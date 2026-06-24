@@ -89,7 +89,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "den Zugang zu amtlichen Dokumenten betreffend: 1. Zivilverfahren,"
+              "text": "den Zugang zu amtlichen Dokumenten betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "Zivilverfahren,"
             },
             {
               "marke": "2",
@@ -110,6 +114,10 @@
             {
               "marke": "6",
               "text": "Schiedsverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "die Einsichtnahme einer Partei in die Akten eines erstinstanzlichen Verwaltungsverfahrens."
             }
           ]
         },
@@ -122,7 +130,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "a2070b06ba6291d47035b3fb12bfc089005831f6eae6c3c1fc8ed626820b752d"
+      "sha": "b3155ca59c2113ad0951f9188e150222d1f417e413777e87ed6de1eedf4d5c3b"
     },
     {
       "id": "bund/BGOE/art_4",

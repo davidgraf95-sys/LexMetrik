@@ -728,11 +728,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Verwalter von Kollektivvermögen nach Absatz 1 Buchstabe a, deren Anlegerinnen und Anleger im Sinne von Artikel 10 Absatz 3 oder 3 ter des Kollektivanlagengesetzes vom 23. Juni 2006 qualifiziert sind und die eine der folgenden Voraussetzungen erfüllen: 1. Die verwalteten Vermögenswerte der kollektiven Kapitalanlagen, ein-schliesslich der durch Einsatz von Finanzinstrumenten mit Hebelwirkung erworbenen Vermögenswerte, betragen insgesamt höchstens 100 Millionen Franken."
+              "text": "Verwalter von Kollektivvermögen nach Absatz 1 Buchstabe a, deren Anlegerinnen und Anleger im Sinne von Artikel 10 Absatz 3 oder 3 ter des Kollektivanlagengesetzes vom 23. Juni 2006 qualifiziert sind und die eine der folgenden Voraussetzungen erfüllen:"
+            },
+            {
+              "marke": "1",
+              "text": "Die verwalteten Vermögenswerte der kollektiven Kapitalanlagen, ein-schliesslich der durch Einsatz von Finanzinstrumenten mit Hebelwirkung erworbenen Vermögenswerte, betragen insgesamt höchstens 100 Millionen Franken."
             },
             {
               "marke": "2",
               "text": "Die verwalteten Vermögenswerte der kollektiven Kapitalanlagen betragen insgesamt höchstens 500 Millionen Franken und enthalten keine Finanzinstrumente mit Hebelwirkung; die kollektiven Kapitalanlagen gewähren kein Anrecht auf Rückzahlung in den ersten fünf Jahren nach der Tätigung der ersten Anlage."
+            },
+            {
+              "marke": "b",
+              "text": "Verwalter von Kollektivvermögen nach Absatz 1 Buchstabe b, die Vermögenswerte von Vorsorgeeinrichtungen von insgesamt höchstens 100 Millionen Franken und im obligatorischen Bereich zudem höchstens 20 Prozent der Vermögenswerte einer einzelnen Vorsorgeeinrichtung verwalten."
             }
           ]
         },
@@ -745,7 +753,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/801/de#art_24",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "68e0e5a6641fb100381dc79a7da6f40fb0069ccf7346baedf73fd4067c144e59"
+      "sha": "a9c56c0f3cbd400a9f941dd0e7ea6d76d44e4a7461daf98b682f3f59ac2b21aa"
     },
     {
       "id": "bund/FINIG/art_25",
@@ -1232,7 +1240,11 @@
             },
             {
               "marke": "b",
-              "text": "für eigene Rechnung kurzfristig mit Effekten handelt, hauptsächlich auf dem Finanzmarkt tätig ist und: 1. dadurch die Funktionsfähigkeit des Finanzmarkts gefährden könnte, oder"
+              "text": "für eigene Rechnung kurzfristig mit Effekten handelt, hauptsächlich auf dem Finanzmarkt tätig ist und:"
+            },
+            {
+              "marke": "1",
+              "text": "dadurch die Funktionsfähigkeit des Finanzmarkts gefährden könnte, oder"
             },
             {
               "marke": "2",
@@ -1241,6 +1253,10 @@
             {
               "marke": "3",
               "text": "ein organisiertes Handelssystem nach Artikel 42 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 betreibt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "für eigene Rechnung kurzfristig mit Effekten handelt und öffentlich dauernd oder auf Anfrage Kurse für einzelne Effekten stellt ( Market Maker )."
             }
           ]
         }
@@ -1249,7 +1265,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/801/de#art_41",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "41106f3f33a2c893f14b5a6493cb21224a95a1abe6319ca0b198bf7fc494e87a"
+      "sha": "9727d6cd91d7bf1fc9f24fd8e514d377c4892ad3ebedc51e5311fd0495ad6eff"
     },
     {
       "id": "bund/FINIG/art_42",
@@ -1583,6 +1599,42 @@
           "text": "Die FINMA erteilt dem ausländischen Finanzinstitut eine Bewilligung zur Errichtung einer Zweigniederlassung, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "das ausländische Finanzinstitut:"
+            },
+            {
+              "marke": "1",
+              "text": "hinreichend organisiert ist und über genügend finanzielle Mittel und qualifiziertes Personal verfügt, um in der Schweiz eine Zweigniederlassung zu betreiben,"
+            },
+            {
+              "marke": "2",
+              "text": "einer angemessenen Aufsicht untersteht, welche die Zweigniederlassung mit einschliesst, und"
+            },
+            {
+              "marke": "3",
+              "text": "nachweist, dass die Firma der Zweigniederlassung im Handelsregister eingetragen werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die zuständigen ausländischen Aufsichtsbehörden:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Einwände gegen die Errichtung einer Zweigniederlassung erheben,"
+            },
+            {
+              "marke": "2",
+              "text": "sich verpflichten, die FINMA unverzüglich zu benachrichtigen, wenn Umstände eintreten, welche die Interessen der Anlegerinnen und Anleger oder der Kundinnen und Kunden ernsthaft gefährden könnten, und"
+            },
+            {
+              "marke": "3",
+              "text": "der FINMA Amtshilfe leisten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zweigniederlassung:"
+            },
+            {
               "marke": "1",
               "text": "die Voraussetzungen nach den Artikeln 9–11 erfüllt und über ein Reglement verfügt, das den Geschäftskreis genau umschreibt und eine ihrer Geschäftstätigkeit entsprechende Verwaltungs- oder Betriebsorganisation vorsieht, und"
             },
@@ -1597,7 +1649,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/801/de#art_53",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "333bb935a9128789eebf3b9d43faf44eb50dbed05b6349965cc99ce6cf20ec08"
+      "sha": "edca0a9aa9e7cf00d9b9f5e4c5e476f18ef31d332101aa53eba4a295a786613e"
     },
     {
       "id": "bund/FINIG/art_54",

@@ -177,7 +177,11 @@
             },
             {
               "marke": "d",
-              "text": "die künftigen Adoptiveltern: 1. nach Persönlichkeit, Gesundheit, zeitlichen Ressourcen, wirtschaftlicher Lage und erzieherischer Eignung sowie nach den Wohnverhältnissen für gute Pflege, Erziehung und Ausbildung des Kindes Gewähr bieten,"
+              "text": "die künftigen Adoptiveltern:"
+            },
+            {
+              "marke": "1",
+              "text": "nach Persönlichkeit, Gesundheit, zeitlichen Ressourcen, wirtschaftlicher Lage und erzieherischer Eignung sowie nach den Wohnverhältnissen für gute Pflege, Erziehung und Ausbildung des Kindes Gewähr bieten,"
             },
             {
               "marke": "2",
@@ -222,7 +226,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/505/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "56e1fabddf8a6d56121aa8ee24649aa8699598f81e6507664ac7a3eeb0edb6e8"
+      "sha": "501ceec9da9518980a9df3e074d1e1da27a55b5ac677355364c8e5dd7b9bbe3e"
     },
     {
       "id": "bund/ADOV/art_6",

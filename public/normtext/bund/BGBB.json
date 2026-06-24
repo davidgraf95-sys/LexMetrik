@@ -1166,7 +1166,11 @@
             },
             {
               "marke": "b",
-              "text": "für ein landwirtschaftliches Grundstück: 1. für den Boden: der doppelte Ertragswert,"
+              "text": "für ein landwirtschaftliches Grundstück:"
+            },
+            {
+              "marke": "1",
+              "text": "für den Boden: der doppelte Ertragswert,"
             },
             {
               "marke": "2",
@@ -1191,7 +1195,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410/de#art_37",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20140101",
-      "sha": "505b576718906e7aed446483ab7167bda689975d09c1edc0f4028f6cef94c337"
+      "sha": "845fe34b3d8f8b955e92775f6512aece77357e33a656eb1be5085c010f666b7e"
     },
     {
       "id": "bund/BGBB/art_38",

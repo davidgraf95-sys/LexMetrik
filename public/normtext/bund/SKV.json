@@ -530,11 +530,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Resultat einer Atemalkoholprobe mit einem Testgerät: 1. über den Werten liegt, die unterschriftlich anerkannt werden können, und keine Atemalkoholprobe mit einem Messgerät durchgeführt werden kann,"
+              "text": "das Resultat einer Atemalkoholprobe mit einem Testgerät:"
+            },
+            {
+              "marke": "1",
+              "text": "über den Werten liegt, die unterschriftlich anerkannt werden können, und keine Atemalkoholprobe mit einem Messgerät durchgeführt werden kann,"
             },
             {
               "marke": "2",
               "text": "durch die betroffene Person unterschriftlich anerkannt werden könnte, sie den Wert aber nicht anerkannt hat und keine Atemalkoholprobe mit einem Messgerät durchgeführt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "das Resultat einer Atemalkoholprobe 0,15 mg/l oder mehr beträgt und der Verdacht besteht, dass die betroffene Person zwei Stunden oder mehr vor der Kontrolle ein Fahrzeug in angetrunkenem Zustand geführt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "die betroffene Person sich der Durchführung einer Atemalkoholprobe widersetzt oder entzieht oder den Zweck dieser Massnahme vereitelt;"
+            },
+            {
+              "marke": "d",
+              "text": "die betroffene Person die Durchführung einer Blutprobe verlangt."
             }
           ]
         },
@@ -547,7 +563,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_12",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "c557005fef0e78678e08cbdac811f51414e9236df2f5d90ede8bc03357093e87"
+      "sha": "be2b7a39ab8bd95e87cf0a02115f7f343398059e5f8ac9b3436b08b3d7c8d182"
     },
     {
       "id": "bund/SKV/art_12_a",
@@ -1032,11 +1048,23 @@
             },
             {
               "marke": "b",
-              "text": "Prüfung der Dokumente betreffend: 1. eine kürzlich erfolgte Kontrolle des technischen Zustandes (Abs. 4),"
+              "text": "Prüfung der Dokumente betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "eine kürzlich erfolgte Kontrolle des technischen Zustandes (Abs. 4),"
             },
             {
               "marke": "2",
               "text": "die letzte periodische Nachprüfung nach Artikel 33 VTS oder nach ausländischem Recht;"
+            },
+            {
+              "marke": "c",
+              "text": "technische Prüfung auf Wartungsmängel betreffend einen, mehrere oder die Gesamtheit der Prüfpunkte nach Anhang I Ziffer 10 der Richtlinie 2000/30/EG;"
+            },
+            {
+              "marke": "d",
+              "text": "Kontrolle nach Artikel 33 Absatz 1 bis VTS, wenn die Wartungsmängel, insbesondere die Mängel an der Bremsanlage, ein Sicherheitsrisiko darstellen können."
             }
           ]
         },
@@ -1061,7 +1089,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_24",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "192ea029bc166b81ef45f9eb4b791575824d429ca337adaad8f9022e217fcb0f"
+      "sha": "65611a8eb418b501504ad91f87d3a5e23a6212e35589fe1d5476d9d6295eb87a"
     },
     {
       "id": "bund/SKV/art_25",
@@ -1684,11 +1712,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Europäischen Kommission: 1. jährlich einen Bericht über die Gefahrgutkontrollen,"
+              "text": "der Europäischen Kommission:"
+            },
+            {
+              "marke": "1",
+              "text": "jährlich einen Bericht über die Gefahrgutkontrollen,"
             },
             {
               "marke": "2",
               "text": "jedes zweite Jahr einen Bericht über die Arbeits-, Lenk- und Ruhezeitkontrollen sowie über die technischen Kontrollen;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Weltverkehrsforum (International Transport Forum, ITF) der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) jedes zweite Jahr einen Bericht über die Arbeits-, Lenk- und Ruhezeitkontrollen."
             }
           ]
         }
@@ -1697,7 +1733,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_46",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "cc4f2b1a417469d4b98ec22aaa8b16e069cc64330d829fc0b54303d79dff7dce"
+      "sha": "838fe45d8c7e4f1ca9cd40b96922b0d781495430c473f21e3a208cb266976c8f"
     },
     {
       "id": "bund/SKV/art_47",
@@ -1753,6 +1789,94 @@
           "text": "Die Datenbank enthält:",
           "items": [
             {
+              "marke": "a",
+              "text": "als Statistikdaten:"
+            },
+            {
+              "marke": "1",
+              "text": "Art der Kontrolle,"
+            },
+            {
+              "marke": "2",
+              "text": "kontrollierende Behörde,"
+            },
+            {
+              "marke": "3",
+              "text": "Ort der Kontrolle,"
+            },
+            {
+              "marke": "4",
+              "text": "Dauer der Kontrolle,"
+            },
+            {
+              "marke": "5",
+              "text": "Art und Anzahl der kontrollierten Fahrzeuge sowie Anzahl der kontrollierten Fahrzeugführer und Fahrzeugführerinnen,"
+            },
+            {
+              "marke": "6",
+              "text": "Staatsangehörigkeit der kontrollierten Fahrzeugführer und Fahrzeugführerinnen,"
+            },
+            {
+              "marke": "7",
+              "text": "Immatrikulationsstaat der kontrollierten Fahrzeuge,"
+            },
+            {
+              "marke": "8",
+              "text": "Art und Anzahl der festgestellten Widerhandlungen,"
+            },
+            {
+              "marke": "9",
+              "text": "Art und Anzahl der angeordneten Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "als Berichtsdaten:"
+            },
+            {
+              "marke": "1",
+              "text": "über Gefahrgutkontrollen:"
+            },
+            {
+              "marke": "–",
+              "text": "erfasster oder geschätzter Umfang der Beförderungen gefährlicher Güter in beförderten Tonnen oder in Tonnenkilometern,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der durchgeführten Kontrollen,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der kontrollierten Fahrzeuge, aufgeschlüsselt nach Immatrikulationsstaat,"
+            },
+            {
+              "marke": "–",
+              "text": "Art und Anzahl der festgestellten Widerhandlungen,"
+            },
+            {
+              "marke": "–",
+              "text": "Art und Anzahl der angeordneten Massnahmen,"
+            },
+            {
+              "marke": "2",
+              "text": "über technische Kontrollen:"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der kontrollierten Nutzfahrzeuge, aufgeschlüsselt nach Fahrzeugklasse und Immatrikulationsstaat,"
+            },
+            {
+              "marke": "–",
+              "text": "Art und Anzahl der festgestellten Mängel,"
+            },
+            {
+              "marke": "–",
+              "text": "Art und Anzahl der angeordneten Massnahmen,"
+            },
+            {
+              "marke": "3",
+              "text": "über Kontrollen der Arbeits-, Lenk- und Ruhezeit:"
+            },
+            {
               "marke": "–",
               "text": "Anzahl der bei Strassenkontrollen kontrollierten Fahrzeugführer und Fahrzeugführerinnen, aufgeschlüsselt nach Staatsangehörigkeit sowie Personen- und Güterverkehr,"
             },
@@ -1783,7 +1907,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_48",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "7f00f63787333d6d9bd712016632df8a0027cc59d8bf6f4512352c45f7d36efa"
+      "sha": "91b4e01420b86eb80d026dbf02319ab1dbe21fe3c2277e1dabc34948cf629d11"
     },
     {
       "id": "bund/SKV/art_49",

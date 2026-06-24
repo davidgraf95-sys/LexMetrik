@@ -2124,7 +2124,11 @@
             },
             {
               "marke": "b",
-              "text": "Die Materialeinzelkosten werden den Herstellungskosten zu folgenden Prozentsätzen zugerechnet: 1. zu 100 Prozent für Materialien, die die Voraussetzungen der Artikel 48–48 c MSchG erfüllen;"
+              "text": "Die Materialeinzelkosten werden den Herstellungskosten zu folgenden Prozentsätzen zugerechnet:"
+            },
+            {
+              "marke": "1",
+              "text": "zu 100 Prozent für Materialien, die die Voraussetzungen der Artikel 48–48 c MSchG erfüllen;"
             },
             {
               "marke": "2",
@@ -2141,7 +2145,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/296_296_296/de#art_52_i",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "c03b0fc33fe61d90e396fa73b31b8300478d87d56c572524017a9b4ea2b24502"
+      "sha": "c5a3ab1a99cb15e913c3e425bfd113291e04d35fe83edcf8d7fa80dcae760764"
     },
     {
       "id": "bund/MSCHV/art_52_j",

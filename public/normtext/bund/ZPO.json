@@ -212,7 +212,11 @@
             },
             {
               "marke": "c",
-              "text": "Streitigkeiten, bei denen die folgenden Bedingungen erfüllt sind: 1. Die Streitigkeit betrifft die geschäftliche Tätigkeit mindestens einer Partei."
+              "text": "Streitigkeiten, bei denen die folgenden Bedingungen erfüllt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "Die Streitigkeit betrifft die geschäftliche Tätigkeit mindestens einer Partei."
             },
             {
               "marke": "2",
@@ -241,7 +245,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "33272de0afb5ac03bc0133e8141ea697bd5944e08d954f47eaf6a106b7b1e624"
+      "sha": "f1a1b8906c5f88ed6fe14c50e4ee69b05e9644ed8247d7219474db56e90ac923"
     },
     {
       "id": "bund/ZPO/art_7",
@@ -5697,7 +5701,11 @@
             },
             {
               "marke": "e",
-              "text": "bei folgenden Klagen aus dem SchKG: 1. Aberkennungsklage (Art. 83 Abs. 2 SchKG),"
+              "text": "bei folgenden Klagen aus dem SchKG:"
+            },
+            {
+              "marke": "1",
+              "text": "Aberkennungsklage (Art. 83 Abs. 2 SchKG),"
             },
             {
               "marke": "2",
@@ -5726,6 +5734,22 @@
             {
               "marke": "8",
               "text": "Klage auf Rückschaffung von Retentionsgegenständen (Art. 284 SchKG);"
+            },
+            {
+              "marke": "f",
+              "text": "bei Streitigkeiten, für die nach Artikel 7 dieses Gesetzes eine einzige kantonale Instanz zuständig ist;"
+            },
+            {
+              "marke": "g",
+              "text": "bei der Hauptintervention, der Widerklage und der Streitverkündungsklage;"
+            },
+            {
+              "marke": "h",
+              "text": "wenn das Gericht eine Frist für eine Klage gesetzt hat sowie bei Klagen, die mit einer solchen Klage vereint werden, sofern die Klagen in einem sachlichen Zusammenhang stehen;"
+            },
+            {
+              "marke": "i",
+              "text": "bei Klagen vor dem Bundespatentgericht."
             }
           ]
         }
@@ -5734,7 +5758,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_198",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "bd595bb541fb485606263ef421efc9ac92a8ffe6073b9c50d445f38f9e97c66f"
+      "sha": "8cc4bdc31a4eb23b9b5476e97ceea068ad66f33c5838ecaec19c7f5c5582d3af"
     },
     {
       "id": "bund/ZPO/art_199",
@@ -7011,6 +7035,10 @@
             {
               "marke": "a",
               "text": "in der Hauptverhandlung durch Übergabe des schriftlichen Dispositivs an die Parteien mit kurzer mündlicher Begründung;"
+            },
+            {
+              "marke": "b",
+              "text": "durch zeitnahe Zustellung des Dispositivs an die Parteien."
             }
           ]
         },
@@ -7027,7 +7055,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_239",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "58095e254349926fe7800f035b18a1fa2be364cba653be6980781f6998ab95fe"
+      "sha": "3e417fd74599dab944850ab90347f90365a25de83497c11dc40be007ac5191c3"
     },
     {
       "id": "bund/ZPO/art_240",
@@ -7278,7 +7306,11 @@
             },
             {
               "marke": "b",
-              "text": "bis zu einem Streitwert von 30 000 Franken: 1. in den übrigen Streitigkeiten aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht,"
+              "text": "bis zu einem Streitwert von 30 000 Franken:"
+            },
+            {
+              "marke": "1",
+              "text": "in den übrigen Streitigkeiten aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht,"
             },
             {
               "marke": "2",
@@ -7291,7 +7323,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_247",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1417ba22d27a6e3ec5979ca96106d1d7bc8071da2c5d71380d2e8ca9c437fcb7"
+      "sha": "ae4798cc75613e447c7f73c2f37463256be792cc7b279f58d1e8e1d008eb533c"
     },
     {
       "id": "bund/ZPO/art_248",
@@ -7347,6 +7379,54 @@
           "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Personenrecht:"
+            },
+            {
+              "marke": "1",
+              "text": "Fristansetzung zur Genehmigung von Rechtsgeschäften einer minderjährigen Person oder einer Person unter umfassender Beistandschaft (Art. 19 a ZGB),"
+            },
+            {
+              "marke": "2",
+              "text": "Anspruch auf Gegendarstellung (Art. 28 l ZGB),"
+            },
+            {
+              "marke": "3",
+              "text": "Verschollenerklärung (Art. 35–38 ZGB),"
+            },
+            {
+              "marke": "4",
+              "text": "Bereinigung einer Eintragung im Zivilstandsregister (Art. 42 ZGB),"
+            },
+            {
+              "marke": "5",
+              "text": "Massnahmen bei Mängeln in der Organisation eines Vereins (Art. 69 c ZGB);"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "Erbrecht:"
+            },
+            {
+              "marke": "1",
+              "text": "Entgegennahme eines mündlichen Testamentes (Art. 507 ZGB),"
+            },
+            {
+              "marke": "2",
+              "text": "Sicherstellung bei Beerbung einer verschollenen Person (Art. 546 ZGB),"
+            },
+            {
+              "marke": "3",
+              "text": "Verschiebung der Erbteilung und Sicherung der Ansprüche der Miterbinnen und Miterben gegenüber zahlungsunfähigen Erben (Art. 604 Abs. 2 und 3 ZGB);"
+            },
+            {
+              "marke": "d",
+              "text": "Sachenrecht:"
+            },
+            {
               "marke": "1",
               "text": "Massnahmen zur Erhaltung des Wertes und der Gebrauchsfähigkeit der Sache bei Miteigentum (Art. 647 Abs. 2 Ziff. 1 ZGB),"
             },
@@ -7397,7 +7477,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_249",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "236f650535038dbff4ae68052cbecece14ac78e3231436ca68433069c40879a4"
+      "sha": "6a9554bef592086fd837a4fbdc47bc3e997b945231372301f70b2f4a981a925e"
     },
     {
       "id": "bund/ZPO/art_250",
@@ -7411,6 +7491,146 @@
           "absatz": null,
           "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Allgemeiner Teil:"
+            },
+            {
+              "marke": "1",
+              "text": "gerichtliche Hinterlegung einer erloschenen Vollmacht (Art. 36 Abs. 1 OR),"
+            },
+            {
+              "marke": "2",
+              "text": "Ansetzung einer angemessenen Frist zur Sicherstellung (Art. 83 Abs. 2 OR),"
+            },
+            {
+              "marke": "3",
+              "text": "Hinterlegung und Verkauf der geschuldeten Sache bei Gläubigerverzug (Art. 92 Abs. 2 und 93 Abs. 2 OR),"
+            },
+            {
+              "marke": "4",
+              "text": "Ermächtigung zur Ersatzvornahme (Art. 98 OR),"
+            },
+            {
+              "marke": "5",
+              "text": "Ansetzung einer Frist zur Vertragserfüllung (Art. 107 Abs. 1 OR),"
+            },
+            {
+              "marke": "6",
+              "text": "Hinterlegung eines streitigen Betrages (Art. 168 Abs. 1 OR);"
+            },
+            {
+              "marke": "b",
+              "text": "Einzelne Vertragsverhältnisse:"
+            },
+            {
+              "marke": "1",
+              "text": "Bezeichnung einer sachverständigen Person zur Nachprüfung des Geschäftsergebnisses oder der Provisionsabrechnung (Art. 322 a Abs. 2 und 322 c Abs. 2 OR),"
+            },
+            {
+              "marke": "2",
+              "text": "Ansetzung einer Frist zur Sicherheitsleistung bei Lohngefährdung (Art. 337 a OR),"
+            },
+            {
+              "marke": "3",
+              "text": "Ansetzung einer Frist bei vertragswidriger Ausführung eines Werkes (Art. 366 Abs. 2 OR),"
+            },
+            {
+              "marke": "4",
+              "text": "Bezeichnung einer sachverständigen Person zur Prüfung eines Werkes (Art. 367 OR),"
+            },
+            {
+              "marke": "5",
+              "text": "Ansetzung einer Frist zur Herstellung der neuen Auflage eines literarischen oder künstlerischen Werkes (Art. 383 Abs. 3 OR),"
+            },
+            {
+              "marke": "6",
+              "text": "Herausgabe der beim Sequester hinterlegten Sache (Art. 480 OR),"
+            },
+            {
+              "marke": "7",
+              "text": "Beurteilung der Pfanddeckung bei Solidarbürgschaft (Art. 496 Abs. 2 OR),"
+            },
+            {
+              "marke": "8",
+              "text": "Einstellung der Betreibung gegen den Bürgen bei Leistung von Realsicherheit (Art. 501 Abs. 2 OR),"
+            },
+            {
+              "marke": "9",
+              "text": "Sicherstellung durch den Hauptschuldner und Befreiung von der Bürgschaft (Art. 506 OR);"
+            },
+            {
+              "marke": "c",
+              "text": "Gesellschaftsrecht und Handelsregister:"
+            },
+            {
+              "marke": "1",
+              "text": "vorläufiger Entzug der Vertretungsbefugnis (Art. 565 Abs. 2, 603 und 767 Abs. 1 OR),"
+            },
+            {
+              "marke": "2",
+              "text": "Bezeichnung der gemeinsamen Vertretung (Art. 690 Abs. 1, 764 Abs. 2, 792 Ziff. 1 und 847 Abs. 4 OR),"
+            },
+            {
+              "marke": "3",
+              "text": "Bestimmung, Abberufung und Ersetzung von Liquidatoren (Art. 583 Abs. 2, 619, 740, 741, 770, 826 Abs. 2 und 913 OR),"
+            },
+            {
+              "marke": "4",
+              "text": "Verkauf zu einem Gesamtübernahmepreis und Art der Veräusserung von Grundstücken (Art. 585 Abs. 3 und 619 OR),"
+            },
+            {
+              "marke": "5",
+              "text": "Bezeichnung der sachverständigen Person zur Prüfung der Gewinn- und Verlustrechnung und der Bilanz der Kommanditgesellschaft (Art. 600 Abs. 3 OR),"
+            },
+            {
+              "marke": "6",
+              "text": "Massnahmen bei Mängeln in der Organisation der Gesellschaft oder Genossenschaft (Art. 731 b , 819 und 908 OR),"
+            },
+            {
+              "marke": "7",
+              "text": "Anordnung der Auskunftserteilung an Gläubiger sowie an Aktionäre, Gesellschafter einer Gesellschaft mit beschränkter Haftung und Genossenschafter (Art. 697 b , 802 Abs. 4, 857 Abs. 3 und 958 e OR),"
+            },
+            {
+              "marke": "8",
+              "text": "Sonderuntersuchung (Art. 697 c –697 h bis OR),"
+            },
+            {
+              "marke": "9",
+              "text": "Einberufung der Generalversammlung, Traktandierung eines Verhandlungsgegenstandes und Aufnahme von Anträgen und kurzen Begründungen in die Einladung der Generalversammlung (Art. 699 Abs. 5, 699 b Abs. 4, 805 Abs. 5 Ziff. 2 und 3 und 881 Abs. 3 OR),"
+            },
+            {
+              "marke": "10",
+              "text": "Bezeichnung einer Vertretung der Gesellschaft oder der Genossenschaft bei Anfechtung von Generalversammlungsbeschlüssen durch die Verwaltung (Art. 706 a Abs. 2, 808 c und 891 Abs. 1 OR),"
+            },
+            {
+              "marke": "11",
+              "text": "…"
+            },
+            {
+              "marke": "12",
+              "text": "Hinterlegung von Forderungsbeiträgen bei der Liquidation (Art. 744, 770, 826 Abs. 2 und 913 OR),"
+            },
+            {
+              "marke": "13",
+              "text": "Abberufung der Verwaltung und der Revisionsstelle der Genossenschaft (Art. 890 Abs. 2 OR),"
+            },
+            {
+              "marke": "14",
+              "text": "Wiedereintragung einer gelöschten Rechtseinheit ins Handelsregister (Art. 935 OR),"
+            },
+            {
+              "marke": "15",
+              "text": "Anordnung zur Auflösung der Gesellschaft und zu ihrer Liquidation nach den Vorschriften über den Konkurs (Art. 731 b , 819 und 908 OR),"
+            },
+            {
+              "marke": "16",
+              "text": "Löschung einer Gesellschaft (Art. 938 a Abs. 2 OR);"
+            },
+            {
+              "marke": "d",
+              "text": "Wertpapierrecht:"
+            },
             {
               "marke": "1",
               "text": "Kraftloserklärung von Wertpapieren (Art. 981 OR),"
@@ -7434,7 +7654,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_250",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "e13e3cdf69353ec5d8f011b62d38f956bf2e745d9184d2dba10bdc94670f3291"
+      "sha": "9cab8dc03eae92b4cb7e1c8c7bbd0e66c209ab4a2d405c887fb8c7c2310d4534"
     },
     {
       "id": "bund/ZPO/art_251",
@@ -8864,6 +9084,38 @@
           "text": "Es prüft die Anordnung der Vertretung insbesondere, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Eltern unterschiedliche Anträge stellen bezüglich:"
+            },
+            {
+              "marke": "1",
+              "text": "der Zuteilung der elterlichen Sorge,"
+            },
+            {
+              "marke": "2",
+              "text": "der Zuteilung der Obhut,"
+            },
+            {
+              "marke": "3",
+              "text": "wichtiger Fragen des persönlichen Verkehrs,"
+            },
+            {
+              "marke": "4",
+              "text": "der Aufteilung der Betreuung,"
+            },
+            {
+              "marke": "5",
+              "text": "des Unterhaltsbeitrages;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kindesschutzbehörde oder ein Elternteil eine Vertretung beantragen;"
+            },
+            {
+              "marke": "c",
+              "text": "es aufgrund der Anhörung der Eltern oder des Kindes oder aus anderen Gründen:"
+            },
+            {
               "marke": "1",
               "text": "erhebliche Zweifel an der Angemessenheit der gemeinsamen Anträge der Eltern bezüglich der Fragen nach Buchstabe a hat, oder"
             },
@@ -8882,7 +9134,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_299",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "679a115a05c3d42da633b46511ad187f18b1853e11bac757bf244cf5fd079058"
+      "sha": "c2b35cfbd04e75f2fa1c4bb8bc2dd84c06cde874aa6c5eeb66aa987fe839c4f5"
     },
     {
       "id": "bund/ZPO/art_300",
@@ -8951,7 +9203,11 @@
             },
             {
               "marke": "c",
-              "text": "gegebenenfalls der Beiständin oder dem Beistand, soweit es um eine der folgenden Fragen geht: 1. die Zuteilung der elterlichen Sorge,"
+              "text": "gegebenenfalls der Beiständin oder dem Beistand, soweit es um eine der folgenden Fragen geht:"
+            },
+            {
+              "marke": "1",
+              "text": "die Zuteilung der elterlichen Sorge,"
             },
             {
               "marke": "2",
@@ -8980,7 +9236,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_301",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "82a3be6caaffac6c0cf20662f1c7307a37eef60cb44702c31395a5ec5e16f665"
+      "sha": "5354f87c812a897aa0976f25c0136fb5ba310a427d0c4aed9b323f57919080c2"
     },
     {
       "id": "bund/ZPO/art_301_a",
@@ -9273,7 +9529,11 @@
             },
             {
               "marke": "b",
-              "text": "in den folgenden Angelegenheiten des SchKG: 1. Aufhebung des Rechtsstillstandes (Art. 57 d SchKG),"
+              "text": "in den folgenden Angelegenheiten des SchKG:"
+            },
+            {
+              "marke": "1",
+              "text": "Aufhebung des Rechtsstillstandes (Art. 57 d SchKG),"
             },
             {
               "marke": "2",
@@ -9306,7 +9566,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_309",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "acf288e305d1862d6ada30a3867abba798bdfc263f948693766637fcdcc1156f"
+      "sha": "2ee3166ad871ef044354d01645cf7695beb6ec71ba6641bf94727881b326a984"
     },
     {
       "id": "bund/ZPO/art_310",
@@ -9602,7 +9862,11 @@
             },
             {
               "marke": "c",
-              "text": "die Sache an die erste Instanz zurückweisen, wenn: 1. ein wesentlicher Teil der Klage nicht beurteilt wurde, oder"
+              "text": "die Sache an die erste Instanz zurückweisen, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "ein wesentlicher Teil der Klage nicht beurteilt wurde, oder"
             },
             {
               "marke": "2",
@@ -9623,7 +9887,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_318",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "3c196f90301163cd02cc8101acc1ef1950b6fc8701a85291fe1c529e43981d39"
+      "sha": "7d75c5ba44d7d8656fc0594d45e905b376b9804ab0d58901eb2a2661a9192be9"
     },
     {
       "id": "bund/ZPO/art_319",
@@ -9643,11 +9907,19 @@
             },
             {
               "marke": "b",
-              "text": "andere erstinstanzliche Entscheide und prozessleitende Verfügungen: 1. in den vom Gesetz bestimmten Fällen,"
+              "text": "andere erstinstanzliche Entscheide und prozessleitende Verfügungen:"
+            },
+            {
+              "marke": "1",
+              "text": "in den vom Gesetz bestimmten Fällen,"
             },
             {
               "marke": "2",
               "text": "wenn durch sie ein nicht leicht wiedergutzumachender Nachteil droht;"
+            },
+            {
+              "marke": "c",
+              "text": "Fälle von Rechtsverzögerung."
             }
           ]
         }
@@ -9656,7 +9928,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_319",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "dbb924134c5797dcae549919e39cdb75e3c4028dcbde23df864ba6da81135864"
+      "sha": "3f1e1d2f4f69bba6de8a6b6db70e299896b2f0229bbbec580e57a395580c1999"
     },
     {
       "id": "bund/ZPO/art_320",
@@ -10456,7 +10728,11 @@
             },
             {
               "marke": "c",
-              "text": "die geschuldete Leistung: 1. in der Urkunde genügend bestimmt ist,"
+              "text": "die geschuldete Leistung:"
+            },
+            {
+              "marke": "1",
+              "text": "in der Urkunde genügend bestimmt ist,"
             },
             {
               "marke": "2",
@@ -10473,7 +10749,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_347",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "a616d4e479418114450c7a9267e5a55c838f354a42602383f66c31e84ac24246"
+      "sha": "abd5fdf8f03b7c04345599bf0b3013c5225cb4d1868b0bbd1fee5978e9feb007"
     },
     {
       "id": "bund/ZPO/art_348",

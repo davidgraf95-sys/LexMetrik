@@ -728,7 +728,11 @@
             },
             {
               "marke": "b",
-              "text": "eine Erklärung des Herstellers oder Importeurs, dass die in Verkehr zu bringenden Baumaschinen oder Partikelfiltersysteme den geprüften Typen entsprechen (Konformitätserklärung), mit folgenden Angaben: 1. Name und Adresse des Herstellers oder Importeurs,"
+              "text": "eine Erklärung des Herstellers oder Importeurs, dass die in Verkehr zu bringenden Baumaschinen oder Partikelfiltersysteme den geprüften Typen entsprechen (Konformitätserklärung), mit folgenden Angaben:"
+            },
+            {
+              "marke": "1",
+              "text": "Name und Adresse des Herstellers oder Importeurs,"
             },
             {
               "marke": "2",
@@ -749,6 +753,10 @@
             {
               "marke": "6",
               "text": "die genaue Lage der Kennzeichnung auf der Baumaschine; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Kennzeichnung nach Anhang 4 Ziffer 33."
             }
           ]
         },
@@ -769,7 +777,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1986/208_208_208/de#art_19_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "55852ae535e0682bdba696e6bbab5cd2cd97ab4ff4d282ea3096052f4bea6d68"
+      "sha": "41c01e1ab9923ab89588c41174083bc6c56d1d775f7c9743e2952023bd285b4b"
     },
     {
       "id": "bund/LRV/art_20",

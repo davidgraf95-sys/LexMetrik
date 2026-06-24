@@ -148,6 +148,41 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  describe('Verschachtelte <dl> — lit. → nummerierte Unterpunkte (Bug 25.6.2026)', () => {
+    // Reale Fedlex-Struktur MStG art_42 (verkürzt): ein lit-<dd> enthält eine
+    // verschachtelte <dl> mit nummerierten Unterpunkten; danach folgen weitere
+    // lit-Geschwister. Vor dem Fix verlor der non-greedy <dl>-Match die lit-Ebene
+    // (nur die innere Liste überlebte) und klebte Unterpunkte als falsche Marken.
+    const MSTG_ART_42 = `<article id="art_42"><a name="a42"></a><div class="collapseable"><p class="absatz man-space-before-4">Das Gericht mildert die Strafe, wenn:</p><dl class="man-space-after-0"><dt class="man-space-before-4 man-space-before-2">a. </dt><dd class="man-space-before-4 man-space-before-2">der Täter gehandelt hat:<dl class="man-space-after-0"><dt class="man-space-before-2">1. </dt><dd class="man-space-before-2">aus achtenswerten Beweggründen,</dd><dt class="man-space-before-2">2. </dt><dd class="man-space-before-2">in schwerer Bedrängnis,</dd><dt class="man-space-before-2">3. </dt><dd class="man-space-before-2">unter dem Eindruck einer schweren Drohung,</dd><dt class="man-space-before-2">4. </dt><dd class="man-space-before-2">auf Veranlassung einer Person, der er Gehorsam schuldet oder von der er abhängig ist;</dd></dl></dd><dt class="man-space-before-4">b. </dt><dd class="man-space-before-4">der Täter durch das Verhalten der verletzten Person ernsthaft in Versuchung geführt worden ist;</dd><dt class="man-space-before-4">c. </dt><dd class="man-space-before-4">der Täter in einer nach den Umständen entschuldbaren heftigen Gemütsbewegung gehandelt hat;</dd><dt class="man-space-before-4">d. </dt><dd class="man-space-before-4">der Täter aufrichtige Reue betätigt;</dd><dt class="man-space-before-4">e. </dt><dd class="man-space-before-4">das Strafbedürfnis deutlich vermindert ist.</dd></dl></div></article>`;
+
+    it('lit. a–e bleiben erhalten; nummerierte Unterpunkte 1–4 folgen flach NACH lit. a', () => {
+      const result = extrahiereArtikel(MSTG_ART_42, '42');
+      expect(result).not.toBeNull();
+      const b = result!.bloecke[0];
+      expect(b.text).toBe('Das Gericht mildert die Strafe, wenn:');
+      // Flaches Modell in Dokumentreihenfolge: a, 1, 2, 3, 4, b, c, d, e.
+      expect(b.items!.map((i) => i.marke)).toEqual(['a', '1', '2', '3', '4', 'b', 'c', 'd', 'e']);
+      // Eltern-lit. trägt NUR seinen Einleitungstext (nicht den ersten Unterpunkt).
+      expect(b.items![0].text).toBe('der Täter gehandelt hat:');
+      expect(b.items![1].text).toMatch(/^aus achtenswerten Beweggründen/);
+      expect(b.items![5].text).toMatch(/^der Täter durch das Verhalten/);
+    });
+  });
+
+  describe('<dt>-eingebetteter Text + leeres <dd> (Fedlex-Sonderform, ZPO art_250 Ziff. 15)', () => {
+    // Reale Fedlex-Sonderform: der Punkttext steht IM <dt> hinter Marke+Fussnote,
+    // das zugehörige <dd> ist leer. Ohne Fallback ginge der Punkt verloren.
+    const SONDERFORM = `<article id="art_x"><div class="collapseable"><dl><dt>14.<sup><a href="#fn1">184</a></sup> </dt><dd>Eintragung im Handelsregister (Art. 935 OR),</dd><dt>15.<sup><a href="#fn2">185</a></sup><sup><inl> </inl></sup>Anordnung zur Auflösung der Gesellschaft nach den Vorschriften über den Konkurs (Art. 731b OR),</dt><dd class="clearfix"></dd><dt>16.<sup><a href="#fn3">186</a></sup> </dt><dd>Löschung einer Gesellschaft (Art. 938a Abs. 2 OR);</dd></dl></div></article>`;
+
+    it('Ziff. 15 (Text im <dt>) bleibt erhalten, ohne Fussnoten-Zahl', () => {
+      const result = extrahiereArtikel(SONDERFORM, 'x');
+      const items = result!.bloecke[0].items!;
+      expect(items.map((i) => i.marke)).toEqual(['14', '15', '16']);
+      expect(items[1].text).toMatch(/^Anordnung zur Auflösung der Gesellschaft/);
+      expect(items[1].text).not.toMatch(/\b185\b/);
+    });
+  });
+
   describe('ZPO Art. 96 — Überschrift mit Fussnoten-<sup>, 2 Absätze', () => {
     it('liefert 2 Blöcke', () => {
       const result = extrahiereArtikel(HTML_ZPO, '96');

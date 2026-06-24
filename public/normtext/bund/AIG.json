@@ -1902,7 +1902,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Ehegatte oder ein Kind Opfer häuslicher Gewalt wurde, wobei die zuständigen Behörden insbesondere die folgenden Hinweise berücksichtigen: 1. die Anerkennung als Opfer im Sinne von Artikel 1 Absatz 1 des Opferhilfegesetzes vom 23. März 2007 durch die dafür zuständigen Behörden,"
+              "text": "der Ehegatte oder ein Kind Opfer häuslicher Gewalt wurde, wobei die zuständigen Behörden insbesondere die folgenden Hinweise berücksichtigen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Anerkennung als Opfer im Sinne von Artikel 1 Absatz 1 des Opferhilfegesetzes vom 23. März 2007 durch die dafür zuständigen Behörden,"
             },
             {
               "marke": "2",
@@ -1923,6 +1927,14 @@
             {
               "marke": "6",
               "text": "strafrechtliche Verurteilungen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Ehegatte die Ehe nicht aus freiem Willen geschlossen hat; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die soziale Wiedereingliederung im Herkunftsland stark gefährdet erscheint."
             }
           ]
         },
@@ -1939,7 +1951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_50",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "8366edd17fbc8858c38d542549f35165c7f909f7b5ae82baac2325bf66284db4"
+      "sha": "08eb9965033f6416fe2b853be9d4061f8067d76baae59aea6d9e3e5679ea3691"
     },
     {
       "id": "bund/AIG/art_51",
@@ -3774,7 +3786,11 @@
             },
             {
               "marke": "b",
-              "text": "in Haft nehmen, wenn: 1. Gründe nach Artikel 75 Absatz 1 Buchstabe a, b, c, f, g, h oder i vorliegen,"
+              "text": "in Haft nehmen, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "Gründe nach Artikel 75 Absatz 1 Buchstabe a, b, c, f, g, h oder i vorliegen,"
             },
             {
               "marke": "2",
@@ -3819,7 +3835,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_76",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "67f7879d928bbffba1179ee221d03db6c4c5f645384031cf914a82b60001984a"
+      "sha": "d8bf6547b73d5f2af80013c06e0c53a7a34c92014716f119f2850b8fc2fb77ca"
     },
     {
       "id": "bund/AIG/art_76_a",
@@ -6990,11 +7006,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "das SEM: 1. auf Daten nach Artikel 108 i Absatz 2 im Rahmen der Wahrnehmung seiner Aufgaben als nationale ETIAS-Stelle,"
+              "text": "das SEM:"
+            },
+            {
+              "marke": "1",
+              "text": "auf Daten nach Artikel 108 i Absatz 2 im Rahmen der Wahrnehmung seiner Aufgaben als nationale ETIAS-Stelle,"
             },
             {
               "marke": "2",
               "text": "auf Daten nach Artikel 108 i Absatz 2 Buchstaben a–i für die Bearbeitung und Beantwortung von Konsultationsanfragen;"
+            },
+            {
+              "marke": "b",
+              "text": "der NDB, fedpol, das Protokoll des EDA und die Schweizer Mission in Genf: auf Daten nach Artikel 108 i Absatz 2 Buchstaben a–i für die Beantwortung von Konsultationsanfragen im Rahmen der ETIAS-Gesuchsbearbeitung;"
+            },
+            {
+              "marke": "c",
+              "text": "der NDB und fedpol: auf Daten nach Artikel 108 i Absatz 2 Buchstaben k und l im Rahmen der Erfüllung ihrer Aufgaben als beantragende Behörde für die Bearbeitung von Daten in der ETIAS-Überwachungsliste."
             }
           ]
         },
@@ -7011,7 +7039,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_108_j",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "80b4a9cbfed1084108507ef31e3872525d5764973817f87529de2839bd81808b"
+      "sha": "5f6b902f19d1d3688918b72a10626590c7c43c310b6e1f419cc8cf710ca9517a"
     },
     {
       "id": "bund/AIG/art_108_k",
@@ -7281,11 +7309,27 @@
             },
             {
               "marke": "f",
-              "text": "den zuständigen Bundesbehörden im Bereich der inneren Sicherheit, der internationalen Rechtshilfe in Strafsachen und des Polizeiwesens: 1. zur Personenidentifikation in den Bereichen des polizeilichen Nachrichtenaustausches, der sicherheits- und gerichtspolizeilichen Ermittlungen, bei Auslieferungsverfahren, bei Rechts- und Amtshilfe, bei der stellvertretenden Strafverfolgung und Strafvollstreckung, bei der Bekämpfung der Geldwäscherei, des Drogenhandels und des organisierten Verbrechens, bei der Kontrolle von Ausweisschriften, bei Nachforschungen nach vermissten Personen sowie bei der Kontrolle der Eingaben ins automatisierte Polizeifahndungssystem nach dem Bundesgesetz vom 13. Juni 2008 über die polizeilichen Informationssysteme des Bundes,"
+              "text": "den zuständigen Bundesbehörden im Bereich der inneren Sicherheit, der internationalen Rechtshilfe in Strafsachen und des Polizeiwesens:"
+            },
+            {
+              "marke": "1",
+              "text": "zur Personenidentifikation in den Bereichen des polizeilichen Nachrichtenaustausches, der sicherheits- und gerichtspolizeilichen Ermittlungen, bei Auslieferungsverfahren, bei Rechts- und Amtshilfe, bei der stellvertretenden Strafverfolgung und Strafvollstreckung, bei der Bekämpfung der Geldwäscherei, des Drogenhandels und des organisierten Verbrechens, bei der Kontrolle von Ausweisschriften, bei Nachforschungen nach vermissten Personen sowie bei der Kontrolle der Eingaben ins automatisierte Polizeifahndungssystem nach dem Bundesgesetz vom 13. Juni 2008 über die polizeilichen Informationssysteme des Bundes,"
             },
             {
               "marke": "2",
               "text": "zur Prüfung von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem Bundesgesetz vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit;"
+            },
+            {
+              "marke": "g",
+              "text": "den Beschwerdeinstanzen des Bundes: für die Instruktion der bei ihnen eingegangenen Beschwerden;"
+            },
+            {
+              "marke": "h",
+              "text": "den Zivilstandsämtern und ihren Aufsichtsbehörden: zur Personenidentifikation im Zusammenhang mit Zivilstandsereignissen, für die Vorbereitung einer Eheschliessung oder Eintragung der Partnerschaft sowie zur Verhinderung der Umgehung des Ausländerrechts nach Artikel 97 a Absatz 1 ZGB und Artikel 6 Absatz 2 des Partnerschaftsgesetzes vom 18. Juni 2004;"
+            },
+            {
+              "marke": "i",
+              "text": "der nationalen ETIAS-Stelle: im Rahmen der Erfüllung ihrer Aufgaben."
             }
           ]
         }
@@ -7294,7 +7338,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_109_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "02dd07c5d7c337e9cef85a51bd3d5ec970665ab74978ccc3a9c79fdab0f085d6"
+      "sha": "54f067cad0426ba9242c1ca1c6fd7a586fe33be0deb2733b198b0f5c31031e42"
     },
     {
       "id": "bund/AIG/art_109_d",
@@ -7534,11 +7578,39 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Mitarbeitenden des SEM: 1. um die Reisedokumente für die Rückkehr zu beschaffen, die Ausreise zu organisieren und Rückkehrhilfe zu gewähren (Daten nach Art. 109 g Abs. 2),"
+              "text": "die Mitarbeitenden des SEM:"
+            },
+            {
+              "marke": "1",
+              "text": "um die Reisedokumente für die Rückkehr zu beschaffen, die Ausreise zu organisieren und Rückkehrhilfe zu gewähren (Daten nach Art. 109 g Abs. 2),"
             },
             {
               "marke": "2",
               "text": "um die Kostenabrechnung zu erstellen (Grunddaten nach Art. 109 g Abs. 2 Bst. a und Daten nach Art. 109 g Abs. 2 Bst. c–h und j–n);"
+            },
+            {
+              "marke": "b",
+              "text": "die kantonalen Behörden, die mit der Durchführung der Rückkehr betraut sind, um Fälle zu melden, welche die Unterstützung des SEM erfordern nach Artikel 71 (Daten nach Art. 109 g Abs. 2);"
+            },
+            {
+              "marke": "c",
+              "text": "die für die Rückkehrhilfe zuständigen kantonalen Behörden (Daten nach Art. 109 g Abs. 2 Bst. a–h und k–n);"
+            },
+            {
+              "marke": "d",
+              "text": "die für die Kostenabrechnung zuständigen kantonalen Behörden (Grunddaten nach Art. 109 g Abs. 2 Bst. a und Daten nach Art. 109 g Abs. 2 Bst. c–g, j und l–n);"
+            },
+            {
+              "marke": "e",
+              "text": "die kantonalen Polizeibehörden für die Begleitung von weg- oder auszuweisenden Personen (Grunddaten nach Art. 109 g Abs. 2 Bst. a und Daten nach Art 109 g Abs. 2 Bst. b, d, g und i–n);"
+            },
+            {
+              "marke": "f",
+              "text": "die kantonalen Polizeibehörden an den Flughäfen und das Grenzwachtkorps für die Aufgaben im Zusammenhang mit der Ausreisekontrolle (Grunddaten nach Art. 109 g Abs. 2 Bst. a und Daten nach Art. 109 g Abs. 2 Bst. b, d, g und i–n);"
+            },
+            {
+              "marke": "g",
+              "text": "beauftragte Dritte nach Artikel 109 i ."
             }
           ]
         }
@@ -7547,7 +7619,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_109_h",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "8efa5e171d9a863934531a5669a885a29c1105cca35affbdc980c51c5acb63ee"
+      "sha": "845a181ef6135b44bfaee08f3680c9b9f449e6adc97622ce6b6e0cf59cad3109"
     },
     {
       "id": "bund/AIG/art_109_i",
@@ -8460,7 +8532,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "terroristische Straftaten: 1. Schreckung der Bevölkerung (Art. 258 StGB),"
+              "text": "terroristische Straftaten:"
+            },
+            {
+              "marke": "1",
+              "text": "Schreckung der Bevölkerung (Art. 258 StGB),"
             },
             {
               "marke": "2",
@@ -8505,6 +8581,10 @@
             {
               "marke": "12",
               "text": "Gewaltverbrechen, mit denen die Bevölkerung eingeschüchtert oder ein Staat oder eine internationale Organisation zu einem Tun oder Unterlassen genötigt werden soll;"
+            },
+            {
+              "marke": "b",
+              "text": "schwere Straftaten: die in Anhang 1 des Schengen-Informationsaustausch-Gesetzes vom 12. Juni 2009 aufgeführten Straftaten."
             }
           ]
         }
@@ -8513,7 +8593,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_111_j",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "31c503b4e736d18f3eb56647195a4921b166e6917d4f2bb9a96ca3765dac5b4e"
+      "sha": "01cf1fac91628d5f0dff607a9ce7da4fe0f19a36535128a3678f2050597d67e4"
     },
     {
       "id": "bund/AIG/art_112",
@@ -9001,7 +9081,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Luftverkehrsunternehmen beweist, dass: 1. die Fälschung oder Verfälschung eines Reisedokuments, Visums oder Aufenthaltstitels nicht offensichtlich erkennbar war,"
+              "text": "das Luftverkehrsunternehmen beweist, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "die Fälschung oder Verfälschung eines Reisedokuments, Visums oder Aufenthaltstitels nicht offensichtlich erkennbar war,"
             },
             {
               "marke": "2",
@@ -9018,6 +9102,10 @@
             {
               "marke": "5",
               "text": "aufgrund einer Störung des ETIAS die Überprüfung, ob eine gültige ETIAS-Reisegenehmigung vorliegt, nicht möglich war;"
+            },
+            {
+              "marke": "b",
+              "text": "das Luftverkehrsunternehmen glaubhaft macht, zur Beförderung einer Person genötigt worden zu sein."
             }
           ]
         },
@@ -9030,7 +9118,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/758/de#art_122_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "05fa0547135ab5743567841452c6264087632120fd6cdaa092e84d7b08237d56"
+      "sha": "b3dc4e9dfb56a6b8dd1334b6b6670adf817174b082b58e758abe9e82b6299e20"
     },
     {
       "id": "bund/AIG/art_122_b",

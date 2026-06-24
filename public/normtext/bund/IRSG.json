@@ -226,11 +226,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "in der Schweiz oder im Tatortstaat der Richter: 1. aus materiellrechtlichen Gründen den Verfolgten freigesprochen oder das Verfahren eingestellt hat, oder"
+              "text": "in der Schweiz oder im Tatortstaat der Richter:"
+            },
+            {
+              "marke": "1",
+              "text": "aus materiellrechtlichen Gründen den Verfolgten freigesprochen oder das Verfahren eingestellt hat, oder"
             },
             {
               "marke": "2",
               "text": "auf eine Sanktion verzichtet oder einstweilen von ihr abgesehen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sanktion vollzogen wurde oder nach dem Recht des Urteilsstaates nicht vollziehbar ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "seine Ausführung Zwangsmassnahmen erfordert und die Strafverfolgung oder die Vollstreckung nach schweizerischem Recht wegen absoluter Verjährung ausgeschlossen wäre."
             }
           ]
         },
@@ -243,7 +255,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/846_846_846/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "ffc78bca555d601a60f3d3ca88db5a31830de71d4cd76448660bb5fe0480c400"
+      "sha": "b0bba39712a4e1770e2a9d31c349a6a3451cc3adfa06711631b61734d87a1d9b"
     },
     {
       "id": "bund/IRSG/art_6",
@@ -1778,7 +1790,11 @@
             },
             {
               "marke": "b",
-              "text": "wenn der Ausgelieferte: 1. trotz Hinweis auf die Folgen das Hoheitsgebiet des ersuchenden Staates nicht innert 45 Tagen nach seiner bedingten oder endgültigen Freilassung verlassen hat, obwohl er die Möglichkeit dazu hatte, oder nach Verlassen dieses Gebiets dorthin zurückgekehrt ist, oder"
+              "text": "wenn der Ausgelieferte:"
+            },
+            {
+              "marke": "1",
+              "text": "trotz Hinweis auf die Folgen das Hoheitsgebiet des ersuchenden Staates nicht innert 45 Tagen nach seiner bedingten oder endgültigen Freilassung verlassen hat, obwohl er die Möglichkeit dazu hatte, oder nach Verlassen dieses Gebiets dorthin zurückgekehrt ist, oder"
             },
             {
               "marke": "2",
@@ -1791,7 +1807,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/846_846_846/de#art_38",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "60f7ab89027f8f6aedc6c2805f0b49d261a2ff5bdcb2d381d2e7886d899aa190"
+      "sha": "458584437f1e5915b5a654f5f6d4597faa696ff2343582ed062aded5708431b9"
     },
     {
       "id": "bund/IRSG/art_39",
@@ -4762,14 +4778,20 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Bundesgesetz vom 22. Januar 1892 betreffend die Auslieferung gegenüber dem Auslande wird aufgehoben."
+          "text": "Das Bundesgesetz vom 22. Januar 1892 betreffend die Auslieferung gegenüber dem Auslande wird aufgehoben.",
+          "items": [
+            {
+              "marke": "2",
+              "text": "– 3 …"
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/846_846_846/de#art_109",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "15977f7b23ac517dae558e1baade6b8178575f1824ecb28f1ea34101d86ba689"
+      "sha": "6172132d1d7b71f41cbdca39a93a54f7d2e716157070673a03206d34bd3be1e9"
     },
     {
       "id": "bund/IRSG/art_110",

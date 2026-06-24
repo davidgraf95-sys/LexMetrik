@@ -307,7 +307,11 @@
             },
             {
               "marke": "e",
-              "text": "die folgenden Familienglieder der Betriebsleiterin oder des Betriebsleiters, die in einem landwirtschaftlichen Betrieb mitarbeiten: 1. die Verwandten der Betriebsleiterin oder des Betriebsleiters in auf- und absteigender Linie sowie ihre Ehegatten oder eingetragenen Partnerinnen oder Partner,"
+              "text": "die folgenden Familienglieder der Betriebsleiterin oder des Betriebsleiters, die in einem landwirtschaftlichen Betrieb mitarbeiten:"
+            },
+            {
+              "marke": "1",
+              "text": "die Verwandten der Betriebsleiterin oder des Betriebsleiters in auf- und absteigender Linie sowie ihre Ehegatten oder eingetragenen Partnerinnen oder Partner,"
             },
             {
               "marke": "2",
@@ -332,7 +336,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de#art_1_j",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "8de7ff86470ce6a23bda078651fdfd57c0ad8ac2004b560350f2389bc03870e1"
+      "sha": "2f4a27121e07702ceb1e8f8fc06227ac1ce796c795d76138a178ad346eef2b8e"
     },
     {
       "id": "bund/BVV_2/art_1_k",
@@ -3113,12 +3117,76 @@
           "text": "Als Anlagen für das Vermögen einer Vorsorgeeinrichtung sind zulässig:",
           "items": [
             {
+              "marke": "a",
+              "text": "Bargeld;"
+            },
+            {
+              "marke": "b",
+              "text": "folgende Forderungen, die auf einen festen Geldbetrag lauten:"
+            },
+            {
+              "marke": "1",
+              "text": "Postcheck- und Bankguthaben,"
+            },
+            {
+              "marke": "2",
+              "text": "Geldmarktanlagen mit einer Laufzeit von bis zu 12 Monaten,"
+            },
+            {
+              "marke": "3",
+              "text": "Kassenobligationen,"
+            },
+            {
+              "marke": "4",
+              "text": "Anleihensobligationen, einschliesslich solcher mit Wandel- oder Optionsrechten,"
+            },
+            {
+              "marke": "5",
+              "text": "besicherte Anleihen,"
+            },
+            {
+              "marke": "6",
+              "text": "schweizerische Grundpfandtitel,"
+            },
+            {
+              "marke": "7",
+              "text": "Schuldanerkennungen von schweizerischen öffentlich-rechtlichen Körperschaften,"
+            },
+            {
+              "marke": "8",
+              "text": "Rückkaufswerte aus Kollektivversicherungsverträgen,"
+            },
+            {
+              "marke": "9",
+              "text": "im Falle von Anlagen, die auf einen gebräuchlichen, breit diversifizierten und weit verbreiteten Bond-Index ausgerichtet sind: die im Index enthaltenen Forderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "Immobilien im Allein- oder Miteigentum, einschliesslich Bauten im Baurecht sowie Bauland;"
+            },
+            {
+              "marke": "d",
+              "text": "Beteiligungen an Gesellschaften wie Aktien und Partizipationsscheine, ähnliche Wertschriften wie Genussscheine, sowie Genossenschaftsanteilscheine; Beteiligungen an Gesellschaften und ähnlichen Wertschriften sind zugelassen, wenn sie an einer Börse kotiert sind oder an einem anderen geregelten, dem Publikum offenstehenden Markt gehandelt werden;"
+            },
+            {
+              "marke": "dbis",
+              "text": "Anlagen in Infrastrukturen;"
+            },
+            {
+              "marke": "dter",
+              "text": "Anlagen in nicht kotierten Forderungen gegenüber Schuldnern ( Private Debt ) oder in Beteiligungen an nicht kotierten Gesellschaften ( Private Equity ), die:"
+            },
+            {
               "marke": "1",
               "text": "ihren Sitz in der Schweiz haben, und"
             },
             {
               "marke": "2",
               "text": "in der Schweiz operativ tätig sind;"
+            },
+            {
+              "marke": "e",
+              "text": "alternative Anlagen wie solche in Hedge Funds, Private Equity, Insurance Linked Securities und Rohstoffen."
             }
           ]
         },
@@ -3187,7 +3255,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de#art_53",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "940a53020731ad4f8c9fe391f706b7e99ad9a01c6afdeeac776e463645800f3c"
+      "sha": "e84b5de551040585ef0c7c7376385a4e39b8cc9ba3d4a7fa092efc44c1525dc1"
     },
     {
       "id": "bund/BVV_2/art_53_a",

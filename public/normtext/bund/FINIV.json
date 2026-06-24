@@ -263,7 +263,11 @@
             },
             {
               "marke": "b",
-              "text": "ihnen die Verwaltung von Kollektivvermögen einzig von folgenden Personen übertragen worden ist: 1. Bewilligungsträgern nach Artikel 2 Absatz 1 Buchstaben c und d sowie Absatz 2 Buchstaben f–i FINIG,"
+              "text": "ihnen die Verwaltung von Kollektivvermögen einzig von folgenden Personen übertragen worden ist:"
+            },
+            {
+              "marke": "1",
+              "text": "Bewilligungsträgern nach Artikel 2 Absatz 1 Buchstaben c und d sowie Absatz 2 Buchstaben f–i FINIG,"
             },
             {
               "marke": "2",
@@ -280,7 +284,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "c99a5699ee538d6424765a4b39dbc868a8550c6213a05c80115c896dc48ea131"
+      "sha": "bdea9a420739b086437ef6320c3d0364b60ab0daf8e943762a4511d4a8d3e174"
     },
     {
       "id": "bund/FINIV/art_8",
@@ -514,6 +518,30 @@
           "text": "Das Gesuch um Bewilligung für ein neues Finanzinstitut muss zu den mit der Verwaltung und Geschäftsführung betrauten Personen nach Artikel 11 Absätze 1 und 2 FINIG sowie zu den Inhaberinnen und Inhabern einer qualifizierten Beteiligung nach Artikel 11 Absatz 3 FINIG insbesondere folgende Angaben und Unterlagen enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "zu natürlichen Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "Angaben über Nationalität, Wohnsitz, qualifizierte Beteiligungen am Finanzinstitut oder an anderen Gesellschaften und hängige Gerichts- und Verwaltungsverfahren,"
+            },
+            {
+              "marke": "2",
+              "text": "einen von der betreffenden Person unterzeichneten Lebenslauf,"
+            },
+            {
+              "marke": "3",
+              "text": "Referenzen,"
+            },
+            {
+              "marke": "4",
+              "text": "einen Privatauszug aus dem Strafregister-Informationssystem VOSTRA und einen Betreibungsregisterauszug oder entsprechende ausländische Bestätigungen bei Wohnsitz im Ausland;"
+            },
+            {
+              "marke": "b",
+              "text": "zu Gesellschaften:"
+            },
+            {
               "marke": "1",
               "text": "die Statuten,"
             },
@@ -552,7 +580,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "eab349a344c60d1b1a6d23bba355d2455208bf876ef046f0324053e85d3048c2"
+      "sha": "77299f2798564d24ce2861d2cfc19323265c4d9d450c6fe89404042a26217eea"
     },
     {
       "id": "bund/FINIV/art_14",
@@ -972,6 +1000,22 @@
           "text": "Eine qualifizierte Geschäftsführerin oder ein qualifizierter Geschäftsführer erfüllt die Anforderungen an Ausbildung und Berufserfahrung im Zeitpunkt der Übernahme der Geschäftsführung, wenn sie oder er Folgendes nachweist:",
           "items": [
             {
+              "marke": "a",
+              "text": "eine Berufserfahrung von fünf Jahren:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Vermögensverwaltern in der Vermögensverwaltung für Dritte,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Trustees im Rahmen von Trusts; und"
+            },
+            {
+              "marke": "b",
+              "text": "eine Ausbildung von mindestens 40 Stunden:"
+            },
+            {
               "marke": "1",
               "text": "bei Vermögensverwaltern in der Vermögensverwaltung für Dritte,"
             },
@@ -998,7 +1042,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "12f3a8d5048c4c4c6aa979e01b3dd040d65eb5e50d49408333f39948c9dd834a"
+      "sha": "5596a9197433d7e7cb7a0951113685915885d074b9f7504214192e8e214380bf"
     },
     {
       "id": "bund/FINIV/art_26",
@@ -1081,7 +1125,11 @@
             },
             {
               "marke": "b",
-              "text": "sich der Vermögensverwalter oder der Trustee verpflichtet hat: 1. sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
+              "text": "sich der Vermögensverwalter oder der Trustee verpflichtet hat:"
+            },
+            {
+              "marke": "1",
+              "text": "sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
             },
             {
               "marke": "2",
@@ -1102,7 +1150,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "add517edd071f5e67e8c885361c865a5aa5ad3f814a2c9b114b150500bf36b2a"
+      "sha": "333db9775ef24176d55236245536f0a10b9ddd2c97db0f14bdbb9eeacbfad064"
     },
     {
       "id": "bund/FINIV/art_28",
@@ -1358,7 +1406,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Den verwalteten Vermögenswerten zuzurechnen sind sämtliche schweizerischen und ausländischen kollektiven Kapitalanlagen, die vom selben Verwalter verwaltet werden, unabhängig davon, ob er diese direkt oder über eine Übertragung verwaltet oder über eine Gesellschaft, mit der er verbunden ist durch: 1. eine einheitliche Geschäftsführung;"
+              "text": "Den verwalteten Vermögenswerten zuzurechnen sind sämtliche schweizerischen und ausländischen kollektiven Kapitalanlagen, die vom selben Verwalter verwaltet werden, unabhängig davon, ob er diese direkt oder über eine Übertragung verwaltet oder über eine Gesellschaft, mit der er verbunden ist durch:"
+            },
+            {
+              "marke": "1",
+              "text": "eine einheitliche Geschäftsführung;"
             },
             {
               "marke": "2",
@@ -1367,6 +1419,18 @@
             {
               "marke": "3",
               "text": "eine wesentliche direkte oder indirekte Beteiligung."
+            },
+            {
+              "marke": "b",
+              "text": "Der Wert der Vermögenswerte wird unter Berücksichtigung einer allfälligen Hebelwirkung mindestens auf Quartalsbasis errechnet."
+            },
+            {
+              "marke": "c",
+              "text": "Für kollektive Kapitalanlagen, die vor mehr als zwölf Monaten aufgesetzt wurden, kann der Schwellenwert auf der Basis des Durchschnittswerts der Vermögenswerte der letzten vier Quartale errechnet werden."
+            },
+            {
+              "marke": "d",
+              "text": "Der Wert der kollektiven Kapitalanlagen nach Artikel 24 Absatz 2 Buchstabe a Ziffer 2 FINIG berechnet sich aufgrund der Kapitalzusagen oder des Nominalwertes der betreffenden kollektiven Kapitalanlagen, sofern die diesen zugrunde liegenden Anlagen keinen Preis haben, der sich aus dem Handel an einem geregelten Markt ergibt."
             }
           ]
         },
@@ -1376,7 +1440,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Einzubeziehen sind Vermögenswerte folgender Vorsorgeeinrichtungen: 1. registrierter und nicht registrierter Vorsorgeeinrichtungen;"
+              "text": "Einzubeziehen sind Vermögenswerte folgender Vorsorgeeinrichtungen:"
+            },
+            {
+              "marke": "1",
+              "text": "registrierter und nicht registrierter Vorsorgeeinrichtungen;"
             },
             {
               "marke": "2",
@@ -1393,6 +1461,14 @@
             {
               "marke": "5",
               "text": "Freizügigkeitsstiftungen."
+            },
+            {
+              "marke": "b",
+              "text": "Ob der Schwellenwert der 100 Millionen Franken erreicht wird, errechnet der Verwalter auf Quartalsbasis."
+            },
+            {
+              "marke": "c",
+              "text": "Ob der Schwellenwert der 20 Prozent im obligatorischen Bereich erreicht wird, errechnet die Vorsorgeeinrichtung jährlich. Sie teilt den errechneten Wert dem Verwalter mit."
             }
           ]
         },
@@ -1409,7 +1485,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_34",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "d481f901a229988d41ea0d96741dc14b640fd5a3f504c28f1b7013204417c5aa"
+      "sha": "2ca27dee40cbe75e19ef4f63fda6959b2da155f3d5f8d52b2280258bff7bbabc"
     },
     {
       "id": "bund/FINIV/art_35",
@@ -1682,7 +1758,11 @@
             },
             {
               "marke": "b",
-              "text": "sich der Verwalter von Kollektivvermögen verpflichtet hat: 1. sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
+              "text": "sich der Verwalter von Kollektivvermögen verpflichtet hat:"
+            },
+            {
+              "marke": "1",
+              "text": "sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
             },
             {
               "marke": "2",
@@ -1703,7 +1783,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_42",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "9bcc3d7cdf0d67f213e554eab8f5c0e6257b4d60674e434de51dfe9302fe46d6"
+      "sha": "dad3303477d133eca5acdf1be84e1fedda5dac840506c8ea11ff782db19bf29e"
     },
     {
       "id": "bund/FINIV/art_43",
@@ -2026,7 +2106,11 @@
             },
             {
               "marke": "b",
-              "text": "Für jeden von der Fondsleitung verwalteten Anlagefonds werden mindestens folgende Aufgaben in der Schweiz wahrgenommen: 1. Entscheid über die Ausgabe von Anteilen;"
+              "text": "Für jeden von der Fondsleitung verwalteten Anlagefonds werden mindestens folgende Aufgaben in der Schweiz wahrgenommen:"
+            },
+            {
+              "marke": "1",
+              "text": "Entscheid über die Ausgabe von Anteilen;"
             },
             {
               "marke": "2",
@@ -2059,7 +2143,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_50",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "066371c1a9ac0d5b4453cbc4f9d74004f0270ffa3c407fd16136d138ef899fb7"
+      "sha": "6a0a786e531a2b80206e20082c796ca1ada3e67cea51121ea81bf9fd52719324"
     },
     {
       "id": "bund/FINIV/art_51",
@@ -2747,7 +2831,11 @@
             },
             {
               "marke": "b",
-              "text": "sich das Wertpapierhaus verpflichtet hat: 1. sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
+              "text": "sich das Wertpapierhaus verpflichtet hat:"
+            },
+            {
+              "marke": "1",
+              "text": "sie weder mit eigenen Forderungen zu verrechnen noch mit eigenen Vermögenswerten sicherzustellen,"
             },
             {
               "marke": "2",
@@ -2772,7 +2860,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_69",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "85211475df8ce403047af6afdec11a790ccd4c483ec6edce2170183ebb66cdd7"
+      "sha": "dcd1b16478a245bc6b373862b188b61ac730d3baf730755d9dd4a841011a075b"
     },
     {
       "id": "bund/FINIV/art_70",
@@ -3034,11 +3122,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Geschäfte in Effekten, die an einem Handelsplatz oder DLT-Handelssystem in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, sofern dem Handelsplatz oder DLT-Handelssystem die zu meldenden Tatsachen gestützt auf eine Vereinbarung nach Artikel 32 Absatz 3 FinfraG oder im Rahmen eines Informationsaustausches zwischen der FINMA und der zuständigen ausländischen Aufsichtsbehörde regelmässig mitgeteilt werden, wenn: 1. sie von der Zweigniederlassung eines schweizerischen Wertpapierhauses oder von einem ausländischen zugelassenen Teilnehmer getätigt werden, und"
+              "text": "Geschäfte in Effekten, die an einem Handelsplatz oder DLT-Handelssystem in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, sofern dem Handelsplatz oder DLT-Handelssystem die zu meldenden Tatsachen gestützt auf eine Vereinbarung nach Artikel 32 Absatz 3 FinfraG oder im Rahmen eines Informationsaustausches zwischen der FINMA und der zuständigen ausländischen Aufsichtsbehörde regelmässig mitgeteilt werden, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "sie von der Zweigniederlassung eines schweizerischen Wertpapierhauses oder von einem ausländischen zugelassenen Teilnehmer getätigt werden, und"
             },
             {
               "marke": "2",
               "text": "die Zweigniederlassung oder der ausländische Teilnehmer von der betreffenden ausländischen Aufsichtsbehörde zum Handel ermächtigt und im betreffenden Staat oder im Heimatstaat meldepflichtig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Geschäfte in ausländischen Effekten, die an einem Handelsplatz oder DLT-Handelssystem in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, die an einem anerkannten ausländischen Handelsplatz oder DLT-Handelssystem getätigt werden."
             }
           ]
         },
@@ -3051,7 +3147,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_75",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "6d5bf8d84f86cb522d2957af451a49428079884c15028a5dc44caebe6dab45e4"
+      "sha": "2ebb6d112a1979121db8b4cd7c357bc5819e26e39b590b0c0d07d3c8daa3611a"
     },
     {
       "id": "bund/FINIV/art_76",
@@ -3108,7 +3204,11 @@
             },
             {
               "marke": "b",
-              "text": "Sicherheiten, die vergleichbar sind mit denjenigen nach: 1. den Artikeln 22 und 23 FINIG im Falle von ausländischen Finanzinstituten, die Vermögenswerte verwalten oder eine Tätigkeit als Trustee ausüben (Art. 52 Abs. 1 Bst. a FINIG),"
+              "text": "Sicherheiten, die vergleichbar sind mit denjenigen nach:"
+            },
+            {
+              "marke": "1",
+              "text": "den Artikeln 22 und 23 FINIG im Falle von ausländischen Finanzinstituten, die Vermögenswerte verwalten oder eine Tätigkeit als Trustee ausüben (Art. 52 Abs. 1 Bst. a FINIG),"
             },
             {
               "marke": "2",
@@ -3134,7 +3234,11 @@
             },
             {
               "marke": "c",
-              "text": "einer Aufsicht unterstehen: 1. nach den Artikeln 61 und 62 FINIG im Falle von ausländischen Finanz-instituten, die Vermögenswerte verwalten oder eine Tätigkeit als Trustee ausüben,"
+              "text": "einer Aufsicht unterstehen:"
+            },
+            {
+              "marke": "1",
+              "text": "nach den Artikeln 61 und 62 FINIG im Falle von ausländischen Finanz-instituten, die Vermögenswerte verwalten oder eine Tätigkeit als Trustee ausüben,"
             },
             {
               "marke": "2",
@@ -3151,7 +3255,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_77",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b6f94bd2c9daaf5e1416202dede255086cae109f89013ba7313a1e782433bda8"
+      "sha": "4f418f21b4865e56cb0c7177ac847df39f12107a35b51d49dbb8b29bb2377ff3"
     },
     {
       "id": "bund/FINIV/art_78",
@@ -3171,7 +3275,11 @@
             },
             {
               "marke": "b",
-              "text": "unter ihnen eine bezeichnen, die für die Beziehungen verantwortlich ist: 1. zur FINMA und zur Aufsichtsorganisation im Falle von Artikel 52 Absatz 1 Buchstabe a FINIG,"
+              "text": "unter ihnen eine bezeichnen, die für die Beziehungen verantwortlich ist:"
+            },
+            {
+              "marke": "1",
+              "text": "zur FINMA und zur Aufsichtsorganisation im Falle von Artikel 52 Absatz 1 Buchstabe a FINIG,"
             },
             {
               "marke": "2",
@@ -3188,7 +3296,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_78",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "2a7414ef99cf114b69cc321c4e6ea41530c3bc16654c342fa6d948129e9a5730"
+      "sha": "72e857eda156b6dca7a7fd782bd66df37eb6e8db8002f885bba90c8545e2bc65"
     },
     {
       "id": "bund/FINIV/art_79",
@@ -3212,7 +3320,11 @@
             },
             {
               "marke": "b",
-              "text": "gegenüber im Finanzbereich tätigen Unternehmungen oder Immobiliengesellschaften, wenn: 1. das ausländische Finanzinstitut mit ihnen eine wirtschaftliche Einheit bildet, oder"
+              "text": "gegenüber im Finanzbereich tätigen Unternehmungen oder Immobiliengesellschaften, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "das ausländische Finanzinstitut mit ihnen eine wirtschaftliche Einheit bildet, oder"
             },
             {
               "marke": "2",
@@ -3247,7 +3359,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/763/de#art_79",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "99d292d3fe30dfaeb995bbb9dd632b0028f552e63cbcc42f4d864f50f3e758fd"
+      "sha": "443086d19b492af4ce03a2d80a9ab63233ea3c4ea26d6cec4a95b61eea2f4309"
     },
     {
       "id": "bund/FINIV/art_80",

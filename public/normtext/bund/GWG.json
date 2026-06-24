@@ -502,7 +502,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "weiss oder den begründeten Verdacht hat, dass die in die Geschäftsbeziehung involvierten Vermögenswerte: 1. 1. im Zusammenhang mit einer strafbaren Handlung nach Artikel 260 ter oder 305 bis StGB stehen,"
+              "text": "weiss oder den begründeten Verdacht hat, dass die in die Geschäftsbeziehung involvierten Vermögenswerte:"
+            },
+            {
+              "marke": "1",
+              "text": "1. im Zusammenhang mit einer strafbaren Handlung nach Artikel 260 ter oder 305 bis StGB stehen,"
             },
             {
               "marke": "2",
@@ -515,6 +519,14 @@
             {
               "marke": "4",
               "text": "der Terrorismusfinanzierung (Art. 260 quinquies Abs. 1 StGB) dienen;"
+            },
+            {
+              "marke": "b",
+              "text": "Verhandlungen zur Aufnahme einer Geschäftsbeziehung wegen eines begründeten Verdachts nach Buchstabe a abbricht;"
+            },
+            {
+              "marke": "c",
+              "text": "aufgrund der nach Artikel 6 Absatz 2 Buchstabe d durchgeführten Abklärungen weiss oder Grund zur Annahme hat, dass die aufgrund von Artikel 22 a Absatz 2 oder 3 weitergeleiteten Daten einer Person oder Organisation den Daten eines Vertragspartners, einer wirtschaftlich berechtigten oder einer zeichnungsberechtigten Person einer Geschäftsbeziehung oder einer Transaktion entsprechen."
             }
           ]
         },
@@ -557,7 +569,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "23698ffd35f2a2b553432eb003917c21df8a387c303c891bd3e3321ec87f3697"
+      "sha": "0c18e122a53edeb0c0e5daaeb6f39b92ed169d77f42c4a143be8d6479ab2842b"
     },
     {
       "id": "bund/GWG/art_9_a",
@@ -1334,7 +1346,11 @@
             },
             {
               "marke": "c",
-              "text": "Gewähr für eine einwandfreie Geschäftstätigkeit bieten und sicherstellen, dass die von ihnen mit der Kontrolle betrauten Personen und Prüfgesellschaften: 1. die erforderlichen Fachkenntnisse aufweisen,"
+              "text": "Gewähr für eine einwandfreie Geschäftstätigkeit bieten und sicherstellen, dass die von ihnen mit der Kontrolle betrauten Personen und Prüfgesellschaften:"
+            },
+            {
+              "marke": "1",
+              "text": "die erforderlichen Fachkenntnisse aufweisen,"
             },
             {
               "marke": "2",
@@ -1343,6 +1359,10 @@
             {
               "marke": "3",
               "text": "von der Geschäftsleitung und der Verwaltung der zu kontrollierenden Finanzintermediäre unabhängig sind;"
+            },
+            {
+              "marke": "d",
+              "text": "sicherstellen, dass die von ihnen mit der Kontrolle betrauten Prüfgesellschaften sowie leitende Prüferinnen und Prüfer die Voraussetzungen nach Artikel 24 a erfüllen."
             }
           ]
         },
@@ -1355,7 +1375,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/de#art_24",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "2cc6095f623cba345e90cbac3d14b863f20114b0f8815a04f898472080a28ae6"
+      "sha": "fd885da667855e951b0a3bf94daa3c13f7286c15a0c7e14c41a071c82d0a07b7"
     },
     {
       "id": "bund/GWG/art_24_a",
@@ -1764,11 +1784,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "sie die Informationen ausschliesslich verwendet: 1. zu Analysezwecken im Rahmen der Bekämpfung der Geldwäscherei und von deren Vortaten, der organisierten Kriminalität oder der Terrorismusfinanzierung, oder"
+              "text": "sie die Informationen ausschliesslich verwendet:"
+            },
+            {
+              "marke": "1",
+              "text": "zu Analysezwecken im Rahmen der Bekämpfung der Geldwäscherei und von deren Vortaten, der organisierten Kriminalität oder der Terrorismusfinanzierung, oder"
             },
             {
               "marke": "2",
               "text": "für die Einleitung eines Strafverfahrens wegen Geldwäscherei und deren Vortaten, der organisierten Kriminalität oder der Terrorismusfinanzierung oder zur Substantiierung eines Rechtshilfegesuches im Rahmen eines solchen Strafverfahrens;"
+            },
+            {
+              "marke": "b",
+              "text": "sie die Informationen nicht zur Verfolgung von Straftaten verwendet, die nach schweizerischem Recht keine Vortaten zur Geldwäscherei darstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "sie die Informationen nicht als Beweismittel verwendet; und"
+            },
+            {
+              "marke": "d",
+              "text": "das Amts- oder Berufsgeheimnis gewahrt wird."
             }
           ]
         },
@@ -1785,7 +1821,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "69c52b8a3d39366921be3b96459425b4a83c91324b45679f14281638244cbaec"
+      "sha": "821798208143bff271cdbaf3f4352bec4833af2201bad4da2da437e1429c1dc8"
     },
     {
       "id": "bund/GWG/art_31",

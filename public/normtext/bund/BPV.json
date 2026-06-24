@@ -255,7 +255,11 @@
             },
             {
               "marke": "b",
-              "text": "das Arbeitsverhältnis während der Aus- oder der Weiterbildung oder innerhalb der folgenden Fristen seit Abschluss der Aus- oder der Weiterbildung auflösen und nicht unterbruchslos ein neues Arbeitsverhältnis bei einer Verwaltungseinheit nach Artikel 1 eingehen: 1. Kostenanteil unter 50 000 Franken: innerhalb von zwei Jahren,"
+              "text": "das Arbeitsverhältnis während der Aus- oder der Weiterbildung oder innerhalb der folgenden Fristen seit Abschluss der Aus- oder der Weiterbildung auflösen und nicht unterbruchslos ein neues Arbeitsverhältnis bei einer Verwaltungseinheit nach Artikel 1 eingehen:"
+            },
+            {
+              "marke": "1",
+              "text": "Kostenanteil unter 50 000 Franken: innerhalb von zwei Jahren,"
             },
             {
               "marke": "2",
@@ -276,7 +280,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "cf8048993f509e5c7d22fe6062bd3b1700db9df985b291ed7aa8785da88cdb18"
+      "sha": "3d4c3bae75b435ceb5d302c77a4396e575f20299b3ee3e65e8e8cf55afcad177"
     },
     {
       "id": "bund/BPV/art_5",
@@ -3965,11 +3969,19 @@
             },
             {
               "marke": "c",
-              "text": "das Kind kostenpflichtig betreut wird: 1. in einer Betreuungsstätte oder einem Tageselternverein, die ein teil- oder vollzeitliches Betreuungsangebot für Kinder im Vorschulalter anbieten, oder"
+              "text": "das Kind kostenpflichtig betreut wird:"
+            },
+            {
+              "marke": "1",
+              "text": "in einer Betreuungsstätte oder einem Tageselternverein, die ein teil- oder vollzeitliches Betreuungsangebot für Kinder im Vorschulalter anbieten, oder"
             },
             {
               "marke": "2",
               "text": "durch Privatpersonen, mit denen ein der Sozialversicherungspflicht unterstelltes Vertragsverhältnis besteht; und"
+            },
+            {
+              "marke": "d",
+              "text": "das gemeinsame jährliche Bruttoeinkommen der in einer Lebensgemeinschaft lebenden Personen nach Buchstabe a oder das jährliche Bruttoeinkommen der alleinstehenden erziehungsberechtigten Person, jeweils einschliesslich des 13. Monatslohns, nicht höher als 240 000 Franken ist."
             }
           ]
         }
@@ -3978,7 +3990,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "ab77cbb3b50b711520a8555660898e46e275d15ef94657069609561e143fbafa"
+      "sha": "cc4a40208cf222adbd437c406b21b10a133d29d9c3973ae27a163ee810201961"
     },
     {
       "id": "bund/BPV/art_75_c",
@@ -5071,11 +5083,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Vorteil offeriert wird von: 1. einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
+              "text": "der Vorteil offeriert wird von:"
+            },
+            {
+              "marke": "1",
+              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
             },
             {
               "marke": "2",
               "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein Zusammenhang zwischen der Vorteilsgewährung und dem Beschaffungs- oder Entscheidprozess nicht ausgeschlossen werden kann."
             }
           ]
         },
@@ -5092,7 +5112,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_93",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "0bbda997a4186ef770ae3a5c268323747ff00b0b905a3105d414679edb7ef11b"
+      "sha": "6c8810bf505456d78baf719992fa9f2f63b4959726ba88f4e7a251e3acb71fd1"
     },
     {
       "id": "bund/BPV/art_93_a",
@@ -5112,11 +5132,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Einladung offeriert wird von: 1. einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
+              "text": "die Einladung offeriert wird von:"
+            },
+            {
+              "marke": "1",
+              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
             },
             {
               "marke": "2",
               "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein Zusammenhang zwischen der Einladung und dem Beschaffungs- oder Entscheidprozess nicht ausgeschlossen werden kann."
             }
           ]
         },
@@ -5129,7 +5157,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_93_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "1cdbd489085077faf3952b08acf5f204d5b26d6884e5a20276f7ca02c528e0fa"
+      "sha": "9cd0b256fa9654f004310120777d3f409a5a852fed4d0a2c2933bb61725c9a1a"
     },
     {
       "id": "bund/BPV/art_94",
@@ -6632,6 +6660,46 @@
           "text": "Es kann im Einvernehmen mit dem Eidgenössischen Departement des Innern abweichende Bestimmungen erlassen:",
           "items": [
             {
+              "marke": "a",
+              "text": "für das Personal der Zollämter und des Grenzwachtkorps im Bereich von:"
+            },
+            {
+              "marke": "1",
+              "text": "Artikel 5: Kaderförderung und Managemententwicklung,"
+            },
+            {
+              "marke": "[tab]",
+              "text": "1 bis . Artikel 10 b Absätze 1, 2 Buchstabe d, 3 und 8: Gesundheitsschutz und Arbeitszeiten bei Einsätzen im Rahmen von festen Dienstplänen,"
+            },
+            {
+              "marke": "2",
+              "text": "Artikel 24: Arbeitsort und Mobilität,"
+            },
+            {
+              "marke": "3",
+              "text": "Artikel 64: Arbeitszeit,"
+            },
+            {
+              "marke": "4",
+              "text": "Artikel 65: Mehrarbeit und Überzeit,"
+            },
+            {
+              "marke": "5",
+              "text": "Artikel 69: Bewaffnung,"
+            },
+            {
+              "marke": "6",
+              "text": "Artikel 72: Spesen,"
+            },
+            {
+              "marke": "7",
+              "text": "Artikel 102: Strafrechtliche Verantwortlichkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Steuerinspektorinnen und Steuerinspektoren der Eidgenössischen Steuerverwaltung in den Bereichen:"
+            },
+            {
               "marke": "1",
               "text": "Artikel 24: Arbeitsort und Mobilität,"
             },
@@ -6646,6 +6714,10 @@
             {
               "marke": "4",
               "text": "Artikel 72: Spesen."
+            },
+            {
+              "marke": "c",
+              "text": "für die Schatzungsexpertinnen und Schatzungsexperten des Bundesamtes für Bauten und Logistik im Bereich der Spesen (Art. 72)."
             }
           ]
         }
@@ -6654,7 +6726,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "48e3e1a6798a3b89b86f5344811471246da5eb0caa3108092571d67214c53983"
+      "sha": "594211468e82d5f1164f754d255a3a4bf5dcf3a42c6066132335def5e011e0ae"
     },
     {
       "id": "bund/BPV/art_116_a",

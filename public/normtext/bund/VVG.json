@@ -2656,7 +2656,11 @@
             },
             {
               "marke": "g",
-              "text": "Unternehmen, die zwei der drei folgenden Grössen überschreiten: 1. Bilanzsumme: 20 Millionen Franken,"
+              "text": "Unternehmen, die zwei der drei folgenden Grössen überschreiten:"
+            },
+            {
+              "marke": "1",
+              "text": "Bilanzsumme: 20 Millionen Franken,"
             },
             {
               "marke": "2",
@@ -2681,7 +2685,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_98_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "721ec852b26e938cb39d2894dca4814c9ad7faadbaea39ab08ac53457a29d58f"
+      "sha": "6a87bc9cc80694f6673ed1695c9d1871623bcb8a337ddfd47380d1568360086b"
     },
     {
       "id": "bund/VVG/art_99",

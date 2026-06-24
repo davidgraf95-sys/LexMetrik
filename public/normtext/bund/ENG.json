@@ -2037,7 +2037,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Höchstanteil von je 0,1 Rappen/kWh für die: 1. wettbewerblichen Ausschreibungen,"
+              "text": "ein Höchstanteil von je 0,1 Rappen/kWh für die:"
+            },
+            {
+              "marke": "1",
+              "text": "wettbewerblichen Ausschreibungen,"
             },
             {
               "marke": "2",
@@ -2046,6 +2050,14 @@
             {
               "marke": "3",
               "text": "Entschädigung nach Artikel 34;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Höchstanteil von 0,2 Rappen/kWh für die Investitionsbeiträge nach Artikel 26 Absatz 1 für Wasserkraftanlagen mit einer Leistung von mehr als 10 MW;"
+            },
+            {
+              "marke": "c",
+              "text": "ein Höchstanteil von 0,2 Rappen/kWh für die Marktprämie für Elektrizität aus Grosswasserkraftanlagen."
             }
           ]
         },
@@ -2066,7 +2078,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/762/de#art_36",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "86dd2bf0a9dc232fb46a90e1d124126fb38f3ee227f07088e9999c198327fc5c"
+      "sha": "96ccdd27643746bd3ba07ab205dfb9dc9b0f628c129c47236211fa5d4df046c4"
     },
     {
       "id": "bund/ENG/art_37",
@@ -2160,7 +2172,11 @@
             },
             {
               "marke": "b",
-              "text": "des Jahres 2036 für: 1. Einmalvergütungen nach den Artikeln 25 und 25 a ,"
+              "text": "des Jahres 2036 für:"
+            },
+            {
+              "marke": "1",
+              "text": "Einmalvergütungen nach den Artikeln 25 und 25 a ,"
             },
             {
               "marke": "2",
@@ -2193,7 +2209,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/762/de#art_38",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "fda94925dce32a1a42dee83a3c8eb80ea95773d70bfe071ec13ff82fd661acd8"
+      "sha": "2e04800e75545dbbab8813e380812705c455c7d5f754da6918f7651e0ca1024f"
     },
     {
       "id": "bund/ENG/art_39",
@@ -3621,7 +3637,11 @@
             },
             {
               "marke": "e",
-              "text": "sie ausgeschlossen sind in: 1. Mooren und Moorlandschaften nach Artikel 78 Absatz 5 der Bundesverfassung,"
+              "text": "sie ausgeschlossen sind in:"
+            },
+            {
+              "marke": "1",
+              "text": "Mooren und Moorlandschaften nach Artikel 78 Absatz 5 der Bundesverfassung,"
             },
             {
               "marke": "2",
@@ -3664,7 +3684,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/762/de#art_71_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "22d2284b82c94c49e00af5991a92e2cce765871aac37d1b8d33c3886a604b67b"
+      "sha": "e7f12d7f29f5957adc222426d4db1c8edd09b9dec37d1cce150355f06820e2c6"
     },
     {
       "id": "bund/ENG/art_71_b",
@@ -3762,7 +3782,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Ausschlüsse nach Artikel 19 Absatz 4 von: 1. Wasserkraftanlagen mit einer Leistung von weniger als 1 MW,"
+              "text": "die Ausschlüsse nach Artikel 19 Absatz 4 von:"
+            },
+            {
+              "marke": "1",
+              "text": "Wasserkraftanlagen mit einer Leistung von weniger als 1 MW,"
             },
             {
               "marke": "2",
@@ -3771,6 +3795,14 @@
             {
               "marke": "3",
               "text": "gewissen Biomasseanlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Beschränkung der Teilnahme am Einspeisevergütungssystem auf Neuanlagen und damit der Ausschluss von erheblichen Anlageerweiterungen oder -erneuerungen;"
+            },
+            {
+              "marke": "c",
+              "text": "der 1. Januar 2013 als Stichdatum für die Neuanlage."
             }
           ]
         },
@@ -3795,7 +3827,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/762/de#art_72",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "7ad2d82096cd992bcd1c2ba54bfb27e303ea1870c03e19d82eca5569836a686b"
+      "sha": "9367aa979e76b9a7a3fdb52c94055344df894cb04b7db1ce907714228cf9eef3"
     },
     {
       "id": "bund/ENG/art_73",

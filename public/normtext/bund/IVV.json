@@ -2970,7 +2970,11 @@
             },
             {
               "marke": "b",
-              "text": "die versicherte Person ein ärztliches Attest vorlegt, das: 1. ihre Arbeitsunfähigkeit von mindestens 50 Prozent bestätigt, und"
+              "text": "die versicherte Person ein ärztliches Attest vorlegt, das:"
+            },
+            {
+              "marke": "1",
+              "text": "ihre Arbeitsunfähigkeit von mindestens 50 Prozent bestätigt, und"
             },
             {
               "marke": "2",
@@ -2987,7 +2991,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "49e6a04b8911677bf7446da6cddf879f9f03c2851f76b6ce6e8d032d5f8b3da9"
+      "sha": "31a947b869f20b777468c1c4192b90044ef080cc7d26c8a344d159442a503d49"
     },
     {
       "id": "bund/IVV/art_30_bis",
@@ -3616,7 +3620,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Hilfeleistungen in den Bereichen nach Artikel 39 c Buchstaben a–c pro alltägliche Lebensverrichtung, die bei der Festsetzung der Hilflosenentschädigung festgehalten wurde: 1. bei leichter Hilflosigkeit: 20 Stunden,"
+              "text": "für Hilfeleistungen in den Bereichen nach Artikel 39 c Buchstaben a–c pro alltägliche Lebensverrichtung, die bei der Festsetzung der Hilflosenentschädigung festgehalten wurde:"
+            },
+            {
+              "marke": "1",
+              "text": "bei leichter Hilflosigkeit: 20 Stunden,"
             },
             {
               "marke": "2",
@@ -3625,6 +3633,14 @@
             {
               "marke": "3",
               "text": "bei schwerer Hilflosigkeit: 40 Stunden;"
+            },
+            {
+              "marke": "b",
+              "text": "für Hilfeleistungen in den Bereichen nach Artikel 39 c Buchstaben d–g: insgesamt 60 Stunden;"
+            },
+            {
+              "marke": "c",
+              "text": "für die Überwachung nach Artikel 39 c Buchstabe h: 120 Stunden."
             }
           ]
         },
@@ -3659,7 +3675,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de#art_39_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "4809a51ebe25e3bf128092b76c0b5ed67f3eca57ab29cb83a6e535668689077c"
+      "sha": "a8bd2ea76f90eaaef1968fa374fc9c1a81a25f3d40b9d653bb9d286ba1dab8d8"
     },
     {
       "id": "bund/IVV/art_39_f",
@@ -3714,7 +3730,11 @@
             },
             {
               "marke": "b",
-              "text": "das Elffache des Assistenzbeitrags pro Monat, wenn: 1. die versicherte Person mit der Person, mit der sie verheiratet ist oder in eingetragener Partnerschaft lebt oder eine faktische Lebensgemeinschaft führt oder in gerader Linie verwandt ist, im selben Haushalt lebt, und"
+              "text": "das Elffache des Assistenzbeitrags pro Monat, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die versicherte Person mit der Person, mit der sie verheiratet ist oder in eingetragener Partnerschaft lebt oder eine faktische Lebensgemeinschaft führt oder in gerader Linie verwandt ist, im selben Haushalt lebt, und"
             },
             {
               "marke": "2",
@@ -3727,7 +3747,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de#art_39_g",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "2812e9fd509e49ce5c16bd7286382b77fd370b2396802a0d68c1e33074803a9d"
+      "sha": "7d6871728f2ca103e948d533fda5cf8dab41b7445304c08d52e5ecc00ec9fea2"
     },
     {
       "id": "bund/IVV/art_39_h",
@@ -4069,7 +4089,11 @@
             },
             {
               "marke": "d",
-              "text": "bezogen auf die einzelnen Sachverständigen, die Sachverständigen-Zweierteams und die Gutachterstellen: 1. Anzahl in Auftrag gegebener Gutachten, unterteilt nach mono-, bi- und polydisziplinären Gutachten,"
+              "text": "bezogen auf die einzelnen Sachverständigen, die Sachverständigen-Zweierteams und die Gutachterstellen:"
+            },
+            {
+              "marke": "1",
+              "text": "Anzahl in Auftrag gegebener Gutachten, unterteilt nach mono-, bi- und polydisziplinären Gutachten,"
             },
             {
               "marke": "2",
@@ -4098,7 +4122,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de#art_41_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "29fbfed16e231437efc6779034be0fa421f19902890c43a8d6a60cdc73d0aa4e"
+      "sha": "eac28c39746f75d34f6c81256824b345abde90ffad97560b8a180e7cf650b4d2"
     },
     {
       "id": "bund/IVV/art_42",

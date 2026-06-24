@@ -411,7 +411,11 @@
             },
             {
               "marke": "b",
-              "text": "können sie, soweit dies von allgemeinem Interesse ist, nach Anhören der Betroffenen veröffentlichen: 1. die Prüfergebnisse der Konformitätsbewertung serienmässig hergestellter Anlagen (Art. 40),"
+              "text": "können sie, soweit dies von allgemeinem Interesse ist, nach Anhören der Betroffenen veröffentlichen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Prüfergebnisse der Konformitätsbewertung serienmässig hergestellter Anlagen (Art. 40),"
             },
             {
               "marke": "2",
@@ -440,7 +444,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1122_1122_1122/de#art_10_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "b844e2e6f5dae6d974cd0256a4fab5c08bfdf4835c645c000c989614590317a5"
+      "sha": "515ea2d0c24a7a2a5efb0ef29b92f64d9a273d6a4ac39b4ad903393477d528b7"
     },
     {
       "id": "bund/USG/art_10_f",
@@ -840,11 +844,31 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei jeder Wohneinheit: 1. zur Be- und Entlüftung der lärmempfindlichen Räume eine kontrollierte Wohnraumlüftung installiert wird, und – ein Kühlsystem vorhanden ist oder"
+              "text": "bei jeder Wohneinheit:"
+            },
+            {
+              "marke": "1",
+              "text": "zur Be- und Entlüftung der lärmempfindlichen Räume eine kontrollierte Wohnraumlüftung installiert wird, und"
+            },
+            {
+              "marke": "–",
+              "text": "ein Kühlsystem vorhanden ist oder"
             },
             {
               "marke": "–",
               "text": "mindestens ein lärmempfindlicher Raum über ein Fenster verfügt, bei dem die Immissionsgrenzwerte eingehalten sind,"
+            },
+            {
+              "marke": "2",
+              "text": "mindestens die Hälfte der lärmempfindlichen Räume über ein Fenster verfügt, bei dem die Immissionsgrenzwerte eingehalten sind, oder"
+            },
+            {
+              "marke": "3",
+              "text": "mindestens ein lärmempfindlicher Raum über ein Fenster verfügt, bei dem die Immissionsgrenzwerte eingehalten sind, sowie ein privat nutzbarer Aussenraum zur Verfügung steht, bei dem die Immissionsgrenzwerte eingehalten sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "der bauliche Mindestschutz nach Artikel 21 gegen Aussen- und Innenlärm angemessen und verhältnismässig verschärft wird."
             }
           ]
         },
@@ -861,7 +885,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1122_1122_1122/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "067d0965fb8a7e04fe8e094d7eac77286e89f7a0f5561408882ff3bebd13d919"
+      "sha": "240b8dc37fb24965f38a79203b43de66433494c50b82356264e5dbffc2507e59"
     },
     {
       "id": "bund/USG/art_23",
@@ -2317,6 +2341,22 @@
           "text": "Der Bundesrat legt die Abgabesätze fest und berücksichtigt dabei insbesondere die zu erwartenden Kosten sowie den Typ der Deponie. Der Abgabesatz beträgt höchstens:",
           "items": [
             {
+              "marke": "a",
+              "text": "für im Inland abgelagerte Abfälle:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Deponien für nicht oder wenig verschmutzte Abfälle: 8 Fr./t,"
+            },
+            {
+              "marke": "2",
+              "text": "bei den übrigen Deponien: 25 Fr./t;"
+            },
+            {
+              "marke": "b",
+              "text": "für im Ausland abgelagerte Abfälle:"
+            },
+            {
               "marke": "1",
               "text": "bei Untertagedeponien: 30 Fr./t,"
             },
@@ -2339,7 +2379,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1122_1122_1122/de#art_32_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "7df2f8005ff590f3b680c908cc6f59d3ef25571905e3a679e1f66df831f45a38"
+      "sha": "72013c7992eff79cf7dbadecdd923f13876b6339ddf1c971863f96d9c235b63b"
     },
     {
       "id": "bund/USG/art_32_e_bis",
@@ -2491,12 +2531,68 @@
           "text": "Die Abgeltungen nach Artikel 32 e bis werden nur geleistet, wenn die getroffenen Massnahmen umweltverträglich und wirtschaftlich sind und dem Stand der Technik entsprechen. Sie werden den Kantonen nach Massgabe des Aufwandes ausbezahlt und betragen:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 1: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "b",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absätze 2 und 4 Buchstabe b:"
+            },
+            {
+              "marke": "1",
+              "text": "40 Prozent der anrechenbaren Kosten bei Standorten, auf die nach dem 31. Januar 1996 keine Abfälle mehr gelangt sind,"
+            },
+            {
+              "marke": "2",
+              "text": "30 Prozent der anrechenbaren Kosten bei Standorten, auf die nach dem 31. Januar 1996, längstens jedoch bis zum 31. Januar 2001, Abfälle gelangt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absätze 3 und 5: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "d",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 4 Buchstabe a:"
+            },
+            {
               "marke": "1",
               "text": "60 Prozent der anrechenbaren Kosten bei Standorten, auf die seit dem 31. Januar 1996 keine Abfälle mehr gelangt sind,"
             },
             {
               "marke": "2",
               "text": "30 Prozent der anrechenbaren Kosten bei Standorten, auf die nach dem 31. Januar 1996, längstens jedoch bis zum 31. Januar 2001, Abfälle gelangt sind;"
+            },
+            {
+              "marke": "e",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absätze 6 und 7: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "f",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 8: 60 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "g",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 9: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "h",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 10: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "i",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 11: 40 Prozent der anrechenbaren Kosten;"
+            },
+            {
+              "marke": "j",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 12 Buchstabe a: pauschal 3000 Franken pro Standort;"
+            },
+            {
+              "marke": "k",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 12 Buchstabe b: pauschal 5000 Franken pro Standort;"
+            },
+            {
+              "marke": "l",
+              "text": "für Abgeltungen nach Artikel 32 e bis Absatz 12 Buchstabe c: pauschal 10 000 Franken pro Standort."
             }
           ]
         },
@@ -2513,7 +2609,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1122_1122_1122/de#art_32_e_ter",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "8bba1f567845140fb02d94603938014d4641b00d377f948748861adfed5d2013"
+      "sha": "4b1485b86be27f51c9cd3370ba9ca36e97a30bf6c029dac69e26bc30e7d6d891"
     },
     {
       "id": "bund/USG/art_33",

@@ -1089,11 +1089,19 @@
             },
             {
               "marke": "b",
-              "text": "dem Bundesrat Aufträge erteilt: 1. eine Planung vorzunehmen oder die Schwerpunkte einer Planung zu ändern, oder"
+              "text": "dem Bundesrat Aufträge erteilt:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Planung vorzunehmen oder die Schwerpunkte einer Planung zu ändern, oder"
             },
             {
               "marke": "2",
               "text": "für die verselbstständigten Einheiten strategische Ziele festzulegen oder diese Ziele zu ändern;"
+            },
+            {
+              "marke": "c",
+              "text": "Grundsatz- oder Planungsbeschlüsse fasst."
             }
           ]
         },
@@ -1114,7 +1122,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/510/de#art_28",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260302",
-      "sha": "d29c32e0b9f762c6dcc25cde60bd31ee0bbeb92f79e5e1ada1f7a9eb47de01fc"
+      "sha": "b6f878474bcf5526680664096aebde30aebacaab67305f932217a1740109efb8"
     },
     {
       "id": "bund/PARLG/art_29",
@@ -5427,11 +5435,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf Herausgabe von: 1. Protokollen der Bundesratssitzungen,"
+              "text": "auf Herausgabe von:"
+            },
+            {
+              "marke": "1",
+              "text": "Protokollen der Bundesratssitzungen,"
             },
             {
               "marke": "2",
               "text": "Unterlagen, die im Interesse des Staatsschutzes oder der Nachrichtendienste als geheim klassifiziert sind oder deren Kenntnisnahme durch Unberechtigte den Landesinteressen einen schweren Schaden zufügen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen als Zeuginnen oder Zeugen einzuvernehmen; für die Vorladung und die Vorführung gilt Artikel 153 Absätze 3 und 4 sinngemäss."
             }
           ]
         },
@@ -5444,7 +5460,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/510/de#art_154",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260302",
-      "sha": "e6b884539e74252681803f720c8102282ad4969243c6455cdcce5e4d8b180b81"
+      "sha": "6faad8bcd55422596f4d27d5e7219570a8d9a8e6835ddb5460265231422d6af5"
     },
     {
       "id": "bund/PARLG/art_154_a",

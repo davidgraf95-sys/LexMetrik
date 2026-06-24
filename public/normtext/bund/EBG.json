@@ -1290,7 +1290,11 @@
             },
             {
               "marke": "c",
-              "text": "die Genehmigung: 1. der Begründung und der Beendigung des Arbeitsverhältnisses mit der Geschäftsleiterin oder dem Geschäftsleiter,"
+              "text": "die Genehmigung:"
+            },
+            {
+              "marke": "1",
+              "text": "der Begründung und der Beendigung des Arbeitsverhältnisses mit der Geschäftsleiterin oder dem Geschäftsleiter,"
             },
             {
               "marke": "2",
@@ -1299,6 +1303,14 @@
             {
               "marke": "3",
               "text": "des Geschäftsberichts und des Beschlusses über die Verwendung eines Gewinns;"
+            },
+            {
+              "marke": "d",
+              "text": "die Genehmigung der strategischen Ziele und die jährliche Überprüfung ihrer Erreichung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Entlastung des Verwaltungsrates."
             }
           ]
         },
@@ -1315,7 +1327,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1958/335_341_347/de#art_9_t",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "964b9e01ce5075cea212b29b78a97456fb12768c9c5395adf888a8c4d82bf959"
+      "sha": "d11000344de5981bd14ffb3e1f20dcefde3426abe949e8b7ff7589313d5356ad"
     },
     {
       "id": "bund/EBG/art_9_u",
@@ -4499,6 +4511,34 @@
           "text": "Der Ausbau der Infrastruktur hat folgende Ziele:",
           "items": [
             {
+              "marke": "a",
+              "text": "Personenverkehr:"
+            },
+            {
+              "marke": "1",
+              "text": "Verbesserung der Verbindungen mit europäischen Metropolitanräumen,"
+            },
+            {
+              "marke": "2",
+              "text": "Verbesserung der Verbindungen zwischen den schweizerischen Metropolitanräumen und innerhalb derselben,"
+            },
+            {
+              "marke": "3",
+              "text": "Verbesserung der Verbindungen im schweizerischen Städtenetz und mit den Zentren der Metropolitanräume,"
+            },
+            {
+              "marke": "4",
+              "text": "Ausbau des Regional- und des Agglomerationsverkehrs,"
+            },
+            {
+              "marke": "5",
+              "text": "Verbesserung der Erschliessung der Berggebiete und der Tourismusregionen;"
+            },
+            {
+              "marke": "b",
+              "text": "Güterverkehr:"
+            },
+            {
               "marke": "1",
               "text": "Verlagerung des alpenquerenden Schwerverkehrs,"
             },
@@ -4517,7 +4557,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1958/335_341_347/de#art_48_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "37a7ceb929476c26fbf78cf8268d51bf685d5832165b5213cd6fbd449b6853b9"
+      "sha": "c6496dcb33c495abe0195a0af00fb890a00d85a7dc1cd1a20e70d54f333d32ae"
     },
     {
       "id": "bund/EBG/art_48_b",

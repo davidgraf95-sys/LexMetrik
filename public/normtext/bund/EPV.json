@@ -198,7 +198,11 @@
             },
             {
               "marke": "k",
-              "text": "zur betroffenen Person: 1. Vorname, Name, Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort; falls die Person nicht in der Schweiz wohnhaft ist, den Aufenthaltsort,"
+              "text": "zur betroffenen Person:"
+            },
+            {
+              "marke": "1",
+              "text": "Vorname, Name, Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort; falls die Person nicht in der Schweiz wohnhaft ist, den Aufenthaltsort,"
             },
             {
               "marke": "1bis",
@@ -223,6 +227,10 @@
             {
               "marke": "6",
               "text": "Herkunftsland;"
+            },
+            {
+              "marke": "l",
+              "text": "Kontaktdaten der Ärztin oder des Arztes, des Spitals, der Stelle des Spitals nach Artikel 12 Absatz 2 oder der öffentlichen oder privaten Institution des Gesundheitswesens."
             }
           ]
         }
@@ -231,7 +239,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "d43339726f26d59809763287cf1e61de60c769f8be02204f83dcb7c4b39e4413"
+      "sha": "76f6836145b087372073d4ca1fe356f4584921f5ac942b30bc0440105aa27ed7"
     },
     {
       "id": "bund/EPV/art_7",
@@ -267,7 +275,11 @@
             },
             {
               "marke": "e",
-              "text": "zur betroffenen Person: 1. Vorname, Name sowie Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort; falls die Person nicht in der Schweiz wohnhaft ist, den Aufenthaltsort,"
+              "text": "zur betroffenen Person:"
+            },
+            {
+              "marke": "1",
+              "text": "Vorname, Name sowie Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort; falls die Person nicht in der Schweiz wohnhaft ist, den Aufenthaltsort,"
             },
             {
               "marke": "1bis",
@@ -280,6 +292,10 @@
             {
               "marke": "3",
               "text": "das Geschlecht;"
+            },
+            {
+              "marke": "f",
+              "text": "Kontaktdaten der Ärztin oder des Arztes, des Spitals, der Stelle des Spitals nach Artikel 12 Absatz 2 oder der öffentlichen oder privaten Institution des Gesundheitswesens."
             }
           ]
         }
@@ -288,7 +304,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "cec0a2f1cef2f58a34be85140a26a5d73074610ed4bcd2190ec956f4b2d16e49"
+      "sha": "e49c12234513e89a161873e270fbfe7004c7481519d00b57b7ca73eb585502f6"
     },
     {
       "id": "bund/EPV/art_8",
@@ -320,7 +336,11 @@
             },
             {
               "marke": "e",
-              "text": "zur betroffenen Person: 1. Vorname, Name, Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort,"
+              "text": "zur betroffenen Person:"
+            },
+            {
+              "marke": "1",
+              "text": "Vorname, Name, Adresse und Telefonnummer, wenn dies für Massnahmen nach den Artikeln 15 sowie 33–38 EpG notwendig ist, sonst nur die Initialen des Vor- und Nachnamens und den Wohnort,"
             },
             {
               "marke": "1bis",
@@ -333,6 +353,14 @@
             {
               "marke": "3",
               "text": "Geschlecht;"
+            },
+            {
+              "marke": "f",
+              "text": "Kontaktdaten der auftraggebenden Ärztin oder des auftraggebenden Arztes;"
+            },
+            {
+              "marke": "g",
+              "text": "Kontaktdaten des Laboratoriums."
             }
           ]
         },
@@ -345,7 +373,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_8",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "bb6f3a9cf3be9e5b026a30dfe09a1c6fe940f4b562027ae2df8c0e6654012bf0"
+      "sha": "942927fc981b2f3c0f66a4f63c041e7d12955131d575c99a29b970e58c684bc3"
     },
     {
       "id": "bund/EPV/art_9",
@@ -359,6 +387,26 @@
           "absatz": null,
           "text": "Die Meldung von epidemiologischen Befunden von Ärztinnen und Ärzten, Spitälern und anderen öffentlichen oder privaten Institutionen des Gesundheitswesens beinhaltet je nach Krankheitserreger die folgenden Angaben:",
           "items": [
+            {
+              "marke": "a",
+              "text": "zu den therapieassoziierten Infektionen:"
+            },
+            {
+              "marke": "1",
+              "text": "Identifizierung des Krankheitserregers und allfällige Resistenzprofile,"
+            },
+            {
+              "marke": "2",
+              "text": "Anzahl der Infektionen pro Spitaltag beziehungsweise pro medizinischem Eingriff für jedes Spital über einen bestimmten Zeitraum,"
+            },
+            {
+              "marke": "3",
+              "text": "Prävalenz der Infektionen an bestimmten Tagen;"
+            },
+            {
+              "marke": "b",
+              "text": "zu den Ausbrüchen therapieassoziierter Infektionen:"
+            },
             {
               "marke": "1",
               "text": "epidemiologische Merkmale (z. B. Krankheitserreger, Typisierungen),"
@@ -386,6 +434,10 @@
             {
               "marke": "7",
               "text": "Unternehmens-Identifikationsnummer (UID) und Betriebs-Identifikationsnummer (BUR-Nummer) der betroffenen Einrichtung, sofern die Meldung elektronisch übermittelt wird;"
+            },
+            {
+              "marke": "c",
+              "text": "Kontaktdaten der Ärztin oder des Arztes, des Spitals, der Stelle des Spitals nach Artikel 12 Absatz 2 oder der öffentlichen oder privaten Institution des Gesundheitswesens."
             }
           ]
         }
@@ -394,7 +446,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1cdd112de1f3b5ddd7f158b5f007a5c368f497df0be934459d00f93febb07379"
+      "sha": "8703ff267981ba7b15a0db36496f5a403e88cbd872f4215e99ee34d5bfcf7f00"
     },
     {
       "id": "bund/EPV/art_10",
@@ -1110,7 +1162,11 @@
             },
             {
               "marke": "b",
-              "text": "sind in verschiedene Kategorien von Impfungen unterteilt, namentlich: 1. empfohlene Basisimpfungen, die dem Schutz der individuellen und öffentlichen Gesundheit dienen,"
+              "text": "sind in verschiedene Kategorien von Impfungen unterteilt, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "empfohlene Basisimpfungen, die dem Schutz der individuellen und öffentlichen Gesundheit dienen,"
             },
             {
               "marke": "2",
@@ -1135,7 +1191,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_32",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "7929e84b9af43dc54cc01c062392434e2d988fa6e12a17978eb703c28a19980a"
+      "sha": "19a8631345e62654c642f7bb6a46233d922cd9c62a24c3c59f2ee7e9f27172fa"
     },
     {
       "id": "bund/EPV/art_33",
@@ -2716,7 +2772,11 @@
             },
             {
               "marke": "h",
-              "text": "bei Bedarf und fallweise aus Fachleuten und je einer Vertreterin oder einem Vertreter weiterer betroffener Institutionen, insbesondere: 1. des Bundesamtes für Umwelt (BAFU), des Bundesamtes für wirtschaftliche Landesversorgung und des Schweizerischen Heilmittelinstituts,"
+              "text": "bei Bedarf und fallweise aus Fachleuten und je einer Vertreterin oder einem Vertreter weiterer betroffener Institutionen, insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "des Bundesamtes für Umwelt (BAFU), des Bundesamtes für wirtschaftliche Landesversorgung und des Schweizerischen Heilmittelinstituts,"
             },
             {
               "marke": "2",
@@ -2729,6 +2789,10 @@
             {
               "marke": "4",
               "text": "des VKS;"
+            },
+            {
+              "marke": "i",
+              "text": "bei Bedarf und fallweise aus regionalen Koordinatorinnen und Koordinatoren der Kantone."
             }
           ]
         }
@@ -2737,7 +2801,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/298/de#art_82",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "38724e850f893fb1730522301c0ee6b73acdd35b2f2578644e13174f958d333d"
+      "sha": "0e8e887c78a61b55e332207d9deb420fb6ee4bd63a6dbda9e3a33f87f4e91af2"
     },
     {
       "id": "bund/EPV/art_83",

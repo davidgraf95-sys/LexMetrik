@@ -802,12 +802,44 @@
           "text": "Die Grundversorgung umfasst die folgenden Dienste:",
           "items": [
             {
+              "marke": "a",
+              "text": "den öffentlichen Telefondienst, der das Führen von nationalen und internationalen Telefongesprächen in Echtzeit mit einer Nummer ermöglicht;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "einen Eintrag im Verzeichnis des öffentlichen Telefondienstes bei Beanspruchung des Dienstes nach Buchstabe a; Haushalte haben Anspruch auf zwei Einträge;"
+            },
+            {
+              "marke": "d",
+              "text": "den Zugangsdienst zum Internet mit einer der folgenden spezifizierten Übertragungsraten:"
+            },
+            {
+              "marke": "1",
+              "text": "10 Mbit/s für den Download und 1 Mbit/s für den Upload,"
+            },
+            {
+              "marke": "2",
+              "text": "80 Mbit/s für den Download und 8 Mbit/s für den Upload;"
+            },
+            {
+              "marke": "e",
+              "text": "die folgenden Dienste für Hörbehinderte:"
+            },
+            {
               "marke": "1",
               "text": "Bereitstellen eines Transkriptionsdienstes für Hörbehinderte, der auch Notrufe abdeckt, sowie eines SMS-Vermittlungsdienstes, die beide rund um die Uhr verfügbar sind,"
             },
             {
               "marke": "2",
               "text": "Bereitstellen eines Vermittlungsdienstes über Videotelefonie, der von Montag bis Freitag von 8 bis 21 Uhr und Samstag, Sonntag sowie an vom Bundesrecht anerkannten Feiertagen von 10 bis 17 Uhr verfügbar ist;"
+            },
+            {
+              "marke": "f",
+              "text": "den Verzeichnis- und Vermittlungsdienst für Sehbehinderte und Personen mit eingeschränkter Mobilität: Zugang zu den Verzeichnisdaten der Kundinnen und Kunden aller Anbieterinnen des öffentlichen Telefondienstes in der Schweiz über eine Sprachauskunft in den drei Amtssprachen und durch das Bereitstellen eines Vermittlungsdienstes rund um die Uhr; sofern die Grundversorgungskonzessionärin einen Kommunikationsherstellungsdienst anbietet, ermöglicht der Vermittlungsdienst auch die Verbindung zu Kundinnen und Kunden, die nach Artikel 11 Absatz 4 nicht in einem Verzeichnis eingetragen, aber damit einverstanden sind, im Rahmen eines Kommunikationsherstellungsdienstes erreicht zu werden."
             }
           ]
         },
@@ -824,7 +856,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/166/de#art_15",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260301",
-      "sha": "eeda87c8a35fe9974cf89a530eb70dcef1e8b83ad6b30d98a6d9dc73fdb51cae"
+      "sha": "ed3d7806668669071b4282de127ac199173a5ac8c660b86acfa4b3e31db28d0c"
     },
     {
       "id": "bund/FDV/art_16",
@@ -1019,6 +1051,46 @@
           "text": "Die Grundversorgungskonzessionärin misst die Qualität der Grundversorgungsangebote und erstattet dem BAKOM jährlich Bericht. Es gelten die folgenden Qualitätskriterien:",
           "items": [
             {
+              "marke": "a",
+              "text": "betreffend die Anschlüsse:"
+            },
+            {
+              "marke": "1",
+              "text": "Frist für die Inbetriebsetzung eines Anschlusses,"
+            },
+            {
+              "marke": "2",
+              "text": "Anzahl Fehlermeldungen pro Anschluss und Jahr,"
+            },
+            {
+              "marke": "3",
+              "text": "Reparaturzeit;"
+            },
+            {
+              "marke": "b",
+              "text": "betreffend den öffentlichen Telefondienst:"
+            },
+            {
+              "marke": "1",
+              "text": "Verfügbarkeit des Dienstes,"
+            },
+            {
+              "marke": "2",
+              "text": "Verbindungsaufbauzeit,"
+            },
+            {
+              "marke": "3",
+              "text": "Sprachübertragungsqualität,"
+            },
+            {
+              "marke": "4",
+              "text": "Häufigkeit des erfolglosen Verbindungsaufbaus infolge von Netzüberlastung oder Netzfehlern;"
+            },
+            {
+              "marke": "c",
+              "text": "betreffend den Zugangsdienst zum Internet:"
+            },
+            {
               "marke": "1",
               "text": "Verfügbarkeit des Dienstes,"
             },
@@ -1033,6 +1105,14 @@
             {
               "marke": "4",
               "text": "Datenübertragungsqualität;"
+            },
+            {
+              "marke": "d",
+              "text": "die Reaktionszeit der Dienste für Menschen mit einer Behinderung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Abrechnungsgenauigkeit der Rechnung."
             }
           ]
         },
@@ -1053,7 +1133,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/166/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260301",
-      "sha": "91eee9659a5c9a2dbf5af404836ca29970d63dc6ae4cda91e09dab30641fd216"
+      "sha": "baaf21afb673a8d96395022403946a5f2864d3a3f32dafe39b81f1be6135aea9"
     },
     {
       "id": "bund/FDV/art_22",
@@ -1068,12 +1148,44 @@
           "text": "Es gelten folgende Preisobergrenzen (ohne Mehrwertsteuer):",
           "items": [
             {
+              "marke": "a",
+              "text": "öffentlicher Telefondienst mit einer Nummer (Art. 15 Abs. 1 Bst. a) mit ein oder zwei Einträgen im Verzeichnis (Art. 15 Abs. 1 Bst. c), einschliesslich Anschluss (Art. 16): 23.45 Franken pro Monat;"
+            },
+            {
+              "marke": "b",
+              "text": "Zugangsdienst zum Internet:"
+            },
+            {
+              "marke": "1",
+              "text": "mit einer spezifizierten Übertragungsrate von 10/1 Mbit/s (Art. 15 Abs. 1 Bst. d Ziff. 1), einschliesslich Anschluss (Art. 16): 45 Franken pro Monat,"
+            },
+            {
+              "marke": "2",
+              "text": "mit einer spezifizierten Übertragungsrate von 80/8 Mbit/s (Art. 15 Abs. 1 Bst. d Ziff. 2), einschliesslich Anschluss (Art. 16): 60 Franken pro Monat;"
+            },
+            {
+              "marke": "c",
+              "text": "öffentlicher Telefondienst mit einer Nummer (Art. 15 Abs. 1 Bst. a) mit ein oder zwei Einträgen im Verzeichnis (Art. 15 Abs. 1 Bst. c) und Zugangsdienst zum Internet:"
+            },
+            {
               "marke": "1",
               "text": "mit einer spezifizierten Übertragungsrate von 10/1 Mbit/s (Art. 15 Abs. 1 Bst. d Ziff. 1), einschliesslich Anschluss (Art. 16): 50 Franken pro Monat,"
             },
             {
               "marke": "2",
               "text": "mit einer spezifizierten Übertragungsrate von 80/8 Mbit/s (Art. 15 Abs. 1 Bst. d Ziff. 2), einschliesslich Anschluss (Art. 16): 65 Franken pro Monat;"
+            },
+            {
+              "marke": "d",
+              "text": "Bereitstellung der Angebote nach den Buchstaben a–c: einmalig 40 Franken bei Abschluss des Vertrags; ein Wechsel zwischen diesen Angeboten muss kostenlos sein;"
+            },
+            {
+              "marke": "e",
+              "text": "nationale Verbindungen im Rahmen des öffentlichen Telefondienstes (Art. 15 Abs. 1 Bst. a) zu Festnetzanschlüssen, verrechnet nach Anzahl Sekunden und aufgerundet auf die nächsten 10 Rappen: 7.5 Rappen pro Minute;"
+            },
+            {
+              "marke": "f",
+              "text": "Inanspruchnahme des Transkriptionsdienstes (Art. 15 Abs. 1 Bst. e Ziff. 1), verrechnet nach Anzahl Sekunden und aufgerundet auf die nächsten 10 Rappen: 3.4 Rappen pro Minute."
             }
           ]
         },
@@ -1086,7 +1198,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/166/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260301",
-      "sha": "34b8484bdf08e82f6a9fb6fc05e23750a053bd4b834da93077028b02e6566758"
+      "sha": "c9e6cbd8ad4c1e6cf878f635f2b886426ea0248c110e22d31e4a6dc2141f92d1"
     },
     {
       "id": "bund/FDV/art_22_a",

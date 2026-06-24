@@ -155,11 +155,31 @@
           "items": [
             {
               "marke": "a",
-              "text": "die folgenden Personen, sofern sie ihren rechtmässigen und tatsächlichen Wohnsitz nicht in der Schweiz haben: 1. Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
+              "text": "die folgenden Personen, sofern sie ihren rechtmässigen und tatsächlichen Wohnsitz nicht in der Schweiz haben:"
+            },
+            {
+              "marke": "1",
+              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
             },
             {
               "marke": "2",
               "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 2 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden;"
+            },
+            {
+              "marke": "abis",
+              "text": "Staatsangehörige anderer ausländischer Staaten, die nicht das Recht haben, sich in der Schweiz niederzulassen;"
+            },
+            {
+              "marke": "b",
+              "text": "juristische Personen oder vermögensfähige Gesellschaften ohne juristische Persönlichkeit, die ihren statutarischen oder tatsächlichen Sitz im Ausland haben;"
+            },
+            {
+              "marke": "c",
+              "text": "juristische Personen oder vermögensfähige Gesellschaften ohne juristische Persönlichkeit, die ihren statutarischen und tatsächlichen Sitz in der Schweiz haben und in denen Personen im Ausland eine beherrschende Stellung innehaben;"
+            },
+            {
+              "marke": "d",
+              "text": "natürliche und juristische Personen sowie vermögensfähige Gesellschaften ohne juristische Persönlichkeit, die nicht Personen im Ausland nach den Buchstaben a, a bis und c sind, wenn sie ein Grundstück für Rechnung von Personen im Ausland erwerben."
             }
           ]
         },
@@ -172,7 +192,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230701",
-      "sha": "77e674a02e67a016250def1666d2c5edcc19b36e53d1c09e2f364e39292e38a2"
+      "sha": "273fffd1ebedb0a5c165a84fcaddeca51bf21dca104c8622aa9e0c079c13ab25"
     },
     {
       "id": "bund/BEWG/art_6",
@@ -305,7 +325,11 @@
             },
             {
               "marke": "j",
-              "text": "die folgenden Personen, sofern sie als Grenzgänger in der Region des Arbeitsorts eine Zweitwohnung erwerben: 1. Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
+              "text": "die folgenden Personen, sofern sie als Grenzgänger in der Region des Arbeitsorts eine Zweitwohnung erwerben:"
+            },
+            {
+              "marke": "1",
+              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
             },
             {
               "marke": "2",
@@ -318,7 +342,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230701",
-      "sha": "63569aa3cfeba715ef890b426d52ba7fbd8a5f8a72e534b5a6a289d2a033df04"
+      "sha": "832e60e809e3d152ae63165e7eb885743206f6b4eeb46a00a4fa4475e0026b88"
     },
     {
       "id": "bund/BEWG/art_7_a",

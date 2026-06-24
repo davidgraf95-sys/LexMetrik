@@ -1001,7 +1001,11 @@
             },
             {
               "marke": "b",
-              "text": "sie aufgrund einer Weisung erfolgt, die: 1. nichtig ist,"
+              "text": "sie aufgrund einer Weisung erfolgt, die:"
+            },
+            {
+              "marke": "1",
+              "text": "nichtig ist,"
             },
             {
               "marke": "2",
@@ -1014,6 +1018,10 @@
             {
               "marke": "4",
               "text": "wegen eines Erklärungsirrtums oder eines Übermittlungsfehlers, wegen absichtlicher Täuschung oder begründeter Furcht angefochten wurde; Artikel 26 des Obligationenrechts bleibt vorbehalten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Gutschrift von Bucheffekten im Effektenkonto der Erwerberin oder des Erwerbers der Weisung nicht entspricht oder nicht innerhalb der für die Aus­führung üblichen Frist erfolgt."
             }
           ]
         },
@@ -1038,7 +1046,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230101",
-      "sha": "b113be1ea7b80c35801d95419197c5ece4532be55191ad2e108f5a99f2e64ed4"
+      "sha": "e6bbd00187f25b6ddf404b15ef9ea99a646e9855436d6cce2e096c76b9fecce6"
     },
     {
       "id": "bund/BEG/art_28",

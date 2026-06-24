@@ -131,6 +131,50 @@
           "text": "Der Ersatznachweis nach Artikel 23 n Absatz 8 des Bundesgesetzes vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit (BWIS) muss folgende Daten enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "über die Person, deren Reisedokument beschlagnahmt oder sichergestellt worden ist:"
+            },
+            {
+              "marke": "1",
+              "text": "Foto,"
+            },
+            {
+              "marke": "2",
+              "text": "Namen und Vornamen,"
+            },
+            {
+              "marke": "3",
+              "text": "Geschlecht,"
+            },
+            {
+              "marke": "4",
+              "text": "Geburtsort,"
+            },
+            {
+              "marke": "5",
+              "text": "Geburtsdatum,"
+            },
+            {
+              "marke": "6",
+              "text": "Heimatorte,"
+            },
+            {
+              "marke": "7",
+              "text": "Staatsangehörigkeiten,"
+            },
+            {
+              "marke": "8",
+              "text": "Körpergrösse,"
+            },
+            {
+              "marke": "9",
+              "text": "Unterschrift;"
+            },
+            {
+              "marke": "b",
+              "text": "über das beschlagnahmte oder sichergestellte Reisedokument, falls vorhanden:"
+            },
+            {
               "marke": "1",
               "text": "Kategorie,"
             },
@@ -145,6 +189,10 @@
             {
               "marke": "4",
               "text": "Gültigkeitsdauer;"
+            },
+            {
+              "marke": "c",
+              "text": "einen Vermerk, dass die Person nicht aus der Schweiz ausreisen darf."
             }
           ]
         },
@@ -165,7 +213,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_3_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230901",
-      "sha": "2bf1ba64a50e387c6e309e6a5c52b199f2994d5a69f1cafd2de304ecd6cd6679"
+      "sha": "1750aeb10463b147e6bc7a34b4fa1d529ce3a376366194dd0d09ca34e6d78419"
     },
     {
       "id": "bund/ZENTV/art_4",

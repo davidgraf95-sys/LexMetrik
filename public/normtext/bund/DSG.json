@@ -165,7 +165,11 @@
             },
             {
               "marke": "c",
-              "text": "besonders schützenswerte Personendaten: 1. Daten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten,"
+              "text": "besonders schützenswerte Personendaten:"
+            },
+            {
+              "marke": "1",
+              "text": "Daten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten,"
             },
             {
               "marke": "2",
@@ -186,6 +190,38 @@
             {
               "marke": "6",
               "text": "Daten über Massnahmen der sozialen Hilfe;"
+            },
+            {
+              "marke": "d",
+              "text": "Bearbeiten : jeder Umgang mit Personendaten, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Beschaffen, Speichern, Aufbewahren, Verwenden, Verändern, Bekanntgeben, Archivieren, Löschen oder Vernichten von Daten;"
+            },
+            {
+              "marke": "e",
+              "text": "Bekanntgeben : das Übermitteln oder Zugänglichmachen von Personendaten;"
+            },
+            {
+              "marke": "f",
+              "text": "Profiling : jede Art der automatisier ten Bearbeitung von Personendaten, die darin besteht, dass diese Daten verwendet werden, um bestimmte persön liche Aspekte, die sich auf eine na türliche Person beziehen, zu bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen;"
+            },
+            {
+              "marke": "g",
+              "text": "Profiling mit hohem Risiko: Profiling, das ein hohes Risiko für die Persönlichkeit oder die Grundrechte der betroffenen Person mit sich bringt, indem es zu einer Verknüpfung von Daten führt, die eine Beurteilung wesentlicher Aspekte der Persönlichkeit einer natürlichen Person erlaubt;"
+            },
+            {
+              "marke": "h",
+              "text": "Verletzung der Datensicherheit: eine Verletzung der Sicherheit, die dazu führt, dass Personendaten unbeabsichtigt oder widerrechtlich verlorengehen, gelöscht, vernichtet oder verändert werden oder Unbefugten offengelegt oder zugänglich gemacht werden;"
+            },
+            {
+              "marke": "i",
+              "text": "Bundesorgan : Behörde oder Dienststelle des Bundes oder Person, die mit öffentlichen Aufgaben des Bundes betraut ist;"
+            },
+            {
+              "marke": "j",
+              "text": "Verantwortlicher : private Person oder Bundesorgan, die oder das allein oder zusammen mit anderen über den Zweck und die Mittel der Bearbeitung entscheidet;"
+            },
+            {
+              "marke": "k",
+              "text": "Auftragsbearbeiter : private Person oder Bundesorgan, die oder das im Auftrag des Verantwortlichen Personendaten bearbeitet."
             }
           ]
         }
@@ -194,7 +230,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "b65c5d6d149152daa8f67cf277e1e6e6511803f66a3c0d77e3824300a3cc70f2"
+      "sha": "c1ed99de0812af47eaf385eac0655c79a3276d99259e019d18774a2afedb18be"
     },
     {
       "id": "bund/DSG/art_6",
@@ -652,12 +688,44 @@
           "text": "Abweichend von Artikel 16 Absätze 1 und 2 dürfen in den folgenden Fällen Personendaten ins Ausland bekanntgegeben werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "Die betroffene Person hat ausdrücklich in die Bekanntgabe eingewilligt."
+            },
+            {
+              "marke": "b",
+              "text": "Die Bekanntgabe steht in unmittelbarem Zusammenhang mit dem Abschluss oder der Abwicklung eines Vertrags:"
+            },
+            {
+              "marke": "1",
+              "text": "zwischen dem Verantwortlichen und der betroffenen Person; oder"
+            },
+            {
+              "marke": "2",
+              "text": "zwischen dem Verantwortlichen und seiner Vertragspartnerin oder seinem Vertragspartner im Interesse der betroffenen Person."
+            },
+            {
+              "marke": "c",
+              "text": "Die Bekanntgabe ist notwendig für:"
+            },
+            {
               "marke": "1",
               "text": "die Wahrung eines überwiegenden öffentlichen Interesses; oder"
             },
             {
               "marke": "2",
               "text": "die Feststellung, Ausübung oder Durchsetzung von Rechtsansprüchen vor einem Gericht oder einer anderen zuständigen ausländischen Behörde."
+            },
+            {
+              "marke": "d",
+              "text": "Die Bekanntgabe ist notwendig, um das Leben oder die körperliche Unversehrtheit der betroffenen Person oder eines Dritten zu schützen, und es ist nicht möglich, innerhalb einer angemessenen Frist die Einwilligung der betroffenen Person einzuholen."
+            },
+            {
+              "marke": "e",
+              "text": "Die betroffene Person hat die Daten allgemein zugänglich gemacht und eine Bearbeitung nicht ausdrücklich untersagt."
+            },
+            {
+              "marke": "f",
+              "text": "Die Daten stammen aus einem gesetzlich vorgesehenen Register, das öffentlich oder Personen mit einem schutzwürdigen Interesse zugänglich ist, soweit im Einzelfall die gesetzlichen Voraussetzungen der Einsichtnahme erfüllt sind."
             }
           ]
         },
@@ -670,7 +738,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "f6a74a85a04c57f30df2995bdddd81bc4b496823601f05b7b11d51777caf2425"
+      "sha": "81345803b104aeb31755f4df2e7a9bbaf290a4febfaec5733697b220bb88a200"
     },
     {
       "id": "bund/DSG/art_18",
@@ -789,6 +857,30 @@
           "text": "Der Verantwortliche kann die Mitteilung der Informationen in den folgenden Fällen einschränken, aufschieben oder darauf verzichten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Überwiegende Interessen Dritter erfordern die Massnahme."
+            },
+            {
+              "marke": "b",
+              "text": "Die Information vereitelt den Zweck der Bearbeitung."
+            },
+            {
+              "marke": "c",
+              "text": "Der Verantwortliche ist eine private Person und die folgenden Voraussetzungen sind erfüllt:"
+            },
+            {
+              "marke": "1",
+              "text": "Überwiegende Interessen des Verantwortlichen erfordern die Massnahme."
+            },
+            {
+              "marke": "2",
+              "text": "Der Verantwortliche gibt die Personendaten nicht Dritten bekannt."
+            },
+            {
+              "marke": "d",
+              "text": "Der Verantwortliche ist ein Bundesorgan und eine der folgenden Voraussetzungen ist erfüllt:"
+            },
+            {
               "marke": "1",
               "text": "Die Massnahme ist wegen überwiegender öffentlicher Interessen, insbesondere der inneren oder der äusseren Sicherheit der Schweiz, erforderlich."
             },
@@ -807,7 +899,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_20",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "3b76a37bc51f4259636f6eb09a391ffa8fbcf36585891476b64582bdd0a42cb3"
+      "sha": "566d95f67092e431191e65503f7654342f3d055d37f3a7d492b0a4b7a31e6d50"
     },
     {
       "id": "bund/DSG/art_21",
@@ -1101,6 +1193,22 @@
           "text": "Darüber hinaus ist es in den folgenden Fällen möglich, die Auskunft zu verweigern, einzuschränken oder aufzuschieben:",
           "items": [
             {
+              "marke": "a",
+              "text": "Der Verantwortliche ist eine private Person und die folgenden Voraussetzungen sind erfüllt:"
+            },
+            {
+              "marke": "1",
+              "text": "Überwiegende Interessen des Verantwortlichen erfordern die Massnahme."
+            },
+            {
+              "marke": "2",
+              "text": "Der Verantwortliche gibt die Personendaten nicht Dritten bekannt."
+            },
+            {
+              "marke": "b",
+              "text": "Der Verantwortliche ist ein Bundesorgan, und eine der folgenden Voraussetzungen ist erfüllt:"
+            },
+            {
               "marke": "1",
               "text": "Die Massnahme ist wegen überwiegender öffentlicher Interessen, insbesondere der inneren oder der äusseren Sicherheit der Schweiz, erforderlich."
             },
@@ -1123,7 +1231,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_26",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "16f7eda9de6c7201bd254a399f8fdab881901d78e97a54ce5a7a4096e7e7ca3d"
+      "sha": "86eb2d0a97702583067d3a561e468290ab032cff504516b5a07fe399237fe2a9"
     },
     {
       "id": "bund/DSG/art_27",
@@ -1280,6 +1388,42 @@
           "text": "Ein überwiegendes Interesse des Verantwortlichen fällt insbesondere in folgenden Fällen in Betracht:",
           "items": [
             {
+              "marke": "a",
+              "text": "Der Verantwortliche bearbeitet die Personendaten über die Vertragspartnerin oder den Vertragspartner in unmittelbarem Zusammenhang mit dem Abschluss oder der Abwicklung eines Vertrags."
+            },
+            {
+              "marke": "b",
+              "text": "Der Verantwortliche steht mit einer anderen Person in wirtschaftlichem Wettbewerb oder wird in wirtschaftlichen Wettbewerb treten und bearbeitet zu diesem Zweck Personendaten, die Dritten nicht bekanntgegeben werden; nicht als Dritte im Rahmen dieser Bestimmung gelten Unternehmen, die zum selben Konzern gehören wie der Verantwortliche."
+            },
+            {
+              "marke": "c",
+              "text": "Der Verantwortliche bearbeitet Personendaten zur Prüfung der Kreditwürdigkeit der betroffenen Person, wobei die folgenden Voraussetzungen erfüllt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "Es handelt sich weder um besonders schützenswerte Personendaten noch um ein Profiling mit hohem Risiko."
+            },
+            {
+              "marke": "2",
+              "text": "Die Daten werden Dritten nur bekanntgegeben, wenn diese die Daten für den Abschluss oder die Abwicklung eines Vertrags mit der betroffenen Person benötigen."
+            },
+            {
+              "marke": "3",
+              "text": "Die Daten sind nicht älter als zehn Jahre."
+            },
+            {
+              "marke": "4",
+              "text": "Die betroffene Person ist volljährig."
+            },
+            {
+              "marke": "d",
+              "text": "Der Verantwortliche bearbeitet die Personendaten beruflich und ausschliesslich zur Veröffentlichung im redaktionellen Teil eines periodisch erscheinenden Mediums oder die Daten dienen ihm, falls keine Veröffentlichung erfolgt, ausschliesslich als persönliches Arbeitsinstrument."
+            },
+            {
+              "marke": "e",
+              "text": "Der Verantwortliche bearbeitet die Personendaten für nicht personenbezogene Zwecke, insbesondere für Forschung, Planung oder Statistik, wobei die folgenden Voraussetzungen erfüllt sind:"
+            },
+            {
               "marke": "1",
               "text": "Er anonymisiert die Daten, sobald der Bearbeitungszweck dies erlaubt; ist eine Anonymisierung unmöglich oder erfordert sie einen unverhältnismässigen Aufwand, so trifft er angemessene Massnahmen, um die Bestimmbarkeit der betroffenen Person zu verhindern."
             },
@@ -1290,6 +1434,10 @@
             {
               "marke": "3",
               "text": "Die Ergebnisse werden so veröffentlicht, dass die betroffenen Personen nicht bestimmbar sind."
+            },
+            {
+              "marke": "f",
+              "text": "Der Verantwortliche sammelt Personendaten über eine Person des öffentlichen Lebens, die sich auf das Wirken dieser Person in der Öffentlichkeit beziehen."
             }
           ]
         }
@@ -1298,7 +1446,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_31",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "351063e4b76e6f47aff4826c7117f13e8a46837349b44c95a0079482c57c91c9"
+      "sha": "d0924783f4b096d3bdb86991639d5e0280e85d0d8400b8971c2fb9fcba5e5106"
     },
     {
       "id": "bund/DSG/art_32",
@@ -2273,11 +2421,31 @@
             },
             {
               "marke": "c",
-              "text": "Identität der betroffenen Personen, falls: 1. die betroffenen Personen eingewilligt haben, oder"
+              "text": "Identität der betroffenen Personen, falls:"
+            },
+            {
+              "marke": "1",
+              "text": "die betroffenen Personen eingewilligt haben, oder"
             },
             {
               "marke": "2",
               "text": "die Mitteilung der Identität der betroffenen Personen unentbehrlich ist zur Erfüllung der gesetzlichen Aufgaben durch den EDÖB oder die ausländische Behörde;"
+            },
+            {
+              "marke": "d",
+              "text": "bearbeitete Personendaten oder Kategorien bearbeiteter Personendaten;"
+            },
+            {
+              "marke": "e",
+              "text": "Bearbeitungszweck;"
+            },
+            {
+              "marke": "f",
+              "text": "Empfängerinnen und Empfänger oder die Kategorien der Empfängerinnen und Empfänger;"
+            },
+            {
+              "marke": "g",
+              "text": "technische und organisatorische Massnahmen."
             }
           ]
         },
@@ -2290,7 +2458,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_55",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "5e70d760855f322bd18f959d13eda3a3c74efca1db5e76433600caf7d20e460a"
+      "sha": "cf2a118de8898fe4491f5873c8c2d88f40fd565734e69511f58824dd0915de56"
     },
     {
       "id": "bund/DSG/art_56",
@@ -2458,7 +2626,11 @@
             },
             {
               "marke": "b",
-              "text": "die es vorsätzlich unterlassen: 1. die betroffene Person nach den Artikeln 19 Absatz 1 und 21 Absatz 1 zu informieren, oder"
+              "text": "die es vorsätzlich unterlassen:"
+            },
+            {
+              "marke": "1",
+              "text": "die betroffene Person nach den Artikeln 19 Absatz 1 und 21 Absatz 1 zu informieren, oder"
             },
             {
               "marke": "2",
@@ -2475,7 +2647,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_60",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250707",
-      "sha": "a6611f4fd8bc9c1a62348ff25e1dfe88159455f3046dd0f5d9ab48f1cdd0051c"
+      "sha": "79d156b7816bc35982690a0814de5add8dba14411b4e2c57c497bfa2d499908a"
     },
     {
       "id": "bund/DSG/art_61",

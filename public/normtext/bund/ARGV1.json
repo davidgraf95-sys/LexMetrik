@@ -850,7 +850,11 @@
             },
             {
               "marke": "b",
-              "text": "die Arbeiten: 1. zusätzlich anfallen und zeitlich nicht aufschiebbar sind, oder"
+              "text": "die Arbeiten:"
+            },
+            {
+              "marke": "1",
+              "text": "zusätzlich anfallen und zeitlich nicht aufschiebbar sind, oder"
             },
             {
               "marke": "2",
@@ -899,7 +903,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/243/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "6108a31e6d8af674fc9095ad8fbc68a7ae671e36edafad967e1096a069d7eba8"
+      "sha": "8e26648b03acfcb71515ac39be019978094407884c2356efc898eba58268271b"
     },
     {
       "id": "bund/ARGV1/art_28",
@@ -1089,7 +1093,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "höchstens eingesetzt werden: 1. in fünf von sieben aufeinander folgenden Nächten; oder"
+              "text": "höchstens eingesetzt werden:"
+            },
+            {
+              "marke": "b",
+              "text": "an ihren freien Tagen keine Überzeitarbeit nach Artikel 25 leisten."
             }
           ]
         },
@@ -1102,7 +1110,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/243/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "030b1e9981ca2b78a01c878e65141e9268a4eddb47779e193743206ec31798ce"
+      "sha": "3c881353abf99ccdc5b3cdffeb34bfe63c0c143a7f7cc5c2f69a40f061197c61"
     },
     {
       "id": "bund/ARGV1/art_31",
@@ -2851,7 +2859,11 @@
             },
             {
               "marke": "e",
-              "text": "im Zusammenhang mit Stoffen und Zubereitungen (Chemikalien) nach dem Chemikaliengesetz vom 15. Dezember 2000 (ChemG): 1. eine Liste der im Betrieb gelagerten und verwendeten Chemikalien, einschliesslich der damit ausgeführten Tätigkeiten, sowie die Namen der Arbeitnehmer und Arbeitnehmerinnen, welche diese Tätigkeiten ausführen,"
+              "text": "im Zusammenhang mit Stoffen und Zubereitungen (Chemikalien) nach dem Chemikaliengesetz vom 15. Dezember 2000 (ChemG):"
+            },
+            {
+              "marke": "1",
+              "text": "eine Liste der im Betrieb gelagerten und verwendeten Chemikalien, einschliesslich der damit ausgeführten Tätigkeiten, sowie die Namen der Arbeitnehmer und Arbeitnehmerinnen, welche diese Tätigkeiten ausführen,"
             },
             {
               "marke": "2",
@@ -2859,7 +2871,11 @@
             },
             {
               "marke": "3",
-              "text": "die folgenden nicht vertraulichen Daten aus dem Register über Stoffe und Zubereitungen nach Artikel 27 ChemG, die automatisiert abgerufen werden können: – Daten nach Artikel 73 Absatz 5 ChemV"
+              "text": "die folgenden nicht vertraulichen Daten aus dem Register über Stoffe und Zubereitungen nach Artikel 27 ChemG, die automatisiert abgerufen werden können:"
+            },
+            {
+              "marke": "–",
+              "text": "Daten nach Artikel 73 Absatz 5 ChemV"
             },
             {
               "marke": "–",
@@ -2876,7 +2892,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/243/de#art_85",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "5c380c108c9aa2d4d504d65f2783ace9b6cffeb72e1373b50cfb840f130421c2"
+      "sha": "fbb32d9d4cc8458fe5083e2da7497f23245850c1babf2c9610dc66cd9030ab38"
     },
     {
       "id": "bund/ARGV1/art_86",

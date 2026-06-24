@@ -704,7 +704,11 @@
             },
             {
               "marke": "c",
-              "text": "beim Fehlen von begünstigten Personen nach den Buchstaben a und b: die übrigen gesetzlichen Erben, unter Ausschluss des Gemeinwesens, im Umfang: 1. der von der versicherten Person einbezahlten Beiträge, oder"
+              "text": "beim Fehlen von begünstigten Personen nach den Buchstaben a und b: die übrigen gesetzlichen Erben, unter Ausschluss des Gemeinwesens, im Umfang:"
+            },
+            {
+              "marke": "1",
+              "text": "der von der versicherten Person einbezahlten Beiträge, oder"
             },
             {
               "marke": "2",
@@ -721,7 +725,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_20_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "a5a63a0e48df2736a4bf94d6594a31ab868c2ecf9eb8e00015db3fa8b4dd65e4"
+      "sha": "030df3890d07b622a8add80128a5cc7324dc4fa5e59d74b39fea632f2b35ee53"
     },
     {
       "id": "bund/BVG/art_21",
@@ -5484,6 +5488,10 @@
               "text": "Organe einer anderen Sozialversicherung, wenn sich eine Pflicht zur Bekanntgabe aus einem Bundesgesetz ergibt;"
             },
             {
+              "marke": "bbis",
+              "text": "bis . Organe einer anderen Sozialversicherung für die Zuweisung oder Verifizierung der AHV-Nummer;"
+            },
+            {
               "marke": "c",
               "text": "die für die Quellensteuer zuständigen Behörden, nach den Artikeln 88 und 100 des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer sowie den entsprechenden kantonalen Bestimmungen;"
             },
@@ -5544,7 +5552,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_86_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "60b32b09f7c4dde24cc63a9838f0758d849e25b6fbd8da63a229e41a59e4b132"
+      "sha": "4c4c18070b04d2656755be379403b1a25747ba34f6fc3cedf274944e87507027"
     },
     {
       "id": "bund/BVG/art_86_b",

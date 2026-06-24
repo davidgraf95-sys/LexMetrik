@@ -97,6 +97,62 @@
           "text": "In dieser Verordnung gelten als:",
           "items": [
             {
+              "marke": "a",
+              "text": "regulierte Börse: eine nach international anerkannten Massstäben angemessen regulierte und beaufsichtigte Einrichtung, die den gleichzeitigen Kauf und Verkauf von Effekten unter mehreren Wertpapierhäusern bezweckt und mittels ausreichender Marktliquidität auch sicherstellt;"
+            },
+            {
+              "marke": "b",
+              "text": "Hauptindex : ein Index, der sämtliche an einer regulierten Börse gehandelten Effekten (Gesamtmarktindex) oder eine Auswahl der wichtigsten Effekten dieser Börse umfasst, oder ein Index, der die wichtigsten Effekten verschiedener regulierter Börsen umfasst;"
+            },
+            {
+              "marke": "c",
+              "text": "reguliertes Unternehmen: ein im Finanzbereich tätiges Unternehmen, das adäquate Eigenmittelvorschriften insbesondere in Bezug auf Geschäftsrisiken einzuhalten hat und das nach international anerkannten Massstäben reguliert und von einer Bank-, Effekten- oder Versicherungsaufsichtsbehörde beaufsichtigt wird;"
+            },
+            {
+              "marke": "d",
+              "text": "Beteiligungstitel: Titel, der eine Beteiligung am Gesellschaftskapital eines Unternehmens ausweist;"
+            },
+            {
+              "marke": "dbis",
+              "text": "Instrument mit Beteiligungscharakter: Finanzinstrument, das unabhängig vom Stimmrecht einen direkten oder indirekten rechtlichen oder wirtschaftlichen Bezug zum Vermögen oder Ertrag eines Unternehmens aufweist, einschliesslich Beteiligungstitel, jedoch ausgenommen Anteile an verwalteten kollektiven Vermögen;"
+            },
+            {
+              "marke": "e",
+              "text": "Eigenkapitalinstrument: Beteiligungstitel im harten oder zusätzlichen Kernkapital sowie Schuldinstrument im zusätzlichen Kernkapital oder Ergänzungskapital;"
+            },
+            {
+              "marke": "f",
+              "text": "entsprechendes Abzugsverfahren: das in den Ziffern 30.21, 30.26 und 30.30 des Basler Mindeststandards zur Kapitaldefinition (CAP) als « corresponding deduction approach » bezeichnete Verfahren;"
+            },
+            {
+              "marke": "fbis",
+              "text": "Zinsinstrument: ein Instrument, bei dem Zinsrisiken als Risikofaktor im Vordergrund stehen;"
+            },
+            {
+              "marke": "g",
+              "text": "qualifiziertes Zinsinstrument: ein Zinsinstrument:"
+            },
+            {
+              "marke": "1",
+              "text": "mit mindestens je einem externen Rating der Ratingklassen 1–4 von zwei von der Eidgenössischen Finanzmarktaufsicht (FINMA) nach Artikel 6 anerkannten Ratingagenturen,"
+            },
+            {
+              "marke": "2",
+              "text": "mit einem externen Rating der Ratingklassen 1–4 einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, wenn kein anderes externes Rating einer schlechteren Ratingklasse einer anerkannten Ratingagentur vorliegt,"
+            },
+            {
+              "marke": "3",
+              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einer Verfallsrendite und einer Restlaufzeit, die mit denjenigen von Titeln mit einem externen Rating der Ratingklassen 1–4 vergleichbar sind, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden, oder"
+            },
+            {
+              "marke": "4",
+              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einem bankinternen Rating entsprechend den Ratingklassen 1–4, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden;"
+            },
+            {
+              "marke": "h",
+              "text": "verwaltete kollektive Vermögen: bei Anlegerinnen und Anlegern eingesammeltes Kapital, das auf deren Rechnung nach einer festgelegten Anlagestrategie kollektiv investiert und verwaltet wird, unabhängig von Domizil und Rechtsform, insbesondere:"
+            },
+            {
               "marke": "1",
               "text": "kollektive Kapitalanlagen,"
             },
@@ -115,6 +171,10 @@
             {
               "marke": "5",
               "text": "Stiftungen, die nach ausländischem Recht errichtet wurden und die Verwaltung von kollektiven Vermögen bezwecken;"
+            },
+            {
+              "marke": "i",
+              "text": "Leverage Ratio : nach den Vorgaben des Basler Mindeststandards zur Höchstverschuldungsquote (LEV) berechnete Höchstverschuldungsquote."
             }
           ]
         },
@@ -136,7 +196,11 @@
             },
             {
               "marke": "d",
-              "text": "Finanzinstrumente, deren Verwertung einzig erfolgt durch: 1. ihre Veräusserung,"
+              "text": "Finanzinstrumente, deren Verwertung einzig erfolgt durch:"
+            },
+            {
+              "marke": "1",
+              "text": "ihre Veräusserung,"
             },
             {
               "marke": "2",
@@ -148,7 +212,11 @@
             },
             {
               "marke": "4",
-              "text": "Rückzahlung mittels Ausgabe von Beteiligungstiteln des Emittenten, wenn: – bei einer zwingenden Rückzahlung oder bei einer Rückzahlung nach Wahl des Emittenten: bei Ausgabe einer variablen Anzahl Beteiligungstitel eine allfällige Änderung des Forderungswerts gleichgerichtet, vergleichbar und verknüpft ist mit der Änderung des Werts einer gegebenen Anzahl Beteiligungstitel am Gesellschaftskapital"
+              "text": "Rückzahlung mittels Ausgabe von Beteiligungstiteln des Emittenten, wenn:"
+            },
+            {
+              "marke": "–",
+              "text": "bei einer zwingenden Rückzahlung oder bei einer Rückzahlung nach Wahl des Emittenten: bei Ausgabe einer variablen Anzahl Beteiligungstitel eine allfällige Änderung des Forderungswerts gleichgerichtet, vergleichbar und verknüpft ist mit der Änderung des Werts einer gegebenen Anzahl Beteiligungstitel am Gesellschaftskapital"
             },
             {
               "marke": "–",
@@ -161,7 +229,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "bc828e9e2124e4f70a1265105e95b8a05af71fd0cbf1a5601d61bc23fa80d80b"
+      "sha": "a64ff022435febcd10b39d1d04965708c3d8f06d95e653850521110dde6b7521"
     },
     {
       "id": "bund/ERV/art_4_a",
@@ -291,11 +359,39 @@
             },
             {
               "marke": "c",
-              "text": "Anteile an verwalteten kollektiven Vermögen, die mindestens eine der folgenden Bedingungen erfüllen: 1. die Bank hat vollständige Kenntnis der dem Vermögen zugrunde liegenden Positionen und ihr stehen genügende und häufige, von einer Drittpartei überprüfte Informationen über diese Positionen zur Verfügung,"
+              "text": "Anteile an verwalteten kollektiven Vermögen, die mindestens eine der folgenden Bedingungen erfüllen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Bank hat vollständige Kenntnis der dem Vermögen zugrunde liegenden Positionen und ihr stehen genügende und häufige, von einer Drittpartei überprüfte Informationen über diese Positionen zur Verfügung,"
             },
             {
               "marke": "2",
               "text": "die Bank erhält tägliche Preise für das Vermögen und hat Zugang zum Mandat oder zu den gesetzlichen Vorschriften der Anlagestrategie;"
+            },
+            {
+              "marke": "d",
+              "text": "kotierte Instrumente mit Beteiligungscharakter;"
+            },
+            {
+              "marke": "e",
+              "text": "handelsbezogene Repo- und repoähnliche Positionen;"
+            },
+            {
+              "marke": "f",
+              "text": "Derivate, einschliesslich eingebetteter Derivate, mit Kredit- oder Aktienpreisrisiken in Instrumenten, die die Bank selbst emittiert hat;"
+            },
+            {
+              "marke": "g",
+              "text": "Positionen, die zu einem Netto-Short-Kredit oder zu einer Netto-Shortposition in Instrumenten mit Beteiligungscharakter im Bankenbuch führen;"
+            },
+            {
+              "marke": "h",
+              "text": "Positionen des Korrelationshandels;"
+            },
+            {
+              "marke": "i",
+              "text": "Positionen aus Übernahmeverpflichtungen aus Wertpapieremissionsgeschäften, bei denen davon ausgegangen werden kann, dass die Bank die Position am Abwicklungstag auch kauft."
             }
           ]
         },
@@ -312,7 +408,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "769f3476a34ccef433178c00b58cec7749ede20229572746c653c958569c26af"
+      "sha": "a70e3ccf6f94f768590b567ba6ebf732b2441c939a009fe51d4a0277e718807c"
     },
     {
       "id": "bund/ERV/art_5_a",
@@ -927,7 +1023,11 @@
             },
             {
               "marke": "e",
-              "text": "der Gewinn des laufenden Geschäftsjahrs, nach Abzug des geschätzten Gewinnausschüttungsanteils, im folgenden Umfang, sofern eine vollständige Erfolgsrechnung nach den auf Artikel 42 BankV gestützten Ausführungsbestimmungen der FINMA oder nach einem durch die FINMA anerkannten internationalen Standard vorliegt: 1. zu 100 Prozent, wenn die Erfolgsrechnung nach den Vorgaben der FINMA einer prüferischen Durchsicht unterzogen wurde,"
+              "text": "der Gewinn des laufenden Geschäftsjahrs, nach Abzug des geschätzten Gewinnausschüttungsanteils, im folgenden Umfang, sofern eine vollständige Erfolgsrechnung nach den auf Artikel 42 BankV gestützten Ausführungsbestimmungen der FINMA oder nach einem durch die FINMA anerkannten internationalen Standard vorliegt:"
+            },
+            {
+              "marke": "1",
+              "text": "zu 100 Prozent, wenn die Erfolgsrechnung nach den Vorgaben der FINMA einer prüferischen Durchsicht unterzogen wurde,"
             },
             {
               "marke": "2",
@@ -944,7 +1044,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "5b03a247a9a37cbd52e0099ed5c739639fd7b90ad01ec3e1bf80c30b417ec47b"
+      "sha": "bcf0bfaf772168c622f549196c12cf4a07750cee9f534a29aa0543aa28d8d061"
     },
     {
       "id": "bund/ERV/art_22",
@@ -1201,11 +1301,27 @@
             },
             {
               "marke": "d",
-              "text": "die Bank bei der Ausgabe darauf hinweist, dass die Aufsichtsbehörde einer Rückzahlung nur zustimmen wird, sofern: 1. die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen; oder"
+              "text": "die Bank bei der Ausgabe darauf hinweist, dass die Aufsichtsbehörde einer Rückzahlung nur zustimmen wird, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen; oder"
             },
             {
               "marke": "2",
               "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden;"
+            },
+            {
+              "marke": "e",
+              "text": "es keine Merkmale aufweist, welche eine Erhöhung des Gesellschaftskapitals der Bank in irgendeiner Weise erschweren;"
+            },
+            {
+              "marke": "f",
+              "text": "Ausschüttungen an die Kapitalgeberinnen und Kapitalgeber durch die Bank nur freiwillig und nur dann erfolgen, wenn ausschüttbare Reserven zur Verfügung stehen; und"
+            },
+            {
+              "marke": "g",
+              "text": "ausgeschlossen ist, dass Ausschüttungen an die Kapitalgeberinnen und Kapitalgeber sich während der Laufzeit aufgrund des emittentenspezifischen Kreditrisikos erhöhen."
             }
           ]
         },
@@ -1258,7 +1374,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "a7de0c323b02e21000edeec23332492939738a53fd59ce450e55c17116f60080"
+      "sha": "3da82f8b1e6a69f350c828f265c8b4ddfd115e62929f59116799fe267032af47"
     },
     {
       "id": "bund/ERV/art_27_a",
@@ -1361,11 +1477,19 @@
             },
             {
               "marke": "d",
-              "text": "die Bank bei der Ausgabe darauf hinweist, dass die Aufsichtsbehörde der vorzeitigen Rückzahlung vorgängig nur zustimmt, sofern: 1. die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen, oder"
+              "text": "die Bank bei der Ausgabe darauf hinweist, dass die Aufsichtsbehörde der vorzeitigen Rückzahlung vorgängig nur zustimmt, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen, oder"
             },
             {
               "marke": "2",
               "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden; und"
+            },
+            {
+              "marke": "e",
+              "text": "ausgeschlossen ist, dass Ausschüttungen an die Kapitalgeberinnen und Kapitalgeber sich während der Laufzeit aufgrund des emittentenspezifischen Kreditrisikos erhöhen."
             }
           ]
         },
@@ -1400,7 +1524,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "debc3610ccf56e81953d56ddc62285f4cfa5c7b23ca8ef86675b637fed739aac"
+      "sha": "611962a214de1230588df47afe112792b6af9f4c9e6c2682549adb3414f5c4e7"
     },
     {
       "id": "bund/ERV/art_31",
@@ -1779,11 +1903,19 @@
             },
             {
               "marke": "c",
-              "text": "Die Kantonalbank: 1. darf eine Kompensation nur leisten, wenn sie nach deren Zahlung die regulatorischen Anforderungen erfüllt,"
+              "text": "Die Kantonalbank:"
+            },
+            {
+              "marke": "1",
+              "text": "darf eine Kompensation nur leisten, wenn sie nach deren Zahlung die regulatorischen Anforderungen erfüllt,"
             },
             {
               "marke": "2",
-              "text": "muss eine Kompensation leisten, wenn sie die Voraussetzungen von Ziffer 1 erfüllt und: – über einen definierten Kapitalpuffer verfügt oder"
+              "text": "muss eine Kompensation leisten, wenn sie die Voraussetzungen von Ziffer 1 erfüllt und:"
+            },
+            {
+              "marke": "–",
+              "text": "über einen definierten Kapitalpuffer verfügt oder"
             },
             {
               "marke": "–",
@@ -1818,7 +1950,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_40_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "996ba7d4cf96bc5602fd60dc268f7533f15f55ad7499142ef35dbb625b8cf8e8"
+      "sha": "0dc19a9312a794ae93baaf99e2d30b272c95b6dcbfaa0f54929b8f63da6f549a"
     },
     {
       "id": "bund/ERV/art_41",
@@ -2357,7 +2489,11 @@
             },
             {
               "marke": "b",
-              "text": "sie gegen die betreffende Bank aufsichtsrechtliche Massnahmen ergriffen hat, ein Verfahren nach Artikel 30 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007 (FINMAG) eröffnet wurde oder die Bank Massnahmen zur Wiederherstellung des ordnungsgemässen Zustandes nach Artikel 31 FINMAG nicht umgesetzt hat in den Bereichen: 1. Verhaltensregeln nach dem Finanzdienstleistungsgesetz vom 15. Juni 2018,"
+              "text": "sie gegen die betreffende Bank aufsichtsrechtliche Massnahmen ergriffen hat, ein Verfahren nach Artikel 30 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007 (FINMAG) eröffnet wurde oder die Bank Massnahmen zur Wiederherstellung des ordnungsgemässen Zustandes nach Artikel 31 FINMAG nicht umgesetzt hat in den Bereichen:"
+            },
+            {
+              "marke": "1",
+              "text": "Verhaltensregeln nach dem Finanzdienstleistungsgesetz vom 15. Juni 2018,"
             },
             {
               "marke": "2",
@@ -2370,6 +2506,10 @@
             {
               "marke": "4",
               "text": "grenzüberschreitendes Geschäft;"
+            },
+            {
+              "marke": "c",
+              "text": "das Zinsrisikomanagement unzureichend ist oder das Zinsrisiko im Verhältnis zum Kernkapital, dem Erfolg aus dem Zinsengeschäft oder der Risikotragfähigkeit unter Berücksichtigung aller Risiken unangemessen hoch ist."
             }
           ]
         }
@@ -2378,7 +2518,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "967b042bc854d10dc49dff0ac2fc05c24ad655aaeb85312b13961dfa1d51dc16"
+      "sha": "c2d17c8be9d93aa74d1018b6a67ec3b6010b7f174160aa6788cd5684b62af178"
     },
     {
       "id": "bund/ERV/art_47_d",
@@ -2929,11 +3069,19 @@
             },
             {
               "marke": "b",
-              "text": "einem der vereinfachten Ansätze: 1. VSA-CCR,"
+              "text": "einem der vereinfachten Ansätze:"
+            },
+            {
+              "marke": "1",
+              "text": "VSA-CCR,"
             },
             {
               "marke": "2",
               "text": "Marktwertansatz;"
+            },
+            {
+              "marke": "c",
+              "text": "dem EPE-Modellansatz."
             }
           ]
         },
@@ -2958,7 +3106,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_56",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "c9005f9c817f65aaee44279411b12f507309fe5a4da9030fea2e3705e3fcddad"
+      "sha": "e25f2d815407dd7b27173d675eedb3d7fa664d334fa361dd53b7da91e737c0a1"
     },
     {
       "id": "bund/ERV/art_57",
@@ -3934,6 +4082,26 @@
           "text": "Positionen gegenüber Unternehmen, ausgenommen direkt und indirekt grundpfandgesicherte Positionen, gelten als Spezialfinanzierung, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "es sich um eine der folgenden Finanzierungsarten handelt:"
+            },
+            {
+              "marke": "1",
+              "text": "Finanzierungen, für deren Rückzahlung und Sicherung hauptsächlich die Einnahmen aus dem finanzierten Projekt verwendet werden (Projektfinanzierungen),"
+            },
+            {
+              "marke": "2",
+              "text": "Finanzierungen des Erwerbs von Anlagen, Maschinen, Fahrzeugen und anderen Ausrüstungsgegenständen, deren Rückzahlung von den Zahlungsflüssen abhängt, die durch diese Vermögenswerte generiert werden (Objektfinanzierungen),"
+            },
+            {
+              "marke": "3",
+              "text": "kurzfristige Kredite zur Finanzierung von Vorräten, Lagerbeständen oder Forderungen aus börsengehandelten Rohstoffen, die aus dem Erlös aus dem Verkauf der finanzierten Waren zurückgezahlt werden (Rohstoffhandelsfinanzierungen); und"
+            },
+            {
+              "marke": "b",
+              "text": "mindestens eine der folgenden Voraussetzungen erfüllt ist:"
+            },
+            {
               "marke": "1",
               "text": "das Unternehmen verfügt über wenige oder gar keine anderen wesentlichen Vermögenswerte oder Tätigkeiten und ist daher für die Rückzahlung der Verpflichtung massgeblich auf die Erträge aus den zu finanzierenden Vermögenswerten angewiesen,"
             },
@@ -3956,7 +4124,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_70_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "e99ca627937958e15713bf35000ded4d6110130104cb9428b953dc4d7271d90c"
+      "sha": "3472f63f4cbf9dbbdb8ee06c3d60e0a4a5ca9dbdcc96a0353fc754573f928676"
     },
     {
       "id": "bund/ERV/art_70_b",
@@ -4067,7 +4235,11 @@
             },
             {
               "marke": "d",
-              "text": "Die zur Deckung verwendeten Vermögenswerte fallen in mindestens eine der folgenden Kategorien: 1. Forderungen gegenüber Zentralregierungen, Zentralbanken, supranationalen Organisationen, öffentlich-rechtlichen Körperschaften oder multilateralen Entwicklungsbanken oder Forderungen, die von einer solchen Institution garantiert sind;"
+              "text": "Die zur Deckung verwendeten Vermögenswerte fallen in mindestens eine der folgenden Kategorien:"
+            },
+            {
+              "marke": "1",
+              "text": "Forderungen gegenüber Zentralregierungen, Zentralbanken, supranationalen Organisationen, öffentlich-rechtlichen Körperschaften oder multilateralen Entwicklungsbanken oder Forderungen, die von einer solchen Institution garantiert sind;"
             },
             {
               "marke": "2",
@@ -4088,6 +4260,14 @@
             {
               "marke": "6",
               "text": "Derivate, die zur Absicherung der Risiken der ausländischen gedeckten Schuldverschreibungen dienen."
+            },
+            {
+              "marke": "e",
+              "text": "Der Nominalwert der zur Deckung verwendeten Vermögenswerte muss mindestens 10 Prozent über dem Nominalwert der vom Institut emittierten ausländischen gedeckten Schuldverschreibungen liegen. Sehen die gesetzlichen Vorschriften nach Buchstabe b diese Überdeckung nicht vor, so muss das Institut die Einhaltung dieser Anforderung regelmässig öffentlich ausweisen."
+            },
+            {
+              "marke": "f",
+              "text": "Die Bank beschafft sich vom Emittenten der ausländischen gedeckten Schuldverschreibungen mindestens alle sechs Monate die Informationen nach Ziffer 20.37 CRE."
             }
           ]
         }
@@ -4096,7 +4276,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_71_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "807c3d4cac25493870447adef7f5c9bd1e4d12815a3a4fde055f8e6820ae49b6"
+      "sha": "1144de07cd45a85ac4a5bf831aafceb035b07beb55aae62e8d352fe77f334574"
     },
     {
       "id": "bund/ERV/art_72",
@@ -4291,7 +4471,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für selbstgenutzte Wohnliegenschaften und selbstgenutzte Gewerbeliegenschaften für: 1. natürliche Personen: 75 Prozent,"
+              "text": "für selbstgenutzte Wohnliegenschaften und selbstgenutzte Gewerbeliegenschaften für:"
+            },
+            {
+              "marke": "1",
+              "text": "natürliche Personen: 75 Prozent,"
             },
             {
               "marke": "2",
@@ -4300,6 +4484,10 @@
             {
               "marke": "3",
               "text": "alle anderen Gegenparteien: das Risikogewicht der Gegenpartei;"
+            },
+            {
+              "marke": "b",
+              "text": "für nicht selbstgenutzte Wohnliegenschaften und nicht selbstgenutzte Gewerbeliegenschaften: 150 Prozent."
             }
           ]
         },
@@ -4312,7 +4500,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "a6f37f4185f4a49dbf0ae4677420fa0b5b68cf8cf062010f97719c63a45f2868"
+      "sha": "6a8023fda6ae91aa2095b39c17666cbee8330be85b045aee0e3d0a80461f9171"
     },
     {
       "id": "bund/ERV/art_72_d",
@@ -6185,7 +6373,11 @@
             },
             {
               "marke": "b",
-              "text": "Der Betrag, der sich daraus ergibt, ist mit einem der folgenden Kreditumrechnungsfaktoren zu multiplizieren: 1. 0,05 ab und mit dem Tag, an dem die feste Übernahmezusage unwiderruflich eingegangen wird,"
+              "text": "Der Betrag, der sich daraus ergibt, ist mit einem der folgenden Kreditumrechnungsfaktoren zu multiplizieren:"
+            },
+            {
+              "marke": "1",
+              "text": "0,05 ab und mit dem Tag, an dem die feste Übernahmezusage unwiderruflich eingegangen wird,"
             },
             {
               "marke": "2",
@@ -6214,7 +6406,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_103",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "18d427ee771d0201c2347ada4527f5f0f95656053d6ade52da34d70679ed0961"
+      "sha": "723288f29cb67084d4201b432ba54929a754745b0f90372bf0757726ff1a0f19"
     },
     {
       "id": "bund/ERV/art_104_105",
@@ -7231,6 +7423,22 @@
           "text": "Die Eigenmittel zur Erfüllung der Anforderungen müssen mindestens folgende Qualität haben:",
           "items": [
             {
+              "marke": "a",
+              "text": "Anforderung an die Leverage Ratio:"
+            },
+            {
+              "marke": "1",
+              "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 1,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital zur Erfüllung der Mindesteigenmittel verwendet werden, dessen auslösendes Ereignis eintritt, wenn das anrechenbare harte Kernkapital 7 Prozent bei der RWA-Quote unterschreitet (Wandlungskapital mit hohem Trigger),"
+            },
+            {
+              "marke": "2",
+              "text": "Eigenmittelpuffer: hartes Kernkapital;"
+            },
+            {
+              "marke": "b",
+              "text": "Anforderung an die RWA-Quote:"
+            },
+            {
               "marke": "1",
               "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 3,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital mit hohem Trigger zur Erfüllung der Mindesteigenmittel verwendet werden,"
             },
@@ -7245,7 +7453,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_131",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "c1921302b9368fdb5c219687e3e13f5e5d6c81d0ac437ae61deaa94a117e639a"
+      "sha": "a19952346497409c80ff3388bc115177039ae00fd3f021516f08800383dc9f4a"
     },
     {
       "id": "bund/ERV/art_131_a",
@@ -7303,7 +7511,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "international tätigen systemrelevanten Bank: 1. für Einheiten, die systemrelevante Funktionen ausüben (Art. 124 Abs. 3 Bst. a): 62 Prozent der Gesamtanforderung auf Stufe Finanzgruppe und auf Stufe Einzelinstitut,"
+              "text": "international tätigen systemrelevanten Bank:"
+            },
+            {
+              "marke": "1",
+              "text": "für Einheiten, die systemrelevante Funktionen ausüben (Art. 124 Abs. 3 Bst. a): 62 Prozent der Gesamtanforderung auf Stufe Finanzgruppe und auf Stufe Einzelinstitut,"
             },
             {
               "marke": "2",
@@ -7311,7 +7523,11 @@
             },
             {
               "marke": "3",
-              "text": "auf Stufe Einzelinstitut einer Bank nach Artikel 124 Absatz 3 Buchstabe c oder d die Summe aus: – den Nominalbeträgen von zusätzlichen verlustabsorbierenden Mitteln, die an Tochtergesellschaften weitergegeben werden"
+              "text": "auf Stufe Einzelinstitut einer Bank nach Artikel 124 Absatz 3 Buchstabe c oder d die Summe aus:"
+            },
+            {
+              "marke": "–",
+              "text": "den Nominalbeträgen von zusätzlichen verlustabsorbierenden Mitteln, die an Tochtergesellschaften weitergegeben werden"
             },
             {
               "marke": "–",
@@ -7320,6 +7536,10 @@
             {
               "marke": "–",
               "text": "30 Prozent der für diese Einheit konsolidiert geltenden Anforderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "nicht international tätigen systemrelevanten Bank: 40 Prozent der Gesamtanforderung."
             }
           ]
         },
@@ -7348,7 +7568,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250124",
-      "sha": "e28f7e39abfccfa29d16ce91b00ccce77c77a500d374d28e7c6cdef277093b5b"
+      "sha": "f019f5c79d6f1f51afb94b0c7d3bf0b6765542ea15a3736d51c3a0995dd97616"
     },
     {
       "id": "bund/ERV/art_132_a",

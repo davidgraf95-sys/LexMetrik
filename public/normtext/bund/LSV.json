@@ -755,6 +755,30 @@
           "text": "Für Strassen verlangt es von den Vollzugsbehörden jährlich insbesondere die folgenden, bis zum 31. März einzureichenden Unterlagen:",
           "items": [
             {
+              "marke": "a",
+              "text": "eine Übersicht über:"
+            },
+            {
+              "marke": "1",
+              "text": "die sanierungsbedürftigen Strassen oder Strassenabschnitte,"
+            },
+            {
+              "marke": "2",
+              "text": "die Zeiträume, in denen diese Strassen und Strassenabschnitte saniert werden,"
+            },
+            {
+              "marke": "3",
+              "text": "die gesamten Kosten dieser Sanierungen und Schallschutzmassnahmen, und"
+            },
+            {
+              "marke": "4",
+              "text": "die Anzahl Personen, die von über den Immissionsgrenzwerten und Alarmwerten liegenden Lärmimmissionen betroffen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Bericht über:"
+            },
+            {
               "marke": "1",
               "text": "die im vorangegangenen Jahr durchgeführten Sanierungen von Strassen oder Strassenabschnitten und die Schallschutzmassnahmen, und"
             },
@@ -777,7 +801,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_20",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "3aef1876d1efddabefaacfd84c69e05ec235f140269188cb478deb7b625c589e"
+      "sha": "07f3f07e853c5b6f77ce1ac1ccdeb60461fc68628c6c389c67bade17e1d3473b"
     },
     {
       "id": "bund/LSV/art_21",
@@ -1661,12 +1685,60 @@
           "text": "Für den Vollzug der Vorschriften über Emissionsbegrenzungen (Art. 4, 7–9 und 12), Sanierungen (Art. 13, 14, 16–18 und 20) sowie über die Ermittlung und Beurteilung von Lärmimmissionen (Art. 36, 37, 37 a und 40) sorgt:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei Eisenbahnanlagen:"
+            },
+            {
+              "marke": "1",
+              "text": "das UVEK, soweit die Vorschriften Eisenbahngrossprojekte nach dem Anhang zum Eisenbahngesetz vom 20. Dezember 1957 betreffen und im Rahmen eines Plangenehmigungsverfahrens vollzogen werden,"
+            },
+            {
+              "marke": "2",
+              "text": "in den anderen Fällen das Bundesamt für Verkehr;"
+            },
+            {
+              "marke": "b",
+              "text": "bei zivilen Flugplätzen:"
+            },
+            {
+              "marke": "1",
+              "text": "das UVEK, soweit die Vorschriften Bauten und Anlagen nach Artikel 37 des Luftfahrtgesetzes vom 21. Dezember 1948 betreffen, die dem Betrieb eines Flughafens dienen und im Rahmen eines Plangenehmigungsverfahrens vollzogen werden,"
+            },
+            {
+              "marke": "2",
+              "text": "in den anderen Fällen das Bundesamt für Zivilluftfahrt;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Nationalstrassen:"
+            },
+            {
+              "marke": "1",
+              "text": "das UVEK, soweit die Vorschriften im Rahmen eines Plangenehmigungsverfahrens vollzogen werden,"
+            },
+            {
+              "marke": "2",
+              "text": "in den anderen Fällen das Bundesamt für Strassen;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Anlagen der Landesverteidigung: das Eidgenössische Departement für Verteidigung, Bevölkerungsschutz und Sport;"
+            },
+            {
+              "marke": "e",
+              "text": "bei elektrischen Anlagen:"
+            },
+            {
               "marke": "1",
               "text": "das Bundesamt für Energie in den Fällen, in denen das Eidgenössische Starkstrominspektorat ( ESTI ) nach Artikel 16 Absatz 2 Buchstabe b des Elektrizitätsgesetzes vom 24. Juni 1902 Einsprachen nicht erledigen oder Differenzen mit den beteiligten Bundesbehörden nicht ausräumen konnte,"
             },
             {
               "marke": "2",
               "text": "in den anderen Fällen das ESTI ;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Seilbahnanlagen nach Artikel 2 des Seilbahngesetzes vom 23. Juni 2006: das Bundesamt für Verkehr."
             }
           ]
         },
@@ -1683,7 +1755,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "11d60394f608f1f0fc0d83892a7607eea0aea4ee04ce6d18b59ff777805b5ac2"
+      "sha": "754c06a1631bbcb799a4686ecca1ba28b249f4b69eca584cbdfb28708dd8213d"
     },
     {
       "id": "bund/LSV/art_45_a",

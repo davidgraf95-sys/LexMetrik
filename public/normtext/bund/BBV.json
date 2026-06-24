@@ -1376,7 +1376,11 @@
             },
             {
               "marke": "c",
-              "text": "eine berufspädagogische Bildung von: 1. 600 Lernstunden, wenn sie hauptberuflich tätig sind,"
+              "text": "eine berufspädagogische Bildung von:"
+            },
+            {
+              "marke": "1",
+              "text": "600 Lernstunden, wenn sie hauptberuflich tätig sind,"
             },
             {
               "marke": "2",
@@ -1389,7 +1393,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "74546e5914b3f10e516874b46b519135a7e85aa1c2e0017de26636e5d339162d"
+      "sha": "77801c63b2d318676f0d99e5a7ee49740cb2085a8c4182fc661d9aeb197dfc30"
     },
     {
       "id": "bund/BBV/art_46",
@@ -1427,7 +1431,11 @@
             },
             {
               "marke": "b",
-              "text": "eine berufspädagogische Bildung von: 1. 1800 Lernstunden bei hauptamtlicher Tätigkeit,"
+              "text": "eine berufspädagogische Bildung von:"
+            },
+            {
+              "marke": "1",
+              "text": "1800 Lernstunden bei hauptamtlicher Tätigkeit,"
             },
             {
               "marke": "2",
@@ -1458,7 +1466,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_46",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "b78586731a3deb02c045eb4ab63acb1a302bd1ae05aac5631228ca9e690d13a9"
+      "sha": "a477fe09f35ae64ff86701f9a1b82d0dbab0f35d54c5bbf7f57288ec3635ab5b"
     },
     {
       "id": "bund/BBV/art_47",
@@ -2242,11 +2250,31 @@
             },
             {
               "marke": "b",
-              "text": "der absolvierte vorbereitende Kurs: 1. im Jahr des Kursbeginns auf der Liste der vorbereitenden Kurse nach Artikel 66 g verzeichnet war, und"
+              "text": "der absolvierte vorbereitende Kurs:"
+            },
+            {
+              "marke": "1",
+              "text": "im Jahr des Kursbeginns auf der Liste der vorbereitenden Kurse nach Artikel 66 g verzeichnet war, und"
             },
             {
               "marke": "2",
               "text": "nicht länger als sieben Jahre vor Eröffnung der Verfügung über das Bestehen oder Nichtbestehen der eidgenössischen Berufsprüfung oder der eidgenössischen höheren Fachprüfung begonnen hat;"
+            },
+            {
+              "marke": "c",
+              "text": "die anrechenbaren Kursgebühren insgesamt 1000 Franken übersteigen;"
+            },
+            {
+              "marke": "d",
+              "text": "eine vom Anbieter des vorbereitenden Kurses ausgestellte Bestätigung über die von der Absolventin oder dem Absolventen bezahlten, anrechenbaren Kursgebühren vorliegt und diese nicht bereits im Rahmen eines anderen Gesuchs oder Antrags eingereicht wurde;"
+            },
+            {
+              "marke": "e",
+              "text": "eine eidgenössische Berufsprüfung oder eine eidgenössische höhere Fachprüfung absolviert wurde;"
+            },
+            {
+              "marke": "f",
+              "text": "das Gesuch innerhalb von 2 Jahren nach Eröffnung der Verfügung über das Bestehen oder Nichtbestehen der eidgenössischen Berufsprüfung oder der eidgenössischen höheren Fachprüfung eingereicht wird."
             }
           ]
         },
@@ -2259,7 +2287,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_66_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "3a6db5340b8c5a707bdd48aea7fa2f7278d3ed2ad0bbc6f43d1cb669117b7545"
+      "sha": "7bbeea3df9d0d0dee06c1e67cf5bb2c5cb393477a2df2280a5dbab3899621ae7"
     },
     {
       "id": "bund/BBV/art_66_d",
@@ -2279,11 +2307,27 @@
             },
             {
               "marke": "b",
-              "text": "eine schriftliche Verpflichtung gegenüber dem SBFI: 1. die angestrebte eidgenössische Berufsprüfung oder eidgenössische höhere Fachprüfung zu absolvieren, und"
+              "text": "eine schriftliche Verpflichtung gegenüber dem SBFI:"
+            },
+            {
+              "marke": "1",
+              "text": "die angestrebte eidgenössische Berufsprüfung oder eidgenössische höhere Fachprüfung zu absolvieren, und"
             },
             {
               "marke": "2",
               "text": "innerhalb von längstens fünf Jahren nach dem ersten Antrag die Verfügung über Bestehen oder Nichtbestehen der absolvierten eidgenössischen Berufsprüfung oder eidgenössischen höheren Fachprüfung beizubringen;"
+            },
+            {
+              "marke": "c",
+              "text": "die vom Anbieter des vorbereitenden Kurses ausgestellten Rechnungen der von der Teilnehmerin oder dem Teilnehmer zu bezahlenden Kursgebühren;"
+            },
+            {
+              "marke": "d",
+              "text": "die vom Anbieter des vorbereitenden Kurses ausgestellte Bestätigung über die von der Teilnehmerin oder dem Teilnehmer bezahlten, anrechenbaren Kursgebühren;"
+            },
+            {
+              "marke": "e",
+              "text": "den Nachweis, dass die Antragstellerin oder der Antragsteller gemäss letzter rechtskräftiger Steuerveranlagung weniger als 88 Franken direkte Bundessteuer leisten musste."
             }
           ]
         },
@@ -2296,7 +2340,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_66_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "3f6c2b0d5c03d0fca91f3767cbf4adf31e5f7291359d357a543b22e1086d2dfa"
+      "sha": "beaa7b291461f82c8e36d4b5333f88becf09e363e706be0697542f56940b0540"
     },
     {
       "id": "bund/BBV/art_66_e",
@@ -2320,11 +2364,27 @@
             },
             {
               "marke": "c",
-              "text": "der absolvierte vorbereitende Kurs: 1. im Jahr des Kursbeginns auf der Liste der vorbereitenden Kurse nach Artikel 66 g verzeichnet war, und"
+              "text": "der absolvierte vorbereitende Kurs:"
+            },
+            {
+              "marke": "1",
+              "text": "im Jahr des Kursbeginns auf der Liste der vorbereitenden Kurse nach Artikel 66 g verzeichnet war, und"
             },
             {
               "marke": "2",
               "text": "nicht länger als zwei Jahre vor Antragstellung begonnen hat;"
+            },
+            {
+              "marke": "d",
+              "text": "die anrechenbaren Kursgebühren pro Antrag 3500 Franken übersteigen;"
+            },
+            {
+              "marke": "e",
+              "text": "eine vom Anbieter des vorbereitenden Kurses ausgestellte Bestätigung über die von der Teilnehmerin oder dem Teilnehmer bezahlten, anrechenbaren Kursgebühren vorliegt und diese nicht bereits im Rahmen eines anderen Gesuchs oder Antrags eingereicht wurde;"
+            },
+            {
+              "marke": "f",
+              "text": "die Antragstellerin oder der Antragsteller gemäss letzter rechtskräftiger Steuerveranlagung weniger als 88 Franken direkte Bundessteuer leisten musste."
             }
           ]
         },
@@ -2345,7 +2405,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_66_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "91d9f2e626882c3f7d295a5eae2f2d9e9db1cee45237e158b5567cca7c631814"
+      "sha": "f7ad97489d68aeac04037779d9d813eae942a3f76e3c4f88b5d773b5f2d4ca56"
     },
     {
       "id": "bund/BBV/art_66_f",
@@ -3048,7 +3108,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Aufgaben nach Artikel 53 Absatz 2 BBG, für die der Bund bisher gestützt auf eines der folgenden Gesetze Beiträge gewährt hat, unterstützt er weiterhin nach diesen Gesetzen: 1. Bundesgesetz vom 19. April 1978 über die Berufsbildung,"
+              "text": "Aufgaben nach Artikel 53 Absatz 2 BBG, für die der Bund bisher gestützt auf eines der folgenden Gesetze Beiträge gewährt hat, unterstützt er weiterhin nach diesen Gesetzen:"
+            },
+            {
+              "marke": "1",
+              "text": "Bundesgesetz vom 19. April 1978 über die Berufsbildung,"
             },
             {
               "marke": "2",
@@ -3061,6 +3125,10 @@
             {
               "marke": "4",
               "text": "Bundesgesetz vom 19. Juni 1992 über Finanzhilfen an die Höheren Fachschulen im Sozialbereich."
+            },
+            {
+              "marke": "b",
+              "text": "Die übrigen Aufgaben nach Artikel 53 Absatz 2 BBG unterstützt der Bund im Rahmen der verfügbaren Mittel nach Artikel 53 Absatz 1 BBG."
             }
           ]
         }
@@ -3069,7 +3137,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/748/de#art_77",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "de11bb97f8a8d5846cf3f3a9c99f73ad5a3f97df87ecdef335d3e3c2e6d4d5fc"
+      "sha": "99a4609a1336837798de712ca07df0b1995f8d8ff7076533e724deaeff6090e9"
     },
     {
       "id": "bund/BBV/art_78",

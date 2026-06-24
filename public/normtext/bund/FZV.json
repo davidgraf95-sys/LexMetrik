@@ -411,7 +411,11 @@
             },
             {
               "marke": "b",
-              "text": "im Todesfall in nachstehender Reihe: 1. die Hinterlassenen nach Artikel 19, 19 a und 20 BVG,"
+              "text": "im Todesfall in nachstehender Reihe:"
+            },
+            {
+              "marke": "1",
+              "text": "die Hinterlassenen nach Artikel 19, 19 a und 20 BVG,"
             },
             {
               "marke": "2",
@@ -436,7 +440,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_15",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "6dde129ad5f96b80c5f458c14c4dad05d2e9a139613dbdc04e1459a6e2f0bcbd"
+      "sha": "014a0a1e9c88eb43dc42f67d8f622424d0539d33d110ea423f855cc31f35c9a7"
     },
     {
       "id": "bund/FZV/art_15_a",

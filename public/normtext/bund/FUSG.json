@@ -62,7 +62,11 @@
             },
             {
               "marke": "e",
-              "text": "kleine und mittlere Unternehmen: Gesellschaften, die keine Anleihensobli­gationen ausstehend haben, deren Anteile nicht an der Börse kotiert sind und die überdies zwei der nachfolgenden Grössen nicht in den zwei letzten dem Fusi­ons-, dem Spaltungs- oder dem Umwandlungsbeschluss vorangegan­genen Geschäftsjahren überschreiten: 1. Bilanzsumme von 20 Millionen Franken,"
+              "text": "kleine und mittlere Unternehmen: Gesellschaften, die keine Anleihensobli­gationen ausstehend haben, deren Anteile nicht an der Börse kotiert sind und die überdies zwei der nachfolgenden Grössen nicht in den zwei letzten dem Fusi­ons-, dem Spaltungs- oder dem Umwandlungsbeschluss vorangegan­genen Geschäftsjahren überschreiten:"
+            },
+            {
+              "marke": "1",
+              "text": "Bilanzsumme von 20 Millionen Franken,"
             },
             {
               "marke": "2",
@@ -71,6 +75,22 @@
             {
               "marke": "3",
               "text": "250 Vollzeitstellen im Jahresdurchschnitt;"
+            },
+            {
+              "marke": "f",
+              "text": "Gesellschafterinnen und Gesellschafter: Anteilsinhaberinnen und -inhaber, Gesellschafte­rinnen und Gesellschafter in der Kollektiv- und der Komman­ditgesellschaft, Genossen­schafterinnen und Genossenschafter ohne Anteil­scheine, Mitglieder im Verein;"
+            },
+            {
+              "marke": "g",
+              "text": "Anteilsinhaberinnen und -inhaber: Inhaberinnen und Inhaber von Aktien, Partizipationsscheinen oder Genussscheinen, Gesellschafterinnen und Gesellschafter von Gesellschaften mit beschränkter Haftung, Genossenschafte­rinnen und Genossenschafter mit Anteilscheinen;"
+            },
+            {
+              "marke": "h",
+              "text": "Generalversammlung: die Generalversammlung in der Aktiengesellschaft, der Kommanditaktiengesellschaft und in der Genossenschaft; die Gesellschafterversammlung in der Gesellschaft mit beschränkter Haftung; die Versammlung der Mitglieder im Verein; die Delegiertenversammlung, soweit diese in der Genossenschaft oder im Verein nach den Statuten zuständig ist;"
+            },
+            {
+              "marke": "i",
+              "text": "Vorsorgeeinrichtungen: Einrichtungen, die der Aufsicht gemäss Artikel 61 ff. des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters‑, Hin­terbliebenen- und Invalidenvorsorge (BVG) unterstellt sind und die als ju­ristische Person ausgestaltet sind."
             }
           ]
         }
@@ -79,7 +99,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230101",
-      "sha": "5a983c5bb2cc83874d2166861f3da4543781713d725491bab3768279bbcb5c6b"
+      "sha": "f0aee533c656de40ed631656fd42e2383d28b85bdf5881cbe20d61cf6077260a"
     },
     {
       "id": "bund/FUSG/art_3",

@@ -88,7 +88,11 @@
             },
             {
               "marke": "e",
-              "text": "Personen, die keinen Anspruch auf eine schweizerische Rente haben, aber: 1. nach dem Freizügigkeitsabkommen sowie seinem Anhang II Anspruch auf eine Rente eines Mitgliedstaates der Europäischen Union haben,"
+              "text": "Personen, die keinen Anspruch auf eine schweizerische Rente haben, aber:"
+            },
+            {
+              "marke": "1",
+              "text": "nach dem Freizügigkeitsabkommen sowie seinem Anhang II Anspruch auf eine Rente eines Mitgliedstaates der Europäischen Union haben,"
             },
             {
               "marke": "2",
@@ -97,6 +101,14 @@
             {
               "marke": "3",
               "text": "nach dem Abkommen vom 9. September 2021 zur Koordinierung der sozialen Sicherheit zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland (Abkommen mit dem Vereinigten Königreich) Anspruch auf eine britische Rente haben;"
+            },
+            {
+              "marke": "f",
+              "text": "Personen, die als Familienangehörige einer unter den Buchstaben c, d oder e erwähnten Person in deren ausländischen Krankenversicherung mitversichert sind und entweder Anspruch auf Leistungsaushilfe haben oder für Behandlungen in der Schweiz über einen gleichwertigen Versicherungsschutz verfügen;"
+            },
+            {
+              "marke": "g",
+              "text": "Personen, die als Familienangehörige einer Person in deren ausländischen Krankenversicherung mitversichert sind und Anspruch auf Leistungsaushilfe haben."
             }
           ]
         },
@@ -137,7 +149,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "c5aeac61ded5a832c1abf04666ed1de2c82223ab8499da89020c5d8659694cb4"
+      "sha": "caf0b99f0523fb2d5be61ceaac39927cc54fa26e3951eee7838e1779fbdbc163"
     },
     {
       "id": "bund/KVV/art_3",
@@ -844,6 +856,62 @@
           "text": "Die Versicherer müssen dem BAG zur Erfüllung der Aufgaben nach Artikel 21 Absatz 2 Buchstaben a–c KVG regelmässig pro versicherte Person folgende Daten weitergeben:",
           "items": [
             {
+              "marke": "a",
+              "text": "soziodemografische Angaben:"
+            },
+            {
+              "marke": "1",
+              "text": "Verbindungscode,"
+            },
+            {
+              "marke": "2",
+              "text": "Alter, Geschlecht und Wohnort,"
+            },
+            {
+              "marke": "3",
+              "text": "Risikogruppe nach Artikel 11 der Verordnung vom 19. Oktober 2016 über den Risikoausgleich (VORA) und Einteilung der versicherten Person in eine pharmazeutische Kostengruppe nach Artikel 12 VORA;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben zur Versicherungsdeckung:"
+            },
+            {
+              "marke": "1",
+              "text": "Beginn und Ende der Deckungsperiode,"
+            },
+            {
+              "marke": "2",
+              "text": "Prämieneigenschaften, wie örtlicher Tätigkeitsbereich des Versicherers, Prämienregion, Kategorie der besonderen Versicherungsformen nach den Artikeln 93–101, Versicherungsform, Modellbezeichnung und dessen Abkürzung, Zugehörigkeit der versicherten Person zu einem Haushalt mit mehreren Kindern oder jungen Erwachsenen, Prämienstufe in der Bonusversicherung, Höhe der Franchise und Unfalldeckung,"
+            },
+            {
+              "marke": "3",
+              "text": "Höhe der Prämie, mit und ohne Beitrag des Kantons, Prämienzuschlag nach Artikel 8, Prämienermässigungen und andere Abschläge,"
+            },
+            {
+              "marke": "4",
+              "text": "Angabe, ob die Versicherungsdeckung nach Artikel 3 Absatz 4 KVG sistiert ist oder nicht,"
+            },
+            {
+              "marke": "5",
+              "text": "Angabe, ob die versicherte Person dem Risikoausgleich unterstellt ist oder nicht,"
+            },
+            {
+              "marke": "6",
+              "text": "Mutationsgründe bezogen auf die Versicherungsdeckung, wie Eintritt und Austritt, Geburt, Tod, Versichererwechsel und interner Wechsel,"
+            },
+            {
+              "marke": "7",
+              "text": "Gesamtkosten der vergüteten Leistungen und Kostenbeteiligung,"
+            },
+            {
+              "marke": "8",
+              "text": "für Versicherte mit einem Austritt in einem der Vorjahre: Austrittsdatum;"
+            },
+            {
+              "marke": "c",
+              "text": "Angaben der Abrechnungsbelege zu den Deckungsperioden nach Buchstabe b:"
+            },
+            {
               "marke": "1",
               "text": "Belegnummer in pseudonymisierter Form,"
             },
@@ -960,7 +1028,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_28",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "df4a52cd1d03b4ea0f2af3388ebee1395618b7bd4a669d72cf3aa0186d706d91"
+      "sha": "c0c12e7b77adb42ed399afec64a81ca556134077d269caf353c7494deb6ab7c8"
     },
     {
       "id": "bund/KVV/art_28_a",
@@ -1131,6 +1199,78 @@
           "text": "Die Leistungserbringer geben dem Bundesamt für Statistik (BFS) folgende Daten nach Artikel 59 a Absatz 1 KVG, soweit diese für die Kontrolle der Wirtschaftlichkeit und der Qualität ihrer Leistungen nach dem KVG erforderlich sind, bekannt:",
           "items": [
             {
+              "marke": "a",
+              "text": "Betriebsdaten (Art. 59 a Abs. 1 Bst. a KVG), namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Betriebstyp und Leistungsangebot,"
+            },
+            {
+              "marke": "2",
+              "text": "Standorte,"
+            },
+            {
+              "marke": "3",
+              "text": "medizinisch-technische Infrastruktur,"
+            },
+            {
+              "marke": "4",
+              "text": "Rechtsform und Art des öffentlichen Beitrags;"
+            },
+            {
+              "marke": "b",
+              "text": "Personaldaten (Art. 59 a Abs. 1 Bst. b KVG), namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Personalbestand,"
+            },
+            {
+              "marke": "2",
+              "text": "Aus- und Weiterbildungsangebot,"
+            },
+            {
+              "marke": "3",
+              "text": "Angaben zu Beschäftigungsvolumen und Funktion sowie soziodemografische Merkmale,"
+            },
+            {
+              "marke": "4",
+              "text": "Angaben zum Personal in Aus- und Weiterbildung;"
+            },
+            {
+              "marke": "c",
+              "text": "Patientendaten (Art. 59 a Abs. 1 Bst. c KVG), namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "ambulanter Patientenkontakt, Ein- und Austritte, Pflegetage und Bettenbelegung,"
+            },
+            {
+              "marke": "2",
+              "text": "Diagnosen, Morbiditätsgrad, Art des Ein- und Austritts, Pflegebedarf und soziodemografische Merkmale;"
+            },
+            {
+              "marke": "d",
+              "text": "Leistungsdaten (Art. 59 a Abs. 1 Bst. d KVG), namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Leistungstyp, Untersuchungen und Behandlungen,"
+            },
+            {
+              "marke": "2",
+              "text": "Leistungsvolumen;"
+            },
+            {
+              "marke": "e",
+              "text": "Kostendaten für stationäre Leistungen (Art. 59 a Abs. 1 Bst. d KVG), namentlich Gestehungskosten und Erlöse pro Fall;"
+            },
+            {
+              "marke": "f",
+              "text": "Finanzdaten (Art. 59 a Abs. 1 Bst. e KVG), namentlich:"
+            },
+            {
               "marke": "1",
               "text": "Betriebsaufwand aus Finanz-, Lohn- und Anlagebuchhaltung,"
             },
@@ -1141,6 +1281,10 @@
             {
               "marke": "3",
               "text": "Betriebsergebnis aus Finanzbuchhaltung;"
+            },
+            {
+              "marke": "g",
+              "text": "medizinische Qualitätsindikatoren (Art. 59 a Abs. 1 Bst. f KVG), namentlich Angaben, deren Analyse Rückschlüsse erlauben, inwieweit medizinische Leistungen wirksam, effizient, angemessen, sicher, patientenzentriert, rechtzeitig und chancengleich erbracht werden."
             }
           ]
         }
@@ -1149,7 +1293,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "b902f730823bca28233593bc1be5f60731355a0a4a666c15f0ad021da625f0d7"
+      "sha": "e78e8b05f3075882d4f43f9947f6fe109735f3577b0023385e712d6a22f49300"
     },
     {
       "id": "bund/KVV/art_30_a",
@@ -1216,7 +1360,11 @@
             },
             {
               "marke": "b",
-              "text": "den zuständigen Behörden der Kantone: 1. die Daten nach Artikel 30, sofern diese für die Planung der Spitäler, Geburtshäuser und Pflegeheime (Art. 39 KVG) erforderlich sind,"
+              "text": "den zuständigen Behörden der Kantone:"
+            },
+            {
+              "marke": "1",
+              "text": "die Daten nach Artikel 30, sofern diese für die Planung der Spitäler, Geburtshäuser und Pflegeheime (Art. 39 KVG) erforderlich sind,"
             },
             {
               "marke": "2",
@@ -1229,6 +1377,14 @@
             {
               "marke": "4",
               "text": "die Daten nach Artikel 30, sofern sie für die Festlegung der Pflegekosten notwendig sind (Art. 55 b KVG);"
+            },
+            {
+              "marke": "c",
+              "text": "den Versicherern: die Daten nach Artikel 30 Buchstaben a, c, d und e, sofern diese für den Vollzug der Bestimmungen zur Kontrolle der Wirtschaftlichkeit der Leistungen, die von der obligatorischen Krankenpflegeversicherung übernommen werden, erforderlich sind;"
+            },
+            {
+              "marke": "d",
+              "text": "dem Preisüberwacher: die Daten nach Artikel 30, sofern diese zur Prüfung von Preisen und Tarifen im Gesundheitswesen im Rahmen von Artikel 14 des Preisüberwachungsgesetzes vom 20. Dezember 1985 erforderlich sind."
             }
           ]
         },
@@ -1255,7 +1411,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_30_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "82c853583182d9f8b2dec388164c30103ca1b74a9b0f3aa985a8fb2364aad43f"
+      "sha": "c4444565118261eb206a1407e67cffd3078939a3c23290190009e91e7a044d22"
     },
     {
       "id": "bund/KVV/art_30_c",
@@ -2268,7 +2424,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einer nach dieser Verordnung zugelassenen Hebamme;"
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einer nach dieser Verordnung zugelassenen Hebamme;"
             },
             {
               "marke": "2",
@@ -2277,6 +2437,10 @@
             {
               "marke": "3",
               "text": "in einer Organisation der Hebammen, unter der Leitung einer Hebamme, welche die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "c",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2285,7 +2449,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "fa8cac1f184aa767869ac9728357973daab6a4fa6156fb5f0af6560cf7e030e8"
+      "sha": "a70f1d11909d047c535afd244e9a96af6b5118cae0e4e62028615ef4b964f85b"
     },
     {
       "id": "bund/KVV/art_45_a",
@@ -2365,7 +2529,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einem Physiotherapeuten oder einer Physiotherapeutin, der oder die nach dieser Verordnung zugelassen ist;"
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem Physiotherapeuten oder einer Physiotherapeutin, der oder die nach dieser Verordnung zugelassen ist;"
             },
             {
               "marke": "2",
@@ -2374,6 +2542,14 @@
             {
               "marke": "3",
               "text": "in einer Organisation der Physiotherapie, unter der Leitung eines Physiotherapeuten oder einer Physiotherapeutin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2382,7 +2558,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_47",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "d477d4e9af44c51bb879c06ba6b62c43e86f5cc386191cf7dbbe4f1c624895ae"
+      "sha": "ba34ad2525d08c2705cf42f36450b1498372a01dec96a1df3340ef56c6176536"
     },
     {
       "id": "bund/KVV/art_48",
@@ -2402,7 +2578,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einem Ergotherapeuten oder einer Ergotherapeutin, der oder die nach dieser Verordnung zugelassen ist;"
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem Ergotherapeuten oder einer Ergotherapeutin, der oder die nach dieser Verordnung zugelassen ist;"
             },
             {
               "marke": "2",
@@ -2411,6 +2591,14 @@
             {
               "marke": "3",
               "text": "in einer Organisation der Ergotherapie, unter der Leitung eines Ergotherapeuten oder einer Ergotherapeutin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2419,7 +2607,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_48",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "22554bfb493cd15404441a7b59223b1762d2020727e5f7e07ec1cafd49ff5214"
+      "sha": "3107883f31ee4c2c44f36a7264aca0cc9f7f662eef4ca75f18326fcbfd8d409a"
     },
     {
       "id": "bund/KVV/art_49",
@@ -2439,7 +2627,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einem Pflegefachmann oder einer Pflegefachfrau, der oder die nach dieser Verordnung zugelassen ist;"
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem Pflegefachmann oder einer Pflegefachfrau, der oder die nach dieser Verordnung zugelassen ist;"
             },
             {
               "marke": "2",
@@ -2448,6 +2640,14 @@
             {
               "marke": "3",
               "text": "in einer Organisation der Krankenpflege und Hilfe zu Hause, unter der Leitung eines Pflegefachmanns oder einer Pflegefachfrau, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         },
@@ -2460,7 +2660,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_49",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "ff6852f442467e96d45d5eecfb3d280650e88cff2ccbd89cf131b73b158f06a3"
+      "sha": "6ca20f1913f29a07ac09b0bb6f2a34f41a5ca2a3bbc5b502c6309784adee70da"
     },
     {
       "id": "bund/KVV/art_50",
@@ -2480,7 +2680,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie verfügen über eine vom Kanton anerkannte dreijährige theoretische und praktische Fachausbildung als Logopäde oder Logopädin mit erfolgreich abgelegter Prüfung in folgenden Fächern: 1. Linguistik (Linguistik, Phonetik, Psycholinguistik);"
+              "text": "Sie verfügen über eine vom Kanton anerkannte dreijährige theoretische und praktische Fachausbildung als Logopäde oder Logopädin mit erfolgreich abgelegter Prüfung in folgenden Fächern:"
+            },
+            {
+              "marke": "1",
+              "text": "Linguistik (Linguistik, Phonetik, Psycholinguistik);"
             },
             {
               "marke": "2",
@@ -2501,6 +2705,18 @@
             {
               "marke": "6",
               "text": "Recht (Sozialgesetzgebung)."
+            },
+            {
+              "marke": "c",
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit in klinischer Logopädie, überwiegend im Erwachsenenbereich, ausgeübt, davon mindestens ein Jahr in einem Spital unter fachärztlicher Leitung (Oto-Rhino-Laryngologie, Psychiatrie, Kinderpsychiatrie, Phoniatrie oder Neurologie) und im Beisein eines Logopäden oder einer Logopädin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt; ein Jahr kann unter entsprechender fachärztlicher Leitung und in Begleitung eines Logopäden oder einer Logopädin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt, in einer Facharztpraxis oder in einer Organisation der Logopädie, die nach dieser Verordnung zugelassen ist, absolviert werden."
+            },
+            {
+              "marke": "d",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "e",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2509,7 +2725,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_50",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "cd1bdaa29bf93a1aa9817005607fabb5c711b72a65efc518ecf56c45874d2132"
+      "sha": "42a5f1daa7eb0b9b2abc7d968d7710c3912b52646adbeb6c0a17c4b88f49ada9"
     },
     {
       "id": "bund/KVV/art_50_a",
@@ -2529,7 +2745,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einem Ernährungsberater oder einer Ernährungsberaterin, der oder die nach dieser Verordnung zugelassen ist;"
+              "text": "Sie haben während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem Ernährungsberater oder einer Ernährungsberaterin, der oder die nach dieser Verordnung zugelassen ist;"
             },
             {
               "marke": "2",
@@ -2538,6 +2758,14 @@
             {
               "marke": "3",
               "text": "in einer Organisation der Ernährungsberatung, unter der Leitung eines Ernährungsberaters oder einer Ernährungsberaterin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2546,7 +2774,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_50_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "b4dfa13e659d50a9a8400ab2f5b2252d46cf0db6ad9352cba6982606e6ddbd5a"
+      "sha": "91faeca339b703290d8c730a2c9bf549e14aee8ebff8201c168f5dc613bdb070"
     },
     {
       "id": "bund/KVV/art_50_b",
@@ -2566,11 +2794,23 @@
             },
             {
               "marke": "b",
-              "text": "Sie verfügen über: 1. einen anerkannten Abschluss in Psychologie und einen eidgenössischen oder als gleichwertig anerkannten Weiterbildungstitel in Neuropsychologie nach dem Psychologieberufegesetz vom 18. März 2011 (PsyG); oder"
+              "text": "Sie verfügen über:"
+            },
+            {
+              "marke": "1",
+              "text": "einen anerkannten Abschluss in Psychologie und einen eidgenössischen oder als gleichwertig anerkannten Weiterbildungstitel in Neuropsychologie nach dem Psychologieberufegesetz vom 18. März 2011 (PsyG); oder"
             },
             {
               "marke": "2",
               "text": "einen anerkannten Abschluss in Psychologie nach dem PsyG und einen Fachtitel Neuropsychologie der Föderation der Schweizer Psychologinnen und Psychologen."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2579,7 +2819,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_50_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "5975410076994cafc58c99564b636ab29efa5b242d9ae9f5b571f21b2d4b71c2"
+      "sha": "0ea356ad4016edf94d7d94c163d175d79cd65b3fc9d904acd878631bbd8f7991"
     },
     {
       "id": "bund/KVV/art_50_c",
@@ -2599,11 +2839,23 @@
             },
             {
               "marke": "b",
-              "text": "Sie haben eine klinische Erfahrung von drei Jahren, davon mindestens 12 Monate in psychotherapeutisch-psychiatrischen Einrichtungen, die über eine der folgenden Anerkennungen des Schweizerischen Instituts für ärztliche Weiter- und Fortbildung (SIWF) verfügen: 1. ambulante oder stationäre Weiterbildungsstätte der Kategorie A, B oder C nach dem Weiterbildungsprogramm «Fachärztin oder Facharzt für Psychiatrie und Psychotherapie» vom 1. Januar 2024 oder der Kategorien A oder B nach den Schwerpunktprogrammen «Alterspsychiatrie und -psychotherapie», «Konsiliar- und Liaisonpsychiatrie», «Forensische Psychiatrie und Psychotherapie» und «Psychiatrie und Psychotherapie der Abhängigkeitserkrankungen» in der am 1. Januar 2024 geltenden Fassung;"
+              "text": "Sie haben eine klinische Erfahrung von drei Jahren, davon mindestens 12 Monate in psychotherapeutisch-psychiatrischen Einrichtungen, die über eine der folgenden Anerkennungen des Schweizerischen Instituts für ärztliche Weiter- und Fortbildung (SIWF) verfügen:"
+            },
+            {
+              "marke": "1",
+              "text": "ambulante oder stationäre Weiterbildungsstätte der Kategorie A, B oder C nach dem Weiterbildungsprogramm «Fachärztin oder Facharzt für Psychiatrie und Psychotherapie» vom 1. Januar 2024 oder der Kategorien A oder B nach den Schwerpunktprogrammen «Alterspsychiatrie und -psychotherapie», «Konsiliar- und Liaisonpsychiatrie», «Forensische Psychiatrie und Psychotherapie» und «Psychiatrie und Psychotherapie der Abhängigkeitserkrankungen» in der am 1. Januar 2024 geltenden Fassung;"
             },
             {
               "marke": "2",
               "text": "Weiterbildungsstätte der Kategorien A, B oder C nach dem Weiterbildungsprogramm «Facharzt für Kinder- und Jugendpsychiatrie und ‑psychotherapie» vom 1. Juli 2006 in der Fassung vom 20. Dezember 2018."
+            },
+            {
+              "marke": "c",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "d",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2612,7 +2864,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_50_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "8da524b198e83d8503af0d6b76152a3a1532198be8552689d612f0bd34bb63b4"
+      "sha": "8d02e1a22494cf896dcfe702fff16db866883a2da3be95cc72ff39f8b2267341"
     },
     {
       "id": "bund/KVV/art_50_d",
@@ -2636,7 +2888,11 @@
             },
             {
               "marke": "c",
-              "text": "Sie haben nach Erhalt ihres Diploms während zwei Jahren eine praktische Tätigkeit ausgeübt: 1. bei einem Podologen oder einer Podologin, der oder die nach dieser Verordnung zugelassen ist;"
+              "text": "Sie haben nach Erhalt ihres Diploms während zwei Jahren eine praktische Tätigkeit ausgeübt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem Podologen oder einer Podologin, der oder die nach dieser Verordnung zugelassen ist;"
             },
             {
               "marke": "2",
@@ -2645,6 +2901,14 @@
             {
               "marke": "3",
               "text": "in einem Spital, in einer Organisation der Krankenpflege und Hilfe zu Hause oder in einem Pflegeheim, unter der Leitung eines Podologen oder einer Podologin, der oder die die Zulassungsvoraussetzungen dieser Verordnung erfüllt."
+            },
+            {
+              "marke": "d",
+              "text": "Sie üben ihren Beruf selbstständig und auf eigene Rechnung aus."
+            },
+            {
+              "marke": "e",
+              "text": "Sie weisen nach, dass sie die Qualitätsanforderungen nach Artikel 58 g erfüllen."
             }
           ]
         }
@@ -2653,7 +2917,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_50_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "8a4d1560c2dd366c6ea3126b99bdd41e7299411dcb892fde184fa880c7d477eb"
+      "sha": "01b78560527ee9cfcc9b3ebd9743955fa2f8f2e4b410c80a5856714c0208a464"
     },
     {
       "id": "bund/KVV/art_51",
@@ -3058,7 +3322,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Praxislaboratorium eines Arztes oder einer Ärztin, wenn: 1. Analysen im Rahmen der Grundversorgung nach Artikel 62 Absatz 1 Buchstabe a für den Eigenbedarf des Arztes oder der Ärztin durchgeführt werden,"
+              "text": "das Praxislaboratorium eines Arztes oder einer Ärztin, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "Analysen im Rahmen der Grundversorgung nach Artikel 62 Absatz 1 Buchstabe a für den Eigenbedarf des Arztes oder der Ärztin durchgeführt werden,"
             },
             {
               "marke": "2",
@@ -3071,6 +3339,14 @@
             {
               "marke": "4",
               "text": "die Analysen im Praxislaboratorium oder, für separat bezeichnete Analysen nach Ziffer 1, im Rahmen eines Hausbesuches durchgeführt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "das Spitallaboratorium für Analysen, die nach Artikel 62 Absatz 1 Buchstabe a im Rahmen der Grundversorgung für den Eigenbedarf durchgeführt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Offizin eines Apothekers oder einer Apothekerin sowie das Spitallaboratorium für Analysen nach Artikel 62 Absatz 1 Buchstabe a im Rahmen der Grundversorgung, die von einem anderen Leistungserbringer angeordnet sind."
             }
           ]
         },
@@ -3109,7 +3385,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_54",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "26ec0ed6b1b64867c2fbc86dd572678f0b646551a7f1db7fa6d03b839c2b2986"
+      "sha": "fd16d7e3c21a0684322f501696cc8f9abe341630575b9e4b99dcbbb0fd073724"
     },
     {
       "id": "bund/KVV/art_54_a",
@@ -3919,6 +4195,78 @@
           "text": "Die Pflicht zur Datenbekanntgabe nach Artikel 47 b Absatz 1 KVG umfasst folgende Daten:",
           "items": [
             {
+              "marke": "a",
+              "text": "allgemeine Betriebsdaten, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Betriebstyp, einschliesslich Rechtsform,"
+            },
+            {
+              "marke": "2",
+              "text": "Standorte,"
+            },
+            {
+              "marke": "3",
+              "text": "medizinisch-technische Infrastruktur,"
+            },
+            {
+              "marke": "4",
+              "text": "Betriebsdauer pro Jahr;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten zum Personalbestand des Betriebs, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Anzahl Leistungserbringer, aufgeschlüsselt nach den Kategorien nach Artikel 35 Absatz 2 KVG und nach Spezialisierung, sowie weiteres Personal,"
+            },
+            {
+              "marke": "2",
+              "text": "Angaben zum Beschäftigungsvolumen der Leistungserbringer, aufgeschlüsselt nach den Kategorien nach Artikel 35 Absatz 2 KVG und nach Spezialisierung, sowie des weiteren Personals;"
+            },
+            {
+              "marke": "c",
+              "text": "Leistungstyp, Untersuchungen und Behandlungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Gestehungskosten der Leistungen, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Personalaufwand pro Personalkategorie, einschliesslich separat ausgewiesener berufliche Vorsorge,"
+            },
+            {
+              "marke": "2",
+              "text": "Materialaufwand und Materialmenge,"
+            },
+            {
+              "marke": "3",
+              "text": "Raumaufwand und Raumfläche,"
+            },
+            {
+              "marke": "4",
+              "text": "Kapitalaufwand sowie Eigen- und Fremdkapital,"
+            },
+            {
+              "marke": "5",
+              "text": "Abschreibungen und Anlagevermögen,"
+            },
+            {
+              "marke": "6",
+              "text": "Investitionsaufwand;"
+            },
+            {
+              "marke": "e",
+              "text": "quantitative Informationen zur Aufschlüsselung der Gestehungskosten nach den einzelnen Leistungen in Abhängigkeit des Kostenmodells, insbesondere die Dauer der Leistung und Anzahl Patientinnen und Patienten;"
+            },
+            {
+              "marke": "f",
+              "text": "Entwicklung der Kosten zulasten der obligatorischen Krankenpflegeversicherung, namentlich:"
+            },
+            {
               "marke": "1",
               "text": "Tarifpositionen, Leistungsvolumen und Kosten der abgerechneten Leistungen,"
             },
@@ -3941,7 +4289,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_59_f",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "f0b82003dc992ce0aff6a01b4ff6288c3dedd89549cb92eef469746136d6b3ca"
+      "sha": "b11b64fd576b399ad5cf643ec7ae81f3e7b0fa89331c34d4371c7ba79861fd0f"
     },
     {
       "id": "bund/KVV/art_59_g",
@@ -4778,7 +5126,11 @@
             },
             {
               "marke": "b",
-              "text": "bei denen die voraussichtliche Erhöhung des Marktvolumens nicht bestimmbar ist, namentlich wenn: 1. das Originalpräparat oder die neue Indikation befristet aufgenommen wurde und die Frist innerhalb der folgenden zwei Jahre abläuft,"
+              "text": "bei denen die voraussichtliche Erhöhung des Marktvolumens nicht bestimmbar ist, namentlich wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "das Originalpräparat oder die neue Indikation befristet aufgenommen wurde und die Frist innerhalb der folgenden zwei Jahre abläuft,"
             },
             {
               "marke": "2",
@@ -4811,7 +5163,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_65_f",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "7c08bc93d957226369546e9fe27d694b221b93b2521b372111ae4d608ca8186d"
+      "sha": "5c70bf015912f860e8308314ba1173fdc63f122297bc2ba37da8740df487311a"
     },
     {
       "id": "bund/KVV/art_65_g",
@@ -4927,11 +5279,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Arzneimittel, die aufgrund der Einteilung der Swissmedic verschreibungspflichtig sind, aus: 1. einem im Verhältnis zur Höhe des Fabrikabgabepreises bemessenen Zuschlag (preisbezogener Zuschlag), namentlich für Kapitalkosten, Lagerhaltung und ausstehende Guthaben,"
+              "text": "für Arzneimittel, die aufgrund der Einteilung der Swissmedic verschreibungspflichtig sind, aus:"
+            },
+            {
+              "marke": "1",
+              "text": "einem im Verhältnis zur Höhe des Fabrikabgabepreises bemessenen Zuschlag (preisbezogener Zuschlag), namentlich für Kapitalkosten, Lagerhaltung und ausstehende Guthaben,"
             },
             {
               "marke": "2",
               "text": "einem Zuschlag je Packung, namentlich für Transport-, Infrastruktur- und Personalkosten;"
+            },
+            {
+              "marke": "b",
+              "text": "für Arzneimittel, die aufgrund der Einteilung der Swissmedic nicht verschreibungspflichtig sind, aus einem preisbezogenen Zuschlag."
             }
           ]
         },
@@ -4958,7 +5318,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_67",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "7eb84f704043cc4b9bdc2106747736995f24221f8fb5fdda08e14c6c8af65570"
+      "sha": "63e691dab5d7474a20aaafb700b50dacf307d5c489cc9eb0bb576c9e72ecb211"
     },
     {
       "id": "bund/KVV/art_67_a",
@@ -5322,6 +5682,74 @@
           "text": "Das BAG veröffentlicht:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Spezialitätenliste (Art. 52 Abs. 1 Bst. b KVG);"
+            },
+            {
+              "marke": "b",
+              "text": "die Grundlagen zur Beurteilung der Wirksamkeit und der Zweckmässigkeit des Originalpräparats, zum therapeutischen Quervergleich (Art. 65 b Abs. 2 Bst. a) und zum Innovationszuschlag (Art. 65 b ter ), mit Ausnahme der Grundlagen zur Berechnung von vertraulichen Rückerstattungen der Zulassungsinhaberin, sowie den Preis aus dem Durchschnitt der Preise der Referenzländer beim Auslandpreisvergleich (Art. 65 b Abs. 2 Bst. b) bezüglich folgender Gesuche, sofern die Eidgenössische Arzneimittelkommission konsultiert wird:"
+            },
+            {
+              "marke": "1",
+              "text": "Gesuch um Aufnahme eines Originalpräparates in die Spezialitätenliste,"
+            },
+            {
+              "marke": "2",
+              "text": "Gesuch um Indikationserweiterung (Art. 65 f ),"
+            },
+            {
+              "marke": "3",
+              "text": "Gesuch um Limitierungsänderung (Art. 65 f ),"
+            },
+            {
+              "marke": "4",
+              "text": "Gesuch um Preiserhöhung (Art. 67 Abs. 5);"
+            },
+            {
+              "marke": "c",
+              "text": "bei einer Ablehnung der Aufnahme eines Originalpräparates in die Spezialitätenliste: die Gründe für die Ablehnung;"
+            },
+            {
+              "marke": "d",
+              "text": "bei einer befristeten Aufnahme in die Spezialitätenliste nach Artikel 65 Absatz 5 Buchstabe a: die Dauer der Aufnahme;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Streichungen eines Arzneimittels aus der Spezialitätenliste (Art. 68): die Gründe für die Streichung;"
+            },
+            {
+              "marke": "f",
+              "text": "nach Eingang eines Gesuchs um Neuaufnahme, Indikationserweiterung oder Limitierungsänderung eines Originalpräparates:"
+            },
+            {
+              "marke": "1",
+              "text": "den Namen des Arzneimittels,"
+            },
+            {
+              "marke": "2",
+              "text": "die Krankheit, für die die Vergütung einer Therapie beantragt wird,"
+            },
+            {
+              "marke": "3",
+              "text": "den Namen der Zulassungsinhaberin,"
+            },
+            {
+              "marke": "4",
+              "text": "die Gesuchsart,"
+            },
+            {
+              "marke": "5",
+              "text": "das Eingangsdatum des Gesuchs,"
+            },
+            {
+              "marke": "6",
+              "text": "den Status der Zulassung bei der Swissmedic zum Zeitpunkt des Gesuchseingangs;"
+            },
+            {
+              "marke": "g",
+              "text": "im Rahmen der Überprüfung der Aufnahmebedingungen alle drei Jahre:"
+            },
+            {
               "marke": "1",
               "text": "die Grundlagen zur Beurteilung der Wirksamkeit und der Zweckmässigkeit des Originalpräparates, soweit diese zu einer Änderung der Spezialitätenliste führen,"
             },
@@ -5332,6 +5760,10 @@
             {
               "marke": "3",
               "text": "die Grundlagen zum therapeutischen Quervergleich, insbesondere eine tabellarische Übersicht der Vergleichsarzneimittel und deren Kosten."
+            },
+            {
+              "marke": "h",
+              "text": "bei Preissenkungen: den Grund der Anpassung;"
             }
           ]
         },
@@ -5362,7 +5794,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_71",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "5d98a49886f66dd731ed405f2a1be37ba8960222751ec5daa8d5d24293f50319"
+      "sha": "d107089ae2c64cd414276173b002e2d5f769e2c36eccda47fe4710b64b621fc7"
     },
     {
       "id": "bund/KVV/art_71_a",
@@ -8048,7 +8480,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Artikel 64 a Absätze 1–7 des Gesetzes und die Artikel 105 b –105 l auf: 1. Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige,"
+              "text": "Artikel 64 a Absätze 1–7 des Gesetzes und die Artikel 105 b –105 l auf:"
+            },
+            {
+              "marke": "1",
+              "text": "Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige,"
             },
             {
               "marke": "2",
@@ -8057,6 +8493,10 @@
             {
               "marke": "3",
               "text": "Bezüger und Bezügerinnen einer Leistung der schweizerischen Arbeitslosenversicherung sowie deren Familienangehörige;"
+            },
+            {
+              "marke": "b",
+              "text": "Artikel 64 a Absätze 1, 2 und 6 des Gesetzes und die Artikel 105 b und 105 l auf Rentnerinnen und Rentnern sowie deren Familienangehörige; der Versicherer übernimmt die Verlustscheine."
             }
           ]
         },
@@ -8069,7 +8509,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_105_m",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "bfa756123fe2a64c389215683b2f4cefb120fd74326c09686c018c3f6bc2b527"
+      "sha": "bdef9a0184acbf42bb04ce233ce2e293d47d2820e0aaf9e34ccf822e251d421f"
     },
     {
       "id": "bund/KVV/art_106",

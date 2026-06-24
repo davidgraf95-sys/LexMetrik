@@ -112,6 +112,46 @@
           "text": "Soweit diese Verordnung nichts Abweichendes vorsieht, gelten die folgenden Papierformen und elektronischen Formen jeweils als gleichwertig:",
           "items": [
             {
+              "marke": "a",
+              "text": "Schriftform:"
+            },
+            {
+              "marke": "1",
+              "text": "Papierdokument mit eigenhändiger Unterschrift,"
+            },
+            {
+              "marke": "2",
+              "text": "elektronisches Dokument mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis des Obligationenrechts (OR);"
+            },
+            {
+              "marke": "b",
+              "text": "öffentliche Urkunde:"
+            },
+            {
+              "marke": "1",
+              "text": "nach kantonalem Recht beurkundetes Papierdokument,"
+            },
+            {
+              "marke": "2",
+              "text": "nach der Verordnung vom 8. Dezember 2017 über die Erstellung elektronischer öffentlicher Urkunden und elektronischer Beglaubigungen (EÖBV) beurkundetes elektronisches Dokument;"
+            },
+            {
+              "marke": "c",
+              "text": "Beglaubigung:"
+            },
+            {
+              "marke": "1",
+              "text": "nach kantonalem Recht erstellte Beglaubigung auf Papier,"
+            },
+            {
+              "marke": "2",
+              "text": "nach der EÖBV erstellte elektronische Beglaubigung;"
+            },
+            {
+              "marke": "d",
+              "text": "Anmelden:"
+            },
+            {
               "marke": "1",
               "text": "Zustellen eines Papierdokuments,"
             },
@@ -130,7 +170,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "61bdd017e6c24f29cafeb4be1de804877cac1f5d00f8edb76b9de65480274dbe"
+      "sha": "1964eaf1f005a55d58c191e5449c767728bbc8c707687d89be64fc8a150fef41"
     },
     {
       "id": "bund/GBV/art_4",
@@ -735,11 +775,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "selbstständige und dauernde Rechte an Grundstücken: 1. auf mindestens 30 Jahre oder auf unbestimmte Zeit begründete und übertragbare Dienstbarkeiten wie Baurechte und Quellenrechte (Art. 943 Abs. 1 Ziff. 2 ZGB),"
+              "text": "selbstständige und dauernde Rechte an Grundstücken:"
+            },
+            {
+              "marke": "1",
+              "text": "auf mindestens 30 Jahre oder auf unbestimmte Zeit begründete und übertragbare Dienstbarkeiten wie Baurechte und Quellenrechte (Art. 943 Abs. 1 Ziff. 2 ZGB),"
             },
             {
               "marke": "2",
               "text": "auf mindestens 30 Jahre verliehene Wasserrechte an öffentlichen Gewässern (Art. 59 des Wasserrechtsgesetzes vom 22. Dez. 1916);"
+            },
+            {
+              "marke": "b",
+              "text": "Bergwerke."
             }
           ]
         },
@@ -756,7 +804,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "168ec0ab4d42f20b03dff45003553f8c14b5510fef8c127886907b3528db5880"
+      "sha": "22c00348b38a69df52b84086a2b90e136eabb7899ab5ea8909d25318e5a9e03a"
     },
     {
       "id": "bund/GBV/art_23",
@@ -1088,7 +1136,11 @@
             },
             {
               "marke": "c",
-              "text": "die Anmerkungen mit Ausnahme von: 1. Grundbuchsperren nach den Artikeln 55 Absatz 1 und 56,"
+              "text": "die Anmerkungen mit Ausnahme von:"
+            },
+            {
+              "marke": "1",
+              "text": "Grundbuchsperren nach den Artikeln 55 Absatz 1 und 56,"
             },
             {
               "marke": "2",
@@ -1113,7 +1165,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_26",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "7f696c59a408cd72b25f74177564934cc2de1e85d42c503105d0fa3fa89ddfcf"
+      "sha": "45c0b1c77520b12840fef25b954deb38f4e1b8698d99c6e752f1cab624849e79"
     },
     {
       "id": "bund/GBV/art_27",
@@ -1176,11 +1228,19 @@
             },
             {
               "marke": "d",
-              "text": "weiteren Personen die Daten der Grundstücke: 1. die ihnen gehören,"
+              "text": "weiteren Personen die Daten der Grundstücke:"
+            },
+            {
+              "marke": "1",
+              "text": "die ihnen gehören,"
             },
             {
               "marke": "2",
               "text": "an denen ihnen Rechte zustehen, sofern sie die Daten zur Ausübung ihrer Geschäftstätigkeit oder zur Wahrnehmung ihrer Rechte benötigen;"
+            },
+            {
+              "marke": "e",
+              "text": "Immobilienverwalterinnen und -verwaltern, die durch Personen nach Buchstabe d als Hilfspersonen zum Zugang ermächtigt worden sind."
             }
           ]
         },
@@ -1197,7 +1257,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_28",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "c0379c0d4489f0039a897b0def0dd88cdfb375a56feb2940bf0cfb6a494c9497"
+      "sha": "682dd88895258f9859e96f2eff7347955833f985bcc61e565a1baa068643feab"
     },
     {
       "id": "bund/GBV/art_29",
@@ -1481,7 +1541,11 @@
             },
             {
               "marke": "b",
-              "text": "in einer Form, die es dem Suchdienst erlaubt, festzustellen, ob zu einer Anfrage Treffer in einem Grundbuchsystem vorhanden sind, es aber nicht ermöglicht, einen weitergehenden Personenbezug herzustellen (pseudonymisierte Form): 1. die Angaben nach Artikel 90 Absatz 1,"
+              "text": "in einer Form, die es dem Suchdienst erlaubt, festzustellen, ob zu einer Anfrage Treffer in einem Grundbuchsystem vorhanden sind, es aber nicht ermöglicht, einen weitergehenden Personenbezug herzustellen (pseudonymisierte Form):"
+            },
+            {
+              "marke": "1",
+              "text": "die Angaben nach Artikel 90 Absatz 1,"
             },
             {
               "marke": "2",
@@ -1512,7 +1576,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_34_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "a7141437574035a4231b90830e5d633f949e227717beee206aa16c5f1bb4f516"
+      "sha": "4acbf5fcce7bdf0bf6ec9a4f0688f1b5c49049175e614a5c2e6b7fdeaa6d8783"
     },
     {
       "id": "bund/GBV/art_34_c",
@@ -1670,7 +1734,11 @@
             },
             {
               "marke": "d",
-              "text": "zur Beschreibung des Rechts eine der folgenden Bezeichnungen: 1. Eigentum an einem Grundstück,"
+              "text": "zur Beschreibung des Rechts eine der folgenden Bezeichnungen:"
+            },
+            {
+              "marke": "1",
+              "text": "Eigentum an einem Grundstück,"
             },
             {
               "marke": "2",
@@ -1695,7 +1763,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_34_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "7012314d562a896d430f5a4ab6cb64bf23418088d7bea87d66bc5c9d5aabc32a"
+      "sha": "fe3f9f158386732043303c03bf6e5fcb268b9347bd82a742e9b60e8222b47d12"
     },
     {
       "id": "bund/GBV/art_34_f",
@@ -1947,6 +2015,26 @@
           "text": "Der Geschäftsverkehr mit dem Grundbuchamt umfasst:",
           "items": [
             {
+              "marke": "a",
+              "text": "Eingaben an das Grundbuchamt, insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "die Anmeldung,"
+            },
+            {
+              "marke": "2",
+              "text": "das Gesuch um Ausstellung einer Bescheinigung,"
+            },
+            {
+              "marke": "3",
+              "text": "das Gesuch um Ausstellung eines Grundbuchauszugs;"
+            },
+            {
+              "marke": "b",
+              "text": "Zustellungen des Grundbuchamts an die beteiligten Parteien, insbesondere:"
+            },
+            {
               "marke": "1",
               "text": "die Bescheinigung des Eintrags im Tagebuch,"
             },
@@ -1981,7 +2069,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_38",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "5f12d857945bd5f11b7a3bef835af7e68cff54545db8a4c67e9689c2b9529c63"
+      "sha": "749bc9c560031ac802af219f8b746e24a823c11c0f7c5ee4cf98b679f4e9a2c5"
     },
     {
       "id": "bund/GBV/art_39",
@@ -2349,7 +2437,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für natürliche Personen: den Namen, die Vornamen, das Geburtsdatum, das Geschlecht, den Wohnort, den Heimatort oder die Staatsangehörigkeit; den Anmeldungsbelegen sind zur Identifizierung eine Kopie des Passes oder der Identitätskarte sowie eines der nachfolgenden Dokumente beizulegen: 1. eine Kopie des Versicherungsausweises nach Artikel 135 bis AHVV,"
+              "text": "für natürliche Personen: den Namen, die Vornamen, das Geburtsdatum, das Geschlecht, den Wohnort, den Heimatort oder die Staatsangehörigkeit; den Anmeldungsbelegen sind zur Identifizierung eine Kopie des Passes oder der Identitätskarte sowie eines der nachfolgenden Dokumente beizulegen:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Kopie des Versicherungsausweises nach Artikel 135 bis AHVV,"
             },
             {
               "marke": "2",
@@ -2358,6 +2450,14 @@
             {
               "marke": "3",
               "text": "eine schriftliche Erklärung der Person, aus welcher ihr Geburtsort, ihr Familienname, ihre AHV-Nummer und die Vornamen der Eltern sowie bei Verheirateten ihr Ledigname hervorgehen;"
+            },
+            {
+              "marke": "b",
+              "text": "für juristische Personen sowie Kollektiv- und Kommanditgesellschaften: die Firma oder den Namen, den Sitz, die Rechtsform, wenn diese nicht aus der Firma oder dem Namen hervorgeht, sowie die Unternehmens-Identifikationsnummer (UID);"
+            },
+            {
+              "marke": "c",
+              "text": "für andere Gesellschaften und Gemeinschaften, in denen die beteiligten Personen durch Gesetzesvorschrift oder Vertrag verbunden und Gesamteigentümer sind: die Angaben über die daran beteiligten Personen nach Buchstabe a oder b."
             }
           ]
         },
@@ -2374,7 +2474,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_51",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "87309c03db5c437a64d3cc1726109c3446b572949ea34a6d8e518a1baae42833"
+      "sha": "4e856a9f5b7a9b72fb30f509e8b4f9bf4aea2583b1856c71d829024036cd756f"
     },
     {
       "id": "bund/GBV/art_52",
@@ -2920,6 +3020,34 @@
           "text": "Erfolgt der Eigentumsübergang im Zusammenhang mit einem Trust, so wird der Rechtsgrundausweis mit den folgenden Belegen erbracht:",
           "items": [
             {
+              "marke": "a",
+              "text": "durch einen öffentlich beurkundeten Vertrag:"
+            },
+            {
+              "marke": "1",
+              "text": "bei der Übertragung eines Grundstücks vom Begründer oder von der Begründerin auf den oder die Trustee bei Errichtung eines Trusts durch Rechtsgeschäft unter Lebenden,"
+            },
+            {
+              "marke": "2",
+              "text": "bei der Weiterübertragung eines Grundstücks von Zwischenberechtigten (Erbschaftsverwalter oder -verwalterin, Willensvollstrecker oder ‑vollstreckerin), Erben oder Erbinnen des Begründers oder der Begründerin auf den oder die Trustee,"
+            },
+            {
+              "marke": "3",
+              "text": "bei der Übertragung eines zu einem Trust gehörenden und im Alleineigentum stehenden Grundstücks zwischen zwei Trustees,"
+            },
+            {
+              "marke": "4",
+              "text": "bei der Weiterübertragung von Grundstücken von Zwischenberechtigten, Erben oder Erbinnen verstorbener Trustees auf nachfolgende Trustees,"
+            },
+            {
+              "marke": "5",
+              "text": "bei der Übertragung von zu einem Trust gehörenden Grundstücken von Trustees auf Begünstigte;"
+            },
+            {
+              "marke": "b",
+              "text": "durch das Erbfolgezeugnis oder eine Bescheinigung der zuständigen Erbgangsbehörde:"
+            },
+            {
               "marke": "1",
               "text": "bei Errichtung eines Trusts durch Verfügung von Todes wegen und direktem Übergang eines Grundstücks vom Begründer oder von der Begründerin auf den oder die Trustee,"
             },
@@ -2930,6 +3058,14 @@
             {
               "marke": "3",
               "text": "beim Erwerb durch zur Weiterübertragung verpflichtete Zwischenberechtigte, Erben oder Erbinnen des Begründers, der Begründerin oder von Trustees;"
+            },
+            {
+              "marke": "c",
+              "text": "beim Erwerb eines Grundstücks von Erben oder Erbinnen des Begründers oder der Begründerin durch Vermächtnis: durch eine beglaubigte Kopie der Verfügung von Todes wegen und die schriftliche Annahmeerklärung des oder der Trustee;"
+            },
+            {
+              "marke": "d",
+              "text": "beim Eigentumsübergang infolge Änderung der Zusammensetzung eines Trusts mit mehreren Trustees: durch eine von allen Trustees unterzeichnete schriftliche Urkunde, die das Ausscheiden bisheriger oder den Eintritt neuer Trustees bescheinigt."
             }
           ]
         },
@@ -2946,7 +3082,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_67",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "17af16f8716e18491dadb45548cec1f6a254dbcf22e9e2a8ee5903d88eb827f0"
+      "sha": "05d9526db5e13539d7ddc7b635c815f1bf2b2d581bea9008506ba89b8c5e0ff3"
     },
     {
       "id": "bund/GBV/art_68",
@@ -3966,7 +4102,11 @@
             },
             {
               "marke": "d",
-              "text": "gegebenenfalls die folgenden Angaben: 1. die Bezeichnung als gesetzliche Dienstbarkeit,"
+              "text": "gegebenenfalls die folgenden Angaben:"
+            },
+            {
+              "marke": "1",
+              "text": "die Bezeichnung als gesetzliche Dienstbarkeit,"
             },
             {
               "marke": "2",
@@ -3975,6 +4115,22 @@
             {
               "marke": "3",
               "text": "die Angabe einer nebensächlichen Leistungspflicht, deren Eintragung beantragt wurde;"
+            },
+            {
+              "marke": "e",
+              "text": "auf dem Hauptbuchblatt des belasteten Grundstücks die Bezeichnung des berechtigten Grundstücks oder der berechtigten Person;"
+            },
+            {
+              "marke": "f",
+              "text": "auf dem Hauptbuchblatt des berechtigten Grundstücks die Bezeichnung des belasteten Grundstücks; ist eine grosse Zahl von Grundstücken belastet, so kann beim Papiergrundbuch auf deren Bezeichnung verzichtet und auf den Beleg hingewiesen werden;"
+            },
+            {
+              "marke": "g",
+              "text": "das Datum der Eintragung in das Tagebuch;"
+            },
+            {
+              "marke": "h",
+              "text": "den Hinweis auf den Beleg."
             }
           ]
         },
@@ -3987,7 +4143,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_98",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "6076c2ff46ff288c763fdde1b7f0ae029b239f8311f403319266e24e0e916082"
+      "sha": "fa39595f448559b5c885fdfc68d39e5fdae381f07f542723f11c54ec561b556b"
     },
     {
       "id": "bund/GBV/art_99",
@@ -4672,7 +4828,11 @@
             },
             {
               "marke": "c",
-              "text": "beim gesetzlichen Pfandrecht für die Heimfallsentschädigung (Art. 779 d Abs. 2 und 3 ZGB): 1. die Bemerkung «Heimfallsentschädigung»,"
+              "text": "beim gesetzlichen Pfandrecht für die Heimfallsentschädigung (Art. 779 d Abs. 2 und 3 ZGB):"
+            },
+            {
+              "marke": "1",
+              "text": "die Bemerkung «Heimfallsentschädigung»,"
             },
             {
               "marke": "2",
@@ -4685,7 +4845,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/667/de#art_120",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "cf035f03fc007d5eb76ba33b6bc92d626277505b69d3a144f9f3d7e26e5eb6e1"
+      "sha": "0d95aa5f755ada6932e01ae1eff1df0f4733331c5deff3d2a355f7fa1957c7b6"
     },
     {
       "id": "bund/GBV/art_121",

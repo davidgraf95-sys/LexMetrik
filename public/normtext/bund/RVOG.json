@@ -350,11 +350,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "sechs Monate nach ihrem Inkrafttreten, wenn der Bundesrat bis dahin der Bundesversammlung keinen Entwurf unterbreitet: 1. einer gesetzlichen Grundlage für den Inhalt der Verordnung, oder"
+              "text": "sechs Monate nach ihrem Inkrafttreten, wenn der Bundesrat bis dahin der Bundesversammlung keinen Entwurf unterbreitet:"
+            },
+            {
+              "marke": "1",
+              "text": "einer gesetzlichen Grundlage für den Inhalt der Verordnung, oder"
             },
             {
               "marke": "2",
               "text": "einer Verordnung der Bundesversammlung gemäss Artikel 173 Absatz 1 Buchstabe c der Bundesverfassung, welche die Verordnung des Bundesrates ersetzt;"
+            },
+            {
+              "marke": "b",
+              "text": "nach der Ablehnung des Entwurfes durch die Bundesversammlung; oder"
+            },
+            {
+              "marke": "c",
+              "text": "wenn die gesetzliche Grundlage oder die sie ersetzende Verordnung der Bundesversammlung in Kraft tritt."
             }
           ]
         },
@@ -367,7 +379,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2022_2022_2022/de#art_7_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250501",
-      "sha": "46c0d174be6cebfc53d42fd23130727d307fe883690ed9cbbe422722b1d6c384"
+      "sha": "f369243c621766efc2f6bf1fbb8b9e8397b03bdf5235e1bedd9ac8f01263b631"
     },
     {
       "id": "bund/RVOG/art_7_e",
@@ -432,7 +444,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Personen des öffentlichen oder privaten Rechts, die: 1. nicht der zentralen Bundesverwaltung angehören,"
+              "text": "die Personen des öffentlichen oder privaten Rechts, die:"
+            },
+            {
+              "marke": "1",
+              "text": "nicht der zentralen Bundesverwaltung angehören,"
             },
             {
               "marke": "2",
@@ -441,6 +457,10 @@
             {
               "marke": "3",
               "text": "mit Verwaltungsaufgaben betraut sind;"
+            },
+            {
+              "marke": "b",
+              "text": "den ETH-Bereich."
             }
           ]
         }
@@ -449,7 +469,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2022_2022_2022/de#art_8",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250501",
-      "sha": "b4f54d30d065b831d5f3cbcf886c8d1e039557674d26f346d04bed23175f2451"
+      "sha": "5d87899660cabbf0e4394ad05eb72a12b6bef672d44151b760229cba184812d3"
     },
     {
       "id": "bund/RVOG/art_9",
@@ -2361,7 +2381,11 @@
             },
             {
               "marke": "b",
-              "text": "die Daten über die Nutzung der elektronischen Infrastruktur: 1. zur Aufrechterhaltung der Informations- und Dienstleistungssicherheit,"
+              "text": "die Daten über die Nutzung der elektronischen Infrastruktur:"
+            },
+            {
+              "marke": "1",
+              "text": "zur Aufrechterhaltung der Informations- und Dienstleistungssicherheit,"
             },
             {
               "marke": "2",
@@ -2378,6 +2402,14 @@
             {
               "marke": "5",
               "text": "zur Erfassung der Kosten, die durch die Benutzung der elektronischen Infrastruktur entstehen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Daten über die Arbeitszeiten des Personals: zur Bewirtschaftung der Arbeitszeit;"
+            },
+            {
+              "marke": "d",
+              "text": "die Daten über das Betreten oder Verlassen von Gebäuden und Räumen der Bundesorgane und über den Aufenthalt darin: zur Gewährleistung der Sicherheit."
             }
           ]
         }
@@ -2386,7 +2418,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2022_2022_2022/de#art_57_l",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250501",
-      "sha": "b098e8f24d801c7a0899640bb6a6f6549073bbcdfd8d3e8fa628826a32f82fd8"
+      "sha": "dcb1966c7226928207a45b884779738fe2411d2484a3cc96adceaa2a00e20709"
     },
     {
       "id": "bund/RVOG/art_57_m",

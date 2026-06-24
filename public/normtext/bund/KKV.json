@@ -930,7 +930,11 @@
             },
             {
               "marke": "b",
-              "text": "eine Verpflichtung vorliegt: 1. sie weder mit eigenen Forderungen zu verrechnen noch aus eigenen Vermögenswerten sicherzustellen,"
+              "text": "eine Verpflichtung vorliegt:"
+            },
+            {
+              "marke": "1",
+              "text": "sie weder mit eigenen Forderungen zu verrechnen noch aus eigenen Vermögenswerten sicherzustellen,"
             },
             {
               "marke": "2",
@@ -947,7 +951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_20",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "e8cb7d43ef1ea2460a9071af67164bc5aab8a10aabb75119d796b7d572a88abc"
+      "sha": "124bad47b87683902b788b03fa23b65d8bfd41f213a73cdf8da96c782dc6ef80"
     },
     {
       "id": "bund/KKV/art_21",
@@ -1251,7 +1255,11 @@
             },
             {
               "marke": "b",
-              "text": "von einer Gesellschaft verwaltet werden, mit der sie verbunden sind durch: 1. eine gemeinsame Verwaltung,"
+              "text": "von einer Gesellschaft verwaltet werden, mit der sie verbunden sind durch:"
+            },
+            {
+              "marke": "1",
+              "text": "eine gemeinsame Verwaltung,"
             },
             {
               "marke": "2",
@@ -1276,7 +1284,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_31",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "f990bac42c1404f557e781eafdbe959e070f267416e5551da3b6e1546ae03b6f"
+      "sha": "450785b1b0791c41f5cac1c2e06f2a49aa6d665c133c4f3495f8ee4d139eccba"
     },
     {
       "id": "bund/KKV/art_31_a",
@@ -4683,7 +4691,11 @@
             },
             {
               "marke": "c",
-              "text": "die entsprechenden Fondsverträge bezüglich folgender Anforderungen grundsätzlich übereinstimmen: 1. Anlagepolitik, Anlagetechniken, Risikoverteilung sowie mit der Anlagepolitik verbundene Risiken,"
+              "text": "die entsprechenden Fondsverträge bezüglich folgender Anforderungen grundsätzlich übereinstimmen:"
+            },
+            {
+              "marke": "1",
+              "text": "Anlagepolitik, Anlagetechniken, Risikoverteilung sowie mit der Anlagepolitik verbundene Risiken,"
             },
             {
               "marke": "2",
@@ -4696,6 +4708,14 @@
             {
               "marke": "4",
               "text": "Laufzeit des Vertrages und die Voraussetzung der Auflösung;"
+            },
+            {
+              "marke": "d",
+              "text": "am gleichen Tag die Vermögen der beteiligten Anlagefonds bewertet, das Umtauschverhältnis berechnet und die Vermögenswerte und Verbindlichkeiten übernommen werden;"
+            },
+            {
+              "marke": "e",
+              "text": "weder den Anlagefonds beziehungsweise Teilvermögen noch den Anlegerinnen und Anlegern daraus Kosten erwachsen."
             }
           ]
         },
@@ -4712,7 +4732,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_114",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "7002231d7520275a4d951a35c7f8121709c03e3e35660381b8060b5091133aae"
+      "sha": "e5aa54e201cb5f982a670a0f06140bd74b552155e60c537585cd830af835b221"
     },
     {
       "id": "bund/KKV/art_115",
@@ -5310,6 +5330,38 @@
           "text": "Die FINMA genehmigt den Statuswechsel und bewilligt ihn gegebenenfalls, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Voraussetzungen nach Artikel 118 a Absatz 1 Buchstaben a–c KAG erfüllt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "der Fondsvertrag, das Anlagereglement oder der Gesellschaftsvertrag die Möglichkeit eines Statuswechsels vorsehen;"
+            },
+            {
+              "marke": "c",
+              "text": "weder der kollektiven Kapitalanlage noch den Anlegerinnen und Anlegern aus dem Statuswechsel Kosten erwachsen; und"
+            },
+            {
+              "marke": "d",
+              "text": "bei einer kollektiven Kapitalanlage in der Rechtsform:"
+            },
+            {
+              "marke": "1",
+              "text": "des vertraglichen Anlagefonds:"
+            },
+            {
+              "marke": "–",
+              "text": "die Depotbank dem Statuswechsel zugestimmt hat und"
+            },
+            {
+              "marke": "–",
+              "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,"
+            },
+            {
+              "marke": "2",
+              "text": "der SICAV:"
+            },
+            {
               "marke": "–",
               "text": "die Depotbank dem Statuswechsel zugestimmt hat"
             },
@@ -5320,6 +5372,10 @@
             {
               "marke": "–",
               "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,"
+            },
+            {
+              "marke": "3",
+              "text": "der Rechtsform der KmGK: sämtliche Anlegerinnen und Anleger dem Statuswechsel zugestimmt haben."
             }
           ]
         },
@@ -5336,7 +5392,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "eb46893bdc5056097646facb52a61d47793171409c582a3efd4407e4db8d67a2"
+      "sha": "717f0e91bf2faf8f8a89c89b1c02e31da9e64c4d5f53388fef20922afdb5d771"
     },
     {
       "id": "bund/KKV/art_126_d",
@@ -5360,11 +5416,19 @@
             },
             {
               "marke": "b",
-              "text": "den Hinweis, dass die Anlegerinnen und Anleger innert 30 Tagen nach der Publikation wählen können, ob sie: 1. in der kollektiven Kapitalanlage verbleiben, falls sie dem Statuswechsel ausdrücklich zustimmen, oder"
+              "text": "den Hinweis, dass die Anlegerinnen und Anleger innert 30 Tagen nach der Publikation wählen können, ob sie:"
+            },
+            {
+              "marke": "1",
+              "text": "in der kollektiven Kapitalanlage verbleiben, falls sie dem Statuswechsel ausdrücklich zustimmen, oder"
             },
             {
               "marke": "2",
               "text": "ihre Anteile unter Beachtung der vertraglichen oder reglementarischen Rückgabefristen und -termine zurückgeben, falls sie ihre Anteile kündigen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Hinweis, dass diejenigen Anlegerinnen und Anleger, die ihr Wahlrecht nach Buchstabe b nicht wahrnehmen, den Anlegerinnen und Anlegern gleichgestellt werden, die ihre Anteile am 30. Tag nach der Publikation kündigen."
             }
           ]
         },
@@ -5377,7 +5441,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "8463bb1f62b0ad950a884793002df4a86ac03c3f88ccc629a4d7634047c628be"
+      "sha": "4372f1f2c3f67a1c15cc43f6148d5ad2a5d9fe36ecc59c2034942424eca4d2ff"
     },
     {
       "id": "bund/KKV/art_126_e",
@@ -5531,7 +5595,11 @@
             },
             {
               "marke": "c",
-              "text": "die Vermögenswerte, gegliedert nach: 1. Inland und Ausland,"
+              "text": "die Vermögenswerte, gegliedert nach:"
+            },
+            {
+              "marke": "1",
+              "text": "Inland und Ausland,"
             },
             {
               "marke": "2",
@@ -5540,6 +5608,18 @@
             {
               "marke": "3",
               "text": "den folgenden Anlagekategorien: Geldmarktinstrumente, Forderungen aus Pensionsgeschäften, Obligationen, Aktien und andere Beteiligungspapiere, Anteile an anderen Kollektivanlagen, strukturierte Produkte, Immobilien, übrige Wertpapiere;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verbindlichkeiten, gegliedert nach Inland und Ausland;"
+            },
+            {
+              "marke": "e",
+              "text": "die Erfolgsrechnung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Risikodaten, einschliesslich der Gliederung der Aktiven und Passiven nach Laufzeitenstruktur sowie des Bestands des Ausserbilanzgeschäfts."
             }
           ]
         },
@@ -5560,7 +5640,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_g",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "ce6c5b352ac9b01e0ba838ba7005da03e9f88baffdd214acab1fdf34adf7f7bd"
+      "sha": "772e1085ea8d320fb20c5175224c97176d99e9ebdf76cff74765f73f0fdd5393"
     },
     {
       "id": "bund/KKV/art_126_h",
@@ -6075,7 +6155,11 @@
             },
             {
               "marke": "b",
-              "text": "die folgenden Anlagebeschränkungen in Prozent des Vermögens des L-QIF: 1. den maximalen Prozentsatz, den der Verkehrswert eines Grundstücks ausmachen darf,"
+              "text": "die folgenden Anlagebeschränkungen in Prozent des Vermögens des L-QIF:"
+            },
+            {
+              "marke": "1",
+              "text": "den maximalen Prozentsatz, den der Verkehrswert eines Grundstücks ausmachen darf,"
             },
             {
               "marke": "2",
@@ -6100,7 +6184,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_w",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "ddbff3ba876a1b52c3b950beeb5432c98e1a0e04dda204db974021e602afb8ab"
+      "sha": "7d5018719a172b8729aacbafb48fadfe3e99a629dd133131dd0a9bafe90d95bd"
     },
     {
       "id": "bund/KKV/art_126_x",
@@ -6423,7 +6507,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Vorschriften zum Erlass und zum Inhalt folgender Dokumente: 1. des Fondsvertrags eines L-QIF in der Rechtsform des vertraglichen Anlagefonds,"
+              "text": "Vorschriften zum Erlass und zum Inhalt folgender Dokumente:"
+            },
+            {
+              "marke": "1",
+              "text": "des Fondsvertrags eines L-QIF in der Rechtsform des vertraglichen Anlagefonds,"
             },
             {
               "marke": "2",
@@ -6432,6 +6520,14 @@
             {
               "marke": "3",
               "text": "des Gesellschaftsvertrags eines L-QIF in der Rechtsform der KmGK;"
+            },
+            {
+              "marke": "b",
+              "text": "Vorschriften zur Änderung der Dokumente nach Buchstabe a;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Verwendung des Modellansatzes zur Risikomessung: Vorschriften zu dessen Berechnung und Anwendung (Art. 33–42 KKV-FINMA in der Fassung vom 1. Januar 2015 sinngemäss)."
             }
           ]
         },
@@ -6452,7 +6548,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_octies",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "6d23761c8e01b950cec6420361fa6314827bf1aeee899f179fab1e3848ba47a5"
+      "sha": "c53d744d6ade95c4039b818dcf592dc12d704c71868e43078b5837c2163c775c"
     },
     {
       "id": "bund/KKV/art_126_z_novies",
@@ -6468,11 +6564,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "die folgenden Berichte zur Rechnungsprüfung: 1. Prüfberichte über die Prüfung der Jahresrechnung nach Artikel 118 i Absatz 2 KAG,"
+              "text": "die folgenden Berichte zur Rechnungsprüfung:"
+            },
+            {
+              "marke": "1",
+              "text": "Prüfberichte über die Prüfung der Jahresrechnung nach Artikel 118 i Absatz 2 KAG,"
             },
             {
               "marke": "2",
               "text": "Kurzberichte über die Prüfung des L-QIF;"
+            },
+            {
+              "marke": "b",
+              "text": "Prüfberichte über die ergänzende Prüfung."
             }
           ]
         },
@@ -6489,7 +6593,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_novies",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251125",
-      "sha": "cc719220d4719c8ec2bdf701aafdf255f8c45834e8359deb6c1cf5b6de10cac5"
+      "sha": "f712b1a091c71533c81690051f48e7112271fa889157615bc32893ab6e142548"
     },
     {
       "id": "bund/KKV/art_126_z_decies",

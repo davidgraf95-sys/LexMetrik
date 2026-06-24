@@ -59,6 +59,10 @@
             {
               "marke": "d",
               "text": "Keimzellen, imprägnierten Eizellen und Embryonen im Rahmen der medi­zinisch unterstützten Fortpflanzung beim Menschen."
+            },
+            {
+              "marke": "3",
+              "text": "Auf den Umgang mit Organen, Geweben oder Zellen zur autogenen Trans­plantation sind die Artikel 36 sowie 50–71 anwendbar. Der Bundesrat kann für Organe, Gewebe oder Zellen zur autogenen Transplantation, die vor der Übertragung aufbereitet werden, Vorschriften zur Qualität und Sicherheit erlassen. Auf Transplan­tatprodukte zur autogenen Transplantation sind die Artikel 4, 7 Ab­satz 2 Buch­stabe b, 49 sowie 63–65 anwendbar."
             }
           ]
         }
@@ -67,7 +71,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/279/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210201",
-      "sha": "f356bf2d49b6c19da98777cdbd98bc94361f13e57e6a049fc22957a3245bcecf"
+      "sha": "40b0ca4e11d475f76268de383bc60b05cbf9d283315e9f9f818c32b8df301ebb"
     },
     {
       "id": "bund/TXG/art_3",
@@ -802,11 +806,19 @@
             },
             {
               "marke": "b",
-              "text": "Personen, die in einem Mitgliedstaat der Europäischen Union, in Island oder Norwegen wohnen und die nach dem Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Frei­zügigkeit oder nach dem Übereinkommen vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation: 1. in der Schweiz der obligatorischen Krankenpflegeversicherung unterstellt sind, oder"
+              "text": "Personen, die in einem Mitgliedstaat der Europäischen Union, in Island oder Norwegen wohnen und die nach dem Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Frei­zügigkeit oder nach dem Übereinkommen vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation:"
+            },
+            {
+              "marke": "1",
+              "text": "in der Schweiz der obligatorischen Krankenpflegeversicherung unterstellt sind, oder"
             },
             {
               "marke": "2",
               "text": "während ihres zeitlich begrenzten Aufenthalts in der Schweiz Anspruch auf internationale Leistungsaushilfe haben;"
+            },
+            {
+              "marke": "c",
+              "text": "Grenzgängerinnen und Grenzgänger nach Artikel 25 des Ausländer- und Integrationsgesetzes vom 16. Dezember 2005, die auf eigenes Gesuch hin in der Schweiz der obligatorischen Krankenpflegeversicherung unterstellt worden sind, sowie deren in der Schweiz der obligatorischen Krankenpflegeversicherung unterstellte Familienangehörige."
             }
           ]
         },
@@ -833,7 +845,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/279/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210201",
-      "sha": "d699a1cb87498600f5e6bbb30174e13df7ac81cb7e8b32af69645f3763ec4bf6"
+      "sha": "9aff1e1e536dcb7fa93ee7601ac7840b00f23ed021d8059e1719cd4b06a3476c"
     },
     {
       "id": "bund/TXG/art_18",
@@ -1160,14 +1172,20 @@
         },
         {
           "absatz": "3",
-          "text": "Die Transplantationszentren müssen die Ergebnisse der Transplantationen nach einheitlichen Kriterien aufzeichnen, auswerten und regelmässig veröffentlichen."
+          "text": "Die Transplantationszentren müssen die Ergebnisse der Transplantationen nach einheitlichen Kriterien aufzeichnen, auswerten und regelmässig veröffentlichen.",
+          "items": [
+            {
+              "marke": "4",
+              "text": "Der Bundesrat kann die Transplantation von Geweben oder Zellen von einer Bewilligung des BAG abhängig machen."
+            }
+          ]
         }
       ],
       "stand": "2021-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/279/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210201",
-      "sha": "16746558fb834c2031b7bdb03633807c0d9e4e3c890f7d0a6ef9c659bdf7ba94"
+      "sha": "be39775b2a3c09617968552fadf9d8d08d828692a9ae197ff99e0c099c6905a8"
     },
     {
       "id": "bund/TXG/art_28",
@@ -1857,7 +1875,11 @@
             },
             {
               "marke": "i",
-              "text": "die Anforderungen an: 1. die Information und Zustimmung der Empfängerin oder des Empfängers,"
+              "text": "die Anforderungen an:"
+            },
+            {
+              "marke": "1",
+              "text": "die Information und Zustimmung der Empfängerin oder des Empfängers,"
             },
             {
               "marke": "2",
@@ -1896,7 +1918,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/279/de#art_48",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210201",
-      "sha": "0e77fafe544238ef2432b76d68eae964550920bcbdd16e4673737fd352f755b5"
+      "sha": "5599ce7761066d20fd7f48a5c958d69d141794f55531074c98f3fa65e9d30857"
     },
     {
       "id": "bund/TXG/art_49",

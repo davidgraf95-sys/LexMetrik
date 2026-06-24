@@ -46,7 +46,11 @@
             },
             {
               "marke": "c",
-              "text": "Schweizer Bürger, die im Ausland tätig sind: 1. im Dienste der Eidgenossenschaft,"
+              "text": "Schweizer Bürger, die im Ausland tätig sind:"
+            },
+            {
+              "marke": "1",
+              "text": "im Dienste der Eidgenossenschaft,"
             },
             {
               "marke": "2",
@@ -121,7 +125,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_1_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "dabbd8c7572a7f8c694e38056bcbc5f34e5eceef3d2b3b990116f640d6c562cd"
+      "sha": "c040663c69490663f70b352de41de7b8dbe7bb8d29bb6d02cbb04b0732974f47"
     },
     {
       "id": "bund/AHVG/art_2",
@@ -2888,7 +2892,11 @@
             },
             {
               "marke": "e",
-              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin: 1. Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin:"
+            },
+            {
+              "marke": "1",
+              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
             },
             {
               "marke": "2",
@@ -2959,7 +2967,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "bc2d59b65060700a55abbf61982e938f7de98c2fafb9ad8c51709c8de72cae3c"
+      "sha": "707088d02fb6ee240bc3c6b0d74fff54904168fa6827aa5ad8e5762bb4fe26e8"
     },
     {
       "id": "bund/AHVG/art_50_b",
@@ -5269,7 +5277,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "soweit sie zur Erfüllung ihrer gesetzlichen Aufgaben erforderlich ist: 1. die eidgenössischen Departemente und die Bundeskanzlei,"
+              "text": "soweit sie zur Erfüllung ihrer gesetzlichen Aufgaben erforderlich ist:"
+            },
+            {
+              "marke": "1",
+              "text": "die eidgenössischen Departemente und die Bundeskanzlei,"
             },
             {
               "marke": "2",
@@ -5286,6 +5298,14 @@
             {
               "marke": "5",
               "text": "die Bildungsinstitutionen;"
+            },
+            {
+              "marke": "b",
+              "text": "die privaten Versicherungsunternehmen in Fällen nach Artikel 47 a des Versicherungsvertragsgesetzes vom 2. April 1908;"
+            },
+            {
+              "marke": "c",
+              "text": "die Organe, die beauftragt sind, die in einem allgemeinverbindlich erklärten Gesamtarbeitsvertrag vorgesehenen Kontrollen durchzuführen."
             }
           ]
         },
@@ -5298,7 +5318,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "14b2906ae1316620880669115a3a67d6afd7c812ee7d2fca4b4280e022daab00"
+      "sha": "933ea0d6176e03299352dd1dd1881f5d9cb35048b27d37edea3aba4edc854fe8"
     },
     {
       "id": "bund/AHVG/art_153_d",

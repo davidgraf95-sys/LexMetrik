@@ -2075,7 +2075,11 @@
             },
             {
               "marke": "e",
-              "text": "Betriebe, die Metall, Holz, Kork, Kunststoffe, Stein oder Glas maschinell bearbeiten, und Giessereien, mit Ausnahme folgender Verkaufsbetriebe, sofern diese nicht selber produzieren, sondern die Produkte nur bearbeiten: 1. Optikergeschäfte,"
+              "text": "Betriebe, die Metall, Holz, Kork, Kunststoffe, Stein oder Glas maschinell bearbeiten, und Giessereien, mit Ausnahme folgender Verkaufsbetriebe, sofern diese nicht selber produzieren, sondern die Produkte nur bearbeiten:"
+            },
+            {
+              "marke": "1",
+              "text": "Optikergeschäfte,"
             },
             {
               "marke": "2",
@@ -2092,6 +2096,50 @@
             {
               "marke": "5",
               "text": "Innendekorationsgeschäfte ohne Bodenleger- und Schreinerarbeiten;"
+            },
+            {
+              "marke": "f",
+              "text": "Betriebe, in denen feuer- oder explosionsgefährliche Stoffe oder Stoffe, die Berufskrankheiten hervorrufen können (Art. 9 Abs. 1) erzeugt, im Grossen verwendet oder im Grossen gelagert werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Verkehrs- und Transportbetriebe sowie Betriebe mit unmittelbarem Anschluss an das Transportgewerbe;"
+            },
+            {
+              "marke": "h",
+              "text": "Handelsbetriebe, die mit Hilfe von Maschinen schwere Waren in grosser Menge lagern;"
+            },
+            {
+              "marke": "i",
+              "text": "Schlachthäuser mit maschinellen Einrichtungen;"
+            },
+            {
+              "marke": "k",
+              "text": "Betriebe der Getränkefabrikation;"
+            },
+            {
+              "marke": "l",
+              "text": "Betriebe der Elektrizitäts-, Gas- und Wasserversorgung sowie der Kehrichtbeseitigung und Abwasserreinigung;"
+            },
+            {
+              "marke": "m",
+              "text": "Betriebe für technische Vorbereitung, Leitung oder Überwachung von Arbeiten nach den Buchstaben b–l;"
+            },
+            {
+              "marke": "n",
+              "text": "Lehr- und Invalidenwerkstätten;"
+            },
+            {
+              "marke": "o",
+              "text": "Betriebe, die temporäre Arbeitskräfte zur Verfügung stellen;"
+            },
+            {
+              "marke": "p",
+              "text": "Bundesverwaltung, Bundesbetriebe und Bundesanstalten;"
+            },
+            {
+              "marke": "q",
+              "text": "Zweige öffentlicher Verwaltungen von Kantonen, Gemeinden und öffentlich-rechtlicher Körperschaften, die Arbeiten nach den Buchstaben b–m ausführen."
             }
           ]
         },
@@ -2138,7 +2186,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/de#art_66",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "010eac605db161662617311767fed9f0d7715384ff2b2ad11de20663f11b21a4"
+      "sha": "c328f55f7cf2c56d5f75a01697b7a976d7cecdfde0c5db5ce51b177874518f66"
     },
     {
       "id": "bund/UVG/art_67",
@@ -3452,7 +3500,11 @@
             },
             {
               "marke": "i",
-              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin: 1. Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin:"
+            },
+            {
+              "marke": "1",
+              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
             },
             {
               "marke": "2",
@@ -3531,7 +3583,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/de#art_97",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "827d666dc231ac5b9a4aebcbabc68b614fa48a687b94196377d514ebf4da640f"
+      "sha": "b30c94677720785cf6f43ec4cc7185bbaf0c340c0a8e466fb181ee0e35c5b247"
     },
     {
       "id": "bund/UVG/art_98",

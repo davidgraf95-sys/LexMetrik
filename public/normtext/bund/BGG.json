@@ -2164,7 +2164,11 @@
             },
             {
               "marke": "b",
-              "text": "öffentlich-rechtliche Entscheide, die in unmittelbarem Zusammenhang mit Zivilrecht stehen, insbesondere Entscheide: 1. über die Anerkennung und Vollstreckung von Entscheiden und über die Rechtshilfe in Zivilsachen,"
+              "text": "öffentlich-rechtliche Entscheide, die in unmittelbarem Zusammenhang mit Zivilrecht stehen, insbesondere Entscheide:"
+            },
+            {
+              "marke": "1",
+              "text": "über die Anerkennung und Vollstreckung von Entscheiden und über die Rechtshilfe in Zivilsachen,"
             },
             {
               "marke": "2",
@@ -2197,7 +2201,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_72",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "1a49370b31eec94a0efd0a5400dd373c7cc189d1dae6bd9ad6ece959ef057e5e"
+      "sha": "3e0275a56d80dd9e37bb7ce71f0624d05eb7b0e96e318247c24602a14c29eb0d"
     },
     {
       "id": "bund/BGG/art_73",
@@ -2477,7 +2481,11 @@
             },
             {
               "marke": "b",
-              "text": "ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung des angefochtenen Entscheids hat, insbesondere: 1. die beschuldigte Person,"
+              "text": "ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung des angefochtenen Entscheids hat, insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "die beschuldigte Person,"
             },
             {
               "marke": "2",
@@ -2518,7 +2526,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_81",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "0eb737d48601aca70e0372f85df25c63062ea60f3679f55c14830ee449931003"
+      "sha": "50b3f66934c4ea6443f25f50c263edf650136d11dd155892d739aba69864672b"
     },
     {
       "id": "bund/BGG/art_82",
@@ -2566,12 +2574,200 @@
           "text": "Die Beschwerde ist unzulässig gegen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Entscheide auf dem Gebiet der inneren oder äusseren Sicherheit des Landes, der Neutralität, des diplomatischen Schutzes und der übrigen auswärtigen Angelegenheiten, soweit das Völkerrecht nicht einen Anspruch auf gerichtliche Beurteilung einräumt;"
+            },
+            {
+              "marke": "b",
+              "text": "Entscheide über die ordentliche Einbürgerung;"
+            },
+            {
+              "marke": "c",
+              "text": "Entscheide auf dem Gebiet des Ausländerrechts betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "die Einreise,"
+            },
+            {
+              "marke": "2",
+              "text": "Bewilligungen, auf die weder das Bundesrecht noch das Völkerrecht einen Anspruch einräumt,"
+            },
+            {
+              "marke": "3",
+              "text": "die vorläufige Aufnahme,"
+            },
+            {
+              "marke": "4",
+              "text": "die Ausweisung gestützt auf Artikel 121 Absatz 2 der Bundesverfassung und die Wegweisung,"
+            },
+            {
+              "marke": "5",
+              "text": "Abweichungen von den Zulassungsvoraussetzungen,"
+            },
+            {
+              "marke": "6",
+              "text": "die Verlängerung der Grenzgängerbewilligung, den Kantonswechsel, den Stellenwechsel von Personen mit Grenzgängerbewilligung sowie die Erteilung von Reisepapieren an schriftenlose Ausländerinnen und Ausländer;"
+            },
+            {
+              "marke": "d",
+              "text": "Entscheide auf dem Gebiet des Asyls, die:"
+            },
+            {
+              "marke": "1",
+              "text": "vom Bundesverwaltungsgericht getroffen worden sind, ausser sie betreffen Personen, gegen die ein Auslieferungsersuchen des Staates vorliegt, vor welchem sie Schutz suchen,"
+            },
+            {
+              "marke": "2",
+              "text": "von einer kantonalen Vorinstanz getroffen worden sind und eine Bewilligung betreffen, auf die weder das Bundesrecht noch das Völkerrecht einen Anspruch einräumt;"
+            },
+            {
+              "marke": "e",
+              "text": "Entscheide über die Verweigerung der Ermächtigung zur Strafverfolgung von Behördenmitgliedern oder von Bundespersonal;"
+            },
+            {
+              "marke": "f",
+              "text": "Entscheide auf dem Gebiet der öffentlichen Beschaffungen, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt; vorbehalten bleiben Beschwerden gegen Beschaffungen des Bundesverwaltungsgerichts, des Bundesstrafgerichts, des Bundespatentgerichts, der Bundesanwaltschaft sowie der oberen kantonalen Gerichtsinstanzen, oder"
+            },
+            {
+              "marke": "2",
+              "text": "der geschätzte Wert des zu vergebenden Auftrags den massgebenden Schwellenwert nach Artikel 52 Absatz 1 in Verbindung mit Anhang 4 Ziffer 2 des Bundesgesetzes vom 21. Juni 2019 über das öffentliche Beschaffungswesen nicht erreicht;"
+            },
+            {
+              "marke": "fbis",
+              "text": "Entscheide des Bundesverwaltungsgerichts über Verfügungen nach Artikel 32 i des Personenbeförderungsgesetzes vom 20. März 2009;"
+            },
+            {
+              "marke": "g",
+              "text": "Entscheide auf dem Gebiet der öffentlich-rechtlichen Arbeitsverhältnisse, wenn sie eine nicht vermögensrechtliche Angelegenheit, nicht aber die Gleichstellung der Geschlechter betreffen;"
+            },
+            {
+              "marke": "h",
+              "text": "Entscheide auf dem Gebiet der internationalen Amtshilfe, mit Ausnahme der Amtshilfe in Steuersachen;"
+            },
+            {
+              "marke": "i",
+              "text": "Entscheide auf dem Gebiet des Militär-, Zivil- und Zivilschutzdienstes;"
+            },
+            {
+              "marke": "j",
+              "text": "Entscheide auf dem Gebiet der wirtschaftlichen Landesversorgung, die bei schweren Mangellagen getroffen worden sind;"
+            },
+            {
+              "marke": "k",
+              "text": "Entscheide betreffend Subventionen, auf die kein Anspruch besteht;"
+            },
+            {
+              "marke": "l",
+              "text": "Entscheide über die Zollveranlagung, wenn diese auf Grund der Tarifierung oder des Gewichts der Ware erfolgt;"
+            },
+            {
+              "marke": "m",
+              "text": "Entscheide über die Stundung oder den Erlass von Abgaben; in Abweichung davon ist die Beschwerde zulässig gegen Entscheide über den Erlass der direkten Bundessteuer oder der kantonalen oder kommunalen Einkommens- und Gewinnsteuer, wenn sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt oder es sich aus anderen Gründen um einen besonders bedeutenden Fall handelt;"
+            },
+            {
+              "marke": "n",
+              "text": "Entscheide auf dem Gebiet der Kernenergie betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "das Erfordernis einer Freigabe oder der Änderung einer Bewilligung oder Verfügung,"
+            },
+            {
+              "marke": "2",
+              "text": "die Genehmigung eines Plans für Rückstellungen für die vor Ausserbetriebnahme einer Kernanlage anfallenden Entsorgungskosten,"
+            },
+            {
+              "marke": "3",
+              "text": "Freigaben;"
+            },
+            {
+              "marke": "o",
+              "text": "Entscheide über die Typengenehmigung von Fahrzeugen auf dem Gebiet des Strassenverkehrs;"
+            },
+            {
+              "marke": "p",
+              "text": "Entscheide des Bundesverwaltungsgerichts auf dem Gebiet des Fernmeldeverkehrs, des Radios und des Fernsehens sowie der Post betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "Konzessionen, die Gegenstand einer öffentlichen Ausschreibung waren,"
+            },
+            {
+              "marke": "2",
+              "text": "Streitigkeiten nach Artikel 11 a des Fernmeldegesetzes vom 30. April 1997,"
+            },
+            {
+              "marke": "3",
+              "text": "Streitigkeiten nach Artikel 8 des Postgesetzes vom 17. Dezember 2010;"
+            },
+            {
+              "marke": "q",
+              "text": "Entscheide auf dem Gebiet der Transplantationsmedizin betreffend:"
+            },
+            {
+              "marke": "1",
+              "text": "die Aufnahme in die Warteliste,"
+            },
+            {
+              "marke": "2",
+              "text": "die Zuteilung von Organen;"
+            },
+            {
+              "marke": "r",
+              "text": "Entscheide auf dem Gebiet der Krankenversicherung, die das Bundesverwaltungsgericht gestützt auf Artikel 34 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005 (VGG) getroffen hat;"
+            },
+            {
+              "marke": "s",
+              "text": "Entscheide auf dem Gebiet der Landwirtschaft betreffend:"
+            },
+            {
               "marke": "1",
               "text": "…"
             },
             {
               "marke": "2",
               "text": "die Abgrenzung der Zonen im Rahmen des Produktionskatasters;"
+            },
+            {
+              "marke": "t",
+              "text": "Entscheide über das Ergebnis von Prüfungen und anderen Fähigkeitsbewertungen, namentlich auf den Gebieten der Schule, der Weiterbildung und der Berufsausübung;"
+            },
+            {
+              "marke": "u",
+              "text": "Entscheide auf dem Gebiet der öffentlichen Kaufangebote (Art. 125‒141 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015);"
+            },
+            {
+              "marke": "v",
+              "text": "Entscheide des Bundesverwaltungsgerichts über Meinungsverschiedenheiten zwischen Behörden in der innerstaatlichen Amts- und Rechtshilfe;"
+            },
+            {
+              "marke": "w",
+              "text": "Entscheide auf dem Gebiet des Elektrizitätsrechts betreffend die Plangenehmigung von Starkstromanlagen und Schwachstromanlagen und die Entscheide auf diesem Gebiet betreffend Enteignung der für den Bau oder Betrieb solcher Anlagen notwendigen Rechte , wenn sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt;"
+            },
+            {
+              "marke": "x",
+              "text": "Entscheide betreffend die Gewährung von Solidaritätsbeiträgen nach dem Bundesgesetz vom 30. September 2016 über die Aufarbeitung der fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen vor 1981, ausser wenn sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt oder aus anderen Gründen ein besonders bedeutender Fall vorliegt;"
+            },
+            {
+              "marke": "y",
+              "text": "Entscheide des Bundesverwaltungsgerichts in Verständigungsverfahren zur Vermeidung einer den anwendbaren internationalen Abkommen im Steuerbereich nicht entsprechenden Besteuerung;"
+            },
+            {
+              "marke": "z",
+              "text": "Entscheide betreffend die in Artikel 71 c Absatz 1 Buchstabe b des Energiegesetzes vom 30. September 2016 genannten Baubewilligungen und notwendigerweise damit zusammenhängenden in der Kompetenz der Kantone liegenden Bewilligungen für Windenergieanlagen von nationalem Interesse, wenn sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt;"
+            },
+            {
+              "marke": "zbis",
+              "text": "Entscheide über die Gewährung von Wasserrechtskonzessionen für Anlagen nach Artikel 9 a Absatz 3 in Verbindung mit Anhang 2 des Stromversorgungsgesetzes vom 23. März 2007, wenn sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt;"
+            },
+            {
+              "marke": "zter",
+              "text": "Entscheide über Beschwerden von Organisationen nach den Artikeln 55 des Umweltschutzgesetzes vom 7. Oktober 1983 und 12 des Bundesgesetzes vom 1. Juli 1966 über den Natur- und Heimatschutz betreffend Wasserkraftwerke nach Artikel 9 a Absatz 3 und Anhang 2 in der Fassung vom 29. September 2023 des Stromversorgungsgesetzes."
             }
           ]
         }
@@ -2580,7 +2776,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_83",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "f7a7b33a1066751a15ef071801deb90f56eca16df7d0043f7c98cc6b3c8f77f8"
+      "sha": "67d30aaa7d123d6b687f600a067639ac3541cdf4a80192c08552362c2bda34bf"
     },
     {
       "id": "bund/BGG/art_84",

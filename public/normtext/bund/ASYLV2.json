@@ -1672,7 +1672,13 @@
         },
         {
           "absatz": "2",
-          "text": "Der Pauschalbeitrag pro Kanton wird jeweils Ende Jahr ausbezahlt und berechnet sich nach der Formel:"
+          "text": "Der Pauschalbeitrag pro Kanton wird jeweils Ende Jahr ausbezahlt und berechnet sich nach der Formel:",
+          "items": [
+            {
+              "marke": "p",
+              "text": "B = (PE × DE × FE + PB × DB × FB) × JA/JT"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1737,7 +1743,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/360/de#art_41",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20220101",
-      "sha": "0fef5588cfe5a853b1c8d4932dff37109af7dbd5d8cb85fa2cb7f719324fd088"
+      "sha": "22e981312f4066bc2e854129dc508fe663c4e2c97264372a7fdba2fad1b38e25"
     },
     {
       "id": "bund/ASYLV2/art_42",
@@ -2608,7 +2614,11 @@
             },
             {
               "marke": "b",
-              "text": "eine der folgenden Voraussetzungen erfüllt ist: 1. die Papierbeschaffung wird voraussichtlich länger als sechs Monate dauern,"
+              "text": "eine der folgenden Voraussetzungen erfüllt ist:"
+            },
+            {
+              "marke": "1",
+              "text": "die Papierbeschaffung wird voraussichtlich länger als sechs Monate dauern,"
             },
             {
               "marke": "2",
@@ -2637,7 +2647,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/360/de#art_59_a_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20220101",
-      "sha": "a03920a7121a39856422651c11fae947eae55e736e2f2b5c4d3ae985c2728b9c"
+      "sha": "d36c06cced39b91fdae88d10ed87602e8465322169b6719dc2b1d837b9c7327e"
     },
     {
       "id": "bund/ASYLV2/art_59_a_ter",
@@ -2803,7 +2813,11 @@
             },
             {
               "marke": "c",
-              "text": "die sich offensichtlich missbräuchlich verhalten haben, insbesondere wenn sie: 1. die Mitwirkungspflicht nach Artikel 8 des AsylG grob verletzt haben,"
+              "text": "die sich offensichtlich missbräuchlich verhalten haben, insbesondere wenn sie:"
+            },
+            {
+              "marke": "1",
+              "text": "die Mitwirkungspflicht nach Artikel 8 des AsylG grob verletzt haben,"
             },
             {
               "marke": "2",
@@ -2816,6 +2830,10 @@
             {
               "marke": "4",
               "text": "die Fürsorgeleistungen missbräuchlich verwenden;"
+            },
+            {
+              "marke": "d",
+              "text": "die offensichtlich über genügend finanzielle Mittel oder umfangreiche Vermögenswerte verfügen."
             }
           ]
         },
@@ -2840,7 +2858,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/360/de#art_64",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20220101",
-      "sha": "9c5659ea310231708944536168998b9dc4d9b972d2cc75f1f405f63d64a9e9a5"
+      "sha": "35dd356fc28467e0eb52c4674f63ba826bb693bfd1b78368b884fc90678506e9"
     },
     {
       "id": "bund/ASYLV2/art_65",

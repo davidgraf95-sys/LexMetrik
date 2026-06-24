@@ -2914,11 +2914,19 @@
             },
             {
               "marke": "b",
-              "text": "eine genaue Beschreibung: 1. der angeblich widerrechtlich angewendeten Verfahren,"
+              "text": "eine genaue Beschreibung:"
+            },
+            {
+              "marke": "1",
+              "text": "der angeblich widerrechtlich angewendeten Verfahren,"
             },
             {
               "marke": "2",
               "text": "der angeblich widerrechtlich hergestellten Erzeugnisse sowie der zur Herstellung dienenden Hilfsmittel; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Beschlagnahme dieser Gegenstände."
             }
           ]
         },
@@ -2943,7 +2951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1955/871_893_899/de#art_77",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "45f654833c1ec6cfaa2f2a815969851e6d38b16e1b290ee0131f03063efaa5cf"
+      "sha": "e793ffb8d75328948fb94ce178d3bc1eaa8254716e2a1789c6344c23de9a5389"
     },
     {
       "id": "bund/PATG/art_78",

@@ -523,6 +523,46 @@
           "text": "Die Höchstgeschwindigkeit beträgt:",
           "items": [
             {
+              "marke": "a",
+              "text": "80 km/h für"
+            },
+            {
+              "marke": "1",
+              "text": "schwere Motorwagen, ausgenommen schwere Personen­wagen,"
+            },
+            {
+              "marke": "2",
+              "text": "Anhängerzüge,"
+            },
+            {
+              "marke": "3",
+              "text": "Sattelmotorfahrzeuge,"
+            },
+            {
+              "marke": "4",
+              "text": "Fahrzeuge mit Spikesreifen;"
+            },
+            {
+              "marke": "b",
+              "text": "60 km/h für gewerbliche Traktoren;"
+            },
+            {
+              "marke": "c",
+              "text": "40 km/h beim"
+            },
+            {
+              "marke": "1",
+              "text": "Abschleppen von Fahrzeugen, auch mittels Ab­schlepp­rolli oder aufgesat­telt; die zuständige Behörde kann in be­sonderen Fällen höhere Schlepp­geschwindigkeiten ge­statten, namentlich für feste Abschlepp­vorrichtungen, welche die Lenkung des geschleppten Fahrzeuges gewähr­leisten,"
+            },
+            {
+              "marke": "2",
+              "text": "Nachziehen eines leeren Abschlepprollis; die zuständige Behörde kann in besonderen Fällen, namentlich für den Einsatz auf Autobahnen und Autostrassen, höhere Ge­schwindigkeiten gestatten;"
+            },
+            {
+              "marke": "d",
+              "text": "30 km/h"
+            },
+            {
               "marke": "1",
               "text": "beim Mitführen von land- und forstwirtschaftlichen Anhängern, die nicht immatri­ku­liert sind,"
             },
@@ -571,7 +611,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1962/1364_1409_1420/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "a7e7146ed6ef6a7ea3f360dc1267d79d67f2b4c4dc4f07618eb1157bc9e9a872"
+      "sha": "d6f997eccda38ed71e2443105671001816f4a359e12a9661dc8189da22f19df3"
     },
     {
       "id": "bund/VRV/art_6",
@@ -2605,11 +2645,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "leichte Motorwagen mit Fremdzündungsmotor und einer bauartbedingten Höchstgeschwindigkeit von 50 km/h und mehr: 1. ohne Katalysator: alle 12 Monate,"
+              "text": "leichte Motorwagen mit Fremdzündungsmotor und einer bauartbedingten Höchstgeschwindigkeit von 50 km/h und mehr:"
+            },
+            {
+              "marke": "1",
+              "text": "ohne Katalysator: alle 12 Monate,"
             },
             {
               "marke": "2",
               "text": "mit Katalysator: alle 24 Monate;"
+            },
+            {
+              "marke": "b",
+              "text": "Motorwagen mit Selbstzündungsmotor und einer bauartbedingten Höchst­geschwindigkeit von mehr als 30 km/h: alle 24 Monate;"
+            },
+            {
+              "marke": "c",
+              "text": "Motorwagen mit Selbstzündungsmotor und einer bauartbedingten Höchst­geschwindigkeit von 30 km/h und weniger: alle 48 Monate."
             }
           ]
         }
@@ -2618,7 +2670,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1962/1364_1409_1420/de#art_59_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260401",
-      "sha": "9c8f0dcc1ab702b998c4a51f509b526b7cc2e6e15c8ac0c6ca6aa8f10744be49"
+      "sha": "a25517a91fa7c34cff1b17b4866c4046f9a166f381c06f94f8745d243eb8ff91"
     },
     {
       "id": "bund/VRV/art_59_c",

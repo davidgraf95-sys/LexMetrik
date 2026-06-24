@@ -437,6 +437,142 @@
           "text": "Folgende Angaben zur Person werden im Personenstandsregister als beurkundete Daten geführt:",
           "items": [
             {
+              "marke": "a",
+              "text": "Namen:"
+            },
+            {
+              "marke": "1",
+              "text": "Familienname,"
+            },
+            {
+              "marke": "2",
+              "text": "Ledigname,"
+            },
+            {
+              "marke": "3",
+              "text": "Vornamen,"
+            },
+            {
+              "marke": "4",
+              "text": "andere amtliche Namen;"
+            },
+            {
+              "marke": "b",
+              "text": "Geschlecht: männlich/weiblich;"
+            },
+            {
+              "marke": "c",
+              "text": "Geburt:"
+            },
+            {
+              "marke": "1",
+              "text": "Datum,"
+            },
+            {
+              "marke": "2",
+              "text": "Zeit,"
+            },
+            {
+              "marke": "3",
+              "text": "Ort,"
+            },
+            {
+              "marke": "4",
+              "text": "Totgeburt;"
+            },
+            {
+              "marke": "d",
+              "text": "Zivilstand:"
+            },
+            {
+              "marke": "1",
+              "text": "Status: ledig; verheiratet/geschieden/verwitwet/unverheiratet; in eingetragener Partnerschaft / gerichtlich aufgelöste Partnerschaft / durch Tod aufgelöste Partnerschaft / durch Verschollenerklärung aufgelöste Partnerschaft,"
+            },
+            {
+              "marke": "2",
+              "text": "Datum;"
+            },
+            {
+              "marke": "e",
+              "text": "Tod:"
+            },
+            {
+              "marke": "1",
+              "text": "Datum,"
+            },
+            {
+              "marke": "2",
+              "text": "Zeit,"
+            },
+            {
+              "marke": "3",
+              "text": "Ort;"
+            },
+            {
+              "marke": "f",
+              "text": "Lebensstatus: lebend, verstorben, verschollen, totgeboren, unbekannt;"
+            },
+            {
+              "marke": "g",
+              "text": "Eltern:"
+            },
+            {
+              "marke": "1",
+              "text": "Familienname der Eltern,"
+            },
+            {
+              "marke": "2",
+              "text": "Vornamen der Eltern,"
+            },
+            {
+              "marke": "3",
+              "text": "andere amtliche Namen der Eltern;"
+            },
+            {
+              "marke": "h",
+              "text": "Adoptiveltern:"
+            },
+            {
+              "marke": "1",
+              "text": "Familienname der Adoptiveltern,"
+            },
+            {
+              "marke": "2",
+              "text": "Vornamen der Adoptiveltern,"
+            },
+            {
+              "marke": "3",
+              "text": "andere amtliche Namen der Adoptiveltern;"
+            },
+            {
+              "marke": "i",
+              "text": "Schweizer Staatsangehörigkeit / Kantonsbürgerrecht / Heimatort:"
+            },
+            {
+              "marke": "1",
+              "text": "Datum: gültig ab / gültig bis,"
+            },
+            {
+              "marke": "2",
+              "text": "Erwerbsgrund,"
+            },
+            {
+              "marke": "3",
+              "text": "Anmerkung zum Erwerbsgrund,"
+            },
+            {
+              "marke": "4",
+              "text": "Verlustgrund,"
+            },
+            {
+              "marke": "5",
+              "text": "Anmerkung zum Verlustgrund;"
+            },
+            {
+              "marke": "j",
+              "text": "Beziehungsdaten:"
+            },
+            {
               "marke": "1",
               "text": "Art: Eheverhältnis / eingetragene Partnerschaft / Kindesverhältnis,"
             },
@@ -455,7 +591,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/362/de#art_8",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "23027ab37745431c2978fe7484f85004dbf5c370b41cede7e16e40163e0aa1ee"
+      "sha": "be285ad29c730838bdeec94834a5059814b52edd88aa71a086355c6d4be4557c"
     },
     {
       "id": "bund/ZSTV/art_8_a",
@@ -470,12 +606,72 @@
           "text": "Im Personenstandsregister werden weitere Geschäfte und Daten geführt, die nicht als beurkundet gelten. Dazu gehören insbesondere folgende Geschäfte und Daten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Ehevorbereitung;"
+            },
+            {
+              "marke": "b",
+              "text": "Systemdaten:"
+            },
+            {
+              "marke": "1",
+              "text": "Systemnummern,"
+            },
+            {
+              "marke": "2",
+              "text": "Eintragungsart,"
+            },
+            {
+              "marke": "3",
+              "text": "Eintragungsstatus,"
+            },
+            {
+              "marke": "4",
+              "text": "Verzeichnisse von Gemeinden, Zivilstandskreisen, Staaten und Adressen;"
+            },
+            {
+              "marke": "c",
+              "text": "Versichertennummer nach Artikel 50 c des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHV-Nummer);"
+            },
+            {
+              "marke": "d",
+              "text": "ZEMIS-Nummer/N-Nummer;"
+            },
+            {
+              "marke": "e",
+              "text": "Referenz auf das Familienregister;"
+            },
+            {
+              "marke": "f",
+              "text": "Burger- oder Korporationsrecht;"
+            },
+            {
+              "marke": "g",
+              "text": "ausländische Staatsangehörigkeit oder Staatenlosigkeit gemäss Staatsangehörigkeitsnachweis oder Ausweisdokument;"
+            },
+            {
+              "marke": "h",
+              "text": "Erwachsenenschutz:"
+            },
+            {
               "marke": "1",
               "text": "Errichtung eines Vorsorgeauftrags und dessen Hinterlegungsort (Art. 361 Abs. 3 ZGB),"
             },
             {
               "marke": "2",
               "text": "umfassende Beistandschaft oder Wirksamkeit eines Vorsorgeauftrags infolge dauernder Urteilsunfähigkeit (Art. 449 c ZGB);"
+            },
+            {
+              "marke": "i",
+              "text": "statistische Angaben nach der Bundesstatistikverordnung vom 30. April 2025;"
+            },
+            {
+              "marke": "j",
+              "text": "Angaben zur genetischen und biologischen Abstammung eines Kindes, das im Rahmen einer Leihmutterschaft oder mittels Eizellen- oder Samenspende im Ausland gezeugt wurde, sofern sie bekannt und nicht bereits in den Abstammungsangaben (Art. 8 Bst. g) erfasst sind;"
+            },
+            {
+              "marke": "k",
+              "text": "weitere Bemerkungen zu Besonderheiten eines Geschäftsfalls."
             }
           ]
         }
@@ -484,7 +680,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/362/de#art_8_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250601",
-      "sha": "4207030dc2aae870c50bf34b335b23d7a7fc3fa8585f712c437700d8f0c26dee"
+      "sha": "0207d71225547edbcb8cdd9765e73471cead68a7179ddb15fdb36adcfcd23625"
     },
     {
       "id": "bund/ZSTV/art_9",

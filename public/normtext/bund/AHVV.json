@@ -1837,11 +1837,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf dem massgebenden Lohn der in Privathaushalten beschäftigten Personen; ausgenommen ist, sofern die Versicherten nicht die Beitragsentrichtung verlangen, der Lohn: 1. den Personen bis zum 31. Dezember des Jahres erzielen, in dem sie das 25. Altersjahr vollenden, und"
+              "text": "auf dem massgebenden Lohn der in Privathaushalten beschäftigten Personen; ausgenommen ist, sofern die Versicherten nicht die Beitragsentrichtung verlangen, der Lohn:"
+            },
+            {
+              "marke": "1",
+              "text": "den Personen bis zum 31. Dezember des Jahres erzielen, in dem sie das 25. Altersjahr vollenden, und"
             },
             {
               "marke": "2",
               "text": "der je Arbeitgeber den Betrag von 750 Franken im Kalenderjahr nicht übersteigt;"
+            },
+            {
+              "marke": "b",
+              "text": "auf dem massgebenden Lohn der Personen, die von Tanz- und Theaterproduzenten, Orchestern, Chören, Phono- und Audiovisionsproduzenten, Radio und Fernsehen, elektronischen Medien und Printmedien, Designunternehmen, Museen sowie Schulen im künstlerischen Bereich beschäftigt werden."
             }
           ]
         },
@@ -1858,7 +1866,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_34_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "4dd2a3db197ca78e4ce1c9ffddb5dadbc8f9000fa277773ec004b2c258a44a06"
+      "sha": "3b957c1be9a2edcb7115a7d0463a9cdba5e46c2025fc412d0ed4532aab74c78c"
     },
     {
       "id": "bund/AHVV/art_35",
@@ -6449,7 +6457,11 @@
             },
             {
               "marke": "b",
-              "text": "das Staatssekretariat für Migration die Daten nach Artikel 13 Absatz 1 Buchstabe a der ZEMIS-Verordnung vom 12. April 2006, welche die ZAS für die einwandfreie Zuteilung der AHV-Nummer benötigt, gemeldet hat: 1. von Personen, denen zum ersten Mal eine Aufenthaltsbewilligung von mehr als vier Monaten erteilt worden ist (Ausländerbereich),"
+              "text": "das Staatssekretariat für Migration die Daten nach Artikel 13 Absatz 1 Buchstabe a der ZEMIS-Verordnung vom 12. April 2006, welche die ZAS für die einwandfreie Zuteilung der AHV-Nummer benötigt, gemeldet hat:"
+            },
+            {
+              "marke": "1",
+              "text": "von Personen, denen zum ersten Mal eine Aufenthaltsbewilligung von mehr als vier Monaten erteilt worden ist (Ausländerbereich),"
             },
             {
               "marke": "2",
@@ -6520,7 +6532,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_133_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "f2507dfa4b33a5b58b7f436bc55362d7b2720e3c9211994e2c1fab51fcbf6682"
+      "sha": "23e5e8a5385ef2cbdee9de759f800218f94a32d0494487192c849146b630d1ac"
     },
     {
       "id": "bund/AHVV/art_134",

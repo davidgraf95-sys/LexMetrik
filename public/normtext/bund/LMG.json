@@ -229,7 +229,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Bedarfsgegenstände: Gegenstände und Materialien: 1. die dazu bestimmt sind, mit Lebensmitteln in Berührung zu kommen,"
+              "text": "Bedarfsgegenstände: Gegenstände und Materialien:"
+            },
+            {
+              "marke": "1",
+              "text": "die dazu bestimmt sind, mit Lebensmitteln in Berührung zu kommen,"
             },
             {
               "marke": "2",
@@ -238,6 +242,38 @@
             {
               "marke": "3",
               "text": "die dazu bestimmt sind, ihre Bestandteile an Lebensmittel abzugeben;"
+            },
+            {
+              "marke": "b",
+              "text": "kosmetische Mittel und andere Gegenstände, Stoffe und Zubereitungen, die nach ihrer Bestimmung äusserlich mit dem Körper, mit den Zähnen oder den Schleimhäuten in Berührung kommen;"
+            },
+            {
+              "marke": "c",
+              "text": "Utensilien und Farben für Tätowierungen und Permanent-Make-up;"
+            },
+            {
+              "marke": "d",
+              "text": "Kleidungsstücke, Textilien und andere Gegenstände, die nach ihrer Bestimmung mit dem Körper in Berührung kommen;"
+            },
+            {
+              "marke": "e",
+              "text": "Spielzeug und andere Gegenstände, die für den Gebrauch durch Kinder bestimmt sind;"
+            },
+            {
+              "marke": "f",
+              "text": "Kerzen, Streichhölzer, Feuerzeuge und Scherzartikel;"
+            },
+            {
+              "marke": "g",
+              "text": "Aerosolpackungen, die Lebensmittel oder andere Gebrauchsgegenstände enthalten;"
+            },
+            {
+              "marke": "h",
+              "text": "Gegenstände und Materialien, die zur Ausstattung und Auskleidung von Wohnräumen bestimmt sind, soweit sie nicht anderen produktspezifischen Gesetzgebungen unterstellt sind;"
+            },
+            {
+              "marke": "i",
+              "text": "Wasser, das dazu bestimmt ist, in Anlagen, die der Allgemeinheit oder einem berechtigten, nicht ausschliesslich privaten Personenkreis zugänglich sind, mit dem menschlichen Körper in Kontakt zu kommen, und das nicht dazu bestimmt ist, getrunken zu werden, wie namentlich das Dusch- und Badewasser in Spitälern, Pflegeheimen oder Hotels."
             }
           ]
         }
@@ -246,7 +282,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/62/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20241001",
-      "sha": "125b5752304be712f043f67d6dde262c38bafaddf0ef4f6f143217a8ff420774"
+      "sha": "78e1fa8077a07a703fcf1c183f76fa25b62788a75d6e72deb95a05887860c080"
     },
     {
       "id": "bund/LMG/art_6",
@@ -675,11 +711,27 @@
             },
             {
               "marke": "c",
-              "text": "Die kantonale Behörde oder eine anerkannte Fachorganisation stellt fest, dass: 1. die minderjährige Person sich für den vorgesehenen Einsatz eignet; und"
+              "text": "Die kantonale Behörde oder eine anerkannte Fachorganisation stellt fest, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "die minderjährige Person sich für den vorgesehenen Einsatz eignet; und"
             },
             {
               "marke": "2",
               "text": "sie hinreichend auf den Einsatz vorbereitet worden ist."
+            },
+            {
+              "marke": "d",
+              "text": "Die minderjährige Person leistet ihren Einsatz anonym und wird dabei von einer erwachsenen Person begleitet."
+            },
+            {
+              "marke": "e",
+              "text": "Es werden keine Massnahmen getroffen, die das wahre Alter der minderjährigen Person verschleiern."
+            },
+            {
+              "marke": "f",
+              "text": "Der Testkauf wird umgehend protokolliert und dokumentiert."
             }
           ]
         },
@@ -710,7 +762,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/62/de#art_14_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20241001",
-      "sha": "b3de73bd1b2632b80d64c0289d46603a8cde9d8f86dc631d30eaa224b4add2fe"
+      "sha": "708a47ee88ee1e124c4017ffd3fea84d3b549868d11e250551828f0070ff97fa"
     },
     {
       "id": "bund/LMG/art_15",
@@ -1958,7 +2010,11 @@
             },
             {
               "marke": "c",
-              "text": "die notwendige Anzahl: 1. Lebensmittelinspektorinnen und -inspektoren,"
+              "text": "die notwendige Anzahl:"
+            },
+            {
+              "marke": "1",
+              "text": "Lebensmittelinspektorinnen und -inspektoren,"
             },
             {
               "marke": "2",
@@ -1987,7 +2043,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2017/62/de#art_49",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20241001",
-      "sha": "2da0d39c3fef8a0f388bb9d258e43dc902b00b7e75ac0ee6e59e01a55bfff13d"
+      "sha": "2a4b5ec3d38c389fa360ec544a86714776efce3710e10dcf54f1ada421f110e0"
     },
     {
       "id": "bund/LMG/art_50",

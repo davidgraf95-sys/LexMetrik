@@ -1566,7 +1566,11 @@
             },
             {
               "marke": "c",
-              "text": "Arzneimittel, für deren sichere Anwendung bei der Abgabe eine Fachberatung durch eine Medizinalperson erforderlich ist und die bis zum 1. Januar 2019 der Abgabekategorie C angehörten und von der Swissmedic neu in die Abgabekategorie B eingeteilt werden. Dies betrifft namentlich Arzneimittel, die: 1. Wirkstoffe mit einem bekannten Missbrauchspotenzial enthalten, die zur Gewöhnung oder Abhängigkeit führen können,"
+              "text": "Arzneimittel, für deren sichere Anwendung bei der Abgabe eine Fachberatung durch eine Medizinalperson erforderlich ist und die bis zum 1. Januar 2019 der Abgabekategorie C angehörten und von der Swissmedic neu in die Abgabekategorie B eingeteilt werden. Dies betrifft namentlich Arzneimittel, die:"
+            },
+            {
+              "marke": "1",
+              "text": "Wirkstoffe mit einem bekannten Missbrauchspotenzial enthalten, die zur Gewöhnung oder Abhängigkeit führen können,"
             },
             {
               "marke": "2",
@@ -1595,7 +1599,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "a3c4b9a7757bbf2ba515afbebd683dcbf0af9651027a387711eb1e6b9ad5c65d"
+      "sha": "c283b7b038b1ac30d011d3ca15198eb8475701d2eb25fbe0fccf07c1a5e0370b"
     },
     {
       "id": "bund/VAM/art_46",
@@ -2197,11 +2201,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "15 Tagen: 1. schwerwiegende unerwünschte Arzneimittelwirkungen,"
+              "text": "15 Tagen:"
+            },
+            {
+              "marke": "1",
+              "text": "schwerwiegende unerwünschte Arzneimittelwirkungen,"
             },
             {
               "marke": "2",
               "text": "Häufungen bekannter oder bisher nicht bekannter unerwünschter Arzneimittelwirkungen;"
+            },
+            {
+              "marke": "b",
+              "text": "60 Tagen: bisher nicht bekannte, nicht schwerwiegende unerwünschte Arzneimittelwirkungen."
             }
           ]
         },
@@ -2228,7 +2240,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_62",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "b170901d088d37dd55f372a3fb3f50601a5c7735a12b83b4c197d7d47fec4420"
+      "sha": "e51bcb2c7f021e1a572ad2c146f859b84e509eb32072c6a482ebdf4134beecb2"
     },
     {
       "id": "bund/VAM/art_62_a",
@@ -2411,12 +2423,84 @@
           "text": "Die Swissmedic veröffentlicht:",
           "items": [
             {
+              "marke": "a",
+              "text": "innert 60 Tagen nach Eingang eines vollständigen Gesuchs um Zulassung, um Erweiterung der Indikation oder um Erweiterung der Zulassung eines Arzneimittels:"
+            },
+            {
+              "marke": "1",
+              "text": "den Namen und die Adresse der Gesuchstellerin,"
+            },
+            {
+              "marke": "2",
+              "text": "Angaben über den Zeitpunkt der Einreichung des Gesuches,"
+            },
+            {
+              "marke": "3",
+              "text": "die Wirkstoffe des Arzneimittels,"
+            },
+            {
+              "marke": "4",
+              "text": "das beantragte Anwendungsgebiet,"
+            },
+            {
+              "marke": "5",
+              "text": "die Zieltierarten;"
+            },
+            {
+              "marke": "b",
+              "text": "nach Eröffnung ihrer Verfügung über die Gutheissung eines Gesuchs um Zulassung, um Erweiterung der Indikation oder um Erweiterung der Zulassung eines Arzneimittels sowie über den Widerruf einer Zulassung namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "den Namen und die Adresse der Zulassungsinhaberin bzw. der Gesuchstellerin,"
+            },
+            {
+              "marke": "2",
+              "text": "die Präparatebezeichnung,"
+            },
+            {
+              "marke": "3",
+              "text": "die Wirkstoffe,"
+            },
+            {
+              "marke": "4",
+              "text": "das Anwendungsgebiet,"
+            },
+            {
+              "marke": "5",
+              "text": "die Zieltierart,"
+            },
+            {
+              "marke": "6",
+              "text": "das Datum der Verfügung;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Eröffnung ihrer Verfügung über die Abweisung oder den Rückzug eines Gesuchs nach Buchstabe b: die Angaben nach Buchstabe b Ziffern 1 und 3–6;"
+            },
+            {
+              "marke": "d",
+              "text": "die Dauer eines nach den Artikeln 11 a und 11 b HMG gewährten Unterlagenschutzes;"
+            },
+            {
+              "marke": "e",
+              "text": "zusammenfassende Berichte, namentlich zu:"
+            },
+            {
               "marke": "1",
               "text": "gutheissenden und abweisenden Entscheiden zur Zulassung von Humanarzneimitteln mit neuen Wirkstoffen sowie zur Erweiterung von deren Indikation,"
             },
             {
               "marke": "2",
               "text": "Risikomanagement-Plänen;"
+            },
+            {
+              "marke": "f",
+              "text": "Erkenntnisse aus der Marktüberwachung mit Relevanz für die Heilmittelsicherheit;"
+            },
+            {
+              "marke": "g",
+              "text": "Informationen zu Marktüberwachungsmassnahmen, insbesondere wenn diese Handlungsempfehlungen beinhalten oder zu einer Änderung der Zulassung führen."
             }
           ]
         },
@@ -2433,7 +2517,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_68",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "4893f7b35048e191e4825477db44d74e1bda0abec7826345cef45b64e68b7d53"
+      "sha": "d22edc2ff780481878cdf7be54c5d45d61652534d50d7c5aaf8c5b2865e127e3"
     },
     {
       "id": "bund/VAM/art_69_70",

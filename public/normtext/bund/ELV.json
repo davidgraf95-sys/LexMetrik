@@ -1101,7 +1101,11 @@
             },
             {
               "marke": "b",
-              "text": "Vermögenverminderungen aufgrund von: 1. Ausgaben zum Werterhalt von Liegenschaften, an denen die Bezügerin oder der Bezüger das Eigentum oder die Nutzniessung hat,"
+              "text": "Vermögenverminderungen aufgrund von:"
+            },
+            {
+              "marke": "1",
+              "text": "Ausgaben zum Werterhalt von Liegenschaften, an denen die Bezügerin oder der Bezüger das Eigentum oder die Nutzniessung hat,"
             },
             {
               "marke": "2",
@@ -1122,6 +1126,14 @@
             {
               "marke": "6",
               "text": "Ausgaben für den gewohnten Lebensunterhalt der versicherten Person während der Jahre vor dem Bezug der jährlichen Ergänzungsleistung, wenn das erzielte Einkommen unzureichend war;"
+            },
+            {
+              "marke": "c",
+              "text": "unfreiwillige Vermögensverluste, die nicht auf ein absichtliches oder grobfahrlässiges Verhalten der Bezügerin oder des Bezügers zurückzuführen sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Genugtuungssummen einschliesslich des Solidaritätsbeitrages nach Artikel 4 Absatz 1 des Bundesgesetzes vom 30. September 2016 über die Aufarbeitung der fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen vor 1981."
             }
           ]
         }
@@ -1130,7 +1142,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "c3d125fb0a85f5b971db39dcebcb24e1542ff469541a6679113fa2c4031ba79b"
+      "sha": "b3e936dc730f9c133fbdb7325cf94053f8cc1f7837dd8f4914efd1481f015132"
     },
     {
       "id": "bund/ELV/art_17_e",
@@ -2525,7 +2537,11 @@
             },
             {
               "marke": "c",
-              "text": "die Stiftung Pro Juventute: 1. den Witwern mit minderjährigen Kindern und den Witwen, sofern sie nicht zu dem unter Buchstabe a oder b umschriebenen Personenkreis gehören,"
+              "text": "die Stiftung Pro Juventute:"
+            },
+            {
+              "marke": "1",
+              "text": "den Witwern mit minderjährigen Kindern und den Witwen, sofern sie nicht zu dem unter Buchstabe a oder b umschriebenen Personenkreis gehören,"
             },
             {
               "marke": "2",
@@ -2538,7 +2554,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "f985d55a44c8843736b7a66339c02071566535342b76ebecf22bd4136161ca2f"
+      "sha": "e5df2a187c7fa0eab1203c16594469e1ae0f8becf7ea18fc8e12803b915d2e17"
     },
     {
       "id": "bund/ELV/art_46",

@@ -1857,7 +1857,11 @@
             },
             {
               "marke": "c",
-              "text": "Es sorgt für die Verbindung mit: 1. den entsprechenden Dienstzweigen der Bundesverwaltung (BAG, Oberzolldirektion);"
+              "text": "Es sorgt für die Verbindung mit:"
+            },
+            {
+              "marke": "1",
+              "text": "den entsprechenden Dienstzweigen der Bundesverwaltung (BAG, Oberzolldirektion);"
             },
             {
               "marke": "2",
@@ -1894,7 +1898,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1952/241_241_245/de#art_29_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230901",
-      "sha": "64736cdfcd324ea1b9f764e3d30348f0730c1e5014019c1c40e2a3f65b301622"
+      "sha": "5c8ec714ba0d1606ba37c05a1240231a973b44b705b142189631b5f2ee645c01"
     },
     {
       "id": "bund/BETMG/art_29_c",

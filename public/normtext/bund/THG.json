@@ -82,6 +82,46 @@
           "text": "Im Sinne dieses Gesetzes gelten als:",
           "items": [
             {
+              "marke": "a",
+              "text": "technische Handelshemmnisse: Behinderungen des grenzüberschreitenden Verkehrs von Produkten aufgrund:"
+            },
+            {
+              "marke": "1",
+              "text": "unterschiedlicher technischer Vorschriften oder Normen,"
+            },
+            {
+              "marke": "2",
+              "text": "der unterschiedlichen Anwendung solcher Vorschriften oder Normen oder"
+            },
+            {
+              "marke": "3",
+              "text": "der Nichtanerkennung insbesondere von Prüfungen, Konformitätsbe­wer­tungen, Anmeldungen oder Zulassungen;"
+            },
+            {
+              "marke": "b",
+              "text": "technische Vorschriften: rechtsverbindliche Regeln, deren Einhaltung die Vor­aussetzung bildet, damit Produkte angeboten, in Verkehr gebracht, in Betrieb genommen, verwendet oder entsorgt werden dürfen, insbesondere Regeln hin­sichtlich:"
+            },
+            {
+              "marke": "1",
+              "text": "der Beschaffenheit, der Eigenschaften, der Verpackung, der Beschrif­tung oder des Konformitätszeichens von Produkten,"
+            },
+            {
+              "marke": "2",
+              "text": "der Herstellung, des Transportes oder der Lagerung von Produkten,"
+            },
+            {
+              "marke": "3",
+              "text": "der Prüfung, der Konformitätsbewertung, der Anmeldung, der Zulas­sung oder des Verfahrens zur Erlangung des Konformitätszeichens;"
+            },
+            {
+              "marke": "c",
+              "text": "technische Normen: nicht rechtsverbindliche, durch normenschaffende Organi­sationen aufgestellte Regeln, Leitlinien oder Merkmale, welche ins­besondere die Herstellung, die Beschaffenheit, die Eigenschaften, die Ver­pac­kung oder die Beschriftung von Produkten oder die Prüfung oder die Kon­formitätsbewer­tung betreffen;"
+            },
+            {
+              "marke": "d",
+              "text": "Inverkehrbringen: das entgeltliche oder unentgeltliche Überlassen eines Pro­dukts, unabhängig davon, ob dieses neu, gebraucht, wiederaufbereitet oder wesentlich verändert worden ist; dem Inverkehrbringen gleichgestellt sind:"
+            },
+            {
               "marke": "1",
               "text": "der gewerbliche oder berufliche Eigengebrauch eines Produkts,"
             },
@@ -96,6 +136,54 @@
             {
               "marke": "4",
               "text": "das Anbieten eines Produkts;"
+            },
+            {
+              "marke": "e",
+              "text": "Inbetriebnahme: die erstmalige Verwendung eines Produkts durch End­benutze­rinnen und Endbenutzer;"
+            },
+            {
+              "marke": "f",
+              "text": "Prüfung: der Vorgang zur Bestimmung bestimmter Merkmale eines Pro­dukts nach einem festgelegten Verfahren;"
+            },
+            {
+              "marke": "g",
+              "text": "Konformität: die Erfüllung technischer Vorschriften oder Normen durch das einzelne Produkt;"
+            },
+            {
+              "marke": "h",
+              "text": "Konformitätsbewertung: die systematische Untersuchung des Ausmasses, in dem Produkte oder die Bedingungen, unter denen sie hergestellt, transpor­tiert oder gelagert werden, technische Vorschriften oder Normen erfüllen;"
+            },
+            {
+              "marke": "i",
+              "text": "Konformitätsbescheinigung: das von einer Konformitätsbewertungsstelle aus­gestellte Dokument, mit dem die Konformität bestätigt wird;"
+            },
+            {
+              "marke": "k",
+              "text": "Konformitätserklärung: das durch die für die Konformität verantwortliche Per­son ausgestellte Dokument, mit dem die Konformität erklärt wird;"
+            },
+            {
+              "marke": "l",
+              "text": "Konformitätszeichen: das staatlich festgelegte oder anerkannte Zeichen oder die staatlich festgelegte oder anerkannte Bezeichnung, womit die Konfor­mität angezeigt wird;"
+            },
+            {
+              "marke": "m",
+              "text": "Anmeldung: die Hinterlegung der für das Anbieten, das Inverkehrbringen, die Inbetriebnahme oder die Verwendung von Produkten erforderlichen Un­terla­gen bei der zuständigen Behörde;"
+            },
+            {
+              "marke": "n",
+              "text": "Zulassung: die Bewilligung, Produkte zum angegebenen Zweck oder unter den angegebenen Bedingungen anzubieten, in Verkehr zu bringen, in Betrieb zu nehmen oder zu verwenden;"
+            },
+            {
+              "marke": "o",
+              "text": "Akkreditierung: die formelle Anerkennung der Kompetenz einer Stelle, be­stimmte Prüfungen oder Konformitätsbewertungen durchzuführen;"
+            },
+            {
+              "marke": "p",
+              "text": "Marktüberwachung: die hoheitliche Tätigkeit von Vollzugsorganen, mit der durchgesetzt werden soll, dass angebotene, in Verkehr gebrachte oder in Betrieb genommene Produkte den technischen Vorschriften entsprechen;"
+            },
+            {
+              "marke": "q",
+              "text": "Produktinformation: rechtsverbindlich vorgeschriebene Angaben und Kenn­zeichnungen, die sich auf ein Produkt beziehen, namentlich Etikettierung, Packungsaufschriften, Beipackzettel, Gebrauchsanweisungen, Benutzer­handbücher und Sicherheitsdatenblätter."
             }
           ]
         }
@@ -104,7 +192,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/1725_1725_1725/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230901",
-      "sha": "cd5da19669c14bae4c55ec4d98845222f2758a8a7c227dab0c59990afe6e561b"
+      "sha": "07f7a6f397339338eede0ccc58d3e2efb8b468dce1c4d11f1185e6eb6bbcdae3"
     },
     {
       "id": "bund/THG/art_4",
@@ -742,11 +830,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Gesuchsteller: 1. nachweist, dass das Lebensmittel den technischen Vorschriften nach Arti­kel 16 a Absatz 1 Buchstabe a entspricht, und"
+              "text": "der Gesuchsteller:"
+            },
+            {
+              "marke": "1",
+              "text": "nachweist, dass das Lebensmittel den technischen Vorschriften nach Arti­kel 16 a Absatz 1 Buchstabe a entspricht, und"
             },
             {
               "marke": "2",
               "text": "glaubhaft macht, dass das Lebensmittel in einem EG- oder EWR-Mit­gliedstaat rechtmässig in Verkehr ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "keine überwiegenden öffentlichen Interessen nach Artikel 4 Absatz 4 Buchsta­ben a–e gefährdet sind."
             }
           ]
         },
@@ -767,7 +863,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/1725_1725_1725/de#art_16_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230901",
-      "sha": "c916cf5f8dbbeb7a41bed6fe19980fa00f357a9ecde7785908e3052dd54c58f1"
+      "sha": "40a52decb87eebf91838b9a911ddbc1fb95e5697eccd4bbc210b80481ff7bd1e"
     },
     {
       "id": "bund/THG/art_16_e",

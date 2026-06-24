@@ -37,6 +37,74 @@
           "text": "In diesem Gesetz gelten als:",
           "items": [
             {
+              "marke": "a",
+              "text": "Finanzmarktinfrastruktur:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Börse (Art. 26 Bst. b),"
+            },
+            {
+              "marke": "2",
+              "text": "ein multilaterales Handelssystem (Art. 26 Bst. c),"
+            },
+            {
+              "marke": "3",
+              "text": "eine zentrale Gegenpartei (Art. 48),"
+            },
+            {
+              "marke": "4",
+              "text": "ein Zentralverwahrer (Art. 61),"
+            },
+            {
+              "marke": "5",
+              "text": "ein Transaktionsregister (Art. 74),"
+            },
+            {
+              "marke": "5a",
+              "text": "ein Handelssystem für Distributed Ledger Technology-Effekten (DLT-Handelssystem; Art. 73 a ),"
+            },
+            {
+              "marke": "6",
+              "text": "ein Zahlungssystem (Art. 81);"
+            },
+            {
+              "marke": "b",
+              "text": "Effekten: vereinheitlichte und zum massenweisen Handel geeignete Wertpapiere, Wertrechte, insbesondere einfache Wertrechte nach Artikel 973 c des Obligationenrechts (OR) und Registerwertrechte nach Artikel 973 d OR, sowie Derivate und Bucheffekten;"
+            },
+            {
+              "marke": "bbis",
+              "text": "Distributed Ledger Technology-Effekten (DLT-Effekten): Effekten in der Form von:"
+            },
+            {
+              "marke": "1",
+              "text": "Registerwertrechten (Art. 973 d OR), oder"
+            },
+            {
+              "marke": "2",
+              "text": "anderen Wertrechten, die in verteilten elektronischen Registern gehalten werden und die mittels technischer Verfahren den Gläubigern, nicht aber dem Schuldner, die Verfügungsmacht über das Wertrecht vermitteln;"
+            },
+            {
+              "marke": "c",
+              "text": "Derivate oder Derivatgeschäfte: Finanzkontrakte, deren Wert von einem oder mehreren Basiswerten abhängt und die kein Kassageschäft darstellen;"
+            },
+            {
+              "marke": "d",
+              "text": "Teilnehmer: jede Person, welche die Dienstleistungen einer Finanzmarktinfrastruktur direkt in Anspruch nimmt;"
+            },
+            {
+              "marke": "e",
+              "text": "indirekte Teilnehmer: jede Person, welche die Dienstleistungen einer Finanzmarktinfrastuktur indirekt über einen Teilnehmer in Anspruch nimmt;"
+            },
+            {
+              "marke": "f",
+              "text": "Kotierung: Zulassung einer Effekte zum Handel an einer Börse nach einem standardisierten Verfahren, in dem von der Börse festgelegte Anforderungen an den Emittenten und an die Effekte geprüft werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Abrechnung (Clearing): Verarbeitungsschritte zwischen dem Abschluss und der Abwicklung eines Geschäfts, insbesondere:"
+            },
+            {
               "marke": "1",
               "text": "die Erfassung, Abstimmung und Bestätigung der Transaktionsdaten,"
             },
@@ -51,6 +119,18 @@
             {
               "marke": "4",
               "text": "die Abstimmung und Bestätigung der abzuwickelnden Zahlungen und Effektenüberträge;"
+            },
+            {
+              "marke": "h",
+              "text": "Abwicklung (Settlement): Erfüllung der bei Geschäftsabschluss eingegangenen Verpflichtungen, namentlich durch die Überweisung von Geld oder die Übertragung von Effekten;"
+            },
+            {
+              "marke": "i",
+              "text": "ö ffentliche Kaufangebote: Angebote zum Kauf oder zum Tausch von Aktien, Partizipations- oder Genussscheinen oder von anderen Beteiligungspapieren (Beteiligungspapiere), die sich öffentlich an Inhaberinnen und Inhaber von Aktien oder von anderen Beteiligungspapieren richten;"
+            },
+            {
+              "marke": "j",
+              "text": "Insiderinformation: vertrauliche Information, deren Bekanntwerden geeignet ist, den Kurs von Effekten, die an einem Handelsplatz oder einem DLT-Handelssystem mit Sitz in der Schweiz zum Handel zugelassen sind, erheblich zu beeinflussen."
             }
           ]
         }
@@ -59,7 +139,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "88acdb364406aec4302463af7beb9b7ac72db3b3a4dae462593270de85a21315"
+      "sha": "2713b829a80e8f5f1c4dfde418e10e621aa42ad9804cfbada139a518e75b7f77"
     },
     {
       "id": "bund/FINFRAG/art_3",
@@ -1274,7 +1354,11 @@
             },
             {
               "marke": "d",
-              "text": "die zuständigen Aufsichtsbehörden: 1. keine Einwände gegen dessen Tätigkeit in der Schweiz erheben,"
+              "text": "die zuständigen Aufsichtsbehörden:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Einwände gegen dessen Tätigkeit in der Schweiz erheben,"
             },
             {
               "marke": "2",
@@ -1299,7 +1383,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_40",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "b9bc2b1ace3d689adc166d67b544ab760632855d80d41dd562b141617122f757"
+      "sha": "37ae38a17b1d86eb0e0077d239e6e1dc9a2b68013d648d6b62d1fca6ff4daf72"
     },
     {
       "id": "bund/FINFRAG/art_41",
@@ -1323,7 +1407,11 @@
             },
             {
               "marke": "b",
-              "text": "die zuständigen ausländischen Aufsichtsbehörden: 1. keine Einwände gegen die grenzüberschreitende Tätigkeit des ausländischen Handelsplatzes erheben,"
+              "text": "die zuständigen ausländischen Aufsichtsbehörden:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Einwände gegen die grenzüberschreitende Tätigkeit des ausländischen Handelsplatzes erheben,"
             },
             {
               "marke": "2",
@@ -1358,7 +1446,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_41",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "5641c2e3d84287f8c954fd8249203844f4707af6f18f595f4a1ba74074aae5dd"
+      "sha": "32802bed0a61f432ea1640bfba3e5e065c32fa3b5b3ba8a122d38a36c52a072a"
     },
     {
       "id": "bund/FINFRAG/art_41_a",
@@ -2075,7 +2163,11 @@
             },
             {
               "marke": "b",
-              "text": "die zuständigen ausländischen Aufsichtsbehörden: 1. keine Einwände gegen die grenzüberschreitende Tätigkeit der ausländischen zentralen Gegenpartei erheben,"
+              "text": "die zuständigen ausländischen Aufsichtsbehörden:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Einwände gegen die grenzüberschreitende Tätigkeit der ausländischen zentralen Gegenpartei erheben,"
             },
             {
               "marke": "2",
@@ -2100,7 +2192,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_60",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "82669a13bd67b13a9fb81d5b9d47450bf7d06574f116f0fb1efef373d5f54119"
+      "sha": "e4a9b727835ba5fe25a745b0585f91536b25fe30fe76cea5c9d6cea51fd9d831"
     },
     {
       "id": "bund/FINFRAG/art_61",
@@ -2981,7 +3073,11 @@
             },
             {
               "marke": "b",
-              "text": "die zuständigen ausländischen Aufsichtsbehörden: 1. keine Einwände gegen die grenzüberschreitende Tätigkeit des ausländischen Transaktionsregisters erheben,"
+              "text": "die zuständigen ausländischen Aufsichtsbehörden:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Einwände gegen die grenzüberschreitende Tätigkeit des ausländischen Transaktionsregisters erheben,"
             },
             {
               "marke": "2",
@@ -3016,7 +3112,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_80",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "c8d6d40a179a5dcc178c8fa406eb1234e13da395fbd68528c9c0a39360499fdb"
+      "sha": "2c743f338d1d3a7b235e4f92341be02ea2f65f5626fd86a45508065a73eaed56"
     },
     {
       "id": "bund/FINFRAG/art_81",
@@ -3505,7 +3601,11 @@
             },
             {
               "marke": "c",
-              "text": "Derivatgeschäfte in Bezug auf Waren, die: 1. physisch geliefert werden müssen,"
+              "text": "Derivatgeschäfte in Bezug auf Waren, die:"
+            },
+            {
+              "marke": "1",
+              "text": "physisch geliefert werden müssen,"
             },
             {
               "marke": "2",
@@ -3526,7 +3626,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_94",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "0d68662ca2fe96394213e0d4dfa6428700c74bde4f6e2a1f9337635a8409ac32"
+      "sha": "5d48f0dae7ee6305d3b7b39d146a2e2408dc7bb246b2d4d60ad269b7c56f29ef"
     },
     {
       "id": "bund/FINFRAG/art_95",
@@ -3839,11 +3939,19 @@
             },
             {
               "marke": "b",
-              "text": "bei Geschäften zwischen zwei Finanziellen Gegenparteien: 1. die Finanzielle Gegenpartei, die nicht klein ist nach Artikel 99,"
+              "text": "bei Geschäften zwischen zwei Finanziellen Gegenparteien:"
+            },
+            {
+              "marke": "1",
+              "text": "die Finanzielle Gegenpartei, die nicht klein ist nach Artikel 99,"
             },
             {
               "marke": "2",
               "text": "die verkaufende Gegenpartei bei einem Geschäft zwischen zwei kleinen oder zwei nicht kleinen Finanziellen Gegenparteien;"
+            },
+            {
+              "marke": "c",
+              "text": "die Gegenpartei mit Sitz in der Schweiz, wenn die ausländische Gegenpartei nicht meldet."
             }
           ]
         },
@@ -3868,7 +3976,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/853/de#art_104",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240201",
-      "sha": "ce0bd3863e191cbad7658766c0ee74dcf551285e6d002adc12c45831ed13c397"
+      "sha": "ea83a39c29aa498735cde30771b4c5d6f18a4e40bdbd549bad042838ab586406"
     },
     {
       "id": "bund/FINFRAG/art_105",

@@ -630,7 +630,11 @@
             },
             {
               "marke": "c",
-              "text": "weitere Abfälle, die eine der folgenden Voraussetzungen erfüllen: 1. Sie gehören einer Gruppe nach Anlage I des Basler Übereinkommens an und weisen eine gefährliche Eigenschaft nach Anlage III des Übereinkommens auf."
+              "text": "weitere Abfälle, die eine der folgenden Voraussetzungen erfüllen:"
+            },
+            {
+              "marke": "1",
+              "text": "Sie gehören einer Gruppe nach Anlage I des Basler Übereinkommens an und weisen eine gefährliche Eigenschaft nach Anlage III des Übereinkommens auf."
             },
             {
               "marke": "2",
@@ -647,7 +651,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250801",
-      "sha": "801b067d7e1381ec930cd6a102495453035fd0bbc607dc8f42c1960f107204a5"
+      "sha": "2211118784faba673dfb6f2df4135053bd17a5c9fb38cad48332c71ac7dbd391"
     },
     {
       "id": "bund/VEVA/art_15",
@@ -671,11 +675,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "zur Verwertung: 1. in einen Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
+              "text": "zur Verwertung:"
+            },
+            {
+              "marke": "1",
+              "text": "in einen Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
             },
             {
               "marke": "2",
               "text": "in einen Staat, der nicht Mitglied der OECD oder der EU ist, wenn es Abfälle nach Anlage IX des Basler Übereinkommens und nicht Abfälle nach Artikel 14 Absatz 3 sind;"
+            },
+            {
+              "marke": "b",
+              "text": "in einen Mitgliedstaat der OECD oder der EU, wenn es sich um Proben von Abfällen handelt und diese ausgeführt werden, um die technische Möglichkeit ihrer Entsorgung abzuklären; es dürfen nur so viele Abfallproben wie nötig ausgeführt werden und eine Probe darf höchstens 25 kg wiegen."
             }
           ]
         },
@@ -692,7 +704,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_15",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250801",
-      "sha": "0b30c87f1dc99e8ec97a79a4a76888885c46095a536775c3d9ec1226618bc337"
+      "sha": "ddcfa8618582d3d26b1194485f10c7d31462619260e707bb82196f7b8a4c022b"
     },
     {
       "id": "bund/VEVA/art_16",
@@ -752,6 +764,42 @@
           "text": "Das BAFU bewilligt die Ausfuhr, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "der Entsorgungsweg der auszuführenden Abfälle bekannt ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Entsorgung umweltverträglich ist und dem Stand der Technik entspricht;"
+            },
+            {
+              "marke": "c",
+              "text": "für die folgenden Abfälle die Entsorgung in der Schweiz nicht möglich ist oder die Ausfuhr im Rahmen einer vertraglich vereinbarten regionalen grenzüberschreitenden Zusammenarbeit vorgesehen ist:"
+            },
+            {
+              "marke": "1",
+              "text": "gemischt gesammelte, brennbare Abfälle aus Haushalten und Unternehmen, wie Kehricht und Sperrgut, sowie deren behandelte und energetisch zu verwertende Anteile,"
+            },
+            {
+              "marke": "2",
+              "text": "Schlacke aus Anlagen, in denen Siedlungsabfälle oder Abfälle vergleichbarer Zusammensetzung verbrannt werden,"
+            },
+            {
+              "marke": "3",
+              "text": "Abfälle aus dem öffentlichen Strassenunterhalt und der öffentlichen Abwasserreinigung,"
+            },
+            {
+              "marke": "4",
+              "text": "brennbare, vermischte Bauabfälle und deren behandelte und energetisch zu verwertende Anteile,"
+            },
+            {
+              "marke": "5",
+              "text": "separat gesammelte biogene Abfälle aus Haushalten sowie pflanzliche Abfälle aus dem Unterhalt von Gärten und Pärken durch Unternehmen; davon ausgenommen sind Holzabfälle;"
+            },
+            {
+              "marke": "d",
+              "text": "die Abfälle nicht zum Zweck der Ablagerung auf einer Deponie ausgeführt werden; ausgenommen ist die Ausfuhr von:"
+            },
+            {
               "marke": "1",
               "text": "Abfällen im Rahmen einer vertraglich vereinbarten regionalen grenzüberschreitenden Zusammenarbeit,"
             },
@@ -770,6 +818,14 @@
             {
               "marke": "4",
               "text": "unverschmutztem Aushub- und Ausbruchmaterial zur Ablagerung auf Deponien im grenznahen Ausland;"
+            },
+            {
+              "marke": "e",
+              "text": "die Zustimmungen des Einfuhrstaates und der Durchfuhrstaaten vorliegen, die nach dem Basler Übereinkommen und dem OECD-Ratsbeschluss erforderlich sind;"
+            },
+            {
+              "marke": "f",
+              "text": "eine ausreichende Sicherheitsleistung nach Artikel 20 erbracht ist."
             }
           ]
         }
@@ -778,7 +834,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250801",
-      "sha": "c8971cd919ced9b70d5a95c338e313af0ae03c8b19008b72231222f2234c9f9d"
+      "sha": "9a78c70da8f0807ef32310b0ab854f2f6568a88a9c2e5b66d4f243361cb4dc62"
     },
     {
       "id": "bund/VEVA/art_18",
@@ -916,11 +972,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "zur Verwertung: 1. aus einem Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
+              "text": "zur Verwertung:"
+            },
+            {
+              "marke": "1",
+              "text": "aus einem Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
             },
             {
               "marke": "2",
               "text": "aus einem Staat, der nicht Mitglied der OECD oder der EU ist, wenn es Abfälle nach Anlage IX des Basler Übereinkommens und nicht Abfälle nach Artikel 14 Absatz 3 sind;"
+            },
+            {
+              "marke": "b",
+              "text": "aus einem Mitgliedstaat der OECD oder der EU, wenn es sich um Proben von Abfällen handelt und diese eingeführt werden, um die technische Möglichkeit ihrer Entsorgung abzuklären; es dürfen nur so viele Abfallproben wie nötig eingeführt werden und eine Probe darf höchstens 25 kg wiegen."
             }
           ]
         }
@@ -929,7 +993,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250801",
-      "sha": "10a005f907c89f4cfc20741e9d6bb3cb90c9cb716d95496c14aeaf7ebc16bd02"
+      "sha": "8e1f05ca693757d34790cbf9b5812b9ec92c6ebb36dd0e8d366d1ead28a6a670"
     },
     {
       "id": "bund/VEVA/art_23",

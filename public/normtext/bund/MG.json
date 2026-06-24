@@ -564,7 +564,15 @@
             },
             {
               "marke": "b",
-              "text": "für höhere Unteroffiziere: 1. die nicht in Stäben grosser Verbände eingeteilt sind: – für Feldweibel, Hauptfeldweibel, Fouriere und Adjutantunteroffiziere: bis zum Ende des Jahres, in dem sie das 36. Altersjahr vollenden"
+              "text": "für höhere Unteroffiziere:"
+            },
+            {
+              "marke": "1",
+              "text": "die nicht in Stäben grosser Verbände eingeteilt sind:"
+            },
+            {
+              "marke": "–",
+              "text": "für Feldweibel, Hauptfeldweibel, Fouriere und Adjutantunteroffiziere: bis zum Ende des Jahres, in dem sie das 36. Altersjahr vollenden"
             },
             {
               "marke": "–",
@@ -573,6 +581,34 @@
             {
               "marke": "–",
               "text": "für Haupt- und Chefadjutanten: bis zum Ende des Jahres, in dem sie das 50. Altersjahr vollenden,"
+            },
+            {
+              "marke": "2",
+              "text": "die in Stäben grosser Verbände eingeteilt sind: bis zum Ende des Jahres, in dem sie das 50. Altersjahr vollenden;"
+            },
+            {
+              "marke": "c",
+              "text": "für Subalternoffiziere: bis zum Ende des Jahres, in dem sie das 40. Altersjahr vollenden;"
+            },
+            {
+              "marke": "d",
+              "text": "für Hauptleute: bis zum Ende des Jahres, in dem sie das 42. Altersjahr vollenden;"
+            },
+            {
+              "marke": "e",
+              "text": "für Stabsoffiziere: bis zum Ende des Jahres, in dem sie das 50. Altersjahr vollenden;"
+            },
+            {
+              "marke": "f",
+              "text": "für höhere Stabsoffiziere: bis zum Ende des Jahres, in dem sie das 65. Altersjahr vollenden;"
+            },
+            {
+              "marke": "g",
+              "text": "für Spezialistinnen und Spezialisten: bis zum Ende des Jahres, in dem sie das 50. Altersjahr vollenden;"
+            },
+            {
+              "marke": "h",
+              "text": "für das militärische Personal: bis zur Beendigung des Arbeitsverhältnisses; vorbehalten bleibt eine längere Dauer nach den Buchstaben a–g."
             }
           ]
         },
@@ -599,7 +635,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "22d764b648b65882616f5c7b82f35ac2a4f07159d8186f782c1c510236f19460"
+      "sha": "a89a994aff0230206a7104e7f3340eafe18acdf7b6d403d4880b3a043cee34ba"
     },
     {
       "id": "bund/MG/art_14",
@@ -729,7 +765,11 @@
             },
             {
               "marke": "c",
-              "text": "die folgenden hauptberuflich tätigen Personen: 1. Medizinalpersonen, die für die Sicherstellung des Betriebs von sanitätsdienstlichen Einrichtungen des zivilen Gesundheitswesens notwendig sind und von der Armee nicht zwingend für sanitätsdienstliche Aufgaben benötigt werden,"
+              "text": "die folgenden hauptberuflich tätigen Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "Medizinalpersonen, die für die Sicherstellung des Betriebs von sanitätsdienstlichen Einrichtungen des zivilen Gesundheitswesens notwendig sind und von der Armee nicht zwingend für sanitätsdienstliche Aufgaben benötigt werden,"
             },
             {
               "marke": "2",
@@ -758,6 +798,14 @@
             {
               "marke": "8",
               "text": "Angestellte der zivilen Flugsicherungsdienste, die für die Sicherstellung der zivilen Flugsicherung unentbehrlich sind und nicht zwingend für die militärische Flugsicherung benötigt werden;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "j",
+              "text": "…"
             }
           ]
         },
@@ -786,7 +834,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_18",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "d4e092b8b0c567d2c2dab5f0d878e6b662de6d384c25a93a85c8dd2f004f137f"
+      "sha": "39c290eac8b6ca16d638a5c2cb426b61cef18db98f7c2916b4dbc8637bdbd6ad"
     },
     {
       "id": "bund/MG/art_19",
@@ -1272,7 +1320,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Militärdienstpflichtige, die: 1. eine Altersrente der Alters- und Hinterlassenenversicherung beziehen,"
+              "text": "Militärdienstpflichtige, die:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Altersrente der Alters- und Hinterlassenenversicherung beziehen,"
             },
             {
               "marke": "2",
@@ -1281,6 +1333,10 @@
             {
               "marke": "3",
               "text": "als Angestellte der Militärverwaltung des Bundes einen Einsatz nach Artikel 65 c leisten;"
+            },
+            {
+              "marke": "b",
+              "text": "Pilotinnen und Piloten sowie Beobachterinnen und Beobachter für das individuelle Training."
             }
           ]
         },
@@ -1293,7 +1349,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_29_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "155882704b07627d852954274d0a0705b25b35606905f41f8ff18c97e6fa382a"
+      "sha": "e4e403e8afb58963294f70b2ef3f5dea45abda18acbbe335d5a4b38754b9e35c"
     },
     {
       "id": "bund/MG/art_29_b",
@@ -3777,7 +3833,11 @@
             },
             {
               "marke": "d",
-              "text": "Waffen einzusetzen: 1. in Notwehr und im Notstand,"
+              "text": "Waffen einzusetzen:"
+            },
+            {
+              "marke": "1",
+              "text": "in Notwehr und im Notstand,"
             },
             {
               "marke": "2",
@@ -3808,7 +3868,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_92",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "311cb55793b4627cd9a9d989c2e71aecbb4d40ff50ce9ffae9e36b3ed4eeeb31"
+      "sha": "1cdcaa545bc64b4a1e9995da0bd653e5bf3c1e68a76688c21290e39eac63a003"
     },
     {
       "id": "bund/MG/art_92_a",
@@ -4172,7 +4232,11 @@
             },
             {
               "marke": "e",
-              "text": "Sie treffen zum Schutz der Armee vor Spionage, Sabotage und weiteren rechtswidrigen Handlungen vorsorgliche Massnahmen und beschaffen die dafür erforderlichen Nachrichten, wenn: 1. die Armee zu Friedensförderungs- oder Aktivdienst aufgeboten ist,"
+              "text": "Sie treffen zum Schutz der Armee vor Spionage, Sabotage und weiteren rechtswidrigen Handlungen vorsorgliche Massnahmen und beschaffen die dafür erforderlichen Nachrichten, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die Armee zu Friedensförderungs- oder Aktivdienst aufgeboten ist,"
             },
             {
               "marke": "2",
@@ -4220,7 +4284,11 @@
             },
             {
               "marke": "c",
-              "text": "für den Fall des Assistenz- oder des Aktivdienstes: 1. den Datenschutz und die Befugnis, Personendaten ohne Wissen der betroffenen Personen zu bearbeiten,"
+              "text": "für den Fall des Assistenz- oder des Aktivdienstes:"
+            },
+            {
+              "marke": "1",
+              "text": "den Datenschutz und die Befugnis, Personendaten ohne Wissen der betroffenen Personen zu bearbeiten,"
             },
             {
               "marke": "2",
@@ -4233,7 +4301,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_100",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "62f6d0b57306026b164db14985f83aed0861163bd06b48106d4f678358f8278e"
+      "sha": "8a9f9887b524837804bc705b27581c1b94e9962ac769112b2067140615136cea"
     },
     {
       "id": "bund/MG/art_100_a",
@@ -4349,7 +4417,11 @@
             },
             {
               "marke": "d",
-              "text": "Offiziere: 1. Subalternoffiziere: Leutnant, Oberleutnant,"
+              "text": "Offiziere:"
+            },
+            {
+              "marke": "1",
+              "text": "Subalternoffiziere: Leutnant, Oberleutnant,"
             },
             {
               "marke": "2",
@@ -4374,7 +4446,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4093_4093_4093/de#art_102",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "8383f0c8de7285e8f2d7b45e3f2998f3a8e0ece168ab295ee47ecee574ba084a"
+      "sha": "34d841f98574536f2dd73bd60a6fe667872f25a6d9177f2a12bc356fbf17a74e"
     },
     {
       "id": "bund/MG/art_103",

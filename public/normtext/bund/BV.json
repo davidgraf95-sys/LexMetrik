@@ -5078,7 +5078,11 @@
             },
             {
               "marke": "d",
-              "text": "völkerrechtliche Verträge, die: 1. unbefristet und unkündbar sind,"
+              "text": "völkerrechtliche Verträge, die:"
+            },
+            {
+              "marke": "1",
+              "text": "unbefristet und unkündbar sind,"
             },
             {
               "marke": "2",
@@ -5099,7 +5103,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/404/de#art_141",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240303",
-      "sha": "2d5f34bcdf8ed111394cfef48a111437db594ac64472f605b35fb486da56eb3c"
+      "sha": "d37ae9b406f6cb619ea5de3d91fe61cede04e427f3f01ce32f9f319439d58efa"
     },
     {
       "id": "bund/BV/art_141_a",
@@ -6935,11 +6939,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Festlegung der Pflegeleistungen, die von Pflegefachpersonen zulasten der Sozialversicherungen erbracht werden: 1. in eigener Verantwortung,"
+              "text": "die Festlegung der Pflegeleistungen, die von Pflegefachpersonen zulasten der Sozialversicherungen erbracht werden:"
+            },
+            {
+              "marke": "1",
+              "text": "in eigener Verantwortung,"
             },
             {
               "marke": "2",
               "text": "auf ärztliche Anordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "die angemessene Abgeltung der Pflegeleistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "anforderungsgerechte Arbeitsbedingungen für die in der Pflege tätigen Personen;"
+            },
+            {
+              "marke": "d",
+              "text": "Möglichkeiten der beruflichen Entwicklung von den in der Pflege tätigen Personen."
             }
           ]
         },
@@ -7068,7 +7088,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/404/de#art_197",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240303",
-      "sha": "72d4b25a4eba155606af44e04f74249457d4df32b8dafe29681a155d447cb8c2"
+      "sha": "30fa81adfe93ff8f60c434ee6ed33efe1df9259bced25feecd4b060b0baa94f3"
     }
   ]
 }

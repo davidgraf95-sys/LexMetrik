@@ -425,7 +425,11 @@
             },
             {
               "marke": "b",
-              "text": "nachweist, dass Massnahmen getroffen wurden, um: 1. ausreichenden Schutz vor Diebstahl zu gewähren, und"
+              "text": "nachweist, dass Massnahmen getroffen wurden, um:"
+            },
+            {
+              "marke": "1",
+              "text": "ausreichenden Schutz vor Diebstahl zu gewähren, und"
             },
             {
               "marke": "2",
@@ -464,7 +468,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_12",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "9bdeb4eddfa4e09ee7fe80ae44a15caea403792903b12167a24411cf54530be1"
+      "sha": "f5f78702c5b0537cabc97663f93441f2a67d31fe8f6ab1621827ca98d3e36fe6"
     },
     {
       "id": "bund/BETMKV/art_13",
@@ -2092,6 +2096,146 @@
           "text": "Die Buchführung nach Artikel 17 BetmG muss für jede kontrollierte Substanz folgende Angaben enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Anbau von kontrollierten Substanzen:"
+            },
+            {
+              "marke": "1",
+              "text": "Art des Anbaus,"
+            },
+            {
+              "marke": "2",
+              "text": "angebaute Sorte,"
+            },
+            {
+              "marke": "3",
+              "text": "Art der angebauten Stoffe,"
+            },
+            {
+              "marke": "4",
+              "text": "genauer Standort und Grösse der Anbaufläche,"
+            },
+            {
+              "marke": "5",
+              "text": "Saat,"
+            },
+            {
+              "marke": "6",
+              "text": "Pflege,"
+            },
+            {
+              "marke": "7",
+              "text": "Datum der Ernte,"
+            },
+            {
+              "marke": "8",
+              "text": "Ertrag,"
+            },
+            {
+              "marke": "9",
+              "text": "Verluste,"
+            },
+            {
+              "marke": "10",
+              "text": "Entsorgung,"
+            },
+            {
+              "marke": "11",
+              "text": "Art und Menge der gewonnenen kontrollierten Substanz,"
+            },
+            {
+              "marke": "12",
+              "text": "Abnehmerin oder Abnehmer;"
+            },
+            {
+              "marke": "b",
+              "text": "Herstellung:"
+            },
+            {
+              "marke": "1",
+              "text": "Lager am Jahresanfang,"
+            },
+            {
+              "marke": "2",
+              "text": "Einfuhr,"
+            },
+            {
+              "marke": "3",
+              "text": "Kauf im Inland,"
+            },
+            {
+              "marke": "4",
+              "text": "Herstellung,"
+            },
+            {
+              "marke": "5",
+              "text": "Ausfuhr,"
+            },
+            {
+              "marke": "6",
+              "text": "Verkauf im Inland,"
+            },
+            {
+              "marke": "7",
+              "text": "Fabrikation aus kontrollierten Substanzen (Bezeichnung, Angabe der Base oder des Salzes), auch wenn das Endprodukt nicht mehr der Kontrolle unterliegt,"
+            },
+            {
+              "marke": "8",
+              "text": "Versuche,"
+            },
+            {
+              "marke": "9",
+              "text": "Verluste,"
+            },
+            {
+              "marke": "10",
+              "text": "Entsorgung,"
+            },
+            {
+              "marke": "11",
+              "text": "Lager am Jahresende;"
+            },
+            {
+              "marke": "c",
+              "text": "Handel:"
+            },
+            {
+              "marke": "1",
+              "text": "Lager am Jahresanfang,"
+            },
+            {
+              "marke": "2",
+              "text": "Einfuhr,"
+            },
+            {
+              "marke": "3",
+              "text": "Kauf im Inland,"
+            },
+            {
+              "marke": "4",
+              "text": "Ausfuhr,"
+            },
+            {
+              "marke": "5",
+              "text": "Verkauf im Inland,"
+            },
+            {
+              "marke": "6",
+              "text": "Verluste,"
+            },
+            {
+              "marke": "7",
+              "text": "Entsorgung,"
+            },
+            {
+              "marke": "8",
+              "text": "Lager am Jahresende;"
+            },
+            {
+              "marke": "d",
+              "text": "internationaler Handel ohne Durchfuhr durch die Schweiz, für jede Trans­aktion:"
+            },
+            {
               "marke": "1",
               "text": "Datum,"
             },
@@ -2130,7 +2274,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_57",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "c1c3a1172d08fe9ca18d8258547b8b7dc759484199607c765a9b7cf7b4e2fb55"
+      "sha": "38fe4d08f599800cc0c432e0cec7dca521ba771f0b790255e6c34a324d205a14"
     },
     {
       "id": "bund/BETMKV/art_58",
@@ -2428,6 +2572,50 @@
           "text": "Ärztinnen und Ärzte, die Personen mit Cannabisarzneimitten behandeln, müssen folgende Daten im Informationssystem nach Artikel 18 f BetmG erfassen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Angaben zur behandelten Person:"
+            },
+            {
+              "marke": "1",
+              "text": "Patientencode,"
+            },
+            {
+              "marke": "2",
+              "text": "Jahrgang,"
+            },
+            {
+              "marke": "3",
+              "text": "Geschlecht,"
+            },
+            {
+              "marke": "4",
+              "text": "Gewicht,"
+            },
+            {
+              "marke": "5",
+              "text": "Wohnkanton;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben zur behandelnden Ärztin oder zum behandelnden Arzt:"
+            },
+            {
+              "marke": "1",
+              "text": "Vor- und Nachname,"
+            },
+            {
+              "marke": "2",
+              "text": "Adresse,"
+            },
+            {
+              "marke": "3",
+              "text": "eidgenössische Weiterbildungstitel;"
+            },
+            {
+              "marke": "c",
+              "text": "Angaben zur Behandlung:"
+            },
+            {
               "marke": "1",
               "text": "Zeitpunkt der Verschreibung,"
             },
@@ -2492,7 +2680,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "96d758594f6ad6b7c4b11c761a93af93958a3bca190bf1345fdfe3bb191b9fee"
+      "sha": "eeebce9e2dd6d2c0071138a3f8ad0e92827158b709226b62ae4217fb5af4c752"
     },
     {
       "id": "bund/BETMKV/art_65_c",
@@ -3015,6 +3203,22 @@
           "text": "Das BAG kann zur Erteilung von Ausnahmebewilligungen gemäss Artikel 8 Absätze 5–8 BetmG zudem folgende Personendaten bearbeiten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Daten der Patientinnen und Patienten:"
+            },
+            {
+              "marke": "1",
+              "text": "zur Identität,"
+            },
+            {
+              "marke": "2",
+              "text": "zur Krankengeschichte, die für die Beurteilung der beschränkten medizinischen Anwendung von verbotenen Betäubungsmitteln relevant sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten der behandelnden Ärztinnen und Ärzte:"
+            },
+            {
               "marke": "1",
               "text": "zur Identität,"
             },
@@ -3033,7 +3237,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_79_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "711e77d8f5996f337e19e6a9ab9b545830d521efa741a8cee3f1e9c6f34ddbc6"
+      "sha": "dd56b98ab9f956c78715f29a8af8772dd4d21a56dfc68492209b9ad7d72df94b"
     },
     {
       "id": "bund/BETMKV/art_79_b",
@@ -3198,7 +3402,11 @@
             },
             {
               "marke": "d",
-              "text": "als verantwortliche Apothekerin oder verantwortlicher Apotheker ein Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a, b oder d notfallmässig abgegeben und eine der folgenden Handlungen unterlassen hat: 1. Aufnahme eines Protokolls über den Namen und die Adresse der Empfängerin oder des Empfängers sowie über den Grund der Abgabe,"
+              "text": "als verantwortliche Apothekerin oder verantwortlicher Apotheker ein Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a, b oder d notfallmässig abgegeben und eine der folgenden Handlungen unterlassen hat:"
+            },
+            {
+              "marke": "1",
+              "text": "Aufnahme eines Protokolls über den Namen und die Adresse der Empfängerin oder des Empfängers sowie über den Grund der Abgabe,"
             },
             {
               "marke": "2",
@@ -3215,7 +3423,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_84",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230123",
-      "sha": "59e9f34ee3e29b8b17de947c454331d7d16c2877e6fd3a431ca18c36560780bd"
+      "sha": "035f26b79ac7e604e08bc4fa58260efbe384e3041a401ff752417a4bf2581066"
     },
     {
       "id": "bund/BETMKV/art_85",

@@ -1635,6 +1635,42 @@
           "text": "Risikoabsorbierende Kapitalinstrumente können unter folgenden Voraussetzungen und nach Genehmigung durch die FINMA entweder an das risikotragende Kapital angerechnet oder im Zielkapital berücksichtigt werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "Sie sind tatsächlich einbezahlt und nicht mit Vermögenswerten des Versicherungsunternehmens sichergestellt."
+            },
+            {
+              "marke": "b",
+              "text": "Sie können nicht mit Forderungen des Versicherungsunternehmens verrechnet werden."
+            },
+            {
+              "marke": "c",
+              "text": "Es ist im Vertrag unwiderruflich festgelegt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 2: dass das Versicherungsunternehmen bei vertraglich definierten Trigger -Ereignissen mindestens aber sowohl bei Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten als auch bei Insolvenzgefahr, verpflichtet ist, die Zahlung der Kapitalforderung und fälliger Schuldzinsen aufzuschieben; zusätzlich ist im Vertrag sicherzustellen, dass die Voraussetzungen nach Artikel 51 a Absatz 4 VAG erfüllt sind;"
+            },
+            {
+              "marke": "2",
+              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 1 zusätzlich zu Ziffer 1: dass sie bei vertraglich definierten Trigger -Ereignissen, mindestens aber sowohl bei Unterschreiten der Schwelle von 80 Prozent des SST-Quotienten, im Zeitpunkt drohender Überschuldung, als auch bei Entzug der Bewilligung durch vollständige Forderungsreduktion wegfallen oder in statutarisches Eigenkapital gewandelt werden; für die Feststellung der drohenden Überschuldung werden die risikoabsorbierenden Kapitalinstrumente als Fremdkapital berücksichtigt;"
+            },
+            {
+              "marke": "3",
+              "text": "dass die FINMA den Eintritt eines auslösenden Ereignisses nach Ziffer 1 oder Ziffer 2 mit einer Mitteilung an das Versicherungsunternehmen endgültig feststellen kann;"
+            },
+            {
+              "marke": "4",
+              "text": "dass sich die Gläubigerinnen und Gläubiger mit der Feststellung nach Ziffer 3 sowie mit allfälligen von der FINMA angeordneten Massnahmen bei Insolvenzgefahr einverstanden erklären."
+            },
+            {
+              "marke": "d",
+              "text": "Sie sind auf Dauer ausgerichtet und können nur mit Zustimmung des Versicherungsunternehmens und nur mit vorheriger Genehmigung der FINMA vorzeitig zurückbezahlt werden. Die Genehmigung wird erteilt, wenn das Versicherungsunternehmen nachweist, dass die Rückzahlung nicht zu einer Gefährdung der Solvenz führt."
+            },
+            {
+              "marke": "e",
+              "text": "Der Vertrag regelt, dass eine Rückzahlung eines befristeten risikoabsorbierenden Kapitalinstruments nur dann erlaubt ist, wenn:"
+            },
+            {
               "marke": "1",
               "text": "die Rückzahlung nicht zum Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten oder zu einer Insolvenzgefahr führt; oder"
             },
@@ -1701,7 +1737,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_37",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "53543228aa2631385c31e15cfd2a775385ffeae8f20ad3824f08dd0200c4e5b5"
+      "sha": "da5da36a48f74cdd458592d6c5c61b99ceb22aa4608dae29602dd92a01191a17"
     },
     {
       "id": "bund/AVO/art_38",
@@ -1869,11 +1905,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "gesamthaft über alle Vereinfachungen: 1. zu einer relativen Änderung des SST-Quotienten um mindestens 10 Prozent, oder"
+              "text": "gesamthaft über alle Vereinfachungen:"
+            },
+            {
+              "marke": "1",
+              "text": "zu einer relativen Änderung des SST-Quotienten um mindestens 10 Prozent, oder"
             },
             {
               "marke": "2",
               "text": "zu einer Über- oder Unterschreitung einer Interventionsschwelle führt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Entscheidungen oder das Urteil von Adressaten des Versicherungsunternehmens oder der FINMA beeinflussen könnte."
             }
           ]
         }
@@ -1882,7 +1926,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_42",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "ca9c333ab7733243158b63e3f73ca486aaea19c91468ccd20b0cb0601327b651"
+      "sha": "fda4409c47d6c6971073caf8a36d8c9d226e0e9a60361279a347d7aa5495df07"
     },
     {
       "id": "bund/AVO/art_43",
@@ -2799,7 +2843,11 @@
             },
             {
               "marke": "c",
-              "text": "Sie müssen Vermögenswerte, die zur Bedeckung der versicherungstechnischen Rückstellungen gehalten werden, folgendermassen anlegen: 1. in einer der Art und Laufzeit der Versicherungsverpflichtungen des Unternehmens angemessenen Weise;"
+              "text": "Sie müssen Vermögenswerte, die zur Bedeckung der versicherungstechnischen Rückstellungen gehalten werden, folgendermassen anlegen:"
+            },
+            {
+              "marke": "1",
+              "text": "in einer der Art und Laufzeit der Versicherungsverpflichtungen des Unternehmens angemessenen Weise;"
             },
             {
               "marke": "2",
@@ -2808,6 +2856,22 @@
             {
               "marke": "3",
               "text": "unter Berücksichtigung der strategischen Ziele."
+            },
+            {
+              "marke": "d",
+              "text": "Sie müssen im Fall eines Interessenkonflikts sicherstellen, dass die Anlage im Interesse der Versicherungsnehmerinnen und -nehmer sowie der Anspruchsberechtigten erfolgt."
+            },
+            {
+              "marke": "e",
+              "text": "Sie müssen Anlagen und Vermögenswerte, die nicht zum Handel an einem geregelten Finanzmarkt zugelassen sind, sind auf einem vorsichtigen Niveau halten."
+            },
+            {
+              "marke": "f",
+              "text": "Sie müssen Anlagen in angemessener Weise so mischen und streuen, dass eine übermässige Abhängigkeit von einer Anlageklasse, einem Vermögenswert, einem Emittenten, einer Unternehmensgruppe, einem Markt, einer geographischen Region sowie eine übermässige Risikokonzentration im Portfolio insgesamt vermieden wird."
+            },
+            {
+              "marke": "g",
+              "text": "Die Verwendung derivativer Finanzinstrumente ist nur zulässig, sofern diese zur Verringerung von Risiken oder zur effizienten Bewirtschaftung der Kapitalanlagen dienen; unzulässig sind Geschäfte, bei denen entsprechende Wertpapierbestände nicht vorhanden sind (Leerverkäufe)."
             }
           ]
         },
@@ -2838,7 +2902,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_69_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "2b18675a554bffac14e43deb3c1f47a7ff815d3e580dc5e7c2464d9c70dee7dc"
+      "sha": "330c888bce644537f68b3a308d481395e57cb9c7dccb92dc0042f3fe3ecf94a7"
     },
     {
       "id": "bund/AVO/art_70",
@@ -3170,7 +3234,11 @@
             },
             {
               "marke": "f",
-              "text": "Anteile an kollektiven Kapitalanlagen, deren Anlagen im Konkurs als Sondervermögen ab- oder aussonderbar sind, sofern: 1. sie jederzeit veräussert werden können,"
+              "text": "Anteile an kollektiven Kapitalanlagen, deren Anlagen im Konkurs als Sondervermögen ab- oder aussonderbar sind, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "sie jederzeit veräussert werden können,"
             },
             {
               "marke": "2",
@@ -3195,7 +3263,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_79",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "f956d2ab3e8cff42c71b9c6ecae496457154c2c0b4555ce43b6f9523e33e39a5"
+      "sha": "041a58aa81c29a0848fe9b908d5d5d119859fb4677662c171cb7632e08849206"
     },
     {
       "id": "bund/AVO/art_80",
@@ -3348,7 +3416,11 @@
             },
             {
               "marke": "b",
-              "text": "die dem gebundenen Vermögen zugewiesenen Werte: 1. vorhanden sind,"
+              "text": "die dem gebundenen Vermögen zugewiesenen Werte:"
+            },
+            {
+              "marke": "1",
+              "text": "vorhanden sind,"
             },
             {
               "marke": "2",
@@ -3381,7 +3453,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_85",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "71e469c6e21b83f766202bfd01acfbc7b83a6aa1aed51c7e479cec9e41f2ee07"
+      "sha": "dd4dbfa8d704b3e489652f060f6a0c6f1b778c4f47f1c8b5a76f57d3758aa96a"
     },
     {
       "id": "bund/AVO/art_86",
@@ -4394,7 +4466,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Versicherungsunternehmen, die in der Vorberichtsperiode und in der Berichtsperiode die folgenden Bedingungen erfüllen: 1. Die gebuchten Brutto-Prämien im Gesamtgeschäft betragen weniger als 10 Millionen Franken."
+              "text": "Versicherungsunternehmen, die in der Vorberichtsperiode und in der Berichtsperiode die folgenden Bedingungen erfüllen:"
+            },
+            {
+              "marke": "1",
+              "text": "Die gebuchten Brutto-Prämien im Gesamtgeschäft betragen weniger als 10 Millionen Franken."
             },
             {
               "marke": "2",
@@ -4403,6 +4479,10 @@
             {
               "marke": "3",
               "text": "Das Versicherungsunternehmen verfügt über einen kleinen Kreis von Versicherten."
+            },
+            {
+              "marke": "b",
+              "text": "Versicherungsunternehmen mit Sitz im Ausland, wenn sie am Hauptsitz einem gleichwertigen Offenlegungsregime unterliegen."
             }
           ]
         },
@@ -4415,7 +4495,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "d8784ad1da364fecd0cdbe2f87fcf07189c47d7d93c4928e262b43ae739312e9"
+      "sha": "83b3e0fadf63303ee7b0de641555f6c223abf5be21ae21f4e56fcac27d534ca8"
     },
     {
       "id": "bund/AVO/art_111_b",
@@ -5611,7 +5691,11 @@
             },
             {
               "marke": "f",
-              "text": "Kostenausweis im mittleren Renditeszenario bestehend aus: 1. der Bruttorendite,"
+              "text": "Kostenausweis im mittleren Renditeszenario bestehend aus:"
+            },
+            {
+              "marke": "1",
+              "text": "der Bruttorendite,"
             },
             {
               "marke": "2",
@@ -5670,7 +5754,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "5df0f3f0078018c7ca529e1dc58f692b382310bb55f9e9efc8338151fd23b1f1"
+      "sha": "9dfec13f1d23d7578a60f286a35487a3feeb135f68b2b8e59a334d970ffdff88"
     },
     {
       "id": "bund/AVO/art_129_c",
@@ -6657,7 +6741,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Bildung von Rückstellungen für: 1. das Langlebigkeitsrisiko,"
+              "text": "Bildung von Rückstellungen für:"
+            },
+            {
+              "marke": "1",
+              "text": "das Langlebigkeitsrisiko,"
             },
             {
               "marke": "2",
@@ -6686,6 +6774,14 @@
             {
               "marke": "8",
               "text": "Tarifumstellungen und -sanierungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Deckung der Kosten für zusätzliches, mit Zustimmung der FINMA aufgenommenes Risikokapital;"
+            },
+            {
+              "marke": "c",
+              "text": "Speisung des Überschussfonds."
             }
           ]
         },
@@ -6702,7 +6798,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_149",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "9618ab152831974717d103fe4d135286edffd5758d4fa0ca5fdf3b1c01608870"
+      "sha": "522266e2b1d8fdada6cff334ebdf8b4005778e1ecef3990474890936c46875b2"
     },
     {
       "id": "bund/AVO/art_150",
@@ -7547,7 +7643,11 @@
             },
             {
               "marke": "d",
-              "text": "bei der Versicherung von Gebäuden: 1. die ausschliesslich Wohn- und Landwirtschaftszwecken dienen: 10 Prozent der Entschädigung, mindestens aber 1000 Franken und höchstens 10 000 Franken,"
+              "text": "bei der Versicherung von Gebäuden:"
+            },
+            {
+              "marke": "1",
+              "text": "die ausschliesslich Wohn- und Landwirtschaftszwecken dienen: 10 Prozent der Entschädigung, mindestens aber 1000 Franken und höchstens 10 000 Franken,"
             },
             {
               "marke": "2",
@@ -7564,7 +7664,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_175",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "15a83aac01018ff4b2f867b35de651cb4955b70febdbdbccf5103780e3d6a6b9"
+      "sha": "06dffff1060453557d6033a98826ce4f0941a28d436e4fc15941138b3e0a374a"
     },
     {
       "id": "bund/AVO/art_176",
@@ -7845,6 +7945,38 @@
           "text": "Folgende Verhaltensweisen oder Umstände sind aufgrund von Interessenkonflikten in jedem Fall unzulässig:",
           "items": [
             {
+              "marke": "a",
+              "text": "Wenn ungebundene Versicherungsvermittlerinnen oder -vermittler:"
+            },
+            {
+              "marke": "1",
+              "text": "mit einem Versicherungsunternehmen Zusammenarbeitsvereinbarungen oder andere Vereinbarungen eingegangen sind, die ihre Freiheit, auch für andere Versicherungsunternehmen tätig zu werden, beeinträchtigen;"
+            },
+            {
+              "marke": "2",
+              "text": "am Gesellschaftskapital eines Versicherungsunternehmens direkt oder indirekt mit mehr als 10 Prozent beteiligt sind."
+            },
+            {
+              "marke": "b",
+              "text": "Wenn ungebundene Versicherungsvermittlerinnen oder -vermittler, beziehungsweise die mit der Verwaltung und Geschäftsführung betrauten Personen sowie Personen, die an der ungebundenen Versicherungsvermittlerin direkt oder indirekt mit mehr als 10 Prozent beteiligt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "eine leitende Funktion in einem Versicherungsunternehmen innehaben; oder"
+            },
+            {
+              "marke": "2",
+              "text": "auf andere Weise auf den Geschäftsgang eines Versicherungsunternehmens Einfluss nehmen können."
+            },
+            {
+              "marke": "c",
+              "text": "Wenn ein Versicherungsunternehmen am Gesellschaftskapital einer ungebundenen Versicherungsvermittlerin direkt oder indirekt mit mehr als 10 Prozent beteiligt ist."
+            },
+            {
+              "marke": "d",
+              "text": "Wenn ein Versicherungsunternehmen beziehungsweise die mit der Verwaltung und Geschäftsführung betrauten Personen sowie Personen, die am Versicherungsunternehmen direkt oder indirekt mit mehr als 10 Prozent beteiligt sind:"
+            },
+            {
               "marke": "1",
               "text": "bei einer ungebundenen Versicherungsvermittlerin eine leitende Funktion innehaben; oder"
             },
@@ -7863,7 +7995,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "40ca516d1ed20c58b3abb11df115335fd3bb67875b1fa5cf46a6ebafcd648258"
+      "sha": "ac41aa174ffa310133dff484fc15b871c89be751011c57b1c5c027db0a1bbe94"
     },
     {
       "id": "bund/AVO/art_182_d",
@@ -8212,6 +8344,30 @@
           "text": "Sie müssen folgende Anforderungen an die Versicherungsvermittlerinnen und -vermittler erfassen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Fähigkeiten namentlich in den Bereichen:"
+            },
+            {
+              "marke": "1",
+              "text": "Kundengewinnung,"
+            },
+            {
+              "marke": "2",
+              "text": "Kundenberatung,"
+            },
+            {
+              "marke": "3",
+              "text": "Kundenbetreuung;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundkenntnisse des Versicherungswesens;"
+            },
+            {
+              "marke": "c",
+              "text": "je nach Tätigkeit Kenntnisse namentlich in den Bereichen:"
+            },
+            {
               "marke": "1",
               "text": "Sach-, Personen- und Vermögensversicherungen,"
             },
@@ -8234,7 +8390,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "05c8e3ca9a6d2ce1cedef9bcd9dfbbf82e094959f846dec4ed01ea2f2a1b0321"
+      "sha": "0906334ef3281e3fa76e0dd69b790266d5724728db4f118b910706d50af48251"
     },
     {
       "id": "bund/AVO/art_190_a",
@@ -8617,7 +8773,11 @@
             },
             {
               "marke": "b",
-              "text": "insbesondere folgende Merkmale einer Versicherungsgruppe es rechtfertigen: 1. die Grösse,"
+              "text": "insbesondere folgende Merkmale einer Versicherungsgruppe es rechtfertigen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Grösse,"
             },
             {
               "marke": "2",
@@ -8638,7 +8798,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260226",
-      "sha": "6d89173527d699fe7ed370fb7975c6928402482e1873820b4ca0d51cad171e94"
+      "sha": "b0c8e5d2b6d7fe4073930aae602d363bec899bd7966a37d97a6f828632ec91e3"
     },
     {
       "id": "bund/AVO/art_197_b",

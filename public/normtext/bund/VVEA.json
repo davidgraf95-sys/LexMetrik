@@ -66,6 +66,86 @@
           "text": "In dieser Verordnung bedeuten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Siedlungsabfälle:"
+            },
+            {
+              "marke": "1",
+              "text": "aus Haushalten stammende Abfälle,"
+            },
+            {
+              "marke": "2",
+              "text": "aus Unternehmen mit weniger als 250 Vollzeitstellen stammende Abfälle, deren Zusammensetzung betreffend Inhaltsstoffe und Mengenverhältnisse mit Abfällen aus Haushalten vergleichbar ist,"
+            },
+            {
+              "marke": "3",
+              "text": "aus öffentlichen Verwaltungen stammende Abfälle, deren Zusammensetzung betreffend Inhaltsstoffe und Mengenverhältnisse mit Abfällen aus Haushalten vergleichbar ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Unternehmen : rechtliche Einheit mit einer eigenen Unternehmens-Identifikationsnummer oder solche in einem Konzern zusammengeschlossene Einheiten mit einem gemeinsam organisierten Abfallentsorgungssystem;"
+            },
+            {
+              "marke": "c",
+              "text": "Sonderabfälle: Abfälle, die im Abfallverzeichnis, das nach Artikel 2 der Verordnung vom 22. Juni 2005 über den Verkehr mit Abfällen (VeVA) erlassen wurde, als Sonderabfälle bezeichnet sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Biogene Abfälle: Abfälle pflanzlicher, tierischer oder mikrobieller Herkunft;"
+            },
+            {
+              "marke": "e",
+              "text": "Bauabfälle: Abfälle, die bei Neubau-, Umbau- oder Rückbauarbeiten von ortsfesten Anlagen anfallen;"
+            },
+            {
+              "marke": "f",
+              "text": "Aushub- und Ausbruchmaterial: Material, das bei Bauarbeiten ausgehoben oder ausgebrochen wird, ausgenommen ist abgetragener Ober- und Unterboden;"
+            },
+            {
+              "marke": "fbis",
+              "text": "Quecksilberabfälle :"
+            },
+            {
+              "marke": "1",
+              "text": "Abfälle, die Quecksilber oder Quecksilberverbindungen enthalten,"
+            },
+            {
+              "marke": "2",
+              "text": "aus der Behandlung von Quecksilberabfällen nach Ziffer 1 stammendes Quecksilber oder stammende Quecksilberverbindungen; davon ausgenommen ist Quecksilber, dessen Ausfuhr nach Anhang 1.7 Ziffer 2.2.4 oder 4.2 der Chemikalien-Risikoreduktions-Verordnung vom 18. Mai 2005 (ChemRRV) bewilligt worden ist,"
+            },
+            {
+              "marke": "3",
+              "text": "Quecksilber oder Quecksilberverbindungen, das oder die bei industriellen Prozessen nicht mehr benötigt wird oder werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Abfallanlagen: Anlagen, in denen Abfälle behandelt, verwertet, abgelagert oder zwischengelagert werden, ausgenommen sind Materialentnahmestellen, in denen Aushub- und Ausbruchmaterial verwertet wird;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "Kompostierungsanlagen: Abfallanlagen, in denen biogene Abfälle unter Luftzufuhr verrottet werden;"
+            },
+            {
+              "marke": "j",
+              "text": "Vergärungsanlagen: Abfallanlagen, in denen biogene Abfälle unter Luftabschluss vergärt werden;"
+            },
+            {
+              "marke": "k",
+              "text": "Deponien: Abfallanlagen, in denen Abfälle kontrolliert abgelagert werden;"
+            },
+            {
+              "marke": "l",
+              "text": "Thermische Behandlung : die Behandlung von Abfällen mit so hoher Temperatur, dass umweltgefährdende Stoffe zerstört oder durch Mineralisierung physikalisch oder chemisch gebunden werden;"
+            },
+            {
+              "marke": "m",
+              "text": "Stand der Technik: der aktuelle Entwicklungsstand von Verfahren, Einrichtungen und Betriebsweisen, der:"
+            },
+            {
               "marke": "1",
               "text": "bei vergleichbaren Anlagen oder Tätigkeiten im In- oder Ausland erfolgreich erprobt ist oder bei Versuchen erfolgreich eingesetzt wurde und nach den Regeln der Technik auf andere Anlagen oder Tätigkeiten übertragen werden kann, und"
             },
@@ -80,7 +160,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "c8be692ca8066b4f27c6fda0c8e4a88308800c4cd2e32044f8761a772bcf967a"
+      "sha": "91f1745c2318bafc214ceb042a3155e1e494e663bccc549777419ab79f7e5dc8"
     },
     {
       "id": "bund/VVEA/art_4",

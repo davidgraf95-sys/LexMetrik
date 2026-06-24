@@ -113,6 +113,38 @@
           "text": "Eine vorgemerkte Verfügungsbeschränkung ist zur Löschung anzu­melden:",
           "items": [
             {
+              "marke": "a",
+              "text": "Von Amtes wegen:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Wegfall der Pfändung oder des Arrestes infolge Erhe­bung eines Drittanspruches, der im Verfahren nach den Ar­tikeln 106 ff. SchKG nicht bestritten worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Betreibung infolge Verwertung des Grundstü­c­kes oder Bezahlung erloschen ist;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der gestundete Kaufpreis für das versteigerte Grund­stück bezahlt worden ist;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn ein Pfändungsanschluss aus irgendeinem Grunde da­hinfällt. In diesem Falle bezieht sich jedoch die Lö­schung nur auf die Vormerkung des Anschlusses;"
+            },
+            {
+              "marke": "5",
+              "text": "wenn ein Arrest infolge Nichtanhebung der Betreibung oder Klage innert Frist erlischt;"
+            },
+            {
+              "marke": "6",
+              "text": "wenn der Schuldner Sicherheit gemäss Artikel 277 SchKG leistet."
+            },
+            {
+              "marke": "b",
+              "text": "Auf Antrag des betriebenen Schuldners, sofern er den erfor­derli­chen Ausweis und den Kostenvorschuss dafür leistet:"
+            },
+            {
               "marke": "1",
               "text": "wenn eine provisorische Pfändung infolge Gutheissung der Aberkennungsklage dahinfällt;"
             },
@@ -135,7 +167,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/36/425_433_469/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20120101",
-      "sha": "8aacf40859fda71aae404e1ceca4df470fc4d6210ec1a3b10fc5f5bfa620e740"
+      "sha": "5edc0f248088691a64271af457010de3c73e56f29485db214320daa507f083e9"
     },
     {
       "id": "bund/VZG/art_7",

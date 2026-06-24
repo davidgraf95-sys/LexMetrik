@@ -321,11 +321,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "den Lohn (einschliesslich Nebenleistungen) des obersten Kaders sowie desjenigen Personals, das in vergleichbarer Höhe entlöhnt wird: 1. der Schweizerischen Bundesbahnen (SBB),"
+              "text": "den Lohn (einschliesslich Nebenleistungen) des obersten Kaders sowie desjenigen Personals, das in vergleichbarer Höhe entlöhnt wird:"
+            },
+            {
+              "marke": "1",
+              "text": "der Schweizerischen Bundesbahnen (SBB),"
             },
             {
               "marke": "2",
               "text": "von andern Unternehmen und Anstalten des Bundes, die als dezentralisierte Verwaltungseinheiten diesem Gesetz unterstehen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Honorar (einschliesslich Nebenleistungen) der Mitglieder des Verwaltungsrates oder eines vergleichbaren obersten Leitungsorgans von Unternehmen und Anstalten nach Buchstabe a;"
+            },
+            {
+              "marke": "c",
+              "text": "die ausgewogene Vertretung der Sprachgemeinschaften im Verwaltungsrat oder in einem vergleichbaren obersten Leitungsorgan von Unternehmen und Anstalten nach Buchstabe a."
             }
           ]
         },
@@ -354,7 +366,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/123/de#art_6_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "18a8830a4c18150ac12a54f027067c1e8f85f828d5dbf8c8d86416f5ef06006c"
+      "sha": "fa8d0e8a95f6c45171080275c2212f8155031afef48265da1a25319fbf9866fc"
     },
     {
       "id": "bund/BPG/art_7",

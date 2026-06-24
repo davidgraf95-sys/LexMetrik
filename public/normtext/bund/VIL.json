@@ -1100,7 +1100,11 @@
             },
             {
               "marke": "c",
-              "text": "die folgenden Pläne: 1. Übersichtsplan des Flugplatzes mit Eintrag des Projektstandortes,"
+              "text": "die folgenden Pläne:"
+            },
+            {
+              "marke": "1",
+              "text": "Übersichtsplan des Flugplatzes mit Eintrag des Projektstandortes,"
             },
             {
               "marke": "2",
@@ -1109,6 +1113,38 @@
             {
               "marke": "3",
               "text": "Geschoss- und Ansichtspläne sowie Schnitte nach Bedarf;"
+            },
+            {
+              "marke": "d",
+              "text": "alle ortsüblichen Pläne, Unterlagen und Formulare, die für die Beurteilung nötig sind; kantonale Vorschriften betreffend die Ausgestaltung von Baueingaben sind zu berücksichtigen, soweit es mit den Besonderheiten der Flugplatzanlage vereinbar ist;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben darüber, welche Auswirkungen das Vorhaben auf Raum und Umwelt hat, sowie bei Vorhaben, die der Umweltverträglichkeitsprüfung unterliegen, den Umweltverträglichkeitsbericht;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Auswirkungen auf die Lärmbelastung: alle Angaben, die für die Festlegung der zulässigen Lärmimmissionen gemäss Artikel 37 a der Lärmschutz-Verordnung vom 15. Dezember 1986 erforderlich sind;"
+            },
+            {
+              "marke": "g",
+              "text": "Angaben über die Auswirkungen des Vorhabens auf den Betrieb des Flugplatzes;"
+            },
+            {
+              "marke": "h",
+              "text": "den Nachweis, dass die Anforderungen der Flugsicherheit erfüllt sind;"
+            },
+            {
+              "marke": "i",
+              "text": "allfällige Änderungen des Betriebsreglements, die mit dem Bauvorhaben in Zusammenhang stehen, und die entsprechenden Unterlagen nach Artikel 24;"
+            },
+            {
+              "marke": "j",
+              "text": "falls von einer Aussteckung abgesehen werden soll, eine Begründung;"
+            },
+            {
+              "marke": "k",
+              "text": "Angaben, wie die Anforderungen nach den übrigen anwendbaren Bestimmungen von Bund und Kanton erfüllt werden."
             }
           ]
         },
@@ -1125,7 +1161,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/3050_3050_3050/de#art_27_a_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "e9427553be18ecd05f5257173a7b90ea20d9a232697c51ae58159e53de3078bf"
+      "sha": "a2b8c86a1ed32700f582c1f724ed7b7c472823c3a0ea7924dd147f3e3b9db4f3"
     },
     {
       "id": "bund/VIL/art_27_a_ter",
@@ -1145,7 +1181,11 @@
             },
             {
               "marke": "b",
-              "text": "die folgenden Pläne: 1. Übersichtsplan des Flugplatzes mit Eintrag des Projektstandortes,"
+              "text": "die folgenden Pläne:"
+            },
+            {
+              "marke": "1",
+              "text": "Übersichtsplan des Flugplatzes mit Eintrag des Projektstandortes,"
             },
             {
               "marke": "2",
@@ -1154,6 +1194,18 @@
             {
               "marke": "3",
               "text": "Entwürfe für Geschoss- und Ansichtspläne sowie Schnitte nach Bedarf;"
+            },
+            {
+              "marke": "c",
+              "text": "grobe Angaben darüber, welche Auswirkungen das Vorhaben auf Raum und Umwelt hat;"
+            },
+            {
+              "marke": "d",
+              "text": "Angaben über die Auswirkungen des Vorhabens auf den Betrieb des Flugplatzes;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben darüber, wie die Anforderungen an die Flugsicherheit erfüllt werden sollen."
             }
           ]
         },
@@ -1166,7 +1218,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/3050_3050_3050/de#art_27_a_ter",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "7e9576e55fad1db9ca479f362fbcb36c90a3c07a1ce64a289772cdb826c474ae"
+      "sha": "173c35d022125960647fb4c65d2f7b17e6b2474e0b6461f846422468a22e3ab8"
     },
     {
       "id": "bund/VIL/art_27_b",
@@ -2011,11 +2063,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "erlaubt zwischen 22 und 24 Uhr: 1. zu gewerbsmässigen Flügen mit einer Nonstop-Flugdistanz von über 5000 km mit Flugzeugen, deren Emissionen den Lärmindex 98 nicht übersteigen,"
+              "text": "erlaubt zwischen 22 und 24 Uhr:"
+            },
+            {
+              "marke": "1",
+              "text": "zu gewerbsmässigen Flügen mit einer Nonstop-Flugdistanz von über 5000 km mit Flugzeugen, deren Emissionen den Lärmindex 98 nicht übersteigen,"
             },
             {
               "marke": "2",
               "text": "zu den übrigen gewerbsmässigen Flügen mit Flugzeugen, deren Emissionen den Lärmindex 96 nicht übersteigen;"
+            },
+            {
+              "marke": "b",
+              "text": "verboten zwischen 24 und 06 Uhr."
             }
           ]
         },
@@ -2042,7 +2102,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/3050_3050_3050/de#art_39_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "822a9e7c67306b40161b6334ff0925fd905ddd048d37036d89c9035181e82e33"
+      "sha": "e05e493b669d7582dc7231f1773e749836d0f949daf5963815fff9efcc98922f"
     },
     {
       "id": "bund/VIL/art_39_b",

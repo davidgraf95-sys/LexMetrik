@@ -14,6 +14,34 @@
           "text": "Der Bund erhebt Stempelabgaben:",
           "items": [
             {
+              "marke": "a",
+              "text": "auf der Ausgabe folgender inländischer Urkunden:"
+            },
+            {
+              "marke": "1",
+              "text": "Aktien,"
+            },
+            {
+              "marke": "2",
+              "text": "Stammanteile von Gesellschaften mit beschränkter Haftung und Anteilscheine von Genossenschaften,"
+            },
+            {
+              "marke": "2bis",
+              "text": "Partizipationsscheine und Beteiligungsscheine von Genossenschaftsbanken,"
+            },
+            {
+              "marke": "3",
+              "text": "Genussscheine,"
+            },
+            {
+              "marke": "4",
+              "text": "und 5. …"
+            },
+            {
+              "marke": "b",
+              "text": "auf dem Umsatz der folgenden inländischen und ausländischen Urkunden:"
+            },
+            {
               "marke": "1",
               "text": "Obligationen,"
             },
@@ -40,6 +68,10 @@
             {
               "marke": "6",
               "text": "Papiere, die dieses Gesetz den Urkunden nach den Ziffern 1–5 gleichstellt;"
+            },
+            {
+              "marke": "c",
+              "text": "auf der Zahlung von Versicherungsprämien gegen Quittung."
             }
           ]
         },
@@ -52,7 +84,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_1",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "f95724c69c0f32683eceba8cfbda54b8cc0b5dfdaf0bd72e17901ba3f25ba262"
+      "sha": "3a1c5c57a7786e7adaf9c206b71faa2371226e964ad0e80134036158f79ab065"
     },
     {
       "id": "bund/STG/art_2",
@@ -159,7 +191,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die entgeltliche oder unentgeltliche Begründung und Erhöhung des Nennwertes von Beteiligungsrechten in Form von: – Aktien inländischer Aktiengesellschaften und Kommanditaktiengesellschaften;"
+              "text": "die entgeltliche oder unentgeltliche Begründung und Erhöhung des Nennwertes von Beteiligungsrechten in Form von:"
+            },
+            {
+              "marke": "–",
+              "text": "Aktien inländischer Aktiengesellschaften und Kommanditaktiengesellschaften;"
             },
             {
               "marke": "–",
@@ -180,6 +216,10 @@
             {
               "marke": "–",
               "text": "Beteiligungsscheinen von Genossenschaftsbanken."
+            },
+            {
+              "marke": "b",
+              "text": "…"
             }
           ]
         },
@@ -206,7 +246,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "d5209c1943e1569b7676484084533caff0ee9b19efb4ec0289e4613ada22f5bf"
+      "sha": "40ce40d4a975465567775a5d1490e0b49824416208fadab6eaf581c626f303ae"
     },
     {
       "id": "bund/STG/art_5_a",
@@ -240,12 +280,84 @@
           "text": "Von der Abgabe sind ausgenommen:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Beteiligungsrechte an Aktiengesellschaften, Kommanditaktiengesellschaften, Gesellschaften mit beschränkter Haftung oder Genossenschaften, die sich, ohne einen Erwerbszweck zu verfolgen, entweder der Fürsorge für Bedürftige und Kranke, der Förderung des Kultus, des Unterrichts sowie anderer gemeinnütziger Zwecke oder der Beschaffung von Wohnungen zu mässigen Mietzinsen oder der Gewährung von Bürgschaften widmen, sofern nach den Statuten"
+            },
+            {
+              "marke": "–",
+              "text": "die Dividende auf höchstens 6 Prozent des einbezahlten Gesellschafts- oder Genossenschaftskapitals beschränkt,"
+            },
+            {
+              "marke": "–",
+              "text": "die Ausrichtung von Tantiemen ausgeschlossen und"
+            },
+            {
+              "marke": "–",
+              "text": "bei der Auflösung der Gesellschaft oder Genossenschaft der nach Rückzahlung des einbezahlten Gesellschafts- oder Genossenschaftskapitals verbleibende Teil des Vermögens einem der erwähnten Zwecke zuzuwenden ist;"
+            },
+            {
+              "marke": "abis",
+              "text": "bis . Beteiligungsrechte, die in Durchführung von Beschlüssen über Fusionen oder diesen wirtschaftlich gleichkommende Zusammenschlüsse, Umwandlungen und Spaltungen von Aktiengesellschaften, Kommanditaktiengesellschaften, Gesellschaften mit beschränkter Haftung oder Genossenschaften begründet oder erhöht werden;"
+            },
+            {
+              "marke": "ater",
+              "text": "die Begründung oder Erhöhung des Nennwerts von Beteiligungsrechten an Gesellschaften, die ausschliesslich in öffentlicher Hand sind und einen öffentlichen Zweck nach Artikel 1 des Bundesgesetzes vom 17. März 2023 über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben verfolgen, sowie gleichgestellte Vorgänge zur Begründung von Beteiligungsrechten an solchen Gesellschaften;"
+            },
+            {
+              "marke": "b",
+              "text": "die Begründung oder Nennwerterhöhung von Beteiligungsrechten an Genossenschaften, soweit die Leistungen der Genossenschafter im Sinne von Artikel 5 gesamthaft eine Million Franken nicht übersteigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Beteiligungsrechte an Transportunternehmen, die aus Investitionsbeiträgen der öffentlichen Hand zu deren Gunsten begründet oder erhöht werden;"
+            },
+            {
+              "marke": "d",
+              "text": "die Beteiligungsrechte, die unter Verwendung früherer Aufgelder und Zuschüsse der Gesellschafter oder Genossenschafter begründet oder erhöht werden, sofern die Gesellschaft oder Genossenschaft nachweist, dass sie auf diesen Leistungen die Abgabe entrichtet hat;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "die Beteiligungsrechte, die unter Verwendung eines Partizipationskapitals oder Beteiligungskapitals einer Genossenschaftsbank begründet oder erhöht werden, sofern die Gesellschaft oder Genossenschaft nachweist, dass sie auf diesem Partizipationskapital oder Beteiligungskapital die Abgabe entrichtet hat;"
+            },
+            {
+              "marke": "h",
+              "text": "die bei der Gründung oder Kapitalerhöhung einer Aktiengesellschaft, einer Kommanditaktiengesellschaft oder einer Gesellschaft mit beschränkter Haftung entgeltlich ausgegebenen Beteiligungsrechte, soweit die Leistungen der Gesellschafter gesamthaft eine Million Franken nicht übersteigen;"
+            },
+            {
+              "marke": "i",
+              "text": "die Begründung von Anteilen von kollektiven Kapitalanlagen gemäss KAG;"
+            },
+            {
+              "marke": "j",
+              "text": "Beteiligungsrechte, die zur Übernahme eines Betriebes oder Teilbetriebes einer Aktiengesellschaft, Kommanditaktiengesellschaft, Gesellschaft mit beschränkter Haftung oder Genossenschaft begründet oder erhöht werden, sofern gemäss letzter Jahresbilanz die Hälfte des Kapitals und der gesetzlichen Reserven dieser Gesellschaft oder Genossenschaft nicht mehr gedeckt ist;"
+            },
+            {
+              "marke": "k",
+              "text": "die bei offenen Sanierungen vorgenommene Begründung von Beteiligungsrechten oder die Erhöhung von deren Nennwert bis zur Höhe vor der Sanierung sowie Zuschüsse von Gesellschaftern oder Genossenschaftern bei stillen Sanierungen, soweit:"
+            },
+            {
               "marke": "–",
               "text": "bestehende Verluste beseitigt werden, und"
             },
             {
               "marke": "–",
               "text": "die Leistungen der Gesellschafter oder Genossenschafter gesamthaft 10 Millionen Franken nicht übersteigen;"
+            },
+            {
+              "marke": "l",
+              "text": "die Beteiligungsrechte an Banken oder Konzerngesellschaften von Finanzgruppen, die unter Verwendung des von der Eidgenössischen Finanzmarktaufsicht im Hinblick auf die Erfüllung regulatorischer Erfordernisse genehmigten Wandlungskapitals nach den Artikeln 13 Absatz 1 oder 30 b Absatz 7 Buchstabe b des Bankengesetzes vom 8. November 1934 begründet oder erhöht werden;"
+            },
+            {
+              "marke": "m",
+              "text": "…"
             }
           ]
         },
@@ -258,7 +370,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "e19568b8296ac55144c625aaf0c50d452e33088a8d83c22faae7be683fddd2eb"
+      "sha": "b745314ef5376d54585d37b2464310ed3f2522e7dc58372cd8bfbd13209c7c6e"
     },
     {
       "id": "bund/STG/art_7",
@@ -275,6 +387,10 @@
             {
               "marke": "a",
               "text": "bei Aktien, Partizipationsscheinen, Stammanteilen von Gesellschaften mit beschränkter Haftung und bei Beteiligungsscheinen von Genossenschaftsbanken: im Zeitpunkt der Eintragung der Begründung oder der Erhöhung der Beteiligungsrechte ins Handelsregister;"
+            },
+            {
+              "marke": "abis",
+              "text": "bis . bei Beteiligungsrechten, die im Verfahren der bedingten Kapitalerhöhung begründet werden: im Zeitpunkt ihrer Ausgabe;"
             },
             {
               "marke": "b",
@@ -307,7 +423,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "90328fd9af6dfd16e06a284fed35c521009891efe72bd2ac29dc71fc8a3fce94"
+      "sha": "1fd8ecfb0c8fd2617dd69aaf9b35f2e2743094c7834b8bf927df04e0af31da39"
     },
     {
       "id": "bund/STG/art_8",
@@ -515,7 +631,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die von einem Inländer ausgegebenen: 1. Obligationen (Art. 4 Abs. 3 und 4),"
+              "text": "die von einem Inländer ausgegebenen:"
+            },
+            {
+              "marke": "1",
+              "text": "Obligationen (Art. 4 Abs. 3 und 4),"
             },
             {
               "marke": "2",
@@ -524,6 +644,14 @@
             {
               "marke": "3",
               "text": "Anteile an kollektiven Kapitalanlagen gemäss KAG;"
+            },
+            {
+              "marke": "b",
+              "text": "die von einem Ausländer ausgegebenen Urkunden, die in ihrer wirtschaftlichen Funktion den Titeln nach Buchstabe a gleichstehen. Der Bundesrat hat die Ausgabe von ausländischen Titeln von der Abgabe auszunehmen, wenn die Entwicklung der Währungslage oder des Kapitalmarktes es erfordert;"
+            },
+            {
+              "marke": "c",
+              "text": "Ausweise über Unterbeteiligungen an Urkunden der in Buchstaben a und b bezeichneten Arten."
             }
           ]
         },
@@ -537,11 +665,31 @@
             },
             {
               "marke": "b",
-              "text": "die nicht unter Buchstabe a fallenden inländischen natürlichen und juristischen Personen und Personengesellschaften, inländischen Anstalten und Zweigniederlassungen ausländischer Unternehmen, deren Tätigkeit ausschliesslich oder zu einem wesentlichen Teil darin besteht, 1. für Dritte den Handel mit steuerbaren Urkunden zu betreiben (Händler), oder"
+              "text": "die nicht unter Buchstabe a fallenden inländischen natürlichen und juristischen Personen und Personengesellschaften, inländischen Anstalten und Zweigniederlassungen ausländischer Unternehmen, deren Tätigkeit ausschliesslich oder zu einem wesentlichen Teil darin besteht,"
+            },
+            {
+              "marke": "1",
+              "text": "für Dritte den Handel mit steuerbaren Urkunden zu betreiben (Händler), oder"
             },
             {
               "marke": "2",
               "text": "als Anlageberater oder Vermögensverwalter Kauf und Verkauf von steuerbaren Urkunden zu vermitteln (Vermittler);"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "die nicht unter die Buchstaben a und b fallenden inländischen Aktiengesellschaften, Kommanditaktiengesellschaften, Gesellschaften mit beschränkter Haftung und Genossenschaften sowie inländischen Einrichtungen der beruflichen Vorsorge und der gebundenen Vorsorge, deren Aktiven nach Massgabe der letzten Bilanz zu mehr als 10 Millionen Franken aus steuerbaren Urkunden nach Absatz 2 bestehen;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "der Bund, die Kantone und die politischen Gemeinden samt ihren Anstalten, sofern sie in ihrer Rechnung für mehr als 10 Millionen Franken steuerbare Urkunden nach Absatz 2 ausweisen, sowie die inländischen Einrichtungen der Sozialversicherung."
             }
           ]
         },
@@ -576,7 +724,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "dcc9a3996da942df2fed45623f29c869a57d976c44ed205180de2d0f701d8b13"
+      "sha": "81c9e192997a8955f524996e43f5f262487de9bf8ccf1c102e3317c5629b2288"
     },
     {
       "id": "bund/STG/art_14",
@@ -963,6 +1111,14 @@
               "text": "nichtrückkaufsfähige Lebensversicherung sowie die rückkaufsfähige Lebensversicherung mit periodischer Prämienzahlung; der Bundesrat legt in einer Verordnung die notwendigen Abgrenzungen fest;"
             },
             {
+              "marke": "abis",
+              "text": "bis . Lebensversicherung, soweit diese der beruflichen Vorsorge im Sinne des BVG dient;"
+            },
+            {
+              "marke": "ater",
+              "text": "ter . Lebensversicherung, welche von einem Versicherungsnehmer mit Wohnsitz im Ausland abgeschlossen wird;"
+            },
+            {
               "marke": "b",
               "text": "Kranken- und Invaliditätsversicherung;"
             },
@@ -1009,7 +1165,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "6ef6485db300c3d83ab3f4b329938b419cfc44ce51e431df8f89aa34c175c88d"
+      "sha": "df922605b9df1583445d8eb5ef0473a896204eb1b11d13564ec3e5f836783c74"
     },
     {
       "id": "bund/STG/art_23",

@@ -4040,7 +4040,11 @@
             },
             {
               "marke": "c",
-              "text": "Angaben zum Grobprojekt, insbesondere: 1. ein Konzept zur selbständigen Geschäftstätigkeit mit Angaben zum vorgesehenen Angebot an Produkten oder Dienstleistungen sowie zum vorgesehenen Absatzmarkt und Kundenkreis,"
+              "text": "Angaben zum Grobprojekt, insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "ein Konzept zur selbständigen Geschäftstätigkeit mit Angaben zum vorgesehenen Angebot an Produkten oder Dienstleistungen sowie zum vorgesehenen Absatzmarkt und Kundenkreis,"
             },
             {
               "marke": "2",
@@ -4069,7 +4073,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "b9b60b9e4ecd33a244817d086e5a48778dce07b2142db9ddaf2e6022df612300"
+      "sha": "da99e5ffdc560ddf0a708243a02d8d745872d7440361bdc6c534912fb1f787ea"
     },
     {
       "id": "bund/AVIV/art_95_c",

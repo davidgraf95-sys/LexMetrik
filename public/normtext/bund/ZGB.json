@@ -3305,7 +3305,11 @@
             },
             {
               "marke": "4",
-              "text": "Sie können: – zur Finanzierung anderer Personalfürsorgeeinrichtungen beitragen;"
+              "text": "Sie können:"
+            },
+            {
+              "marke": "–",
+              "text": "zur Finanzierung anderer Personalfürsorgeeinrichtungen beitragen;"
             },
             {
               "marke": "–",
@@ -3318,7 +3322,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_89_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "2c26baf81c6bfb80d9c560f382761adb861c4f5f2553b68e3a6e843f559e57e2"
+      "sha": "6608d4c1d9f8c09be436bd4a8b9cd35d10b22d550bcfb753f8fca90b047b6797"
     },
     {
       "id": "bund/ZGB/art_89_b",
@@ -12982,7 +12986,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kantone können Ärztinnen und Ärzte bezeichnen, die neben der Erwachsenenschutzbehörde eine Unterbringung während einer vom kantonalen Recht festgelegten Dauer anordnen dürfen. Die Dauer darf höchstens sechs Wochen betragen."
+          "text": "Die Kantone können Ärzte und Ärztinnen bezeichnen, die neben der Erwachsenenschutzbehörde eine Unterbringung während einer vom kantonalen Recht festgelegten Dauer anordnen dürfen. Die Dauer darf höchstens sechs Wochen betragen."
         },
         {
           "absatz": "2",
@@ -12997,7 +13001,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_429",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "864338f91fe5adef60eb708d242abe34d53cd5b8d5d0b17b95c205786dfa1f5c"
+      "sha": "c53946ffecc1f8a23d61dbb63443884c633c2ddbf505f853971d431e58732a24"
     },
     {
       "id": "bund/ZGB/art_430",
@@ -13636,12 +13640,64 @@
           "text": "Die Erwachsenenschutzbehörde teilt unverzüglich folgenden Behörden ihre Entscheide betreffend die Anordnung, Änderung oder Aufhebung von Massnahmen mit, sobald diese vollstreckbar geworden sind:",
           "items": [
             {
+              "marke": "1",
+              "text": "dem Zivilstandsamt, wenn:"
+            },
+            {
+              "marke": "a",
+              "text": "sie eine Person unter umfassende Beistandschaft gestellt hat,"
+            },
+            {
+              "marke": "b",
+              "text": "sie eine Anordnung getroffen hat, welche die Zustimmung des gesetzlichen Vertreters nach Artikel 260 Absatz 2 erforderlich macht, oder"
+            },
+            {
+              "marke": "c",
+              "text": "für eine dauernd urteilsunfähige Person ein Vorsorgeauftrag wirksam geworden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "der Wohnsitzgemeinde, wenn:"
+            },
+            {
+              "marke": "a",
+              "text": "sie eine Person unter eine Beistandschaft gestellt hat, oder"
+            },
+            {
+              "marke": "b",
+              "text": "für eine dauernd urteilsunfähige Person ein Vorsorgeauftrag wirksam geworden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "dem Betreibungsamt am Wohnsitz der betroffenen Person, wenn:"
+            },
+            {
+              "marke": "a",
+              "text": "sie für eine minderjährige Person eine Vormundschaft oder eine Beistandschaft nach Artikel 325 errichtet hat,"
+            },
+            {
+              "marke": "b",
+              "text": "sie für eine volljährige Person eine Beistandschaft errichtet hat, welche Vermögensverwaltungsbefugnisse umfasst oder die Handlungsfähigkeit entzieht oder einschränkt, oder"
+            },
+            {
+              "marke": "c",
+              "text": "für eine dauernd urteilsunfähige Person ein Vorsorgeauftrag wirksam geworden ist;"
+            },
+            {
+              "marke": "4",
+              "text": "der ausstellenden Behörde nach dem Ausweisgesetz vom 22. Juni 2001, wenn sie:"
+            },
+            {
               "marke": "a",
               "text": "für eine minderjährige Person eine Vormundschaft errichtet hat oder die elterliche Sorge in Bezug auf den Antrag auf Ausstellung eines Ausweises eingeschränkt hat, oder"
             },
             {
               "marke": "b",
               "text": "für eine volljährige Person eine Beistandschaft errichtet hat, welche die Handlungsfähigkeit in Bezug auf den Antrag auf Ausstellung eines Ausweises einschränkt;"
+            },
+            {
+              "marke": "5",
+              "text": "dem Grundbuchamt als Anmeldung für eine Anmerkung, wenn sie für eine Person eine Beistandschaft errichtet hat, welche die Verfügungsfähigkeit über ein Grundstück einschränkt oder entzieht."
             }
           ]
         },
@@ -13654,7 +13710,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_449_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "e5936b1e4f7907c707ecdb01d313ffdfdcc4c09f10a7d8f551f9eb861943aa34"
+      "sha": "29fa86905b5a3469353901ece5791f27fa89fa0aa5cda56365d086730c3aec20"
     },
     {
       "id": "bund/ZGB/art_450",

@@ -3323,11 +3323,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Er deckt die Haftung für Schäden, die in der Schweiz verursacht werden durch: 1. nicht ermittelte oder nicht versicherte Motorfahrzeuge und Anhänger, soweit nach diesem Gesetz eine Versicherungspflicht besteht,"
+              "text": "Er deckt die Haftung für Schäden, die in der Schweiz verursacht werden durch:"
+            },
+            {
+              "marke": "1",
+              "text": "nicht ermittelte oder nicht versicherte Motorfahrzeuge und Anhänger, soweit nach diesem Gesetz eine Versicherungspflicht besteht,"
             },
             {
               "marke": "2",
               "text": "Radfahrer oder Benützer fahrzeugähnlicher Geräte, sofern der Schädiger nicht ermittelt werden kann oder der Schaden weder vom Schädiger noch von einer Haftpflichtversicherung noch von einer für ihn verantwortlichen Person oder einer anderen Versicherung gedeckt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "Er betreibt die Entschädigungsstelle nach Artikel 79 d."
             }
           ]
         },
@@ -3398,7 +3406,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de#art_76",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "2bfa0a4d8309d64c09a39183e35876225f388c86d64ea76948da335307ffc63e"
+      "sha": "db9c0e1bd2ef3d9aa84f56ab40ad0ced88a9b5bf6948b3d2df64b30e568a5043"
     },
     {
       "id": "bund/SVG/art_76_a",
@@ -3993,7 +4001,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Erteilen, Kontrollieren und Entziehen von: 1. Ausweisen für die Zulassung von Personen und Fahrzeugen zum Strassenverkehr,"
+              "text": "Erteilen, Kontrollieren und Entziehen von:"
+            },
+            {
+              "marke": "1",
+              "text": "Ausweisen für die Zulassung von Personen und Fahrzeugen zum Strassenverkehr,"
             },
             {
               "marke": "2",
@@ -4002,6 +4014,54 @@
             {
               "marke": "3",
               "text": "Fahrtschreiberkarten;"
+            },
+            {
+              "marke": "b",
+              "text": "Durchführung von Administrativ- und Strafverfahren gegen Fahrzeugführer im Strassenverkehr;"
+            },
+            {
+              "marke": "c",
+              "text": "Fahrzeugtypisierung, Fahrzeugprüfung und Zulassung von Fahrzeugen zum Strassenverkehr;"
+            },
+            {
+              "marke": "d",
+              "text": "Kontrolle der Versicherung, Verzollung und Versteuerung nach dem AStG der zum Strassenverkehr zugelassenen Fahrzeuge;"
+            },
+            {
+              "marke": "e",
+              "text": "Identifikation von Fahrzeughaltern und Fahrzeugfahndung;"
+            },
+            {
+              "marke": "f",
+              "text": "Verkehrsopferschutz;"
+            },
+            {
+              "marke": "g",
+              "text": "Treibstoffrationierung sowie Belegung oder Einmietung von Fahrzeugen für Armee, Zivilschutz und wirtschaftliche Landesversorgung;"
+            },
+            {
+              "marke": "h",
+              "text": "Erstellen von Statistiken, namentlich in den Bereichen Fahrberechtigungen, Administrativmassnahmen, Fahrzeugtypen, Fahrzeugzulassungen, Strassenverkehrsunfälle und Strassenverkehrskontrollen;"
+            },
+            {
+              "marke": "i",
+              "text": "Erarbeiten von Grundlagen der Verkehrs-, Umwelt- und Energiepolitik;"
+            },
+            {
+              "marke": "j",
+              "text": "Erhebung der kantonalen Motorfahrzeugsteuern und weiterer Abgaben sowie Erhebung und Überprüfung der Entrichtung der Schwerverkehrsabgaben und der Nationalstrassenabgaben;"
+            },
+            {
+              "marke": "k",
+              "text": "Unterstützung in- und ausländischer Behörden beim Vollzug der Vorschriften über die Arbeits- und Ruhezeit der berufsmässigen Motorfahrzeugführer;"
+            },
+            {
+              "marke": "l",
+              "text": "Zulassung und Kontrolle von Strassentransportunternehmen im Personen- und im Güterverkehr;"
+            },
+            {
+              "marke": "m",
+              "text": "Vollzug der Verminderung der CO 2 -Emissionen von Fahrzeugen nach dem CO 2 -Gesetz vom 23. Dezember 2011."
             }
           ]
         }
@@ -4010,7 +4070,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de#art_89_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "8a1b1a5fad0ddd63e6413167c578efc2c5921aa40ed7c9817a57507b0e6396de"
+      "sha": "c7e104369a768ec4dc3dbad29cf663daacf255070582a77338f6cd50e54340b6"
     },
     {
       "id": "bund/SVG/art_89_c",
@@ -4038,7 +4098,11 @@
             },
             {
               "marke": "d",
-              "text": "die Daten zu den folgenden Administrativmassnahmen, ihrer Aufhebung und ihrer Änderung, wenn sie von schweizerischen Behörden verfügt oder von ausländischen Behörden gegen Personen mit Wohnsitz in der Schweiz angeordnet worden sind: 1. Verweigerung und Entzug von Ausweisen und Bewilligungen,"
+              "text": "die Daten zu den folgenden Administrativmassnahmen, ihrer Aufhebung und ihrer Änderung, wenn sie von schweizerischen Behörden verfügt oder von ausländischen Behörden gegen Personen mit Wohnsitz in der Schweiz angeordnet worden sind:"
+            },
+            {
+              "marke": "1",
+              "text": "Verweigerung und Entzug von Ausweisen und Bewilligungen,"
             },
             {
               "marke": "2",
@@ -4087,6 +4151,14 @@
             {
               "marke": "13",
               "text": "Sperrfristen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Daten zu den in der Schweiz in Handel gebrachten Fahrzeugtypen sowie Name und Adresse des Inhabers der Typengenehmigung oder dessen Vertreters in der Schweiz;"
+            },
+            {
+              "marke": "f",
+              "text": "Daten der von schweizerischen Behörden zugelassenen Fahrzeuge sowie deren Haftpflichtversicherer."
             }
           ]
         }
@@ -4095,7 +4167,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de#art_89_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "38a91430e3964af836e55c5a01a7da74413ee7fd4356944ca5a9eb5d0365179e"
+      "sha": "032dff7a97191ec9fca943c83749fa584a18334644dddc960f31ab6022a77245"
     },
     {
       "id": "bund/SVG/art_89_d",
@@ -4407,7 +4479,11 @@
             },
             {
               "marke": "b",
-              "text": "das Auswertungssystem: 1. der Auswertung und Analyse von Strassenverkehrsunfällen,"
+              "text": "das Auswertungssystem:"
+            },
+            {
+              "marke": "1",
+              "text": "der Auswertung und Analyse von Strassenverkehrsunfällen,"
             },
             {
               "marke": "2",
@@ -4424,7 +4500,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de#art_89_j",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "0395ceac79b126cf3f8b0fee0da7f245e38717f52113e7a1f6c126f010eb676f"
+      "sha": "59aa6907df34631c599f70ad10ecfb3e4a793fd10f7c6829009cd156db832064"
     },
     {
       "id": "bund/SVG/art_89_k",
@@ -4661,7 +4737,11 @@
             },
             {
               "marke": "b",
-              "text": "das Auswertungssystem: 1. der Erfüllung der Berichterstattungspflichten aus dem Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse,"
+              "text": "das Auswertungssystem:"
+            },
+            {
+              "marke": "1",
+              "text": "der Erfüllung der Berichterstattungspflichten aus dem Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse,"
             },
             {
               "marke": "2",
@@ -4678,7 +4758,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de#art_89_p",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "089f72eff2939b6da954d6e6485b4d834e6e5bb28ca7b47b31122df12507e0ae"
+      "sha": "17bd331844d0cbd83af856b0c2c68ebe198d185f8b878a9b0c2c7d4fdfb4ac66"
     },
     {
       "id": "bund/SVG/art_89_q",

@@ -516,7 +516,11 @@
             },
             {
               "marke": "b",
-              "text": "eine der folgenden Voraussetzungen erfüllt ist: 1. Die Auftraggeberin vergibt den Auftrag an Dritte, obschon das unabhängige Expertengremium empfohlen hat, er sei der Urheberin oder dem Urheber des Beitrags zu erteilen."
+              "text": "eine der folgenden Voraussetzungen erfüllt ist:"
+            },
+            {
+              "marke": "1",
+              "text": "Die Auftraggeberin vergibt den Auftrag an Dritte, obschon das unabhängige Expertengremium empfohlen hat, er sei der Urheberin oder dem Urheber des Beitrags zu erteilen."
             },
             {
               "marke": "2",
@@ -529,7 +533,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_18",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230901",
-      "sha": "e66dbf4171ae72dbb54854b960ed3bc402a82444639f3cd5242712f63906cdf6"
+      "sha": "42040b69f6c2ae33518416ff1472109cd4495db7038055553115a3a353e4d6b0"
     },
     {
       "id": "bund/VOEB/art_19",

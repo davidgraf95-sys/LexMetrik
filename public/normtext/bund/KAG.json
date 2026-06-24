@@ -259,7 +259,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für die eine der folgenden Personen im Rahmen eines auf Dauer angelegten Vermögensverwaltungs- oder Anlageberatungsverhältnisses Vermögensverwaltung oder Anlageberatung im Sinne von Artikel 3 Buchstabe c Ziffern 3 und 4 FIDLEG erbringt: 1. ein Finanzintermediär nach Artikel 4 Absatz 3 Buchstabe a FIDLEG,"
+              "text": "für die eine der folgenden Personen im Rahmen eines auf Dauer angelegten Vermögensverwaltungs- oder Anlageberatungsverhältnisses Vermögensverwaltung oder Anlageberatung im Sinne von Artikel 3 Buchstabe c Ziffern 3 und 4 FIDLEG erbringt:"
+            },
+            {
+              "marke": "1",
+              "text": "ein Finanzintermediär nach Artikel 4 Absatz 3 Buchstabe a FIDLEG,"
             },
             {
               "marke": "2",
@@ -268,6 +272,10 @@
             {
               "marke": "3",
               "text": "ein Versicherungsunternehmen nach dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG); und"
+            },
+            {
+              "marke": "b",
+              "text": "die nicht schriftlich oder in anderer durch Text nachweisbarer Form erklärt haben, nicht als solche gelten zu wollen."
             }
           ]
         },
@@ -310,7 +318,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "81a0f3c7f2cbd410afafb84abbcf62d5952c39e4d2cb32eb4862a0eda4b532e8"
+      "sha": "2ce7202937d547eecd487b9cbd9c0d64ea5b641e4c61a50f7baccfabe01cc215"
     },
     {
       "id": "bund/KAG/art_11",
@@ -2446,7 +2454,11 @@
             },
             {
               "marke": "g",
-              "text": "Angaben über Angelegenheiten von besonderer wirtschaftlicher oder rechtlicher Bedeutung, insbesondere über: 1. Änderungen des Fondsreglements,"
+              "text": "Angaben über Angelegenheiten von besonderer wirtschaftlicher oder rechtlicher Bedeutung, insbesondere über:"
+            },
+            {
+              "marke": "1",
+              "text": "Änderungen des Fondsreglements,"
             },
             {
               "marke": "2",
@@ -2463,6 +2475,14 @@
             {
               "marke": "5",
               "text": "Rechtsstreitigkeiten;"
+            },
+            {
+              "marke": "h",
+              "text": "das Ergebnis der offenen kollektiven Kapitalanlage (Performance), allenfalls im Vergleich zu ähnlichen Anlagen (Benchmark);"
+            },
+            {
+              "marke": "i",
+              "text": "einen Kurzbericht der Prüfgesellschaft zu den vorstehenden Angaben, bei Immobilienfonds ebenfalls zu den Angaben nach Artikel 90."
             }
           ]
         },
@@ -2487,7 +2507,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_89",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "eeefcfdcd694ca99771babb88fb3856cd73de6f776f3f96a7a3779f8b41f6efa"
+      "sha": "6d113eeb4edf00cd9d085e48e895abd9b91e89f74f872e48200efbc2d2b192da"
     },
     {
       "id": "bund/KAG/art_90",
@@ -2663,7 +2683,11 @@
             },
             {
               "marke": "c",
-              "text": "durch Verfügung der FINMA: 1. bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Fondsleitung und der Depotbank,"
+              "text": "durch Verfügung der FINMA:"
+            },
+            {
+              "marke": "1",
+              "text": "bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Fondsleitung und der Depotbank,"
             },
             {
               "marke": "2",
@@ -2689,7 +2713,11 @@
             },
             {
               "marke": "c",
-              "text": "durch Verfügung der FINMA: 1. bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Unternehmeraktionärinnen und -aktionäre, sofern er mindestens zwei Drittel der ausgegebenen Unternehmeraktien auf sich vereinigt,"
+              "text": "durch Verfügung der FINMA:"
+            },
+            {
+              "marke": "1",
+              "text": "bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Unternehmeraktionärinnen und -aktionäre, sofern er mindestens zwei Drittel der ausgegebenen Unternehmeraktien auf sich vereinigt,"
             },
             {
               "marke": "2",
@@ -2698,6 +2726,10 @@
             {
               "marke": "3",
               "text": "in den Fällen nach Artikel 133 ff.;"
+            },
+            {
+              "marke": "d",
+              "text": "in den übrigen vom Gesetz vorgesehenen Fällen."
             }
           ]
         },
@@ -2714,7 +2746,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_96",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "7fa4d949f0d6d99b31b4495dafa0a80235cbc2ea0eda972b4fbf7b9b39b9979e"
+      "sha": "88e146183cefc04d92ee8100f710c39aeb5c66c2c21976dc265c63dfa18acfc3"
     },
     {
       "id": "bund/KAG/art_97",
@@ -3537,7 +3569,11 @@
             },
             {
               "marke": "b",
-              "text": "einem ausländischen Verwalter von Kollektivvermögen, wenn: 1. dieser in seinem Sitzstaat einer angemessenen Regulierung und Aufsicht untersteht, und"
+              "text": "einem ausländischen Verwalter von Kollektivvermögen, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "dieser in seinem Sitzstaat einer angemessenen Regulierung und Aufsicht untersteht, und"
             },
             {
               "marke": "2",
@@ -3558,7 +3594,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_g",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "bc53feafa5778d71d1905fcc08d584e2a631972ffca67fddf93a9a6819021d14"
+      "sha": "1c7cf8600e95a5e6f077ccf58f323b2ca988e49c4e705c212f0e413f19343397"
     },
     {
       "id": "bund/KAG/art_118_h",
@@ -4745,12 +4781,68 @@
           "text": "Mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe wird bestraft, wer vorsätzlich:",
           "items": [
             {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "ohne Bewilligung beziehungsweise Genehmigung eine kollektive Kapitalanlage bildet;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "in- und ausländische kollektive Kapitalanlagen, die nicht genehmigt sind, nicht qualifizierten Anlegerinnen und Anlegern anbietet;"
+            },
+            {
+              "marke": "e",
+              "text": "die Geschäftsbücher nicht ordnungsgemäss führt oder Geschäftsbücher, Belege und Unterlagen nicht vorschriftsgemäss aufbewahrt;"
+            },
+            {
+              "marke": "f",
+              "text": "im Jahresbericht oder Halbjahresbericht:"
+            },
+            {
+              "marke": "1",
+              "text": "falsche Angaben macht oder wesentliche Tatsachen verschweigt,"
+            },
+            {
+              "marke": "2",
+              "text": "nicht alle vorgeschriebenen Angaben aufnimmt;"
+            },
+            {
+              "marke": "g",
+              "text": "den Jahresbericht oder Halbjahresbericht:"
+            },
+            {
               "marke": "1",
               "text": "nicht oder nicht ordnungsgemäss erstellt,"
             },
             {
               "marke": "2",
               "text": "nicht oder nicht innerhalb der vorgeschriebenen Fristen veröffentlicht;"
+            },
+            {
+              "marke": "h",
+              "text": "der Prüfgesellschaft, dem Untersuchungsbeauftragten, dem Sachwalter, dem Liquidator oder der FINMA falsche Auskünfte erteilt oder die verlangten Auskünfte verweigert;"
+            },
+            {
+              "marke": "i",
+              "text": "…"
+            },
+            {
+              "marke": "j",
+              "text": "als Schätzungsexperte die ihm auferlegten Pflichten grob verletzt;"
+            },
+            {
+              "marke": "k",
+              "text": "…"
+            },
+            {
+              "marke": "l",
+              "text": "…"
             }
           ]
         },
@@ -4771,7 +4863,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_148",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "3af6ab0ad516cd884c01b8e398c4f2bdbf3c5276960f209da4427e915b8631a0"
+      "sha": "98aa8ec9857b4dac11a6c6f5cd8b322026a728afa28109e6674b989cea57e982"
     },
     {
       "id": "bund/KAG/art_149",

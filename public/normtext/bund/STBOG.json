@@ -1049,7 +1049,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Beschwerden in internationalen Rechtshilfeangelegenheiten gemäss: 1. dem Rechtshilfegesetz vom 20. März 1981,"
+              "text": "Beschwerden in internationalen Rechtshilfeangelegenheiten gemäss:"
+            },
+            {
+              "marke": "1",
+              "text": "dem Rechtshilfegesetz vom 20. März 1981,"
             },
             {
               "marke": "2",
@@ -1062,6 +1066,30 @@
             {
               "marke": "4",
               "text": "dem Bundesgesetz vom 3. Oktober 1975 zum Staatsvertrag mit den Vereinigten Staaten von Amerika über gegenseitige Rechtshilfe in Strafsachen;"
+            },
+            {
+              "marke": "b",
+              "text": "Beschwerden, die ihnen das Bundesgesetz vom 22. März 1974 über das Verwaltungsstrafrecht zuweist;"
+            },
+            {
+              "marke": "c",
+              "text": "Beschwerden gegen Verfügungen des Bundesverwaltungsgerichts über das Arbeitsverhältnis seiner Richter und Richterinnen und seines Personals sowie des Personals der ständigen Sekretariate der eidgenössischen Schätzungskommissionen;"
+            },
+            {
+              "marke": "d",
+              "text": "Konflikte über die Zuständigkeit der militärischen und der zivilen Gerichtsbarkeit;"
+            },
+            {
+              "marke": "e",
+              "text": "Anstände, die ihnen das Bundesgesetz vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit zum Entscheid zuweist;"
+            },
+            {
+              "marke": "f",
+              "text": "Anstände, die ihnen das Bundesgesetz vom 7. Oktober 1994 über kriminalpolizeiliche Zentralstellen des Bundes zum Entscheid zuweist;"
+            },
+            {
+              "marke": "g",
+              "text": "Konflikte über die Zuständigkeit nach dem Geldspielgesetz vom 29. September 2017."
             }
           ]
         }
@@ -1070,7 +1098,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/444/de#art_37",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "63e060a1c4062ccdc07edbba91c55cd725f9d0a30de15a770734907d0c8890ad"
+      "sha": "7892b70b9905030eec547d25e5d01aa20a171533874e0e7548fba4fdd3c89d6d"
     },
     {
       "id": "bund/STBOG/art_38",

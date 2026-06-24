@@ -519,6 +519,26 @@
           "text": "Das eGRISDM umfasst die folgenden Teilmodelle:",
           "items": [
             {
+              "marke": "a",
+              "text": "obligatorische Teilmodelle:"
+            },
+            {
+              "marke": "1",
+              "text": "Hauptbuch mit den dazugehörenden Codetabellen,"
+            },
+            {
+              "marke": "2",
+              "text": "Tagebuch mit den dazugehörenden Codetabellen,"
+            },
+            {
+              "marke": "3",
+              "text": "Personenidentifikationsregister mit den dazugehörenden Codetabellen;"
+            },
+            {
+              "marke": "b",
+              "text": "fakultative Teilmodelle:"
+            },
+            {
               "marke": "1",
               "text": "Personen-Stamm,"
             },
@@ -537,7 +557,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_8",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "2d790cf4d8b63d1d9e8674a7ac60c4b2d4f1074997069941592e44119f47f9f8"
+      "sha": "f4a5c36c8efd21ffb68e5a1e7b124c50d3a5436d29cee5dcbd52d7dede28c8bf"
     },
     {
       "id": "bund/TGBV/art_8_a",

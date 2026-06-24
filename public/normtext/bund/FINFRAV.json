@@ -78,7 +78,11 @@
             },
             {
               "marke": "b",
-              "text": "Derivatgeschäfte in Bezug auf Strom und Gas, die: 1. auf einem organisierten Handelssystem gehandelt werden,"
+              "text": "Derivatgeschäfte in Bezug auf Strom und Gas, die:"
+            },
+            {
+              "marke": "1",
+              "text": "auf einem organisierten Handelssystem gehandelt werden,"
             },
             {
               "marke": "2",
@@ -87,6 +91,10 @@
             {
               "marke": "3",
               "text": "nicht nach Wahl einer Partei bar abgerechnet werden können;"
+            },
+            {
+              "marke": "c",
+              "text": "Derivatgeschäfte mit Bezug auf Klimavariablen, Frachtsätze, Inflationsraten oder andere offizielle Wirtschaftsstatistiken, die nur bei einem Ausfall oder einem anderen Beendigungsereignis bar abgerechnet werden."
             }
           ]
         },
@@ -113,7 +121,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "f2716149e41d850ceca8ddbead6a0a518b744328b505986398614b2b17cf88b0"
+      "sha": "d1f6cb2cecc82e84cf5a660d825e3a3918d3796cc66de23f1fb73ed63948ce3c"
     },
     {
       "id": "bund/FINFRAV/art_3",
@@ -405,6 +413,30 @@
           "text": "Das Gesuch um Bewilligung für eine neue Finanzmarktinfrastruktur muss zu den mit der Verwaltung und Geschäftsführung betrauten Personen nach Artikel 9 Absatz 2 FinfraG sowie zu den Inhaberinnen und Inhabern einer qualifizierten Beteiligung nach Artikel 9 Absatz 3 FinfraG insbesondere folgende Angaben und Unterlagen enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "zu natürlichen Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "Angaben über Nationalität, Wohnsitz, qualifizierte Beteiligungen an anderen Gesellschaften und hängige Gerichts- und Verwaltungsverfahren,"
+            },
+            {
+              "marke": "2",
+              "text": "einen von der betreffenden Person unterzeichneten Lebenslauf,"
+            },
+            {
+              "marke": "3",
+              "text": "Referenzen,"
+            },
+            {
+              "marke": "4",
+              "text": "einen Strafregisterauszug;"
+            },
+            {
+              "marke": "b",
+              "text": "zu Gesellschaften:"
+            },
+            {
               "marke": "1",
               "text": "die Statuten,"
             },
@@ -435,7 +467,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "14868eb9e3f699b0d971b799c22ab451d70afc27694c00b291cd686fa7655136"
+      "sha": "ce098738b8b4a0e97147f9dc2ab43afa3f003e103dab763f772e165058a4d8a9"
     },
     {
       "id": "bund/FINFRAV/art_11",
@@ -515,6 +547,90 @@
           "text": "Als wesentliche Dienstleistungen gelten namentlich auch:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei Handelsplätzen:"
+            },
+            {
+              "marke": "1",
+              "text": "sämtliche auf die Gewährleistung eines fairen, effizienten und ordnungsgemässen Handels abzielenden Tätigkeiten,"
+            },
+            {
+              "marke": "2",
+              "text": "das Betreiben von Matching - und Marktdatenverteilungssystemen;"
+            },
+            {
+              "marke": "b",
+              "text": "bei zentralen Gegenparteien:"
+            },
+            {
+              "marke": "1",
+              "text": "der schuldrechtliche Eintritt in Effektengeschäfte oder in andere Kontrakte über Finanzinstrumente zwischen zwei Teilnehmern oder zwischen einem Teilnehmer und einer anderen zentralen Gegenpartei,"
+            },
+            {
+              "marke": "2",
+              "text": "die Bereitstellung von Mechanismen zur Planung und Absicherung von Ausfällen von Teilnehmern oder von interoperabel verbundenen zentralen Gegenparteien, zur Segregierung von Positionen der indirekten Teilnehmer und Kunden von Teilnehmern sowie zur Übertragung von Positionen auf andere Teilnehmer;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Zentralverwahrern:"
+            },
+            {
+              "marke": "1",
+              "text": "der Betrieb einer zentralen Verwahrungsstelle oder eines Effektenabwicklungssystems,"
+            },
+            {
+              "marke": "2",
+              "text": "das erstmalige Verbuchen von Effekten in einem Effektenkonto,"
+            },
+            {
+              "marke": "3",
+              "text": "die Bestandesabstimmung;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Transaktionsregistern:"
+            },
+            {
+              "marke": "1",
+              "text": "die Sammlung, Verwaltung und Verwahrung der gemeldeten Daten,"
+            },
+            {
+              "marke": "2",
+              "text": "die Veröffentlichung von gemeldeten Daten,"
+            },
+            {
+              "marke": "3",
+              "text": "die Gewährung des Zugangs zu gemeldeten Daten;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Zahlungssystemen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Entgegennahme und Ausführung von Zahlungsaufträgen der Teilnehmer,"
+            },
+            {
+              "marke": "2",
+              "text": "das Führen von Verrechnungskonten;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Handelssystemen für Distributed Ledger Technology-Effekten (DLT-Handelssystemen), die keine Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen:"
+            },
+            {
+              "marke": "1",
+              "text": "sämtliche auf die Gewährleistung eines fairen, effizienten und ordnungsgemässen Handels abzielenden Tätigkeiten,"
+            },
+            {
+              "marke": "2",
+              "text": "das Betreiben von Matching - und Marktdatenverteilungssystemen;"
+            },
+            {
+              "marke": "g",
+              "text": "bei DLT-Handelssystemen, die Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen:"
+            },
+            {
               "marke": "1",
               "text": "die Dienstleistungen nach Buchstabe f,"
             },
@@ -537,7 +653,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_12",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "a875247c9cfe2e5d79b7f17e40fa2af4cde6b2dd14509446a10924b06eec0473"
+      "sha": "5784e8a2c4ceb5bfbbf37b4f7f81a847823cda09889847dcbc6c3619dc346d5e"
     },
     {
       "id": "bund/FINFRAV/art_13",
@@ -892,6 +1008,46 @@
           "text": "Massnahmen zur Verbesserung der Sanier- und Liquidierbarkeit der Finanzmarktinfrastruktur können insbesondere umfassen:",
           "items": [
             {
+              "marke": "a",
+              "text": "strukturelle Verbesserung und Entflechtung durch:"
+            },
+            {
+              "marke": "1",
+              "text": "Ausrichtung der Rechtsstruktur nach Geschäftseinheiten ( business-aligned legal entities ),"
+            },
+            {
+              "marke": "2",
+              "text": "Bildung rechtlich selbstständiger Dienstleistungseinheiten,"
+            },
+            {
+              "marke": "3",
+              "text": "Eliminierung oder Verminderung faktischer Beistandszwänge, insbesondere durch Bildung einer unabhängigen Führungsstruktur,"
+            },
+            {
+              "marke": "4",
+              "text": "Reduktion geografischer oder bilanzieller Asymmetrien;"
+            },
+            {
+              "marke": "b",
+              "text": "finanzielle Entflechtung zur Begrenzung der Ansteckungsrisiken durch:"
+            },
+            {
+              "marke": "1",
+              "text": "Reduktion der Kapitalbeteiligungen unter den juristischen Einheiten auf gleicher Ebene,"
+            },
+            {
+              "marke": "2",
+              "text": "Beschränkung der Gewährung unbesicherter Kredite und Garantien unter juristischen Einheiten auf gleicher Ebene innerhalb der Finanzgruppe,"
+            },
+            {
+              "marke": "3",
+              "text": "Schaffung einer Anreizstruktur zu möglichst marktnaher konzerninterner Finanzierung;"
+            },
+            {
+              "marke": "c",
+              "text": "operative Entflechtung zur Sicherung von Daten und zur Weiterführung wichtiger betrieblicher Dienstleistungen durch:"
+            },
+            {
               "marke": "1",
               "text": "Gewährleistung des Zugriffs auf und des Einsatzes von Datenbeständen, Datenbanken und Informatikmitteln,"
             },
@@ -910,7 +1066,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "049a34d47e06d5c4e9be07d7de51bab739e10fa674bb52e5b14701da27ecc882"
+      "sha": "3986de40961d867acfe39d15fd8cf61b176f5cc42f58d52003a649cdad352289"
     },
     {
       "id": "bund/FINFRAV/art_22",
@@ -1134,7 +1290,11 @@
             },
             {
               "marke": "b",
-              "text": "Geschäften: 1. die über einen für die Effekte typischen Umfang hinausgehen,"
+              "text": "Geschäften:"
+            },
+            {
+              "marke": "1",
+              "text": "die über einen für die Effekte typischen Umfang hinausgehen,"
             },
             {
               "marke": "2",
@@ -1143,6 +1303,10 @@
             {
               "marke": "3",
               "text": "bei denen berücksichtigt wird, ob es sich bei den Vertragsparteien um Klein- oder Grossanleger handelt;"
+            },
+            {
+              "marke": "c",
+              "text": "Geschäften mit Effekten, für die kein liquider Markt besteht."
             }
           ]
         }
@@ -1151,7 +1315,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_28",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "f128e2e7bdec70da89c875da25ac6096a4af9bdeda0911452b322adde24555e8"
+      "sha": "5ff6b4a9bc9cd52afd2e1508155f6a79acd540850fddeecef7829ba33fddc153"
     },
     {
       "id": "bund/FINFRAV/art_29",
@@ -1333,7 +1497,11 @@
             },
             {
               "marke": "e",
-              "text": "angemessenen Tests von Algorithmen und Kontrollmechanismen unterliegen, einschliesslich Vorkehrungen zur: 1. Begrenzung des Verhältnisses nicht ausgeführter Handelsaufträge zu Geschäften, die von einem Teilnehmer in das System eingegeben werden können,"
+              "text": "angemessenen Tests von Algorithmen und Kontrollmechanismen unterliegen, einschliesslich Vorkehrungen zur:"
+            },
+            {
+              "marke": "1",
+              "text": "Begrenzung des Verhältnisses nicht ausgeführter Handelsaufträge zu Geschäften, die von einem Teilnehmer in das System eingegeben werden können,"
             },
             {
               "marke": "2",
@@ -1359,7 +1527,11 @@
             },
             {
               "marke": "c",
-              "text": "Teilnehmer mit: 1. einer Infrastruktur zur Minimierung von Verzögerungen bei der Auftragsübertragung,"
+              "text": "Teilnehmer mit:"
+            },
+            {
+              "marke": "1",
+              "text": "einer Infrastruktur zur Minimierung von Verzögerungen bei der Auftragsübertragung,"
             },
             {
               "marke": "2",
@@ -1376,7 +1548,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_31",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "c2a8bb1b9e79baec6bd98af8581a7e1657ce721e2cfcebb0ab68f228eddf7be6"
+      "sha": "3cc5c9b7daa63afe66eecbd526efc40b7ce5e52e0adc0f8f16a7901e5a3ccf4b"
     },
     {
       "id": "bund/FINFRAV/art_32",
@@ -1565,11 +1737,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Geschäfte in Effekten, die an einem Handelsplatz in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, sofern dem Handelsplatz die zu meldenden Tatsachen gestützt auf eine Vereinbarung nach Artikel 32 Absatz 3 FinfraG oder im Rahmen eines Informationsaustausches zwischen der FINMA und der zuständigen ausländischen Aufsichtsbehörde regelmässig mitgeteilt werden, wenn: 1. sie von der Zweigniederlassung eines schweizerischen Wertpapierhauses oder von einem ausländischen zugelassenen Teilnehmer getätigt werden, und"
+              "text": "Geschäfte in Effekten, die an einem Handelsplatz in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, sofern dem Handelsplatz die zu meldenden Tatsachen gestützt auf eine Vereinbarung nach Artikel 32 Absatz 3 FinfraG oder im Rahmen eines Informationsaustausches zwischen der FINMA und der zuständigen ausländischen Aufsichtsbehörde regelmässig mitgeteilt werden, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "sie von der Zweigniederlassung eines schweizerischen Wertpapierhauses oder von einem ausländischen zugelassenen Teilnehmer getätigt werden, und"
             },
             {
               "marke": "2",
               "text": "die Zweigniederlassung oder der ausländische Teilnehmer von der betreffenden ausländischen Aufsichtsbehörde zum Handel ermächtigt und im betreffenden Staat oder im Heimatstaat meldepflichtig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Geschäfte in ausländischen Effekten, die an einem Handelsplatz in der Schweiz zum Handel zugelassen sind, und in daraus abgeleiteten Derivaten, die an einem anerkannten ausländischen Handelsplatz getätigt werden."
             }
           ]
         },
@@ -1582,7 +1762,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_37",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "aa55e7984d12c95bfd6cd54419e7b31bfff16fde6549e2ed1bd8eeaaecc5485e"
+      "sha": "5329d2fcf0d744e6e020094a27f8a8cfd32888a3a7ad50ca5a6b993531a974bc"
     },
     {
       "id": "bund/FINFRAV/art_38",
@@ -3484,11 +3664,19 @@
             },
             {
               "marke": "b",
-              "text": "nach Ablauf von 12 Monaten: für Derivatgeschäfte, die: 1. Teilnehmer an einer bewilligten oder anerkannten zentralen Gegenpartei mit anderen Finanziellen Gegenparteien, die nicht klein sind, neu abschliessen, oder"
+              "text": "nach Ablauf von 12 Monaten: für Derivatgeschäfte, die:"
+            },
+            {
+              "marke": "1",
+              "text": "Teilnehmer an einer bewilligten oder anerkannten zentralen Gegenpartei mit anderen Finanziellen Gegenparteien, die nicht klein sind, neu abschliessen, oder"
             },
             {
               "marke": "2",
               "text": "übrige Finanzielle Gegenparteien, die nicht klein sind, neu untereinander abschliessen;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Ablauf von 18 Monaten: für alle übrigen Derivatgeschäfte, die neu abgeschlossen werden."
             }
           ]
         }
@@ -3497,7 +3685,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_85",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "e08c034eb8482bf71913be17110a5fede9e9aa737313e6095a272070e98a70e0"
+      "sha": "16ee346f3020f231c8d27b3dfd6e4a33c9ac92fcf14f7efbddeb088c8168c3e5"
     },
     {
       "id": "bund/FINFRAV/art_86",
@@ -3529,11 +3717,23 @@
             },
             {
               "marke": "c",
-              "text": "Die Gegenpartei des Emittenten der gedeckten Schuldverschreibung oder des Rechtsträgers des Deckungsstocks ist mindestens gleichrangig mit den Gläubigern der gedeckten Schuldverschreibung; ausgenommen sind Fälle, in denen: 1. die Gegenpartei die säumige oder die betroffene Partei ist; oder"
+              "text": "Die Gegenpartei des Emittenten der gedeckten Schuldverschreibung oder des Rechtsträgers des Deckungsstocks ist mindestens gleichrangig mit den Gläubigern der gedeckten Schuldverschreibung; ausgenommen sind Fälle, in denen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Gegenpartei die säumige oder die betroffene Partei ist; oder"
             },
             {
               "marke": "2",
               "text": "die Gegenpartei auf die Gleichrangigkeit verzichtet."
+            },
+            {
+              "marke": "d",
+              "text": "Die übrigen unter dem Netting-Set abgeschlossenen Derivatgeschäfte hängen mit dem Deckungsstock zusammen."
+            },
+            {
+              "marke": "e",
+              "text": "Die Besicherungsquote des Deckungsstocks beträgt mindestens 102 Prozent."
             }
           ]
         }
@@ -3542,7 +3742,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_86",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "d893f85f641b366dcf80e2305c5a2c9693b107adcc57664a5fed4d047324322d"
+      "sha": "ca609e150196415b050d75fc35ec9cfb7aee26234ed90e2d2818176ef93bb5e6"
     },
     {
       "id": "bund/FINFRAV/art_87",
@@ -4178,6 +4378,22 @@
           "text": "In Abweichung von Absatz 3 ist die Leistung von Nachschusszahlungen bis spätestens zwei Geschäftstage nach dem Berechnungstag zulässig, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "eine Gegenpartei, ohne zur Leistung einer Ersteinschusszahlung verpflichtet zu sein, vor dem Berechnungstag zusätzliche Sicherheiten geleistet hat und folgende Voraussetzungen erfüllt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "die zusätzlichen Sicherheiten wurden berechnet unter Berücksichtigung eines einseitigen Konfidenzintervalls von 99 Prozent bei der Bewertung der zu besichernden OTC-Derivatgeschäfte über die relevante Nachschuss-Risikoperiode,"
+            },
+            {
+              "marke": "2",
+              "text": "die Nachschuss-Risikoperiode beträgt mindestens so viele Tage, wie zwischen dem Berechnungstag und dem Tag der Leistung der Nachschusszahlungen liegen, wobei der Berechnungstag und der Leistungstag auch mitzuzählen sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Gegenparteien Ersteinschusszahlungen unter Berücksichtigung einer Nachschuss-Risikoperiode geleistet haben, die mindestens folgende Zeitspannen abdeckt:"
+            },
+            {
               "marke": "1",
               "text": "die Zeitspanne von der letzten Leistung von Nachschusszahlungen bis zum möglichen Ausfall der Gegenpartei zuzüglich der Tage vom Berechnungstag bis zum Tag der Leistung der Nachschusszahlung, und"
             },
@@ -4192,7 +4408,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_101_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "65884c5efbad411beb416fe22257e43faf7c521c6b5d08d126f20cfc103fc57a"
+      "sha": "8a14c9897f3d8342c60221ddf3d65b9e2687d4fe3e9f308d536ef70a19f7e594"
     },
     {
       "id": "bund/FINFRAV/art_102",
@@ -4360,7 +4576,11 @@
             },
             {
               "marke": "h",
-              "text": "Anteile an Effektenfonds nach Artikel 53 des Kollektivanlagengesetzes vom 23. Juni 2006, wenn: 1. die Anteile täglich bewertet werden, und"
+              "text": "Anteile an Effektenfonds nach Artikel 53 des Kollektivanlagengesetzes vom 23. Juni 2006, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die Anteile täglich bewertet werden, und"
             },
             {
               "marke": "2",
@@ -4385,7 +4605,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_104",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "c73e365875103b4235fd1b539fbd339e5dde7840b2567ae6fa4bc7498df23afb"
+      "sha": "e4f758820c3f08d394d0cad26e158d079c1769e9c20dc1dec72c347673ef448e"
     },
     {
       "id": "bund/FINFRAV/art_105",
@@ -4548,11 +4768,19 @@
             },
             {
               "marke": "b",
-              "text": "nach Ablauf von 9 Monaten: für Derivatgeschäfte: 1. die Teilnehmer an einer bewilligten oder anerkannten zentralen Gegenpartei mit anderen Finanziellen Gegenparteien neu abschliessen, oder"
+              "text": "nach Ablauf von 9 Monaten: für Derivatgeschäfte:"
+            },
+            {
+              "marke": "1",
+              "text": "die Teilnehmer an einer bewilligten oder anerkannten zentralen Gegenpartei mit anderen Finanziellen Gegenparteien neu abschliessen, oder"
             },
             {
               "marke": "2",
               "text": "die übrige Finanzielle Gegenparteien, die nicht klein sind, neu untereinander abschliessen;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Ablauf von 12 Monaten: für alle übrigen Derivatgeschäfte, die neu abgeschlossen werden."
             }
           ]
         }
@@ -4561,7 +4789,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_108",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "7301e0b362bd863385ce8092ce48a7338836bedf94dd2f0b87245118d3d9a2b6"
+      "sha": "dd7e8fa0271adc0c7fec1a6e4a20b363c0090968146798e66f59f7b58197c756"
     },
     {
       "id": "bund/FINFRAV/art_109",
@@ -4978,6 +5206,38 @@
           "text": "Der Rückkauf eigener Beteiligungspapiere im Rahmen eines öffentlichen Rückkaufangebots (Rückkaufprogramm) zum Marktpreis, der unter die Artikel 142 Absatz 1 Buchstabe a und 143 Absatz 1 FinfraG fällt, ist unter Vorbehalt von Artikel 124 zulässig, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "das Rückkaufprogramm höchstens drei Jahre dauert;"
+            },
+            {
+              "marke": "b",
+              "text": "der Umfang der Rückkäufe gesamthaft 10 Prozent des Kapitals und der Stimmrechte und 20 Prozent des frei handelbaren Anteils der Beteiligungspapiere nicht übersteigt;"
+            },
+            {
+              "marke": "c",
+              "text": "der Umfang der Rückkäufe pro Tag 25 Prozent des Tagesvolumens nicht übersteigt, das während dreissig Tagen vor der Veröffentlichung des Rückkaufprogramms auf der ordentlichen Handelslinie durchschnittlich gehandelt wurde;"
+            },
+            {
+              "marke": "d",
+              "text": "der Kaufpreis nicht höher ist als:"
+            },
+            {
+              "marke": "1",
+              "text": "der letzte unabhängig erzielte Abschlusspreis auf der ordentlichen Handelslinie, oder"
+            },
+            {
+              "marke": "2",
+              "text": "der gegenwärtig beste unabhängige Angebotspreis auf der ordentlichen Handelslinie, sofern dieser unter dem Preis nach Ziffer 1 liegt;"
+            },
+            {
+              "marke": "e",
+              "text": "während Handelsunterbrüchen sowie der Eröffnungs- oder der Schlussauktion keine Kurse gestellt werden;"
+            },
+            {
+              "marke": "f",
+              "text": "Verkäufe eigener Beteiligungspapiere während des Rückkaufprogramms ausschliesslich zur Erfüllung von Mitarbeiterbeteiligungsprogrammen erfolgen oder die folgenden Bedingungen erfüllen:"
+            },
+            {
               "marke": "1",
               "text": "sie werden am Börsentag nach deren Vornahme der Börse gemeldet,"
             },
@@ -4988,6 +5248,14 @@
             {
               "marke": "3",
               "text": "sie übersteigen pro Tag den Umfang von 5 Prozent des Tagesvolumens nicht, das während dreissig Tagen vor der Veröffentlichung des Rückkaufprogramms auf der ordentlichen Handelslinie durchschnittlich gehandelt wurde;"
+            },
+            {
+              "marke": "g",
+              "text": "der wesentliche Inhalt des Rückkaufprogramms mittels Rückkaufinserat vor Beginn des Rückkaufprogramms veröffentlicht wird und während der gesamten Dauer des Rückkaufprogramms öffentlich zugänglich bleibt; und"
+            },
+            {
+              "marke": "h",
+              "text": "die einzelnen Rückkäufe der Börse als Teil des Rückkaufprogramms spätestens am fünften Börsentag nach dem Rückkauf gemeldet und vom Emittenten veröffentlicht werden."
             }
           ]
         },
@@ -5036,7 +5304,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_123",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b4cf46423559de85aaffd287d112143a59d04962a11f70d1989012053b9f78ce"
+      "sha": "382f4eaa02551c0b8048362e5fda73bfaa0a26e0b8738482d38cc11df54cf26e"
     },
     {
       "id": "bund/FINFRAV/art_124",
@@ -5103,7 +5371,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Informationen zum Emittenten, insbesondere zu: 1. seiner Identität,"
+              "text": "Informationen zum Emittenten, insbesondere zu:"
+            },
+            {
+              "marke": "1",
+              "text": "seiner Identität,"
             },
             {
               "marke": "2",
@@ -5116,6 +5388,14 @@
             {
               "marke": "4",
               "text": "den Aktionärsbeteiligungen nach Artikel 120 FinfraG;"
+            },
+            {
+              "marke": "b",
+              "text": "Art, Zweck und Gegenstand des Rückkaufprogramms;"
+            },
+            {
+              "marke": "c",
+              "text": "den Zeitplan."
             }
           ]
         }
@@ -5124,7 +5404,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_125",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "5f7d0a5d3628e7c4917c10cb27ab5b50e9eea7dd4b0f2010a344d9726e2b9815"
+      "sha": "43ece634da8b1749d2419040407569f790a2dc3919a814f6e9ee7ba42bc309c6"
     },
     {
       "id": "bund/FINFRAV/art_126",
@@ -5185,7 +5465,11 @@
             },
             {
               "marke": "b",
-              "text": "Effektengeschäfte, soweit sie im Rahmen öffentlicher Aufgaben und nicht zu Anlagezwecken getätigt werden von: 1. Bund, Kantonen oder Gemeinden,"
+              "text": "Effektengeschäfte, soweit sie im Rahmen öffentlicher Aufgaben und nicht zu Anlagezwecken getätigt werden von:"
+            },
+            {
+              "marke": "1",
+              "text": "Bund, Kantonen oder Gemeinden,"
             },
             {
               "marke": "2",
@@ -5236,7 +5520,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_127",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "79180447bfdec15bf6cef467fc28433eb663222bcd152c1bc3e52b5815b1f623"
+      "sha": "5f42d21a9600c5689e9487e66c049d367d2b732082a5b9844ccc9f9b879ee00f"
     },
     {
       "id": "bund/FINFRAV/art_128",
@@ -5256,7 +5540,11 @@
             },
             {
               "marke": "b",
-              "text": "die Mitteilung im Hinblick auf den Abschluss eines Vertrages unerlässlich ist und die Informationsinhaberin oder der Informationsinhaber: 1. die Informationsempfängerin oder den Informationsempfänger darauf hinweist, dass die Insiderinformation nicht ausgenützt werden darf, und"
+              "text": "die Mitteilung im Hinblick auf den Abschluss eines Vertrages unerlässlich ist und die Informationsinhaberin oder der Informationsinhaber:"
+            },
+            {
+              "marke": "1",
+              "text": "die Informationsempfängerin oder den Informationsempfänger darauf hinweist, dass die Insiderinformation nicht ausgenützt werden darf, und"
             },
             {
               "marke": "2",
@@ -5269,7 +5557,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/854/de#art_128",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "bc065a1e08cac85e14ca07267cfb4de4c5dccfe1b78883215f5a9350e49711d0"
+      "sha": "a4a16ba69660c9b3dea80904cc4e020d2a78d70451cb9b929cb74d3dac063519"
     },
     {
       "id": "bund/FINFRAV/art_129",

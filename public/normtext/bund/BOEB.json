@@ -339,6 +339,46 @@
           "text": "Dieses Gesetz findet keine Anwendung auf:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Beschaffung von Leistungen im Hinblick auf den gewerblichen Verkauf oder Wiederverkauf oder im Hinblick auf die Verwendung in der Produktion oder im Angebot von Leistungen für einen gewerblichen Verkauf oder Wiederverkauf;"
+            },
+            {
+              "marke": "b",
+              "text": "den Erwerb, die Miete oder die Pacht von Grundstücken, Bauten und Anlagen sowie der entsprechenden Rechte daran;"
+            },
+            {
+              "marke": "c",
+              "text": "die Ausrichtung von Finanzhilfen gemäss dem Subventionsgesetz vom 5. Oktober 1990;"
+            },
+            {
+              "marke": "d",
+              "text": "Verträge über Finanzdienstleistungen im Zusammenhang mit Ausgabe, Ankauf, Verkauf, Übertragung oder Verwaltung von Wertpapieren oder anderen Finanzinstrumenten sowie Dienstleistungen der Zentralbanken;"
+            },
+            {
+              "marke": "e",
+              "text": "Aufträge an Behinderteninstitutionen, Organisationen der Arbeitsintegration, Wohltätigkeitseinrichtungen und Strafanstalten;"
+            },
+            {
+              "marke": "f",
+              "text": "die Verträge des Personalrechts;"
+            },
+            {
+              "marke": "g",
+              "text": "folgende Rechtsdienstleistungen:"
+            },
+            {
+              "marke": "1",
+              "text": "Vertretung des Bundes oder eines öffentlichen Unternehmens des Bundes durch eine Anwältin oder einen Anwalt in einem nationalen oder internationalen Schiedsgerichts-, Schlichtungs- oder Gerichtsverfahren und damit zusammenhängende Dienstleistungen,"
+            },
+            {
+              "marke": "2",
+              "text": "Rechtsberatung durch eine Anwältin oder einen Anwalt im Hinblick auf ein mögliches Verfahren nach Ziffer 1, wenn eine hohe Wahrscheinlichkeit besteht, dass die Angelegenheit, auf die sich die Beratung bezieht, Gegenstand eines solchen Verfahrens werden wird;"
+            },
+            {
+              "marke": "h",
+              "text": "Beschaffungen:"
+            },
+            {
               "marke": "1",
               "text": "im Rahmen internationaler humanitärer Nothilfe sowie Agrar- und Ernährungshilfe,"
             },
@@ -353,6 +393,10 @@
             {
               "marke": "4",
               "text": "im Rahmen der internationalen Zusammenarbeit, soweit ein äquivalentes lokales Verfahren im Empfängerstaat beachtet wird;"
+            },
+            {
+              "marke": "i",
+              "text": "die öffentlich-rechtlichen Vorsorgeeinrichtungen des Bundes."
             }
           ]
         },
@@ -405,7 +449,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/126/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "bf9c8214ac7704337915f13b6734dabb9f63251d1f04879eaccf7b5c36e438c2"
+      "sha": "86d89b0d55bc84493e84c060403679dd4ce23e621d2330aedf2e50d09ce2fc1a"
     },
     {
       "id": "bund/BOEB/art_11",
@@ -797,7 +841,11 @@
             },
             {
               "marke": "i",
-              "text": "Die Auftraggeberin vergibt den Folgeauftrag an die Gewinnerin eines Planungs- oder Gesamtleistungswettbewerbs oder eines Auswahlverfahrens zu Planungs- oder Gesamtleistungsstudien; dabei müssen die folgenden Voraussetzungen erfüllt sein: 1. das vorausgehende Verfahren wurde in Übereinstimmung mit den Grundsätzen des Gesetzes durchgeführt;"
+              "text": "Die Auftraggeberin vergibt den Folgeauftrag an die Gewinnerin eines Planungs- oder Gesamtleistungswettbewerbs oder eines Auswahlverfahrens zu Planungs- oder Gesamtleistungsstudien; dabei müssen die folgenden Voraussetzungen erfüllt sein:"
+            },
+            {
+              "marke": "1",
+              "text": "das vorausgehende Verfahren wurde in Übereinstimmung mit den Grundsätzen des Gesetzes durchgeführt;"
             },
             {
               "marke": "2",
@@ -850,7 +898,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/126/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "50fef1f38195e043f103f258ed5b6ff4ce14b7eb01790846209358be99e3a202"
+      "sha": "e84213177243ad8df52b03793120263543fd50e9fb60def39bf9fcd21fabbc28"
     },
     {
       "id": "bund/BOEB/art_22",

@@ -564,11 +564,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "die innerhalb von zwölf Monaten insgesamt längstens vier Monate in der Schweiz erwerbstätig sind, sofern: 1. die Dauer und der Zweck des Aufenthaltes von vornherein feststehen, und"
+              "text": "die innerhalb von zwölf Monaten insgesamt längstens vier Monate in der Schweiz erwerbstätig sind, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "die Dauer und der Zweck des Aufenthaltes von vornherein feststehen, und"
             },
             {
               "marke": "2",
               "text": "die Zahl der kurzfristig beschäftigten Ausländerinnen und Ausländer nur in begründeten Ausnahmefällen einen Viertel des gesamten Personalbestandes im Betrieb überschreitet;"
+            },
+            {
+              "marke": "b",
+              "text": "die sich innerhalb von zwölf Monaten insgesamt längstens acht Monate in der Schweiz aufhalten und tätig sind als Künstlerinnen und Künstler auf den Gebieten der Musik oder Literatur, der darstellenden oder bildenden Kunst sowie als Zirkus- und Variétéartistinnen und -artisten."
             }
           ]
         }
@@ -577,7 +585,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/759/de#art_19",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "5cca085b0fb8f43a9252b51bc36578db5f5f87911240ea82b6036fa739304ca1"
+      "sha": "ca5d4f5fb3dce5c6f4f9cdbdaea91c9a04b577828e9320ec961b7129af0b7aed"
     },
     {
       "id": "bund/VZAE/art_19_a",
@@ -640,11 +648,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "die innerhalb von zwölf Monaten insgesamt längstens vier Monate in der Schweiz erwerbstätig sind, sofern: 1. die Dauer und der Zweck des Aufenthaltes von vornherein feststehen, und"
+              "text": "die innerhalb von zwölf Monaten insgesamt längstens vier Monate in der Schweiz erwerbstätig sind, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "die Dauer und der Zweck des Aufenthaltes von vornherein feststehen, und"
             },
             {
               "marke": "2",
               "text": "die Zahl der kurzfristig beschäftigten Ausländerinnen und Ausländer nur in begründeten Ausnahmefällen einen Viertel des gesamten Personalbestandes im Betrieb überschreitet;"
+            },
+            {
+              "marke": "b",
+              "text": "die sich innerhalb von zwölf Monaten insgesamt längstens acht Monate in der Schweiz aufhalten und tätig sind als Künstlerinnen und Künstler auf den Gebieten der Musik oder Literatur, der darstellenden oder bildenden Kunst sowie als Zirkus- und Variétéartistinnen und -artisten."
             }
           ]
         }
@@ -653,7 +669,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/759/de#art_19_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "f608abf0a4b3a7447821f220c854c1231993c8d0cfe591ddef6b748f07d18465"
+      "sha": "2a2059e399951f0b1bf0ba9138fb707d8f0266a5c71232f2c9acf5fd30867967"
     },
     {
       "id": "bund/VZAE/art_20",
@@ -2840,7 +2856,11 @@
             },
             {
               "marke": "e",
-              "text": "Personen, die die Personen nach Absatz 2 begleiten und: 1. in den Genuss von Vorrechten, Immunitäten und Erleichterungen kommen,"
+              "text": "Personen, die die Personen nach Absatz 2 begleiten und:"
+            },
+            {
+              "marke": "1",
+              "text": "in den Genuss von Vorrechten, Immunitäten und Erleichterungen kommen,"
             },
             {
               "marke": "2",
@@ -2865,7 +2885,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/759/de#art_71_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "6c3c1fb2019050f981da4f50d98e613d5f06bb524a38a01b1c9d3d76ec2cd578"
+      "sha": "fd7ce1bdbf2a286ae873932b4ac5fdc0d3a0688959cd22b3fff413144cd8c66d"
     },
     {
       "id": "bund/VZAE/art_71_b",
@@ -3694,7 +3714,11 @@
             },
             {
               "marke": "c",
-              "text": "anderer gewichtiger persönlicher Umstände, namentlich wegen: 1. einer ausgeprägten Lern-, Lese- oder Schreibschwäche,"
+              "text": "anderer gewichtiger persönlicher Umstände, namentlich wegen:"
+            },
+            {
+              "marke": "1",
+              "text": "einer ausgeprägten Lern-, Lese- oder Schreibschwäche,"
             },
             {
               "marke": "2",
@@ -3715,7 +3739,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/759/de#art_77_f",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "3471d06d373567eb7c7339c8ab8e74d29279062146e91ddc8e0a8f339013399b"
+      "sha": "57194b55cc51a38e1a87af15a06d8415eb21e0781537dcd55c31fe7457e4ce17"
     },
     {
       "id": "bund/VZAE/art_77_g",
@@ -4252,7 +4276,11 @@
             },
             {
               "marke": "c",
-              "text": "Verlängerung einer Aufenthaltsbewilligung, wenn: 1. die betroffene Person den Mittelpunkt ihrer Lebensverhältnisse nicht in der Schweiz hat,"
+              "text": "Verlängerung einer Aufenthaltsbewilligung, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die betroffene Person den Mittelpunkt ihrer Lebensverhältnisse nicht in der Schweiz hat,"
             },
             {
               "marke": "2",
@@ -4285,7 +4313,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/759/de#art_86",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "24c8b094f99dec0ad7e94e3eda6d672d06d0718a17728293e22490f749e83e5f"
+      "sha": "a76b4627f008308b11135879a41ed5a4bcb97dc9bc7ea23108f83dc31bc5773d"
     },
     {
       "id": "bund/VZAE/art_87",

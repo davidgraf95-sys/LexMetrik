@@ -455,7 +455,11 @@
             },
             {
               "marke": "j",
-              "text": "die Rechte der betroffenen Person, insbesondere: 1. das Auskunftsrecht und das Recht auf Datenherausgabe oder -übertragung,"
+              "text": "die Rechte der betroffenen Person, insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "das Auskunftsrecht und das Recht auf Datenherausgabe oder -übertragung,"
             },
             {
               "marke": "2",
@@ -494,7 +498,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "4e1140c08def6023729bf2c840db79e695cc26c3ec8c9baff59ccf9ac15b7320"
+      "sha": "83d19661063dfe8d6c25d3ba7434a4a2e37b5705cd58e2f39335f735dee788dd"
     },
     {
       "id": "bund/DSV/art_10",
@@ -982,11 +986,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "Sie oder er wirkt bei der Anwendung der Datenschutzvorschriften mit, indem sie oder er insbesondere: 1. die Bearbeitung von Personendaten prüft und Korrekturmassnahmen empfiehlt, wenn eine Verletzung der Datenschutzvorschriften festgestellt wird,"
+              "text": "Sie oder er wirkt bei der Anwendung der Datenschutzvorschriften mit, indem sie oder er insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "die Bearbeitung von Personendaten prüft und Korrekturmassnahmen empfiehlt, wenn eine Verletzung der Datenschutzvorschriften festgestellt wird,"
             },
             {
               "marke": "2",
               "text": "den Verantwortlichen bei der Erstellung der Datenschutz-Folgenabschätzung berät und deren Ausführung überprüft."
+            },
+            {
+              "marke": "b",
+              "text": "Sie oder er dient als Anlaufstelle für die betroffenen Personen."
+            },
+            {
+              "marke": "c",
+              "text": "Sie oder er schult und berät die Mitarbeitenden des Bundesorgans in Fragen des Datenschutzes."
             }
           ]
         }
@@ -995,7 +1011,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_26",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "a59ded965c4780231a037e21fe0f9d6a8255dadfff7e4b4508925bb016c4b3df"
+      "sha": "dd41d608abfb93df26adc63fd332f4799e22e213415561248b35de4fff86f7bf"
     },
     {
       "id": "bund/DSV/art_27",

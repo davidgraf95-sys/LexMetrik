@@ -622,7 +622,11 @@
             },
             {
               "marke": "c",
-              "text": "der Jugendliche den Schaden so weit als möglich durch eigene Leistung wieder gutgemacht oder eine besondere Anstrengung unternommen hat, um das von ihm begangene Unrecht auszugleichen, und wenn: 1. als Strafe nur ein Verweis nach Artikel 22 in Betracht kommt,"
+              "text": "der Jugendliche den Schaden so weit als möglich durch eigene Leistung wieder gutgemacht oder eine besondere Anstrengung unternommen hat, um das von ihm begangene Unrecht auszugleichen, und wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "als Strafe nur ein Verweis nach Artikel 22 in Betracht kommt,"
             },
             {
               "marke": "2",
@@ -631,6 +635,18 @@
             {
               "marke": "3",
               "text": "der Jugendliche den Sachverhalt eingestanden hat;"
+            },
+            {
+              "marke": "d",
+              "text": "der Jugendliche durch die unmittelbaren Folgen seiner Tat so schwer betroffen ist, dass eine Strafe unangemessen wäre;"
+            },
+            {
+              "marke": "e",
+              "text": "der Jugendliche wegen seiner Tat von den Eltern, andern erziehungsberechtigten Personen oder Dritten schon genug bestraft worden ist; oder"
+            },
+            {
+              "marke": "f",
+              "text": "seit der Tat verhältnismässig lange Zeit verstrichen ist, der Jugendliche sich wohlverhalten hat und das Interesse der Öffentlichkeit und des Geschädigten an der Strafverfolgung gering sind."
             }
           ]
         },
@@ -647,7 +663,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "0812eb790f00fd2a4b52a4f76d2f45c89f213ad8245dab29b077de055bf540df"
+      "sha": "8451742422bef909176a7dfe1ac7035a1f7625d2154991300760a0485f3505a8"
     },
     {
       "id": "bund/JSTG/art_22",

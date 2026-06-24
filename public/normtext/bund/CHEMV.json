@@ -61,7 +61,11 @@
             },
             {
               "marke": "c",
-              "text": "Stoffe und Zubereitungen in Form folgender Fertigerzeugnisse, die für private und berufliche Verwenderinnen bestimmt sind: 1. Lebensmittel nach Artikel 4 des Lebensmittelgesetzes vom 20. Juni 2014 (LMG),"
+              "text": "Stoffe und Zubereitungen in Form folgender Fertigerzeugnisse, die für private und berufliche Verwenderinnen bestimmt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "Lebensmittel nach Artikel 4 des Lebensmittelgesetzes vom 20. Juni 2014 (LMG),"
             },
             {
               "marke": "2",
@@ -70,6 +74,14 @@
             {
               "marke": "3",
               "text": "Futtermittel im Sinne von Artikel 3 Absatz 1 der Futtermittel-Verordnung vom 26. Oktober 2011;"
+            },
+            {
+              "marke": "d",
+              "text": "Waffen und Munition nach Artikel 4 Absätze 1 und 5 des Waffengesetzes vom 20. Juni 1997;"
+            },
+            {
+              "marke": "e",
+              "text": "Stoffe, Zubereitungen und Gegenstände, die nach Artikel 7 Absatz 6 USG Abfälle sind."
             }
           ]
         },
@@ -86,7 +98,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_1",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "1be0e39c99cd56d852481a03cacd664e0df7862fe82b60c531166a0f2cb499f8"
+      "sha": "53e435718f3755faf6199b1662a24d7d5c1912c1287ddc5ae22fec88f705986f"
     },
     {
       "id": "bund/CHEMV/art_2",
@@ -106,11 +118,19 @@
             },
             {
               "marke": "b",
-              "text": "Herstellerin: 1. jede natürliche oder juristische Person mit Wohnsitz, Geschäftssitz oder Zweigniederlassung in der Schweiz , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt,"
+              "text": "Herstellerin:"
+            },
+            {
+              "marke": "1",
+              "text": "jede natürliche oder juristische Person mit Wohnsitz, Geschäftssitz oder Zweigniederlassung in der Schweiz , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt,"
             },
             {
               "marke": "2",
-              "text": "als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt: – unter eigenem Namen ohne Angabe des Namens der ursprünglichen Herstellerin"
+              "text": "als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt:"
+            },
+            {
+              "marke": "–",
+              "text": "unter eigenem Namen ohne Angabe des Namens der ursprünglichen Herstellerin"
             },
             {
               "marke": "–",
@@ -127,6 +147,10 @@
             {
               "marke": "–",
               "text": "an einem Ort, in dessen Amtssprache die Kennzeichnung nach Artikel 10 Absatz 3 Buchstabe b durch die ursprüngliche Herstellerin nicht erfolgt ist,"
+            },
+            {
+              "marke": "3",
+              "text": "als alleinige Herstellerin gilt eine Person, die einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen lässt und in der Schweiz Wohnsitz, Geschäftssitz oder Zweigniederlassung hat; hat sie weder Wohnsitz noch Geschäftssitz oder Zweigniederlassung in der Schweiz, so ist der Dritte alleinige Herstellerin."
             }
           ]
         },
@@ -135,12 +159,108 @@
           "text": "Darüber hinaus bedeuten in dieser Verordnung:",
           "items": [
             {
+              "marke": "a",
+              "text": "berufliche Verwenderin :"
+            },
+            {
+              "marke": "1",
+              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie zu Erwerbszwecken zu verwenden,"
+            },
+            {
+              "marke": "2",
+              "text": "als berufliche Verwenderin gilt auch:"
+            },
+            {
+              "marke": "–",
+              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer Ausbildung oder zu Forschungszwecken zu verwenden"
+            },
+            {
+              "marke": "–",
+              "text": "jede juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer gemeinnützigen Tätigkeit zu verwenden;"
+            },
+            {
+              "marke": "b",
+              "text": "private Verwenderin : jede natürliche Person, die Stoffe, Zubereitungen oder Gegenstände zu Nichterwerbszwecken bezieht oder verwendet;"
+            },
+            {
+              "marke": "c",
+              "text": "Händlerin : jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und unverändert gewerblich abgibt;"
+            },
+            {
+              "marke": "d",
+              "text": "Alleinvertreterin: natürliche oder juristische Person, die von einer Herstellerin mit Wohnsitz oder Geschäftssitz im Ausland zur Anmeldung eines Stoffs in der Schweiz bevollmächtigt ist und mehrere von ihr benannte Importeurinnen vertritt;"
+            },
+            {
+              "marke": "e",
+              "text": "Gegenstand: Erzeugnis, bestehend aus einem oder mehreren Stoffen oder Zubereitungen, das bei der Herstellung eine spezifische Form, Oberfläche oder Gestalt erhält, die in grösserem Masse als die chemische Zusammensetzung seine Endfunktion bestimmt;"
+            },
+            {
+              "marke": "f",
+              "text": "alter Stoff : Stoff, der nach Artikel 5 der Verordnung (EG) Nr. 1907/2006 (EU-REACH-Verordnung) registriert ist, mit Ausnahme von Stoffen, die:"
+            },
+            {
+              "marke": "[tab]",
+              "text": "1. in höheren Mengen in Verkehr gebracht werden, als sie im Europäischen Wirtschaftsraum (EWR) registriert sind, oder"
+            },
+            {
+              "marke": "[tab]",
+              "text": "2. ausschliesslich als Zwischenprodukte registriert sind, soweit sie keine Monomere sind;"
+            },
+            {
+              "marke": "g",
+              "text": "Polymer: Stoff, der aus Molekülen besteht, die durch Ketten einer oder mehrerer Arten von Monomereinheiten gekennzeichnet sind, und der enthält:"
+            },
+            {
               "marke": "1",
               "text": "eine einfache Gewichtsmehrheit von Molekülen mit mindestens drei Monomereinheiten, die zumindest mit einer weiteren Monomereinheit oder einem sonstigen Reaktanden eine kovalente Bindung eingegangen sind, und"
             },
             {
               "marke": "2",
               "text": "weniger als eine einfache Gewichtsmehrheit von Molekülen mit demselben Molekulargewicht; diese Moleküle liegen innerhalb eines bestimmten Molekulargewichtsbereichs, wobei die Unterschiede beim Molekulargewicht im Wesentlichen auf die Unterschiede in der Zahl der Monomereinheiten zurückzuführen sind;"
+            },
+            {
+              "marke": "h",
+              "text": "Monomer: ein Stoff, der unter den Bedingungen der für den jeweiligen Prozess verwendeten relevanten polymerbildenden Reaktion imstande ist, kovalente Bindungen mit einer Sequenz weiterer ähnlicher oder unähnlicher Moleküle einzugehen;"
+            },
+            {
+              "marke": "i",
+              "text": "Monomereinheit: die gebundene Form eines Monomerstoffes in einem Polymer;"
+            },
+            {
+              "marke": "j",
+              "text": "Zwischenprodukt : Stoff, der ausschliesslich für die chemische Weiterverarbeitung hergestellt und verbraucht wird und hierbei in einen oder mehrere andere Stoffe umgewandelt wird;"
+            },
+            {
+              "marke": "k",
+              "text": "Folgeprodukt : Stoff, der bei der Lagerung, Verwendung oder Entsorgung eines Stoffs oder einer Zubereitung durch chemische oder biochemische Umwandlung entsteht;"
+            },
+            {
+              "marke": "l",
+              "text": "wissenschaftliche Forschung und Entwicklung: unter kontrollierten Bedingungen durchgeführte wissenschaftliche Versuche, Analysen oder Forschungsarbeiten mit chemischen Stoffen in Mengen unter 1 Tonne pro Jahr;"
+            },
+            {
+              "marke": "m",
+              "text": "produkt- und verfahrensorientierte Forschung und Entwicklung: mit der Produktentwicklung oder der Weiterentwicklung eines Stoffs als solchem, in Zubereitungen oder Gegenständen zusammenhängende wissenschaftliche Entwicklung, bei der zur Entwicklung des Produktionsprozesses oder zur Erprobung der Anwendungsmöglichkeiten des Stoffs Versuche in Pilot- oder Produktionsanlagen durchgeführt werden;"
+            },
+            {
+              "marke": "n",
+              "text": "qualifizierte Prüfungszusammenfassung (robust study summary): detaillierte Zusammenfassung der Ziele, Methoden, Ergebnisse und Schlussfolgerungen eines umfassenden Prüfberichts mit Informationen, die für eine unabhängige Beurteilung der Prüfung ausreichen, sodass der umfassende Prüfbericht möglichst nicht mehr eingesehen werden muss;"
+            },
+            {
+              "marke": "o",
+              "text": "Expositionsszenario: Zusammenstellung von Bedingungen einschliesslich der Verwendungsbedingungen und Risikomanagementmassnahmen, mit denen dargestellt wird, wie der Stoff hergestellt oder während seines Lebenszyklus verwendet wird und wie die Herstellerin die Exposition von Mensch und Umwelt beherrscht oder den beruflichen Verwenderinnen zu beherrschen empfiehlt; ein Expositionsszenario kann ein spezifisches Verfahren oder eine spezifische Verwendung oder gegebenenfalls verschiedene Verfahren oder Verwendungen abdecken;"
+            },
+            {
+              "marke": "p",
+              "text": "Gefahrenklasse: Art der physikalischen Gefahr, der Gefahr für die Gesundheit des Menschen oder der Gefahr für die Umwelt;"
+            },
+            {
+              "marke": "q",
+              "text": "Nanomaterial: Material, das Partikel in ungebundenem Zustand, als Aggregat oder als Agglomerat enthält, bei denen ein oder mehrere Aussenmasse im Bereich von 1 bis 100 Nanometer liegen, oder ein Material, das ein spezifisches Oberflächen-Volumen-Verhältnis von über 60 m 2 /cm 3 aufweist; ein Material gilt nur dann als Nanomaterial, wenn es gezielt zur Nutzung der Eigenschaften hergestellt wird, die sich aus den genannten Aussenmassen der enthaltenen Partikel oder dem genannten Oberflächen-Volumen-Verhältnis des Materials ergeben; Fullerene, Graphenflocken und einwandige Kohlenstoff-Nanoröhren mit einem oder mehreren Aussenmassen unter 1 Nanometer gelten als Nanomaterialien;"
+            },
+            {
+              "marke": "r",
+              "text": "Farbmittel: Stoffe und Zubereitungen, die im Wesentlichen Farbstoffe, Farbpigmente und effektgebende Pigmente enthalten, die ausschliesslich zum Zwecke der Färbung oder der Effekte zugemischt werden."
             }
           ]
         },
@@ -169,7 +289,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "7f8d2a0a49fc06f3699fdbf49dbe5902643d9a08929ceca0cb149c222b2b27d9"
+      "sha": "f8bf6ebd1bc7eddffa0c247c2f8665d7cbeed073378cda230ab8b66803c744e5"
     },
     {
       "id": "bund/CHEMV/art_3",
@@ -638,7 +758,11 @@
             },
             {
               "marke": "b",
-              "text": "folgende Angaben zu denjenigen Stoffen, deren Identität im Rahmen der Kennzeichnung geheim gehalten werden soll: 1. die chemische Bezeichnung,"
+              "text": "folgende Angaben zu denjenigen Stoffen, deren Identität im Rahmen der Kennzeichnung geheim gehalten werden soll:"
+            },
+            {
+              "marke": "1",
+              "text": "die chemische Bezeichnung,"
             },
             {
               "marke": "2",
@@ -647,6 +771,42 @@
             {
               "marke": "3",
               "text": "die EG-Nr.;"
+            },
+            {
+              "marke": "c",
+              "text": "den Ersatznamen des Stoffs;"
+            },
+            {
+              "marke": "d",
+              "text": "die Begründung für das Gesuch;"
+            },
+            {
+              "marke": "e",
+              "text": "den Handelsnamen oder die Bezeichnung der Zubereitung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Angaben zu den Inhaltsstoffen nach den Bestimmungen über das Sicherheitsdatenblatt;"
+            },
+            {
+              "marke": "g",
+              "text": "die Einstufung der Zubereitung;"
+            },
+            {
+              "marke": "h",
+              "text": "die Kennzeichnung der Zubereitung;"
+            },
+            {
+              "marke": "i",
+              "text": "die Verwendungszwecke der Zubereitung;"
+            },
+            {
+              "marke": "j",
+              "text": "den Aggregatszustand;"
+            },
+            {
+              "marke": "k",
+              "text": "gegebenenfalls das Sicherheitsdatenblatt."
             }
           ]
         },
@@ -659,7 +819,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_15",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "a445fdcd9a0ca6399e44164cfa3d48975f11d307adc5c2da4d23616830724778"
+      "sha": "b113d43e9940282abd7de90080680500acb23302a8e923a0d907baf7d1330009"
     },
     {
       "id": "bund/CHEMV/art_15_a",
@@ -811,7 +971,11 @@
             },
             {
               "marke": "d",
-              "text": "Zubereitungen, die nicht gefährlich im Sinne von Artikel 3 sind und mindestens einen der folgenden Stoffe enthalten: 1. einen gesundheitsgefährdenden oder umweltgefährlichen Stoff in einer Einzelkonzentration von ≥ 1,0 Gewichtsprozent (nicht gasförmige Zubereitungen) beziehungsweise von ≥ 0,2 Volumenprozent (gasförmige Zubereitungen),"
+              "text": "Zubereitungen, die nicht gefährlich im Sinne von Artikel 3 sind und mindestens einen der folgenden Stoffe enthalten:"
+            },
+            {
+              "marke": "1",
+              "text": "einen gesundheitsgefährdenden oder umweltgefährlichen Stoff in einer Einzelkonzentration von ≥ 1,0 Gewichtsprozent (nicht gasförmige Zubereitungen) beziehungsweise von ≥ 0,2 Volumenprozent (gasförmige Zubereitungen),"
             },
             {
               "marke": "2",
@@ -832,7 +996,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_19",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "6b6b969a17842e781d2b03ae2ae9ab9a57fbd0b699e4cefa32bc8dd513b48ead"
+      "sha": "539a7b8c55f7d4342ca7bccb385f3a88e68693965cea8cb1c717bb0212d07856"
     },
     {
       "id": "bund/CHEMV/art_20",
@@ -1031,12 +1195,64 @@
           "text": "Eine Anmeldung ist nicht erforderlich für:",
           "items": [
             {
+              "marke": "a",
+              "text": "Polymere sowie Stoffe, die als Monomereinheiten oder an das Polymer chemisch gebunden in einer Konzentration von weniger als 2 Gewichtsprozent enthalten sind;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "Stoffe, die in Mengen unter 1 Tonne pro Jahr in Verkehr gebracht werden;"
+            },
+            {
+              "marke": "d",
+              "text": "Stoffe, die von einer Herstellerin in Verkehr gebracht werden:"
+            },
+            {
+              "marke": "1",
+              "text": "ausschliesslich zu Zwecken der produkt- und verfahrensorientierten Forschung und Entwicklung,"
+            },
+            {
+              "marke": "2",
+              "text": "höchstens in der für den genannten Zweck erforderlichen Menge, und"
+            },
+            {
+              "marke": "3",
+              "text": "höchstens während fünf Jahren; auf begründeten Antrag kann die Anmeldestelle im Einvernehmen mit den Beurteilungsstellen diese Frist um weitere fünf oder zehn Jahre verlängern;"
+            },
+            {
+              "marke": "e",
+              "text": "Stoffe, die ausschliesslich als Ausgangs-, Wirk- und Zusatzstoffe in Lebensmitteln, Heilmitteln und Futtermitteln verwendet werden;"
+            },
+            {
+              "marke": "f",
+              "text": "Stoffe, die in der Schweiz bezogen werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Zwischenprodukte, soweit sie keine Monomere sind;"
+            },
+            {
+              "marke": "h",
+              "text": "Stoffe, die in Anhang IV oder Anhang V der EU-REACH-Verordnung aufgeführt sind;"
+            },
+            {
+              "marke": "i",
+              "text": "Stoffe, die bereits von der Herstellerin angemeldet und exportiert wurden und von derselben oder von einer anderen Herstellerin derselben Lieferkette wieder eingeführt wurden, wenn diese nachweisen kann, dass:"
+            },
+            {
               "marke": "1",
               "text": "es sich um denselben Stoff handelt,"
             },
             {
               "marke": "2",
               "text": "ihr für den exportierten Stoff ein Sicherheitsdatenblatt nach Artikel 20 übermittelt wurde, falls dies nach Artikel 19 erforderlich ist;"
+            },
+            {
+              "marke": "j",
+              "text": "Stoffe, die in Anhang 7 aufgeführt sind, bis zur dort verzeichneten maximalen Menge."
             }
           ]
         },
@@ -1053,7 +1269,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_26",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "a2b405d131d65e061c439e29df44ff93bdd5cb85bd14c1198c04411e44ab98c0"
+      "sha": "703c68903d69990616273919a09debb16defdc0c94a4533523e5177a9cc2bb73"
     },
     {
       "id": "bund/CHEMV/art_27",
@@ -1077,7 +1293,11 @@
             },
             {
               "marke": "b",
-              "text": "ein technisches Dossier mit folgenden, in Anhang 4 genauer aufgeführten Angaben: 1. Identität der Anmelderin,"
+              "text": "ein technisches Dossier mit folgenden, in Anhang 4 genauer aufgeführten Angaben:"
+            },
+            {
+              "marke": "1",
+              "text": "Identität der Anmelderin,"
             },
             {
               "marke": "2",
@@ -1110,6 +1330,18 @@
             {
               "marke": "9",
               "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die umweltgefährlichen Eigenschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "wenn die in Verkehr gebrachte Menge pro Jahr 10 Tonnen oder mehr entspricht: einen Stoffsicherheitsbericht nach Artikel 28;"
+            },
+            {
+              "marke": "d",
+              "text": "einen Vorschlag für ein Sicherheitsdatenblatt im Fall von gefährlichen Stoffen oder PBT- oder vPvB-Stoffen;"
+            },
+            {
+              "marke": "e",
+              "text": "alle verfügbaren Unterlagen und Informationen über die Eigenschaften, die Exposition und die schädlichen Wirkungen des Stoffs auf Mensch und Umwelt, soweit diese nicht bereits aus dem technischen Dossier nach Buchstabe b hervorgehen."
             }
           ]
         },
@@ -1140,7 +1372,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "88996394b59ab8f3f4786ed4731ddc7c5f1c170a30ce08d5538b2a9388dd0483"
+      "sha": "9494f36d655f19db713c34f1077ee939f9859171e4e2b6cee10467e494fc1e18"
     },
     {
       "id": "bund/CHEMV/art_28",
@@ -1172,7 +1404,11 @@
             },
             {
               "marke": "e",
-              "text": "falls der Stoff die Anforderungen nach Artikel 14 Absatz 4 der EU-REACH-Verordnung erfüllt: 1. eine Beurteilung der Exposition, bei der alle identifizierten Verwendungen zu berücksichtigen sind,"
+              "text": "falls der Stoff die Anforderungen nach Artikel 14 Absatz 4 der EU-REACH-Verordnung erfüllt:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Beurteilung der Exposition, bei der alle identifizierten Verwendungen zu berücksichtigen sind,"
             },
             {
               "marke": "2",
@@ -1185,7 +1421,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_28",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "60d039f69616936b5e998f00b0cb2ef7c85aaa6fdf16f1fec1aead9ec05af202"
+      "sha": "96b981c512caf4b6e5d7fa0c13de52dac8394f9c860b9845f67ffc43dd80f972"
     },
     {
       "id": "bund/CHEMV/art_29",
@@ -1944,6 +2180,66 @@
           "text": "Die Meldung muss die folgenden Angaben enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Name und Adresse der Herstellerin;"
+            },
+            {
+              "marke": "b",
+              "text": "Name der für das Inverkehrbringen im EWR zuständigen Person gemäss Artikel 17 Absatz 1 Buchstabe a der EU-CLP-Verordnung, wenn die Identität der Herstellerin in der Kennzeichnung nicht erwähnt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Stoffen:"
+            },
+            {
+              "marke": "1",
+              "text": "die chemische Bezeichnung nach Artikel 18 Absatz 2 Buchstaben a–d der EU-CLP-Verordnung,"
+            },
+            {
+              "marke": "2",
+              "text": "die CAS-Nr.,"
+            },
+            {
+              "marke": "3",
+              "text": "die EG-Nr.,"
+            },
+            {
+              "marke": "4",
+              "text": "die Einstufung und die Kennzeichnung,"
+            },
+            {
+              "marke": "5",
+              "text": "die Verwendungszwecke,"
+            },
+            {
+              "marke": "6",
+              "text": "bei umweltgefährlichen Stoffen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,"
+            },
+            {
+              "marke": "7",
+              "text": "bei Nanomaterialien:"
+            },
+            {
+              "marke": "–",
+              "text": "die Zusammensetzung, die Teilchenform und die mittlere Korngrösse sowie, soweit vorhanden, die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung, und"
+            },
+            {
+              "marke": "–",
+              "text": "die voraussichtlich jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Kilogramm, 1–10 Kilogramm, 10–100 Kilogramm, 100–1000 Kilogramm, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,"
+            },
+            {
+              "marke": "8",
+              "text": "Hinweis, ob der Stoff als PBT oder als vPvB gilt,"
+            },
+            {
+              "marke": "9",
+              "text": "den im EWR vorhandenen Stoffsicherheitsbericht, sofern er von der Herstellerin mit zumutbarem Aufwand beschafft werden kann;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Zubereitungen:"
+            },
+            {
               "marke": "1",
               "text": "den Handelsnamen,"
             },
@@ -1983,11 +2279,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die folgenden Konzentrationen werden nicht überschritten: 1. bei Parfümen: insgesamt 5 Gewichtsprozent,"
+              "text": "Die folgenden Konzentrationen werden nicht überschritten:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Parfümen: insgesamt 5 Gewichtsprozent,"
             },
             {
               "marke": "2",
               "text": "bei Farbmitteln: insgesamt 25 Gewichtsprozent;"
+            },
+            {
+              "marke": "b",
+              "text": "Besonders besorgniserregende Stoffe nach Anhang 3 in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent sind in der Meldung angegeben."
             }
           ]
         }
@@ -1996,7 +2300,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_49",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "e5cb734f9d538c63d44f1f3c6cab407b8446df3d486132da3745868bdd001c23"
+      "sha": "1205549333760ee1a4c036b5ab931c6026d9d95c108d79e43b4b7276c70b312e"
     },
     {
       "id": "bund/CHEMV/art_50",
@@ -2101,12 +2405,92 @@
           "text": "Von den Meldepflichten nach diesem Kapitel ausgenommen sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "Zwischenprodukte, die:"
+            },
+            {
+              "marke": "1",
+              "text": "nicht an Dritte abgegeben werden,"
+            },
+            {
+              "marke": "2",
+              "text": "den Herstellungsstandort nicht verlassen, oder"
+            },
+            {
+              "marke": "3",
+              "text": "in Mengen unter 100 kg pro Jahr in Verkehr gebracht werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Stoffe und Zubereitungen, die ausschliesslich für Analyse-, Forschungs- oder Entwicklungszwecke in Verkehr gebracht werden;"
+            },
+            {
+              "marke": "bbis",
+              "text": "Stoffe, die ausschliesslich zu Bildungszwecken in Verkehr gebracht werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Stoffe und Zubereitungen, die ausschliesslich für Lebensmittel, Heilmittel oder Futtermittel verwendet werden;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "Sprengmittel und pyrotechnische Gegenstände, die nach der Sprengstoffverordnung vom 27. November 2000 einer Bewilligung unterliegen;"
+            },
+            {
+              "marke": "f",
+              "text": "Stoffe, die in der Schweiz bezogen werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Zubereitungen, die in der Schweiz bezogen und in einer anderen als von der ursprünglichen Herstellerin vorgesehenen Verpackung abgegeben werden, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "der Handelsname, die Zusammensetzung, der UFI und der Verwendungszweck unverändert sind, und"
+            },
+            {
+              "marke": "2",
+              "text": "der Name der ursprünglichen Herstellerin zusätzlich angegeben wird;"
+            },
+            {
+              "marke": "h",
+              "text": "Gasmischungen, die ausschliesslich aus gemeldeten Gasen bestehen;"
+            },
+            {
+              "marke": "hbis",
+              "text": "Gase und Gasmischungen, die ausschliesslich in der Gefahrenkategorie «Gase unter Druck» eingestuft sind;"
+            },
+            {
+              "marke": "i",
+              "text": "Zubereitungen, die nicht gefährlich im Sinne von Artikel 3 sind und sich in Verpackungen von nicht mehr als 200 ml Inhalt befinden, wenn sie in der Schweiz hergestellt und direkt von der Herstellerin an die berufliche oder private Verwenderin abgegeben werden;"
+            },
+            {
+              "marke": "j",
+              "text": "Zubereitungen, die in Mengen unter 100 kg pro Jahr in Verkehr gebracht werden und ausschliesslich für berufliche Verwenderinnen bestimmt sind;"
+            },
+            {
+              "marke": "k",
+              "text": "Stoffe, die die Herstellerin nach Artikel 24 angemeldet hat;"
+            },
+            {
+              "marke": "l",
+              "text": "auf Wunsch formulierte Anstrichfarben, die in begrenzten Mengen für einen einzelnen Verbraucher oder gewerblichen Anwender in der Verkaufsstelle durch Abtönen oder Farbmischen formuliert werden, sofern:"
+            },
+            {
               "marke": "1",
               "text": "die Anforderungen von Artikel 25 Absatz 8 der EU-CLP-Verordnung eingehalten werden, oder"
             },
             {
               "marke": "2",
               "text": "die möglichen gesundheitsgefährlichen Farbmittel in der Konzentration, in der sie maximal zugemischt werden, in der Meldung der Basisfarbe angegeben sind; in diesem Fall ist das Produkt mit dem UFI der Basisfarbe zu kennzeichnen;"
+            },
+            {
+              "marke": "m",
+              "text": "Frisch- und Fertigbeton, Gips und Zement, die den Standardrezepturen gemäss Anhang VIII Teil D der EU-CLP-Verordnung entsprechen und die mit dem von der Anmeldestelle vorgegebenen UFI ausgestattet sind."
             }
           ]
         },
@@ -2129,7 +2513,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_54",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "d70e65ac95a7a06bfa69a3875e7fde0cca1597cc9063edefda1bb24ed4ddb43e"
+      "sha": "476df779b716b772aaebed287b31011bec5f7e7548e392816cdee8707649757e"
     },
     {
       "id": "bund/CHEMV/art_55",
@@ -2863,12 +3247,48 @@
           "text": "Auf Verlangen der Anmeldestelle, der Zulassungsstelle Pflanzenschutzmittel und der Beurteilungsstellen und wenn es zum Vollzug dieser Verordnung erforderlich ist, sind folgende Daten über Stoffe, Zubereitungen und Gegenstände weiterzugeben:",
           "items": [
             {
+              "marke": "a",
+              "text": "Daten, die vom BLW erhoben werden gestützt auf:"
+            },
+            {
+              "marke": "1",
+              "text": "die Düngerverordnung vom 1. November 2023,"
+            },
+            {
+              "marke": "2",
+              "text": "die Futtermittel-Verordnung vom 26. Oktober 2011;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten, die vom BLV erhoben werden gestützt auf:"
+            },
+            {
               "marke": "1",
               "text": "die Pflanzenschutzmittelverordnung vom 20. August 2025,"
             },
             {
               "marke": "2",
               "text": "die Verordnung vom 27. Mai 2020 über den Vollzug der Lebensmittelgesetzgebung;"
+            },
+            {
+              "marke": "c",
+              "text": "Daten des Bundesamts für Zoll und Grenzsicherheit aus den Zollanmeldungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Daten, die vom SECO, von der Schweizerischen Unfallversicherungsanstalt (SUVA) oder von den kantonalen Arbeitsinspektoraten gestützt auf die Arbeitnehmerschutzgesetzgebung erhoben werden;"
+            },
+            {
+              "marke": "e",
+              "text": "Daten, die von der Auskunftsstelle für Vergiftungen (Art. 79) erhoben werden;"
+            },
+            {
+              "marke": "f",
+              "text": "Daten, die von Prüfungsstellen nach Artikel 12 Absatz 3 ChemRRV erhoben werden;"
+            },
+            {
+              "marke": "g",
+              "text": "Daten, die von den Kantonen erhoben werden beim Vollzug dieser Verordnung oder anderer Erlasse, die den Schutz des Menschen oder der Umwelt vor Stoffen, Zubereitungen oder Gegenständen regeln."
             }
           ]
         }
@@ -2877,7 +3297,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_74",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "5cc68d57773f25ef941adc7b0a95d06b095de2f6e84641fcbf440ba7b1216fc7"
+      "sha": "e44e71bff5e1ca655f4891182d05186d98b7774012df1572469e1b12d3cace03"
     },
     {
       "id": "bund/CHEMV/art_75",
@@ -2927,7 +3347,11 @@
             },
             {
               "marke": "b",
-              "text": "Eine Weitergabe an die Behörden und Stellen nach den Absätzen 2, 3 und 4 ist nur zulässig, wenn sie: 1. von einer Strafverfolgungsbehörde verlangt wird;"
+              "text": "Eine Weitergabe an die Behörden und Stellen nach den Absätzen 2, 3 und 4 ist nur zulässig, wenn sie:"
+            },
+            {
+              "marke": "1",
+              "text": "von einer Strafverfolgungsbehörde verlangt wird;"
             },
             {
               "marke": "2",
@@ -2948,7 +3372,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_75",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "1ce65ac35280adc81c01d422648cb8f1eaaa3fdafbfe926bac52151c9413d3e9"
+      "sha": "3321b284aa0ee55929f9b7bbb856b419ebab9512fce2f31fd94ac162266faa20"
     },
     {
       "id": "bund/CHEMV/art_76",
@@ -3308,7 +3732,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Anhang 2: 1. Es bezeichnet die massgebende Fassung der Anhänge der EU-CLP-Verordnung."
+              "text": "Anhang 2:"
+            },
+            {
+              "marke": "1",
+              "text": "Es bezeichnet die massgebende Fassung der Anhänge der EU-CLP-Verordnung."
             },
             {
               "marke": "2",
@@ -3317,6 +3745,18 @@
             {
               "marke": "3",
               "text": "Es bezeichnet die massgebende Fassung des Anhangs II der EU-REACH-Verordnung."
+            },
+            {
+              "marke": "b",
+              "text": "Anhang 3 (Kandidatenliste). Es berücksichtigt dabei die Änderungen der «Liste der für eine Aufnahme in Anhang XIV der Verordnung (EG) Nr. 1907/2006 in Frage kommenden Stoffe» nach Artikel 59 Absatz 1 der EU-REACH-Verordnung."
+            },
+            {
+              "marke": "c",
+              "text": "Anhang 4. Es berücksichtigt dabei die Änderungen der Anhänge III und VII–XI der EU-REACH-Verordnung."
+            },
+            {
+              "marke": "d",
+              "text": "Anhang 7. Es berücksichtigt dabei die europäische Entwicklung."
             }
           ]
         }
@@ -3325,7 +3765,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_84",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260424",
-      "sha": "a9a9098bf8346312f37f90e24ad6dd64ebfbe50bac1b02a1d28afe1fba150a2f"
+      "sha": "ed41cb34c28073a21434106d8322e9f2cf5a42a086a559579a844cd92ed7946f"
     },
     {
       "id": "bund/CHEMV/art_85",

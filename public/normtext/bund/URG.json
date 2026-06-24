@@ -490,7 +490,11 @@
             },
             {
               "marke": "b",
-              "text": "es sich bei dem audiovisuellen Werk um Folgendes handelt: 1. Firmenportraits, Industriefilme, Werbe- oder Promotionsfilme, Computerspiele, Dienst- oder Auftragswerke von Sendeunternehmen oder andere journalistische Dienst- und Auftragswerke,"
+              "text": "es sich bei dem audiovisuellen Werk um Folgendes handelt:"
+            },
+            {
+              "marke": "1",
+              "text": "Firmenportraits, Industriefilme, Werbe- oder Promotionsfilme, Computerspiele, Dienst- oder Auftragswerke von Sendeunternehmen oder andere journalistische Dienst- und Auftragswerke,"
             },
             {
               "marke": "2",
@@ -519,7 +523,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de#art_13_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "8d8e041ec773854f4dee596d9944eefa09584759037f49a2c6936bdfc9e11eb9"
+      "sha": "cff97db08db102097e051e415649e8b0c06af34955d5dc3361a1b8fe794d9884"
     },
     {
       "id": "bund/URG/art_14",
@@ -1114,6 +1118,38 @@
           "text": "Als kurzer Auszug gelten insbesondere folgende Werkteile:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei literarischen, wissenschaftlichen und anderen Sprachwerken:"
+            },
+            {
+              "marke": "1",
+              "text": "Cover als kleinformatiges Bild mit geringer Auflösung,"
+            },
+            {
+              "marke": "2",
+              "text": "Titel,"
+            },
+            {
+              "marke": "3",
+              "text": "Frontispiz,"
+            },
+            {
+              "marke": "4",
+              "text": "Inhalts- und Literaturverzeichnis,"
+            },
+            {
+              "marke": "5",
+              "text": "Umschlagseiten,"
+            },
+            {
+              "marke": "6",
+              "text": "Zusammenfassungen wissenschaftlicher Werke;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Werken der Musik und anderen akustischen Werken sowie bei filmischen und anderen audiovisuellen Werken:"
+            },
+            {
               "marke": "1",
               "text": "Cover als kleinformatiges Bild mit geringer Auflösung,"
             },
@@ -1124,6 +1160,10 @@
             {
               "marke": "3",
               "text": "ein kurzer Ausschnitt in reduzierter Auflösung oder reduziertem Format;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Werken der bildenden Kunst, insbesondere der Malerei, der Bildhauerei und der Grafik, sowie bei fotografischen und anderen visuellen Werken: die Gesamtansicht der Werke als kleinformatiges Bild mit geringer Auflösung."
             }
           ]
         }
@@ -1132,7 +1172,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de#art_24_e",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "e2c468fc810c72896d2f36352fc9fdaeb96da2047d93a2b642369c7cbf96a7b0"
+      "sha": "b61071ed31660045f6b4e7c72fd27076c2235bf1a50344c914065c1c71994c1d"
     },
     {
       "id": "bund/URG/art_25",
@@ -1530,7 +1570,11 @@
             },
             {
               "marke": "b",
-              "text": "es sich bei dem audiovisuellen Werk um Folgendes handelt: 1. Firmenportraits, Industriefilme, Werbe- oder Promotionsfilme, Computerspiele, Musikvideos, Konzertaufnahmen, Dienst- oder Auftragswerke von Sendeunternehmen oder andere journalistische Dienst- und Auftragswerke,"
+              "text": "es sich bei dem audiovisuellen Werk um Folgendes handelt:"
+            },
+            {
+              "marke": "1",
+              "text": "Firmenportraits, Industriefilme, Werbe- oder Promotionsfilme, Computerspiele, Musikvideos, Konzertaufnahmen, Dienst- oder Auftragswerke von Sendeunternehmen oder andere journalistische Dienst- und Auftragswerke,"
             },
             {
               "marke": "2",
@@ -1555,7 +1599,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de#art_35_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "dd1b74fa12476eafa40bcaf77ec240c876f092f624ca9b7df7842b2199b632a2"
+      "sha": "30a3f116a96a562b8f42ddd7d04dba24d9ec36b167f22f4a9d096d23c250e6b9"
     },
     {
       "id": "bund/URG/art_36",
@@ -2811,7 +2855,11 @@
             },
             {
               "marke": "b",
-              "text": "Vorrichtungen, Erzeugnisse oder Bestandteile herstellt, einführt, anbietet, veräussert oder sonst wie verbreitet, vermietet, zum Gebrauch überlässt, dafür wirbt oder zu Erwerbszwecken besitzt oder Dienstleistungen erbringt, die: 1. Gegenstand einer Verkaufsförderung, Werbung oder Vermarktung mit dem Ziel der Umgehung wirksamer technischer Massnahmen sind,"
+              "text": "Vorrichtungen, Erzeugnisse oder Bestandteile herstellt, einführt, anbietet, veräussert oder sonst wie verbreitet, vermietet, zum Gebrauch überlässt, dafür wirbt oder zu Erwerbszwecken besitzt oder Dienstleistungen erbringt, die:"
+            },
+            {
+              "marke": "1",
+              "text": "Gegenstand einer Verkaufsförderung, Werbung oder Vermarktung mit dem Ziel der Umgehung wirksamer technischer Massnahmen sind,"
             },
             {
               "marke": "2",
@@ -2820,6 +2868,14 @@
             {
               "marke": "3",
               "text": "hauptsächlich entworfen, hergestellt, angepasst oder erbracht werden, um die Umgehung wirksamer technischer Massnahmen zu ermöglichen oder zu erleichtern;"
+            },
+            {
+              "marke": "c",
+              "text": "elektronische Informationen zur Wahrnehmung der Urheber- und verwandten Schutzrechte nach Artikel 39 c Absatz 2 entfernt oder ändert;"
+            },
+            {
+              "marke": "d",
+              "text": "Werke oder andere Schutzobjekte, an denen Informationen über die Wahrnehmung von Rechten nach Artikel 39 c Absatz 2 entfernt oder geändert wurden, vervielfältigt, einführt, anbietet, veräussert oder sonstwie verbreitet, sendet, wahrnehmbar oder zugänglich macht."
             }
           ]
         },
@@ -2836,7 +2892,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de#art_69_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "c0d80ffb3c8945bcbeee4acb4eb2ae34078189214ab92824b7889fdc66841c74"
+      "sha": "1ac8e181a46871a7e0d944ede1b792c200c0a2097026ba6e17571913a2dfaa12"
     },
     {
       "id": "bund/URG/art_70",

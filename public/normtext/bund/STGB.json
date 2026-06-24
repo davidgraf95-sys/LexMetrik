@@ -1309,7 +1309,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Täter gehandelt hat: 1. aus achtenswerten Beweggründen,"
+              "text": "der Täter gehandelt hat:"
+            },
+            {
+              "marke": "1",
+              "text": "aus achtenswerten Beweggründen,"
             },
             {
               "marke": "2",
@@ -1322,6 +1326,22 @@
             {
               "marke": "4",
               "text": "auf Veranlassung einer Person, der er Gehorsam schuldet oder von der er abhängig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter durch das Verhalten der verletzten Person ernsthaft in Versuchung geführt worden ist;"
+            },
+            {
+              "marke": "c",
+              "text": "der Täter in einer nach den Umständen entschuldbaren heftigen Gemütsbewegung oder unter grosser seelischer Belastung gehandelt hat;"
+            },
+            {
+              "marke": "d",
+              "text": "der Täter aufrichtige Reue betätigt, namentlich den Schaden, soweit es ihm zuzumuten war, ersetzt hat;"
+            },
+            {
+              "marke": "e",
+              "text": "das Strafbedürfnis in Anbetracht der seit der Tat verstrichenen Zeit deutlich vermindert ist und der Täter sich in dieser Zeit wohl verhalten hat."
             }
           ]
         }
@@ -1330,7 +1350,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_48",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "2c44b0eb8e9c0d5f0d15bd269377c5380862acf2f5ce938ef5d87be070764fd8"
+      "sha": "3377c578207fee0ec263c12fe4bdb9e76f09df4034768667f29c5a8d1639c084"
     },
     {
       "id": "bund/STGB/art_48_a",
@@ -1528,7 +1548,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Opfer: 1. der Ehegatte des Täters ist und die Tat während der Ehe oder innerhalb eines Jahres nach deren Scheidung begangen wurde, oder"
+              "text": "das Opfer:"
+            },
+            {
+              "marke": "1",
+              "text": "der Ehegatte des Täters ist und die Tat während der Ehe oder innerhalb eines Jahres nach deren Scheidung begangen wurde, oder"
             },
             {
               "marke": "2",
@@ -1537,6 +1561,14 @@
             {
               "marke": "3",
               "text": "der hetero- oder homosexuelle Lebenspartner beziehungsweise der noch nicht ein Jahr getrennt lebende Ex-Lebenspartner des Täters ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "das Opfer oder, falls dieses nicht handlungsfähig ist, sein gesetzlicher Vertreter darum ersucht; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Sistierung geeignet erscheint, die Situation des Opfers zu stabilisieren oder zu verbessern."
             }
           ]
         },
@@ -1575,7 +1607,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_55_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "9fe2373ca5799197859bd55335775ee68071dc00711ef299fdb599f43692fd2e"
+      "sha": "5716c1195f0bad48f29c05f792040aae7a4977aae5bc24f4f79373fdc34676e9"
     },
     {
       "id": "bund/STGB/art_56",
@@ -2667,7 +2699,11 @@
             },
             {
               "marke": "d",
-              "text": "Pornografie (Art. 197): 1. nach Artikel 197 Absatz 1 oder 3,"
+              "text": "Pornografie (Art. 197):"
+            },
+            {
+              "marke": "1",
+              "text": "nach Artikel 197 Absatz 1 oder 3,"
             },
             {
               "marke": "2",
@@ -2679,6 +2715,22 @@
           "absatz": "4",
           "text": "Wird jemand wegen einer der nachfolgenden Straftaten zu einer Strafe verurteilt oder wird deswegen gegen ihn eine Massnahme nach den Artikeln 59 – 61, 63 oder 64 angeordnet, so verbietet ihm das Gericht lebenslänglich jede berufliche und jede organisierte ausserberufliche Tätigkeit, die einen regelmässigen Kontakt zu volljährigen, besonders schutzbedürftigen Personen umfasst, sowie jede berufliche oder jede organisierte ausserberufliche Tätigkeit im Gesundheitsbereich mit direktem Patientenkontakt:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Menschenhandel (Art. 182) zum Zwecke der sexuellen Ausbeutung, sexueller Übergriff und sexuelle Nötigung (Art. 189), Vergewaltigung (Art. 190), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191), Ausnützung einer Notlage oder Abhängigkeit (Art. 193), Täuschung über den sexuellen Charakter einer Handlung (Art. 193 a ), Exhibitionismus (Art. 194), Förderung der Prostitution (Art. 195), unbefugtes Weiterleiten von nicht öffentlichen sexuellen Inhalten (Art. 197 a ) oder sexuelle Belästigungen (Art. 198), sofern er die Straftat begangen hat an oder vor:"
+            },
+            {
+              "marke": "1",
+              "text": "einem volljährigen, besonders schutz bedürftigen Opfer, oder"
+            },
+            {
+              "marke": "2",
+              "text": "einem volljährigen nicht besonders schutzbedürftigen Opfer , das zum Wider stand unfähig oder urteilsunfähig war oder sich aufgrund einer körperlichen oder psychischen Abhängigkeit nicht zu Wehr setzen konnte;"
+            },
+            {
+              "marke": "b",
+              "text": "Pornografie (Art. 197 Abs. 2 erster Satz und Abs. 4 oder 5), sofern die Gegenstände oder Vorführungen zum Inhalt hatten:"
+            },
             {
               "marke": "1",
               "text": "sexuelle Handlungen mit volljährigen, besonders schutzbedürftigen Opfern, oder"
@@ -2720,7 +2772,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "7ef599e9e5ddd9fba5d7bf0ee7ac083bc36a0e2655e55f11e18805fb09f58f53"
+      "sha": "bc8bf0c8e98f01f7ddc3936ba65d7ba8cb44ee3921c02f990eef62e5cc6ec805"
     },
     {
       "id": "bund/STGB/art_67_a",
@@ -2752,7 +2804,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Tätigkeiten, die direkt und spezifisch gegenüber Minderjährigen oder anderen besonders schutzbedürftigen Personen ausgeübt werden, namentlich: 1. Lehren oder Unterrichten,"
+              "text": "Tätigkeiten, die direkt und spezifisch gegenüber Minderjährigen oder anderen besonders schutzbedürftigen Personen ausgeübt werden, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Lehren oder Unterrichten,"
             },
             {
               "marke": "2",
@@ -2785,6 +2841,10 @@
             {
               "marke": "9",
               "text": "direkter Verkauf oder Verleih oder direkte Vermittlung von spezifisch für die Bedürfnisse von Minderjährigen oder anderen besonders schutzbedürftigen Personen bestimmten Objekten, sofern dies die Haupttätigkeit der betreffenden Person darstellt;"
+            },
+            {
+              "marke": "b",
+              "text": "andere Tätigkeiten, die vor allem oder wiederholt in Einrichtungen ausgeübt werden, die Dienstleistungen nach Buchstabe a anbieten; ausgenommen sind Tätigkeiten, bei denen örtlich oder zeitlich sichergestellt ist, dass kein Kontakt zu Minderjährigen oder anderen besonders schutzbedürften Personen stattfinden kann."
             }
           ]
         },
@@ -2797,7 +2857,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "9c86791a0d3cd9edd127fd92ab97c8e26523d2bfdbe921feefb9e8e71d373f70"
+      "sha": "10d1b87a3fef570c018047b021067c4b7967e2771bfc7cb614dd1b03a9dcba86"
     },
     {
       "id": "bund/STGB/art_67_b",
@@ -4835,7 +4895,11 @@
             },
             {
               "marke": "b",
-              "text": "persönlich mit der schwangeren Frau ein eingehendes Gespräch zu führen und sie zu beraten, sie über die gesundheitlichen Risiken des Eingriffs zu informieren und ihr gegen Unterschrift einen Leitfaden auszuhändigen, welcher enthält: 1. ein Verzeichnis der kostenlos zur Verfügung stehenden Beratungsstellen,"
+              "text": "persönlich mit der schwangeren Frau ein eingehendes Gespräch zu führen und sie zu beraten, sie über die gesundheitlichen Risiken des Eingriffs zu informieren und ihr gegen Unterschrift einen Leitfaden auszuhändigen, welcher enthält:"
+            },
+            {
+              "marke": "1",
+              "text": "ein Verzeichnis der kostenlos zur Verfügung stehenden Beratungsstellen,"
             },
             {
               "marke": "2",
@@ -4844,6 +4908,10 @@
             {
               "marke": "3",
               "text": "Auskunft über die Möglichkeit, das geborene Kind zur Adoption freizugeben;"
+            },
+            {
+              "marke": "c",
+              "text": "sich persönlich zu vergewissern, dass eine schwangere Frau unter 16 Jahren sich an eine für Jugendliche spezialisierte Beratungsstelle gewandt hat."
             }
           ]
         },
@@ -4856,7 +4924,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_120",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "6d2d6e3e526923c3e7f9ab34bad3d26142e001ba249a497f38d68c06b7b598f8"
+      "sha": "cd6820df5980ca60b4f7b75c87edd3f0fdab29ec1d544f4bc2529add121ff7ab"
     },
     {
       "id": "bund/STGB/art_121",
@@ -5849,7 +5917,11 @@
             },
             {
               "marke": "c",
-              "text": "verhindert, dass: 1. die Statuten die Bestimmungen nach Artikel 626 Absatz 2 Ziffern 1 und 2 OR enthalten,"
+              "text": "verhindert, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "die Statuten die Bestimmungen nach Artikel 626 Absatz 2 Ziffern 1 und 2 OR enthalten,"
             },
             {
               "marke": "2",
@@ -5878,7 +5950,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_154",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "ca576bffd3e0374a752465f8a72f9d2e7682faa62770cf5784a71bb30168fc4f"
+      "sha": "0b0aed14d4af923b037bc4eda9a79d78b785d50300f76dcb6f9a1e867876fd27"
     },
     {
       "id": "bund/STGB/art_155",
@@ -9103,11 +9175,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "sich an einer Organisation beteiligt, die den Zweck verfolgt: 1. Gewaltverbrechen zu begehen oder sich mit verbrecherischen Mitteln zu bereichern, oder"
+              "text": "sich an einer Organisation beteiligt, die den Zweck verfolgt:"
+            },
+            {
+              "marke": "1",
+              "text": "Gewaltverbrechen zu begehen oder sich mit verbrecherischen Mitteln zu bereichern, oder"
             },
             {
               "marke": "2",
               "text": "Gewaltverbrechen zu begehen, mit denen die Bevölkerung eingeschüchtert oder ein Staat oder eine internationale Organisation zu einem Tun oder Unterlassen genötigt werden soll; oder"
+            },
+            {
+              "marke": "b",
+              "text": "eine solche Organisation in ihrer Tätigkeit unterstützt."
             }
           ]
         },
@@ -9132,7 +9212,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_260_ter",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "21b22590dc3429fa79fe3f2e937ea5a74adceb188ab3d4633939b64754264f81"
+      "sha": "93ebf3f2e74124e09ebba95780d17bd3a41735eaac73e7eef8936709b9d8f0bf"
     },
     {
       "id": "bund/STGB/art_260_quater",
@@ -9420,11 +9500,35 @@
             },
             {
               "marke": "e",
-              "text": "in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen: 1. im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird, oder"
+              "text": "in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen:"
+            },
+            {
+              "marke": "1",
+              "text": "im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird, oder"
             },
             {
               "marke": "2",
               "text": "im Auftrag eines Staates oder einer politischen Organisation oder entgegen einer Rechtspflicht die Auskunft über das Schicksal oder den Verbleib dieser Person verweigert;"
+            },
+            {
+              "marke": "f",
+              "text": "einem unter seinem Gewahrsam oder seiner Kontrolle stehenden Menschen grosse Leiden oder eine schwere Schädigung des Körpers oder der physischen oder psychischen Gesundheit zufügt;"
+            },
+            {
+              "marke": "g",
+              "text": "an einer Person eine Vergewaltigung nach Artikel 190 Absatz 2 oder 3 oder eine sexuelle Nötigung nach Artikel 189 Absatz 2 oder 3 von vergleichbarer Schwere begeht, sie zu einer sexuellen Handlung von vergleichbarer Schwere missbraucht, sie zur Prostitution nötigt oder sie zwangsweise sterilisiert oder, nachdem sie gegen ihren Willen geschwängert wurde, gefangen hält in der Absicht, die ethnische Zusammensetzung einer Bevölkerung zu beeinflussen;"
+            },
+            {
+              "marke": "h",
+              "text": "Menschen aus dem Gebiet, in dem sie sich rechtmässig aufhalten, vertreibt oder zwangsweise an einen andern Ort überführt;"
+            },
+            {
+              "marke": "i",
+              "text": "einer Gruppe von Menschen aus politischen, rassischen, ethnischen, religiösen, sozialen oder anderen völkerrechtswidrigen Gründen, im Zusammenhang mit einer Tat nach dem zwölften Titel bis oder dem zwölften Titel ter oder zwecks systematischer Unterdrückung oder Beherrschung einer rassischen Gruppe, in schwerwiegender Weise Grundrechte vorenthält oder entzieht;"
+            },
+            {
+              "marke": "j",
+              "text": "eine andere Handlung von vergleichbarer Schwere wie die in diesem Absatz genannten Verbrechen verübt und dadurch einem Menschen grosse Leiden oder eine schwere Schädigung des Körpers oder der physischen oder psychischen Gesundheit zufügt."
             }
           ]
         },
@@ -9441,7 +9545,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "f682f8a93ec6e878e7f10693d855c57db9c39bd0fd7651c69a8900d82e4dc8d1"
+      "sha": "2c0914d951597ebbbe5abc7769208398918cbf851b3b21ca12be8f9d98ab0fba"
     },
     {
       "id": "bund/STGB/art_264_b",

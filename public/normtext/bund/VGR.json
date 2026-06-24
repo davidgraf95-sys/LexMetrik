@@ -403,7 +403,11 @@
             },
             {
               "marke": "l",
-              "text": "die Genehmigung: 1. der Zuteilung der Richter und Richterinnen an die Kammern (Art. 25 Abs. 2) und der Bestellung des zweiten Kammerpräsidiums (Art. 25 Abs. 3),"
+              "text": "die Genehmigung:"
+            },
+            {
+              "marke": "1",
+              "text": "der Zuteilung der Richter und Richterinnen an die Kammern (Art. 25 Abs. 2) und der Bestellung des zweiten Kammerpräsidiums (Art. 25 Abs. 3),"
             },
             {
               "marke": "2",
@@ -412,6 +416,10 @@
             {
               "marke": "3",
               "text": "des Schlüssels für die Geschäftsverteilung (Art. 31 Abs. 3);"
+            },
+            {
+              "marke": "m",
+              "text": "sämtliche weiteren Verwaltungsgeschäfte, die nicht in die Zuständigkeit des Gesamtgerichts oder der Präsidentenkonferenz fallen."
             }
           ]
         },
@@ -428,7 +436,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/320/de#art_11",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230601",
-      "sha": "8890a4e8cb77eb0b666d10cf9ff578439a138cbe3d395fd28e6a1242af6303fe"
+      "sha": "d65eff1fc657349837b79076036c250cb5c2b54a63a96fe3036c29098c9f9620"
     },
     {
       "id": "bund/VGR/art_12",
@@ -1266,7 +1274,11 @@
             },
             {
               "marke": "h",
-              "text": "die Konnexität und ein enger Sachzusammenhang von Verfahren; in der Regel wird das Geschäft dem gleichen Mitglied zugeteilt: 1. bei einer Rückweisung durch das Bundesgericht,"
+              "text": "die Konnexität und ein enger Sachzusammenhang von Verfahren; in der Regel wird das Geschäft dem gleichen Mitglied zugeteilt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einer Rückweisung durch das Bundesgericht,"
             },
             {
               "marke": "2",
@@ -1279,6 +1291,10 @@
             {
               "marke": "4",
               "text": "wenn dieselben Beschwerdeführenden aufeinanderfolgende Verfügungen in derselben Sache mit denselben Behörden und Parteien anfechten;"
+            },
+            {
+              "marke": "i",
+              "text": "die Analogie von Verfahren, insbesondere Verfahren, die dieselbe Rechtsfrage betreffen, sodass das Geschäft dem gleichen Mitglied zugeteilt werden kann."
             }
           ]
         },
@@ -1295,7 +1311,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/320/de#art_31",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230601",
-      "sha": "f240c38d415e186679e16e87a9d56411971a489fa8574024523259bc63c3ee98"
+      "sha": "cb5020226db741388f043e4180a98753f5c3cb5116008ec6fce70c48ca1a92c9"
     },
     {
       "id": "bund/VGR/art_32",

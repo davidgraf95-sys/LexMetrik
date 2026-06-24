@@ -14,12 +14,36 @@
           "text": "Diese Verordnung regelt namentlich:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Banken und für Personen nach Artikel 1 b BankG:"
+            },
+            {
+              "marke": "1",
+              "text": "die Voraussetzungen für die Bewilligung zum Geschäftsbetrieb,"
+            },
+            {
+              "marke": "2",
+              "text": "die Anforderungen an die Organisation,"
+            },
+            {
+              "marke": "3",
+              "text": "die Vorgaben an die Rechnungslegung;"
+            },
+            {
+              "marke": "b",
+              "text": "für Banken:"
+            },
+            {
               "marke": "1",
               "text": "die Einlagensicherung,"
             },
             {
               "marke": "2",
               "text": "die Übertragung und die Liquidation nachrichtenloser Vermögenswerte;"
+            },
+            {
+              "marke": "c",
+              "text": "für systemrelevante Banken: die Notfallplanung und die Verbesserung ihrer Sanier- und Liquidierbarkeit."
             }
           ]
         }
@@ -28,7 +52,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_1",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b80623d8f67465d549d1f109b9869f6403a44993844154c6b674d78ca15a8c37"
+      "sha": "4ce20ec7438809b4a7690088c222d3eb158959a7d8754680da7359e345181c08"
     },
     {
       "id": "bund/BANKV/art_2",
@@ -196,7 +220,11 @@
             },
             {
               "marke": "f",
-              "text": "bei Vereinen, Stiftungen oder Genossenschaften, sofern: 1. diese nicht im Finanzbereich tätig sind,"
+              "text": "bei Vereinen, Stiftungen oder Genossenschaften, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "diese nicht im Finanzbereich tätig sind,"
             },
             {
               "marke": "2",
@@ -213,12 +241,56 @@
           "text": "Nicht als Einlagen gelten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Gelder, die eine Gegenleistung aus einem Vertrag auf Übertragung des Eigentums oder aus einem Dienstleistungsvertrag darstellen oder als Sicherheitsleistung übertragen werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Anleihensobligationen und andere vereinheitlichte und massenweise ausgegebene Schuldverschreibungen oder nicht verurkundete Rechte mit gleicher Funktion (Wertrechte), wenn die Gläubigerinnen und Gläubiger zum Zeitpunkt des Angebots in einer der Formen nach Artikel 64 Absatz 3 des Finanzdienstleistungsgesetzes vom 15. Juni 2018 (FIDLEG) Aufschluss erhalten über:"
+            },
+            {
+              "marke": "1",
+              "text": "den Namen, den Sitz und den in einer kurzen Umschreibung dargelegten Zweck des Emittenten,"
+            },
+            {
+              "marke": "2",
+              "text": "den Zinssatz, den Ausgabepreis, die Zeichnungsfrist, das Liberierungsdatum, die Laufzeit und die Rückzahlungsbedingungen,"
+            },
+            {
+              "marke": "3",
+              "text": "die letzte Jahresrechnung und Konzernrechnung mit dem Revisionsbericht und, wenn der Bilanzstichtag mehr als sechs Monate zurückliegt, über die Zwischenabschlüsse, soweit vorhanden, des Emittenten und des Sicherheitengebers,"
+            },
+            {
+              "marke": "4",
+              "text": "die bestellten Sicherheiten,"
+            },
+            {
+              "marke": "5",
+              "text": "die Vertretung der Anleihensgläubiger, soweit in den Anlagebedingungen enthalten;"
+            },
+            {
+              "marke": "c",
+              "text": "nicht verzinste und einzig der Abwicklung von Kundengeschäften dienende Habensaldi auf Kundenkonti:"
+            },
+            {
               "marke": "1",
               "text": "von Edelmetallhändlern, Vermögensverwaltern oder ähnlichen Unternehmen, sofern die Abwicklung innert 60 Tagen erfolgt, oder"
             },
             {
               "marke": "2",
               "text": "von Wertpapierhäusern oder von Handelssystemen für Distributed Ledger Technology-Effekten (DLT-Handelssystemen) nach Artikel 73 a des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG);"
+            },
+            {
+              "marke": "d",
+              "text": "Gelder, deren Entgegennahme in einem untrennbaren Zusammenhang mit einem Lebensversicherungsvertrag, der beruflichen Vorsorge oder anderen anerkannten Vorsorgeformen nach Artikel 82 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge steht;"
+            },
+            {
+              "marke": "e",
+              "text": "Gelder, die in geringem Umfang einem Zahlungsmittel oder Zahlungssystem zugeführt werden und einzig dem künftigen Bezug von Waren oder Dienstleistungen dienen und für die kein Zins bezahlt wird;"
+            },
+            {
+              "marke": "f",
+              "text": "Gelder, deren Rückzahlung und Verzinsung durch eine Bank garantiert werden (Ausfallgarantie)."
             }
           ]
         }
@@ -227,7 +299,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b61b86273459f127b033cda128ddbc8c8ac14052b32e0de7ad35589863a6f3d4"
+      "sha": "893943569ac7f9dc5135c22598883a15419add4305ae5afe07819e00162a32b3"
     },
     {
       "id": "bund/BANKV/art_5_a",
@@ -247,11 +319,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die als nicht verzinste und einzig der Abwicklung von Kundengeschäften dienende Habensaldi auf Kundenkonti gehalten werden: 1. von Edelmetallhändlern, Vermögensverwaltern oder ähnlichen Unternehmen, sofern die Abwicklung innert 60 Tagen erfolgt, oder"
+              "text": "die als nicht verzinste und einzig der Abwicklung von Kundengeschäften dienende Habensaldi auf Kundenkonti gehalten werden:"
+            },
+            {
+              "marke": "1",
+              "text": "von Edelmetallhändlern, Vermögensverwaltern oder ähnlichen Unternehmen, sofern die Abwicklung innert 60 Tagen erfolgt, oder"
             },
             {
               "marke": "2",
               "text": "von Wertpapierhäusern oder von DLT-Handelssystemen;"
+            },
+            {
+              "marke": "b",
+              "text": "von in- und ausländischen Banken oder anderen staatlich beaufsichtigten Unternehmen;"
+            },
+            {
+              "marke": "c",
+              "text": "von institutionellen Anlegern mit professioneller Tresorerie."
             }
           ]
         }
@@ -260,7 +344,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_5_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "469552cdc552e66808a2b18b88c39798cf4a895d1ba39357dc720d45cf32aff3"
+      "sha": "23c46b94b157eed5a0d0a393b30bc05a9af2d4c0ac6f5df420d69cbfb2f5ed68"
     },
     {
       "id": "bund/BANKV/art_6",
@@ -298,7 +382,11 @@
             },
             {
               "marke": "c",
-              "text": "die Einlegerinnen und Einleger, bevor sie die Einlage tätigen, schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, darüber informiert, dass: 1. er von der FINMA nicht beaufsichtigt wird, und"
+              "text": "die Einlegerinnen und Einleger, bevor sie die Einlage tätigen, schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, darüber informiert, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "er von der FINMA nicht beaufsichtigt wird, und"
             },
             {
               "marke": "2",
@@ -319,7 +407,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "bd6eb4d67f44e9bd0059b713dbed65d53cc03f1a461b9fd572887f2a5aa911c7"
+      "sha": "e8f52756b2bdb839af83e4ad0c058faf092f361cf108c5010ad30bc85e9a4e85"
     },
     {
       "id": "bund/BANKV/art_7",
@@ -427,6 +515,30 @@
           "text": "Das Gesuch um Bewilligung für eine neue Bank oder Person nach Artikel 1 b BankG muss zu den mit der Verwaltung und Geschäftsführung betrauten Personen nach Artikel 3 Absatz 2 Buchstabe c BankG sowie zu den Inhaberinnen und Inhabern einer qualifizierten Beteiligung nach Artikel 3 Absatz 2 Buchstabe c bis BankG insbesondere folgende Angaben und Unterlagen enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "zu natürlichen Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "Angaben über Nationalität, Wohnsitz, qualifizierte Beteiligungen an anderen Gesellschaften und hängige Gerichts- und Verwaltungsverfahren,"
+            },
+            {
+              "marke": "2",
+              "text": "einen von der betreffenden Person unterzeichneten Lebenslauf,"
+            },
+            {
+              "marke": "3",
+              "text": "Referenzen,"
+            },
+            {
+              "marke": "4",
+              "text": "einen Privatauszug aus dem Strafregister-Informationssystem VOSTRA und einen Betreibungsregisterauszug oder entsprechende ausländische Bestätigungen bei Wohnsitz im Ausland;"
+            },
+            {
+              "marke": "b",
+              "text": "zu Gesellschaften:"
+            },
+            {
               "marke": "1",
               "text": "die Statuten,"
             },
@@ -453,7 +565,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_8",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "63cf17ea8c3efb293e59b0f7fcf94a9aec9ab15c522f5e8605610a7fd603c004"
+      "sha": "ebcbcc9d7e42d4de914a619cbef7189f0f32ab58c2756969b1ca75d56191bc04"
     },
     {
       "id": "bund/BANKV/art_8_a",
@@ -1891,11 +2003,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "Forderungen gegenüber einer Bank, die: 1. als Saldo auf Konten bei der Bank gebucht sind und auf eine staatliche oder von einer Zentralbank herausgegebene Währung lauten, oder"
+              "text": "Forderungen gegenüber einer Bank, die:"
+            },
+            {
+              "marke": "1",
+              "text": "als Saldo auf Konten bei der Bank gebucht sind und auf eine staatliche oder von einer Zentralbank herausgegebene Währung lauten, oder"
             },
             {
               "marke": "2",
               "text": "auf Gold, Silber, Platin oder Palladium lauten und bei denen die Einlegerin oder der Einleger einen ausschliesslichen oder alternativen Anspruch auf Leistung in einer staatlichen oder von einer Zentralbank herausgegebenen Währung hat;"
+            },
+            {
+              "marke": "b",
+              "text": "Kassenobligationen der Bank, die in der Bilanz der Bank als solche verbucht sind und auf den Namen der Einlegerin oder des Einlegers bei der Bank hinterlegt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "durch die Einlegerin oder den Einleger in Auftrag gegebene Zahlungen im Zahlungsverkehr, welche die Bank oder deren Konto bei einer Verrechnungs- oder Korrespondenzstelle im Zeitpunkt der Anordnung einer Schutzmassnahme nach Artikel 26 Absatz 1 Buchstaben e–h BankG oder des Bankenkonkurses noch nicht verlassen haben, auch wenn sie dem Konto der Einlegerin oder des Einlegers schon belastet wurden;"
+            },
+            {
+              "marke": "d",
+              "text": "Zahlungen im Zahlungsverkehr zugunsten einer Einlegerin oder eines Einlegers, die bei einer Bank oder auf deren Konto bei einer Verrechnungs- oder Korrespondenzstelle vor der Anordnung einer Schutzmassnahme nach Artikel 26 Absatz 1 Buchstaben e–h BankG oder des Bankenkonkurses eingetroffen sind, auch wenn sie noch nicht dem Konto der Einlegerin oder des Einlegers gutgeschrieben wurden."
             }
           ]
         },
@@ -1938,7 +2066,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "113ac155369409d01404ebc89ce7bcfb6dba30f1fb175ae3e3f63945653578d0"
+      "sha": "b3a1b75ca0400c4910c6d1eab16df8b1733f634c2cee4d1bdc849cb8b5145fe3"
     },
     {
       "id": "bund/BANKV/art_42_b",

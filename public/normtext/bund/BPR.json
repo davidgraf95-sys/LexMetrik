@@ -515,7 +515,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Vorwegverteilung: 1. Die Wohnbevölkerung der Schweiz wird durch 200 geteilt. Die nächsthö­here ganze Zahl über dem Ergebnis bildet die erste Vertei­lungszahl. Jeder Kanton, dessen Bevölkerung diese Zahl nicht erreicht, erhält einen Sitz; er scheidet für die weitere Verteilung aus."
+              "text": "Vorwegverteilung:"
+            },
+            {
+              "marke": "1",
+              "text": "Die Wohnbevölkerung der Schweiz wird durch 200 geteilt. Die nächsthö­here ganze Zahl über dem Ergebnis bildet die erste Vertei­lungszahl. Jeder Kanton, dessen Bevölkerung diese Zahl nicht erreicht, erhält einen Sitz; er scheidet für die weitere Verteilung aus."
             },
             {
               "marke": "2",
@@ -524,6 +528,14 @@
             {
               "marke": "3",
               "text": "Dieses Verfahren wird wiederholt, bis die verbleibenden Kantone die letzte Verteilungszahl erreichen."
+            },
+            {
+              "marke": "b",
+              "text": "Hauptverteilung: Jeder verbliebene Kanton erhält so viele Sitze, als die letzte Verteilungszahl in seiner Bevölkerungszahl enthalten ist."
+            },
+            {
+              "marke": "c",
+              "text": "Restverteilung: Die restlichen Sitze werden auf die Kantone mit den grössten Restzahlen verteilt. Erreichen mehrere Kantone die gleiche Restzahl, so schei­den sie in der Reihenfolge der kleinsten Reste aus, die sich nach der Teilung ih­rer Bevölkerungszahl durch die erste Verteilungszahl ergeben. Sind auch diese Reste gleich, so entscheidet das Los."
             }
           ]
         }
@@ -532,7 +544,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1978/688_688_688/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20221023",
-      "sha": "429379a2640e53d18b4ecb2dab0ec9930bcb204b5160965c75d52a8d38c07057"
+      "sha": "702f8df90a27168c627ad49e2e2d5688bfa27d585c7a5e743368f355584a00c0"
     },
     {
       "id": "bund/BPR/art_18",

@@ -4316,11 +4316,27 @@
             },
             {
               "marke": "f",
-              "text": "gegen folgende Vorschriften verstösst, die in einem Betriebsreglement nach Artikel 36 c enthalten sind und dem Schutz der Umwelt sowie der Sicherheit von Menschen oder Sachen dienen: 1. Vorschriften über das An- und Abflugverfahren,"
+              "text": "gegen folgende Vorschriften verstösst, die in einem Betriebsreglement nach Artikel 36 c enthalten sind und dem Schutz der Umwelt sowie der Sicherheit von Menschen oder Sachen dienen:"
+            },
+            {
+              "marke": "1",
+              "text": "Vorschriften über das An- und Abflugverfahren,"
             },
             {
               "marke": "2",
               "text": "Vorschriften über die Benützung von Flugplatzanlagen durch Passagiere, Luft- und Bodenfahrzeuge sowie sonstige Benützer;"
+            },
+            {
+              "marke": "g",
+              "text": "als Passagier Weisungen der Flugbesatzung missachtet, die der Sicherheit von Menschen oder Sachen dienen;"
+            },
+            {
+              "marke": "h",
+              "text": "die öffentliche Ruhe stört, indem er ein Luftfahrzeug zu einem Zeitpunkt betreibt, in dem es die Gesetzgebung oder das anwendbare Betriebsreglement nach Artikel 36 c nicht erlaubt;"
+            },
+            {
+              "marke": "i",
+              "text": "gegen Ausführungsvorschriften verstösst, deren Übertretung unter Hinweis auf die Strafdrohung dieser Bestimmung für strafbar erklärt ist."
             }
           ]
         },
@@ -4359,7 +4375,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1950/471_491_479/de#art_91",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "0832f586d5181867c3edccb7d400151f54ec3f8e5adb1a8daa0ba0bcf3c84edb"
+      "sha": "f93049c7e58fb1927f948c8bb51ffe591ab0189ce4e3331ea0189e3f96b6ad2d"
     },
     {
       "id": "bund/LFG/art_91_bis",
@@ -5076,7 +5092,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "das in der Zivilluftfahrt tätige Personal, über: 1. Charakter (Leumund, Strafregisterauszug und Ergebnisse allfälliger weiterer Abklärungen),"
+              "text": "das in der Zivilluftfahrt tätige Personal, über:"
+            },
+            {
+              "marke": "1",
+              "text": "Charakter (Leumund, Strafregisterauszug und Ergebnisse allfälliger weiterer Abklärungen),"
             },
             {
               "marke": "2",
@@ -5085,6 +5105,10 @@
             {
               "marke": "3",
               "text": "Gesundheit (Untersuchungen betreffend körperliche und intellektuelle Eignung);"
+            },
+            {
+              "marke": "b",
+              "text": "administrative und strafrechtliche Verfolgungen und Sanktionen nach der Gesetzgebung über die Zivilluftfahrt."
             }
           ]
         },
@@ -5135,7 +5159,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1950/471_491_479/de#art_107_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "6729614acb411bef1b787bd242a93c74e4b8b3eeda0e8b1b2d8802a5c1275490"
+      "sha": "9e01bb7007604fc7b406846be6236cd73b836649ed028c7d9df612ff3295138a"
     },
     {
       "id": "bund/LFG/art_107_b",

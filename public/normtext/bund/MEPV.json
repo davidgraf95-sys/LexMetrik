@@ -41,11 +41,23 @@
             },
             {
               "marke": "c",
-              "text": "Produkte, die hergestellt sind: 1. aus Geweben oder Zellen tierischen Ursprungs, oder ihren Derivaten, die nicht lebensfähig sind oder abgetötet wurden,"
+              "text": "Produkte, die hergestellt sind:"
+            },
+            {
+              "marke": "1",
+              "text": "aus Geweben oder Zellen tierischen Ursprungs, oder ihren Derivaten, die nicht lebensfähig sind oder abgetötet wurden,"
             },
             {
               "marke": "2",
               "text": "aus Derivaten von Geweben oder Zellen menschlichen Ursprungs, die nicht lebensfähig sind oder abgetötet wurden;"
+            },
+            {
+              "marke": "d",
+              "text": "Produkte, die beim Inverkehrbringen oder bei der Inbetriebnahme als integralen Bestandteil nicht lebensfähiges Gewebe oder nicht lebensfähige Zellen menschlichen Ursprungs oder deren Derivate enthalten, denen im Rahmen des Produkts eine unterstützende Funktion zukommt;"
+            },
+            {
+              "marke": "e",
+              "text": "Produkte, die beim Inverkehrbringen oder bei der Inbetriebnahme als integralen Bestandteil ein In-vitro-Diagnostikum enthalten; für diesen Bestandteil sind die Bestimmungen über In-vitro-Diagnostika anwendbar."
             }
           ]
         }
@@ -54,7 +66,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#art_1",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "a767302a4a7e10d3470ecbb781babcc565ef7b46e416ce4d549b28409acdfb81"
+      "sha": "5bb7e124564a42353f3b8f3462f63e5ee1f8f1f081379085f97d52a81cc6366a"
     },
     {
       "id": "bund/MEPV/art_2",
@@ -143,7 +155,11 @@
             },
             {
               "marke": "c",
-              "text": "die allein oder in Kombination einen oder mehrere der folgenden spezifischen medizinischen Zwecke erfüllen: 1. Diagnose, Verhütung, Überwachung, Vorhersage, Prognose, Behandlung oder Linderung von Krankheiten,"
+              "text": "die allein oder in Kombination einen oder mehrere der folgenden spezifischen medizinischen Zwecke erfüllen:"
+            },
+            {
+              "marke": "1",
+              "text": "Diagnose, Verhütung, Überwachung, Vorhersage, Prognose, Behandlung oder Linderung von Krankheiten,"
             },
             {
               "marke": "2",
@@ -192,7 +208,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "22294c55dbb4dcbde888a92b429f21546eb30acd41a6a5dc38a4bd661c5c74f2"
+      "sha": "eca550d7a6a62c2782e6eec299ac214d335f1ea2b2d62be7c545f7dcf60a862f"
     },
     {
       "id": "bund/MEPV/art_4",
@@ -2582,11 +2598,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "zum aufbereiteten Produkt erklären, dass das Produkt: 1. nach den Anweisungen des Herstellers aufbereitet worden ist, oder"
+              "text": "zum aufbereiteten Produkt erklären, dass das Produkt:"
+            },
+            {
+              "marke": "1",
+              "text": "nach den Anweisungen des Herstellers aufbereitet worden ist, oder"
             },
             {
               "marke": "2",
               "text": "nach einem eigenen Aufbereitungsverfahren aufbereitet worden ist, das gleich sicher und gleich wirksam ist wie das vom Hersteller vorgegebene Verfahren, und diese Gleichwertigkeit mit einer Risikoanalyse und einem Validierungsverfahren nachgewiesen wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "über ein geeignetes, nach national oder international anerkannten Normen zertifiziertes Qualitätsmanagementsystem verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Nachweis erbringen, dass die Aufbereitung in zweckmässigen Räumlichkeiten nach den anerkannten Regeln von Wissenschaft und Technik erfolgt und dabei die Anforderungen an die Hygiene eingehalten werden;"
+            },
+            {
+              "marke": "d",
+              "text": "dokumentieren, dass das Produkt gemäss Buchstabe a aufbereitet worden ist."
             }
           ]
         },
@@ -2599,7 +2631,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#art_72",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "d24a1816d9142db97f840c559e1350e1783e471b878cf8379734dd3c6eb13613"
+      "sha": "dfa5005e45ead4dc468138e4a2485563af1bd63817a91228639ed978e5c5d008"
     },
     {
       "id": "bund/MEPV/art_73",
@@ -2760,7 +2792,11 @@
             },
             {
               "marke": "c",
-              "text": "der Instandhaltung und der Aufbereitung von Produkten: 1. in Spitälern,"
+              "text": "der Instandhaltung und der Aufbereitung von Produkten:"
+            },
+            {
+              "marke": "1",
+              "text": "in Spitälern,"
             },
             {
               "marke": "2",
@@ -2795,7 +2831,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#art_76",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "fc25311cfa9475ad871dcf0e678c86a9aa6dc222dcca78684f8afb27beb92eba"
+      "sha": "b4edf6146aec88313beb81619277b2ff1f549b769740170c7cd80eb81916fbd0"
     },
     {
       "id": "bund/MEPV/art_77",
@@ -3513,7 +3549,11 @@
             },
             {
               "marke": "b",
-              "text": "Produkte mit einer nach Artikel 100 gültigen Bescheinigung: 1. Produkte der Klasse III und implantierbare Produkte der Klasse IIb, ausgenommen Nahtmaterial, Klammern, Zahnfüllungen, Zahnspangen, Zahnkronen, Schrauben, Keile, Zahnplatten und Knochenplatten, Drähte, Stifte, Klemmen und Verbindungsstücke: bis zum 31. Dezember 2027,"
+              "text": "Produkte mit einer nach Artikel 100 gültigen Bescheinigung:"
+            },
+            {
+              "marke": "1",
+              "text": "Produkte der Klasse III und implantierbare Produkte der Klasse IIb, ausgenommen Nahtmaterial, Klammern, Zahnfüllungen, Zahnspangen, Zahnkronen, Schrauben, Keile, Zahnplatten und Knochenplatten, Drähte, Stifte, Klemmen und Verbindungsstücke: bis zum 31. Dezember 2027,"
             },
             {
               "marke": "2",
@@ -3578,7 +3618,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#art_101",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20231101",
-      "sha": "590c7aa475f4ba62b83653a7ed54ac9f1d7f9be797daf4b500b0eac9719bf6b6"
+      "sha": "b332b29140749e16ea6229607a2522feb149e7149ab7bcd2e8b6ae883db528e2"
     },
     {
       "id": "bund/MEPV/art_102",

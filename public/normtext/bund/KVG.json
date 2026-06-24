@@ -862,7 +862,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Untersuchungen und Behandlungen, die ambulant, stationär oder in einem Pflegeheim sowie die Pflegeleistungen, die im Rahmen einer stationären Behandlung erbracht werden von: 1. Ärzten oder Ärztinnen,"
+              "text": "die Untersuchungen und Behandlungen, die ambulant, stationär oder in einem Pflegeheim sowie die Pflegeleistungen, die im Rahmen einer stationären Behandlung erbracht werden von:"
+            },
+            {
+              "marke": "1",
+              "text": "Ärzten oder Ärztinnen,"
             },
             {
               "marke": "2",
@@ -875,6 +879,38 @@
             {
               "marke": "3",
               "text": "Personen, die auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin beziehungsweise eines Chiropraktors oder einer Chiropraktorin Leistungen erbringen;"
+            },
+            {
+              "marke": "b",
+              "text": "die ärztlich oder unter den vom Bundesrat bestimmten Voraussetzungen von Chiropraktoren oder Chiropraktorinnen verordneten Analysen, Arzneimittel und der Untersuchung oder Behandlung dienenden Mittel und Gegenstände;"
+            },
+            {
+              "marke": "c",
+              "text": "einen Beitrag an die Kosten von ärztlich angeordneten Badekuren;"
+            },
+            {
+              "marke": "d",
+              "text": "die ärztlich durchgeführten oder angeordneten Massnahmen der medizinischen Rehabilitation;"
+            },
+            {
+              "marke": "e",
+              "text": "den Aufenthalt im Spital entsprechend dem Standard der allgemeinen Abteilung;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "fbis",
+              "text": "den Aufenthalt bei Entbindung in einem Geburtshaus (Art. 29);"
+            },
+            {
+              "marke": "g",
+              "text": "einen Beitrag an die medizinisch notwendigen Transportkosten sowie an die Rettungskosten;"
+            },
+            {
+              "marke": "h",
+              "text": "die Leistung der Apotheker und Apothekerinnen bei der Abgabe von nach Buchstabe b verordneten Arzneimitteln."
             }
           ]
         }
@@ -883,7 +919,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "ce101f110326d1b09f229d26a246fa610736e3d22cf57fb99a0cf1e6fd17548b"
+      "sha": "312382987f2405ccdc1699b7ad4449e1c54edd9ca8652726619891f4b8166aac"
     },
     {
       "id": "bund/KVG/art_25_a",
@@ -2160,7 +2196,11 @@
             },
             {
               "marke": "b",
-              "text": "folgende Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, bei stationärer Behandlung in der Schweiz: 1. Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige,"
+              "text": "folgende Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, bei stationärer Behandlung in der Schweiz:"
+            },
+            {
+              "marke": "1",
+              "text": "Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige,"
             },
             {
               "marke": "2",
@@ -2197,7 +2237,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_49_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "18375e78a7686e0624c35c1851228db10fc2ad2b006c2ff5b91b34e30e948500"
+      "sha": "45bce3cb368f8624f0ff3679460f8d7f27243323a1d3f685e42b7f69c827a68b"
     },
     {
       "id": "bund/KVG/art_50",
@@ -2255,7 +2295,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "erlässt das EDI: 1. eine Liste der Analysen mit Tarif,"
+              "text": "erlässt das EDI:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Liste der Analysen mit Tarif,"
             },
             {
               "marke": "2",
@@ -2264,6 +2308,10 @@
             {
               "marke": "3",
               "text": "Bestimmungen über die Leistungspflicht und den Umfang der Vergütung von der Untersuchung oder Behandlung dienenden Mitteln und Gegenständen, die nach den Artikeln 25 Absatz 2 Buchstabe b und 25 a Absätze 1 bis und 2 verwendet werden;"
+            },
+            {
+              "marke": "b",
+              "text": "erstellt das BAG eine Liste der pharmazeutischen Spezialitäten und konfektionierten Arzneimittel mit Preisen (Spezialitätenliste)."
             }
           ]
         },
@@ -2280,7 +2328,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_52",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "e580c942bcdb67c96e9d80393378de69c3af66d0ff82f67a35f2a86caef6fd9a"
+      "sha": "014e3208d05da09a293b5de233de1ef29177b2d97201f42a0e09491706fb27d8"
     },
     {
       "id": "bund/KVG/art_52_a",
@@ -2436,7 +2484,11 @@
             },
             {
               "marke": "b",
-              "text": "dass die Anzahl folgender Ärzte und Ärztinnen auf die entsprechende Höchstzahl beschränkt ist: 1. Ärzte und Ärztinnen, die ihre Tätigkeit im ambulanten Bereich eines Spitals ausüben,"
+              "text": "dass die Anzahl folgender Ärzte und Ärztinnen auf die entsprechende Höchstzahl beschränkt ist:"
+            },
+            {
+              "marke": "1",
+              "text": "Ärzte und Ärztinnen, die ihre Tätigkeit im ambulanten Bereich eines Spitals ausüben,"
             },
             {
               "marke": "2",
@@ -2479,7 +2531,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "968a75ce3030bb73c3141390f3206b2e8a3ae4f31949e4127bb89e1cbe3a94ef"
+      "sha": "0e52ed1642f34a03f784def65490fcb3891ac6bdc4222df90685924e80bcb4a5"
     },
     {
       "id": "bund/KVG/art_55_b",
@@ -4356,7 +4408,11 @@
             },
             {
               "marke": "h",
-              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin: 1. Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin:"
+            },
+            {
+              "marke": "1",
+              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
             },
             {
               "marke": "2",
@@ -4423,7 +4479,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "328effc3e312707d6f1209529c0c152b91b2f55f73cccc5815c1613231add3f5"
+      "sha": "509f2ed3cc1472c27db104e37917b79118c8eb83bcb10fe00d20b59753e03c5e"
     },
     {
       "id": "bund/KVG/art_84_b",

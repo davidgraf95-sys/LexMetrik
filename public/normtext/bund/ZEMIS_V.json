@@ -55,6 +55,42 @@
           "text": "In dieser Verordnung bedeuten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Daten des Ausländerbereichs: Personendaten, die im Rahmen der Aufgaben nach den folgenden Erlassen oder Bestimmungen bearbeitet werden:"
+            },
+            {
+              "marke": "1",
+              "text": "Ausländer- und Integrationsgesetz vom 16. Dezember 2005 (AIG),"
+            },
+            {
+              "marke": "2",
+              "text": "Bürgerrechtsgesetz vom 20. Juni 2014 (BüG),"
+            },
+            {
+              "marke": "3",
+              "text": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen EU),"
+            },
+            {
+              "marke": "4",
+              "text": "Abkommen vom 21. Juni 2001 zur Änderung des EFTA-Übereinkommens (Freizügigkeitsabkommen EFTA),"
+            },
+            {
+              "marke": "5",
+              "text": "die Schengen- und Dublin-Assoziierungsabkommen; diese Abkommen sind in Anhang 4 aufgeführt,"
+            },
+            {
+              "marke": "6",
+              "text": "Abkommen vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens,"
+            },
+            {
+              "marke": "7",
+              "text": "Artikel 66 a und 66 a bis Schweizerisches Strafgesetzbuch (StGB) sowie Artikel 49 a und 49 a bis Militärstrafgesetz vom 13. Juni 1927 (MStG);"
+            },
+            {
+              "marke": "b",
+              "text": "Daten des Asylbereichs: Personendaten, die im Rahmen der Aufgaben nach den folgenden Erlassen bearbeitet werden:"
+            },
+            {
               "marke": "1",
               "text": "Asylgesetz vom 26. Juni 1998 (AsylG),"
             },
@@ -69,6 +105,18 @@
             {
               "marke": "4",
               "text": "die Dublin-Assoziierungsabkommen;"
+            },
+            {
+              "marke": "c",
+              "text": "Ausländerinnen und Ausländer: Personen aus dem Ausländer- und Asylbereich;"
+            },
+            {
+              "marke": "d",
+              "text": "Verschwinden: Personen aus dem Asylbereich, welche sich beim zuständigen Aufnahme-Kanton nicht gemeldet haben oder während eines laufenden Asylverfahrens an ihrem Aufenthaltsort nicht mehr zu erreichen sind;"
+            },
+            {
+              "marke": "e",
+              "text": "Wiederauftauchen: Personen aus dem Asylbereich, die als verschwunden galten, sich erneut bei den zuständigen Behörden melden oder während eines laufenden Asylverfahrens an ihrem Aufenthaltsort erneut erreichbar sind."
             }
           ]
         }
@@ -77,7 +125,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "b42b7c05cb78ad06cf6cac759dfbd9d8ebdd95ebbf5b4f5a03336c2fa0707e0b"
+      "sha": "c0b94af880abb5adb6fd6e9b2bb4b9e3609dac42517c57f69286dc36cd2a30d2"
     },
     {
       "id": "bund/ZEMIS_V/art_3",
@@ -411,12 +459,172 @@
           "text": "Daten des Ausländerbereichs kann das SEM folgenden Behörden durch ein Abrufverfahren zugänglich machen:",
           "items": [
             {
+              "marke": "a",
+              "text": "den kantonalen und kommunalen Ausländerbehörden, den kantonalen und kommunalen Polizei-, Arbeitsmarkt- und Bürgerrechtsbehörden: für ihre Aufgaben im Ausländerbereich sowie den kantonalen und kommunalen Polizeibehörden zur Personenidentifikation;"
+            },
+            {
+              "marke": "abis",
+              "text": "den Behörden, die für den Vollzug der Landesverweisung nach Artikel 66 a oder 66 a bis StGB oder Artikel 49 a oder 49 a bis MStG zuständig sind, um sie als Ausschreibungen zum Zweck der Rückkehr oder zur Einreiseverweigerung im nationalen Teil des Schengener Informationssystems zu erfassen;"
+            },
+            {
+              "marke": "b",
+              "text": "folgenden Stellen im Bundesamt für Polizei (fedpol):"
+            },
+            {
+              "marke": "1",
+              "text": "Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem Bundesgesetz vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit (BWIS) sowie zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG,"
+            },
+            {
+              "marke": "2",
+              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,"
+            },
+            {
+              "marke": "3",
+              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale, dem SIRENE-Büro: ausschliesslich zur Personenidentifikation in den Bereichen des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit dem europäischen Polizeiamt (Europol), sowie zur Prüfung von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz,"
+            },
+            {
+              "marke": "4",
+              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:"
+            },
+            {
+              "marke": "–",
+              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,"
+            },
+            {
+              "marke": "–",
+              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,"
+            },
+            {
+              "marke": "5",
+              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,"
+            },
+            {
+              "marke": "6",
+              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 102 Absatz 1 AIG,"
+            },
+            {
+              "marke": "7",
+              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,"
+            },
+            {
+              "marke": "8",
+              "text": "der für die Erfüllung der Aufgaben nach dem Vorläuferstoffgesetz vom 25. September 2020 (VSG) zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;"
+            },
+            {
+              "marke": "c",
+              "text": "folgenden Stellen im Bundesamt für Justiz (BJ):"
+            },
+            {
+              "marke": "1",
+              "text": "der Abteilung Internationale Rechtshilfe im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,"
+            },
+            {
+              "marke": "2",
+              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem Bundesgesetz vom 21. Dezember 2007 über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen (BG-KKE) sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "dem Bundesverwaltungsgericht: für die Instruktion der Beschwerden nach dem AIG;"
+            },
+            {
+              "marke": "e",
+              "text": "den Grenzposten der kantonalen Polizeibehörden und dem Grenzwachtkorps: zur Durchführung der Personenkontrolle, zur Erteilung von Ausnahmevisa und zur Ausschreibung der Ausreise von Personen, welche den Schengen-Raum verlassen müssen;"
+            },
+            {
+              "marke": "f",
+              "text": "den schweizerischen Auslandvertretungen und Missionen: zur Prüfung der Visumgesuche und zur Erfüllung ihrer Aufgaben im Bereich des Schweizer Bürgerrechts;"
+            },
+            {
+              "marke": "g",
+              "text": "dem Staatssekretariat, der Politischen Direktion und der Konsularischen Direktion des EDA: zur Prüfung und zum Entscheid über Visumgesuche im Zuständigkeitsbereich des Departements;"
+            },
+            {
+              "marke": "h",
+              "text": "der Zentralen Ausgleichsstelle: zur Abklärung von Leistungsgesuchen sowie zur Zuteilung und Überprüfung der AHV-Nummer;"
+            },
+            {
+              "marke": "i",
+              "text": "den kantonalen Steuerbehörden: für ihre Aufgaben bei der Erhebung der Quellensteuer;"
+            },
+            {
+              "marke": "j",
+              "text": "den in Artikel 7 Absatz 1 Buchstabe b des Bundesgesetzes vom 8. Oktober 1999 über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer als Kontrollorgane vorgesehenen tripartiten Kommissionen: für deren Aufgaben nach Artikel 11 der Verordnung vom 21. Mai 2003 über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer;"
+            },
+            {
+              "marke": "k",
+              "text": "den Zivilstandsämtern, den kantonalen Aufsichtsbehörden im Zivilstandsdienst und dem Eidgenössischen Amt für das Zivilstandswesen zur Personenidentifikation im Zusammenhang mit Zivilstandsereignissen, für die Vorbereitung einer Eheschliessung oder Eintragung der Partnerschaft und zur Verhinderung der Umgehung des Ausländerrechts nach Artikel 97 a Absatz 1 des Zivilgesetzbuches und Artikel 6 Absatz 2 des Partnerschaftsgesetzes vom 18. Juni 2004;"
+            },
+            {
+              "marke": "l",
+              "text": "den kantonalen Asyl- und Flüchtlingskoordinationsstellen: ausschliesslich zur Gewährleistung der Sozialhilfe nach dem AsylG;"
+            },
+            {
+              "marke": "m",
+              "text": "den für die Register nach Artikel 2 Absatz 2 des Registerharmonisierungsgesetzes vom 23. Juni 2006 zuständigen Stellen: zur Harmonisierung der Register und zur Nachführung der AHV-Nummer;"
+            },
+            {
+              "marke": "n",
+              "text": "dem Nachrichtendienst des Bundes (NDB):"
+            },
+            {
+              "marke": "1",
+              "text": "zur Personenidentifikation für das frühzeitige Erkennen und Verhindern von Bedrohungen für die innere oder äussere Sicherheit nach Artikel 6 Absatz 1 Buchstabe a des Nachrichtendienstgesetzes vom 25. September 2015 (NDG),"
+            },
+            {
+              "marke": "2",
+              "text": "zur Erfüllung seiner Aufgaben bei Überprüfungen im Zusammenhang mit der Gefährdung der inneren oder äusseren Sicherheit nach dem BüG, dem AIG und dem AsylG,"
+            },
+            {
+              "marke": "3",
+              "text": "zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG;"
+            },
+            {
+              "marke": "o",
+              "text": "der Eidgenössischen Steuerverwaltung für ihre Aufgaben:"
+            },
+            {
+              "marke": "1",
+              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,"
+            },
+            {
+              "marke": "2",
+              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;"
+            },
+            {
+              "marke": "p",
+              "text": "dem Bundesamt für Zoll und Grenzsicherheit (BAZG) zur Erfüllung seiner Aufgaben:"
+            },
+            {
+              "marke": "1",
+              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),"
+            },
+            {
+              "marke": "2",
+              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;"
+            },
+            {
+              "marke": "q",
+              "text": "…"
+            },
+            {
+              "marke": "r",
+              "text": "dem Bundesamt für Sozialversicherungen für seine Aufgaben:"
+            },
+            {
               "marke": "1",
               "text": "als zuständige Behörde für Amtshilfe nach Artikel 76 Absatz 2 der Verordnung (EG) Nr. 883/2004,"
             },
             {
               "marke": "2",
               "text": "als Verbindungsstelle bei der Durchführung der Amtshilfe im Bereich der Familienleistungen nach den Artikeln 67–69 der Verordnung (EG) Nr. 883/2004;"
+            },
+            {
+              "marke": "s",
+              "text": "den kantonalen Justizvollzugsbehörden für die Fallführung sowie den Vollzug von Urteilen und Auflagen nach dem StGB;"
+            },
+            {
+              "marke": "t",
+              "text": "der Bundesanwaltschaft für die Adressennachforschung im Zusammenhang mit dem Urteilsvollzug."
             }
           ]
         }
@@ -425,7 +633,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "42767d8adea97497a7e52aa4d3b056cb00e1823644cc390c9f7a485d1eb155a8"
+      "sha": "cb9720c2651e753a186e033d4da3d5a32df789fd5ea1e5941d25f024ea89630f"
     },
     {
       "id": "bund/ZEMIS_V/art_10",
@@ -440,12 +648,140 @@
           "text": "Daten des Asylbereichs kann das SEM folgenden Behörden durch ein Abrufverfahren zugänglich machen:",
           "items": [
             {
+              "marke": "a",
+              "text": "den kantonalen und kommunalen Ausländerbehörden, den kantonalen und kommunalen Polizeibehörden, Asyl- und Flüchtlingskoordinationsstellen und Arbeitsmarktbehörden: für ihre Aufgaben im Asylbereich sowie den kantonalen und kommunalen Polizeibehörden zur Personenidentifikation;"
+            },
+            {
+              "marke": "b",
+              "text": "folgenden Stellen von fedpol:"
+            },
+            {
+              "marke": "1",
+              "text": "dem Rechtsdienst: ausschliesslich zum Erlass von Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem BWIS,"
+            },
+            {
+              "marke": "2",
+              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,"
+            },
+            {
+              "marke": "3",
+              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale und dem SIRENE-Büro: ausschliesslich zur Personenidentifikation im Zusammenhang mit Aufgaben im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit Europol,"
+            },
+            {
+              "marke": "4",
+              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:"
+            },
+            {
+              "marke": "–",
+              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,"
+            },
+            {
+              "marke": "–",
+              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,"
+            },
+            {
+              "marke": "5",
+              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,"
+            },
+            {
+              "marke": "6",
+              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 99 AsylG,"
+            },
+            {
+              "marke": "7",
+              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,"
+            },
+            {
+              "marke": "8",
+              "text": "der für die Erfüllung der Aufgaben nach dem VSG zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;"
+            },
+            {
+              "marke": "c",
+              "text": "folgenden Stellen im BJ:"
+            },
+            {
+              "marke": "1",
+              "text": "der Abteilung Internationale Rechtshilfe des Bundesamtes für Justiz: im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,"
+            },
+            {
+              "marke": "2",
+              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem BG-KKE sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "dem Bundesverwaltungsgericht: für die Instruktion der Beschwerden nach dem AsylG;"
+            },
+            {
+              "marke": "e",
+              "text": "den Grenzposten der kantonalen Polizeibehörden und dem Grenzwachtkorps: zur Durchführung der Personenkontrolle und zur Erteilung von Ausnahmevisa;"
+            },
+            {
+              "marke": "f",
+              "text": "der Eidgenössischen Finanzkontrolle: zur Wahrung der Finanzaufsicht;"
+            },
+            {
+              "marke": "g",
+              "text": "der Zentralen Ausgleichsstelle: zur Abklärung von Leistungsgesuchen sowie zur Zuteilung und Überprüfung der AHV-Nummer;"
+            },
+            {
+              "marke": "h",
+              "text": "den kantonalen Steuerbehörden: für ihre Aufgaben bei der Erhebung der Quellensteuer;"
+            },
+            {
+              "marke": "i",
+              "text": "den Zivilstandsämtern, den kantonalen Aufsichtsbehörden im Zivilstandsdienst und dem Eidgenössischen Amt für das Zivilstandswesen zur Personenidentifikation im Zusammenhang mit Zivilstandsereignissen, für die Vorbereitung einer Eheschliessung oder Eintragung der Partnerschaft und zur Verhinderung der Umgehung des Ausländerrechts nach Artikel 97 a Absatz 1 des Zivilgesetzbuches und Artikel 6 Absatz 2 des Partnerschaftsgesetzes vom 18. Juni 2004;"
+            },
+            {
+              "marke": "j",
+              "text": "den für die Register nach Artikel 2 Absatz 2 des Registerharmonisierungsgesetzes vom 23. Juni 2006 zuständigen Stellen: zur Harmonisierung der Register und zur Nachführung der AHV-Nummer;"
+            },
+            {
+              "marke": "k",
+              "text": "dem NDB: ausschliesslich zur Personenidentifikation für das frühzeitige Erkennen und Verhindern von Bedrohungen für die innere oder äussere Sicherheit nach Artikel 6 Absatz 1 Buchstabe a des NDG sowie zur Erfüllung seiner Aufgaben bei Überprüfungen im Zusammenhang mit der Gefährdung der inneren oder äusseren Sicherheit nach dem BüG, dem AIG und dem AsylG;"
+            },
+            {
+              "marke": "l",
+              "text": "der Eidgenössischen Steuerverwaltung für ihre Aufgaben:"
+            },
+            {
+              "marke": "1",
+              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,"
+            },
+            {
+              "marke": "2",
+              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;"
+            },
+            {
+              "marke": "m",
+              "text": "dem BAZG zur Erfüllung ihrer Aufgaben:"
+            },
+            {
               "marke": "1",
               "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),"
             },
             {
               "marke": "2",
               "text": "im Bereich der Zollfahndung: zur Personenidentifikation;"
+            },
+            {
+              "marke": "n",
+              "text": "…"
+            },
+            {
+              "marke": "o",
+              "text": "den schweizerischen Auslandvertretungen und Missionen: zur Überprüfung, ob eine Gesuchstellerin oder ein Gesuchsteller ein Asylverfahren durchläuft oder durchlaufen hat;"
+            },
+            {
+              "marke": "p",
+              "text": "dem Staatssekretariat, der Politischen Direktion und der Konsularischen Direktion des EDA: zur Überprüfung, ob eine Gesuchstellerin oder ein Gesuchsteller ein Asylverfahren durchläuft oder durchlaufen hat;"
+            },
+            {
+              "marke": "q",
+              "text": "den kantonalen Justizvollzugsbehörden für die Fallführung sowie den Vollzug von Urteilen und Auflagen nach dem StGB;"
+            },
+            {
+              "marke": "r",
+              "text": "der Bundesanwaltschaft für die Adressennachforschung im Zusammenhang mit dem Urteilsvollzug."
             }
           ]
         }
@@ -454,7 +790,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "2e220d058bb00ef6264546606a6111850f657265d30e63dccccfcb03912d38f5"
+      "sha": "b7dbe8ed1fd29dd7da619116d05c2b9117c0c152304aeb3c94b2d61930fd3e9c"
     },
     {
       "id": "bund/ZEMIS_V/art_11",

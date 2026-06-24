@@ -322,11 +322,23 @@
             },
             {
               "marke": "f",
-              "text": "der Kategorie B: 1. zum Führen von leichten Motorwagen der Unterkategorie D1 für die Behebung von Pannen und zum Abschleppen, zum Überführen und Erproben von Fahrzeugen im Zusammenhang mit dem Fahrzeughandel, mit Reparaturen oder Umbauten am Fahrzeug, zum Erproben von neuen Fahrzeugen durch Hersteller und Importeure, zum Begutachten von Fahrzeugen durch Sachverständige sowie für die amtliche Fahrzeugprüfung und Fahrten zu dieser Prüfung,"
+              "text": "der Kategorie B:"
+            },
+            {
+              "marke": "1",
+              "text": "zum Führen von leichten Motorwagen der Unterkategorie D1 für die Behebung von Pannen und zum Abschleppen, zum Überführen und Erproben von Fahrzeugen im Zusammenhang mit dem Fahrzeughandel, mit Reparaturen oder Umbauten am Fahrzeug, zum Erproben von neuen Fahrzeugen durch Hersteller und Importeure, zum Begutachten von Fahrzeugen durch Sachverständige sowie für die amtliche Fahrzeugprüfung und Fahrten zu dieser Prüfung,"
             },
             {
               "marke": "2",
               "text": "zum Führen von schweren Motorwagen mit einem Gesamtgewicht von mehr als 3500 kg, aber höchstens 4250 kg, und mit nicht mehr als acht Plätzen ausser dem Führersitz, sofern sie über einen emissionsfreien Antrieb (Art. 9 a Abs. 2 VTS) verfügen und das 3500 kg überschreitende Gewicht einzig durch das Mehrgewicht der emissionsfreien Antriebstechnik verursacht wird; es darf ein Anhänger mit einem Gesamtgewicht von nicht mehr als 750 kg mitgeführt werden;"
+            },
+            {
+              "marke": "g",
+              "text": "der Kategorien B und F: zum Führen von Elektro-Rikschas;"
+            },
+            {
+              "marke": "h",
+              "text": "der Kategorie BE: zum Mitführen eines Anhängers mit einem Gesamtgewicht von mehr als 750 kg an schweren Motorwagen mit einem Gesamtgewicht von mehr als 3500 kg, aber höchstens 4250 kg, und mit nicht mehr als acht Plätzen ausser dem Führersitz, sofern das Zugfahrzeug über einen emissionsfreien Antrieb (Art. 9 a Abs. 2 VTS) verfügt und das 3500 kg überschreitende Gewicht einzig durch das Mehrgewicht der emissionsfreien Antriebstechnik verursacht wird."
             }
           ]
         },
@@ -339,7 +351,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "95aca18e80d9513b1c505f0bd75d9a8b1525f21a9411407d18035a25070b535b"
+      "sha": "c02da51cbc2d8d89f10a8c9055da9c14a59fddd00a8ba07ac0bf0ea2e0749814"
     },
     {
       "id": "bund/VZV/art_5",
@@ -444,6 +456,30 @@
           "text": "Die kantonale Behörde anerkennt Ärzte für Untersuchungen nach folgenden Stufen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Stufe 1: verkehrsmedizinische Kontrolluntersuchungen von über 75-jährigen Inhabern eines Führerausweises;"
+            },
+            {
+              "marke": "b",
+              "text": "Stufe 2:"
+            },
+            {
+              "marke": "1",
+              "text": "erstmalige Untersuchung von Bewerbern um einen Lernfahr- oder Führerausweis der Kategorien C oder D oder der Unterkategorien C1 oder D1 oder einer Bewilligung zum berufsmässigen Personentransport,"
+            },
+            {
+              "marke": "2",
+              "text": "verkehrsmedizinische Kontrolluntersuchungen von Inhabern eines Führerausweises nach Ziffer 1 oder einer Bewilligung zum berufsmässigen Personentransport,"
+            },
+            {
+              "marke": "3",
+              "text": "Untersuchungen von Verkehrsexperten nach Artikel 65 Absatz 2 Buchstabe d;"
+            },
+            {
+              "marke": "c",
+              "text": "Stufe 3:"
+            },
+            {
               "marke": "1",
               "text": "Zweituntersuchungen von Personen nach den Buchstaben a und b, wenn das Ergebnis der Erstuntersuchung keinen eindeutigen Schluss über deren Fahreignung zulässt,"
             },
@@ -462,6 +498,10 @@
             {
               "marke": "5",
               "text": "verkehrsmedizinische Untersuchungen in Fällen nach Artikel 15 d Absatz 1 Buchstaben d und e SVG;"
+            },
+            {
+              "marke": "d",
+              "text": "Stufe 4: alle verkehrsmedizinischen Untersuchungen und Gutachten zur Fahreignung und Fahrfähigkeit."
             }
           ]
         },
@@ -478,7 +518,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_5_a_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "effea059623f150e6eb0643a9a3a89108caade12f56b81c0e65f08d3b2124de6"
+      "sha": "d144685c8078d7bd99b2310626784cbce618837620b16605238365dcc9d3b5f6"
     },
     {
       "id": "bund/VZV/art_5_b",
@@ -815,12 +855,48 @@
           "text": "Das Mindestalter zum Führen von Motorfahrzeugen beträgt für:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Spezialkategorien G und M: 14 Jahre;"
+            },
+            {
+              "marke": "b",
+              "text": "die Spezialkategorie F für:"
+            },
+            {
+              "marke": "1",
+              "text": "Arbeitsmotorfahrzeuge und Traktoren mit einer Höchstgeschwindigkeit bis 45 km/h sowie Motorkarren und land- und forstwirtschaftliche Fahrzeuge: 16 Jahre,"
+            },
+            {
+              "marke": "2",
+              "text": "die übrigen Fahrzeuge: 18 Jahre;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterkategorie A1 für:"
+            },
+            {
               "marke": "1",
               "text": "Kleinmotorräder: 15 Jahre,"
             },
             {
               "marke": "2",
               "text": "die übrigen Fahrzeuge: 16 Jahre;"
+            },
+            {
+              "marke": "cbis",
+              "text": "die Kategorien B und BE: 17 Jahre;"
+            },
+            {
+              "marke": "d",
+              "text": "die Kategorien A, C und CE sowie die Unterkategorien B1, C1 und C1E: 18 Jahre;"
+            },
+            {
+              "marke": "e",
+              "text": "die Kategorien D und DE sowie die Unterkategorien D1 und D1E: 21 Jahre;"
+            },
+            {
+              "marke": "f",
+              "text": "Motorfahrzeuge, für die ein Führerausweis nicht erforderlich ist: 16 Jahre."
             }
           ]
         },
@@ -850,11 +926,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Personen mit Behinderung, die auf ein Motorfahrzeug angewiesen und zu dessen sicherer Führung fähig sind: 1. den Führerausweis der Kategorie B, der Unterkategorie B1 oder der Spezialkategorien F oder M aufgrund einer Meldung nach Anhang 3 eines Arztes mit mindestens der Anerkennung der Stufe 3 vor Erreichen des jeweiligen Mindestalters erteilen,"
+              "text": "Personen mit Behinderung, die auf ein Motorfahrzeug angewiesen und zu dessen sicherer Führung fähig sind:"
+            },
+            {
+              "marke": "1",
+              "text": "den Führerausweis der Kategorie B, der Unterkategorie B1 oder der Spezialkategorien F oder M aufgrund einer Meldung nach Anhang 3 eines Arztes mit mindestens der Anerkennung der Stufe 3 vor Erreichen des jeweiligen Mindestalters erteilen,"
             },
             {
               "marke": "2",
               "text": "das Führen von Fahrzeugen, für die ein Führerausweis nicht erforderlich ist, vor Erreichen des Mindestalters bewilligen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Führerausweis der Spezialkategorie M vor Erreichen des Mindestalters erteilen, wenn die Verwendung eines anderen Verkehrsmittels unzumutbar ist."
             }
           ]
         },
@@ -867,7 +951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "f273c6b7b119c1fe1ddd078e415a6dcb40619def13ad16cc85637373b2e69370"
+      "sha": "5240b6e4e3c3ae5a818120309669a83c07b44c950216b572bcbc50ebf80e097d"
     },
     {
       "id": "bund/VZV/art_7",
@@ -994,6 +1078,34 @@
           "text": "Vor der Einreichung eines der folgenden Gesuche muss der Gesuchsteller, sofern er noch keinen gültigen Lernfahr- oder Führerausweis besitzt, sein Sehvermögen summarisch prüfen lassen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Gesuch um die Erteilung eines Lernfahrfahrausweises:"
+            },
+            {
+              "marke": "1",
+              "text": "der Kategorie A,"
+            },
+            {
+              "marke": "2",
+              "text": "der Kategorie B,"
+            },
+            {
+              "marke": "3",
+              "text": "der Unterkategorie A1,"
+            },
+            {
+              "marke": "4",
+              "text": "der Unterkategorie B1,"
+            },
+            {
+              "marke": "5",
+              "text": "der Spezialkategorie F;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesuch um einen Führerausweis:"
+            },
+            {
               "marke": "1",
               "text": "der Spezialkategorie M,"
             },
@@ -1024,7 +1136,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "cd4033b8f6358a80b8aa55d3351aed3e5ac872b8d684c6271cdb100aef81acbd"
+      "sha": "0d9198f4a5fa608a9c69163149473b485d1f2dff8a47a07c8fcc4a52f30cd37d"
     },
     {
       "id": "bund/VZV/art_10",
@@ -1129,7 +1241,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Lernende folgender beruflichen Grundbildungen, die das 18. Altersjahr noch nicht erreicht haben: 1. «Strassentransportfachfrau/Strassentransportfachmann EFZ»,"
+              "text": "Lernende folgender beruflichen Grundbildungen, die das 18. Altersjahr noch nicht erreicht haben:"
+            },
+            {
+              "marke": "1",
+              "text": "«Strassentransportfachfrau/Strassentransportfachmann EFZ»,"
             },
             {
               "marke": "2",
@@ -1138,6 +1254,10 @@
             {
               "marke": "3",
               "text": "«Automobil-Mechatronikerin/Automobil-Mechatroniker EFZ» mit der Fachrichtung «Nutzfahrzeuge»;"
+            },
+            {
+              "marke": "b",
+              "text": "Lernende der beruflichen Grundbildung «Motorradmechanikerin/Motorradmechaniker EFZ»."
             }
           ]
         },
@@ -1159,7 +1279,11 @@
             },
             {
               "marke": "d",
-              "text": "die vom Staatssekretariat für Migration nach der Verordnung vom 14. November 2012 über die Ausstellung von Reisedokumenten für ausländische Personen (RDV) ausgestellten gültigen Reisedokumente: 1. Reiseausweis für Flüchtlinge (Art. 3 RDV) nach Artikel 28 des Abkommens vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge,"
+              "text": "die vom Staatssekretariat für Migration nach der Verordnung vom 14. November 2012 über die Ausstellung von Reisedokumenten für ausländische Personen (RDV) ausgestellten gültigen Reisedokumente:"
+            },
+            {
+              "marke": "1",
+              "text": "Reiseausweis für Flüchtlinge (Art. 3 RDV) nach Artikel 28 des Abkommens vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge,"
             },
             {
               "marke": "2",
@@ -1180,7 +1304,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_11",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "8790f77b1a1ed0d01fdfb7eeb5d01dc84148014a5a789b73ee00296bb6f2f5bb"
+      "sha": "ccf8d82eba1e9eb901d395523c43507076ec877ca90a4c2d799bb57dedfd343b"
     },
     {
       "id": "bund/VZV/art_11_a",
@@ -1502,7 +1626,11 @@
             },
             {
               "marke": "b",
-              "text": "der Lehrvertrag folgender Lernenden vor Vollendung ihres 18. Altersjahres aufgelöst wird: 1. Lernende der beruflichen Grundbildung «Strassentransportfachfrau/ Strassentransportfachmann EFZ»,"
+              "text": "der Lehrvertrag folgender Lernenden vor Vollendung ihres 18. Altersjahres aufgelöst wird:"
+            },
+            {
+              "marke": "1",
+              "text": "Lernende der beruflichen Grundbildung «Strassentransportfachfrau/ Strassentransportfachmann EFZ»,"
             },
             {
               "marke": "2",
@@ -1523,7 +1651,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_16",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "c8999a8ea8dd0880413fed35e3c6b76b3fc7ad4a02b34dbcb94805384ebd3cf3"
+      "sha": "c4aec3d618130e3cd64f67b1240e3651ccbf4770bbab6390e38b7fd79952d26a"
     },
     {
       "id": "bund/VZV/art_17",
@@ -2144,11 +2272,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die berufsmässige Beförderung von verletzten, kranken oder behinderten Personen in dazu eingerichteten und mit den besonderen Warnvorrichtungen (Art. 82 Abs. 2 und Art. 110 Abs. 3 Bst. a VTS) ausgerüsteten Fahrzeugen, wenn: 1. ausschliesslich verletzte, kranke oder behinderte Betriebsangehörige in betriebseigenen Fahrzeugen befördert werden,"
+              "text": "die berufsmässige Beförderung von verletzten, kranken oder behinderten Personen in dazu eingerichteten und mit den besonderen Warnvorrichtungen (Art. 82 Abs. 2 und Art. 110 Abs. 3 Bst. a VTS) ausgerüsteten Fahrzeugen, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "ausschliesslich verletzte, kranke oder behinderte Betriebsangehörige in betriebseigenen Fahrzeugen befördert werden,"
             },
             {
               "marke": "2",
               "text": "der Fahrzeugführer im Rahmen seiner dienstlichen Tätigkeit bei der Polizei, der Militärverwaltung, dem Zivilschutz oder der Feuerwehr am Strassenverkehr teilnimmt und dies von der Behörde bewilligt wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "berufsmässige Personentransporte, bei denen der Fahrpreis in anderen Leistungen eingerechnet wird und die Fahrstrecke nicht mehr als 50 km beträgt;"
+            },
+            {
+              "marke": "c",
+              "text": "berufsmässige Personentransporte mit führerlosen Fahrzeugen, sofern diese mit anderen Mitteln als den konventionellen Bedienelementen geführt werden."
             }
           ]
         },
@@ -2183,7 +2323,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "3a0f5812f444ff448d9523feb80449c5d9f74c5870dbd1a84e3437aeb4ae5209"
+      "sha": "ed48f9b52e27080564333de5615bbeecec4563954c3ba0caca2f554dc345244f"
     },
     {
       "id": "bund/VZV/art_26",
@@ -2260,11 +2400,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "Inhaber eines Führerausweises der Kategorien C oder D, der Unterkategorien C1 oder D1 oder der Bewilligung zum berufsmässigen Personentransport sowie Verkehrsexperten für Führerprüfungen: 1. alle fünf Jahre, vorbehältlich der ersten Untersuchung nach dem vollendeten 50. Altersjahr mit spätestens 53 Jahren,"
+              "text": "Inhaber eines Führerausweises der Kategorien C oder D, der Unterkategorien C1 oder D1 oder der Bewilligung zum berufsmässigen Personentransport sowie Verkehrsexperten für Führerprüfungen:"
+            },
+            {
+              "marke": "1",
+              "text": "alle fünf Jahre, vorbehältlich der ersten Untersuchung nach dem vollendeten 50. Altersjahr mit spätestens 53 Jahren,"
             },
             {
               "marke": "2",
               "text": "nach der ersten Untersuchung, die nach dem vollendeten 50. Altersjahr stattgefunden hat, alle drei Jahre, vorbehältlich der ersten Untersuchung nach dem vollendeten 75. Altersjahr mit spätestens 77 Jahren;"
+            },
+            {
+              "marke": "b",
+              "text": "Inhaber eines Führerausweises ab dem vollendeten 75. Altersjahr: alle zwei Jahre;"
+            },
+            {
+              "marke": "c",
+              "text": "Inhaber eines Führerausweises während oder nach schweren körperlichen Beeinträchtigungen durch Unfallverletzungen oder Krankheiten."
             }
           ]
         },
@@ -2325,7 +2477,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_27",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "1250d00d4717b54bb7bb08466c1131aafd302a1cd479d820e532369a6852af61"
+      "sha": "ed3e04e8616f17bbfe00da7b24cbce1ebce62f58695f7a766145b6837eac8c3c"
     },
     {
       "id": "bund/VZV/art_27_a",
@@ -3989,7 +4141,11 @@
             },
             {
               "marke": "c",
-              "text": "folgende Anhänger, unter Ausschluss der Ausnahmeanhänger: 1. land- und forstwirtschaftliche Anhänger mit einer Höchstgeschwindigkeit von 30 km/h an Traktoren sowie an Motorfahrzeugen mit einer bauartbedingten Höchstgeschwindigkeit von 30 km/h,"
+              "text": "folgende Anhänger, unter Ausschluss der Ausnahmeanhänger:"
+            },
+            {
+              "marke": "1",
+              "text": "land- und forstwirtschaftliche Anhänger mit einer Höchstgeschwindigkeit von 30 km/h an Traktoren sowie an Motorfahrzeugen mit einer bauartbedingten Höchstgeschwindigkeit von 30 km/h,"
             },
             {
               "marke": "2",
@@ -4006,6 +4162,46 @@
             {
               "marke": "5",
               "text": "Schlittenanhänger;"
+            },
+            {
+              "marke": "d",
+              "text": "Arbeitsfahrzeuge auf begrenzten, aber dem Verkehr nicht völlig verschlossenen Strassenbaustellen;"
+            },
+            {
+              "marke": "e",
+              "text": "Motorfahrzeuge und ihre Anhänger im behördlich bewilligten werkinternen Verkehr auf öffentlichen Strassen;"
+            },
+            {
+              "marke": "f",
+              "text": "Abschlepprollis;"
+            },
+            {
+              "marke": "g",
+              "text": "Fahrbare Transportbehälter; die Bewilligung für das Schleppen von und zur Verladestation wird auf das Zugfahrzeug ausgestellt und auf bestimmte Arten von Behältern beschränkt;"
+            },
+            {
+              "marke": "h",
+              "text": "geschleppte Motorfahrzeuge;"
+            },
+            {
+              "marke": "i",
+              "text": "Fahrzeuge, die auf einem Transportmotorwagen oder einem Anhänger transportiert und beim Auf- und Abladen gefahren werden, sofern der Halter des Transportfahrzeugs eine Versicherung nach Artikel 27 Absatz 1 VVV abgeschlossen hat;"
+            },
+            {
+              "marke": "j",
+              "text": "Fahrzeuge, die durch Unternehmen des Motorfahrzeuggewerbes auf dem betriebsinternen Areal verschoben werden, sofern eine Versicherung nach Artikel 27 Absatz 1 VVV besteht;"
+            },
+            {
+              "marke": "k",
+              "text": "Leicht-Motorfahrräder;"
+            },
+            {
+              "marke": "l",
+              "text": "Rollstühle mit elektrischem Antrieb und einer Höchstgeschwindigkeit bis 10 km/h;"
+            },
+            {
+              "marke": "m",
+              "text": "Arbeitskarren mit einer Höchstgeschwindigkeit bis 10 km/h; handelt es sich bei solchen Arbeitskarren jedoch um Ausnahmefahrzeuge, benötigen sie Fahrzeugausweise und Kontrollschilder, es sei denn, sie gelten nur aufgrund der montierten Gummiraupen-Laufwerke als Ausnahmefahrzeuge."
             }
           ]
         },
@@ -4022,7 +4218,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_72",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "56ee6b26fd15b9a12a53ea34b0d615a8c940308602e41bcc15e26f1d7a264371"
+      "sha": "41c960512a3bfbb080cc1e97faabb6a1cfcd71964b8adcb211ff84aa39fa84d9"
     },
     {
       "id": "bund/VZV/art_72_a",
@@ -4128,6 +4324,22 @@
           "text": "Die Zulassungsbehörde des Standortkantons erteilt den Fahrzeugausweis dem Halter, wenn ihr der entsprechende Versicherungsnachweis zur Verfügung steht und folgende Unterlagen vorliegen:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei der erstmaligen Zulassung eines Fahrzeugs schweizerischer Herkunft oder bei der Zulassung eines Fahrzeugs ausländischer Herkunft:"
+            },
+            {
+              "marke": "1",
+              "text": "den Prüfungsbericht (Form. 13.20 A) gegebenenfalls mit Zollstempel oder mit separater Zollbewilligung,"
+            },
+            {
+              "marke": "2",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Zulassung bereits immatrikulierter Fahrzeuge nach Verlegung des Standortkantons oder Halterwechsel:"
+            },
+            {
               "marke": "1",
               "text": "den alten Fahrzeugausweis,"
             },
@@ -4158,7 +4370,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_74",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "3c1c66d0f96189af043421d1370b23ca877599944eb2f5421fc86e96ae423f55"
+      "sha": "6accf204f54c51e935c1c2f1ced70e5fd2aa92fed3fd72d490bf0754192376ca"
     },
     {
       "id": "bund/VZV/art_75",
@@ -4178,7 +4390,11 @@
             },
             {
               "marke": "b",
-              "text": "Wenn für folgende Fahrzeuge eine Typengenehmigung (Art. 2 Bst. b TGV) oder ein Datenblatt (Art. 2 Bst. l TGV) vorliegt: 1. leichte Motorwagen, bei denen es sich nicht um einen Personenwagen (Art. 11 Abs. 2 Bst. a VTS) handelt;"
+              "text": "Wenn für folgende Fahrzeuge eine Typengenehmigung (Art. 2 Bst. b TGV) oder ein Datenblatt (Art. 2 Bst. l TGV) vorliegt:"
+            },
+            {
+              "marke": "1",
+              "text": "leichte Motorwagen, bei denen es sich nicht um einen Personenwagen (Art. 11 Abs. 2 Bst. a VTS) handelt;"
             },
             {
               "marke": "2",
@@ -4211,7 +4427,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de#art_75",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "d84edb7969d7aea4bc90b46ed19dce6a91b5c6d825016dcc32dea851a41ff983"
+      "sha": "df9cc33d878e9eeb160d8fea4f71e6561bd4082a53971439eb257a9c729eeda9"
     },
     {
       "id": "bund/VZV/art_76",

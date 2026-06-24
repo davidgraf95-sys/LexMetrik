@@ -707,6 +707,78 @@
           "text": "Allgemeine Abzüge sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "die privaten Schuldzinsen im Umfang des nach den Artikeln 7 und 7 a steuerbaren Vermögensertrages und weiterer 50 000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "die dauernden Lasten sowie der Ertragsanteil nach Artikel 7 Absatz 2 Buchstabe c der Leistungen aus Leibrenten- und aus Verpfründungsverträgen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterhaltsbeiträge an den geschiedenen, gerichtlich oder tatsächlich getrenntlebenden Ehegatten sowie die Unterhaltsbeiträge an einen Elternteil für die unter dessen elterlichen Sorge stehenden Kinder, nicht jedoch Leistungen in Erfüllung anderer familienrechtlicher Unterhalts- oder Unterstützungspflichten;"
+            },
+            {
+              "marke": "d",
+              "text": "die gemäss Gesetz, Statut oder Reglement geleisteten Einlagen, Prämien und Beiträge an die Alters-, Hinterlassenen- und Invalidenversicherung und an Einrichtungen der beruflichen Vorsorge;"
+            },
+            {
+              "marke": "e",
+              "text": "Einlagen, Prämien und Beiträge zum Erwerb von vertraglichen Ansprüchen aus anerkannten Formen der gebundenen Selbstvorsorge, bis zu einem bestimmten Betrag;"
+            },
+            {
+              "marke": "f",
+              "text": "die Prämien und Beiträge für die Erwerbsersatzordnung, die Arbeitslosenversicherung und für die obligatorische Unfallversicherung;"
+            },
+            {
+              "marke": "g",
+              "text": "die Einlagen, Prämien und Beiträge für die Lebens‑, die Kranken- und die nicht unter Buchstabe f fallende Unfallversicherung sowie die Zinsen von Sparkapitalien des Steuerpflichtigen und der von ihm unterhaltenen Personen, bis zu einem nach kantonalem Recht bestimmten Betrag, der pauschaliert werden kann;"
+            },
+            {
+              "marke": "h",
+              "text": "die Krankheits- und Unfallkosten des Steuerpflichtigen und der von ihm unterhaltenen Personen, soweit der Steuerpflichtige die Kosten selber trägt und diese einen vom kantonalen Recht bestimmten Selbstbehalt übersteigen;"
+            },
+            {
+              "marke": "hbis",
+              "text": "bis . die behinderungsbedingten Kosten des Steuerpflichtigen oder der von ihm unterhaltenen Personen mit Behinderungen im Sinne des Behindertengleichstellungsgesetzes vom 13. Dezember 2002, soweit der Steuerpflichtige die Kosten selber trägt;"
+            },
+            {
+              "marke": "i",
+              "text": "die freiwilligen Leistungen von Geld und übrigen Vermögenswerten bis zu dem nach kantonalem Recht bestimmten Ausmass an juristische Personen mit Sitz in der Schweiz, die im Hinblick auf ihre öffentlichen oder gemeinnützigen Zwecke von der Steuerpflicht befreit sind (Art. 23 Abs. 1 Bst. f), sowie an Bund, Kantone, Gemeinden und deren Anstalten (Art. 23 Abs. 1 Bst. a–c);"
+            },
+            {
+              "marke": "k",
+              "text": "ein Abzug vom Erwerbseinkommen, das ein Ehegatte unabhängig vom Beruf, Geschäft oder Gewerbe des andern Ehegatten erzielt, bis zu einem nach kantonalem Recht bestimmten Betrag; ein gleichartiger Abzug ist zulässig bei erheblicher Mitarbeit eines Ehegatten im Beruf, Geschäft oder Gewerbe des andern Ehegatten;"
+            },
+            {
+              "marke": "l",
+              "text": "die Mitgliederbeiträge und Zuwendungen bis zu einem nach kantonalem Recht bestimmten Betrag an politische Parteien, die:"
+            },
+            {
+              "marke": "1",
+              "text": "im Parteienregister nach Artikel 76 a des Bundesgesetzes vom 17. Dezember 1976 über die politischen Rechte eingetragen sind,"
+            },
+            {
+              "marke": "2",
+              "text": "in einem kantonalen Parlament vertreten sind, oder"
+            },
+            {
+              "marke": "3",
+              "text": "in einem Kanton bei den letzten Wahlen des kantonalen Parlaments mindestens 3 Prozent der Stimmen erreicht haben;"
+            },
+            {
+              "marke": "m",
+              "text": "die nachgewiesenen Kosten, bis zu einem nach kantonalem Recht bestimmten Betrag, für die Drittbetreuung jedes Kindes, das das 14. Altersjahr noch nicht vollendet hat und mit der steuerpflichtigen Person, die für seinen Unterhalt sorgt, im gleichen Haushalt lebt, soweit diese Kosten in direktem kausalem Zusammenhang mit der Erwerbstätigkeit, Ausbildung oder Erwerbsunfähigkeit der steuerpflichtigen Person stehen;"
+            },
+            {
+              "marke": "n",
+              "text": "die Einsatzkosten in der Höhe eines nach kantonalem Recht bestimmten Prozentbetrags der einzelnen Gewinne aus Geldspielen, welche nicht nach Artikel 7 Absatz 4 Buchstaben l–m steuerfrei sind; die Kantone können einen Höchstbetrag für den Abzug vorsehen;"
+            },
+            {
+              "marke": "o",
+              "text": "die Kosten der berufsorientierten Aus- und Weiterbildung, einschliesslich der Umschulungskosten, bis zu einem nach kantonalem Recht bestimmten Betrag, sofern:"
+            },
+            {
               "marke": "1",
               "text": "ein erster Abschluss auf der Sekundarstufe II vorliegt, oder"
             },
@@ -743,7 +815,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1e2f2d86ecabc9e8ef447d5619aa0fe5d9ca4579a64553c713573e0e12d7b61e"
+      "sha": "1358bc593aedbdd36626f81bb738ea3c6fa51612166aa1c9b04021d4c137a7c8"
     },
     {
       "id": "bund/STHG/art_10",

@@ -179,7 +179,11 @@
             },
             {
               "marke": "b",
-              "text": "der Fondsleitung oder der SICAV haftet für: 1. die pünktliche und uneingeschränkte Vergütung der während der Effek­tenleihe anfallenden Erträge,"
+              "text": "der Fondsleitung oder der SICAV haftet für:"
+            },
+            {
+              "marke": "1",
+              "text": "die pünktliche und uneingeschränkte Vergütung der während der Effek­tenleihe anfallenden Erträge,"
             },
             {
               "marke": "2",
@@ -188,6 +192,10 @@
             {
               "marke": "3",
               "text": "die vertragskonforme Rückerstattung von Effekten gleicher Art, Menge und Güte;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zuteilung der ihm für die Effektenleihe insgesamt verfügbaren Effekten auf die einzelnen Darleiher nach objektiven und nachvollziehbaren Kriterien vornimmt."
             }
           ]
         },
@@ -210,7 +218,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210101",
-      "sha": "edd06cbedc044759e3bc904b3eb1598e47446c151fc1e4b9d1db8adf0ab607ac"
+      "sha": "c7a9028247db03597c2f5d15ae4a9d7e8878c5f48fd43428482df7a598b665ec"
     },
     {
       "id": "bund/KKV_FINMA/art_8",
@@ -290,11 +298,23 @@
             },
             {
               "marke": "b",
-              "text": "Repo: Rechtsgeschäft, durch das eine Partei (Pensionsgeber) das Eigentum an Effekten gegen Bezahlung vorübergehend auf eine andere Partei (Pensionsnehmer) überträgt und bei dem: 1. der Pensionsnehmer sich verpflichtet, dem Pensionsge­ber bei Fälligkeit Effekten gleicher Art, Menge und Güte sowie die während der Dauer des Pensionsgeschäftes anfallenden Erträge zurückzuerstatten,"
+              "text": "Repo: Rechtsgeschäft, durch das eine Partei (Pensionsgeber) das Eigentum an Effekten gegen Bezahlung vorübergehend auf eine andere Partei (Pensionsnehmer) überträgt und bei dem:"
+            },
+            {
+              "marke": "1",
+              "text": "der Pensionsnehmer sich verpflichtet, dem Pensionsge­ber bei Fälligkeit Effekten gleicher Art, Menge und Güte sowie die während der Dauer des Pensionsgeschäftes anfallenden Erträge zurückzuerstatten,"
             },
             {
               "marke": "2",
               "text": "der Pensionsgeber das Kursrisiko der Effekten während der Dauer des Pensionsgeschäftes trägt;"
+            },
+            {
+              "marke": "c",
+              "text": "Reverse Repo: Repo aus der Sicht des Pensionsnehmers;"
+            },
+            {
+              "marke": "d",
+              "text": "Repo-Zins: Differenz zwischen dem Verkaufspreis und dem Kaufpreis der Effekten."
             }
           ]
         }
@@ -303,7 +323,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210101",
-      "sha": "489ac948a3a1e2c5926f41643530af61df1f57966740fc249d7de072260d6ef7"
+      "sha": "a67dfc53252cf407513301e02c2475b65a523d250d0b1e67eb37a8f35f8e92a0"
     },
     {
       "id": "bund/KKV_FINMA/art_11",
@@ -472,12 +492,36 @@
           "text": "Die Fondsleitung oder die SICAV vereinbart im standardisierten Rahmenvertrag mit der Gegenpartei oder dem Vermittler, dass:",
           "items": [
             {
+              "marke": "a",
+              "text": "der Pensionsnehmer dem Pensionsgeber haftet für:"
+            },
+            {
+              "marke": "1",
+              "text": "die pünktliche und uneingeschränkte Vergütung der während des Pen­sionsgeschäfts anfallenden Erträge und der nach Artikel 16 zu erbringenden Ausgleichsleistungen,"
+            },
+            {
+              "marke": "2",
+              "text": "die Geltendmachung anderer Vermögensrechte wie Wandel- und Bezugsrechte, und"
+            },
+            {
+              "marke": "3",
+              "text": "die vertragskonforme Rückerstattung von Effekten gleicher Art, Menge und Güte;"
+            },
+            {
+              "marke": "b",
+              "text": "der Pensionsgeber dem Pensionsnehmer haftet für:"
+            },
+            {
               "marke": "1",
               "text": "die pünktliche und uneingeschränkte Vergütung der während des Pen­sionsgeschäfts nach Artikel 16 zu erbringenden Ausgleichsleistungen, und"
             },
             {
               "marke": "2",
               "text": "den vertragskonformen Rückkauf der in Pension gegebenen Effekten;"
+            },
+            {
+              "marke": "c",
+              "text": "geld- und titelmässige Forderungen aus Pensionsgeschäften nicht mit Forderungen der Gegenpartei beziehungsweise des Vermittlers verrechnet werden dürfen."
             }
           ]
         }
@@ -486,7 +530,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210101",
-      "sha": "8b5264dcb122012ddc45bc609ac75e24118dda81f567fff17a2bcadfb06410a8"
+      "sha": "be27fa99b355cfe641ce173c8e9b177202546ae8b3946ecb4e529583868230be"
     },
     {
       "id": "bund/KKV_FINMA/art_18",
@@ -646,12 +690,76 @@
           "text": "Die folgenden Begriffe bedeuten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Derivat-Grundform:"
+            },
+            {
+              "marke": "1",
+              "text": "Call- oder Put-Option, deren Wert bei Verfall linear von der positiven oder negativen Differenz zwischen dem Verkehrswert des Basiswerts und dem Ausübungspreis abhängt und null wird, wenn die Differenz das andere Vorzeichen hat,"
+            },
+            {
+              "marke": "2",
+              "text": "Credit Default Swap (CDS),"
+            },
+            {
+              "marke": "3",
+              "text": "Swap, dessen Zahlungen linear und pfadunabhängig vom Wert des Basiswerts oder einem absoluten Betrag abhängen,"
+            },
+            {
+              "marke": "4",
+              "text": "Termingeschäft (Future oder Forward), dessen Wert linear vom Wert des Basiswerts abhängt;"
+            },
+            {
+              "marke": "b",
+              "text": "engagementerhöhendes Derivatengagement: Derivatengagement, das in seiner ökonomischen Wir­kung dem Kauf eines Basiswerts ähnlich ist, insbesondere der Kauf einer Call-Op­tion, der Kauf eines Futures, der Verkauf einer Put-Option, der Tausch von variablen gegen fixe Zinszahlungen oder der Abschluss eines Credit-De­fault-Swaps als Sicherungsgeber;"
+            },
+            {
+              "marke": "c",
+              "text": "engagementreduzierendes Derivatengagement: Derivatengagement, das in seiner ökonomischen Wirkung dem Verkauf eines Basiswerts ähnlich ist, insbesondere der Verkauf einer Call-Option, der Verkauf eines Futures, der Kauf einer Put-Option, der Tausch von fixen gegen variable Zinszahlungen oder der Abschluss eines Credit-Default-Swaps als Sicherungsnehmer;"
+            },
+            {
+              "marke": "d",
+              "text": "exotisches Derivat: Derivat, dessen Wirkungsweise weder durch eine Deri­vat-Grundform noch durch eine Kombination von Derivat-Grundformen beschrieben werden kann, beispielsweise eine pfadabhängige Option, eine Option mit mehreren Faktoren oder eine Option mit Kontraktmodifikationen;"
+            },
+            {
+              "marke": "e",
+              "text": "Kontraktgrösse: Anzahl Basiswerte oder Nominalwert eines Derivat-Kontraktes;"
+            },
+            {
+              "marke": "f",
+              "text": "Kontraktwert:"
+            },
+            {
               "marke": "1",
               "text": "bei einem Swap: das Produkt aus dem Nominalwert des Basiswerts und der Kontraktgrösse,"
             },
             {
               "marke": "2",
               "text": "bei allen anderen Derivaten: das Produkt aus dem Verkehrswert des Basiswerts und der Kontraktgrösse;"
+            },
+            {
+              "marke": "g",
+              "text": "OTC (over-the-counter): Abschluss von Geschäften ausserhalb einer Börse oder eines anderen geregelten, dem Publikum offen stehenden Marktes;"
+            },
+            {
+              "marke": "h",
+              "text": "synthetische Liquidität: Basiswerte, deren Marktrisiko und deren allfälliges Kreditrisiko mit Derivaten mit symmetrischem Auszahlungsprofil abgesichert sind;"
+            },
+            {
+              "marke": "i",
+              "text": "Gesamtengagement: Engagement, das sich ergibt aus dem Nettofondsvermögen, dem Netto-Gesamtengagement aus Derivaten sowie aus Anlagetechniken nach Artikel 55 KAG, einschliesslich Leerverkäufen;"
+            },
+            {
+              "marke": "j",
+              "text": "Brutto-Gesamtengagement aus Derivaten: Summe der Anrechnungsbeträge aus Derivaten einschliesslich Derivat-Komponenten;"
+            },
+            {
+              "marke": "k",
+              "text": "Netto-Gesamtengagement aus Derivaten: Summe der Anrechnungsbeträge aus Derivaten einschliesslich Derivat-Komponenten, nach Berücksichtigung der zulässigen Verrechnungen, der Absicherungsgeschäfte und der weiteren Regeln nach den Artikeln 35 und 36;"
+            },
+            {
+              "marke": "l",
+              "text": "Hebelwirkung: Wirkung von Derivaten, Derivat-Komponenten, Anlagetechniken, einschliesslich Leerverkäufen, auf das Nettofondsvermögen durch den Aufbau einer im Vergleich zum Kapitaleinsatz überproportional hohen Position in einem Basiswert."
             }
           ]
         }
@@ -660,7 +768,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_23",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210101",
-      "sha": "61994df09dcb92a4e21a21943e5c5876caacd247a350ddbbace61b32c6b3c7c1"
+      "sha": "9572053d62a6f64abca5b8f011110c94e9538450647aaafffa36c8719dd1103b"
     },
     {
       "id": "bund/KKV_FINMA/art_24",
@@ -1083,11 +1191,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Swaps, mit denen die Entwicklung der Basiswerte, welche der Effektenfonds direkt hält, gegen die Entwicklung von anderen Basiswerten getauscht wird (Total Return Swaps), sofern: 1. das Marktrisiko der getauschten Basiswerte aus dem Effektenfonds vollständig eliminiert wird, so dass diese Vermögenswerte keinen Einfluss auf die Veränderung des Wertes des Effektenfonds haben, und"
+              "text": "Swaps, mit denen die Entwicklung der Basiswerte, welche der Effektenfonds direkt hält, gegen die Entwicklung von anderen Basiswerten getauscht wird (Total Return Swaps), sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "das Marktrisiko der getauschten Basiswerte aus dem Effektenfonds vollständig eliminiert wird, so dass diese Vermögenswerte keinen Einfluss auf die Veränderung des Wertes des Effektenfonds haben, und"
             },
             {
               "marke": "2",
               "text": "der Swap weder Optionsrechte einräumt noch eine Hebelwirkung oder sonstige zusätzliche Marktrisiken, die über die direkte Investition der relevanten Basiswerte hinausgehen, enthält;"
+            },
+            {
+              "marke": "b",
+              "text": "Derivate, denen entsprechende geldnahe Mittel zugeordnet werden, so dass die Kombination aus Derivat und geldnahen Mitteln äquivalent zu einer direkten Investition in den zugrunde liegenden Basiswert ist und dadurch kein zusätzliches Marktrisiko und keine Hebelwirkung generiert wird. Die zur Deckung der Derivatposition verwendeten geldnahen Mittel dürfen nicht gleichzeitig für mehrere Kombinationen verwendet werden."
             }
           ]
         },
@@ -1100,7 +1216,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_35",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210101",
-      "sha": "37d95c2f338a44f235c68f023a2bf6698859ce430fbbe98e33a08119899a1181"
+      "sha": "d59f04da1d526546d2f2d069e8693b6984d922957b55e58efb67a82786589f39"
     },
     {
       "id": "bund/KKV_FINMA/art_36",

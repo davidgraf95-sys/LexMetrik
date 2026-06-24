@@ -1439,7 +1439,11 @@
             },
             {
               "marke": "b",
-              "text": "die asylsuchende Person: 1. andere Personen erheblich gefährdet,"
+              "text": "die asylsuchende Person:"
+            },
+            {
+              "marke": "1",
+              "text": "andere Personen erheblich gefährdet,"
             },
             {
               "marke": "2",
@@ -1472,7 +1476,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/358/de#art_25_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "09aac77d40b95ae601c3ca547d898121395e3e185b218fcc0bc353dbcb1441db"
+      "sha": "51b7bac13bd9a241829baf40dc20063cdd60b2c6dc6a9721c274568069bce63f"
     },
     {
       "id": "bund/ASYLG/art_25_c",

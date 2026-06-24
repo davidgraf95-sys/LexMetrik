@@ -1892,7 +1892,11 @@
             },
             {
               "marke": "c",
-              "text": "Verträge, Verfügungen und andere formelle Verpflichtungen der Eidgenössischen Steuerverwaltung, die: 1. sich auf das Mehrwertsteuergesetz vom 12. Juni 2009, das Verrechnungssteuergesetz vom 13. Oktober 1965 oder das Bundesgesetz vom 27. Juni 1973 über die Stempelabgabe stützen, und"
+              "text": "Verträge, Verfügungen und andere formelle Verpflichtungen der Eidgenössischen Steuerverwaltung, die:"
+            },
+            {
+              "marke": "1",
+              "text": "sich auf das Mehrwertsteuergesetz vom 12. Juni 2009, das Verrechnungssteuergesetz vom 13. Oktober 1965 oder das Bundesgesetz vom 27. Juni 1973 über die Stempelabgabe stützen, und"
             },
             {
               "marke": "2",
@@ -1905,7 +1909,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/170/de#art_22_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260301",
-      "sha": "1e450e155f31c7b7cfc8d47a7de4fec88367ea7fededf6da3b7e8211d78b8fa0"
+      "sha": "88470fa99ecf9602afa6041c52791780e8e0745b1f2de14c3b26be63750a51f5"
     },
     {
       "id": "bund/RVOV/art_23",
@@ -2025,6 +2029,38 @@
           "text": "Die Verwaltungseinheiten können in ihren Profilen Beiträge unterdrücken, wenn:",
           "items": [
             {
+              "marke": "a",
+              "text": "es konkrete Anhaltspunkte dafür gibt, dass diese:"
+            },
+            {
+              "marke": "1",
+              "text": "zu Vergehen oder Verbrechen aufrufen,"
+            },
+            {
+              "marke": "2",
+              "text": "zu Hass oder Gewalt aufrufen,"
+            },
+            {
+              "marke": "3",
+              "text": "persönlichkeitsverletzende, ehrverletzende, drohende, diskriminierende oder pornografische Inhalte oder Gewaltdarstellungen enthalten,"
+            },
+            {
+              "marke": "4",
+              "text": "zu einem Verhalten anregen, das die Gesundheit oder persönliche Sicherheit gravierend gefährdet,"
+            },
+            {
+              "marke": "5",
+              "text": "kommerzielle Werbung enthalten, oder"
+            },
+            {
+              "marke": "6",
+              "text": "maschinell erzeugt wurden; oder"
+            },
+            {
+              "marke": "b",
+              "text": "diese wiederholt angebracht werden und:"
+            },
+            {
               "marke": "1",
               "text": "offensichtlich sachfremd sind, oder"
             },
@@ -2051,7 +2087,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/170/de#art_23_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260301",
-      "sha": "b0e7ca0a53f7c87a60a06b72059fc60cbea5ae132463ebbc17fbf0e4937e7663"
+      "sha": "b56d87f41b97c27d91e43f828947ec55ae856e98e3e5f292f4ed9027d9b80a23"
     },
     {
       "id": "bund/RVOV/art_24",

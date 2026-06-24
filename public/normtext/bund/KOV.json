@@ -409,7 +409,11 @@
             },
             {
               "marke": "2",
-              "text": "Findet kein solcher Übergang des Geschäfts und damit der Ge­schäftsbücher und Geschäftspapiere auf einen Dritten statt, so ist wie folgt zu verfahren: a. Im Falle des Konkurses über eine Einzelfirma sind die Ge­schäftsbücher und Geschäftspapiere nach durchge­führtem Konkursverfahren dem Gemeinschuldner heraus­zugeben, und es ist alsdann seine Sache, für ihre Aufbe­wahrung wäh­rend der zehnjährigen Frist des Artikels 962 des Obligatio­nenrechts zu sorgen."
+              "text": "Findet kein solcher Übergang des Geschäfts und damit der Ge­schäftsbücher und Geschäftspapiere auf einen Dritten statt, so ist wie folgt zu verfahren:"
+            },
+            {
+              "marke": "a",
+              "text": "Im Falle des Konkurses über eine Einzelfirma sind die Ge­schäftsbücher und Geschäftspapiere nach durchge­führtem Konkursverfahren dem Gemeinschuldner heraus­zugeben, und es ist alsdann seine Sache, für ihre Aufbe­wahrung wäh­rend der zehnjährigen Frist des Artikels 962 des Obligatio­nenrechts zu sorgen."
             },
             {
               "marke": "b",
@@ -418,6 +422,14 @@
             {
               "marke": "c",
               "text": "Die Geschäftsbücher und Geschäftspapiere von falliten Ak­tiengesellschaften und Genossenschaften sind auch nach Schluss des Konkursverfahrens auf dem Konkursamt aufzu­bewahren, solange nicht die nach Artikel 747 des Obligatio­nenrechts hierzu kompetente Handelsregisterbe­hörde einen anderen sicheren Ort für die Niederlegung auf die Dauer von zehn Jahren bestimmt hat."
+            },
+            {
+              "marke": "3",
+              "text": "Ist die Aufbewahrung durch den Gemeinschuldner nicht mög­lich, so sind die Bücher und Papiere auf dem Konkursamt auf­zu­bewahren."
+            },
+            {
+              "marke": "4",
+              "text": "Die kantonalen Aufsichtsbehörden haben dafür zu sorgen, dass die Konkursämter, welche nicht in der Lage sind, die nach vor­stehenden Grundsätzen bei ihnen liegenden Bücher und Pa­piere aufzubewahren, sie an einem zentralen Orte archivieren können."
             }
           ]
         }
@@ -426,7 +438,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/751_749_771/de#art_15",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210801",
-      "sha": "67d56c82806f2ba959c139e61339414456e4811a01fa9ccb24f34c0d14fb5e00"
+      "sha": "ff482cc67be673abf9f3ed2ffce7f9bb0f6c21e2e379d4782d7a15ef2589df87"
     },
     {
       "id": "bund/KOV/art_15_a",
@@ -1493,11 +1505,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Pfandgesicherte Forderungen (vgl. Art. 37 SchKG): 1. grundpfandgesicherte;"
+              "text": "Pfandgesicherte Forderungen (vgl. Art. 37 SchKG):"
+            },
+            {
+              "marke": "1",
+              "text": "grundpfandgesicherte;"
             },
             {
               "marke": "2",
               "text": "faustpfandgesicherte."
+            },
+            {
+              "marke": "b",
+              "text": "Ungesicherte Forderungen: Klassen I–III (Art. 219 SchKG)."
             }
           ]
         },
@@ -1510,7 +1530,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/751_749_771/de#art_56",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20210801",
-      "sha": "b738e4f221d866fae1efd2506b5c2731984802db9865bc6d32624b7dc1aad83a"
+      "sha": "3556552ec76274eafa491cf5e6ae5590b2651f9b14d8af91f93fc906a13352ab"
     },
     {
       "id": "bund/KOV/art_57",

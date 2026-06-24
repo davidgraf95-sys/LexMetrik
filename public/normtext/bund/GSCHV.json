@@ -1719,7 +1719,11 @@
             },
             {
               "marke": "b",
-              "text": "den topografischen Verhältnissen in Gewässerabschnitten: 1. in denen das Gewässer den Talboden weitgehend ausfüllt, und"
+              "text": "den topografischen Verhältnissen in Gewässerabschnitten:"
+            },
+            {
+              "marke": "1",
+              "text": "in denen das Gewässer den Talboden weitgehend ausfüllt, und"
             },
             {
               "marke": "2",
@@ -1754,7 +1758,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1998/2863_2863_2863/de#art_41_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "50c7e1e09c6546275093a3133684e03dc06f1ebd314a7506a8960947c3900121"
+      "sha": "ad02be4635bb0debc8bd26257cbcdb0c02021f2d1ac39c544722adef8b7e7b67"
     },
     {
       "id": "bund/GSCHV/art_41_b",

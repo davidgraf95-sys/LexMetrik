@@ -165,11 +165,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Bundesamt für Umwelt (BAFU): 1. für die Entgegennahme der Benachrichtigung durch die Ursprungspartei sowie"
+              "text": "das Bundesamt für Umwelt (BAFU):"
+            },
+            {
+              "marke": "1",
+              "text": "für die Entgegennahme der Benachrichtigung durch die Ursprungspartei sowie"
             },
             {
               "marke": "2",
               "text": "für die Übermittlung der Stellungnahmen an die Ursprungspartei bei Vorhaben, über die in der Schweiz eine kantonale Behörde entscheiden würde;"
+            },
+            {
+              "marke": "b",
+              "text": "die zuständige Behörde nach Artikel 5 Absatz 1, die in der Schweiz über das Vorhaben entscheiden würde, für die Wahrnehmung der übrigen Rechte und Pflichten; ist die zuständige Behörde nach Artikel 5 Absatz 1 eine kantonale Behörde, so können die Kantone eine andere Zuständigkeit festlegen."
             }
           ]
         },
@@ -182,7 +190,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_6_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "5ea2b7bcf6f174e8d9ac7548948730a0ab1f487a229800d6885c1347e57648c7"
+      "sha": "aae18b75fc2c9f9a70d63548cc8c07a45be7cbc7c03a32775cbe8c06f599236b"
     },
     {
       "id": "bund/UVPV/art_7",

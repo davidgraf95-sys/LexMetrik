@@ -68,7 +68,11 @@
             },
             {
               "marke": "d",
-              "text": "soweit ihre Tätigkeit dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG) untersteht: 1. Versicherungsunternehmen,"
+              "text": "soweit ihre Tätigkeit dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG) untersteht:"
+            },
+            {
+              "marke": "1",
+              "text": "Versicherungsunternehmen,"
             },
             {
               "marke": "2",
@@ -77,6 +81,10 @@
             {
               "marke": "3",
               "text": "Ombudsstellen;"
+            },
+            {
+              "marke": "e",
+              "text": "öffentlich-rechtliche Versicherungseinrichtungen nach Artikel 67 Absatz 1 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge."
             }
           ]
         }
@@ -85,7 +93,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "8468dbd0bc83f7d5be9c36d2ebba5c3f92ebb571d97cd1da0adae0a03245199e"
+      "sha": "5b02fe5b6d5adc6c4072770060d540587eac7ec4334b18e684481e5d10f8f321"
     },
     {
       "id": "bund/FIDLEG/art_3",
@@ -99,6 +107,54 @@
           "absatz": null,
           "text": "In diesem Gesetz gelten als:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Finanzinstrumente:"
+            },
+            {
+              "marke": "1",
+              "text": "Beteiligungspapiere:"
+            },
+            {
+              "marke": "–",
+              "text": "Effekten in Form von Aktien einschliesslich Aktien gleichzustellender Effekten, die Beteiligungs- oder Stimmrechte verleihen, wie Partizipations- oder Genussscheine"
+            },
+            {
+              "marke": "–",
+              "text": "Effekten, die bei Umwandlung oder Ausübung des darin verbrieften Rechts den Erwerb von Beteiligungspapieren nach Strich 1 ermöglichen, sobald sie zur Umwandlung angemeldet wurden,"
+            },
+            {
+              "marke": "2",
+              "text": "Forderungspapiere: Effekten, die nicht Beteiligungspapiere sind,"
+            },
+            {
+              "marke": "3",
+              "text": "Anteile an kollektiven Kapitalanlagen nach den Artikeln 7 und 119 des Kollektivanlagengesetzes vom 23. Juni 2006 (KAG),"
+            },
+            {
+              "marke": "4",
+              "text": "strukturierte Produkte, namentlich kapitalgeschützte Produkte, Produkte mit Maximalrendite und Zertifikate,"
+            },
+            {
+              "marke": "5",
+              "text": "Derivate nach Artikel 2 Buchstabe c des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG),"
+            },
+            {
+              "marke": "6",
+              "text": "Einlagen, deren Rückzahlungswert oder Zins risiko- oder kursabhängig ist, ausgenommen solche, deren Zins an einen Zinsindex gebunden ist,"
+            },
+            {
+              "marke": "7",
+              "text": "Anleihensobligationen: Anteile an einem Gesamtdarlehen mit einheitlichen Bedingungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Effekten: vereinheitlichte und zum massenweisen Handel geeignete Wertpapiere, Wertrechte, insbesondere einfache Wertrechte nach Artikel 973 c des Obligationenrechts (OR) und Registerwertrechte nach Artikel 973 d OR, sowie Derivate und Bucheffekten;"
+            },
+            {
+              "marke": "c",
+              "text": "Finanzdienstleistungen: die folgenden für Kundinnen und Kunden erbrachten Tätigkeiten:"
+            },
             {
               "marke": "1",
               "text": "der Erwerb oder die Veräusserung von Finanzinstrumenten,"
@@ -118,6 +174,30 @@
             {
               "marke": "5",
               "text": "die Gewährung von Krediten für die Durchführung von Geschäften mit Finanzinstrumenten;"
+            },
+            {
+              "marke": "d",
+              "text": "Finanzdienstleister: Personen, die gewerbsmässig Finanzdienstleistungen in der Schweiz oder für Kundinnen und Kunden in der Schweiz erbringen, wobei Gewerbsmässigkeit gegeben ist, wenn eine selbstständige, auf dauernden Erwerb ausgerichtete wirtschaftliche Tätigkeit vorliegt ;"
+            },
+            {
+              "marke": "e",
+              "text": "Kundenberaterinnen und -berater: natürliche Personen, die im Namen eines Finanzdienstleisters oder selbst als Finanzdienstleister Finanzdienstleistungen erbringen;"
+            },
+            {
+              "marke": "f",
+              "text": "Emittenten: Personen, die Effekten begeben oder zu begeben beabsichtigen;"
+            },
+            {
+              "marke": "g",
+              "text": "Angebot: jede Einladung zum Erwerb eines Finanzinstruments, die ausreichende Informationen über die Angebotsbedingungen und das Finanzinstrument selber enthält;"
+            },
+            {
+              "marke": "h",
+              "text": "öffentliches Angebot: an das Publikum gerichtetes Angebot;"
+            },
+            {
+              "marke": "i",
+              "text": "Ersteller: Personen, die ein Finanzinstrument erstellen oder Änderungen an einem bestehenden Finanzinstrument, einschliesslich Änderungen seines Risiko- und Renditeprofils oder der mit einer Anlage in das Finanzinstrument verbundenen Kosten, vornehmen."
             }
           ]
         }
@@ -126,7 +206,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "110e152c73d20db8b754b75a5740a69508cbd9dec910cba7abea6430a150702f"
+      "sha": "271325b95f6ce30ec687b53d2e162a380867345943956a142f186007c2c8f210"
     },
     {
       "id": "bund/FIDLEG/art_4",
@@ -1406,7 +1486,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "zum Emittenten und zum Garantie- und Sicherheitengeber, namentlich: 1. Verwaltungsrat, Geschäftsleitung, Revisionsstelle und weitere Organe,"
+              "text": "zum Emittenten und zum Garantie- und Sicherheitengeber, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Verwaltungsrat, Geschäftsleitung, Revisionsstelle und weitere Organe,"
             },
             {
               "marke": "2",
@@ -1419,6 +1503,14 @@
             {
               "marke": "4",
               "text": "wesentliche Perspektiven, Risiken und Streitigkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "zu den öffentlich angebotenen oder zum Handel auf einem Handelsplatz bestimmten Effekten: namentlich die damit verbundenen Rechte, Pflichten und Risiken für die Anlegerinnen und Anleger;"
+            },
+            {
+              "marke": "c",
+              "text": "zum Angebot: namentlich die Art der Platzierung und den geschätzten Nettoerlös der Emission."
             }
           ]
         },
@@ -1443,7 +1535,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_40",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "03a1d47470f7eed7667bae4fed9dcc5246ee6883b3c516d4e9ba7966b3d9ae40"
+      "sha": "8e3ac57542254504a9b628c0ddbfbb366271fed172625e8ee3f911bf12786f5f"
     },
     {
       "id": "bund/FIDLEG/art_41",
@@ -2440,7 +2532,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "diese Produkte angeboten werden durch: 1. Finanzintermediäre nach dem BankG, dem FINIG und dem KAG,"
+              "text": "diese Produkte angeboten werden durch:"
+            },
+            {
+              "marke": "1",
+              "text": "Finanzintermediäre nach dem BankG, dem FINIG und dem KAG,"
             },
             {
               "marke": "2",
@@ -2449,6 +2545,10 @@
             {
               "marke": "3",
               "text": "ein ausländisches Institut, das einer gleichwertigen Aufsicht untersteht; und"
+            },
+            {
+              "marke": "b",
+              "text": "eine Sicherung gewährleistet ist, die den Anforderungen nach Absatz 1 entspricht."
             }
           ]
         },
@@ -2461,7 +2561,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_70",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "009ce3968113751c6c3f44a8bbfde89b0207e7baafa328a9f47a7be52cef8d63"
+      "sha": "fa89211d87c0a98c203a82c3bb786e5ece43cd208c848ac92469fcd0e2d98081"
     },
     {
       "id": "bund/FIDLEG/art_71",

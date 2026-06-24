@@ -931,11 +931,23 @@
             },
             {
               "marke": "e",
-              "text": "Sie schaffen mit ihrem Vergütungssystem keine Anreize zur Missachtung der gesetzlichen Pflichten oder für schädigendes Verhalten gegenüber Kundinnen und Kunden. Sie gestalten es insbesondere so aus, dass: 1. variable Vergütungselemente die Qualität der Finanzdienstleistung den Kundinnen und Kunden gegenüber nicht beeinträchtigen;"
+              "text": "Sie schaffen mit ihrem Vergütungssystem keine Anreize zur Missachtung der gesetzlichen Pflichten oder für schädigendes Verhalten gegenüber Kundinnen und Kunden. Sie gestalten es insbesondere so aus, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "variable Vergütungselemente die Qualität der Finanzdienstleistung den Kundinnen und Kunden gegenüber nicht beeinträchtigen;"
             },
             {
               "marke": "2",
               "text": "keine gegenseitige direkte Beziehung unter den Vergütungen besteht, wenn zwischen den Tätigkeiten von Geschäftseinheiten ein Interessenkonflikt entstehen könnte."
+            },
+            {
+              "marke": "f",
+              "text": "Sie erlassen interne Weisungen, welche die Erkennung von Interessenkonflikten zwischen Kundinnen und Kunden und den Mitarbeiterinnen und Mitarbeitern ermöglichen und die Massnahmen enthalten, um solche Konflikte zu verhindern oder beizulegen. Sie überprüfen diese Weisungen regelmässig."
+            },
+            {
+              "marke": "g",
+              "text": "Sie erlassen Regeln für den Erwerb und die Veräusserung von Finanz­instrumenten auf eigene Rechnung durch Mitarbeiterinnen und Mitarbeiter."
             }
           ]
         }
@@ -944,7 +956,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/759/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20220101",
-      "sha": "de87158f706c37b28d565b6d7a3f956dd86525c5bf41ce5c47a129c27cbf6251"
+      "sha": "69e4770f99d606468b1932e8802680328c8000b6c3991a6e82f4ba646465d87b"
     },
     {
       "id": "bund/FIDLEV/art_26",
@@ -3310,11 +3322,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "jede rechtlich durchsetzbare Zusicherung eines beaufsichtigten Finanzintermediärs nach Artikel 70 Absatz 1 FIDLEG: 1. für die Leistungsverpflichtungen des Emittenten eines strukturierten Produkts einzustehen,"
+              "text": "jede rechtlich durchsetzbare Zusicherung eines beaufsichtigten Finanzintermediärs nach Artikel 70 Absatz 1 FIDLEG:"
+            },
+            {
+              "marke": "1",
+              "text": "für die Leistungsverpflichtungen des Emittenten eines strukturierten Produkts einzustehen,"
             },
             {
               "marke": "2",
               "text": "den Emittenten finanziell so auszustatten, dass dieser die Ansprüche der Anlegerinnen und Anleger befriedigen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bereitstellung einer rechtlich durchsetzbaren dinglichen Sicherheit zugunsten der Anlegerinnen und Anleger."
             }
           ]
         }
@@ -3323,7 +3343,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/759/de#art_96",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20220101",
-      "sha": "c98e8a9f20f4c84dffcbf03eaa5acbb2e729880c1a4fe291f2e10221b12652da"
+      "sha": "b19708ec3fdf801f3d6b898d964f11b16bf2ba79553832bcbaf39c3c23c58df4"
     },
     {
       "id": "bund/FIDLEV/art_97",

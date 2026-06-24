@@ -618,7 +618,11 @@
             },
             {
               "marke": "b",
-              "text": "dem Antrag eine Bestätigung der zuständigen Steuerbehörde des anspruchsberechtigten Wohnsitzstaates beiliegt, wonach: 1. diese von der Kapitalleistung Kenntnis genommen hat, und"
+              "text": "dem Antrag eine Bestätigung der zuständigen Steuerbehörde des anspruchsberechtigten Wohnsitzstaates beiliegt, wonach:"
+            },
+            {
+              "marke": "1",
+              "text": "diese von der Kapitalleistung Kenntnis genommen hat, und"
             },
             {
               "marke": "2",
@@ -631,7 +635,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/274/de#art_19",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250110",
-      "sha": "477e1f8601f7974bf73ad4c712a6230111f63c87d98d42c3907319f3542bade6"
+      "sha": "b6df930bed1f4ed2d57cc013c77c2c52584f7dca7f7bd4277185bbeb12e03f96"
     },
     {
       "id": "bund/QSTV/art_20",

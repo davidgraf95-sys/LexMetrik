@@ -1628,7 +1628,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Angebote an: 1. Fachkundiger individueller Begleitung von Lernenden in zweijährigen beruflichen Grundbildungen (Art. 18 Abs. 2),"
+              "text": "Angebote an:"
+            },
+            {
+              "marke": "1",
+              "text": "Fachkundiger individueller Begleitung von Lernenden in zweijährigen beruflichen Grundbildungen (Art. 18 Abs. 2),"
             },
             {
               "marke": "2",
@@ -1665,6 +1669,10 @@
             {
               "marke": "10",
               "text": "Qualifizierung der Berufs-, Studien- und Laufbahnberaterinnen und ‑berater (Art. 50);"
+            },
+            {
+              "marke": "b",
+              "text": "die Durchführung von Prüfungen und anderen Qualifikationsverfahren (Art. 40 Abs. 1) unter Vorbehalt von Artikel 52 Absatz 3 Buchstabe c."
             }
           ]
         }
@@ -1673,7 +1681,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/674/de#art_53",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "854e4cde1dbcbf7ba670917a2ed0fc996ebdab8cc1315b10818640a7c4b41778"
+      "sha": "b479b29f6c4e5c1224b9962deebb4c8cd100d648aa050612b0d6429692f613ea"
     },
     {
       "id": "bund/BBG/art_54",
@@ -1943,6 +1951,30 @@
           "text": "Die Bundesversammlung bewilligt jeweils mit einfachem Bundesbeschluss für eine mehrjährige Beitragsperiode:",
           "items": [
             {
+              "marke": "a",
+              "text": "den Zahlungsrahmen für die Pauschalbeiträge an die Kantone nach Artikel 53;"
+            },
+            {
+              "marke": "abis",
+              "text": "den Zahlungsrahmen für die Abgeltungen für die EHB nach Artikel 48 Absatz 2;"
+            },
+            {
+              "marke": "ater",
+              "text": "den Zahlungsrahmen für:"
+            },
+            {
+              "marke": "1",
+              "text": "die Beiträge nach Artikel 56 an die Durchführung eidgenössischer Berufsprüfungen und eidgenössischer höherer Fachprüfungen sowie an Bildungsgänge höherer Fachschulen,"
+            },
+            {
+              "marke": "2",
+              "text": "die Beiträge nach Artikel 56 a an Absolventinnen und Absolventen von vorbereitenden Kursen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Verpflichtungskredit für:"
+            },
+            {
               "marke": "1",
               "text": "die Beiträge nach Artikel 54 an Projekte zur Entwicklung der Berufsbildung und zur Qualitätsentwicklung,"
             },
@@ -1961,7 +1993,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/674/de#art_59",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250301",
-      "sha": "c19335f216c55c31db7d2862b46da37628b5b5c04ebfa2bad92a18788a103152"
+      "sha": "357fb628d277deb56a9434033933db3013c7f615209f25cad26066d3ad881195"
     },
     {
       "id": "bund/BBG/art_60",

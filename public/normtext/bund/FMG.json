@@ -2894,7 +2894,11 @@
             },
             {
               "marke": "b",
-              "text": "das Frequenzspektrum benutzt: 1. ohne die erforderliche Konzession,"
+              "text": "das Frequenzspektrum benutzt:"
+            },
+            {
+              "marke": "1",
+              "text": "ohne die erforderliche Konzession,"
             },
             {
               "marke": "2",
@@ -2907,6 +2911,26 @@
             {
               "marke": "4",
               "text": "im Widerspruch zu den Nutzungsvorschriften oder zur Konzession;"
+            },
+            {
+              "marke": "c",
+              "text": "Adressierungselemente, die auf nationaler Ebene verwaltet werden, in Betrieb nimmt, ohne dazu berechtigt zu sein;"
+            },
+            {
+              "marke": "d",
+              "text": "Fernmeldeanlagen, die den Vorschriften nicht entsprechen, importiert, anbietet, auf dem Markt bereitstellt oder in Betrieb nimmt;"
+            },
+            {
+              "marke": "e",
+              "text": "Fernmeldeanlagen, die den Vorschriften nicht entsprechen, erstellt oder betreibt;"
+            },
+            {
+              "marke": "f",
+              "text": "Fernmeldeanlagen an unbefugte Personen abgibt;"
+            },
+            {
+              "marke": "g",
+              "text": "Fernmeldeanlagen oder andere Vorrichtungen, die dazu bestimmt sind, den Fernmeldeverkehr oder den Rundfunk zu stören oder zu verhindern, herstellt, importiert, anbietet, auf dem Markt bereitstellt, besitzt, in Betrieb nimmt, erstellt oder betreibt."
             }
           ]
         },
@@ -2919,7 +2943,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_52",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260601",
-      "sha": "c1db1bc403b557a93126a6876294a7a5f24957601fc727e22392a5ed5395272c"
+      "sha": "0ebd6e48310080a5ff511c955c058bceb3db00e9713b710f78235b6027f0cf1c"
     },
     {
       "id": "bund/FMG/art_53",

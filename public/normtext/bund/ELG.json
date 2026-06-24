@@ -110,11 +110,23 @@
             },
             {
               "marke": "b",
-              "text": "Anspruch hätten auf eine Rente der AHV, wenn: 1. sie die Mindestbeitragsdauer nach Artikel 29 Absatz 1 AHVG erfüllen würden, oder"
+              "text": "Anspruch hätten auf eine Rente der AHV, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "sie die Mindestbeitragsdauer nach Artikel 29 Absatz 1 AHVG erfüllen würden, oder"
             },
             {
               "marke": "2",
               "text": "die verstorbene Person diese Mindestbeitragsdauer erfüllt hätte und die verwitwete Person das Referenzalter nach Artikel 21 AHVG noch nicht erreicht hat;"
+            },
+            {
+              "marke": "c",
+              "text": "Anspruch haben auf eine Rente oder eine Hilflosenentschädigung der Invalidenversicherung (IV) oder ununterbrochen während mindestens sechs Monaten ein Taggeld der IV beziehen; oder"
+            },
+            {
+              "marke": "d",
+              "text": "Anspruch hätten auf eine Rente der IV, wenn sie die Mindestbeitragsdauer nach Artikel 36 Absatz 1 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung erfüllen würden."
             }
           ]
         },
@@ -145,7 +157,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/804/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "9b88b76f08ded9b968c63ea51eed3025bf739ed210753910936da90fdd181841"
+      "sha": "57d5707c25265c098beec4d95b6a1fda83b564e0dafec8bd27fb57438916ac48"
     },
     {
       "id": "bund/ELG/art_5",
@@ -420,12 +432,40 @@
           "text": "Bei Personen, die nicht dauernd oder nicht länger als drei Monate in einem Heim oder Spital leben (zu Hause lebende Personen), werden als Ausgaben anerkannt:",
           "items": [
             {
+              "marke": "a",
+              "text": "als Betrag für den allgemeinen Lebensbedarf pro Jahr:"
+            },
+            {
+              "marke": "1",
+              "text": "bei alleinstehenden Personen: 20 670 Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Ehepaaren: 31 005 Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "bei rentenberechtigten Waisen und bei Kindern, die einen Anspruch auf eine Kinderrente der AHV oder IV begründen und das 11. Altersjahr vollendet haben: 10 815 Franken; dabei gelten für die ersten zwei Kinder der volle Betrag, für zwei weitere Kinder je zwei Drittel und für die übrigen Kinder je ein Drittel dieses Betrages,"
+            },
+            {
+              "marke": "4",
+              "text": "bei rentenberechtigten Waisen und bei Kindern, die einen Anspruch auf eine Kinderrente der AHV oder IV begründen und das 11. Altersjahr noch nicht vollendet haben: 7590 Franken; dabei gilt für das erste Kind der volle Betrag; für jedes weitere Kind reduziert er sich um einen Sechstel des vorangehenden Betrages; der Betrag für das fünfte Kind gilt auch für weitere Kinder;"
+            },
+            {
+              "marke": "b",
+              "text": "der Mietzins einer Wohnung und die damit zusammenhängenden Nebenkosten; wird eine Schlussabrechnung für die Nebenkosten erstellt, so ist weder eine Nach- noch eine Rückzahlung zu berücksichtigen; als jährlicher Höchstbetrag werden anerkannt:"
+            },
+            {
               "marke": "1",
               "text": "für eine allein lebende Person: 18 900 Franken in der Region 1, auf 18 300 Franken in der Region 2 und auf 16 680 Franken in der Region 3 ,"
             },
             {
               "marke": "2",
-              "text": "bei mehreren im gleichen Haushalt lebenden Personen: – für die zweite Person zusätzlich: 3420 Franken in der Region 1, 3420 Franken in der Region 2 und 3480 Franken in der Region 3"
+              "text": "bei mehreren im gleichen Haushalt lebenden Personen:"
+            },
+            {
+              "marke": "–",
+              "text": "für die zweite Person zusätzlich: 3420 Franken in der Region 1, 3420 Franken in der Region 2 und 3480 Franken in der Region 3"
             },
             {
               "marke": "–",
@@ -434,6 +474,14 @@
             {
               "marke": "–",
               "text": "für die vierte Person zusätzlich: 2280 Franken in der Region 1, 2160 Franken in der Region 2 und 1800 Franken in der Region 3 ,"
+            },
+            {
+              "marke": "3",
+              "text": "bei der notwendigen Miete einer rollstuhlgängigen Wohnung: zusätzlich 6900 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "anstelle des Mietzinses der Mietwert der Liegenschaft bei Personen, die eine Liegenschaft bewohnen, an der sie oder eine andere Person, die in die Berechnung der Ergänzungsleistung eingeschlossen ist, das Eigentum, die Nutzniessung oder ein Wohnrecht haben; Buchstabe b gilt sinngemäss."
             }
           ]
         },
@@ -520,7 +568,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/804/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "5e0216422af829d42d78379711b64d90b49b770ba1df561f1446ece360228e6c"
+      "sha": "5f1d4673a68599cc58aa94b8f061263a7c2d5962468aadbd8302cd3f0b22e7e2"
     },
     {
       "id": "bund/ELG/art_11",

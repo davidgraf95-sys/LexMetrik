@@ -335,7 +335,11 @@
             },
             {
               "marke": "c",
-              "text": "anderer gewichtiger persönlicher Umstände, namentlich wegen: 1. einer ausgeprägten Lern-, Lese- oder Schreibschwäche,"
+              "text": "anderer gewichtiger persönlicher Umstände, namentlich wegen:"
+            },
+            {
+              "marke": "1",
+              "text": "einer ausgeprägten Lern-, Lese- oder Schreibschwäche,"
             },
             {
               "marke": "2",
@@ -356,7 +360,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20190709",
-      "sha": "e7eb88bdbc90f8f79c7feecf0dbed465ebf4485e057fd83d5eed6caa647e262e"
+      "sha": "51e746b62821254835353626cc404970025da9f5ad4b5bb27bf28c7ee3042d75"
     },
     {
       "id": "bund/BUEV/art_10",

@@ -159,7 +159,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Minderjährige ab dem vollendeten 13. Altersjahr und junge Erwachsene bis zum vollendeten 25. Altersjahr, die: 1. von Invalidität bedroht sind,"
+              "text": "Minderjährige ab dem vollendeten 13. Altersjahr und junge Erwachsene bis zum vollendeten 25. Altersjahr, die:"
+            },
+            {
+              "marke": "1",
+              "text": "von Invalidität bedroht sind,"
             },
             {
               "marke": "2",
@@ -168,6 +172,10 @@
             {
               "marke": "3",
               "text": "von einer kantonalen Instanz nach Artikel 68 bis Absätze 1 bis und 1 ter betreut werden;"
+            },
+            {
+              "marke": "b",
+              "text": "arbeitsunfähige oder von einer länger dauernden Arbeitsunfähigkeit bedrohte Personen (Art. 6 ATSG)."
             }
           ]
         },
@@ -180,7 +188,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_3_a_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "f6658bc27056e0a364747f7b390d29298335f53e043eebaa387d4292179530d5"
+      "sha": "bbc0b7ae1141d7be5a0450a42381368987683414acfc130c13d94821ec3fe4b4"
     },
     {
       "id": "bund/IVG/art_3_b",
@@ -785,7 +793,11 @@
             },
             {
               "marke": "b",
-              "text": "während einer Erwerbstätigkeit im Ausland obligatorisch versichert ist: 1. nach Artikel 1 a Absatz 1 Buchstabe c AHVG,"
+              "text": "während einer Erwerbstätigkeit im Ausland obligatorisch versichert ist:"
+            },
+            {
+              "marke": "1",
+              "text": "nach Artikel 1 a Absatz 1 Buchstabe c AHVG,"
             },
             {
               "marke": "2",
@@ -816,7 +828,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "37fd506a4b71439a96e99eb522e329f0c9613d05afec49fa137913bc9fb92839"
+      "sha": "64ded2cec180ff1958f7e72a954372d8ed89b7da2f1cfc5229cee40a2a8f292c"
     },
     {
       "id": "bund/IVG/art_10",
@@ -1013,7 +1025,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Behandlungen und die dazugehörenden Untersuchungen, die ambulant oder stationär, sowie die Pflegeleistungen, die in einem Spital durchgeführt werden von: 1. Ärztinnen oder Ärzten,"
+              "text": "die Behandlungen und die dazugehörenden Untersuchungen, die ambulant oder stationär, sowie die Pflegeleistungen, die in einem Spital durchgeführt werden von:"
+            },
+            {
+              "marke": "1",
+              "text": "Ärztinnen oder Ärzten,"
             },
             {
               "marke": "2",
@@ -1022,6 +1038,30 @@
             {
               "marke": "3",
               "text": "Personen, die auf Anordnung oder im Auftrag einer Ärztin oder eines Arztes beziehungsweise einer Chiropraktorin oder eines Chiropraktors Leistungen erbringen;"
+            },
+            {
+              "marke": "b",
+              "text": "medizinische Pflegeleistungen, die ambulant erbracht werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die ärztlich oder unter den vom Bundesrat bestimmten Voraussetzungen von Chiropraktorinnen oder Chiropraktoren verordneten Analysen, Arzneimittel und der Untersuchung oder Behandlung dienenden Mittel und Gegenstände;"
+            },
+            {
+              "marke": "d",
+              "text": "die ärztlich durchgeführten oder angeordneten Massnahmen der medizinischen Rehabilitation;"
+            },
+            {
+              "marke": "e",
+              "text": "den Aufenthalt im Spital entsprechend dem Standard der allgemeinen Abteilung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Leistung der Apothekerinnen und Apotheker bei der Abgabe von nach Buchstabe c verordneten Arzneimitteln;"
+            },
+            {
+              "marke": "g",
+              "text": "die medizinisch notwendigen Transportkosten."
             }
           ]
         },
@@ -1042,7 +1082,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "24c4c994a603897a96c7b57c9e09f993677f22b66cb4af0c862b95528850ab50"
+      "sha": "09edd254c7ef7e088744a0aeeeee31449466656576259982ee56742c72997d7c"
     },
     {
       "id": "bund/IVG/art_14_bis",
@@ -1103,11 +1143,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "angewendet werden: 1. ausserhalb der durch das Schweizerische Heilmittelinstitut zugelassenen Fachinformation, oder"
+              "text": "angewendet werden:"
+            },
+            {
+              "marke": "1",
+              "text": "ausserhalb der durch das Schweizerische Heilmittelinstitut zugelassenen Fachinformation, oder"
             },
             {
               "marke": "2",
               "text": "ausserhalb des Indikationsbereichs, der in der Spezialitätenliste oder in der gestützt auf Absatz 5 erstellten Liste festgehalten ist;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Schweiz zugelassen sind, jedoch nicht in der Spezialitätenliste oder in der gestützt auf Absatz 5 erstellten Liste aufgenommen sind; oder"
+            },
+            {
+              "marke": "c",
+              "text": "in der Schweiz nicht zugelassen sind."
             }
           ]
         },
@@ -1124,7 +1176,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_14_ter",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "76a897c0eab24153aa490b862e343689306834ca643aa3e2d21a8b96a6214d52"
+      "sha": "322aa834776331a13a125765a0cfeea57d5891ea6f2b08494c81ca21481a10e7"
     },
     {
       "id": "bund/IVG/art_14_quater",
@@ -4426,7 +4478,11 @@
             },
             {
               "marke": "c",
-              "text": "die Auskünfte und Unterlagen dazu dienen: 1. die für die betroffene Person geeigneten Eingliederungsmassnahmen zu ermitteln, oder"
+              "text": "die Auskünfte und Unterlagen dazu dienen:"
+            },
+            {
+              "marke": "1",
+              "text": "die für die betroffene Person geeigneten Eingliederungsmassnahmen zu ermitteln, oder"
             },
             {
               "marke": "2",
@@ -4451,7 +4507,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_68_bis",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "10613393c0e109605e5c6f75aaff0a12f7cf76282f84f09f3ca6cca0f1aaaad6"
+      "sha": "ff60aa5d530165d77b476964d39d7deaf521ab8e32ae8598516b444316ed892d"
     },
     {
       "id": "bund/IVG/art_68_ter",

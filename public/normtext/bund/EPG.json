@@ -198,7 +198,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die ordentlichen Vollzugsorgane nicht in der Lage sind, den Ausbruch und die Verbreitung übertragbarer Krankheiten zu verhüten und zu bekämpfen, und eine der folgenden Gefahren besteht: 1. eine erhöhte Ansteckungs- und Ausbreitungsgefahr,"
+              "text": "die ordentlichen Vollzugsorgane nicht in der Lage sind, den Ausbruch und die Verbreitung übertragbarer Krankheiten zu verhüten und zu bekämpfen, und eine der folgenden Gefahren besteht:"
+            },
+            {
+              "marke": "1",
+              "text": "eine erhöhte Ansteckungs- und Ausbreitungsgefahr,"
             },
             {
               "marke": "2",
@@ -207,6 +211,10 @@
             {
               "marke": "3",
               "text": "schwerwiegende Auswirkungen auf die Wirtschaft oder auf andere Lebensbereiche;"
+            },
+            {
+              "marke": "b",
+              "text": "die Weltgesundheitsorganisation (WHO) festgestellt hat, dass eine gesundheitliche Notlage von internationaler Tragweite besteht und durch diese in der Schweiz eine Gefährdung der öffentlichen Gesundheit droht."
             }
           ]
         },
@@ -241,7 +249,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250801",
-      "sha": "6f19672e1a2072f97d4edeaa6f0ad6952b6943cd6d92f836d7d2588158df75c1"
+      "sha": "2a449dda022439794351123af062e15fb79b870485a74182b31d180d4b0e031c"
     },
     {
       "id": "bund/EPG/art_7",

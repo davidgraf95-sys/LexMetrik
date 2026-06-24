@@ -197,11 +197,59 @@
             },
             {
               "marke": "a",
-              "text": "wichtiges Arzneimittel für seltene Krankheiten (Orphan Drug): Humanarzneimittel, bei dem nachgewiesen ist, dass: 1. es der Erkennung, Verhütung oder Behandlung einer lebensbedrohenden oder chronisch invalidisierenden Erkrankung dient, von der zum Zeitpunkt der Gesuchseinreichung höchstens fünf von zehntausend Personen in der Schweiz betroffen sind, oder"
+              "text": "wichtiges Arzneimittel für seltene Krankheiten (Orphan Drug): Humanarzneimittel, bei dem nachgewiesen ist, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "es der Erkennung, Verhütung oder Behandlung einer lebensbedrohenden oder chronisch invalidisierenden Erkrankung dient, von der zum Zeitpunkt der Gesuchseinreichung höchstens fünf von zehntausend Personen in der Schweiz betroffen sind, oder"
             },
             {
               "marke": "2",
               "text": "ihm oder seinem Wirkstoff von einem anderen Land mit vergleichbarer Arzneimittelkontrolle im Sinne von Artikel 13 der Status als wichtiges Arzneimittel für seltene Krankheiten zuerkannt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "Medizinprodukte: Produkte, einschliesslich Instrumente, Apparate, Geräte, In-vitro-Diagnostika, Software, Implantate, Reagenzien, Materialien und andere Gegenstände oder Stoffe, die für die medizinische Verwendung bestimmt sind oder angepriesen werden und deren Hauptwirkung nicht durch ein Arzneimittel erreicht wird;"
+            },
+            {
+              "marke": "c",
+              "text": "Herstellen: sämtliche Arbeitsgänge der Heilmittelproduktion von der Beschaffung der Ausgangsmaterialien über die Verarbeitung bis zur Verpackung, Lagerung und Auslieferung des Endproduktes sowie die Qualitätskontrollen und die Freigaben;"
+            },
+            {
+              "marke": "d",
+              "text": "Inverkehrbringen: das Vertreiben und Abgeben von Heilmitteln;"
+            },
+            {
+              "marke": "e",
+              "text": "Vertreiben: die entgeltliche oder unentgeltliche Übertragung oder Überlassung eines Heilmittels, einschliesslich der Tätigkeiten der Mäklerinnen und Mäkler sowie der Agentinnen und Agenten, mit Ausnahme des Abgebens;"
+            },
+            {
+              "marke": "f",
+              "text": "Abgeben: die entgeltliche oder unentgeltliche Übertragung oder Überlassung eines verwendungsfertigen Heilmittels für die Verwendung durch den Erwerber oder die Erwerberin sowie für die Anwendung an Drittpersonen oder an Tieren;"
+            },
+            {
+              "marke": "fbis",
+              "text": "Verschreibung: protokollierter Entscheid einer berechtigten Medizinalperson, der gemäss Artikel 26 Absatz 2 für eine bestimmte Person ausgestellt ist und dieser Person ein Zugangsrecht zu medizinischen Leistungen wie Pflegeleistungen, Medikamenten, Analysen oder Medizinprodukten erteilt;"
+            },
+            {
+              "marke": "g",
+              "text": "Pharmakopöe (Pharmacopoea Europaea und Pharmacopoea Helvetica): eine Sammlung von Vorschriften über die Qualität von Arzneimitteln, pharmazeutischen Hilfsstoffen und einzelnen Medizinprodukten;"
+            },
+            {
+              "marke": "h",
+              "text": "neuer Wirkstoff : Wirkstoff, der in der Schweiz erstmals im Rahmen eines ordentlichen Verfahrens nach Artikel 11 zugelassen wird. Bisher nur in Humanarzneimitteln zugelassene Wirkstoffe gelten als neue Wirkstoffe, wenn sie in Tierarzneimitteln eingesetzt werden, und umgekehrt;"
+            },
+            {
+              "marke": "i",
+              "text": "ö ffentliche Apotheke: kantonal bewilligter Apothekenbetrieb, durch eine Apothekerin oder einen Apotheker geführt, der regelmässige Öffnungszeiten garantiert und einen direkten Zugang für die Öffentlichkeit anbietet;"
+            },
+            {
+              "marke": "j",
+              "text": "Spitalapotheke: Einrichtung in einem Spitalbetrieb, die von einer Apothekerin oder einem Apotheker geführt wird und namentlich pharmazeutische Dienstleistungen an die Kundschaft des Spitals anbietet; für die Herstellung von Radiopharmazeutika nach Artikel 9 Absatz 2 Buchstabe a und Absatz 2 bis gilt auch ein spitalinterner radiopharmazeutischer Betrieb als Spitalapotheke;"
+            },
+            {
+              "marke": "k",
+              "text": "Selbstdispensation: kantonal bewilligte Abgabe von Arzneimitteln innerhalb einer Arztpraxis beziehungsweise einer ambulanten Institution des Gesundheitswesens, deren Apotheke unter fachlicher Verantwortung einer Ärztin oder eines Arztes mit Berufsausübungsbewilligung steht."
             }
           ]
         },
@@ -218,7 +266,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "f7298a2b8841d5d59e32520d8bc61c673488915b3cbac97e5a5df9b23833bc3b"
+      "sha": "d0b167fd6dd2d956409ad925802c933ace2e0c7c23c1d881fa4bf6cd2b67f273"
     },
     {
       "id": "bund/HMG/art_5",
@@ -532,11 +580,23 @@
             },
             {
               "marke": "abis",
-              "text": "bei Komplementärarzneimitteln ohne Indikationsangabe jederzeit anhand einer Dokumentation: 1. nachweisen können, dass sie qualitativ hochstehend sind, und"
+              "text": "bei Komplementärarzneimitteln ohne Indikationsangabe jederzeit anhand einer Dokumentation:"
+            },
+            {
+              "marke": "1",
+              "text": "nachweisen können, dass sie qualitativ hochstehend sind, und"
             },
             {
               "marke": "2",
               "text": "glaubhaft machen können, dass vom betreffenden Arzneimittel keine Gefahr für die Sicherheit der Konsumentinnen und Konsumenten ausgeht;"
+            },
+            {
+              "marke": "b",
+              "text": "über eine Herstellungs-, Einfuhr- oder Grosshandelsbewilligung der zuständigen Behörde verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "Wohnsitz, Geschäftssitz oder eine Zweigniederlassung in der Schweiz begründet haben."
             }
           ]
         },
@@ -549,7 +609,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1534bd1776df96ae58c3f36696024dcbc211fc65e7b2081466723bb6faeb2fde"
+      "sha": "10490b9029961a30f20fd19fe2c2722315be9e93762cd5d00ca47c197f08c1b1"
     },
     {
       "id": "bund/HMG/art_11",
@@ -581,6 +641,38 @@
           "absatz": "2",
           "text": "Mit dem Gesuch um Zulassung folgender Arzneimittel sind zusätzlich folgende Angaben und Unterlagen einzureichen:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Arzneimittel mit Indikationsangabe:"
+            },
+            {
+              "marke": "1",
+              "text": "die Ergebnisse der physikalischen, chemischen, galenischen und biologischen oder mikrobiologischen Prüfungen,"
+            },
+            {
+              "marke": "2",
+              "text": "die Ergebnisse der pharmakologischen, toxikologischen und der klinischen Prüfungen, einschliesslich sämtlicher Ergebnisse aus Prüfungen in besonderen Bevölkerungsgruppen,"
+            },
+            {
+              "marke": "3",
+              "text": "die Heilwirkungen und die unerwünschten Wirkungen,"
+            },
+            {
+              "marke": "4",
+              "text": "die Kennzeichnung, die Arzneimittelinformation sowie die Abgabe- und die Anwendungsart,"
+            },
+            {
+              "marke": "5",
+              "text": "eine Bewertung der Risiken und soweit erforderlich ein Plan zu ihrer systematischen Erfassung, Abklärung und Prävention (Pharmacovigilance-Plan),"
+            },
+            {
+              "marke": "6",
+              "text": "das pädiatrische Prüfkonzept nach Artikel 54 a ;"
+            },
+            {
+              "marke": "b",
+              "text": "Arzneimittel für Tiere, die für die Lebensmittelproduktion gehalten werden:"
+            },
             {
               "marke": "1",
               "text": "die Angaben und Unterlagen nach Buchstabe a,"
@@ -622,7 +714,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_11",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "5fd9b42621e8eaedebcb0ec3cf26d3704677dac28f6c1fdedb78301105823aa5"
+      "sha": "261427d7bdf30f36698a0b3f443df108f365515e49b0797fc0a33a157c38d12f"
     },
     {
       "id": "bund/HMG/art_11_a",
@@ -826,6 +918,38 @@
           "text": "Das Gesuch um Zulassung im vereinfachten Verfahren muss für folgende Arzneimittel nachstehende Angaben und Unterlagen enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a bis :"
+            },
+            {
+              "marke": "1",
+              "text": "die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a Ziffern 1–4, wobei die Angaben nach Artikel 11 Absatz 2 Buchstabe a Ziffer 2 ersetzt werden können durch eine Zusammenstellung gleichwertigen wissenschaftlichen Erkenntnismaterials,"
+            },
+            {
+              "marke": "2",
+              "text": "der Nachweis der Zulassungen des ausländischen Vergleichspräparats;"
+            },
+            {
+              "marke": "b",
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a ter :"
+            },
+            {
+              "marke": "1",
+              "text": "die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a Ziffern 1, 3 und 4,"
+            },
+            {
+              "marke": "2",
+              "text": "eine Bewertung der Risiken,"
+            },
+            {
+              "marke": "3",
+              "text": "der Nachweis der 30- beziehungsweise 15-jährigen medizinischen Verwendung;"
+            },
+            {
+              "marke": "c",
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a quater :"
+            },
+            {
               "marke": "1",
               "text": "die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a Ziffern 1, 3 und 4,"
             },
@@ -836,6 +960,14 @@
             {
               "marke": "3",
               "text": "die kantonale Zulassung;"
+            },
+            {
+              "marke": "d",
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe b: die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a, wobei die Angaben nach Artikel 11 Absatz 2 Buchstabe a Ziffer 2 ersetzt werden können durch äquivalente Angaben gemäss den speziellen Therapierichtungen, insbesondere durch einen bibliografischen Nachweis von Wirksamkeit und Sicherheit oder durch Anwendungsbelege;"
+            },
+            {
+              "marke": "e",
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe c bis : die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a, wobei die Angaben nach Artikel 11 Absatz 2 Buchstabe a Ziffer 2 ersetzt werden können durch einen bibliografischen Nachweis von Wirksamkeit und Sicherheit oder durch Anwendungsbelege."
             }
           ]
         },
@@ -858,7 +990,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_14_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "4dc5c4eba99d2919ab46a80d244b5f012f93523023fc25ab2710133e551bd356"
+      "sha": "ac7c473c2804d4320de35bd5768ff28ac9d9e043143a427cea36d11a40e66a5e"
     },
     {
       "id": "bund/HMG/art_15",
@@ -1343,11 +1475,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "Apothekerinnen und Apotheker auf ärztliche Verschreibung. Sie dürfen solche Arzneimittel auch ohne ärztliche Verschreibung abgeben, wenn sie direkten Kontakt mit der betroffenen Person haben, die Abgabe dokumentieren und es sich um: 1. Arzneimittel und Indikationen handelt, die der Bundesrat bezeichnet hat, oder"
+              "text": "Apothekerinnen und Apotheker auf ärztliche Verschreibung. Sie dürfen solche Arzneimittel auch ohne ärztliche Verschreibung abgeben, wenn sie direkten Kontakt mit der betroffenen Person haben, die Abgabe dokumentieren und es sich um:"
+            },
+            {
+              "marke": "1",
+              "text": "Arzneimittel und Indikationen handelt, die der Bundesrat bezeichnet hat, oder"
             },
             {
               "marke": "2",
               "text": "einen begründeten Ausnahmefall handelt;"
+            },
+            {
+              "marke": "b",
+              "text": "weitere Medizinalpersonen entsprechend den Bestimmungen über die Selbstdispensation sowie unter Berücksichtigung von Artikel 1 Absatz 3 Buchstabe c;"
+            },
+            {
+              "marke": "c",
+              "text": "entsprechend ausgebildete Fachpersonen unter der Kontrolle von Personen nach den Buchstaben a und b."
             }
           ]
         },
@@ -1368,7 +1512,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_24",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "3940ee52c3382f836ef6a793f836f71f782fe6d1140cd2f30f8bcc7a9f24acfc"
+      "sha": "731f1fa6ff29d9b6ab31490432d43998acfd7b7e625a7887f0481d2403073944"
     },
     {
       "id": "bund/HMG/art_25",
@@ -2714,7 +2858,11 @@
             },
             {
               "marke": "b",
-              "text": "bei Medizinprodukten, ob: 1. die Medizinprodukte die Anforderungen nach Artikel 45 erfüllen, soweit die Erfüllung dieser Anforderungen nicht Gegenstand des klinischen Versuchs ist,"
+              "text": "bei Medizinprodukten, ob:"
+            },
+            {
+              "marke": "1",
+              "text": "die Medizinprodukte die Anforderungen nach Artikel 45 erfüllen, soweit die Erfüllung dieser Anforderungen nicht Gegenstand des klinischen Versuchs ist,"
             },
             {
               "marke": "2",
@@ -2747,7 +2895,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_54",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1a90c3c25a675f3e720c31b0c6f1154296c0fa1ad643d1e30e821cc4fb509391"
+      "sha": "bd24c833ce91b255c7caddce61ac184beb8dfa5a43985771b2f5e292f9f407a6"
     },
     {
       "id": "bund/HMG/art_54_a",
@@ -3114,6 +3262,30 @@
           "text": "Stellen des Bundes und der Kantone, regionale Zentren und mit Vollzugsaufgaben betraute Dritte können, soweit es zur Erfüllung ihrer Aufgaben nach diesem Gesetz erforderlich ist, folgende besonders schützenswerte Personendaten bearbeiten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Daten über die Gesundheit:"
+            },
+            {
+              "marke": "1",
+              "text": "zur behördlichen Marktüberwachung,"
+            },
+            {
+              "marke": "2",
+              "text": "zur Wahrnehmung der Vigilance im Rahmen eingehender Meldungen über unerwünschte Wirkungen und Vorkommnisse sowie über Qualitätsmängel,"
+            },
+            {
+              "marke": "3",
+              "text": "zur Überprüfung von klinischen Versuchen im Rahmen eingehender Meldungen und mittels Inspektionen, oder"
+            },
+            {
+              "marke": "4",
+              "text": "im Rahmen von Gesuchen für befristete Bewilligungen nach Artikel 9 b Absatz 1 sowie für Ausnahmebewilligungen für Medizinprodukte nach Artikel 46 Absatz 3 Buchstabe b;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten über administrative oder strafrechtliche Verfolgungen und Sanktionen:"
+            },
+            {
               "marke": "1",
               "text": "im Rahmen von Verfahren zur Erteilung von Betriebsbewilligungen, oder"
             },
@@ -3158,7 +3330,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_62_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "2aad477d5b2ceba2e404bcf3eea6e0035b01e0e505f1003eba1c79b8e0f769e5"
+      "sha": "1f14de8f18fca7c6e88f09c670a04034156a735ed42080ad999fd96f35b7bc74"
     },
     {
       "id": "bund/HMG/art_62_b",

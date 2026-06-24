@@ -192,11 +192,23 @@
             },
             {
               "marke": "i",
-              "text": "die Zinsen von Banken oder Konzerngesellschaften von Finanzgruppen für Fremdkapitalinstrumente nach Artikel 30 b Absatz 7 Buchstabe b BankG, die: 1. die FINMA im Hinblick auf die Erfüllung regulatorischer Erfordernisse genehmigt hat: – bei nicht systemrelevanten Banken oder bei Konzerngesellschaften von Finanzgruppen: im Zeitpunkt der Emission"
+              "text": "die Zinsen von Banken oder Konzerngesellschaften von Finanzgruppen für Fremdkapitalinstrumente nach Artikel 30 b Absatz 7 Buchstabe b BankG, die:"
+            },
+            {
+              "marke": "1",
+              "text": "die FINMA im Hinblick auf die Erfüllung regulatorischer Erfordernisse genehmigt hat:"
+            },
+            {
+              "marke": "–",
+              "text": "bei nicht systemrelevanten Banken oder bei Konzerngesellschaften von Finanzgruppen: im Zeitpunkt der Emission"
             },
             {
               "marke": "–",
               "text": "bei systemrelevanten Banken nach den Artikeln 7 Absatz 1 BankG: im Zeitpunkt der Emission oder bei einem Wechsel von einem ausländischen zu einem schweizerischen Emittenten, und"
+            },
+            {
+              "marke": "2",
+              "text": "zwischen dem 1. Januar 2017 und dem 31. Dezember 2026 ausgegeben werden oder deren Emittent während dieser Zeit nach Ziffer 1 wechselt."
             }
           ]
         },
@@ -243,7 +255,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/371_385_384/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "cb9c8f77a9fb5ea1d7c7982a6aa861d72deecc867836e8dbc360824115c8cc60"
+      "sha": "1897ea9ce63b6e44aa5dbc03442153f4b4b7e3593fcb8fdb511f021406ed7d73"
     },
     {
       "id": "bund/VSTG/art_6",

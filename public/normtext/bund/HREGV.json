@@ -922,7 +922,11 @@
             },
             {
               "marke": "b",
-              "text": "Sie reicht dem Handelsregisteramt die Unterschrift als Beleg ein: 1. auf Papier von einer Urkundsperson beglaubigt;"
+              "text": "Sie reicht dem Handelsregisteramt die Unterschrift als Beleg ein:"
+            },
+            {
+              "marke": "1",
+              "text": "auf Papier von einer Urkundsperson beglaubigt;"
             },
             {
               "marke": "2",
@@ -947,7 +951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "86b215031de2194cec5e4242d9835fc5b9a3eea23d54b48ca79cf9fcfa69afe6"
+      "sha": "581f37f6fb41af0fc87ec2efa9f8665efaafdf2934b6d10d6b6bf584896f2ca0"
     },
     {
       "id": "bund/HREGV/art_22",
@@ -999,7 +1003,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Statuten von: 1. Aktiengesellschaften,"
+              "text": "die Statuten von:"
+            },
+            {
+              "marke": "1",
+              "text": "Aktiengesellschaften,"
             },
             {
               "marke": "2",
@@ -1020,6 +1028,10 @@
             {
               "marke": "6",
               "text": "Investmentgesellschaften mit variablem Kapital;"
+            },
+            {
+              "marke": "b",
+              "text": "Stiftungsurkunden."
             }
           ]
         },
@@ -1032,7 +1044,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "7683c69af42622914e87563d4e234ca02940aa35438acfd768d41faf268c41af"
+      "sha": "d1b66ec3adaccc06a8b62defdd26e187a0d5e3bd896eeb0c0129a660c859a1ed"
     },
     {
       "id": "bund/HREGV/art_23",
@@ -2446,6 +2458,42 @@
           "text": "Mit der Anmeldung zur Eintragung einer nachträglichen Leistung von Einlagen auf das Aktienkapital müssen dem Handelsregisteramt folgende Belege eingereicht werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "die öffentliche Urkunde über die Beschlüsse des Verwaltungsrates;"
+            },
+            {
+              "marke": "b",
+              "text": "die angepassten Statuten;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Bareinlagen: eine Bescheinigung, aus der ersichtlich ist, bei welcher Bank die Einlagen hinterlegt sind, sofern die Bank in der öffentlichen Urkunde nicht genannt wird;"
+            },
+            {
+              "marke": "d",
+              "text": "bei einer Liberierung durch Umwandlung von frei verwendbarem Eigenkapital:"
+            },
+            {
+              "marke": "1",
+              "text": "ein Nachweis der Deckung des Erhöhungsbetrags nach Artikel 652 d Absatz 2 OR,"
+            },
+            {
+              "marke": "2",
+              "text": "der Beschluss der Generalversammlung, wonach das frei verwendbare Eigenkapital dem Verwaltungsrat zur Nachliberierung zur Verfügung gestellt wird,"
+            },
+            {
+              "marke": "3",
+              "text": "ein Bericht des Verwaltungsrates, der von einem Mitglied unterzeichnet ist,"
+            },
+            {
+              "marke": "4",
+              "text": "eine vorbehaltslose Prüfungsbestätigung eines staatlich beaufsichtigten Revisionsunternehmens, einer zugelassenen Revisionsexpertin, eines zugelassenen Revisionsexperten, einer zugelassenen Revisorin oder eines zugelassenen Revisors;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Sacheinlagen und bei Verrechnung:"
+            },
+            {
               "marke": "1",
               "text": "ein Bericht des Verwaltungsrates, der von einem Mitglied unterzeichnet ist,"
             },
@@ -2512,7 +2560,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_54",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "13ca9ce22cbe42ebd101ea2a1d6a20e209d6f2949f9ebb73a6b5987a67523692"
+      "sha": "fc8575f65c5662db4a7c4b7f681c14632072130f53b4a8ae0f93604fbc4141be"
     },
     {
       "id": "bund/HREGV/art_55",
@@ -4424,7 +4472,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Protokoll der Vereinsversammlung über: 1. die Annahme der Statuten,"
+              "text": "ein Protokoll der Vereinsversammlung über:"
+            },
+            {
+              "marke": "1",
+              "text": "die Annahme der Statuten,"
             },
             {
               "marke": "2",
@@ -4433,6 +4485,26 @@
             {
               "marke": "3",
               "text": "die Wahl der Revisionsstelle, sofern der Verein revisionspflichtig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die von einem Mitglied des Vorstandes unterzeichneten Statuten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Erklärung der Mitglieder des Vorstandes und gegebenenfalls der Revisionsstelle, dass sie die Wahl annehmen;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Bestellung zur Vertretung berechtigter Personen: der entsprechende Beschluss der Vereinsversammlung oder des Vorstandes;"
+            },
+            {
+              "marke": "e",
+              "text": "im Fall von Artikel 117 Absatz 3: die Erklärung der Domizilhalterin oder des Domizilhalters, dass sie oder er dem Verein ein Rechtsdomizil am Ort von dessen Sitz gewährt;"
+            },
+            {
+              "marke": "f",
+              "text": "falls die Statuten eine persönliche Haftung oder Nachschusspflicht der Mitglieder vorsehen: das Verzeichnis der Mitglieder."
             }
           ]
         },
@@ -4453,7 +4525,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_90_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1c51032743e3dac73e8ffa06e8f58631c60ed55478d90ff95240195295825d2e"
+      "sha": "74e6274e91ce4fd9c2b19e56fe8a1a49ea0ad76b9195ef3b905a0c8ccee8e47d"
     },
     {
       "id": "bund/HREGV/art_91",
@@ -4528,7 +4600,11 @@
             },
             {
               "marke": "k",
-              "text": "die nachstehenden Personen: 1. bei Vereinen nach Artikel 90 Absatz 1 Buchstaben a und b: die Mitglieder des Vorstands und die zur Vertretung berechtigten Personen,"
+              "text": "die nachstehenden Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Vereinen nach Artikel 90 Absatz 1 Buchstaben a und b: die Mitglieder des Vorstands und die zur Vertretung berechtigten Personen,"
             },
             {
               "marke": "2",
@@ -4537,6 +4613,14 @@
             {
               "marke": "3",
               "text": "bei anderen Vereinen: mindestens ein Mitglied des Vorstands und mindestens eine zur Vertretung berechtigte Person;"
+            },
+            {
+              "marke": "l",
+              "text": "…"
+            },
+            {
+              "marke": "m",
+              "text": "falls der Verein eine ordentliche oder eingeschränkte Revision durchführt: die Revisionsstelle."
             }
           ]
         }
@@ -4545,7 +4629,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_92",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "607d254e67cd411f32883080c1d4772acd066f4822ef40fe36d277667b3625c7"
+      "sha": "e249167fb55861096141ca9d3b04d5a189a03df2f67432b1df0d9b86389b7017"
     },
     {
       "id": "bund/HREGV/art_93",
@@ -4649,7 +4733,11 @@
             },
             {
               "marke": "e",
-              "text": "eines der folgenden Daten: 1. das Datum der Stiftungsurkunde,"
+              "text": "eines der folgenden Daten:"
+            },
+            {
+              "marke": "1",
+              "text": "das Datum der Stiftungsurkunde,"
             },
             {
               "marke": "2",
@@ -4658,6 +4746,46 @@
             {
               "marke": "3",
               "text": "bei kirchlichen Stiftungen, bei denen die Errichtung nicht mehr belegt werden kann: das im Protokoll oder im Protokollauszug nach Artikel 181 a erklärte Datum der Errichtung der Stiftung;"
+            },
+            {
+              "marke": "f",
+              "text": "der Zweck;"
+            },
+            {
+              "marke": "g",
+              "text": "bei einem Vorbehalt der Zweckänderung durch die Stifterin oder den Stifter: ein Verweis auf die nähere Umschreibung in der Stiftungsurkunde;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "die Mitglieder des obersten Stiftungsorgans;"
+            },
+            {
+              "marke": "j",
+              "text": "die zur Vertretung berechtigten Personen;"
+            },
+            {
+              "marke": "k",
+              "text": "falls die Stiftung einer Aufsicht untersteht: die Stiftungsaufsichtsbehörde, sobald sie ihre Tätigkeit aufgenommen hat;"
+            },
+            {
+              "marke": "l",
+              "text": "falls die Stiftung keine ordentliche oder eingeschränkte Revision durchführt: ein Hinweis darauf sowie das Datum des Beginns des Geschäftsjahres, ab welchem die Befreiung gilt;"
+            },
+            {
+              "marke": "m",
+              "text": "falls die Stiftung eine ordentliche oder eingeschränkte Revision durchführt: die Revisionsstelle;"
+            },
+            {
+              "marke": "n",
+              "text": "falls die Stiftung der Durchführung der beruflichen Vorsorge dient: die Aufsichtsbehörde gemäss Artikel 61 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters‑, Hinterlassenen- und Invalidenvorsorge;"
+            },
+            {
+              "marke": "o",
+              "text": "falls es sich um eine kirchliche Stiftung oder eine Familienstiftung handelt: ein Hinweis darauf."
             }
           ]
         },
@@ -4670,7 +4798,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_95",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "3e0890dce0bfd7fcc9c47f388504144196e9cc523bb0bbf300d40d8c837b41f4"
+      "sha": "09db019804970bbcc64893d29408bff85c6bb2939f49a58ccbdd94d3a0fd1fbd"
     },
     {
       "id": "bund/HREGV/art_96",
@@ -5753,6 +5881,30 @@
           "text": "Werden Rechtseinheiten als Inhaberinnen einer Funktion bei einer anderen Rechtseinheit eingetragen, so muss dieser Eintrag die folgenden Angaben enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "wenn die Funktionsinhaberin selbst im Handelsregister eingetragen ist:"
+            },
+            {
+              "marke": "1",
+              "text": "die Firma, den Namen oder die Bezeichnung in der im Handelsregister eingetragenen Fassung,"
+            },
+            {
+              "marke": "2",
+              "text": "die Unternehmens-Identifikationsnummer,"
+            },
+            {
+              "marke": "3",
+              "text": "den Sitz,"
+            },
+            {
+              "marke": "4",
+              "text": "die Funktion;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Funktionsinhaberin selbst nicht im Handelsregister eingetragen ist:"
+            },
+            {
               "marke": "1",
               "text": "den Namen oder die Bezeichnung,"
             },
@@ -5783,7 +5935,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_119",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "8697b645065cc32f1433132d1bc544cfdaf104f6764efeec4125cf44bdc72de7"
+      "sha": "12ed55465b5bdef3bdf2a30f7d6daa428849caee52ead8c5b23f1f01a21a977b"
     },
     {
       "id": "bund/HREGV/art_120",
@@ -7402,6 +7554,86 @@
           "text": "Folgende Angaben müssen ins Handelsregister eingetragen werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei Eröffnung des Konkurses über eine Rechtseinheit oder bei der Bestätigung der Konkurseröffnung:"
+            },
+            {
+              "marke": "1",
+              "text": "die Tatsache, dass der Konkurs eröffnet wurde und von welchem Gericht oder welcher Behörde,"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum und der Zeitpunkt des Konkurserkenntnisses,"
+            },
+            {
+              "marke": "3",
+              "text": "bei Personengesellschaften und juristischen Personen: die Firma beziehungsweise der Name mit dem Zusatz «in Liquidation» oder «in Liq.»;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Erteilung der aufschiebenden Wirkung für ein Rechtsmittel, bei Aufhebung der Konkurseröffnung oder Widerruf des Konkurses:"
+            },
+            {
+              "marke": "1",
+              "text": "die Tatsache, dass einem Rechtsmittel aufschiebende Wirkung erteilt beziehungsweise die Konkurseröffnung aufgehoben oder der Konkurs widerrufen wurde,"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum der Verfügung,"
+            },
+            {
+              "marke": "3",
+              "text": "bei Personengesellschaften und juristischen Personen: die Firma beziehungsweise der Name ohne den Zusatz «in Liquidation» oder «in Liq.»;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Einsetzung einer ausseramtlichen Konkursverwaltung:"
+            },
+            {
+              "marke": "1",
+              "text": "die Tatsache, dass eine ausseramtliche Konkursverwaltung eingesetzt wurde,"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum des Beschlusses,"
+            },
+            {
+              "marke": "3",
+              "text": "die Personenangaben zur ausseramtlichen Konkursverwaltung;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Einstellung des Konkursverfahrens mangels Aktiven:"
+            },
+            {
+              "marke": "1",
+              "text": "die Tatsache, dass der Konkurs mangels Aktiven eingestellt wurde,"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum der Einstellungsverfügung;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Wiederaufnahme des Konkursverfahrens:"
+            },
+            {
+              "marke": "1",
+              "text": "die Tatsache, dass das Konkursverfahren wiederaufgenommen wurde,"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum der Wiederaufnahmeverfügung,"
+            },
+            {
+              "marke": "3",
+              "text": "bei Personengesellschaften und juristischen Personen: die Firma beziehungsweise der Name mit dem Zusatz «in Liquidation» oder «in Liq.»;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Abschluss des Konkursverfahrens:"
+            },
+            {
               "marke": "1",
               "text": "die Tatsache, dass das Konkursverfahren abgeschlossen wurde,"
             },
@@ -7416,7 +7648,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_159",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "614bbf760c13126f66b0a89efa91d4fb11e236682a2d1fadeb9d872fec8de547"
+      "sha": "29eb36af21a31e2660ba6576d3b322d3a6b28e27f9adeaacac2156f35151d079"
     },
     {
       "id": "bund/HREGV/art_159_a",
@@ -7862,6 +8094,10 @@
           "text": "Alle Weisungen, Kreisschreiben und Mitteilungen des Eidgenössischen Justiz- und Polizeidepartements und des EHRA, die gestützt auf die Handelsregisterverordnung vom 7. Juni 1937 erlassen wurden, werden aufgehoben. Davon ausgenommen sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "–b. …"
+            },
+            {
               "marke": "c",
               "text": "die Richtlinien des EHRA vom 13. Januar 1998 für die kantonalen Handelsregisterämter über den Erwerb von Grundstücken durch Personen im Ausland;"
             },
@@ -7880,7 +8116,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_171",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "dd336a3236e1e3376d7b03e4d8f2ec90f53e37b4068e61ca8d1eeea2153d88ec"
+      "sha": "1cf05824d54ca476a37339c4e734cd35bc04ce1c01091ef688c58f5020a799cc"
     },
     {
       "id": "bund/HREGV/art_172",

@@ -92,12 +92,88 @@
           "text": "Im Sinne dieses Gesetzes bedeuten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Inland: das schweizerische Staatsgebiet mit den Zollanschlussgebieten nach Artikel 3 Absatz 2 des Zollgesetzes vom 18. März 2005 (ZG);"
+            },
+            {
+              "marke": "b",
+              "text": "Gegenstände: bewegliche und unbewegliche Sachen sowie Elektrizität, Gas, Wärme, Kälte und Ähnliches;"
+            },
+            {
+              "marke": "c",
+              "text": "Leistung: die Einräumung eines verbrauchsfähigen wirtschaftlichen Wertes an eine Drittperson in Erwartung eines Entgelts, auch wenn sie von Gesetzes wegen oder aufgrund behördlicher Anordnung erfolgt;"
+            },
+            {
+              "marke": "d",
+              "text": "Lieferung:"
+            },
+            {
+              "marke": "1",
+              "text": "Verschaffen der Befähigung, im eigenen Namen über einen Gegenstand wirtschaftlich zu verfügen,"
+            },
+            {
+              "marke": "2",
+              "text": "Abliefern eines Gegenstandes, an dem Arbeiten besorgt worden sind, auch wenn dieser Gegenstand dadurch nicht verändert, sondern bloss geprüft, geeicht, reguliert, in der Funktion kontrolliert oder in anderer Weise behandelt worden ist,"
+            },
+            {
+              "marke": "3",
+              "text": "Überlassen eines Gegenstandes zum Gebrauch oder zur Nutzung;"
+            },
+            {
+              "marke": "e",
+              "text": "Dienstleistung: jede Leistung, die keine Lieferung ist; eine Dienstleistung liegt auch vor, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "immaterielle Werte und Rechte überlassen werden,"
+            },
+            {
+              "marke": "2",
+              "text": "eine Handlung unterlassen oder eine Handlung beziehungsweise ein Zustand geduldet wird;"
+            },
+            {
+              "marke": "f",
+              "text": "Entgelt: Vermögenswert, den der Empfänger oder die Empfängerin oder an seiner oder ihrer Stelle eine Drittperson für den Erhalt einer Leistung aufwendet;"
+            },
+            {
+              "marke": "g",
+              "text": "hoheitliche Tätigkeit: Tätigkeit eines Gemeinwesens oder einer von einem Gemeinwesen eingesetzten Person oder Organisation, die nicht unternehmerischer Natur ist, namentlich nicht marktfähig ist und nicht im Wettbewerb mit Tätigkeiten privater Anbieter steht, selbst wenn für die Tätigkeit Gebühren, Beiträge oder sonstige Abgaben erhoben werden;"
+            },
+            {
+              "marke": "h",
+              "text": "eng verbundene Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Inhaber und Inhaberinnen von mindestens 20 Prozent des Stamm- oder Grundkapitals eines Unternehmens oder von einer entsprechenden Beteiligung an einer Personengesellschaft oder ihnen nahestehende Personen,"
+            },
+            {
+              "marke": "2",
+              "text": "Stiftungen und Vereine, zu denen eine besonders enge wirtschaftliche, vertragliche oder personelle Beziehung besteht; nicht als eng verbundene Personen gelten Vorsorgeeinrichtungen;"
+            },
+            {
+              "marke": "i",
+              "text": "Spende: freiwillige Zuwendung in der Absicht, den Empfänger oder die Empfängerin zu bereichern ohne Erwartung einer Gegenleistung im mehrwertsteuerlichen Sinne; eine Zuwendung gilt auch dann als Spende, wenn:"
+            },
+            {
               "marke": "1",
               "text": "die Zuwendung in einer Publikation in neutraler Form einmalig oder mehrmalig erwähnt wird, selbst wenn dabei die Firma oder das Logo des Spenders oder der Spenderin verwendet wird,"
             },
             {
               "marke": "2",
               "text": "es sich um Beiträge von Passivmitgliedern sowie von Gönnern und Gönnerinnen an Vereine oder an gemeinnützige Organisationen handelt; Beiträge von Gönnern und Gönnerinnen an gemeinnützige Organisationen gelten auch dann als Spende, wenn die gemeinnützige Organisation ihren Gönnern und Gönnerinnen freiwillig Vorteile im Rahmen des statutarischen Zwecks gewährt, sofern sie dem Gönner oder der Gönnerin mitteilt, dass kein Anspruch auf die Vorteile besteht;"
+            },
+            {
+              "marke": "j",
+              "text": "gemeinnützige Organisation: Organisation, die die Voraussetzungen erfüllt, welche gemäss Artikel 56 Buchstabe g DBG für die direkte Bundessteuer gelten;"
+            },
+            {
+              "marke": "k",
+              "text": "Rechnung: jedes Dokument, mit dem gegenüber einer Drittperson über das Entgelt für eine Leistung abgerechnet wird, gleichgültig, wie dieses Dokument im Geschäftsverkehr bezeichnet wird;"
+            },
+            {
+              "marke": "l",
+              "text": "elektronische Plattform: elektronische Schnittstelle, die online direkte Kontakte zwischen mehreren Personen ermöglicht mit dem Ziel, eine Lieferung oder eine Dienstleistung zu erbringen."
             }
           ]
         }
@@ -106,7 +182,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_3",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "41062bd9a29f8bdafb7f1889c452256b651f30f8c64113dc40b27b54fa66f7f0"
+      "sha": "1697416b8d9c62b9b8c193fcb1536911e24367b5a98e64ca92b167bfcc3452ef"
     },
     {
       "id": "bund/MWSTG/art_4",
@@ -346,7 +422,11 @@
             },
             {
               "marke": "b",
-              "text": "ein Unternehmen mit Sitz, Wohnsitz oder Betriebsstätte im Ausland betreibt, das im Inland, unabhängig vom Umsatz, ausschliesslich eine oder mehrere der folgenden Leistungsarten erbringt: 1. von der Steuer befreite Leistungen,"
+              "text": "ein Unternehmen mit Sitz, Wohnsitz oder Betriebsstätte im Ausland betreibt, das im Inland, unabhängig vom Umsatz, ausschliesslich eine oder mehrere der folgenden Leistungsarten erbringt:"
+            },
+            {
+              "marke": "1",
+              "text": "von der Steuer befreite Leistungen,"
             },
             {
               "marke": "1bis",
@@ -359,6 +439,14 @@
             {
               "marke": "3",
               "text": "Lieferung von Elektrizität in Leitungen, Gas über das Erdgasverteilnetz und Fernwärme an steuerpflichtige Personen im Inland;"
+            },
+            {
+              "marke": "c",
+              "text": "als nicht gewinnstrebiger, ehrenamtlich geführter Sport- oder Kulturverein oder als gemeinnützige Organisation innerhalb eines Jahres im In- und Ausland weniger als 250 000 Franken Umsatz aus Leistungen erzielt, die nicht nach Artikel 21 Absatz 2 von der Steuer ausgenommen sind;"
+            },
+            {
+              "marke": "d",
+              "text": "ein Unternehmen mit Sitz, Wohnsitz oder Betriebsstätte im Inland betreibt, das im Inland ausschliesslich von der Steuer ausgenommene Leistungen erbringt."
             }
           ]
         },
@@ -375,7 +463,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "c0594f28f5fe0ab5c27fca639c6ccf4fca9338775460adb12c463f96b1758fd0"
+      "sha": "0bd095b2eb534ac9eea3e052597072bb2dde2635f6d7c335c41c7e5c6bd74711"
     },
     {
       "id": "bund/MWSTG/art_11",
@@ -482,11 +570,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Unternehmen mit Sitz, Wohnsitz oder Betriebsstätte im Inland: 1. mit der Beendigung der unternehmerischen Tätigkeit,"
+              "text": "für Unternehmen mit Sitz, Wohnsitz oder Betriebsstätte im Inland:"
+            },
+            {
+              "marke": "1",
+              "text": "mit der Beendigung der unternehmerischen Tätigkeit,"
             },
             {
               "marke": "2",
               "text": "bei Vermögensliquidation: mit Abschluss des Liquidationsverfahrens;"
+            },
+            {
+              "marke": "b",
+              "text": "für alle anderen Unternehmen: am Schluss des Kalenderjahres, in dem letztmals eine Leistung im Inland erbracht wird."
             }
           ]
         },
@@ -507,7 +603,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "3ad4674b3112cea8e8502c00cd1379aa7cf264b535026d8303eb21c916e11d8b"
+      "sha": "4a20de3282bf6a1edd9122c323a0529fce38ceaba1d35ae729173fae8b750a42"
     },
     {
       "id": "bund/MWSTG/art_15",
@@ -831,6 +927,242 @@
           "text": "Von der Steuer ausgenommen sind:",
           "items": [
             {
+              "marke": "1",
+              "text": "die Beförderung von Briefen, die unter den reservierten Dienst nach Artikel 18 des Postgesetzes vom 17. Dezember 2010 fällt;"
+            },
+            {
+              "marke": "2",
+              "text": "die Spitalbehandlung und die ärztliche Heilbehandlung in Spitälern im Bereich der Humanmedizin einschliesslich der damit eng verbundenen Leistungen, die von Spitälern, Zentren für ärztliche Heilbehandlung und Diagnostik sowie Ambulatorien und Tageskliniken erbracht werden. Die Abgabe von selbst hergestellten oder zugekauften Prothesen und orthopädischen Apparaten gilt als steuerbare Lieferung;"
+            },
+            {
+              "marke": "3",
+              "text": "die von Ärzten und Ärztinnen, Zahnärzten und Zahnärztinnen, Psychotherapeuten und Psychotherapeutinnen, Chiropraktoren und Chiropraktorinnen, Physiotherapeuten und Physiotherapeutinnen, Naturärzten und Naturärztinnen, Entbindungspflegern und Hebammen, Pflegefachmännern und Pflegefachfrauen oder Angehörigen ähnlicher Heil- und Pflegeberufe erbrachten Heilbehandlungen im Bereich der Humanmedizin, soweit die Leistungserbringer und Leistungserbringerinnen über eine Berufsausübungsbewilligung verfügen; der Bundesrat bestimmt die Einzelheiten. Die Abgabe von selbst hergestellten oder zugekauften Prothesen und orthopädischen Apparaten gilt als steuerbare Lieferung;"
+            },
+            {
+              "marke": "3bis",
+              "text": "Leistungen der koordinierten Versorgung im Zusammenhang mit Heilbehandlungen;"
+            },
+            {
+              "marke": "4",
+              "text": "die von Krankenpflegepersonen, Organisationen der Krankenpflege und der Hilfe zu Hause (Spitex) oder in Heimen erbrachten Pflegeleistungen, sofern sie ärztlich verordnet sind;"
+            },
+            {
+              "marke": "5",
+              "text": "die Lieferung von menschlichen Organen durch medizinisch anerkannte Institutionen und Spitäler sowie von menschlichem Vollblut durch Inhaber und Inhaberinnen einer hiezu erforderlichen Bewilligung;"
+            },
+            {
+              "marke": "6",
+              "text": "die Dienstleistungen von Gemeinschaften, deren Mitglieder Angehörige der in Ziffer 3 aufgeführten Berufe sind, soweit diese Dienstleistungen anteilsmässig zu Selbstkosten an die Mitglieder für die unmittelbare Ausübung ihrer Tätigkeiten erbracht werden;"
+            },
+            {
+              "marke": "7",
+              "text": "die Beförderung von kranken oder verletzten Personen oder Personen mit Behinderungen in dafür besonders eingerichteten Transportmitteln;"
+            },
+            {
+              "marke": "8",
+              "text": "Leistungen von Einrichtungen der Sozialhilfe und der sozialen Sicherheit, von Organisationen der Krankenpflege und der Hilfe zu Hause (Spitex) und von Alters-, Wohn- und Pflegeheimen;"
+            },
+            {
+              "marke": "9",
+              "text": "die mit der Kinder- und Jugendbetreuung verbundenen Leistungen durch dafür eingerichtete Institutionen;"
+            },
+            {
+              "marke": "10",
+              "text": "die mit der Kultur- und Bildungsförderung von Jugendlichen eng verbundenen Leistungen von gemeinnützigen Jugendaustauschorganisationen; Jugendliche im Sinne dieser Bestimmung sind Personen bis zum vollendeten 25. Altersjahr;"
+            },
+            {
+              "marke": "11",
+              "text": "die folgenden Leistungen im Bereich der Erziehung und Bildung:"
+            },
+            {
+              "marke": "a",
+              "text": "die Leistungen im Bereich der Erziehung von Kindern und Jugendlichen, des Unterrichts, der Ausbildung, der Weiterbildung und der beruflichen Umschulung einschliesslich des von Privatlehrern und Privatlehrerinnen oder an Privatschulen erteilten Unterrichts,"
+            },
+            {
+              "marke": "b",
+              "text": "Kurse, Vorträge und andere Veranstaltungen wissenschaftlicher oder bildender Art; die Referententätigkeit ist von der Steuer ausgenommen, unabhängig davon, ob das Honorar der unterrichtenden Person oder ihrem Arbeitgeber ausgerichtet wird,"
+            },
+            {
+              "marke": "c",
+              "text": "im Bildungsbereich durchgeführte Prüfungen,"
+            },
+            {
+              "marke": "d",
+              "text": "Organisationsdienstleistungen (mit Einschluss der damit zusammenhängenden Nebenleistungen) der Mitglieder einer Einrichtung, die von der Steuer ausgenommene Leistungen nach den Buchstaben a–c erbringt, an diese Einrichtung,"
+            },
+            {
+              "marke": "e",
+              "text": "Organisationsdienstleistungen (mit Einschluss der damit zusammenhängenden Nebenleistungen) an Dienststellen von Bund, Kantonen und Gemeinden, die von der Steuer ausgenommene Leistungen nach den Buchstaben a–c entgeltlich oder unentgeltlich erbringen;"
+            },
+            {
+              "marke": "12",
+              "text": "das Zurverfügungstellen von Personal durch nichtgewinnstrebige Einrichtungen für Zwecke der Krankenbehandlung, der Sozialhilfe und der sozialen Sicherheit, der Kinder- und Jugendbetreuung, der Erziehung und Bildung sowie für kirchliche, karitative und gemeinnützige Zwecke;"
+            },
+            {
+              "marke": "13",
+              "text": "die Leistungen, die nichtgewinnstrebige Einrichtungen mit politischer, gewerkschaftlicher, wirtschaftlicher, religiöser, patriotischer, weltanschaulicher, philanthropischer, ökologischer, sportlicher, kultureller oder staatsbürgerlicher Zielsetzung ihren Mitgliedern gegen einen statutarisch festgesetzten Beitrag erbringen;"
+            },
+            {
+              "marke": "14",
+              "text": "dem Publikum unmittelbar erbrachte oder, sofern nicht unmittelbar erbracht, von diesem unmittelbar wahrnehmbare kulturelle Dienstleistungen der nachstehend aufgeführten Arten:"
+            },
+            {
+              "marke": "a",
+              "text": "Theater-, musikalische und choreographische Aufführungen sowie Filmvorführungen,"
+            },
+            {
+              "marke": "b",
+              "text": "Darbietungen von Schauspielern und Schauspielerinnen, Musikern und Musikerinnen, Tänzern und Tänzerinnen und anderen ausübenden Künstlern und Künstlerinnen, Leistungen von Personen, die an solchen Darbietungen künstlerisch mitwirken, sowie Leistungen von Schaustellern und Schaustellerinnen, einschliesslich der von diesen angebotenen Geschicklichkeitsspiele,"
+            },
+            {
+              "marke": "c",
+              "text": "Besuche von Museen, Galerien, Denkmälern, historischen Stätten sowie botanischen und zoologischen Gärten,"
+            },
+            {
+              "marke": "d",
+              "text": "Dienstleistungen von Bibliotheken, Archiven und Dokumentationsstellen, namentlich die Einsichtgewährung in Text-, Ton- und Bildträger in ihren Räumlichkeiten; steuerbar ist jedoch die Lieferung von Gegenständen (einschliesslich Gebrauchsüberlassung) solcher Institutionen;"
+            },
+            {
+              "marke": "14bis",
+              "text": "für die Zulassung zur Teilnahme an kulturellen Anlässen verlangte Entgelte (z. B. Einschreibegebühren) samt den darin eingeschlossenen Nebenleistungen;"
+            },
+            {
+              "marke": "15",
+              "text": "für sportliche Anlässe verlangte Entgelte einschliesslich derjenigen für die Zulassung zur Teilnahme an solchen Anlässen (z. B. Startgelder) samt den darin eingeschlossenen Nebenleistungen;"
+            },
+            {
+              "marke": "16",
+              "text": "kulturelle Dienstleistungen, die Lieferung von Werken kultureller Natur durch deren Urheber und Urheberinnen wie Schriftsteller und Schriftstellerinnen, Komponisten und Komponistinnen, Filmschaffende, Kunstmaler und Kunstmalerinnen, Bildhauer und Bildhauerinnen sowie Dienstleistungen, die von den Verlegern und Verlegerinnen und den Verwertungsgesellschaften zur Verbreitung dieser Werke erbracht werden; dies gilt auch für Werke zweiter Hand nach Artikel 3 des Urheberrechtsgesetzes vom 9. Oktober 1992, die kultureller Natur sind;"
+            },
+            {
+              "marke": "17",
+              "text": "die Leistungen bei Veranstaltungen wie Basaren, Flohmärkten und Tombolas von Einrichtungen, die von der Steuer ausgenommene Tätigkeiten auf dem Gebiet des nichtgewinnstrebigen Sports und Kulturschaffens, auf dem Gebiet der Krankenbehandlung, der Sozialhilfe und der sozialen Sicherheit und der Kinder- und Jugendbetreuung ausüben, sowie von gemeinnützigen Organisationen der Krankenpflege und der Hilfe zu Hause (Spitex) und von Alters-, Wohn- und Pflegeheimen, sofern die Veranstaltungen dazu bestimmt sind, diesen Einrichtungen eine finanzielle Unterstützung zu verschaffen, und ausschliesslich zu ihrem Nutzen durchgeführt werden; Leistungen von Einrichtungen der Sozialhilfe und der sozialen Sicherheit, die diese mittels Brockenhäusern ausschliesslich zu ihrem Nutzen erbringen;"
+            },
+            {
+              "marke": "18",
+              "text": "im Versicherungsbereich:"
+            },
+            {
+              "marke": "a",
+              "text": "Versicherungs- und Rückversicherungsleistungen,"
+            },
+            {
+              "marke": "b",
+              "text": "Sozialversicherungsleistungen,"
+            },
+            {
+              "marke": "c",
+              "text": "die folgenden Leistungen im Bereich der Sozialversicherungen und Prävention:"
+            },
+            {
+              "marke": "–",
+              "text": "Leistungen von Einrichtungen der Sozialversicherungen untereinander"
+            },
+            {
+              "marke": "–",
+              "text": "Leistungen von Durchführungsorganen aufgrund gesetzlich vorgeschriebener Präventionsaufgaben"
+            },
+            {
+              "marke": "–",
+              "text": "Leistungen, die der beruflichen Aus- und Weiterbildung dienen,"
+            },
+            {
+              "marke": "d",
+              "text": "Leistungen im Rahmen der Tätigkeit als Versicherungsvertreter oder Versicherungsvertreterin, als Versicherungsmakler oder Versicherungsmaklerin;"
+            },
+            {
+              "marke": "19",
+              "text": "die folgenden Umsätze im Bereich des Geld- und Kapitalverkehrs:"
+            },
+            {
+              "marke": "a",
+              "text": "die Gewährung und die Vermittlung von Krediten und die Verwaltung von Krediten durch die Kreditgeber und Kreditgeberinnen,"
+            },
+            {
+              "marke": "b",
+              "text": "die Vermittlung und die Übernahme von Verbindlichkeiten, Bürgschaften und anderen Sicherheiten und Garantien sowie die Verwaltung von Kreditsicherheiten durch die Kreditgeber und Kreditgeberinnen,"
+            },
+            {
+              "marke": "c",
+              "text": "die Umsätze, einschliesslich Vermittlung, im Einlagengeschäft und Kontokorrentverkehr, im Zahlungs- und Überweisungsverkehr, im Geschäft mit Geldforderungen, Checks und anderen Handelspapieren; steuerbar ist jedoch die Einziehung von Forderungen im Auftrag des Gläubigers (Inkassogeschäft),"
+            },
+            {
+              "marke": "d",
+              "text": "die Umsätze, einschliesslich Vermittlung, die sich auf gesetzliche Zahlungsmittel (in- und ausländische Valuten wie Devisen, Banknoten, Münzen) beziehen; steuerbar sind jedoch Sammlerstücke (Banknoten und Münzen), die normalerweise nicht als gesetzliches Zahlungsmittel verwendet werden,"
+            },
+            {
+              "marke": "e",
+              "text": "die Umsätze (Kassa- und Termingeschäfte), einschliesslich Vermittlung, von Wertpapieren, Wertrechten und Derivaten sowie von Anteilen an Gesellschaften und anderen Vereinigungen; steuerbar sind jedoch die Verwahrung und die Verwaltung von Wertpapieren, Wertrechten und Derivaten sowie von Anteilen (namentlich Depotgeschäft) einschliesslich Treuhandanlagen,"
+            },
+            {
+              "marke": "f",
+              "text": "dem Anbieten von Anteilen an kollektiven Kapitalanlagen gemäss Kollektivanlagengesetz vom 23. Juni 2006 (KAG) und die Verwaltung von kollektiven Kapitalanlagen nach dem KAG durch Personen, die diese verwalten oder aufbewahren, die Fondsleitungen, die Depotbanken und deren Beauftragte; als Beauftragte werden alle natürlichen oder juristischen Personen betrachtet, denen die kollektiven Kapitalanlagen nach dem KAG oder dem Finanzinstitutsgesetz vom 15. Juni 2018 Aufgaben delegieren können; das Anbieten von Anteilen und die Verwaltung von Investmentgesellschaften mit festem Kapital nach Artikel 110 KAG richtet sich nach Buchstabe e,"
+            },
+            {
+              "marke": "g",
+              "text": "das Anbieten von Anlagegruppen von Anlagestiftungen gemäss Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) und die Verwaltung von Anlagegruppen nach BVG durch Personen, die diese verwalten oder aufbewahren, die Depotbanken und deren Beauftragte; als Beauftragte gelten alle natürlichen oder juristischen Personen, denen die Anlagestiftungen Aufgaben delegieren können;"
+            },
+            {
+              "marke": "20",
+              "text": "die Übertragung und die Bestellung von dinglichen Rechten an Grundstücken sowie die Leistungen von Stockwerkeigentümergemeinschaften an die Stockwerkeigentümer und Stockwerkeigentümerinnen, soweit die Leistungen in der Überlassung des gemeinschaftlichen Eigentums zum Gebrauch, seinem Unterhalt, seiner Instandsetzung und sonstigen Verwaltung sowie der Lieferung von Wärme und ähnlichen Gegenständen bestehen;"
+            },
+            {
+              "marke": "21",
+              "text": "die Überlassung von Grundstücken und Grundstücksteilen zum Gebrauch oder zur Nutzung; steuerbar sind jedoch:"
+            },
+            {
+              "marke": "a",
+              "text": "die Vermietung von Wohn- und Schlafräumen zur Beherbergung von Gästen sowie die Vermietung von Sälen im Hotel- und Gastgewerbe,"
+            },
+            {
+              "marke": "b",
+              "text": "die Vermietung von Campingplätzen,"
+            },
+            {
+              "marke": "c",
+              "text": "die Vermietung von nicht im Gemeingebrauch stehenden Plätzen für das Abstellen von Fahrzeugen, ausser es handle sich um eine unselbstständige Nebenleistung zu einer von der Steuer ausgenommenen Immobilienvermietung,"
+            },
+            {
+              "marke": "d",
+              "text": "die Vermietung und Verpachtung von fest eingebauten Vorrichtungen und Maschinen, die zu einer Betriebsanlage, nicht jedoch zu einer Sportanlage gehören,"
+            },
+            {
+              "marke": "e",
+              "text": "die Vermietung von Schliessfächern,"
+            },
+            {
+              "marke": "f",
+              "text": "die Vermietung von Messestandflächen und einzelner Räume in Messe- und Kongressgebäuden;"
+            },
+            {
+              "marke": "22",
+              "text": "die Lieferung von im Inland gültigen Postwertzeichen und sonstigen amtlichen Wertzeichen höchstens zum aufgedruckten Wert;"
+            },
+            {
+              "marke": "23",
+              "text": "die Umsätze bei Geldspielen, soweit die Bruttospielerträge der Spielbankenabgabe nach Artikel 119 des Geldspielgesetzes vom 29. September 2017 unterliegen oder der damit erzielte Reingewinn vollumfänglich für gemeinnützige Zwecke im Sinne von Artikel 125 des genannten Gesetzes verwendet wird;"
+            },
+            {
+              "marke": "24",
+              "text": "die Lieferung gebrauchter beweglicher Gegenstände, die ausschliesslich zur Erbringung von nach diesem Artikel von der Steuer ausgenommenen Leistungen verwendet wurden;"
+            },
+            {
+              "marke": "25",
+              "text": "…"
+            },
+            {
+              "marke": "26",
+              "text": "die Veräusserung von im eigenen Betrieb gewonnenen Erzeugnissen der Landwirtschaft, der Forstwirtschaft sowie der Gärtnerei durch Landwirte und Landwirtinnen, Forstwirte und Forstwirtinnen oder Gärtner und Gärtnerinnen sowie der Verkauf von Vieh durch Viehhändler und Viehhändlerinnen und der Verkauf von Milch durch Milchsammelstellen an milchverarbeitende Betriebe;"
+            },
+            {
+              "marke": "27",
+              "text": "Bekanntmachungsleistungen, die gemeinnützige Organisationen zugunsten Dritter oder Dritte zugunsten gemeinnütziger Organisationen erbringen;"
+            },
+            {
+              "marke": "28",
+              "text": "Leistungen:"
+            },
+            {
               "marke": "a",
               "text": "zwischen den Organisationseinheiten des gleichen Gemeinwesens,"
             },
@@ -841,6 +1173,22 @@
             {
               "marke": "c",
               "text": "zwischen Anstalten oder Stiftungen, deren Gründer oder Träger ausschliesslich Gemeinwesen sind, und diesen Gemeinwesen und deren Organisationseinheiten;"
+            },
+            {
+              "marke": "28bis",
+              "text": "das Zurverfügungstellen von Personal durch Gemeinwesen an andere Gemeinwesen;"
+            },
+            {
+              "marke": "29",
+              "text": "die Ausübung von Funktionen der Schiedsgerichtsbarkeit;"
+            },
+            {
+              "marke": "30",
+              "text": "Leistungen zwischen Bildungs- und Forschungsinstitutionen, die an einer Bildungs- und Forschungskooperation beteiligt sind, sofern sie im Rahmen der Kooperation erfolgen, unabhängig davon, ob die Bildungs- und Forschungskooperation als Mehrwertsteuersubjekt auftritt;"
+            },
+            {
+              "marke": "31",
+              "text": "die durch Reisebüros weiterverkauften Reiseleistungen und die damit zusammenhängenden Dienstleistungen der Reisebüros."
             }
           ]
         },
@@ -869,7 +1217,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_21",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "63453c350846d18a55d30c6be59ca9e3389d1a65c37a55562caa57607e205e90"
+      "sha": "b5604d4f62d45dcd55b11d7f64154a68991d1a568c496e3398b1846dcf4809e6"
     },
     {
       "id": "bund/MWSTG/art_22",
@@ -921,16 +1269,96 @@
           "text": "Von der Steuer sind befreit:",
           "items": [
             {
+              "marke": "1",
+              "text": "die Lieferung von Gegenständen mit Ausnahme der Überlassung zum Gebrauch oder zur Nutzung, die direkt ins Ausland befördert oder versendet werden;"
+            },
+            {
+              "marke": "2",
+              "text": "die Überlassung zum Gebrauch oder zur Nutzung, namentlich die Vermietung und Vercharterung, von Gegenständen, sofern die Gegenstände vom Lieferungsempfänger oder von der Lieferungsempfängerin selbst überwiegend im Ausland genutzt werden;"
+            },
+            {
+              "marke": "3",
+              "text": "die Lieferung von Gegenständen, die im Rahmen eines Transitverfahrens (Art. 49 ZG ), Zolllagerverfahrens (Art. 50–57 ZG), Zollverfahrens der vorübergehenden Verwendung (Art. 58 ZG) oder der aktiven Veredelung (Art. 59 ZG) nachweislich im Inland unter Zollüberwachung standen, sofern das Verfahren ordnungsgemäss oder mit nachträglicher Bewilligung des Bundesamtes für Zoll und Grenzsicherheit (BAZG) abgeschlossen wurde;"
+            },
+            {
+              "marke": "3bis",
+              "text": "die Lieferung von Gegenständen, die wegen Einlagerung in einem Zollfreilager (Art. 62–66 ZG) nachweislich im Inland unter Zollüberwachung standen und diesen Zollstatus nicht rückwirkend verloren haben;"
+            },
+            {
+              "marke": "4",
+              "text": "das Verbringen oder Verbringenlassen von Gegenständen ins Ausland, das nicht im Zusammenhang mit einer Lieferung steht;"
+            },
+            {
+              "marke": "5",
+              "text": "das mit der Einfuhr von Gegenständen im Zusammenhang stehende Befördern oder Versenden von Gegenständen und alle damit zusammenhängenden Leistungen bis zum Bestimmungsort, an den die Gegenstände im Zeitpunkt der Entstehung der Steuerschuld nach Artikel 56 zu befördern sind; entsteht keine Steuerschuld, so gilt für den massgebenden Zeitpunkt Artikel 69 ZG sinngemäss;"
+            },
+            {
+              "marke": "6",
+              "text": "das mit der Ausfuhr von Gegenständen des zollrechtlich freien Verkehrs im Zusammenhang stehende Befördern oder Versenden von Gegenständen und alle damit zusammenhängenden Leistungen;"
+            },
+            {
+              "marke": "7",
+              "text": "Beförderungsleistungen und Nebentätigkeiten des Logistikgewerbes wie Beladen, Entladen, Umschlagen, Abfertigen oder Zwischenlagern:"
+            },
+            {
+              "marke": "a",
+              "text": "bei denen der Ort der Dienstleistung nach Artikel 8 Absatz 1 im Inland liegt, die Dienstleistung selbst aber ausschliesslich im Ausland ausgeführt wird, oder"
+            },
+            {
+              "marke": "b",
+              "text": "die im Zusammenhang mit Gegenständen unter Zollüberwachung erbracht werden;"
+            },
+            {
+              "marke": "8",
+              "text": "die Lieferung von Luftfahrzeugen an Luftverkehrsunternehmen, die gewerbsmässige Luftfahrt im Beförderungs- oder Charterverkehr betreiben und deren Umsätze aus internationalen Flügen jene aus dem Binnenluftverkehr übertreffen; Umbauten, Instandsetzungen und Wartungen an Luftfahrzeugen, die solche Luftverkehrsunternehmen im Rahmen einer Lieferung erworben haben; Lieferungen, Instandsetzungen und Wartungen der in diese Luftfahrzeuge eingebauten Gegenstände oder der Gegenstände für ihren Betrieb; Lieferungen von Gegenständen zur Versorgung dieser Luftfahrzeuge sowie Dienstleistungen, die für den unmittelbaren Bedarf dieser Luftfahrzeuge und ihrer Ladungen bestimmt sind;"
+            },
+            {
+              "marke": "9",
+              "text": "die Dienstleistungen von ausdrücklich in fremdem Namen und für fremde Rechnung handelnden Vermittlern und Vermittlerinnen, wenn die vermittelte Leistung entweder nach diesem Artikel von der Steuer befreit ist oder ausschliesslich im Ausland bewirkt wird; wird die vermittelte Leistung sowohl im Inland als auch im Ausland bewirkt, so ist nur der Teil der Vermittlung von der Steuer befreit, der auf Leistungen im Ausland oder auf Leistungen, die nach diesem Artikel von der Steuer befreit sind, entfällt;"
+            },
+            {
+              "marke": "10",
+              "text": "in eigenem Namen erbrachte Dienstleistungen von Reisebüros und Organisatoren von Veranstaltungen, soweit sie Lieferungen und Dienstleistungen Dritter in Anspruch nehmen, die von diesen im Ausland bewirkt werden; werden diese Leistungen Dritter sowohl im Inland als auch im Ausland erbracht, so ist nur der Teil der Dienstleistung des Reisebüros oder des Organisators von der Steuer befreit, der auf Leistungen im Ausland entfällt;"
+            },
+            {
+              "marke": "11",
+              "text": "die Lieferung von Gegenständen nach Artikel 17 Absatz 1 bis ZG an ins Ausland abfliegende oder aus dem Ausland ankommende Reisende;"
+            },
+            {
+              "marke": "12",
+              "text": "die Umsätze, die mit Gold und Legierungen von Gold der folgenden Form erzielt werden:"
+            },
+            {
               "marke": "a",
               "text": "staatlich geprägte Goldmünzen der Zolltarifnummern 7118.9010, 9705.3100 und 9705.3900 ,"
             },
             {
               "marke": "b",
-              "text": "Gold zu Anlagezwecken mit einem Mindestfeingehalt von 995 Tausendsteln, in Form von: – gegossenen Barren, versehen mit der Angabe des Feingehalts und dem Stempelzeichen eines anerkannten Prüfer-Schmelzers oder"
+              "text": "Gold zu Anlagezwecken mit einem Mindestfeingehalt von 995 Tausendsteln, in Form von:"
+            },
+            {
+              "marke": "–",
+              "text": "gegossenen Barren, versehen mit der Angabe des Feingehalts und dem Stempelzeichen eines anerkannten Prüfer-Schmelzers oder"
             },
             {
               "marke": "–",
               "text": "gestanzten Plättchen, versehen mit der Angabe des Feingehalts und dem Stempelzeichen eines anerkannten Prüfer-Schmelzers oder einer in der Schweiz registrierten Verantwortlichkeitsmarke,"
+            },
+            {
+              "marke": "c",
+              "text": "Gold in Form von Granalien mit einem Mindestfeingehalt von 995 Tausendsteln, die von einem anerkannten Prüfer-Schmelzer verpackt und versiegelt wurden,"
+            },
+            {
+              "marke": "d",
+              "text": "Gold in Rohform oder in Form von Halbzeug, das zur Raffination oder Rückgewinnung bestimmt ist, sowie Gold in Form von Abfällen und Schrott,"
+            },
+            {
+              "marke": "e",
+              "text": "Legierungen von Gold nach Buchstabe d, sofern sie zwei oder mehr Gewichtsprozent Gold oder, wenn Platin enthaltend, mehr Gold als Platin aufweisen;"
+            },
+            {
+              "marke": "13",
+              "text": "die Lieferung von Gegenständen durch einen Verkäufer oder eine Verkäuferin, die mit Hilfe einer elektronischen Plattform ermöglicht wird, sofern die Person, die die Lieferung ermöglicht hat, nach Artikel 20 a als Leistungserbringerin gilt und im Register der steuerpflichtigen Personen eingetragen ist."
             }
           ]
         },
@@ -951,7 +1379,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_23",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "743ccb5ab250b1286e5a0b03b066dc0fa29ef0553aacb7e678edefca2f0bf71b"
+      "sha": "efa5cdb4ec0904a768803fa68478a41f910eceed84a7581d6cb641f8689eb819"
     },
     {
       "id": "bund/MWSTG/art_24",
@@ -1067,7 +1495,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf der Lieferung folgender Gegenstände: 1. Wasser in Leitungen,"
+              "text": "auf der Lieferung folgender Gegenstände:"
+            },
+            {
+              "marke": "1",
+              "text": "Wasser in Leitungen,"
             },
             {
               "marke": "2",
@@ -1104,6 +1536,22 @@
             {
               "marke": "10",
               "text": "Produkte für die Monatshygiene;"
+            },
+            {
+              "marke": "abis",
+              "text": "auf elektronische Zeitungen, Zeitschriften und Bücher ohne Reklamecharakter der vom Bundesrat zu bestimmenden Arten;"
+            },
+            {
+              "marke": "b",
+              "text": "auf den Dienstleistungen der Radio- und Fernsehgesellschaften, mit Ausnahme der Dienstleistungen mit gewerblichem Charakter;"
+            },
+            {
+              "marke": "c",
+              "text": "auf den Leistungen nach Artikel 21 Absatz 2 Ziffern 14–16;"
+            },
+            {
+              "marke": "d",
+              "text": "auf den Leistungen im Bereich der Landwirtschaft, die in einer mit der Urproduktion in unmittelbarem Zusammenhang stehenden Bearbeitung des Bodens oder Bearbeitung von mit dem Boden verbundenen Erzeugnissen der Urproduktion bestehen."
             }
           ]
         },
@@ -1124,7 +1572,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "7058fb1fa7722ad6545c308a510b580e2518d688ce8fa76a7562d426a3c896c6"
+      "sha": "629e5916bbcd939855190d72a8202afce8bf88aee298596ab8af2b458aa20cd5"
     },
     {
       "id": "bund/MWSTG/art_26",
@@ -2407,11 +2855,27 @@
             },
             {
               "marke": "c",
-              "text": "bedingt veranlagte Gegenstände (Art. 49, 51 Abs. 2 Bst. b, 58 und 59 ZG) unter Abschluss des Zollverfahrens: 1. wieder ausgeführt werden, oder"
+              "text": "bedingt veranlagte Gegenstände (Art. 49, 51 Abs. 2 Bst. b, 58 und 59 ZG) unter Abschluss des Zollverfahrens:"
+            },
+            {
+              "marke": "1",
+              "text": "wieder ausgeführt werden, oder"
             },
             {
               "marke": "2",
               "text": "in ein anderes Zollverfahren übergeführt werden (Art. 47 ZG);"
+            },
+            {
+              "marke": "cbis",
+              "text": "bei bedingt veranlagten Gegenständen der Importeur oder die Importeurin im Zeitpunkt der Annahme der Zollanmeldung im Inland als steuerpflichtige Person eingetragen war;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "die Gegenstände periodisch zum Zollveranlagungsverfahren anzumelden sind (Art. 42 Abs. 1 Bst. c ZG) oder aufgrund eines vereinfachten Zollveranlagungsverfahrens nachträglich veranlagt werden (Art. 42 Abs. 2 ZG) und der Importeur oder die Importeurin im Zeitpunkt der Einfuhr im Inland als steuerpflichtige Person eingetragen war."
             }
           ]
         }
@@ -2420,7 +2884,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_58",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "c7fc8344276a66b90ce8d672e4c9683296cc2c8fba08a016296feb2322836d4b"
+      "sha": "a85822ca3ff4724ec53ef774d0af5f90e0908468c274acd3e1eb62d69ad5dea2"
     },
     {
       "id": "bund/MWSTG/art_59",
@@ -4541,7 +5005,11 @@
             },
             {
               "marke": "b",
-              "text": "im Bereich der Inland- und der Bezugsteuer: 1. bei Übertretungen nach Artikel 96 Absätze 1–3: sechs Monate nach Eintritt der Rechtskraft der entsprechenden Steuerforderung,"
+              "text": "im Bereich der Inland- und der Bezugsteuer:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Übertretungen nach Artikel 96 Absätze 1–3: sechs Monate nach Eintritt der Rechtskraft der entsprechenden Steuerforderung,"
             },
             {
               "marke": "2",
@@ -4550,6 +5018,14 @@
             {
               "marke": "3",
               "text": "bei Vergehen nach Artikel 97 Absatz 2 sowie bei Vergehen nach den Artikeln 14–17 VStrR: sieben Jahre nach Ablauf der betreffenden Steuerperiode;"
+            },
+            {
+              "marke": "c",
+              "text": "im Bereich der Einfuhrsteuer: für alle Vergehen und Übertretungen nach den Artikeln 96, 97 Absatz 2 und 99 sowie bei Vergehen nach den Artikeln 14–17 VStrR: in sieben Jahren;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
             }
           ]
         },
@@ -4580,7 +5056,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/615/de#art_105",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250331",
-      "sha": "b60fe6a563eafce7c56391f888d9416e166e8f4aacbd1b17959dd582a64ababd"
+      "sha": "9de9be508964a2a7b4cd56b24cbe3994ca759447148d9b05e9fee2f9468c2f10"
     },
     {
       "id": "bund/MWSTG/art_106",

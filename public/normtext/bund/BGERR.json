@@ -815,7 +815,11 @@
             },
             {
               "marke": "b",
-              "text": "raumbezogene Materien, namentlich: 1. Raumplanung und Baurecht,"
+              "text": "raumbezogene Materien, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Raumplanung und Baurecht,"
             },
             {
               "marke": "2",
@@ -836,6 +840,30 @@
             {
               "marke": "6",
               "text": "Wanderwege;"
+            },
+            {
+              "marke": "c",
+              "text": "politische Rechte;"
+            },
+            {
+              "marke": "d",
+              "text": "internationale Rechtshilfe in Strafsachen;"
+            },
+            {
+              "marke": "e",
+              "text": "Strassenverkehr;"
+            },
+            {
+              "marke": "f",
+              "text": "Bürgerrecht;"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            },
+            {
+              "marke": "h",
+              "text": "Personal im öffentlichen Dienst."
             }
           ]
         },
@@ -886,7 +914,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_29",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260201",
-      "sha": "d49d65e8299e2cf6b98ca60f3cbc3d37d295a11ba196fa0a4e7169cb13a7faba"
+      "sha": "661ebead2b49168dfb38876b4ba8292a11a07e61d9e1233ad91ef4917c76f21b"
     },
     {
       "id": "bund/BGERR/art_30",
@@ -910,7 +938,11 @@
             },
             {
               "marke": "c",
-              "text": "öffentliches Wirtschaftsrecht und sonstiges Verwaltungsrecht, soweit es nicht einer anderen Abteilung zugewiesen ist, namentlich: 1. Staatshaftung (ohne medizinische Tätigkeit und ohne Ansprüche nach strafprozessualen Normen über Entschädigungen),"
+              "text": "öffentliches Wirtschaftsrecht und sonstiges Verwaltungsrecht, soweit es nicht einer anderen Abteilung zugewiesen ist, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Staatshaftung (ohne medizinische Tätigkeit und ohne Ansprüche nach strafprozessualen Normen über Entschädigungen),"
             },
             {
               "marke": "2",
@@ -1041,7 +1073,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_30",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260201",
-      "sha": "884e02f03a9b2a5f8e7924d9eae3e63874ff17ec1493b977fef8ea2b60b3d5d8"
+      "sha": "5f85685c46ecbb76d2137968d1759d383e9a83c12996fa063a041d42fc8f7cef"
     },
     {
       "id": "bund/BGERR/art_31",
@@ -1228,7 +1260,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Zivilgesetzbuch: 1. Personenrecht,"
+              "text": "Zivilgesetzbuch:"
+            },
+            {
+              "marke": "1",
+              "text": "Personenrecht,"
             },
             {
               "marke": "2",
@@ -1241,6 +1277,18 @@
             {
               "marke": "4",
               "text": "Sachenrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "bäuerliches Bodenrecht;"
+            },
+            {
+              "marke": "c",
+              "text": "Schuldbetreibung und Konkurs (ohne provisorische und definitive Rechtsöffnungen);"
+            },
+            {
+              "marke": "d",
+              "text": "Registersachen und Entscheide über die Anerkennung und Vollstreckung von Entscheiden sowie über die Rechtshilfe in Zivilsachen gemäss Artikel 72 Absatz 2 Buchstabe b BGG in den Rechtsgebieten nach Buchstaben a und c dieses Absatzes."
             }
           ]
         },
@@ -1253,7 +1301,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_34",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260201",
-      "sha": "92466a674ffee7a95a7dc1c70e566b0c7a8abf38193884180d07e6d1cfc7fd3c"
+      "sha": "bea55e7a20f174476cfd82023653c098c932f46cc037e5775345ad88513a6f95"
     },
     {
       "id": "bund/BGERR/art_35",

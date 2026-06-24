@@ -592,7 +592,11 @@
             },
             {
               "marke": "b",
-              "text": "bei einer Neuwagenflotte von schweren Fahrzeugen: für jedes Gramm CO 2 pro Tonnenkilometer, das über der individuellen Zielvorgabe liegt: 1. in den Jahren 2025–2029: zwischen 4250 und 6800 Franken,"
+              "text": "bei einer Neuwagenflotte von schweren Fahrzeugen: für jedes Gramm CO 2 pro Tonnenkilometer, das über der individuellen Zielvorgabe liegt:"
+            },
+            {
+              "marke": "1",
+              "text": "in den Jahren 2025–2029: zwischen 4250 und 6800 Franken,"
             },
             {
               "marke": "2",
@@ -625,7 +629,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/855/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "1a9e2f89a82d20fcbc38029b46c60e854c027f77b77748350cc53cc1671e2f75"
+      "sha": "0d911e3eda869db53c5fba87ca858775e1947e90c8e288477e4658aa7710a93a"
     },
     {
       "id": "bund/CO2_GESETZ/art_13_a",
@@ -639,6 +643,30 @@
           "absatz": null,
           "text": "Das Eidgenössische Departement für Umwelt, Verkehr, Energie und Kommunikation veröffentlicht jährlich:",
           "items": [
+            {
+              "marke": "a",
+              "text": "die Namen der Importeure und Hersteller von mindestens:"
+            },
+            {
+              "marke": "1",
+              "text": "50 erstmals in Verkehr gesetzten Personenwagen,"
+            },
+            {
+              "marke": "2",
+              "text": "6 erstmals in Verkehr gesetzten Lieferwagen und leichten Sattelschleppern, oder"
+            },
+            {
+              "marke": "3",
+              "text": "5 erstmals in Verkehr gesetzten schweren Fahrzeugen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zusammensetzung der Emissionsgemeinschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "pro Importeur und Emissionsgemeinschaft je Neuwagenflotte:"
+            },
             {
               "marke": "1",
               "text": "die Anzahl der erstmals in Verkehr gesetzten Fahrzeuge,"
@@ -662,7 +690,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/855/de#art_13_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b6ff174c193af0cda0a544248d93059c0c0a6b7cc791399d909267b875636d2e"
+      "sha": "041546442e06b1b71ca5504cdae70380cae08cb6adc1fa61cf643dc831ca5c55"
     },
     {
       "id": "bund/CO2_GESETZ/art_13_b",

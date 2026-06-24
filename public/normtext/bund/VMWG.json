@@ -702,6 +702,50 @@
           "text": "Das Formular für die Mitteilung von Mietzinserhöhungen und anderen einseitigen Vertragsänderungen im Sinne von Artikel 269 d OR muss enthalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "Für Mietzinserhöhungen:"
+            },
+            {
+              "marke": "1",
+              "text": "den bisherigen Mietzins und die bisherige Belastung des Mieters für Nebenkosten;"
+            },
+            {
+              "marke": "2",
+              "text": "den neuen Mietzins und die neue Belastung des Mieters für Nebenkosten;"
+            },
+            {
+              "marke": "3",
+              "text": "den Zeitpunkt, auf den die Erhöhung in Kraft tritt;"
+            },
+            {
+              "marke": "4",
+              "text": "die klare Begründung der Erhöhung. Werden mehrere Erhöhungsgründe geltend gemacht, so sind diese je in Einzelbeträgen auszuweisen;"
+            },
+            {
+              "marke": "5",
+              "text": "bei Mehrleistungen die Angabe, ob der Vermieter Förderbeiträge für wertvermehrende Verbesserungen erhält."
+            },
+            {
+              "marke": "b",
+              "text": "Für andere einseitige Vertragsänderungen:"
+            },
+            {
+              "marke": "1",
+              "text": "die Umschreibung dieser Forderung;"
+            },
+            {
+              "marke": "2",
+              "text": "den Zeitpunkt, auf den sie wirksam wird;"
+            },
+            {
+              "marke": "3",
+              "text": "die klare Begründung dieser Forderung."
+            },
+            {
+              "marke": "c",
+              "text": "Für beide Fälle:"
+            },
+            {
               "marke": "1",
               "text": "die gesetzlichen Voraussetzungen der Anfechtung;"
             },
@@ -742,7 +786,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_19",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251001",
-      "sha": "ed432af7f8fc00a2953daace80b72845134ce69bf316f1abd10f197c3c1a882d"
+      "sha": "02653a66b4a7edcf431b014c069d7f1dffbb5258dc9d989a01e7165cdef90526"
     },
     {
       "id": "bund/VMWG/art_19_a",

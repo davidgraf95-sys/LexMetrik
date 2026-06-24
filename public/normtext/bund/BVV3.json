@@ -70,7 +70,11 @@
             },
             {
               "marke": "b",
-              "text": "nach dessen Ableben die folgenden Personen in nachstehender Reihenfolge: 1. der überlebende Ehegatte oder die überlebende eingetragene Partnerin oder der überlebende eingetragene Partner,"
+              "text": "nach dessen Ableben die folgenden Personen in nachstehender Reihenfolge:"
+            },
+            {
+              "marke": "1",
+              "text": "der überlebende Ehegatte oder die überlebende eingetragene Partnerin oder der überlebende eingetragene Partner,"
             },
             {
               "marke": "2",
@@ -103,7 +107,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1985/1778_1778_1778/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "070c4b9b3c9853cc6fece630e573f9d79f9ddf783b03ab54c850ccd158259045"
+      "sha": "e70e4b11baac2c8c3aaec1eb74246875567afd6e16c64cf212a008bff699e8ec"
     },
     {
       "id": "bund/BVV3/art_2_a",

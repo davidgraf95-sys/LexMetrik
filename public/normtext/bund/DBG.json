@@ -466,7 +466,11 @@
             },
             {
               "marke": "d",
-              "text": "der Summe der Bruttoerträge: 1. der Einkünfte aus dem in der Schweiz gelegenen unbeweglichen Vermögen,"
+              "text": "der Summe der Bruttoerträge:"
+            },
+            {
+              "marke": "1",
+              "text": "der Einkünfte aus dem in der Schweiz gelegenen unbeweglichen Vermögen,"
             },
             {
               "marke": "2",
@@ -507,7 +511,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "d5c1183d619aa3d3a51c0fe2c6a8dce5e41dd47f5870419488605abdb1c390a8"
+      "sha": "9e393498d0e7ecb8bbb946b56a062b657a0cf5384072ea5444cc458c9cf53b6e"
     },
     {
       "id": "bund/DBG/art_15",
@@ -1441,6 +1445,70 @@
           "text": "Von den Einkünften werden abgezogen:",
           "items": [
             {
+              "marke": "a",
+              "text": "die privaten Schuldzinsen im Umfang der nach den Artikeln 20, 20 a und 21 steuerbaren Vermögenserträge und weiterer 50 000 Franken. Nicht abzugsfähig sind Schuldzinsen für Darlehen, die eine Kapitalgesellschaft einer an ihrem Kapital massgeblich beteiligten oder ihr sonst wie nahe stehenden natürlichen Person zu Bedingungen gewährt, die erheblich von den im Geschäftsverkehr unter Dritten üblichen Bedingungen abweichen;"
+            },
+            {
+              "marke": "b",
+              "text": "die dauernden Lasten sowie der Ertragsanteil nach Artikel 22 Absatz 3 Buchstabe c der Leistungen aus Leibrenten- und aus Verpfründungsverträgen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterhaltsbeiträge an den geschiedenen, gerichtlich oder tatsächlich getrennt lebenden Ehegatten sowie die Unterhaltsbeiträge an einen Elternteil für die unter dessen elterlichen Sorge stehenden Kinder, nicht jedoch Leistungen in Erfüllung anderer familienrechtlicher Unterhalts- oder Unterstützungspflichten;"
+            },
+            {
+              "marke": "d",
+              "text": "die gemäss Gesetz, Statut oder Reglement geleisteten Einlagen, Prämien und Beiträge an die Alters-, Hinterlassenen- und Invalidenversicherung und an Einrichtungen der beruflichen Vorsorge;"
+            },
+            {
+              "marke": "e",
+              "text": "Einlagen, Prämien und Beiträge zum Erwerb von vertraglichen Ansprüchen aus anerkannten Formen der gebundenen Selbstvorsorge; der Bundesrat legt in Zusammenarbeit mit den Kantonen die anerkannten Vorsorgeformen und die Höhe der abzugsfähigen Beiträge fest;"
+            },
+            {
+              "marke": "f",
+              "text": "die Prämien und Beiträge für die Erwerbsersatzordnung, die Arbeitslosenversicherung und die obligatorische Unfallversicherung;"
+            },
+            {
+              "marke": "g",
+              "text": "die Einlagen, Prämien und Beiträge für die Lebens-, die Kranken- und die nicht unter Buchstabe f fallende Unfallversicherung sowie die Zinsen von Sparkapitalien der steuerpflichtigen Person und der von ihr unterhaltenen Personen, bis zum Gesamtbetrag von:"
+            },
+            {
+              "marke": "1",
+              "text": "3700 Franken für Ehepaare, die in rechtlich und tatsächlich ungetrennter Ehe leben,"
+            },
+            {
+              "marke": "2",
+              "text": "1800 Franken für die übrigen Steuerpflichtigen;"
+            },
+            {
+              "marke": "h",
+              "text": "die Krankheits- und Unfallkosten des Steuerpflichtigen und der von ihm unterhaltenen Personen, soweit der Steuerpflichtige die Kosten selber trägt und diese 5 Prozent der um die Aufwendungen (Art. 26–33) verminderten steuerbaren Einkünfte übersteigen;"
+            },
+            {
+              "marke": "hbis",
+              "text": "die behinderungsbedingten Kosten des Steuerpflichtigen oder der von ihm unterhaltenen Personen mit Behinderungen im Sinne des Behindertengleichstellungsgesetzes vom 13. Dezember 2002, soweit der Steuerpflichtige die Kosten selber trägt;"
+            },
+            {
+              "marke": "i",
+              "text": "die Mitgliederbeiträge und Zuwendungen bis zum Gesamtbetrag von 10 600 Franken an politische Parteien, die:"
+            },
+            {
+              "marke": "1",
+              "text": "im Parteienregister nach Artikel 76 a des Bundesgesetzes vom 17. Dezember 1976 über die politischen Rechte eingetragen sind,"
+            },
+            {
+              "marke": "2",
+              "text": "in einem kantonalen Parlament vertreten sind, oder"
+            },
+            {
+              "marke": "3",
+              "text": "in einem Kanton bei den letzten Wahlen des kantonalen Parlaments mindestens 3 Prozent der Stimmen erreicht haben;"
+            },
+            {
+              "marke": "j",
+              "text": "die Kosten der berufsorientierten Aus- und Weiterbildung, einschliesslich der Umschulungskosten, bis zum Gesamtbetrag von 13 000 Franken, sofern:"
+            },
+            {
               "marke": "1",
               "text": "ein erster Abschluss auf der Sekundarstufe II vorliegt, oder"
             },
@@ -1481,7 +1549,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_33",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "e8b361b2c6fa35089a58d71e684b9bae858cc93691e75ea05426ab478da47333"
+      "sha": "5d5c8afa2e38fa8fa59ad4950cc0d937ca7805154b005a75a9773fd2fa024c55"
     },
     {
       "id": "bund/DBG/art_33_a",
@@ -2555,7 +2623,11 @@
             },
             {
               "marke": "b",
-              "text": "allen vor Berechnung des Saldos der Erfolgsrechnung ausgeschiedenen Teilen des Geschäftsergebnisses, die nicht zur Deckung von geschäftsmässig begründetem Aufwand verwendet werden, wie insbesondere: – Kosten für die Anschaffung, Herstellung oder Wertvermehrung von Gegenständen des Anlagevermögens,"
+              "text": "allen vor Berechnung des Saldos der Erfolgsrechnung ausgeschiedenen Teilen des Geschäftsergebnisses, die nicht zur Deckung von geschäftsmässig begründetem Aufwand verwendet werden, wie insbesondere:"
+            },
+            {
+              "marke": "–",
+              "text": "Kosten für die Anschaffung, Herstellung oder Wertvermehrung von Gegenständen des Anlagevermögens,"
             },
             {
               "marke": "–",
@@ -2572,6 +2644,10 @@
             {
               "marke": "–",
               "text": "offene und verdeckte Gewinnausschüttungen und geschäftsmässig nicht begründete Zuwendungen an Dritte;"
+            },
+            {
+              "marke": "c",
+              "text": "den der Erfolgsrechnung nicht gutgeschriebenen Erträgen, mit Einschluss der Kapital-, Aufwertungs- und Liquidationsgewinne, vorbehältlich Artikel 64. …"
             }
           ]
         },
@@ -2588,7 +2664,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_58",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "bc2ad60f10a279d2c9b628664ec11bf82bd5df01a53d5c414bf76a61f8783826"
+      "sha": "9e47cc91e6231d1ea9bb2faba8cb4aa19f3f985f3c0d8375bb5aee88ba698816"
     },
     {
       "id": "bund/DBG/art_59",
@@ -6908,7 +6984,11 @@
             },
             {
               "marke": "b",
-              "text": "bei vollendeter Steuerhinterziehung zehn Jahre nach Ablauf: 1. der Steuerperiode, für welche die steuerpflichtige Person nicht oder unvollständig veranlagt wurde oder der Steuerabzug an der Quelle nicht gesetzmässig erfolgte (Art. 175 Abs. 1),"
+              "text": "bei vollendeter Steuerhinterziehung zehn Jahre nach Ablauf:"
+            },
+            {
+              "marke": "1",
+              "text": "der Steuerperiode, für welche die steuerpflichtige Person nicht oder unvollständig veranlagt wurde oder der Steuerabzug an der Quelle nicht gesetzmässig erfolgte (Art. 175 Abs. 1),"
             },
             {
               "marke": "2",
@@ -6925,7 +7005,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_184",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "5d6ede8c163ec8ac2c8df34e33e68d1da5d83dea86b636e4f4a672863dddbef8"
+      "sha": "8970fb2750f643c70d1ec3b3da1830b7e572c2b513047d9cbfe8229b4b34388c"
     },
     {
       "id": "bund/DBG/art_185",

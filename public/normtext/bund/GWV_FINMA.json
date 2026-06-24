@@ -42,11 +42,43 @@
           "items": [
             {
               "marke": "a",
-              "text": "Sitzgesellschaften: juristische Personen, Gesellschaften, Anstalten, Stiftungen, Trusts, Treuhandunternehmen und ähnliche Verbindungen, die kein Handels-, Fabrikations- oder anderes nach kaufmännischer Art geführtes Gewerbe betreiben. Nicht als Sitzgesellschaften gelten Gesellschaften, die: 1. die Wahrung der Interessen ihrer Mitglieder oder ihrer Begünstigten in gemeinsamer Selbsthilfe bezwecken oder politische, religiöse, wissenschaftliche, künstlerische, gemeinnützige, gesellige oder ähnliche Zwe­cke verfolgen,"
+              "text": "Sitzgesellschaften: juristische Personen, Gesellschaften, Anstalten, Stiftungen, Trusts, Treuhandunternehmen und ähnliche Verbindungen, die kein Handels-, Fabrikations- oder anderes nach kaufmännischer Art geführtes Gewerbe betreiben. Nicht als Sitzgesellschaften gelten Gesellschaften, die:"
+            },
+            {
+              "marke": "1",
+              "text": "die Wahrung der Interessen ihrer Mitglieder oder ihrer Begünstigten in gemeinsamer Selbsthilfe bezwecken oder politische, religiöse, wissenschaftliche, künstlerische, gemeinnützige, gesellige oder ähnliche Zwe­cke verfolgen,"
             },
             {
               "marke": "2",
               "text": "die Mehrheit der Beteiligungen an einer oder mehreren operativ tätigen Gesellschaften halten, um diese durch Stimmenmehrheit oder auf andere Weise unter einheitlicher Leitung zusammenzufassen und deren Zweck nicht hauptsächlich in der Verwaltung von Vermögen Dritter besteht (Holding- und Subholdinggesellschaften). Dabei muss die Holding- oder Subholdinggesellschaft ihre Leitungs- und Kontrollmöglichkeiten auch tatsächlich ausüben;"
+            },
+            {
+              "marke": "b",
+              "text": "Kassageschäfte: alle Bargeschäfte, insbesondere der Geldwechsel, der Kauf und der Verkauf von Edelmetallen, der Verkauf von Reiseschecks, die Barliberierung von Inhaberpapieren, Kassa- und Anleihensobligationen und das Bareinlösen von Checks, sofern mit diesen Geschäften keine dauernde Geschäftsbeziehung verbunden ist;"
+            },
+            {
+              "marke": "c",
+              "text": "Geld- und Wertübertragung: der Transfer von Vermögenswerten durch Entgegennahme von Bargeld, Edelmetallen, virtuellen Währungen, Schecks oder sonstigen Zahlungsmitteln in der Schweiz und Auszahlung einer entsprechenden Summe in Bargeld, Edelmetallen, virtuellen Währungen oder durch bargeldlose Übertragung, Überweisung oder sonstige Verwendung eines Zahlungs- oder Abrechnungssystems im Ausland, oder auf dem umgekehrten Weg, sofern mit diesen Geschäften keine dauernde Geschäftsbeziehung verbunden ist;"
+            },
+            {
+              "marke": "d",
+              "text": "dauernde Geschäftsbeziehung: Kundenbeziehung, die bei einem schweize­rischen Finanzintermediär gebucht oder überwiegend von der Schweiz aus betreut wird und die sich nicht in der Vornahme einmaliger unterstellungspflichtiger Tätigkeiten erschöpft;"
+            },
+            {
+              "marke": "e",
+              "text": "professioneller Notenhändler: Nichtbanken, die Noten kaufen und verkaufen und damit einen wesentlichen Umsatz oder Ertrag erzielen;"
+            },
+            {
+              "marke": "f",
+              "text": "Kontrollinhaberin oder -inhaber: natürliche Personen, die über Stimmen oder Kapital mit mindestens 25 Prozent direkt oder indirekt, allein oder in gemeinsamer Absprache mit Dritten oder auf andere Weise die Kontrolle über eine operativ tätige juristische Person oder Personengesellschaft aus­üben und als wirtschaftlich Berechtigte an diesen von ihnen kontrollierten operativ tätigen Unternehmen gelten, oder ersatzweise die geschäftsführende Person eines solchen Unternehmens;"
+            },
+            {
+              "marke": "g",
+              "text": "KAG-Investmentgesellschaften: Investmentgesellschaften nach dem Kollektivanlagengesetz vom 23. Juni 2006 (KAG), d. h. Investesmentgesellschaften mit variablem Kapital (SICAV), Kommanditgesellschaften für kollektive Kapitalanlagen (KGK) sowie Investmentgesellschaften mit festem Kapitel (SICAF) im Sinne von Artikel 2 Absatz 2 Buchstabe b bis GwG."
+            },
+            {
+              "marke": "h",
+              "text": "Verwalter von Kollektivvermögen: Verwalter von Kollektivvermögen nach Artikel 2 Absatz 1 Buchstabe c des Finanzinstitutsgesetzes vom 15. Juni 2018 (FINIG) in Verbindung mit Artikel 2 Absatz 2 Buchstabe b bis GwG."
             }
           ]
         }
@@ -55,7 +87,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/390/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230101",
-      "sha": "500814668f21771b407d8d6a61023ac79cb2b30f4aa570de2903a8855c265010"
+      "sha": "96f17924f665eadd8ff233c340dd8b5ccb727e9c59c2ac3ef806be7bd4a88297"
     },
     {
       "id": "bund/GWV_FINMA/art_3",

@@ -4163,11 +4163,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei notwendiger Verteidigung: 1. die beschuldigte Person trotz Aufforderung der Verfahrensleitung keine Wahlverteidigung bestimmt,"
+              "text": "bei notwendiger Verteidigung:"
+            },
+            {
+              "marke": "1",
+              "text": "die beschuldigte Person trotz Aufforderung der Verfahrensleitung keine Wahlverteidigung bestimmt,"
             },
             {
               "marke": "2",
               "text": "der Wahlverteidigung das Mandat entzogen wurde oder sie es niedergelegt hat und die beschuldigte Person nicht innert Frist eine neue Wahlverteidigung bestimmt;"
+            },
+            {
+              "marke": "b",
+              "text": "die beschuldigte Person nicht über die erforderlichen Mittel verfügt und die Verteidigung zur Wahrung ihrer Interessen geboten ist."
             }
           ]
         },
@@ -4184,7 +4192,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_132",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "79839f06a51c969b7043825eaf9d75c7c0f5cc459cddeb205d45df6ad64ff6b2"
+      "sha": "750416aab78942884642f763c6bd660fd60814d8bd5ba09aef265bd36890d91a"
     },
     {
       "id": "bund/STPO/art_133",
@@ -5459,7 +5467,11 @@
             },
             {
               "marke": "b",
-              "text": "ohne das Zeugnis eine der folgenden Straftaten nicht aufgeklärt werden oder die einer solchen Tat beschuldigte Person nicht ergriffen werden kann: 1. Tötungsdelikte im Sinne der Artikel 111–113 StGB,"
+              "text": "ohne das Zeugnis eine der folgenden Straftaten nicht aufgeklärt werden oder die einer solchen Tat beschuldigte Person nicht ergriffen werden kann:"
+            },
+            {
+              "marke": "1",
+              "text": "Tötungsdelikte im Sinne der Artikel 111–113 StGB,"
             },
             {
               "marke": "2",
@@ -5480,7 +5492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_172",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "fc8908d0f435b6a9d3f6a1f71d276c6e95c1b10fbc3d609f43076a17c563d70e"
+      "sha": "c4df56bcd1cf1906fe4469a5c0b5ba82128925a53c31532d9a25030941a81ef7"
     },
     {
       "id": "bund/STPO/art_173",
@@ -8592,7 +8604,11 @@
             },
             {
               "marke": "c",
-              "text": "Unternehmen, wenn sie sich durch die Herausgabe selbst derart belasten würden, dass sie: 1. strafrechtlich verantwortlich gemacht werden könnten, oder"
+              "text": "Unternehmen, wenn sie sich durch die Herausgabe selbst derart belasten würden, dass sie:"
+            },
+            {
+              "marke": "1",
+              "text": "strafrechtlich verantwortlich gemacht werden könnten, oder"
             },
             {
               "marke": "2",
@@ -8613,7 +8629,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_265",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "c90a215356da49af8ad13602365be46d9f8c8ed725f887934c5ef1106272456d"
+      "sha": "9c5045ab3ec36043c2e843134b1c1bcf95c24e1ef29aeb550559d8b045a9b71b"
     },
     {
       "id": "bund/STPO/art_266",
@@ -8966,7 +8982,11 @@
             },
             {
               "marke": "b",
-              "text": "von Drittpersonen, wenn aufgrund bestimmter Tatsachen angenommen werden muss, dass: 1. die beschuldigte Person die Postadresse oder den Fernmeldedienst der Drittperson benutzt, oder"
+              "text": "von Drittpersonen, wenn aufgrund bestimmter Tatsachen angenommen werden muss, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "die beschuldigte Person die Postadresse oder den Fernmeldedienst der Drittperson benutzt, oder"
             },
             {
               "marke": "2",
@@ -8979,7 +8999,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_270",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "0009edde82ea230fc4c1033f47ffb4dec5b94058a26e767f5f83accaac9805a4"
+      "sha": "482b67cf5912c06b07b081955d50ca02dd74faba8d4c14cb245c7c17f1eafe1a"
     },
     {
       "id": "bund/STPO/art_271",
@@ -12528,7 +12548,11 @@
             },
             {
               "marke": "b",
-              "text": "die Person: 1. sich deren Vollzug entzieht, oder"
+              "text": "die Person:"
+            },
+            {
+              "marke": "1",
+              "text": "sich deren Vollzug entzieht, oder"
             },
             {
               "marke": "2",
@@ -12549,7 +12573,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_364_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250401",
-      "sha": "33a884b7ac8c878bb07c9d9973ba28c1d87ef712307f3caf1559f448cd91acc9"
+      "sha": "dfca5f1bf7acf7340b80e5e62b542b7359a86b52901350b75d0407e3109c35c8"
     },
     {
       "id": "bund/STPO/art_364_b",

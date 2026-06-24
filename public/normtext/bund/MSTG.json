@@ -159,7 +159,11 @@
           "items": [
             {
               "marke": "1",
-              "text": "Zivilpersonen, die sich schuldig machen: a. der Verräterei nach den Artikeln 88, 90 und 91,"
+              "text": "Zivilpersonen, die sich schuldig machen:"
+            },
+            {
+              "marke": "a",
+              "text": "der Verräterei nach den Artikeln 88, 90 und 91,"
             },
             {
               "marke": "b",
@@ -172,6 +176,22 @@
             {
               "marke": "d",
               "text": "des Völkermords oder eines Verbrechens gegen die Menschlichkeit (sechster Abschnitt des zweiten Teils), eines Kriegsverbrechens (sechster Abschnitt bis des zweiten Teils sowie Art. 139);"
+            },
+            {
+              "marke": "2",
+              "text": "Kriegsgefangene, auch für solche strafbare Handlungen, die sie im In- oder Auslande während des Krieges und vor ihrer Gefangennahme gegenüber dem schweizerischen Staat, der schweizerischen Armee oder Angehörigen der schweizerischen Armee begangen haben;"
+            },
+            {
+              "marke": "3",
+              "text": "feindliche Parlamentäre und ihre Begleiter, die ihre Stellung zur Begehung einer strafbaren Handlung missbrauchen;"
+            },
+            {
+              "marke": "4",
+              "text": "in Kriegsgebieten oder in besetzten Gebieten internierte Zivilpersonen."
+            },
+            {
+              "marke": "5",
+              "text": "ausländische Militärpersonen, die sich des Völkermords, eines Verbrechens gegen die Menschlichkeit (sechster Abschnitt des zweiten Teils) oder eines Kriegsverbrechens (sechster Abschnitt bis des zweiten Teils sowie Art. 139) schuldig machen."
             }
           ]
         },
@@ -184,7 +204,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/43/359_375_369/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260608",
-      "sha": "137a9d7adb7cf62c4cc9471b61270fe5205edc376714ac9edb39d2f7dafa1e65"
+      "sha": "d0d4b7f7b4be90cd75815178d2ac103dea7999941d2e9e781d30fae4ad689dae"
     },
     {
       "id": "bund/MSTG/art_6",
@@ -1296,7 +1316,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Täter gehandelt hat: 1. aus achtenswerten Beweggründen,"
+              "text": "der Täter gehandelt hat:"
+            },
+            {
+              "marke": "1",
+              "text": "aus achtenswerten Beweggründen,"
             },
             {
               "marke": "2",
@@ -1309,6 +1333,22 @@
             {
               "marke": "4",
               "text": "auf Veranlassung einer Person, der er Gehorsam schuldet oder von der er abhängig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter durch das Verhalten der verletzten Person ernsthaft in Versuchung geführt worden ist;"
+            },
+            {
+              "marke": "c",
+              "text": "der Täter in einer nach den Umständen entschuldbaren heftigen Gemütsbewegung unter grosser seelischer Belastung gehandelt hat;"
+            },
+            {
+              "marke": "d",
+              "text": "der Täter aufrichtige Reue betätigt, namentlich den Schaden, soweit es ihm zuzumuten war, ersetzt hat;"
+            },
+            {
+              "marke": "e",
+              "text": "das Strafbedürfnis in Anbetracht der seit der Tat verstrichenen Zeit deutlich vermindert ist und der Täter sich in dieser Zeit wohl verhalten hat."
             }
           ]
         }
@@ -1317,7 +1357,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/43/359_375_369/de#art_42",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260608",
-      "sha": "2c44b0eb8e9c0d5f0d15bd269377c5380862acf2f5ce938ef5d87be070764fd8"
+      "sha": "88b65c0d19fdf3b689e596139b9b3f13382f5d3786997edfb81e17fccca7cbdd"
     },
     {
       "id": "bund/MSTG/art_42_a",
@@ -1481,7 +1521,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Opfer: 1. der Ehegatte des Täters ist und die Tat während der Ehe oder innerhalb eines Jahres nach deren Scheidung begangen wurde, oder"
+              "text": "das Opfer:"
+            },
+            {
+              "marke": "1",
+              "text": "der Ehegatte des Täters ist und die Tat während der Ehe oder innerhalb eines Jahres nach deren Scheidung begangen wurde, oder"
             },
             {
               "marke": "2",
@@ -1490,6 +1534,14 @@
             {
               "marke": "3",
               "text": "der hetero- oder homosexuelle Lebenspartner des Täters ist, sofern sie auf unbestimmte Zeit einen gemeinsamen Haushalt führen und die Tat während dieser Zeit oder innerhalb eines Jahres nach der Trennung begangen wurde; und"
+            },
+            {
+              "marke": "b",
+              "text": "das Opfer oder, falls dieses nicht handlungsfähig ist, sein gesetzlicher Vertreter darum ersucht; und"
+            },
+            {
+              "marke": "c",
+              "text": "die provisorische Einstellung geeignet erscheint, die Situation des Opfers zu stabilisieren oder zu verbessern."
             }
           ]
         },
@@ -1536,7 +1588,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/43/359_375_369/de#art_46_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260608",
-      "sha": "9c41e0a67f3028135ec35f5c1740da037de972ab75b2f1f3dd758df22e04fbc3"
+      "sha": "418da6ab4e91ef463e78f86e29e251e067c116144a7dc53ad561d99ce479582b"
     },
     {
       "id": "bund/MSTG/art_47",
@@ -1844,7 +1896,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Tätigkeiten, die direkt und spezifisch gegenüber Minderjährigen oder anderen besonders schutzbedürftigen Personen ausgeübt werden, namentlich: 1. Lehren oder Unterrichten,"
+              "text": "Tätigkeiten, die direkt und spezifisch gegenüber Minderjährigen oder anderen besonders schutzbedürftigen Personen ausgeübt werden, namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Lehren oder Unterrichten,"
             },
             {
               "marke": "2",
@@ -1877,6 +1933,10 @@
             {
               "marke": "9",
               "text": "direkter Verkauf oder Verleih oder direkte Vermittlung von spezifisch für die Bedürfnisse von Minderjährigen oder anderen besonders schutzbedürftigen Personen bestimmten Objekten, sofern dies die Haupttätigkeit der betreffenden Person darstellt;"
+            },
+            {
+              "marke": "b",
+              "text": "andere Tätigkeiten, die vor allem oder wiederholt in Einrichtungen ausgeübt werden, die Dienstleistungen nach Buchstabe a anbieten; ausgenommen sind Tätigkeiten, bei denen örtlich oder zeitlich sichergestellt ist, dass kein Kontakt zu Minderjährigen oder anderen besonders schutzbedürften Personen stattfinden kann."
             }
           ]
         },
@@ -1889,7 +1949,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/43/359_375_369/de#art_50_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260608",
-      "sha": "e30753cd886f8d73a419f1f5ec33e9708caf90d5251d06f39a7f5ef620af5148"
+      "sha": "0f9c29f9503e0306b4b970bdeff099778b7f72229383fb25a4e8e62b88719ba6"
     },
     {
       "id": "bund/MSTG/art_50_b",
@@ -4216,11 +4276,35 @@
             },
             {
               "marke": "e",
-              "text": "in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen: 1. im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird, oder"
+              "text": "in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen:"
+            },
+            {
+              "marke": "1",
+              "text": "im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird, oder"
             },
             {
               "marke": "2",
               "text": "im Auftrag eines Staates oder einer politischen Organisation oder entgegen einer Rechtspflicht die Auskunft über das Schicksal oder den Verbleib dieser Person verweigert;"
+            },
+            {
+              "marke": "f",
+              "text": "einem unter seinem Gewahrsam oder seiner Kontrolle stehenden Menschen grosse Leiden oder eine schwere Schädigung des Körpers oder der physischen oder psychischen Gesundheit zufügt;"
+            },
+            {
+              "marke": "g",
+              "text": "an einer Person eine Vergewaltigung nach Artikel 154 Absatz 2 oder 3 oder eine sexuelle Nötigung nach Artikel 153 Absatz 2 oder 3 von vergleichbarer Schwere begeht, sie zu einer sexuellen Handlung von vergleichbarer Schwere missbraucht, sie zur Prostitution nötigt oder sie zwangsweise sterilisiert oder, nachdem sie gegen ihren Willen geschwängert wurde, gefangen hält in der Absicht, die ethnische Zusammensetzung einer Bevölkerung zu beeinflussen;"
+            },
+            {
+              "marke": "h",
+              "text": "Menschen aus dem Gebiet, in dem sie sich rechtmässig aufhalten, vertreibt oder zwangsweise an einen andern Ort überführt;"
+            },
+            {
+              "marke": "i",
+              "text": "einer Gruppe von Menschen aus politischen, rassischen, ethnischen, religiösen, sozialen oder anderen völkerrechtswidrigen Gründen, im Zusammenhang mit einer Tat nach dem sechsten Abschnitt oder dem sechsten Abschnitt bis oder zwecks systematischer Unterdrückung oder Beherrschung einer rassischen Gruppe, in schwerwiegender Weise Grundrechte vorenthält oder entzieht;"
+            },
+            {
+              "marke": "j",
+              "text": "eine andere unmenschliche Handlung von vergleichbarer Schwere wie die in diesem Absatz genannten Verbrechen verübt und dadurch einem Menschen grosse Leiden oder eine schwere Schädigung des Körpers oder der physischen oder psychischen Gesundheit zufügt."
             }
           ]
         },
@@ -4237,7 +4321,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/43/359_375_369/de#art_109",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260608",
-      "sha": "d005fdf33026fd4f0797f1ea14328b5a615778df1b232a75db5c41b7c9ecfb8b"
+      "sha": "bdfdad7fd32c2a7272844ef593f76bacce42330a476d6257b0fc2c467e4fb7df"
     },
     {
       "id": "bund/MSTG/art_110",

@@ -63,12 +63,64 @@
           "text": "Nicht der Aufsicht nach diesem Gesetz unterstehen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Versicherungsunternehmen mit Sitz im Ausland, die in der Schweiz nur die Rückversicherung betreiben;"
+            },
+            {
+              "marke": "b",
+              "text": "Versicherungsunternehmen, soweit sie von Bundesrechts wegen einer besonderen Aufsicht unterstellt sind, im Ausmass dieser Aufsicht; als solche gelten insbesondere die in das Register für die berufliche Vorsorge eingetragenen Vorsorgeeinrichtungen;"
+            },
+            {
+              "marke": "bbis",
+              "text": "ausländische staatliche oder staatlich garantierte Exportrisikoversicherungsunternehmen;"
+            },
+            {
+              "marke": "c",
+              "text": "Versicherungsvermittler, die in einem Abhängigkeitsverhältnis zu einem Versicherungsnehmer stehen, soweit sie nur die Interessen dieses Versicherungsnehmers und der von diesem beherrschten Gesellschaften verfolgen;"
+            },
+            {
+              "marke": "d",
+              "text": "Versicherungsgenossenschaften, die am 1. Januar 1993 bestanden haben, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "sie ihren Sitz in der Schweiz haben,"
+            },
+            {
+              "marke": "2",
+              "text": "sie eng mit einem Verein oder einem Verband verbunden sind, dessen Hauptzweck nicht das Versicherungsgeschäft ist,"
+            },
+            {
+              "marke": "3",
+              "text": "ihr jährliches Bruttoprämienvolumen seit dem 1. Januar 1993 den Betrag von 3 Millionen Franken nie überstiegen hat,"
+            },
+            {
+              "marke": "4",
+              "text": "ihr Tätigkeitsbereich seit dem 1. Januar 1993 auf das Hoheitsgebiet der Schweiz beschränkt ist,"
+            },
+            {
+              "marke": "5",
+              "text": "sie nur Mitglieder des Vereins oder des Verbandes versichern, mit dem sie eng verbunden sind, und"
+            },
+            {
+              "marke": "6",
+              "text": "die Versicherten identisch sind mit den stimmberechtigten Mitgliedern der Versicherungsgenossenschaft und sie aufgrund ihrer Mitgliedschaft über die Versicherungsleistungen und Versicherungsprämien selber bestimmen können;"
+            },
+            {
+              "marke": "e",
+              "text": "Vereine, Verbände, Genossenschaften und Stiftungen, die mit ihren Mitgliedern, Genossenschafterinnen und Genossenschaftern oder Destinatärinnen und Destinatären Verträge über Geschäfte mit Sicherungscharakter abschliessen, insbesondere über Bürgschaften oder Garantien, sofern:"
+            },
+            {
               "marke": "1",
               "text": "ihr örtlicher Tätigkeitsbereich sich auf das Hoheitsgebiet der Schweiz beschränkt, und"
             },
             {
               "marke": "2",
               "text": "der erwirtschaftete Gewinn den jeweiligen Vertragspartnerinnen und -partnern zugewiesen wird;"
+            },
+            {
+              "marke": "f",
+              "text": "Versicherungsvermittlerinnen und -vermittler, sofern sich ihre Vermittlungstätigkeit auf eine Versicherung bezieht, die von geringer Bedeutung ist und ein Produkt oder eine Dienstleistung ergänzt."
             }
           ]
         },
@@ -104,7 +156,11 @@
             },
             {
               "marke": "b",
-              "text": "insbesondere zur Wahrung der Zukunftsfähigkeit des Schweizer Finanzplatzes vorsehen, Versicherungsunternehmen ganz oder teilweise von der Aufsicht zu befreien, und diese Befreiung unter Berücksichtigung insbesondere folgender Faktoren mit Auflagen, unter anderem hinsichtlich Unternehmenssitz, Sicherheiten und Informationspflichten, verbinden: 1. das Geschäftsmodell,"
+              "text": "insbesondere zur Wahrung der Zukunftsfähigkeit des Schweizer Finanzplatzes vorsehen, Versicherungsunternehmen ganz oder teilweise von der Aufsicht zu befreien, und diese Befreiung unter Berücksichtigung insbesondere folgender Faktoren mit Auflagen, unter anderem hinsichtlich Unternehmenssitz, Sicherheiten und Informationspflichten, verbinden:"
+            },
+            {
+              "marke": "1",
+              "text": "das Geschäftsmodell,"
             },
             {
               "marke": "2",
@@ -125,7 +181,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/734/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "347841b8b407b81e35de1d7f4b9619f38e88faae16a93eceb352fa82a73f7ca7"
+      "sha": "14e5fa04d69ef3ba529845a3458a8c6062df2087422962d0e4b749ec79657273"
     },
     {
       "id": "bund/VAG/art_2_a",
@@ -291,7 +347,11 @@
             },
             {
               "marke": "k",
-              "text": "die geplanten Versicherungszweige, die Art der zu versichernden Risiken und, soweit ein Versicherungsunternehmen die entsprechenden Erleichterungen in der Aufsicht in Anspruch nehmen möchte, pro Versicherungszweig, ob ein Geschäft abgeschlossen werden soll: 1. mit professionellen Versicherungsnehmern nach Artikel 30 a Absatz 2,"
+              "text": "die geplanten Versicherungszweige, die Art der zu versichernden Risiken und, soweit ein Versicherungsunternehmen die entsprechenden Erleichterungen in der Aufsicht in Anspruch nehmen möchte, pro Versicherungszweig, ob ein Geschäft abgeschlossen werden soll:"
+            },
+            {
+              "marke": "1",
+              "text": "mit professionellen Versicherungsnehmern nach Artikel 30 a Absatz 2,"
             },
             {
               "marke": "2",
@@ -300,6 +360,34 @@
             {
               "marke": "3",
               "text": "mit nicht professionellen Versicherungsnehmerinnen und -nehmern;"
+            },
+            {
+              "marke": "l",
+              "text": "allenfalls die Erklärung des Beitritts zum Nationalen Versicherungsbüro und zum Nationalen Garantiefonds;"
+            },
+            {
+              "marke": "m",
+              "text": "Angaben über die Mittel zur Erfüllung von Beistandsleistungen, sofern eine Bewilligung für den Versicherungszweig «Beistandsleistung» beantragt wird;"
+            },
+            {
+              "marke": "n",
+              "text": "den Rückversicherungsplan sowie, für die aktive Rückversicherung, den Retrozessionsplan;"
+            },
+            {
+              "marke": "o",
+              "text": "die voraussichtlichen Kosten für den Aufbau des Versicherungsunternehmens;"
+            },
+            {
+              "marke": "p",
+              "text": "die Planbilanzen und Planerfolgsrechnungen für die ersten drei Geschäftsjahre;"
+            },
+            {
+              "marke": "q",
+              "text": "Angaben zur Erfassung, Begrenzung und Überwachung der Risiken;"
+            },
+            {
+              "marke": "r",
+              "text": "die Tarife und Allgemeinen Versicherungsbedingungen, welche in der Schweiz verwendet werden bei der Versicherung von sämtlichen Risiken in der beruflichen Vorsorge und in der Zusatzversicherung zur sozialen Krankenversicherung."
             }
           ]
         },
@@ -316,7 +404,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/734/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "31333485d081488774516c782107559a58163f112eb35e5f5d30a33151badfb7"
+      "sha": "36bd452943f2cdeb72a9b9ac0c06e235a228a2317b78ca1742aa8c708f60ac5b"
     },
     {
       "id": "bund/VAG/art_5",
@@ -1015,7 +1103,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für die Berechnung und Ermittlung aufgrund sachgemässer aktuarieller Berechnungsgrundlagen: 1. der Verpflichtungen in einer Bilanz zu Marktwerten oder zu marktnahen Werten,"
+              "text": "für die Berechnung und Ermittlung aufgrund sachgemässer aktuarieller Berechnungsgrundlagen:"
+            },
+            {
+              "marke": "1",
+              "text": "der Verpflichtungen in einer Bilanz zu Marktwerten oder zu marktnahen Werten,"
             },
             {
               "marke": "2",
@@ -1024,6 +1116,10 @@
             {
               "marke": "3",
               "text": "der versicherungstechnischen Rückstellungen nach Artikel 16;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Prüfung, ob der Sollbetrag des gebundenen Vermögens den aufsichtsrechtlichen Vorschriften entspricht."
             }
           ]
         },
@@ -1048,7 +1144,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/734/de#art_24",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240901",
-      "sha": "f7928bcaaae7d7e01ce3fc2f1b99d670f184df5c7450782314620f6367c62201"
+      "sha": "661b8ba8a5d4d08f3ea587669551b1a1b50b4797cd0c776a118007ab281e96bb"
     },
     {
       "id": "bund/VAG/art_25",

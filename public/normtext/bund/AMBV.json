@@ -1682,7 +1682,11 @@
             },
             {
               "marke": "b",
-              "text": "zugelassenem oder nicht zulassungspflichtigem Blut und solchen Blutprodukten, wenn diese Arzneimittel: 1. in medizinischen Notfallsituationen oder zur Eigenbluttransfusion eingeführt werden,"
+              "text": "zugelassenem oder nicht zulassungspflichtigem Blut und solchen Blutprodukten, wenn diese Arzneimittel:"
+            },
+            {
+              "marke": "1",
+              "text": "in medizinischen Notfallsituationen oder zur Eigenbluttransfusion eingeführt werden,"
             },
             {
               "marke": "2",
@@ -1691,6 +1695,10 @@
             {
               "marke": "3",
               "text": "über eine behördliche Chargenfreigabe einer dem Official-Control-Authority-Batch-Release-Netzwerk (OCABR-Netzwerk) zugehörigen Kontrollbehörde verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "zugelassenen oder nicht zulassungspflichtigen, immunologischen Arzneimitteln, sofern für die einzuführende Charge eine behördliche Chargenfreigabe einer dem OCABR-Netzwerk zugehörigen Kontrollbehörde vorliegt."
             }
           ]
         },
@@ -1703,7 +1711,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/786/de#art_44",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250315",
-      "sha": "6a2966fff2feb24d1fe6c1ac7d34180f1be3c95e96fc761fc985bb2ea0ab6524"
+      "sha": "39948d7b987e4c276774fe2e2a454ca1fc9a4194bf4f1f35f2d0c053d3eafa33"
     },
     {
       "id": "bund/AMBV/art_45",
@@ -1735,7 +1743,11 @@
             },
             {
               "marke": "e",
-              "text": "bei Blut und Blutprodukten für die Anwendung am Menschen zusätzlich zu den Buchstaben a–d: 1. keine Krankheitserreger oder Hinweise auf Krankheitserreger feststellbar sind,"
+              "text": "bei Blut und Blutprodukten für die Anwendung am Menschen zusätzlich zu den Buchstaben a–d:"
+            },
+            {
+              "marke": "1",
+              "text": "keine Krankheitserreger oder Hinweise auf Krankheitserreger feststellbar sind,"
             },
             {
               "marke": "2",
@@ -1756,7 +1768,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/786/de#art_45",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250315",
-      "sha": "8fc5a82ac6a3e4049aba33d508807ed96c74f9ff8c1e391eb63e248ad69f9fcf"
+      "sha": "50a1bbface53e277a1c791eba23b00a609dd1bcae2cab396f1a9a7e472fa2ac6"
     },
     {
       "id": "bund/AMBV/art_46",
@@ -1871,7 +1883,11 @@
             },
             {
               "marke": "c",
-              "text": "für das betreffende Arzneimittel: 1. in der Schweiz kein alternativ einsetzbares Arzneimittel zugelassen ist,"
+              "text": "für das betreffende Arzneimittel:"
+            },
+            {
+              "marke": "1",
+              "text": "in der Schweiz kein alternativ einsetzbares Arzneimittel zugelassen ist,"
             },
             {
               "marke": "2",
@@ -1893,7 +1909,11 @@
             },
             {
               "marke": "b",
-              "text": "das Arzneimittel: 1. die Anforderungen nach Absatz 1 Buchstaben a und c erfüllt, sowie"
+              "text": "das Arzneimittel:"
+            },
+            {
+              "marke": "1",
+              "text": "die Anforderungen nach Absatz 1 Buchstaben a und c erfüllt, sowie"
             },
             {
               "marke": "2",
@@ -1926,7 +1946,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/786/de#art_49",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250315",
-      "sha": "0b71ebcab250c52f7c73ca0b521e3a0bb63874a4fac3cfe8cb380f5297f25098"
+      "sha": "adb72f713519385c496619581e669027bf6abbd053b1b723a4e85bfc5bfdbd7b"
     },
     {
       "id": "bund/AMBV/art_49_a",

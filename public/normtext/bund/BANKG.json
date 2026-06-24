@@ -995,7 +995,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "über Eigenmittel verfügen, die namentlich: 1. gemessen an den gesetzlichen Anforderungen eine höhere Verlusttragfähigkeit gewährleisten als bei nicht systemrelevanten Banken,"
+              "text": "über Eigenmittel verfügen, die namentlich:"
+            },
+            {
+              "marke": "1",
+              "text": "gemessen an den gesetzlichen Anforderungen eine höhere Verlusttragfähigkeit gewährleisten als bei nicht systemrelevanten Banken,"
             },
             {
               "marke": "2",
@@ -1008,6 +1012,18 @@
             {
               "marke": "4",
               "text": "an den risikogewichteten Aktiven einerseits und den nicht risikogewichteten Aktiven, die auch Ausserbilanzgeschäfte enthalten können, andererseits bemessen werden;"
+            },
+            {
+              "marke": "b",
+              "text": "über Liquidität verfügen, die gewährleistet, dass sie Liquiditätsschocks besser absorbieren als nicht systemrelevante Banken und dadurch ihre Zahlungsverpflichtungen auch in einer aussergewöhnlichen Belastungssituation erfüllen können;"
+            },
+            {
+              "marke": "c",
+              "text": "die Risiken so verteilen, dass Gegenpartei- und Klumpenrisiken limitiert werden;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Notfallplanung hinsichtlich Struktur, Infrastruktur, Führung und Kontrolle sowie konzerninterner Liquiditäts- und Kapitalflüsse so vorsehen, dass diese umgehend umgesetzt werden kann und im Fall drohender Insolvenz die Weiterführung ihrer systemrelevanten Funktionen gewährleistet ist."
             }
           ]
         }
@@ -1016,7 +1032,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/51/117_121_129/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "26111042ae06bb3148605b82a6d8c99ff9bc253de31df0fa1db5a199da89b57a"
+      "sha": "8d34f75c444e169e6ba6a8b72ee66ae209b8fa71c1dce6293e1c0ebd5fbea624"
     },
     {
       "id": "bund/BANKG/art_10",
@@ -1453,11 +1469,23 @@
             },
             {
               "marke": "1bis",
-              "text": "kryptobasierte Vermögenswerte, wenn sich die Bank verpflichtet hat, diese für den Depotkunden jederzeit bereitzuhalten, und diese: a. dem Depotkunden individuell zugeordnet sind, oder"
+              "text": "kryptobasierte Vermögenswerte, wenn sich die Bank verpflichtet hat, diese für den Depotkunden jederzeit bereitzuhalten, und diese:"
+            },
+            {
+              "marke": "a",
+              "text": "dem Depotkunden individuell zugeordnet sind, oder"
             },
             {
               "marke": "b",
               "text": "einer Gemeinschaft zugeordnet sind und ersichtlich ist, welcher Anteil am Gemeinschaftsvermögen dem Depotkunden zusteht;"
+            },
+            {
+              "marke": "2",
+              "text": "bewegliche Sachen, Effekten und Forderungen, welche die Bank für Rechnung der Depotkunden fiduziarisch innehat;"
+            },
+            {
+              "marke": "3",
+              "text": "frei verfügbare Lieferansprüche der Bank gegenüber Dritten aus Kassageschäften, abgelaufenen Termingeschäften, Deckungsgeschäften oder Emissionen für Rechnung der Depotkunden."
             }
           ]
         }
@@ -1466,7 +1494,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/51/117_121_129/de#art_16",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "25580579bb0f8a8ae1a21ae7d05f3c6226ee136c249ea913598754d2892c476a"
+      "sha": "69911d0ab8f5eb6509006ba2dd46d87c268e9b364854f9cba577fdae6f481e01"
     },
     {
       "id": "bund/BANKG/art_17",
@@ -2906,11 +2934,19 @@
             },
             {
               "marke": "c",
-              "text": "sicherstellt, dass jede Bank im Umfang der Hälfte ihrer Beitragsverpflichtungen auf Dauer: 1. leicht verwertbare Wertschriften von hoher Qualität oder Schweizerfranken in bar bei einer sicheren Drittverwahrungsstelle hinterlegt, oder"
+              "text": "sicherstellt, dass jede Bank im Umfang der Hälfte ihrer Beitragsverpflichtungen auf Dauer:"
+            },
+            {
+              "marke": "1",
+              "text": "leicht verwertbare Wertschriften von hoher Qualität oder Schweizerfranken in bar bei einer sicheren Drittverwahrungsstelle hinterlegt, oder"
             },
             {
               "marke": "2",
               "text": "dem Träger der Einlagensicherung Bardarlehen gewährt;"
+            },
+            {
+              "marke": "d",
+              "text": "jede Bank dazu verpflichtet, dass sie im Rahmen ihrer ordentlichen Geschäftstätigkeit die notwendigen Vorbereitungen trifft, die dem Untersuchungs- oder Sanierungsbeauftragten oder Konkursliquidator die Erstellung eines Auszahlungsplans, die Kontaktierung der Einleger sowie die Auszahlung gemäss Artikel 37 j erlauben."
             }
           ]
         },
@@ -2953,7 +2989,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/51/117_121_129/de#art_37_h",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "ccead2b10b8f418f6d30b0b205cfe92fb41af604e30c5ef81faf371be412f85d"
+      "sha": "77e4555e25f30a7d40ec5d394229061f58d63f630af3dc720bfa43efd068c9af"
     },
     {
       "id": "bund/BANKG/art_37_i",

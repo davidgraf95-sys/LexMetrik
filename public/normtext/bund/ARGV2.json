@@ -869,11 +869,19 @@
             },
             {
               "marke": "c",
-              "text": "Das Einkaufszentrum befindet sich: 1. in einem Fremdenverkehrsgebiet nach Absatz 2; oder"
+              "text": "Das Einkaufszentrum befindet sich:"
+            },
+            {
+              "marke": "1",
+              "text": "in einem Fremdenverkehrsgebiet nach Absatz 2; oder"
             },
             {
               "marke": "2",
               "text": "in einer Entfernung von höchstens 15 Kilometern zur Schweizer Grenze und in der unmittelbaren Nähe eines Autobahnanschlusses oder Bahnhofs."
+            },
+            {
+              "marke": "d",
+              "text": "Die Arbeitnehmer und Arbeitnehmerinnen erhalten für die Sonntagsarbeit Kompensationen, die über die gesetzlichen Vorgaben hinausgehen."
             }
           ]
         }
@@ -882,7 +890,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/244/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "9574bd01a70875ba37736f2c2f534b2c761b3abb483354c909a7dcd06b52bb60"
+      "sha": "9063cb8fe38d3868914ed3ee1807a2337278cd8da7e45e0ac23bc9cba14a8930"
     },
     {
       "id": "bund/ARGV2/art_26",
@@ -1318,7 +1326,11 @@
             },
             {
               "marke": "c",
-              "text": "Sie verfügen über: 1. ein Bruttojahreseinkommen, einschliesslich Boni, von mehr als 120 000 Franken, wobei sich der Betrag von 120 000 Franken bei Teilzeitanstellung anteilsmässig reduziert; oder"
+              "text": "Sie verfügen über:"
+            },
+            {
+              "marke": "1",
+              "text": "ein Bruttojahreseinkommen, einschliesslich Boni, von mehr als 120 000 Franken, wobei sich der Betrag von 120 000 Franken bei Teilzeitanstellung anteilsmässig reduziert; oder"
             },
             {
               "marke": "2",
@@ -1348,11 +1360,23 @@
             },
             {
               "marke": "d",
-              "text": "Betreffend die tägliche Ruhezeit gilt Folgendes: 1. Sie muss mindestens 9 Stunden und im Durchschnitt von vier Wochen 11 Stunden betragen."
+              "text": "Betreffend die tägliche Ruhezeit gilt Folgendes:"
+            },
+            {
+              "marke": "1",
+              "text": "Sie muss mindestens 9 Stunden und im Durchschnitt von vier Wochen 11 Stunden betragen."
             },
             {
               "marke": "2",
               "text": "Sie kann für projektbezogene oder termingebundene Tätigkeiten unterbrochen werden; in diesem Fall gilt Artikel 19 Absatz 3 der Verordnung 1 vom 10. Mai 2000 zum Arbeitsgesetz sinngemäss."
+            },
+            {
+              "marke": "e",
+              "text": "An höchstens 9 Sonntagen pro Jahr ist für jeweils höchstens 5 Stunden Sonntagsarbeit ohne behördliche Bewilligung erlaubt."
+            },
+            {
+              "marke": "f",
+              "text": "Die geleistete tägliche Arbeitszeit ist zu erfassen; Artikel 73 a der Verordnung 1 zum Arbeitsgesetz ist nicht anwendbar."
             }
           ]
         },
@@ -1365,7 +1389,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/244/de#art_34_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "2b1e4dae13045b1e19e8961c26edcc022b39d634a9770602b659d36d440f7802"
+      "sha": "7cf4e1000c040fc9d2a0d0962621773ff893d8fe12f8e43ad5a3cb1de71af247"
     },
     {
       "id": "bund/ARGV2/art_35",
@@ -1807,7 +1831,11 @@
             },
             {
               "marke": "b",
-              "text": "in einem Betrieb stattfindet: 1. der dieser Verordnung unterstellt ist,"
+              "text": "in einem Betrieb stattfindet:"
+            },
+            {
+              "marke": "1",
+              "text": "der dieser Verordnung unterstellt ist,"
             },
             {
               "marke": "2",
@@ -1824,7 +1852,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/244/de#art_51",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20251201",
-      "sha": "c88e823d5607ec208c98b794d734008db96d2c4d0fea8d7d6d35cd2a8a9d39fe"
+      "sha": "2bb26107bc45da1bf998f5554f3902e80e499ba10e5e1eb71a791044ae19eb57"
     },
     {
       "id": "bund/ARGV2/art_51_a",

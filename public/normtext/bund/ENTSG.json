@@ -524,12 +524,48 @@
           "text": "Die zuständige kantonale Behörde nach Artikel 7 Absatz 1 Buchstabe d kann:",
           "items": [
             {
+              "marke": "a",
+              "text": "bei Verstössen gegen Artikel 1 a Absatz 2, gegen Artikel 3 oder gegen Artikel 6 eine Verwaltungssanktion aussprechen, die eine Belastung durch einen Betrag bis 5000 Franken vorsieht;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Verstössen gegen Artikel 2 eine Verwaltungssanktion aussprechen, die:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Belastung durch einen Betrag bis 30 000 Franken vorsieht, oder"
+            },
+            {
+              "marke": "2",
+              "text": "den betreffenden Unternehmen verbietet, während ein bis fünf Jahren in der Schweiz ihre Dienste anzubieten;"
+            },
+            {
+              "marke": "c",
+              "text": "bei einem besonders schwerwiegenden Verstoss gegen Artikel 2 die nach Buchstabe b vorgesehenen administrativen Sanktionen kumulativ aussprechen;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Verstössen gegen die Sorgfaltspflicht nach Artikel 5 Absatz 3 eine Verwaltungssanktion aussprechen:"
+            },
+            {
               "marke": "1",
               "text": "die eine Belastung durch einen Betrag bis 5000 Franken vorsieht, oder"
             },
             {
               "marke": "2",
               "text": "den betreffenden Unternehmen verbietet, während ein bis fünf Jahren in der Schweiz ihre Dienste anzubieten;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Verstössen im Sinne von Artikel 12 Absatz 1 Buchstabe a oder b oder bei Nichtbezahlung des Betrags der rechtskräftigen Verwaltungssanktion nach Buchstabe a, b oder d den betreffenden Unternehmen verbieten, während ein bis fünf Jahren in der Schweiz ihre Dienste anzubieten;"
+            },
+            {
+              "marke": "f",
+              "text": "gegen Arbeitgeber, die Arbeitnehmerinnen und Arbeitnehmer in der Schweiz anstellen und die gegen die Bestimmungen über den Mindestlohn in einem Normalarbeitsvertrag nach Artikel 360 a OR verstossen, eine Verwaltungssanktion aussprechen, die eine Belastung durch einen Betrag bis 30 000 Franken vorsieht;"
+            },
+            {
+              "marke": "g",
+              "text": "den fehlbaren Unternehmen die Kontrollkosten ganz oder teilweise auferlegen."
             }
           ]
         },
@@ -542,7 +578,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2003/231/de#art_9",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "16dda2ad61d3b610dd93230e8f0a4f035b73e4ea3bffe0b75465dd120872e4f5"
+      "sha": "8b3d7dd3f45cbf923caaf475782eb0d083240502c0646b8be7093a0cfb18bc6f"
     },
     {
       "id": "bund/ENTSG/art_10",

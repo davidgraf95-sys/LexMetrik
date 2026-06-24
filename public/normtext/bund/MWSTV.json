@@ -1390,6 +1390,22 @@
           "text": "Die Steuerausnahme erstreckt sich auf:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Leistungen zwischen privat- oder öffentlich-rechtlichen Gesellschaften, an denen ausschliesslich Gemeinwesen beteiligt sind, und:"
+            },
+            {
+              "marke": "1",
+              "text": "den ausschliesslich von diesen Gesellschaften direkt oder indirekt gehaltenen Gesellschaften, oder"
+            },
+            {
+              "marke": "2",
+              "text": "den Anstalten und Stiftungen, deren alleinige Gründer oder Träger sie sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Leistungen zwischen Anstalten oder Stiftungen, deren Gründer oder Träger ausschliesslich Gemeinwesen sind, und:"
+            },
+            {
               "marke": "1",
               "text": "den Gesellschaften, die sie alleine direkt oder indirekt halten, oder"
             },
@@ -1404,7 +1420,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/828/de#art_38",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "a8135378ed7da03bf15aafe4eebb42f3f9ec84453be43f525c75fa61ea410992"
+      "sha": "f2649f62267ea065f46700e4522cccfec627df7e53fb5e9b3154a190a2d67219"
     },
     {
       "id": "bund/MWSTV/art_38_a",
@@ -2871,11 +2887,27 @@
             },
             {
               "marke": "b",
-              "text": "auf den Beginn der übernächsten Steuerperiode, wenn: 1. die steuerpflichtige Person eine Herabsetzung der Raten beantragt hat, durch die in der laufenden Steuerperiode das Total der Raten im Verhältnis zum Steuerbetrag gemäss Abrechnung folgenden Wert unterschreitet: – bei effektiver Abrechnung und bei Abrechnung mit Pauschalsteuersätzen: 50 Prozent"
+              "text": "auf den Beginn der übernächsten Steuerperiode, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die steuerpflichtige Person eine Herabsetzung der Raten beantragt hat, durch die in der laufenden Steuerperiode das Total der Raten im Verhältnis zum Steuerbetrag gemäss Abrechnung folgenden Wert unterschreitet:"
+            },
+            {
+              "marke": "–",
+              "text": "bei effektiver Abrechnung und bei Abrechnung mit Pauschalsteuersätzen: 50 Prozent"
             },
             {
               "marke": "–",
               "text": "bei Abrechnung mit Saldosteuersätzen: 35 Prozent,"
+            },
+            {
+              "marke": "2",
+              "text": "die ESTV wegen Nichteinreichens der Abrechnung den geschuldeten Steuerbetrag gestützt auf Artikel 86 Absatz 2 zweiter Satz MWSTG nach pflichtgemässem Ermessen bestimmt hat, oder"
+            },
+            {
+              "marke": "3",
+              "text": "die ESTV gestützt auf Artikel 86 Absatz 2 erster Satz Forderungen in Betreibung gesetzt hat."
             }
           ]
         }
@@ -2884,7 +2916,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/828/de#art_76_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "291c7248965c9b8170430556362bf9444528a5789f4a83293def4d41bf28dd46"
+      "sha": "e9c82094a18836117e02bd6aa6f7e5547b01e5bcb57b2ef369feca08667531e0"
     },
     {
       "id": "bund/MWSTV/art_76_d",
@@ -3026,6 +3058,22 @@
           "text": "Wird gleichzeitig mit der Unterstellung unter die Saldosteuersatzmethode auch die Abrechnungsart nach Artikel 39 MWSTG geändert, so sind per Umstellungsdatum zusätzlich folgende Korrekturen vorzunehmen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Wird von vereinbarten auf vereinnahmte Entgelte gewechselt, so hat die steuerpflichtige Person in der letzten Abrechnungsperiode vor dem Wechsel Folgendes rückgängig zu machen:"
+            },
+            {
+              "marke": "1",
+              "text": "die deklarierte Steuer auf den von ihr in Rechnung gestellten, aber noch nicht bezahlten steuerbaren Leistungen (Debitorenposten); und"
+            },
+            {
+              "marke": "2",
+              "text": "den Vorsteuerabzug auf den ihr in Rechnung gestellten, aber noch nicht bezahlten steuerbaren Leistungen (Kreditorenposten), sofern es sich dabei um Vorsteuern handelt, die nicht bereits aufgrund von Absatz 3 korrigiert werden müssen."
+            },
+            {
+              "marke": "b",
+              "text": "Wird von vereinnahmten auf vereinbarte Entgelte gewechselt, so hat die steuerpflichtige Person in der letzten Abrechnungsperiode vor dem Wechsel:"
+            },
+            {
               "marke": "1",
               "text": "die Steuer auf den bestehenden Debitorenposten zum entsprechenden gesetzlichen Steuersatz zu deklarieren; und"
             },
@@ -3040,7 +3088,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/828/de#art_79",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "afac415eed6ccd4d681fa746a92e322d36dc030edf3e79f9327b7b93cb7bd82d"
+      "sha": "2108ed612e3df83d84e7597952efbdc812dca1c6ba07f15974332d0e821f24eb"
     },
     {
       "id": "bund/MWSTV/art_80",
@@ -4439,6 +4487,78 @@
           "text": "Bei der effektiven Abrechnungsmethode muss die steuerpflichtige Person für die Abrechnung mit der ESTV die folgenden Werte in geeigneter Weise festhalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "das Total aller der Inlandsteuer unterliegenden Entgelte; dieses umfasst namentlich die Entgelte für:"
+            },
+            {
+              "marke": "1",
+              "text": "besteuerte Leistungen, aufgeteilt nach Steuersätzen,"
+            },
+            {
+              "marke": "2",
+              "text": "Leistungen, die nach Artikel 22 MWSTG freiwillig versteuert werden (Option),"
+            },
+            {
+              "marke": "3",
+              "text": "Leistungen, die nach Artikel 23 MWSTG von der Steuer befreit sind,"
+            },
+            {
+              "marke": "4",
+              "text": "Leistungen an Begünstigte nach Artikel 2 GSG, die nach Artikel 143 dieser Verordnung von der Mehrwertsteuer befreit sind,"
+            },
+            {
+              "marke": "5",
+              "text": "Leistungen, für die das Meldeverfahren nach Artikel 38 MWSTG angewendet wurde,"
+            },
+            {
+              "marke": "6",
+              "text": "Leistungen, die nach Artikel 21 MWSTG von der Steuer ausgenommen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Minderungen des Entgelts bei Abrechnung nach vereinbarten Entgelten, soweit sie nicht in einer anderen Position berücksichtigt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "die nicht im Anwendungsbereich der Mehrwertsteuer liegenden:"
+            },
+            {
+              "marke": "1",
+              "text": "Entgelte aus Leistungen, deren Ort nach den Artikeln 7 und 8 MWSTG im Ausland liegt,"
+            },
+            {
+              "marke": "2",
+              "text": "nicht als Entgelte geltenden Mittelflüsse nach Artikel 18 Absatz 2 Buchstaben a–c MWSTG,"
+            },
+            {
+              "marke": "3",
+              "text": "anderen nicht als Entgelte geltenden Mittelflüsse nach Artikel 18 Absatz 2 Buchstaben d–l MWSTG;"
+            },
+            {
+              "marke": "d",
+              "text": "das Total der Entgelte für der Bezugsteuer unterliegende Leistungen, aufgeteilt nach Steuersätzen;"
+            },
+            {
+              "marke": "e",
+              "text": "das Total aller abziehbaren Vorsteuern, vor den Korrekturen und Kürzungen nach Buchstabe f, aufgeteilt in:"
+            },
+            {
+              "marke": "1",
+              "text": "Vorsteuer auf Material- und Dienstleistungsaufwand,"
+            },
+            {
+              "marke": "2",
+              "text": "Vorsteuer auf Investitionen und übrigem Betriebsaufwand,"
+            },
+            {
+              "marke": "3",
+              "text": "Einlageentsteuerung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Beträge, um die der Vorsteuerabzug korrigiert oder gekürzt werden muss infolge:"
+            },
+            {
               "marke": "1",
               "text": "gemischter Verwendung nach Artikel 30 MWSTG,"
             },
@@ -4449,6 +4569,10 @@
             {
               "marke": "3",
               "text": "Erhalts von Mittelflüssen, die nicht als Entgelt gelten, nach Artikel 33 Absatz 2 MWSTG;"
+            },
+            {
+              "marke": "g",
+              "text": "das Total der im Verlagerungsverfahren abgerechneten Einfuhrsteuer."
             }
           ]
         },
@@ -4461,7 +4585,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/828/de#art_126",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "b9f7de4808b75e9fe5622e0782f175e0f1477f393fa2eec6001dc7fc9590ef06"
+      "sha": "27744f1df9ccc17b95a7c0125fb6bd0d0974330bfd4be6cbe9928202b809d3c7"
     },
     {
       "id": "bund/MWSTV/art_127",
@@ -4476,6 +4600,38 @@
           "text": "Bei der Saldosteuersatz- und der Pauschalsteuersatzmethode muss die steuerpflichtige Person für die Abrechnung mit der ESTV die folgenden Werte in geeigneter Weise festhalten:",
           "items": [
             {
+              "marke": "a",
+              "text": "das Total aller der Inlandsteuer unterliegenden Entgelte; dieses umfasst namentlich die Entgelte für:"
+            },
+            {
+              "marke": "1",
+              "text": "besteuerte Leistungen, aufgeteilt nach Saldosteuersätzen beziehungsweise Pauschalsteuersätzen,"
+            },
+            {
+              "marke": "2",
+              "text": "Leistungen, die nach Artikel 23 MWSTG von der Steuer befreit sind,"
+            },
+            {
+              "marke": "3",
+              "text": "Leistungen an Begünstigte nach Artikel 2 GSG, die nach Artikel 143 dieser Verordnung von der Mehrwertsteuer befreit sind,"
+            },
+            {
+              "marke": "4",
+              "text": "Leistungen, für die das Meldeverfahren nach Artikel 38 MWSTG angewendet wurde,"
+            },
+            {
+              "marke": "5",
+              "text": "Leistungen, die nach Artikel 21 MWSTG von der Steuer ausgenommen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Minderungen des Entgelts bei Abrechnung nach vereinbarten Entgelten, soweit sie nicht in einer anderen Position berücksichtigt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "die nicht im Anwendungsbereich der Mehrwertsteuer liegenden:"
+            },
+            {
               "marke": "1",
               "text": "Entgelte aus Leistungen, deren Ort nach den Artikeln 7 und 8 MWSTG im Ausland liegt,"
             },
@@ -4486,6 +4642,18 @@
             {
               "marke": "3",
               "text": "anderen nicht als Entgelte geltenden Mittelflüsse nach Artikel 18 Absatz 2 Buchstaben d–l MWSTG;"
+            },
+            {
+              "marke": "d",
+              "text": "das Total der Entgelte für der Bezugsteuer unterliegende Leistungen, aufgeteilt nach Steuersätzen;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "die Korrekturen nach den Artikeln 79 Absätze 3 und 4, 81 Absätze 5 und 6 sowie 83 Absatz 1."
             }
           ]
         },
@@ -4498,7 +4666,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/828/de#art_127",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250101",
-      "sha": "bcd55003e81191111e968e3f71d950223153fe4cb17cfc537cca69eed2783793"
+      "sha": "4693cabbb713d60135ac45e0329ff1ff66ac81144a167275a0b07e1ee6339260"
     },
     {
       "id": "bund/MWSTV/art_128",

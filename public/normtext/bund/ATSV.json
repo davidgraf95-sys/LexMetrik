@@ -1329,12 +1329,48 @@
           "text": "Verbindungsstellen nach Artikel 75 a ATSG sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Leistungen bei Krankheit und Mutterschaft: die gemeinsame Einrichtung nach Artikel 18 des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung (KVG), soweit sie nicht bereits nach Artikel 19 der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV) Verbindungsstelle ist;"
+            },
+            {
+              "marke": "b",
+              "text": "für Leistungen bei Invalidität:"
+            },
+            {
+              "marke": "1",
+              "text": "im Bereich der Invalidenversicherung: die IV-Stelle für Versicherte im Ausland nach Artikel 56 des Bundesgesetzes vom 19. Juni 1995 über die Invalidenversicherung,"
+            },
+            {
+              "marke": "2",
+              "text": "im Bereich der beruflichen Vorsorge: der Sicherheitsfonds nach Artikel 54 Absatz 2 Buchstabe a des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG);"
+            },
+            {
+              "marke": "c",
+              "text": "für Leistungen bei Alter und Tod:"
+            },
+            {
               "marke": "1",
               "text": "im Bereich der Alters- und Hinterlassenenversicherung: die Schweizerische Ausgleichskasse nach Artikel 113 der Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV),"
             },
             {
               "marke": "2",
               "text": "im Bereich der beruflichen Vorsorge: der Sicherheitsfonds;"
+            },
+            {
+              "marke": "d",
+              "text": "für Leistungen bei Arbeitsunfällen und Berufskrankheiten: die Schweizerische Unfallversicherungsanstalt (Suva) nach Artikel 61 des Bundesgesetzes vom 20. März 1981 über die Unfallversicherung;"
+            },
+            {
+              "marke": "e",
+              "text": "für Leistungen bei Arbeitslosigkeit: die Ausgleichsstelle der Arbeitslosenversicherung nach Artikel 83 AVIG;"
+            },
+            {
+              "marke": "f",
+              "text": "für Familienleistungen: das BSV;"
+            },
+            {
+              "marke": "g",
+              "text": "für die Bestimmung der anwendbaren Rechtsvorschriften: das BSV."
             }
           ]
         }
@@ -1343,7 +1379,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/569/de#art_17_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "97fc6fbc207402bcba1be10b9bbb2de08dea635da738f12265cfa10b16b1b41b"
+      "sha": "3985916b436c8d5e922bd5d9aff8a2cb5ec81743cfd63f0eeb17d14973711069"
     },
     {
       "id": "bund/ATSV/art_17_c",
@@ -1358,12 +1394,96 @@
           "text": "Zuständige Träger nach Artikel 75 a ATSG sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Leistungen bei Krankheit und Mutterschaft mit Ausnahme der Mutterschaftsentschädigung: der Versicherer nach dem KVG;"
+            },
+            {
+              "marke": "b",
+              "text": "für Leistungen bei Invalidität:"
+            },
+            {
+              "marke": "1",
+              "text": "im Bereich der Invalidenversicherung:"
+            },
+            {
+              "marke": "–",
+              "text": "bei Wohnsitz in der Schweiz: die IV-Stelle des Wohnkantons"
+            },
+            {
+              "marke": "–",
+              "text": "bei Wohnsitz im Ausland: die IV-Stelle für Versicherte im Ausland,"
+            },
+            {
+              "marke": "2",
+              "text": "im Bereich der beruflichen Vorsorge: die Vorsorgeeinrichtung oder die Freizügigkeitseinrichtung;"
+            },
+            {
+              "marke": "c",
+              "text": "für Leistungen bei Alter und Tod:"
+            },
+            {
+              "marke": "1",
+              "text": "im Bereich der Alters- und Hinterlassenenversicherung:"
+            },
+            {
+              "marke": "–",
+              "text": "bei Wohnsitz in der Schweiz: die AHV-Ausgleichskasse"
+            },
+            {
+              "marke": "–",
+              "text": "bei Wohnsitz im Ausland: die Schweizerische Ausgleichskasse,"
+            },
+            {
+              "marke": "2",
+              "text": "im Bereich der beruflichen Vorsorge: die Vorsorgeeinrichtung oder die Freizügigkeitseinrichtung;"
+            },
+            {
+              "marke": "d",
+              "text": "für Leistungen der Mutterschaftsentschädigung:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Wohnsitz in der Schweiz: die AHV-Ausgleichskasse,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Wohnsitz im Ausland: die Schweizerische Ausgleichskasse;"
+            },
+            {
+              "marke": "e",
+              "text": "für Leistungen bei Arbeitsunfällen und Berufskrankheiten:"
+            },
+            {
+              "marke": "1",
+              "text": "bei unselbstständig Erwerbstätigen: der Unfallversicherer, dem der Arbeitgeber angeschlossen ist,"
+            },
+            {
+              "marke": "2",
+              "text": "bei selbstständig Erwerbstätigen: der Unfallversicherer, bei dem die betreffende Person versichert ist;"
+            },
+            {
+              "marke": "f",
+              "text": "für Leistungen bei Arbeitslosigkeit: die von der arbeitslosen Person gewählte Arbeitslosenkasse sowie das zuständige Regionale Arbeitsvermittlungszentrum nach Artikel 85 b AVIG;"
+            },
+            {
+              "marke": "g",
+              "text": "für Familienleistungen:"
+            },
+            {
               "marke": "1",
               "text": "nach dem Familienzulagengesetz vom 24. März 2006 (FamZG): die Familienausgleichskassen nach Artikel 14 FamZG,"
             },
             {
               "marke": "2",
               "text": "nach dem Bundesgesetz vom 20. Juni 1952 über die Familienzulagen in der Landwirtschaft: die AHV-Ausgleichskasse;"
+            },
+            {
+              "marke": "h",
+              "text": "für die Vollstreckung ausländischer Forderungen in der Schweiz: die Zentrale Ausgleichsstelle (ZAS) nach Artikel 71 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG);"
+            },
+            {
+              "marke": "i",
+              "text": "für die Bestimmung der anwendbaren Rechtsvorschriften: die AHV-Ausgleichskasse."
             }
           ]
         }
@@ -1372,7 +1492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/569/de#art_17_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "54bb531d5e3894343f85c45f795e69e98f603132c21ebef919d8102291a1ee98"
+      "sha": "b69034482604cc63bc9e0952e72ca6f0f7cf793067ccd936d5ec9cc5e2aeb327"
     },
     {
       "id": "bund/ATSV/art_17_d",

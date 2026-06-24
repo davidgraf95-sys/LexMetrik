@@ -69,17 +69,26 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   //      konsumiert, damit ihre Zellen-<p> nicht einzeln matchen, und als
   //      mehrspaltig-Block geführt (sonst kompletter Verlust, Bug 23.6.2026).
   const NICHT_P = '(?:(?!</p>)[\\s\\S])*?';
+  // Die <dl>-Alternative matcht NUR den Öffnungs-Tag (match[4] === ''); ihr Ende
+  // wird im Loop BALANCIERT bestimmt (findeDlEnde), weil Fedlex verschachtelte
+  // <dl> in <dd> setzt (lit. → nummerierte Unterpunkte, z.B. MStG art_42, KVV
+  // art_30). Ein non-greedy `[\s\S]*?</dl>` stoppte sonst am ERSTEN — also dem
+  // INNEREN — </dl> und verlor lit-Ebene + Einleitung (Bug 25.6.2026, §1).
   const bloeckeUndListenRe = new RegExp(
     '<p[^>]*\\bclass="[^"]*\\babsatz\\b[^"]*"[^>]*>([\\s\\S]*?)</p>' +
       `|<p[^>]*>((?:\\s|&nbsp;|<\\/?inl>)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
       `|<p[^>]*>(${NICHT_P})</p>(?=\\s*<dl)` +
-      '|<dl[^>]*>([\\s\\S]*?)</dl>' +
+      '|(<dl[^>]*>)' +
       '|<table[^>]*>([\\s\\S]*?)</table>',
     'gi',
   );
   const bloecke: ArtikelText['bloecke'] = [];
 
-  for (const match of inner.matchAll(bloeckeUndListenRe)) {
+  let match: RegExpExecArray | null;
+  while ((match = bloeckeUndListenRe.exec(inner)) !== null) {
+    // Leer-Match-Schutz: bei einem Null-Längen-Treffer (theoretisch) lastIndex
+    // vorrücken, damit der Loop nicht hängt.
+    if (match[0] === '') { bloeckeUndListenRe.lastIndex++; continue; }
     if (match[5] !== undefined) {
       // ── Tabelle (<table><tr><th>…</th></tr><tr><td>…</td></tr></table>) ──────
       const mehr = parseFedlexTabelle(match[5]);
@@ -116,7 +125,14 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
       }
     } else if (match[4] !== undefined) {
       // ── Aufzählung (<dl><dt>marke.</dt><dd>text</dd>…</dl>) ───────────────
-      const items = parseDefinitionsListe(match[4]);
+      // Balancierte <dl>…</dl>-Klammer: match[4] ist nur der Öffnungs-Tag; das
+      // PASSENDE schliessende </dl> wird über die Tag-Tiefe gefunden, damit
+      // verschachtelte <dl> (lit. → nummerierte Unterpunkte) komplett erfasst
+      // werden (Bug 25.6.2026). dlInner = Inhalt OHNE äusseres <dl>/</dl>.
+      const ende = findeDlEnde(inner, match.index);
+      const dlInner = inner.slice(match.index + match[4].length, ende - '</dl>'.length);
+      bloeckeUndListenRe.lastIndex = ende; // verschachtelte <dl>/<dt> nicht erneut matchen
+      const items = parseDefinitionsListe(dlInner);
       if (items.length > 0) {
         if (bloecke.length > 0) {
           bloecke[bloecke.length - 1].items = items;
@@ -145,24 +161,70 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
 }
 
 /**
- * Zerlegt eine Fedlex-<dl>-Aufzählung in lit./Ziff.-Items.
+ * Findet zu einem <dl>-Öffnungs-Tag (an Position startIdx beginnend) den Index
+ * NACH dem PASSENDEN schliessenden </dl>, indem die <dl>/</dl>-Tiefe gezählt wird.
+ * Fedlex verschachtelt <dl> in <dd> (lit. → nummerierte Unterpunkte); ein
+ * non-greedy Regex stoppte am falschen (inneren) </dl>. Fehlt das schliessende
+ * Tag (malformed), wird das Stringende zurückgegeben (defensiv).
+ */
+function findeDlEnde(html: string, startIdx: number): number {
+  const tagRe = /<dl\b[^>]*>|<\/dl>/gi;
+  tagRe.lastIndex = startIdx;
+  let tiefe = 0;
+  let m: RegExpExecArray | null;
+  while ((m = tagRe.exec(html)) !== null) {
+    if (m[0].toLowerCase().startsWith('</')) {
+      tiefe--;
+      if (tiefe === 0) return m.index + m[0].length;
+    } else {
+      tiefe++;
+    }
+  }
+  return html.length;
+}
+
+/**
+ * Zerlegt eine Fedlex-<dl>-Aufzählung in lit./Ziff.-Items — REKURSIV über
+ * verschachtelte <dl> (lit.-Buchstabe → nummerierte Unterpunkte).
  *
  * Reale Struktur (SPIKE 16.6.2026, OR art_336/art_77):
  *   <dl><dt>a. </dt><dd>…Text;</dd><dt>b. </dt><dd>…</dd>…</dl>
+ * Verschachtelt (MStG art_42, KVV art_30, MWSTV 126/127):
+ *   <dl><dt>a. </dt><dd>Einleitung:<dl><dt>1. </dt><dd>…</dd>…</dl></dd>…</dl>
  * Die <dt>-Marke ist «a. », «1. » o.ä.; einzelne <dt> tragen einen
  * Fussnoten-<sup><a>…</a></sup> (z.B. «e.<sup><a>199</a></sup> »).
  *
  * marke = Buchstabe/Ziffer OHNE Punkt und ohne Fussnote ('a','b','17').
- * text  = bereinigter <dd>-Inhalt (Fussnoten-<sup> entfernt, Entities dekodiert).
+ * text  = bereinigter <dd>-Inhalt (Fussnoten-<sup> entfernt, Entities dekodiert);
+ *         bei verschachteltem <dl> nur der Einleitungstext VOR der Unterliste.
+ *
+ * AUSGABE-MODELL (flach, abwärtskompatibel): Unterpunkte werden als weitere
+ * Items NACH ihrem Eltern-Item in DOKUMENTREIHENFOLGE angehängt. Die Lesesicht
+ * (ArtikelBody) rekonstruiert die Verschachtelung aus den Marken-Typen
+ * (lit a/b/c = Stufe 0; Ziff 1/2/3 NACH einem lit = Stufe 1) — dasselbe
+ * Datenmodell, das schon flache lit/Ziff/Strich-Listen zweistufig rendert.
  */
 function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: string }> {
   const items: Array<{ marke: string; text: string }> = [];
-  const paarRe =
-    /<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/gi;
-  for (const m of dlInner.matchAll(paarRe)) {
-    // Fussnoten-<sup><a>…</a></sup> aus der <dt>-Marke und dem <dd>-Text tilgen.
+  // Iterativer Scan über die direkten <dt>…<dd>-Paare DIESER Ebene. Ein <dd>
+  // kann eine verschachtelte <dl> enthalten; deren Ende wird balanciert bestimmt
+  // (findeDlEnde), damit das <dd>-Ende nicht am inneren </dl> falsch erkannt wird.
+  const dtRe = /<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = dtRe.exec(dlInner)) !== null) {
+    const ddStart = dtRe.lastIndex; // direkt nach dem <dd…>-Öffnungs-Tag
+    // ── Ende dieses <dd> finden (balanciert über <dd>/</dd>) ──────────────
+    const ddEnde = findeDdEnde(dlInner, ddStart);
+    const ddRoh = dlInner.slice(ddStart, ddEnde);
+    dtRe.lastIndex = ddEnde + '</dd>'.length; // hinter dieses </dd> springen
+
+    // Verschachtelte <dl> in DIESEM <dd> abtrennen: Einleitungstext = vor der
+    // Unterliste; die Unterliste wird rekursiv zerlegt und NACH dem Eltern-Item
+    // eingehängt.
+    const subDlIdx = ddRoh.search(/<dl\b[^>]*>/i);
+
+    // Fussnoten-<sup><a>…</a></sup> aus der <dt>-Marke tilgen.
     const dtOhneFn = m[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
-    const ddOhneFn = m[2].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
     // Marke-Tags OHNE Leerzeichen strippen: das lat. Suffix steht als <sup>bis</sup>
     // direkt am Buchstaben («c<sup>bis</sup>»); entferneTags würde es zu «c bis»
     // trennen und die Regex unten verstümmelte es zu «c» (Bug-Audit 19.6.2026).
@@ -172,12 +234,69 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
     // «cbis»→«c», «1bis»→«1b»). Suffix VOR optionalem Buchstaben (wie ABS-Regex).
     const markeMatch = markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
     const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(/[.)]\s*$/, '');
-    const text = entferneTags(ddOhneFn);
-    if (marke && text) {
+
+    const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
+    const ddOhneFn = ddVorListe.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
+    let text = entferneTags(ddOhneFn);
+
+    // <dt>-EINGEBETTETER Text + LEERES <dd> (Fedlex-Sonderform, z.B. ZPO art_250
+    // Ziff. 15, einige VStrR/StG/BV-Punkte): hier steht der Punkttext IM <dt>
+    // hinter der Marke («<dt>15.<sup>fn</sup> Anordnung …</dt><dd></dd>») statt im
+    // <dd>. Ohne Fallback ginge dieser Punkt stumm verloren (§1/§8). NUR greifen,
+    // wenn das <dd> wirklich leer ist UND keine Unterliste vorliegt — sonst bleibt
+    // alles byte-gleich (§6). Der Resttext nach der Marke wird tag-/fussnoten-
+    // bereinigt übernommen.
+    if (!text && subDlIdx < 0 && markeMatch) {
+      // Die nackte Marke + Punkt/Klammer aus dem getaggt-/fussnoten-bereinigten
+      // <dt> entfernen; der Rest ist der Punkttext.
+      const dtTextRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, ' '))
+        .replace(/\s+/g, ' ')
+        .trim();
+      const nachMarke = dtTextRoh.replace(
+        /^[0-9]+(?:bis|ter|quater|quinquies)?[a-z]?\s*[.)]?\s*|^[a-z](?:bis|ter|quater|quinquies)?\s*[.)]?\s*/i,
+        '',
+      ).trim();
+      if (nachMarke) text = nachMarke;
+    }
+
+    // Eltern-Item: auch ohne eigenen Text aufnehmen, WENN eine Unterliste folgt
+    // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
+    // wie bisher nur bei Text (leere Items werden verworfen).
+    if (marke && (text || subDlIdx >= 0)) {
       items.push({ marke, text });
+    }
+
+    // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item).
+    if (subDlIdx >= 0) {
+      const subEnde = findeDlEnde(ddRoh, subDlIdx);
+      const subOpenLen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i)![0].length;
+      const subInner = ddRoh.slice(subDlIdx + subOpenLen, subEnde - '</dl>'.length);
+      for (const sub of parseDefinitionsListe(subInner)) items.push(sub);
     }
   }
   return items;
+}
+
+/**
+ * Findet zu einem <dd>-Inhalt (ab Position startIdx, NACH dem <dd…>-Öffnungs-Tag)
+ * den Index des PASSENDEN schliessenden </dd>, balanciert über die <dd>-Tiefe.
+ * Verschachtelte <dl><dt>…<dd>…</dd></dl> dürfen das <dd>-Ende nicht vortäuschen;
+ * darum werden <dd>/</dd> gezählt (Start-Tiefe 1 für das offene <dd>).
+ */
+function findeDdEnde(html: string, startIdx: number): number {
+  const tagRe = /<dd\b[^>]*>|<\/dd>/gi;
+  tagRe.lastIndex = startIdx;
+  let tiefe = 1;
+  let m: RegExpExecArray | null;
+  while ((m = tagRe.exec(html)) !== null) {
+    if (m[0].toLowerCase().startsWith('</')) {
+      tiefe--;
+      if (tiefe === 0) return m.index;
+    } else {
+      tiefe++;
+    }
+  }
+  return html.length;
 }
 
 /**

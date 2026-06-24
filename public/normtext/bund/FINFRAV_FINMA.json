@@ -505,6 +505,30 @@
           "text": "Wer in einer oder in beiden der nachstehenden Positionen einen Grenzwert erreicht, über- oder unterschreitet, muss die Positionen einzeln und unabhängig voneinander berechnen sowie beide gleichzeitig melden:",
           "items": [
             {
+              "marke": "a",
+              "text": "Erwerbspositionen:"
+            },
+            {
+              "marke": "1",
+              "text": "Aktien und aktienähnliche Anteile sowie Stimmrechte nach Artikel 120 Absatz 3 FinfraG,"
+            },
+            {
+              "marke": "2",
+              "text": "Wandel- und Erwerbsrechte (Art. 15 Abs. 2 Bst. a),"
+            },
+            {
+              "marke": "3",
+              "text": "eingeräumte (geschriebene) Veräusserungsrechte (Art. 15 Abs. 2 Bst. b),"
+            },
+            {
+              "marke": "4",
+              "text": "übrige Beteiligungsderivate (Art. 15 Abs. 2);"
+            },
+            {
+              "marke": "b",
+              "text": "Veräusserungspositionen:"
+            },
+            {
               "marke": "1",
               "text": "Veräusserungsrechte (Art. 15 Abs. 2 Bst. a),"
             },
@@ -527,7 +551,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230201",
-      "sha": "9b1998722a0c60f3f464ee087d152e8d7c3a59781a168b28dbca108e562678fd"
+      "sha": "1fb40590e903e16090e2ea5248435246b265055b3567fd42f73a2ace3da13cc5"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_15",
@@ -712,7 +736,11 @@
             },
             {
               "marke": "b",
-              "text": "Organisatorische Unabhängigkeit: Der Konzern gewährleistet durch seine Organisationsstrukturen, dass: 1. die Konzernobergesellschaft und andere Gesellschaften, die von ihr beherrscht werden, nicht in Form von Weisungen oder in anderer Weise auf die Stimmrechtsausübung der Fondsleitung oder der Gesellschaft ein­wirken; und"
+              "text": "Organisatorische Unabhängigkeit: Der Konzern gewährleistet durch seine Organisationsstrukturen, dass:"
+            },
+            {
+              "marke": "1",
+              "text": "die Konzernobergesellschaft und andere Gesellschaften, die von ihr beherrscht werden, nicht in Form von Weisungen oder in anderer Weise auf die Stimmrechtsausübung der Fondsleitung oder der Gesellschaft ein­wirken; und"
             },
             {
               "marke": "2",
@@ -751,7 +779,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_18",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230201",
-      "sha": "7681d40811762442f4ac27e1161e3e5fe63e2a3082963db67389ff0547539df0"
+      "sha": "60b28766d2a63563cc9aed8134b6065167a62fc9d8a54ad7af20ce4f762175c5"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_19",
@@ -880,7 +908,11 @@
             },
             {
               "marke": "b",
-              "text": "Meldepflicht auslösender Sachverhalt wie: 1. Erwerb,"
+              "text": "Meldepflicht auslösender Sachverhalt wie:"
+            },
+            {
+              "marke": "1",
+              "text": "Erwerb,"
             },
             {
               "marke": "2",
@@ -917,6 +949,18 @@
             {
               "marke": "10",
               "text": "Änderung gemeldeter Angaben;"
+            },
+            {
+              "marke": "c",
+              "text": "Datum der Entstehung der Meldepflicht;"
+            },
+            {
+              "marke": "d",
+              "text": "Datum der Übertragung der Beteiligungspapiere, wenn dieses nicht mit dem Datum der Entstehung der Meldepflicht zusammenfällt;"
+            },
+            {
+              "marke": "e",
+              "text": "Name, Vorname und Wohnort beziehungsweise Firma und Sitz der erwerbenden oder der veräussernden beziehungsweise der beteiligten Personen."
             }
           ]
         },
@@ -924,6 +968,62 @@
           "absatz": "2",
           "text": "Die Angaben nach Absatz 1 sind in folgenden Fällen namentlich mit nachstehenden Angaben zu ergänzen:",
           "items": [
+            {
+              "marke": "a",
+              "text": "in Fällen von Artikel 120 Absatz 3 FinfraG:"
+            },
+            {
+              "marke": "1",
+              "text": "in der Meldung der zur Ausübung der Stimmrechte nach freiem Ermessen berechtigten Person: der von der Ausübungsermächtigung erfasste Anteil der Stimmrechte,"
+            },
+            {
+              "marke": "2",
+              "text": "Hinweis, sofern die Meldung nicht durch den nach freiem Ermessen Ermächtigten erfolgt, sondern durch denjenigen, der diesen direkt oder indirekt beherrscht (konsolidierte Meldung);"
+            },
+            {
+              "marke": "b",
+              "text": "beim Handeln in gemeinsamer Absprache oder als organisierte Gruppe nach Artikel 12: die Angaben gemäss Artikel 121 FinfraG und Artikel 12 Absatz 3 dieser Verordnung;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Beteiligungsderivaten nach Artikel 15, die mit einer Wertpapierkennnummer (ISIN) versehen sind: diese Nummer;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Beteiligungsderivaten nach Artikel 15, die nicht mit einer ISIN versehen sind: die Angabe der wesentlichen Bedingungen wie:"
+            },
+            {
+              "marke": "1",
+              "text": "die Identität des Emittenten,"
+            },
+            {
+              "marke": "2",
+              "text": "den Basiswert,"
+            },
+            {
+              "marke": "3",
+              "text": "das Bezugsverhältnis,"
+            },
+            {
+              "marke": "4",
+              "text": "den Ausübungspreis,"
+            },
+            {
+              "marke": "5",
+              "text": "die Ausübungsfrist,"
+            },
+            {
+              "marke": "6",
+              "text": "die Ausübungsart;"
+            },
+            {
+              "marke": "e",
+              "text": "bei kollektiven Kapitalanlagen nach Artikel 18 Absatz 3: den Hinweis, dass die Anforderungen nach Artikel 18 Absatz 5 erfüllt sind;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Rechtsgeschäften nach Artikel 17:"
+            },
             {
               "marke": "1",
               "text": "Stimmrechtsanteil, Art und Anzahl der übertragenen Beteiligungspapiere oder Beteiligungsderivate nach Artikel 15 und der mit diesen verbundenen Stimmrechte,"
@@ -947,7 +1047,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20230201",
-      "sha": "c4b28b53e4b27e35f68ee584c0abc4689bfa29e2e4d8823f7db0bb7769fcab70"
+      "sha": "e09f09bea8472ad1a079a4494db754355bf7e99aa51e71289ee4cbb7b34751e8"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_23",

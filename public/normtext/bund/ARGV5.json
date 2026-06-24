@@ -338,11 +338,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Beschäftigung in der Nacht unentbehrlich ist, um: 1. die Ziele einer beruflichen Grundbildung zu erreichen, oder"
+              "text": "die Beschäftigung in der Nacht unentbehrlich ist, um:"
+            },
+            {
+              "marke": "1",
+              "text": "die Ziele einer beruflichen Grundbildung zu erreichen, oder"
             },
             {
               "marke": "2",
               "text": "eine Betriebsstörung infolge höherer Gewalt zu beheben;"
+            },
+            {
+              "marke": "b",
+              "text": "die Arbeit unter der Aufsicht einer erwachsenen und qualifizierten Person ausgeführt wird; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Beschäftigung in der Nacht den Besuch der Berufsfachschule nicht beeinträchtigt."
             }
           ]
         },
@@ -363,7 +375,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/692/de#art_12",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240401",
-      "sha": "c2d54139c6ecdfade943c16942e8bba8c13f6bccb9843f50c9ca6ab5692aac48"
+      "sha": "8cda02a419f61fa144d6a51318a6043ca525abfa626bede83720269d9239efb1"
     },
     {
       "id": "bund/ARGV5/art_13",
@@ -379,11 +391,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Beschäftigung am Sonntag unentbehrlich ist, um: 1. die Ziele einer beruflichen Grundbildung zu erreichen, oder"
+              "text": "die Beschäftigung am Sonntag unentbehrlich ist, um:"
+            },
+            {
+              "marke": "1",
+              "text": "die Ziele einer beruflichen Grundbildung zu erreichen, oder"
             },
             {
               "marke": "2",
               "text": "eine Betriebsstörung infolge höherer Gewalt zu beheben;"
+            },
+            {
+              "marke": "b",
+              "text": "die Arbeit unter der Aufsicht einer erwachsenen und qualifizierten Person ausgeführt wird; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Beschäftigung am Sonntag den Besuch der Berufsfachschule nicht beeinträchtigt."
             }
           ]
         },
@@ -404,7 +428,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/692/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240401",
-      "sha": "b1652ab9a2b045136556f65417c09875e0af816f2bf37e010a32baf804c93031"
+      "sha": "895bf1904960e905065260ed1f0f76145df37129016eef419d2b294d9037b8b3"
     },
     {
       "id": "bund/ARGV5/art_14",

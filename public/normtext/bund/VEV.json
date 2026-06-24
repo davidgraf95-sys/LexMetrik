@@ -115,12 +115,52 @@
           "text": "In dieser Verordnung bedeuten:",
           "items": [
             {
+              "marke": "a",
+              "text": "kurzfristiger Aufenthalt: Aufenthalt von höchstens 90 Tagen innerhalb eines Zeitraums von 180 Tagen im Schengen-Raum;"
+            },
+            {
+              "marke": "b",
+              "text": "längerfristiger Aufenthalt: Aufenthalt von mehr als 90 Tagen innerhalb eines Zeitraums von 180 Tagen im Schengen-Raum;"
+            },
+            {
+              "marke": "c",
+              "text": "Flughafentransit: Durchreise durch die internationalen Transitzonen der Flughäfen der Staaten, die durch eines der SAA gebunden sind (Schengen-Staaten);"
+            },
+            {
+              "marke": "d",
+              "text": "Visum für einen kurzfristigen Aufenthalt (Schengen-Visum, Typ C): Dokument in Form einer Vignette oder in elektronischem Format, das von einem Schengen-Staat ausgestellt wird und bescheinigt, dass die Inhaberin oder der Inhaber die Voraussetzungen für einen kurzfristigen Aufenthalt erfüllt; das Visum für einen kurzfristigen Aufenthalt ist entweder:"
+            },
+            {
+              "marke": "1",
+              "text": "einheitlich: für das Hoheitsgebiet aller Schengen-Staaten gültig, oder"
+            },
+            {
+              "marke": "2",
+              "text": "räumlich beschränkt: nur für das Hoheitsgebiet eines oder mehrerer Schengen-Staaten gültig;"
+            },
+            {
+              "marke": "e",
+              "text": "Visum für den Flughafentransit (Schengen-Visum, Typ A): Dokument in Form einer Vignette oder in elektronischem Format, das von einem Schengen-Staat ausgestellt wird und bescheinigt, dass die Inhaberin oder der Inhaber die Voraussetzungen für einen Flughafentransit erfüllt; das Visum für den Flughafentransit ist entweder:"
+            },
+            {
               "marke": "1",
               "text": "einheitlich: für die Durchreise durch die internationalen Transitzonen der Flughäfen aller Schengen-Staaten gültig, oder"
             },
             {
               "marke": "2",
               "text": "räumlich beschränkt : nur für die Durchreise durch die internationalen Transitzonen der Flughäfen eines oder mehrerer Schengen-Staaten gültig;"
+            },
+            {
+              "marke": "f",
+              "text": "Visum für einen längerfristigen Aufenthalt (nationales Visum, Typ D): Dokument in Form einer Vignette oder in elektronischem Format, das von einem Schengen-Staat ausgestellt wird und bescheinigt, dass die Inhaberin oder der Inhaber die Voraussetzungen für einen längerfristigen Aufenthalt erfüllt;"
+            },
+            {
+              "marke": "g",
+              "text": "Drittstaatsangehörige oder Drittstaatsangehöriger: Angehörige oder Angehöriger eines Staates, der weder Mitgliedstaat der Europäischen Union (EU) noch der Europäischen Freihandelsassoziation (EFTA) ist;"
+            },
+            {
+              "marke": "h",
+              "text": "Grenzüberschreitende Regionen : alle Kantone entlang der Landesgrenze der Schweiz zuzüglich der Kantone Appenzell Ausserrhoden und Appenzell Innerrhoden."
             }
           ]
         }
@@ -129,7 +169,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_2",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "2f0cb93008efe239d6d39651abac452ed3db1d6c5ea7a195e3729477d5fc4ed5"
+      "sha": "8e3e37b7378c8c7a8e1ea9529f8f650b2068d6a3effdd153ef148afca98d094f"
     },
     {
       "id": "bund/VEV/art_3",
@@ -290,7 +330,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Seine Gültigkeitsdauer beträgt: 1. bei einem kurzfristigen Aufenthalt: noch mindestens drei Monate ab dem Datum, an dem die Inhaberin oder der Inhaber beabsichtigt, den Schengen-Raum zu verlassen;"
+              "text": "Seine Gültigkeitsdauer beträgt:"
+            },
+            {
+              "marke": "1",
+              "text": "bei einem kurzfristigen Aufenthalt: noch mindestens drei Monate ab dem Datum, an dem die Inhaberin oder der Inhaber beabsichtigt, den Schengen-Raum zu verlassen;"
             },
             {
               "marke": "2",
@@ -299,6 +343,14 @@
             {
               "marke": "3",
               "text": "bei einem längerfristigen Aufenthalt: noch mindestens drei Monate ab dem Datum, an dem der Inhaberin oder dem Inhaber die Genehmigung zur Einreise in die Schweiz erteilt wurde."
+            },
+            {
+              "marke": "b",
+              "text": "Es muss innerhalb der vorangegangenen zehn Jahre ausgestellt worden sein."
+            },
+            {
+              "marke": "c",
+              "text": "Es muss bei Einreichung des Visumgesuchs mindestens zwei leere Seiten aufweisen, sofern seine Inhaberin oder sein Inhaber der Visumpflicht untersteht."
             }
           ]
         },
@@ -347,7 +399,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_6",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "5f3e74330c0e4d3b8326fbbed4c2af0b321ae59bba6273713be0cfe048634236"
+      "sha": "6a537052a643e214986a3d3def3678c737cda36c5792afe05007cea1f23d6fc8"
     },
     {
       "id": "bund/VEV/art_7",
@@ -509,6 +561,26 @@
           "text": "Gestützt auf Artikel 3 Absatz 5 des Visakodex sind folgende Personen von der Visumpflicht für den Flughafentransit ausgenommen:",
           "items": [
             {
+              "marke": "a",
+              "text": "Inhaberinnen und Inhaber eines von einem EU- oder EFTA-Mitgliedstaat ausgestellten gültigen Aufenthaltstitels;"
+            },
+            {
+              "marke": "b",
+              "text": "Staatsangehörige von Nichtmitgliedstaaten der EU und der EFTA, die über einen der folgenden Aufenthaltstitel verfügen:"
+            },
+            {
+              "marke": "1",
+              "text": "einen von Andorra, Japan, Kanada, San Marino, dem Vereinigten Königreich oder den Vereinigten Staaten ausgestellten gültigen Aufenthaltstitel nach Anhang V des Visakodex, der die vorbehaltlose Rückübernahme der Inhaberin oder des Inhabers garantiert,"
+            },
+            {
+              "marke": "2",
+              "text": "einen gültigen Aufenthaltstitel für ein überseeisches Land oder Gebiet der Niederlande: Aruba, Curaçao, Sint Maarten, Bonaire, Sint Eustatius und Saba;"
+            },
+            {
+              "marke": "c",
+              "text": "Staatsangehörige von Nichtmitgliedstaaten der EU und der EFTA, die über ein gültiges Visum der folgenden Staaten verfügen:"
+            },
+            {
               "marke": "1",
               "text": "eines EU-Mitgliedstaates, der den Visakodex nicht übernimmt oder noch nicht vollständig anwendet,"
             },
@@ -519,6 +591,18 @@
             {
               "marke": "3",
               "text": "eines überseeischen Landes oder Gebietes der Niederlande: Aruba, Curaçao, Sint Maarten, Bonaire, Sint Eustatius und Saba;"
+            },
+            {
+              "marke": "d",
+              "text": "Familienangehörige von Staatsangehörigen eines EU-Mitgliedstaates nach Anhang I Artikel 3 des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen) oder Familienangehörige von Staatsangehörigen des Vereinigten Königreichs, die Begünstigte des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens sind;"
+            },
+            {
+              "marke": "e",
+              "text": "Inhaberinnen und Inhaber eines anerkannten und gültigen Diplomatenpasses, der von einem der in Absatz 2 genannten Staaten ausgestellt wurde;"
+            },
+            {
+              "marke": "f",
+              "text": "Flugbesatzungsmitglieder, die Staatsangehörige eines Vertragsstaats des Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt sind."
             }
           ]
         },
@@ -535,7 +619,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_10",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260612",
-      "sha": "5b9e4a95e220387fb79b672c711d12f4aeea0682c2ca5574e13da4de0174e494"
+      "sha": "d3b7e88cf104a05d03bc992ec1e17d49ae30596e8e139df94a52dafc45f06fd5"
     },
     {
       "id": "bund/VEV/art_10_a",

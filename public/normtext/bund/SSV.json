@@ -4596,7 +4596,11 @@
             },
             {
               "marke": "b",
-              "text": "die Anbringung der folgenden Signale: 1. Lichtsignale,"
+              "text": "die Anbringung der folgenden Signale:"
+            },
+            {
+              "marke": "1",
+              "text": "Lichtsignale,"
             },
             {
               "marke": "2",
@@ -4645,6 +4649,10 @@
             {
               "marke": "13",
               "text": "«Autostrasse» (4.03);"
+            },
+            {
+              "marke": "c",
+              "text": "Anordnungen im Zusammenhang mit Baustellen von einer Dauer bis 6 Monaten."
             }
           ]
         },
@@ -4669,7 +4677,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#art_107",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20250701",
-      "sha": "67ecd969858d86020e0d6ba505c6c61dcb3dcdca2e7fe6c4cd3d8a0d3cd1bcfd"
+      "sha": "027ed7c4527dd49d8185f03bd9b10fd6ce1591c6e8c87c8af3cebb298a4bb415"
     },
     {
       "id": "bund/SSV/art_108",

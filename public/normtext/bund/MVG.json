@@ -37,12 +37,140 @@
           "text": "Bei der Militärversicherung ist versichert:",
           "items": [
             {
+              "marke": "a",
+              "text": "wer im obligatorischen oder freiwilligen Militär- oder Zivilschutzdienst steht;"
+            },
+            {
+              "marke": "b",
+              "text": "wer im Bundesdienst steht als:"
+            },
+            {
+              "marke": "1",
+              "text": "Berufsmilitär,"
+            },
+            {
+              "marke": "2",
+              "text": "Zeitmilitär,"
+            },
+            {
+              "marke": "3",
+              "text": "Waffenkontrolleur,"
+            },
+            {
+              "marke": "4",
+              "text": "Schiessplatzchef oder Schiessplatzwart,"
+            },
+            {
+              "marke": "5",
+              "text": "Militärkrankenpfleger,"
+            },
+            {
+              "marke": "6",
+              "text": "Instruktor des Bundesamtes für Bevölkerungsschutz;"
+            },
+            {
+              "marke": "c",
+              "text": "wer als Bundesbediensteter zu einer Truppe oder Zivilschutzorganisation abkommandiert ist und deren Risiken teilt;"
+            },
+            {
+              "marke": "d",
+              "text": "wer zufolge eines Aufgebots teilnimmt an:"
+            },
+            {
+              "marke": "1",
+              "text": "der Rekrutierung,"
+            },
+            {
+              "marke": "2",
+              "text": "sanitarischen Untersuchungen der Armee oder des Zivilschutzes,"
+            },
+            {
+              "marke": "3",
+              "text": "…"
+            },
+            {
+              "marke": "4",
+              "text": "Inspektionen oder Schatzungen von Tieren oder Sachen, die durch die Requisition für Armee oder Zivilschutz erfasst werden;"
+            },
+            {
+              "marke": "e",
+              "text": "wer nach Artikel 8 des Militärgesetzes vom 3. Februar 1995 an einer Orientierungsveranstaltung teilnimmt;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "wer teilnimmt an:"
+            },
+            {
+              "marke": "1",
+              "text": "der militärtechnischen Vorbildung,"
+            },
+            {
+              "marke": "2",
+              "text": "ausserdienstlichen Schiessübungen,"
+            },
+            {
+              "marke": "3",
+              "text": "einer freiwilligen militärischen oder wehrsportlichen Tätigkeit oder an einer freiwilligen Zivilschutztätigkeit ausser Dienst,"
+            },
+            {
+              "marke": "4",
+              "text": "militärischen Übungen und an Instruktionsdiensten des Zivilschutzes als Zivilperson, als Lehr- oder als Hilfspersonal,"
+            },
+            {
+              "marke": "5",
+              "text": "vom Bund durchgeführten Kursen und Übungen für Gesamtverteidigung als Lehr- oder als Hilfspersonal,"
+            },
+            {
+              "marke": "6",
+              "text": "…;"
+            },
+            {
+              "marke": "h",
+              "text": "wer beim Einsatz einer Zivilschutzorganisation im Sinne des Bevölkerungs- und Zivilschutzgesetzes vom 20. Dezember 2019 als Drittperson Hilfe leistet;"
+            },
+            {
+              "marke": "i",
+              "text": "wer als Patient auf Kosten der Militärversicherung in einer Heil-, Kur- oder Pflegeanstalt oder in einer Abklärungsstelle untergebracht ist;"
+            },
+            {
+              "marke": "k",
+              "text": "wer als Wehrpflichtiger:"
+            },
+            {
               "marke": "1",
               "text": "eine Arreststrafe verbüsst; oder"
             },
             {
               "marke": "2",
               "text": "in militärischer Untersuchungshaft steht oder vorläufig festgenommen ist;"
+            },
+            {
+              "marke": "l",
+              "text": "wer an friedenserhaltenden Aktionen und Guten Diensten des Bundes oder an der Vorbereitung solcher Aktionen teilnimmt und dafür in einem öffentlich-rechtlichen Dienstverhältnis zum Bund steht;"
+            },
+            {
+              "marke": "m",
+              "text": "wer als Angehöriger des Schweizerischen Katastrophenhilfekorps an Aktionen des Bundes oder an der Vorbereitung solcher Aktionen teilnimmt und dafür in einem öffentlich-rechtlichen Dienstverhältnis zum Bund steht;"
+            },
+            {
+              "marke": "n",
+              "text": "wer Zivildienst leistet;"
+            },
+            {
+              "marke": "o",
+              "text": "wer aufgrund einer Einladung an einem Einführungstag des Bundesamtes für Zivildienst (ZIVI) oder aufgrund eines Aufgebots an einer Vorsprache beim ZIVI, an einem Vorstellungsgespräch in einem Einsatzbetrieb oder an einem Ausbildungskurs teilnimmt;"
+            },
+            {
+              "marke": "p",
+              "text": "wer zufolge eines Aufgebots oder einer Einladung an sanitarischen Untersuchungen des Zivildienstes, des Schweizerischen Katastrophenhilfekorps oder der friedenserhaltenden Aktionen und Guten Dienste des Bundes teilnimmt;"
+            },
+            {
+              "marke": "q",
+              "text": "wer als Mitarbeiter des Nachrichtendienstes des Bundes (NDB) im Ausland eingesetzt ist."
             }
           ]
         },
@@ -55,7 +183,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/3043_3043_3043/de#art_1_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "c11fbe8851f8efef893129b65c964abe513753f9e6435bb904cbc0c9302970f6"
+      "sha": "efa5c225ba959d5c797243aabeaef5df951570654ffd6559bd7ce511c5a4e927"
     },
     {
       "id": "bund/MVG/art_2",
@@ -2702,8 +2830,16 @@
               "text": "den Strafuntersuchungsbehörden, wenn die Anzeige oder die Abwendung eines Verbrechens die Datenbekanntgabe erfordert;"
             },
             {
+              "marke": "hbis",
+              "text": "bis . dem NDB oder den Sicherheitsorganen der Kantone zuhanden des NDB, wenn eine konkrete Bedrohung der inneren oder äusseren Sicherheit nach Artikel 19 Absatz 2 des Nachrichtendienstgesetzes vom 25. September 2015 gegeben ist;"
+            },
+            {
               "marke": "i",
-              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin: 1. Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin:"
+            },
+            {
+              "marke": "1",
+              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
             },
             {
               "marke": "2",
@@ -2782,7 +2918,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/3043_3043_3043/de#art_95_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240101",
-      "sha": "07103b6791a86b90c087a2fe6d73e9e4774db23375953e32051ca6d26d5a6b66"
+      "sha": "b1b828484690c6977509642e50e506ef4a6ab83ce5d5d07da0e7a1285218a6f6"
     },
     {
       "id": "bund/MVG/art_95_b",

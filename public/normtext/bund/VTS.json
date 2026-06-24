@@ -774,7 +774,11 @@
             },
             {
               "marke": "d",
-              "text": "Klasse T4: Traktoren mit besonderer Zweckbestimmung der folgenden Unterklassen: 1. Klasse T4.1: Stelzradtraktoren, die für den Einsatz in hohen Reihenkulturen ausgelegt sind, ein überhöhtes Fahrwerk haben und deren Bodenfreiheit in der Arbeitsposition mehr als 1,00 m beträgt,"
+              "text": "Klasse T4: Traktoren mit besonderer Zweckbestimmung der folgenden Unterklassen:"
+            },
+            {
+              "marke": "1",
+              "text": "Klasse T4.1: Stelzradtraktoren, die für den Einsatz in hohen Reihenkulturen ausgelegt sind, ein überhöhtes Fahrwerk haben und deren Bodenfreiheit in der Arbeitsposition mehr als 1,00 m beträgt,"
             },
             {
               "marke": "2",
@@ -813,7 +817,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_12",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "f44e466a7004a58373382369b17fc5943a40549355d91221305783d0391a0ad2"
+      "sha": "72a771f4dbd2c1b54f62e5dd6d95d1e5fce982bd60772f1841e10215d947f52f"
     },
     {
       "id": "bund/VTS/art_13",
@@ -833,7 +837,11 @@
             },
             {
               "marke": "b",
-              "text": "die höchstens folgende Lasten aufweisen: 1. eine Nutz- oder eine Anhängelast für Teile, Werkzeuge, Betriebsstoffe und Verbrauchsmaterial für die Maschine bis 10 Prozent des Gesamtgewichts,"
+              "text": "die höchstens folgende Lasten aufweisen:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Nutz- oder eine Anhängelast für Teile, Werkzeuge, Betriebsstoffe und Verbrauchsmaterial für die Maschine bis 10 Prozent des Gesamtgewichts,"
             },
             {
               "marke": "2",
@@ -847,11 +855,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "Motorwagen nach Absatz 1: 1. die eine Möglichkeit zur vorübergehenden Aufnahme und Beförderung eines spezifischen Guts aufweisen, das im Arbeitsprozess maschinell verändert oder verbraucht wird oder das Ergebnis der verrichteten Arbeit ist, und"
+              "text": "Motorwagen nach Absatz 1:"
+            },
+            {
+              "marke": "1",
+              "text": "die eine Möglichkeit zur vorübergehenden Aufnahme und Beförderung eines spezifischen Guts aufweisen, das im Arbeitsprozess maschinell verändert oder verbraucht wird oder das Ergebnis der verrichteten Arbeit ist, und"
             },
             {
               "marke": "2",
               "text": "bei denen die Summe aus Nutzlast und Anhängelast höchstens einen Drittel des Gesamtgewichts, aber nicht mehr als 4 000 kg beträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "Motorwagen, die zum Materialtransport auf zusammenhängenden und begrenzten, aber dem Verkehr nicht völlig verschlossenen Bau- und Arbeitsplätzen dienen und nur leer überführt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Motorwagen mit Arbeitsgeräten für den betrieblichen Unterhalt der Infrastruktur im Normalprofil im Sinne der NSV, die über kurze Distanzen ein Ladegut befördern, das sie ohne Bedienpersonal ausserhalb des Fahrzeugs auf der Fahrt aufnehmen oder abgeben;"
+            },
+            {
+              "marke": "d",
+              "text": "Motorwagen der Feuerwehr und des Zivilschutzes, mit denen ausschliesslich Angehörige und Material der betreffenden Organisation befördert werden."
             }
           ]
         },
@@ -878,7 +902,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_13",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "08ba714828f65aba8fd9800db97fd3da59764db3d5d65dfc4ad495e8f507bf94"
+      "sha": "7072935c27bab89bcf11385c5739a8baf742803f15710fddf52465521348ee30"
     },
     {
       "id": "bund/VTS/art_14",
@@ -898,7 +922,11 @@
             },
             {
               "marke": "b",
-              "text": "«Kleinmotorräder», das heisst: 1. zweirädrige Motorfahrzeuge mit einer bauartbedingten Höchstgeschwindigkeit von höchstens 45 km/h und einer Motorleistung von höchstens 4,00 kW sowie einem Hubraum von höchstens 50 cm 3 bei Fremdzündungsmotoren,"
+              "text": "«Kleinmotorräder», das heisst:"
+            },
+            {
+              "marke": "1",
+              "text": "zweirädrige Motorfahrzeuge mit einer bauartbedingten Höchstgeschwindigkeit von höchstens 45 km/h und einer Motorleistung von höchstens 4,00 kW sowie einem Hubraum von höchstens 50 cm 3 bei Fremdzündungsmotoren,"
             },
             {
               "marke": "2",
@@ -907,6 +935,10 @@
             {
               "marke": "3",
               "text": "«Elektro-Rikschas», das heisst zwei- oder mehrrädrige Fahrzeuge mit elektrischem Antrieb, einer Motorleistung von insgesamt höchstens 2,00 kW, einer bauartbedingten Höchstgeschwindigkeit von höchstens 20 km/h, einer allfälligen Tretunterstützung, die bis höchstens 25 km/h wirkt, einem Gewicht nach Artikel 136 Absatz 1 von höchstens 0,27 t und einem Gesamtgewicht von höchstens 0,45 t;"
+            },
+            {
+              "marke": "c",
+              "text": "«Motorschlitten», das heisst mit Raupen versehene Motorfahrzeuge, die nicht durch Abbremsen einer Raupe gelenkt werden und die ein Gewicht nach Artikel 136 Absatz 1 von höchstens 0,45 t haben, sofern sie nicht Leicht- oder Kleinmotorfahrzeuge, Motoreinachser oder Motorhandwagen sind."
             }
           ]
         }
@@ -915,7 +947,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_14",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "112a77820e632a84383939286463c935cb19657add21d24944ad177acb0f165f"
+      "sha": "1bcd18b26ec623ed85ccdd79b319840fa65d3db66ad25601459fa6bbfd9cb06a"
     },
     {
       "id": "bund/VTS/art_15",
@@ -1003,12 +1035,40 @@
           "text": "«Motorfahrräder» sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "«schnelle Motorfahrräder», das heisst einplätzige, einspurige Fahrzeuge mit einer bauartbedingten Höchstgeschwindigkeit im reinen Motorbetrieb von höchstens 30 km/h, einer Motorleistung von insgesamt höchstens 1,00 kW und einem Gesamtgewicht von höchstens 200 kg und:"
+            },
+            {
+              "marke": "1",
+              "text": "einem Verbrennungsmotor mit einem Hubraum von höchstens 50 cm 3 , oder"
+            },
+            {
+              "marke": "2",
+              "text": "elektrischem Antrieb sowie einer allfälligen Tretunterstützung, die bis höchstens 45 km/h wirkt;"
+            },
+            {
+              "marke": "b",
+              "text": "«Leicht-Motorfahrräder», das heisst Fahrzeuge mit einem Gesamtgewicht von höchstens 250 kg, einer Motorleistung von insgesamt höchstens 0,50 kW und einem elektrischen Antrieb, der bei Fahrzeugen:"
+            },
+            {
               "marke": "1",
               "text": "mit Sitzgelegenheit für den Führer oder die Führerin bis höchstens 25 km/h wirkt, oder"
             },
             {
               "marke": "2",
               "text": "ohne Sitzgelegenheit für den Führer oder die Führerin bis höchstens 20 km/h wirkt;"
+            },
+            {
+              "marke": "c",
+              "text": "«motorisierte Rollstühle», das heisst für gehbehinderte Personen konzipierte Fahrzeuge mit elektrischem Antrieb, einer bauartbedingten Höchstgeschwindigkeit von höchstens 25 km/h sowie einer Motorleistung von insgesamt höchstens 2,00 kW;"
+            },
+            {
+              "marke": "d",
+              "text": "«Elektro-Stehroller», das heisst einplätzige, selbstbalancierende Fahrzeuge mit elektrischem Antrieb, der bis höchstens 25 km/h wirkt, einem Gesamtgewicht von höchstens 250 kg und einer Motorleistung von insgesamt höchstens 2,00 kW, die zu einem wesentlichen Teil für das Halten der Balance des Fahrzeugs eingesetzt wird;"
+            },
+            {
+              "marke": "e",
+              "text": "«schwere Motorfahrräder», das heisst mehrspurige Fahrzeuge mit elektrischem Antrieb, der bis höchstens 25 km/h wirkt, einem Gesamtgewicht von höchstens 450 kg und einer Motorleistung von insgesamt höchstens 2,00 kW."
             }
           ]
         }
@@ -1017,7 +1077,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_18",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "4916676e455b6084520accff3d2363789d49def325b963f7b3c88ce4fe0abce3"
+      "sha": "c4d51958892decd48b5b9e22973aabbdb8a7d8b59678cbb57c6f9f05c22567d9"
     },
     {
       "id": "bund/VTS/art_19",
@@ -1240,11 +1300,35 @@
           "items": [
             {
               "marke": "a",
-              "text": "nach Absatz 1: 1. die eine Ladekapazität aufweisen, um während des Arbeitsprozesses erzeugtes oder benötigtes Gut aufzunehmen oder abzugeben, das im Arbeitsprozess maschinell verändert oder verbraucht wird oder das Ergebnis der verrichteten Arbeit ist, und"
+              "text": "nach Absatz 1:"
+            },
+            {
+              "marke": "1",
+              "text": "die eine Ladekapazität aufweisen, um während des Arbeitsprozesses erzeugtes oder benötigtes Gut aufzunehmen oder abzugeben, das im Arbeitsprozess maschinell verändert oder verbraucht wird oder das Ergebnis der verrichteten Arbeit ist, und"
             },
             {
               "marke": "2",
               "text": "deren Nutzlast höchstens zwei Drittel der insgesamt zulässigen Achslast beträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Transport von Bestandteilen, Werkzeugen und Betriebsstoffen des Arbeitsmotorwagens, an dem sie mitgeführt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die keine eigenständige Arbeitsfunktion haben, sondern die Arbeitsfunktion des Zugfahrzeugs ergänzen und hierfür mit besonderen Verbindungen ausgerüstet sind;"
+            },
+            {
+              "marke": "d",
+              "text": "mit Arbeitsgeräten für den betrieblichen Unterhalt der Infrastruktur im Normalprofil im Sinne der NSV, die über kurze Distanzen ein Ladegut befördern, das sie ohne Bedienpersonal ausserhalb des Fahrzeugs auf der Fahrt aufnehmen oder abgeben;"
+            },
+            {
+              "marke": "e",
+              "text": "die so gebaut sind, dass sie nur ein bestimmtes Arbeitsgerät aufnehmen können und keine anderweitige Lademöglichkeit aufweisen;"
+            },
+            {
+              "marke": "f",
+              "text": "der Feuerwehr und des Zivilschutzes."
             }
           ]
         },
@@ -1261,7 +1345,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_22",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "53fe7a00e83e2e3c129326afe7189b983962084581865b79c2bd77545c3fe668"
+      "sha": "8741e1a042e0c075c052dce065e4ab83d513cf9482d1ffc39bb03ef0cf792d21"
     },
     {
       "id": "bund/VTS/art_23",
@@ -1608,6 +1692,30 @@
           "text": "Für neue vollständige oder vervollständigte Fahrzeuge, die nicht unter Artikel 30 fallen, für Fahrzeuge gemäss Artikel 30 Absatz 2, für welche keine Typengenehmigung und kein Datenblatt vorliegt, sowie für Personenwagen gemäss Artikel 11 Absatz 2 Buchstabe a, die neu und vollständig sind und für welche die Dokumente nach Artikel 30 Absatz 1 nicht vorliegen, ist der Nachweis über die Einhaltung der Bau- und Ausrüstungsvorschriften erbracht mit:",
           "items": [
             {
+              "marke": "a",
+              "text": "einer EU-Übereinstimmungsbescheinigung in Papierform und einer Identifikationsprüfung:"
+            },
+            {
+              "marke": "1",
+              "text": "bei Personenwagen gemäss Artikel 11 Absatz 2 Buchstabe a,"
+            },
+            {
+              "marke": "2",
+              "text": "bei vollständigen Wohnmotorwagen mit einem Gesamtgewicht bis 3,50 t;"
+            },
+            {
+              "marke": "b",
+              "text": "einem elektronischen Einzelfahrzeugdatensatz (Art. 72 b VZV) und einer Funktionskontrolle: bei vollständigen Wohnmotorwagen mit einem Gesamtgewicht bis 3,50 t;"
+            },
+            {
+              "marke": "c",
+              "text": "einer EU-Übereinstimmungsbescheinigung in Papierform, einem elektronischen Einzelfahrzeugdatensatz (Art. 72 b VZV), einer Typengenehmigung oder einem Datenblatt sowie einer Funktionskontrolle: bei allen anderen vollständigen und vervollständigten Fahrzeugen;"
+            },
+            {
+              "marke": "d",
+              "text": "sofern keine EU-Übereinstimmungsbescheinigung in Papierform und kein elektronischer Einzelfahrzeugdatensatz (Art. 72 b VZV) vorliegt: einer Funktionskontrolle und den nachfolgenden Nachweisdokumenten:"
+            },
+            {
               "marke": "1",
               "text": "Konformitätserklärung nach dem UNECE-Reglement Nr. 0 sowie alle weiteren erforderlichen Genehmigungen zur Vervollständigung nach dem entsprechenden EU-Gesamtgenehmigungsrechtsakt,"
             },
@@ -1642,7 +1750,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_30_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "e198c80e1481eb036cbc01aee78fadadf5867a5f65d3014ed6ebf9a1c925712f"
+      "sha": "3a663a082de69a43c745abf4894d3929871655eff879e572d2e941e27e068005"
     },
     {
       "id": "bund/VTS/art_30_b",
@@ -1840,6 +1948,106 @@
           "text": "Es gelten folgende Prüfungsintervalle:",
           "items": [
             {
+              "marke": "a",
+              "text": "erstmals ein Jahr nach der ersten Inverkehrsetzung, dann jährlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Fahrzeuge zum berufsmässigen Personentransport, ausgenommen Fahrzeuge, die nach Artikel 4 Absatz 1 Buchstabe d ARV 2 verwendet werden,"
+            },
+            {
+              "marke": "2",
+              "text": "Gesellschaftswagen,"
+            },
+            {
+              "marke": "3",
+              "text": "Anhänger zum Personentransport,"
+            },
+            {
+              "marke": "4",
+              "text": "Fahrzeuge zum Transport gefährlicher Güter, für die gemäss SDR eine jährliche Nachprüfung erforderlich ist,"
+            },
+            {
+              "marke": "5",
+              "text": "führerlose Fahrzeuge;"
+            },
+            {
+              "marke": "abis",
+              "text": "erstmals zwei Jahre nach der ersten Inverkehrsetzung, anschliessend nach zwei Jahren, dann jährlich:"
+            },
+            {
+              "marke": "1",
+              "text": "Lastwagen mit einer Höchstgeschwindigkeit von mehr als 45 km/h,"
+            },
+            {
+              "marke": "2",
+              "text": "Sattelschlepper mit einem Gesamtgewicht über 3,50 t und einer Höchstgeschwindigkeit von mehr als 45 km/h,"
+            },
+            {
+              "marke": "3",
+              "text": "Sachentransportanhänger mit einem Gesamtgewicht über 3,50 t und einer zugelassenen Höchstgeschwindigkeit von mehr als 45 km/h;"
+            },
+            {
+              "marke": "b",
+              "text": "erstmals vier Jahre nach der ersten Inverkehrsetzung, anschliessend nach drei Jahren, dann alle zwei Jahre:"
+            },
+            {
+              "marke": "1",
+              "text": "Kleinbusse,"
+            },
+            {
+              "marke": "2",
+              "text": "Lieferwagen,"
+            },
+            {
+              "marke": "3",
+              "text": "Lastwagen mit einer Höchstgeschwindigkeit von nicht mehr als 45 km/h,"
+            },
+            {
+              "marke": "4",
+              "text": "Sattelschlepper mit einem Gesamtgewicht bis 3,5 t oder einer Höchstgeschwindigkeit von nicht mehr als 45 km/h,"
+            },
+            {
+              "marke": "5",
+              "text": "Wohnmotorwagen und Motorwagen mit aufgebautem Nutzraum;"
+            },
+            {
+              "marke": "c",
+              "text": "erstmals fünf Jahre, jedoch spätestens sechs Jahre nach der ersten Inverkehrsetzung, anschliessend nach drei Jahren, dann alle zwei Jahre:"
+            },
+            {
+              "marke": "1",
+              "text": "leichte und schwere Personenwagen,"
+            },
+            {
+              "marke": "2",
+              "text": "Motorräder, ausgenommen Motorschlitten,"
+            },
+            {
+              "marke": "3",
+              "text": "Leicht-, Klein- und dreirädrige Motorfahrzeuge,"
+            },
+            {
+              "marke": "4",
+              "text": "Transportanhänger, einschliesslich Anhänger mit aufgebautem Nutzraum, mit einem Gesamtgewicht über 0,75 t, sofern sie nicht unter Buchstabe a Ziffer 3 oder 4, Buchstabe a bis Ziffer 3 oder Buchstabe e Ziffer 5 fallen;"
+            },
+            {
+              "marke": "d",
+              "text": "erstmals fünf Jahre nach der ersten Inverkehrsetzung, anschliessend alle drei Jahre:"
+            },
+            {
+              "marke": "1",
+              "text": "gewerbliche Traktoren,"
+            },
+            {
+              "marke": "2",
+              "text": "Arbeitsmaschinen;"
+            },
+            {
+              "marke": "e",
+              "text": "erstmals fünf Jahre nach der ersten Inverkehrsetzung, anschliessend alle fünf Jahre:"
+            },
+            {
               "marke": "1",
               "text": "Motorkarren,"
             },
@@ -1906,7 +2114,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_33",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "cf7696c3e8cef05213b31c5bc80d7ec0eb6532c07e041e5469ecee7a4f288272"
+      "sha": "fbee4374ac3f6b55e64ba47be9d38e66785be197f06b595e800a74c46de070c9"
     },
     {
       "id": "bund/VTS/art_33_a",
@@ -2335,6 +2543,78 @@
           "text": "Die Fahrzeugbreite ist zu messen über die äussersten fest mit dem Fahrzeug verbundenen Teile, jedoch ohne:",
           "items": [
             {
+              "marke": "a",
+              "text": "Schutz- und Befestigungsvorrichtungen für Zollplomben;"
+            },
+            {
+              "marke": "b",
+              "text": "Einrichtungen zur Sicherung der Fahrzeugblachen und dazugehörende Schutzvorrichtungen in einer Höhe:"
+            },
+            {
+              "marke": "1",
+              "text": "bis 2,00 m über dem Boden, sofern sie höchstens 20 mm je Seite überstehen,"
+            },
+            {
+              "marke": "2",
+              "text": "von mehr als 2,00 m bis 2,50 m über dem Boden, sofern sie höchstens 50 mm je Seite überstehen,"
+            },
+            {
+              "marke": "3",
+              "text": "von mehr als 2,50 m über dem Boden, sofern sie höchstens 150 mm je Seite überstehen;"
+            },
+            {
+              "marke": "c",
+              "text": "Reifendruck- und Reifenschadensanzeiger, sofern sie für beide Seiten zusammen insgesamt höchstens 100 mm überstehen;"
+            },
+            {
+              "marke": "d",
+              "text": "biegsame Kotschutzlappen oder Spritzschutzvorrichtungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Beleuchtungsvorrichtungen;"
+            },
+            {
+              "marke": "f",
+              "text": "Hebebühnen, Beladerampen und vergleichbare Einrichtungen an Fahrzeugen der Klassen M 2 , M 3 , N 2 , N 3 und O, sofern sie in nicht entfaltetem Zustand höchstens 10 mm pro Seite überstehen;"
+            },
+            {
+              "marke": "g",
+              "text": "Spiegel und andere Systeme für indirekte Sicht sowie deren Halterungen, Sichthilfen, Profilanzeiger;"
+            },
+            {
+              "marke": "h",
+              "text": "einziehbare oder ausklappbare Trittstufen;"
+            },
+            {
+              "marke": "i",
+              "text": "Reifenabplattungen;"
+            },
+            {
+              "marke": "k",
+              "text": "Schneeketten;"
+            },
+            {
+              "marke": "l",
+              "text": "an Fahrzeugblachen seitlich angebrachte Luftstabilisatoren aus weichem Material mit einem Querschnitt von höchstens 50 mm × 50 mm;"
+            },
+            {
+              "marke": "m",
+              "text": "einziehbare Spurführungseinrichtungen (in ausgefahrener Stellung) von Gesellschaftswagen (einschliesslich Gelenk- und Trolleybussen), die in Spurbussystemen verwendet werden;"
+            },
+            {
+              "marke": "n",
+              "text": "Sichthilfen und Ortungseinrichtungen einschliesslich Radargeräten an Fahrzeugen der Klassen M 2 , M 3 , N 2 , N 3 und O, sofern sie für beide Seiten zusammen insgesamt höchstens 100 mm überstehen;"
+            },
+            {
+              "marke": "o",
+              "text": "einklappbare oder einziehbare Einrichtungen zur Verringerung des Luftwiderstands an schweren Motorwagen, Kleinbussen und Anhängern der Klassen O 3 und O 4 , sofern diese Einrichtungen der Verordnung (EU) 2019/2144 entsprechen;"
+            },
+            {
+              "marke": "p",
+              "text": "Sicherheitsgeländer an Fahrzeugen zum Transport von mindestens zwei mehrspurigen Fahrzeugen, sofern diese Geländer:"
+            },
+            {
               "marke": "1",
               "text": "mindestens 2,00 m und höchstens 3,70 m über dem Boden sind,"
             },
@@ -2379,7 +2659,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_38",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "868b7bb24b3f82b7941784cb58b04944e08bee24a5a19e20fc80c50e399421d7"
+      "sha": "0918b60608b6e970d481bece337220d6c89c0d6b210441df32fba3ce575b79b9"
     },
     {
       "id": "bund/VTS/art_39",
@@ -2966,7 +3246,11 @@
             },
             {
               "marke": "b",
-              "text": "für die entsprechende Version eines Fahrzeugtyps über eine Genehmigung nach einer der folgenden Regelungen verfügen: 1. Verordnung (EU) Nr. 540/2014,"
+              "text": "für die entsprechende Version eines Fahrzeugtyps über eine Genehmigung nach einer der folgenden Regelungen verfügen:"
+            },
+            {
+              "marke": "1",
+              "text": "Verordnung (EU) Nr. 540/2014,"
             },
             {
               "marke": "2",
@@ -3011,7 +3295,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_53",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "5bbccf1460acc2093cc6ce2f129bc48005553af1b54bd8d09b8a890c6c4dbc24"
+      "sha": "dbeb61b486dc5f9da109e4907b24608b9b74ef87228ee6fea22bc14fd409e679"
     },
     {
       "id": "bund/VTS/art_54",
@@ -5629,6 +5913,66 @@
           "text": "Erlaubt sind folgende zusätzliche Einrichtungen:",
           "items": [
             {
+              "marke": "a",
+              "text": "vorn: zwei Fernlichter, zwei Nebellichter, zwei Tagfahrlichter an Fahrzeugen, für die keine solchen vorgeschrieben sind, zwei Abbiegescheinwerfer, zwei Markierlichter und zwei nicht dreieckige Rückstrahler; sind vier einklappbare Fernlichter vorhanden: zwei zusätzliche Fern- oder Abblendlichter ausschliesslich für Lichthupesignale;"
+            },
+            {
+              "marke": "b",
+              "text": "hinten:"
+            },
+            {
+              "marke": "1",
+              "text": "zwei Markierlichter,"
+            },
+            {
+              "marke": "2",
+              "text": "ein oder zwei Rückfahrlichter,"
+            },
+            {
+              "marke": "3",
+              "text": "ein oder zwei Nebelschlusslichter,"
+            },
+            {
+              "marke": "4",
+              "text": "ein zusätzliches Bremslicht (Art. 75 Abs. 4) oder zwei zusätzliche, hoch angeordnete Bremslichter (Anhang 10 Ziff. 322 ist nicht anwendbar),"
+            },
+            {
+              "marke": "5",
+              "text": "zwei zusätzliche, hoch angeordnete Richtungsblinker (Anhang 10 Ziff. 21 und 322 sind nicht anwendbar),"
+            },
+            {
+              "marke": "6",
+              "text": "zwei zusätzliche, hoch angeordnete Schlusslichter, wenn keine entsprechenden Markierlichter vorhanden sind (Anhang 10 Ziff. 21 und 322 sind nicht anwendbar);"
+            },
+            {
+              "marke": "c",
+              "text": "nach der Seite wirkende Rückstrahler sowie seitliche Markierlichter; diese können bei Fahrzeugen bis 6 m Länge mit den Richtungsblinkern mitblinken, wenn sie der Anordnung V in Ziffer 51 des Anhangs 10 entsprechen;"
+            },
+            {
+              "marke": "d",
+              "text": "eine optische Warnvorrichtung (Lichthupe);"
+            },
+            {
+              "marke": "e",
+              "text": "eine Innenbeleuchtung für den Passagier- und Laderaum, die nicht störend nach aussen wirkt;"
+            },
+            {
+              "marke": "f",
+              "text": "Warnlichter, die an geöffneten Türen nach hinten leuchten;"
+            },
+            {
+              "marke": "g",
+              "text": "Warnblinklichter zur Kennzeichnung des Fahrzeugs;"
+            },
+            {
+              "marke": "h",
+              "text": "Warnblinklichter zur Kennzeichnung von Hebebühnen, heruntergeklappten Heckladen oder geöffneten Hecktüren (Art. 78 Abs. 2) sowie Warnblinklichter an Abstellstützen und dergleichen, die in Arbeitsstellung über die Fahrzeugkontur hinausragen;"
+            },
+            {
+              "marke": "i",
+              "text": "Arbeitslichter an:"
+            },
+            {
               "marke": "1",
               "text": "Einsatzfahrzeugen der Feuerwehr, der Polizei, des Zolls und der Sanität,"
             },
@@ -5647,6 +5991,10 @@
             {
               "marke": "5",
               "text": "Motorwagen mit bewilligter Anhängelast zum An- und Abkoppeln eines Anhängers;"
+            },
+            {
+              "marke": "j",
+              "text": "nicht blendende weisse Lichter, die bei geöffneten Türen den unmittelbaren Einstiegsbereich beleuchten."
             }
           ]
         },
@@ -5690,7 +6038,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "an Fahrzeugen der Feuerwehr, der Polizei, der Sanität und des Zolls: 1. rundum blinkende Blaulichter,"
+              "text": "an Fahrzeugen der Feuerwehr, der Polizei, der Sanität und des Zolls:"
+            },
+            {
+              "marke": "1",
+              "text": "rundum blinkende Blaulichter,"
             },
             {
               "marke": "2",
@@ -5711,6 +6063,22 @@
             {
               "marke": "6",
               "text": "auf dem Dach montierte, nach vorn und hinten sichtbare gelbe Warnblinkleuchten, die über einen separaten Schalter mit den Warnblinklichtern (Art. 78 Abs. 1) zusammengeschaltet sind;"
+            },
+            {
+              "marke": "b",
+              "text": "an Fahrzeugen, die für die übrigen Verkehrsteilnehmer oder ‑teilnehmerinnen eine nicht leicht erkennbare Gefahr bilden, und an ihren Begleitfahrzeugen sowie an Fahrzeugen, die für das vorübergehende Anbringen von Zusatzgeräten mit einer Breite von über 3,00 m vorgesehen und ausgerüstet sind: gelbe Gefahrenlichter;"
+            },
+            {
+              "marke": "c",
+              "text": "an Fahrzeugen der Polizei und des Zolls: nach vorn und nach hinten gerichtete beleuchtete Aufschriften in Normal- oder Spiegelschrift, wie «Stau», «Unfall», «Stop Polizei», «Stop Grenzwache»; die Aufschriften dürfen nicht blenden; Anhang 10 Ziffer 1 ist nicht anwendbar;"
+            },
+            {
+              "marke": "d",
+              "text": "an Schneepistenfahrzeugen Suchlampen, die den technischen Anforderungen für Fernlichter entsprechen müssen;"
+            },
+            {
+              "marke": "e",
+              "text": "an Fahrzeugen der Polizei, des Zolls, der Feuerwehr und der Sanität sowie an Fahrzeugen, die regelmässig für den Strassenunterhalt oder als Begleitfahrzeuge für Ausnahmefahrzeuge und Ausnahmetransporte eingesetzt werden: beleuchtete oder selbstleuchtende Wechselanzeigetafeln."
             }
           ]
         },
@@ -5723,7 +6091,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_110",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "6b0cbd8d81eb96a5e4e92d5339228a81b5f5fd77c78e6357be9d52d4d39d9d42"
+      "sha": "c532e8e529663460340edf7ebd7245d2f2a42dacfb7b04e09c246d8cc29f64c3"
     },
     {
       "id": "bund/VTS/art_111",
@@ -7175,7 +7543,11 @@
             },
             {
               "marke": "b",
-              "text": "an Fahrzeugen der Polizei und des Zolls: 1. eine Suchlampe,"
+              "text": "an Fahrzeugen der Polizei und des Zolls:"
+            },
+            {
+              "marke": "1",
+              "text": "eine Suchlampe,"
             },
             {
               "marke": "2",
@@ -7184,6 +7556,10 @@
             {
               "marke": "3",
               "text": "nach vorn und nach hinten gerichtete beleuchtete Aufschriften in Normal- oder Spiegelschrift, wie «Stau», «Unfall», «Stop Polizei», «Stop Grenzwache»; die Aufschriften dürfen nicht blenden; Anhang 10 Ziffer 1 ist nicht anwendbar;"
+            },
+            {
+              "marke": "c",
+              "text": "an Raupenfahrzeugen, die für Rettungszwecke eingesetzt werden: gelbe Gefahrenlichter."
             }
           ]
         },
@@ -7200,7 +7576,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_141",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "5f589ff69420196c2f25fac9ead0ed1a90fe32e7150a254e8ff88a4749e73304"
+      "sha": "bd4ab369ddecaa9f72505885a26bf6b7812efa8ae66a13a051e4a58ddbf87929"
     },
     {
       "id": "bund/VTS/art_142",
@@ -7466,11 +7842,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die Betriebsbremse kann bestehen aus: 1. zwei voneinander unabhängigen Bremsen, die jeweils gleichmässig auf beide Räder wirken; oder"
+              "text": "Die Betriebsbremse kann bestehen aus:"
+            },
+            {
+              "marke": "1",
+              "text": "zwei voneinander unabhängigen Bremsen, die jeweils gleichmässig auf beide Räder wirken; oder"
             },
             {
               "marke": "2",
               "text": "einer Bremse, die gleichmässig auf beide Räder wirkt, und einer abstufbaren Hilfsbremse."
+            },
+            {
+              "marke": "b",
+              "text": "Die Feststellbremse muss auf beide Räder wirken. Die Hilfsbremse nach Buchstabe a Ziffer 2 darf als Feststellbremse benützt werden."
             }
           ]
         },
@@ -7483,7 +7867,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_149",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "5f6b97a4b7f3d4e138beda1f11e175bb2584c8161d7da42b76a26b0f70365f80"
+      "sha": "fe29172358179f29026c08f7bc7bf79d6474938848245728240f262530c22d59"
     },
     {
       "id": "bund/VTS/art_150",
@@ -7588,11 +7972,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die Betriebsbremse kann bestehen aus: 1. zwei voneinander unabhängigen Bremsen, die bei gleichzeitiger Betätigung auf alle Räder wirken; oder"
+              "text": "Die Betriebsbremse kann bestehen aus:"
+            },
+            {
+              "marke": "1",
+              "text": "zwei voneinander unabhängigen Bremsen, die bei gleichzeitiger Betätigung auf alle Räder wirken; oder"
             },
             {
               "marke": "2",
               "text": "einer Bremse, die auf alle Räder wirkt, und einer abstufbaren Hilfsbremse."
+            },
+            {
+              "marke": "b",
+              "text": "Die Feststellbremse muss auf die Räder mindestens einer Achse wirken. Die Hilfsbremse nach Buchstabe a Ziffer 2 darf als Feststellbremse benützt werden."
             }
           ]
         },
@@ -7605,7 +7997,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_153",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "866882dcdcdb433bef650e70eb105c855708a38f2a0d0dbf6a41218cc2946d66"
+      "sha": "f36ab36da42e59caedbacfc945588f82ae0b2a1c3c5f81671e3e4bdb41e87c85"
     },
     {
       "id": "bund/VTS/art_154",
@@ -8599,7 +8991,11 @@
             },
             {
               "marke": "b",
-              "text": "Beim hinteren Paar Richtungsblinker darf der vorgeschriebene Abstand von 0,35 m zwischen dem unteren Rand der Leuchtflächen und dem Boden unterschritten werden, sofern: 1. das hintere Ende des Fahrzeugs für eine Anbringung der Richtungsblinker auf dieser Höhe zu niedrig ist, und"
+              "text": "Beim hinteren Paar Richtungsblinker darf der vorgeschriebene Abstand von 0,35 m zwischen dem unteren Rand der Leuchtflächen und dem Boden unterschritten werden, sofern:"
+            },
+            {
+              "marke": "1",
+              "text": "das hintere Ende des Fahrzeugs für eine Anbringung der Richtungsblinker auf dieser Höhe zu niedrig ist, und"
             },
             {
               "marke": "2",
@@ -8612,7 +9008,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_180",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "650b2fac68d29846da553e9189ba97953260b6eae0397a6938d4ab25f9e78b20"
+      "sha": "864fe215f5194370fedaa744e64a1065a364bececd6f495c06207492b7d6767a"
     },
     {
       "id": "bund/VTS/art_181",
@@ -10420,11 +10816,31 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die in Ziffer 211 aufgeführte Richtlinie Nr. 70/220 des Rates vom 20. März 1970 zur Angleichung der Rechtsvorschriften der Mitgliedstaaten über Massnahmen gegen die Verunreinigung der Luft durch Emissionen von Kraftfahrzeugmotoren ist wie folgt anwendbar: 1. in der Fassung der Richtlinie Nr. 93/59 des Rates vom 28. Juni 1993 für die erstmalige Zulassung aller ab 1. Oktober 1995 eingeführten oder in der Schweiz hergestellten Fahrzeuge der entsprechenden Fahrzeugklasse;"
+              "text": "Die in Ziffer 211 aufgeführte Richtlinie Nr. 70/220 des Rates vom 20. März 1970 zur Angleichung der Rechtsvorschriften der Mitgliedstaaten über Massnahmen gegen die Verunreinigung der Luft durch Emissionen von Kraftfahrzeugmotoren ist wie folgt anwendbar:"
+            },
+            {
+              "marke": "1",
+              "text": "in der Fassung der Richtlinie Nr. 93/59 des Rates vom 28. Juni 1993 für die erstmalige Zulassung aller ab 1. Oktober 1995 eingeführten oder in der Schweiz hergestellten Fahrzeuge der entsprechenden Fahrzeugklasse;"
             },
             {
               "marke": "2",
               "text": "in der Fassung der Richtlinie Nr. 94/12 des Europäischen Parlaments und des Rates vom 23. März 1994 für alle ab 1. Januar 1996 neu typengenehmigten und für die erstmalige Zulassung aller ab 1. Januar 1997 eingeführten oder in der Schweiz hergestellten Fahrzeuge der entsprechenden Fahrzeugklassen."
+            },
+            {
+              "marke": "b",
+              "text": "Fahrzeuge, die vor dem 1. Januar 1997 eingeführt oder in der Schweiz hergestellt worden sind, können aufgrund einer bestehenden Abgasgenehmigung nach der FAV 1 zugelassen werden."
+            },
+            {
+              "marke": "c",
+              "text": "Die in Ziffer 211 aufgeführte Richtlinie Nr. 88/77 des Rates vom 3. Dezember 1977 zur Angleichung der Rechtsvorschriften der Mitgliedstaaten über Massnahmen gegen die Emission gasförmiger Schadstoffe und luftverunreinigender Partikel aus Dieselmotoren ist in der Fassung der Richtlinie Nr. 91/542 des Rates vom 1. Oktober 1991 (Grenzwerte der Zeile B) für alle ab 1. Oktober 1995 neu typengenehmigten und für die erstmalige Zulassung aller ab dem 1. Oktober 1996 eingeführten oder in der Schweiz hergestellten Fahrzeuge der entsprechenden Fahrzeugklasse anwendbar."
+            },
+            {
+              "marke": "d",
+              "text": "Das in Ziffer 211 aufgeführte UNECE-Reglement Nr. 49 ist in der Fassung E/ECE/TRANS/505/Rev. 1/Add. 48/Rev. 2 vom 11. September 1992 (Grenzwerte der Zeile B) für alle ab 1. Oktober 1995 neu typengenehmigten und für die erstmalige Zulassung aller ab 1. Oktober 1996 eingeführten oder in der Schweiz hergestellten Fahrzeuge der entsprechenden Fahrzeugklasse anwendbar."
+            },
+            {
+              "marke": "e",
+              "text": "Die Ziffer 213 gilt für die erstmalige Zulassung aller ab 1. Oktober 1995 eingeführten oder in der Schweiz hergestellten Motorräder, Kleinmotorräder, Leicht‑, Klein- und dreirädrigen Motorfahrzeuge."
             }
           ]
         },
@@ -10459,7 +10875,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_222",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260430",
-      "sha": "d552dad9b1c844b9ffeec1109130c90b4523f93bc30e2f78ed3463d99e0ecc73"
+      "sha": "a14a390cc80aaeef19f88a40665bca91cb2171ed1497270ef54413555d7abdc3"
     },
     {
       "id": "bund/VTS/art_222_a",

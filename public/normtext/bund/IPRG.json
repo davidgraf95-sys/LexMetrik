@@ -5165,7 +5165,11 @@
             },
             {
               "marke": "c",
-              "text": "es ergangen ist: 1. im Wohnsitzstaat des Schuldners, oder"
+              "text": "es ergangen ist:"
+            },
+            {
+              "marke": "1",
+              "text": "im Wohnsitzstaat des Schuldners, oder"
             },
             {
               "marke": "2",
@@ -5186,7 +5190,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/de#art_166",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "82b0de8eaa846cc42e21b96c8fcfce00ac91bad8b33d85b379a82f0feeaa6515"
+      "sha": "2752ac4c1266120211a3710e82645b274c904bf2d821a75d9b784291debd5e14"
     },
     {
       "id": "bund/IPRG/art_167",

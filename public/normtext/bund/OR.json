@@ -8429,7 +8429,11 @@
             },
             {
               "marke": "e",
-              "text": "vor Ablauf von drei Jahren nach Abschluss eines mit dem Mietverhältnis zusammenhängenden Schlichtungs- oder Gerichtsverfahrens, in dem der Vermieter: 1. zu einem erheblichen Teil unterlegen ist;"
+              "text": "vor Ablauf von drei Jahren nach Abschluss eines mit dem Mietverhältnis zusammenhängenden Schlichtungs- oder Gerichtsverfahrens, in dem der Vermieter:"
+            },
+            {
+              "marke": "1",
+              "text": "zu einem erheblichen Teil unterlegen ist;"
             },
             {
               "marke": "2",
@@ -8442,6 +8446,10 @@
             {
               "marke": "4",
               "text": "mit dem Mieter einen Vergleich geschlossen oder sich sonstwie geeinigt hat;"
+            },
+            {
+              "marke": "f",
+              "text": "wegen Änderungen in der familiären Situation des Mieters, aus denen dem Vermieter keine wesentlichen Nachteile entstehen."
             }
           ]
         },
@@ -8484,7 +8492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_271_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "8857aedc1aa7faf49ae235d82bd2a72f2894478599a4c76f073be6bfd10428af"
+      "sha": "98500c9c522c0189c7c24a23e766739f0aa3e5f0b35c23afa21719b232c241ba"
     },
     {
       "id": "bund/OR/art_272",
@@ -26769,6 +26777,26 @@
           "text": "Folgende Gesellschaften müssen ihre Jahresrechnung und gegebenenfalls ihre Konzernrechnung durch eine Revisionsstelle ordentlich prüfen lassen:",
           "items": [
             {
+              "marke": "1",
+              "text": "Publikumsgesellschaften; als solche gelten Gesellschaften, die:"
+            },
+            {
+              "marke": "a",
+              "text": "Beteiligungspapiere an einer Börse kotiert haben,"
+            },
+            {
+              "marke": "b",
+              "text": "Anleihensobligationen ausstehend haben,"
+            },
+            {
+              "marke": "c",
+              "text": "mindestens 20 Prozent der Aktiven oder des Umsatzes zur Konzernrechnung einer Gesellschaft nach Buchstabe a oder b beitragen;"
+            },
+            {
+              "marke": "2",
+              "text": "Gesellschaften, die zwei der nachstehenden Grössen in zwei aufeinander folgenden Geschäftsjahren überschreiten:"
+            },
+            {
               "marke": "a",
               "text": "Bilanzsumme von 20 Millionen Franken,"
             },
@@ -26779,6 +26807,10 @@
             {
               "marke": "c",
               "text": "250 Vollzeitstellen im Jahresdurchschnitt;"
+            },
+            {
+              "marke": "3",
+              "text": "Gesellschaften, die zur Erstellung einer Konzernrechnung verpflichtet sind."
             }
           ]
         },
@@ -26799,7 +26831,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_727",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "18a767cce396da9d71776c8e277df954ebe16a05310a0149ad378266fcb26e08"
+      "sha": "2546a7fe4a0f6a747b530cb8563a98cd2dd3317c66b79155b0aab3c1cda778d2"
     },
     {
       "id": "bund/OR/art_727_a",
@@ -35248,6 +35280,34 @@
           "text": "Unter den Aktiven müssen ihrem Liquiditätsgrad entsprechend mindestens folgende Positionen einzeln und in der vorgegebenen Reihenfolge ausgewiesen werden:",
           "items": [
             {
+              "marke": "1",
+              "text": "Umlaufvermögen:"
+            },
+            {
+              "marke": "a",
+              "text": "flüssige Mittel und kurzfristig gehaltene Aktiven mit Börsenkurs,"
+            },
+            {
+              "marke": "b",
+              "text": "Forderungen aus Lieferungen und Leistungen,"
+            },
+            {
+              "marke": "c",
+              "text": "übrige kurzfristige Forderungen,"
+            },
+            {
+              "marke": "d",
+              "text": "Vorräte und nicht fakturierte Dienstleistungen,"
+            },
+            {
+              "marke": "e",
+              "text": "aktive Rechnungsabgrenzungen;"
+            },
+            {
+              "marke": "2",
+              "text": "Anlagevermögen:"
+            },
+            {
               "marke": "a",
               "text": "Finanzanlagen,"
             },
@@ -35273,6 +35333,46 @@
           "absatz": "2",
           "text": "Unter den Passiven müssen ihrer Fälligkeit entsprechend mindestens folgende Positionen einzeln und in der vorgegebenen Reihenfolge ausgewiesen werden:",
           "items": [
+            {
+              "marke": "1",
+              "text": "kurzfristiges Fremdkapital:"
+            },
+            {
+              "marke": "a",
+              "text": "Verbindlichkeiten aus Lieferungen und Leistungen,"
+            },
+            {
+              "marke": "b",
+              "text": "kurzfristige verzinsliche Verbindlichkeiten,"
+            },
+            {
+              "marke": "c",
+              "text": "übrige kurzfristige Verbindlichkeiten,"
+            },
+            {
+              "marke": "d",
+              "text": "passive Rechnungsabgrenzungen;"
+            },
+            {
+              "marke": "2",
+              "text": "langfristiges Fremdkapital:"
+            },
+            {
+              "marke": "a",
+              "text": "langfristige verzinsliche Verbindlichkeiten,"
+            },
+            {
+              "marke": "b",
+              "text": "übrige langfristige Verbindlichkeiten,"
+            },
+            {
+              "marke": "c",
+              "text": "Rückstellungen sowie vom Gesetz vorgesehene ähnliche Positionen;"
+            },
+            {
+              "marke": "3",
+              "text": "Eigenkapital:"
+            },
             {
               "marke": "a",
               "text": "Grund-, Gesellschafter- oder Stiftungskapital, gegebenenfalls gesondert nach Beteiligungskategorien,"
@@ -35316,7 +35416,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_959_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "65dde0475bc8123c1aea8092448ad626d17778e619dc79bff4dc9445a4a320b6"
+      "sha": "628d94635fe6273aad023391911e5e6d3b017c2e07ea291f60877f2c0a94dfd9"
     },
     {
       "id": "bund/OR/art_959_b",
@@ -36099,7 +36199,11 @@
           "items": [
             {
               "marke": "1",
-              "text": "zusammen mit den kontrollierten Unternehmen zwei der nachstehenden Grössen in zwei aufeinander folgenden Geschäftsjahren nicht überschreitet: a. Bilanzsumme von 20 Millionen Franken,"
+              "text": "zusammen mit den kontrollierten Unternehmen zwei der nachstehenden Grössen in zwei aufeinander folgenden Geschäftsjahren nicht überschreitet:"
+            },
+            {
+              "marke": "a",
+              "text": "Bilanzsumme von 20 Millionen Franken,"
             },
             {
               "marke": "b",
@@ -36108,6 +36212,14 @@
             {
               "marke": "c",
               "text": "250 Vollzeitstellen im Jahresdurchschnitt;"
+            },
+            {
+              "marke": "2",
+              "text": "von einem Unternehmen kontrolliert wird, dessen Konzernrechnung nach schweizerischen oder gleichwertigen ausländischen Vorschriften erstellt und ordentlich geprüft worden ist; oder"
+            },
+            {
+              "marke": "3",
+              "text": "die Pflicht zur Erstellung einer Konzernrechnung an ein kontrolliertes Unternehmen nach Artikel 963 Absatz 4 übertragen hat."
             }
           ]
         },
@@ -36142,7 +36254,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_963_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "db4b240b5140cde6095600b2b15e23fb1d7c0f0840d142570cbb905290b633dd"
+      "sha": "bacef114bb290a5f4a05d9f7a00651fd5445f09d9586e61664d113dbd8a7a7ec"
     },
     {
       "id": "bund/OR/art_963_b",
@@ -36244,7 +36356,11 @@
             },
             {
               "marke": "3",
-              "text": "zusammen mit den von ihnen kontrollierten in- oder ausländischen Unternehmen, mindestens eine der nachstehenden Grössen in zwei aufeinanderfolgenden Geschäftsjahren überschreiten: a. Bilanzsumme von 20 Millionen Franken,"
+              "text": "zusammen mit den von ihnen kontrollierten in- oder ausländischen Unternehmen, mindestens eine der nachstehenden Grössen in zwei aufeinanderfolgenden Geschäftsjahren überschreiten:"
+            },
+            {
+              "marke": "a",
+              "text": "Bilanzsumme von 20 Millionen Franken,"
             },
             {
               "marke": "b",
@@ -36271,7 +36387,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_964_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "f78d4d27602fc7f900ae656f9e63a16e901ddcadc6beb85ec73c5ce0f957b05e"
+      "sha": "2d2032bcd44d6cdc490a839cf3eed4a944a5f2a1717a3912ac7195cd89fb74a4"
     },
     {
       "id": "bund/OR/art_964_b",
@@ -36303,11 +36419,19 @@
             },
             {
               "marke": "4",
-              "text": "eine Beschreibung der wesentlichen Risiken im Zusammenhang mit den Belangen gemäss Absatz 1 sowie der Handhabung dieser Risiken durch das Unternehmen; massgebend sind Risiken: a. die sich aus der eigenen Geschäftstätigkeit des Unternehmens ergeben, und"
+              "text": "eine Beschreibung der wesentlichen Risiken im Zusammenhang mit den Belangen gemäss Absatz 1 sowie der Handhabung dieser Risiken durch das Unternehmen; massgebend sind Risiken:"
+            },
+            {
+              "marke": "a",
+              "text": "die sich aus der eigenen Geschäftstätigkeit des Unternehmens ergeben, und"
             },
             {
               "marke": "b",
               "text": "wenn dies relevant und verhältnismässig ist, die sich aus seinen Geschäftsbeziehungen, seinen Erzeugnissen oder seinen Dienstleistungen ergeben;"
+            },
+            {
+              "marke": "5",
+              "text": "die für die Unternehmenstätigkeit wesentlichen Leistungsindikatoren in Bezug auf die Belange gemäss Absatz 1."
             }
           ]
         },
@@ -36332,7 +36456,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_964_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "30e2bbc1826f6c1aa8ec8aa7472f9624ddcac533e21dcd4d777282933d195b53"
+      "sha": "68f8454347a593675eea6866561b659c2b8454d0d15da90c44021e22c2743617"
     },
     {
       "id": "bund/OR/art_964_c",

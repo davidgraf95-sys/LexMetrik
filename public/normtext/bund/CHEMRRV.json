@@ -286,6 +286,30 @@
           "text": "Die folgenden Tätigkeiten dürfen beruflich oder gewerblich nur von natürlichen Personen mit einer entsprechenden Fachbewilligung oder als gleichwertig anerkannten Qualifikation oder unter Anleitung solcher Personen ausgeübt werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Verwendung von:"
+            },
+            {
+              "marke": "1",
+              "text": "Pflanzenschutzmitteln,"
+            },
+            {
+              "marke": "2",
+              "text": "Schädlingsbekämpfungsmitteln im Auftrag Dritter,"
+            },
+            {
+              "marke": "3",
+              "text": "Mitteln zur Desinfektion des Badewassers in Gemeinschaftsbädern,"
+            },
+            {
+              "marke": "4",
+              "text": "Holzschutzmitteln;"
+            },
+            {
+              "marke": "b",
+              "text": "der Umgang mit Kältemitteln beim:"
+            },
+            {
               "marke": "1",
               "text": "Herstellen, Installieren, Warten oder Entsorgen von Geräten oder Anlagen, die der Kühlung, Klimatisierung oder Wärmegewinnung dienen,"
             },
@@ -308,7 +332,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260101",
-      "sha": "adf194ac4e1580f2335a01ae3594abca6a69a578b44e3bfd96cb56acce841fea"
+      "sha": "2278382b3893e47f9169640c5517be4d6ac66d3b5fe3735c3fe26c6d2f5072bd"
     },
     {
       "id": "bund/CHEMRRV/art_8",

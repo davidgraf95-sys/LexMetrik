@@ -467,6 +467,26 @@
           "text": "Die Grundabgabe beträgt pro Jahr:",
           "items": [
             {
+              "marke": "a",
+              "text": "im Bereich der Grossbanken und der mit ihnen als Finanzgruppe verbundenen Gesellschaften:"
+            },
+            {
+              "marke": "1",
+              "text": "500 000 Franken je Grossbank,"
+            },
+            {
+              "marke": "2",
+              "text": "15 000 Franken je verbundene Bank,"
+            },
+            {
+              "marke": "3",
+              "text": "10 000 Franken je verbundenem Wertpapierhaus;"
+            },
+            {
+              "marke": "b",
+              "text": "im Bereich der übrigen Banken und Wertpapierhäuser:"
+            },
+            {
               "marke": "1",
               "text": "15 000 Franken je Bank und je Pfandbriefzentrale,"
             },
@@ -477,6 +497,10 @@
             {
               "marke": "3",
               "text": "150 000 Franken pauschal für mehr als zehn nach Artikel 17 Buchstabe a der Bankenverordnung vom 30. April 2014 (BankV) zusammengeschlossene Banken und Wertpapierhäuser;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
             }
           ]
         },
@@ -493,7 +517,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_16",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "a4dc847753ef10f76f5ae7be081834fb9aff782c099e3e54d654e38e31678756"
+      "sha": "a2969e27fae9712c8e6e4a965746bef922008fa132f86f1c7cfa004ee7cbe2c0"
     },
     {
       "id": "bund/FINMA_GEBV/art_17",
@@ -573,6 +597,74 @@
           "text": "Die Grundabgabe für Finanzmarktinfrastrukturen beträgt pro Jahr:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Börsen und multilaterale Handelssysteme:"
+            },
+            {
+              "marke": "1",
+              "text": "300 000 Franken je Börse oder multilaterales Handelssystem mit einer Bilanzsumme von über 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "100 000 Franken je Börse oder multilaterales Handelssystem mit einer Bilanzsumme von 25–50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "15 000 Franken je Börse oder multilaterales Handelssystem mit einer Bilanzsumme von weniger als 25 Millionen Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "für zentrale Gegenparteien:"
+            },
+            {
+              "marke": "1",
+              "text": "250 000 Franken je zentrale Gegenpartei mit einer Bilanzsumme von mindestens 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "100 000 Franken je zentrale Gegenpartei mit einer Bilanzsumme von weniger als 50 Millionen Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "für Zentralverwahrer: 250 000 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "für Transaktionsregister: 60 000 Franken;"
+            },
+            {
+              "marke": "e",
+              "text": "für nach Artikel 4 Absatz 2 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG) von der FINMA bewilligte Zahlungssysteme:"
+            },
+            {
+              "marke": "1",
+              "text": "100 000 Franken je Zahlungssystem mit einem Bruttoertrag von mindestens 20 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "60 000 Franken je Zahlungssystem mit einem Bruttoertrag von weniger als 20 Millionen Franken;"
+            },
+            {
+              "marke": "f",
+              "text": "für DLT-Handelssysteme, die keine Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen:"
+            },
+            {
+              "marke": "1",
+              "text": "300 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von über 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "100 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von 25–50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "15 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von weniger als 25 Millionen Franken;"
+            },
+            {
+              "marke": "g",
+              "text": "für DLT-Handelssysteme, die Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen:"
+            },
+            {
               "marke": "1",
               "text": "550 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von über 50 Millionen Franken,"
             },
@@ -605,7 +697,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "1f627f96e0af650e1875f38ae47ca718258a756cfe4e7d465c09d0b14e89a37f"
+      "sha": "497bd05f98f4670642eaeaa4720a30c5caf3b96b2c4ea3554d739d96f97f5b84"
     },
     {
       "id": "bund/FINMA_GEBV/art_19_b",
@@ -737,6 +829,58 @@
           "text": "Die Grundabgabe beträgt pro Jahr:",
           "items": [
             {
+              "marke": "a",
+              "text": "für Fondsleitungen:"
+            },
+            {
+              "marke": "1",
+              "text": "20 000 Franken je Fondsleitung mit einem Bruttoertrag von mindestens 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "10 000 Franken je Fondsleitung mit einem Bruttoertrag zwischen 5 Millionen und 50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "5000 Franken je Fondsleitung mit einem Bruttoertrag von weniger als 5 Millionen Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "für selbstverwaltete Investmentgesellschaften mit variablem Kapital (SICAV):"
+            },
+            {
+              "marke": "1",
+              "text": "20 000 Franken je selbstverwaltete SICAV mit einem Bruttoertrag von mindestens 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "10 000 Franken je selbstverwaltete SICAV mit einem Bruttoertrag zwischen 5 Millionen und 50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "5000 Franken je selbstverwaltete SICAV mit einem Bruttoertrag von weniger als 5 Millionen Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "5000 Franken für fremdverwaltete SICAV, für Kommanditgesellschaften für kollektive Kapitalanlagen und für Investmentgesellschaften mit festem Kapital (SICAF);"
+            },
+            {
+              "marke": "d",
+              "text": "5000 Franken für Vertreter ausländischer kollektiver Kapitalanlagen;"
+            },
+            {
+              "marke": "e",
+              "text": "600 Franken für schweizerische und für ausländische kollektive Kapitalanlagen pro kollektive Kapitalanlage ohne Teilvermögen oder pro Teilvermögen;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "für Verwalter von Kollektivvermögen, die der Aufsicht der FINMA unterstehen:"
+            },
+            {
               "marke": "1",
               "text": "20 000 Franken je Verwalter von Kollektivvermögen mit Bruttoertrag von mindestens 50 Millionen Franken,"
             },
@@ -747,6 +891,10 @@
             {
               "marke": "3",
               "text": "5000 Franken je Verwalter von Kollektivvermögen mit Bruttoertrag von weniger als 5 Millionen Franken;"
+            },
+            {
+              "marke": "h",
+              "text": "5000 Franken für Depotbanken schweizerischer kollektiver Kapitalanlagen."
             }
           ]
         },
@@ -789,7 +937,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_20",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "fcbe6b3277cdba38a81a5da8c63aad881278044fb71e937f4e7b7e4e3eab58db"
+      "sha": "6c913258ff135fcb20a8b308d1899eaba861b6b86fc83ec81a304a632e64a01e"
     },
     {
       "id": "bund/FINMA_GEBV/art_21",
@@ -963,7 +1111,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Versicherungsunternehmen, die das direkte Versicherungsgeschäft betreiben: 1. den Prämieneinnahmen aus dem direkten Versicherungsgeschäft in der Schweiz, abzüglich des zedierten Geschäfts,"
+              "text": "für Versicherungsunternehmen, die das direkte Versicherungsgeschäft betreiben:"
+            },
+            {
+              "marke": "1",
+              "text": "den Prämieneinnahmen aus dem direkten Versicherungsgeschäft in der Schweiz, abzüglich des zedierten Geschäfts,"
             },
             {
               "marke": "2",
@@ -972,6 +1124,14 @@
             {
               "marke": "3",
               "text": "den Prämieneinnahmen aus dem direkten Versicherungsgeschäft im Ausland durch Vermittlung einer Niederlassung im Ausland, abzüglich des zedierten Geschäfts;"
+            },
+            {
+              "marke": "b",
+              "text": "für schweizerische Versicherungsunternehmen, die das Rückversicherungsgeschäft betreiben: einem Fünftel der Prämieneinnahmen aus dem Rückversicherungsgeschäft, abzüglich des retrozedierten Geschäfts;"
+            },
+            {
+              "marke": "c",
+              "text": "für Krankenkassen: der Hälfte der Prämieneinnahmen aus den der Versicherungsaufsicht unterstellten Versicherungszweigen."
             }
           ]
         },
@@ -988,7 +1148,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_25",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20240301",
-      "sha": "9768200ec63c942eee66fb9b5b1cc98fc70c41f82b49e9d993a7b07ca5dbe0c3"
+      "sha": "93caf876b127b5a30030f3c6d8a3450d0ba3ca060b7a7d134665df2820a1b973"
     },
     {
       "id": "bund/FINMA_GEBV/art_26",

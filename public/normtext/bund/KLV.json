@@ -237,6 +237,66 @@
           "text": "Die Versicherung übernimmt die Kosten der folgenden Leistungen, soweit sie von nach Artikel 44 KVV zugelassenen Chiropraktoren und Chiropraktorinnen oder von nach Artikel 44 a KVV zugelassenen Organisationen der Chiropraktik verordnet sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "Analysen: die Analysen sind gestützt auf Artikel 62 Absatz 1 Buchstabe b KVV in der Analysenliste separat bezeichnet;"
+            },
+            {
+              "marke": "b",
+              "text": "Arzneimittel: pharmazeutische Spezialitäten der folgenden therapeutischen Gruppen der Spezialitätenliste:"
+            },
+            {
+              "marke": "1",
+              "text": "01.01.10 (antipyretische Analgetica), 01.12 (Myotonolytica: nur per os verabreichte),"
+            },
+            {
+              "marke": "2",
+              "text": "04.99 (Gastroenterologica, Varia: nur Mittel zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut),"
+            },
+            {
+              "marke": "3",
+              "text": "07.02.10 (Mineralia), 07.02.20 (kombinierte Mineralien), 07.02.30 (einfache Vitamine), 07.02.40 (kombinierte Vitamine), 07.02.50 (andere Kombinationen"
+            },
+            {
+              "marke": "4",
+              "text": "07.10.10 (einfache entzündungshemmende Mittel), 07.10.20 (kombinierte entzündungshemmende Mittel ohne Corticosteroide: nur Kombinationen von entzündungshemmenden Mitteln und Mitteln zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut), 07.10.40 (kutane Mittel: nur solche mit entzündungshemmenden Wirkstoffen),"
+            },
+            {
+              "marke": "5",
+              "text": "57.10.10 (Komplementärmedizin: einfache entzündungshemmende Mittel);"
+            },
+            {
+              "marke": "c",
+              "text": "der Untersuchung oder Behandlung dienende Mittel und Gegenstände:"
+            },
+            {
+              "marke": "1",
+              "text": "Produkte der Gruppe 05. Bandagen,"
+            },
+            {
+              "marke": "2",
+              "text": "Produkte der Gruppe 09.02 Geräte für die trans- und perkutane elektrische neuromuskuläre Modulation,"
+            },
+            {
+              "marke": "3",
+              "text": "Produkte der Gruppe 16. Kälte- und/oder Wärmetherapie-Mittel,"
+            },
+            {
+              "marke": "4",
+              "text": "Produkte der Gruppe 22. Fertigorthesen,"
+            },
+            {
+              "marke": "5",
+              "text": "Produkte der Gruppe 23. Massorthesen,"
+            },
+            {
+              "marke": "6",
+              "text": "Produkte der Gruppe 35. Verbandmaterial;"
+            },
+            {
+              "marke": "d",
+              "text": "Bildgebende Verfahren:"
+            },
+            {
               "marke": "1",
               "text": "Röntgen des Skelettes,"
             },
@@ -255,6 +315,10 @@
             {
               "marke": "5",
               "text": "Drei-Phasen-Skelettszintigraphie;"
+            },
+            {
+              "marke": "e",
+              "text": "physiotherapeutische Leistungen nach Artikel 5."
             }
           ]
         }
@@ -263,7 +327,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_4",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "6473ec28472923938d02a4312f65ed1ca75d2409b0c408bf6b053047dd243c69"
+      "sha": "19658118f852c8d5668cbc772ce1ccfc151ded8ca8a4a632778b76bc6d9e9350"
     },
     {
       "id": "bund/KLV/art_4_a",
@@ -360,6 +424,58 @@
           "text": "Die Versicherung übernimmt die Kosten der folgenden Leistungen, die auf ärztliche Anordnung hin von nach Artikel 47 KVV zugelassenen Physiotherapeuten und Physiotherapeutinnen oder von nach Artikel 52 KVV zugelassenen Organisationen der Physiotherapie und im Rahmen der Behandlung von Krankheiten des muskuloskelettalen oder neurologischen Systems oder der Systeme der inneren Organe und Gefässe, soweit diese der Physiotherapie zugänglich sind, erbracht werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "Massnahmen der physiotherapeutischen Untersuchung und der Abklärung;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen der Behandlung, Beratung und Instruktion:"
+            },
+            {
+              "marke": "1",
+              "text": "aktive und passive Bewegungstherapie,"
+            },
+            {
+              "marke": "2",
+              "text": "manuelle Therapie,"
+            },
+            {
+              "marke": "3",
+              "text": "detonisierende Physiotherapie,"
+            },
+            {
+              "marke": "4",
+              "text": "Atemphysiotherapie (inkl. Aerosolinhalationen),"
+            },
+            {
+              "marke": "5",
+              "text": "medizinische Trainingstherapie,"
+            },
+            {
+              "marke": "6",
+              "text": "lymphologische Physiotherapie,"
+            },
+            {
+              "marke": "7",
+              "text": "Bewegungstherapie im Wasser,"
+            },
+            {
+              "marke": "8",
+              "text": "Hippotherapie bei multipler Sklerose, Cerebralparese und Trisomie 21,"
+            },
+            {
+              "marke": "9",
+              "text": "Herz-Kreislauf-Physiotherapie,"
+            },
+            {
+              "marke": "[tab]",
+              "text": "10. Beckenboden - Physiotherapie;"
+            },
+            {
+              "marke": "c",
+              "text": "Physikalische Massnahmen:"
+            },
+            {
               "marke": "1",
               "text": "Wärme- und Kältetherapie,"
             },
@@ -414,7 +530,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_5",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "c70d102cd4b7357ee267c9252c73e01bc3bd76e558c56ce2dcce54dc4effa2f6"
+      "sha": "2fd6bc57b580db7f80d8545527992be50b2e5ec97ab30df0d89ce1a3fc1bda7a"
     },
     {
       "id": "bund/KLV/art_6",
@@ -492,6 +608,86 @@
           "text": "Leistungen im Sinne von Absatz 1 sind:",
           "items": [
             {
+              "marke": "a",
+              "text": "Massnahmen der Abklärung, Beratung und Koordination:"
+            },
+            {
+              "marke": "1",
+              "text": "Ermittlung des Pflegebedarfs und des Umfelds des Patienten oder der Patientin und Planung der notwendigen Massnahmen,"
+            },
+            {
+              "marke": "2",
+              "text": "Beratung des Patienten oder der Patientin sowie gegebenenfalls der nichtberuflich an der Krankenpflege Mitwirkenden bei der Durchführung der Krankenpflege, insbesondere im Umgang mit Krankheitssymptomen, bei der Einnahme von Medikamenten oder beim Gebrauch medizinischer Geräte, und Vornahme der notwendigen Kontrollen,"
+            },
+            {
+              "marke": "3",
+              "text": "Koordination der Massnahmen sowie Vorkehrungen im Hinblick auf Komplikationen in komplexen und instabilen Pflegesituationen durch spezialisierte Pflegefachpersonen;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen der Untersuchung und der Behandlung:"
+            },
+            {
+              "marke": "1",
+              "text": "Messung der Vitalzeichen (Puls, Blutdruck, Temperatur, Atem, Gewicht),"
+            },
+            {
+              "marke": "2",
+              "text": "einfache Bestimmung des Zuckers in Blut und Urin,"
+            },
+            {
+              "marke": "3",
+              "text": "Entnahme von Untersuchungsmaterial zu Laborzwecken,"
+            },
+            {
+              "marke": "4",
+              "text": "Massnahmen zur Atemtherapie (wie O 2 -Verabreichung, Inhalation, einfache Atemübungen, Absaugen),"
+            },
+            {
+              "marke": "5",
+              "text": "Einführen von Sonden oder Kathetern und die damit verbundenen pflegerischen Massnahmen,"
+            },
+            {
+              "marke": "6",
+              "text": "Massnahmen bei Hämo- oder Peritonealdialyse,"
+            },
+            {
+              "marke": "7",
+              "text": "Vorbereitung und Verabreichung von Medikamenten sowie Dokumentation der damit verbundenen Tätigkeiten,"
+            },
+            {
+              "marke": "8",
+              "text": "enterale oder parenterale Verabreichung von Nährlösungen,"
+            },
+            {
+              "marke": "9",
+              "text": "Massnahmen zur Überwachung von Infusionen, Transfusionen und Geräten, die der Behandlung oder der Kontrolle und Erhaltung von vitalen Funktionen dienen,"
+            },
+            {
+              "marke": "10",
+              "text": "Spülen, Reinigen und Versorgen von Wunden (inkl. Dekubitus- und Ulcus-cruris-Pflege) und von Körperhöhlen (inkl. Stoma- und Tracheostomiepflege) sowie Fusspflege bei Diabetikern,"
+            },
+            {
+              "marke": "11",
+              "text": "pflegerische Massnahmen bei Störungen der Blasen- oder Darmentleerung, inkl. Rehabilitationsgymnastik bei Inkontinenz,"
+            },
+            {
+              "marke": "12",
+              "text": "Hilfe bei Medizinal-Teil- oder ‑Vollbädern; Anwendung von Wickeln, Packungen und Fangopackungen,"
+            },
+            {
+              "marke": "13",
+              "text": "pflegerische Massnahmen zur Umsetzung der ärztlichen Therapie im Alltag, wie Einüben von Bewältigungsstrategien und Anleitung im Umgang mit Aggression, Angst, Wahnvorstellungen,"
+            },
+            {
+              "marke": "14",
+              "text": "Unterstützung für psychisch kranke Personen in Krisensituationen, insbesondere zur Vermeidung von akuter Selbst- oder Fremdgefährdung;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen der Grundpflege:"
+            },
+            {
               "marke": "1",
               "text": "Allgemeine Grundpflege bei Patienten oder Patientinnen, welche die Tätigkeiten nicht selber ausführen können, wie Beine einbinden, Kompressionsstrümpfe anlegen; Betten, Lagern; Bewegungsübungen, Mobilisieren; Dekubitusprophylaxe, Massnahmen zur Verhütung oder Behebung von behandlungsbedingten Schädigungen der Haut; Hilfe bei der Mund- und Körperpflege, beim An- und Auskleiden, beim Essen und Trinken,"
             },
@@ -532,7 +728,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_7",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "f3c9ffb43432e9f5fc77e49b734bd0bb42149ca506f9575d053b4118751e3ff9"
+      "sha": "6bf25203ea2d413a138a9f23ccc92f2f6600f4caf3b2779c4f1807d053a9dc49"
     },
     {
       "id": "bund/KLV/art_7_a",
@@ -776,11 +972,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf einer schweizweit einheitlichen, von Versicherern, Leistungserbringern und Kantonen gemeinsam vereinbarten Methodik beruhen, die: 1. wissenschaftlich anerkannt ist,"
+              "text": "auf einer schweizweit einheitlichen, von Versicherern, Leistungserbringern und Kantonen gemeinsam vereinbarten Methodik beruhen, die:"
+            },
+            {
+              "marke": "1",
+              "text": "wissenschaftlich anerkannt ist,"
             },
             {
               "marke": "2",
               "text": "geeignet ist, eine Abgrenzung der Leistungen nach Artikel 7 Absatz 2 von anderen Leistungen vorzunehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Schweiz durchgeführt worden sein;"
+            },
+            {
+              "marke": "c",
+              "text": "für die Gesamtheit der vom Instrument betroffenen Patienten und Patientinnen von Pflegeheimen ausreichend repräsentativ sein."
             }
           ]
         }
@@ -789,7 +997,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_8_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "2f7a8636054abf7e88106e67b16848c891156cba49811efd133fa5b0e9ec8901"
+      "sha": "f154c8ab01d0e4e7d5bd23104364b39ac295e69f282e15d607340841bbb4b925"
     },
     {
       "id": "bund/KLV/art_8_c",
@@ -1099,6 +1307,26 @@
           "text": "Die Versicherung übernimmt die Kosten der Leistungen, die auf ärztliche Anordnung hin von nach Artikel 50 d KVV zugelassenen Podologen und Podologinnen oder von nach Artikel 52 f KVV zugelassenen Organisationen der Podologie erbracht werden, soweit:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Leistungen bei Personen mit Diabetes mellitus durchgeführt werden, bei denen einer der nachfolgenden Risikofaktoren für ein diabetisches Fuss-Syndrom vorliegt:"
+            },
+            {
+              "marke": "1",
+              "text": "Polyneuropathie, mit oder ohne peripher arterielle Verschlusskrankheit (PAVK),"
+            },
+            {
+              "marke": "2",
+              "text": "früheres diabetisches Ulcus,"
+            },
+            {
+              "marke": "3",
+              "text": "erfolgte diabetesbedingte Amputation, unabhängig vom Vorliegen einer Neuro- oder Angiopathie; und"
+            },
+            {
+              "marke": "b",
+              "text": "es sich um folgende Leistungen handelt:"
+            },
+            {
               "marke": "1",
               "text": "Fuss-, Haut-, und Nagelkontrolle,"
             },
@@ -1122,11 +1350,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei Personen mit Diabetes mellitus und Polyneuropathie: 1. ohne PAVK: vier Sitzungen,"
+              "text": "bei Personen mit Diabetes mellitus und Polyneuropathie:"
+            },
+            {
+              "marke": "1",
+              "text": "ohne PAVK: vier Sitzungen,"
             },
             {
               "marke": "2",
               "text": "mit PAVK: sechs Sitzungen;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Personen mit Diabetes mellitus nach diabetischem Ulcus oder nach diabetesbedingter Amputation: sechs Sitzungen."
             }
           ]
         },
@@ -1139,7 +1375,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_11_c",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "e3057b08bba7a5d5af89165a72d15c0a44c2695f519ddd342c809b4e458d8497"
+      "sha": "c74e57ba6b33de0144f24e094c5ec4651d2541cdb772888416f7d5b537ea6068"
     },
     {
       "id": "bund/KLV/art_12",
@@ -1669,6 +1905,38 @@
           "text": "Die Versicherung übernimmt die Kosten der folgenden Leistungen, die von nach Artikel 45 KVV zugelassenen Hebammen oder von nach Artikel 45 a KVV zugelassenen Organisationen der Hebammen erbracht werden:",
           "items": [
             {
+              "marke": "a",
+              "text": "die Leistungen nach Artikel 13 Buchstabe a:"
+            },
+            {
+              "marke": "1",
+              "text": "In der normalen Schwangerschaft kann die Hebamme oder die Organisation der Hebammen sieben Kontrolluntersuchungen durchführen; sie weist die Versicherte darauf hin, dass ersten Trimenon eine ärztliche Untersuchung angezeigt ist."
+            },
+            {
+              "marke": "2",
+              "text": "Bei einer Risikoschwangerschaft ohne manifeste Pathologie arbeitet die Hebamme oder die Organisation der Hebammen mit dem Arzt oder mit der Ärztin zusammen; bei einer Risikoschwangerschaft mit manifester Pathologie erbringt sie ihre Leistungen auf ärztliche Anordnung."
+            },
+            {
+              "marke": "abis",
+              "text": "Betreuung im Rahmen von Hausbesuchen zur Pflege und zur Überwachung des Gesundheitszustands der Versicherten nach einer Fehlgeburt oder einem medizinisch indizierten Schwangerschaftsabbruch ab der 13. bis zur vollendeten 23. Schwangerschaftswoche, wie folgt:"
+            },
+            {
+              "marke": "1",
+              "text": "Nach der Fehlgeburt oder dem Schwangerschaftsabbruch kann die Hebamme oder die Organisation höchstens 10 Hausbesuche durchführen."
+            },
+            {
+              "marke": "2",
+              "text": "Für zusätzliche Hausbesuche ist eine ärztliche Anordnung erforderlich."
+            },
+            {
+              "marke": "b",
+              "text": "die Leistungen nach den Artikeln 13 Buchstaben c und e, 14 und 15;"
+            },
+            {
+              "marke": "c",
+              "text": "Betreuung im Wochenbett im Rahmen von Hausbesuchen zur Pflege und zur Überwachung des Gesundheitszustandes von Mutter und Kind sowie zur Unterstützung, Anleitung und Beratung der Mutter in der Pflege und Ernährung des Kindes wie folgt:"
+            },
+            {
               "marke": "1",
               "text": "In den 56 Tagen nach der Geburt kann die Hebamme oder die Organisation der Hebammen nach Frühgeburt, Mehrlingsgeburt, bei Erstgebärenden und nach einer Sectio höchstens 16 Hausbesuche durchführen; in allen übrigen Fällen kann die Hebamme höchstens 10 Hausbesuche durchführen."
             },
@@ -1695,7 +1963,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_16",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "0468d8499597538b54b506a42b312f94a848c7c309a8a1a78f8920f3960d993d"
+      "sha": "20203ed2242a90994d9ed7210c824160f623cf88a4c4806b7c2aeabd1e7d7473"
     },
     {
       "id": "bund/KLV/art_17",
@@ -1709,6 +1977,90 @@
           "absatz": null,
           "text": "Die Versicherung übernimmt die Kosten der zahnärztlichen Behandlungen, die durch eine der folgenden schweren, nicht vermeidbaren Erkrankungen des Kausystems bedingt sind (Art. 31 Abs. 1 Bst. a KVG). Voraussetzung ist, dass das Leiden Krankheitswert erreicht; die Behandlung ist nur so weit von der Versicherung zu übernehmen, wie es der Krankheitswert des Leidens notwendig macht:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Erkrankungen der Zähne:"
+            },
+            {
+              "marke": "1",
+              "text": "Idiopathisches internes Zahngranulom,"
+            },
+            {
+              "marke": "2",
+              "text": "Verlagerung und Überzahl von Zähnen und Zahnkeimen mit Krankheitswert (z. B. Abszess, Zyste);"
+            },
+            {
+              "marke": "b",
+              "text": "Erkrankungen des Zahnhalteapparates (Parodontopathien):"
+            },
+            {
+              "marke": "1",
+              "text": "Präpubertäre Parodontitis,"
+            },
+            {
+              "marke": "2",
+              "text": "Juvenile, progressive Parodontitis,"
+            },
+            {
+              "marke": "3",
+              "text": "Irreversible Nebenwirkungen von Medikamenten;"
+            },
+            {
+              "marke": "c",
+              "text": "Erkrankungen des Kieferknochens und der Weichteile:"
+            },
+            {
+              "marke": "1",
+              "text": "Gutartige Tumore im Kiefer- und Schleimhautbereich und tumorähnliche Veränderungen,"
+            },
+            {
+              "marke": "2",
+              "text": "Maligne Tumore im Gesichts‑, Kiefer- und Halsbereich,"
+            },
+            {
+              "marke": "3",
+              "text": "Osteopathien der Kiefer,"
+            },
+            {
+              "marke": "4",
+              "text": "Zysten (ohne Zusammenhang mit Zahnelementen),"
+            },
+            {
+              "marke": "5",
+              "text": "Osteomyelitis der Kiefer;"
+            },
+            {
+              "marke": "d",
+              "text": "Erkrankungen des Kiefergelenks und des Bewegungsapparates:"
+            },
+            {
+              "marke": "1",
+              "text": "Kiefergelenksarthrose,"
+            },
+            {
+              "marke": "2",
+              "text": "Ankylose,"
+            },
+            {
+              "marke": "3",
+              "text": "Kondylus- und Diskusluxation;"
+            },
+            {
+              "marke": "e",
+              "text": "Erkrankungen der Kieferhöhle:"
+            },
+            {
+              "marke": "1",
+              "text": "In die Kieferhöhle dislozierter Zahn oder Zahnteil,"
+            },
+            {
+              "marke": "2",
+              "text": "Mund-Antrumfistel;"
+            },
+            {
+              "marke": "f",
+              "text": "Dysgnathien, die zu folgenden Störungen mit Krankheitswert führen:"
+            },
             {
               "marke": "1",
               "text": "Schlafapnoesyndrom,"
@@ -1728,7 +2080,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_17",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "1590f37388a897be59b4f3ccb0e51e7cc8f4a50ecc30c3fe56ff456916a1b037"
+      "sha": "a095d97c4932a9b8cf5875d7ac717421e59e295b3f6cd1557d34926fa51d3347"
     },
     {
       "id": "bund/KLV/art_18",
@@ -1742,6 +2094,54 @@
           "absatz": "1",
           "text": "Die Versicherung übernimmt die Kosten der zahnärztlichen Behandlungen, die durch eine der folgenden schweren Allgemeinerkrankungen oder ihre Folgen bedingt und zur Behandlung des Leidens notwendig sind (Art. 31 Abs. 1 Bst. b KVG):",
           "items": [
+            {
+              "marke": "a",
+              "text": "Erkrankungen des Blutsystems:"
+            },
+            {
+              "marke": "1",
+              "text": "Neutropenie, Agranulozytose,"
+            },
+            {
+              "marke": "2",
+              "text": "Schwere aplastische Anämie,"
+            },
+            {
+              "marke": "3",
+              "text": "Leukämien,"
+            },
+            {
+              "marke": "4",
+              "text": "Myelodysplastische Syndrome (MDS),"
+            },
+            {
+              "marke": "5",
+              "text": "Hämorraghische Diathesen;"
+            },
+            {
+              "marke": "b",
+              "text": "Stoffwechselerkrankungen:"
+            },
+            {
+              "marke": "1",
+              "text": "Akromegalie,"
+            },
+            {
+              "marke": "2",
+              "text": "Hyperparathyreoidismus,"
+            },
+            {
+              "marke": "3",
+              "text": "Idiopathischer Hypoparathyreoidismus,"
+            },
+            {
+              "marke": "4",
+              "text": "Hypophosphatasie (genetisch bedingte Vitamin D-resistente Rachitis);"
+            },
+            {
+              "marke": "c",
+              "text": "Weitere Erkrankungen:"
+            },
             {
               "marke": "1",
               "text": "Chronische Polyarthritis mit Kieferbeteiligung,"
@@ -1769,6 +2169,14 @@
             {
               "marke": "7",
               "text": "Schwere psychische Erkrankungen mit konsekutiver schwerer Beeinträchtigung der Kaufunktion;"
+            },
+            {
+              "marke": "d",
+              "text": "Speicheldrüsenerkrankungen;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
             }
           ]
         },
@@ -1781,7 +2189,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_18",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "c62580892cc35cada70a8c88911970ead4e60da9558fe29d4d6f9721c0e36f7d"
+      "sha": "127d664027dbcf9b37368d733297fa2bc3ff1dfee6744cd5dd2b1534aea3f263"
     },
     {
       "id": "bund/KLV/art_19",
@@ -1851,12 +2259,236 @@
           "text": "Geburtsgebrechen im Sinne von Absatz 1 sind:",
           "items": [
             {
+              "marke": "1",
+              "text": "Dysplasia ectodermalis ;"
+            },
+            {
+              "marke": "2",
+              "text": "Angeborene blasenbildende Hautkrankheiten ( Epidermolysis bullosa here dita ria , Acrodermatitis enteropathica und Pemphigus benignus familiaris chro nicus ;"
+            },
+            {
+              "marke": "3",
+              "text": "Chondrodystrophie (wie Achondroplasie, Hypochondroplasie, Dysplasia epi physaria multiplex );"
+            },
+            {
+              "marke": "4",
+              "text": "Angeborene Dysostosen;"
+            },
+            {
+              "marke": "5",
+              "text": "Kartilaginäre Exostosen, sofern Operation notwendig ist;"
+            },
+            {
+              "marke": "6",
+              "text": "Angeborene Hemihypertrophien und andere Körperasymmetrien, sofern Operation notwendig ist;"
+            },
+            {
+              "marke": "7",
+              "text": "Angeborene Schädeldefekte;"
+            },
+            {
+              "marke": "8",
+              "text": "Kraniosynostosen;"
+            },
+            {
+              "marke": "9",
+              "text": "Angeborene Wirbelmissbildungen (hochgradige Keilwirbel, Blockwirbel wie Klippel-Feil, aplastische Wirbel und hochgradig dysplastische Wirbel);"
+            },
+            {
+              "marke": "10",
+              "text": "Arthromyodysplasia congenita (Arthrogryposis);"
+            },
+            {
+              "marke": "11",
+              "text": "Dystrophia musculorum progressiva und andere congenitale Myopathien;"
+            },
+            {
+              "marke": "12",
+              "text": "Myositis ossificans progressiva congenita ;"
+            },
+            {
+              "marke": "13",
+              "text": "Cheilo-gnatho-palatoschisis (Lippen-, Kiefer‑, Gaumenspalte);"
+            },
+            {
+              "marke": "14",
+              "text": "Mediane, schräge und quere Gesichtsspalten;"
+            },
+            {
+              "marke": "15",
+              "text": "Angeborene Nasen- und Lippenfistel;"
+            },
+            {
+              "marke": "16",
+              "text": "Proboscis lateralis ;"
+            },
+            {
+              "marke": "17",
+              "text": "Angeborene Dysplasien der Zähne, sofern mindestens zwölf Zähne der zweiten Dentition nach Durchbruch hochgradig befallen sind und sofern bei diesen eine definitive Versorgung mittels zirkulärer Umfassungen voraussehbar ist;"
+            },
+            {
+              "marke": "18",
+              "text": "Anodontia totalis congenita oder Anodontia partialis congenita bei Nichtanlage von mindestens zwei nebeneinander liegenden bleibenden Zähnen oder vier bleibenden Zähnen pro Kiefer, exklusive Weisheitszähne;"
+            },
+            {
+              "marke": "19",
+              "text": "Hyperodontia congenita , sofern der oder die überzähligen Zähne eine intramaxilläre oder intramandibuläre Deviation verursachen, welche eine apparative Behandlung verlangt;"
+            },
+            {
+              "marke": "20",
+              "text": "Micrognathia inferior congenita mit im ersten Lebensjahr auftretenden behandlungsbedürftigen Schluck- und Atemstörungen, oder wenn:"
+            },
+            {
+              "marke": "–",
+              "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenrelation mit einem Winkel ANB von mindestens 9 Grad (beziehungsweise von mindestens 7 Grad bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad) ergibt;"
+            },
+            {
+              "marke": "–",
+              "text": "bei den bleibenden Zähnen, exklusive Weisheitszähne, eine buccale Nonokklusion von mindestens drei Antagonistenpaaren im Seitenzahnbereich pro Kieferhälfte vorliegt;"
+            },
+            {
+              "marke": "21",
+              "text": "Mordex apertus congenitus , sofern ein vertikal offener Biss nach Durchbruch der bleibenden Incisiven besteht und die kephalometrische Beurteilung einen Kieferbasenwinkel von 40 Grad und mehr (beziehungsweise von mindestens 37 Grad bei Kombination mit einem Winkel ANB von mindestens 7 Grad) ergibt;"
+            },
+            {
+              "marke": "22",
+              "text": "Prognathia inferior congenita , sofern:"
+            },
+            {
               "marke": "–",
               "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenregulation mit einem Winkel ANB von mindestens –1 Grad ergibt und sich mindestens zwei Antagonistenpaare der zweiten Dentition in frontaler Kopf- oder Kreuzbissrelation befinden oder"
             },
             {
               "marke": "–",
               "text": "eine Diskrepanz von +1 Grad und weniger bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad und mehr respektive von 15 Grad und weniger vorliegt;"
+            },
+            {
+              "marke": "23",
+              "text": "Epulis des Neugeborenen;"
+            },
+            {
+              "marke": "24",
+              "text": "Choanalatresie;"
+            },
+            {
+              "marke": "25",
+              "text": "Glossoschisis;"
+            },
+            {
+              "marke": "26",
+              "text": "Makro- und Microglossia congenita , sofern Operation der Zunge notwendig ist;"
+            },
+            {
+              "marke": "27",
+              "text": "Angeborene Zungenzysten und -tumoren;"
+            },
+            {
+              "marke": "28",
+              "text": "Angeborene Speicheldrüsen- und Speichelgangaffektionen (Fisteln, Stenosen, Zysten, Tumoren, Ektasien und Hypo- oder Aplasien sämtlicher grossen Speicheldrüsen);"
+            },
+            {
+              "marke": "28a",
+              "text": "Kongenitale Retention oder Ankylose von Zähnen, sofern mehrere Molaren oder mindestens zwei nebeneinander liegende Zähne im Bereich der Prämolaren und Molaren (exklusive Weisheitszähne) der zweiten Dentition betroffen sind; fehlende Anlagen (exklusive Weisheitszähne) sind retinierten und ankylosierten Zähnen gleichgestellt."
+            },
+            {
+              "marke": "29",
+              "text": "Angeborene Halszysten, ‑fisteln, ‑spalten und ‑tumoren (Reichert’scher Knorpel);"
+            },
+            {
+              "marke": "30",
+              "text": "Haemangioma cavernosum aut tuberosum ;"
+            },
+            {
+              "marke": "31",
+              "text": "Lymphangioma congenitum , sofern Operation notwendig ist;"
+            },
+            {
+              "marke": "32",
+              "text": "Angeborene Koagulopathien und Thrombozytopathien;"
+            },
+            {
+              "marke": "33",
+              "text": "Histiozytosen (eosinophiles Granulom, Hand-Schüller-Christian und Letterer-Siwesche-Krankheit);"
+            },
+            {
+              "marke": "34",
+              "text": "Missbildungen des Zentralnervensystems und seiner Häute ( Encephalocele , Arachnoidalzyste , Myelomeningozele , Hydromyelie , Meningocele , Mega len cephalie , Porencephalie und Diastematomyelie );"
+            },
+            {
+              "marke": "35",
+              "text": "Heredo-degenerative Erkrankungen des Nervensystems (wie Friedreich’sche Ataxie, Leukodystrophien und progrediente Erkrankungen der grauen Substanz, spinale und neurale Muskelatrophien, familiäre Dysautonomie, Anal ge sia congenita );"
+            },
+            {
+              "marke": "36",
+              "text": "Angeborene Epilepsie;"
+            },
+            {
+              "marke": "37",
+              "text": "Angeborene cerebrale Lähmungen (spastisch, athetotisch, ataktisch);"
+            },
+            {
+              "marke": "38",
+              "text": "Kongenitale Paralysen und Paresen;"
+            },
+            {
+              "marke": "39",
+              "text": "Ptosis palpebrae congenita ;"
+            },
+            {
+              "marke": "40",
+              "text": "Aplasie der Tränenwege;"
+            },
+            {
+              "marke": "41",
+              "text": "Anophthalmus ;"
+            },
+            {
+              "marke": "42",
+              "text": "Angeborene Tumoren der Augenhöhle;"
+            },
+            {
+              "marke": "43",
+              "text": "Atresia auris congenita inklusive Anotie und Microtie;"
+            },
+            {
+              "marke": "44",
+              "text": "Angeborene Missbildungen des Ohrmuschelskelettes;"
+            },
+            {
+              "marke": "45",
+              "text": "Angeborene Störungen des Mucopolysaccharid- und Glycoproteinstoffwechsels (wie Morbus Pfaundler-Hurler, Morbus Morquio);"
+            },
+            {
+              "marke": "46",
+              "text": "Angeborene Störungen des Knochen-Stoffwechsels (wie Hypophosphatasie, progressive diaphysäre Dysplasie Camurati-Engelmann, Osteodystrophia Jaffé-Lichtenstein, Vitamin D-resistente Rachitisformen);"
+            },
+            {
+              "marke": "47",
+              "text": "Angeborene Störungen der Thyreoidea-Funktion (Athyreose, Hypothyreose und Kretinismus);"
+            },
+            {
+              "marke": "48",
+              "text": "Angeborene Störungen der hypothalamo- hypophysären Funktion (hypophysärer Zwergwuchs, Diabetes insipidus und Prader-Willi-Syndrom, Kallmann-Syndrom);"
+            },
+            {
+              "marke": "49",
+              "text": "Angeborene Störungen der Gonadenfunktion (Turner-Syndrom, Missbildungen des Ovars, Anorchie und Klinefelter-Syndrom);"
+            },
+            {
+              "marke": "50",
+              "text": "Neurofibromatose;"
+            },
+            {
+              "marke": "51",
+              "text": "Angiomatosis encephalo-trigeminalis (Sturge-Weber-Krabbe);"
+            },
+            {
+              "marke": "52",
+              "text": "Kongenitale Dystrophien des Bindegewebes (wie Marfan-Syndrom, Ehlers-Danlos-Syndrom, Cutis laxa congenita , Pseudoxanthoma elasticum );"
+            },
+            {
+              "marke": "53",
+              "text": "Teratome und andere Keimzellentumoren (wie Dysgerminom, embryonales Karzinom, gemischter Keimzellentumor, Dottersacktumor, Choriokarzinom, Gonadoblastom)."
             }
           ]
         }
@@ -1865,7 +2497,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_19_a",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "b6a25cc7b5ac3a77a60ccc4fc56ec076346e14199b99c8f8f14fdd56771e64b2"
+      "sha": "918675e9f79970f2f596d674d9caeb4f89ef3fd032dc7279660d2eb0cb92092f"
     },
     {
       "id": "bund/KLV/art_19_b",
@@ -2595,11 +3227,31 @@
           "items": [
             {
               "marke": "a",
-              "text": "Dänemark: 1. bei patentgeschützten Originalpräparaten: 6,5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen,"
+              "text": "Dänemark:"
+            },
+            {
+              "marke": "1",
+              "text": "bei patentgeschützten Originalpräparaten: 6,5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen,"
             },
             {
               "marke": "2",
               "text": "bei nicht mehr patentgeschützten Originalpräparaten: 5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen;"
+            },
+            {
+              "marke": "b",
+              "text": "Grossbritannien: 12,5 Prozent des Publikumspreises;"
+            },
+            {
+              "marke": "c",
+              "text": "Niederlande: 6,5 Prozent des Apothekeneinstandspreises, höchstens jedoch 30 Euro;"
+            },
+            {
+              "marke": "d",
+              "text": "Finnland: 3 Prozent des Apothekeneinstandspreises, höchstens jedoch 30 Euro;"
+            },
+            {
+              "marke": "e",
+              "text": "Schweden: 2,7 Prozent des Apothekeneinstandspreises, höchstens jedoch 167 schwedische Kronen."
             }
           ]
         },
@@ -2640,7 +3292,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_b",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "cc0a14f21bcdb61ed33037d7023def710dc89c7ad77ebc062b39178aa5d0ef1c"
+      "sha": "0a94ff875c7872db7b5d6df25da4c8146231f4ca1ed09981ce24b28ebfb00262"
     },
     {
       "id": "bund/KLV/art_34_c",
@@ -2681,6 +3333,86 @@
           "absatz": "1bis",
           "text": "Die IT-Gruppen werden in folgende Einheiten nach Artikel 65 d Absatz 1 KVV eingeteilt:",
           "items": [
+            {
+              "marke": "a",
+              "text": "Einheit A:"
+            },
+            {
+              "marke": "1",
+              "text": "Gastroenterologika (04),"
+            },
+            {
+              "marke": "2",
+              "text": "Stoffwechsel (07),"
+            },
+            {
+              "marke": "3",
+              "text": "Antidota (15),"
+            },
+            {
+              "marke": "4",
+              "text": "Kationenaustauscher (16),"
+            },
+            {
+              "marke": "5",
+              "text": "…"
+            },
+            {
+              "marke": "6",
+              "text": "Gastroenterologika Komplementärmedizin (54),"
+            },
+            {
+              "marke": "7",
+              "text": "Stoffwechsel Komplementärmedizin (57);"
+            },
+            {
+              "marke": "b",
+              "text": "Einheit B:"
+            },
+            {
+              "marke": "1",
+              "text": "Nervensystem (01),"
+            },
+            {
+              "marke": "2",
+              "text": "Nieren und Wasserhaushalt (05),"
+            },
+            {
+              "marke": "3",
+              "text": "Blut (06),"
+            },
+            {
+              "marke": "4",
+              "text": "Dermatologika (10),"
+            },
+            {
+              "marke": "5",
+              "text": "Odontostomatologika (13),"
+            },
+            {
+              "marke": "6",
+              "text": "Diagnostika (14),"
+            },
+            {
+              "marke": "7",
+              "text": "Nervensystem Komplementärmedizin (51),"
+            },
+            {
+              "marke": "8",
+              "text": "Nieren und Wasserhaushalt Komplementärmedizin (55),"
+            },
+            {
+              "marke": "9",
+              "text": "Blut Komplementärmedizin (56),"
+            },
+            {
+              "marke": "10",
+              "text": "Dermatologika Komplementärmedizin (60);"
+            },
+            {
+              "marke": "c",
+              "text": "Einheit C:"
+            },
             {
               "marke": "1",
               "text": "Herz und Kreislauf (02),"
@@ -2758,7 +3490,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_d",
       "abgerufen": "2026-06-25",
       "fassungsToken": "20260511",
-      "sha": "d0c57fa0f5a2107ffad1147cabf132b38c20131e91c3f9bed37a987939b990b3"
+      "sha": "495cfa6bce7f89bf6347fc110b59ea215c566d258a139cf0dae9d2be0311032d"
     },
     {
       "id": "bund/KLV/art_34_e",
