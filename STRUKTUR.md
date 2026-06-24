@@ -22,6 +22,22 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 24.6.2026 (spät) — 14-Punkte-UI/Redesign-Welle, autonom (in `main` lokal, PROD-DEPLOY je Welle)
+
+Auftrag David: Live-Review-Punkte am Stück, je Schritt Bug-Check (adversariale Opus-Agenten) + Deploy, ohne Rückfragen. Gate je Welle grün (golden byte-gleich), Playwright-/Prod-Preview-verifiziert. **12 von 14 erledigt + deployt; 11+12 (Gesetze-Ausbau) blockiert.**
+- **(14) Rechtsprechung-Seitenleiste als Dropdown** wie die anderen: Sachgebiete in EINER einklappbaren Gruppe «Nach Sachgebiet» (standardOffen=false), strukturgleich zu Bund/Kantone; Punkt-5-Sonderbehandlung (nurBlaetter) entfernt.
+- **(1) Suchleiste GesetzLeser** in die Gliederungs-Spalte (oberhalb TOC) statt voll über den Gesetzestext; Vollbreiten-Fallback nur ohne 2-Spalten. Review fand Mobil-Doppel (gefixt).
+- **(2/4) Tab-Streifen nach Kategorie gruppiert** (`TabStreifen` v2): Sammel-Reiter je Kategorie (Gesetze/Rechtsprechung/Vorlagen/Rechner) mit Piktogramm + Dropdown; Drag-and-Drop entfernt. Dropdown auf nav-Ebene (ausserhalb des scrollenden `<ul>`), sonst abgeschnitten.
+- **(3) Sortierung-Select (Rechtsprechung)** vertikales Klipping gefixt (`index.css`: `lc-select.lc-input-sm` 0-Vertikalpolster, höhere Spezifität).
+- **(5) Seitenleiste**: Rechtsprechung-Direktlinks gleich eingerückt wie Gruppen-Auswahl. **(8)** Klick auf Abschnitts-Überschrift klappt Untergruppen zu (Remount-Key).
+- **(6) Live-Suche (entscheidsuche.ch)** an den Kopf der Ergebnis-Spalte.
+- **(7) Scheidungs-Vorlagen**: «Juristische Person» entfernt (`ParteiEditor` Prop `nurNatuerlich`; Ehegatten = natürliche Personen). KlageVereinfacht behält Umschalter. Golden byte-gleich.
+- **(9) Vorlagen-Übersicht entschlackt** (`Katalog.tsx`, Workflow-Empfehlung): ein Header (`ohneKopf`), ~14 Pillen → ein Rechtsgebiet-Dropdown, geplante Vorlagen gesammelt in EINEN «In Vorbereitung»-Block, flache Unterrubriken, Form-Gate-Label weg. Nur `/vorlagen`, `/rechner` unverändert.
+- **(10) Startseiten-Kalender** an Fristenrechner angeglichen: `start/FristenKalender` ist jetzt dünner Adapter auf `components/FristenKalender` (§5/§10); Basis rückwärtskompatibel erweitert (aQuoISO optional, `stillstandPerioden`); 6 Formulare byte-gleich (Review bestätigt).
+- **(13) Scroll-Reset beim Gesetz-Tab-Wechsel** endgültig gefixt: die `ScrollWiederherstellung` (`App.tsx`) brach in der Reader-Ladephase (eintraege=null, kurze stabile Höhe) zu früh ab → bei langsamem Netz Sprung an den Anfang. «stabil» zählt erst ab geladenem Inhalt (Höhe > 1.5×Viewport). Mit 700ms-Netzdrosselung im Prod-Build verifiziert.
+- **OFFEN/BLOCKIERT (11+12)**: International-Rubrik (SR 0.*: EMRK/CISG/LugÜ/Haager + EU/GDPR als Live-Link) und Gesetze-Ausbau ~100 Bund-SR. **Punkt 12 blockiert**: Quell-Datei `bookmarks_schweizer_recht_v2.html` ist aus `~/Downloads` verschwunden → ohne sie keine Extraktion der konkreten SR-Liste (keine erfundenen Normen, §7/§8). Beides ist Fedlex-Generator-Arbeit (dedizierte Session) — gemeinsam zu erledigen, sobald die Datei wieder da ist.
+- **Hinweis Git**: Commits liegen LOKAL auf `main` (Push zu origin vom Auto-Classifier geblockt); PROD ist via `vercel --prod` aktuell (CLI-Deploy, nicht git-getrieben).
+
 ## Session 24.6.2026 (abends, Forts.) — Schnellrechner-Politur: «Berechnen» weg, Disclaimer entschlackt, Kalender zeigt Stillstand (in `main`, PROD-DEPLOY)
 
 Auftrag David (Live-Review): Startseite-Schnellrechner aufräumen. Worktree (§12) auf `45c1315`, Gate grün, Playwright-verifiziert.
