@@ -81,7 +81,7 @@ export function FristenKalender({ markierung, kanton }: {
                     : istBeginn
                       ? 'ring-1 ring-brass-300 text-ink-700'
                       : istStillstand
-                        ? 'bg-brass-50 text-ink-500 ring-1 ring-brass-200/70'
+                        ? 'bg-brass-100/70 text-brass-800'
                         : frei
                           ? 'text-ink-500 bg-surface-sunken/40'
                           : 'text-ink-700';
@@ -98,7 +98,7 @@ export function FristenKalender({ markierung, kanton }: {
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-600" /> Fristende</span>
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-100 ring-1 ring-brass-400" /> Ereignis</span>
               {markierung.stillstand && markierung.stillstand.length > 0 && (
-                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-50 ring-1 ring-brass-200" /> Gerichtsferien</span>
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-100/70" /> Gerichtsferien</span>
               )}
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-surface-sunken/60" /> arbeitsfrei</span>
             </div>
