@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Mit Ausschreibung vom 21. Oktober 2022 eröffnete das Tiefbauamt des Kantons Zürich (nachfolgend: Vergabebehörde) ein offenes Submissionsverfahren betreffend die Strassenbauarbeiten für den Vierspurausbau Hardwald. Am 19. April 2023 erging der Zuschlag an die Arbeitsgemeinschaft \"D.\" (nachfolgend: ARGE D.) für deren Angebot im Betrag von Fr. 54'693'910.10. Mit Schreiben vom 26. April 2023 teilte die Vergabebehörde den anderen Anbieterinnen die Zuschlagserteilung an die ARGE D. mit. Am 2. Mai 2023 erfolgte die SIMAP-Publikation des Zuschlags. B. Mit Beschwerde vom 12. Mai 2023 gelangte die Arbeitsgemeinschaft \"A.\", bestehend aus der B. AG und der C. AG (nachfolgend: ARGE A.) an das Verwaltungsgericht des Kantons Zürich. Sie beantragten, es sei der Zuschlag aufzuheben und an sie zu erteilen. (...) B.b Mit Beschluss vom 7. September 2023 trat das Verwaltungsgericht auf die Beschwerde nicht ein. Es erwog im Wesentlichen, die zehntägige Beschwerdefrist errechne sich ab der individuellen Eröffnung des Zuschlags mit Schreiben vom 26. April 2023. Da die ARGE A. ihre Beschwerde vom 12. Mai 2023 erst zehn Tage nach der SIMAP-Publikation am 2. Mai 2023 beim Verwaltungsgericht eingereicht habe, sei auf diese nicht einzutreten. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten und subsidiärer Verfassungsbeschwerde vom 19. September 2023 gelangt die ARGE A., bestehend aus der B. AG und der C. AG, an das Bundesgericht. Sie beantragen die Aufhebung des Beschlusses vom 7. September 2023. Es sei das Verfahren zur Beurteilung an die Vorinstanz zurückzuweisen. (...) (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Mit Ausschreibung vom 21. Oktober 2022 eröffnete das Tiefbauamt des Kantons Zürich (nachfolgend: Vergabebehörde) ein offenes Submissionsverfahren betreffend die Strassenbauarbeiten für den Vierspurausbau Hardwald. Am 19. April 2023 erging der Zuschlag an die Arbeitsgemeinschaft \"D.\" (nachfolgend: ARGE D.) für deren Angebot im Betrag von Fr. 54'693'910.10. Mit Schreiben vom 26. April 2023 teilte die Vergabebehörde den anderen Anbieterinnen die Zuschlagserteilung an die ARGE D. mit. Am 2. Mai 2023 erfolgte die SIMAP-Publikation des Zuschlags."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde vom 12. Mai 2023 gelangte die Arbeitsgemeinschaft \"A.\", bestehend aus der B. AG und der C. AG (nachfolgend: ARGE A.) an das Verwaltungsgericht des Kantons Zürich. Sie beantragten, es sei der Zuschlag aufzuheben und an sie zu erteilen. (...) B.b Mit Beschluss vom 7. September 2023 trat das Verwaltungsgericht auf die Beschwerde nicht ein. Es erwog im Wesentlichen, die zehntägige Beschwerdefrist errechne sich ab der individuellen Eröffnung des Zuschlags mit Schreiben vom 26. April 2023. Da die ARGE A. ihre Beschwerde vom 12. Mai 2023 erst zehn Tage nach der SIMAP-Publikation am 2. Mai 2023 beim Verwaltungsgericht eingereicht habe, sei auf diese nicht einzutreten."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten und subsidiärer Verfassungsbeschwerde vom 19. September 2023 gelangt die ARGE A., bestehend aus der B. AG und der C. AG, an das Bundesgericht. Sie beantragen die Aufhebung des Beschlusses vom 7. September 2023. Es sei das Verfahren zur Beurteilung an die Vorinstanz zurückzuweisen. (...) (Auszug)"
             }
           ]
         },
@@ -129,7 +140,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=71&highlight_docid=atf%3A%2F%2F150-I-183%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "12c402318e223361fb9b41cab5900f3bdfae09b91ac014ed1b3b105f7957e429",
-      "sha": "c993078c1eb8efa46b9c1190d76c80cf5d91fe4182d74203f43b1af1522be711"
+      "sha": "7dea6e564b3a82c3077e2760a85ac2ac6c45c1f0edfcd20bddf657ee22b19ef7"
     }
   ]
 }

@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Am 3. September 2021 verurteilte das Kriminalgericht des Kantons Luzern A. (geboren 1955) wegen Veruntreuung, Betrugs, ungetreuer Geschäftsbesorgung und mehrfacher Urkundenfälschung zu einer Freiheitsstrafe von 2 Jahren und 10 Monaten, davon 10 Monate unbedingt. Auf ihre Berufung hin reduzierte das Kantonsgericht Luzern die Freiheitsstrafe am 5. Oktober 2022 auf 2 Jahre und 9 Monate, davon 9 Monate unbedingt. Das Bundesgericht wies eine von A. dagegen erhobene Beschwerde mit Urteil vom 6B_194/2023 vom 25. September 2023 ab, soweit es darauf eintrat. B. Mit Gesuch vom 22. Februar 2024 beantragte A., den unbedingten Teil der Freiheitsstrafe in der besonderen Vollzugsform der Halbgefangenschaft verbüssen zu dürfen. Der Vollzugs- und Bewährungsdienst des Kantons Luzern (VBD) wies das Gesuch mit Entscheid vom 22. April 2024 ab. Das Kantonsgericht Luzern wies eine von A. dagegen erhobene Beschwerde mit Urteil vom 16. Juli 2024 ab und auferlegte ihr die Verfahrenskosten. C. Dagegen gelangt A. mit Beschwerde in Strafsachen an das Bundesgericht. Sie beantragt, das Urteil des Kantonsgerichts vom 16. Juli 2024 sei aufzuheben und ihr sei der Vollzug ihrer Freiheitsstrafe in Form der Halbgefangenschaft zu gewähren. Eventualiter sei die Sache an die Vorinstanz zur neuen Beurteilung zurückzuweisen. A. ersucht um Gewährung der unentgeltlichen Rechtspflege und Verbeiständung sowie der aufschiebenden Wirkung. Mit Verfügung des Präsidenten der II. strafrechtlichen Abteilung des Bundesgerichts vom 3. Oktober 2024 wurde der Beschwerde die aufschiebende Wirkung zuerkannt. Das Bundesgericht hat antragsgemäss die vorinstanzlichen Akten beigezogen, jedoch keine Vernehmlassung eingeholt. Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Am 3. September 2021 verurteilte das Kriminalgericht des Kantons Luzern A. (geboren 1955) wegen Veruntreuung, Betrugs, ungetreuer Geschäftsbesorgung und mehrfacher Urkundenfälschung zu einer Freiheitsstrafe von 2 Jahren und 10 Monaten, davon 10 Monate unbedingt. Auf ihre Berufung hin reduzierte das Kantonsgericht Luzern die Freiheitsstrafe am 5. Oktober 2022 auf 2 Jahre und 9 Monate, davon 9 Monate unbedingt. Das Bundesgericht wies eine von A. dagegen erhobene Beschwerde mit Urteil vom 6B_194/2023 vom 25. September 2023 ab, soweit es darauf eintrat."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Gesuch vom 22. Februar 2024 beantragte A., den unbedingten Teil der Freiheitsstrafe in der besonderen Vollzugsform der Halbgefangenschaft verbüssen zu dürfen. Der Vollzugs- und Bewährungsdienst des Kantons Luzern (VBD) wies das Gesuch mit Entscheid vom 22. April 2024 ab. Das Kantonsgericht Luzern wies eine von A. dagegen erhobene Beschwerde mit Urteil vom 16. Juli 2024 ab und auferlegte ihr die Verfahrenskosten."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Dagegen gelangt A. mit Beschwerde in Strafsachen an das Bundesgericht. Sie beantragt, das Urteil des Kantonsgerichts vom 16. Juli 2024 sei aufzuheben und ihr sei der Vollzug ihrer Freiheitsstrafe in Form der Halbgefangenschaft zu gewähren. Eventualiter sei die Sache an die Vorinstanz zur neuen Beurteilung zurückzuweisen. A. ersucht um Gewährung der unentgeltlichen Rechtspflege und Verbeiständung sowie der aufschiebenden Wirkung. Mit Verfügung des Präsidenten der II. strafrechtlichen Abteilung des Bundesgerichts vom 3. Oktober 2024 wurde der Beschwerde die aufschiebende Wirkung zuerkannt. Das Bundesgericht hat antragsgemäss die vorinstanzlichen Akten beigezogen, jedoch keine Vernehmlassung eingeholt. Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt."
             }
           ]
         },
@@ -120,7 +131,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-65%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "972c4ced5f0b13045894579df0ede519607d85c6f0e047d089ed9d45724dc8ab",
-      "sha": "75ea8bf8796c4d857239e1c0b67e99da24902f279574dc9599f281134e9fa0bb"
+      "sha": "6b370507bf6b8df98d16c6e3084d3d09c163dc20340b424e81999dff1a75bb96"
     }
   ]
 }

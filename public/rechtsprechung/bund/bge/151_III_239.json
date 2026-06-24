@@ -27,8 +27,14 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die D. Bank AG leitete mit Betreibungsbegehren vom 16. August 2022 gegen die \"Unverteilte Erbschaft des E.A. sel.\" bzw. handschriftlich abgeändert \"Erbengemeinschaft des E.A. sel.\" eine Betreibung auf Verwertung eines Grundpfandes ein. Als Grundpfand wurde das zur unverteilten Erbschaft des E.A. gehörende Grundstück U. Gbbl.-Nr. x bezeichnet. Sodann wurden im Betreibungsbegehren unter der Rubrik \"Erben\" die zwei Söhne des Erblassers genannt. Das Betreibungsamt Region Solothurn stellte den in der Betreibung Nr. y gegen die \"Erbengemeinschaft des E.A.\" ausgestellten Zahlungsbefehl im September 2022 dem Miterben B.A. zu, der vom Betreibungsamt in der Folge als Vertreter der Erbschaft behandelt wurde. Dem Miterben A.A. wurde der Zahlungsbefehl mit dem Vermerk \"Zahlungsbefehl an Dritteigentümer\" im Februar 2023 durch öffentliche Bekanntmachung ebenfalls zugestellt. Am 1. März 2024 führte das Betreibungsamt die Versteigerung durch. Mit Eingabe vom 11. März 2024 liess der Miterbe A.A. bei der Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Solothurn gegen den Zuschlag betreffend das Grundstück U. Gbbl.-Nr. x an die C. AG anlässlich der Steigerung vom 1. März 2024 Beschwerde erheben. Die Aufsichtsbehörde wies die Beschwerde am 25. Juni 2024 ab, soweit sie darauf eintrat. B. Mit Beschwerde in Zivilsachen vom 8. Juli 2024 ist A.A. (Beschwerdeführer) an das Bundesgericht gelangt. Er beantragt die Aufhebung des vorinstanzlichen Entscheids und verlangt namentlich, die Versteigerung vom 1. März 2024 für ungültig zu erklären und den Zuschlag an die C. AG aufzuheben. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung) Aus den Erwägungen:"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die D. Bank AG leitete mit Betreibungsbegehren vom 16. August 2022 gegen die \"Unverteilte Erbschaft des E.A. sel.\" bzw. handschriftlich abgeändert \"Erbengemeinschaft des E.A. sel.\" eine Betreibung auf Verwertung eines Grundpfandes ein. Als Grundpfand wurde das zur unverteilten Erbschaft des E.A. gehörende Grundstück U. Gbbl.-Nr. x bezeichnet. Sodann wurden im Betreibungsbegehren unter der Rubrik \"Erben\" die zwei Söhne des Erblassers genannt. Das Betreibungsamt Region Solothurn stellte den in der Betreibung Nr. y gegen die \"Erbengemeinschaft des E.A.\" ausgestellten Zahlungsbefehl im September 2022 dem Miterben B.A. zu, der vom Betreibungsamt in der Folge als Vertreter der Erbschaft behandelt wurde. Dem Miterben A.A. wurde der Zahlungsbefehl mit dem Vermerk \"Zahlungsbefehl an Dritteigentümer\" im Februar 2023 durch öffentliche Bekanntmachung ebenfalls zugestellt. Am 1. März 2024 führte das Betreibungsamt die Versteigerung durch. Mit Eingabe vom 11. März 2024 liess der Miterbe A.A. bei der Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Solothurn gegen den Zuschlag betreffend das Grundstück U. Gbbl.-Nr. x an die C. AG anlässlich der Steigerung vom 1. März 2024 Beschwerde erheben. Die Aufsichtsbehörde wies die Beschwerde am 25. Juni 2024 ab, soweit sie darauf eintrat."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Zivilsachen vom 8. Juli 2024 ist A.A. (Beschwerdeführer) an das Bundesgericht gelangt. Er beantragt die Aufhebung des vorinstanzlichen Entscheids und verlangt namentlich, die Versteigerung vom 1. März 2024 für ungültig zu erklären und den Zuschlag an die C. AG aufzuheben. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung) Aus den Erwägungen:"
             }
           ]
         },
@@ -115,7 +121,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-239%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "922b9599758e420508474b4821d50ed4e9ceddcba233eaf61eb36680e9ec0bc0",
-      "sha": "4841116a5535b2e38152037d93dd2895e30e81fb2aad0badd613072878bc182e"
+      "sha": "47238c7a1f770e83d24c622d012cd32ee416f8bb00eebf7ad22b02ca9d8c0eb5"
     }
   ]
 }

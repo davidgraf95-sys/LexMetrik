@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die Swisscom (Schweiz) AG (nachfolgend: Swisscom) reichte bei der Bausektion der Stadt Zürich ein Baugesuch für die Erweiterung und Änderung der Sendeleistung und des Winkelbereichs einer bestehenden Mobilfunkantennenanlage ein. Die Antennenmodule der Swisscom sollen dabei auf den Frequenzbändern 700-900, 1'400-2'600 sowie 3'600 MHz und in den Azimuten (Abweichungen in Grad von Nord) von 40° und 130° senden. Im Frequenzbereich 3'600 MHz sollen die Antennen mit je 16 Sub-Arrays adaptiv unter Berücksichtigung eines Korrekturfaktors betrieben werden. Dabei soll die kumulierte Sendeleistung 700 WERP betragen und mit 300 WERP auf die Senderichtung 40° und mit 400 WERP auf die Senderichtung 130° verteilt werden. B. Die Bausektion erteilte der Swisscom mit Beschluss vom 20. Oktober 2021 die ersuchte Baubewilligung. Hiergegen erhob A. Rekurs beim Baurekursgericht des Kantons Zürich, welches das Rechtsmittel mit Entscheid vom 6. Mai 2022 abwies. Die gegen den Entscheid des Baurekursgerichts erhobene Beschwerde von A. wies das Verwaltungsgericht des Kantons Zürich am 12. Mai 2023 ab. C. Gegen das verwaltungsgerichtliche Urteil hat A. am 20. Juni 2023 Beschwerde in öffentlich-rechtlichen Angelegenheiten an das Bundesgericht erhoben. Das Bundesgericht weist die Beschwerde ab, soweit darauf einzutreten ist. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Swisscom (Schweiz) AG (nachfolgend: Swisscom) reichte bei der Bausektion der Stadt Zürich ein Baugesuch für die Erweiterung und Änderung der Sendeleistung und des Winkelbereichs einer bestehenden Mobilfunkantennenanlage ein. Die Antennenmodule der Swisscom sollen dabei auf den Frequenzbändern 700-900, 1'400-2'600 sowie 3'600 MHz und in den Azimuten (Abweichungen in Grad von Nord) von 40° und 130° senden. Im Frequenzbereich 3'600 MHz sollen die Antennen mit je 16 Sub-Arrays adaptiv unter Berücksichtigung eines Korrekturfaktors betrieben werden. Dabei soll die kumulierte Sendeleistung 700 WERP betragen und mit 300 WERP auf die Senderichtung 40° und mit 400 WERP auf die Senderichtung 130° verteilt werden."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die Bausektion erteilte der Swisscom mit Beschluss vom 20. Oktober 2021 die ersuchte Baubewilligung. Hiergegen erhob A. Rekurs beim Baurekursgericht des Kantons Zürich, welches das Rechtsmittel mit Entscheid vom 6. Mai 2022 abwies. Die gegen den Entscheid des Baurekursgerichts erhobene Beschwerde von A. wies das Verwaltungsgericht des Kantons Zürich am 12. Mai 2023 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Gegen das verwaltungsgerichtliche Urteil hat A. am 20. Juni 2023 Beschwerde in öffentlich-rechtlichen Angelegenheiten an das Bundesgericht erhoben. Das Bundesgericht weist die Beschwerde ab, soweit darauf einzutreten ist. (Zusammenfassung)"
             }
           ]
         },
@@ -224,7 +235,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-593%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5986119db69f13ed7a130560952a7a0cc7fd13660a1cce3f44ee44eb161e40be",
-      "sha": "44d55f04558967e055374afcfd567e778016f8aae02ca2b2a65783f4e7479e60"
+      "sha": "a99cef60234116824096034c9edd001d404b46655efd9f70f146d5b5c1adb916"
     }
   ]
 }

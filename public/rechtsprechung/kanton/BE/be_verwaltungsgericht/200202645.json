@@ -24,8 +24,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die 1968 geborene A.________ (Beschwerdeführerin) wird durch die B.________ (EG B.________ bzw. Beschwerdegegnerin) mit wirtschaftlicher Sozialhilfe unterstützt (vgl. Akten der Regierungsstatthalterin des Verwaltungskreises Bern-Mittelland [Regierungsstatthalterin bzw. Vor-instanz; act. II] 7 ff.). Auf entsprechendes Begehren von A.________ hin (unpaginierte Akten der EG B.________ im Verfahren des Verwaltungsgerichts des Kantons Bern SH 200 2026 3 [act. IID] Korrespondenz … vom 4. März 2024 bis 13. März 2025, E-Mails vom 13. Februar 2025) erliess die EG B.________ am 13. Februar 2025 zwei Verfügungen betreffend deren Sozialhilfeanspruch ab dem 1. April 2024 (act. II 7 ff.) sowie ab dem 1. Dezember 2024 (act. II 11 ff.). B. Auf eine gegen die Verfügungen vom 13. Februar 2025 (act. II 7 ff.) erhobene Beschwerde vom 7. März 2025 (act. II 1 ff.) trat die Regierungsstatthalterin mit Entscheid vom 15. Dezember 2025 (act. II 39 ff.) wegen fehlenden Rechtsschutzinteresses nicht ein. C. Mit Eingabe vom 19. Januar 2026 erhob A.________ Beschwerde beim Verwaltungsgericht des Kantons Bern mit dem sinngemässen Antrag, der angefochtene Entscheid vom 15. Dezember 2025 (act. II 39 ff.) sei aufzuheben und die Vorinstanz sei anzuweisen, auf die Beschwerde vom 7. März 2025 (act. II 1 ff.) einzutreten. Gleichzeitig forderte sie eine Wiedergutmachung in der Höhe von Fr. 10'000.-- und ersuchte um Gewährung des Rechts auf unentgeltliche Rechtspflege. Urteil des Verwaltungsgerichts des Kantons Bern vom 7. Mai 2026, SH 200 2026 45 - 3 - Mit Vernehmlassung vom 13. Februar 2026 beantragte die Vorinstanz unter Verweis auf die Begründung im angefochtenen Entscheid, auf die Verwaltungsgerichtsbeschwerde sei nicht einzutreten, eventualiter sei sie abzuweisen. Mit Eingabe vom 20. Februar 2026 verzichtete die Beschwerdegegnerin auf die Einreichung einer umfassenden Beschwerdeantwort und beantragte, auf die Verwaltungsgerichtsbeschwerde sei nicht einzutreten. Mit prozessleitender Verfügung vom 24. Februar 2026 stellte der Instruktionsrichter die Eingaben der Vorinstanz vom 13. Februar 2026 und der Beschwerdegegnerin vom 20. Februar 2026 den übrigen Verfahrensbeteiligten zu."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die 1968 geborene A.________ (Beschwerdeführerin) wird durch die B.________ (EG B.________ bzw. Beschwerdegegnerin) mit wirtschaftlicher Sozialhilfe unterstützt (vgl. Akten der Regierungsstatthalterin des Verwaltungskreises Bern-Mittelland [Regierungsstatthalterin bzw. Vor-instanz; act. II] 7 ff.). Auf entsprechendes Begehren von A.________ hin (unpaginierte Akten der EG B.________ im Verfahren des Verwaltungsgerichts des Kantons Bern SH 200 2026 3 [act. IID] Korrespondenz … vom 4. März 2024 bis 13. März 2025, E-Mails vom 13. Februar 2025) erliess die EG B.________ am 13. Februar 2025 zwei Verfügungen betreffend deren Sozialhilfeanspruch ab dem 1. April 2024 (act. II 7 ff.) sowie ab dem 1. Dezember 2024 (act. II 11 ff.)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Auf eine gegen die Verfügungen vom 13. Februar 2025 (act. II 7 ff.) erhobene Beschwerde vom 7. März 2025 (act. II 1 ff.) trat die Regierungsstatthalterin mit Entscheid vom 15. Dezember 2025 (act. II 39 ff.) wegen fehlenden Rechtsschutzinteresses nicht ein."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 19. Januar 2026 erhob A.________ Beschwerde beim Verwaltungsgericht des Kantons Bern mit dem sinngemässen Antrag, der angefochtene Entscheid vom 15. Dezember 2025 (act. II 39 ff.) sei aufzuheben und die Vorinstanz sei anzuweisen, auf die Beschwerde vom 7. März 2025 (act. II 1 ff.) einzutreten. Gleichzeitig forderte sie eine Wiedergutmachung in der Höhe von Fr. 10'000.-- und ersuchte um Gewährung des Rechts auf unentgeltliche Rechtspflege. Urteil des Verwaltungsgerichts des Kantons Bern vom 7. Mai 2026, SH 200 2026 45 - 3 - Mit Vernehmlassung vom 13. Februar 2026 beantragte die Vorinstanz unter Verweis auf die Begründung im angefochtenen Entscheid, auf die Verwaltungsgerichtsbeschwerde sei nicht einzutreten, eventualiter sei sie abzuweisen. Mit Eingabe vom 20. Februar 2026 verzichtete die Beschwerdegegnerin auf die Einreichung einer umfassenden Beschwerdeantwort und beantragte, auf die Verwaltungsgerichtsbeschwerde sei nicht einzutreten. Mit prozessleitender Verfügung vom 24. Februar 2026 stellte der Instruktionsrichter die Eingaben der Vorinstanz vom 13. Februar 2026 und der Beschwerdegegnerin vom 20. Februar 2026 den übrigen Verfahrensbeteiligten zu."
             }
           ]
         },
@@ -157,7 +168,7 @@
       "quelleUrl": "https://www.vg-urteile.apps.be.ch/tribunapublikation/tribunavtplus/ServletDownload/200_2026_45_1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2b9597f119a514f786990aec4297f1a1805f21c4269f9aa825315f3dd5a0d86a1662fdedfac158674c698a9c72224d159?path=1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2b9597f119a514f786990aec4297f1a1805f21c4269f9aa825315f3dd5a0d86a1662fdedfac158674c698a9c72224d159&pathIsEncrypted=1&dossiernummer=200_2026_45",
       "abgerufen": "2026-06-23",
       "fassungsToken": "74f041d9fba6852994627dc234b436d02b240009cdf2a2e464e7a6adeed94e22",
-      "sha": "5b297570f553c72fd5b92b68d8c62e4c754d32720345a5d9e7040ef3d6177e44"
+      "sha": "8816ba9458f200da6a78997ab7f3ad761926deaec735e4d33096ad5544afe717"
     }
   ]
 }

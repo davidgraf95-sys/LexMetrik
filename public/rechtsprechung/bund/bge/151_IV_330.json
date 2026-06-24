@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Im Rahmen eines selbstständigen nachträglichen Verfahrens hat das Strafgericht Basel-Stadt über die Verlängerung einer am 18. Dezember 2017 gegen A. angeordneten und am 13. Dezember 2022 erstmals verlängerten stationären therapeutischen Massnahme entschieden. Mit Urteil vom 26. November 2024 verlängerte es diese um 18 Monate. Gleichentags ordnete das Strafgericht mit separatem Beschluss bis zum 16. März 2025 Sicherheitshaft an. Gegen die erstinstanzliche Massnahmenverlängerung erhob A. Berufung beim Appellationsgericht des Kantons Basel-Stadt (Art. 365 Abs. 3 StPO). B. Am 14. März 2025 gab der Präsident des Appellationsgerichts als Berufungsinstanz den Parteien Gelegenheit, sich zu einer allfälligen Verlängerung der Sicherheitshaft zu äussern. Gleichzeitig verlängerte er diese provisorisch \"bis zum Entscheid (in Woche 13)\". Das Amt für Justizvollzug des Kantons Basel-Stadt bezog am 17. März 2025 zur Haftverlängerung Stellung und reichte dem Appellationsgericht \"im Aktennachgang\" \"relevante Vollzugsakten\" ein. A. liess sich am 21. März 2025 vernehmen. Am 24. März 2025 verlängerte der Präsident des Appellationsgerichts die Sicherheitshaft \"bis zu einem neuen Entscheid zum Zeitpunkt des Berufungsurteils\", dies unter Zustellung der erwähnten Stellungnahmen an die jeweilige Gegenpartei. C. A. wendet sich mit Beschwerde in Strafsachen an das Bundesgericht und verlangt seine umgehende Haftentlassung, dies eventualiter unter Anordnung geeigneter Ersatzmassnahmen. Weiter sei festzustellen, dass er seit dem 16. März 2025 illegal inhaftiert werde. Pro Hafttag sei ihm zudem eine Genugtuung von Fr. 200.- zuzüglich Zins von 5 % auszurichten. Ebenso sei festzustellen, dass die Vorinstanz sein rechtliches Gehör verletzt habe. Eventualiter sei die Sache zu neuer Begründung und Entscheidung an die Vorinstanz zurückzuweisen. A. ersucht für das bundesgerichtliche Verfahren um unentgeltliche Rechtspflege und Verbeiständung. Das Appellationsgericht und das Amt für Justizvollzug des Kantons Basel-Stadt haben ausdrücklich auf Vernehmlassung verzichtet. Das Bundesgericht heisst die Beschwerde teilweise gut und weist sie im Übrigen ab, soweit es darauf eintritt."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Im Rahmen eines selbstständigen nachträglichen Verfahrens hat das Strafgericht Basel-Stadt über die Verlängerung einer am 18. Dezember 2017 gegen A. angeordneten und am 13. Dezember 2022 erstmals verlängerten stationären therapeutischen Massnahme entschieden. Mit Urteil vom 26. November 2024 verlängerte es diese um 18 Monate. Gleichentags ordnete das Strafgericht mit separatem Beschluss bis zum 16. März 2025 Sicherheitshaft an. Gegen die erstinstanzliche Massnahmenverlängerung erhob A. Berufung beim Appellationsgericht des Kantons Basel-Stadt (Art. 365 Abs. 3 StPO)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 14. März 2025 gab der Präsident des Appellationsgerichts als Berufungsinstanz den Parteien Gelegenheit, sich zu einer allfälligen Verlängerung der Sicherheitshaft zu äussern. Gleichzeitig verlängerte er diese provisorisch \"bis zum Entscheid (in Woche 13)\". Das Amt für Justizvollzug des Kantons Basel-Stadt bezog am 17. März 2025 zur Haftverlängerung Stellung und reichte dem Appellationsgericht \"im Aktennachgang\" \"relevante Vollzugsakten\" ein. A. liess sich am 21. März 2025 vernehmen. Am 24. März 2025 verlängerte der Präsident des Appellationsgerichts die Sicherheitshaft \"bis zu einem neuen Entscheid zum Zeitpunkt des Berufungsurteils\", dies unter Zustellung der erwähnten Stellungnahmen an die jeweilige Gegenpartei."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A. wendet sich mit Beschwerde in Strafsachen an das Bundesgericht und verlangt seine umgehende Haftentlassung, dies eventualiter unter Anordnung geeigneter Ersatzmassnahmen. Weiter sei festzustellen, dass er seit dem 16. März 2025 illegal inhaftiert werde. Pro Hafttag sei ihm zudem eine Genugtuung von Fr. 200.- zuzüglich Zins von 5 % auszurichten. Ebenso sei festzustellen, dass die Vorinstanz sein rechtliches Gehör verletzt habe. Eventualiter sei die Sache zu neuer Begründung und Entscheidung an die Vorinstanz zurückzuweisen. A. ersucht für das bundesgerichtliche Verfahren um unentgeltliche Rechtspflege und Verbeiständung. Das Appellationsgericht und das Amt für Justizvollzug des Kantons Basel-Stadt haben ausdrücklich auf Vernehmlassung verzichtet. Das Bundesgericht heisst die Beschwerde teilweise gut und weist sie im Übrigen ab, soweit es darauf eintritt."
             }
           ]
         },
@@ -104,7 +115,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-330%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "1469286b4067c8c26977b07d43488e267cc64863420b9275b95db849bd1d0871",
-      "sha": "9801f1b25d323266115ca6454ad72930d7869ad549c862df0762c9d3752f5d21"
+      "sha": "777d4060072dd6f5a5ea045a4a713753a6aca29894cfacc129f255f9bfa5b06b"
     }
   ]
 }

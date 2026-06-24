@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Der 1966 geborene A. meldete sich am 27. Oktober 2021 zur Arbeitsvermittlung und am 7. November 2021 zum Bezug von Arbeitslosenentschädigung an, nachdem ihm die Teilzeitanstellung mit einer Wochenarbeitszeit von 15 Stunden als Unterhaltsreiniger bei der B. AG per 31. Juli 2021 gekündigt worden war. In seinem Antrag auf Arbeitslosenentschädigung gab er an, er sei bereit und in der Lage, Vollzeit zu arbeiten. Eine weitere, seit 3. Juli 2020 ausgeübte teilzeitliche Tätigkeit als Reinigungsmitarbeiter für die C. AG (nachfolgend: Arbeitgeberin) konnte A. auch nach der Anmeldung bei der Arbeitslosenkasse beibehalten. Gemäss Arbeitsvertrag vom 7. Dezember 2020 war in dieser Anstellung bei einer Arbeitszeit \"gemäss Einsatzplänen\" eine \"Wochenarbeitszeit\" von 16,5 Stunden vereinbart. Die Unia Arbeitslosenkasse eröffnete eine Rahmenfrist für den Leistungsbezug vom 27. Oktober 2021 bis 26. Oktober 2023. In der Folge rechnete sie die Kontrollperioden November 2021 bis Februar 2022 unter Anrechnung eines auf 16,5 Wochenarbeitsstunden basierenden Zwischenverdienstes ab. Dies hielt sie auf entsprechende Aufforderung des A. am 25. März 2022 auch noch in Verfügungsform fest, wobei sie darauf hinwies, dass sich der Zwischenverdienst nach der arbeitsvertraglich vereinbarten Arbeitszeit richte. Die von der Arbeitgeberin zugesicherten Stunden seien von der Kasse als Zwischenverdienst anzurechnen, auch wenn im betreffenden Monat weniger gearbeitet worden sei. Die dagegen erhobene Einsprache lehnte sie ab, wobei sie den Verfahrensgegenstand auf die Kontrollperioden Oktober 2021 bis und mit Februar 2022 ausdehnte. B. In Gutheissung der dagegen geführten Beschwerde hob das Sozialversicherungsgericht des Kantons Basel-Stadt den Einspracheentscheid auf und wies die Sache zur Neuberechnung des Zwischenverdienstes für die Kontrollperioden Oktober 2021 bis und mit Februar 2022 im Sinne der Erwägungen an die Kasse zurück. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten stellt die Kasse das Rechtsbegehren, das angefochtene Urteil sei aufzuheben und der Einspracheentscheid sei zu bestätigen. Das Staatssekretariat für Wirtschaft (SECO) pflichtet in seiner Vernehmlassung den Ausführungen der Kasse vollumfänglich bei, ohne sich weiter zu äussern, während das kantonale Gericht auf Abweisung der Beschwerde schliesst. A. lässt beantragen, das Rechtsmittel sei abzuweisen und ausserdem sei ihm die unentgeltliche Rechtspflege und Verbeiständung zu gewähren."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Der 1966 geborene A. meldete sich am 27. Oktober 2021 zur Arbeitsvermittlung und am 7. November 2021 zum Bezug von Arbeitslosenentschädigung an, nachdem ihm die Teilzeitanstellung mit einer Wochenarbeitszeit von 15 Stunden als Unterhaltsreiniger bei der B. AG per 31. Juli 2021 gekündigt worden war. In seinem Antrag auf Arbeitslosenentschädigung gab er an, er sei bereit und in der Lage, Vollzeit zu arbeiten. Eine weitere, seit 3. Juli 2020 ausgeübte teilzeitliche Tätigkeit als Reinigungsmitarbeiter für die C. AG (nachfolgend: Arbeitgeberin) konnte A. auch nach der Anmeldung bei der Arbeitslosenkasse beibehalten. Gemäss Arbeitsvertrag vom 7. Dezember 2020 war in dieser Anstellung bei einer Arbeitszeit \"gemäss Einsatzplänen\" eine \"Wochenarbeitszeit\" von 16,5 Stunden vereinbart. Die Unia Arbeitslosenkasse eröffnete eine Rahmenfrist für den Leistungsbezug vom 27. Oktober 2021 bis 26. Oktober 2023. In der Folge rechnete sie die Kontrollperioden November 2021 bis Februar 2022 unter Anrechnung eines auf 16,5 Wochenarbeitsstunden basierenden Zwischenverdienstes ab. Dies hielt sie auf entsprechende Aufforderung des A. am 25. März 2022 auch noch in Verfügungsform fest, wobei sie darauf hinwies, dass sich der Zwischenverdienst nach der arbeitsvertraglich vereinbarten Arbeitszeit richte. Die von der Arbeitgeberin zugesicherten Stunden seien von der Kasse als Zwischenverdienst anzurechnen, auch wenn im betreffenden Monat weniger gearbeitet worden sei. Die dagegen erhobene Einsprache lehnte sie ab, wobei sie den Verfahrensgegenstand auf die Kontrollperioden Oktober 2021 bis und mit Februar 2022 ausdehnte."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "In Gutheissung der dagegen geführten Beschwerde hob das Sozialversicherungsgericht des Kantons Basel-Stadt den Einspracheentscheid auf und wies die Sache zur Neuberechnung des Zwischenverdienstes für die Kontrollperioden Oktober 2021 bis und mit Februar 2022 im Sinne der Erwägungen an die Kasse zurück."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten stellt die Kasse das Rechtsbegehren, das angefochtene Urteil sei aufzuheben und der Einspracheentscheid sei zu bestätigen. Das Staatssekretariat für Wirtschaft (SECO) pflichtet in seiner Vernehmlassung den Ausführungen der Kasse vollumfänglich bei, ohne sich weiter zu äussern, während das kantonale Gericht auf Abweisung der Beschwerde schliesst. A. lässt beantragen, das Rechtsmittel sei abzuweisen und ausserdem sei ihm die unentgeltliche Rechtspflege und Verbeiständung zu gewähren."
             }
           ]
         },
@@ -206,7 +217,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=11&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=104&highlight_docid=atf%3A%2F%2F150-V-235%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "1b05404a79151f2922b6063437cb8be403a30e56c4de02c1ceec05ece2c73b9e",
-      "sha": "cd269da49271f682b6a89d830f938661a345b016633d52f5d5ea225fad4c616f"
+      "sha": "c4ec9cc18a0c9244f07426f381f834cabc5023ce68f26599a8bece7460369863"
     }
   ]
 }

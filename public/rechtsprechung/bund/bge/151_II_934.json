@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Im Zusammenhang mit der Sanierung der Dorfstrasse in Lenggenwil, Gemeinde Niederhelfenschwil, ordnete die Kantonspolizei des Kantons St. Gallen am 1. Juni 2021 die Aufhebung des Fussgängerstreifens Nr. 1375 an und entfernte die entsprechende Strassenmarkierung. Alternative Verkehrsmassnahmen zur Sicherheit der Fussgängerinnen und Fussgänger ordnete sie nicht an. Den dagegen angehobenen Rechtsmitteln der Gemeinde Niederhelfenschwil an das Polizeikommando der Kantonspolizei und das Sicherheits- und Justizdepartement des Kantons St. Gallen (nachfolgend: SJD/SG) war kein Erfolg beschieden. Das hierauf angerufene Verwaltungsgericht des Kantons St. Gallen hiess eine Beschwerde der Gemeinde Niederhelfenschwil mit Urteil vom 9. Oktober 2022 hingegen teilweise gut, soweit es darauf eintrat. Es hob den angefochtenen Entscheid auf und wies die Angelegenheit zur erneuten Abklärung des Fussgänger- und Fahrzeugverkehrs im Bereich des Fussgängerstreifens sowie zum Neuentscheid an das SJD/SG zurück. Das Gesuch um vorsorgliche Wiederanbringung des Streifens wies es ab. B. In der Folge beauftragte das SJD/SG die Kantonspolizei mit der Erhebung der Fussgängerzahlen und der Fahrzeugerfassung im Bereich des mittlerweile entfernten Fussgängerstreifens. Aus den Abklärungsergebnissen folgerte das SJD/SG in seinem Entscheid vom 3. Juli 2023, dass der Fussgängerstreifen Nr. 1375 zu wenig frequentiert würde und damit ein Sicherheitsrisiko für Fussgängerinnen und Fussgänger darstelle, weshalb dessen Entfernung rechtmässig gewesen sei. Das Verwaltungsgericht wies eine Beschwerde der Gemeinde Niederhelfenschwil mit Entscheid vom 16. Januar 2024 ab. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 19. Februar 2024 an das Bundesgericht beantragt die Gemeinde Niederhelfenschwil die ersatzlose Aufhebung des verwaltungsgerichtlichen Entscheids. Eventualiter sei die Sache zur Neubeurteilung an das Verwaltungsgericht zurückzuweisen und dieses insbesondere anzuweisen, eine neue Fussgänger- und Verkehrszählung gemäss den Erwägungen in der Beschwerdeschrift vorzunehmen. Das Bundesgericht heisst die Beschwerde gut. Die Entscheide des Verwaltungsgerichts St. Gallen vom 9. Oktober 2022 und vom 16. Januar 2024 werden aufgehoben und die Sache wird im Sinne der Erwägungen zur Fortführung des Verfahrens an das Verwaltungsgericht St. Gallen zurückgewiesen. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Im Zusammenhang mit der Sanierung der Dorfstrasse in Lenggenwil, Gemeinde Niederhelfenschwil, ordnete die Kantonspolizei des Kantons St. Gallen am 1. Juni 2021 die Aufhebung des Fussgängerstreifens Nr. 1375 an und entfernte die entsprechende Strassenmarkierung. Alternative Verkehrsmassnahmen zur Sicherheit der Fussgängerinnen und Fussgänger ordnete sie nicht an. Den dagegen angehobenen Rechtsmitteln der Gemeinde Niederhelfenschwil an das Polizeikommando der Kantonspolizei und das Sicherheits- und Justizdepartement des Kantons St. Gallen (nachfolgend: SJD/SG) war kein Erfolg beschieden. Das hierauf angerufene Verwaltungsgericht des Kantons St. Gallen hiess eine Beschwerde der Gemeinde Niederhelfenschwil mit Urteil vom 9. Oktober 2022 hingegen teilweise gut, soweit es darauf eintrat. Es hob den angefochtenen Entscheid auf und wies die Angelegenheit zur erneuten Abklärung des Fussgänger- und Fahrzeugverkehrs im Bereich des Fussgängerstreifens sowie zum Neuentscheid an das SJD/SG zurück. Das Gesuch um vorsorgliche Wiederanbringung des Streifens wies es ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "In der Folge beauftragte das SJD/SG die Kantonspolizei mit der Erhebung der Fussgängerzahlen und der Fahrzeugerfassung im Bereich des mittlerweile entfernten Fussgängerstreifens. Aus den Abklärungsergebnissen folgerte das SJD/SG in seinem Entscheid vom 3. Juli 2023, dass der Fussgängerstreifen Nr. 1375 zu wenig frequentiert würde und damit ein Sicherheitsrisiko für Fussgängerinnen und Fussgänger darstelle, weshalb dessen Entfernung rechtmässig gewesen sei. Das Verwaltungsgericht wies eine Beschwerde der Gemeinde Niederhelfenschwil mit Entscheid vom 16. Januar 2024 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 19. Februar 2024 an das Bundesgericht beantragt die Gemeinde Niederhelfenschwil die ersatzlose Aufhebung des verwaltungsgerichtlichen Entscheids. Eventualiter sei die Sache zur Neubeurteilung an das Verwaltungsgericht zurückzuweisen und dieses insbesondere anzuweisen, eine neue Fussgänger- und Verkehrszählung gemäss den Erwägungen in der Beschwerdeschrift vorzunehmen. Das Bundesgericht heisst die Beschwerde gut. Die Entscheide des Verwaltungsgerichts St. Gallen vom 9. Oktober 2022 und vom 16. Januar 2024 werden aufgehoben und die Sache wird im Sinne der Erwägungen zur Fortführung des Verfahrens an das Verwaltungsgericht St. Gallen zurückgewiesen. (Zusammenfassung)"
             }
           ]
         },
@@ -126,7 +137,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-934%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "b8f34e6b051098230a1fdea9ee09228e6beae368698254583eb702f78db030f5",
-      "sha": "05c4d1ef9fbf1159f71b1f0b69b79f39ae26e63ce96e45e2027deea2dc0e1558"
+      "sha": "6f07b3eb4a8867cb0a09f131b753dce74e2576c7ac5aaa5074bcda501dbb2c2b"
     }
   ]
 }

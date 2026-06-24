@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A. und B. sind Miteigentümer der Stockwerkeinheit Nr. y, die zur Überbauung C. gehört. Direkt über der Stockwerkeinheit Nr. y liegt die Einheit Nr. z, die im Eigentum von E. und F. steht. A. und B. vertreten die Ansicht, die Bodenbeläge in der Stockwerkeinheit Nr. z seien in Verletzung von Art. 7 Abs. 2 Bst. a des Reglements der Stockwerkeigentümergemeinschaft ersetzt worden. Nach dieser Bestimmung ist es den Stockwerkeigentümern untersagt, die Böden ihrer Räume übermässig zu belasten und die Beschaffenheit der Bodenbeläge samt Unterbau so zu verändern, dass daraus eine Verschlechterung der Schallverhältnisse zulasten anderer Stockwerkeinheiten resultiert. Anlässlich der ordentlichen Stockwerkeigentümerversammlung vom 14. September 2021 beantragten A. und B. unter anderem, die Verwaltung sei zu beauftragen und zu bevollmächtigen, von E. und F. als den Eigentümern der Stockwerkeinheit Nr. z den Rückbau der in ihrer Wohnung eingebauten Bodenbeläge binnen zwei Monaten zu verlangen und erforderlichenfalls gerichtlich durchzusetzen (Anträge A.1 und B.1). Die Stockwerkeigentümergemeinschaft C. lehnte diese Anträge mit elf Stimmen gegen eine Stimme ab. B. A. und B. fochten den Beschluss der Stockwerkeigentümergemeinschaft C. nach erfolglosem Schlichtungsversuch beim Kreisgericht St. Gallen an und stellten in ihrer Klage vom 31. März 2022 dieselben Begehren wie anlässlich der Versammlung vom 14. September 2021 (vgl. Bst. A.). Das Kreisgericht wies die Klage ab. Die dagegen erhobene Berufung wies das Kantonsgericht St. Gallen mit Entscheid vom 21. November 2023 ab. C. A. und B. (Beschwerdeführer) gelangen an das Bundesgericht und beantragen, den Entscheid des Kantonsgerichts aufzuheben und die Beschlüsse der Stockwerkeigentümergemeinschaft C. (Beschwerdegegnerin) bezüglich der Anträge A.1 und B.1 (vgl. Bst. A) aufzuheben. Eventualiter sei die Sache zu neuem Entscheid über die Anfechtung der Beschlüsse an die Vorinstanz zurückzuweisen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A. und B. sind Miteigentümer der Stockwerkeinheit Nr. y, die zur Überbauung C. gehört. Direkt über der Stockwerkeinheit Nr. y liegt die Einheit Nr. z, die im Eigentum von E. und F. steht. A. und B. vertreten die Ansicht, die Bodenbeläge in der Stockwerkeinheit Nr. z seien in Verletzung von Art. 7 Abs. 2 Bst. a des Reglements der Stockwerkeigentümergemeinschaft ersetzt worden. Nach dieser Bestimmung ist es den Stockwerkeigentümern untersagt, die Böden ihrer Räume übermässig zu belasten und die Beschaffenheit der Bodenbeläge samt Unterbau so zu verändern, dass daraus eine Verschlechterung der Schallverhältnisse zulasten anderer Stockwerkeinheiten resultiert. Anlässlich der ordentlichen Stockwerkeigentümerversammlung vom 14. September 2021 beantragten A. und B. unter anderem, die Verwaltung sei zu beauftragen und zu bevollmächtigen, von E. und F. als den Eigentümern der Stockwerkeinheit Nr. z den Rückbau der in ihrer Wohnung eingebauten Bodenbeläge binnen zwei Monaten zu verlangen und erforderlichenfalls gerichtlich durchzusetzen (Anträge A.1 und B.1). Die Stockwerkeigentümergemeinschaft C. lehnte diese Anträge mit elf Stimmen gegen eine Stimme ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "A. und B. fochten den Beschluss der Stockwerkeigentümergemeinschaft C. nach erfolglosem Schlichtungsversuch beim Kreisgericht St. Gallen an und stellten in ihrer Klage vom 31. März 2022 dieselben Begehren wie anlässlich der Versammlung vom 14. September 2021 (vgl. Bst. A.). Das Kreisgericht wies die Klage ab. Die dagegen erhobene Berufung wies das Kantonsgericht St. Gallen mit Entscheid vom 21. November 2023 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A. und B. (Beschwerdeführer) gelangen an das Bundesgericht und beantragen, den Entscheid des Kantonsgerichts aufzuheben und die Beschlüsse der Stockwerkeigentümergemeinschaft C. (Beschwerdegegnerin) bezüglich der Anträge A.1 und B.1 (vgl. Bst. A) aufzuheben. Eventualiter sei die Sache zu neuem Entscheid über die Anfechtung der Beschlüsse an die Vorinstanz zurückzuweisen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
             }
           ]
         },
@@ -105,7 +116,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-377%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2f1b40a4fc9767a0e03325e8cf89e705a3f2d23d773d56a832f1daac9ce85f28",
-      "sha": "e9412637fe7fe16d88f3e985d0b745eb04fe676988b96b91cc2be80cbdbac292"
+      "sha": "54f0a56c5b87621595189fde9735d5dfb60c1be9cca2339ea9f613fe9082e535"
     }
   ]
 }

@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A.A. und B.A. heirateten am 1. Juni 2006 in Gjakovë (Kosovo). Sie haben die gemeinsamen Kinder C.A. (2008) und D.A. (2011). Nachdem B.A. auf die Trennungsversuche von A.A. wiederholt mit Suizid drohte, bezog sie mit den beiden Kindern am 1. Juli 2021 im Haus E. eine Notunterkunft. Mit Gesuch vom 5. Juli 2021 ersuchte A.A. bei der Dienststelle Soziales und Gesellschaft (DISG) des Kantons Luzern, Opferberatungsstelle, im Rahmen der Soforthilfe um Kostengutsprache im Umfang von Fr. 12'600.- für eine Notunterkunft für sich und die Kinder im Haus E. für den Zeitraum vom 1. Juli 2021 bis 4. August 2021. Mit E-Mail vom 8. Juli 2021 teilte die DISG dem Haus E. mit, die Voraussetzungen für die Kostengutsprache seien nicht erfüllt. Nach einer telefonischen Besprechung vom 14. Juli 2021 mit einer Mitarbeiterin des Hauses E. lehnte die DISG das Gesuch mit Schreiben vom 26. Juli 2021 ab. Gleichzeitig wurde A.A. auf die Möglichkeit hingewiesen, einen anfechtbaren Entscheid zu verlangen und weitere Unterlagen und Beweismittel einzureichen. Nachdem sie am 7. August 2021 einen anfechtbaren Entscheid verlangt hatte, wies die DISG das Gesuch um Kostengutsprache für die Notunterkunft mit Verfügung vom 29. Dezember 2021 ab. B. Dagegen erhob A.A. Verwaltungsgerichtsbeschwerde beim Kantonsgericht Luzern. Dieses wies das Rechtsmittel mit Urteil vom 26. Oktober 2022 ab. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten an das Bundesgericht vom 9. Dezember 2022 beantragt A.A., das Urteil des Kantonsgerichts vom 26. Oktober 2022 sei aufzuheben und das Gesuch um Soforthilfe vom 5. Juli 2021 sei gutzuheissen. Eventualiter sei die Sache zur Neubeurteilung an das Kantonsgericht zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut und hebt den angefochtenen Entscheid auf. Es stellt fest, dass die beantragte Soforthilfe zu Unrecht verweigert worden ist, und weist die DISG an, die tatsächlich beanspruchte Soforthilfe zu gewähren. (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.A. und B.A. heirateten am 1. Juni 2006 in Gjakovë (Kosovo). Sie haben die gemeinsamen Kinder C.A. (2008) und D.A. (2011). Nachdem B.A. auf die Trennungsversuche von A.A. wiederholt mit Suizid drohte, bezog sie mit den beiden Kindern am 1. Juli 2021 im Haus E. eine Notunterkunft. Mit Gesuch vom 5. Juli 2021 ersuchte A.A. bei der Dienststelle Soziales und Gesellschaft (DISG) des Kantons Luzern, Opferberatungsstelle, im Rahmen der Soforthilfe um Kostengutsprache im Umfang von Fr. 12'600.- für eine Notunterkunft für sich und die Kinder im Haus E. für den Zeitraum vom 1. Juli 2021 bis 4. August 2021. Mit E-Mail vom 8. Juli 2021 teilte die DISG dem Haus E. mit, die Voraussetzungen für die Kostengutsprache seien nicht erfüllt. Nach einer telefonischen Besprechung vom 14. Juli 2021 mit einer Mitarbeiterin des Hauses E. lehnte die DISG das Gesuch mit Schreiben vom 26. Juli 2021 ab. Gleichzeitig wurde A.A. auf die Möglichkeit hingewiesen, einen anfechtbaren Entscheid zu verlangen und weitere Unterlagen und Beweismittel einzureichen. Nachdem sie am 7. August 2021 einen anfechtbaren Entscheid verlangt hatte, wies die DISG das Gesuch um Kostengutsprache für die Notunterkunft mit Verfügung vom 29. Dezember 2021 ab."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Dagegen erhob A.A. Verwaltungsgerichtsbeschwerde beim Kantonsgericht Luzern. Dieses wies das Rechtsmittel mit Urteil vom 26. Oktober 2022 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten an das Bundesgericht vom 9. Dezember 2022 beantragt A.A., das Urteil des Kantonsgerichts vom 26. Oktober 2022 sei aufzuheben und das Gesuch um Soforthilfe vom 5. Juli 2021 sei gutzuheissen. Eventualiter sei die Sache zur Neubeurteilung an das Kantonsgericht zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut und hebt den angefochtenen Entscheid auf. Es stellt fest, dass die beantragte Soforthilfe zu Unrecht verweigert worden ist, und weist die DISG an, die tatsächlich beanspruchte Soforthilfe zu gewähren. (Auszug)"
             }
           ]
         },
@@ -170,7 +181,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=80&highlight_docid=atf%3A%2F%2F150-II-465%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "399d17729c31e13338b7e45f2d8c7703a5d5cf430f86569a397546f7f75d1197",
-      "sha": "38f469a3d22841ea42dccea385367d49874bdd1044a972c79910b32c633ac7f8"
+      "sha": "b0bde1890fba92cec20cd125a19c6df3c248edac88ef0c1a1d076cfd70b640f9"
     }
   ]
 }

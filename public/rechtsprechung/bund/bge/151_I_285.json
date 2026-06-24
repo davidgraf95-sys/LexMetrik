@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Der A. ist ein Verein mit Sitz im Kanton Basel-Stadt. Für seine Mitglieder erbringt er verschiedene kostenlose oder vergünstigte Dienstleistungen, darunter auch die Unterstützung in rechtlichen Belangen. Im Kanton Basel-Stadt besteht nach § 4 des kantonalen Advokaturgesetzes vom 15. Mai 2002 (SG 291.100; im Folgenden: Advokaturgesetz/BS) die Pflicht, sich vor den kantonalen Gerichten durch eine im kantonalen Anwaltsregister eingetragene Person vertreten zu lassen. B. Mit Eingabe vom 15. September 2022 erhob der A. im Namen mehrerer natürlicher Personen bei der Baurekurskommission des Kantons Basel-Stadt Einsprache gegen eine Baubewilligung. Der Präsident der Baurekurskommission setzte daraufhin den Rekurrierenden eine (Nach-)Frist, um eine von ihnen persönlich unterzeichnete Eingabe einzureichen. Er erwog, dem Verband sei die berufsmässige Vertretung gestützt auf § 4 Advokaturgesetz/BS untersagt. Diesen Entscheid fochten der A. sowie die von ihm vertretenen Privatpersonen mit Rekurs beim Appellationsgericht des Kantons Basel-Stadt an, welches das Rechtsmittel mit Urteil vom 6. Februar 2023 abwies. C. Der A. sowie die von ihm vertretenen Privatpersonen gelangen mit Beschwerde in öffentlich-rechtlichen Angelegenheiten ans Bundesgericht. Sie beantragen die Aufhebung des Urteils des Appellationsgerichts des Kantons Basel-Stadt vom 6. Februar 2023. Die Baurekurskommission sei anzuweisen, den Verband als Vertreter zuzulassen; eventualiter sei dessen Berechtigung zur Vertretung im Verfahren vor der Baurekurskommission festzustellen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Der A. ist ein Verein mit Sitz im Kanton Basel-Stadt. Für seine Mitglieder erbringt er verschiedene kostenlose oder vergünstigte Dienstleistungen, darunter auch die Unterstützung in rechtlichen Belangen. Im Kanton Basel-Stadt besteht nach § 4 des kantonalen Advokaturgesetzes vom 15. Mai 2002 (SG 291.100; im Folgenden: Advokaturgesetz/BS) die Pflicht, sich vor den kantonalen Gerichten durch eine im kantonalen Anwaltsregister eingetragene Person vertreten zu lassen."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 15. September 2022 erhob der A. im Namen mehrerer natürlicher Personen bei der Baurekurskommission des Kantons Basel-Stadt Einsprache gegen eine Baubewilligung. Der Präsident der Baurekurskommission setzte daraufhin den Rekurrierenden eine (Nach-)Frist, um eine von ihnen persönlich unterzeichnete Eingabe einzureichen. Er erwog, dem Verband sei die berufsmässige Vertretung gestützt auf § 4 Advokaturgesetz/BS untersagt. Diesen Entscheid fochten der A. sowie die von ihm vertretenen Privatpersonen mit Rekurs beim Appellationsgericht des Kantons Basel-Stadt an, welches das Rechtsmittel mit Urteil vom 6. Februar 2023 abwies."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Der A. sowie die von ihm vertretenen Privatpersonen gelangen mit Beschwerde in öffentlich-rechtlichen Angelegenheiten ans Bundesgericht. Sie beantragen die Aufhebung des Urteils des Appellationsgerichts des Kantons Basel-Stadt vom 6. Februar 2023. Die Baurekurskommission sei anzuweisen, den Verband als Vertreter zuzulassen; eventualiter sei dessen Berechtigung zur Vertretung im Verfahren vor der Baurekurskommission festzustellen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
             }
           ]
         },
@@ -120,7 +131,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-285%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05d026a039393bace626bc0731cf9e7cc37f512714e9cc2411ca0e69aabcf5db",
-      "sha": "ccd92dc5dbe702aa52658ecc86d95a6193eb33a208bb7f18c3670364c1a8a2a0"
+      "sha": "e16e3703513673d3e7189ad3460ac312d10479f9202c364a169f866310252fbf"
     }
   ]
 }

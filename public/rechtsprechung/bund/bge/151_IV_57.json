@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die Staatsanwaltschaft Basel-Landschaft, Hauptabteilung Besondere Delikte, führt ein Strafverfahren gegen A. wegen Mordes an B., angeblich begangen am 4. Oktober 2000. Nachdem A. am 8. Dezember 2023 von Deutschland in die Schweiz ausgeliefert worden war, versetzte ihn das Zwangsmassnahmengericht Basel-Landschaft mit Entscheid vom 11. Dezember 2023 in Untersuchungshaft. Am 27. Mai 2024 ersuchte A. um Haftentlassung. Mit Entscheid vom 12. Juni 2024 wies das Zwangsmassnahmengericht sein Haftentlassungsgesuch ab und verlängerte die Untersuchungshaft auf Antrag der Staatsanwaltschaft bis zum 6. Oktober 2024. B. Gegen diesen Entscheid erhob A. Beschwerde beim Kantonsgericht Basel-Landschaft, Abteilung Strafrecht. Das Kantonsgericht wies die Beschwerde mit Beschluss vom 29. Juli 2024 ab. C. Mit Beschwerde in Strafsachen beantragt A. vor Bundesgericht, der Beschluss vom 29. Juli 2024 sei aufzuheben und er sei unverzüglich aus der Haft zu entlassen. Eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Die Vorinstanz beantragt die Abweisung der Beschwerde, soweit darauf einzutreten sei. Die Staatsanwaltschaft beantragt, die Beschwerde abzuweisen. Das Bundesgericht weist die Beschwerde ab."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Staatsanwaltschaft Basel-Landschaft, Hauptabteilung Besondere Delikte, führt ein Strafverfahren gegen A. wegen Mordes an B., angeblich begangen am 4. Oktober 2000. Nachdem A. am 8. Dezember 2023 von Deutschland in die Schweiz ausgeliefert worden war, versetzte ihn das Zwangsmassnahmengericht Basel-Landschaft mit Entscheid vom 11. Dezember 2023 in Untersuchungshaft. Am 27. Mai 2024 ersuchte A. um Haftentlassung. Mit Entscheid vom 12. Juni 2024 wies das Zwangsmassnahmengericht sein Haftentlassungsgesuch ab und verlängerte die Untersuchungshaft auf Antrag der Staatsanwaltschaft bis zum 6. Oktober 2024."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Gegen diesen Entscheid erhob A. Beschwerde beim Kantonsgericht Basel-Landschaft, Abteilung Strafrecht. Das Kantonsgericht wies die Beschwerde mit Beschluss vom 29. Juli 2024 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Strafsachen beantragt A. vor Bundesgericht, der Beschluss vom 29. Juli 2024 sei aufzuheben und er sei unverzüglich aus der Haft zu entlassen. Eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Die Vorinstanz beantragt die Abweisung der Beschwerde, soweit darauf einzutreten sei. Die Staatsanwaltschaft beantragt, die Beschwerde abzuweisen. Das Bundesgericht weist die Beschwerde ab."
             }
           ]
         },
@@ -110,7 +121,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-57%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d27fbd02ffefa76539029acfa69843854670efdbbbfaa8b0549e33bb4fa03359",
-      "sha": "c82c5ec656f6cd760b187bc2d682dc2cb23e8d9779a371974bdefbfdc7de7d73"
+      "sha": "d9777aa97e3fef7bad7ca134b6060ede8bbdff12f936ff1c49b95956af60542a"
     }
   ]
 }

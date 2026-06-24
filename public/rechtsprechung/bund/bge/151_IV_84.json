@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Mit Strafbefehl vom 20. September 2022 verhängte das Stadtrichteramt Zürich gegen A. eine Busse von Fr. 400.- gestützt auf Art. 83 Abs. 1 lit. k des Bundesgesetzes vom 28. September 2012 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG; SR 818.101) in Verbindung mit Art. 8 Abs. 1 und 3 der Verordnung vom 23. Juni 2021 über Massnahmen zur Bekämpfung der Covid-19-Epidemie im Bereich des internationalen Personenverkehrs (Covid-19-Verordnung internationaler Personenverkehr; SR 818.101.27) in der Fassung vom 20. Dezember 2021. Dagegen erhob A. am 8. Dezember 2023 - vertreten durch seinen Verteidiger Rechtsanwalt Fatih Aslantas - Einsprache. Am 16. Januar 2024 kündigte das Stadtrichteramt die bevorstehende Einstellung der Strafuntersuchung an, worauf A. die Entschädigung der Kosten für die anwaltliche Vertretung in Höhe von Fr. 298.- beantragte. Mit Verfügung vom 5. Februar 2024 stellte das Stadtrichteramt die Strafuntersuchung gegen A. ein und hob die am 20. September 2022 ausgefällte Busse auf (Dispositiv-Ziffer 1). Die Kosten nahm es auf die Amtskasse (Dispositiv-Ziffer 2), eine Entschädigung sprach es nicht zu (Dispositiv-Ziffer 3). B. Gegen die Verweigerung der Entschädigung erhob A. - handelnd durch seinen Verteidiger - Beschwerde an das Obergericht des Kantons Zürich. Er beantragte, ihm (A.) sei eine angemessene Entschädigung zuzusprechen, mindestens aber Fr. 298.-. Mit Verfügung vom 3. Mai 2024 trat das Obergericht mangels Beschwerdelegitimation von A. nicht auf dessen Beschwerde ein. C. A. hat mit Eingabe vom 14. Juni 2024 Beschwerde in Strafsachen an das Bundesgericht erhoben. Er begehrt, die Verfügung des Obergerichts sei aufzuheben und auf seine Beschwerde sei einzutreten. Dispositiv-Ziffer 3 der Einstellungsverfügung vom 6. Februar 2024 sei aufzuheben und es sei ihm \"eine angemessene Entschädigung (mindestens Fr. 298.-) zuzusprechen\". Eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Mit Strafbefehl vom 20. September 2022 verhängte das Stadtrichteramt Zürich gegen A. eine Busse von Fr. 400.- gestützt auf Art. 83 Abs. 1 lit. k des Bundesgesetzes vom 28. September 2012 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG; SR 818.101) in Verbindung mit Art. 8 Abs. 1 und 3 der Verordnung vom 23. Juni 2021 über Massnahmen zur Bekämpfung der Covid-19-Epidemie im Bereich des internationalen Personenverkehrs (Covid-19-Verordnung internationaler Personenverkehr; SR 818.101.27) in der Fassung vom 20. Dezember 2021. Dagegen erhob A. am 8. Dezember 2023 - vertreten durch seinen Verteidiger Rechtsanwalt Fatih Aslantas - Einsprache. Am 16. Januar 2024 kündigte das Stadtrichteramt die bevorstehende Einstellung der Strafuntersuchung an, worauf A. die Entschädigung der Kosten für die anwaltliche Vertretung in Höhe von Fr. 298.- beantragte. Mit Verfügung vom 5. Februar 2024 stellte das Stadtrichteramt die Strafuntersuchung gegen A. ein und hob die am 20. September 2022 ausgefällte Busse auf (Dispositiv-Ziffer 1). Die Kosten nahm es auf die Amtskasse (Dispositiv-Ziffer 2), eine Entschädigung sprach es nicht zu (Dispositiv-Ziffer 3)."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Gegen die Verweigerung der Entschädigung erhob A. - handelnd durch seinen Verteidiger - Beschwerde an das Obergericht des Kantons Zürich. Er beantragte, ihm (A.) sei eine angemessene Entschädigung zuzusprechen, mindestens aber Fr. 298.-. Mit Verfügung vom 3. Mai 2024 trat das Obergericht mangels Beschwerdelegitimation von A. nicht auf dessen Beschwerde ein."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A. hat mit Eingabe vom 14. Juni 2024 Beschwerde in Strafsachen an das Bundesgericht erhoben. Er begehrt, die Verfügung des Obergerichts sei aufzuheben und auf seine Beschwerde sei einzutreten. Dispositiv-Ziffer 3 der Einstellungsverfügung vom 6. Februar 2024 sei aufzuheben und es sei ihm \"eine angemessene Entschädigung (mindestens Fr. 298.-) zuzusprechen\". Eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
             }
           ]
         },
@@ -72,7 +83,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-84%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "ae3fc75a378b3f7bf91a7fd72985bb3e10b8e63fd78b14d18d442eb629d53fe2",
-      "sha": "994c129fbdc59fa907de773368047d08b1eb68abde3a9b12073831ee3c785a84"
+      "sha": "6949da1a79be31cf0e97b1bab477ee0c8c867904386c1f9a7eb1086323c2cec3"
     }
   ]
 }

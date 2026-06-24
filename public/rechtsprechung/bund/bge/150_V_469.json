@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A., geboren 1999, arbeitete zwischen seinem Abschluss des Gymnasiums sowie Absolvierung des Militärdienstes und dem geplanten Beginn eines Physikstudiums an der Hochschule B. in einem Sandwich-Restaurant und war dadurch bei der Vaudoise Allgemeine Versicherungs-Gesellschaft AG (nachfolgend: Vaudoise) obligatorisch gegen die Folgen von Berufs- und Nichtberufsunfällen sowie Berufskrankheiten versichert. Am 8. Februar 2020 stürzte er im Bahnhof C. vom Perron unter einen Zug. Die Vaudoise erbrachte die gesetzlichen Leistungen. Wegen des Verlusts beziehungsweise der Amputation beider Unterschenkel sprach sie ihm mit Verfügung vom 16. Mai 2022 und Einspracheentscheid vom 18. Oktober 2022 eine Integritätsentschädigung bei einer Integritätseinbusse von 80 % (Fr. 118'560.-) zu. B. Die dagegen von A. erhobene Beschwerde hiess das Sozialversicherungsgericht des Kantons Zürich mit Urteil vom 14. April 2023 gut und setzte die Integritätseinbusse auf 100 % fest (Fr. 148'200.-). C. Die Vaudoise lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen mit dem Antrag, unter Aufhebung des angefochtenen Urteils sei ihr Einspracheentscheid vom 18. Oktober 2022 zu bestätigen. A. lässt auf Abweisung der Beschwerde schliessen. Das Bundesamt für Gesundheit verzichtet auf eine Vernehmlassung. Das Bundesgericht weist die Beschwerde ab."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A., geboren 1999, arbeitete zwischen seinem Abschluss des Gymnasiums sowie Absolvierung des Militärdienstes und dem geplanten Beginn eines Physikstudiums an der Hochschule B. in einem Sandwich-Restaurant und war dadurch bei der Vaudoise Allgemeine Versicherungs-Gesellschaft AG (nachfolgend: Vaudoise) obligatorisch gegen die Folgen von Berufs- und Nichtberufsunfällen sowie Berufskrankheiten versichert. Am 8. Februar 2020 stürzte er im Bahnhof C. vom Perron unter einen Zug. Die Vaudoise erbrachte die gesetzlichen Leistungen. Wegen des Verlusts beziehungsweise der Amputation beider Unterschenkel sprach sie ihm mit Verfügung vom 16. Mai 2022 und Einspracheentscheid vom 18. Oktober 2022 eine Integritätsentschädigung bei einer Integritätseinbusse von 80 % (Fr. 118'560.-) zu."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die dagegen von A. erhobene Beschwerde hiess das Sozialversicherungsgericht des Kantons Zürich mit Urteil vom 14. April 2023 gut und setzte die Integritätseinbusse auf 100 % fest (Fr. 148'200.-)."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die Vaudoise lässt Beschwerde in öffentlich-rechtlichen Angelegenheiten führen mit dem Antrag, unter Aufhebung des angefochtenen Urteils sei ihr Einspracheentscheid vom 18. Oktober 2022 zu bestätigen. A. lässt auf Abweisung der Beschwerde schliessen. Das Bundesamt für Gesundheit verzichtet auf eine Vernehmlassung. Das Bundesgericht weist die Beschwerde ab."
             }
           ]
         },
@@ -99,7 +110,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=9&highlight_docid=atf%3A%2F%2F150-V-469%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "70ea42aebda2e21d7ddf607cbb01b04a24949a44c5cac1370e9f092751d9d687",
-      "sha": "18d1a07759b6829cd33863eeab11171c6af3ae5daa2f0acd7371ef17ed0dd94f"
+      "sha": "b0ba9e6d113b1792d2ab177d54273c664c2e36bfdafcd66f5ca46afa6dde8a91"
     }
   ]
 }

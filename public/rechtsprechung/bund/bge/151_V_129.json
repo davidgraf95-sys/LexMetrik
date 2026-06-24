@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A. meldete sich am 2. Dezember 2021 bei der Ausgleichskasse Zürcher Arbeitgeber (nachfolgend: AZA) zum Bezug einer Betreuungsentschädigung für seinen am 11. November 2021 geborenen Sohn B. an. Mit Verfügungen vom 15. Dezember 2021 und - nach erfolgter Rückfrage beim Bundesamt für Sozialversicherungen (BSV) - vom 23. März 2022 wies die AZA das Leistungsbegehren ab. Die dagegen erhobene Einsprache wies sie mit Einspracheentscheid vom 3. Mai 2022 ab. Sie tat dies im Wesentlichen mit der Begründung, die von der Kindsmutter bezogene Mutterschaftsentschädigung sei prioritär zum Anspruch auf eine Betreuungsentschädigung. B. Die gegen den Einspracheentscheid vom 3. Mai 2022 erhobene Beschwerde hiess das Versicherungsgericht des Kantons St. Gallen mit Entscheid vom 17. August 2023 teilweise gut, hob den Einspracheentscheid auf und wies die Sache zur Prüfung der übrigen Anspruchsvoraussetzungen im Sinne der Erwägungen an die AZA zurück. C. Die AZA führt Beschwerde in öffentlich-rechtlichen Angelegenheiten und beantragt, es sei der Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 17. August 2023 aufzuheben und der Einspracheentscheid vom 3. Mai 2022 zu bestätigen. Während A. auf Abweisung der Beschwerde schliesst, beantragt das BSV deren Gutheissung. Das Bundesgericht heisst die Beschwerde gut."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A. meldete sich am 2. Dezember 2021 bei der Ausgleichskasse Zürcher Arbeitgeber (nachfolgend: AZA) zum Bezug einer Betreuungsentschädigung für seinen am 11. November 2021 geborenen Sohn B. an. Mit Verfügungen vom 15. Dezember 2021 und - nach erfolgter Rückfrage beim Bundesamt für Sozialversicherungen (BSV) - vom 23. März 2022 wies die AZA das Leistungsbegehren ab. Die dagegen erhobene Einsprache wies sie mit Einspracheentscheid vom 3. Mai 2022 ab. Sie tat dies im Wesentlichen mit der Begründung, die von der Kindsmutter bezogene Mutterschaftsentschädigung sei prioritär zum Anspruch auf eine Betreuungsentschädigung."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die gegen den Einspracheentscheid vom 3. Mai 2022 erhobene Beschwerde hiess das Versicherungsgericht des Kantons St. Gallen mit Entscheid vom 17. August 2023 teilweise gut, hob den Einspracheentscheid auf und wies die Sache zur Prüfung der übrigen Anspruchsvoraussetzungen im Sinne der Erwägungen an die AZA zurück."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die AZA führt Beschwerde in öffentlich-rechtlichen Angelegenheiten und beantragt, es sei der Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 17. August 2023 aufzuheben und der Einspracheentscheid vom 3. Mai 2022 zu bestätigen. Während A. auf Abweisung der Beschwerde schliesst, beantragt das BSV deren Gutheissung. Das Bundesgericht heisst die Beschwerde gut."
             }
           ]
         },
@@ -114,7 +125,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=3&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=21&highlight_docid=atf%3A%2F%2F151-V-129%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "9cc969fcafaf5a7a1c085d731719f3af4bdbe1ef59dd5cbb044a64659e7daff4",
-      "sha": "0007034f1e482e5de98cbd82e9ddb013f82bfe7597f4521faf4af0636acb4c8d"
+      "sha": "f8f00072e54d3b918ad202a1ee4965129a67c20743e38d14fd8d168a476651cb"
     }
   ]
 }

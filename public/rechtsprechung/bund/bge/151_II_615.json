@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A.A. tätigte am 24. Oktober 2017 zum Erwerb von Wohneigentum einen Vorbezug aus beruflicher Vorsorge von Fr. 950'000.-. Am 27. Dezember 2017 verfügte das kantonale Steueramt Zürich die Besteuerung des Vorbezugs als Kapitalleistung zum Satz von Fr. 95'000.- getrennt vom übrigen Einkommen nach § 37 des Steuergesetzes (des Kantons Zürich) vom 8. Juni 1997 (StG/ZH; LS 631.1). Gestützt darauf erliess die Gemeinde U./ZH am 11. Januar 2018 die Schlussrechnung für die Staats- und Gemeindesteuern 2017 in Bezug auf diese Kapitalleistung über Fr. 93'755.30. B. Am 24. Dezember 2020 nahm A.A. eine Teilrückzahlung der Kapitalleistung an die Vorsorgeeinrichtung in Höhe von Fr. 250'000.- vor. Daraufhin erliess die Gemeinde U./ZH am 4. Februar 2021 eine neue Schlussrechnung, mit der sie eine Kapitalleistung von Fr. 700'000.- zum Satz von Fr. 95'000.- getrennt vom übrigen Einkommen in Rechnung stellte. Vom daraus resultierenden Steuerbetrag von Fr. 69'082.85 brachte sie den bezahlten Betrag von Fr. 93'755.30 in Abzug, was zu einem Guthaben von Fr. 24'672.45 führte. Daran hielt die Gemeinde mit Einspracheentscheid vom 19. März 2021 fest. Die dagegen erhobenen Rechtsmittel wiesen das kantonale Steueramt Zürich am 16. März 2023 und das Verwaltungsgericht des Kantons Zürich am 27. März 2024 ab. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 14. Juni 2024 beantragen B.A. und A.A. dem Bundesgericht, in Aufhebung des Urteils des Verwaltungsgerichts vom 27. März 2024 sei die Kapitalleistung von Fr. 700'000.- zum Satz von Fr. 70'000.- zu besteuern, was zu einem Steuerbetrag von Fr. 56'574.20 und zu einem Guthaben von Fr. 37'181.10 führe. Das kantonale Steueramt schliesst auf Abweisung der Beschwerde. Die Gemeinde äussert sich nicht."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.A. tätigte am 24. Oktober 2017 zum Erwerb von Wohneigentum einen Vorbezug aus beruflicher Vorsorge von Fr. 950'000.-. Am 27. Dezember 2017 verfügte das kantonale Steueramt Zürich die Besteuerung des Vorbezugs als Kapitalleistung zum Satz von Fr. 95'000.- getrennt vom übrigen Einkommen nach § 37 des Steuergesetzes (des Kantons Zürich) vom 8. Juni 1997 (StG/ZH; LS 631.1). Gestützt darauf erliess die Gemeinde U./ZH am 11. Januar 2018 die Schlussrechnung für die Staats- und Gemeindesteuern 2017 in Bezug auf diese Kapitalleistung über Fr. 93'755.30."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 24. Dezember 2020 nahm A.A. eine Teilrückzahlung der Kapitalleistung an die Vorsorgeeinrichtung in Höhe von Fr. 250'000.- vor. Daraufhin erliess die Gemeinde U./ZH am 4. Februar 2021 eine neue Schlussrechnung, mit der sie eine Kapitalleistung von Fr. 700'000.- zum Satz von Fr. 95'000.- getrennt vom übrigen Einkommen in Rechnung stellte. Vom daraus resultierenden Steuerbetrag von Fr. 69'082.85 brachte sie den bezahlten Betrag von Fr. 93'755.30 in Abzug, was zu einem Guthaben von Fr. 24'672.45 führte. Daran hielt die Gemeinde mit Einspracheentscheid vom 19. März 2021 fest. Die dagegen erhobenen Rechtsmittel wiesen das kantonale Steueramt Zürich am 16. März 2023 und das Verwaltungsgericht des Kantons Zürich am 27. März 2024 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 14. Juni 2024 beantragen B.A. und A.A. dem Bundesgericht, in Aufhebung des Urteils des Verwaltungsgerichts vom 27. März 2024 sei die Kapitalleistung von Fr. 700'000.- zum Satz von Fr. 70'000.- zu besteuern, was zu einem Steuerbetrag von Fr. 56'574.20 und zu einem Guthaben von Fr. 37'181.10 führe. Das kantonale Steueramt schliesst auf Abweisung der Beschwerde. Die Gemeinde äussert sich nicht."
             }
           ]
         },
@@ -161,7 +172,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-615%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "37f1f578dd1f99a47846a0cb48132c00baf7db46d2479c752f085d1467f875a8",
-      "sha": "3385f089d8f8f82053fa55a76b12eabf112f372a115a5393be916cda2e59a927"
+      "sha": "1ee83b6982668a4053810aae0867d8114c452d34779cb296c92376bf1d2799c8"
     }
   ]
 }

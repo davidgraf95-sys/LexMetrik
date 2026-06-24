@@ -24,8 +24,39 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die Staatsanwaltschaft Graubünden führt je eine Strafuntersuchung gegen A._____ (VV.2025.1584: u. a. wegen Körperverletzung, Drohung, Beschimpfung, Hinderung einer Amtshandlung, Sachbeschädigung, Nötigung sowie diverser Übertretungstatbestände) und gegen B._____ (VV.2025.1446: u. a. wegen versuchter einfacher Körperverletzung, versuchter Nötigung, Drohung, falscher Anschuldigung). Hintergrund der beiden Strafverfahren sind vornehmlich gegenseitige strafrechtliche Vorwürfe im Zusammenhang mit der (vergangenen) Paarbeziehung zwischen A._____ und B._____. B. Am 6. November 2025 wies die Staatsanwaltschaft das Gesuch von A._____ um amtliche Verteidigung ab. C. Hiergegen erhob A._____ (fortan Beschwerdeführer) Beschwerde beim Obergericht des Kantons Graubünden. Er beantragt, die Verfügung der Staatsanwaltschaft sei aufzuheben und ihm im Strafverfahren VV.2025.1584 eine amtliche Verteidigung zu bestellen. D. Am 18. November 2025 tätigte der Beschwerdeführer hierorts noch zwei weitere Eingaben (\"Klarstellung zur Berufung: tatsächliche Autorenschaft von B._____\" [Nachtrag zur Beschwerde] und \"Fristerstreckungsgesuch an das Obergericht\"). E. Die Staatsanwaltschaft schloss auf kostenfällige Abweisung der Beschwerde, unter Verzicht auf eine weitergehende Stellungnahme. Ebenso verzichtete die Staatsanwaltschaft auf Äusserungen zum Nachtrag zur Beschwerde. F. Am 7. Januar 2026 reichte die Staatsanwaltschaft ein Schreiben vom 3. Dezember 2025 betreffend Strafantragsrückzug von C._____ sowie einen weiteren Polizeirapport (GR 2025 7 327: Missbrauch einer Fernmeldeanlage) ins Recht. G. Der Wechsel im Vorsitz wurde den Parteien am 21. Mai 2026 angezeigt. Die Akten sind beigezogen. Das Verfahren ist spruchreif."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Staatsanwaltschaft Graubünden führt je eine Strafuntersuchung gegen A._____ (VV.2025.1584: u. a. wegen Körperverletzung, Drohung, Beschimpfung, Hinderung einer Amtshandlung, Sachbeschädigung, Nötigung sowie diverser Übertretungstatbestände) und gegen B._____ (VV.2025.1446: u. a. wegen versuchter einfacher Körperverletzung, versuchter Nötigung, Drohung, falscher Anschuldigung). Hintergrund der beiden Strafverfahren sind vornehmlich gegenseitige strafrechtliche Vorwürfe im Zusammenhang mit der (vergangenen) Paarbeziehung zwischen A._____ und B._____."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 6. November 2025 wies die Staatsanwaltschaft das Gesuch von A._____ um amtliche Verteidigung ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Hiergegen erhob A._____ (fortan Beschwerdeführer) Beschwerde beim Obergericht des Kantons Graubünden. Er beantragt, die Verfügung der Staatsanwaltschaft sei aufzuheben und ihm im Strafverfahren VV.2025.1584 eine amtliche Verteidigung zu bestellen."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "Am 18. November 2025 tätigte der Beschwerdeführer hierorts noch zwei weitere Eingaben (\"Klarstellung zur Berufung: tatsächliche Autorenschaft von B._____\" [Nachtrag zur Beschwerde] und \"Fristerstreckungsgesuch an das Obergericht\")."
+            },
+            {
+              "marke": "E.",
+              "tiefe": 1,
+              "text": "Die Staatsanwaltschaft schloss auf kostenfällige Abweisung der Beschwerde, unter Verzicht auf eine weitergehende Stellungnahme. Ebenso verzichtete die Staatsanwaltschaft auf Äusserungen zum Nachtrag zur Beschwerde."
+            },
+            {
+              "marke": "F.",
+              "tiefe": 1,
+              "text": "Am 7. Januar 2026 reichte die Staatsanwaltschaft ein Schreiben vom 3. Dezember 2025 betreffend Strafantragsrückzug von C._____ sowie einen weiteren Polizeirapport (GR 2025 7 327: Missbrauch einer Fernmeldeanlage) ins Recht."
+            },
+            {
+              "marke": "G.",
+              "tiefe": 1,
+              "text": "Der Wechsel im Vorsitz wurde den Parteien am 21. Mai 2026 angezeigt. Die Akten sind beigezogen. Das Verfahren ist spruchreif."
             }
           ]
         },
@@ -191,7 +222,7 @@
       "quelleUrl": "https://entscheidsuche.gr.ch/tribunavtplus/ServletDownload/SR2_2025_89_ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd60976d25b9312befc40dd11de14a0abe79aa1b7ac1a663324cc45e73312765e0cdc0dedc1bc0425c099a9488a18062b80f8de?path=ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd60976d25b9312befc40dd11de14a0abe79aa1b7ac1a663324cc45e73312765e0cdc0dedc1bc0425c099a9488a18062b80f8de&pathIsEncrypted=1&dossiernummer=SR2_2025_89",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e4d3ef82805ffa78ab811aac97038c84333a9885a5ec0ba90289c039b15bac86",
-      "sha": "7f56f37e52ce4ec2dfef8bb13aa57415593612b174e4190ad67597edbf9cbc4d"
+      "sha": "0a5136146ffd5517e05503160bb1ca02cf6f4d373adde5335f7dda3876036388"
     }
   ]
 }

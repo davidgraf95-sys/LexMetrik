@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. Die Parteien mit Jahrgängen 1941 (Ehemann) und 1947 (Ehefrau), italienische Staatsangehörige, heirateten 1972 in Italien und lebten anschliessend in der Schweiz. Sie führten eine klassische Hausgattenehe, aus welcher zwei längst volljährige Kinder hervorgingen. Der Ehemann lebt seit mehreren Jahren in Bulgarien, die Ehefrau weiterhin in der Schweiz. B. In der Scheidungsklage beantragte der Ehemann u.a. die Feststellung, dass sich die Parteien gegenseitig keinen nachehelichen Unterhalt schulden. Die Ehefrau verlangte in ihrer Klageantwort einen monatlichen Unterhaltsbeitrag von mindestens Fr. 814.-. Im Scheidungsurteil verpflichtete das Regionalgericht den Ehemann, der Ehefrau \"lebenslang resp. bis zur erneuten Wohnsitznahme in der Schweiz\" einen monatlichen Unterhaltsbeitrag von Fr. 446.- zu leisten. Die hiergegen erhobene Berufung wies das Obergericht des Kantons Bern ab. C. Mit Beschwerde in Zivilsachen verlangt der Ehemann in dahingehender Aufhebung des obergerichtlichen Urteils die Feststellung, dass er der Beschwerdegegnerin keinen nachehelichen Unterhalt schulde. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Parteien mit Jahrgängen 1941 (Ehemann) und 1947 (Ehefrau), italienische Staatsangehörige, heirateten 1972 in Italien und lebten anschliessend in der Schweiz. Sie führten eine klassische Hausgattenehe, aus welcher zwei längst volljährige Kinder hervorgingen. Der Ehemann lebt seit mehreren Jahren in Bulgarien, die Ehefrau weiterhin in der Schweiz."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "In der Scheidungsklage beantragte der Ehemann u.a. die Feststellung, dass sich die Parteien gegenseitig keinen nachehelichen Unterhalt schulden. Die Ehefrau verlangte in ihrer Klageantwort einen monatlichen Unterhaltsbeitrag von mindestens Fr. 814.-. Im Scheidungsurteil verpflichtete das Regionalgericht den Ehemann, der Ehefrau \"lebenslang resp. bis zur erneuten Wohnsitznahme in der Schweiz\" einen monatlichen Unterhaltsbeitrag von Fr. 446.- zu leisten. Die hiergegen erhobene Berufung wies das Obergericht des Kantons Bern ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Zivilsachen verlangt der Ehemann in dahingehender Aufhebung des obergerichtlichen Urteils die Feststellung, dass er der Beschwerdegegnerin keinen nachehelichen Unterhalt schulde. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
             }
           ]
         },
@@ -105,7 +116,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=34&highlight_docid=atf%3A%2F%2F151-III-9%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3f3df9bae051af8510cd0aeb33b336ba3d3346ec4e2aede6eeb441af8f038300",
-      "sha": "f03ce7a350cfc34181bd17ef5ad8f84a036904ec6402e9308fce17995281d315"
+      "sha": "beedff7ecc3258a14cf525ac60f6f5fae6de02abe9ea1d7579e80b68f4bee307"
     }
   ]
 }
