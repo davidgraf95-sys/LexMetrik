@@ -145,13 +145,13 @@ export function VorlageScheidungsbegehren() {
       case 'parteien': return (
         <div className="space-y-5">
           <Field label="Ehegatte/Ehegattin 1">
-            <ParteiEditor p={a.ehegatte1} onChange={(p) => set('ehegatte1', p)} />
+            <ParteiEditor p={a.ehegatte1} onChange={(p) => set('ehegatte1', p)} nurNatuerlich />
           </Field>
           <Field label="Vertretung Partei 1" optional>
             <input className={inputCls} value={a.vertretung1 ?? ''} onChange={(e) => set('vertretung1', e.target.value || undefined)} placeholder="z. B. RA lic. iur. X" />
           </Field>
           <Field label="Ehegatte/Ehegattin 2">
-            <ParteiEditor p={a.ehegatte2} onChange={(p) => set('ehegatte2', p)} />
+            <ParteiEditor p={a.ehegatte2} onChange={(p) => set('ehegatte2', p)} nurNatuerlich />
           </Field>
           <Field label="Vertretung Partei 2" optional>
             <input className={inputCls} value={a.vertretung2 ?? ''} onChange={(e) => set('vertretung2', e.target.value || undefined)} placeholder="z. B. RA lic. iur. Y" />

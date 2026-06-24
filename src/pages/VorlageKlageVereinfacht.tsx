@@ -45,20 +45,25 @@ const BANNER_KV: PdfBanner = {
 };
 
 // Kompakter Partei-Editor (natürlich/juristisch) — Darstellung, keine Logik.
-export function ParteiEditor({ p, onChange }: { p: SgPartei; onChange: (p: SgPartei) => void }) {
+// nurNatuerlich: blendet den Personentyp-Umschalter aus und erzwingt eine
+// natürliche Person (Auftrag David: bei der Scheidung sind die Parteien stets
+// Ehegatten — eine «juristische Person» ergibt dort keinen Sinn).
+export function ParteiEditor({ p, onChange, nurNatuerlich }: { p: SgPartei; onChange: (p: SgPartei) => void; nurNatuerlich?: boolean }) {
   return (
     <div className="space-y-3">
-      <SelectionGrid
-        className="grid grid-cols-2 gap-2"
-        items={[
-          { code: 'natuerlich' as const, label: 'Natürliche Person' },
-          { code: 'juristisch' as const, label: 'Juristische Person' },
-        ]}
-        value={p.typ}
-        onSelect={(code) => onChange(code === 'natuerlich'
-          ? { typ: 'natuerlich', vorname: '', name: '', strasse: '', plz: '', ort: '' }
-          : { typ: 'juristisch', firma: '', sitzStrasse: '', sitzPlz: '', sitzOrt: '' })}
-      />
+      {!nurNatuerlich && (
+        <SelectionGrid
+          className="grid grid-cols-2 gap-2"
+          items={[
+            { code: 'natuerlich' as const, label: 'Natürliche Person' },
+            { code: 'juristisch' as const, label: 'Juristische Person' },
+          ]}
+          value={p.typ}
+          onSelect={(code) => onChange(code === 'natuerlich'
+            ? { typ: 'natuerlich', vorname: '', name: '', strasse: '', plz: '', ort: '' }
+            : { typ: 'juristisch', firma: '', sitzStrasse: '', sitzPlz: '', sitzOrt: '' })}
+        />
+      )}
       {p.typ === 'natuerlich' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Vorname"><input className={inputCls} value={p.vorname} onChange={(e) => onChange({ ...p, vorname: e.target.value })} /></Field>

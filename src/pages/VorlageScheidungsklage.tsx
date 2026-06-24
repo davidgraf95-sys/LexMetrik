@@ -137,14 +137,14 @@ export function VorlageScheidungsklage() {
       case 'parteien': return (
         <div className="space-y-5">
           <Field label="Klagende Partei (Ehegatte/Ehegattin)">
-            <ParteiEditor p={a.klaeger} onChange={(p) => set('klaeger', p)} />
+            <ParteiEditor p={a.klaeger} onChange={(p) => set('klaeger', p)} nurNatuerlich />
           </Field>
           <Field label="Vertretung" optional>
             <input className={inputCls} value={a.vertretung ?? ''} onChange={(e) => set('vertretung', e.target.value || undefined)}
               placeholder="z. B. RA lic. iur. X, Kanzlei Y, Adresse" />
           </Field>
           <Field label="Beklagte Partei (Ehegatte/Ehegattin)">
-            <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} />
+            <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} nurNatuerlich />
           </Field>
           <Checkbox
             checked={a.kinderErfassen}
