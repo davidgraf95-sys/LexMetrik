@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, VORLAGE_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard, type VorlageCard } from '../lib/startseiteConfig';
-import { EINGABE_RUBRIKEN, VERTRAG_RUBRIKEN, formGateText, istVorlage } from '../lib/vorlagenKategorie';
+import { EINGABE_RUBRIKEN, VERTRAG_RUBRIKEN, istVorlage } from '../lib/vorlagenKategorie';
 import { GEBUEHREN_RUBRIKEN, gebuehrenRubrik, type GebuehrenRubrik } from '../lib/gebuehrenKategorie';
 import { type Oberkategorie } from '../lib/oberkategorien';
 import { praxisRang } from '../lib/praxisRang';
@@ -222,138 +222,89 @@ function GebuehrenRegister({ karten, sortiert }: {
 // Geplante Vorlagen stehen je Gruppe als gedämpfte Ein-Zeilen-Liste (ehrliche
 // Struktur-Sicht §8, ohne die Ansicht zu fluten).
 
-function GeplantZeile({ karten }: { karten: CalculatorCard[] }) {
-  if (karten.length === 0) return null;
-  return (
-    <p className="text-body-s text-ink-500 leading-relaxed">
-      <span className="lc-badge lc-badge-soft mr-2">In Vorbereitung</span>
-      {karten.map((k, i) => (
-        <span key={k.id}>
-          {i > 0 && <span aria-hidden> · </span>}
-          {sansAmp(k.title)}
-        </span>
-      ))}
-    </p>
-  );
-}
-
+// Vorlagen-Register (Redesign 24.6.2026, Auftrag David «Übersicht entschlacken»):
+// Nur EINSATZBEREITE Vorlagen im Hauptbereich; alle geplanten wandern in den
+// gemeinsamen «In Vorbereitung»-Block unten (KategorieSektion). Flache
+// Unterrubriken (ohne Einrück-Borte), keine Form-Gate-Sub-Labels mehr (die
+// Form-Grenzen stehen auf der Vorlage selbst, §8) — ruhigere, scanbarere Wand.
 function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
-  const vorlagen = karten.filter(istVorlage);
+  const vorlagen = karten.filter(istVorlage).filter(istVerfuegbar);
   const proGruppe = VORLAGE_SEKTIONEN
-    .map((s) => ({ s, alle: vorlagen.filter((v) => v.art === s.art) }))
-    .filter((g) => g.alle.length > 0);
-
-  // V1 (FAHRPLAN-VORLAGEN-AUSBAU): Form-Gate als zweites Sub-Label-Element —
-  // EIN Template-Literal (SSR-Regel), Gate vor dem Gebiets-/Gruppen-Label.
-  const subMitGate = (v: VorlageCard, basis?: string) => {
-    const gate = formGateText(v);
-    const label = basis ?? v.rechtsgebiet;
-    return gate ? `${gate} · ${label}` : label;
-  };
+    .map((s) => ({ s, verf: vorlagen.filter((v) => v.art === s.art) }))
+    .filter((g) => g.verf.length > 0);
 
   const zeilen = (xs: VorlageCard[], subLabel?: (v: VorlageCard) => string | undefined) => (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-      {xs.map((v) => <ListenZeile key={v.id} k={v} subLabel={subMitGate(v, subLabel?.(v))} />)}
+      {xs.map((v) => <ListenZeile key={v.id} k={v} subLabel={subLabel?.(v) ?? v.rechtsgebiet} />)}
     </div>
   );
 
   return (
     <div className="space-y-6">
-      {proGruppe.map(({ s, alle }) => {
-        const verf = alle.filter(istVerfuegbar);
-        const geplant = alle.filter((v) => !istVerfuegbar(v));
-        return (
-          /* id-Anker «vorlage-<id>»: Sprungziel der Seitenleisten-Vorlagen-
-             Untergruppen (navigation.ts → ScrollZuHash). scroll-mt klärt den
-             sticky Top-Streifen. */
-          <div key={s.id} id={`vorlage-${s.id}`} className="space-y-2 scroll-mt-24">
-            <div className="flex items-center gap-3">
-              <h3 className="lc-overline text-brass-700">{s.title}
-                {verf.length > 0 && <span className="num text-ink-500"> ({verf.length})</span>}</h3>
-              <span aria-hidden className="flex-1 h-px bg-line" />
-            </div>
-            <p className="text-body-s text-ink-500 max-w-reading">{s.lede}</p>
-            {s.art === 'eingabe' ? (
-              /* Behördeneingaben: drei Unterrubriken (Davids «Kachel für
-                 Gesuche und sonstige Eingaben» = dritte Rubrik). */
-              <div className="space-y-4">
-                {EINGABE_RUBRIKEN.map((r) => {
-                  const inRubrik = alle.filter((v) => v.eingabeRubrik === r.id);
-                  if (inRubrik.length === 0) return null;
-                  const rVerf = inRubrik.filter(istVerfuegbar);
-                  const rGeplant = inRubrik.filter((v) => !istVerfuegbar(v));
-                  return (
-                    <div key={r.id} className="space-y-2 pl-3 border-l-2 border-line">
-                      <h4 className="lc-overline text-ink-600">{r.titel}</h4>
-                      {rVerf.length > 0 && zeilen(rVerf, (v) => v.klageGebiet ?? v.rechtsgebiet)}
-                      <GeplantZeile karten={rGeplant} />
-                    </div>
-                  );
-                })}
-              </div>
-            ) : s.art === 'vertrag' ? (
-              /* V1 (FAHRPLAN-VORLAGEN-AUSBAU): sieben Verträge-Rubriken nach
-                 dem Eingabe-Muster; EIN Eintrag pro Vertragstyp, Varianten im
-                 Wizard. Ab >6 verfügbaren Karten klappt die Rubrik ein
-                 (<details>, Zähler) — heutiger Bestand bleibt offen. */
-              <div className="space-y-4">
-                {VERTRAG_RUBRIKEN.map((r) => {
-                  const inRubrik = alle.filter((v) => v.vertragRubrik === r.id);
-                  if (inRubrik.length === 0) return null;
-                  const rVerf = inRubrik.filter(istVerfuegbar);
-                  const rGeplant = inRubrik.filter((v) => !istVerfuegbar(v));
-                  const inhalt = (
-                    <>
-                      {rVerf.length > 0 && zeilen(rVerf)}
-                      <GeplantZeile karten={rGeplant} />
-                    </>
-                  );
-                  return (
-                    <div key={r.id} className="space-y-2 pl-3 border-l-2 border-line">
-                      {rVerf.length > 6 ? (
-                        <details className="group space-y-2">
-                          <summary className="cursor-pointer list-none select-none">
-                            <h4 className="lc-overline text-ink-600 inline">
-                              <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
-                              {r.titel} <span className="num text-ink-500">({rVerf.length})</span>
-                            </h4>
-                          </summary>
-                          {inhalt}
-                        </details>
-                      ) : (
-                        <>
-                          <h4 className="lc-overline text-ink-600">{r.titel}</h4>
-                          {inhalt}
-                        </>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            ) : (
-              <>
-                {verf.length > 0 && zeilen(verf)}
-                <GeplantZeile karten={geplant} />
-              </>
-            )}
+      {proGruppe.map(({ s, verf }) => (
+        /* id-Anker «vorlage-<id>»: Sprungziel der Seitenleisten-Vorlagen-
+           Untergruppen (navigation.ts → ScrollZuHash). */
+        <div key={s.id} id={`vorlage-${s.id}`} className="space-y-2 scroll-mt-24">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-brass-700">{s.title}
+              <span className="num text-ink-500"> ({verf.length})</span></h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
           </div>
-        );
-      })}
+          <p className="text-body-s text-ink-500 max-w-reading">{s.lede}</p>
+          {s.art === 'eingabe' ? (
+            /* Behördeneingaben: drei Unterrubriken, flach (ohne Einrück-Borte). */
+            <div className="space-y-3">
+              {EINGABE_RUBRIKEN.map((r) => {
+                const rVerf = verf.filter((v) => v.eingabeRubrik === r.id);
+                if (rVerf.length === 0) return null;
+                return (
+                  <div key={r.id} className="space-y-2">
+                    <h4 className="lc-overline text-ink-500">{r.titel}</h4>
+                    {zeilen(rVerf, (v) => v.klageGebiet ?? v.rechtsgebiet)}
+                  </div>
+                );
+              })}
+            </div>
+          ) : s.art === 'vertrag' ? (
+            /* Verträge-Rubriken, flach; ab >6 Karten klappt die Rubrik ein. */
+            <div className="space-y-3">
+              {VERTRAG_RUBRIKEN.map((r) => {
+                const rVerf = verf.filter((v) => v.vertragRubrik === r.id);
+                if (rVerf.length === 0) return null;
+                return (
+                  <div key={r.id} className="space-y-2">
+                    {rVerf.length > 6 ? (
+                      <details className="group space-y-2">
+                        <summary className="cursor-pointer list-none select-none">
+                          <h4 className="lc-overline text-ink-500 inline">
+                            <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
+                            {r.titel} <span className="num text-ink-500">({rVerf.length})</span>
+                          </h4>
+                        </summary>
+                        {zeilen(rVerf)}
+                      </details>
+                    ) : (
+                      <>
+                        <h4 className="lc-overline text-ink-500">{r.titel}</h4>
+                        {zeilen(rVerf)}
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            zeilen(verf)
+          )}
+        </div>
+      ))}
     </div>
   );
 }
 
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
-// Filter-Pille (Rechtsgebiet-Schnitt im Vorlagen-Register) — Pillen-Höhe
-// (--pill-h) aus dem Designsystem; aktiver Zustand im Messing-Akzent.
-const pillKlasse = (aktiv: boolean) =>
-  `h-9 px-3 rounded-full text-body-s font-medium transition-colors whitespace-nowrap motion-reduce:transition-none ${
-    aktiv
-      ? 'bg-brass-100 text-brass-700 border border-brass-500'
-      : 'bg-surface text-ink-600 border border-line hover:border-brass-400 hover:text-brass-700'}`;
-
-export function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck?: () => void }) {
+export function KategorieSektion({ kat, karten, onZurueck, ohneKopf }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck?: () => void; ohneKopf?: boolean }) {
   const [params, setParams] = useSearchParams();
   // Übersichtlichkeits-Politur (Auftrag David 10.6.2026): ZWEI ruhige
   // Gebrauchs-Ebenen statt einer Mischliste — «Alltag» (Praxis-Rang 1)
@@ -385,12 +336,6 @@ export function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategori
     if (nv) p.set('status', 'verfuegbar'); else p.delete('status');
     setParams(p, { replace: true });
   };
-  const toggleGebiet = (g: string) => {
-    const s = new Set(aktiveGebiete);
-    if (s.has(g)) s.delete(g); else s.add(g);
-    setzeFilter(s, nurVerfuegbar);
-  };
-
   const verfuegbarAlle = gefiltert.filter(istVerfuegbar);
   const alltag = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) === 1));
   const weitere = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) !== 1));
@@ -402,44 +347,57 @@ export function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategori
   // Vorlagen ausnehmen — geplante Werkzeug-Karten (checklisten,
   // mandatsaufnahme) zeigt das VorlagenRegister nicht, sie müssen hier
   // sichtbar bleiben (Kachel-Zähler = Ansicht, §8).
+  // Redesign 24.6.2026: in der Vorlagen-Kategorie wandern ALLE geplanten Vorlagen
+  // (nicht mehr je Gruppe gestreut) in DIESEN gemeinsamen «In Vorbereitung»-Block.
   const geplant = gefiltert.filter((k) => !istVerfuegbar(k)
-    && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id))
-    && !(kat.id === 'vorlagen' && istVorlage(k)));
+    && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id)));
 
   return (
-    <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
-      <div className="space-y-1.5 pt-2">
-        {onZurueck && (
-          <button type="button" onClick={onZurueck}
-            className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
-            ← Alle Kategorien
-          </button>
-        )}
-        <div className="flex items-baseline gap-4">
-          <h2 id={`register-titel-${kat.id}`} className="whitespace-nowrap">
-            <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
-          </h2>
-          <span aria-hidden className="flex-1 h-px bg-line" />
-          <span className="lc-overline num text-ink-500 whitespace-nowrap">
+    <section id={`register-${kat.id}`}
+      aria-label={ohneKopf ? kat.titel : undefined}
+      aria-labelledby={ohneKopf ? undefined : `register-titel-${kat.id}`}
+      className="space-y-4 scroll-mt-28">
+      {/* Eigener Kopf nur, wenn die Seite nicht schon einen trägt (ohneKopf=true
+          auf /vorlagen: der SeitenKopf führt bereits Titel + Intro → kein Doppelkopf). */}
+      {!ohneKopf && (
+        <div className="space-y-1.5 pt-2">
+          {onZurueck && (
+            <button type="button" onClick={onZurueck}
+              className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
+              ← Alle Kategorien
+            </button>
+          )}
+          <div className="flex items-baseline gap-4">
+            <h2 id={`register-titel-${kat.id}`} className="whitespace-nowrap">
+              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
+            </h2>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+            <span className="lc-overline num text-ink-500 whitespace-nowrap">
+              <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
+            </span>
+          </div>
+          <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
+        </div>
+      )}
+
+      {/* Rechtsgebiet-Filter (Redesign 24.6.2026): EIN Dropdown statt ~14 Pillen —
+          macht die Vorlagen-«Wand» scanbar; die Auswahl engt alle Gruppen live ein.
+          Die «Nur verfügbare»-Pille entfällt: der Hauptbereich zeigt ohnehin nur
+          Einsatzbereite, Geplantes liegt im Sammelblock unten. */}
+      {filterAktiv && vorhandeneGebiete.length > 1 && (
+        <div className="flex flex-wrap items-center gap-3" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
+          <label className="flex items-center gap-2 text-body-s text-ink-600">
+            <span>Rechtsgebiet</span>
+            <select value={[...aktiveGebiete][0] ?? ''}
+              onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
+              className="lc-select lc-input-sm w-auto min-w-[12rem]">
+              <option value="">Alle</option>
+              {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
+            </select>
+          </label>
+          <span className="lc-overline num text-ink-500">
             <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
           </span>
-        </div>
-        <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
-      </div>
-
-      {/* Rechtsgebiet-Filter + Status-Schnitt — macht die Vorlagen-«Wand»
-          scanbar; die Treffer engen alle Gruppen darunter live ein. */}
-      {filterAktiv && vorhandeneGebiete.length > 1 && (
-        <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
-          <button type="button" onClick={() => setzeFilter(new Set(), false)}
-            className={pillKlasse(aktiveGebiete.size === 0 && !nurVerfuegbar)}>Alle</button>
-          {vorhandeneGebiete.map((g) => (
-            <button key={g} type="button" aria-pressed={aktiveGebiete.has(g)} onClick={() => toggleGebiet(g)}
-              className={pillKlasse(aktiveGebiete.has(g))}>{g}</button>
-          ))}
-          <span aria-hidden className="mx-1 h-5 w-px bg-line-strong" />
-          <button type="button" aria-pressed={nurVerfuegbar} onClick={() => setzeFilter(aktiveGebiete, !nurVerfuegbar)}
-            className={pillKlasse(nurVerfuegbar)}>Nur verfügbare</button>
         </div>
       )}
 

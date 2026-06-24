@@ -23,7 +23,7 @@ export function VorlagenUebersicht() {
         intro="Verträge, Eingaben, Erklärungen und Dokumentmappen – regelbasiert aufgesetzt, mit ehrlichen Form-Grenzen. Nach Rechtsgebiet filterbar."
       />
 
-      <KategorieSektion kat={VORLAGEN_KATEGORIE} karten={kartenDerKategorie(KATALOG_KARTEN, 'vorlagen')} />
+      <KategorieSektion kat={VORLAGEN_KATEGORIE} karten={kartenDerKategorie(KATALOG_KARTEN, 'vorlagen')} ohneKopf />
 
       <KatalogHinweis />
     </div>
