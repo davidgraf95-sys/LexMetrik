@@ -49,13 +49,15 @@ function GebuehrenTab() {
   const aktiv = GEBUEHREN.find((g) => g.id === art)!;
   return (
     <div className="space-y-4">
-      {/* Segment-Buttons: ein Klick wählt die Gebührenart (weniger Klicks). */}
-      <div role="tablist" aria-label="Gebührenart" className="flex flex-wrap gap-0.5 rounded-lg border border-line bg-surface p-0.5">
+      {/* Segment-Buttons: ein Klick wählt die Gebührenart (weniger Klicks).
+          3-Spalten-Raster → gleichmässig EINE Reihe (auch auf Mobil, statt
+          ungleichem 2+1-Umbruch); auf schmalen Schirmen kleinere Schrift. */}
+      <div role="tablist" aria-label="Gebührenart" className="grid grid-cols-3 gap-0.5 rounded-lg border border-line bg-surface p-0.5">
         {GEBUEHREN.map((g) => {
           const an = g.id === art;
           return (
             <button key={g.id} type="button" role="tab" aria-selected={an} onClick={() => setArt(g.id)}
-              className={`flex-1 text-center px-3 py-2 text-body-s font-medium rounded-md transition-colors ${
+              className={`truncate px-2 sm:px-3 py-2 text-xs sm:text-body-s font-medium rounded-md transition-colors ${
                 an ? 'bg-brass-100 text-brass-800' : 'text-ink-600 hover:text-ink-900'
               }`}>
               {g.kurz}
