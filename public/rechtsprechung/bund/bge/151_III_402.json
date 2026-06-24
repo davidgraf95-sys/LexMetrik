@@ -28,7 +28,22 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "ab Seite 402 BGE 151 III 402 S. 402 A. Am 7. Januar 2020 errichtete die Stiftung A. (Schuldnerin, Beschwerdeführerin) zur Sicherung der Schenkungssteuer 2006 und der aufgelaufenen Zinse zu Gunsten des Kantons Basel Stadt (Gläubiger, Beschwerdegegner) einen Papier-Inhaberschuldbrief. B. B.a Mit Zahlungsbefehl (...) vom 21. Juni 2022 liess der Gläubiger die Schuldnerin auf Grundpfandverwertung betreiben, worauf die Schuldnerin Rechtsvorschlag erhob. BGE 151 III 402 S. 403 B.b Das Bezirksgericht Kriens erteilte dem Gläubiger am 17. Januar 2024 definitive Rechtsöffnung für Fr. 97'650.- nebst Zins (...) sowie für Fr. 57'564.65. Weiter erteilte es dem Gläubiger provisorische Rechtsöffnung für das Pfandrecht. B.c Die dagegen gerichtete Beschwerde der Schuldnerin wies das Kantonsgericht Luzern am 25. Juli 2024 ab, soweit es darauf eintrat. C. Die Schuldnerin beantragt mit Beschwerde in Zivilsachen, das kantonsgerichtliche (...) Urteil sei \"aufzuheben und das Verfahren an die Vorinstanz zur Neubeurteilung zurückzuweisen\". Eventualiter sei für die Forderung und für das Pfandrecht provisorische Rechtsöffnung zu erteilen. (...) Das Bundesgericht heisst die Beschwerde gut, hebt das kantonsgerichtliche Urteil auf und erteilt dem Beschwerdegegner provisorische Rechtsöffnung für das Pfandrecht und für Fr. 97'650.- nebst Zins sowie für Fr. 57'564.65. (Auszug)"
+              "text": "A. Am 7. Januar 2020 errichtete die Stiftung A. (Schuldnerin, Beschwerdeführerin) zur Sicherung der Schenkungssteuer 2006 und der aufgelaufenen Zinse zu Gunsten des Kantons Basel Stadt (Gläubiger, Beschwerdegegner) einen Papier-Inhaberschuldbrief. B."
+            },
+            {
+              "marke": "B.a",
+              "tiefe": 2,
+              "text": "Mit Zahlungsbefehl (...) vom 21. Juni 2022 liess der Gläubiger die Schuldnerin auf Grundpfandverwertung betreiben, worauf die Schuldnerin Rechtsvorschlag erhob."
+            },
+            {
+              "marke": "B.b",
+              "tiefe": 2,
+              "text": "Das Bezirksgericht Kriens erteilte dem Gläubiger am 17. Januar 2024 definitive Rechtsöffnung für Fr. 97'650.- nebst Zins (...) sowie für Fr. 57'564.65. Weiter erteilte es dem Gläubiger provisorische Rechtsöffnung für das Pfandrecht."
+            },
+            {
+              "marke": "B.c",
+              "tiefe": 2,
+              "text": "Die dagegen gerichtete Beschwerde der Schuldnerin wies das Kantonsgericht Luzern am 25. Juli 2024 ab, soweit es darauf eintrat. C. Die Schuldnerin beantragt mit Beschwerde in Zivilsachen, das kantonsgerichtliche (...) Urteil sei \"aufzuheben und das Verfahren an die Vorinstanz zur Neubeurteilung zurückzuweisen\". Eventualiter sei für die Forderung und für das Pfandrecht provisorische Rechtsöffnung zu erteilen. (...) Das Bundesgericht heisst die Beschwerde gut, hebt das kantonsgerichtliche Urteil auf und erteilt dem Beschwerdegegner provisorische Rechtsöffnung für das Pfandrecht und für Fr. 97'650.- nebst Zins sowie für Fr. 57'564.65. (Auszug)"
             }
           ]
         },
@@ -95,7 +110,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-402%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "34cf168eae85e0d95834059ad4c8be558a84132731d562ac57ff3cd2b442a41d",
-      "sha": "6f146c2ad35e787775d73cc75ee2728fc5a6a667d84b2fc2923899005e648103"
+      "sha": "e2175bcdf0ec7dde88020baff9bb60a816ddf73010f15904381149135a4867cf"
     }
   ]
 }
