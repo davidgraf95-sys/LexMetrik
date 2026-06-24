@@ -56,6 +56,13 @@ BGE-Leitentscheide ab 2024 (265 dt., curated statt Routine) aus OpenCaseLaw (Cou
 Quelle/Stand, Pipeline (`adapter-entscheide`/`normtext-entscheide`), Datum via aza-Cross-Fetch
 + Bandjahr-Fallback, Sachgebiet-Ableitung. Inhaltliche Einzelabnahme: David, offen.
 
+**Rubrum-Darstellung + Daten-Befund:** [rechtsprechung/rubrum-darstellung-regelwerk.md](rechtsprechung/rubrum-darstellung-regelwerk.md) —
+einheitlicher BGE-Detailseiten-Kopf (Auftrag David 24.6.2026, ultracode); Cross-Check
+gegen entscheidsuche-mcp deckte auf, dass alle 178 gespeicherten Rubrum-Felder
+Falsch-Positive (Erwägungs-Fragmente) waren; deterministisches Plausibilitäts-Tor
+`rubrumFeldPlausibel` (Anzeige + Extraktion + Bestands-Reinigung), narrative
+Vorinstanz-Anreicherung §1-bedingt verworfen. Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
