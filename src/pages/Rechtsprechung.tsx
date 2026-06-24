@@ -5,6 +5,7 @@ import { EntscheidKarte } from '../components/rechtsprechung/EntscheidKarte';
 import { EntscheidZeile } from '../components/rechtsprechung/EntscheidZeile';
 import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
 import { SachgebietKacheln } from '../components/rechtsprechung/SachgebietKacheln';
+import { LiveSuche } from '../components/rechtsprechung/LiveSuche';
 import {
   ladeEntscheidManifest, filterEntscheide, sortiere, gruppiereNachLeit,
   zaehleSachgebiete, normLabel,
@@ -217,6 +218,9 @@ export function Rechtsprechung() {
             ) : (
               <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />
             )}
+
+            {/* Discovery über den ganzen CH-Korpus (extern, opt-in) — über die kuratierte Auswahl hinaus. */}
+            <LiveSuche initialQ={werte.q ?? ''} />
 
             <p className="border-t border-line/60 pt-3 text-micro text-ink-400">
               Keine Rechtsberatung. «ungeprüft» = maschinell erfasst, fachlich noch nicht abgenommen; massgeblich ist stets die amtliche Fassung (Link je Entscheid).
