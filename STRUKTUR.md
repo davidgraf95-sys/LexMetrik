@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Ultracode-Review umgesetzt: Inline-Popover-Lücke (34 Gesetze) + SR-Sonde korpusweit + §5-Entdopplung (autonom, in `main` lokal, NICHT deployt/gepusht)
+
+Auftrag David: «vereinfachen + Fehleranfälligkeit reduzieren, Befunde gleich umsetzen». Zwei adversariale Opus-Reviewer (Normtext-Mechanik + UI); risikoarme Befunde umgesetzt, gate grün (golden byte-gleich).
+- **⭐ MAJOR-Funktionslücke (Commit `3e42bb4`):** `SNAPSHOT_QUELLE` (bundRef.ts) deckte nur 52 von 86 Volltext-Snapshots ab — 34 ZENTRALE Gesetze (BV, DBG, KG, FusG, MSchG, PatG, UWG, VStG, ATSG, RPG, IPRG, BVG, UVG, AHVG …) hatten den Volltext lokal, aber das Inline-Norm-Popover fiel STUMM auf den Live-Link zurück (Tabellen-Eintrag beim Promovieren vergessen, kein Tor fing es). Fix: 52-Zeilen-Handtabelle durch Ableitung `fedlexKey→key` aus ERLASS_REGISTER ersetzt (SSoT §5, kann nicht mehr driften). Empirisch: alte 52 byte-identisch, 34 lösen jetzt auf. **Deklarierte fachliche Änderung §6.3** (34 neue Popovers = zusätzlicher UI-Pfad zu BEREITS angezeigten, §7-verifizierten Snapshots, keine neue Rechtsquelle); Test nachgezogen.
+- **SR-Sonde korpusweit (Commit `3e42bb4`):** Die VAG-Härtung (SR-Identitäts-Prüfung im Cache-Tor) trug nur 25/86 Pins → SR-Feld bei ALLEN 86 ergänzt. Lauf bestätigt: alle 86 SR-konform (kein weiterer VAG-artiger Fehlgriff im Altbestand).
+- **§5-Entdopplung + a11y (Commit `d527c2a`):** verlaufLabel + Tab-Wappen-Helper teilten denselben {ebene,key}→Erlass-`find` (doppelt je Gesetz-Tab) → geteilter `erlassVonPfad`-Resolver. KantonWappen-Prop `dekorativ` (aria-hidden im Tab, da Titel daneben).
+- **Systematik-Tor (Commit `113df2a`):** neuer Soft-Tor — jeder Bund-Volltext-Erlass muss in genau einer SYSTEMATIK-Gruppe stehen (sonst stumm «Weitere Erlasse»); fängt das Vergessen beim Promovieren (aktuell 0 fehlend).
+- **Reviewer-Verdikt sonst:** erkenneFedlexGesetz bei ~90 Keys KOLLISIONSFREI (empirisch alle Paare); ScrollWiederherstellung-Loop NICHT umbauen (eingefangenes Bug-Wissen, Observer nicht klar besser) — beide bewusst gelassen.
+
 ## Session 25.6.2026 — Punkt-12-Bug-Check (VAG-Fehlerlass) + Scroll-Ruck + Tab-Kantonswappen (autonom, in `main` lokal, NICHT deployt/gepusht)
 
 Forts. derselben Session (Daueranweisung David: laufend Bug-Check). Reine Darstellung/Daten, gate grün (golden byte-gleich), Playwright-verifiziert.
