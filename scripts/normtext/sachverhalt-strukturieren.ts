@@ -52,7 +52,9 @@ for (const datei of alleSnapshotDateien(PUB)) {
 
   const sv = snap.abschnitte.find((a) => a.typ === 'sachverhalt');
   if (!sv) continue;
-  const altText = sv.bloecke.map((b) => b.text).join(' ');
+  // Original-Text MIT Markern rekonstruieren (idempotent: ein bereits gegliederter
+  // Bestand wird korrekt neu abgeleitet, nicht eingeebnet).
+  const altText = sv.bloecke.map((b) => (b.marke ? `${b.marke} ` : '') + b.text).join(' ');
   const neuBloecke = teileSachverhalt(altText);
 
   // Tor: Wort-Invariante modulo Rauschen.

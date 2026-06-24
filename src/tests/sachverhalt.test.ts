@@ -13,10 +13,11 @@ describe('entrauscheSachverhalt', () => {
 });
 
 describe('teileSachverhalt — sicheres Sub-Marker-Splitting', () => {
-  it('teilt an A.a/A.b/B.a und behält den Top-Buchstaben im Label', () => {
+  it('teilt an A.a/A.b/B.a (+ Top-Köpfe A./B.) und behält den Top-Buchstaben im Label', () => {
     const t = 'A. A.a Am 10. März 2023 stellte die A. mbH ein Gesuch. A.b In Prosequierung setzte sie. B. B.a Am 31. Juli 2024 verlangte sie Fortsetzung.';
     const bl = teileSachverhalt(t);
-    expect(bl.filter((b) => b.marke).map((b) => b.marke)).toEqual(['A.a', 'A.b', 'B.a']);
+    expect(bl.filter((b) => b.tiefe === 2).map((b) => b.marke)).toEqual(['A.a', 'A.b', 'B.a']);
+    expect(bl.filter((b) => b.tiefe === 1).map((b) => b.marke)).toEqual(['A.', 'B.']); // Top-Köpfe (wortinvariant)
     expect(bl.find((b) => b.marke === 'A.a')!.text).toMatch(/^Am 10\. März/);
   });
 
@@ -49,5 +50,22 @@ describe('teileSachverhalt — sicheres Sub-Marker-Splitting', () => {
 
   it('leerer Text → leere Block-Liste', () => {
     expect(teileSachverhalt('')).toEqual([]);
+  });
+
+  // Regression (Bug-Check MAJOR 24.6.): ein satz-schliessender Name am Blockende
+  // (z.B. „… im E.") darf NICHT als nachlaufender Top-Marker getilgt werden — nur
+  // wenn der Buchstabe dem Top des FOLGENDEN Abschnitts entspricht.
+  it('behält einen Schluss-Namen, der nicht zum nächsten Top-Marker passt', () => {
+    const t = 'A.a Er war bis 2019 tätig im E. A.b Danach geschah Weiteres. B.a Schliesslich endete es.';
+    const bl = teileSachverhalt(t);
+    expect(bl.find((b) => b.marke === 'A.a')!.text).toBe('Er war bis 2019 tätig im E.');
+  });
+  it('trennt einen nachlaufenden Top-Marker nur ab, wenn er zum nächsten Abschnitt passt', () => {
+    const t = 'A.a Erstes geschah. B. B.a Zweites geschah danach.';
+    const bl = teileSachverhalt(t);
+    expect(bl.find((b) => b.marke === 'A.a')!.text).toBe('Erstes geschah.'); // „B." abgetrennt
+    expect(bl.some((b) => b.tiefe === 1 && b.marke === 'B.')).toBe(true);    // als Top-Kopf erfasst
+    // wortinvariant: „B." bleibt als marke erhalten
+    expect(rekon(bl)).toBe(W('A.a Erstes geschah. B. B.a Zweites geschah danach.'));
   });
 });

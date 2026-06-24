@@ -120,22 +120,23 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
     );
   }
 
-  // Sachverhalt: Buchstaben-Gliederung (A.a/A.b/B.a …) als Label je Absatz. Nackte
-  // Top-Marker („A." allein bzw. nachlaufendes „… B.") werden nicht angezeigt — das
-  // Sub-Label trägt den Top-Buchstaben bereits (Anzeige-Politur, Daten unberührt).
+  // Sachverhalt: Buchstaben-Gliederung (A.a/A.b/B.a …) als Label je Absatz. Leere
+  // Top-Köpfe (tiefe 1, z.B. „B.") werden ausgeblendet — der Top-Buchstabe steckt
+  // schon im Sub-Label (Anzeige-Politur). KEIN Text-Trim mehr: der Block-Text wird
+  // unverändert gezeigt (nachlaufende Marker sind bereits im Split abgetrennt, §1).
   function Sachverhalt({ bloecke }: { bloecke: EntscheidBlock[] }) {
     return (
       <div className="space-y-4">
         {bloecke.map((b, i) => {
+          if (b.tiefe === 1 && !b.text.trim()) return null;
           if (!b.marke) {
             if (/^[A-ZÄÖÜ]\.$/.test(b.text.trim())) return null;
             return <p key={i} className={ABSATZ}><NormText text={b.text} /></p>;
           }
-          const txt = b.text.replace(/\s+[A-ZÄÖÜ]\.$/, '').trim();
           return (
             <p key={i} className={ABSATZ}>
               <span className="num mr-1.5 font-semibold text-ink-900">{b.marke}</span>
-              <NormText text={txt} />
+              <NormText text={b.text} />
             </p>
           );
         })}

@@ -65,16 +65,30 @@ export function teileSachverhalt(roh: string): EntscheidBlock[] {
   if (ok.length < 2) return [{ marke: null, text: t }];
 
   const bloecke: EntscheidBlock[] = [];
-  // Vorspann vor dem ersten Sub-Marker (enthält ggf. den nackten Top-Marker „A.";
-  // er bleibt im Text — KEINE synthetischen Köpfe, sonst Wortdrift). Markenlos.
-  const pre = t.slice(0, ok[0].at).trim();
+  // Vorspann vor dem ersten Sub-Marker. Endet er auf den nackten Top-Marker des
+  // ersten Abschnitts („… A." vor „A.a"), wird dieser als Top-Kopf (tiefe 1)
+  // abgetrennt — DETERMINISTISCH (Buchstabe muss zum folgenden Top passen), nie
+  // ein satz-schliessender Name. Wortinvariant (der Token wandert nach `marke`).
+  let pre = t.slice(0, ok[0].at).trim();
+  const preM = /(?:^|\s)([A-Z])\.$/.exec(pre);
+  let preKopf: string | null = null;
+  if (preM && preM[1] === ok[0].top) { pre = pre.slice(0, pre.length - preM[0].length).trim(); preKopf = ok[0].top; }
   if (pre) bloecke.push({ marke: null, text: pre });
+  if (preKopf) bloecke.push({ marke: `${preKopf}.`, tiefe: 1, text: '' });
 
-  // An den sequenzvalidierten Sub-Markern trennen; der Marker-Token wird zur
-  // `marke` (z.B. „A.a"), der übrige Text bleibt vollständig erhalten (wortinvariant).
+  // An den Sub-Markern trennen (Token → `marke`). Ein am Blockende nachlaufender
+  // nackter Top-Marker wird nur dann abgetrennt, wenn sein Buchstabe dem Top des
+  // NÄCHSTEN Abschnitts entspricht (≠ aktueller Top) — dann ist es belegt ein
+  // Abschnitts-Marker, kein Name am Satzende (§1). Sonst bleibt der Text unangetastet.
   for (let i = 0; i < ok.length; i++) {
-    const txt = t.slice(ok[i].end, i + 1 < ok.length ? ok[i + 1].at : t.length).trim();
+    let txt = t.slice(ok[i].end, i + 1 < ok.length ? ok[i + 1].at : t.length).trim();
+    let folgeKopf: string | null = null;
+    if (i + 1 < ok.length) {
+      const m = /\s([A-Z])\.$/.exec(txt);
+      if (m && m[1] === ok[i + 1].top && m[1] !== ok[i].top) { txt = txt.slice(0, txt.length - m[0].length).trim(); folgeKopf = m[1]; }
+    }
     bloecke.push({ marke: `${ok[i].top}.${ok[i].sub}`, tiefe: 2, text: txt });
+    if (folgeKopf) bloecke.push({ marke: `${folgeKopf}.`, tiefe: 1, text: '' });
   }
   return bloecke;
 }
