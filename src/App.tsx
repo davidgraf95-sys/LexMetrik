@@ -92,11 +92,26 @@ function ScrollWiederherstellung() {
   useEffect(() => {
     aktiv.current = hash ? '' : pathname;
     if (hash) return; // Anker-Sprung übernimmt ScrollZuHash
-    const ziel = positionen.current.get(pathname) ?? 0;
-    // Lazy geladene Seiten (in Prod: Reader-Chunk + Normtext-JSON erst nach dem
-    // Routenwechsel) sind anfangs zu kurz → die alte 40-Frame-Frist lief ab, bevor
-    // der Inhalt da war, und man landete oben (Bug David: Gesetz-Tab-Wechsel springt
-    // an den Anfang). Darum: erneut anpeilen, SOLANGE der Inhalt noch wächst — bis
+    const gespeichert = positionen.current.get(pathname);
+    const ziel = gespeichert ?? 0;
+    // Neu besuchter Pfad OHNE gespeicherte Position (Ziel = Anfang): EINMALIG nach
+    // oben, KEIN beharrlicher Loop. Der 360-Frame-Loop ist nur für das
+    // Wiederherstellen einer NICHT-Null-Position durch die lazy Ladephase nötig;
+    // für einen frischen Pfad reisst er die Seite nur sichtbar wiederholt an den
+    // Anfang (Bug David: «beim Wechsel zwischen Gesetzen wird man an den Anfang
+    // geschickt» — der Reader remountet ohnehin oben, das genügt). Ein zweiter
+    // raf fängt den Fall, dass der lazy Chunk im selben Frame noch nicht montiert
+    // ist und der Browser eine Rest-Scrollposition hält.
+    if (gespeichert === undefined || ziel === 0) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      const raf = requestAnimationFrame(() => {
+        if (window.scrollY > 0) window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+    // Gespeicherte NICHT-Null-Position wiederherstellen (Tab verlassen → zurück):
+    // Lazy geladene Seiten (Reader-Chunk + Normtext-JSON erst nach dem Routenwechsel)
+    // sind anfangs zu kurz → erneut anpeilen, SOLANGE der Inhalt noch wächst — bis
     // das Ziel erreicht ist oder die Höhe ~12 Frames stabil bleibt (Seite fertig,
     // ggf. echt kürzer), höchstens ~360 Frames als Notbremse.
     wiederherstellend.current = true;

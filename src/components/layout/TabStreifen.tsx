@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
 import { schliesseTab, leereTabs, type TabEintrag } from '../../lib/tabs';
-import { verlaufLabel, pfadTeil, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { verlaufLabel, pfadTeil, gesetzPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { KantonWappen } from '../KantonWappen';
 
 // ─── In-App-Reiter-Streifen (v2, Auftrag David) ─────────────────────────────
 //
@@ -117,6 +118,19 @@ export function TabStreifen() {
 
   const label = (t: TabEintrag) => verlaufLabel(t.path, manifeste);
 
+  // Kantonskürzel eines Reiters, falls er ein KANTONALES Gesetz zeigt (Auftrag
+  // David: «der Tab soll anzeigen, wenn man kantonales Gesetz hat, um welchen
+  // Kanton es sich handelt, mit Wappen»). Quelle ist das ohnehin geladene
+  // Browse-Manifest (SSoT, §5); der Kanton steht dort je Erlass, nicht aus dem
+  // Pfad-Key geraten. null = Bund/kein Gesetz/Manifest noch nicht geladen →
+  // Fallback auf das Kategorie-Piktogramm.
+  const kantonVon = (t: TabEintrag): string | null => {
+    const g = gesetzPfad(t.path);
+    if (!g || g.ebene !== 'kanton') return null;
+    const e = manifeste.gesetze?.erlasse.find((x) => x.key === g.key && x.ebene === g.ebene);
+    return e?.kanton ?? null;
+  };
+
   return (
     <nav aria-label="Geöffnete Reiter" ref={navRef}
       className="relative sticky top-16 z-10 border-b border-line"
@@ -132,6 +146,7 @@ export function TabStreifen() {
             if (items.length === 1) {
               const t = items[0];
               const aktiv = pfadTeil(t.path) === aktivTeil;
+              const kanton = kantonVon(t);
               return (
                 <li key={kat} className="shrink-0" style={{ scrollSnapAlign: 'start' }}>
                   <span className={`group/tab inline-flex items-center rounded-md border transition-colors ${
@@ -140,7 +155,8 @@ export function TabStreifen() {
                     <button type="button" aria-current={aktiv ? 'page' : undefined}
                       onClick={() => navigate(t.path)}
                       className="inline-flex items-center gap-1.5 max-w-[10rem] sm:max-w-[14rem] truncate pl-2.5 pr-1.5 py-1.5 text-body-s font-medium">
-                      {pikto}<span className="truncate">{label(t)}</span>
+                      {/* Kantonales Gesetz: Wappen statt §-Glyph (zeigt den Kanton). */}
+                      {kanton ? <KantonWappen kanton={kanton} className="h-4 w-3.5" /> : pikto}<span className="truncate">{label(t)}</span>
                     </button>
                     <button type="button" onClick={() => schliessen(t.path)}
                       aria-label={`Reiter «${label(t)}» schliessen`}
@@ -196,12 +212,14 @@ export function TabStreifen() {
           className="absolute z-30 w-[18rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg py-1 max-h-[70vh] overflow-y-auto">
           {tabs.filter((t) => tabKat(t.path) === offeneKat).map((t) => {
             const aktiv = pfadTeil(t.path) === aktivTeil;
+            const kanton = kantonVon(t);
             return (
               <div key={t.path} className={`flex items-center ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
                 <button type="button" role="menuitem" aria-current={aktiv ? 'page' : undefined}
                   onClick={() => { navigate(t.path); setOffeneKat(null); }}
-                  className={`flex-1 min-w-0 truncate text-left px-3 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
-                  {label(t)}
+                  className={`flex-1 min-w-0 inline-flex items-center gap-1.5 truncate text-left px-3 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
+                  {/* Kantonales Gesetz im Dropdown ebenfalls mit Wappen markieren. */}
+                  {kanton && <KantonWappen kanton={kanton} className="h-4 w-3.5" />}<span className="truncate">{label(t)}</span>
                 </button>
                 <button type="button" onClick={() => schliessen(t.path)}
                   aria-label={`Reiter «${label(t)}» schliessen`}
