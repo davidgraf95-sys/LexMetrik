@@ -111,6 +111,22 @@ const GESETZE_KINDER: NavKnoten[] = [
     standardOffen: false,
     kinder: KANTONE.map((kt) => link(kt, `/gesetze?ebene=kanton&kt=${kt}`)),
   },
+  // International unter «Gesetze» subsumiert (Auftrag David 25.6.2026) — eigene
+  // einklappbare Gruppe wie Bund/Kantone; Ziel = die /international-Übersichtsseite,
+  // die Kinder springen zu deren Sach-Ankern.
+  {
+    art: 'gruppe',
+    label: 'International',
+    ziel: '/international',
+    aufklappbar: true,
+    standardOffen: false,
+    kinder: [
+      link('Menschenrechte', '/international#menschenrechte'),
+      link('Int. Privat- & Zivilrecht', '/international#privat-zivil'),
+      link('Rechtshilfe (Haager)', '/international#rechtshilfe'),
+      link('Schweiz–EU & Datenschutz', '/international#eu-datenschutz'),
+    ],
+  },
 ];
 
 // Rechtsprechung: gleichrangig zu «Gesetze». Die Sachgebiete (GEBIETE, dieselbe
@@ -131,24 +147,6 @@ const RECHTSPRECHUNG_KINDER: NavKnoten[] = [
   },
 ];
 
-// International: gleichrangige Top-Sektion (nach Rechtsprechung). Eine einklappbare
-// Gruppe «Nach Sachgebiet» mit Direktlinks auf die /international-Anker — strukturgleich
-// zu Rechtsprechung «Nach Sachgebiet» (Auftrag David 24.6.2026, konsistentes Dropdown).
-const INTERNATIONAL_KINDER: NavKnoten[] = [
-  {
-    art: 'gruppe',
-    label: 'Nach Sachgebiet',
-    aufklappbar: true,
-    standardOffen: false,
-    kinder: [
-      link('Menschenrechte', '/international#menschenrechte'),
-      link('Int. Privat- & Zivilrecht', '/international#privat-zivil'),
-      link('Rechtshilfe (Haager)', '/international#rechtshilfe'),
-      link('Schweiz–EU & Datenschutz', '/international#eu-datenschutz'),
-    ],
-  },
-];
-
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
 
 export const NAVIGATION: NavAbschnitt[] = [
@@ -159,7 +157,6 @@ export const NAVIGATION: NavAbschnitt[] = [
   { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
   { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
-  { titel: 'International', ziel: '/international', kinder: INTERNATIONAL_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.
