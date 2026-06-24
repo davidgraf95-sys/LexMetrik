@@ -1,0 +1,789 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/BGOE/art_1",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz soll die Transparenz über den Auftrag, die Organisation und die Tätigkeit der Verwaltung fördern. Zu diesem Zweck trägt es zur Information der Öffentlichkeit bei, indem es den Zugang zu amtlichen Dokumenten gewährleistet."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "3d7647ea9d7677a587387c1c247cd3811b4d744fc9828b6c8e5c380d2edfb53e"
+    },
+    {
+      "id": "bund/BGOE/art_2",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bundesverwaltung;"
+            },
+            {
+              "marke": "b",
+              "text": "Organisationen und Personen des öffentlichen oder privaten Rechts, die nicht der Bundesverwaltung angehören, soweit sie Erlasse oder erstinstanzlich Verfügungen im Sinn von Artikel 5 des Bundesgesetzes vom 20. Dezember 1968 über das Verwaltungsverfahren (Verwaltungsverfahrensgesetz) erlassen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Parlamentsdienste."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesetz gilt nicht für die Schweizerische Nationalbank und die Eidgenössische Finanzmarktaufsicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann weitere Einheiten der Bundesverwaltung sowie weitere Organisationen und Personen, die nicht der Bundesverwaltung angehören, vom Geltungsbereich ausnehmen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies für die Erfüllung der ihnen übertragenen Aufgaben erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "deren Wettbewerbsfähigkeit durch die Unterstellung unter dieses Gesetz beeinträchtigt würde; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die ihnen übertragenen Aufgaben von geringer Bedeutung sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "5caa357fa3b82c3e64b237eac82d8b4bb8ee98acb6a0a8ce7984fccde54d681a"
+    },
+    {
+      "id": "bund/BGOE/art_3",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zugang zu amtlichen Dokumenten betreffend: 1. Zivilverfahren,"
+            },
+            {
+              "marke": "2",
+              "text": "Strafverfahren,"
+            },
+            {
+              "marke": "3",
+              "text": "Verfahren der internationalen Rechts- und Amtshilfe,"
+            },
+            {
+              "marke": "4",
+              "text": "internationale Verfahren zur Streitbeilegung,"
+            },
+            {
+              "marke": "5",
+              "text": "Verfahren der Staats- und Verwaltungsrechtspflege oder"
+            },
+            {
+              "marke": "6",
+              "text": "Schiedsverfahren;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang zu amtlichen Dokumenten, die Personendaten der Gesuchstellerin oder des Gesuchstellers enthalten, richtet sich nach dem Datenschutzgesetz vom 25. September 2020 (DSG)."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "a2070b06ba6291d47035b3fb12bfc089005831f6eae6c3c1fc8ed626820b752d"
+    },
+    {
+      "id": "bund/BGOE/art_4",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vorbehalten bleiben spezielle Bestimmungen anderer Bundesgesetze, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bestimmte Informationen als geheim bezeichnen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "von diesem Gesetz abweichende Voraussetzungen für den Zugang zu bestimmten Informationen vorsehen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "d95719201a43a6357cc33a1d7788df1ea5ec997f477b41d5e6a2fa57f4f16f49"
+    },
+    {
+      "id": "bund/BGOE/art_5",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein amtliches Dokument ist jede Information, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf einem beliebigen Informationsträger aufgezeichnet ist;"
+            },
+            {
+              "marke": "b",
+              "text": "sich im Besitz einer Behörde befindet, von der sie stammt oder der sie mitgeteilt worden ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Erfüllung einer öffentlichen Aufgabe betrifft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als amtliche Dokumente gelten auch solche, die durch einen einfachen elektronischen Vorgang aus aufgezeichneten Informationen erstellt werden können, welche die Anforderungen nach Absatz 1 Buchstaben b und c erfüllen."
+        },
+        {
+          "absatz": "3",
+          "text": "Nicht als amtliche Dokumente gelten Dokumente, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch eine Behörde kommerziell genutzt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "nicht fertig gestellt sind; oder"
+            },
+            {
+              "marke": "c",
+              "text": "zum persönlichen Gebrauch bestimmt sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "c719dbd5ba0f43f6df5d1a37748a7ddfad6b342b69a624e024ca9624b4df8fa3"
+    },
+    {
+      "id": "bund/BGOE/art_6",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person hat das Recht, amtliche Dokumente einzusehen und von den Behörden Auskünfte über den Inhalt amtlicher Dokumente zu erhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Dokumente können vor Ort eingesehen werden, oder es können Kopien davon angefordert werden. Die Gesetzgebung über das Urheberrecht bleibt vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist ein amtliches Dokument in einem Publikationsorgan oder auf einer Internetseite des Bundes veröffentlicht, so gilt der Anspruch nach den Absätzen 1 und 2 für jedermann als erfüllt."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "adf9536978671528ae5d6f55d93659e75cc88bfaeed2e578df696a8b362b5933"
+    },
+    {
+      "id": "bund/BGOE/art_7",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Zugang zu amtlichen Dokumenten wird eingeschränkt, aufgeschoben oder verweigert, wenn durch seine Gewährung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die freie Meinungs- und Willensbildung einer diesem Gesetz unterstellten Behörde, eines anderen legislativen oder administrativen Organes oder einer gerichtlichen Instanz wesentlich beeinträchtigt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die zielkonforme Durchführung konkreter behördlicher Massnahmen beeinträchtigt würde;"
+            },
+            {
+              "marke": "c",
+              "text": "die innere oder äussere Sicherheit der Schweiz gefährdet werden kann;"
+            },
+            {
+              "marke": "d",
+              "text": "die aussenpolitischen Interessen oder die internationalen Beziehungen der Schweiz beeinträchtigt werden können;"
+            },
+            {
+              "marke": "e",
+              "text": "die Beziehungen zwischen dem Bund und den Kantonen oder zwischen Kantonen beeinträchtigt werden können;"
+            },
+            {
+              "marke": "f",
+              "text": "die wirtschafts-, geld- und währungspolitischen Interessen der Schweiz gefährdet werden können;"
+            },
+            {
+              "marke": "g",
+              "text": "Berufs-, Geschäfts- oder Fabrikationsgeheimnisse offenbart werden können;"
+            },
+            {
+              "marke": "h",
+              "text": "Informationen vermittelt werden können, die der Behörde von Dritten freiwillig mitgeteilt worden sind und deren Geheimhaltung die Behörde zugesichert hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang zu amtlichen Dokumenten wird eingeschränkt, aufgeschoben oder verweigert, wenn durch seine Gewährung die Privatsphäre Dritter beeinträchtigt werden kann; ausnahmsweise kann jedoch das öffentliche Interesse am Zugang überwiegen."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "f4801e654d97d2b2077818699165eb09d0387be943151bf41bf32b28ccb272d3"
+    },
+    {
+      "id": "bund/BGOE/art_8",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es besteht kein Recht auf Zugang zu amtlichen Dokumenten des Mitberichtsverfahrens."
+        },
+        {
+          "absatz": "2",
+          "text": "Amtliche Dokumente dürfen erst zugänglich gemacht werden, wenn der politische oder administrative Entscheid, für den sie die Grundlage darstellen, getroffen ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann ausnahmsweise beschliessen, amtliche Dokumente des Ämterkonsultationsverfahrens auch nach dem Entscheid nicht zugänglich zu machen."
+        },
+        {
+          "absatz": "4",
+          "text": "Amtliche Dokumente über Positionen in laufenden und künftigen Verhandlungen sind in keinem Fall zugänglich."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Zugang zu Berichten über die Evaluation der Leistungsfähigkeit der Bundesverwaltung und die Wirksamkeit ihrer Massnahmen ist gewährleistet."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "c4b00abd8aef4701050bf3032c6bd1790ae176131bf780632ec7c82372f4dab7"
+    },
+    {
+      "id": "bund/BGOE/art_9",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Amtliche Dokumente, die Personendaten oder Daten juristischer Personen enthalten, sind nach Möglichkeit vor der Einsichtnahme zu anonymisieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Zugangsgesuche, die sich auf amtliche Dokumente beziehen, die nicht anonymisiert werden können, sind für Personendaten nach Artikel 36 DSG und für Daten juristischer Personen nach Artikel 57 s des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 zu beurteilen. Das Zugangsverfahren richtet sich nach dem vorliegenden Gesetz."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "c247654572c0407f93255fc1dd78d1550b2b2fa16ca1d545bfa12b2f6536ec2f"
+    },
+    {
+      "id": "bund/BGOE/art_10",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Zugang zu amtlichen Dokumenten ist an die Behörde zu richten, die das Dokument erstellt oder von Dritten, die nicht diesem Gesetz unterstehen, als Hauptadressatin erhalten hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann ein besonderes Verfahren für den Zugang zu amtlichen Dokumenten der schweizerischen Vertretungen im Ausland und der Missionen bei internationalen Organisationen vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gesuch muss hinreichend genau formuliert sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Einzelheiten des Verfahrens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er nimmt auf die besonderen Bedürfnisse der Medien Rücksicht."
+            },
+            {
+              "marke": "b",
+              "text": "Er kann für Fälle, in denen eine Vielzahl von Gesuchen sich auf dieselben Dokumente bezieht, andere Modalitäten des Zugangs vorsehen."
+            },
+            {
+              "marke": "c",
+              "text": "Er kann für Gesuche, die eine besonders aufwendige Bearbeitung erfordern, längere Bearbeitungsfristen vorsehen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "0c2527c7288113e635d5602959ccdcb1ade20c25c4c13355dac09ebf3b16a7e4"
+    },
+    {
+      "id": "bund/BGOE/art_11",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zieht die Behörde in Erwägung, den Zugang zu amtlichen Dokumenten zu gewähren, durch deren Zugänglichmachung die Privatsphäre Dritter beeinträchtigt werden kann, so konsultiert sie den betroffenen Dritten und gibt ihm Gelegenheit zur Stellungnahme innert zehn Tagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informiert die angehörte Person über ihre Stellungnahme zum Gesuch."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "01076cf6b43f2eb1af49a755077c1c67553ce2ab7102cf595852396663c503a3"
+    },
+    {
+      "id": "bund/BGOE/art_12",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörde nimmt so rasch als möglich Stellung, in jedem Fall aber innert 20 Tagen nach Eingang des Gesuches."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Frist kann ausnahmsweise um 20 Tage verlängert werden, wenn das Gesuch umfangreiche, komplexe oder schwer beschaffbare Dokumente betrifft. Sie wird um die erforderliche Dauer verlängert, wenn sich ein Gesuch auf amtliche Dokumente bezieht, durch deren Zugänglichmachung die Privatsphäre Dritter beeinträchtigt werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Betrifft das Gesuch amtliche Dokumente, durch deren Zugänglichmachung die Privatsphäre Dritter beeinträchtigt werden kann, so schiebt die Behörde den Zugang auf, bis die Rechtslage geklärt ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Behörde informiert die Gesuchstellerinnen und Gesuchsteller über eine Fristverlängerung oder über eine Beschränkung oder Verweigerung des Zugangs und begründet sie summarisch. Die Information über die Beschränkung oder Verweigerung des Zugangs sowie die Begründung erfolgen schriftlich."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "b43fcd89ac73adf9c66d8698915b0e497063ab35575263b247fd6f37e4ba64dd"
+    },
+    {
+      "id": "bund/BGOE/art_13",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einen Schlichtungsantrag stellen kann eine Person:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren Zugang zu amtlichen Dokumenten eingeschränkt, aufgeschoben oder verweigert wird;"
+            },
+            {
+              "marke": "b",
+              "text": "zu deren Gesuch die Behörde nicht fristgerecht Stellung genommen hat; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die nach Artikel 11 angehört worden ist, wenn die Behörde gegen ihren Willen den Zugang gewähren will."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Schlichtungsantrag ist dem Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) innert 20 Tagen nach Empfang der Stellungnahme oder nach Ablauf der der Behörde für die Stellungnahme zur Verfügung stehenden Frist schriftlich zu stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kommt eine Schlichtung zustande, so gilt das Verfahren als erledigt."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "4ed9aed999c7034dbff02b45fd2b0a6ed37d6806c55b47c61cb3576626315e7d"
+    },
+    {
+      "id": "bund/BGOE/art_14",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kommt keine Schlichtung zustande, so gibt der EDÖB innert 30 Tagen nach Empfang des Schlichtungsantrages den am Schlichtungsverfahren Beteiligten eine schriftliche Empfehlung ab."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "66845876a996c4d2dda54eca9e672b4ea82b73554ab4e1b27bda3cd059d698d7"
+    },
+    {
+      "id": "bund/BGOE/art_15",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesuchsteller, die Gesuchstellerin oder die angehörte Person kann innerhalb von zehn Tagen nach Erhalt der Empfehlung den Erlass einer Verfügung nach Artikel 5 des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen erlässt die Behörde eine Verfügung, wenn sie in Abweichung von der Empfehlung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Recht auf Zugang zu einem amtlichen Dokument einschränken, aufschieben oder verweigern will;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zugang zu einem amtlichen Dokument gewähren will, durch dessen Zugänglichmachung die Privatsphäre Dritter beeinträchtigt werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verfügung ist innert 20 Tagen nach Empfang der Empfehlung oder nach Eingang des Gesuches nach Absatz 1 zu erlassen."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "fd101102cb0b5fcee96b6921ad378864a83d50cd87a111ce72c51fe78d1e817e"
+    },
+    {
+      "id": "bund/BGOE/art_16",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Beschwerdeverfahren richtet sich nach den allgemeinen Bestimmungen über die Bundesrechtspflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beschwerdeinstanzen haben auch Zugang zu amtlichen Dokumenten, die der Geheimhaltung unterliegen."
+        },
+        {
+          "absatz": null,
+          "text": "Art. 17 Kostenloser Zugang zu amtlichen Dokumenten"
+        },
+        {
+          "absatz": "1",
+          "text": "In Verfahren für den Zugang zu amtlichen Dokumenten werden keine Gebühren erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausnahmsweise können Gebühren erhoben werden, wenn ein Zugangsgesuch eine besonders aufwändige Bearbeitung durch die Behörde erfordert. Der Bundesrat legt die Einzelheiten und den Gebührentarif nach Aufwand fest. Der Gesuchsteller oder die Gesuchstellerin wird vorgängig über die Absicht der Behörde, eine Gebühr zu erheben, sowie über die Höhe dieser Gebühr informiert."
+        },
+        {
+          "absatz": "3",
+          "text": "In Schlichtungsverfahren (Art. 13) und Verfahren auf Erlass einer Verfügung (Art. 15) werden in keinem Fall Gebühren erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Abgabe von Berichten, Broschüren oder anderen Drucksachen und Informationsträgern kann in jedem Fall eine Gebühr erhoben werden."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "a84621034270f5ae8f3da92c1d25b3712fc3259af6bc2e97f7494466a8fee29a"
+    },
+    {
+      "id": "bund/BGOE/art_18",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der EDÖB hat nach dem vorliegenden Gesetz insbesondere folgende Aufgaben und Kompetenzen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er leitet das Schlichtungsverfahren (Art. 13) und gibt, für den Fall, dass es zu keiner Schlichtung kommt, eine Empfehlung ab (Art. 14)."
+            },
+            {
+              "marke": "b",
+              "text": "Er informiert von Amtes wegen oder auf Anfrage Private und Behörden über die Modalitäten des Zugangs zu amtlichen Dokumenten."
+            },
+            {
+              "marke": "c",
+              "text": "Er kann sich zu Erlassentwürfen und Massnahmen des Bundes, welche das Öffentlichkeitsprinzip wesentlich betreffen, äussern."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "dc689f851b05bf6f1fd1181723bf9f78a358f73bae513cd80b89fa415618a237"
+    },
+    {
+      "id": "bund/BGOE/art_19",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der EDÖB überprüft den Vollzug und die Wirksamkeit dieses Gesetzes sowie insbesondere die durch seine Umsetzung verursachten Kosten und erstattet dem Bundesrat regelmässig Bericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein erster Bericht über die Umsetzungskosten ist dem Bundesrat innert drei Jahren nach Inkrafttreten dieses Gesetzes vorzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berichte des EDÖB werden veröffentlicht."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "e5acc6ab78144837cd3a6a020503f4112803ce099fa6c5cb804c48c9c647db93"
+    },
+    {
+      "id": "bund/BGOE/art_20",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rahmen des Schlichtungsverfahrens hat der EDÖB auch Zugang zu amtlichen Dokumenten, die der Geheimhaltung unterliegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB untersteht dem Amtsgeheimnis im gleichen Ausmass wie die Behörden, in deren amtliche Dokumente er Einsicht nimmt oder die ihm Auskunft erteilen."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "e901eb0d80704ce873e29bfbe1585a6085edb395a51f6f0cc121784511665785"
+    },
+    {
+      "id": "bund/BGOE/art_21",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann insbesondere Vorschriften erlassen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bewirtschaftung amtlicher Dokumente;"
+            },
+            {
+              "marke": "b",
+              "text": "die Information über amtliche Dokumente;"
+            },
+            {
+              "marke": "c",
+              "text": "die Publikation amtlicher Dokumente."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "67ac03ebbf833311fb0a242ecb7416947c0951665fcf20d1ae90604c6cb47623"
+    },
+    {
+      "id": "bund/BGOE/art_22",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung bisherigen Rechts wird im Anhang geregelt."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "04b72ef2b9e140cdac1a886a6117816e152d482153b4fd42e962f7aa019f0a9a"
+    },
+    {
+      "id": "bund/BGOE/art_23",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz ist auf amtliche Dokumente anwendbar, die nach seinem Inkrafttreten von einer Behörde erstellt oder empfangen wurden."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "aa04ecf9b16a9128baaf400a2934bbccb6b1e955404e45faeef925d5636f259e"
+    },
+    {
+      "id": "bund/BGOE/art_23_a",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Gesuche, die im Zeitpunkt des Inkrafttretens der Änderung vom 30. September 2022 hängig sind, findet das bisherige Recht Anwendung."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "60e958cfbb653c858f812211189d92fe16a49c4b86670db51ebe309e9107b72c"
+    },
+    {
+      "id": "bund/BGOE/art_24",
+      "ebene": "bund",
+      "quelle": "BGOE",
+      "erlass": "BGOE",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2023-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/355/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20231101",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

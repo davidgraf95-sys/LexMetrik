@@ -19,12 +19,8 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(heute)) { console.error('--datum=YYYY-MM-DD nöt
 // Erlasse stehen separat im ERLASS_REGISTER). [SR, Kürzel, Gebiet].
 const LISTE: Array<[string, string, Rechtsgebiet]> = [
   // Staat & Verfassung
-  ['171.10', 'ParlG', 'oeffentlich'],
-  ['172.010', 'RVOG', 'oeffentlich'],
-  ['161.1', 'BPR', 'oeffentlich'],
   // Privatrecht & Nebenerlasse
   // (PartG 211.231, IPRG 291 → Volltext-Snapshot 23.6.2026, im ERLASS_REGISTER)
-  ['232.12', 'DesG', 'privat'],
   ['232.16', 'SortG', 'privat'],
   ['221.112.944', 'PrHG', 'privat'],
   ['944.3', 'PRG', 'privat'],
@@ -35,29 +31,17 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['322.1', 'MStP', 'straf'],
   ['351.1', 'IRSG', 'straf'],
   // Verwaltung: Verfahren & Rechtspflege
-  ['170.32', 'VG', 'prozess'],
-  ['152.3', 'BGÖ', 'oeffentlich'],
   // Sozialversicherung
-  ['831.30', 'ELG', 'sozial-abgaben'],
   ['833.1', 'MVG', 'sozial-abgaben'],
   // Migration & Gleichstellung
-  ['141.0', 'BüG', 'oeffentlich'],
   // Raumplanung, Bau & Umwelt
-  ['814.20', 'GSchG', 'oeffentlich'],
-  ['451', 'NHG', 'oeffentlich'],
-  ['921.0', 'WaG', 'oeffentlich'],
   ['730.0', 'EnG', 'oeffentlich'],
   ['641.71', 'CO2-Gesetz', 'oeffentlich'],
   // Wirtschaft & Finanzmarkt
-  ['951.31', 'KAG', 'oeffentlich'],
-  ['954.1', 'FINIG', 'oeffentlich'],
-  ['961.01', 'VAG', 'oeffentlich'],
-  ['950.1', 'FIDLEG', 'oeffentlich'],
   // Gesundheit, Sicherheit & Infrastruktur
   ['818.101', 'EpG', 'oeffentlich'],
   ['810.21', 'TxG', 'oeffentlich'],
   ['817.0', 'LMG', 'oeffentlich'],
-  ['172.056.1', 'BöB', 'oeffentlich'],
   ['748.0', 'LFG', 'oeffentlich'],
   ['742.101', 'EBG', 'oeffentlich'],
   ['784.10', 'FMG', 'oeffentlich'],

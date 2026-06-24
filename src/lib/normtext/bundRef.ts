@@ -43,6 +43,12 @@ const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
   BBG: 'BBG',
   GBV: 'GBV',
   JStPO: 'JSTPO',
+  // Punkt 12 Batch 1 (24.6.2026): Bund-Gesetze aus Davids Bookmark-Liste.
+  BUEG: 'BUEG', BGOE: 'BGOE', BPR: 'BPR', VG: 'VG', PUBLG: 'PUBLG',
+  PARLG: 'PARLG', RVOG: 'RVOG', BOEB: 'BOEB', BPG: 'BPG', STBOG: 'STBOG',
+  DESG: 'DESG', OHG: 'OHG', NHG: 'NHG', ENTG: 'ENTG', GSCHG: 'GSCHG',
+  ENTSG: 'ENTSG', ELG: 'ELG', FZG: 'FZG', WAG: 'WAG', PUEG: 'PUEG',
+  FIDLEG: 'FIDLEG', KAG: 'KAG', FINIG: 'FINIG', FINFRAG: 'FINFRAG', VAG: 'VAG',
 };
 
 export function bundSnapshotRef(

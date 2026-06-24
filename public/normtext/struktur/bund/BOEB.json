@@ -1,0 +1,953 @@
+{
+ "erzeugt": "2026-06-25",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gegenstand, Zweck und Begriffe"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gegenstand, Zweck und Begriffe"
+    }
+   ],
+   "marginalie": [
+    "Zweck"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gegenstand, Zweck und Begriffe"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "7",
+     "text": "SR 822.11",
+     "links": [
+      {
+       "label": "SR 822.11",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9884"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Subjektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Auftraggeberinnen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "SR 172.010",
+     "links": [
+      {
+       "label": "SR 172.010",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "9",
+     "text": "SR 783.0",
+     "links": [
+      {
+       "label": "SR 783.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9151"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    }
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Subjektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Anwendbares Recht"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Subjektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Anbieterinnen"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Subjektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Befreiung von der Unterstellung"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Objektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Öffentlicher Auftrag"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Objektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Übertragung öffentlicher Aufgaben und Verleihung von Konzessionen"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Objektiver Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "SR 616.1",
+     "links": [
+      {
+       "label": "SR 616.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    }
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Verfahrensgrundsätze"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Einhaltung der Arbeitsschutzbestimmungen, der Arbeitsbedingungen, der Lohngleichheit und des Umweltrechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "11",
+     "text": "SR 822.41",
+     "links": [
+      {
+       "label": "SR 822.41",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9926"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Ausstand"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Vorbefassung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Allgemeine Grundsätze"
+    }
+   ],
+   "marginalie": [
+    "Bestimmung des Auftragswerts"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Schwellenwerte"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Verfahrensarten"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Offenes Verfahren"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Selektives Verfahren"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Einladungsverfahren"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Freihändiges Verfahren"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Wettbewerbe sowie Studienaufträge"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Elektronische Auktionen"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Dialog"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Vergabeverfahren"
+    }
+   ],
+   "marginalie": [
+    "Rahmenverträge"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Teilnahmebedingungen"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Eignungskriterien"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Verzeichnisse"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Zuschlagskriterien"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Technische Spezifikationen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "links": [
+      {
+       "label": "AS 2024 648",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
+      },
+      {
+       "label": "BBl 2023 13",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
+      },
+      {
+       "label": "437",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/437"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Bietergemeinschaften und Subunternehmerinnen"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Lose und Teilleistungen"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Varianten"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Vergabeanforderungen"
+    }
+   ],
+   "marginalie": [
+    "Formerfordernisse"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Inhalt der Ausschreibung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "CPV = «Common Procurement Vocabulary» (Gemeinsames Vokabular für öffentliche Aufträge der Europäischen Union)",
+     "links": [],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "14",
+     "text": "CPC = «Central Product Classification» (Zentrale Gütersystematik der Vereinten Nationen)",
+     "links": [],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Inhalt der Ausschreibungsunterlagen"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Angebotsöffnung"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Prüfung der Angebote"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Bereinigung der Angebote"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Bewertung der Angebote"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Zuschlag"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Vertragsabschluss"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Abbruch"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss vom Verfahren und Widerruf des Zuschlags"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 29. Sept. 2023 (Einführung einer Meldepflicht für Cyberangriffe auf kritische Infrastrukturen), in Kraft seit 1. April 2025 (AS 2024 257; 2025 168, 173; BBl 2023 84).",
+     "links": [
+      {
+       "label": "AS 2024 257",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/257"
+      },
+      {
+       "label": "2025 168",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/168"
+      },
+      {
+       "label": "173",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/173"
+      },
+      {
+       "label": "BBl 2023 84",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/84"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "16",
+     "text": "SR 128",
+     "links": [
+      {
+       "label": "SR 128",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40013"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "17",
+     "text": "SR 822.41",
+     "links": [
+      {
+       "label": "SR 822.41",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9926"
+      }
+     ],
+     "absatz": "2",
+     "item": "g"
+    },
+    {
+     "nr": "18",
+     "text": "SR 241",
+     "links": [
+      {
+       "label": "SR 241",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6122"
+      }
+     ],
+     "absatz": "2",
+     "item": "h"
+    }
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Ablauf des Vergabeverfahrens"
+    }
+   ],
+   "marginalie": [
+    "Sanktionen"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Fristen und Veröffentlichungen, Statistik"
+    }
+   ],
+   "marginalie": [
+    "Fristen"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Fristen und Veröffentlichungen, Statistik"
+    }
+   ],
+   "marginalie": [
+    "Fristverkürzung im Staatsvertragsbereich"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Fristen und Veröffentlichungen, Statistik"
+    }
+   ],
+   "marginalie": [
+    "Veröffentlichungen"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Fristen und Veröffentlichungen, Statistik"
+    }
+   ],
+   "marginalie": [
+    "Aufbewahrung der Unterlagen"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Fristen und Veröffentlichungen, Statistik"
+    }
+   ],
+   "marginalie": [
+    "Statistik"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Eröffnung von Verfügungen"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Beschwerde"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Beschwerdeobjekt"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Aufschiebende Wirkung"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Anwendbares Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Beschwerdefrist, Beschwerdegründe und Legitimation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "SR 173.110",
+     "links": [
+      {
+       "label": "SR 173.110",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Akteneinsicht"
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Rechtsschutz"
+    }
+   ],
+   "marginalie": [
+    "Beschwerdeentscheid"
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Kommission Beschaffungswesen Bund‑Kantone"
+    }
+   ],
+   "marginalie": []
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vollzug"
+   ]
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufhebung und Änderung anderer Erlasse"
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung"
+   ]
+  },
+  "63": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "10. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "BRB vom 12. Febr. 2020",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ }
+}

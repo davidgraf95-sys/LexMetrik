@@ -150,6 +150,35 @@ EINTRAEGE=(
   "ahvg|cc/63/837_843_843|20260101|0|art_1"
   "bankg|cc/51/117_121_129|20240101|0|art_1"
   "hmg|cc/2001/422|20250101|0|art_1"
+  # ── Punkt 12 Batch 1 (24.6.2026) — Bund-Gesetze aus Davids Anwaltsprüfungs-
+  #    Bookmark-Liste, Promotion aus nur-live-link-Stubs. ELI/Konsolidierung via
+  #    Resolver, danach gegen check:fedlex-versionen + Filestore-HTML-Sonde
+  #    korrigiert (art_1 + Stichproben empirisch verifiziert, §7). ──
+  "bueg|cc/2016/404|20230901|0|art_1"
+  "bgoe|cc/2006/355|20231101|0|art_1"
+  "bpr|cc/1978/688_688_688|20221023|0|art_1"
+  "vg|cc/1958/1413_1483_1489|20250615|0|art_1"
+  "publg|cc/2004/745|20230901|0|art_1"
+  "parlg|cc/2003/510|20260302|0|art_1"
+  "rvog|cc/1997/2022_2022_2022|20250501|0|art_1"
+  "boeb|cc/2020/126|20260101|0|art_1"
+  "bpg|cc/2001/123|20240101|0|art_1"
+  "stbog|cc/2010/444|20240101|0|art_1"
+  "desg|cc/2002/226|20250701|0|art_1"
+  "ohg|cc/2008/232|20250101|0|art_1"
+  "nhg|cc/1966/1637_1694_1679|20250801|0|art_1"
+  "entg|cc/47/689_701_723|20210101|0|art_1"
+  "gschg|cc/1992/1860_1860_1860|20250801|0|art_1"
+  "entsg|cc/2003/231|20240101|0|art_1"
+  "elg|cc/2007/804|20260101|0|art_1"
+  "fzg|cc/1994/2386_2386_2386|20240101|0|art_1"
+  "wag|cc/1992/2521_2521_2521|20250801|0|art_1"
+  "pueg|cc/1986/895_895_895|20260508|0|art_1"
+  "fidleg|cc/2019/758|20240301|0|art_1"
+  "kag|cc/2006/822|20240301|0|art_1"
+  "finig|cc/2018/801|20240301|0|art_1"
+  "finfrag|cc/2015/853|20240201|0|art_1"
+  "vag|cc/2005/734|20240901|0|art_1"
 )
 
 fehler=0

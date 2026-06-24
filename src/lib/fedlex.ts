@@ -145,6 +145,37 @@ export const FEDLEX = {
   AHVG:   'https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de', // SR 831.10, Kons. 20260101
   BANKG:  'https://www.fedlex.admin.ch/eli/cc/51/117_121_129/de', // SR 952.0, Kons. 20240101
   HMG:    'https://www.fedlex.admin.ch/eli/cc/2001/422/de', // SR 812.21, Kons. 20250101
+  // ── Punkt 12 Batch 1 (24.6.2026, Bund-Gesetze aus Davids Anwaltsprüfungs-
+  //    Bookmark-Liste, Promotion aus nur-live-link-Stubs). ELI über die
+  //    date-geordnete Taxonomie-Abfrage gewählt (Resolver gab für mehrere die
+  //    REPEALTE Altfassung — rvog/stbog/desg/finig/wag/pueg), gegen
+  //    check:fedlex-versionen (alle aktuell) + Filestore-HTML-Inhalts-Sonde
+  //    (art_1 vorhanden) + den Titel der GEPINNTEN ELI doppelt verifiziert (§7).
+  BUEG:    'https://www.fedlex.admin.ch/eli/cc/2016/404/de', // SR 141.0, Kons. 20230901
+  BGOE:    'https://www.fedlex.admin.ch/eli/cc/2006/355/de', // SR 152.3, Kons. 20231101
+  BPR:     'https://www.fedlex.admin.ch/eli/cc/1978/688_688_688/de', // SR 161.1, Kons. 20221023
+  VG:      'https://www.fedlex.admin.ch/eli/cc/1958/1413_1483_1489/de', // SR 170.32, Kons. 20250615
+  PUBLG:   'https://www.fedlex.admin.ch/eli/cc/2004/745/de', // SR 170.512, Kons. 20230901
+  PARLG:   'https://www.fedlex.admin.ch/eli/cc/2003/510/de', // SR 171.10, Kons. 20260302
+  RVOG:    'https://www.fedlex.admin.ch/eli/cc/1997/2022_2022_2022/de', // SR 172.010, Kons. 20250501
+  BOEB:    'https://www.fedlex.admin.ch/eli/cc/2020/126/de', // SR 172.056.1, Kons. 20260101
+  BPG:     'https://www.fedlex.admin.ch/eli/cc/2001/123/de', // SR 172.220.1, Kons. 20240101
+  STBOG:   'https://www.fedlex.admin.ch/eli/cc/2010/444/de', // SR 173.71, Kons. 20240101
+  DESG:    'https://www.fedlex.admin.ch/eli/cc/2002/226/de', // SR 232.12, Kons. 20250701
+  OHG:     'https://www.fedlex.admin.ch/eli/cc/2008/232/de', // SR 312.5, Kons. 20250101
+  NHG:     'https://www.fedlex.admin.ch/eli/cc/1966/1637_1694_1679/de', // SR 451, Kons. 20250801
+  ENTG:    'https://www.fedlex.admin.ch/eli/cc/47/689_701_723/de', // SR 711, Kons. 20210101
+  GSCHG:   'https://www.fedlex.admin.ch/eli/cc/1992/1860_1860_1860/de', // SR 814.20, Kons. 20250801
+  ENTSG:   'https://www.fedlex.admin.ch/eli/cc/2003/231/de', // SR 823.20, Kons. 20240101
+  ELG:     'https://www.fedlex.admin.ch/eli/cc/2007/804/de', // SR 831.30, Kons. 20260101
+  FZG:     'https://www.fedlex.admin.ch/eli/cc/1994/2386_2386_2386/de', // SR 831.42, Kons. 20240101
+  WAG:     'https://www.fedlex.admin.ch/eli/cc/1992/2521_2521_2521/de', // SR 921.0, Kons. 20250801
+  PUEG:    'https://www.fedlex.admin.ch/eli/cc/1986/895_895_895/de', // SR 942.20, Kons. 20260508
+  FIDLEG:  'https://www.fedlex.admin.ch/eli/cc/2019/758/de', // SR 950.1, Kons. 20240301
+  KAG:     'https://www.fedlex.admin.ch/eli/cc/2006/822/de', // SR 951.31, Kons. 20240301
+  FINIG:   'https://www.fedlex.admin.ch/eli/cc/2018/801/de', // SR 954.1, Kons. 20240301
+  FINFRAG: 'https://www.fedlex.admin.ch/eli/cc/2015/853/de', // SR 958.1, Kons. 20240201
+  VAG:     'https://www.fedlex.admin.ch/eli/cc/2005/734/de', // SR 961.01, Kons. 20240901
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

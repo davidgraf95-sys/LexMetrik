@@ -132,6 +132,42 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('BBG', 'BBG', 'Bundesgesetz über die Berufsbildung', '412.10', 'oeffentlich', 3),
   bund('BEWG', 'BewG', 'Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (Lex Koller)', '211.412.41', 'oeffentlich', 4, 'BewG'),
   bund('KG', 'KG', 'Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen (Kartellgesetz)', '251', 'oeffentlich', 5),
+  // ── Punkt 12 Batch 1 (24.6.2026, Promotion aus nur-live-link-Stubs;
+  //    Bund-Gesetze aus Davids Anwaltsprüfungs-Bookmark-Liste). ELI/Konsolidierung
+  //    via date-geordnete Taxonomie-Abfrage (Resolver-Altfassungen verworfen),
+  //    gegen check:fedlex-versionen + Filestore-HTML-Sonde + ELI-Titel
+  //    doppelt-verifiziert (§7). Rechtsgebiet nach Bookmark-Ordner deklariert. ──
+  // Staat & Verfassung
+  bund('BPR', 'BPR', 'Bundesgesetz über die politischen Rechte (BPR)', '161.1', 'oeffentlich', 6),
+  bund('PARLG', 'ParlG', 'Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG)', '171.10', 'oeffentlich', 7),
+  bund('RVOG', 'RVOG', 'Regierungs- und Verwaltungsorganisationsgesetz (RVOG)', '172.010', 'oeffentlich', 8),
+  bund('PUBLG', 'PublG', 'Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)', '170.512', 'oeffentlich', 9),
+  bund('BPG', 'BPG', 'Bundespersonalgesetz (BPG)', '172.220.1', 'oeffentlich', 10),
+  bund('BGOE', 'BGÖ', 'Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ)', '152.3', 'oeffentlich', 11),
+  bund('BUEG', 'BüG', 'Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz, BüG)', '141.0', 'oeffentlich', 30),
+  // Verfahren & Rechtspflege
+  bund('VG', 'VG', 'Bundesgesetz über die Verantwortlichkeit des Bundes sowie seiner Behördemitglieder und Beamten (Verantwortlichkeitsgesetz, VG)', '170.32', 'prozess', 22),
+  bund('STBOG', 'StBOG', 'Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)', '173.71', 'prozess', 23),
+  // Privatrecht
+  bund('DESG', 'DesG', 'Bundesgesetz über den Schutz von Design (Designgesetz, DesG)', '232.12', 'privat', 25),
+  // Strafrecht
+  bund('OHG', 'OHG', 'Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)', '312.5', 'straf', 14),
+  // Öffentliches Recht — Umwelt, Beschaffung, Enteignung, Finanzmarkt
+  bund('NHG', 'NHG', 'Bundesgesetz über den Natur- und Heimatschutz (NHG)', '451', 'oeffentlich', 31),
+  bund('GSCHG', 'GSchG', 'Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)', '814.20', 'oeffentlich', 32),
+  bund('WAG', 'WaG', 'Bundesgesetz über den Wald (Waldgesetz, WaG)', '921.0', 'oeffentlich', 33),
+  bund('ENTG', 'EntG', 'Bundesgesetz über die Enteignung (EntG)', '711', 'oeffentlich', 34),
+  bund('BOEB', 'BöB', 'Bundesgesetz über das öffentliche Beschaffungswesen (BöB)', '172.056.1', 'oeffentlich', 35),
+  bund('PUEG', 'PüG', 'Preisüberwachungsgesetz (PüG)', '942.20', 'oeffentlich', 36),
+  bund('FIDLEG', 'FIDLEG', 'Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)', '950.1', 'oeffentlich', 37),
+  bund('KAG', 'KAG', 'Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)', '951.31', 'oeffentlich', 38),
+  bund('FINIG', 'FINIG', 'Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)', '954.1', 'oeffentlich', 39),
+  bund('FINFRAG', 'FinfraG', 'Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)', '958.1', 'oeffentlich', 40),
+  bund('VAG', 'VAG', 'Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)', '961.01', 'oeffentlich', 41),
+  // Sozialversicherung
+  bund('ELG', 'ELG', 'Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)', '831.30', 'sozial-abgaben', 28),
+  bund('FZG', 'FZG', 'Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)', '831.42', 'sozial-abgaben', 29),
+  bund('ENTSG', 'EntsG', 'Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern (Entsendegesetz, EntsG)', '823.20', 'sozial-abgaben', 30),
   // Steuern, Sozialversicherung & Abgaben
   bund('KVG', 'KVG', 'Bundesgesetz über die Krankenversicherung', '832.10', 'sozial-abgaben', 1),
   bund('KVV', 'KVV', 'Verordnung über die Krankenversicherung', '832.102', 'sozial-abgaben', 2),

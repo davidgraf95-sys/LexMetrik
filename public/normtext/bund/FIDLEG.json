@@ -1,0 +1,3201 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/FIDLEG/art_1",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt den Schutz der Kundinnen und Kunden von Finanzdienstleistern sowie die Schaffung vergleichbarer Bedingungen für das Erbringen von Finanzdienstleistungen durch die Finanzdienstleister und trägt damit zur Stärkung des Ansehens und der Wettbewerbsfähigkeit des Finanzplatzes Schweiz bei."
+        },
+        {
+          "absatz": "2",
+          "text": "Dazu legt es die Anforderungen für die getreue, sorgfältige und transparente Erbringung von Finanzdienstleistungen fest und regelt das Anbieten von Finanzinstrumenten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f55c47997e56ab015db30c25f599ef63bcce71b56f554b5a96120500b4b45278"
+    },
+    {
+      "id": "bund/FIDLEG/art_2",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Gesetz sind unabhängig von der Rechtsform unterstellt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Finanzdienstleister;"
+            },
+            {
+              "marke": "b",
+              "text": "Kundenberaterinnen und -berater;"
+            },
+            {
+              "marke": "c",
+              "text": "Ersteller und Anbieter von Finanzinstrumenten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diesem Gesetz nicht unterstellt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Schweizerische Nationalbank;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bank für Internationalen Zahlungsausgleich;"
+            },
+            {
+              "marke": "c",
+              "text": "Vorsorgeeinrichtungen und andere Einrichtungen, die nach ihrem Zweck der beruflichen Vorsorge dienen (Vorsorgeeinrichtungen), sowie patronale Stiftungen (patronale Wohlfahrtsfonds); Arbeitgeber, die das Vermögen ihrer Vorsorgeeinrichtungen verwalten; Arbeitgeber- und Arbeitnehmerverbände, die das Vermögen ihrer Verbandseinrichtungen verwalten;"
+            },
+            {
+              "marke": "d",
+              "text": "soweit ihre Tätigkeit dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG) untersteht: 1. Versicherungsunternehmen,"
+            },
+            {
+              "marke": "2",
+              "text": "Versicherungsvermittlerinnen und -vermittler,"
+            },
+            {
+              "marke": "3",
+              "text": "Ombudsstellen;"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8468dbd0bc83f7d5be9c36d2ebba5c3f92ebb571d97cd1da0adae0a03245199e"
+    },
+    {
+      "id": "bund/FIDLEG/art_3",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In diesem Gesetz gelten als:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Erwerb oder die Veräusserung von Finanzinstrumenten,"
+            },
+            {
+              "marke": "2",
+              "text": "die Annahme und Übermittlung von Aufträgen, die Finanzinstrumente zum Gegenstand haben,"
+            },
+            {
+              "marke": "3",
+              "text": "die Verwaltung von Finanzinstrumenten (Vermögensverwaltung),"
+            },
+            {
+              "marke": "4",
+              "text": "die Erteilung von persönlichen Empfehlungen, die sich auf Geschäfte mit Finanzinstrumenten beziehen (Anlageberatung),"
+            },
+            {
+              "marke": "5",
+              "text": "die Gewährung von Krediten für die Durchführung von Geschäften mit Finanzinstrumenten;"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "110e152c73d20db8b754b75a5740a69508cbd9dec910cba7abea6430a150702f"
+    },
+    {
+      "id": "bund/FIDLEG/art_4",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzdienstleister ordnen die Personen, für die sie Finanzdienstleistungen erbringen, einem der folgenden Segmente zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Privatkundinnen und -kunden;"
+            },
+            {
+              "marke": "b",
+              "text": "professionelle Kunden;"
+            },
+            {
+              "marke": "c",
+              "text": "institutionelle Kunden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Privatkundinnen und -kunden gelten Kundinnen und Kunden, die keine professionellen Kunden sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Als professionelle Kunden gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Finanzintermediäre nach dem Bankengesetz vom 8. November 1934 (BankG), dem Finanzinstitutsgesetz vom 15. Juni 2018 (FINIG) und dem KAG;"
+            },
+            {
+              "marke": "b",
+              "text": "beaufsichtigte Versicherungseinrichtungen;"
+            },
+            {
+              "marke": "c",
+              "text": "ausländische Kundinnen und Kunden, die einer prudenziellen Aufsicht unterstehen wie die Personen nach den Buchstaben a und b;"
+            },
+            {
+              "marke": "d",
+              "text": "Zentralbanken;"
+            },
+            {
+              "marke": "e",
+              "text": "öffentlich-rechtliche Körperschaften, Anstalten und Stiftungen mit professioneller Tresorerie;"
+            },
+            {
+              "marke": "f",
+              "text": "Vorsorgeeinrichtungen und Einrichtungen, die nach ihrem Zweck der beruflichen Vorsorge dienen, mit professioneller Tresorerie;"
+            },
+            {
+              "marke": "g",
+              "text": "Unternehmen mit professioneller Tresorerie;"
+            },
+            {
+              "marke": "h",
+              "text": "grosse Unternehmen;"
+            },
+            {
+              "marke": "i",
+              "text": "für vermögende Privatkundinnen und -kunden errichtete private Anlage strukturen mit professioneller Tresorerie."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Als institutionelle Kunden gelten professionelle Kunden nach Absatz 3 Buchstaben a–d sowie nationale und supranationale öffentlich-rechtliche Körperschaften mit professioneller Tresorerie."
+        },
+        {
+          "absatz": "5",
+          "text": "Als grosses Unternehmen gilt ein Unternehmen, das zwei der folgenden Grössen überschreitet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bilanzsumme von 20 Millionen Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "Umsatzerlös von 40 Millionen Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "Eigenkapital von 2 Millionen Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Nicht als Kundinnen gelten Gesellschaften eines Konzerns, für die eine andere Gesellschaft des gleichen Konzerns eine Finanzdienstleistung erbringt."
+        },
+        {
+          "absatz": "7",
+          "text": "Finanzdienstleister können auf eine Kundensegmentierung verzichten, wenn sie alle Kundinnen und Kunden als Privatkundinnen und ‑kunden behandeln."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4de618547709828fd88392cdf928bc03c99d7e74a76b84dbd329b945d6c5bc91"
+    },
+    {
+      "id": "bund/FIDLEG/art_5",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vermögende Privatkundinnen und -kunden und für diese errichtete private An lagestrukturen können erklären, dass sie als professionelle Kunden gelten wollen ( Opting-out )."
+        },
+        {
+          "absatz": "2",
+          "text": "Als vermögend im Sinne von Absatz 1 gilt, wer glaubhaft erklärt, dass sie oder er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "aufgrund der persönlichen Ausbildung und der beruflichen Erfahrung oder aufgrund einer vergleichbaren Erfahrung im Finanzsektor über die Kenntnisse verfügt, die notwendig sind, um die Risiken der Anlagen zu verstehen, und über ein Vermögen von mindestens 500 000 Franken verfügt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "über ein Vermögen von mindestens 2 Millionen Franken verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Professionelle Kunden nach Artikel 4 Absatz 3 Buchstaben f und g können erklären, dass sie als institutionelle Kunden gelten wollen."
+        },
+        {
+          "absatz": "4",
+          "text": "Schweizerische und ausländische kollektive Kapitalanlagen und deren Verwaltungsgesellschaften, die nicht bereits nach Artikel 4 Absatz 3 Buchstabe a oder c in Verbindung mit Artikel 4 Absatz 4 als institutionelle Kunden gelten, können erklären, dass sie als institutionelle Kunden gelten wollen."
+        },
+        {
+          "absatz": "5",
+          "text": "Professionelle Kunden, die keine institutionellen Kunden im Sinn von Artikel 4 Absatz 4 sind, können erklären, dass sie als Privatkunden gelten wollen ( Opting-in )."
+        },
+        {
+          "absatz": "6",
+          "text": "Institutionelle Kunden können erklären, dass sie nur als professionelle Kunden gelten wollen."
+        },
+        {
+          "absatz": "7",
+          "text": "Vor dem Erbringen von Finanzdienstleistungen informieren Finanzdienstleister ihre Kundinnen und Kunden, die nicht als Privatkundinnen und -kunden gelten, über die Möglichkeit zum Opting-in."
+        },
+        {
+          "absatz": "8",
+          "text": "Die Erklärungen nach den Absätzen 1–6 müssen schriftlich oder in anderer durch Text nachweisbarer Form vorliegen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a9f3c658db07b43d1beae936dc3442559718ddee11713da9eb1c2f293d1368e5"
+    },
+    {
+      "id": "bund/FIDLEG/art_6",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kundenberaterinnen und ‑berater müssen über hinreichende Kenntnisse über die Verhaltensregeln nach diesem Gesetz sowie über das für ihre Tätigkeit notwendige Fachwissen verfügen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bc008c24acd74a1304d71e95228c7c55e351708533a980b7484c7da5af08a193"
+    },
+    {
+      "id": "bund/FIDLEG/art_7",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister müssen beim Erbringen von Finanzdienstleistungen die aufsichtsrechtlichen Pflichten nach diesem Titel befolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben spezialgesetzliche Regelungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dead74504cbba37dd041f015d5d292f9428e3160fd4934bcf605a5a9100f9bf9"
+    },
+    {
+      "id": "bund/FIDLEG/art_8",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister informieren ihre Kundinnen und Kunden über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihren Namen und ihre Adresse;"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Tätigkeitsfeld und ihren Aufsichtsstatus;"
+            },
+            {
+              "marke": "c",
+              "text": "die Möglichkeit zur Einleitung von Vermittlungsverfahren vor einer anerkannten Ombudsstelle nach dem 5. Titel; und"
+            },
+            {
+              "marke": "d",
+              "text": "die allgemeinen mit Finanzinstrumenten verbundenen Risiken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informieren zusätzlich über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die persönlich empfohlene Finanzdienstleistung und die damit verbundenen Risiken und Kosten;"
+            },
+            {
+              "marke": "b",
+              "text": "die im Zusammenhang mit der angebotenen Finanzdienstleistung bestehenden wirtschaftlichen Bindungen an Dritte;"
+            },
+            {
+              "marke": "c",
+              "text": "das bei der Auswahl der Finanzinstrumente berücksichtigte Marktangebot."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der persönlichen Empfehlung von Finanzinstrumenten stellen die Finanzdienstleister der Privatkundin oder dem Privatkunden zusätzlich das Basisinformationsblatt zur Verfügung, sofern ein solches für das empfohlene Finanzinstrument zu erstellen ist (Art. 58 und 59). Bei einem zusammengesetzten Finanzinstrument ist nur für dieses ein Basisinformationsblatt zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kein Basisinformationsblatt muss zur Verfügung gestellt werden, wenn die Dienstleistung ausschliesslich in der Aus führung oder Übermittlung von Kunden aufträgen besteht, ausser wenn bereits ein Basisinformationsblatt für das Finanzinstrument vorhanden ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der persönlichen Empfehlung von Finanzinstrumenten, für die ein Prospekt zu erstellen ist (Art. 35–37), stellen die Finanzdienstleister der Privatkundin oder dem Privatkunden auf Anfrage kostenlos einen Prospekt zur Verfügung ."
+        },
+        {
+          "absatz": "6",
+          "text": "Werbung muss als solche gekennzeichnet sein."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0d3ba1c67c8ca5e648e9769596f5a949849bb8ceb6838ab4b42210f5ec4b02be"
+    },
+    {
+      "id": "bund/FIDLEG/art_9",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister informieren ihre Kundinnen und Kunden vor Abschluss des Vertrags oder vor Erbringen der Dienstleistung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzdienstleister stellen ihren Privatkundinnen und -kunden das Basisinformationsblatt vor der Zeichnung oder vor dem Vertragsabschluss kostenlos zur Verfügung. Erfolgt eine Beratung unter Abwesenden, kann das Basisinformationsblatt mit Zustimmung der Kundin oder des Kunden nach Abschluss des Geschäfts zur Verfügung gestellt werden. Die Finanzdienstleister dokumentieren diese Zustimmung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationen können den Kundinnen und Kunden in standardisierter Form auf Papier oder elektronisch zur Verfügung gestellt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ec9467687bbe01fb93cdcde87d6c62f3d36891b641e3e09f6920e9033ee65062"
+    },
+    {
+      "id": "bund/FIDLEG/art_10",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finanzdienstleister, die eine Anlageberatung oder eine Vermögensverwaltung erbringen, führen eine Angemessenheits- oder Eignungsprüfung durch."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b9ecff13150489e552cc4600671945e4101a1819be440cf600c2433be01cd840"
+    },
+    {
+      "id": "bund/FIDLEG/art_11",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Finanzdienstleister, der die Anlageberatung für einzelne Transaktionen erbringt, ohne dafür das gesamte Kundenportfolio zu berücksichtigen, muss sich über die Kenntnisse und Erfahrungen seiner Kundinnen und Kunden erkundigen und vor der Empfehlung von Finanzinstrumenten prüfen, ob diese für die Kundin oder den Kunden angemessen sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "22ba2d63dae753bd0ae6a27a843e8fc36a69bc7c074ed63e5cf3d2226eb072b7"
+    },
+    {
+      "id": "bund/FIDLEG/art_12",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Finanzdienstleister, der die Anlageberatung unter Berücksichtigung des Kundenportfolios oder die Vermögensverwaltung erbringt, muss sich über die finanziellen Verhältnisse und Anlageziele sowie über die Kenntnisse und Erfahrungen der Kundin oder des Kunden erkundigen. Diese Kenntnisse und Erfahrungen beziehen sich auf die Finanzdienstleistung und nicht auf die einzelnen Transaktionen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1cf0c69a258b7c5fb732d50c5b484f227fa94723c5b368a6f7dfa45c17689ad6"
+    },
+    {
+      "id": "bund/FIDLEG/art_13",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei blosser Ausführung oder Übermittlung von Kundenaufträgen müssen die Finanzdienstleister weder eine Angemessenheits- noch eine Eignungsprüfung durchführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informieren die Kundinnen und Kunden vor der Erbringung von Dienstleistungen nach Absatz 1, dass keine Angemessenheits- oder Eignungsprüfung durchgeführt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei professionellen Kunden können sie davon ausgehen, dass diese über die erforderlichen Kenntnisse und Erfahrungen verfügen und die mit der Finanzdienstleistung einhergehenden Anlagerisiken finanziell tragbar sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f28cb6ad74abe758e441b17eb7b312428ab0a41fcd469c44d1f0285f732b5c26"
+    },
+    {
+      "id": "bund/FIDLEG/art_14",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Reichen die Informationen, die der Finanzdienstleister erhält, nicht aus, um die Angemessenheit oder die Eignung eines Finanzinstruments zu beurteilen, so weist er die Kundin oder den Kunden vor der Erbringung der Dienstleistung darauf hin, dass er diese Beurteilung nicht vornehmen kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Finanzdienstleister der Auffassung, dass ein Finanzinstrument für seine Kundinnen und Kunden nicht angemessen oder geeignet ist, so rät er ihnen vor der Erbringung der Dienstleistung davon ab."
+        },
+        {
+          "absatz": "3",
+          "text": "Mangelnde Kenntnisse und Erfahrungen können durch Aufklärung der Kundinnen und Kunden kompensiert werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "362ff681e9b071965440ea6218414b7a275d9f0f86c7ad4a298f99d4868fbbe4"
+    },
+    {
+      "id": "bund/FIDLEG/art_15",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister dokumentieren in geeigneter Weise:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die mit den Kundinnen und Kunden vereinbarten Finanzdienstleistungen und die über sie erhobenen Informationen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Information nach Artikel 13 Absatz 2 oder die Tatsache, dass sie den Kundinnen und Kunden nach Artikel 14 von der Inanspruchnahme der Dienstleistung abgeraten haben;"
+            },
+            {
+              "marke": "c",
+              "text": "die für die Kundinnen und Kunden erbrachten Finanzdienstleistungen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Anlageberatung dokumentieren sie zusätzlich die Bedürfnisse der Kundinnen und Kunden sowie die Gründe für jede Empfehlung, die zum Erwerb oder zur Veräusserung eines Finanzinstruments führt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e93a15230c530fed9bf8fff6b3eb2ac1faa652684efff92accbd927d277779fc"
+    },
+    {
+      "id": "bund/FIDLEG/art_16",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister stellen ihren Kundinnen und Kunden auf Anfrage eine Kopie der Dokumentation nach Artikel 15 zu oder machen sie ihnen in anderer geeigneter Weise zugänglich."
+        },
+        {
+          "absatz": "2",
+          "text": "Zudem legen sie auf Anfrage der Kundinnen und Kunden Rechenschaft ab über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vereinbarten und erbrachten Finanzdienstleistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zusammensetzung, Bewertung und Entwicklung des Portfolios;"
+            },
+            {
+              "marke": "c",
+              "text": "die mit den Finanzdienstleistungen verbundenen Kosten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt den Mindestinhalt der Informationen nach Absatz 2."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fbeabe60c1c8e8821b46674cdd9b8b0d57bad8ce51bf1869ea114ba9ca86a1b2"
+    },
+    {
+      "id": "bund/FIDLEG/art_17",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister beachten bei der Bearbeitung von Kundenaufträgen den Grundsatz von Treu und Glauben und das Prinzip der Gleichbehandlung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt, wie die Grundsätze nach Absatz 1 zu erfüllen sind, namentlich hinsichtlich der Verfahren und Systeme zur Abwicklung von Kundenaufträgen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dc075573b27693fe0a1bb9da06de69e9996e0f4cf843ea650633013b70c2389f"
+    },
+    {
+      "id": "bund/FIDLEG/art_18",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister stellen sicher, dass bei der Ausführung der Aufträge ihrer Kundinnen und Kunden das bestmögliche Ergebnis in finanzieller, zeitlicher und qualitativer Hinsicht erreicht wird."
+        },
+        {
+          "absatz": "2",
+          "text": "In finanzieller Hinsicht berücksichtigen sie neben dem Preis für das Finanzinstrument auch die mit der Ausführung des Auftrags verbundenen Kosten sowie die Entschädigungen Dritter nach Artikel 26 Absatz 3."
+        },
+        {
+          "absatz": "3",
+          "text": "Sofern sie Mitarbeiterinnen und Mitarbeiter beschäftigen, die Kundenaufträge ausführen, erlassen sie Weisungen über die Ausführung von Kundenaufträgen, die der Anzahl solcher Mitarbeiterinnen und Mitarbeiter und der Betriebsstruktur angemessen sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4a22df48561635c868fbb040a7b75ede3ed0ecd0dca210d1197cb6c973e3e8b4"
+    },
+    {
+      "id": "bund/FIDLEG/art_19",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister dürfen nur Finanzinstrumente aus Kundenbeständen als Gegenpartei borgen oder als Agent solche Geschäfte vermitteln, wenn die Kundinnen und Kunden diesen Geschäften in einer von den allgemeinen Geschäftsbedingungen gesonderten Vereinbarung vorgängig schriftlich oder in anderer durch Text nachweisbarer Form ausdrücklich zugestimmt haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zustimmung der Kundinnen und Kunden ist nur gültig, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über die mit solchen Geschäften verbundenen Risiken in verständlicher Weise aufgeklärt worden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Anspruch auf Ausgleichszahlungen für die auf den ausgeliehenen Finanzinstrumenten fällig werdenden Erträgnisse haben; und"
+            },
+            {
+              "marke": "c",
+              "text": "für die ausgeliehenen Finanzinstrumente entschädigt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ungedeckte Geschäfte mit Finanzinstrumenten von Privatkundinnen und ‑kunden sind nicht zulässig."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8468c58ae99a30553536e5f309e1f1acb33a6b96a1cdc1d612a51ded3cfa8539"
+    },
+    {
+      "id": "bund/FIDLEG/art_20",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Geschäften mit institutionellen Kunden finden die Bestimmungen dieses Kapitels keine Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Professionelle Kunden können ausdrücklich darauf verzichten, dass Finanzdienstleister die Verhaltensregeln nach den Artikeln 8, 9, 15 und 16 anwenden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0c7be2f629f9cd713ee7d2a274a640b55abde50370554e6926ba5422dc002214"
+    },
+    {
+      "id": "bund/FIDLEG/art_21",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finanzdienstleister stellen durch interne Vorschriften und eine angemessene Betriebsorganisation die Erfüllung der Pflichten aus diesem Gesetz sicher."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6df8c1b267c7be0c1fe084a8048207e65cabbffe14bc927389df2c2d25f73926"
+    },
+    {
+      "id": "bund/FIDLEG/art_22",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister stellen sicher, dass ihre Mitarbeiterinnen und Mitarbeiter über die für ihre Tätigkeit notwendigen Fähigkeiten, Kenntnisse und Erfahrungen verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Finanzdienstleister, die nicht nach Artikel 3 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007 (FINMAG) beaufsichtigt werden, stellen zudem sicher, dass nur Personen als Kundenberaterinnen und ‑berater für sie tätig sind, die im Beraterregister (Art. 29) eingetragen sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "226207c57d0c7140857647d43f7cd51b30536c0f73d1c2bc511448584aa44ccc"
+    },
+    {
+      "id": "bund/FIDLEG/art_23",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister können für die Erbringung von Finanzdienstleistungen Dritte beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ziehen nur Personen bei, die über die für ihre Tätigkeit notwendigen Fähigkeiten, Kenntnisse und Erfahrungen und über die für diese Tätigkeit erforderlichen Bewilligungen und Registereinträge verfügen, und instruieren und überwachen die beigezogenen Personen sorgfältig."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9196c06074859719cb23e1becd127905b5321780f43d84be814c0d972a2f132a"
+    },
+    {
+      "id": "bund/FIDLEG/art_24",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister, die einem anderen Finanzdienstleister den Auftrag erteilen, für Kundinnen und Kunden eine Finanzdienstleistung zu erbringen, bleiben für die Vollständigkeit und Richtigkeit der Kundeninformationen sowie die Einhaltung der Pflichten nach den Artikeln 8–16 verantwortlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat der beauftragte Finanzdienstleister begründeten Anlass zur Vermutung, dass die Kundeninformationen unzutreffend sind oder die Pflichten nach den Artikeln 8–16 durch den auftraggebenden Finanzdienstleister nicht eingehalten wurden, so erbringt er seine Dienstleistung erst, wenn er die Vollständigkeit und Richtigkeit der Informationen sowie die Erfüllung der Verhaltensregeln sichergestellt hat."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0ae1b6a7ab02c9fe3fea92fe2c1c033b6b5d11e73b0730c3fc76b43ea1dbf479"
+    },
+    {
+      "id": "bund/FIDLEG/art_25",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister treffen angemessene organisatorische Vorkehrungen, um Interessenkonflikte, die bei der Erbringung von Finanzdienstleistungen entstehen können, zu vermeiden oder die Benachteiligung der Kundinnen und Kunden durch Interessenkonflikte auszuschliessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann eine Benachteiligung der Kundinnen und Kunden nicht ausgeschlossen werden, so ist ihnen dies offenzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Einzelheiten; insbesondere bezeichnet er Verhaltensweisen, die aufgrund von Interessenkonflikten in jedem Fall unzulässig sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "747496defa3afe6b0723abc0a04b1bb749e89afb59241cc6c61dabb50c6526d8"
+    },
+    {
+      "id": "bund/FIDLEG/art_26",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister dürfen im Zusammenhang mit der Erbringung von Finanzdienstleistungen Entschädigungen von Dritten nur annehmen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kundinnen und Kunden vorgängig ausdrücklich über die Entschädigung informiert haben und diese darauf verzichten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Entschädigung vollumfänglich an die Kundinnen und Kunden weitergeben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Information der Kundinnen und Kunden muss Art und Umfang der Entschädigung beinhalten und vor Erbringung der Finanzdienstleistung oder vor Vertragsabschluss erfolgen. Ist die Höhe des Betrags vorgängig nicht feststellbar, so informiert der Finanzdienstleister seine Kundinnen und Kunden über die Berechnungsparameter und die Bandbreiten. Auf Anfrage legen die Finanzdienstleister die effektiv erhaltenen Beträge offen."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Entschädigung gelten Leistungen, die dem Finanzdienstleister im Zusammenhang mit der Erbringung einer Finanzdienstleistung von Dritten zufliessen, insbesondere Courtagen, Kommissionen, Provisionen, Rabatte oder sonstige vermögenswerte Vorteile."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0859eb5eb8ae8fbd17a2700ac6ea925f7cf698371552f519817c5ac57df749a1"
+    },
+    {
+      "id": "bund/FIDLEG/art_27",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister sehen Massnahmen vor, mit denen sich verhindern lässt, dass Mitarbeiterinnen und Mitarbeiter Informationen, über die sie nur aufgrund ihrer Funktion verfügen, missbräuchlich für Geschäfte auf eigene Rechnung nutzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erlassen eine interne Weisung über die erforderlichen Überwachungsmassnahmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f56c49002c387066efb11882fd62cf1daf4446122d3d91bc91fc5f9272a75618"
+    },
+    {
+      "id": "bund/FIDLEG/art_28",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kundenberaterinnen und ‑berater von inländischen Finanzdienstleistern, die nicht nach Artikel 3 FINMAG beaufsichtigt werden, sowie Kundenberaterinnen und ‑berater von ausländischen Finanzdienstleistern dürfen ihre Tätigkeit in der Schweiz erst ausüben, wenn sie in einem Beraterregister eingetragen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann Kundenberaterinnen und -berater von ausländischen Finanzdienstleistern, die einer prudenziellen Aufsicht unterstehen, von der Registrierungspflicht ausnehmen, wenn sie ihre Dienstleistungen in der Schweiz ausschliesslich gegenüber professionellen oder institutionellen Kunden nach Artikel 4 erbringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann die Ausnahme nach Absatz 2 davon abhängig machen, dass Gegenrecht gewährt wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "df9ef7965caae9ffbdda0e4429cdb660d3544dd8e58637208ad4a430772c8904"
+    },
+    {
+      "id": "bund/FIDLEG/art_29",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kundenberaterinnen und ‑berater werden in das Beraterregister eingetragen, wenn sie den Nachweis erbringen, dass sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anforderungen nach Artikel 6 erfüllen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Berufshaftpflichtversicherung abgeschlossen haben oder dass gleichwertige finanzielle Sicherheiten bestehen; und"
+            },
+            {
+              "marke": "c",
+              "text": "selbst als Finanzdienstleister oder der Finanzdienstleister, für den sie tätig sind, einer Ombudsstelle (Art. 74) angeschlossen sind, sofern eine Anschlusspflicht (Art. 77) besteht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht ins Beraterregister eingetragen werden Kundenberaterinnen und ‑berater:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die nach den Artikeln 89–92 dieses Gesetzes oder nach Artikel 86 VAG strafrechtlich verurteilt oder wegen strafbarer Handlungen gegen das Vermögen nach den Artikeln 137–172 ter des Strafgesetzbuches im Strafregister eingetragen sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "gegen die für die einzutragende Tätigkeit ein Tätigkeitsverbot nach Artikel 33 a FINMAG oder ein Berufsverbot nach Artikel 33 FINMAG vorliegt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sind die Kundenberaterinnen und ‑berater als Mitarbeiterinnen oder Mitarbeiter für einen Finanzdienstleister tätig, so kann die Voraussetzung nach Absatz 1 Buchstabe b durch diesen erfüllt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "86b2989b5b90af27588d456b4861f722402641d76235125fe47f6ddb5c1bafdf"
+    },
+    {
+      "id": "bund/FIDLEG/art_30",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Beraterregister enthält mindestens folgende Angaben über die Kundenberaterinnen und ‑berater:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname;"
+            },
+            {
+              "marke": "b",
+              "text": "Name oder Firma und Adresse des Finanzdienstleisters, für den sie tätig sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Funktion und Position der Kundenberaterin oder des Kundenberaters innerhalb der Organisation;"
+            },
+            {
+              "marke": "d",
+              "text": "die Tätigkeitsfelder;"
+            },
+            {
+              "marke": "e",
+              "text": "die absolvierte Aus- und Weiterbildung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Ombudsstelle, der sie selbst als Finanzdienstleister oder der Finanzdienstleister, für den sie tätig sind, angeschlossen sind;"
+            },
+            {
+              "marke": "g",
+              "text": "Datum des Registereintrags."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "13bf8b81f9afe34ab2da3bf28661f72e46c7f7a3f8447afa9a70d3bab12afaa6"
+    },
+    {
+      "id": "bund/FIDLEG/art_31",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Registrierungsstelle führt das Beraterregister. Sie bedarf der Zulassung durch die Eidgenössische Finanzmarktaufsicht (FINMA)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann mehrere Registrierungsstellen zulassen, soweit dies sachlich gerechtfertigt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Registrierungsstelle muss so organisiert sein, dass die unabhängige Erfüllung ihrer Aufgaben sichergestellt ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Registrierungsstelle und die mit der Geschäftsführung betrauten Personen müssen Gewähr für eine einwandfreie Geschäftstätigkeit bieten. Die mit der Geschäftsführung betrauten Personen müssen zudem einen guten Ruf geniessen und die für die Funktion erforderlichen fachlichen Qualifikationen aufweisen."
+        },
+        {
+          "absatz": "5",
+          "text": "Erfüllt die Registrierungsstelle die Anforderungen nach diesem Gesetz nicht mehr, so verfügt die FINMA die notwendigen Massnahmen zur Behebung der Mängel. Behebt die Registrierungsstelle Mängel, die die Aufgabenerfüllung gefährden, nicht innert angemessener Frist, so entzieht ihr die FINMA die Zulassung zur Registrierung von Kundenberaterinnen und ‑beratern."
+        },
+        {
+          "absatz": "6",
+          "text": "Steht keine private Stelle als Registrierungsstelle zur Verfügung, so bezeichnet der Bundesrat eine Stelle für diese Aufgabe."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "26f80a436e642ceddcf055f44ec701b1310d3784b667f6dd2c34d12c046f89c8"
+    },
+    {
+      "id": "bund/FIDLEG/art_32",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Registrierungsstelle entscheidet über die Eintragungen und Löschungen im Beraterregister und erlässt die erforderlichen Verfügungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Registrierte Kundenberaterinnen und ‑berater sowie der Finanzdienstleister, für den sie tätig sind, müssen der Registrierungsstelle alle Änderungen von der Registrierung zugrunde liegenden Tatsachen melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständigen Aufsichtsbehörden melden der Registrierungsstelle, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen eingetragene Kundenberaterinnen und -berater ein Tätigkeits- oder Berufsverbot im Sinne von Artikel 29 Absatz 2 Buchstabe b aussprechen;"
+            },
+            {
+              "marke": "b",
+              "text": "davon Kenntnis erhalten, dass gegen eingetragene Kundenberaterinnen und ‑berater eine strafrechtliche Verurteilung nach Artikel 29 Absatz 2 Buchstabe a vorliegt."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Erhält die Registrierungsstelle davon Kenntnis, dass eine Kundenberaterin oder ein Kundenberater eine Registrierungsvoraussetzung nicht mehr erfüllt, so löscht sie diese oder diesen aus dem Register."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Daten des Beraterregisters sind öffentlich und werden im Abrufverfahren zugänglich gemacht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e8889935ca982909622791c202bb34a383f3073643805c1071e68d47dd9a403a"
+    },
+    {
+      "id": "bund/FIDLEG/art_33",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Registrierungsstelle erhebt kostendeckende Gebühren für ihre Verfügungen und Dienstleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3fdbccdb5600e5a1c31fd16fb63e656f70b58d45a98fc8974e7a081f439ed07e"
+    },
+    {
+      "id": "bund/FIDLEG/art_34",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Verfahren über den Registereintrag richtet sich nach dem Verwaltungsverfahrensgesetz vom 20. Dezember 1968."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "848af01fb5caf90457fac26201d11191c8366549bb9315e54f860ac2e010533a"
+    },
+    {
+      "id": "bund/FIDLEG/art_35",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer in der Schweiz ein öffentliches Angebot zum Erwerb von Effekten unterbreitet oder wer um Zulassung von Effekten zum Handel auf einem Handelsplatz nach Artikel 26 Buchstabe a FinfraG ersucht, hat vorgängig einen Prospekt zu veröffentlichen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Für die Zulassung von DLT-Effekten nach Artikel 2 Buchstabe b bis FinfraG zum Handel an einem DLT-Handelssystem nach Artikel 73 a FinfraG gelten die Artikel 35–57 und 64–69 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Emittent der Effekten nicht am öffentlichen Angebot beteiligt, so treffen ihn keine Mitwirkungspflichten bei der Erstellung des Prospekts."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "475676247a57381b7e3134084e95aabce1ac4bcb3f8574c670c653fb72e04b49"
+    },
+    {
+      "id": "bund/FIDLEG/art_36",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kein Prospekt muss veröffentlicht werden, wenn das öffentliche Angebot:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich nur an Anlegerinnen und Anleger richtet, die als professionelle Kunden gelten;"
+            },
+            {
+              "marke": "b",
+              "text": "sich an weniger als 500 Anlegerinnen und Anleger richtet;"
+            },
+            {
+              "marke": "c",
+              "text": "sich an Anlegerinnen und Anleger richtet, die Effekten im Wert von mindestens 100 000 Franken erwerben;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Mindeststückelung von 100 000 Franken aufweist;"
+            },
+            {
+              "marke": "e",
+              "text": "über einen Zeitraum von 12 Monaten berechnet einen Gesamtwert von 8 Millionen Franken nicht übersteigt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes öffentliche Angebot zur Weiterveräusserung von Effekten, die zuvor Gegenstand eines Angebots nach Absatz 1 waren, gilt als gesondertes Angebot."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anbieter kann ohne gegenteilige Anhaltspunkte für die Zwecke dieser Bestimmung davon ausgehen, dass professionelle und institutionelle Kundinnen und Kunden keine Erklärung abgegeben haben, wonach sie als Privatkundinnen oder ‑kunden gelten wollen."
+        },
+        {
+          "absatz": "4",
+          "text": "Ein Finanzdienstleister muss für später öffentlich angebotene Effekten keinen Prospekt veröffentlichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "solange ein gültiger Prospekt vorliegt; und"
+            },
+            {
+              "marke": "b",
+              "text": "wenn der Emittent oder die Personen, die die Verantwortung für den Prospekt übernommen haben, in dessen Verwendung eingewilligt haben."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Der Bundesrat kann die Anzahl der Anlegerinnen und Anleger sowie die Beträge nach Absatz 1 Buchstaben b–e unter Berücksichtigung anerkannter internationaler Standards und der ausländischen Rechtsentwicklung anpassen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a2fba2b646ebf8b24420b2d0dc3f0427f8685dfc99484b602e4fddcda41e130d"
+    },
+    {
+      "id": "bund/FIDLEG/art_37",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kein Prospekt muss veröffentlicht werden, wenn folgende Arten von Effekten öffentlich angeboten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beteiligungspapiere, die ausserhalb einer Kapitalerhöhung im Tausch gegen bereits ausgegebene Beteiligungspapiere derselben Gattung ausgegeben werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Beteiligungspapiere, die bei der Umwandlung oder beim Tausch von Finanzinstrumenten desselben Emittenten oder derselben Unternehmensgruppe ausgegeben oder geliefert werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Beteiligungspapiere, die infolge der Ausübung eines mit Finanzinstrumenten desselben Emittenten oder derselben Unternehmensgruppe verbundenen Rechts ausgegeben oder geliefert werden;"
+            },
+            {
+              "marke": "d",
+              "text": "Effekten, die anlässlich einer Übernahme zum Tausch angeboten werden, sofern Angaben vorliegen, die inhaltlich einem Prospekt gleichwertig sind;"
+            },
+            {
+              "marke": "e",
+              "text": "Effekten, die anlässlich einer Fusion, Spaltung, Umwandlung oder Vermögensübertragung angeboten oder zugeteilt werden, sofern Angaben vorliegen, die inhaltlich einem Prospekt gleichwertig sind;"
+            },
+            {
+              "marke": "f",
+              "text": "Beteiligungspapiere, die als Dividenden Inhaberinnen und Inhabern von Beteiligungspapieren derselben Gattung ausgeschüttet werden, sofern Angaben über die Anzahl und die Art der Beteiligungspapiere sowie die Gründe und Einzelheiten zu dem Angebot vorliegen;"
+            },
+            {
+              "marke": "g",
+              "text": "Effekten, die Arbeitgeber oder verbundene Unternehmen derzeitigen oder ehemaligen Mitgliedern des Verwaltungsrats oder der Geschäftsleitung oder ihren Arbeitnehmerinnen und Arbeitnehmern anbieten oder zuteilen;"
+            },
+            {
+              "marke": "h",
+              "text": "Effekten, die von Bund oder Kantonen, von einer inter- oder supranationalen öffentlich-rechtlichen Körperschaft, von der Schweizerischen Nationalbank oder von ausländischen Zentralbanken ausgegeben oder uneingeschränkt und unwiderruflich garantiert werden;"
+            },
+            {
+              "marke": "i",
+              "text": "Effekten, die von Einrichtungen mit ideellem Zweck zur Mittelbeschaffung für nicht gewerbliche Ziele ausgegeben werden;"
+            },
+            {
+              "marke": "j",
+              "text": "Kassenobligationen;"
+            },
+            {
+              "marke": "k",
+              "text": "Effekten mit einer Laufzeit von weniger als einem Jahr (Geldmarktinstrumente);"
+            },
+            {
+              "marke": "l",
+              "text": "Derivate, die nicht in Form einer Emission angeboten werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann unter Berücksichtigung anerkannter internationaler Standards und der ausländischen Rechtsentwicklung für weitere Arten von Effekten, die öffentlich angeboten werden, Ausnahmen von der Prospektpflicht vorsehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c727c7aa9d08ca9bd212ab3adc15b10b76c593c23a0908b5edf54732fa6b4bfd"
+    },
+    {
+      "id": "bund/FIDLEG/art_38",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kein Prospekt muss veröffentlicht werden, wenn folgende Arten von Effekten zum Handel zugelassen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beteiligungspapiere, die über einen Zeitraum von zwölf Monaten insgesamt weniger als 20 Prozent der Zahl der Beteiligungspapiere derselben Gattung ausmachen, die bereits an demselben Handelsplatz zum Handel zugelassen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Beteiligungspapiere, die bei der Umwandlung oder beim Tausch von Finanzinstrumenten oder infolge der Ausübung von mit Finanzinstrumenten verbundenen Rechten ausgegeben werden, sofern es sich dabei um Beteiligungspapiere derselben Gattung handelt wie die Beteiligungspapiere, die bereits zum Handel zugelassen sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Effekten, die an einem ausländischen Handelsplatz zum Handel zugelassen sind, dessen Regulierung, Aufsicht und Transparenz durch den inländischen Handelsplatz als angemessen anerkannt worden ist, oder bei denen die Transparenz für die Anlegerinnen und Anleger auf andere Weise sichergestellt ist;"
+            },
+            {
+              "marke": "d",
+              "text": "Effekten, für die die Zulassung für ein Handelssegment beantragt wird, das ausschliesslich professionellen Kunden offensteht, die für ihre eigene Rechnung oder für Rechnung von ausschliesslich professionellen Kunden handeln."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausnahmen von der Pflicht zur Veröffentlichung eines Prospekts nach den Artikeln 36 und 37 gelten sinngemäss auch bei der Zulassung zum Handel."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "adf27388f46b91e767b6eb33349388dbf4f6619ef52b50c951069b11b8e49a6c"
+    },
+    {
+      "id": "bund/FIDLEG/art_39",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Besteht keine Prospektpflicht, so behan deln die Anbieter oder Emittenten die Anlegerinnen und Anleger gleich, wenn sie diesen wesentliche Informationen zu einem öffentlichen Angebot zukommen lassen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "06d3b866bd5b2495f4a45d36464055517f57b96c666fef7dd589f7b6289ab626"
+    },
+    {
+      "id": "bund/FIDLEG/art_40",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Prospekt enthält die für einen Entscheid der Anlegerin oder des Anlegers wesentlichen Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zum Emittenten und zum Garantie- und Sicherheitengeber, namentlich: 1. Verwaltungsrat, Geschäftsleitung, Revisionsstelle und weitere Organe,"
+            },
+            {
+              "marke": "2",
+              "text": "die letzte Halbjahres- oder Jahresrechnung oder, wenn noch keine solche vorliegt, Angaben zu Vermögenswerten und Verbindlichkeiten,"
+            },
+            {
+              "marke": "3",
+              "text": "die Geschäftslage,"
+            },
+            {
+              "marke": "4",
+              "text": "wesentliche Perspektiven, Risiken und Streitigkeiten;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Angaben sind in einer Amtssprache des Bundes oder in Englisch zu machen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Prospekt enthält zudem in verständlicher Form eine Zusammenfassung der wesentlichen Angaben."
+        },
+        {
+          "absatz": "4",
+          "text": "Können der endgültige Emissionskurs und das Emissionsvolumen im Prospekt nicht genannt werden, so muss dieser den höchstmöglichen Emissionskurs und die Kriterien und Bedingungen nennen, anhand deren das Emissionsvolumen ermittelt werden kann. Die Angaben zum endgültigen Emissionskurs und zum Emissionsvolumen werden bei der Prüfstelle hinterlegt und veröffentlicht."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei Angeboten, bei denen eine Ausnahme nach Artikel 51 Absatz 2 beansprucht wird, ist im Prospekt darauf hinzuweisen, dass dieser noch nicht geprüft ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "03a1d47470f7eed7667bae4fed9dcc5246ee6883b3c516d4e9ba7966b3d9ae40"
+    },
+    {
+      "id": "bund/FIDLEG/art_41",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfstelle kann vorsehen, dass Angaben nicht in den Prospekt aufgenommen werden müssen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bekanntmachung dem Emittenten ernsthaft schaden würde und die Anlegerinnen und Anleger durch die Nichtaufnahme nicht in Bezug auf Tatsachen und Umstände, die für die Beurteilung der Qualität des Emittenten und der Eigenschaften der Effekten wesentlich sind, irregeführt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die entsprechenden Informationen nur von untergeordneter Bedeutung und nicht dazu geeignet sind, die Beurteilung der Geschäftslage und der wesentlichen Perspektiven, Risiken und Streitigkeiten des Emittenten oder des Garantie- und Sicherheitengebers zu beeinflussen; oder"
+            },
+            {
+              "marke": "c",
+              "text": "es sich um Angaben zu Effekten handelt, die an einem Handelsplatz gehandelt werden, und die periodische Berichterstattung des Emittenten während der letzten drei Jahre den massgeblichen Vorschriften zur Rechnungslegung entsprach."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann in beschränktem Umfang weitere Ausnahmen vorsehen, soweit die Interessen der Anlegerinnen und Anleger gewahrt bleiben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "26606ed142bfde18a6b27832385fd3900d80101503d491390babdb2cac33660f"
+    },
+    {
+      "id": "bund/FIDLEG/art_42",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Prospekt darf in allen Teilen ausser in der Zusammenfassung Verweisungen auf zuvor oder gleichzeitig veröffentlichte Dokumente enthalten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fb1a3d9099c5f162f19939132d49c1d1ac0275e07f648797a461121f8de0c25f"
+    },
+    {
+      "id": "bund/FIDLEG/art_43",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zusammenfassung soll einen Vergleich unter ähnlichen Effekten erleichtern."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Zusammenfassung ist deutlich hervorzuheben, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie als Einleitung zum Prospekt zu verstehen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "sich der Anlageentscheid nicht auf die Zusammenfassung, sondern auf die Angaben des gesamten Prospekts stützen muss;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Haftung für die Zusammenfassung nur für den Fall besteht, dass diese irreführend, unrichtig oder widersprüchlich ist, wenn sie zusammen mit den anderen Teilen des Prospektes gelesen wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e940f5aa26c59a06a0168fc91f28a4e5905818be079e612f8f16598d15957d3a"
+    },
+    {
+      "id": "bund/FIDLEG/art_44",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Prospekt kann aus einem einzigen Dokument oder aus mehreren Einzeldokumenten bestehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht er aus mehreren Einzeldokumenten, so kann er aufgeteilt werden auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Registrierungsformular mit den Angaben zum Emittenten;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Effektenbeschreibung mit den Angaben zu den Effekten, die öffentlich angeboten werden oder die zum Handel auf einem Handelsplatz zugelassen werden sollen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zusammenfassung."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3aa69edfb03126a2d273263b60465d7f3e1055789d5470e596ff3b03425ddcea"
+    },
+    {
+      "id": "bund/FIDLEG/art_45",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Prospekt kann namentlich bei Forderungspapieren, die in einem Angebotsprogramm oder dauernd oder wiederholt von Banken nach BankG oder Wertpapierhäusern nach dem FINIG ausgegeben werden, in Form eines Basisprospekts erstellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Basisprospekt enthält alle zum Zeitpunkt seiner Veröffentlichung vorliegenden Angaben zum Emittenten, zum Garantie- und Sicherheitengeber und zu den Effekten, nicht aber die endgültigen Bedingungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die endgültigen Bedingungen sind im Zeitpunkt des öffentlichen Angebots zumindest in einer Fassung mit indikativen Angaben zu machen. Nach Ablauf der Zeichnungsfrist sind sie in endgültiger Fassung zu veröffentlichen und bei der Prüfstelle zu hinterlegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Genehmigung der endgültigen Bedingungen ist nicht erforderlich."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6bca22699bb6f006b3791f5f3c4d3733f34e7850cb5bcaab09b726f6e40547f2"
+    },
+    {
+      "id": "bund/FIDLEG/art_46",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt unter Berücksichtigung der spezifischen Eigenschaften von Emittenten und Effekten ergänzende Bestimmungen, namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zum Format des Prospekts und des Basisprospekts, der Zusammenfassung, der endgültigen Bedingungen und der Nachträge;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Inhalt der Zusammenfassung;"
+            },
+            {
+              "marke": "c",
+              "text": "zu den Mindestangaben des Prospekts;"
+            },
+            {
+              "marke": "d",
+              "text": "zu den Dokumenten, auf die verwiesen werden darf."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8860f468e17ed99e8dd4310a5824c5e6b235b09bf10c8652a266e70e689943f3"
+    },
+    {
+      "id": "bund/FIDLEG/art_47",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann Erleichterungen von der Prospektpflicht sowie von der Nachtragspflicht für Emittenten festlegen, die zwei der nachstehenden Grössen im letzten Geschäftsjahr nicht überschreiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bilanzsumme von 20 Millionen Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "Umsatzerlös von 40 Millionen Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "250 Vollzeitstellen im Jahresdurchschnitt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann zudem Erleichterungen festlegen insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Emittenten, die sich in geringem Masse auf einem Handelsplatz kapitalisieren;"
+            },
+            {
+              "marke": "b",
+              "text": "Emissionen von Bezugsrechten;"
+            },
+            {
+              "marke": "c",
+              "text": "Emittenten, die regelmässig Effekten öffentlich anbieten oder deren Effekten an einem ausländischen Handelsplatz zum Handel zugelassen sind, dessen Regulierung, Aufsicht und Transparenz durch einen inländischen Handelsplatz als angemessen anerkannt worden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Er gestaltet die Erleichterungen einheitlich aus und richtet sich insbesondere nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Art der begebenen Effekten;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Emissionsvolumen;"
+            },
+            {
+              "marke": "c",
+              "text": "dem Marktumfeld;"
+            },
+            {
+              "marke": "d",
+              "text": "dem konkreten Bedarf nach transparenter Information der Anlegerinnen und Anleger;"
+            },
+            {
+              "marke": "e",
+              "text": "der Geschäftstätigkeit und der Grösse der Emittenten."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9c8395d79236c7bc1fe3c80ad3b45cde503fb5996f5ed9c5797c28391c5a4dbc"
+    },
+    {
+      "id": "bund/FIDLEG/art_48",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für offene kollektive Kapitalanlagen nach dem 2. Titel des KAG erstellen die Fondsleitung (Art. 32 FINIG) und die Investmentgesellschaft mit variablem Kapital (SICAV) (Art. 13 Abs. 2 Bst. b KAG) einen Prospekt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Prospekt enthält das Fondsreglement, sofern den interessierten Personen nicht mitgeteilt wird, wo dieses vor Vertragsabschluss oder vor der Zeichnung bezogen werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt fest, welche Angaben neben dem Fondsreglement im Prospekt aufgeführt werden müssen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Prospekt und seine Änderungen sind unverzüglich der FINMA einzureichen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b453f0ae4dc32b3deea72632c928f287d06a4e71ecea95d1cf19757ac0a6c11b"
+    },
+    {
+      "id": "bund/FIDLEG/art_49",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommanditgesellschaft für kollektive Kapitalanlagen nach Artikel 98 KAG erstellt einen Prospekt."
+        },
+        {
+          "absatz": "2",
+          "text": "Dieser enthält namentlich die im Gesellschaftsvertrag nach Artikel 102 Absatz 1 Buchstabe h KAG enthaltenen Angaben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Prospekt der Investmentgesellschaft mit festem Kapital nach Artikel 110 KAG gilt Artikel 48 sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "59d1b72e131118e2fc78f17b15440f6c026a8651726c3d80e811907d8f9f9650"
+    },
+    {
+      "id": "bund/FIDLEG/art_50",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für einen Limited Qualified Investor Fund (L-QIF) ist kein Prospekt zu erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann kollektive Kapitalanlagen nach dem KAG ganz oder teilweise von den Bestimmungen dieses Kapitels befreien, sofern sie ausschliesslich qualifizierten Anlegerinnen und Anlegern nach Artikel 10 Absätze 3 und 3 ter KAG offenstehen und der Schutzzweck dieses Gesetzes dadurch nicht beeinträchtigt wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2ce728f6c1396fcddd123915f221d72ba76c8fd405a2081da2b0ee3241fa9746"
+    },
+    {
+      "id": "bund/FIDLEG/art_51",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Prospekt ist vor seiner Veröffentlichung der Prüfstelle zu unterbreiten. Diese prüft ihn auf Vollständigkeit, Kohärenz und Verständlichkeit hin."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann Effekten bezeichnen, deren Prospekt erst nach der Veröffentlichung geprüft werden muss, wenn eine Bank nach dem BankG oder ein Wertpapierhaus nach dem FINIG bestätigt, dass zum Zeitpunkt der Veröffentlichung die wichtigsten Informationen über den Emittenten und die Effekte vorliegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Nicht geprüft werden müssen Prospekte kollektiver Kapitalanlagen. Vorbehalten bleibt die Genehmigungspflicht für Dokumentationen ausländischer kollektiver Kapitalanlagen nach den Artikeln 15 Absatz 1 Buchstabe e und 120 KAG."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e16518ed76ca7e601907bd63889f0e97c033f5278aee98484e68b2fb80d8d6ab"
+    },
+    {
+      "id": "bund/FIDLEG/art_52",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfstelle bedarf der Zulassung durch die FINMA. Die FINMA kann mehrere Prüfstellen zulassen, soweit dies sachlich gerechtfertigt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfstelle muss so organisiert sein, dass die unabhängige Erfüllung ihrer Aufgaben sichergestellt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie und die mit der Geschäftsführung der Prüfstelle betrauten Personen müssen Gewähr für eine einwandfreie Geschäftstätigkeit bieten. Die mit der Geschäftsführung betrauten Personen müssen zudem einen guten Ruf geniessen und die für die Funktion erforderlichen fachlichen Qualifikationen aufweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Erfüllt die Prüfstelle die Anforderungen nach diesem Gesetz nicht mehr, so verfügt die FINMA die notwendigen Massnahmen zur Behebung der Mängel. Behebt die Prüfstelle Mängel, die die Aufgabenerfüllung gefährden, nicht innert angemessener Frist, so entzieht ihr die FINMA die Zulassung."
+        },
+        {
+          "absatz": "5",
+          "text": "Steht keine private Stelle als Prüfstelle zur Verfügung, so bezeichnet der Bundesrat eine Stelle für diese Aufgabe."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0e46666454a7d5430921d5d8ee28b153aff7e3ba668a589b8bcaa4dbfd016bf2"
+    },
+    {
+      "id": "bund/FIDLEG/art_53",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren der Prüfstelle richtet sich nach dem Verwaltungsverfahrensgesetz vom 20. Dezember 1968."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfstelle prüft die Prospekte unverzüglich bei deren Eingang."
+        },
+        {
+          "absatz": "3",
+          "text": "Stellt sie fest, dass ein Prospekt den gesetzlichen Anforderungen nicht entspricht, so teilt sie dies der den Prospekt vorlegenden Person innerhalb von 10 Kalendertagen ab dessen Eingang mit Begründung mit und fordert die Person zur Nachbesserung auf."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie entscheidet innert 10 Kalendertagen ab Eingang des gegebenenfalls nachgebesserten Prospekts über dessen Genehmigung."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei neuen Emittenten beträgt die Frist 20 Kalendertage."
+        },
+        {
+          "absatz": "6",
+          "text": "Ergeht innert der in den Absätzen 4 und 5 genannten Fristen kein Entscheid der Prüfstelle, so gilt dies nicht als Genehmigung des Prospekts."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1166af6003d8d46e67f1823c7744cbc43ca8cddbfb871b678c4567f043537607"
+    },
+    {
+      "id": "bund/FIDLEG/art_54",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfstelle kann einen nach ausländischen Rechtsvorschriften erstellten Prospekt genehmigen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "er nach internationalen Standards erstellt wurde, die durch internationale Organisationen von Wertpapieraufsichtsbehörden festgelegt werden; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Informationspflichten, auch in Bezug auf Finanzinformationen, mit den Anforderungen dieses Gesetzes gleichwertig sind; ein geprüfter Einzelabschluss ist nicht erforderlich."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann für Prospekte, die nach bestimmten Rechtsordnungen genehmigt wurden, vorsehen, dass sie auch in der Schweiz als genehmigt gelten."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie veröffentlicht eine Liste der Länder, deren Prospektgenehmigung in der Schweiz anerkannt ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5a104bfd22c3b1999290de42b6db884317133f94be115f7fa25d25841d727744"
+    },
+    {
+      "id": "bund/FIDLEG/art_55",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Prospekte sind nach ihrer Genehmigung während zwölf Monaten für öffentliche Angebote oder Zulassungen zum Handel auf einem Handelsplatz von Effekten derselben Gattung und desselben Emittenten gültig."
+        },
+        {
+          "absatz": "2",
+          "text": "Prospekte für Forderungspapiere, die von einer Bank nach dem BankG oder einem Wertpapierhaus nach dem FINIG in einem Angebotsprogramm ausgegeben werden, sind gültig, bis keines der betroffenen Forderungspapiere mehr dauernd oder wiederholt ausgegeben wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "39683e509930a4e64ba8f2fb7d7de7a4f2e87890223d352140dbfe625e495cf0"
+    },
+    {
+      "id": "bund/FIDLEG/art_56",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Nachtrag zum Prospekt ist zu erstellen, wenn zwischen der Genehmigung des Prospekts und dem endgültigen Schluss eines öffentlichen Angebots oder einer Eröffnung des Handels auf einem Handelsplatz neue Tatsachen eintreten oder festgestellt werden und diese die Bewertung der Effekten wesentlich beeinflussen könnten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nachtrag ist umgehend nach Eintritt oder Feststellung der neuen Tatsache der Prüfstelle zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Prüfstelle entscheidet innerhalb von höchstens sieben Kalendertagen über die Genehmigung des Nachtrags. Danach ist er unverzüglich zu veröffentlichen. Zusammenfassungen sind durch die im Nachtrag enthaltenen Informationen zu ergänzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Prüfstelle führt eine Liste mit Tatsachen, die von ihrer Natur her nicht der Genehmigung unterliegen. Nachträge zu solchen Tatsachen sind gleichzeitig mit der Meldung an die Prüfstelle zu veröffentlichen."
+        },
+        {
+          "absatz": "5",
+          "text": "Tritt eine neue Tatsache nach Absatz 1 während eines öffentlichen Angebotes ein, so endet die Angebotsfrist frühestens zwei Tage nach Veröffentlichung des Nachtrags. Anlegerinnen und Anleger können Zeichnungen oder Erwerbszusagen bis zum Ende der Zeichnungsfrist oder Angebotsfrist zurückziehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2f987638a8697a51bbdf4cf7c04112e6a57859d11ffd599db5910fb3a2a85609"
+    },
+    {
+      "id": "bund/FIDLEG/art_57",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfstelle erhebt kostendeckende Gebühren für ihre Verfügungen und Dienstleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "47b1ccf9deba6e527062535def057ccb78c85aab794f40c7c39b3a1e0fda20f9"
+    },
+    {
+      "id": "bund/FIDLEG/art_58",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Finanzinstrument Privatkundinnen und -kunden angeboten, so hat der Ersteller vorgängig ein Basisinformationsblatt zu erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Finanzinstrumente, die für Privatkundinnen oder -kunden ausschliesslich im Rahmen eines Vermögensverwaltungsvertrags erworben werden dürfen, ist kein Basisinformationsblatt zu erstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann qualifizierte Dritte bezeichnen, denen die Erstellung des Basisinformationsblatts übertragen werden kann. Der Ersteller bleibt für die Vollständigkeit und Richtigkeit der Angaben auf dem Basisinformationsblatt sowie für die Einhaltung der Pflichten nach dem 2.–4. Kapitel (Art. 58–68)verantwortlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden Finanzinstrumente Privatkunden auf der Basis von indikativen Angaben angeboten, so ist zumindest eine vorläufige Fassung des Basisinformationsblatts mit den entsprechenden indikativen Angaben zu erstellen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "03601d4f5394a5583ebba2933c951cb649faedbab5478f4f0151c63c8a457762"
+    },
+    {
+      "id": "bund/FIDLEG/art_59",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kein Basisinformationsblatt muss erstellen, wer Effekten in Form von Aktien einschliesslich Aktien gleichzustellender Effekten, die Beteiligungsrechte verleihen, wie Partizipations- oder Genussscheine, sowie Forderungspapiere ohne derivativen Charakter anbietet."
+        },
+        {
+          "absatz": "2",
+          "text": "Dokumente nach ausländischem Recht, die dem Basisinformationsblatt gleichwertig sind, können anstelle eines Basisinformationsblatts verwendet werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ab42a91a90cb486569beedb6e49d9c5ef42385e0f32909390074e31fdbbaf0d0"
+    },
+    {
+      "id": "bund/FIDLEG/art_60",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Basisinformationsblatt enthält die Angaben, die wesentlich sind, damit die Anlegerinnen und Anleger eine fundierte Anlageentscheidung treffen und unterschiedliche Finanzinstrumente miteinander vergleichen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Angaben umfassen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Namen des Finanzinstruments und die Identität des Erstellers;"
+            },
+            {
+              "marke": "b",
+              "text": "die Art und die Merkmale des Finanzinstruments;"
+            },
+            {
+              "marke": "c",
+              "text": "das Risiko- und Renditeprofil des Finanzinstruments unter Angabe des höchsten Verlusts, der den Anlegerinnen und Anleger auf dem angelegten Kapital droht;"
+            },
+            {
+              "marke": "d",
+              "text": "die Kosten des Finanzinstruments;"
+            },
+            {
+              "marke": "e",
+              "text": "die Mindesthaltedauer und die Handelbarkeit des Finanzinstruments;"
+            },
+            {
+              "marke": "f",
+              "text": "die Information über die mit dem Finanzinstrument verbundenen Bewilligungen und Genehmigungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4d13d2b170a0272751f0018ecd764e52d325eaba0ceaead87bf1df607def53b1"
+    },
+    {
+      "id": "bund/FIDLEG/art_61",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Basisinformationsblatt muss leicht verständlich sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist ein eigenständiges Dokument, das sich von Werbematerialien deutlich unterscheiden muss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "df9c852249d4e778c7964cca4324ef9e01e148e0776cff53c99cbcd7a7c9e4db"
+    },
+    {
+      "id": "bund/FIDLEG/art_62",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ersteller überprüft regelmässig die im Basisinformationsblatt enthaltenen Angaben und überarbeitet sie, soweit sich wesentliche Änderungen ergeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Überprüfung und die Überarbeitung der im Basisinformationsblatt enthaltenen Angaben können qualifizierten Dritten übertragen werden. Der Ersteller bleibt für die Vollständigkeit und Richtigkeit der Angaben auf dem Basisinformationsblatt sowie für die Einhaltung der Pflichten nach dem 2.–4. Kapitel (Art. 58–68) verantwortlich."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "19b6f435f70f661405ab77cf4bb38b91989393c907be3b24f66bccb590f4e3b0"
+    },
+    {
+      "id": "bund/FIDLEG/art_63",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt ergänzende Bestimmungen zum Basisinformationsblatt. Er regelt namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dessen Inhalt;"
+            },
+            {
+              "marke": "b",
+              "text": "dessen Umfang, Sprache und Gestaltung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Modalitäten der Bereitstellung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Gleichwertigkeit ausländischer Dokumente mit dem Basisinformationsblatt nach Artikel 59 Absatz 2."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fa7c4327383171e5dc6bf4ad1c13faf4d5d4fd214734cfa75ac4ed7b79bcd795"
+    },
+    {
+      "id": "bund/FIDLEG/art_64",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anbieter von Effekten oder die deren Zulassung zum Handel beantragende Person muss den Prospekt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach seiner Genehmigung bei der Prüfstelle hinterlegen;"
+            },
+            {
+              "marke": "b",
+              "text": "spätestens mit Beginn des öffentlichen Angebots oder der Zulassung der betreffenden Effekte zum Handel veröffentlichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Soll eine Gattung von Beteiligungspapieren eines Emittenten zum ersten Mal zum Handel auf einem Handelsplatz zugelassen werden, so muss der Prospekt mindestens sechs Arbeitstage vor dem Ende des Angebots zur Verfügung gestellt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Prospekt kann veröffentlicht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in einer oder mehreren Zeitungen mit einer der Emission entsprechenden Verbreitung oder im Schweizerischen Handelsamtsblatt;"
+            },
+            {
+              "marke": "b",
+              "text": "durch kostenlose Abgabe in gedruckter Form am Sitz des Emittenten oder bei der mit der Emission befassten Stelle;"
+            },
+            {
+              "marke": "c",
+              "text": "in elektronischer Form auf der Website des Emittenten, des Garantie- und Sicherheitengebers, des Handelsplatzes oder der mit der Emission befassten Stelle; oder"
+            },
+            {
+              "marke": "d",
+              "text": "in elektronischer Form auf der Website der Prüfstelle."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Wird der Prospekt in elektronischer Form veröffentlicht, so müssen auf Anfrage kostenlose Papierversionen zur Verfügung gestellt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Prüfstelle setzt die genehmigten Prospekte auf eine Liste und macht diese während zwölf Monaten zugänglich."
+        },
+        {
+          "absatz": "6",
+          "text": "Wird der Prospekt in mehreren Einzeldokumenten erstellt oder enthält er eine Verweisung, können die den Prospekt bildenden Dokumente und Angaben getrennt veröffentlicht werden. Die Einzeldokumente sind den Anlegerinnen und Anlegern kostenlos zur Verfügung zu stellen. In jedem Einzeldokument ist anzugeben, wo die anderen Einzeldokumente erhältlich sind, die zusammen mit diesem den vollständigen Prospekt bilden."
+        },
+        {
+          "absatz": "7",
+          "text": "Wortlaut und Aufmachung des Prospekts und der Nachträge, die veröffentlicht oder dem Publikum zur Verfügung gestellt werden, müssen jederzeit der bei der Prüfstelle hinterlegten Fassung entsprechen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c2cf334ef6ec3ba9656242676d775fe0de814630e4ddca6460511d93270ae6ab"
+    },
+    {
+      "id": "bund/FIDLEG/art_65",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Prospekt für eine kollektive Kapitalanlage ist spätestens mit Beginn des öffentlichen Angebots zu veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Veröffentlichung gilt Artikel 64 Absätze 3, 4 und 6 sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "42002ab3b0ec60abf47b0da9c9568705a5dbee739d5bfed831780e853567f537"
+    },
+    {
+      "id": "bund/FIDLEG/art_66",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Finanzinstrument, für das ein Basisinformationsblatt zu erstellen ist, öffentlich angeboten, so ist das Basisinformationsblatt spätestens mit Beginn des öffentlichen Angebots zu veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 64 Absätze 3 und 4 gilt sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2c968315aa788675519e38f4446ddec3e2ba128e813893e8b52e4d82e16884c5"
+    },
+    {
+      "id": "bund/FIDLEG/art_67",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Emittent macht Änderungen der mit den Effekten verbundenen Rechte so rechtzeitig bekannt, dass für die Anlegerinnen und Anleger die Wahrnehmung ihrer Rechte gewährleistet ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Inhalt und Umfang der Veröffentlichung richten sich im Übrigen nach den Emissionsbedingungen. Artikel 64 Absätze 3 und 4 gilt sinngemäss."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben besondere gesetzliche Bestimmungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f1de8bda0e5f77cd2949aa8cecd0a7166c437d1e7aac6127f475d677520af4ba"
+    },
+    {
+      "id": "bund/FIDLEG/art_68",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werbung für Finanzinstrumente muss als solche klar erkennbar sein."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Werbung ist auf den Prospekt und das Basisinformationsblatt zum jeweiligen Finanzinstrument und auf die Bezugsstelle hinzuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Werbung und andere an die Anlegerinnen und Anleger gerichtete Informationen über Finanzinstrumente müssen mit den im Prospekt und im Basisinformationsblatt enthaltenen Angaben übereinstimmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dd13c79f48db6b9d823c5d4710cfd69fd7db4686f2cd8753a13ca1ee8448ad31"
+    },
+    {
+      "id": "bund/FIDLEG/art_69",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer in Prospekten, im Basisinformationsblatt oder in ähnlichen Mitteilungen unrichtige, irreführende oder den gesetzlichen Anforderungen nicht entsprechende Angaben macht, ohne dabei die erforderliche Sorgfalt anzuwenden, haftet dem Erwerber eines Finanzinstruments für den dadurch verursachten Schaden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Angaben in der Zusammenfassung wird nur gehaftet, wenn sich erweist, dass diese irreführend, unrichtig oder widersprüchlich sind, wenn sie zusammen mit den anderen Teilen des Prospektes gelesen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für falsche oder irreführende Angaben über wesentliche Perspektiven wird nur gehaftet, wenn die Angaben wider besseres Wissen oder ohne Hinweis auf die Ungewissheit zukünftiger Entwicklungen gemacht oder verbreitet wurden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "62bb3bd854011f62b7a2decbbf911cb61c9372b3969e6a61d30c839448aa7664"
+    },
+    {
+      "id": "bund/FIDLEG/art_70",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Strukturierte Produkte dürfen in der Schweiz oder von der Schweiz aus Privatkundinnen und -kunden ohne ein auf Dauer angelegtes Vermögensverwaltungs- oder Anlageberatungsverhältnis nur angeboten werden, wenn sie ausgegeben, garantiert oder gleichwertig gesichert werden von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einer Bank nach dem BankG;"
+            },
+            {
+              "marke": "b",
+              "text": "einer Versicherung nach dem VAG;"
+            },
+            {
+              "marke": "c",
+              "text": "einem Wertpapierhaus nach dem FINIG;"
+            },
+            {
+              "marke": "d",
+              "text": "einem ausländischen Institut, das einer gleichwertigen prudenziellen Aufsicht untersteht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausgabe von strukturierten Produkten an Privatkundinnen und -kunden durch Sonderzweckgesellschaften ist zulässig, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Produkte angeboten werden durch: 1. Finanzintermediäre nach dem BankG, dem FINIG und dem KAG,"
+            },
+            {
+              "marke": "2",
+              "text": "Versicherungsunternehmen nach dem VAG,"
+            },
+            {
+              "marke": "3",
+              "text": "ein ausländisches Institut, das einer gleichwertigen Aufsicht untersteht; und"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Anforderungen an die Sicherung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "009ce3968113751c6c3f44a8bbfde89b0207e7baafa328a9f47a7be52cef8d63"
+    },
+    {
+      "id": "bund/FIDLEG/art_71",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Interne Sondervermögen vertraglicher Art zur kollektiven Verwaltung von Vermögen bestehender Kundinnen und Kunden dürfen von Banken nach dem BankG und Wertpapierhäusern nach dem FINIG nur gebildet werden, wenn diese folgende Voraussetzungen erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie beteiligen Kundinnen und Kunden ausschliesslich aufgrund eines auf Dauer angelegten Vermögensverwaltungs- oder Anlageberatungsverhältnisses am internen Sondervermögen."
+            },
+            {
+              "marke": "b",
+              "text": "Sie geben dafür keine Anteilscheine aus."
+            },
+            {
+              "marke": "c",
+              "text": "Sie bieten die Beteiligung nicht öffentlich an und sie betreiben dafür keine Werbung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für interne Sondervermögen ist ein Basisinformationsblatt nach den Artikeln 58–63 zu erstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Errichtung und die Auflösung interner Sondervermögen sind der aufsichtsrechtlichen Prüfgesellschaft zu melden."
+        },
+        {
+          "absatz": "4",
+          "text": "Sachen und Rechte, die zum Sondervermögen gehören, werden im Konkurs der Bank oder des Wertpapierhauses zugunsten der Anlegerinnen und Anleger abgesondert."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d8569e25e27ae432337b7b58d5662387e7aaa4e4fccd2df8fc96d6a0ee0f6179"
+    },
+    {
+      "id": "bund/FIDLEG/art_72",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kundin und der Kunde haben jederzeit Anspruch auf Herausgabe einer Kopie ihres Dossiers sowie sämtlicher weiterer sie betreffenden Dokumente, die der Finanzdienstleister im Rahmen der Geschäftsbeziehung erstellt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Einverständnis der Kundin oder des Kunden kann die Herausgabe in elektronischer Form erfolgen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b45ee50e9483cbb1dffe7b4cf7dbb47f6e21fb5735fe91a59f4bbd7b3f2a5c6f"
+    },
+    {
+      "id": "bund/FIDLEG/art_73",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen Anspruch geltend machen will, stellt schriftlich oder in anderer durch Text nachweisbarer Form ein entsprechendes Gesuch."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Finanzdienstleister lässt der Kundin oder dem Kunden innert 30 Tagen nach Erhalt des Gesuchs kostenlos eine Kopie der betreffenden Dokumente zukommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kommt er dem Gesuch auf Herausgabe nicht nach, so kann die Kundin oder der Kunde das Gericht anrufen."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine allfällige Weigerung des Finanzdienstleisters zur Herausgabe kann in einem späteren Rechtsstreit vom zuständigen Gericht beim Entscheid über die Prozesskosten berücksichtigt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3d3e63782249fd0b209f9f681670070bfee444dbc5324d9ccb3cb19da71caf65"
+    },
+    {
+      "id": "bund/FIDLEG/art_74",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Streitigkeiten über Rechtsansprüche zwischen der Kundin oder dem Kunden und dem Finanzdienstleister sollen nach Möglichkeit im Rahmen eines Vermittlungsverfahrens durch eine Ombudsstelle erledigt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1eabda4f6aa19cc615fffcc43d707da6ceb26f626d0b42c99408c8318b684792"
+    },
+    {
+      "id": "bund/FIDLEG/art_75",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren vor der Ombudsstelle muss unbürokratisch, fair, rasch, unparteiisch und für die Kundin oder den Kunden kostengünstig oder kostenlos sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist vertraulich. Im Rahmen des Vermittlungsverfahrens gemachte Aussagen der Parteien sowie die zwischen einer Partei und der Ombudsstelle geführte Korrespondenz dürfen in einem anderen Verfahren nicht verwendet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Parteien haben keinen Anspruch auf Einsicht in die Korrespondenz der Ombudsstelle mit der jeweils anderen Partei."
+        },
+        {
+          "absatz": "4",
+          "text": "Ein Vermittlungsgesuch ist jederzeit zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es nach den im Verfahrensreglement der Ombudsstelle festgelegten Vorgaben oder mit dem von der Ombudsstelle zur Verfügung gestellten Formular eingereicht wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kundin oder der Kunde glaubhaft macht, dass sie oder er zuvor den Finanzdienstleister über ihren oder seinen Standpunkt informiert und versucht hat, sich mit ihm zu einigen;"
+            },
+            {
+              "marke": "c",
+              "text": "es nicht offensichtlich missbräuchlich ist oder in der gleichen Sache bereits ein Vermittlungsverfahren durchgeführt wurde; und"
+            },
+            {
+              "marke": "d",
+              "text": "weder eine Schlichtungsbehörde noch ein Gericht, ein Schiedsgericht oder eine Verwaltungsbehörde mit der Sache befasst ist oder war."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Das Verfahren wird in der Amtssprache des Bundes durchgeführt, die die Kundin oder der Kunde wählt. Vorbehalten bleiben abweichende Vereinbarungen zwischen den Parteien, soweit sie sich im Rahmen des Verfahrensreglements der Ombudsstelle halten."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Ombudsstelle würdigt die ihr unterbreiteten Fälle frei und unterliegt keinen Weisungen."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Ombudsstelle trifft die zweckmässigen Massnahmen zur Vermittlung, sofern diese nicht von vornherein aussichtslos erscheint."
+        },
+        {
+          "absatz": "8",
+          "text": "Kann keine Einigung erzielt werden oder erscheint eine solche aussichtslos, so kann die Ombudsstelle den Parteien gestützt auf die ihr vorliegenden Informationen eine eigene tatsächliche und rechtliche Einschätzung der Streitigkeit abgeben und in die Verfahrensabschlussmitteilung aufnehmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_75",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dd053ab4ca670cf0b6a7faa49b2d877eb9a2d8d2bbb30360b4632f5e1ed982e2"
+    },
+    {
+      "id": "bund/FIDLEG/art_76",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einreichung eines Vermittlungsgesuchs bei einer Ombudsstelle schliesst eine Zivilklage nicht aus und verhindert eine solche nicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Durchführung eines Verfahrens vor einer Ombudsstelle kann die klagende Partei einseitig auf die Durchführung des Schlichtungsverfahrens nach der Zivilprozessordnung verzichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Ombudsstelle beendet das Verfahren, sobald eine Schlichtungsbehörde, ein Gericht, ein Schiedsgericht oder eine Verwaltungsbehörde mit der Sache befasst ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_76",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fae7b8fcbbbe96bd930e251411961c6a64cd7ba5464b6944a1ac06c8a50e533e"
+    },
+    {
+      "id": "bund/FIDLEG/art_77",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finanzdienstleister, die nicht ausschliesslich gegenüber institutionellen oder professionellen Kunden nach Artikel 4 Absätze 3 und 4 Finanzdienstleistungen erbringen, müssen sich spätestens mit Aufnahme ihrer Tätigkeit einer Ombudsstelle anschliessen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0e846ef19c16837ace3b96dff126e1016cac7c349a6fd17e89dc6168a5468941"
+    },
+    {
+      "id": "bund/FIDLEG/art_78",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzdienstleister, die von einem Vermittlungsgesuch um Schlichtung bei einer Ombudsstelle betroffen sind, müssen am Verfahren teilnehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben Vorladungen, Aufforderungen zur Stellungnahme sowie Auskunftsanfragen der Ombudsstellen fristgerecht nachzukommen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "35a1e3e186a9ac93db8ca4348b7cd61a4e62d7e9fdeeac6c19c97ca829ff1b6d"
+    },
+    {
+      "id": "bund/FIDLEG/art_79",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Finanzdienstleister informieren ihre Kundinnen und Kunden über die Möglichkeit eines Vermittlungsverfahrens durch eine Ombudsstelle:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Eingehung einer Geschäftsbeziehung im Rahmen der Informationspflicht nach Artikel 8 Absatz 1 Buchstabe c;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Zurückweisung eines von der Kundin oder vom Kunden geltend gemachten Rechtsanspruchs; und"
+            },
+            {
+              "marke": "c",
+              "text": "jederzeit auf Anfrage."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Information erfolgt in geeigneter Form und beinhaltet Name und Adresse der Ombudsstelle, der sich der Finanzdienstleister angeschlossen hat."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "188e1c5b28e26e1ff972700c8a3a2e7af7e6f6785fe616e451106a4d6582eb4c"
+    },
+    {
+      "id": "bund/FIDLEG/art_80",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finanzdienstleister leisten finanzielle Beiträge an die Ombudsstelle, der sie sich angeschlossen haben. Die Beiträge bemessen sich verursachergerecht nach der Beitrags- und Kostenordnung der Ombudsstelle."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d3f58fd89472563d01b1dffbccb8c874cf6c4f8f050834502cfa1f26e2afd06f"
+    },
+    {
+      "id": "bund/FIDLEG/art_81",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Ombudsstelle ist verpflichtet, einen Finanzdienstleister aufzunehmen, wenn er ihre Anschlussvoraussetzungen erfüllt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6cfe861758163fd04d245a1a25225e141efdcdc447434456b9bcc17534698606"
+    },
+    {
+      "id": "bund/FIDLEG/art_82",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finanzdienstleister, die den Pflichten nach den Artikeln 78–80 wiederholt nicht nachkommen, werden von der Ombudsstelle ausgeschlossen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f621c475a00822f083de047c78a666341e4336516657ccbbf00ffd1d1cbc84ee"
+    },
+    {
+      "id": "bund/FIDLEG/art_83",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Ombudsstelle informiert die zuständigen Aufsichtsbehörden sowie die Registrierungsstelle über die ihr angeschlossenen Finanzdienstleister und über diejenigen, denen sie den Anschluss verweigert oder die sie ausgeschlossen hat."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "cbb8f284fa1a18b180723fac9d472fd7c5d265b24fd799dcd47a20ed5c798146"
+    },
+    {
+      "id": "bund/FIDLEG/art_84",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ombudsstellen bedürfen der Anerkennung des Eidgenössischen Finanzdepartements (EFD)."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Ombudsstellen werden Organisationen anerkannt, die die folgenden Voraussetzungen erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie und die von ihr mit der Vermittlung beauftragten Personen üben ihre Aufgabe unparteiisch, transparent, effizient sowie organisatorisch und finanziell unabhängig aus und nehmen keine Weisungen entgegen."
+            },
+            {
+              "marke": "b",
+              "text": "Sie stellen sicher, dass die von ihr mit der Vermittlung beauftragten Personen über die erforderlichen Fachkenntnisse verfügen."
+            },
+            {
+              "marke": "c",
+              "text": "Sie verfügen über ein Organisationsreglement, das die Funktionsfähigkeit der Ombudsstelle sicherstellt und die Anschlussvoraussetzungen regelt."
+            },
+            {
+              "marke": "d",
+              "text": "Sie verfügen über ein Verfahrensreglement, mit dem das Verfahren nach Artikel 75 konkretisiert wird."
+            },
+            {
+              "marke": "e",
+              "text": "Sie verfügen über eine Beitrags- und Kostenordnung nach Artikel 80."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das EFD veröffentlicht eine Liste der Ombudsstellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Besteht für einzelne Finanzdienstleister keine Möglichkeit, sich einer Ombudsstelle anzuschliessen, so kann das EFD eine Stelle zur Aufnahme dieser Finanzdienstleister verpflichten. Besteht keine geeignete Ombudsstelle für mehrere Finanzdienstleister, so kann der Bundesrat eine solche Stelle errichten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4220f45158bad4a5ffd368f12c7fc1b7740badb2eb2ac8a97004408435484a03"
+    },
+    {
+      "id": "bund/FIDLEG/art_85",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Änderungen, die die Erfüllung der Anerkennungsvoraussetzungen nach Artikel 84 betreffen, sind dem EFD zur Genehmigung vorzulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfüllt eine Ombudsstelle die Anerkennungsvoraussetzungen nicht mehr, so setzt ihr das EFD eine angemessene Frist zur Nachbesserung."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Nachbesserungen nicht innerhalb dieser Frist vorgenommen, so entzieht es ihr die Anerkennung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f76ed4e518fb191c834951893b12ce4656563f506c1d691e9da67bcdcfde01f3"
+    },
+    {
+      "id": "bund/FIDLEG/art_86",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Ombudsstelle veröffentlicht jährlich einen Tätigkeitsbericht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fe32e87cab8175bbd2247dcb7d8b5fc9b61679143bbb06eedd4b756c54cfe3de"
+    },
+    {
+      "id": "bund/FIDLEG/art_87",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Aufsichtsbehörde überwacht, dass die von ihr beaufsichtigten Finanzdienstleister die Anforderungen an das Erbringen von Finanzdienstleistungen und das Anbieten von Finanzinstrumenten einhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann im Rahmen der ihr zur Verfügung stehenden Aufsichtsinstrumente Anordnungen treffen, um Verstösse gegen diese Anforderungen zu verhindern oder zu beseitigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Privatrechtliche Streitigkeiten zwischen Finanzdienstleistern oder zwischen Finanzdienstleistern und Kundinnen und Kunden entscheidet das zuständige Gericht oder Schiedsgericht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3c0d6424711d64de4c0a4f24870d53775d963233d9fa2c6431b0c71748665ead"
+    },
+    {
+      "id": "bund/FIDLEG/art_88",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA, die Aufsichtsorganisation, die Registrierungsstelle, die Prüfstelle, die Ombudsstelle und das EFD können einander die nicht öffentlich zugänglichen Informationen übermitteln, die sie zur Erfüllung ihrer Aufgaben benötigen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1032195b73f7d87a04959b0ab5796e2ec78ae41132456c26e3ff936e8ad93241"
+    },
+    {
+      "id": "bund/FIDLEG/art_89",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit Busse bis zu 100 000 Franken wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Erfüllung der Informationspflichten nach Artikel 8 falsche Angaben macht oder wesentliche Tatsachen verschweigt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Pflichten zur Angemessenheits- und Eignungsprüfung nach den Artikeln 10–14 in schwerwiegender Weise verletzt;"
+            },
+            {
+              "marke": "c",
+              "text": "gegen die Bestimmungen über die Herausgabe von Entschädigungen Dritter nach Artikel 26 verstösst."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c49e3dcb43cda65013dccb2e27b6aa7a042915fdfc44a2ff26a37aaf053971ea"
+    },
+    {
+      "id": "bund/FIDLEG/art_90",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse bis zu 500 000 Franken wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Prospekt oder im Basisinformationsblatt nach dem 3. Titel falsche Angaben macht oder wesentliche Tatsachen verschweigt;"
+            },
+            {
+              "marke": "b",
+              "text": "den Prospekt oder das Basisinformationsblatt nach dem 3. Titel nicht spätestens mit Beginn des öffentlichen Angebots veröffentlicht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Busse bis zu 100 000 Franken wird bestraft, wer vorsätzlich das Basisinformationsblatt nicht vor der Zeichnung oder vor dem Vertragsabschluss zur Verfügung stellt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_90",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dbe2e64713e84c5c0f8db0cec87f589d119e5bfc626a8932c3089da63c32c868"
+    },
+    {
+      "id": "bund/FIDLEG/art_91",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit Busse bis zu 500 000 Franken wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Privatkundinnen und -kunden strukturierte Produkte anbietet, ohne die Bedingungen von Artikel 70 einzuhalten;"
+            },
+            {
+              "marke": "b",
+              "text": "ein internes Sondervermögen bildet, ohne die Bedingungen von Artikel 71 einzuhalten."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_91",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2b60d3d7f22f2aa0886a6594cb3a6e63ceacf88cde93af668f266da53a3a1716"
+    },
+    {
+      "id": "bund/FIDLEG/art_92",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 89–91 gelten nicht für nach Artikel 3 FINMAG Beaufsichtigte und für Personen, die für sie tätig sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_92",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f77c6a3be51a5e61f4739f9475e798eeb16dac05615e4abf957502f959310451"
+    },
+    {
+      "id": "bund/FIDLEG/art_93",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt die Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_93",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1e03f966cfaf308ea01474b8609abe3ebc5eb7398fb82210534ffea1fccbd9a0"
+    },
+    {
+      "id": "bund/FIDLEG/art_94",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung anderer Erlasse wird im Anhang geregelt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_94",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "da979eb7108e01a468e1b3d882e9718dbcc4146fc7ea7f21360ee3f406f7eca7"
+    },
+    {
+      "id": "bund/FIDLEG/art_95",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann zur Erfüllung der Anforderungen nach Artikel 6 eine Übergangsfrist vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kundenberaterinnen und -berater nach Artikel 28 haben sich innert sechs Monaten nach Inkrafttreten dieses Gesetzes bei der Registrierungsstelle für die Eintragung ins Register anzumelden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Finanzdienstleister haben sich innert sechs Monaten nach Inkrafttreten dieses Gesetzes an eine Ombudsstelle nach Artikel 74 anzuschliessen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Vorschriften des 3. Titels dieses Gesetzes gelten nach Ablauf von zwei Jahren seit dem Inkrafttreten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Effekten, für die vor dem Inkrafttreten ein öffentliches Angebot unterbreitet oder um Zulassung zum Handel auf einem Handelsplatz ersucht wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "für Finanzinstrumente, die vor dem Inkrafttreten Privatkundinnen und ‑kunden angeboten wurden."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Der Bundesrat kann die Frist nach Absatz 4 für Effekten verlängern, wenn dies infolge einer verzögerten Inbetriebnahme der Prüfstelle angezeigt sein sollte."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_95",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f7f6b7ca1dc7ea447bf2e5e057d2111153804b13f9704d67898be0a66275db5e"
+    },
+    {
+      "id": "bund/FIDLEG/art_96",
+      "ebene": "bund",
+      "quelle": "FIDLEG",
+      "erlass": "FIDLEG",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Dieses Gesetz tritt nur zusammen mit dem FINIG in Kraft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_96",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bf10f39f576c5d7efb71894e101db06865c3c3b4be897615ba42a281f97bb840"
+    }
+  ]
+}

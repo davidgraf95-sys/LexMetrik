@@ -1,0 +1,2227 @@
+{
+ "erzeugt": "2026-06-25",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Zweck und Gegenstand"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SR 961.01",
+     "links": [
+      {
+       "label": "SR 961.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "nr": "4",
+     "text": "SR 831.40",
+     "links": [
+      {
+       "label": "SR 831.40",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "399",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "399",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Kundensegmentierung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Weil es sich bei den professionellen Kunden hauptsächlich um juristische Personen handelt, wird statt der Paarform nur die männliche Form verwendet.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "3",
+     "item": "a"
+    },
+    {
+     "nr": "12",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "3",
+     "item": "a"
+    },
+    {
+     "nr": "13",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "3",
+     "item": "a"
+    },
+    {
+     "nr": "14",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "links": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    },
+    {
+     "nr": "15",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "links": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "3",
+     "item": "e"
+    },
+    {
+     "nr": "16",
+     "text": "Weil es sich bei den institutionellen Kunden um juristische Personen handelt, wird statt der Paarform nur die männliche Form verwendet.",
+     "links": [],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Erforderliche Kenntnisse"
+    }
+   ],
+   "marginalie": []
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Grundsatz"
+    }
+   ],
+   "marginalie": []
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Informationspflicht"
+    }
+   ],
+   "marginalie": [
+    "Inhalt und Form der Information"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Informationspflicht"
+    }
+   ],
+   "marginalie": [
+    "Zeitpunkt und Form der Informationen"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Angemessenheit und Eignung von Finanzdienstleistungen"
+    }
+   ],
+   "marginalie": [
+    "Prüfpflicht"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Angemessenheit und Eignung von Finanzdienstleistungen"
+    }
+   ],
+   "marginalie": [
+    "Angemessenheitsprüfung"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Angemessenheit und Eignung von Finanzdienstleistungen"
+    }
+   ],
+   "marginalie": [
+    "Eignungsprüfung"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Angemessenheit und Eignung von Finanzdienstleistungen"
+    }
+   ],
+   "marginalie": [
+    "Ausnahme von der Prüfpflicht"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Angemessenheit und Eignung von Finanzdienstleistungen"
+    }
+   ],
+   "marginalie": [
+    "Nicht beurteilbare oder fehlende Angemessenheit oder Eignung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Dokumentation und Rechenschaft"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Dokumentation und Rechenschaft"
+    }
+   ],
+   "marginalie": [
+    "Rechenschaft"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Transparenz und Sorgfalt bei Kundenaufträgen"
+    }
+   ],
+   "marginalie": [
+    "Bearbeitung von Kundenaufträgen"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Transparenz und Sorgfalt bei Kundenaufträgen"
+    }
+   ],
+   "marginalie": [
+    "Bestmögliche Ausführung von Kundenaufträgen"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Transparenz und Sorgfalt bei Kundenaufträgen"
+    }
+   ],
+   "marginalie": [
+    "Verwendung von Finanzinstrumenten von Kundinnen und Kunden"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Verhaltensregeln"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Institutionelle und professionelle Kunden"
+    }
+   ],
+   "marginalie": []
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Organisatorische Massnahmen"
+    }
+   ],
+   "marginalie": [
+    "Angemessene Organisation"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Organisatorische Massnahmen"
+    }
+   ],
+   "marginalie": [
+    "Mitarbeiterinnen und Mitarbeiter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Organisatorische Massnahmen"
+    }
+   ],
+   "marginalie": [
+    "Beizug Dritter"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Organisatorische Massnahmen"
+    }
+   ],
+   "marginalie": [
+    "Dienstleisterkette"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Interessenkonflikte"
+    }
+   ],
+   "marginalie": [
+    "Organisatorische Vorkehrungen"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Interessenkonflikte"
+    }
+   ],
+   "marginalie": [
+    "Entschädigungen durch Dritte"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Organisation"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Interessenkonflikte"
+    }
+   ],
+   "marginalie": [
+    "Mitarbeitergeschäfte"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Registrierungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Registrierungsvoraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "19",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS 2021 33; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "20",
+     "text": "SR 961.01",
+     "links": [
+      {
+       "label": "SR 961.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "21",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "22",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Inhalt"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Registrierungsstelle"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Registerführung und Meldepflicht"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "23",
+     "text": "SR 172.010",
+     "links": [
+      {
+       "label": "SR 172.010",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Anforderungen für das Erbringen von Finanzdienstleistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Beraterregister"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "24",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Pflicht zur Veröffentlichung eines Prospekts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "26",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "399",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "27",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "399",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen nach der Art des Angebots"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen nach der Art der Effekten"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen für die Zulassung zum Handel"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Allgemeines"
+    }
+   ],
+   "marginalie": [
+    "Informationen ausserhalb der Prospektpflicht"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Inhalt"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Verweisungen"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Zusammenfassung"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Aufteilung"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Basisprospekt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "28",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "29",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "ErgänzendeBestimmungen"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Erleichterungen"
+    }
+   ],
+   "marginalie": []
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Kollektive Kapitalanlagen"
+    }
+   ],
+   "marginalie": [
+    "Offene kollektive Kapitalanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Kollektive Kapitalanlagen"
+    }
+   ],
+   "marginalie": [
+    "Geschlossene kollektive Kapitalanlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Kollektive Kapitalanlagen"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "links": [
+      {
+       "label": "AS 2024 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl 2020 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Pflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "35",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Prüfstelle"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Verfahren und Fristen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Ausländische Prospekte"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Gültigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Nachträge"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Prospekt für Effekten"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Prüfung des Prospekts"
+    }
+   ],
+   "marginalie": [
+    "Gebühren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "SR 172.010",
+     "links": [
+      {
+       "label": "SR 172.010",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Pflicht"
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen"
+   ]
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Inhalt"
+   ]
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Anforderungen"
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Anpassungen"
+   ]
+  },
+  "63": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Basisinformationsblatt für Finanzinstrumente"
+    }
+   ],
+   "marginalie": [
+    "Ergänzende Bestimmungen"
+   ]
+  },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Prospekt für Effekten"
+   ]
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Prospekt für kollektive Kapitalanlagen"
+   ]
+  },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Basisinformationsblatt"
+   ]
+  },
+  "67": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Änderungen mit Effekten verbundener Rechte"
+   ]
+  },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Werbung"
+    }
+   ],
+   "marginalie": []
+  },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Haftung"
+    }
+   ],
+   "marginalie": []
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Anbieten von strukturierten Produkten und Bilden von Sondervermögen"
+    }
+   ],
+   "marginalie": [
+    "Strukturierte Produkte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "43",
+     "text": "SR 961.01",
+     "links": [
+      {
+       "label": "SR 961.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "44",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "45",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    }
+   ]
+  },
+  "71": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Anbieten von Finanzinstrumenten"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Anbieten von strukturierten Produkten und Bilden von Sondervermögen"
+    }
+   ],
+   "marginalie": [
+    "Interne Sondervermögen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Titel: Herausgabe von Dokumenten"
+    }
+   ],
+   "marginalie": [
+    "Anspruch"
+   ]
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Titel: Herausgabe von Dokumenten"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
+  "74": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Vermittlung"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Vermittlung"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Vermittlung"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zum Schlichtungsverfahren und zu anderen Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "48",
+     "text": "SR 272",
+     "links": [
+      {
+       "label": "SR 272",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2010/262"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Pflichten der Finanzdienstleister"
+    }
+   ],
+   "marginalie": [
+    "Anschlusspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "49",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS 2021 33; BBl 2020 233).",
+     "links": [
+      {
+       "label": "AS 2021 33",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
+      },
+      {
+       "label": "BBl 2020 233",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Pflichten der Finanzdienstleister"
+    }
+   ],
+   "marginalie": [
+    "Teilnahmepflicht"
+   ]
+  },
+  "79": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Pflichten der Finanzdienstleister"
+    }
+   ],
+   "marginalie": [
+    "Pflicht zur Information"
+   ]
+  },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Pflichten der Finanzdienstleister"
+    }
+   ],
+   "marginalie": [
+    "Finanzielle Beteiligung"
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Aufnahme und Ausschluss"
+    }
+   ],
+   "marginalie": [
+    "Aufnahme"
+   ]
+  },
+  "82": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Aufnahme und Ausschluss"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss"
+   ]
+  },
+  "83": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Aufnahme und Ausschluss"
+    }
+   ],
+   "marginalie": [
+    "Informationspflicht"
+   ]
+  },
+  "84": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Anerkennung und Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Anerkennung"
+   ]
+  },
+  "85": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Anerkennung und Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Anerkennung"
+   ]
+  },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Titel: Ombudsstellen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Anerkennung und Veröffentlichung"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattung"
+   ]
+  },
+  "87": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Titel: Aufsicht und Informationsaustausch"
+    }
+   ],
+   "marginalie": [
+    "Aufsicht"
+   ]
+  },
+  "88": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Titel: Aufsicht und Informationsaustausch"
+    }
+   ],
+   "marginalie": [
+    "Informationsaustausch"
+   ]
+  },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Titel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verletzung der Verhaltensregeln"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Titel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verletzung der Vorschriften für Prospekte und Basisinformationsblätter"
+   ]
+  },
+  "91": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Titel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Unerlaubtes Anbieten von Finanzinstrumenten"
+   ]
+  },
+  "92": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Titel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "93": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ausführungsbestimmungen"
+   ]
+  },
+  "94": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Änderung anderer Erlasse"
+   ]
+  },
+  "95": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen"
+   ]
+  },
+  "96": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "V vom 6. Nov. 2019 über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes (AS 2019 4631).",
+     "links": [
+      {
+       "label": "AS 2019 4631",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ }
+}

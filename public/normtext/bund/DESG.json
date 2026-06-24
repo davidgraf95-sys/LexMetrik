@@ -1,0 +1,1680 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/DESG/art_1",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz schützt Gestaltungen von Erzeugnissen oder Teilen von Erzeugnissen, die namentlich durch die Anordnung von Linien, Flächen, Konturen oder Farben oder durch das verwendete Material charakterisiert sind, als Design."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "fbb852da2757ed23f99a32b210bfa828e5f58a043da80d6193f34f66fd32bd7b"
+    },
+    {
+      "id": "bund/DESG/art_2",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Design ist schutzfähig, soweit es neu ist und Eigenart aufweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Design ist nicht neu, wenn der Öffentlichkeit vor dem Hinterlegungs- oder Prioritätsdatum ein identisches Design zugänglich gemacht worden ist, welches den in der Schweiz beteiligten Verkehrskreisen bekannt sein konnte."
+        },
+        {
+          "absatz": "3",
+          "text": "Design weist keine Eigenart auf, wenn es sich nach dem Gesamteindruck von Design, welches den in der Schweiz beteiligten Verkehrskreisen bekannt sein konnte, nur in unwesentlichen Merkmalen unterscheidet."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "114abf65056987c493edb4ed91477ac7b7fc93769e43fc69f49872b86baa77ba"
+    },
+    {
+      "id": "bund/DESG/art_3",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Offenbarung eines Designs kann bis zu einer Dauer von zwölf Monaten vor dem Hinterlegungs- oder Prioritätsdatum der Person, die das Recht innehat (Rechtsinhaberin), nicht entgegengehalten werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Dritte das Design missbräuchlich zum Nachteil der berechtigten Person offenbart haben;"
+            },
+            {
+              "marke": "b",
+              "text": "die berechtigte Person das Design selber offenbart hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "2006628fc49d381c4114ec440d6418676d14c4458982b3f7431b5643590c4886"
+    },
+    {
+      "id": "bund/DESG/art_4",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Designschutz ist ausgeschlossen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kein Design im Sinne von Artikel 1 hinterlegt ist;"
+            },
+            {
+              "marke": "b",
+              "text": "das Design im Zeitpunkt der Hinterlegung die Voraussetzungen nach Artikel 2 nicht erfüllt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Merkmale des Designs ausschliesslich durch die technische Funktion des Erzeugnisses bedingt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "das Design Bundesrecht oder Staatsverträge verletzt;"
+            },
+            {
+              "marke": "e",
+              "text": "das Design gegen die öffentliche Ordnung oder die guten Sitten verstösst."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "99e73e4c014ef2d6fbeb978701e3168cac20ec25f4fa2af4432fe29b24413ca9"
+    },
+    {
+      "id": "bund/DESG/art_5",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Designrecht entsteht mit der Eintragung im Design-Register (Register)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Schutz besteht während fünf Jahren vom Datum der Hinterlegung an."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann um vier Schutzperioden von jeweils fünf Jahren verlängert werden."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "8ba7c52a370d6e864da39a4b19679b157ae5d6df6267fae567fb9a64ec9ab425"
+    },
+    {
+      "id": "bund/DESG/art_6",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Designrecht steht demjenigen zu, der das Design zuerst hinterlegt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "53edd2d7315ef2960d7da7f05fecdc1db2ad6c420658ebf3ac2e499f962994d0"
+    },
+    {
+      "id": "bund/DESG/art_7",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Hinterlegung berechtigt ist diejenige Person, die das Design entworfen hat, deren Rechtsnachfolgerin oder eine Drittperson, welcher das Recht aus einem andern Rechtsgrund gehört."
+        },
+        {
+          "absatz": "2",
+          "text": "Haben mehrere Personen ein Design gemeinsam entworfen, so sind sie ohne gegenteilige Vereinbarung gemeinschaftlich zur Hinterlegung berechtigt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "8acb42705aa1aee208bdb35be3609f7d38dd96e86ca1714c9f97b4492fa59e24"
+    },
+    {
+      "id": "bund/DESG/art_8",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Schutz des Designrechts erstreckt sich auf Designs, welche die gleichen wesentlichen Merkmale aufweisen und dadurch den gleichen Gesamteindruck erwecken wie ein bereits eingetragenes Design."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "68ffd8d8216f61c5f40d25a05f5567ea2617c10f0486ba29566a1b09c7635572"
+    },
+    {
+      "id": "bund/DESG/art_9",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Designrecht verleiht der Rechtsinhaberin das Recht, andern zu verbieten, das Design zu gewerblichen Zwecken zu gebrauchen. Als Gebrauch gelten insbesondere das Herstellen, das Lagern, das Anbieten, das Inverkehrbringen, die Ein-, Aus- und Durchfuhr sowie der Besitz zu diesen Zwecken."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Rechtsinhaberin kann die Ein-, Aus- und Durchfuhr von gewerblich hergestellten Waren auch dann verbieten, wenn sie zu privaten Zwecken erfolgt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Rechtsinhaberin kann Dritten auch verbieten, bei einer widerrechtlichen Gebrauchshandlung mitzuwirken, deren Begehung zu begünstigen oder zu erleichtern."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "fe43873e4d5c3c37091d773b7b3f0dd859a14c165ff8996ceafaafabaf183619"
+    },
+    {
+      "id": "bund/DESG/art_10",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer auf Waren oder Geschäftspapieren auf Designschutz hinweist, ohne die Nummer des Designrechts zu nennen, ist verpflichtet, die Nummer auf Anfrage unentgeltlich bekannt zu geben."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "370b924945fd2a5428d12bcbc99d8792266756895511443555ee1d3d6de82259"
+    },
+    {
+      "id": "bund/DESG/art_11",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mehreren Rechtsinhaberinnen stehen ohne gegenteilige Vereinbarung die Befugnisse nach Artikel 9 gesamtheitlich zu."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "766882a031e410c2b77b2255d006b8bbaa93c6dafdb01fc942ce54d21aa4d13c"
+    },
+    {
+      "id": "bund/DESG/art_12",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsinhaberin kann Dritten nicht verbieten, ein von diesen im Inland während der folgenden Zeitabschnitte gutgläubig gebrauchtes Design im bisherigen Umfang weiter zu gebrauchen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor dem Hinterlegungs- oder Prioritätsdatum;"
+            },
+            {
+              "marke": "b",
+              "text": "während der Dauer des Aufschubs der Veröffentlichung (Art. 26)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Weiterbenützungsrecht ist nur zusammen mit dem Unternehmen übertragbar."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "52894d0afbdca7b2b61aa21701107f985b03f12050c904d33c86af0be3d036e0"
+    },
+    {
+      "id": "bund/DESG/art_13",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsinhaberin kann das eingetragene Design Dritten nicht entgegenhalten, wenn die Dritten es im Inland zwischen dem letzten Tag der Frist für die Zahlung der Gebühr für eine weitere Schutzperiode und dem Tag, an dem ein Weiterbehandlungsantrag (Art. 31) eingereicht worden ist, gutgläubig gewerbsmässig gebraucht oder dazu besondere Anstalten getroffen haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Mitbenützungsrecht ist nur zusammen mit dem Unternehmen übertragbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer das Mitbenützungsrecht beansprucht, hat der Rechtsinhaberin ab Wiederaufleben des Designrechts eine angemessene Entschädigung zu bezahlen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "1e27936cc31a26d987cde53f13ed08beca663fe2e4d64d765eb35f06d7737f48"
+    },
+    {
+      "id": "bund/DESG/art_14",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsinhaberin kann das Designrecht ganz oder teilweise übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Übertragung bedarf zu ihrer Gültigkeit der schriftlichen Form, nicht aber der Eintragung im Register. Sie ist gegenüber gutgläubigen Dritten erst wirksam, wenn sie im Register eingetragen ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zur Eintragung der Übertragung im Register:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "können gutgläubige Lizenznehmerinnen und Lizenznehmer mit befreiender Wirkung an die bisherige Rechtsinhaberin leisten;"
+            },
+            {
+              "marke": "b",
+              "text": "können Klagen nach diesem Gesetz gegen die bisherige Rechtsinhaberin gerichtet werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "6d0f7c1274e575cad2cc94e6a7423f11cdfb0dd836cf8cdaff8a12f05ff46db8"
+    },
+    {
+      "id": "bund/DESG/art_15",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsinhaberin kann das Designrecht oder einzelne Befugnisse daraus Dritten ausschliesslich oder nicht ausschliesslich zum Gebrauch überlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Lizenz wird auf Antrag einer der beteiligten Personen in das Register eingetragen. Sie erhält damit Geltung gegenüber einem später erworbenen Recht am Design."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "30641e9d2715547cde1bae39842e94332f63c8071abaa9e0e3816a1049a3b38d"
+    },
+    {
+      "id": "bund/DESG/art_16",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Designrecht kann Gegenstand einer Nutzniessung oder eines Pfandrechts sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Nutzniessung und ein Pfandrecht können gegenüber gutgläubigen Erwerberinnen und Erwerbern des Designrechts nur geltend gemacht werden, wenn sie im Register eingetragen sind. Die Eintragung erfolgt auf Antrag einer der beteiligten Personen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zur Eintragung einer Nutzniessung im Register können gutgläubige Lizenznehmerinnen und Lizenznehmer mit befreiender Wirkung an die bisherige Rechtsinhaberin leisten."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "f95cfd7d923b417091cf7d417334b03f311e39c4b52281f787cd2d016f05db60"
+    },
+    {
+      "id": "bund/DESG/art_17",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Designrecht unterliegt der Zwangsvollstreckung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "f0d95a37a342dcdb23a0c6b4780eb8eb8f1a2395ab359a8f7825c7971f3accd5"
+    },
+    {
+      "id": "bund/DESG/art_18",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer an einem Verwaltungsverfahren nach diesem Gesetz beteiligt ist und in der Schweiz keinen Wohnsitz oder Sitz hat, muss ein Zustellungsdomizil in der Schweiz bezeichnen, es sei denn, das Völkerrecht oder die zuständige ausländische Stelle gestatte der Behörde, Schriftstücke im betreffenden Staat direkt zuzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Eidgenössische Institut für Geistiges Eigentum (IGE) ist befugt, gegenüber der zuständigen ausländischen Stelle zu erklären, dass im Bereich des geistigen Eigentums in der Schweiz die direkte Zustellung zulässig ist, sofern der Schweiz Gegenrecht gewährt wird."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "f2f919bc4a101f365f1a34c9117e45a4209e1039e0d3abbb1e947a5979134ccf"
+    },
+    {
+      "id": "bund/DESG/art_19",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Design gilt als hinterlegt, wenn beim IGE ein Eintragungsgesuch eingereicht wird. Das Gesuch enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Antrag auf Eintragung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine zur Reproduktion geeignete Abbildung des Designs; erfüllt sie diese Voraussetzung nicht, so setzt das IGE der hinterlegenden Person eine Frist zur Behebung dieses Mangels."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Innert der vom IGE gesetzten Frist ist zudem die vorgesehene Gebühr für die erste Schutzperiode zu bezahlen."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird ein flächenhaftes Design (Muster) hinterlegt und ist der Aufschub der Veröffentlichung nach Artikel 26 beantragt worden, so kann an Stelle der Abbildung ein Exemplar des Designs eingereicht werden. Soll der Designschutz nach Ablauf eines Aufschubs aufrechterhalten werden, so ist dem IGE vorab eine zur Reproduktion geeignete Abbildung des Designs nachzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Design kann erläuternd zur Abbildung gegen Entrichtung einer Gebühr mit höchstens 100 Wörtern beschrieben werden."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "2bb4656a53f063b72bcb5a94bfc8699c980ff8af0f80f9a9fae6cace5712f6fb"
+    },
+    {
+      "id": "bund/DESG/art_20",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Designs, die nach dem Abkommen von Locarno vom 8. Oktober 1968 über die Errichtung der internationalen Klassifikation für gewerbliche Muster und Modelle derselben Klasse angehören, können in einer Sammelhinterlegung hinterlegt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann die Sammelhinterlegung hinsichtlich Grösse und Gewicht beschränken."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "3a389cf745d671c4801736d00a41361f6abada4cf1516338313934d063ecbd06"
+    },
+    {
+      "id": "bund/DESG/art_21",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Hinterlegung begründet die Vermutung der Neuheit und der Eigenart sowie der Berechtigung zur Hinterlegung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "09cb679ee10503c3fe66f8cb03324995b9cfe634e9e079e4ff7308f3942446d3"
+    },
+    {
+      "id": "bund/DESG/art_22",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist ein Design erstmals in einem anderen Mitgliedstaat der Pariser Verbandsübereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums oder mit Wirkung für einen solchen Staat vorschriftsgemäss hinterlegt worden, so kann die hinterlegende Person oder deren Rechtsnachfolgerin für die Hinterlegung des gleichen Designs in der Schweiz das Datum der Ersthinterlegung beanspruchen, sofern die Hinterlegung in der Schweiz innerhalb von sechs Monaten nach der Ersthinterlegung erfolgt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ersthinterlegung in einem Staat, welcher der Schweiz Gegenrecht hält, hat die gleiche Wirkung wie die Ersthinterlegung in einem Mitgliedstaat der Pariser Verbandsübereinkunft."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "920f3051d051a758218e12a3f7c2128b9fd55a18eabe5c3fb8e323280f376d45"
+    },
+    {
+      "id": "bund/DESG/art_23",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer ein Prioritätsrecht beanspruchen will, hat dem IGE eine Prioritätserklärung einzureichen. Das IGE kann die Einreichung eines Prioritätsbelegs verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anspruch verwirkt, wenn die vom Bundesrat festzulegenden Fristen und Formerfordernisse nicht eingehalten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Eintragung einer Priorität begründet lediglich eine Vermutung zu Gunsten der Rechtsinhaberin."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "1ed3fb818be59ca3d39bfe7521732f501e68123da7925e465f4643435697fda5"
+    },
+    {
+      "id": "bund/DESG/art_24",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein nach den gesetzlichen Vorschriften hinterlegtes Design wird in das Register eingetragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das IGE tritt auf das Eintragungsgesuch nicht ein, wenn die formellen Erfordernisse nach Artikel 19 Absätze 1 und 2 nicht erfüllt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Es weist das Eintragungsgesuch ab, wenn offensichtlich ein Ausschlussgrund nach Artikel 4 Buchstaben a, d oder e vorliegt."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Register werden ferner alle Änderungen im Bestand des Designrechts oder in der Berechtigung am Design eingetragen. Der Bundesrat kann die Eintragung weiterer Angaben wie Verfügungsbeschränkungen von Gerichten oder Zwangsvollstreckungsbehörden vorsehen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "5c51be49adb8b5cdf470c48494bd8e819800a603b194faa00364bd92fe1a6bc7"
+    },
+    {
+      "id": "bund/DESG/art_25",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das IGE veröffentlicht auf Grund der Eintragungen im Register die in der Verordnung vorgesehenen Angaben sowie eine Reproduktion des hinterlegten Designs."
+        },
+        {
+          "absatz": "2",
+          "text": "Das IGE bestimmt das Publikationsorgan."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "a9564ffc8eab34c5fbe513fcc119c81d731411eba310bac394e45951eeefac69"
+    },
+    {
+      "id": "bund/DESG/art_26",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die hinterlegende Person kann schriftlich beantragen, dass die Veröffentlichung um höchstens 30 Monate, vom Hinterlegungs- oder Prioritätsdatum an gerechnet, aufgeschoben wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Während des Aufschubs kann die Rechtsinhaberin jederzeit die sofortige Veröffentlichung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das IGE hält das hinterlegte Design bis zum Ablauf des Aufschubs geheim. Die Geheimhaltung ist unbefristet, wenn die Hinterlegung vor Ablauf des Aufschubs zurückgenommen wird."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "4e5a3fa7e4377ed06c29ce9ac12ad09eee327864713e9d97d38f9a9154955aac"
+    },
+    {
+      "id": "bund/DESG/art_26_a",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "26_a",
+      "artikelLabel": "Art. 26a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann das IGE ermächtigen, die elektronische Kommunikation im Rahmen der allgemeinen Bestimmungen der Bundesrechtspflege zu regeln."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Aktenheft und die Akten können in elektronischer Form geführt und aufbewahrt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Register kann in elektronischer Form geführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Das IGE kann seine Datenbestände insbesondere im elektronischen Abrufverfahren Dritten zugänglich machen; es kann dafür ein Entgelt verlangen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Veröffentlichungen des IGE können in elektronischer Form erfolgen; die elektronische Fassung ist jedoch nur massgebend, wenn die Daten ausschliesslich elektronisch veröffentlicht werden."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_26_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "90f6a76f83d453f872315a6d54f91a505a23b7a37122937bf4482e22e07257bd"
+    },
+    {
+      "id": "bund/DESG/art_27",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person kann in das Register Einsicht nehmen, über dessen Inhalt Auskünfte einholen und Auszüge verlangen; Artikel 26 bleibt vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie hat zudem das Recht, in das Aktenheft eingetragener Designs Einsicht zu nehmen. Der Bundesrat darf das Einsichtsrecht nur einschränken, wenn Fabrikations- oder Geschäftsgeheimnisse oder andere überwiegende Interessen entgegenstehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ausnahmsweise besteht das Einsichtsrecht in das Aktenheft schon vor der Eintragung, soweit dadurch die Voraussetzungen und der Umfang des Schutzes (Art. 2–17) nicht verändert werden. Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "a3ef2ff3d4d0f13e52f7c6c1666fbd2232104e08d5de9021fedcaa0343d7bbbb"
+    },
+    {
+      "id": "bund/DESG/art_28",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das IGE löscht eine Eintragung ganz oder teilweise, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Rechtsinhaberin die Löschung beantragt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Eintragung nicht verlängert wird;"
+            },
+            {
+              "marke": "c",
+              "text": "die vorgesehenen Gebühren nicht bezahlt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "die Eintragung durch ein rechtskräftiges richterliches Urteil für nichtig erklärt wird; oder"
+            },
+            {
+              "marke": "e",
+              "text": "die Schutzfrist nach Artikel 5 abgelaufen ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "df46b4fa732613d4e1620faa550cf61f0dd42bee03464d5d9da9d971fbd0077a"
+    },
+    {
+      "id": "bund/DESG/art_29",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer ein gewerbliches Muster oder Modell (Design) international mit Benennung Schweiz hinterlegt, erlangt dadurch den Schutz dieses Gesetzes wie bei einer Hinterlegung in der Schweiz. Soweit die Bestimmungen des Haager Abkommens vom 6. November 1925 über die internationale Hinterlegung gewerblicher Muster und Modelle für die Inhaberin oder den Inhaber der internationalen Hinterlegung günstiger sind als dieses Gesetz, gehen sie diesem vor."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "0f6d7d55b62128363e20c4040af40594825f3ffc48cb618d7c0f0a550c1166dc"
+    },
+    {
+      "id": "bund/DESG/art_30",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Höhe der nach diesem Gesetz und seiner Verordnung zu zahlenden Gebühren sowie die Zahlungsmodalitäten richten sich nach der Gebührenordnung des Eidgenössischen Instituts für Geistiges Eigentum vom 28. April 1997 (IGE-GebO)."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "18df7761cd0de9aee6d5d39ba5fe250478d007d33a137785236d749d1444d000"
+    },
+    {
+      "id": "bund/DESG/art_31",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Versäumt die hinterlegende Person oder die Rechtsinhaberin eine Frist, die gegenüber dem IGE einzuhalten ist, so kann sie bei diesem die Weiterbehandlung beantragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Antrag muss innerhalb von zwei Monaten ab Kenntnisnahme des Fristversäumnisses eingereicht werden, spätestens jedoch innerhalb von sechs Monaten nach Ablauf der versäumten Frist. Innerhalb dieser Fristen muss zudem die unterbliebene Handlung vollständig nachgeholt und die Weiterbehandlungsgebühr bezahlt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gutheissung des Weiterbehandlungsantrags durch das IGE stellt den Zustand her, der bei rechtzeitiger Handlung eingetreten wäre."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Weiterbehandlung ist ausgeschlossen beim Versäumen der Fristen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Einreichung des Weiterbehandlungsantrags;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Inanspruchnahme einer Priorität."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "5ae541658dcfafd267e2db7f609d4d33396c7e6bf4e4ab9e98b7fb512aa70b6e"
+    },
+    {
+      "id": "bund/DESG/art_32",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/DESG/art_33",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer ein rechtliches Interesse nachweist, kann gerichtlich feststellen lassen, dass ein Recht oder Rechtsverhältnis nach diesem Gesetz besteht oder nicht besteht."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "f05565303ac37c6e9b464b63fbffffaabfe3fcfda7566e492e07d7877dfdcf46"
+    },
+    {
+      "id": "bund/DESG/art_34",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer ein besseres Recht geltend macht, kann gegen die Rechtsinhaberin auf Abtretung des Designrechts klagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Rechtsinhaberin gutgläubig, so ist ihr gegenüber die Klage innerhalb von zwei Jahren seit der Veröffentlichung des Designs anzuheben."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Abtretung verfügt, so fallen die inzwischen Dritten eingeräumten Lizenzen oder andern Rechte dahin; diese Dritten haben jedoch, wenn sie in gutem Glauben das Design im Inland gewerbsmässig benützt oder besondere Anstalten dazu getroffen haben, Anspruch auf Erteilung einer nicht ausschliesslichen Lizenz."
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehalten bleiben alle Schadenersatzansprüche."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "bbc7edb9f204180dbe7f8343b612312abf1c395975d3741264a19edfe153fd86"
+    },
+    {
+      "id": "bund/DESG/art_35",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsinhaberin, die in ihren Rechten verletzt oder gefährdet wird, kann vom Gericht verlangen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine drohende Verletzung zu verbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "eine bestehende Verletzung zu beseitigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die beklagte Partei zu verpflichten, Herkunft und Umfang der in ihrem Besitz befindlichen, widerrechtlich hergestellten Gegenstände anzugeben und Adressaten sowie Umfang einer Weitergabe an gewerbliche Abnehmerinnen und Abnehmer zu nennen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die Klagen nach dem Obligationenrecht auf Schadenersatz, auf Genugtuung sowie auf Herausgabe eines Gewinns entsprechend den Bestimmungen über die Geschäftsführung ohne Auftrag."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leistungsklage kann erst nach der Eintragung des Designs im Register angehoben werden. Ein Schaden kann rückwirkend auf den Zeitpunkt geltend gemacht werden, in dem die beklagte Partei vom Inhalt des Eintragungsgesuchs Kenntnis erhalten hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Wer über eine ausschliessliche Lizenz verfügt, ist unabhängig von der Eintragung der Lizenz im Register selbstständig zur Klage berechtigt, sofern dies im Lizenzvertrag nicht ausdrücklich ausgeschlossen worden ist. Alle Lizenznehmerinnen und Lizenznehmer können einer Verletzungsklage beitreten, um ihren eigenen Schaden geltend zu machen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "833a0b7c11ad6c9dc27040e41946f4b73292a33b0fa59449b550260dc9f266ed"
+    },
+    {
+      "id": "bund/DESG/art_36",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gericht kann die Einziehung und Verwertung oder Vernichtung der widerrechtlich hergestellten Gegenstände oder der vorwiegend zu ihrer Herstellung dienenden Einrichtungen, Geräte und sonstigen Mittel anordnen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "2c3edcaa58b95171ff6eb2732728e53c84883d7298e20f105791ba07bba3e773"
+    },
+    {
+      "id": "bund/DESG/art_37",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/DESG/art_38",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ersucht eine Person um die Anordnung vorsorglicher Massnahmen, so kann sie insbesondere verlangen, dass das Gericht Massnahmen anordnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Beweissicherung;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Ermittlung der Herkunft widerrechtlich hergestellter Gegenstände;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Wahrung des bestehenden Zustandes; oder"
+            },
+            {
+              "marke": "d",
+              "text": "zur vorläufigen Vollstreckung von Unterlassungs- und Beseitigungsansprüchen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "30aedc166e35a33043b73f8978727701cda5010ed96b2d6976f6953cfa9a9cc1"
+    },
+    {
+      "id": "bund/DESG/art_39",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gericht kann auf Antrag der obsiegenden Partei anordnen, dass das Urteil auf Kosten der anderen Partei veröffentlicht wird. Es bestimmt Art und Umfang der Veröffentlichung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "38cb63583634021d26d2e056fe7851b8554bc0c0f86063029aa43701a0f91f28"
+    },
+    {
+      "id": "bund/DESG/art_40",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gerichte stellen rechtskräftige Urteile dem IGE in vollständiger Ausfertigung unentgeltlich zu."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "daffeb949fa2df31b96f3b26c6166066d32fcca57475b08e8e8c0d62a48695fa"
+    },
+    {
+      "id": "bund/DESG/art_41",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Person wird auf Antrag der Rechtsinhaberin mit Freiheitsstrafe bis zu einem Jahr oder Geldstrafe bestraft, wenn sie deren Designrecht vorsätzlich verletzt, indem sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Design widerrechtlich gebraucht;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Gebrauchshandlung mitwirkt, deren Begehung begünstigt oder erleichtert;"
+            },
+            {
+              "marke": "c",
+              "text": "sich weigert, der zuständigen Behörde die Herkunft und den Umfang der in ihrem Besitz befindlichen, widerrechtlich hergestellten Gegenstände anzugeben und Adressat sowie Umfang einer Weitergabe an gewerbliche Abnehmerinnen und Abnehmer zu nennen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gewerbsmässige Handlungen werden von Amtes wegen verfolgt. Die Strafe ist Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe. …"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "4519eecdc495d928e128717eb13de6d4073031d7613d8a68197c1b6190a0d54b"
+    },
+    {
+      "id": "bund/DESG/art_41_a",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "41_a",
+      "artikelLabel": "Art. 41a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Handlungen nach Artikel 9 Absatz 1 bis sind nicht strafbar."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_41_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "47169455df4cf9b726b393330cf9bf56b1cb4b362c7fba8b3b69bb494fed0eb5"
+    },
+    {
+      "id": "bund/DESG/art_42",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Widerhandlungen in Geschäftsbetrieben durch Untergebene, Beauftragte oder Vertreter gelten die Artikel 6 und 7 des Bundesgesetzes vom 22. März 1974 über das Verwaltungsstrafrecht."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "929b9bbce4ea3d6c834aba2b2fe6ffaa3ec7565f4acc157fbe147a7bfb10af7e"
+    },
+    {
+      "id": "bund/DESG/art_43",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Macht die angeschuldigte Person die Nichtigkeit oder die Nichtverletzung des Designrechts in einem Zivilverfahren geltend, so kann das Gericht das Strafverfahren aussetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird im Strafverfahren die Nichtigkeit oder die Nichtverletzung des Designrechts behauptet, so kann das Gericht zu ihrer Geltendmachung in einem Zivilverfahren eine angemessene Frist setzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Während der Aussetzung ruht die Verjährung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "e8baf91c7de5491617a3c2df5d626add644acaef6ab059be91a61429fdd0afff"
+    },
+    {
+      "id": "bund/DESG/art_44",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gericht kann selbst im Falle eines Freispruchs die Einziehung oder Vernichtung der widerrechtlich hergestellten Gegenstände sowie der vorwiegend zu ihrer Herstellung dienenden Einrichtungen, Geräte und sonstigen Mittel anordnen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "eb4db77268a4d0b733050fc93c62380af0b65f05b0ab084120f15af09be8113c"
+    },
+    {
+      "id": "bund/DESG/art_45",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Strafverfolgung ist Sache der Kantone."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "60e5c17bd70e2bf01228bc8b447af08aaa4e04040b2cfa6762628fcae04bd374"
+    },
+    {
+      "id": "bund/DESG/art_46",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt für Zoll und Grenzsicherheit (BAZG) ist ermächtigt, die Rechtsinhaberin eines hinterlegten Designs zu benachrichtigen, wenn der Verdacht besteht, dass das Verbringen von widerrechtlich hergestellten Gegenständen ins Zollgebiet oder aus dem Zollgebiet bevorsteht."
+        },
+        {
+          "absatz": "2",
+          "text": "In diesem Falle ist es ermächtigt, die Gegenstände während drei Arbeitstagen zurückzuhalten, damit die Rechtsinhaberin einen Antrag nach Artikel 47 stellen kann."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "11ae0585b6c65eb2b4ea91768bc5249e572123488dd807da9edd451d0596d134"
+    },
+    {
+      "id": "bund/DESG/art_47",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat die Rechtsinhaberin oder die klageberechtigte Lizenznehmerin beziehungsweise der klageberechtigte Lizenznehmer eines hinterlegten Designs konkrete Anhaltspunkte dafür, dass das Verbringen von widerrechtlich hergestellten Gegenständen ins Zollgebiet oder aus dem Zollgebiet bevorsteht, so kann sie oder er beim BAZG schriftlich beantragen, die Freigabe der Gegenstände zu verweigern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die den Antrag stellende Person (Antragstellerin) kann gleichzeitig schriftlich beantragen, dass die Gegenstände vernichtet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im ordentlichen Verfahren (Art. 48 c –49); oder"
+            },
+            {
+              "marke": "b",
+              "text": "im vereinfachten Verfahren (Art. 49 a ), wenn es sich um eine Kleinsendung handelt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann im Antrag nach Absatz 2 verlangen, dass die Gegenstände ihr übergeben werden, damit sie sie selber vernichtet."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Antrag nach Absatz 2 Buchstabe a führt nicht dazu, dass die Fristen nach Artikel 48 Absätze 3 und 4 zur Erwirkung vorsorglicher Massnahmen verlängert werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Bundesrat bestimmt, was als Kleinsendung gilt; er berücksichtigt dabei namentlich die Anzahl der in einer Sendung enthaltenen Einheiten."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Antragstellerin muss alle ihr zur Verfügung stehenden Angaben machen, die das BAZG benötigt, um über den Antrag entscheiden zu können; dazu gehört eine genaue Beschreibung der Gegenstände."
+        },
+        {
+          "absatz": "7",
+          "text": "Das BAZG entscheidet endgültig über den Antrag. Es kann eine Gebühr zur Deckung der Verwaltungskosten erheben."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "dd41134ee860712daa8df55847af18272d7ebf929ccf09beb290d7a50cd7bb55"
+    },
+    {
+      "id": "bund/DESG/art_48",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat das BAZG aufgrund eines Antrags auf Hilfeleistung nach Artikel 47 Absatz 1 den Verdacht, dass die zum Verbringen ins Zollgebiet oder aus dem Zollgebiet bestimmten Gegenstände widerrechtlich hergestellt worden sind, so:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "behält es die Gegenstände zurück; und"
+            },
+            {
+              "marke": "b",
+              "text": "teilt es dies einerseits der Antragstellerin und andererseits der Anmelderin, Besitzerin oder Eigentümerin beziehungsweise dem Anmelder, Besitzer oder Eigentümer der Gegenstände mit."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde mit dem Antrag auf Hilfeleistung nach Artikel 47 Absatz 1 ein Antrag auf Vernichtung von Kleinsendungen (Art. 47 Abs. 2 Bst. b) gestellt, so richtet sich das Verfahren ausschliesslich nach Artikel 49 a."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAZG behält die Gegenstände während höchstens zehn Arbeitstagen, nachdem die Antragstellerin die Mitteilung nach Absatz 1 Buchstabe b erhalten hat, zurück, damit diese vorsorgliche Massnahmen erwirken kann."
+        },
+        {
+          "absatz": "4",
+          "text": "In begründeten Fällen kann es den Gegenstand während höchstens zehn weiteren Arbeitstagen zurückbehalten."
+        },
+        {
+          "absatz": "5",
+          "text": "Handelt es sich um eine Kleinsendung, so kann es die Zuständigkeit für die Mitteilung nach Absatz 1 Buchstabe b und die weiteren Verfahrensschritte dem IGE übertragen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "6d8c27cc45fa5ff1760b3e83fda25255e88ed907bbf467ed76c0b526375c1f65"
+    },
+    {
+      "id": "bund/DESG/art_48_a",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_a",
+      "artikelLabel": "Art. 48a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Während des Zurückbehaltens der Gegenstände ist das BAZG ermächtigt, der Antragstellerin auf Antrag Proben oder Muster zur Prüfung zu übergeben oder zuzusenden oder ihr die Besichtigung der Gegenstände zu gestatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Proben oder Muster werden auf Kosten der Antragstellerin entnommen und versandt."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie müssen nach erfolgter Prüfung, soweit sinnvoll, zurückgegeben werden. Verbleiben Proben oder Muster bei der Antragstellerin, so unterliegen sie den Bestimmungen der Zollgesetzgebung."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "cf535ac22eccd3141adc18d25c5ccc277a46422a5f8119503f9482f4aae11014"
+    },
+    {
+      "id": "bund/DESG/art_48_b",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_b",
+      "artikelLabel": "Art. 48b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gleichzeitig mit der Benachrichtigung nach Artikel 48 Absatz 1 informiert das BAZG die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise den Anmelder, Besitzer oder Eigentümer über die mögliche Übergabe von Proben oder Mustern beziehungsweise die Besichtigungsmöglichkeit nach Artikel 48 a Absatz 1."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise der Anmelder, Besitzer oder Eigentümer kann verlangen, zur Wahrung ihrer beziehungsweise seiner Fabrikations- oder Geschäftsgeheimnisse bei der Besichtigung anwesend zu sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAZG kann auf begründeten Antrag der Anmelderin, Besitzerin oder Eigentümerin beziehungsweise des Anmelders, Besitzers oder Eigentümers die Übergabe von Proben oder Mustern verweigern."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "99565ed4dbecb3db7385ce147399c70c6cbd396dae27116a40d331d105a673ca"
+    },
+    {
+      "id": "bund/DESG/art_48_c",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_c",
+      "artikelLabel": "Art. 48c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Antrag auf Vernichtung gestellt, so teilt das BAZG dies der Anmelderin, Besitzerin oder Eigentümerin beziehungsweise dem Anmelder, Besitzer oder Eigentümer im Rahmen der Mitteilung nach Artikel 48 Absatz 1 mit."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "7939129824c48c005c7d16a584d9e56dad27e5467124708ce17a4249da3bfe25"
+    },
+    {
+      "id": "bund/DESG/art_48_d",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_d",
+      "artikelLabel": "Art. 48d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Vernichtung der Gegenstände ist die Zustimmung der Anmelderin, Besitzerin oder Eigentümerin beziehungsweise des Anmelders, Besitzers oder Eigentümers erforderlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zustimmung gilt als erteilt, wenn die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise der Anmelder, Besitzer oder Eigentümer die Vernichtung nicht innerhalb der Fristen nach Artikel 48 Absätze 2 und 3 ausdrücklich ablehnt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "c6fecb17546d2220c6c3bdfde3506818fa681c0ac3c0e3ad999e03448fada4fe"
+    },
+    {
+      "id": "bund/DESG/art_48_e",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_e",
+      "artikelLabel": "Art. 48e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vor der Vernichtung der Gegenstände entnimmt das BAZG Proben oder Muster und bewahrt sie als Beweismittel auf für allfällige Klagen auf Schadenersatz."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "98fbdd872c3c3bd3a2198cfeb9e0f3ed97a7f10d0a40afc5b8948a2ab52234b1"
+    },
+    {
+      "id": "bund/DESG/art_48_f",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_f",
+      "artikelLabel": "Art. 48f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erweist sich die Vernichtung der Gegenstände als unbegründet, so haftet ausschliesslich die Antragstellerin für den entstandenen Schaden."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise der Anmelder, Besitzer oder Eigentümer der Vernichtung schriftlich zugestimmt, so entstehen gegenüber der Antragstellerin auch dann keine Ansprüche auf Schadenersatz, wenn sich die Vernichtung später als unbegründet erweist."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "80a5be93f9a85e4c8c82efacd17ef78e06ac1b7572ab51b833bc652df93eece8"
+    },
+    {
+      "id": "bund/DESG/art_48_g",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "48_g",
+      "artikelLabel": "Art. 48g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vernichtung der Gegenstände erfolgt auf Kosten der Antragstellerin."
+        },
+        {
+          "absatz": "2",
+          "text": "Über die Kosten für die Entnahme und Aufbewahrung von Proben oder Mustern nach Artikel 48 e entscheidet das Gericht im Zusammenhang mit der Beurteilung der Schadenersatzansprüche nach Artikel 48 f Absatz 1."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_48_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "6ad1677a0c262ae1af5912264768d6b55a38a57472cc5da93867a97b6c83f0e2"
+    },
+    {
+      "id": "bund/DESG/art_49",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist durch das Zurückbehalten der Gegenstände ein Schaden zu befürchten, so kann das BAZG das Zurückbehalten davon abhängig machen, dass die Antragstellerin ihm eine Haftungserklärung abgibt. An deren Stelle kann das BAZG von der Antragstellerin in begründeten Fällen eine angemessene Sicherheitsleistung verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Antragstellerin muss den Schaden, der durch das Zurückbehalten der Gegenstände und die Entnahme von Proben oder Mustern entstanden ist, ersetzen, wenn vorsorgliche Massnahmen nicht angeordnet werden oder sich als unbegründet erweisen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "0e4338e9e96bec93b4fbab11e34a7ee5ec4a8375b772bfeb1ce87598617458d1"
+    },
+    {
+      "id": "bund/DESG/art_49_a",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "49_a",
+      "artikelLabel": "Art. 49a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAZG behält Gegenstände zurück, wenn es sich um eine Kleinsendung handelt und:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es aufgrund eines Antrags auf Hilfeleistung nach Artikel 47 Absatz 1 den Verdacht hat, dass die zum Verbringen ins Zollgebiet oder aus dem Zollgebiet bestimmten Gegenstände widerrechtlich hergestellt worden sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "ein Antrag auf Vernichtung von Kleinsendungen (Art. 47 Abs. 2 Bst. b) gestellt wurde."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann die Zuständigkeit für die Durchführung des weiteren Verfahrens dem IGE übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Behörde informiert die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise den Anmelder, Besitzer oder Eigentümer der Gegenstände über den Verdacht und die zurückbehaltenen Gegenstände und weist sie oder ihn darauf hin, dass die Gegenstände vernichtet werden, wenn sie oder er die Vernichtung nicht innerhalb von zehn Arbeitstagen nach Empfang dieser Information ausdrücklich ablehnt."
+        },
+        {
+          "absatz": "4",
+          "text": "Lehnt die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise der Anmelder, Besitzer oder Eigentümer die Vernichtung innerhalb der Frist nach Absatz 3 ausdrücklich ab, so teilt die zuständige Behörde dies der Antragstellerin mit. Das weitere Verfahren richtet sich sinngemäss nach den Artikeln 48 Absätze 3 und 4, 48 a , 48 b und 49."
+        },
+        {
+          "absatz": "5",
+          "text": "Stimmt die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise der Anmelder, Besitzer oder Eigentümer der Vernichtung zu oder lässt sie oder er sich innerhalb der Frist nach Absatz 3 nicht vernehmen, so vernichtet die zuständige Behörde die Gegenstände auf Kosten der Antragstellerin frühestens drei Monate nach der Information nach Absatz 3 oder überlässt sie der Antragstellerin zur Vernichtung, sofern sie dies nach Artikel 47 Absatz 3 verlangt hat. Schadenersatzansprüche der Antragstellerin gegen die Anmelderin, Besitzerin oder Eigentümerin beziehungsweise den Anmelder, Besitzer oder Eigentümer sind ausgeschlossen."
+        },
+        {
+          "absatz": "6",
+          "text": "Die zuständige Behörde informiert die Antragstellerin über die Menge und die Art sowie über die Absender im In- oder Ausland der nach Absatz 5 vernichteten Gegenstände."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_49_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "fb3686087b366a6d92ae8474880d5b3e7730970b96ff840c2447e2e00987f2c4"
+    },
+    {
+      "id": "bund/DESG/art_50",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt die Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "1e03f966cfaf308ea01474b8609abe3ebc5eb7398fb82210534ffea1fccbd9a0"
+    },
+    {
+      "id": "bund/DESG/art_51",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufhebung und die Änderung bisherigen Rechts werden im Anhang geregelt."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "da2524a3a3ca0ffca39ae06988dfae45488d531df34f80d43d7c0710cdec723a"
+    },
+    {
+      "id": "bund/DESG/art_52",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eingetragene Muster und Modelle unterstehen ab dem Inkrafttreten dieses Gesetzes dem neuen Recht. Mit dem Gesuch um Verlängerung für eine vierte Schutzperiode ist dem IGE eine zur Reproduktion geeignete Abbildung des Designs einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Inkrafttreten dieses Gesetzes bereits hinterlegte, aber noch nicht eingetragene Muster und Modelle unterstehen bis zum Zeitpunkt der Eintragung dem bisherigen Recht."
+        },
+        {
+          "absatz": "3",
+          "text": "Beim Inkrafttreten dieses Gesetzes versiegelt eingetragene Muster und Modelle bleiben bis zum Ende der ersten Schutzperiode versiegelt."
+        },
+        {
+          "absatz": "4",
+          "text": "Artikel 35 Absatz 4 findet nur auf Lizenzverträge Anwendung, welche nach Inkrafttreten dieses Gesetzes abgeschlossen oder bestätigt worden sind."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "fa9ae6c1082ce62bee7be25830823df76aef2154d2c9e7d6b03cac1c2a38470a"
+    },
+    {
+      "id": "bund/DESG/art_53",
+      "ebene": "bund",
+      "quelle": "DESG",
+      "erlass": "DESG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/226/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250701",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

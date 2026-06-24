@@ -1,0 +1,888 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/PUBLG/art_1",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz regelt die Veröffentlichung durch die Bundeskanzlei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Sammlungen des Bundesrechts (Amtliche Sammlung des Bundesrechts, AS und Systematische Sammlung des Bundesrechts, SR);"
+            },
+            {
+              "marke": "b",
+              "text": "des Bundesblatts (BBl);"
+            },
+            {
+              "marke": "c",
+              "text": "von anderen Texten mit einem Zusammenhang zur Gesetzgebung."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "187e6d07719bcdbeaca7333304714e748ef06cdb81b0a315b58476d9a1eebfbe"
+    },
+    {
+      "id": "bund/PUBLG/art_1_a",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Veröffentlichung nach diesem Gesetz erfolgt zentral über eine öffentlich zugängliche Online-Plattform (Publikationsplattform)."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erfolgt im Grundsatz auch in einer Form, die maschinenlesbar ist und mit der die aktuelle und alle früheren Fassungen abgerufen werden können. Der Bundesrat bestimmt die Ausnahmen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_1_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "00549630207adc090438d5f413ef93b6938f4d988f86efbd451595f81577d5f4"
+    },
+    {
+      "id": "bund/PUBLG/art_2",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In der AS werden veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bundesverfassung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bundesgesetze;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verordnungen der Bundesversammlung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verordnungen des Bundesrates;"
+            },
+            {
+              "marke": "e",
+              "text": "die übrigen rechtsetzenden Erlasse der Bundesbehörden sowie von Organisationen und Personen des öffentlichen oder des privaten Rechts, die mit Verwaltungsaufgaben betraut sind, jedoch nicht der Bundesverwaltung angehören;"
+            },
+            {
+              "marke": "f",
+              "text": "die dem fakultativen Referendum unterstehenden Bundesbeschlüsse;"
+            },
+            {
+              "marke": "g",
+              "text": "die Bundesbeschlüsse über die Genehmigung völkerrechtlicher Verträge;"
+            },
+            {
+              "marke": "h",
+              "text": "einfache Bundesbeschlüsse, sofern die Bundesversammlung dies beschliesst."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "c36bf735e04235985d4761e501756aab2a70cfd6a771ca6c23d1f74f37ad4448"
+    },
+    {
+      "id": "bund/PUBLG/art_3",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit sie für die Schweiz verbindlich sind, werden in der AS veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die völkerrechtlichen Verträge und die Beschlüsse des internationalen Rechts, die dem obligatorischen Referendum nach Artikel 140 Absatz 1 Buchstabe b oder dem fakultativen Referendum nach Artikel 141 Absatz 1 Buchstabe d BV unterstehen;"
+            },
+            {
+              "marke": "b",
+              "text": "die übrigen völkerrechtlichen Ver­träge und Beschlüsse des internationalen Rechts, die Recht setzen oder zur Rechtsetzung ermächtigen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann beschliessen, dass auch nicht rechtsetzende Verträge und Beschlüsse in der AS veröffentlicht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt die Voraussetzungen fest, unter denen Verträge und Beschlüsse, deren Geltungsdauer sechs Monate nicht übersteigt, sowie solche von beschränkter Tragweite nicht in der AS veröffentlicht werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "c9fafcb1dbb8ec63643e90806bfd5c426296ff387bb480abedb879d9bce798de"
+    },
+    {
+      "id": "bund/PUBLG/art_4",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In der AS werden veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verträge zwischen Bund und Kantonen, die Recht setzen oder zur Recht­setzung ermächtigen;"
+            },
+            {
+              "marke": "b",
+              "text": "andere Verträge zwischen Bund und Kantonen, sofern der Bundesrat dies beschliesst;"
+            },
+            {
+              "marke": "c",
+              "text": "Verträge zwischen Kantonen, die vom Bund allgemeinverbindlich erklärt worden sind (Art. 48 a BV)."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "eb39100bd02a5f70a90a71bbd3e6340bfb53dee5e509f85a4decfbcb418339c5"
+    },
+    {
+      "id": "bund/PUBLG/art_5",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Texte nach den Artikeln 2–4, die sich wegen ihres besonderen Charakters für die Veröffentlichung in der AS nicht eignen, werden nur mit Titel und mit Fundstelle auf der Publikationsplattform in die AS aufgenommen, namentlich wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nur einen kleinen Kreis von Personen betreffen;"
+            },
+            {
+              "marke": "b",
+              "text": "sie technischer Natur sind und sich nur an Fachleute wenden;"
+            },
+            {
+              "marke": "c",
+              "text": "sie in einem Format veröffentlicht werden müssen, das sich für die Veröffentlichung in der AS nicht eignet; oder"
+            },
+            {
+              "marke": "d",
+              "text": "ein Bundesgesetz oder eine Verordnung der Bundesversammlung die Veröffentlichung ausserhalb der AS anordnet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Texte nach den Artikeln 2–4, die in einem anderen in der Schweiz unentgeltlich zugänglichen Publikationsorgan veröffentlicht sind, werden nur mit dem Titel sowie der Fundstelle in diesem Organ oder der Bezugsquelle in die AS aufgenommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 6–10 und 14 sind anwendbar."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "5a8333737228202f7e0b738a92f808590f325023deb30bdb473bf6e5fd5e11c9"
+    },
+    {
+      "id": "bund/PUBLG/art_6",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erlasse des Bundes sowie völkerrechtliche Verträge und Beschlüsse des internationalen Rechts, die zur Wahrung der inneren oder äusseren Sicherheit der Schweiz oder aufgrund völkerrechtlicher Verpflichtungen der Schweiz geheim gehalten werden müssen, werden in der AS nicht veröffentlicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit die Texte nach Absatz 1 individuelle Pflichten vorsehen, werden nur jene Personen verpflichtet, denen die entsprechenden Bestimmungen bekannt gegeben werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "87af88359765967e56f19c7c0e64b8281de2bbc98a8e5a03b1db868e8870fe0d"
+    },
+    {
+      "id": "bund/PUBLG/art_7",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Texte nach den Artikeln 2–4 werden mindestens fünf Tage vor dem Inkraft­treten in der AS veröffentlicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Verträge und Beschlüsse nach den Artikeln 3 und 4, deren Inkrafttreten zum Zeitpunkt der Genehmigung noch nicht bekannt ist, werden unmittelbar nach dem Bekanntwerden ihres Inkrafttretens veröffentlicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Text wird ausnahmsweise spätestens am Tag des Inkrafttretens veröffentlicht (dringliche Veröffentlichung), wenn dies zur Sicherstellung der Wirkung erforderlich ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist die Publikationsplattform nicht zugänglich, so werden die Texte mit anderen Mitteln veröffentlicht (ausserordentliche Veröffentlichung)."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "7de79ac034288c2200a56e90533537977344fd9adad30293c3847cff065a7c4e"
+    },
+    {
+      "id": "bund/PUBLG/art_8",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechtspflichten aus Texten nach den Artikeln 2–4 entstehen, sobald die Texte nach den Bestimmungen dieses Abschnitts veröffentlicht worden sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Erlass nach dem Inkrafttreten in der AS veröffentlicht, so entstehen Ver­pflichtungen daraus erst am Tag nach seiner Veröffentlichung. Artikel 7 Absatz 3 bleibt vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird ein Erlass im ausserordentlichen Verfahren veröffentlicht, so bleibt der betroffenen Person der Nachweis offen, dass sie den Erlass nicht kannte und ihn trotz pflichtgemässer Sorgfalt nicht kennen konnte."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "db9d0e10de2d8354e8c19fd8aeb0eb1b585f2ddb4e2f29c81ae9e891f7ee7591"
+    },
+    {
+      "id": "bund/PUBLG/art_9",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/PUBLG/art_10",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundeskanzlei berichtigt in der AS sinnverändernde Fehler und Formulierungen, die nicht dem Beschluss der erlassenden Behörde entsprechen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Erlassen des Bundes, mit Ausnahme der Erlasse der Bundesversammlung: in eigener Verantwortung;"
+            },
+            {
+              "marke": "b",
+              "text": "in völkerrechtlichen Verträgen und Beschlüssen des internationalen Rechts: im Einvernehmen mit den Vertragspartnern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berichtigung von Erlassen der Bundesversammlung gelten die Artikel 57 Absatz 1 bis und 58 des Parlamentsgesetzes vom 13. Dezember 2002."
+        },
+        {
+          "absatz": "3",
+          "text": "Fehler in Erlassen der Bundesversammlung, die bei der Veröffentlichung entstanden sind, berichtigt die Bundeskanzlei im Einvernehmen mit der Redaktionskommission der Bundesversammlung in der AS."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "bb1fb653ffeb32c1bf0822b1a336add8649f3eb1fbab9e69dc495828eb81b42c"
+    },
+    {
+      "id": "bund/PUBLG/art_11",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die SR ist eine bereinigte, nach Sachgebieten geordnete und laufend nachgeführte Sammlung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der in der AS veröffentlichten Texte, mit Ausnahme der nicht rechtsetzenden Bundesbeschlüsse über die Genehmigung von völkerrechtlichen Verträgen oder von Beschlüssen des internationalen Rechts; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Kantonsverfassungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "6627ad5292a34fdc68cf87fae4efd862b8308e30b71c0aad1848c58e673e698c"
+    },
+    {
+      "id": "bund/PUBLG/art_12",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundeskanzlei berichtigt Fehler, die nicht sinnverändernd sind, in der SR formlos."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie passt Angaben wie Bezeichnungen von Verwaltungseinheiten, Verweise, Fundstellen oder Abkürzungen in der SR formlos an."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Berichtigung von Erlassen der Bundesversammlung gilt Artikel 58 des Parlamentsgesetzes vom 13. Dezember 2002."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "740b7c0cc6c0d38ab50d5f0cb6b8ac3af3937184caf200b4b01c2a1e303616cd"
+    },
+    {
+      "id": "bund/PUBLG/art_13",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Bundesblatt werden veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Botschaften und Entwürfe des Bundesrates zu Erlassen der Bundesversammlung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Berichte und die Entwürfe von Kommissionen der Bundesversammlung zu Erlassen der Bundesversammlung und die entsprechenden Stellungnahmen des Bundes­rates;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "die Bundesbeschlüsse zu Verfassungsänderungen sowie über die Genehmigung völkerrechtlicher Verträge nach Artikel 140 Absatz 1 Buchstabe b BV;"
+            },
+            {
+              "marke": "e",
+              "text": "die Bundesgesetze und die dem fakultativen Referendum unterstehenden Bundesbeschlüsse;"
+            },
+            {
+              "marke": "f",
+              "text": "die einfachen Bundesbeschlüsse, die nicht nach Artikel 2 Buchstabe h in der AS veröffentlicht werden;"
+            },
+            {
+              "marke": "fbis",
+              "text": "Weisungen des Bundesrates;"
+            },
+            {
+              "marke": "g",
+              "text": "weitere Texte, die nach der Bundesgesetzgebung aufzunehmen sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Bundesblatt können ferner veröffentlicht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Berichte, Stellungnahmen oder Vereinbarungen des Bundesrates, der Kommissionen der Bundesversammlung oder der eidgenössischen Gerichte, soweit sie nicht nach Absatz 1 veröffentlicht werden müssen;"
+            },
+            {
+              "marke": "b",
+              "text": "Beschlüsse und Mitteilungen des Bundesrates;"
+            },
+            {
+              "marke": "c",
+              "text": "Beschlüsse, Weisungen und Mitteilungen der Bundesverwaltung sowie von Organisationen und Personen des öffentlichen oder des privaten Rechts, die mit Verwaltungsaufgaben betraut sind, jedoch nicht der Bundesverwaltung angehören."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit es zweckmässig erscheint, kann die Veröffentlichung auf Titel sowie Fundstelle oder Bezugsquelle (Art. 5) beschränkt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Berichtigung der Texte gilt Artikel 10 sinngemäss."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "56a27f1f81e0809ae33c2f8ff93b9324c7ac2595bf802e9b31bb3c09d4e8b6bd"
+    },
+    {
+      "id": "bund/PUBLG/art_13_a",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf der Publikationsplattform werden des Weiteren veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vollständigen durch Verweis veröffentlichten Texte nach den Artikeln 5 Absatz 1 und 13 Absatz 3;"
+            },
+            {
+              "marke": "b",
+              "text": "die Unterlagen zu Vernehmlassungen im Sinne des Vernehmlassungsgesetzes vom 18. März 2005;"
+            },
+            {
+              "marke": "c",
+              "text": "vergangene Fassungen des Bundesrechts;"
+            },
+            {
+              "marke": "d",
+              "text": "Übersetzungen amtlicher Veröffentlichungen insbesondere in rätoromanischer und in englischer Sprache."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann vorsehen, dass weitere Texte, die einen Zusammenhang mit der Gesetzgebung haben, auf der Publikationsplattform veröffentlicht werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_13_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "8e20717f78a86d5c698d43426b4bc7a343719014ebb71c4c546ca5abed1a9860"
+    },
+    {
+      "id": "bund/PUBLG/art_14",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Veröffentlichung erfolgt gleichzeitig in den Amtssprachen Deutsch, Französisch und Italienisch. Bei Erlassen sind die drei Fassungen in gleicher Weise verbindlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann bestimmen, dass durch Verweis veröffentlichte Texte nach Artikel 13 a Absatz 1 Buchstabe a und weitere Texte nach Artikel 13 a Absatz 2 nicht in allen drei Amtssprachen oder in keiner Amtssprache veröffentlicht werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die in diesen Texten enthaltenen Bestimmungen die Betroffenen nicht unmittelbar verpflichten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Betroffenen diese Texte ausschliesslich in der Originalsprache benützen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bundeskanzlei kann bestimmen, dass Beschlüsse und Mitteilungen der Bundesverwaltung sowie von Organisationen und Personen des öffentlichen oder des privaten Rechts nach Artikel 13 Absatz 2 nur in der Amtssprache des betroffenen Sprachgebietes veröffentlicht werden, sofern sie von ausschliesslich lokaler Bedeutung sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Übersetzung der Unterlagen zu Vernehmlassungen gilt die Gesetzgebung über das Vernehmlassungsverfahren."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Veröffentlichung von Texten in Rätoromanisch richtet sich nach Artikel 11 des Sprachengesetzes vom 5. Oktober 2007."
+        },
+        {
+          "absatz": "6",
+          "text": "Auf der Publikationsplattform veröffentlichte Texte von besonderer Tragweite oder internationalem Interesse können in weiteren Sprachen, insbesondere in Englisch, veröffentlicht werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "5dd43ffad4b096c1026d14879630fc3ecd1686148aad71a73b6f8b8b06d8946a"
+    },
+    {
+      "id": "bund/PUBLG/art_14_a",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundeskanzlei veröffentlicht im BBl sowie in der AS Erlasse der Bundesversammlung in den drei Amtssprachen in der von den Räten angenom­menen endgültigen Fassung."
+        },
+        {
+          "absatz": "2",
+          "text": "Dabei ist sie nur befugt, die Information über die Referendumsfrist, den Ablauf der Referendumsfrist und die Inkraftsetzung hinzuzufügen, fehlende AS-, BBl- und SR-Referenzen zu ergänzen sowie gestalterische Anpassungen vorzunehmen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_14_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "28dece2e6cf36b2263d9ce5e3ba473e6b04606eeb5aa6746d7830475d9d7a4ac"
+    },
+    {
+      "id": "bund/PUBLG/art_15",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Erlasse des Bundes, Verträge zwischen Bund und Kantonen sowie Verträge zwischen Kantonen (Art. 2 und 4) ist die in der AS veröffentlichte Fassung massgebend. Wird ein Text durch Verweis veröffentlicht, so ist die Fassung massgebend, auf die verwiesen wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die auf der Publikationsplattform veröffentlichte Fassung ist massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Welche Fassung von völkerrechtlichen Verträgen und von Beschlüssen des internationalen Rechts massgebend ist, richtet sich nach deren Bestimmungen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "23a04ac3bc7576e10d0fa68a809ef06ffe16e53e437ccf3ba38481e390dfefd5"
+    },
+    {
+      "id": "bund/PUBLG/art_16",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die auf der Publikationsplattform veröffentlichten Texte können in gedruckter Form bezogen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat legt fest, zu welchen Bedingungen periodische Ausgaben von auf der Publikationsplattform veröffentlichten Texten in gedruckter Form erstellt und vertrieben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Er legt die Mindestanzahl an gedruckten Exemplaren fest, die von den in der AS und im BBl veröffentlichten Texten bereitgestellt werden, sowie die Stellen, bei denen sie hinterlegt werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "49166714a617e2163b29eaf418f1c20424f87e7ead4506b15f452986bdbb1268"
+    },
+    {
+      "id": "bund/PUBLG/art_16_a",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "16_a",
+      "artikelLabel": "Art. 16a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat legt die notwendigen Massnahmen fest, um die Authentizität, die Integrität und die Aufbewahrung der auf der Publikationsplattform veröffentlichten Texte sowie den störungsfreien Betrieb der Publikationsplattform zu gewährleisten; er berücksichtigt dabei den Stand der Technik."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_16_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "0c2d3e7d6801ea78bce6c60a39898834cebf1044c200a1a0d62590b243371f0f"
+    },
+    {
+      "id": "bund/PUBLG/art_16_b",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "16_b",
+      "artikelLabel": "Art. 16b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Veröffentlichungen nach diesem Gesetz können Personendaten enthalten; insbesondere können sie auch besonders schützenswerte Personendaten nach Artikel 5 Buchstabe c des Datenschutzgesetzes vom 25. September 2020 enthalten, sofern dies für eine in einem Bundesgesetz vorgesehene Veröffentlichung not­wendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Texte, die besonders schützenswerte Personendaten enthalten, dürfen online nicht länger öffentlich zugänglich sein und nicht mehr Informationen enthalten, als es ihr Zweck erfordert."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt die weiteren notwendigen Massnahmen fest, um bei der On­line-Veröffentlichung den Schutz von besonders schützenswerten Personendaten sicherzustellen; er berücksichtigt dabei den Stand der Technik."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_16_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "7ae76d22e3fe45bb6003639fd307af0fd01730de32fe4a606ae89a89bd8e1b9f"
+    },
+    {
+      "id": "bund/PUBLG/art_17",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/PUBLG/art_18",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei der Bundeskanzlei und bei den von den Kantonen bezeichneten Stellen können eingesehen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Inhalte der Publikationsplattform; und"
+            },
+            {
+              "marke": "b",
+              "text": "die ausserordentlich veröffentlichten Erlasse, die noch nicht in die AS aufgenommen worden sind (Art. 7 Abs. 4)."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "485de95b1f64f9a2cc5a154e1adbb1a72d3a931925035ca3edebff45921a5458"
+    },
+    {
+      "id": "bund/PUBLG/art_19",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konsultation der Publikationsplattform sowie die Einsichtnahme im Sinne von Artikel 18 sind unentgeltlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Gebühren für die Abgabe von gedruckten Texten und von elektronischen Daten nach diesem Gesetz."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "0237f1b9f78af5687301f8969ffd050eaf2f14a025a5098706506ca5586754b0"
+    },
+    {
+      "id": "bund/PUBLG/art_19_a",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann für Drittanbieter besondere Bedingungen vorsehen, insbeson­dere Auflagen für die Verwertung von Daten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "3054667595edc6fac82d15b353176e2f1425a2972d60e370bd0e195ec76e6666"
+    },
+    {
+      "id": "bund/PUBLG/art_19_b",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundeskanzlei führt die Publikationsplattform."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erfüllt die weiteren Aufgaben nach diesem Gesetz, soweit nicht andere Verwaltungseinheiten zuständig sind."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_19_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "d7ebcaa54a3cdcabbece3610f644f7738ad43b8329148cc72abdd7f66d7ae75a"
+    },
+    {
+      "id": "bund/PUBLG/art_20",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Publikationsgesetz vom 21. März 1986 48 wird aufgehoben."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "d2f028960248aab1fafb94f8f1ffd749a466e45377260935e5f27bc1b1431000"
+    },
+    {
+      "id": "bund/PUBLG/art_21",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die nachstehenden Bundesgesetze werden wie folgt geändert: … 49"
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "892c51b3ba8005b1b12e80a303627a2cc7a454fd73eec416fdc7bd499a3e4b16"
+    },
+    {
+      "id": "bund/PUBLG/art_22",
+      "ebene": "bund",
+      "quelle": "PUBLG",
+      "erlass": "PUBLG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/745/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230901",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

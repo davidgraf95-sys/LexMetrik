@@ -1,0 +1,4983 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/KAG/art_1",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz bezweckt den Schutz der Anlegerinnen und Anleger sowie die Transparenz und die Funktionsfähigkeit des Marktes für kollektive Kapitalanlagen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a146efb4473b8913f42221d518a29b8d060fd9d446113b89186b5bff343027ed"
+    },
+    {
+      "id": "bund/KAG/art_2",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diesem Gesetz unterstellt sind, unabhängig von der Rechtsform:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kollektive Kapitalanlagen und Personen, die diese aufbewahren;"
+            },
+            {
+              "marke": "b",
+              "text": "ausländische kollektive Kapitalanlagen, die in der Schweiz angeboten werden;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "Personen, die in der Schweiz ausländische kollektive Kapitalanlagen vertreten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diesem Gesetz nicht unterstellt sind insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einrichtungen und Hilfseinrichtungen der beruflichen Vorsorge, einschliesslich Anlagestiftungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Sozialversicherungseinrichtungen und Ausgleichskassen;"
+            },
+            {
+              "marke": "c",
+              "text": "öffentlich-rechtliche Körperschaften und Anstalten;"
+            },
+            {
+              "marke": "d",
+              "text": "operative Gesellschaften, die eine unternehmerische Tätigkeit ausüben;"
+            },
+            {
+              "marke": "e",
+              "text": "Gesellschaften, die durch Stimmenmehrheit oder auf andere Weise eine oder mehrere Gesellschaften in einem Konzern unter einheitlicher Leitung zusammenfassen (Holdinggesellschaften);"
+            },
+            {
+              "marke": "f",
+              "text": "Investmentclubs, sofern deren Mitglieder in der Lage sind, ihre Vermögensinteressen selber wahrzunehmen;"
+            },
+            {
+              "marke": "g",
+              "text": "Vereine und Stiftungen im Sinne des Zivilgesetzbuches;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Investmentgesellschaften in der Form einer schweizerischen Aktiengesellschaft unterstehen diesem Gesetz nicht, sofern sie an einer Schweizer Börse kotiert sind oder sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausschliesslich Aktionärinnen und Aktionäre im Sinne von Artikel 10 Absätze 3 und 3 ter beteiligt sein dürfen; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Aktien auf Namen lauten."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4955d6926b527fefde2cbbcfc8d1ca26bc8d4c608f77042e01f4d1d16e6734ae"
+    },
+    {
+      "id": "bund/KAG/art_3_6",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "3_6",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_3_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_7",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kollektive Kapitalanlagen sind Vermögen, die von Anlegerinnen und Anlegern zur gemeinschaftlichen Kapitalanlage aufgebracht und für deren Rechnung verwaltet werden. Die Anlagebedürfnisse der Anlegerinnen und Anleger werden in gleichmässiger Weise befriedigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kollektiven Kapitalanlagen können offen oder geschlossen sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann die Mindestanzahl der Anlegerinnen und Anleger je nach Rechtsform und Adressatenkreis bestimmen. Er kann kollektive Kapitalanlagen für eine einzige qualifizierte Anlegerin oder einen einzigen qualifizierten Anleger (Einanlegerfonds) nach Artikel 10 Absatz 3 in Verbindung mit Artikel 4 Absatz 3 Buchstaben b, e und f des Finanzdienstleistungsgesetzes vom 15. Juni 2018 (FIDLEG) zulassen ."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Einanlegerfonds können die Fondsleitung und die Investmentgesellschaft mit variablem Kapital (SICAV) die Anlageentscheide auf die einzige Anlegerin oder auf den einzigen Anleger übertragen. Die Eidgenössische Finanzmarktaufsicht (FINMA) kann diese oder diesen von der Bewilligungspflicht nach Artikel 14 Absatz 1 des Finanzinstitutsgesetzes vom 15. Juni 2018 (FINIG) beziehungsweise von der Pflicht, sich einer anerkannten Aufsicht nach Artikel 36 Absatz 3 des vorliegenden Gesetzes zu unterstellen, befreien."
+        },
+        {
+          "absatz": "5",
+          "text": "Kollektive Kapitalanlagen müssen ihren Sitz und ihre Hauptverwaltung in der Schweiz haben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6f38cdd1745fa3b1c3051400aaa3cc1542da8964bf3f5732521efd35f138ff35"
+    },
+    {
+      "id": "bund/KAG/art_8",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Offene kollektive Kapitalanlagen weisen entweder die Form des vertraglichen Anlagefonds (Art. 25 ff.) oder die Form der SICAV (Art. 36 ff.) auf."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei offenen kollektiven Kapitalanlagen haben die Anlegerinnen und Anleger zulasten des Kollektivvermögens unmittelbar oder mittelbar einen Rechtsanspruch auf Rückgabe ihrer Anteile zum Nettoinventarwert."
+        },
+        {
+          "absatz": "3",
+          "text": "Die offenen kollektiven Kapitalanlagen haben ein Fondsreglement. Dieses entspricht beim vertraglichen Anlagefonds dem Kollektivanlagevertrag (Fondsvertrag) und bei der SICAV den Statuten und dem Anlagereglement."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4c289dd7b9261ab90049f51b4f3da37577c5bd218d520a0f65de2880a71d34f5"
+    },
+    {
+      "id": "bund/KAG/art_9",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geschlossene kollektive Kapitalanlagen weisen entweder die Form der Kommanditgesellschaft für kollektive Kapitalanlagen (KmGK, Art. 98–109) oder die Form der Investmentgesellschaft mit festem Kapital (SICAF, Art. 110–118) auf."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei geschlossenen kollektiven Kapitalanlagen haben die Anlegerinnen und Anleger zulasten des Kollektivvermögens weder unmittelbar noch mittelbar einen Rechtsanspruch auf Rückgabe ihrer Anteile zum Nettoinventarwert."
+        },
+        {
+          "absatz": "3",
+          "text": "Die KmGK beruht auf einem Gesellschaftsvertrag."
+        },
+        {
+          "absatz": "4",
+          "text": "Die SICAF beruht auf Statuten und erlässt ein Anlagereglement."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "89567b0495a998e0774b070b7e6edf37e16c386cebcebcde80247fc3b7d138e9"
+    },
+    {
+      "id": "bund/KAG/art_10",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anlegerinnen und Anleger sind natürliche und juristische Personen sowie Kollektiv- und Kommanditgesellschaften, die Anteile an kollektiven Kapitalanlagen halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Kollektive Kapitalanlagen stehen sämtlichen Anlegerinnen und Anlegern offen, es sei denn, dieses Gesetz, das Fondsreglement oder die Statuten schränken den Anlegerkreis auf qualifizierte Anlegerinnen und Anleger ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Als qualifizierte Anlegerinnen und Anleger im Sinne dieses Gesetzes gelten professionelle Kundinnen und Kunden nach Artikel 4 Absätze 3–5 oder nach Artikel 5 Absätze 1 und 4 FIDLEG."
+        },
+        {
+          "absatz": "3bis",
+          "text": "…"
+        },
+        {
+          "absatz": "3ter",
+          "text": "Als qualifizierte Anlegerinnen und Anleger gelten auch Privatkundinnen und -kunden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die eine der folgenden Personen im Rahmen eines auf Dauer angelegten Vermögensverwaltungs- oder Anlageberatungsverhältnisses Vermögensverwaltung oder Anlageberatung im Sinne von Artikel 3 Buchstabe c Ziffern 3 und 4 FIDLEG erbringt: 1. ein Finanzintermediär nach Artikel 4 Absatz 3 Buchstabe a FIDLEG,"
+            },
+            {
+              "marke": "2",
+              "text": "ein ausländischer Finanzintermediär, der einer prudenziellen Aufsicht untersteht wie der Finanzintermediär nach Ziffer 1,"
+            },
+            {
+              "marke": "3",
+              "text": "ein Versicherungsunternehmen nach dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG); und"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die FINMA kann kollektive Kapitalanlagen ganz oder teilweise von bestimmten Vorschriften der Finanzmarktgesetze im Sinne von Artikel 1 Absatz 1 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007 (FINMAG) befreien, sofern sie ausschliesslich qualifizierten Anlegerinnen und Anlegern offenstehen und der Schutzzweck dieses Gesetzes dadurch nicht beeinträchtigt wird, namentlich von den Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "die Pflicht zur Erstellung eines Halbjahresberichtes;"
+            },
+            {
+              "marke": "d",
+              "text": "die Pflicht, den Anlegerinnen und Anlegern das Recht auf jederzeitige Kündigung einzuräumen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Pflicht zur Ausgabe und Rücknahme der Anteile in bar;"
+            },
+            {
+              "marke": "f",
+              "text": "die Risikoverteilung."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "81a0f3c7f2cbd410afafb84abbcf62d5952c39e4d2cb32eb4862a0eda4b532e8"
+    },
+    {
+      "id": "bund/KAG/art_11",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Anteile sind Forderungen gegen die Fondsleitung auf Beteiligung an Vermögen und Ertrag des Anlagefonds oder Beteiligungen an der Gesellschaft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8dbfbb4ace340573fd50eaee29ec05002d8e449be56b726b3ab3aad9a706f12b"
+    },
+    {
+      "id": "bund/KAG/art_12",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bezeichnung der kollektiven Kapitalanlage darf nicht zu Verwechslung oder Täuschung Anlass geben, insbesondere nicht in Bezug auf die Anlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bezeichnungen wie «Anlagefonds», «Investmentfonds», «Investmentgesellschaft mit variablem Kapital», «SICAV», «Kommanditgesellschaft für kollektive Kapitalanlagen», «KmGK», «Investmentgesellschaft mit festem Kapital», «SICAF», «Limited Qualified Investor Fund» oder «L-QIF» dürfen nur für die entsprechenden, diesem Gesetz unterstellten kollektiven Kapitalanlagen verwendet werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0d7c4449fa42b8e755b1c0fd2804d9a4af4447e1b41fdeb843fe5e849783745a"
+    },
+    {
+      "id": "bund/KAG/art_13",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine kollektive Kapitalanlage bildet, betreibt oder aufbewahrt , braucht eine Bewilligung der FINMA."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Bewilligung beantragen müssen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "die SICAV;"
+            },
+            {
+              "marke": "c",
+              "text": "die KmGK;"
+            },
+            {
+              "marke": "d",
+              "text": "die SICAF;"
+            },
+            {
+              "marke": "e",
+              "text": "die Depotbank;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "h",
+              "text": "der Vertreter ausländischer kollektiver Kapitalanlagen."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Keiner Bewilligung bedarf ein Limited Qualified Investor Fund (L-QIF) in der Rechtsform der SICAV oder der KmGK."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann Vertreter, die bereits einer anderen gleichwertigen staatlichen Aufsicht unterstehen, von der Bewilligungspflicht befreien."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die Personen nach Absatz 2 Buchstaben b–d dürfen erst nach Erteilung der Bewilligung durch die FINMA in das Handelsregister eingetragen werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3fd2108dac8c43f25767992e9dec3fffd31cf713053abfa39a373bef942d6118"
+    },
+    {
+      "id": "bund/KAG/art_14",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung wird erteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Personen nach Artikel 13 Absatz 2 und die für die Verwaltung und Geschäftsführung verantwortlichen Personen Gewähr für eine einwandfreie Geschäftstätigkeit bieten;"
+            },
+            {
+              "marke": "abis",
+              "text": "die für die Verwaltung und Geschäftsführung verantwortlichen Personen einen guten Ruf geniessen und die für die Funktion erforderlichen fachlichen Qualifikationen aufweisen;"
+            },
+            {
+              "marke": "b",
+              "text": "die qualifiziert Beteiligten einen guten Ruf geniessen und sich ihr Einfluss nicht zum Schaden einer umsichtigen und soliden Geschäftstätigkeit auswirkt;"
+            },
+            {
+              "marke": "c",
+              "text": "durch interne Vorschriften und eine angemessene Betriebsorganisation die Erfüllung der Pflichten aus diesem Gesetz sichergestellt ist;"
+            },
+            {
+              "marke": "d",
+              "text": "ausreichende finanzielle Garantien vorliegen;"
+            },
+            {
+              "marke": "e",
+              "text": "die in den entsprechenden Bestimmungen des Gesetzes aufgeführten zusätzlichen Bewilligungsvoraussetzungen erfüllt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Sofern es sich bei finanziellen Garantien um Kapitalanforderungen handelt, kann der Bundesrat höhere Kapitalanforderungen als nach dem Obligationenrecht vorsehen."
+        },
+        {
+          "absatz": "1ter",
+          "text": "Der Bundesrat kann zusätzliche Bewilligungsvoraussetzungen festlegen, wenn dies anerkannten internationalen Standards entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Als qualifiziert beteiligt gelten, sofern sie an den Personen nach Artikel 13 Absatz 2 direkt oder indirekt mit mindestens 10 Prozent des Kapitals oder der Stimmen beteiligt sind oder ihre Geschäftstätigkeit auf andere Weise massgebend beeinflussen können:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "natürliche und juristische Personen:"
+            },
+            {
+              "marke": "b",
+              "text": "Kollektiv- und Kommanditgesellschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "wirtschaftlich miteinander verbundene Personen, die dieses Kriterium gemeinsam erfüllen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "690a1f8ba58f868485c27180a15968a7e995e88a8ed49a0e6a5ac0aa99414f55"
+    },
+    {
+      "id": "bund/KAG/art_15",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Genehmigung der FINMA bedürfen folgende Dokumente:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Kollektivanlagevertrag des Anlagefonds (Art. 25);"
+            },
+            {
+              "marke": "b",
+              "text": "die Statuten und das Anlagereglement der SICAV;"
+            },
+            {
+              "marke": "c",
+              "text": "der Gesellschaftsvertrag der KmGK;"
+            },
+            {
+              "marke": "d",
+              "text": "die Statuten und das Anlagereglement der SICAF;"
+            },
+            {
+              "marke": "e",
+              "text": "die entsprechenden Dokumente ausländischer kollektiver Kapitalanlagen, die nicht qualifizierten Anlegerinnen und Anlegern angeboten werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Anlagefonds oder die SICAV als offene kollektive Kapitalanlage mit Teilvermögen (Art. 92 ff.) ausgestaltet, so bedarf jedes Teilvermögen beziehungsweise jede Aktienkategorie einer eigenen Genehmigung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dokumente eines L-QIF und deren Änderung bedürfen weder einer Genehmigung nach Absatz 1 noch einer Genehmigung nach Absatz 2."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5a012d2a1ef00454d089b1f9c0564740b323058576a18d84784cafaea04275ed"
+    },
+    {
+      "id": "bund/KAG/art_16",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ändern sich die der Bewilligung beziehungsweise der Genehmigung zugrunde liegenden Umstände, so ist für die Weiterführung der Tätigkeit vorgängig die Bewilligung beziehungsweise Genehmigung der FINMA einzuholen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b46c321d67dc64fc186ff3bb3d4d2a5db17ef3cd3b1af2f6448e2033d0b9ff99"
+    },
+    {
+      "id": "bund/KAG/art_17",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann für kollektive Kapitalanlagen ein vereinfachtes Bewilligungs- und Genehmigungsverfahren vorsehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bf03767250da69cfd1b758dc5bb3ee25923f880f88382a41b018ba406b5cdc50"
+    },
+    {
+      "id": "bund/KAG/art_18_18_c",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "18_18_c",
+      "artikelLabel": "Art. 1818c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_18_18_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_19",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_20",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die kollektive Kapitalanlagen verwalten, aufbewahren oder vertreten, sowie ihre Beauftragten erfüllen dabei insbesondere die folgenden Pflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Treuepflicht: Sie handeln unabhängig und wahren ausschliesslich die Interessen der Anlegerinnen und Anleger;"
+            },
+            {
+              "marke": "b",
+              "text": "Sorgfaltspflicht: Sie treffen die organisatorischen Massnahmen, die für eine einwandfreie Geschäftstätigkeit erforderlich sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Informationspflicht: Sie legen Rechenschaft ab über die von ihnen verwalteten, aufbewahrten und vertretenen kollektiven Kapitalanlagen und informieren über sämtliche den Anlegerinnen und Anlegern direkt oder indirekt belasteten Gebühren und Kosten sowie über von Dritten zugeflossene Entschädigungen, insbesondere Provisionen, Rabatte oder sonstige vermögenswerte Vorteile."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Personen, die kollektive Kapitalanlagen verwalten, aufbewahren oder vertreten, sowie ihre Beauftragten treffen für ihre gesamte Geschäftstätigkeit alle zur Erfüllung dieser Pflichten notwendigen Massnahmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a2fd02c5b1d60d4b8098e50802327b3d420035386ef986edb085e755b8653465"
+    },
+    {
+      "id": "bund/KAG/art_21",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die kollektive Kapitalanlagen verwalten, aufbewahren oder vertreten, sowie ihre Beauftragten befolgen eine Anlagepolitik, die dauernd mit dem in den entsprechenden Dokumenten festgelegten Anlagecharakter der kollektiven Kapitalanlage übereinstimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen im Zusammenhang mit dem Erwerb und der Veräusserung von Sachen und Rechten für sich wie für Dritte nur die Vergütungen entgegennehmen, die in den entsprechenden Dokumenten vorgesehen sind. Entschädigungen nach Artikel 26 FIDLEG sind der kollektiven Kapitalanlage gutzuschreiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie dürfen Anlagen auf eigene Rechnung nur zum Marktpreis übernehmen und Anlagen aus eigenen Beständen nur zum Marktpreis abtreten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1c06e2ded679ce1d6e1bfb6408c54d0645fcedbc8d92df000b5a22ff430e6a1f"
+    },
+    {
+      "id": "bund/KAG/art_22",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_23",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die mit den Anlagen verbundenen Mitgliedschafts- und Gläubigerrechte sind unabhängig und ausschliesslich im Interesse der Anlegerinnen und Anleger auszuüben."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 685 d Absatz 2 des Obligationenrechts findet auf Anlagefonds keine Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Verwaltet eine Fondsleitung mehrere Anlagefonds, so wird die Höhe der Beteiligung im Hinblick auf die prozentmässige Begrenzung nach Artikel 685 d Absatz 1 des Obligationenrechts für jeden Anlagefonds einzeln berechnet."
+        },
+        {
+          "absatz": "4",
+          "text": "Absatz 3 gilt auch für jedes Teilvermögen einer offenen kollektiven Kapitalanlage im Sinne von Artikel 92 ff."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d2f39d86abd178f75f293af8fcbcc8e6763de23f76a16ac2afde600f2019db93"
+    },
+    {
+      "id": "bund/KAG/art_24",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_25",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der vertragliche Anlagefonds (Anlagefonds) basiert auf einem Kollektivanlagevertrag (Fondsvertrag), durch den sich die Fondsleitung verpflichtet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anlegerinnen und Anleger nach Massgabe der von ihnen erworbenen Fondsanteile am Anlagefonds zu beteiligen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Fondsvermögen gemäss den Bestimmungen des Fondsvertrags selbständig und im eigenen Namen zu verwalten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Depotbank nimmt nach Massgabe der ihr durch Gesetz und Fondsvertrag übertragenen Aufgaben am Fondsvertrag teil."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anlagefonds weist ein Mindestvermögen auf. Der Bundesrat legt dessen Höhe fest und die Frist, innerhalb der es geäufnet werden muss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bcd0f4c6f079305a6f30b12e07e24b7423691e128f04af415a5cbc47bfa811fa"
+    },
+    {
+      "id": "bund/KAG/art_26",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung stellt den Fondsvertrag auf und unterbreitet diesen mit Zustimmung der Depotbank der FINMA zur Genehmigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Fondsvertrag umschreibt die Rechte und Pflichten der Anlegerinnen und Anleger, der Fondsleitung und der Depotbank."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt den Mindestinhalt fest."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "36a873e70e22ef013e65e186e7e9ce640d6af1aa7ce6b46cc7bb4a7418c4d1c4"
+    },
+    {
+      "id": "bund/KAG/art_27",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung hat Änderungen des Fondsvertrags mit Zustimmung der Depotbank der FINMA zur Genehmigung einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ändert die Fondsleitung den Fondsvertrag, so veröffentlicht sie eine Zusammenfassung der wesentlichen Änderungen im Voraus mit dem Hinweis auf die Stellen, wo die Vertragsänderungen im Wortlaut kostenlos bezogen werden können."
+        },
+        {
+          "absatz": "3",
+          "text": "In den Publikationen sind die Anlegerinnen und Anleger auf die Möglichkeit hinzuweisen, bei der FINMA innert 30 Tagen nach der Publikation Einwendungen zu erheben. Das Verfahren richtet sich nach dem Verwaltungsverfahrensgesetz vom 20. Dezember 1968 (VwVG). Die Anlegerinnen und Anleger sind ferner darauf hinzuweisen, dass sie unter Beachtung der vertraglichen oder reglementarischen Frist die Auszahlung ihrer Anteile in bar verlangen können."
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA veröffentlicht ihren Entscheid in den Publikationsorganen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "04db3aaa3168fe6e16828bffbd981da5ebf09007d0a22f6a5883218394cb998b"
+    },
+    {
+      "id": "bund/KAG/art_28_35",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "28_35",
+      "artikelLabel": "Art. 2835",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_28_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_36",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die SICAV ist eine Gesellschaft:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren Kapital und Anzahl Aktien nicht im Voraus bestimmt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "deren Kapital in Unternehmer- und Anlegeraktien aufgeteilt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "für deren Verbindlichkeiten nur das Gesellschaftsvermögen haftet;"
+            },
+            {
+              "marke": "d",
+              "text": "deren ausschliesslicher Zweck die kollektive Kapitalanlage ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die SICAV weist ein Mindestvermögen auf. Der Bundesrat legt dessen Höhe fest und die Frist, innerhalb der dieses geäufnet werden muss."
+        },
+        {
+          "absatz": "3",
+          "text": "Anlageentscheide darf die SICAV nur Personen übertragen, die über eine für diese Tätigkeit erforderliche Bewilligung verfügen. Die Artikel 14 und 35 FINIG gelten sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9d0565978585e4ac7a4b84a3e29aa7255f370b8ac221cd377951096d9bb7574f"
+    },
+    {
+      "id": "bund/KAG/art_37",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gründung der SICAV richtet sich nach den Bestimmungen des Obligationenrechtes über die Gründung der Aktiengesellschaft; ausgenommen sind die Bestimmungen über die Sacheinlagen, die Sachübernahmen und die besonderen Vorteile."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat legt fest, wie hoch die Mindesteinlage im Zeitpunkt der Gründung einer SICAV sein muss."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7da5ce6e1f9274675c3a6d3a0a23506dacf622b7fa86a4436dcc1eca2a81c465"
+    },
+    {
+      "id": "bund/KAG/art_38",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Firma muss die Bezeichnung der Rechtsform oder deren Abkürzung (SICAV) enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen kommen die Bestimmungen des Obligationenrechtes über die Firma der Aktiengesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ff402b4d65b05ff53d43e47e70b6e8b234e25862ae2cbbd8d5a2b7447c381d09"
+    },
+    {
+      "id": "bund/KAG/art_39",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zwischen den Einlagen der Unternehmeraktionärinnen und -aktionäre und dem Gesamtvermögen der SICAV muss ein angemessenes Verhältnis bestehen. Der Bundesrat regelt dieses Verhältnis."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann in besonderen Fällen Erleichterungen gewähren oder Verschärfungen anordnen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bb6f75ce142a113641d96a59b3280448d6e8ecda22af83f8ca9d92f4adb43a44"
+    },
+    {
+      "id": "bund/KAG/art_40",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Unternehmeraktien lauten auf den Namen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Unternehmer- und die Anlegeraktien weisen keinen Nennwert auf und müssen vollständig in bar liberiert sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aktien sind frei übertragbar. Die Statuten können den Anlegerkreis auf qualifizierte Anlegerinnen und Anleger einschränken, wenn die Aktien der SICAV nicht an einer Börse kotiert sind. Verweigert die SICAV ihre Zustimmung zur Übertragung der Aktien, so kommt Artikel 82 zur Anwendung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Statuten können verschiedene Kategorien von Aktien vorsehen, denen unterschiedliche Rechte zukommen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Ausgabe von Partizipationsscheinen, Genussscheinen und Vorzugsaktien ist untersagt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "09f501785f76b32fed99e5e56a885e96af61fd1d0b841da9987a4adb0885cfc5"
+    },
+    {
+      "id": "bund/KAG/art_41",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Unternehmeraktionärinnen und -aktionäre leisten die für die Gründung der SICAV erforderliche Mindesteinlage."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beschliessen die Auflösung der SICAV und von deren Teilvermögen nach Artikel 96 Absätze 2 und 3."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Übrigen finden die Bestimmungen über die Rechte der Aktionärinnen und Aktionäre (Art. 46 ff.) Anwendung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Rechte und Pflichten der Unternehmeraktionärinnen und -aktionäre gehen mit der Übertragung der Aktien auf den Erwerber über."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d3d2105bac5196c2d6794a3c68c625991bfc3fe46baae2a599d222f322a65c18"
+    },
+    {
+      "id": "bund/KAG/art_42",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit Gesetz und Statuten nichts anderes vorsehen, kann die SICAV jederzeit zum Nettoinventarwert neue Aktien ausgeben und muss, auf Ersuchen einer Aktionärin oder eines Aktionärs, ausgegebene Aktien jederzeit zum Nettoinventarwert zurücknehmen. Dazu bedarf es weder einer Statutenänderung noch eines Handelsregistereintrags."
+        },
+        {
+          "absatz": "2",
+          "text": "Die SICAV darf weder direkt noch indirekt eigene Aktien halten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aktionärinnen und Aktionäre haben keinen Anspruch auf den Teil der neu ausgegebenen Aktien, der ihrer bisherigen Beteiligung entspricht. Im Falle von Immobilienfonds bleibt Artikel 66 Absatz 1 vorbehalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Übrigen richten sich die Ausgabe und die Rücknahme der Aktien nach den Artikeln 78–82."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e5fa669f4a9bed536c832df1dc87261c232b52c4b3c78230bffcb53a29d4d997"
+    },
+    {
+      "id": "bund/KAG/art_43",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Statuten müssen Bestimmungen enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Firma und den Sitz;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zweck;"
+            },
+            {
+              "marke": "c",
+              "text": "die Mindesteinlage;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einberufung der Generalversammlung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Organe;"
+            },
+            {
+              "marke": "f",
+              "text": "die Publikationsorgane."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zu ihrer Verbindlichkeit bedürfen der Aufnahme in die Statuten Bestimmungen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Dauer;"
+            },
+            {
+              "marke": "b",
+              "text": "die Einschränkung des Aktionärskreises auf qualifizierte Anlegerinnen und Anleger und die damit verbundene Beschränkung der Übertragbarkeit der Aktien (Art. 40 Abs. 3);"
+            },
+            {
+              "marke": "c",
+              "text": "die Kategorien von Aktien und die damit verbundenen Rechte;"
+            },
+            {
+              "marke": "d",
+              "text": "die Delegation der Geschäftsführung und der Vertretung sowie deren Modalitäten (Art. 51);"
+            },
+            {
+              "marke": "e",
+              "text": "die Abstimmung auf dem Korrespondenzweg."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4dc62deb89ad2721918d741b9081774f809ad8c4f4a5d67cc1bd86936eb0c83a"
+    },
+    {
+      "id": "bund/KAG/art_44",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die SICAV stellt ein Anlagereglement auf. Sein Inhalt richtet sich nach den Bestimmungen über den Fondsvertrag, soweit dieses Gesetz und die Statuten nichts anderes vorsehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6ff83a20fad43505b6bd6d8797d46bbe1cf0b36d8209c11c84e0165526dc4ad9"
+    },
+    {
+      "id": "bund/KAG/art_44_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "44_a",
+      "artikelLabel": "Art. 44a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die SICAV muss eine Depotbank nach den Artikeln 72–74 beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann in begründeten Fällen Ausnahmen von dieser Pflicht bewilligen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die SICAV ausschliesslich qualifizierten Anlegerinnen und Anlegern offensteht;"
+            },
+            {
+              "marke": "b",
+              "text": "ein oder mehrere Institute, welche einer gleichwertigen Aufsicht unterstehen, die mit der Abwicklung verbundenen Transaktionen vornehmen und für solche Transaktionen spezialisiert sind («Prime Broker»); und"
+            },
+            {
+              "marke": "c",
+              "text": "sichergestellt ist, dass die «Prime Broker» oder die zuständigen ausländischen Aufsichtsbehörden der «Prime Broker» der FINMA alle Auskünfte und Unterlagen erteilen, die diese zur Erfüllung ihrer Aufgabe benötigt."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_44_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "82841dd1745a9ae2c1bd19c255dd13b4a49af6322f4d75ae22e1df227e216716"
+    },
+    {
+      "id": "bund/KAG/art_45",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bestimmungen über öffentliche Kaufangebote (Art. 125‒141 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015) sind auf die SICAV nicht anwendbar."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "16383b55575de6083d287a2827375aed801c271774230571187db4fbb905323a"
+    },
+    {
+      "id": "bund/KAG/art_46",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitgliedschaftsrechte ausüben kann, wer von der SICAV als Aktionärin oder als Aktionär anerkannt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aktionärinnen und Aktionäre können ihre Aktien in der Generalversammlung selbst vertreten oder durch einen Dritten vertreten lassen. Sofern die Statuten nichts anderes vorsehen, brauchen diese nicht Aktionärinnen oder Aktionäre zu sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Die SICAV führt ein Aktienbuch, in welches die Unternehmeraktionärinnen und Unternehmeraktionäre mit Namen und Adressen eingetragen werden. Sie führt zudem nach Artikel 697 l des Obligationenrechts ein Verzeichnis der Personen, die an den Aktien der Unternehmeraktionärinnen und -aktionären wirtschaftlich berechtigt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Statuten können vorsehen, dass die Unternehmeraktionärinnen und -aktionäre sowie die Anlegeraktionärinnen und -aktionäre sowohl bei der selbst- als auch bei der fremdverwalteten SICAV einen Anspruch auf mindestens je einen Verwaltungsratssitz haben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e8d7e0565079fe62b75c9eac194a1f4b21eae16a1f2fb1199e160324f5bb0312"
+    },
+    {
+      "id": "bund/KAG/art_46_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "46_a",
+      "artikelLabel": "Art. 46a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Unternehmeraktionärinnen und -aktionäre, deren Aktien nicht an einer Börse kotiert sind, unterstehen der Meldepflicht nach Artikel 697 j des Obligationenrechts."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Folgen der Nichteinhaltung der Meldepflicht bestimmen sich nach Artikel 697 m des Obligationenrechts."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_46_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "71d286849a0fa4d8e8172bcc58d08af7dd745f6bf4479c87210109977a9604a3"
+    },
+    {
+      "id": "bund/KAG/art_47",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Aktie entspricht einer Stimme."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann die FINMA ermächtigen, die Zerlegung oder die Zusammenlegung von Aktien einer Aktienkategorie anzuordnen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0acd8b79b7673ec181c4458bff79152aff4e250572bdfa5ac19b611c70be345b"
+    },
+    {
+      "id": "bund/KAG/art_48",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kontrollrechte richten sich nach den Bestimmungen des Obligationenrechtes über die Kontrollrechte der Aktionärinnen und Aktionäre, soweit dieses Gesetz nichts anderes vorsieht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "87c98a3adf2efa6785369f79a8e20c74f3c8271779147460bd2d03e9d7421572"
+    },
+    {
+      "id": "bund/KAG/art_49",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Übrigen kommen die Artikel 78 ff. zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9d0c9d30c7f9c2abe29cf4759bf076173a366d8c68f96618f26bfd63c627d55c"
+    },
+    {
+      "id": "bund/KAG/art_50",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Oberstes Organ der SICAV ist die Generalversammlung der Aktionärinnen und Aktionäre."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Generalversammlung findet jährlich innerhalb von vier Monaten nach Abschluss des Geschäftsjahres statt."
+        },
+        {
+          "absatz": "3",
+          "text": "Sofern der Bundesrat nichts anderes vorsieht, kommen im Übrigen die Bestimmungen des Obligationenrechts über die Generalversammlung der Aktiengesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4d5c5615b36c805260205e1414405a0d4de9c0efcfa494e48e07f217fc94d996"
+    },
+    {
+      "id": "bund/KAG/art_51",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verwaltungsrat besteht aus mindestens drei und höchstens sieben Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Statuten können den Verwaltungsrat ermächtigen, die Geschäftsführung und die Vertretung nach Massgabe des Organisationsreglements ganz oder teilweise an einzelne Mitglieder oder Dritte zu übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die geschäftsführenden Personen der SICAV und der Depotbank müssen von der jeweils anderen Gesellschaft unabhängig sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Verwaltungsrat erfüllt die mit dem Anbieten von Finanzinstrumenten verbundenen Pflichten nach dem 3. Titel des FIDLEG."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Administration der SICAV darf nur an eine Fondsleitung nach Artikel 32 FINIG, die eine Bewilligung hat, delegiert werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Sofern der Bundesrat nichts anderes vorsieht, kommen im Übrigen die Bestimmungen des Obligationenrechts über den Verwaltungsrat der Aktiengesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6d9ba58c545a30e977eccc71c2161d698617cb114da80b731b717fcb0526ef83"
+    },
+    {
+      "id": "bund/KAG/art_52",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die SICAV bezeichnet eine Prüfgesellschaft (Art. 126 ff.)."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "acdad7212511c34c20d3e1c2d05a48732ba0550389138034d0735a92c8ea9fdc"
+    },
+    {
+      "id": "bund/KAG/art_53",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Effektenfonds sind offene kollektive Kapitalanlagen, die ihre Mittel in Effekten anlegen und dem Recht der Europäischen Gemeinschaften entsprechen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "62de5b5fecb62649e7839e406337038793b03458c115001eaa77c869433a575a"
+    },
+    {
+      "id": "bund/KAG/art_54",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Effektenfonds zulässig sind Anlagen in massenweise ausgegebene Wertpapiere und in nicht verurkundete Rechte mit gleicher Funktion (Wertrechte), die an einer Börse oder an einem andern geregelten, dem Publikum offen stehenden Markt gehandelt werden, sowie in andere liquide Finanzanlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "In begrenztem Umfang sind auch andere Anlagen sowie das Halten angemessener flüssiger Mittel zulässig."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "cbd70abbd54084cba872ed6f075e082419f700cdfadcd3d9dae92eb83bdbc9ff"
+    },
+    {
+      "id": "bund/KAG/art_55",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV dürfen im Rahmen der effizienten Verwaltung folgende Anlagetechniken einsetzen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Effektenleihe;"
+            },
+            {
+              "marke": "b",
+              "text": "Pensionsgeschäft;"
+            },
+            {
+              "marke": "c",
+              "text": "Kreditaufnahme, jedoch nur vorübergehend und bis zu einem bestimmten Prozentsatz;"
+            },
+            {
+              "marke": "d",
+              "text": "Verpfändung oder Sicherungsübereignung, jedoch nur bis zu einem bestimmten Prozentsatz."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann weitere Anlagetechniken wie Leerverkäufe und Kreditgewährung zulassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er legt die Prozentsätze fest. Die FINMA regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1ad63f95ea9cbc423a831a13294fad508572d5c537c2a42d53ffd403a53dcd31"
+    },
+    {
+      "id": "bund/KAG/art_56",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV dürfen Geschäfte mit Derivaten tätigen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Geschäfte nicht zu einer Veränderung des Anlagecharakters des Effektenfonds führen;"
+            },
+            {
+              "marke": "b",
+              "text": "sie über eine geeignete Organisation und ein adäquates Risikomanagement verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "die mit der Abwicklung und der Überwachung betrauten Personen qualifiziert sind und die Wirkungsweise der eingesetzten Derivate jederzeit verstehen und nachvollziehen können."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesamtengagement aus Geschäften mit Derivaten darf einen bestimmten Prozentsatz des Nettofondsvermögens nicht übersteigen. Engagements aus Geschäften mit Derivaten sind auf die gesetzlichen und reglementarischen Höchstlimiten, namentlich auf die Risikoverteilung, anzurechnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt den Prozentsatz fest. Die FINMA regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c2a06d94a7d0ad26b7cd695aa7110fa9e1519a333b459708eff0d8e2dcac4e6f"
+    },
+    {
+      "id": "bund/KAG/art_57",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV müssen bei ihren Anlagen die Grundsätze der Risikoverteilung einhalten. Sie dürfen in der Regel nur einen bestimmten Prozentsatz des Fondsvermögens beim gleichen Schuldner oder Unternehmen anlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die mit den Wertpapieren oder Wertrechten erworbenen Stimmrechte bei einem Schuldner oder Unternehmen dürfen einen bestimmten Prozentsatz nicht überschreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt die Prozentsätze fest. Die FINMA regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bdde9fc119eb4258573eab2fc0aeb29b8871a50f2310c71a514a70b76e52298f"
+    },
+    {
+      "id": "bund/KAG/art_58",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Immobilienfonds sind offene kollektive Kapitalanlagen, die ihre Mittel in Immobilienwerten anlegen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ab5ccbddecfb061d531e5c32dae13fe5db86667e40fc0577d5b1c86b897b6986"
+    },
+    {
+      "id": "bund/KAG/art_59",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Immobilienfonds zulässig sind Anlagen in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Grundstücke einschliesslich Zugehör;"
+            },
+            {
+              "marke": "b",
+              "text": "Beteiligungen an und Forderungen gegen Immobiliengesellschaften, deren Zweck einzig der Erwerb und Verkauf oder die Vermietung und Verpachtung eigener Grundstücke ist, sofern mindestens zwei Drittel ihres Kapitals und der Stimmen im Immobilienfonds vereinigt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Anteile an anderen Immobilienfonds und börsenkotierten Immobilieninvestmentgesellschaften bis höchstens 25 Prozent des Gesamtfondsvermögens;"
+            },
+            {
+              "marke": "d",
+              "text": "ausländische Immobilienwerte, deren Wert hinreichend beurteilt werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Miteigentum an Grundstücken ist nur zulässig, sofern die Fondsleitung oder die SICAV einen beherrschenden Einfluss ausüben kann."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "af8c774fb608b617ddabf3b500d3cc9b61323a6cbf391a301baf8c5af838580d"
+    },
+    {
+      "id": "bund/KAG/art_60",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Fondsleitung und die SICAV müssen zur Sicherstellung der Verbindlichkeiten einen angemessenen Teil des Fondsvermögens in kurzfristigen festverzinslichen Effekten oder in anderen kurzfristig verfügbaren Mitteln halten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "77daa69ee08c2bd74c1ebd00122e0f54b75afed72a41887538b84d6ab806008d"
+    },
+    {
+      "id": "bund/KAG/art_61",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Fondsleitung und die SICAV dürfen Geschäfte mit Derivaten tätigen, sofern sie mit der Anlagepolitik vereinbar sind. Die Bestimmungen über den Einsatz von Derivaten bei Effektenfonds (Art. 56) sind sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "acbabf93933b00b606c3238892fffd2302def6e861d48ebaae401c2cb9e9093e"
+    },
+    {
+      "id": "bund/KAG/art_62",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anlagen sind nach Objekten, deren Nutzungsart, Alter, Bausubstanz und Lage zu verteilen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "540fe56f57a48b4874eb3bdf00f9a17fa958e1afb3d2e2467483f9768dc4e6e4"
+    },
+    {
+      "id": "bund/KAG/art_63",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung haftet den Anlegerinnen und Anlegern dafür, dass die Immobiliengesellschaften, die zum Immobilienfonds gehören, die Vorschriften dieses Gesetzes und des Fondsreglementes einhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung, die Depotbank sowie deren Beauftragte und die ihnen nahe stehenden natürlichen und juristischen Personen dürfen von Immobilienfonds keine Immobilienwerte übernehmen oder ihnen abtreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die SICAV darf von den Unternehmeraktionärinnen und -aktionären, von ihren Beauftragten sowie den ihr nahe stehenden natürlichen oder juristischen Personen keine Immobilienwerte übernehmen oder ihnen abtreten."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Interesse der Anlegerinnen und Anleger kann die FINMA in begründeten Einzelfällen Ausnahmen vom Verbot von Geschäften mit nahe stehenden Personen im Sinne der Absätze 2 und 3 gewähren. Der Bundesrat regelt die Ausnahmekriterien."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f48267fb88cf9de27585897fff604f99da8bc4da86911f0fc7c0ec677a390459"
+    },
+    {
+      "id": "bund/KAG/art_64",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV beauftragen mindestens zwei natürliche Personen oder eine juristische Person als Schätzungsexpertinnen oder Schätzungsexperten. Der Auftrag bedarf der Genehmigung der FINMA."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Genehmigung wird erteilt, wenn die Schätzungsexpertinnen und Schätzungsexperten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die erforderlichen Qualifikationen aufweisen;"
+            },
+            {
+              "marke": "b",
+              "text": "unabhängig sind;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Schätzungsexpertinnen und Schätzungsexperten haben die Schätzungen mit der Sorgfalt einer ordentlichen und sachkundigen Schätzungsexpertin oder eines ordentlichen und sachkundigen Schätzungsexperten durchzuführen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA kann die Genehmigung vom Abschluss einer Berufshaftpflichtversicherung oder vom Nachweis finanzieller Garantien abhängig machen."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie kann weitere Anforderungen an die Schätzungsexpertinnen und Schätzungsexperten festlegen und die Schätzungsmethoden umschreiben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9c4dfd0e67b89ca0fa178f62ab578edabf1073381a38981eb61a956544580cef"
+    },
+    {
+      "id": "bund/KAG/art_65",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV dürfen Bauten erstellen lassen, sofern das Fondsreglement ausdrücklich den Erwerb von Bauland und die Durchführung von Bauvorhaben vorsieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen Grundstücke verpfänden und die Pfandrechte zur Sicherung übereignen; die Belastung darf jedoch im Durchschnitt aller Grundstücke einen bestimmten Prozentsatz des Verkehrswertes nicht übersteigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat bestimmt den Prozentsatz. Die FINMA regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1023be155514e2c1ebb54f40b6baddfc8af82f33e2e045fa4d9d7a983d0d26c7"
+    },
+    {
+      "id": "bund/KAG/art_66",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV müssen neue Anteile zuerst den bisherigen Anlegerinnen und Anlegern anbieten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anlegerinnen und Anleger können jeweils auf das Ende eines Rechnungsjahres unter Einhaltung einer Frist von zwölf Monaten die Rücknahme ihrer Anteile verlangen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "10b45f6c92b3e5a50044e448824df4de5985aca6e50a9b2e8ef0cddd1a2e76df"
+    },
+    {
+      "id": "bund/KAG/art_67",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Fondsleitung und die SICAV stellen über eine Bank oder einen Effektenhändler einen regelmässigen börslichen oder ausserbörslichen Handel von Immobilienfondsanteilen sicher."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "900c6866899ef8d1170093db337af85f5106d9c4fbea0e10aa4b5979094bd547"
+    },
+    {
+      "id": "bund/KAG/art_68",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Übrige Fonds für traditionelle und für alternative Anlagen sind offene kollektive Kapitalanlagen, die weder Effektenfonds noch Immobilienfonds sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0ec95af8e1ce2fa0585f87b4b39146d7b9a4ff871e31ea3bd8045b37f04f93f4"
+    },
+    {
+      "id": "bund/KAG/art_69",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für übrige Fonds für traditionelle und alternative Anlagen zulässig sind insbesondere Anlagen in Effekten, Edelmetallen, Immobilien, Massenwaren (Commodities), Derivaten, Anteilen anderer kollektiver Kapitalanlagen sowie in anderen Sachen und Rechten."
+        },
+        {
+          "absatz": "2",
+          "text": "Für diese Fonds können insbesondere Anlagen getätigt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die nur beschränkt marktgängig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die hohen Kursschwankungen unterliegen;"
+            },
+            {
+              "marke": "c",
+              "text": "die eine begrenzte Risikoverteilung aufweisen;"
+            },
+            {
+              "marke": "d",
+              "text": "deren Bewertung erschwert ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "207ee3f2ce62fac6db3e1881bf46c448db2613eac30af93e3b2a452b8639d217"
+    },
+    {
+      "id": "bund/KAG/art_70",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als übrige Fonds für traditionelle Anlagen gelten offene kollektive Kapitalanlagen, die bei ihren Anlagen, Anlagetechniken und -beschränkungen ein für traditionelle Anlagen typisches Risikoprofil aufweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf übrige Fonds für traditionelle Anlagen sind die Bestimmungen über den Einsatz von Anlagetechniken und Derivaten für Effektenfonds sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a56be11aa56e0bfd717b3d9610cf337e6d1a4e45298fbd2aa2d7b7c2bffceb11"
+    },
+    {
+      "id": "bund/KAG/art_71",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als übrige Fonds für alternative Anlagen gelten offene kollektive Kapitalanlagen, deren Anlagen, Struktur, Anlagetechniken (Leerverkäufe, Kreditaufnahme etc.) und -beschränkungen ein für alternative Anlagen typisches Risikoprofil aufweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Hebelwirkung ist nur bis zu einem bestimmten Prozentsatz des Nettofondsvermögens erlaubt. Der Bundesrat legt den Prozentsatz fest. Die FINMA regelt die Einzelheiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Auf die besonderen Risiken, die mit alternativen Anlagen verbunden sind, ist in der Bezeichnung, im Prospekt und im Basisinformationsblatt nach dem 3. Titel des FIDLEG sowie in der Werbung hinzuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die FINMA kann gestatten, dass die mit der Abwicklung der Transaktionen verbundenen Dienstleistungen eines direkt anlegenden übrigen Fonds für alternative Anlagen durch ein beaufsichtigtes Institut, das für solche Transaktionen spezialisiert ist («Prime Broker»), erbracht werden. Sie kann festlegen, welche Kontrollaufgaben die Fondsleitung und die SICAV wahrnehmen müssen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "747e6588855f424ba65d58e24725b6ebf720a64851d34756659d511c790567a4"
+    },
+    {
+      "id": "bund/KAG/art_72",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Depotbank muss eine Bank im Sinne des BankG sein und über eine für ihre Tätigkeit als Depotbank von kollektiven Kapitalanlagen angemessene Organisation verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Neben den mit der Geschäftsführung betrauten Personen müssen auch die mit den Aufgaben der Depotbanktätigkeit betrauten Personen die Anforderungen nach Artikel 14 Absatz 1 Buchstaben a und a bis erfüllen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7dfae97eaa3f3265568c4be537f8dddd9d59495724c2a84c1e0b8c2155b93f7c"
+    },
+    {
+      "id": "bund/KAG/art_73",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Depotbank bewahrt das Fondsvermögen auf, besorgt die Ausgabe und Rücknahme der Anteile und den Zahlungsverkehr."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann die Aufbewahrung des Fondsvermögens Dritt- und Zentralverwahrern im In- oder Ausland übertragen, soweit dies im Interesse einer sachgerechten Verwahrung liegt. Die Anlegerinnen und Anleger sind über die Risiken, die mit einer solchen Übertragung verbunden sind, im Prospekt und im Basisinformationsblatt nach dem 3. Titel des FIDLEG zu informieren."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Für Finanzinstrumente darf die Übertragung nach Absatz 2 nur an beaufsichtigte Dritt- oder Zentralverwahrer erfolgen. Davon ausgenommen ist die zwingende Verwahrung an einem Ort, an dem die Übertragung an beaufsichtigte Dritt- oder Zentralverwahrer nicht möglich ist, wie insbesondere aufgrund zwingender Rechtsvorschriften oder der Modalitäten des Anlageprodukts. Die Anlegerinnen und Anleger sind in der Produktedokumentation über die Aufbewahrung durch nicht beaufsichtigte Dritt- oder Zentralverwahrer zu informieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbank sorgt dafür, dass die Fondsleitung oder die SICAV das Gesetz und das Fondsreglement beachten. Sie prüft ob:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Berechnung des Nettoinventarwertes und der Ausgabe- und Rücknahmepreise der Anteile Gesetz und Fondsreglement entsprechen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anlageentscheide Gesetz und Fondsreglement entsprechen;"
+            },
+            {
+              "marke": "c",
+              "text": "der Erfolg nach Massgabe des Fondsreglements verwendet wird."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Anforderungen für die Tätigkeiten der Depotbank und kann Vorgaben zum Schutz der Wertpapieranlagen einführen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9f73880c85c8e8fa650135a568deb72606098f6b8d1519a3c62999027e1c9092"
+    },
+    {
+      "id": "bund/KAG/art_74",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Wechsel der Depotbank gelten bei Anlagefonds die Bestimmungen über den Wechsel der Fondsleitung (Art. 39 FINIG) sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Wechsel der Depotbank bei der SICAV bedarf eines Vertrages in schriftlicher oder in einer anderen durch Text nachweisbaren Form und der vorgängigen Genehmigung der FINMA."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA veröffentlicht den Entscheid in den Publikationsorganen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c55cf3770ae05f46f3a0893db13f6223d881a34c387f2cd6b83788c013ca557d"
+    },
+    {
+      "id": "bund/KAG/art_75_77",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "75_77",
+      "artikelLabel": "Art. 7577",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_75_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_78",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anlegerinnen und Anleger erwerben mit Vertragsabschluss beziehungsweise mit der Zeichnung und der Einzahlung in bar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beim Anlagefonds nach Massgabe der von ihnen erworbenen Fondsanteile eine Forderung gegen die Fondsleitung auf Beteiligung am Vermögen und am Ertrag des Anlagefonds;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der SICAV nach Massgabe der von ihnen erworbenen Aktien eine Beteiligung an der Gesellschaft und an deren Bilanzgewinn."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind grundsätzlich jederzeit berechtigt, die Rücknahme ihrer Anteile und deren Auszahlung in bar zu verlangen. Anteilscheine sind zur Vernichtung zurückzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei kollektiven Kapitalanlagen mit verschiedenen Anteilsklassen regelt der Bundesrat die Einzelheiten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA kann Abweichungen von der Pflicht zur Ein- und Auszahlung in bar gestatten."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei kollektiven Kapitalanlagen mit Teilvermögen richten sich die Vermögensrechte nach den Artikeln 93 Absatz 2 und 94 Absatz 2."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fc0fa33a797eaa1d5a2da2203617dc9c5da77ea569345ab8e3701ba15e2ba440"
+    },
+    {
+      "id": "bund/KAG/art_78_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "78_a",
+      "artikelLabel": "Art. 78a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV stellt eine den Anlagen, der Anlagepolitik, der Risikoverteilung, dem Anlegerkreis und der Rücknahmefrequenz angemessene Liquidität der kollektiven Kapitalanlage sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann diese Pflicht weiter präzisieren."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_78_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "85efe9ae7a07d34e023a11d87a75d9d09929fb96760d9087cd037398c6214c6b"
+    },
+    {
+      "id": "bund/KAG/art_79",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann nach Massgabe der Anlagevorschriften (Art. 54–57, 59–62, 69–71, 118 n und 118 o ) bei kollektiven Kapitalanlagen mit erschwerter Bewertung oder beschränkter Marktgängigkeit Ausnahmen vom Recht auf jederzeitige Rückgabe vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er darf das Recht auf jederzeitige Rückgabe jedoch höchstens fünf Jahre aussetzen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b3c1b6ce96861d1ff667655a6e09fa108262a45132a5c3d3d1f6667466745ae6"
+    },
+    {
+      "id": "bund/KAG/art_80",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Ausgabe- und der Rücknahmepreis der Anteile bestimmen sich nach dem Nettoinventarwert pro Anteil am Bewertungstag, zuzüglich beziehungsweise abzüglich allfälliger Kommissionen und Kosten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6f09f66f728457f95d2038eb43d64505cdfba22844e3fa26a410819215f92f09"
+    },
+    {
+      "id": "bund/KAG/art_81",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat bestimmt, in welchen Fällen das Fondsreglement im Interesse der Gesamtheit der Anlegerinnen und Anleger einen befristeten Aufschub für die Rückzahlung der Anteile vorsehen kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann in ausserordentlichen Fällen im Interesse der Gesamtheit der Anlegerinnen und Anleger einen befristeten Aufschub für die Rückzahlung der Anteile gewähren."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f5ece4e440a82d2c13f05eba73d6b450811c1a2e5004847066081fbf9d733e4f"
+    },
+    {
+      "id": "bund/KAG/art_82",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat schreibt den Zwangsrückkauf vor, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies zur Wahrung des Rufes des Finanzplatzes, namentlich zur Bekämpfung der Geldwäscherei, erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anlegerin oder der Anleger die gesetzlichen, reglementarischen, vertraglichen oder statutarischen Voraussetzungen zur Teilnahme an einer kollektiven Kapitalanlage nicht mehr erfüllen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e435eaac504ce8c2ff3f74f57d5a3c679dab38c7dea995b6d6c1de05fbe6b357"
+    },
+    {
+      "id": "bund/KAG/art_83",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Nettoinventarwert der offenen kollektiven Kapitalanlage wird zum Verkehrswert am Ende des Rechnungsjahres sowie für jeden Tag berechnet, an dem Anteile ausgegeben oder zurückgenommen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nettoinventarwert pro Anteil ergibt sich aus dem Verkehrswert der Anlagen, vermindert um allfällige Verbindlichkeiten, dividiert durch die Anzahl der im Umlauf befindlichen Anteile."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann eine von Absatz 2 abweichende Methode zur Berechnung des Nettoinventarwertes oder der Nettoinventarwerte zulassen, soweit diese internationalen Standards entspricht und der Schutzzweck des Gesetzes dadurch nicht gefährdet wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Fondsleitung und die SICAV veröffentlichen die Nettoinventarwerte in regelmässigen Abständen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d69f2c2cd467e994cedddcce8f53350fd27e1f536a64a359f31a872643ef85a9"
+    },
+    {
+      "id": "bund/KAG/art_84",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV erteilen Anlegerinnen und Anlegern auf Verlangen Auskunft über die Grundlagen für die Berechnung des Nettoinventarwertes pro Anteil."
+        },
+        {
+          "absatz": "2",
+          "text": "Machen Anlegerinnen und Anleger ein Interesse an näheren Angaben über einzelne Geschäfte der Fondsleitung oder der SICAV wie die Ausübung von Mitgliedschafts- und Gläubigerrechten oder über das Riskmanagement geltend, so erteilen diese ihnen auch darüber jederzeit Auskunft."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anlegerinnen und Anleger können beim Gericht am Sitz der Fondsleitung oder der SICAV verlangen, dass die Prüfgesellschaft oder eine andere sachverständige Person den abklärungsbedürftigen Sachverhalt untersucht und ihnen darüber Bericht erstattet."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "93c3cad97861d0107ac897c9d2b70e19e57792699277109fe349cd67c621ee73"
+    },
+    {
+      "id": "bund/KAG/art_85",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Werden der offenen kollektiven Kapitalanlage widerrechtlich Vermögensrechte entzogen oder Vermögensvorteile vorenthalten, so können die Anlegerinnen und Anleger auf Leistung an die betroffene offene kollektive Kapitalanlage klagen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c1bd9150896c5d536850402f5fa2aa1017f7ad97fddeb9b175767c8a1a3f4a9d"
+    },
+    {
+      "id": "bund/KAG/art_86",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anlegerinnen und Anleger können vom Gericht die Ernennung einer Vertretung verlangen, wenn sie Ansprüche auf Leistung an die offene kollektive Kapitalanlage glaubhaft machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gericht veröffentlicht die Ernennung in den Publikationsorganen der offenen kollektiven Kapitalanlage."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Person, welche die Anlegerinnen und Anleger vertritt, hat dieselben Rechte wie diese."
+        },
+        {
+          "absatz": "4",
+          "text": "Klagt sie auf Leistung an die offene kollektive Kapitalanlage, so können die einzelnen Anlegerinnen und Anleger dieses Klagerecht nicht mehr ausüben."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Kosten der Vertretung gehen zulasten des Fondsvermögens, sofern sie nicht durch das Urteil anders verteilt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a6da86925104144b21a649abe951d15f733d2c4b1790adf7aaad55d047ca2c3a"
+    },
+    {
+      "id": "bund/KAG/art_87",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für jede offene kollektive Kapitalanlage muss gesondert Buch geführt werden. Soweit dieses Gesetz oder die Ausführungsbestimmungen nichts anderes vorsehen, kommen die Artikel 662 ff. des Obligationenrechtes zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0704fe637dea939e9613a07e40a13a68e4441c0fdc6c765fe6f59662a741ff3f"
+    },
+    {
+      "id": "bund/KAG/art_88",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anlagen, die an einer Börse kotiert sind oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden, sind zu den Kursen zu bewerten, die am Hauptmarkt bezahlt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Andere Anlagen, für die keine aktuellen Kurse verfügbar sind, sind zu dem Preis zu bewerten, der bei sorgfältigem Verkauf im Zeitpunkt der Schätzung wahrscheinlich erzielt würde."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "123b0644fca179c44b8ebcbb92316011bc2b05c8880cb6e9ee2e1f6be5b3539b"
+    },
+    {
+      "id": "bund/KAG/art_89",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für jede offene kollektive Kapitalanlage wird innerhalb von vier Monaten nach Abschluss des Geschäftsjahres ein Jahresbericht veröffentlicht; dieser enthält namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Jahresrechnung, bestehend aus der Vermögensrechnung beziehungsweise der Bilanz und der Erfolgsrechnung, sowie die Angaben über die Verwendung des Erfolges und die Offenlegung der Kosten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zahl der im Berichtsjahr zurückgenommenen und der neu ausgegebenen Anteile sowie den Schlussbestand der ausgegebenen Anteile;"
+            },
+            {
+              "marke": "c",
+              "text": "das Inventar des Fondsvermögens zu Verkehrswerten und den daraus errechneten Wert (Nettoinventarwert) eines Anteils auf den letzten Tag des Rechnungsjahres;"
+            },
+            {
+              "marke": "d",
+              "text": "die Grundsätze für die Bewertung sowie für die Berechnung des Nettoinventarwertes;"
+            },
+            {
+              "marke": "e",
+              "text": "eine Aufstellung der Käufe und Verkäufe;"
+            },
+            {
+              "marke": "f",
+              "text": "den Namen oder die Firma der Personen, an die Aufgaben delegiert sind;"
+            },
+            {
+              "marke": "g",
+              "text": "Angaben über Angelegenheiten von besonderer wirtschaftlicher oder rechtlicher Bedeutung, insbesondere über: 1. Änderungen des Fondsreglements,"
+            },
+            {
+              "marke": "2",
+              "text": "wesentliche Fragen der Auslegung von Gesetz und Fondsreglement,"
+            },
+            {
+              "marke": "3",
+              "text": "den Wechsel von Fondsleitung und Depotbank,"
+            },
+            {
+              "marke": "4",
+              "text": "Änderungen der geschäftsführenden Personen der Fondsleitung, der SICAV oder des Verwalters von Kollektivvermögen,"
+            },
+            {
+              "marke": "5",
+              "text": "Rechtsstreitigkeiten;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vermögensrechnung des Anlagefonds und die Bilanz der SICAV sind zu Verkehrswerten zu erstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Innerhalb von zwei Monaten nach Ablauf der ersten Hälfte des Rechnungsjahres ist ein Halbjahresbericht zu veröffentlichen. Dieser enthält eine ungeprüfte Vermögensrechnung beziehungsweise eine ungeprüfte Bilanz und eine Erfolgsrechnung sowie Angaben nach Absatz 1 Buchstaben b, c und e."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Jahres- und Halbjahresberichte werden der FINMA spätestens gleichzeitig mit der Veröffentlichung eingereicht."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie sind während zehn Jahren interessierten Personen kostenlos zur Einsicht zur Verfügung zu halten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "eeefcfdcd694ca99771babb88fb3856cd73de6f776f3f96a7a3779f8b41f6efa"
+    },
+    {
+      "id": "bund/KAG/art_90",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Jahresrechnung für Immobilienfonds besteht aus einer konsolidierten Rechnung von Vermögen beziehungsweise Bilanz und Erfolg des Immobilienfonds und dessen Immobiliengesellschaften. Artikel 89 kommt sinngemäss zur Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundstücke sind in der Vermögensrechnung zu den Verkehrswerten einzustellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Inventar des Fondsvermögens sind die Gestehungskosten und die geschätzten Verkehrswerte der einzelnen Grundstücke aufzuführen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Jahresbericht und die Jahresrechnung enthalten neben den Angaben nach Artikel 89 Angaben über die Schätzungsexperten, die Schätzungsmethoden und über die angewandten Kapitalisierungs- und Diskontierungssätze."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_90",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "75a27c31a7f1d4be04f9e5b72de36a3f8874cac3d47a62fce5168592596c2054"
+    },
+    {
+      "id": "bund/KAG/art_91",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA erlässt die weiteren Vorschriften über die Buchführungspflicht, die Bewertung, die Rechenschaftsablage und die Publikationspflicht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_91",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "87851844b6d58116a8af1d7355015c92c9bf2b6a99478121e7b6e676f43a54e5"
+    },
+    {
+      "id": "bund/KAG/art_92",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei einer offenen kollektiven Kapitalanlage mit Teilvermögen (Umbrella-Fonds) stellt jedes Teilvermögen eine eigene kollektive Kapitalanlage dar und weist einen eigenen Nettoinventarwert auf."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_92",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d25fabc02ca1b6d7681430450a50ef5585649173c6dfa1b517c8a9e9878fbb66"
+    },
+    {
+      "id": "bund/KAG/art_93",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Anlagefonds mit Teilvermögen sind die Anlegerinnen und Anleger nur am Vermögen und am Ertrag desjenigen Teilvermögens berechtigt, an dem sie beteiligt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes Teilvermögen haftet nur für eigene Verbindlichkeiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_93",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e41fa8000d4eaea8a41b2527e6ea47bfb13aa53e7d93ad88c96cf05c3d95628d"
+    },
+    {
+      "id": "bund/KAG/art_94",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anlegerinnen und Anleger sind nur am Vermögen und am Ertrag desjenigen Teilvermögens beteiligt, dessen Aktien sie halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes Teilvermögen nach Absatz 1 haftet nur für eigene Verbindlichkeiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_94",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "437ff0444dce7cc30c9aafd48c8e84d8c8c0aa5929da1518ee9ccb76fe061355"
+    },
+    {
+      "id": "bund/KAG/art_95",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Umstrukturierungen von offenen kollektiven Kapitalanlagen sind zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vereinigung durch Übertragung der Vermögenswerte und Verbindlichkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Umwandlung in eine andere Rechtsform einer kollektiven Kapitalanlage;"
+            },
+            {
+              "marke": "c",
+              "text": "für die SICAV: die Vermögensübertragung nach den Artikeln 69–77 des Fusionsgesetzes vom 3. Oktober 2003."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Umstrukturierung nach Absatz 1 Buchstaben b und c darf erst ins Handelsregister eingetragen werden, nachdem sie von der FINMA nach Artikel 15 genehmigt worden ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_95",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "914f911d6d8132cf6740453a603d5e23fe9355059830868b39346ada6cd3c163"
+    },
+    {
+      "id": "bund/KAG/art_96",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anlagefonds wird aufgelöst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei unbestimmter Laufzeit durch Kündigung der Fondsleitung oder der Depotbank;"
+            },
+            {
+              "marke": "b",
+              "text": "bei bestimmter Laufzeit durch Zeitablauf;"
+            },
+            {
+              "marke": "c",
+              "text": "durch Verfügung der FINMA: 1. bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Fondsleitung und der Depotbank,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Unterschreiten des Mindestvermögens,"
+            },
+            {
+              "marke": "3",
+              "text": "in den Fällen nach Artikel 133 ff."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die SICAV wird aufgelöst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei unbestimmter Laufzeit durch Beschluss der Unternehmeraktionärinnen und -aktionäre, sofern er mindestens zwei Drittel der ausgegebenen Unternehmeraktien auf sich vereinigt;"
+            },
+            {
+              "marke": "b",
+              "text": "bei bestimmter Laufzeit durch Zeitablauf;"
+            },
+            {
+              "marke": "c",
+              "text": "durch Verfügung der FINMA: 1. bei bestimmter Laufzeit vorzeitig aus wichtigem Grund und auf Antrag der Unternehmeraktionärinnen und -aktionäre, sofern er mindestens zwei Drittel der ausgegebenen Unternehmeraktien auf sich vereinigt,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Unterschreiten des Mindestvermögens,"
+            },
+            {
+              "marke": "3",
+              "text": "in den Fällen nach Artikel 133 ff.;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Auflösung von Teilvermögen kommen die Absätze 1 und 2 sinngemäss zur Anwendung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Fondsleitung und die SICAV geben der FINMA die Auflösung unverzüglich bekannt und veröffentlichen sie in den Publikationsorganen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_96",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7fa4d949f0d6d99b31b4495dafa0a80235cbc2ea0eda972b4fbf7b9b39b9979e"
+    },
+    {
+      "id": "bund/KAG/art_97",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "97",
+      "artikelLabel": "Art. 97",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach der Auflösung des Anlagefonds beziehungsweise der SICAV dürfen Anteile weder neu ausgegeben noch zurückgenommen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anlegerinnen und Anleger haben beim Anlagefonds Anspruch auf einen verhältnismässigen Anteil des Liquidationserlöses."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der SICAV haben die Anlegeraktionärinnen und -aktionäre ein Recht auf einen verhältnismässigen Anteil am Ergebnis der Liquidation. Die Unternehmeraktionärinnen und -aktionäre werden nachrangig befriedigt. Im Übrigen kommen die Artikel 737 ff. des Obligationenrechtes zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_97",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5f65d2cf98f7bb15d031e248484546836ffeafa3b8722fbc922ce6f2a34bb43d"
+    },
+    {
+      "id": "bund/KAG/art_98",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "98",
+      "artikelLabel": "Art. 98",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommanditgesellschaft für kollektive Kapitalanlagen (KmGK) ist eine Gesellschaft, deren ausschliesslicher Zweck die kollektive Kapitalanlage ist. Wenigstens ein Mitglied haftet unbeschränkt (Komplementär), die anderen Mitglieder (Kommanditärinnen und Kommanditäre) haften nur bis zu einer bestimmten Vermögenseinlage (der Kommanditsumme)."
+        },
+        {
+          "absatz": "2",
+          "text": "Komplementäre müssen Aktiengesellschaften mit Sitz in der Schweiz sein. Aktiengesellschaften ohne Bewilligung als Verwalter von Kollektivvermögen dürfen nur in einer einzigen KmGK als Komplementär tätig sein."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Für die Komplementäre gelten die Bewilligungsvoraussetzungen nach Artikel 14 sinngemäss."
+        },
+        {
+          "absatz": "3",
+          "text": "Kommanditärinnen und Kommanditäre müssen qualifizierte Anlegerinnen und Anleger nach Artikel 10 Absatz 3 oder 3 ter sein."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_98",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "68b6dd45c50fa46b11ad65a6769ebb1768bbd82d0c2ad750ac49de58ee26c0bb"
+    },
+    {
+      "id": "bund/KAG/art_99",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "99",
+      "artikelLabel": "Art. 99",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sofern dieses Gesetz nichts anderes vorsieht, kommen die Bestimmungen des Obligationenrechtes über die Kommanditgesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_99",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "78ca35bde3ae5ac1f3d542ce2efede7c45a008104b46f98c91de3464a6affbc0"
+    },
+    {
+      "id": "bund/KAG/art_100",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "100",
+      "artikelLabel": "Art. 100",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesellschaft entsteht durch die Eintragung in das Handelsregister."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmeldung der einzutragenden Tatsachen oder ihre Änderung müssen von allen Komplementären beim Handelsregister unterzeichnet oder schriftlich mit beglaubigten Unterschriften eingereicht werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_100",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8f9dcbfe0c4a53339efc47b05d80754efec1289261527ed8238fa8261439b27a"
+    },
+    {
+      "id": "bund/KAG/art_101",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "101",
+      "artikelLabel": "Art. 101",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Firma der Gesellschaft muss die Bezeichnung der Rechtsform oder deren Abkürzung KmGK enthalten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_101",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fd57a12d00aba80b8cfb2c64a46056bdd2e7f82191169701550f9cb44e223d48"
+    },
+    {
+      "id": "bund/KAG/art_102",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "102",
+      "artikelLabel": "Art. 102",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesellschaftsvertrag muss Bestimmungen enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Firma und den Sitz;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zweck;"
+            },
+            {
+              "marke": "c",
+              "text": "die Firma und den Sitz der Komplementäre;"
+            },
+            {
+              "marke": "d",
+              "text": "den Betrag der gesamten Kommanditsumme oder die Bandbreite der Kommanditsumme (Kapitalband);"
+            },
+            {
+              "marke": "e",
+              "text": "die Dauer;"
+            },
+            {
+              "marke": "f",
+              "text": "die Bedingungen über den Ein- und Austritt der Kommanditärinnen und Kommanditäre;"
+            },
+            {
+              "marke": "g",
+              "text": "die Führung eines Registers der Kommanditärinnen und Kommanditäre;"
+            },
+            {
+              "marke": "h",
+              "text": "die Anlagen, die Anlagepolitik, die Anlagebeschränkungen, die Risikoverteilung, die mit der Anlage verbundenen Risiken sowie die Anlagetechniken;"
+            },
+            {
+              "marke": "i",
+              "text": "die Delegation der Geschäftsführung sowie der Vertretung;"
+            },
+            {
+              "marke": "j",
+              "text": "den Beizug einer Depot- und einer Zahlstelle."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gesellschaftsvertrag bedarf bei Gründung der Zustimmung und der Unterschrift sämtlicher Gesellschafter."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_102",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ca286f85ecf7b9da101c11144d88aa6846932821bddf67101ee52be46313fedc"
+    },
+    {
+      "id": "bund/KAG/art_102_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "102_a",
+      "artikelLabel": "Art. 102a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Änderung des Gesellschaftsvertrags bedarf der Zustimmung und der Unterschrift sämtlicher Gesellschafter."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gesellschaftsvertrag kann durch Mehrheitsbeschlüsse geändert werden, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies im Gesellschaftsvertrag vorgesehen ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Beschluss öffentlich beurkundet wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der durch einen Mehrheitsbeschluss geänderte Gesellschaftsvertrag bedarf ausschliesslich der Unterschrift der Komplementäre."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_102_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a0d6cc7df1b084839c18375cee11cd7f48481e7b722941d9eade0e02c4f789e2"
+    },
+    {
+      "id": "bund/KAG/art_103",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "103",
+      "artikelLabel": "Art. 103",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesellschaft tätigt Anlagen in Risikokapital."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann auch andere Anlagen zulassen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_103",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "779c444c387a938051e9d052a078c23628125e3748f3138042c973c6b9a74157"
+    },
+    {
+      "id": "bund/KAG/art_104",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "104",
+      "artikelLabel": "Art. 104",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommanditärinnen und Kommanditäre sind ohne Zustimmung der Komplementäre berechtigt, für eigene und für fremde Rechnung andere Geschäfte zu betreiben und sich an anderen Unternehmen zu beteiligen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern der Gesellschaftsvertrag nichts anderes vorsieht, dürfen die Komplementäre ohne Zustimmung der Kommanditärinnen und Kommanditäre für eigene und für fremde Rechnung andere Geschäfte betreiben und sich an anderen Unternehmen beteiligen, sofern dies offen gelegt wird und die Interessen der KmGK dadurch nicht beeinträchtigt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_104",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "54324643c30df3459a2be0742ce5a4e9d95784cc9ea07e6e8fcc51a46e40cecd"
+    },
+    {
+      "id": "bund/KAG/art_105",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "105",
+      "artikelLabel": "Art. 105",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern dies der Gesellschaftsvertrag vorsieht, kann der Komplementär über den Ein- und Austritt von Kommanditärinnen und Kommanditären beschliessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen des Obligationenrechtes über den Ausschluss von Gesellschaftern der Kommanditgesellschaft bleiben vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann den Zwangsausschluss vorschreiben. Dieser richtet sich nach Artikel 82."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_105",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bf62a07b7a3e7ccbbdc0b27d84bf81b38110fd92bfe8755bb2413363cb3ec0b0"
+    },
+    {
+      "id": "bund/KAG/art_106",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "106",
+      "artikelLabel": "Art. 106",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommanditärinnen und Kommanditäre sind berechtigt, jederzeit Einsicht in die Geschäftsbücher der Gesellschaft zu nehmen. Geschäftsgeheimnisse der Gesellschaften, in die die KmGK investiert, bleiben gewahrt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommanditärinnen und Kommanditäre haben mindestens einmal vierteljährlich Anspruch auf Auskunft über den Geschäftsgang der Gesellschaft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_106",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6ef8db619c10c312b5bccbe8532f28d7317b786c94c3bf54e792ed2bcd4ff27e"
+    },
+    {
+      "id": "bund/KAG/art_107",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "107",
+      "artikelLabel": "Art. 107",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gesellschaft bezeichnet eine Prüfgesellschaft (Art. 126 ff.)."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_107",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "908e69d800965e4ede58fa70b4bb1f82ae7e2732d50aa3c68613342f4e891258"
+    },
+    {
+      "id": "bund/KAG/art_108",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "108",
+      "artikelLabel": "Art. 108",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Rechenschaftsablage der Gesellschaft und die Bewertung des Vermögens gelten die Artikel 88 ff. sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "International anerkannte Standards sind zu berücksichtigen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_108",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "253777bfea1042c3d66fa0d9fad20f8093b76c2c565a52cff9a03b6e19e7f83e"
+    },
+    {
+      "id": "bund/KAG/art_109",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "109",
+      "artikelLabel": "Art. 109",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gesellschaft wird aufgelöst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch Gesellschafterbeschluss;"
+            },
+            {
+              "marke": "b",
+              "text": "aus den in Gesetz und Gesellschaftsvertrag vorgesehenen Gründen;"
+            },
+            {
+              "marke": "c",
+              "text": "durch Verfügung der FINMA in den Fällen nach Artikel 133 ff."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_109",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3d3f36cd2390f34dc16da1efed5502e86096418df0efaa2a3db7a50255f69a7d"
+    },
+    {
+      "id": "bund/KAG/art_110",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "110",
+      "artikelLabel": "Art. 110",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die SICAF ist eine Aktiengesellschaft im Sinne des Obligationenrechts (Art. 620 ff. OR):",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren ausschliesslicher Zweck die kollektive Kapitalanlage ist;"
+            },
+            {
+              "marke": "b",
+              "text": "deren Aktionärinnen und Aktionäre nicht qualifiziert im Sinne von Artikel 10 Absatz 3 sein müssen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die nicht an einer Schweizer Börse kotiert ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zwischen den eigenen Mitteln der SICAF und deren Gesamtvermögen muss ein angemessenes Verhältnis bestehen. Der Bundesrat regelt dieses Verhältnis."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_110",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3dd8ea195533e0c322f2409ea2a7e1632af5ac90fdb94e869610a56367d4d992"
+    },
+    {
+      "id": "bund/KAG/art_111",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "111",
+      "artikelLabel": "Art. 111",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Firma der Gesellschaft muss die Bezeichnung der Rechtsform oder deren Abkürzung (SICAF) enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen kommen die Bestimmungen des Obligationenrechtes über die Firma der Aktiengesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_111",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "cd566526767e6a32a63f64c61b353a61c4629159d359a9cb3755f0501a64bbe3"
+    },
+    {
+      "id": "bund/KAG/art_112",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "112",
+      "artikelLabel": "Art. 112",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sofern dieses Gesetz nichts anderes vorsieht, kommen die Bestimmungen des Obligationenrechtes über die Aktiengesellschaft zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_112",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7680a6aa9f27a4f9a16517cb37e5b59ad73d15c0144613fade946c2e29c8088f"
+    },
+    {
+      "id": "bund/KAG/art_113",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "113",
+      "artikelLabel": "Art. 113",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aktien sind vollständig liberiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausgabe von Stimmrechtsaktien, Partizipationsscheinen, Genussscheinen und Vorzugsaktien ist untersagt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann den Zwangsrückkauf vorschreiben. Dieser richtet sich nach Artikel 82."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_113",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b81171a09d00a98e250a6f44d83827695c42373493a52a1ce0a518e60c207de4"
+    },
+    {
+      "id": "bund/KAG/art_114",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "114",
+      "artikelLabel": "Art. 114",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die SICAF muss eine Depotbank nach den Artikeln 72–74 beiziehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_114",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "058cbd451da4368dd07b26fbd30d14948d782bc7294ea190c58649463f475c96"
+    },
+    {
+      "id": "bund/KAG/art_115",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "115",
+      "artikelLabel": "Art. 115",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die SICAF regelt die Anlagen, die Anlagepolitik, die Anlagebeschränkungen, die Risikoverteilung sowie die mit den Anlagen verbundenen Risiken in den Statuten und im Anlagereglement."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anlagen gelten Artikel 69 und sinngemäss die Artikel 64, 70 und 71."
+        },
+        {
+          "absatz": "3",
+          "text": "Über Änderungen des Anlagereglements entscheidet die Generalversammlung mit der Mehrheit der vertretenen Aktienstimmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_115",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f9a716a653dbfeeaad2b148ee9c83e41c50f302ab1ffaae6642fd8c2ea782adf"
+    },
+    {
+      "id": "bund/KAG/art_116",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "116",
+      "artikelLabel": "Art. 116",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_116",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_117",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "117",
+      "artikelLabel": "Art. 117",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Rechenschaftsablage kommen neben den aktienrechtlichen Bestimmungen über die Rechnungslegung die Artikel 89 Absatz 1 Buchstaben a und c–i, Absätze 2–4 sowie Artikel 90 sinngemäss zur Anwendung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_117",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0d0ff85f135791c36cd886050362c2e19ddc0c544fcfa4cdfc479417907c7260"
+    },
+    {
+      "id": "bund/KAG/art_118",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118",
+      "artikelLabel": "Art. 118",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die SICAF bezeichnet eine Prüfgesellschaft (Art. 126 ff.)."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "142b5fb21ad0f4c25e03c874296f2905216add135ee0d4bcab46c13408de9a1f"
+    },
+    {
+      "id": "bund/KAG/art_118_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_a",
+      "artikelLabel": "Art. 118a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein L-QIF ist eine kollektive Kapitalanlage, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausschliesslich qualifizierten Anlegerinnen und Anlegern offensteht;"
+            },
+            {
+              "marke": "b",
+              "text": "für den Fall, dass sie ihre Mittel direkt in Immobilien anlegt, ausschliesslich Anlegerinnen und Anlegern offensteht, die professionelle Kundinnen und Kunden nach Artikel 4 Absatz 3 Buchstaben a–h FIDLEG sind;"
+            },
+            {
+              "marke": "c",
+              "text": "gemäss den Vorschriften der Artikel 118 g und 118 h verwaltet wird; und"
+            },
+            {
+              "marke": "d",
+              "text": "weder über eine Bewilligung noch eine Genehmigung der FINMA verfügt und auch nicht von der FINMA beaufsichtigt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er untersteht diesem Gesetz, soweit dieses nichts anderes bestimmt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f48a000e039fb5a66ecad4da34145220e0c5755ffbb52fec4a3b3c8d10a016dd"
+    },
+    {
+      "id": "bund/KAG/art_118_b",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_b",
+      "artikelLabel": "Art. 118b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine kollektive Kapitalanlage, die über eine Bewilligung oder Genehmigung der FINMA verfügt, kann diese zurückgeben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie die Voraussetzungen nach Artikel 118 a Absatz 1 Buchstaben a−c erfüllt; und"
+            },
+            {
+              "marke": "b",
+              "text": "sichergestellt ist, dass die Interessen der Anlegerinnen und Anleger gewahrt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Einzelheiten. Er legt die Massnahmen fest, die sicherstellen, dass die Interessen der Anlegerinnen und Anleger gewahrt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4466deb8f702752da3a9eaaacfc13b15a1564a6eac529c8736e6e6272f62bd5c"
+    },
+    {
+      "id": "bund/KAG/art_118_c",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_c",
+      "artikelLabel": "Art. 118c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der L-QIF kann die Rechtsform des vertraglichen Anlagefonds, der SICAV oder der KmGK haben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "cd9da5a8af4da2a8295c68921006a20c34b4e8292cf255a654e4000e286719f0"
+    },
+    {
+      "id": "bund/KAG/art_118_d",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_d",
+      "artikelLabel": "Art. 118d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf L-QIF nicht anwendbar sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anlagevorschriften nach den Artikeln 53–71 und 103;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bestimmungen, die der FINMA eine Kompetenz zur Entscheidung im Einzelfall oder eine Aufsichtskompetenz zusprechen (Art. 7 Abs. 4 zweiter Satz, 10 Abs. 5, 26 Abs. 1, 27, 39 Abs. 2, 44 a Abs. 2, 47 Abs. 2, 74, 78 Abs. 4, 81 Abs. 2, 83 Abs. 3, 89 Abs. 4, 91, 95 Abs. 2, 96 Abs. 1 Bst. c, Abs. 2 Bst. c und Abs. 4, 109 Bst. c, 126, 132–134, 136–139 und 144)."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6c6015da239597342f4bb377b6987ff662c9db6e82e05a3281b22eeeb0eca6a5"
+    },
+    {
+      "id": "bund/KAG/art_118_e",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_e",
+      "artikelLabel": "Art. 118e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf der ersten Seite in den Fondsdokumenten eines L-QIF sowie in der Werbung für einen L-QIF ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung «Limited Qualified Investor Fund» oder «L-QIF» zu verwenden;"
+            },
+            {
+              "marke": "b",
+              "text": "der Hinweis anzubringen, dass der L-QIF weder über eine Bewilligung noch über eine Genehmigung der FINMA verfügt und auch nicht von ihr beaufsichtigt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Firma eines L-QIF in der Rechtsform der SICAV oder KmGK muss die Bezeichnung «Limited Qualified Investor Fund» oder deren Abkürzung «L-QIF» sowie die Bezeichnung der entsprechenden Rechtsform enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein L-QIF darf nicht als «Effektenfonds», «Immobilienfonds», «übriger Fonds für traditionelle Anlagen» oder «übriger Fonds für alternative Anlagen» bezeichnet werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bac686b86ae045e1eeef0a040d9ffd6a31a4b9ccbb35454a7fd2b525b022f54c"
+    },
+    {
+      "id": "bund/KAG/art_118_f",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_f",
+      "artikelLabel": "Art. 118f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das nach Artikel 118 g Absatz 1 oder 118 h Absatz 1, 2 oder 4 für die Verwaltung zuständige Institut meldet dem Eidgenössischen Finanzdepartement (EFD) die Übernahme oder Aufgabe der Verwaltung eines L-QIF innert 14 Tagen. Der Bundesrat kann festlegen, welche Angaben diese Meldungen enthalten müssen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das EFD führt ein öffentlich zugängliches Verzeichnis über sämtliche L-QIF und die jeweils für die Verwaltung nach Artikel 118 g Absatz 1 oder 118 h Absatz 1, 2 oder 4 zuständigen Institute."
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann beim L-QIF und den nach Artikel 118 g Absatz 1 oder 118 h Absatz 1, 2 oder 4 für die Verwaltung zuständigen Instituten zu statistischen Zwecken Daten über die Geschäftstätigkeit des L-QIF erheben."
+        },
+        {
+          "absatz": "4",
+          "text": "Es kann diese Daten durch Dritte erheben lassen oder die in Absatz 3 genannten Personen verpflichten, ihm diese zu melden."
+        },
+        {
+          "absatz": "5",
+          "text": "Artikel 144 Absätze 2 und 3 gilt sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "72b59c239bda6142efc5ce1369b7e328c904acd4a42d4214d165d7967d46e444"
+    },
+    {
+      "id": "bund/KAG/art_118_g",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_g",
+      "artikelLabel": "Art. 118g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein L-QIF in der Rechtsform des vertraglichen Anlagefonds wird von einer Fondsleitung verwaltet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung darf die Anlageentscheide unter den Voraussetzungen nach den Artikeln 14 Absatz 1 und 35 FINIG übertragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Verwalter von Kollektivvermögen nach Artikel 2 Absatz 1 Buchstabe c FINIG;"
+            },
+            {
+              "marke": "b",
+              "text": "einem ausländischen Verwalter von Kollektivvermögen, wenn: 1. dieser in seinem Sitzstaat einer angemessenen Regulierung und Aufsicht untersteht, und"
+            },
+            {
+              "marke": "2",
+              "text": "zwischen der FINMA und der jeweils zuständigen ausländischen Aufsichtsbehörde eine Vereinbarung über die Zusammenarbeit und den Informationsaustausch besteht, sofern das ausländische Recht eine solche verlangt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verwalter von Kollektivvermögen darf die Anlageentscheide unter den Voraussetzungen nach den Artikeln 14 Absatz 1 und 27 Absatz 1 FINIG auf Personen nach Absatz 2 dieser Bestimmung übertragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Fondsvertrag ist anzugeben, wem die Anlageentscheide übertragen werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bc53feafa5778d71d1905fcc08d584e2a631972ffca67fddf93a9a6819021d14"
+    },
+    {
+      "id": "bund/KAG/art_118_h",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_h",
+      "artikelLabel": "Art. 118h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein L-QIF in der Rechtsform der SICAV muss die Administration und die Anlageentscheide ein und derselben Fondsleitung übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein L-QIF in der Rechtsform der KmGK muss die Geschäftsführung an einen Verwalter von Kollektivvermögen übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Weiterübertragung der Anlageentscheide richtet sich nach Artikel 118 g Absätze 2 und 3."
+        },
+        {
+          "absatz": "4",
+          "text": "Ein L-QIF in der Rechtsform der KmGK muss die Geschäftsführung nicht übertragen, wenn die Komplementäre Banken, Versicherungsunternehmen im Sinne des VAG, Wertpapierhäuser, Fondsleitungen oder Verwalter von Kollektivvermögen sind."
+        },
+        {
+          "absatz": "5",
+          "text": "In den Statuten oder im Gesellschaftsvertrag ist anzugeben, wem die Geschäftsführung oder die Administration übertragen wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_h",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8cfee5908de87fd120db68753bd320f6787ad28db4603b864d7c34327c8f0a2a"
+    },
+    {
+      "id": "bund/KAG/art_118_i",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_i",
+      "artikelLabel": "Art. 118i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den L-QIF ist eine von der Eidgenössischen Revisionsaufsichtsbehörde nach Artikel 9 a Absatz 1 des Revisionsaufsichtsgesetzes vom 16. Dezember 2005 zugelassene Prüfgesellschaft mit einer Prüfung zu beauftragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Jahresrechnung und gegebenenfalls die Konzernrechnung des L-QIF und jeder zu diesem gehörenden Immobiliengesellschaft müssen von einem staatlich beaufsichtigten Revisionsunternehmen nach den Grundsätzen der ordentlichen Revision des Obligationenrechts geprüft werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Prüfung ist dieselbe Prüfgesellschaft zu beauftragen wie für das nach Artikel 118 g Absatz 1 oder 118 h Absatz 1, 2 oder 4 für die Verwaltung zuständige Institut."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Geheimhaltung durch die Prüfgesellschaft gilt Artikel 730 b Absatz 2 des Obligationenrechts sinngemäss."
+        },
+        {
+          "absatz": "5",
+          "text": "Der L-QIF trägt die Kosten der Prüfung."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Bundesrat regelt die Einzelheiten der Prüfung. Er kann zusätzliche Vorschriften über die Buchführung, die Bewertung, die Rechenschaftsablage und die Publikationspflicht erlassen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_i",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e7a639a48f5dbde528afd9b5e1c18e424f04d76f24e51ec1062212522f7e3bc2"
+    },
+    {
+      "id": "bund/KAG/art_118_j",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_j",
+      "artikelLabel": "Art. 118j",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einem L-QIF in der Rechtsform des vertraglichen Anlagefonds erstellt die Fondsleitung den Fondsvertrag und holt die Zustimmung der Depotbank ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Beabsichtigt die Fondsleitung Änderungen am Fondsvertrag, so holt sie im Voraus die Zustimmung der Depotbank ein und veröffentlicht in den Publikationsorganen des L-QIF:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Zusammenfassung der wesentlichen Änderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Hinweis auf die Stellen, wo die Vertragsänderungen im Wortlaut kostenlos bezogen werden können; und"
+            },
+            {
+              "marke": "c",
+              "text": "einen Hinweis darauf, wann die Änderungen in Kraft treten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Auf eine Publikation nach Absatz 2 kann verzichtet werden, wenn sämtliche Anlegerinnen und Anleger schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, über den Wortlaut der Änderungen und den Zeitpunkt des Inkrafttretens der Änderung informiert werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Änderungen des Fondsvertrags treten frühestens in Kraft:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Fall eines vertraglichen Anlagefonds mit jederzeitiger Rückgabemöglichkeit: 30 Tage nach der Publikation nach Absatz 2 oder der Information nach Absatz 3;"
+            },
+            {
+              "marke": "b",
+              "text": "im Fall eines vertraglichen Anlagefonds ohne jederzeitige Rückgabemöglichkeit: am Tag nach dem Tag, an dem die Anteile unter Beachtung der vertraglichen oder reglementarischen Rückgabefristen und Termine zurückgegeben werden können, wenn der Fondsvertrag am 30. Tag nach der Publikation nach Absatz 2 oder der Information nach Absatz 3 gekündigt würde."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Dauert die vertragliche oder reglementarische Kündigungsfrist länger als 30 Tage, so können die Änderungen früher als nach Absatz 4 in Kraft treten, wenn sämtliche Anlegerinnen und Anleger schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, zustimmen, frühestens aber 30 Tage nach der Publikation nach Absatz 2 oder der Information nach Absatz 3."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_j",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "0f0e42dd9a656de9f3832de8320f2e2c5610c81c7115cb7d7f7639cd630887ac"
+    },
+    {
+      "id": "bund/KAG/art_118_k",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_k",
+      "artikelLabel": "Art. 118k",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Artikel 39 a FINIG findet auf den Wechsel der Depotbank bei einem L-QIF in der Rechtsform des vertraglichen Anlagefonds sinngemäss Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Wechsel der Depotbank eines L-QIF in der Rechtsform der SICAV bedarf eines Vertrags in schriftlicher oder in einer anderen Form, die den Nachweis durch Text ermöglicht. Der Wechsel ist unverzüglich in den Publikationsorganen der SICAV zu veröffentlichen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_k",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7ae384703882ecad2da20ee53525b4a0da36612e1f4d1f764170411780a0ec43"
+    },
+    {
+      "id": "bund/KAG/art_118_l",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_l",
+      "artikelLabel": "Art. 118l",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei einem L-QIF in der Rechtsform des vertraglichen Anlagefonds oder der SICAV sind Ausnahmen von der Pflicht zur Ein- und Auszahlung in bar nach Artikel 78 gestattet, wenn sie in folgenden Dokumenten vorgesehen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Fall eines L-QIF in der Rechtsform des vertraglichen Anlagefonds: im Fondsvertrag;"
+            },
+            {
+              "marke": "b",
+              "text": "im Fall eines L-QIF in der Rechtsform der SICAV: im Anlagereglement."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_l",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "202b01a57e3d870ed81290535da4abce58578a68709edbc3d489731dce5755c0"
+    },
+    {
+      "id": "bund/KAG/art_118_m",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_m",
+      "artikelLabel": "Art. 118m",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei einem L-QIF in der Rechtsform des vertraglichen Anlagefonds oder der SICAV kann die Fondsleitung in ausserordentlichen Fällen im Interesse der Gesamtheit der Anlegerinnen und Anleger einen befristeten Aufschub der Rückzahlung der Anteile anordnen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_m",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4051d5c2f9fe3b095abf64689b11325a90834282342cdb7763aa25d7761860de"
+    },
+    {
+      "id": "bund/KAG/art_118_n",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_n",
+      "artikelLabel": "Art. 118n",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für den L-QIF zulässigen Anlagen sind in den folgenden Dokumenten zu regeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Fall eines L-QIF in der Rechtsform des vertraglichen Anlagefonds: im Fondsvertrag;"
+            },
+            {
+              "marke": "b",
+              "text": "im Fall eines L-QIF in der Rechtsform der SICAV: im Anlagereglement;"
+            },
+            {
+              "marke": "c",
+              "text": "im Fall eines L-QIF in der Form der KmGK: im Gesellschaftsvertrag."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Investiert der L-QIF in alternative Anlagen, so ist auf die besonderen Risiken, die mit diesen Anlagen verbunden sind, in der Bezeichnung, in den Dokumenten nach Absatz 1 sowie in der Werbung hinzuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt Anlagetechniken und Anlagebeschränkungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_n",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dfb3561857453e47d1a0ee445f0dede30fc25f2aa9182345c969075e2026b694"
+    },
+    {
+      "id": "bund/KAG/art_118_o",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_o",
+      "artikelLabel": "Art. 118o",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Risikoverteilung eines L-QIF ist in den Dokumenten nach Artikel 118 n Absatz 1 zu umschreiben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_o",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b2b868c995ac2dd8a1acd3766b2fb32edcb23d17b971e70bd1ac5f6768971fe8"
+    },
+    {
+      "id": "bund/KAG/art_118_p",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "118_p",
+      "artikelLabel": "Art. 118p",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Investiert ein L-QIF in Immobilienanlagen, so gilt Artikel 63 Absätze 1–3 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den L-QIF sind mindestens zwei unabhängige natürliche Personen oder eine unabhängige juristische Person als Schätzungsexpertinnen oder Schätzungsexperten für Immobilienanlagen zu beauftragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Ausnahmen von Absatz 1 und die Anforderungen an die Schätzungsexpertinnen und Schätzungsexperten nach Absatz 2. Er regelt namentlich die Ausnahmen vom Übernahme- und Abtretungsverbot nach Artikel 63 Absätze 2 und 3."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_118_p",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "34e3fd2317634e326822888ecfa81d69b7af565e03e21007d38ceb37db8f6f84"
+    },
+    {
+      "id": "bund/KAG/art_119",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "119",
+      "artikelLabel": "Art. 119",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als ausländische offene kollektive Kapitalanlagen gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vermögen, die aufgrund eines Fondsvertrags oder eines andern Vertrags mit ähnlicher Wirkung zum Zweck der kollektiven Kapitalanlage geäufnet wurden und von einer Fondsleitung mit Sitz und Hauptverwaltung im Ausland verwaltet werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesellschaften und ähnliche Vermögen mit Sitz und Hauptverwaltung im Ausland, deren Zweck die kollektive Kapitalanlage ist und bei denen die Anlegerinnen und Anleger gegenüber der Gesellschaft selbst oder einer ihr nahe stehenden Gesellschaft einen Rechtsanspruch auf Rückzahlung ihrer Anteile zum Nettoinventarwert haben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als ausländische geschlossene kollektive Kapitalanlagen gelten Gesellschaften und ähnliche Vermögen mit Sitz und Hauptverwaltung im Ausland, deren Zweck die kollektive Kapitalanlage ist und bei denen die Anlegerinnen und Anleger gegenüber der Gesellschaft selbst oder einer ihr nahe stehenden Gesellschaft keinen Rechtsanspruch auf Rückzahlung ihrer Anteile zum Nettoinventarwert haben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_119",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4384e31ab3f4fd295545dbfe25cd1164262c47f5da9a15f4ac525491510030df"
+    },
+    {
+      "id": "bund/KAG/art_120",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "120",
+      "artikelLabel": "Art. 120",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausländische kollektive Kapitalanlagen müssen von der FINMA genehmigt werden, bevor sie in der Schweiz nicht qualifizierten Anlegerinnen und Anlegern angeboten werden. Der Vertreter legt der FINMA die genehmigungspflichtigen Dokumente vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Genehmigung wird erteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die kollektive Kapitalanlage, die Fondsleitung oder die Gesellschaft, der Verwalter von Kollektivvermögen und die Verwahrstelle einer dem Anlegerschutz dienenden öffentlichen Aufsicht unterstehen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Fondsleitung oder die Gesellschaft sowie die Verwahrstelle hinsichtlich Organisation, Anlegerrechte und Anlagepolitik einer Regelung unterstehen, die den Bestimmungen dieses Gesetzes gleichwertig ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bezeichnung der kollektiven Kapitalanlage nicht zu Täuschung oder Verwechslung Anlass gibt;"
+            },
+            {
+              "marke": "d",
+              "text": "für die in der Schweiz angebotenen Anteile ein Vertreter und eine Zahlstelle bezeichnet sind;"
+            },
+            {
+              "marke": "e",
+              "text": "eine Vereinbarung über Zusammenarbeit und Informationsaustausch zwischen der FINMA und den für das Anbieten relevanten ausländischen Aufsichtsbehörden besteht."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Der Vertreter und die Zahlstelle dürfen nur mit vorgängiger Genehmigung der FINMA ihr Mandat beenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann für ausländische kollektive Anlagen ein vereinfachtes und beschleunigtes Genehmigungsverfahren vorsehen, sofern solche Anlagen bereits von einer ausländischen Aufsichtsbehörde genehmigt wurden und das Gegenrecht gewährleistet ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Ausländische kollektive Kapitalanlagen, die in der Schweiz qualifizierten Anlegerinnen und Anlegern nach Artikel 5 Absatz 1 des Finanzdienstleistungsgesetzes vom 15. Juni 2018 (FIDLEG) angeboten werden, bedürfen keiner Genehmigung, haben aber die Voraussetzungen nach Absatz 2 Buchstaben c und d des vorliegenden Artikels jederzeit zu erfüllen."
+        },
+        {
+          "absatz": "5",
+          "text": "Mitarbeiterbeteiligungspläne in Form von ausländischen kollektiven Kapitalanlagen, die ausschliesslich Mitarbeiterinnen und Mitarbeitern angeboten werden, bedürfen keiner Genehmigung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_120",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a4c1c6c8576b412c038c510b07f20327822a84d5bc98a8f848f84492cc31a45d"
+    },
+    {
+      "id": "bund/KAG/art_121",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "121",
+      "artikelLabel": "Art. 121",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Zahlstelle ist eine Bank im Sinne des BankG vorzusehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anlegerinnen und Anleger können die Ausgabe und Rücknahme der Anteile bei der Zahlstelle verlangen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_121",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9db4b6d33fd0a962a3b910180cb8f3e161780597fde75da6da2f8ad846b3fe47"
+    },
+    {
+      "id": "bund/KAG/art_122",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "122",
+      "artikelLabel": "Art. 122",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat ist befugt, auf der Grundlage gegenseitiger Anerkennung gleichwertiger Regelungen und Massnahmen Staatsverträge abzuschliessen, die für kollektive Kapitalanlagen aus den Vertragsstaaten anstelle der Genehmigungspflicht eine blosse Meldepflicht vorsehen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_122",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "53c983442d77b7a8331ee837127627645b28ac91fa1f5137e0633224e111a490"
+    },
+    {
+      "id": "bund/KAG/art_123",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "123",
+      "artikelLabel": "Art. 123",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausländische kollektive Kapitalanlagen dürfen in der Schweiz nicht qualifizierten Anlegerinnen und Anlegern und in der Schweiz qualifizierten Anlegerinnen und Anlegern nach Artikel 5 Absatz 1 FIDLEG nur angeboten werden, sofern die Fondsleitung oder die Gesellschaft vorgängig einen Vertreter mit der Wahrnehmung der Pflichten nach Artikel 124 des vorliegenden Gesetzes beauftragt hat. Vorbehalten bleibt Artikel 122 des vorliegenden Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung und die Gesellschaft verpflichten sich, dem Vertreter alle Informationen zur Verfügung zu stellen, die er zur Wahrnehmung seiner Aufgaben braucht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_123",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8e7d45cffe72166304a25406ef86e6078eeee582259ddefe6189c28f66014d91"
+    },
+    {
+      "id": "bund/KAG/art_124",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "124",
+      "artikelLabel": "Art. 124",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Vertreter vertritt die ausländische kollektive Kapitalanlage gegenüber Anlegerinnen und Anlegern und der FINMA. Seine Vertretungsbefugnis darf nicht beschränkt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Er hält die gesetzlichen Melde-, Publikations- und Informationspflichten sowie die Verhaltensregeln von Branchenorganisationen ein, die von der FINMA zum Mindeststandard erklärt worden sind. Seine Identität ist in jeder Publikation zu nennen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_124",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b68bb3860f8d5e796c940e0f0887c338385d59a4e873a6d78232280124831713"
+    },
+    {
+      "id": "bund/KAG/art_125",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "125",
+      "artikelLabel": "Art. 125",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Erfüllungsort für die in der Schweiz angebotenen Anteile der ausländischen kollektiven Kapitalanlage liegt am Sitz des Vertreters."
+        },
+        {
+          "absatz": "2",
+          "text": "Er besteht nach einem Bewilligungsentzug oder nach der Auflösung der ausländischen kollektiven Kapitalanlage am Sitz des Vertreters weiter."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Gerichtsstand liegt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "am Sitz des Vertreters; oder"
+            },
+            {
+              "marke": "b",
+              "text": "am Sitz oder Wohnsitz der Anlegerin oder des Anlegers."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_125",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "963879f82c606f957424a1399daca9ecfcdc39072d186e52cd8e6ce1658ac804"
+    },
+    {
+      "id": "bund/KAG/art_126",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "126",
+      "artikelLabel": "Art. 126",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Personen müssen eine von der Eidgenössischen Revisionsaufsichtsbehörde nach Artikel 9 a Absatz 1 des Revisionsaufsichtsgesetzes vom 16. Dezember 2005 zugelassene Prüfgesellschaft mit einer Prüfung nach Artikel 24 FINMAG beauftragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Fondsleitung für die von ihr verwalteten Anlagefonds;"
+            },
+            {
+              "marke": "b",
+              "text": "die SICAV;"
+            },
+            {
+              "marke": "c",
+              "text": "die KmGK;"
+            },
+            {
+              "marke": "d",
+              "text": "die SICAF;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "der Vertreter ausländischer kollektiver Kapitalanlagen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Die SICAV und die gegebenenfalls von ihr nach Artikel 51 Absatz 5 beauftragte Fondsleitung sind von der gleichen Prüfgesellschaft zu prüfen. Die FINMA kann Ausnahmen gestatten."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die in Absatz 1 genannten Personen, verwaltete Anlagefonds sowie jede zu den Immobilienfonds oder zu den Immobilieninvestmentgesellschaften gehörende Immobiliengesellschaften müssen ihre Jahresrechnung und gegebenenfalls Konzernrechnung von einem staatlich beaufsichtigten Revisionsunternehmen nach den Grundsätzen der ordentlichen Revision des Obligationenrechts prüfen lassen."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Bundesrat regelt die Einzelheiten. Er kann die FINMA ermächtigen, in Belangen von beschränkter Tragweite, namentlich in vorwiegend technischen Angelegenheiten, Ausführungsbestimmungen zu erlassen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_126",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "995ad7933bb85253585f460456bc8a84f03477c3ec1d6af13de0a5b07a4f49f2"
+    },
+    {
+      "id": "bund/KAG/art_127_129",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "127_129",
+      "artikelLabel": "Art. 127129",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_127_129",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_130",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "130",
+      "artikelLabel": "Art. 130",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schätzungsexperten sowie die Immobiliengesellschaften, die zur kollektiven Kapitalanlage gehören, gewähren der Prüfgesellschaft Einsicht in die Bücher, die Belege und in die Schätzungsberichte; sie erteilen ihr zudem alle Auskünfte, die sie zur Erfüllung der Prüfungspflicht benötigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfgesellschaft der Depotbank und die Prüfgesellschaft der übrigen Bewilligungsträger arbeiten zusammen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_130",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2b4bb69142b8c4a4e543e70a9adce0fd835131e242c26b30b96cfbabeae40bcb"
+    },
+    {
+      "id": "bund/KAG/art_131",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "131",
+      "artikelLabel": "Art. 131",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_131",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_132",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "132",
+      "artikelLabel": "Art. 132",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA erteilt die nach diesem Gesetz erforderlichen Bewilligungen und Genehmigungen und überwacht die Einhaltung der gesetzlichen, vertraglichen, statutarischen und reglementarischen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie überprüft die geschäftspolitische Zweckmässigkeit der Entscheide der Bewilligungsträger nicht."
+        },
+        {
+          "absatz": "3",
+          "text": "L-QIF unterstehen nicht der Aufsicht der FINMA."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_132",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2742193cee0d82fb8a8a871b728b9a5c5b962cd2cf2e659c439abac26e09d9a3"
+    },
+    {
+      "id": "bund/KAG/art_133",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "133",
+      "artikelLabel": "Art. 133",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Verletzungen der vertraglichen, statutarischen und reglementarischen Bestimmungen sind die Aufsichtsinstrumente nach den Artikeln 30–37 des FINMAG sinngemäss anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 37 des FINMAG gilt sinngemäss auch für die Genehmigung nach diesem Gesetz."
+        },
+        {
+          "absatz": "3",
+          "text": "Erscheinen die Rechte der Anlegerinnen und Anleger gefährdet, so kann die FINMA die Bewilligungsträger zu Sicherheitsleistungen verpflichten."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird eine vollstreckbare Verfügung der FINMA nach vorgängiger Mahnung innert der angesetzten Frist nicht befolgt, so kann die FINMA auf Kosten der säumigen Partei die angeordnete Handlung selber vornehmen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_133",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "783671f23c65212d8caa59a24505d9dbe07d641aa9ad4c5dd41447349bd1223f"
+    },
+    {
+      "id": "bund/KAG/art_134",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "134",
+      "artikelLabel": "Art. 134",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bewilligungsträger, denen die Bewilligung entzogen wurde, oder kollektive Kapitalanlagen, denen die Genehmigung entzogen wurde, können von der FINMA liquidiert werden. Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_134",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "583c6bb917379c0651989c44b699277f95d4dd77e13f193777b48be84da34c97"
+    },
+    {
+      "id": "bund/KAG/art_135",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "135",
+      "artikelLabel": "Art. 135",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Personen, die ohne Bewilligung beziehungsweise Genehmigung der FINMA tätig werden, kann die FINMA die Auflösung verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Wahrung der Interessen der Anlegerinnen und Anleger kann die FINMA die Überführung der kollektiven Kapitalanlage in eine gesetzmässige Form vorschreiben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_135",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "90ad4819568cb2ecb81d1e24157a2d208ccdb1d6e8591e7470203b1f120fec7a"
+    },
+    {
+      "id": "bund/KAG/art_136",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "136",
+      "artikelLabel": "Art. 136",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In begründeten Fällen kann die FINMA für die Schätzung der Anlagen von Immobilienfonds oder Immobilieninvestmentgesellschaften Schätzungsexperten nach Artikel 64 einsetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann die vom Immobilienfonds oder von der Immobilieninvestmentgesellschaft eingesetzten Schätzungsexperten abberufen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_136",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1300a33b6a5ff1b54767479e1b71d7304e31b78ffb4641160aeaed6b3257f036"
+    },
+    {
+      "id": "bund/KAG/art_137",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "137",
+      "artikelLabel": "Art. 137",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besteht begründete Besorgnis, dass ein Bewilligungsträger nach Artikel 13 Absatz 2 Buchstaben b–d überschuldet ist oder ernsthafte Liquiditätsprobleme hat, und besteht keine Aussicht auf Sanierung oder ist diese gescheitert, so entzieht die FINMA dem Bewilligungsträger die Bewilligung, eröffnet den Konkurs und macht diesen öffentlich bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen über das Nachlassverfahren (Art. 293–336 des BG vom 11. April 1889 über Schuldbetreibung und Konkurs, SchKG) und über die Benachrichtigung des Gerichts (Art. 716 a Abs. 1 Ziff. 8, 725 a Abs. 3, 725 b Abs. 3 und 728 c Abs. 3 des Obligationenrechts) sind auf die von Absatz 1 erfassten Bewilligungsträger nicht anwendbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA ernennt eine oder mehrere Konkursliquidatorinnen oder einen oder mehrere Konkursliquidatoren. Diese unterstehen der Aufsicht der FINMA und erstatten ihr auf Verlangen Bericht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_137",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ab9bffd35c8af283e775d59a7f451578e45f4831414a4dff5aec2054f3359070"
+    },
+    {
+      "id": "bund/KAG/art_138",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "138",
+      "artikelLabel": "Art. 138",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anordnung des Konkurses hat die Wirkungen einer Konkurseröffnung nach den Artikeln 197–220 SchKG."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Konkurs ist unter Vorbehalt der Artikel 138 a –138 c nach den Artikeln 221–270 SchKG durchzuführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann abweichende Verfügungen und Anordnungen treffen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_138",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1e5771a3293db9dbff24f6366a5a4667a0388b875c5cf27e596fd96ab9639e3a"
+    },
+    {
+      "id": "bund/KAG/art_138_a",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "138_a",
+      "artikelLabel": "Art. 138a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konkursliquidatorin oder der Konkursliquidator kann der FINMA beantragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Gläubigerversammlung einzusetzen und deren Kompetenzen sowie die für die Beschlussfassung notwendigen Präsenz- und Stimmquoren festzulegen;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Gläubigerausschuss einzurichten sowie dessen Zusammensetzung und Kompetenzen festzulegen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer SICAV mit Teilvermögen nach Artikel 94 kann für jedes Teilvermögen eine Gläubigerversammlung oder ein Gläubigerausschuss eingesetzt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA ist nicht an die Anträge der Konkursliquidatorin oder des Konkursliquidators gebunden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_138_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a05fcf16cc1b36e6cda741d3329d2a9ca7a0126e8d21eb9c98ebcd194f2b5826"
+    },
+    {
+      "id": "bund/KAG/art_138_b",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "138_b",
+      "artikelLabel": "Art. 138b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind sämtliche Aktiven verwertet und alle die Feststellung der Aktiv- und Passiv-masse betreffenden Prozesse erledigt, so erstellen die Konkursliquidatorinnen oder Konkursliquidatoren die abschliessende Verteilungsliste sowie die Schlussrechnung und unterbreiten diese der FINMA zur Genehmigung. Prozesse aus Abtretung von Rechtsansprüchen nach Artikel 260 SchKG bleiben unberücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Genehmigungsverfügung wird mit der Verteilungsliste und der Schlussrechnung während 30 Tagen zur Einsicht aufgelegt. Die Auflegung wird im Schweizerischen Handelsamtsblatt und auf der Internetseite der FINMA publiziert und den Gläubigerinnen und Gläubigern unter Mitteilung ihres Anteils sowie gegebenenfalls den Eignerinnen und Eignern vorgängig angezeigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA trifft die nötigen Anordnungen zur Schliessung des Verfahrens. Sie macht die Schliessung öffentlich bekannt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_138_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "84ec6aa55ca904263a06be412c7d24dd9668c83ae280746f30b3977abb0c0967"
+    },
+    {
+      "id": "bund/KAG/art_138_c",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "138_c",
+      "artikelLabel": "Art. 138c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Anerkennung ausländischer Konkursdekrete und Insolvenzmassnahmen sowie für die Koordination mit ausländischen Insolvenzverfahren gelten die Artikel 37 f und 37 g des BankG sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_138_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "49b2ec3f9b6a4003d9c1a5e5da960d59aaa0b022ffe53f78d45394c025d89a21"
+    },
+    {
+      "id": "bund/KAG/art_138_d",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "138_d",
+      "artikelLabel": "Art. 138d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Konkursverfahren können die Gläubigerinnen und Gläubiger sowie die Eignerinnen und Eigner eines von Artikel 137 Absatz 1 erfassten Bewilligungsträgers lediglich gegen Verwertungshandlungen sowie gegen die Genehmigung der Verteilungsliste und der Schlussrechnung Beschwerde führen. Die Beschwerde nach Artikel 17 SchKG über Schuldbetreibung und Konkurs ist ausgeschlossen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Frist für eine Beschwerde gegen die Genehmigung der Verteilungsliste und der Schlussrechnung beginnt am Tag nach deren Auflegung zur Einsicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Beschwerden im Konkursverfahren haben keine aufschiebende Wirkung. Die Instruktionsrichterin oder der Instruktionsrichter kann die aufschiebende Wirkung auf Gesuch hin erteilen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_138_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ae121495b9172529f0f4af2ef401845f4a8d2fd0cb8be7a64678d090df791e3c"
+    },
+    {
+      "id": "bund/KAG/art_139",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "139",
+      "artikelLabel": "Art. 139",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die eine Funktion im Rahmen dieses Gesetzes ausüben, müssen der FINMA alle Auskünfte und Unterlagen erteilen, die diese zur Erfüllung ihrer Aufgabe benötigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann Bewilligungsträger verpflichten, ihr die Informationen zu liefern, die sie zur Erfüllung ihrer Aufgabe benötigt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_139",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "72fb316e893dfcf06d5e37e24b9e0911255777687493da15e1e3062afec7cc89"
+    },
+    {
+      "id": "bund/KAG/art_140",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "140",
+      "artikelLabel": "Art. 140",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_140",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_141",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "141",
+      "artikelLabel": "Art. 141",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_141",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_142",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "142",
+      "artikelLabel": "Art. 142",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_142",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_143",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "143",
+      "artikelLabel": "Art. 143",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_143",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_144",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "144",
+      "artikelLabel": "Art. 144",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA ist befugt, von den Bewilligungsträgern die Daten über ihre Geschäftstätigkeit und über die Entwicklung der von ihnen verwalteten oder vertretenen kollektiven Kapitalanlagen zu erheben, die sie benötigt, um die Transparenz im Markt der kollektiven Kapitalanlagen zu gewährleisten oder ihre Aufsichtstätigkeit auszuüben. Sie kann diese Daten durch Dritte erheben lassen oder die Bewilligungsträger verpflichten, ihr diese zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Beauftragte Dritte haben über die erhobenen Daten das Geheimnis zu bewahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die statistischen Meldepflichten gegenüber der Schweizerischen Nationalbank, die das Nationalbankgesetz vom 3. Oktober 2003 vorschreibt, sowie die Befugnis der FINMA und der Schweizerischen Nationalbank, Daten auszutauschen, bleiben vorbehalten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_144",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "077b3e77feeac269db657f68cb4044960a8bf25ce2087852d6a53043b5c04315"
+    },
+    {
+      "id": "bund/KAG/art_145",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "145",
+      "artikelLabel": "Art. 145",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Pflichten verletzt, haftet der Gesellschaft, den einzelnen Anlegerinnen und Anlegern sowie den Gesellschaftsgläubigern für den daraus entstandenen Schaden, sofern er nicht beweist, dass ihn kein Verschulden trifft. Haftbar gemacht werden können alle mit der Gründung, der Geschäftsführung, der Vermögensverwaltung, der Prüfung oder der Liquidation befassten Personen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Fondsleitung,"
+            },
+            {
+              "marke": "b",
+              "text": "der SICAV,"
+            },
+            {
+              "marke": "c",
+              "text": "der KmGK,"
+            },
+            {
+              "marke": "d",
+              "text": "der SICAF,"
+            },
+            {
+              "marke": "e",
+              "text": "der Depotbank,"
+            },
+            {
+              "marke": "f",
+              "text": "der Verwalter von Kollektivvermögen;"
+            },
+            {
+              "marke": "g",
+              "text": "des Vertreters ausländischer kollektiver Kapitalanlagen,"
+            },
+            {
+              "marke": "h",
+              "text": "der Prüfgesellschaft,"
+            },
+            {
+              "marke": "i",
+              "text": "des Liquidators."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verantwortlichkeit nach Absatz 1 gilt auch für den Schätzungsexperten und den Vertreter der Anlegergemeinschaft."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer die Erfüllung einer Aufgabe einem Dritten überträgt, haftet für den von diesem verursachten Schaden, sofern er nicht nachweist, dass er bei der Auswahl, Instruktion und Überwachung die nach den Umständen gebotene Sorgfalt angewendet hat. Der Bundesrat kann die Anforderungen an die Überwachung regeln. Vorbehalten bleibt Artikel 68 Absatz 3 FINIG."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verantwortlichkeit der Organe der Fondsleitung, der SICAV und SICAF richtet sich nach den Bestimmungen des Obligationenrechts über die Aktiengesellschaft."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Verantwortlichkeit der KmGK richtet sich nach den Bestimmungen des Obligationenrechts über die Kommanditgesellschaft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_145",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "55c901524a0c6cede48301e25052118025f2812ca7826c1f63b1c788a9acccf9"
+    },
+    {
+      "id": "bund/KAG/art_146",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "146",
+      "artikelLabel": "Art. 146",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind für einen Schaden mehrere Personen ersatzpflichtig, so haftet die einzelne Person mit den andern solidarisch, soweit ihr der Schaden aufgrund ihres eigenen Verschuldens und der Umstände persönlich zurechenbar ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Klägerin oder der Kläger können mehrere Beteiligte gemeinsam für den Gesamtschaden einklagen und verlangen, dass das Gericht im gleichen Verfahren die Ersatzpflicht jeder einzelnen beklagten Person festsetzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gericht bestimmt unter Würdigung aller Umstände den Rückgriff auf die Beteiligten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_146",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2291a5126a974b0e8cfacbe90545c634f86aa614b29cd1169294307b1b74de79"
+    },
+    {
+      "id": "bund/KAG/art_147",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "147",
+      "artikelLabel": "Art. 147",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anspruch auf Schadenersatz verjährt fünf Jahre nach dem Tage, an dem die geschädigte Person Kenntnis vom Schaden und von der ersatzpflichtigen Person erlangt hat, spätestens aber drei Jahre nach der Rückzahlung eines Anteils und jedenfalls mit Ablauf von zehn Jahren, vom Tage an gerechnet, an welchem das schädigende Verhalten erfolgte oder aufhörte."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat die ersatzpflichtige Person durch ihr schädigendes Verhalten eine strafbare Handlung begangen, so verjährt der Anspruch auf Schadenersatz frühestens mit Eintritt der strafrechtlichen Verfolgungsverjährung. Tritt diese infolge eines erstinstanzlichen Strafurteils nicht mehr ein, so verjährt der Anspruch frühestens mit Ablauf von drei Jahren seit Eröffnung des Urteils."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_147",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "34053df5f4ef711b325205e794dc3926d256b3b145e122ff64eaece8eec39aa4"
+    },
+    {
+      "id": "bund/KAG/art_148",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "148",
+      "artikelLabel": "Art. 148",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "nicht oder nicht ordnungsgemäss erstellt,"
+            },
+            {
+              "marke": "2",
+              "text": "nicht oder nicht innerhalb der vorgeschriebenen Fristen veröffentlicht;"
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Wer fahrlässig handelt, wird mit Busse bis zu 250 000 Franken bestraft."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_148",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3af6ab0ad516cd884c01b8e398c4f2bdbf3c5276960f209da4427e915b8631a0"
+    },
+    {
+      "id": "bund/KAG/art_149",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "149",
+      "artikelLabel": "Art. 149",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse bis zu 500 000 Franken wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen die Bestimmung über den Schutz vor Verwechslung oder Täuschung (Art. 12) verstösst;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Werbung für eine kollektive Kapitalanlage unzulässige, falsche oder irreführende Angaben macht;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "die vorgeschriebenen Meldungen an die FINMA, die Schweizerische Nationalbank oder die Anlegerinnen und Anleger unterlässt oder darin falsche Angaben macht;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "das Aktienbuch im Sinne von Artikel 46 Absatz 3 nicht korrekt führt;"
+            },
+            {
+              "marke": "g",
+              "text": "gegen die Bestimmung über die Information der Anlegerinnen und Anleger und die Bezeichnung von L-QIF verstösst (Art. 118 e );"
+            },
+            {
+              "marke": "h",
+              "text": "gegen die Meldepflicht nach Artikel 118 f Absatz 1 verstösst."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_149",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a2dac98b2944742cd4c5686f0a0cd6d321b78b0732689ac2f8830e7d2d16a063"
+    },
+    {
+      "id": "bund/KAG/art_150",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "150",
+      "artikelLabel": "Art. 150",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_150",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_151",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "151",
+      "artikelLabel": "Art. 151",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_151",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_152",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "152",
+      "artikelLabel": "Art. 152",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat erlässt die Ausführungsbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat und die FINMA beachten beim Erlass von Verordnungsrecht die massgebenden Anforderungen des Rechts der Europäischen Gemeinschaften."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_152",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5bdffa658aacfa2d657b6cf8ae1d60e872bddd93309aab012e0460576eb9ef76"
+    },
+    {
+      "id": "bund/KAG/art_153",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "153",
+      "artikelLabel": "Art. 153",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufhebung und die Änderung bisherigen Rechts werden im Anhang geregelt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_153",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "da2524a3a3ca0ffca39ae06988dfae45488d531df34f80d43d7c0710cdec723a"
+    },
+    {
+      "id": "bund/KAG/art_154_158",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "154_158",
+      "artikelLabel": "Art. 154158",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_154_158",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_158_a_158_e",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "158_a_158_e",
+      "artikelLabel": "Art. 158a158e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_158_a_158_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KAG/art_159",
+      "ebene": "bund",
+      "quelle": "KAG",
+      "erlass": "KAG",
+      "artikel": "159",
+      "artikelLabel": "Art. 159",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/822/de#art_159",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}
