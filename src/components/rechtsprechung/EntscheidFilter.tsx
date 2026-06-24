@@ -73,14 +73,16 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
           aria-label="Rechtsprechung durchsuchen"
           className="lc-input lc-input-sm min-w-[180px] flex-1"
         />
-        <label className="flex items-center gap-1.5 text-xs text-ink-500">
+        <label className="flex shrink-0 items-center gap-1.5 text-xs text-ink-500">
           <span className="hidden sm:inline">Sortierung</span>
-          <select className="lc-select lc-input-sm" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
+          {/* min-w + shrink-0: in der flex-wrap-Toolbar wurde der Select sonst
+              gestaucht und das längste Label («Leitentscheide zuerst») abgeschnitten. */}
+          <select className="lc-select lc-input-sm min-w-[11.5rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
             aria-label="Sortierung">
             {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
           </select>
         </label>
-        <div className="inline-flex overflow-hidden rounded-md border border-line" role="group" aria-label="Ansicht">
+        <div className="inline-flex shrink-0 overflow-hidden rounded-md border border-line" role="group" aria-label="Ansicht">
           {dichteBtn('liste', 'Liste')}
           {dichteBtn('karten', 'Karten')}
         </div>
