@@ -88,12 +88,23 @@ function ScrollWiederherstellung() {
     aktiv.current = hash ? '' : pathname;
     if (hash) return; // Anker-Sprung übernimmt ScrollZuHash
     const ziel = positionen.current.get(pathname) ?? 0;
-    // Lazy-Seiten sind anfangs zu kurz → über einige Frames erneut anpeilen.
+    // Lazy geladene Seiten (in Prod: Reader-Chunk + Normtext-JSON erst nach dem
+    // Routenwechsel) sind anfangs zu kurz → die alte 40-Frame-Frist lief ab, bevor
+    // der Inhalt da war, und man landete oben (Bug David: Gesetz-Tab-Wechsel springt
+    // an den Anfang). Darum: erneut anpeilen, SOLANGE der Inhalt noch wächst — bis
+    // das Ziel erreicht ist oder die Höhe ~12 Frames stabil bleibt (Seite fertig,
+    // ggf. echt kürzer), höchstens ~360 Frames als Notbremse.
     wiederherstellend.current = true;
     let frames = 0;
+    let stabil = 0;
+    let letzteHoehe = -1;
     let raf = requestAnimationFrame(function versuche() {
       window.scrollTo({ top: ziel, left: 0, behavior: 'instant' as ScrollBehavior });
-      if (Math.abs(window.scrollY - ziel) > 2 && frames++ < 40) raf = requestAnimationFrame(versuche);
+      const erreicht = Math.abs(window.scrollY - ziel) <= 2;
+      const hoehe = document.documentElement.scrollHeight;
+      stabil = hoehe === letzteHoehe ? stabil + 1 : 0;
+      letzteHoehe = hoehe;
+      if (!erreicht && frames++ < 360 && stabil < 12) raf = requestAnimationFrame(versuche);
       else wiederherstellend.current = false;
     });
     return () => { cancelAnimationFrame(raf); wiederherstellend.current = false; };
