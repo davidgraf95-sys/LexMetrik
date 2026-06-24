@@ -87,8 +87,10 @@ export function TabStreifen() {
   useEffect(() => {
     if (!offeneKat) return;
     const zu = (e: MouseEvent) => { if (navRef.current && !navRef.current.contains(e.target as Node)) setOffeneKat(null); };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setOffeneKat(null); };
     document.addEventListener('mousedown', zu);
-    return () => document.removeEventListener('mousedown', zu);
+    document.addEventListener('keydown', esc);
+    return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
   }, [offeneKat]);
 
   // Guard: weniger als 2 Reiter → nichts rendern (Optik/golden/prerender
