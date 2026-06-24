@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
@@ -55,11 +55,32 @@ function AltRouteRedirect() {
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
 // neue Seite die alte Scrollposition und man «landet unten»). Trägt die Route
 // einen Anker (#vorlage-…, #g-…, von der Seitenleiste), übernimmt ScrollZuHash.
-function ScrollToTop() {
+// Scroll-Position je Pfad merken und beim Zurückkehren wiederherstellen (Auftrag
+// David): ein Tab-Wechsel (insb. zu einem langen Gesetzes-Reader und zurück) soll
+// NICHT an den Anfang springen, sondern dort weitermachen, wo man war. Neue,
+// noch nie besuchte Pfade starten weiterhin oben (keine gespeicherte Position).
+// Trägt die Route einen Anker (#…), übernimmt ScrollZuHash.
+function ScrollWiederherstellung() {
   const { pathname, hash } = useLocation();
+  const positionen = useRef<Map<string, number>>(new Map());
+  const aktiv = useRef(pathname);
+  // Laufend die Scrollposition des AKTUELLEN Pfads festhalten.
   useEffect(() => {
-    if (hash) return;
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+    const onScroll = () => { positionen.current.set(aktiv.current, window.scrollY); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  useEffect(() => {
+    aktiv.current = pathname;
+    if (hash) return; // Anker-Sprung übernimmt ScrollZuHash
+    const ziel = positionen.current.get(pathname) ?? 0;
+    // Lazy-Seiten sind anfangs zu kurz → über einige Frames erneut anpeilen.
+    let frames = 0;
+    let raf = requestAnimationFrame(function versuche() {
+      window.scrollTo({ top: ziel, left: 0, behavior: 'instant' as ScrollBehavior });
+      if (Math.abs(window.scrollY - ziel) > 2 && frames++ < 40) raf = requestAnimationFrame(versuche);
+    });
+    return () => cancelAnimationFrame(raf);
   }, [pathname, hash]);
   return null;
 }
@@ -92,7 +113,7 @@ export default function App() {
   return (
     <LocaleProvider>
     <Shell>
-      <ScrollToTop />
+      <ScrollWiederherstellung />
       <ScrollZuHash />
       <RouteMeta />
       {/* Öffnet je Inhalts-Route einen Reiter im In-App-Tab-Streifen */}
