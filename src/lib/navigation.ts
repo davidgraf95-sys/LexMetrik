@@ -124,7 +124,28 @@ const RECHTSPRECHUNG_KINDER: NavKnoten[] = [
     label: 'Nach Sachgebiet',
     aufklappbar: true,
     standardOffen: false,
-    kinder: GEBIETE.map((g) => link(g.label, `/rechtsprechung?rg=${g.id}`)),
+    // 'international' ist die Sach-Achse der Rubrik «International» (Staatsverträge),
+    // nicht der Rechtsprechung — kein Entscheid trägt es. Aus der Rechtsprechungs-
+    // Navigation ausgeblendet (sonst leerer Sachgebiets-Link, §8).
+    kinder: GEBIETE.filter((g) => g.id !== 'international').map((g) => link(g.label, `/rechtsprechung?rg=${g.id}`)),
+  },
+];
+
+// International: gleichrangige Top-Sektion (nach Rechtsprechung). Eine einklappbare
+// Gruppe «Nach Sachgebiet» mit Direktlinks auf die /international-Anker — strukturgleich
+// zu Rechtsprechung «Nach Sachgebiet» (Auftrag David 24.6.2026, konsistentes Dropdown).
+const INTERNATIONAL_KINDER: NavKnoten[] = [
+  {
+    art: 'gruppe',
+    label: 'Nach Sachgebiet',
+    aufklappbar: true,
+    standardOffen: false,
+    kinder: [
+      link('Menschenrechte', '/international#menschenrechte'),
+      link('Int. Privat- & Zivilrecht', '/international#privat-zivil'),
+      link('Rechtshilfe (Haager)', '/international#rechtshilfe'),
+      link('Schweiz–EU & Datenschutz', '/international#eu-datenschutz'),
+    ],
   },
 ];
 
@@ -138,6 +159,7 @@ export const NAVIGATION: NavAbschnitt[] = [
   { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
   { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
+  { titel: 'International', ziel: '/international', kinder: INTERNATIONAL_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.

@@ -40,6 +40,11 @@ const GesetzLeser = lazyRetry(() => import('./pages/GesetzLeser').then((m) => ({
 // /rechtsprechung/:key ist client-lazy (SPA-Fallback). Routenzahl +1.
 const Rechtsprechung = lazyRetry(() => import('./pages/Rechtsprechung').then((m) => ({ default: m.Rechtsprechung })));
 const EntscheidLeser = lazyRetry(() => import('./pages/EntscheidLeser').then((m) => ({ default: m.EntscheidLeser })));
+// Rubrik «International»: eigenständige Übersicht der für die Schweiz
+// massgeblichen Staatsverträge & des internationalen Rechts — alle Einträge
+// nur-live-link (amtliche Quelle), kein Volltext-Snapshot. Übersicht /international
+// wird prerendert (seo.ts). Routenzahl +1.
+const International = lazyRetry(() => import('./pages/International').then((m) => ({ default: m.International })));
 const NotFound = lazyRetry(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
@@ -189,6 +194,8 @@ export default function App() {
         {/* Rubrik VI «Rechtsprechung»: Übersicht (prerendert) + Reader (SPA-Fallback) */}
         <Route path="/rechtsprechung" element={<Rechtsprechung />} />
         <Route path="/rechtsprechung/:key" element={<EntscheidLeser />} />
+        {/* Rubrik «International»: Übersicht (prerendert), nur-live-link-Karten */}
+        <Route path="/international" element={<International />} />
         <Route path="/methodik" element={<Methodik />} />
         <Route path="/ueber" element={<Ueber />} />
         <Route path="/kontakt" element={<Kontakt />} />

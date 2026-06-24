@@ -81,14 +81,11 @@ export const SYSTEMATIK: SystematikKategorie[] = [
       { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'BBG', 'BGFA'] },
     ],
   },
-  {
-    nr: '06', id: 'voelker', titel: 'Völker- und Europarecht',
-    lede: 'Der internationale Rahmen — wirkt über Querverweise (EMRK, LugÜ u. a.) in die nationalen Äste hinein.',
-    gruppen: [
-      { id: 'menschenrechte', titel: 'Menschenrechte', keys: ['EMRK', 'UNO_PAKT_II'] },
-      { id: 'international', titel: 'Internationales Verfahren & Vertragsrecht', keys: ['LUGUE', 'VRK'] },
-    ],
-  },
+  // Völker- & Europarecht (EMRK/LugÜ/VRK u. a.) liegt seit 24.6.2026 in der
+  // eigenständigen Rubrik «International» (rechtsgebiet 'international',
+  // /international) — darum hier NICHT mehr als Bund-Systematik-Kategorie
+  // (sonst doppelt). Die Erlasse werden in der regulären Gesetze-Übersicht
+  // ausgeblendet (Gesetze.tsx filtert rechtsgebiet 'international').
 ];
 
 // ─── Kantonale Systematik (Sachgebiets-Gliederung nach systematischer Nummer) ──

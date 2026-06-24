@@ -319,7 +319,10 @@ export function Gesetze() {
     ladeBrowseManifest().then((m) => {
       if (!lebt) return;
       if (!m) { setFehler(true); return; }
-      setErlasse(m.erlasse);
+      // Internationale Erlasse (Staatsverträge SR 0.*, EU-Recht) erscheinen nur
+      // in der eigenständigen Rubrik «International» (/international), nicht in
+      // der Bund/Kantone-Gesetzessammlung — sonst doppelt (Auftrag David 24.6.2026).
+      setErlasse(m.erlasse.filter((e) => e.rechtsgebiet !== 'international'));
     });
     // Systematik-Bäume parallel; fehlen sie, greift der neutrale Fallback (§8).
     ladeKantonSystematik().then((s) => { if (lebt) setSystematik(s); });

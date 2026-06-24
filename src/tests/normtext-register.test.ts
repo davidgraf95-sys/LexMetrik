@@ -51,8 +51,11 @@ describe('Tor 2 — Taxonomie vollständig & deklariert', () => {
       expect(r.kuerzel.trim().length, r.key).toBeGreaterThan(0);
     }
   });
-  it('jeder Bund-Eintrag trägt eine SR-Nummer', () => {
-    const ohneSr = bundReg.filter((r) => !r.sr);
+  it('jeder Bund-Eintrag trägt eine SR-Nummer (ausser nicht-Fedlex-EU-Recht)', () => {
+    // International/EU-Recht (z.B. DSGVO) liegt NICHT in Fedlex und hat darum keine
+    // SR-Nummer — amtliche Quelle ist EUR-Lex (rechtsgebiet 'international',
+    // INTERNATIONAL_EXTERN). Fedlex-Staatsverträge SR 0.* tragen weiterhin eine SR.
+    const ohneSr = bundReg.filter((r) => !r.sr && r.rechtsgebiet !== 'international');
     expect(ohneSr.map((r) => r.key)).toEqual([]);
   });
 });

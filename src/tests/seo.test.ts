@@ -23,13 +23,14 @@ describe('prerenderRouten()', () => {
         .map((h) => h.split('#')[0]),
     );
     for (const p of kartenPfade) expect(ROUTEN).toContain(p);
-    // 9 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
-    // /rechtsprechung (Rubrik Rechtsprechung, 23.6.2026) und — seit der UI-Welle —
-    // /rechner + /vorlagen (Rubrik-Übersichten, lösen /recherche ab).
-    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+    // 10 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
+    // /rechtsprechung (Rubrik Rechtsprechung, 23.6.2026), /international (Rubrik
+    // International, 24.6.2026) und — seit der UI-Welle — /rechner + /vorlagen
+    // (Rubrik-Übersichten, lösen /recherche ab).
+    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 9);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 10);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {

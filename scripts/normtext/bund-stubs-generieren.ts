@@ -79,11 +79,17 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['741.21', 'SSV', 'oeffentlich'],
   ['211.112.2', 'ZStV', 'privat'],
   ['235.11', 'DSV', 'oeffentlich'],
-  // Völker- & Europarecht
-  ['0.101', 'EMRK', 'oeffentlich'],
-  ['0.275.12', 'LugÜ', 'oeffentlich'],
-  ['0.111', 'VRK', 'oeffentlich'],
-  ['0.103.2', 'UNO-Pakt II', 'oeffentlich'],
+  // Völker- & Europarecht → Rubrik «International» (rechtsgebiet 'international').
+  // Staatsverträge SR 0.* — Titel/ELI/Stand verifiziert via Fedlex-SPARQL (§7).
+  ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention
+  ['0.221.211.1', 'CISG', 'international'],      // UN-/Wiener Kaufrecht
+  ['0.275.12', 'LugÜ', 'international'],         // Lugano-Übereinkommen
+  ['0.274.131', 'HZÜ', 'international'],         // Haager Zustellungsübereinkommen
+  ['0.274.132', 'HBewÜ', 'international'],       // Haager Beweisaufnahmeübereinkommen
+  ['0.211.230.02', 'HKÜ', 'international'],      // Haager Kindesentführungsübereinkommen
+  ['0.142.112.681', 'FZA', 'international'],     // Freizügigkeitsabkommen CH–EU
+  ['0.111', 'VRK', 'international'],             // Wiener Übereinkommen über das Recht der Verträge
+  ['0.103.2', 'UNO-Pakt II', 'international'],   // UNO-Pakt II (bürgerliche/politische Rechte)
 ];
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';

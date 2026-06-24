@@ -13,11 +13,12 @@
 
 import { FEDLEX, type FedlexGesetz } from '../fedlex';
 import { BUND_STUBS } from './bund-stubs.generated';
+import { INTERNATIONAL_EXTERN } from './international-extern';
 
 /** Kanzleirelevante Sach-Achsen. Bund deklariert je Erlass; Kanton-Default unten. */
 export type Rechtsgebiet =
   | 'privat' | 'straf' | 'prozess'
-  | 'oeffentlich' | 'schkg' | 'sozial-abgaben';
+  | 'oeffentlich' | 'schkg' | 'sozial-abgaben' | 'international';
 
 export type Sprache = 'de' | 'fr' | 'it';
 export type ErlassStatus = 'snapshot' | 'nur-live-link';
@@ -54,6 +55,7 @@ export const GEBIETE: ReadonlyArray<{ id: Rechtsgebiet; label: string }> = [
   { id: 'schkg', label: 'Schuldbetreibung & Konkurs' },
   { id: 'oeffentlich', label: 'Öffentliches Recht' },
   { id: 'sozial-abgaben', label: 'Steuern, Sozialversicherung & Abgaben' },
+  { id: 'international', label: 'International / Staatsverträge' },
 ];
 
 export const GEBIET_LABEL: Record<Rechtsgebiet, string> = Object.fromEntries(
@@ -142,6 +144,9 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
   //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
   ...BUND_STUBS,
+  // ── International: nicht-Fedlex-Erlasse (EU-Recht) als «nur-live-link»,
+  //    amtliche EUR-Lex-Quelle. Rubrik «International» (§7/§8). ──
+  ...INTERNATIONAL_EXTERN,
 ];
 
 // Bund-Eintrag mit Default-Sprache de + status 'snapshot'. fedlexKey default ==

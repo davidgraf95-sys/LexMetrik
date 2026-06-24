@@ -34,7 +34,7 @@ import { renderRoute } from '../src/entry-server';
 // src/tests/routenManifest.test.ts gegated (Manifest === katalogRouten()).
 // Dieser Zähler bleibt als sekundärer Drift-Backstop (fängt auch statische
 // Seiten) — bei neuen Karten/Seiten weiter im selben Commit nachführen.
-const ERWARTETE_ROUTEN = 55; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1)
+const ERWARTETE_ROUTEN = 56; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); +1: /international (24.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1)
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite
