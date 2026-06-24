@@ -27,8 +27,54 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "ab Seite 269 BGE 150 III 268 S. 269 A. A.a Die C. AG mit Sitz in U./TG war insbesondere im Vertrieb wie auch im Handel mit Strom und Gas tätig und fungierte dabei als Beteiligungs- und Muttergesellschaft im Energiesektor. Die B. mit Sitz in München/Deutschland war eine Tochtergesellschaft. A.b A. war gemäss eigenen Angaben zu 50 % am Aktionariat der C. AG beteiligt und überdies Mitglied des Verwaltungsrates. A.c Mit Beschluss vom 29. Januar 2019 ordnete das Amtsgericht München auf Antrag der B. eine vorläufige Insolvenzverwaltung an und ernannte Rechtsanwalt D. in München als vorläufigen Insolvenzverwalter. A.d Das Bezirksgericht Kreuzlingen eröffnete mit Entscheid vom 18. Februar 2019 den Konkurs über die C. AG, d.h. über die in der Schweiz domizilierte Muttergesellschaft. A.e Mit Beschluss vom 16. Oktober 2019, 08.00 Uhr, eröffnete das Amtsgericht München das Insolvenzverfahren gegen die B. wegen Zahlungsunfähigkeit und Überschuldung und bestellte Rechtsanwalt D. zum definitiven Insolvenzverwalter. A.f Im Konkursverfahren der C. AG lag der Kollokationsplan zwischen dem 23. November 2020 und dem 14. Dezember 2020 auf. Das Konkursamt des Kantons Thurgau kollozierte u.a. eine Forderung der Tochtergesellschaft B. im Umfang von Fr. 135'499'613.06 in der dritten Klasse (Forderung Nr. x, Forderungseingabe vom 26. April 2019). A.g Am 10. Dezember 2020 erhob A., der selbst mit einer Forderung von Fr. 5'696'927.20 in der dritten Klasse kolloziert worden war (Forderung Nr. y), beim Bezirksgericht Kreuzlingen (negative) Kollokationsklage mit dem Hauptantrag, es sei die Forderung Nr. x der B. aus dem Kollokationsplan zu weisen. Mit Entscheid vom 7. November 2022 wies das Bezirksgericht die Kollokationsklage ab. A. führt gegen diesen Entscheid Berufung beim Obergericht des Kantons Thurgau; das Berufungsverfahren (ZBR.2022.27) ist hängig. A.h Das Konkursamt des Kantons Thurgau führte den Konkurs gegen die C. AG im summarischen Verfahren durch. Mit Verfügung vom 23. August 2021 trat es der B. die Verantwortlichkeitsansprüche gemäss Art. 752 ff. OR gegenüber den Organen der C. AG (Konkursitin) gestützt auf Art. 260 SchKG ab. BGE 150 III 268 S. 270 A.i Im September 2021 erstellte das Konkursamt die Verteilungsliste und übermittelte dem Bezirksgericht Kreuzlingen den Schlussbericht. Mit Entscheid vom 13. September 2021 erklärte das Konkursgericht das Konkursverfahren über die C. AG für geschlossen. B. Am 26. April 2023 gelangte A. an das Obergericht des Kantons Thurgau als Aufsichtsbehörde in Konkurssachen und beantragte die Feststellung der Nichtigkeit von Verfügungen des Konkursamtes im Konkursverfahren über die C. AG (Kollokationsplan vom 12. November 2020, Kollokation der Forderung Nr. x der B., Abtretung gemäss Art. 260 SchKG vom 23. August 2021 von Verantwortlichkeitsansprüchen an die B.). Das Obergericht wies das Gesuch mit Entscheid vom 18. September 2023 ab. C. Mit Eingabe vom 6. Oktober 2023 hat A. Beschwerde in Zivilsachen erhoben. Der Beschwerdeführer beantragt die Aufhebung des obergerichtlichen Entscheides vom 18. September 2023 und (wie im kantonalen Verfahren) die Aufhebung der erwähnten Verfügungen des Konkursamtes (Kollokationsplan vom 12. November 2020, Kollokation der Forderung Nr. x der B., Abtretung gemäss Art. 260 SchKG vom 23. August 2021 von Verantwortlichkeitsansprüchen gegen den Beschwerdeführer an die B.). (...) Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Die C. AG mit Sitz in U./TG war insbesondere im Vertrieb wie auch im Handel mit Strom und Gas tätig und fungierte dabei als Beteiligungs- und Muttergesellschaft im Energiesektor. Die B. mit Sitz in München/Deutschland war eine Tochtergesellschaft."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "A. war gemäss eigenen Angaben zu 50 % am Aktionariat der C. AG beteiligt und überdies Mitglied des Verwaltungsrates."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Mit Beschluss vom 29. Januar 2019 ordnete das Amtsgericht München auf Antrag der B. eine vorläufige Insolvenzverwaltung an und ernannte Rechtsanwalt D. in München als vorläufigen Insolvenzverwalter."
+            },
+            {
+              "marke": "A.d",
+              "tiefe": 2,
+              "text": "Das Bezirksgericht Kreuzlingen eröffnete mit Entscheid vom 18. Februar 2019 den Konkurs über die C. AG, d.h. über die in der Schweiz domizilierte Muttergesellschaft."
+            },
+            {
+              "marke": "A.e",
+              "tiefe": 2,
+              "text": "Mit Beschluss vom 16. Oktober 2019, 08.00 Uhr, eröffnete das Amtsgericht München das Insolvenzverfahren gegen die B. wegen Zahlungsunfähigkeit und Überschuldung und bestellte Rechtsanwalt D. zum definitiven Insolvenzverwalter."
+            },
+            {
+              "marke": "A.f",
+              "tiefe": 2,
+              "text": "Im Konkursverfahren der C. AG lag der Kollokationsplan zwischen dem 23. November 2020 und dem 14. Dezember 2020 auf. Das Konkursamt des Kantons Thurgau kollozierte u.a. eine Forderung der Tochtergesellschaft B. im Umfang von Fr. 135'499'613.06 in der dritten Klasse (Forderung Nr. x, Forderungseingabe vom 26. April 2019)."
+            },
+            {
+              "marke": "A.g",
+              "tiefe": 2,
+              "text": "Am 10. Dezember 2020 erhob A., der selbst mit einer Forderung von Fr. 5'696'927.20 in der dritten Klasse kolloziert worden war (Forderung Nr. y), beim Bezirksgericht Kreuzlingen (negative) Kollokationsklage mit dem Hauptantrag, es sei die Forderung Nr. x der B. aus dem Kollokationsplan zu weisen. Mit Entscheid vom 7. November 2022 wies das Bezirksgericht die Kollokationsklage ab. A. führt gegen diesen Entscheid Berufung beim Obergericht des Kantons Thurgau; das Berufungsverfahren (ZBR.2022.27) ist hängig."
+            },
+            {
+              "marke": "A.h",
+              "tiefe": 2,
+              "text": "Das Konkursamt des Kantons Thurgau führte den Konkurs gegen die C. AG im summarischen Verfahren durch. Mit Verfügung vom 23. August 2021 trat es der B. die Verantwortlichkeitsansprüche gemäss Art. 752 ff. OR gegenüber den Organen der C. AG (Konkursitin) gestützt auf Art. 260 SchKG ab."
+            },
+            {
+              "marke": "A.i",
+              "tiefe": 2,
+              "text": "Im September 2021 erstellte das Konkursamt die Verteilungsliste und übermittelte dem Bezirksgericht Kreuzlingen den Schlussbericht. Mit Entscheid vom 13. September 2021 erklärte das Konkursgericht das Konkursverfahren über die C. AG für geschlossen. B. Am 26. April 2023 gelangte A. an das Obergericht des Kantons Thurgau als Aufsichtsbehörde in Konkurssachen und beantragte die Feststellung der Nichtigkeit von Verfügungen des Konkursamtes im Konkursverfahren über die C. AG (Kollokationsplan vom 12. November 2020, Kollokation der Forderung Nr. x der B., Abtretung gemäss Art. 260 SchKG vom 23. August 2021 von Verantwortlichkeitsansprüchen an die B.). Das Obergericht wies das Gesuch mit Entscheid vom 18. September 2023 ab. C. Mit Eingabe vom 6. Oktober 2023 hat A. Beschwerde in Zivilsachen erhoben. Der Beschwerdeführer beantragt die Aufhebung des obergerichtlichen Entscheides vom 18. September 2023 und (wie im kantonalen Verfahren) die Aufhebung der erwähnten Verfügungen des Konkursamtes (Kollokationsplan vom 12. November 2020, Kollokation der Forderung Nr. x der B., Abtretung gemäss Art. 260 SchKG vom 23. August 2021 von Verantwortlichkeitsansprüchen gegen den Beschwerdeführer an die B.). (...) Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Auszug)"
             }
           ]
         },
@@ -154,7 +200,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=11&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=102&highlight_docid=atf%3A%2F%2F150-III-268%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "7a76579afd1c473883f19db6b756b5074fcedaecd5e671b60182aab7dbf3d125",
-      "sha": "bd9208df805be243ac981ccba41131f6b05d07d5f431770d155504bae4dbea7f"
+      "sha": "503ace83c48b1dc80091214d5cccf02e956eaa855be637cc014fcb55b36b4b12"
     }
   ]
 }

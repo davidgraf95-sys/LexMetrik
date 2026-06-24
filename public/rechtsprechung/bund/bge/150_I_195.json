@@ -27,8 +27,39 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "ab Seite 196 BGE 150 I 195 S. 196 A. A.a A. verunfallte 1995 und leidet seither unter kognitiven Einschränkungen. Seit Herbst 2019 studiert er an der Eidgenössischen Technischen Hochschule Zürich (ETH Zürich) Umweltnaturwissenschaften im Masterstudiengang. BGE 150 I 195 S. 197 A.b Am 21. September 2020 reichte A. bei der ETH Zürich ein Gesuch um Ausstellung einer Parkkarte ein. (...) Die ETH Zürich wies das Gesuch mit Verfügung vom 19. November 2020 ab. Die dagegen geführte Beschwerde von A. wies die ETH-Beschwerdekommission mit Entscheid vom 16. September 2021 ab (...). Dieser Beschwerdeentscheid blieb unangefochten. B. B.a Am 15. Oktober 2021 reichte A. ein zweites Gesuch um Ausstellung einer Parkkarte für die Zeit vom 10. bis 23. Januar 2022 ein. (...) Er benötige für diese Zeit eine Parkkarte, um direkt beim \"CAB\" oder \"CHN\" parkieren zu können. (...) B.b Mit Verfügung vom 11. November 2021 wies die ETH das Gesuch ab. Die ETH-Beschwerdekommission trat auf die dagegen erhobene Beschwerde mit Entscheid vom 25. August 2022 nicht ein, da eine \"res iudicata\" vorliege, und auferlegte A. die Verfahrenskosten wegen mutwilliger bzw. leichtsinniger Prozessführung. B.c Gegen den Entscheid vom 25. August 2022 gelangte A. an das Bundesverwaltungsgericht, das mit Urteil vom 17. April 2023 die Beschwerde abwies und ihm Kosten von Fr. 500.- wegen mutwilliger bzw. leichtsinniger Prozessführung auferlegte. C. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten gegen das Urteil vom 17. April 2023 mit dem Antrag, ihm seien keine Kosten für das Verfahren vor der ETH-Beschwerdekommission und dem Bundesverwaltungsgericht aufzuerlegen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "A. verunfallte 1995 und leidet seither unter kognitiven Einschränkungen. Seit Herbst 2019 studiert er an der Eidgenössischen Technischen Hochschule Zürich (ETH Zürich) Umweltnaturwissenschaften im Masterstudiengang."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Am 21. September 2020 reichte A. bei der ETH Zürich ein Gesuch um Ausstellung einer Parkkarte ein. (...) Die ETH Zürich wies das Gesuch mit Verfügung vom 19. November 2020 ab. Die dagegen geführte Beschwerde von A. wies die ETH-Beschwerdekommission mit Entscheid vom 16. September 2021 ab (...). Dieser Beschwerdeentscheid blieb unangefochten."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "B.a",
+              "tiefe": 2,
+              "text": "Am 15. Oktober 2021 reichte A. ein zweites Gesuch um Ausstellung einer Parkkarte für die Zeit vom 10. bis 23. Januar 2022 ein. (...) Er benötige für diese Zeit eine Parkkarte, um direkt beim \"CAB\" oder \"CHN\" parkieren zu können. (...)"
+            },
+            {
+              "marke": "B.b",
+              "tiefe": 2,
+              "text": "Mit Verfügung vom 11. November 2021 wies die ETH das Gesuch ab. Die ETH-Beschwerdekommission trat auf die dagegen erhobene Beschwerde mit Entscheid vom 25. August 2022 nicht ein, da eine \"res iudicata\" vorliege, und auferlegte A. die Verfahrenskosten wegen mutwilliger bzw. leichtsinniger Prozessführung."
+            },
+            {
+              "marke": "B.c",
+              "tiefe": 2,
+              "text": "Gegen den Entscheid vom 25. August 2022 gelangte A. an das Bundesverwaltungsgericht, das mit Urteil vom 17. April 2023 die Beschwerde abwies und ihm Kosten von Fr. 500.- wegen mutwilliger bzw. leichtsinniger Prozessführung auferlegte. C. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten gegen das Urteil vom 17. April 2023 mit dem Antrag, ihm seien keine Kosten für das Verfahren vor der ETH-Beschwerdekommission und dem Bundesverwaltungsgericht aufzuerlegen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
             }
           ]
         },
@@ -136,7 +167,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=12&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=111&highlight_docid=atf%3A%2F%2F150-I-195%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a27bd782ac1906e11dfb405c7eb23deee701519f2793c34f168f430c23d3d77e",
-      "sha": "8f9ea9aab9a1ec733b4a5ab731d4cfc9e700e7940e120a7690325f0ed19cfe4e"
+      "sha": "b60ec8228f6ca95f96169737295c836033a4d8cc4b0f12fc6b1930824310f3be"
     }
   ]
 }

@@ -28,7 +28,22 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "ab Seite 285 BGE 151 V 284 S. 285 A. Dr. med. A. ist Facharzt für Allgemeine Innere Medizin. Am 30. Juni 2021 reichten verschiedene Krankenversicherer vertreten durch den Branchenverband Santésuisse beim Schiedsgericht in Sozialversicherungsstreitigkeiten des Kantons Bern gegen ihn eine Rückforderungsklage wegen unwirtschaftlicher Behandlungsweise ein. Sie beantragten, der Beklagte sei zu verpflichten, für das Jahr 2019 Vergütungen aus obligatorischer Krankenpflegeversicherung im Betrag von Fr. 148'024.- (gemäss Regressions-Index), eventuell Fr. 219'375.- (gemäss ANOVA-Index), zurückzuerstatten. Es sei vorzumerken, dass sich die Klägerinnen das Recht vorbehielten, den Rückforderungsbetrag nach Abschluss des Beweisverfahrens anzupassen. B. Mit Urteil vom 9. März 2022 hiess das Schiedsgericht in Sozialversicherungsstreitigkeiten des Kantons Bern die Klage gut und verurteilte Dr. med. A., für das Jahr 2019 den Betrag von insgesamt Fr. 156'455.75 zurückzuerstatten. C. C.a Dr. med. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit den Rechtsbegehren, das angefochtene Urteil sei aufzuheben und die Klage abzuweisen; eventuell sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Gleichzeitig beantragt er, der Beschwerde sei die aufschiebende Wirkung zuzuerkennen. C.b Am 9. September 2022 weist das kantonale Schiedsgericht das am 5. April 2022 gestellte Gesuch des Beschwerdeführers ab, das schiedsgerichtliche Urteil vom 9. März 2022 sei aufzuheben und die Frist zur Einreichung einer Klageantwort wiederherzustellen. Das Bundesgericht hebt darauf die zwischenzeitlich verfügte Sistierung des Verfahrens auf. Mit Urteil vom 29. April 2025 heisst das Bundesgericht die Beschwerde teilweise gut."
+              "text": "A. Dr. med. A. ist Facharzt für Allgemeine Innere Medizin. Am 30. Juni 2021 reichten verschiedene Krankenversicherer vertreten durch den Branchenverband Santésuisse beim Schiedsgericht in Sozialversicherungsstreitigkeiten des Kantons Bern gegen ihn eine Rückforderungsklage wegen unwirtschaftlicher Behandlungsweise ein. Sie beantragten, der Beklagte sei zu verpflichten, für das Jahr 2019 Vergütungen aus obligatorischer Krankenpflegeversicherung im Betrag von Fr. 148'024.- (gemäss Regressions-Index), eventuell Fr. 219'375.- (gemäss ANOVA-Index), zurückzuerstatten. Es sei vorzumerken, dass sich die Klägerinnen das Recht vorbehielten, den Rückforderungsbetrag nach Abschluss des Beweisverfahrens anzupassen. B. Mit Urteil vom 9. März 2022 hiess das Schiedsgericht in Sozialversicherungsstreitigkeiten des Kantons Bern die Klage gut und verurteilte Dr. med. A., für das Jahr 2019 den Betrag von insgesamt Fr. 156'455.75 zurückzuerstatten."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "C.a",
+              "tiefe": 2,
+              "text": "Dr. med. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit den Rechtsbegehren, das angefochtene Urteil sei aufzuheben und die Klage abzuweisen; eventuell sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Gleichzeitig beantragt er, der Beschwerde sei die aufschiebende Wirkung zuzuerkennen."
+            },
+            {
+              "marke": "C.b",
+              "tiefe": 2,
+              "text": "Am 9. September 2022 weist das kantonale Schiedsgericht das am 5. April 2022 gestellte Gesuch des Beschwerdeführers ab, das schiedsgerichtliche Urteil vom 9. März 2022 sei aufzuheben und die Frist zur Einreichung einer Klageantwort wiederherzustellen. Das Bundesgericht hebt darauf die zwischenzeitlich verfügte Sistierung des Verfahrens auf. Mit Urteil vom 29. April 2025 heisst das Bundesgericht die Beschwerde teilweise gut."
             }
           ]
         },
@@ -169,7 +184,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-284%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3ba4e3257c21a5b9a04a09020e4d855072b51f32a4bcea5193631912bb413877",
-      "sha": "afbca722d9fec1cd919c43f202494a12cda19351e92ac2ae9b7dec4120c13790"
+      "sha": "38d5955364370dfe39f6d8f6500d14f290a2751e0a9b2e031e6e2e53dc4c8bf0"
     }
   ]
 }

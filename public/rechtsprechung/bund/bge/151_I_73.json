@@ -28,7 +28,27 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "ab Seite 74 BGE 151 I 73 S. 74 A. A. (geboren 1964) verunfallte 1995 und leidet seither unter kognitiven Einschränkungen. Die Arbeits- bzw. Studierfähigkeit beträgt gemäss Bestätigungen des behandelnden Neurologen rund 20 %. Im Januar 2018 schloss A. sein Biologiestudium an der Universität Bern ab. Mit Entscheid vom 27. August 2019 liess die Beschwerdekommission der ETH Zürich ihn zum Masterstudium an der Eidgenössischen Technischen Hochschule Zürich (ETH Zürich) in Umweltnaturwissenschaften zu. BGE 151 I 73 S. 75 B. B.a Am 1. Oktober 2019 stellte A. bei der ETH Zürich ein Gesuch um Ausgleich behinderungsbedingter Nachteile. Unter anderem ersuchte er um Bestellung und Finanzierung einer persönlichen Assistenz für technisch-administrative Arbeiten, die nicht unmittelbar dem Wissenserwerb und dem Erlernen des Prüfungsstoffs dienen. Er begründete das Gesuch im Wesentlichen damit, Tätigkeiten wie das Zusammensuchen, Organisieren und Ausdrucken von Unterlagen der Lehrveranstaltungen auf verschiedenen Plattformen der ETH Zürich sowie die Anmeldeformalitäten für einzelne Lehrveranstaltungen würden ein Pensum von 20 % beanspruchen; ihm fehle behinderungsbedingt die Kapazität für das eigentliche Studium, wenn er selbst diese \"Verwaltungsarbeiten\" ausführen müsse. B.b Die ETH Zürich wies das Gesuch vom 1. Oktober 2019 in Bezug auf die persönliche Assistenz mit Verfügung vom 20. November 2019 ab. Die von A. dagegen geführte Beschwerde blieb erfolglos. Die ETH-Beschwerdekommission wies das Rechtsmittel mit Entscheid vom 10. Februar 2021 ab, soweit sie darauf eintrat. B.c Das von A. daraufhin angerufene Bundesverwaltungsgericht wies dessen Beschwerde mit Urteil vom 14. März 2023 ebenfalls ab, soweit es darauf eintrat. C. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit dem Antrag, ihm sei in Aufhebung des angefochtenen Urteils für die Dauer seines Masterstudiums an der ETH Zürich eine persönliche Assistenz für \"technisch-administrative Aufgaben\" zu organisieren und zu bezahlen; eventualiter sei ihm eine solche Assistenz zu organisieren; subeventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen und gegebenenfalls eine neuropsychologische Begutachtung anzuordnen. (...) Das Bundesgericht weist die Beschwerde ab. (Auszug)"
+              "text": "A. A. (geboren 1964) verunfallte 1995 und leidet seither unter kognitiven Einschränkungen. Die Arbeits- bzw. Studierfähigkeit beträgt gemäss Bestätigungen des behandelnden Neurologen rund 20 %. Im Januar 2018 schloss A. sein Biologiestudium an der Universität Bern ab. Mit Entscheid vom 27. August 2019 liess die Beschwerdekommission der ETH Zürich ihn zum Masterstudium an der Eidgenössischen Technischen Hochschule Zürich (ETH Zürich) in Umweltnaturwissenschaften zu."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "B.a",
+              "tiefe": 2,
+              "text": "Am 1. Oktober 2019 stellte A. bei der ETH Zürich ein Gesuch um Ausgleich behinderungsbedingter Nachteile. Unter anderem ersuchte er um Bestellung und Finanzierung einer persönlichen Assistenz für technisch-administrative Arbeiten, die nicht unmittelbar dem Wissenserwerb und dem Erlernen des Prüfungsstoffs dienen. Er begründete das Gesuch im Wesentlichen damit, Tätigkeiten wie das Zusammensuchen, Organisieren und Ausdrucken von Unterlagen der Lehrveranstaltungen auf verschiedenen Plattformen der ETH Zürich sowie die Anmeldeformalitäten für einzelne Lehrveranstaltungen würden ein Pensum von 20 % beanspruchen; ihm fehle behinderungsbedingt die Kapazität für das eigentliche Studium, wenn er selbst diese \"Verwaltungsarbeiten\" ausführen müsse."
+            },
+            {
+              "marke": "B.b",
+              "tiefe": 2,
+              "text": "Die ETH Zürich wies das Gesuch vom 1. Oktober 2019 in Bezug auf die persönliche Assistenz mit Verfügung vom 20. November 2019 ab. Die von A. dagegen geführte Beschwerde blieb erfolglos. Die ETH-Beschwerdekommission wies das Rechtsmittel mit Entscheid vom 10. Februar 2021 ab, soweit sie darauf eintrat."
+            },
+            {
+              "marke": "B.c",
+              "tiefe": 2,
+              "text": "Das von A. daraufhin angerufene Bundesverwaltungsgericht wies dessen Beschwerde mit Urteil vom 14. März 2023 ebenfalls ab, soweit es darauf eintrat. C. A. führt Beschwerde in öffentlich-rechtlichen Angelegenheiten mit dem Antrag, ihm sei in Aufhebung des angefochtenen Urteils für die Dauer seines Masterstudiums an der ETH Zürich eine persönliche Assistenz für \"technisch-administrative Aufgaben\" zu organisieren und zu bezahlen; eventualiter sei ihm eine solche Assistenz zu organisieren; subeventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen und gegebenenfalls eine neuropsychologische Begutachtung anzuordnen. (...) Das Bundesgericht weist die Beschwerde ab. (Auszug)"
             }
           ]
         },
@@ -249,7 +269,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-73%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "01fc465dc959dd2273416488d1a5fe54391afae81c634557cd1b15ac810a52e7",
-      "sha": "8d36735e989928a3ad4b06fc1c10a1ac091c3f0d0ccc2aa0bd9bd7ffe1974ea5"
+      "sha": "cecc401b62e7afaacfd35ee48f4e4f73563984b307597d65241b338116c75b75"
     }
   ]
 }

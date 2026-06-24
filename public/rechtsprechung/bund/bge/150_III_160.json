@@ -27,8 +27,29 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "ab Seite 161 BGE 150 III 160 S. 161 A. A.a A. (geb. 1958) ist das aussereheliche Kind von F. (geb. 1938). Mutmasslicher Vater ist der am 21. Juli 2017 verstorbene G. (geb. 1936; fortan: der Erblasser). Dieser verpflichtete sich mit von der Vormundschaftsbehörde genehmigtem Vertrag vom 31. Mai 1958 zur Zahlung von monatlich Fr. 120.- an den Unterhalt von A. Der Erblasser hat zwei weitere Kinder aus geschiedener Ehe, B. und C. A.b Der Erblasser errichtete verschiedene letztwillige Verfügungen und schloss mit B. und C. überdies einen Erbvertrag. A. wird weder in den letztwilligen Verfügungen noch im Erbvertrag erwähnt. B. und C. haben am 31. Juli 2019 einen Erbteilungsvertrag abgeschlossen und den Nachlass ihres Vaters teilweise geteilt. A.c Gestützt auf die von A. erwirkte Klagebewilligung erhob dieser am 7. März 2019 beim Bezirksgericht Baden Herabsetzungsklage BGE 150 III 160 S. 162 gegen B., C., die D. Stiftung, die D. AG und die E. AG. In prozessualer Hinsicht beantragte er unter anderem, dass in der Gestalt eines Zwischenentscheids seine Erbenstellung im Sinn von Art. 470 ZGB festzustellen sei. A.d Das Bezirksgericht beschränkte das Verfahren auf die Frage der Aktivlegitimation und wies die Klage am 4. August 2021 kostenfällig ab. B. Die hiergegen von A. erhobene Berufung wies das Obergericht des Kantons Aargau mit Entscheid vom 20. Februar 2023 ab. C. Mit Beschwerde in Zivilsachen vom 23. März 2023 wendet sich A. (Beschwerdeführer) an das Bundesgericht. Diesem beantragt er im Wesentlichen die Aufhebung des angefochtenen Entscheids und Rückweisung der Sache zur weiteren Behandlung an die Vorinstanzen, da seine Aktivlegitimation gegeben sei. Das Gesuch um aufschiebende Wirkung wies der Präsident der urteilenden Abteilung am 28. März 2023 ab. Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "A. (geb. 1958) ist das aussereheliche Kind von F. (geb. 1938). Mutmasslicher Vater ist der am 21. Juli 2017 verstorbene G. (geb. 1936; fortan: der Erblasser). Dieser verpflichtete sich mit von der Vormundschaftsbehörde genehmigtem Vertrag vom 31. Mai 1958 zur Zahlung von monatlich Fr. 120.- an den Unterhalt von A. Der Erblasser hat zwei weitere Kinder aus geschiedener Ehe, B. und C."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Der Erblasser errichtete verschiedene letztwillige Verfügungen und schloss mit B. und C. überdies einen Erbvertrag. A. wird weder in den letztwilligen Verfügungen noch im Erbvertrag erwähnt. B. und C. haben am 31. Juli 2019 einen Erbteilungsvertrag abgeschlossen und den Nachlass ihres Vaters teilweise geteilt."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Gestützt auf die von A. erwirkte Klagebewilligung erhob dieser am 7. März 2019 beim Bezirksgericht Baden Herabsetzungsklage gegen B., C., die D. Stiftung, die D. AG und die E. AG. In prozessualer Hinsicht beantragte er unter anderem, dass in der Gestalt eines Zwischenentscheids seine Erbenstellung im Sinn von Art. 470 ZGB festzustellen sei."
+            },
+            {
+              "marke": "A.d",
+              "tiefe": 2,
+              "text": "Das Bezirksgericht beschränkte das Verfahren auf die Frage der Aktivlegitimation und wies die Klage am 4. August 2021 kostenfällig ab. B. Die hiergegen von A. erhobene Berufung wies das Obergericht des Kantons Aargau mit Entscheid vom 20. Februar 2023 ab. C. Mit Beschwerde in Zivilsachen vom 23. März 2023 wendet sich A. (Beschwerdeführer) an das Bundesgericht. Diesem beantragt er im Wesentlichen die Aufhebung des angefochtenen Entscheids und Rückweisung der Sache zur weiteren Behandlung an die Vorinstanzen, da seine Aktivlegitimation gegeben sei. Das Gesuch um aufschiebende Wirkung wies der Präsident der urteilenden Abteilung am 28. März 2023 ab. Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Zusammenfassung)"
             }
           ]
         },
@@ -169,7 +190,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=14&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=136&highlight_docid=atf%3A%2F%2F150-III-160%3Ade&number_of_ranks=177&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "204f1bd4d8ac9dbbba6848de6d60ddb0c616703d3da1b7ae0ac584d9af7ff99c",
-      "sha": "4f3b950f3f2e6a3687ab44f3509240012d98385e3c0621da3c654684055e460f"
+      "sha": "55872d79a57b8a89f13dffc57f756f89815c031a5e826403587ad549065b2e41"
     }
   ]
 }

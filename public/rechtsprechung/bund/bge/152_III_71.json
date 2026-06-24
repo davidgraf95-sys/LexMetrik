@@ -27,8 +27,29 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "ab Seite 73 BGE 152 III 71 S. 73 A. A.a Der FC A. (Beschwerdeführer) ist ein Schweizer Fussballverein, dessen 1. Herrenmannschaft in der Saison 2022/2023 in der Gruppe 1 der 1. Liga Classic des Schweizerischen Fussballverbandes (SFV) gespielt hat. Die Erste Liga des Schweizerischen Fussballverbandes (Erste Liga, Beschwerdegegnerin) hat eigene Rechtspersönlichkeit und ist eine von drei Abteilungen des SFV. Sie organisiert mit der 1. Liga Classic die vierthöchste Spielklasse im Schweizer Fussball. Am 8. Oktober 2022 spielte der FC A. gegen den FC B. Die Begegnung erfolgte im Rahmen der Fussball-Meisterschaft der Gruppe 1 der 1. Liga Classic in U. Das Spiel endete 2:0 zugunsten des FC B. A.b Am 11. Oktober 2022 beantragte der FC A. beim Komitee der Ersten Liga, das Ergebnis der Begegnung vom 8. Oktober 2022 sei zu annullieren und stattdessen das Spiel mit einem 3:0-Sieg zu seinen Gunsten zu werten. (...) Mit Entscheid vom 18. Oktober 2022 wies das Komitee der Ersten Liga den Antrag des FC A. auf Annullierung des Ergebnisses und Wertung des Spiels zu seinen Gunsten ab und bestätigte das Resultat des Spiels. Der FC A. focht den Entscheid des Komitees vom 18. Oktober 2022 bei der Rekurskommission der Ersten Liga an, die den Rekurs mit Entscheid vom 28. November 2022 abwies. A.c Dagegen erhob der FC A. beim Tribunal Arbitral du Sport (TAS) Berufung. Gleichzeitig beantragte er, dass über seine Berufung durch einen Einzelschiedsrichter entschieden werde und schlug vor, Prof. Dr. Ulrich Haas als solchen Einzelschiedsrichter zu ernennen. Am 31. Januar 2023 informierte die Kanzlei des TAS die Parteien, dass Prof. Dr. Ulrich Haas, \"Professor in V., Germany\", als Einzelschiedsrichter zur Beurteilung der Streitsache eingesetzt worden sei. (...) Mit Schiedsspruch vom 17. Mai 2023 wies der Einzelschiedsrichter die Berufung ab. A.d Dagegen erhob der FC A. Beschwerde in Zivilsachen an das Bundesgericht. Dieses wies die Beschwerde mit Urteil vom 14. Februar 2024 ab, soweit es darauf eintrat (Verfahren 4A_628/2023). B. Am 31. Mai 2024 reichte der FC A. beim Tribunal cantonal du canton de Vaud ein Revisionsgesuch gegen den Schiedsspruch vom BGE 152 III 71 S. 74 17. Mai 2023 ein. Er beantragte, der Schiedsspruch sei aufzuheben und die Sache sei an das TAS zu neuer Entscheidung zurückzuweisen. Er machte geltend, er habe kürzlich einen Ablehnungsgrund gegen den Einzelschiedsrichter Prof. Dr. Ulrich Haas erfahren. Dieser habe entgegen der anwendbaren Bestimmung der Statuten des SFV seinen Wohnsitz nicht in der Schweiz, sondern in Deutschland gehabt. (...) Das Tribunal cantonal du canton de Vaud wies das Revisionsgesuch mit Entscheid vom 3. Februar 2025 ab. (...) C. Mit Beschwerde in Zivilsachen beantragt der FC A. dem Bundesgericht, es sei das Urteil des Tribunal cantonal du canton de Vaud vom 3. Februar 2025 aufzuheben. In Gutheissung des Revisionsgesuchs sei der Schiedsspruch des TAS vom 17. Mai 2023 aufzuheben und die Sache zu neuer Beurteilung und Entscheidung an das TAS, eventualiter an die Vorinstanz, zurückzuweisen unter Bindung an die Erwägungen des Bundesgerichts. (...) Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Auszug)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Der FC A. (Beschwerdeführer) ist ein Schweizer Fussballverein, dessen 1. Herrenmannschaft in der Saison 2022/2023 in der Gruppe 1 der 1. Liga Classic des Schweizerischen Fussballverbandes (SFV) gespielt hat. Die Erste Liga des Schweizerischen Fussballverbandes (Erste Liga, Beschwerdegegnerin) hat eigene Rechtspersönlichkeit und ist eine von drei Abteilungen des SFV. Sie organisiert mit der 1. Liga Classic die vierthöchste Spielklasse im Schweizer Fussball. Am 8. Oktober 2022 spielte der FC A. gegen den FC B. Die Begegnung erfolgte im Rahmen der Fussball-Meisterschaft der Gruppe 1 der 1. Liga Classic in U. Das Spiel endete 2:0 zugunsten des FC B."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Am 11. Oktober 2022 beantragte der FC A. beim Komitee der Ersten Liga, das Ergebnis der Begegnung vom 8. Oktober 2022 sei zu annullieren und stattdessen das Spiel mit einem 3:0-Sieg zu seinen Gunsten zu werten. (...) Mit Entscheid vom 18. Oktober 2022 wies das Komitee der Ersten Liga den Antrag des FC A. auf Annullierung des Ergebnisses und Wertung des Spiels zu seinen Gunsten ab und bestätigte das Resultat des Spiels. Der FC A. focht den Entscheid des Komitees vom 18. Oktober 2022 bei der Rekurskommission der Ersten Liga an, die den Rekurs mit Entscheid vom 28. November 2022 abwies."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Dagegen erhob der FC A. beim Tribunal Arbitral du Sport (TAS) Berufung. Gleichzeitig beantragte er, dass über seine Berufung durch einen Einzelschiedsrichter entschieden werde und schlug vor, Prof. Dr. Ulrich Haas als solchen Einzelschiedsrichter zu ernennen. Am 31. Januar 2023 informierte die Kanzlei des TAS die Parteien, dass Prof. Dr. Ulrich Haas, \"Professor in V., Germany\", als Einzelschiedsrichter zur Beurteilung der Streitsache eingesetzt worden sei. (...) Mit Schiedsspruch vom 17. Mai 2023 wies der Einzelschiedsrichter die Berufung ab."
+            },
+            {
+              "marke": "A.d",
+              "tiefe": 2,
+              "text": "Dagegen erhob der FC A. Beschwerde in Zivilsachen an das Bundesgericht. Dieses wies die Beschwerde mit Urteil vom 14. Februar 2024 ab, soweit es darauf eintrat (Verfahren 4A_628/2023). B. Am 31. Mai 2024 reichte der FC A. beim Tribunal cantonal du canton de Vaud ein Revisionsgesuch gegen den Schiedsspruch vom 17. Mai 2023 ein. Er beantragte, der Schiedsspruch sei aufzuheben und die Sache sei an das TAS zu neuer Entscheidung zurückzuweisen. Er machte geltend, er habe kürzlich einen Ablehnungsgrund gegen den Einzelschiedsrichter Prof. Dr. Ulrich Haas erfahren. Dieser habe entgegen der anwendbaren Bestimmung der Statuten des SFV seinen Wohnsitz nicht in der Schweiz, sondern in Deutschland gehabt. (...) Das Tribunal cantonal du canton de Vaud wies das Revisionsgesuch mit Entscheid vom 3. Februar 2025 ab. (...) C. Mit Beschwerde in Zivilsachen beantragt der FC A. dem Bundesgericht, es sei das Urteil des Tribunal cantonal du canton de Vaud vom 3. Februar 2025 aufzuheben. In Gutheissung des Revisionsgesuchs sei der Schiedsspruch des TAS vom 17. Mai 2023 aufzuheben und die Sache zu neuer Beurteilung und Entscheidung an das TAS, eventualiter an die Vorinstanz, zurückzuweisen unter Bindung an die Erwägungen des Bundesgerichts. (...) Das Bundesgericht weist die Beschwerde ab, soweit es darauf eintritt. (Auszug)"
             }
           ]
         },
@@ -143,7 +164,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-III-71%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "48b0ac7379bbef4958827ba2d0ab92ac1da173304bfa167cfa1ac2248a7cfa21",
-      "sha": "4ef66fe286daff5e0575b81c7e250e311d618a3e32a409517e8ef94d15294b05"
+      "sha": "545fa45d484eee36e338cde3220b4ff3eaea893cdc44e5decee7d76b0c0b05ef"
     }
   ]
 }

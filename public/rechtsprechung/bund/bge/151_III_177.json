@@ -28,7 +28,22 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "ab Seite 178 BGE 151 III 177 S. 178 A. Mit Zahlungsbefehl Nr. x des Betreibungsamts Region Solothurn vom 14. November 2023 leitete die Schweizerische Eidgenossenschaft (Gläubigerin, Beschwerdegegnerin) gegen A. (Schuldner, Beschwerdeführer) eine Betreibung auf Sicherheitsleistung ein. Als Forderungsgrund nannte sie die Sicherstellungsverfügung vom 9. November 2023, die auf Fr. 1'065'000.- nebst Zins zu 4 % seit 10. November 2023 lautet. Der Schuldner erhob Rechtsvorschlag. B. B.a Am 12. Dezember 2023 ersuchte die Gläubigerin das Richteramt Solothurn-Lebern um Rechtsöffnung für Forderung, Zinsen, Kosten und eine angemessene Umtriebsentschädigung. Am 12. März 2024 wies das Richteramt das Gesuch ab und verpflichtete die Gläubigerin zur Bezahlung der Gerichtskosten von Fr. 1'000.- und einer Parteientschädigung von Fr. 2'021.80 an den Schuldner. B.b Die dagegen gerichtete Beschwerde der Gläubigerin hiess das Obergericht des Kantons Solothurn am 18. Juni 2024 gut. Es hob das Urteil des Richteramts auf und erteilte definitive Rechtsöffnung in der Betreibung Nr. x auf Sicherheitsleistung des Betreibungsamts Region Solothurn für Fr. 1'065'000.- nebst Zins zu 4 % seit 10. November 2023. Das Obergericht verpflichtete den Schuldner, der Gläubigerin die Arrestkosten von Fr. 476.90 und die Betreibungskosten von Fr. 466.30 zu ersetzen. Zudem auferlegte es ihm die Kosten des erstinstanzlichen Verfahrens von Fr. 1'000.-, des zweitinstanzlichen Verfahrens von Fr. 6'000.- und verpflichtete ihn, der Gläubigerin für beide Instanzen eine Parteientschädigung von total Fr. 1'200.- zu bezahlen. C. Der Schuldner beantragt mit Beschwerde in Zivilsachen, das obergerichtliche Urteil sei unter Kosten- und Entschädigungsfolge zu Lasten der Gläubigerin aufzuheben und es sei keine Rechtsöffnung zu gewähren. Das Obergericht und die Gläubigerin tragen auf Abweisung der Beschwerde an."
+              "text": "A. Mit Zahlungsbefehl Nr. x des Betreibungsamts Region Solothurn vom 14. November 2023 leitete die Schweizerische Eidgenossenschaft (Gläubigerin, Beschwerdegegnerin) gegen A. (Schuldner, Beschwerdeführer) eine Betreibung auf Sicherheitsleistung ein. Als Forderungsgrund nannte sie die Sicherstellungsverfügung vom 9. November 2023, die auf Fr. 1'065'000.- nebst Zins zu 4 % seit 10. November 2023 lautet. Der Schuldner erhob Rechtsvorschlag."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "B.a",
+              "tiefe": 2,
+              "text": "Am 12. Dezember 2023 ersuchte die Gläubigerin das Richteramt Solothurn-Lebern um Rechtsöffnung für Forderung, Zinsen, Kosten und eine angemessene Umtriebsentschädigung. Am 12. März 2024 wies das Richteramt das Gesuch ab und verpflichtete die Gläubigerin zur Bezahlung der Gerichtskosten von Fr. 1'000.- und einer Parteientschädigung von Fr. 2'021.80 an den Schuldner."
+            },
+            {
+              "marke": "B.b",
+              "tiefe": 2,
+              "text": "Die dagegen gerichtete Beschwerde der Gläubigerin hiess das Obergericht des Kantons Solothurn am 18. Juni 2024 gut. Es hob das Urteil des Richteramts auf und erteilte definitive Rechtsöffnung in der Betreibung Nr. x auf Sicherheitsleistung des Betreibungsamts Region Solothurn für Fr. 1'065'000.- nebst Zins zu 4 % seit 10. November 2023. Das Obergericht verpflichtete den Schuldner, der Gläubigerin die Arrestkosten von Fr. 476.90 und die Betreibungskosten von Fr. 466.30 zu ersetzen. Zudem auferlegte es ihm die Kosten des erstinstanzlichen Verfahrens von Fr. 1'000.-, des zweitinstanzlichen Verfahrens von Fr. 6'000.- und verpflichtete ihn, der Gläubigerin für beide Instanzen eine Parteientschädigung von total Fr. 1'200.- zu bezahlen. C. Der Schuldner beantragt mit Beschwerde in Zivilsachen, das obergerichtliche Urteil sei unter Kosten- und Entschädigungsfolge zu Lasten der Gläubigerin aufzuheben und es sei keine Rechtsöffnung zu gewähren. Das Obergericht und die Gläubigerin tragen auf Abweisung der Beschwerde an."
             }
           ]
         },
@@ -209,7 +224,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=&to_date=&from_year=2025&to_year=2025&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=5&highlight_docid=atf%3A%2F%2F151-III-177%3Ade&number_of_ranks=12&azaclir=clir",
       "abgerufen": "2026-06-23",
       "fassungsToken": "9b19e3fd23a7a85b7847ffa5566239f295e64ad082e01d0af7cb8cb18d4a78b0",
-      "sha": "93a9169a6cd924af0f0787564d6a84128f288686eff491fc2ce22eebffd7c001"
+      "sha": "f8056cffb3570aae506142d8bd5c38e9f8132c6c7d8ac6c1d84cab0090680ddd"
     }
   ]
 }

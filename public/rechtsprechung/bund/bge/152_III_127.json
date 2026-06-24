@@ -27,8 +27,19 @@
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "ab Seite 128 BGE 152 III 127 S. 128 A. A.a A. ist schweizerischer Staatsangehöriger mit Wohnsitz in U. und Heimatort in V., Kanton Luzern. Im Jahr 2017 heiratete er die bangladeschische Staatsangehörige B. Diese gab ihr Eheversprechen in Anwesenheit von Zeugen vor einer für Eheschliessungen zuständigen Behörde in Bangladesch ab, während A. sich in der Schweiz aufhielt und sein Einverständnis mit der Eheschliessung über Telefon erklärte. A.b Nachdem die Schweizer Vertretung in Bangladesch die Akten der Eheschliessung an den Kanton Luzern zur Prüfung der Eintragung im schweizerischen Personenstandsregister zugestellt hatte, wies die Abteilung Gemeinden des Justiz- und Sicherheitsdepartements des Kantons Luzern das Gesuch um Anerkennung und Eintragung der Heirat im Personenstandsregister mit Entscheid vom 7. Juni 2024 ab. B. Gegen diesen Entscheid führte A. Beschwerde beim Kantonsgericht Luzern. Er beantragte unter Kosten- und Entschädigungsfolge die Aufhebung des Entscheids vom 7. Juni 2024 und die Anerkennung sowie den Eintrag der Eheschliessung im Personenstandsregister. Das Kantonsgericht wies die Beschwerde mit Entscheid vom 7. November 2024 ab. C. Dagegen gelangt A. (Beschwerdeführer) mit Beschwerde in Zivilsachen vom 12. Dezember 2024 an das Bundesgericht. Er beantragt unter Kosten- und Entschädigungsfolge, das Urteil des Kantonsgerichts sei aufzuheben. Im Übrigen hält er die vor dem Kantonsgericht BGE 152 III 127 S. 129 gestellten Rechtsbegehren aufrecht. Eventualiter sei die Sache zu neuem Entscheid an die Vorinstanzen zurückzuweisen. Das Kantonsgericht und das Justiz- und Sicherheitsdepartement schliessen auf Abweisung der Beschwerde. Das Bundesamt für Justiz (BJ) hat sich geäussert, ohne einen Antrag zum Verfahrensausgang zu stellen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "A. ist schweizerischer Staatsangehöriger mit Wohnsitz in U. und Heimatort in V., Kanton Luzern. Im Jahr 2017 heiratete er die bangladeschische Staatsangehörige B. Diese gab ihr Eheversprechen in Anwesenheit von Zeugen vor einer für Eheschliessungen zuständigen Behörde in Bangladesch ab, während A. sich in der Schweiz aufhielt und sein Einverständnis mit der Eheschliessung über Telefon erklärte."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Nachdem die Schweizer Vertretung in Bangladesch die Akten der Eheschliessung an den Kanton Luzern zur Prüfung der Eintragung im schweizerischen Personenstandsregister zugestellt hatte, wies die Abteilung Gemeinden des Justiz- und Sicherheitsdepartements des Kantons Luzern das Gesuch um Anerkennung und Eintragung der Heirat im Personenstandsregister mit Entscheid vom 7. Juni 2024 ab. B. Gegen diesen Entscheid führte A. Beschwerde beim Kantonsgericht Luzern. Er beantragte unter Kosten- und Entschädigungsfolge die Aufhebung des Entscheids vom 7. Juni 2024 und die Anerkennung sowie den Eintrag der Eheschliessung im Personenstandsregister. Das Kantonsgericht wies die Beschwerde mit Entscheid vom 7. November 2024 ab. C. Dagegen gelangt A. (Beschwerdeführer) mit Beschwerde in Zivilsachen vom 12. Dezember 2024 an das Bundesgericht. Er beantragt unter Kosten- und Entschädigungsfolge, das Urteil des Kantonsgerichts sei aufzuheben. Im Übrigen hält er die vor dem Kantonsgericht gestellten Rechtsbegehren aufrecht. Eventualiter sei die Sache zu neuem Entscheid an die Vorinstanzen zurückzuweisen. Das Kantonsgericht und das Justiz- und Sicherheitsdepartement schliessen auf Abweisung der Beschwerde. Das Bundesamt für Justiz (BJ) hat sich geäussert, ohne einen Antrag zum Verfahrensausgang zu stellen. Das Bundesgericht weist die Beschwerde ab. (Zusammenfassung)"
             }
           ]
         },
@@ -128,7 +139,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-III-127%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "1a462ac19298e5859085ea6bc57c2aea609368a19c8824ceee9989afe5db79e7",
-      "sha": "987e9d18b4f979611eda67aa607471bda72dd84d6e991f38cf763d16640adfd1"
+      "sha": "e9c5fc2097b87a016aaa78c6a13b4791c6a92a919b533d393e7a6df05e04f740"
     }
   ]
 }
