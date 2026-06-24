@@ -628,8 +628,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       )}
 
       {/* Suchleiste OBERHALB der Gliederung (Auftrag David): volle Breite, sticky
-          unter dem Header — gilt für Gliederungs-Spalte und Artikel gleichermassen. */}
-      <div data-such-bar className="sticky top-16 z-[16] mb-4 rounded-lg bg-paper">
+          unter dem Header UND unter dem Reiter-Streifen (--tabstreifen-h, sonst würde
+          sie ihn verdecken) — gilt für Gliederungs-Spalte und Artikel gleichermassen. */}
+      <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
+        style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
         <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
           {sektionen.length > 0 && !tocOffen && (
             <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"

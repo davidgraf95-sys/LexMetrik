@@ -25,6 +25,16 @@ export function TabStreifen() {
   // kein Re-Render beim Ziehen); ueberTeil = Drop-Ziel für die visuelle Markierung.
   const gezogen = useRef<string | null>(null);
   const [ueberTeil, setUeberTeil] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  // Eigene Höhe als CSS-Variable veröffentlichen, damit in-page-sticky-Leisten
+  // (z.B. die Gesetz-Suchleiste) sich UNTER den Reiter-Streifen stapeln statt ihn
+  // zu verdecken. 0px, wenn der Streifen nicht rendert (< 2 Reiter).
+  useEffect(() => {
+    const wurzel = document.documentElement;
+    wurzel.style.setProperty('--tabstreifen-h', navRef.current ? `${navRef.current.offsetHeight}px` : '0px');
+    return () => wurzel.style.setProperty('--tabstreifen-h', '0px');
+  }, [tabs.length]);
 
   // Reader-Labels (Gesetz/Entscheid) aus den ohnehin lazy ladbaren Manifesten —
   // nur laden, wenn ein Reiter eine solche Route trägt (wie die Verlauf-Schiene).
@@ -67,7 +77,7 @@ export function TabStreifen() {
   // eine schlichte Liste mit aria-current="page" auf dem aktiven Reiter; der
   // «Alle schliessen»-Knopf steht NEBEN der Liste, nicht darin.
   return (
-    <nav aria-label="Geöffnete Reiter"
+    <nav aria-label="Geöffnete Reiter" ref={navRef}
       className="sticky top-16 z-10 border-b border-line"
       style={{ background: 'color-mix(in srgb, var(--paper) 96%, transparent)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       <div className="flex items-stretch gap-2 px-2 sm:px-4 py-1.5">

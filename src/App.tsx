@@ -63,24 +63,40 @@ function AltRouteRedirect() {
 function ScrollWiederherstellung() {
   const { pathname, hash } = useLocation();
   const positionen = useRef<Map<string, number>>(new Map());
-  const aktiv = useRef(pathname);
-  // Laufend die Scrollposition des AKTUELLEN Pfads festhalten.
+  const aktiv = useRef(hash ? '' : pathname);
+  const wiederherstellend = useRef(false);
+  // Native Scroll-Wiederherstellung abschalten — wir verwalten sie selbst (sonst
+  // konkurriert der Browser bei Back/Forward mit der manuellen Wiederherstellung).
   useEffect(() => {
-    const onScroll = () => { positionen.current.set(aktiv.current, window.scrollY); };
+    if (!('scrollRestoration' in history)) return;
+    const vorher = history.scrollRestoration;
+    history.scrollRestoration = 'manual';
+    return () => { history.scrollRestoration = vorher; };
+  }, []);
+  // Laufend die Position des AKTUELLEN Pfads festhalten — NICHT während einer
+  // programmatischen Wiederherstellung (Zwischenwerte würden das Ziel überschreiben)
+  // und NICHT auf Anker-Routen (#hash → der Anker-Offset gehört nicht als Pfad-
+  // Position gespeichert, sonst landet ein späterer hashloser Besuch am Anker).
+  useEffect(() => {
+    const onScroll = () => {
+      if (!wiederherstellend.current && aktiv.current) positionen.current.set(aktiv.current, window.scrollY);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
   useEffect(() => {
-    aktiv.current = pathname;
+    aktiv.current = hash ? '' : pathname;
     if (hash) return; // Anker-Sprung übernimmt ScrollZuHash
     const ziel = positionen.current.get(pathname) ?? 0;
     // Lazy-Seiten sind anfangs zu kurz → über einige Frames erneut anpeilen.
+    wiederherstellend.current = true;
     let frames = 0;
     let raf = requestAnimationFrame(function versuche() {
       window.scrollTo({ top: ziel, left: 0, behavior: 'instant' as ScrollBehavior });
       if (Math.abs(window.scrollY - ziel) > 2 && frames++ < 40) raf = requestAnimationFrame(versuche);
+      else wiederherstellend.current = false;
     });
-    return () => cancelAnimationFrame(raf);
+    return () => { cancelAnimationFrame(raf); wiederherstellend.current = false; };
   }, [pathname, hash]);
   return null;
 }

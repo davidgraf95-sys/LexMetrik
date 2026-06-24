@@ -138,7 +138,7 @@ export function synthThema(e: ThemaFelder): string {
 
 // Ein Segment, das mit einem Norm-Zitat beginnt („Art. …", „§ …", „a Art. …").
 // Solche Segmente trägt der Norm-Chip schon; sie verraten nicht das Thema.
-const NORM_SEGMENT = /^\s*(?:a\s+)?(?:a?Art|§|Ziff|lit|Bst)\.?\s*\d|^\s*(?:a\s+)?(?:a?Art|§)\b/;
+const NORM_SEGMENT = /^\s*(?:a\s+)?(?:a?Art|§|Ziff|lit|Bst|Buchst)\.?\s*\d|^\s*(?:a\s+)?(?:a?Art|§)\b/;
 // Abkürzungen, deren Punkt KEIN Satzende ist (sonst bräche der Leitsatz mittendrin ab).
 const ABK_ENDE = /\b(?:a?Art|Abs|lit|Ziff|Bst|ff|f|al|vgl|Ingress|i\.V\.m|cpv|cons|Cost|cp|bzw|sog|inkl|Nr|Ziffer)\.?$/i;
 
@@ -184,7 +184,9 @@ export function regesteLeitsatz(regesteKurz: string): string {
   if (satz.length < 6 || NORM_SEGMENT.test(satz)) return voll;
   if (ABK_ENDE.test(satz.replace(/[.…]+$/, ''))) return voll;
   if (/…$/.test(satz) && satz.length < 24) return voll; // Trunkierungs-Krümel
-  return satz;
+  // Leitsätze beginnen in der Regeste oft klein (nach dem Artikel-Block) — als
+  // Bezeichnung gross schreiben, damit es nicht wie ein zerstückelter Halbsatz wirkt.
+  return satz.charAt(0).toLocaleUpperCase('de-DE') + satz.slice(1);
 }
 
 /** Leitelement-Text für Karte und Liste: Leitsatz der Regeste, sonst synthThema. */

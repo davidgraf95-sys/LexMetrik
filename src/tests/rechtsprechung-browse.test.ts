@@ -41,7 +41,7 @@ describe('themaText / synthThema / istSynth', () => {
   });
   it('regesteLeitsatz überspringt mehrere Artikel-Gruppen', () => {
     expect(regesteLeitsatz('Art. 16 DBG; Art. 34b BPG; Art. 337c OR; steuerliche Behandlung einer Entschädigung. Die Entschädigung ist steuerbar.'))
-      .toBe('steuerliche Behandlung einer Entschädigung.');
+      .toBe('Steuerliche Behandlung einer Entschädigung.');
   });
   it('regesteLeitsatz lässt einen reinen Schlagwort-Leitsatz unverändert', () => {
     expect(regesteLeitsatz('Bauhandwerkerpfandrecht')).toBe('Bauhandwerkerpfandrecht');
@@ -56,7 +56,7 @@ describe('themaText / synthThema / istSynth', () => {
   });
   it('regesteLeitsatz bricht NICHT an einem Abkürzungspunkt (ff./Abs.) ab', () => {
     expect(regesteLeitsatz('Art. 25a Abs. 2 ELV; keine Anwendung gemäss Art. 9 ff. dieser Regel.'))
-      .toBe('keine Anwendung gemäss Art. 9 ff. dieser Regel.');
+      .toBe('Keine Anwendung gemäss Art. 9 ff. dieser Regel.');
   });
   it('regesteLeitsatz gibt bei reinem (abgeschnittenem) Artikel-Block ehrlich die volle Regeste zurück — nie ein Fragment', () => {
     const rk = 'Art. 44 SchKG; Art. 184 Abs. 3 BV; Art. 2 des Embargogesetzes; Art. 15 der Ukraine-Verordnung …';
