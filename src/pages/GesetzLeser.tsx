@@ -627,8 +627,24 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </details>
       )}
 
-      {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt mit Suchleiste auf
-          HÖHE DER ARTIKEL (in der Inhalts-Spalte, nicht über der Gliederung). */}
+      {/* Suchleiste OBERHALB der Gliederung (Auftrag David): volle Breite, sticky
+          unter dem Header — gilt für Gliederungs-Spalte und Artikel gleichermassen. */}
+      <div data-such-bar className="sticky top-16 z-[16] mb-4 rounded-lg bg-paper">
+        <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
+          {sektionen.length > 0 && !tocOffen && (
+            <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
+              className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
+          )}
+          <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+            placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
+            className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
+          <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+            className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+            title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
+        </div>
+      </div>
+
+      {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt. */}
       <div className={sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
         {sektionen.length > 0 && (
           <aside className={`mb-4 lg:mb-0 lg:sticky lg:top-[10.5rem] lg:max-h-[calc(100vh-11rem)] lg:flex-col ${tocOffen ? 'lg:flex' : 'lg:hidden'}`}>
@@ -668,24 +684,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         )}
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
-          {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem
-              Header). Der frühere fliegende Standort-Tracker entfällt — der Standort
-              ergibt sich aus der markierten Gliederung, den Sektionsüberschriften und
-              den statischen Randtiteln an den Artikeln. */}
-          <div data-such-bar className="sticky top-16 z-[15] mb-4 rounded-lg bg-paper">
-            <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
-              {sektionen.length > 0 && !tocOffen && (
-                <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
-                  className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
-              )}
-              <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-                placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
-                className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
-              <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-                className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
-                title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
-            </div>
-          </div>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
