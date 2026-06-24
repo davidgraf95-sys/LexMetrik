@@ -12,7 +12,7 @@
 // Platzhalter-Label statt eines Rohpfads.
 
 import { metaFuerPfad } from './seo';
-import type { BrowseManifest } from './normtext/browse-typen';
+import type { BrowseManifest, BrowseErlass } from './normtext/browse-typen';
 import type { EntscheidManifest } from './rechtsprechung/register';
 
 const SUFFIX = /\s*[—–-]\s*LexMetrik\s*$/;
@@ -46,15 +46,28 @@ export interface VerlaufManifeste {
   entscheide?: EntscheidManifest | null;
 }
 
+/**
+ * Browse-Erlass eines Gesetz-Leser-Pfads aus dem geladenen Manifest auflösen
+ * (SSoT §5: EINE Stelle für die {ebene,key}→Erlass-Suche, von verlaufLabel UND
+ * vom Tab-Streifen-Wappen genutzt — kein doppelter find). Exakter (ebene,key)-
+ * Treffer zuerst, dann key-only als Fallback. null = kein Gesetz-Pfad / kein
+ * Manifest / unbekannter Schlüssel.
+ */
+export function erlassVonPfad(path: string, m: VerlaufManifeste = {}): BrowseErlass | null {
+  const g = gesetzPfad(path);
+  if (!g) return null;
+  return m.gesetze?.erlasse.find((x) => x.key === g.key && x.ebene === g.ebene)
+    ?? m.gesetze?.erlasse.find((x) => x.key === g.key)
+    ?? null;
+}
+
 /** Bestmögliches Label für die Anzeige; nie ein Rohpfad. */
 export function verlaufLabel(path: string, m: VerlaufManifeste = {}): string {
   const meta = labelAusMeta(path);
   if (meta) return meta;
 
-  const g = gesetzPfad(path);
-  if (g) {
-    const e = m.gesetze?.erlasse.find((x) => x.key === g.key && x.ebene === g.ebene)
-      ?? m.gesetze?.erlasse.find((x) => x.key === g.key);
+  if (gesetzPfad(path)) {
+    const e = erlassVonPfad(path, m);
     return e ? e.kuerzel || e.titel : 'Gesetz öffnen';
   }
 

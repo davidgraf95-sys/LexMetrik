@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
 import { schliesseTab, leereTabs, type TabEintrag } from '../../lib/tabs';
-import { verlaufLabel, pfadTeil, gesetzPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { verlaufLabel, pfadTeil, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { KantonWappen } from '../KantonWappen';
 
 // ─── In-App-Reiter-Streifen (v2, Auftrag David) ─────────────────────────────
@@ -120,15 +120,14 @@ export function TabStreifen() {
 
   // Kantonskürzel eines Reiters, falls er ein KANTONALES Gesetz zeigt (Auftrag
   // David: «der Tab soll anzeigen, wenn man kantonales Gesetz hat, um welchen
-  // Kanton es sich handelt, mit Wappen»). Quelle ist das ohnehin geladene
-  // Browse-Manifest (SSoT, §5); der Kanton steht dort je Erlass, nicht aus dem
-  // Pfad-Key geraten. null = Bund/kein Gesetz/Manifest noch nicht geladen →
-  // Fallback auf das Kategorie-Piktogramm.
+  // Kanton es sich handelt, mit Wappen»). Quelle ist der geteilte Resolver
+  // erlassVonPfad über das ohnehin geladene Browse-Manifest (SSoT §5, derselbe
+  // Lookup wie für das Label — kein doppelter find); der Kanton steht dort je
+  // Erlass, nicht aus dem Pfad-Key geraten. null = Bund/kein Gesetz/Manifest
+  // noch nicht geladen → Fallback auf das Kategorie-Piktogramm.
   const kantonVon = (t: TabEintrag): string | null => {
-    const g = gesetzPfad(t.path);
-    if (!g || g.ebene !== 'kanton') return null;
-    const e = manifeste.gesetze?.erlasse.find((x) => x.key === g.key && x.ebene === g.ebene);
-    return e?.kanton ?? null;
+    const e = erlassVonPfad(t.path, manifeste);
+    return e?.ebene === 'kanton' ? e.kanton ?? null : null;
   };
 
   return (
@@ -156,7 +155,7 @@ export function TabStreifen() {
                       onClick={() => navigate(t.path)}
                       className="inline-flex items-center gap-1.5 max-w-[10rem] sm:max-w-[14rem] truncate pl-2.5 pr-1.5 py-1.5 text-body-s font-medium">
                       {/* Kantonales Gesetz: Wappen statt §-Glyph (zeigt den Kanton). */}
-                      {kanton ? <KantonWappen kanton={kanton} className="h-4 w-3.5" /> : pikto}<span className="truncate">{label(t)}</span>
+                      {kanton ? <KantonWappen kanton={kanton} className="h-4 w-3.5" dekorativ /> : pikto}<span className="truncate">{label(t)}</span>
                     </button>
                     <button type="button" onClick={() => schliessen(t.path)}
                       aria-label={`Reiter «${label(t)}» schliessen`}
@@ -219,7 +218,7 @@ export function TabStreifen() {
                   onClick={() => { navigate(t.path); setOffeneKat(null); }}
                   className={`flex-1 min-w-0 inline-flex items-center gap-1.5 truncate text-left px-3 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
                   {/* Kantonales Gesetz im Dropdown ebenfalls mit Wappen markieren. */}
-                  {kanton && <KantonWappen kanton={kanton} className="h-4 w-3.5" />}<span className="truncate">{label(t)}</span>
+                  {kanton && <KantonWappen kanton={kanton} className="h-4 w-3.5" dekorativ />}<span className="truncate">{label(t)}</span>
                 </button>
                 <button type="button" onClick={() => schliessen(t.path)}
                   aria-label={`Reiter «${label(t)}» schliessen`}
