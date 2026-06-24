@@ -113,12 +113,20 @@ const GESETZE_KINDER: NavKnoten[] = [
   },
 ];
 
-// Rechtsprechung: gleichrangig zu «Gesetze». Direktlinks je Sachgebiet (GEBIETE,
-// dieselbe Sach-Achse wie die Gesetze → Verzahnung); Ziel = /rechtsprechung mit
-// ?rg=<gebiet> (Sachgebiet-Vorwahl, teilbar).
-const RECHTSPRECHUNG_KINDER: NavKnoten[] = GEBIETE.map(
-  (g) => link(g.label, `/rechtsprechung?rg=${g.id}`),
-);
+// Rechtsprechung: gleichrangig zu «Gesetze». Die Sachgebiete (GEBIETE, dieselbe
+// Sach-Achse wie die Gesetze → Verzahnung) liegen in EINER einklappbaren Gruppe
+// «Nach Sachgebiet» — damit der Eintrag ein Dropdown ist wie Bund/Kantone unter
+// Gesetze (Auftrag David 24.6.2026), standardmässig zu. Ziel je Sachgebiet:
+// /rechtsprechung?rg=<gebiet> (Vorwahl, teilbar).
+const RECHTSPRECHUNG_KINDER: NavKnoten[] = [
+  {
+    art: 'gruppe',
+    label: 'Nach Sachgebiet',
+    aufklappbar: true,
+    standardOffen: false,
+    kinder: GEBIETE.map((g) => link(g.label, `/rechtsprechung?rg=${g.id}`)),
+  },
+];
 
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
 

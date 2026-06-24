@@ -148,9 +148,6 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
     );
   }
   const aktiv = a.ziel != null && (loc.pathname + loc.search === a.ziel || (a.ziel === '/gesetze' && loc.pathname.startsWith('/gesetze')));
-  // Direktlink-Abschnitte (Rechtsprechung: Sachgebiete) auf die gleiche Einrückung
-  // wie die Auswahl-Einträge der Gruppen-Abschnitte bringen (Auftrag David).
-  const nurBlaetter = a.kinder.length > 0 && a.kinder.every((k) => k.art === 'link');
   return (
     <div className="flex flex-col">
       <div className="flex items-center gap-1 px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
@@ -172,17 +169,9 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
         </button>
       </div>
       {offen && (
-        nurBlaetter ? (
-          <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
-            {a.kinder.map((k, j) => (k.art === 'link'
-              ? <Blatt key={j} k={k} loc={loc} onNavigate={onNavigate} klein />
-              : null))}
-          </div>
-        ) : (
-          <div className="flex flex-col gap-0.5">
-            {a.kinder.map((k, j) => <Knoten key={`${j}-${zuklappGen}`} k={k} loc={loc} onNavigate={onNavigate} />)}
-          </div>
-        )
+        <div className="flex flex-col gap-0.5">
+          {a.kinder.map((k, j) => <Knoten key={`${j}-${zuklappGen}`} k={k} loc={loc} onNavigate={onNavigate} />)}
+        </div>
       )}
     </div>
   );
