@@ -13,7 +13,8 @@ import { NAVIGATION, NAVIGATION_META, alleNavLinks, type NavGruppe } from '../li
 import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
 import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { istVorlage } from '../lib/vorlagenKategorie';
-import { SYSTEMATIK } from '../lib/normtext/systematik';
+import { SYSTEMATIK, SYSTEMATIK_VON_KEY } from '../lib/normtext/systematik';
+import { ERLASS_REGISTER } from '../lib/normtext/register';
 import { KANTONE } from '../data/tarif/typen';
 import { ROUTEN_MANIFEST } from '../routesManifest';
 
@@ -65,6 +66,21 @@ describe('Navigations-SSoT', () => {
     expect(kantone.standardOffen).toBe(false);
     expect(kantone.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
       .toEqual(KANTONE.map((kt) => ({ label: kt, ziel: `/gesetze?ebene=kanton&kt=${kt}` })));
+  });
+
+  // Soft-Vollständigkeits-Tor (Review-Befund 25.6.2026): jeder Bund-Volltext-
+  // Erlass MUSS in genau einer SYSTEMATIK-Gruppe stehen, sonst fällt er stumm in
+  // «Weitere Erlasse» (per Design tolerant, §8 — aber beim Promovieren leicht
+  // vergessen). Dieser Tor fängt das Vergessen, OHNE die tolerante Laufzeit-
+  // Logik zu verschärfen. Wird ein Erlass bewusst NICHT eingeordnet, hier in die
+  // Ausnahmeliste eintragen (mit Begründung).
+  it('jeder Bund-Volltext-Erlass ist in der SYSTEMATIK eingeordnet (Sidebar-Vollständigkeit)', () => {
+    const AUSNAHMEN = new Set<string>([]); // bewusst nicht eingeordnete Keys (mit Begründung)
+    const fehlend = ERLASS_REGISTER
+      .filter((r) => r.ebene === 'bund' && r.status === 'snapshot')
+      .map((r) => r.key)
+      .filter((key) => !SYSTEMATIK_VON_KEY.has(key) && !AUSNAHMEN.has(key));
+    expect(fehlend).toEqual([]);
   });
 
   it('jedes Blatt-Ziel löst auf eine echte Route auf (keine toten Links)', () => {
