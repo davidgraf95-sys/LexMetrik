@@ -24,7 +24,7 @@ export function EntscheidKarte({ e }: { e: BrowseEntscheid }) {
         className="block flex-1 no-underline"
       >
         <div className="flex items-baseline justify-between gap-3">
-          <span className="num font-display text-h3 font-semibold text-ink-900 leading-none">{anker}</span>
+          <span className="num font-display text-h3 font-semibold text-ink-900 leading-none min-w-0 truncate">{anker}</span>
           <span className="flex shrink-0 items-center gap-1.5">
             {e.leitcharakter === 'leitentscheid' && (
               <span className="lc-badge lc-badge-ok">Leitentscheid</span>

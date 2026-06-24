@@ -103,7 +103,7 @@ export function Zeiterfassung() {
           onKeyDown={(e) => { if (e.key === 'Enter' && laeuft) stoppenUndBuchen(); }}
           placeholder="Woran arbeitest du? (z. B. Schlichtungsgesuch redigieren)"
           aria-label="Aufgabe"
-          className="lc-input flex-1 min-w-[14rem]"
+          className="lc-input flex-1 min-w-0 basis-full sm:basis-auto sm:min-w-[12rem]"
         />
         <div className="flex gap-2">
           <button type="button" onClick={laeuft ? stoppenUndBuchen : starten}

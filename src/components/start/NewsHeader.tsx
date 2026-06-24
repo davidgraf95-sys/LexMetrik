@@ -55,7 +55,7 @@ export function NewsHeader() {
       <div className="overflow-x-auto pb-1.5">
       <ul className="flex gap-3 w-max max-w-full snap-x snap-mandatory">
         {news.map((e) => (
-          <li key={e.key} className="snap-start shrink-0 w-[clamp(14rem,78vw,18rem)]">
+          <li key={e.key} className="snap-start shrink-0 w-[clamp(12rem,72vw,18rem)]">
             <Link to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
               className="group flex h-full flex-col gap-1 lc-card p-3.5 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
               <span className="flex items-center gap-2">

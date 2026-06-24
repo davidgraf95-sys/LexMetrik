@@ -120,7 +120,7 @@ export function FristenKalender() {
                 const titel = istEnde ? 'Fristende' : istEreignis ? 'Ereignistag (zählt nicht)' : istBeginn ? 'erster mitzählender Tag' : frei ? 'arbeitsfreier Tag' : undefined;
                 return (
                   <span key={iso} title={titel}
-                    className={`num text-body-s leading-none py-1.5 rounded ${klasse}`}>
+                    className={`num text-xs leading-none py-1.5 rounded text-center tabular-nums ${klasse}`}>
                     {d.getDate()}
                   </span>
                 );

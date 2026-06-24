@@ -58,7 +58,7 @@ export function Startseite() {
       <Schnellrechner />
 
       <Seclabel>Werkzeuge</Seclabel>
-      <div className="grid gap-x-4 gap-y-5 md:grid-cols-2 md:items-start">
+      <div className="grid grid-cols-1 gap-x-4 gap-y-5 md:grid-cols-2 md:items-start">
         <div className="space-y-2.5">
           <span className="lc-overline text-ink-500">Favoriten</span>
           <div className="lc-card p-4"><Favoriten /></div>

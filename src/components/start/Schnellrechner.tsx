@@ -50,12 +50,12 @@ function GebuehrenTab() {
   return (
     <div className="space-y-4">
       {/* Segment-Buttons: ein Klick wählt die Gebührenart (weniger Klicks). */}
-      <div role="tablist" aria-label="Gebührenart" className="inline-flex flex-wrap gap-0.5 rounded-lg border border-line bg-surface p-0.5">
+      <div role="tablist" aria-label="Gebührenart" className="flex flex-wrap gap-0.5 rounded-lg border border-line bg-surface p-0.5">
         {GEBUEHREN.map((g) => {
           const an = g.id === art;
           return (
             <button key={g.id} type="button" role="tab" aria-selected={an} onClick={() => setArt(g.id)}
-              className={`px-3 py-1.5 text-body-s font-medium rounded-md transition-colors ${
+              className={`flex-1 text-center px-3 py-2 text-body-s font-medium rounded-md transition-colors ${
                 an ? 'bg-brass-100 text-brass-800' : 'text-ink-600 hover:text-ink-900'
               }`}>
               {g.kurz}

@@ -25,7 +25,7 @@ function Sektion({ titel, liste }: { titel: string; liste: BrowseEntscheid[] }) 
         {titel}<span className="num text-ink-400">{liste.length}</span>
         <span aria-hidden className="flex-1 h-px bg-line" />
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
         {liste.map((e) => <EntscheidKarte key={e.key} e={e} />)}
       </div>
     </section>
@@ -132,7 +132,9 @@ export function Rechtsprechung() {
               ] as const).map(([id, label, n]) => (
                 <button key={id} type="button" onClick={() => setEbene(id)}
                   aria-pressed={ebene === id}
-                  className={`lc-chip ${ebene === id ? 'border-brass-400 text-brass-700' : ''}`}>
+                  className={`inline-flex items-center gap-1.5 min-h-[2rem] px-3 rounded-md border text-body-s font-medium transition-colors ${
+                    ebene === id ? 'border-brass-400 text-brass-700 bg-brass-100/40' : 'border-line text-ink-600 hover:text-ink-900'
+                  }`}>
                   {label} <span className="num text-ink-400">{n}</span>
                 </button>
               ))}
