@@ -1,0 +1,21 @@
+{
+  "decision_id": "bger_auszug_ab3",
+  "court": "bger",
+  "language": "de",
+  "decision_date": "2025-03-12",
+  "regeste": null,
+  "sachverhalt_chars": 0,
+  "sachverhalt_excerpt": "",
+  "erwaegungen_paragraph_count": 6,
+  "_note": "Synthetisches Fixture: publizierter Sammlungs-BGE-Auszug, der legitim bei consid. 3 startet UND eine echte Innenlücke 4->7 hat. Genau der Fall, den der alte markenPlausibel (tops[0]>2, Sprung>=3) faelschlich flachte.",
+  "erwaegungen_paragraphs": [
+    { "e_number": "3", "depth": 1, "parent": null, "text": "Die Beschwerdeführerin rügt eine Verletzung von Art. 8 ZGB." },
+    { "e_number": "3.1", "depth": 2, "parent": "3", "text": "Nach der Rechtsprechung trägt die Beweislast, wer aus einer Tatsache Rechte ableitet." },
+    { "e_number": "3.2", "depth": 2, "parent": "3", "text": "Die Vorinstanz hat diese Grundsätze zutreffend angewendet." },
+    { "e_number": "4", "depth": 1, "parent": null, "text": "Zu prüfen bleibt die Rüge der willkürlichen Beweiswürdigung." },
+    { "e_number": "7", "depth": 1, "parent": null, "text": "Die weiteren Vorbringen sind nicht geeignet, den angefochtenen Entscheid als bundesrechtswidrig erscheinen zu lassen." },
+    { "e_number": "9.2", "depth": 2, "parent": "9", "text": "Die Gerichtskosten sind der unterliegenden Beschwerdeführerin aufzuerlegen." }
+  ],
+  "dispositiv": "1.\n\nDie Beschwerde wird abgewiesen.\n\n2.\n\nDie Gerichtskosten von Fr. 2'000.-- werden der Beschwerdeführerin auferlegt.",
+  "dispositiv_orders": []
+}

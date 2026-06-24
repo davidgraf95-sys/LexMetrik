@@ -11,6 +11,10 @@ import type {
 import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 import { normalisiereRegeste, bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 import { sha256EntscheidBloecke } from './sha-entscheide';
+import { normalisiereErwaegung } from './erwaegung-normalisieren';
+// markenPlausibel/MONAT leben jetzt in erwaegung-normalisieren.ts (Single Source, §5);
+// hier re-exportiert, damit bestehende Importeure/Tests stabil bleiben.
+export { markenPlausibel, MONAT } from './erwaegung-normalisieren';
 import {
   statutesZuNormKeys, legalAreaZuSachgebiet, abteilungZuSachgebiet, gerichtstypFuerCourt,
   gerichtAnzeigename, kantonalSachgebiet, fmtDatumDe,
@@ -68,8 +72,6 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export async function holeErwaegung(id: string, e: string): Promise<OclErwaegung | null> {
   return jget<OclErwaegung>(`${API}/erwaegung/${id}/${encodeURIComponent(e)}`);
 }
-
-const MONAT = /^(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b/;
 
 /**
  * Vollen Sachverhalt aus full_text zwischen „Sachverhalt:" und „Erwägungen:" schneiden
@@ -135,19 +137,6 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
   const vorinstanz = sauber(cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 400), { salvage: true });
   if (!besetzung && !parteien && !gegenstand && !vorinstanz) return null;
   return { besetzung, parteien, gegenstand, vorinstanz };
-}
-
-/**
- * Plausibilität der Erwägungs-Nummerierung: Start bei 1/2, keine Top-Sprünge ≥3,
- * kein Block-Start mit Monat (Jahreszahl als Marke fehlgeparst). Sonst Marken verwerfen.
- */
-export function markenPlausibel(paras: OclParagraph[]): boolean {
-  const tops = paras.map((p) => Number((p.e_number ?? '').split('.')[0])).filter(Number.isFinite);
-  if (!tops.length) return false;
-  if (tops[0] > 2) return false;
-  for (let i = 1; i < tops.length; i++) if (tops[i] - tops[i - 1] >= 3) return false;
-  if (paras.some((p) => MONAT.test(String(p.text ?? p.text_excerpt ?? '').trim()))) return false;
-  return true;
 }
 
 /**
@@ -241,15 +230,14 @@ export function mappeEntscheidOCL(
     const sv = extrahiereSachverhalt(det.full_text, str.sachverhalt_excerpt, str.sachverhalt_chars);
     if (sv) abschnitte.push({ typ: 'sachverhalt', vollstaendig: sv.vollstaendig, bloecke: [{ marke: null, text: bereinigeFliesstext(sv.text) }] });
 
+    // Erwägungen: EINE reine Funktion (gleicher Pfad für Live-Import, Cache-Replay,
+    // Bestands-Renormalisierung; §5). Setzt marke/tiefe aus e_number, wenn plausibel
+    // (publizierte Sammlungs-Auszüge ab consid. N≥3 inklusive); sonst ehrlich flach.
     const paras: OclParagraph[] = Array.isArray(str.erwaegungen_paragraphs) ? str.erwaegungen_paragraphs : [];
-    const plaus = markenPlausibel(paras);   // Jahreszahl-/Fehlmarken verwerfen → ehrlicher Fliesstext
-    const ervBloecke: EntscheidBlock[] = paras
-      .map((p) => ({
-        marke: plaus && p.e_number ? `E. ${p.e_number}` : null,
-        tiefe: plaus && typeof p.depth === 'number' ? p.depth : undefined,
-        text: bereinigeFliesstext(String(p.text ?? p.text_excerpt ?? '')),
-      }))
+    const rohErw: EntscheidBlock[] = paras
+      .map((p): EntscheidBlock => ({ marke: null, text: bereinigeFliesstext(String(p.text ?? p.text_excerpt ?? '')) }))
       .filter((b) => b.text);
+    const ervBloecke = normalisiereErwaegung(paras, rohErw);
     if (ervBloecke.length) abschnitte.push({ typ: 'erwaegung', bloecke: ervBloecke });
 
     // Dispositiv: nummeriert (standalone ODER inline); korruptes/überlanges Roh-Dispositiv weglassen.

@@ -28,6 +28,7 @@
     "check:normtext-netz": "vite-node scripts/normtext/check-drift.ts -- --netz",
     "entscheide": "vite-node scripts/normtext-entscheide.ts --",
     "entscheide:seed": "vite-node scripts/normtext/seed-aus-cache.ts --",
+    "renormalisiere:entscheide": "vite-node scripts/normtext/renormalisiere-bestand.ts --",
     "check:confidence": "vite-node scripts/normtext/check-confidence.ts",
     "golden": "vite-node scripts/golden-outputs.ts",
     "golden:vergleich": "vite-node scripts/golden-outputs.ts vergleich",

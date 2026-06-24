@@ -114,8 +114,17 @@ describe('markenPlausibel', () => {
   it('akzeptiert saubere Sequenz', () => {
     expect(markenPlausibel([{ e_number: '1' }, { e_number: '2' }, { e_number: '2.1' }, { e_number: '3' }])).toBe(true);
   });
-  it('verwirft Jahreszahl-Sprünge (1→6→11)', () => {
-    expect(markenPlausibel([{ e_number: '1' }, { e_number: '6' }, { e_number: '11' }])).toBe(false);
+  // DEKLARIERTE fachliche Änderung (§6.3, 24.6.2026): der alte Sprung≥3-Guard
+  // entwertete genuine amtliche Nummerierung (publizierte Sammlungs-Auszüge
+  // starten legitim ab consid. N≥3 und haben echte Innenlücken). markenPlausibel
+  // lebt jetzt in erwaegung-normalisieren.ts und prüft Monotonie + Jahr-Schwelle
+  // statt der Start-bei-1/2-Annahme. Eine monoton steigende Folge 1→6→11 unter
+  // 1900 ist daher jetzt plausibel (die Zahlen stehen real in e_number — keine
+  // Fabrikation). Fehlmarken werden über Jahr-Schwelle/Monat/Monotonie gefangen
+  // (siehe src/tests/erwaegung-normalisieren.test.ts).
+  it('akzeptiert monotone Folge mit Lücken (1→6→11), verwirft Jahres-Marke', () => {
+    expect(markenPlausibel([{ e_number: '1' }, { e_number: '6' }, { e_number: '11' }])).toBe(true);
+    expect(markenPlausibel([{ e_number: '2024' }, { e_number: '2025' }])).toBe(false);
   });
   it('verwirft Block, der mit einem Monat beginnt (Jahreszahl-Fehlparse)', () => {
     expect(markenPlausibel([{ e_number: '1', text: 'Oktober 2000 erging der Entscheid.' }])).toBe(false);
