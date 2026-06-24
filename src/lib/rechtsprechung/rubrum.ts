@@ -35,7 +35,8 @@ export function rubrumFeldPlausibel(label: RubrumFeld, wert: string | null | und
   if (t.length > MAX_LAENGE[label]) return false;
   // Saubere Einträge beginnen mit Grossbuchstabe, Ziffer oder Parteimarke (A.);
   // ein Kleinbuchstabe am Anfang verrät ein mitten im Satz gekapptes Fragment.
-  if (/^[a-zäöü]/.test(t)) return false;
+  // Unicode-bewusst (\p{Ll}) → erfasst auch fr/it-Akzent-Kleinbuchstaben (é/è/à/ù/ì/ç/œ…).
+  if (/^\p{Ll}/u.test(t)) return false;
   if (ERWAEGUNGS_MARKER.test(t)) return false;
   return true;
 }

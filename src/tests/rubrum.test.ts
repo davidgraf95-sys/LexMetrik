@@ -19,6 +19,12 @@ describe('rubrumFeldPlausibel', () => {
     expect(rubrumFeldPlausibel('parteien', 'die Dauer des Arbeitsverhältnisses, das Alter der Person')).toBe(false);
   });
 
+  it('verwirft auch fr/it-Fragmente mit Akzent-Kleinbuchstaben am Anfang (zukunftsfest)', () => {
+    expect(rubrumFeldPlausibel('gegenstand', 'étude du litige et conséquences pour les parties')).toBe(false);
+    expect(rubrumFeldPlausibel('parteien', 'à propos de la qualité pour recourir des intéressés')).toBe(false);
+    expect(rubrumFeldPlausibel('gegenstand', 'è controverso se il debitore abbia diritto')).toBe(false);
+  });
+
   it('verwirft Werte mit Erwägungs-/Zitat-Markern (BGE, E., i.V.m., BBl, Ziff.)', () => {
     expect(rubrumFeldPlausibel('gegenstand', 'Die Frage nach Art. 8 ZGB (BGE 131 I 24 E. 2.2)')).toBe(false);
     expect(rubrumFeldPlausibel('parteien', 'An und entscheidet; vgl. E. 2.1 hiervor')).toBe(false);
