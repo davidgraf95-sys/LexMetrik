@@ -77,7 +77,7 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
           <span className="hidden sm:inline">Sortierung</span>
           {/* min-w + shrink-0: in der flex-wrap-Toolbar wurde der Select sonst
               gestaucht und das längste Label («Leitentscheide zuerst») abgeschnitten. */}
-          <select className="lc-select lc-input-sm min-w-[11.5rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
+          <select className="lc-select lc-input-sm w-auto min-w-[13.75rem]" value={sort} onChange={(e) => onSort(e.target.value as SortModus)}
             aria-label="Sortierung">
             {(Object.keys(SORT_LABEL) as SortModus[]).map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
           </select>

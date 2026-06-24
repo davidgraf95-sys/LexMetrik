@@ -52,6 +52,22 @@ describe('teileSachverhalt — sicheres Sub-Marker-Splitting', () => {
     expect(teileSachverhalt('')).toEqual([]);
   });
 
+  // Top-Marker-Fallback (E): reine A./B./C.-Gliederung ohne Sub-Marker.
+  it('gliedert reine Top-Marker A./B./C. (satz-initial, sequenzvalidiert)', () => {
+    const t = 'A. Frau A. arbeitete beim Spital B. und stürzte. B. Sie erhob Beschwerde. C. Das Gericht entschied.';
+    const bl = teileSachverhalt(t);
+    expect(bl.map((b) => b.marke)).toEqual(['A.', 'B.', 'C.']);
+    // Namens-Kollision: „Spital B." mitten im Satz darf NICHT trennen.
+    expect(bl[0].text).toBe('Frau A. arbeitete beim Spital B. und stürzte.');
+    expect(rekon(bl)).toBe(W(t));
+  });
+  it('Top-Marker: kein Split bei nur einem Abschnitt (Namen wie „A. mbH"/„Spital B.")', () => {
+    const t = 'A. Die A. mbH und die Spital B. AG schlossen einen Vertrag. Es gab keine weiteren Abschnitte.';
+    const bl = teileSachverhalt(t);
+    expect(bl).toHaveLength(1);
+    expect(bl[0].marke).toBeNull();
+  });
+
   // Regression (Bug-Check MAJOR 24.6.): ein satz-schliessender Name am Blockende
   // (z.B. „… im E.") darf NICHT als nachlaufender Top-Marker getilgt werden — nur
   // wenn der Buchstabe dem Top des FOLGENDEN Abschnitts entspricht.

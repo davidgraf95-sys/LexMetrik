@@ -204,6 +204,12 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell erfasst</span>
           )}
           <span className="ml-auto inline-flex items-center gap-2">
+            {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8). */}
+            <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
+              className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
+              title="Die amtliche, massgebliche Fassung bei der Quelle öffnen">
+              ↗ massgebliche Fassung
+            </a>
             {/* R17: Lese-Schriftgrösse */}
             <span className="inline-flex items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
               <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}

@@ -1,57 +1,52 @@
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
-import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
+import { istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
 import { formatiereDatum } from './format';
 
-// Kompakte Listen-Zeile — die DEFAULT-Dichte der Übersicht (scan-optimiert: das
-// Auge wandert die linke Kante mit dem THEMA herunter). Pendant zur Karte, teilt
-// themaText/istSynth + NormChip. Ein ruhiges Leit-Signal (schmaler Messing-Strich
-// links), KEIN Badge-Lärm. Reine Darstellung (§3).
+// Kompakte Listen-Zeile (Default-Dichte). Aufbau nach Auftrag David: ganz links das
+// Entscheiddatum, dann als Bezeichnung die BGE-Nummer (sonst Aktenzeichen), darunter
+// die angewandten/in der Regeste genannten Artikel als KLICKBARE Norm-Chips (zweite
+// Navigationsachse, ?norm), dann das Rechtsgebiet. Reine Darstellung (§3).
 export function EntscheidZeile({ e, onNorm }: {
   e: BrowseEntscheid;
   onNorm: (k: string) => void;
 }) {
   const leit = e.leitcharakter === 'leitentscheid';
-  const synth = istSynth(e);
   return (
     <Link
       to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
-      className="group flex items-stretch gap-3 px-4 py-2.5 no-underline hover:bg-well transition-colors"
+      className="group flex items-stretch gap-3 px-4 py-3 no-underline hover:bg-well transition-colors"
     >
-      {/* Zone 1 — Leit-Signal (oder gleich breiter Spacer für Spaltenstabilität). */}
-      <span aria-hidden
-        className={`mt-0.5 w-0.5 shrink-0 rounded-full ${leit ? 'bg-brass-500' : 'bg-transparent'}`}
-        title={leit ? 'Leitentscheid' : undefined} />
+      {/* Ganz links — Entscheiddatum (feste Spalte für scanbare Kante). */}
+      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-400 tabular-nums">
+        {formatiereDatum(e.datum)}
+      </span>
 
-      {/* Zone 2 — Thema (Leitelement) + Metazeile. */}
-      <div className="min-w-0 flex-1">
-        <div className="flex items-baseline gap-2">
-          <span className={`min-w-0 truncate text-body-s ${leit ? 'font-medium text-ink-900' : 'text-ink-700'} group-hover:text-brass-700`}>
-            {themaText(e)}
+      <div className="min-w-0 flex-1 space-y-1.5">
+        {/* Bezeichnung — BGE-Nummer zuerst (sonst Aktenzeichen), hervorgehoben. */}
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          <span className={`num text-body-s font-medium ${istBge(e) ? 'text-brass-700' : 'text-ink-900'} group-hover:text-brass-700`}>
+            {hauptIdentitaet(e)}
           </span>
-          {synth && <span className="shrink-0 text-micro text-ink-400 italic">ohne amtl. Regeste</span>}
-        </div>
-        <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
-          <span>{e.gerichtName}</span>
-          <span className="text-ink-300" aria-hidden>·</span>
-          <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
-          {/* Identität/Datum auf Mobil hier mit, auf Desktop rechts in Zone 3. */}
-          <span className="num text-ink-400 sm:hidden" aria-hidden>· {hauptIdentitaet(e)} · {formatiereDatum(e.datum)}</span>
-          {e.normKeys.slice(0, 3).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
-          {e.normKeys.length > 3 && <span className="num text-micro text-ink-400">+{e.normKeys.length - 3}</span>}
+          {leit && <span className="lc-badge lc-badge-ok shrink-0">Leitentscheid</span>}
           {e.kuratierung === 'maschinell' && (
-            <span className="text-ink-400" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
+            <span className="shrink-0 text-micro text-ink-400" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}
-          {e.sprache !== 'de' && <span className="text-ink-400 uppercase">{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="shrink-0 text-micro uppercase text-ink-400">{e.sprache}</span>}
         </div>
-      </div>
 
-      {/* Zone 3 — Identität rechtsbündig (ab sm): BGE-Zitierung hervorgehoben, sonst Aktenzeichen. */}
-      <div className="hidden shrink-0 text-right sm:block">
-        <span className={`num block text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-400'}`}>{hauptIdentitaet(e)}</span>
-        <span className="num block text-micro text-ink-300">{formatiereDatum(e.datum)}</span>
+        {/* Artikel aus der Regeste — klickbar (filtert die Rechtsprechung nach der Norm). */}
+        {e.normKeys.length > 0 && (
+          <div className="flex flex-wrap items-center gap-1.5">
+            {e.normKeys.slice(0, 6).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
+            {e.normKeys.length > 6 && <span className="num text-micro text-ink-400">+{e.normKeys.length - 6}</span>}
+          </div>
+        )}
+
+        {/* Rechtsgebiet (Sachgebiet-Zuordnung). */}
+        <div className="text-xs text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</div>
       </div>
     </Link>
   );

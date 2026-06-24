@@ -35,6 +35,44 @@ interface Marker { top: string; sub: string; at: number; end: number }
 // Sub-Marker: Gross.Klein, gefolgt von Whitespace + Gross/Ziffer (Abschnitt-Anfang).
 const SUB_RE = /(?:^|\s)([A-Z])\.([a-z])(?=\s+[A-ZÄÖÜ0-9])/g;
 
+// Top-Marker: Gross. + Whitespace + Grossbuchstabe. UNSICHER bei naiver Anwendung
+// (kollidiert mit Namen „Spital B.", „A. mbH", „B.A."). Darum nur SATZ-INITIAL
+// akzeptiert (Textanfang oder direkt nach Satzzeichen) + strenge A→B→C-Sequenz.
+const TOP_RE = /([A-Z])\.\s+(?=[A-ZÄÖÜ])/g;
+
+/** true, wenn die Position idx satz-initial ist (Textanfang oder nach .!?). */
+function istSatzInitial(t: string, idx: number): boolean {
+  let i = idx - 1;
+  while (i >= 0 && /\s/.test(t[i])) i--;
+  return i < 0 || /[.!?]/.test(t[i]);
+}
+
+/**
+ * Reine Top-Marker-Gliederung (A./B./C.) als FALLBACK, wenn keine Sub-Marker
+ * vorliegen. Nur satz-initiale, sequenzvalidierte Marker — sonst null (kein Split).
+ */
+function teileTopLevel(t: string): EntscheidBlock[] | null {
+  const cand: { top: string; at: number; end: number }[] = [];
+  for (let m; (m = TOP_RE.exec(t)); ) {
+    if (istSatzInitial(t, m.index)) cand.push({ top: m[1], at: m.index, end: m.index + m[0].length });
+  }
+  const ok: typeof cand = [];
+  let cur: number | null = null;
+  for (const c of cand) {
+    const code = c.top.charCodeAt(0);
+    if ((cur === null && c.top === 'A') || (cur !== null && code === cur + 1)) { cur = code; ok.push(c); }
+  }
+  if (ok.length < 2) return null;
+  const bloecke: EntscheidBlock[] = [];
+  const pre = t.slice(0, ok[0].at).trim();
+  if (pre) bloecke.push({ marke: null, text: pre });
+  for (let i = 0; i < ok.length; i++) {
+    const txt = t.slice(ok[i].end, i + 1 < ok.length ? ok[i + 1].at : t.length).trim();
+    bloecke.push({ marke: `${ok[i].top}.`, tiefe: 1, text: txt });
+  }
+  return bloecke;
+}
+
 /**
  * Sachverhalt in Buchstaben-Abschnitte teilen — NUR an sequenzvalidierten
  * Sub-Markern. Liefert EntscheidBlock[] (marke 'A.'/'A.a', tiefe 1/2). Greift die
@@ -62,7 +100,8 @@ export function teileSachverhalt(roh: string): EntscheidBlock[] {
       curSub = sc; ok.push(c);
     }
   }
-  if (ok.length < 2) return [{ marke: null, text: t }];
+  // Keine (≥2) Sub-Marker → Top-Marker-Gliederung versuchen (A./B./C.), sonst EIN Block.
+  if (ok.length < 2) return teileTopLevel(t) ?? [{ marke: null, text: t }];
 
   const bloecke: EntscheidBlock[] = [];
   // Vorspann vor dem ersten Sub-Marker. Endet er auf den nackten Top-Marker des
