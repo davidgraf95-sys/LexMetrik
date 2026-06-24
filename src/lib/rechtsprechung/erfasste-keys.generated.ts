@@ -281,7 +281,6 @@ export const ERFASST: ReadonlySet<string> = new Set([
   "gr_gerichte_SR2202589",
   "gr_gerichte_SV1202622",
   "gr_gerichte_SV120269",
-  "gr_gerichte_ZR12024196",
   "gr_gerichte_ZR1202620",
   "gr_gerichte_ZR2202624",
   "sg_gerichte_B2023_225",
