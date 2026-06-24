@@ -50,6 +50,18 @@ describe('themaText / synthThema / istSynth', () => {
     const e = be({ regesteKurz: 'Art. 8 ZGB; Beweislast bei der Vaterschaft. Der Kläger trägt die Beweislast.', normKeys: ['ZGB'] });
     expect(themaText(e)).toBe('Beweislast bei der Vaterschaft.');
   });
+  it('regesteLeitsatz trennt auch am Punkt nach dem Gesetzeskürzel (statt Semikolon)', () => {
+    expect(regesteLeitsatz('Art. 6 Abs. 4 lit. b ZPO; Art. 105 FusG. Die fusionsrechtliche Überprüfungsklage ist zulässig.'))
+      .toBe('Die fusionsrechtliche Überprüfungsklage ist zulässig.');
+  });
+  it('regesteLeitsatz bricht NICHT an einem Abkürzungspunkt (ff./Abs.) ab', () => {
+    expect(regesteLeitsatz('Art. 25a Abs. 2 ELV; keine Anwendung gemäss Art. 9 ff. dieser Regel.'))
+      .toBe('keine Anwendung gemäss Art. 9 ff. dieser Regel.');
+  });
+  it('regesteLeitsatz gibt bei reinem (abgeschnittenem) Artikel-Block ehrlich die volle Regeste zurück — nie ein Fragment', () => {
+    const rk = 'Art. 44 SchKG; Art. 184 Abs. 3 BV; Art. 2 des Embargogesetzes; Art. 15 der Ukraine-Verordnung …';
+    expect(regesteLeitsatz(rk)).toBe(rk);
+  });
   it('baut ohne Regeste eine Synth-Zeile aus Gebiet + Gericht + Normen', () => {
     const e = be({ sachgebiet: 'sozial-abgaben', gerichtName: 'Kantonsgericht GR', normKeys: ['ATSG', 'BGG'] });
     expect(istSynth(e)).toBe(true);

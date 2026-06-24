@@ -136,26 +136,55 @@ export function synthThema(e: ThemaFelder): string {
   return `${gebiet} — ${e.gerichtName}, ${jahr(e.datum)}`;
 }
 
-// Eine Norm-Zitat-Segment (Regeste beginnt mit „Art. … Gesetz; Art. …;") —
-// diese Präfix-Segmente trägt der Norm-Chip schon; sie verraten nicht das Thema.
-const NORM_SEGMENT = /^\s*(?:a?Art\.|§|i\.V\.m\.|Ziff\.|lit\.)/;
+// Ein Segment, das mit einem Norm-Zitat beginnt („Art. …", „§ …", „a Art. …").
+// Solche Segmente trägt der Norm-Chip schon; sie verraten nicht das Thema.
+const NORM_SEGMENT = /^\s*(?:a\s+)?(?:a?Art|§|Ziff|lit|Bst)\.?\s*\d|^\s*(?:a\s+)?(?:a?Art|§)\b/;
+// Abkürzungen, deren Punkt KEIN Satzende ist (sonst bräche der Leitsatz mittendrin ab).
+const ABK_ENDE = /\b(?:a?Art|Abs|lit|Ziff|Bst|ff|f|al|vgl|Ingress|i\.V\.m|cpv|cons|Cost|cp|bzw|sog|inkl|Nr|Ziffer)\.?$/i;
+
+/** Erster echter Satz (Abkürzungs-Punkte sind kein Satzende). */
+function ersterSatz(s: string): string {
+  const re = /([.!?])(?=\s+[A-ZÄÖÜ]|\s*$)/g;
+  for (let m; (m = re.exec(s)); ) {
+    const vor = s.slice(0, m.index);
+    if (ABK_ENDE.test(vor)) continue; // Punkt gehört zu einer Abkürzung → weiter
+    return s.slice(0, m.index + 1).trim();
+  }
+  return s.trim();
+}
 
 /**
- * Leitsatz/Thema einer amtlichen Regeste — die eigentliche Sachaussage, OHNE den
- * vorangestellten Artikel-Block. Aus „Art. 88 … SchKG; Verfahren betreffend
- * Feststellung neuen Vermögens … . Während …" wird „Verfahren betreffend
- * Feststellung neuen Vermögens …". Rein/deterministisch (§3); reine Anzeige, kürzt
- * nur, erfindet nichts (§8). Greift nichts (kein Leitsatz) → ganze Regeste.
+ * Leitsatz/Thema einer amtlichen Regeste — die Sachaussage OHNE den vorangestellten
+ * Artikel-Block. Grenze Norm-Block → Leitsatz = das erste „<Gesetzeskürzel>[.;] "
+ * (ein Token, das auf einem Grossbuchstaben endet: ZPO/SchKG/FusG/BV …), dem KEIN
+ * weiteres Zitat folgt — danach beginnt die Sachaussage. Abkürzungen wie „Art.",
+ * „Abs.", „lit.", „ff." enden klein → keine Grenze. KONSERVATIV (§1/§8): bleibt das
+ * Ergebnis fragwürdig (zu kurz, beginnt selbst mit Art./§, endet auf einer Abkürzung,
+ * Trunkierungs-Krümel) ODER ist keine klare Grenze erkennbar, wird die VOLLE Regeste
+ * zurückgegeben — ehrlich, nie ein verstümmeltes Fragment. Rein (§3).
  */
 export function regesteLeitsatz(regesteKurz: string): string {
-  const segmente = regesteKurz.split(';');
+  const voll = regesteKurz.trim();
+  const segmente = voll.split(';').map((s) => s.trim());
+  // 1) Führende reine Zitat-Segmente überspringen („Art. … ZGB"; „Ziff. 1.2 …").
   let i = 0;
   while (i < segmente.length && NORM_SEGMENT.test(segmente[i])) i++;
-  const rest = segmente.slice(i).join(';').trim();
-  if (!rest) return regesteKurz.trim();
-  // Leitsatz = bis zum ersten Satzende (Punkt + Leer + Grossbuchstabe, oder Schluss).
-  const m = /^(.*?[.!?])(?:\s+[A-ZÄÖÜ].*)?$/s.exec(rest);
-  return (m ? m[1] : rest).trim();
+  let rest = i < segmente.length ? segmente.slice(i).join('; ') : '';
+  // 2) Sonst (alles Zitate, oder der Rest beginnt doch mit Zitat): im letzten Zitat-
+  //    Segment nach „<Gesetzeskürzel>. <Grossbuchstabe>" trennen — Punkt statt Semikolon
+  //    als Grenze (z.B. „… Art. 22c FZG. Vorsorgeausgleich …"). Abkürzungen enden klein.
+  if (!rest || NORM_SEGMENT.test(rest)) {
+    const kand = segmente[Math.min(i, segmente.length - 1)] ?? '';
+    const pm = /[A-Za-zÄÖÜ]*[A-ZÄÖÜ]\.\s+(?=[A-ZÄÖÜ])/.exec(kand);
+    rest = pm ? kand.slice(pm.index + pm[0].length) : '';
+  }
+  if (!rest) return voll;
+  // 3) Erster echter Satz; degeneriert → ehrlich die volle Regeste statt Schrott.
+  const satz = ersterSatz(rest);
+  if (satz.length < 6 || NORM_SEGMENT.test(satz)) return voll;
+  if (ABK_ENDE.test(satz.replace(/[.…]+$/, ''))) return voll;
+  if (/…$/.test(satz) && satz.length < 24) return voll; // Trunkierungs-Krümel
+  return satz;
 }
 
 /** Leitelement-Text für Karte und Liste: Leitsatz der Regeste, sonst synthThema. */
