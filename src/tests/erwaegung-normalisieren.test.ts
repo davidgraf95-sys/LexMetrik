@@ -45,6 +45,46 @@ describe('markenPlausibel — Fehlmarken bleiben verworfen', () => {
   });
 });
 
+describe('Bug-Check-Regressionen (adversariale Review)', () => {
+  it('#1 fehlende/leere e_number schleust KEINE Phantom-Top-0 ein', () => {
+    // Eine voll nummerierte Erwägung mit einem unnummerierten Zwischen-Absatz
+    // bleibt plausibel (früher: Number('')===0 → nicht-monoton → alles flach).
+    expect(markenPlausibel([{ e_number: '3' }, { e_number: '' }, { e_number: '4' }])).toBe(true);
+    expect(markenPlausibel([{ e_number: '1' }, { e_number: '2' }, { e_number: undefined }])).toBe(true);
+  });
+  it('#1 normalisiereErwaegung: nummerierte Absätze behalten Marke, leerer wird flach, Text erhalten', () => {
+    const p: OclParagraph[] = [
+      { e_number: '3', text: 'Erwägung drei.' },
+      { e_number: '', text: 'Zwischentext ohne Nummer.' },
+      { e_number: '4', text: 'Erwägung vier.' },
+    ];
+    const bl = normalisiereErwaegung(p, []);
+    expect(bl.map((b) => b.marke)).toEqual(['E. 3', null, 'E. 4']);
+    expect(worte(bl)).toBe('Erwägung drei. Zwischentext ohne Nummer. Erwägung vier.');
+  });
+  it('#4 fehlgeparste hohe Top-Nummer (>60) wird verworfen, realistische bleibt', () => {
+    expect(markenPlausibel([{ e_number: '1' }, { e_number: '850' }])).toBe(false);
+    expect(markenPlausibel([{ e_number: '400' }])).toBe(false);
+    expect(markenPlausibel([{ e_number: '12' }, { e_number: '13' }, { e_number: '14' }])).toBe(true);
+  });
+  it('#2 spalteMonolith fabriziert KEINE Marken auf Prosa-Aufzählung (2 Köpfe, §1)', () => {
+    expect(spalteMonolith('1. Auflage des Kommentars erschien 2020.\n\n2. Kammer des Gerichts entschied.')).toBeNull();
+    expect(spalteMonolith('1. ABC GmbH wurde gegründet.\n\n2. Der Beschwerdeführer rügt dies.')).toBeNull();
+  });
+  it('#2 spalteMonolith verlangt lückenlose Folge ab 1 (nicht-konsekutiv → null)', () => {
+    expect(spalteMonolith('1. Text A.\n\n2. Text B.\n\n4. Text D.')).toBeNull();   // 3 fehlt
+    expect(spalteMonolith('2. Text B.\n\n3. Text C.\n\n4. Text D.')).toBeNull();   // Start ≠ 1
+  });
+  it('#5 tiefe folgt der Segmentzahl der Marke, NICHT p.depth', () => {
+    const p: OclParagraph[] = [
+      { e_number: '3', depth: 3, text: 'Top.' },
+      { e_number: '3.1', depth: 1, text: 'Sub.' },
+    ];
+    const bl = normalisiereErwaegung(p, []);
+    expect(bl.map((b) => b.tiefe)).toEqual([1, 2]);   // 'E. 3' → 1, 'E. 3.1' → 2
+  });
+});
+
 describe('fuehrendeGliederungsnummer — Schutz gegen Fehltreffer', () => {
   it('kein Treffer bei Datum „2. Mai 2026 …"', () => {
     expect(fuehrendeGliederungsnummer('2. Mai 2026 wurde der Entscheid eröffnet.')).toBeNull();

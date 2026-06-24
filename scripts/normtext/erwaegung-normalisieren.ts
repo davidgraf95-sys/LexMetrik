@@ -24,13 +24,18 @@ import { bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 export const MONAT =
   /^(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b/;
 
-/** Top-Marke ≥ 1900 ist sicher eine fehlgeparste Jahreszahl, keine Gliederung. */
-const JAHR_SCHWELLE = 1900;
+/** Kein Erwägungs-Top liegt realistisch über dieser Schwelle — darüber ist die
+ *  Zahl sicher fehlgeparst (Rand-/Fussnotennummer, Jahreszahl). Bug-Check #4:
+ *  ersetzt die alte 1900-Grenze, die «E. 400» noch durchgelassen hätte. */
+const SECTION_MAX = 60;
 
-/** Top-Segment-Folge einer e_number-Liste, nur endliche Zahlen. */
+/** Top-Segment-Folge einer e_number-Liste. Leere/fehlende e_number werden
+ *  ÜBERSPRUNGEN (Bug-Check #1: `Number('') === 0` hätte sonst eine Phantom-Top-0
+ *  eingeschleust und eine voll nummerierte Erwägung fälschlich verworfen). */
 function tops(nums: (string | undefined)[]): number[] {
   return nums
-    .map((e) => Number(String(e ?? '').split('.')[0]))
+    .filter((e) => String(e ?? '').trim() !== '')
+    .map((e) => Number(String(e).split('.')[0]))
     .filter((n) => Number.isFinite(n));
 }
 
@@ -48,7 +53,7 @@ function tops(nums: (string | undefined)[]): number[] {
 export function markenPlausibel(paras: OclParagraph[]): boolean {
   const t = tops(paras.map((p) => p.e_number));
   if (!t.length) return false;
-  if (t.some((n) => n >= JAHR_SCHWELLE)) return false;
+  if (t.some((n) => n > SECTION_MAX)) return false;   // fehlgeparste Rand-/Fussnoten-/Jahreszahl
   for (let i = 1; i < t.length; i++) if (t[i] < t[i - 1]) return false;
   if (paras.some((p) => MONAT.test(String(p.text ?? p.text_excerpt ?? '').trim()))) return false;
   return true;
@@ -92,12 +97,16 @@ export function spalteMonolith(text: string): EntscheidBlock[] | null {
   if (treffer.length < 2) return null;
   // Nur die Top-Köpfe (eine Segment-Tiefe) als Schnittpunkte werten; Folge plausibel?
   const koepfe = treffer.filter((t) => !t.nummer.includes('.'));
-  if (koepfe.length < 2) return null;
+  // Bug-Check #2 (§1, Fabrikations-Schutz): ein Monolith ist der VOLLE Erwägungstext,
+  // echte Erwägungen laufen daher 1,2,3,… lückenlos ab 1. Verlangt:
+  //  · ≥ 3 Köpfe (2 Treffer sind zu schwach — «1. Auflage … 2. Kammer …» wäre Prosa),
+  //  · Start bei genau 1,
+  //  · streng konsekutiv (+1 je Schritt) — sonst KEIN Split (lieber flach, §8).
+  if (koepfe.length < 3) return null;
   const ttops = koepfe.map((k) => k.top);
-  if (ttops[0] > 2) return null;
+  if (ttops[0] !== 1) return null;
   for (let i = 1; i < ttops.length; i++) {
-    if (ttops[i] <= ttops[i - 1]) return null;           // streng aufsteigend
-    if (ttops[i] - ttops[i - 1] >= 3) return null;        // keine grossen Lücken (Zitat-Schutz)
+    if (ttops[i] !== ttops[i - 1] + 1) return null;
   }
   // An den Kopf-Absätzen schneiden. Text VOR dem ersten Kopf bleibt markenlos voran.
   const grenzen = koepfe.map((k) => k.i);
@@ -139,9 +148,10 @@ export function normalisiereErwaegung(
       .map((p): EntscheidBlock => {
         const text = bereinigeFliesstext(String(p.text ?? p.text_excerpt ?? ''));
         if (!plaus || !p.e_number) return { marke: null, text };
-        const tiefe = typeof p.depth === 'number'
-          ? p.depth
-          : String(p.e_number).split('.').length;
+        // Bug-Check #5: tiefe aus der Segmentzahl der ANGEZEIGTEN Nummer ableiten
+        // (nie aus p.depth, das mit der Marke widersprechen und die Einrückung
+        // verfälschen könnte). Segmentzahl ist immer ≥ 1 und deckt sich mit «E. x.y».
+        const tiefe = String(p.e_number).split('.').length;
         return { marke: `E. ${p.e_number}`, tiefe, text };
       })
       .filter((b) => b.text);
