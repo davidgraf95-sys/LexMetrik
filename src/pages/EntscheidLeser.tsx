@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
@@ -74,6 +74,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
+  const [lese, setLese] = useState(false);
   const [fsIdx, setFsIdx] = useState<number>(ladeFsIdx);
   const setFs = (i: number) => {
     const x = Math.max(0, Math.min(FS_STUFEN.length - 1, i));
@@ -222,6 +223,11 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
               title="Zitierung + Link in die Zwischenablage kopieren">
               {kopiert ? '✓ kopiert' : '⧉ Zitat kopieren'}
             </button>
+            <button type="button" onClick={() => setLese(true)}
+              className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
+              title="Ablenkungsfreier Lesemodus">
+              ▭ Lesemodus
+            </button>
           </span>
         </div>
       </header>
@@ -267,6 +273,91 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       <nav className="border-t border-line pt-5 text-body-s" aria-label="Weitere Entscheide">
         <Link to="/rechtsprechung" className="text-ink-500 hover:text-brass-700">‹ Zur Übersicht</Link>
       </nav>
+
+      {lese && (
+        <LesemodusOverlay snap={snap} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={() => setLese(false)} />
+      )}
+    </div>
+  );
+}
+
+// ── Lesemodus: ablenkungsfreies Vollbild-Overlay ────────────────────────────
+// Zeigt NUR den Entscheid in einer ruhigen Lesespalte (grosse Serif, viel
+// Weissraum), blendet die App-Shell aus. Wiederverwendung des EntscheidBody +
+// der Regeste (keine Duplizierung der Rechtsdarstellung, §3/§5). Provenienz/
+// massgebliche Fassung bleibt sichtbar (§8). ESC schliesst, Body-Scroll gesperrt.
+function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
+  snap: EntscheidSnapshot;
+  regesteText: string | null;
+  fsIdx: number;
+  setFs: (i: number) => void;
+  onClose: () => void;
+}) {
+  const schliessRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const vorher = typeof document !== 'undefined' ? document.body.style.overflow : '';
+    if (typeof document !== 'undefined') document.body.style.overflow = 'hidden';
+    schliessRef.current?.focus();
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      if (typeof document !== 'undefined') document.body.style.overflow = vorher;
+    };
+  }, [onClose]);
+
+  return (
+    <div role="dialog" aria-modal="true" aria-label={`Lesemodus — ${snap.zitierung}`}
+      className="fixed inset-0 z-50 overflow-y-auto bg-paper">
+      {/* schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen */}
+      <div className="sticky top-0 z-10 flex items-center gap-3 border-b border-line bg-paper/95 px-5 py-2.5 backdrop-blur-sm">
+        <span className="num text-body-s font-medium text-ink-700">{snap.bgeReferenz ?? snap.zitierung}</span>
+        <span className="ml-auto inline-flex items-center gap-2">
+          <span className="inline-flex items-stretch overflow-hidden rounded border border-line" role="group" aria-label="Schriftgrösse">
+            <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
+              className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
+            <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
+              className="border-l border-line px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift grösser">A+</button>
+          </span>
+          <button ref={schliessRef} type="button" onClick={onClose}
+            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400" title="Lesemodus schliessen (Esc)">
+            ✕ schliessen
+          </button>
+        </span>
+      </div>
+
+      <article className="mx-auto w-full max-w-reading px-5 py-10 sm:py-14"
+        style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
+        <p className="lc-overline">
+          {snap.gerichtName}
+          {snap.abteilung && <span className="text-ink-400"> · {snap.abteilung}</span>}
+          <span className="text-brass-700"> · {GEBIET_LABEL[snap.sachgebiet]}</span>
+        </p>
+        <h1 className="mt-2 text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
+        <p className="mt-1 text-xs text-ink-500">
+          Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span>
+          {snap.bgeReferenz && <> · <span className="num">{snap.bgeReferenz}</span></>}
+        </p>
+
+        {regesteText && snap.regeste && (
+          <section className="lc-highlight mt-7 space-y-2">
+            <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
+            <p className="font-serif text-[1.1rem] leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
+          </section>
+        )}
+
+        <div className="mt-9">
+          <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+        </div>
+
+        <footer className="mt-12 border-t border-line pt-5 text-body-s text-ink-500">
+          <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
+            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">↗ massgebliche Fassung</a>
+          <p className="mt-3 text-micro text-ink-400 leading-relaxed">
+            Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG); massgeblich ist stets die amtliche Quelle. Keine Rechtsberatung.
+          </p>
+        </footer>
+      </article>
     </div>
   );
 }
