@@ -9,6 +9,17 @@ LexMetrik nutzbar gemacht werden kann.
 Grundlagen: E-Mail-Befund (4 sichtbare Rubrum-Formen), Spec
 `bger-darstellung-datenmodell-spezifikation.md`, Daten-CSV (265 BGE).
 
+> **Ergebnis 24.6.2026 (umgesetzt, NICHT deployt).** Teil A geliefert als
+> **Display-Vereinheitlichung + Datenreparatur**: einheitlicher Kopf (`kopf.ts`)
+> + `rubrumFeldPlausibel` (`rubrum.ts`); der Cross-Check zeigte, dass **alle 178
+> gespeicherten Rubrum-Felder Falsch-Positive** waren → genullt (`rubrum-bereinigen.ts`,
+> 140 Snapshots). **Abweichung (§7, offengelegt):** die in §2 gewählte „Extraktion
+> härten/Korpus neu ableiten"-Anreicherung der **Vorinstanz** wurde §1-bedingt
+> VERWORFEN (narrative Extraktion greift oft ein zitiertes Präjudiz statt der
+> Vorinstanz). Details: Session-Karte in `STRUKTUR.md` + `bibliothek/rechtsprechung/
+> rubrum-darstellung-regelwerk.md`. Teil B (entscheidsuche-Nutzbarmachung) bleibt
+> Plan.
+
 ## 1. Befund (verifiziert, §7/§8)
 
 - Der Kopf (`<header>`: Gericht · Abteilung · Sachgebiet · Zitierung · Datum · Badges)
