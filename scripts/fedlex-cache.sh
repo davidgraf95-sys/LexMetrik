@@ -154,36 +154,43 @@ EINTRAEGE=(
   #    Bookmark-Liste, Promotion aus nur-live-link-Stubs. ELI/Konsolidierung via
   #    Resolver, danach gegen check:fedlex-versionen + Filestore-HTML-Sonde
   #    korrigiert (art_1 + Stichproben empirisch verifiziert, §7). ──
-  "bueg|cc/2016/404|20230901|0|art_1"
-  "bgoe|cc/2006/355|20231101|0|art_1"
-  "bpr|cc/1978/688_688_688|20221023|0|art_1"
-  "vg|cc/1958/1413_1483_1489|20250615|0|art_1"
-  "publg|cc/2004/745|20230901|0|art_1"
-  "parlg|cc/2003/510|20260302|0|art_1"
-  "rvog|cc/1997/2022_2022_2022|20250501|0|art_1"
-  "boeb|cc/2020/126|20260101|0|art_1"
-  "bpg|cc/2001/123|20240101|0|art_1"
-  "stbog|cc/2010/444|20240101|0|art_1"
-  "desg|cc/2002/226|20250701|0|art_1"
-  "ohg|cc/2008/232|20250101|0|art_1"
-  "nhg|cc/1966/1637_1694_1679|20250801|0|art_1"
-  "entg|cc/47/689_701_723|20210101|0|art_1"
-  "gschg|cc/1992/1860_1860_1860|20250801|0|art_1"
-  "entsg|cc/2003/231|20240101|0|art_1"
-  "elg|cc/2007/804|20260101|0|art_1"
-  "fzg|cc/1994/2386_2386_2386|20240101|0|art_1"
-  "wag|cc/1992/2521_2521_2521|20250801|0|art_1"
-  "pueg|cc/1986/895_895_895|20260508|0|art_1"
-  "fidleg|cc/2019/758|20240301|0|art_1"
-  "kag|cc/2006/822|20240301|0|art_1"
-  "finig|cc/2018/801|20240301|0|art_1"
-  "finfrag|cc/2015/853|20240201|0|art_1"
-  "vag|cc/2005/734|20240901|0|art_1"
+  "bueg|cc/2016/404|20230901|0|art_1|141.0"
+  "bgoe|cc/2006/355|20231101|0|art_1|152.3"
+  "bpr|cc/1978/688_688_688|20221023|0|art_1|161.1"
+  "vg|cc/1958/1413_1483_1489|20250615|0|art_1|170.32"
+  "publg|cc/2004/745|20230901|0|art_1|170.512"
+  "parlg|cc/2003/510|20260302|0|art_1|171.10"
+  "rvog|cc/1997/2022_2022_2022|20250501|0|art_1|172.010"
+  "boeb|cc/2020/126|20260101|0|art_1|172.056.1"
+  "bpg|cc/2001/123|20240101|0|art_1|172.220.1"
+  "stbog|cc/2010/444|20240101|0|art_1|173.71"
+  "desg|cc/2002/226|20250701|0|art_1|232.12"
+  "ohg|cc/2008/232|20250101|0|art_1|312.5"
+  "nhg|cc/1966/1637_1694_1679|20250801|0|art_1|451"
+  "entg|cc/47/689_701_723|20210101|0|art_1|711"
+  "gschg|cc/1992/1860_1860_1860|20250801|0|art_1|814.20"
+  "entsg|cc/2003/231|20240101|0|art_1|823.20"
+  "elg|cc/2007/804|20260101|0|art_1|831.30"
+  "fzg|cc/1994/2386_2386_2386|20240101|0|art_1|831.42"
+  "wag|cc/1992/2521_2521_2521|20250801|0|art_1|921.0"
+  "pueg|cc/1986/895_895_895|20260508|0|art_1|942.20"
+  "fidleg|cc/2019/758|20240301|0|art_1|950.1"
+  "kag|cc/2006/822|20240301|0|art_1|951.31"
+  "finig|cc/2018/801|20240301|0|art_1|954.1"
+  "finfrag|cc/2015/853|20240201|0|art_1|958.1"
+  "vag|cc/2005/734|20240901|1|art_1|961.01"
 )
 
 fehler=0
 for e in "${EINTRAEGE[@]}"; do
-  IFS='|' read -r name eli kons n anker <<<"$e"
+  # 6. Feld (sr) ist OPTIONAL: trägt es eine SR-Nummer, prüft das Tor die im
+  # HTML eingebettete <p class="srnummer">NNN</p> gegen die erwartete SR. Das
+  # fängt die Erlass-KOLLISIONS-Klasse (richtige ELI/Konsolidierung + richtiger
+  # art_-Anker, aber FALSCHER Erlass unter dieser html-Variante) — entdeckt
+  # 25.6.2026 an VAG: cc/2005/734/20240901 html-0 = Agrar-Einfuhr-VO (SR 916.01),
+  # html-1 = VAG (SR 961.01); das art_1-Tor allein war blind dafür. Fehlt das
+  # Feld (Altbestand), läuft die Prüfung wie bisher (rückwärtskompatibel, §6).
+  IFS='|' read -r name eli kons n anker sr <<<"$e"
   datei="/tmp/${name}.html"
   pfad="${eli//\//-}"
   # n=0: Datei OHNE «-N»-Suffix (Spezialfall GebV SchKG, festgestellt 7.6.2026)
@@ -216,11 +223,20 @@ for e in "${EINTRAEGE[@]}"; do
   for a in "${LISTE[@]}"; do
     if ! grep -q "id=\"${a}\"" "$datei"; then fehlend="${fehlend} ${a}"; fi
   done
-  if [ -n "$fehlend" ]; then
-    echo "FEHLER  ${name} (${kons}, ${groesse} B): fehlende Anker:${fehlend}"
+  # SR-Identitäts-Sonde (Erlass-Kollisions-Tor): nur wenn eine erwartete SR
+  # angegeben ist. Fedlex bettet die SR als <p class="srnummer">NNN</p> ein.
+  sr_problem=""
+  if [ -n "${sr:-}" ]; then
+    if ! grep -qE "class=\"srnummer[^\"]*\"[^>]*>[[:space:]]*${sr//./\\.}[[:space:]]*<" "$datei"; then
+      gefunden=$(grep -oE 'class="srnummer[^"]*"[^>]*>[[:space:]]*[0-9.]+' "$datei" | grep -oE '[0-9.]+$' | head -1)
+      sr_problem=" FALSCHER ERLASS: erwartet SR ${sr}, HTML trägt SR ${gefunden:-?}"
+    fi
+  fi
+  if [ -n "$fehlend" ] || [ -n "$sr_problem" ]; then
+    echo "FEHLER  ${name} (${kons}, ${groesse} B):${fehlend:+ fehlende Anker:${fehlend}}${sr_problem}"
     fehler=$((fehler+1))
   else
-    echo "OK      ${name} (${kons}) → ${datei} (${groesse} B), ${#LISTE[@]} Anker geprüft"
+    echo "OK      ${name} (${kons}) → ${datei} (${groesse} B), ${#LISTE[@]} Anker${sr:+ + SR ${sr}} geprüft"
   fi
 done
 

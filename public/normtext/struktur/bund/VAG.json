@@ -5,54 +5,262 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "1. Kapitel: Allgemeine Bestimmungen"
+     "label": "1. Kapitel: Gegenstand, Zweck und Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ],
    "marginalie": [
-    "Generaleinfuhrbewilligung"
+    "Gegenstand und Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "3",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "2": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "1. Kapitel: Allgemeine Bestimmungen"
-    }
-   ],
-   "marginalie": [
-    "Angabe der GEB in der Zollanmeldung"
-   ]
-  },
-  "3": {
-   "gliederung": [
+     "label": "1. Kapitel: Gegenstand, Zweck und Geltungsbereich"
+    },
     {
-     "ebene": 1,
-     "label": "1. Kapitel: Allgemeine Bestimmungen"
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ],
    "marginalie": [
-    "Eingaben von Gesuchen, Meldungen und Steigerungsgeboten"
+    "Geltungsbereich"
    ],
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "6",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "7",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "nr": "9",
+     "text": "Eingefügt durch Ziff. I des BG vom 12. Dez. 2014, in Kraft seit 1. Juli 2015 (AS 2015 1539; BBl 2014 6271 6315).",
+     "links": [
+      {
+       "label": "AS 2015 1539",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/305"
+      },
+      {
+       "label": "BBl 2014 6271",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1364"
+      },
+      {
+       "label": "6315",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1413"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "nr": "10",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5521).",
+     "nr": "11",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "13",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "4",
+     "item": "c"
+    },
+    {
+     "nr": "14",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "5",
+     "item": "4"
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bewilligung"
+    }
+   ],
+   "marginalie": [
+    "Bewilligungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "18",
+     "text": "Ausdruck gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829). Diese Änderung wurde im ganzen Erlass berücksichtigt.",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": "1",
@@ -64,24 +272,48 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bewilligung"
     }
    ],
    "marginalie": [
-    "Zollansätze"
+    "Bewilligungsgesuch und Geschäftsplan"
    ],
    "fussnoten": [
     {
-     "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
+     "nr": "19",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
      "links": [
       {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "2",
+     "item": "i"
+    },
+    {
+     "nr": "20",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": "k"
     }
    ]
   },
@@ -89,56 +321,32 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bewilligung"
     }
    ],
    "marginalie": [
-    "Zollansätze für Zucker"
+    "Änderung des Geschäftsplans"
    ],
    "fussnoten": [
     {
-     "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
+     "nr": "21",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
      "links": [
       {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
      "absatz": "1",
      "item": null
-    },
-    {
-     "nr": "9",
-     "text": "SR 531",
-     "links": [
-      {
-       "label": "SR 531",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2017/308"
-      }
-     ],
-     "absatz": "2",
-     "item": "a"
-    },
-    {
-     "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Aug. 2021, in Kraft vom 1. Okt. 2021 bis zum 31. Dez. 2026 (AS 2021 513, 679; 2022 87).",
-     "links": [
-      {
-       "label": "AS 2021 513",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2021/513"
-      },
-      {
-       "label": "679",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2021/679"
-      },
-      {
-       "label": "2022 87",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2022/87"
-      }
-     ],
-     "absatz": "2",
-     "item": "b"
     }
    ]
   },
@@ -146,83 +354,35 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bewilligung"
     }
    ],
    "marginalie": [
-    "Zollansätze für Getreide zur menschlichen Ernährung"
+    "Erteilung der Bewilligung"
    ],
    "fussnoten": [
     {
-     "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
+     "nr": "22",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
-      }
-     ],
-     "absatz": "1",
-     "item": null
-    },
-    {
-     "nr": "12",
-     "text": "Die Bezeichnung wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Juni 2017 angepasst.",
-     "links": [
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
       {
-       "label": "SR 170.512",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "13",
-     "text": "SR 531",
-     "links": [
-      {
-       "label": "SR 531",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2017/308"
-      }
-     ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Juli 2014 (AS 2013 3931).",
-     "links": [
-      {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
-      }
-     ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
-     "links": [
-      {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
-      }
-     ],
-     "absatz": "5",
-     "item": null
-    },
-    {
-     "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
-     "links": [
-      {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
-      }
-     ],
-     "absatz": "6",
      "item": null
     }
    ]
@@ -231,20 +391,28 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Schwellenpreissystem"
+    "Rechtsform"
    ],
    "fussnoten": [
     {
-     "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
+     "nr": "23",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -256,31 +424,43 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Preis franko Zollgrenze, nicht veranlagt"
+    "Mindestkapital"
    ]
   },
   "9": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "2. Kapitel: Zollansätze, die vom Generaltarif abweichen, und Schwellenpreise"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Anpassung der Zollansätze"
+    "Solvabilität"
    ],
    "fussnoten": [
     {
-     "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3931).",
+     "nr": "24",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2013 3931",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/719"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -292,42 +472,46 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Zollkontingente, Teilzollkontingente und Richtmengen"
+    "Organisationsfonds"
    ]
   },
   "11": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Kontingentsperiode und Ausnützung von Kontingentsanteilen"
+    "Geschäfte neben dem Versicherungsgeschäft"
    ],
    "fussnoten": [
     {
-     "nr": "19",
-     "text": "SR 916.341",
+     "nr": "28",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "SR 916.341",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2003/791"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "3",
+     "absatz": null,
      "item": null
     }
    ]
@@ -336,70 +520,76 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Begriffe"
+    "Gleichzeitiges Betreiben von Lebensversicherung und anderen Versicherungszweigen"
    ]
   },
   "13": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Allgemeine Voraussetzung für die Zuteilung von Kontingentsanteilen"
+    "Beitritt zum Nationalen Versicherungsbüro und zum Nationalen Garantiefonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "SR 741.01",
+     "links": [
+      {
+       "label": "SR 741.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "14": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "2. Abschnitt: Voraussetzungen"
     }
    ],
    "marginalie": [
-    "Vereinbarung über die Ausnützung von Kontingentsanteilen"
+    "Gewähr für eine einwandfreie Geschäftstätigkeit"
    ],
    "fussnoten": [
     {
-     "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
+     "nr": "30",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "2",
+     "absatz": null,
      "item": null
-    },
-    {
-     "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
-     "links": [
-      {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
-      }
-     ],
-     "absatz": "3",
-     "item": "b"
     }
    ]
   },
@@ -407,112 +597,172 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+     "label": "3. Abschnitt: Ergänzende Voraussetzungen für ausländische Versicherungsunternehmen"
     }
    ],
    "marginalie": [
-    "Veröffentlichung"
+    "Allgemein"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "16": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Versteigerung"
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
     }
    ],
    "marginalie": [
-    "Ausschreibung"
-   ],
-   "fussnoten": [
-    {
-     "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
-     "links": [
-      {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
+    "Versicherungstechnische Rückstellungen"
    ]
   },
   "17": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Versteigerung"
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
     }
    ],
    "marginalie": [
-    "Steigerungsgebote"
+    "Gebundenes Vermögen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "18": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Versteigerung"
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
     }
    ],
    "marginalie": [
-    "Zuteilung"
-   ],
-   "fussnoten": [
-    {
-     "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
-     "links": [
-      {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
-      }
-     ],
-     "absatz": "3",
-     "item": "b"
-    }
+    "Sollbetrag des gebundenen Vermögens"
    ]
   },
   "19": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Versteigerung"
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
     }
    ],
    "marginalie": [
-    "Zuschlagspreis und Zahlungsfrist"
+    "Haftung des gebundenen Vermögens"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
+    }
+   ],
+   "marginalie": [
+    "Vorschriften zum gebundenen Vermögen"
    ],
    "fussnoten": [
     {
-     "nr": "24",
-     "text": "Aufgehoben durch Ziff. I der V vom 28. Okt. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 4545).",
+     "nr": "35",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Finanzielle Ausstattung"
+    }
+   ],
+   "marginalie": [
+    "Beteiligungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": "3",
@@ -520,59 +770,57 @@
     }
    ]
   },
-  "20": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
-    },
-    {
-     "ebene": 2,
-     "label": "2. Abschnitt: Versteigerung"
-    }
-   ],
-   "marginalie": [
-    "Veröffentlichung der Zuteilung"
-   ]
-  },
-  "21": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
-    },
-    {
-     "ebene": 2,
-     "label": "3. Abschnitt: Inlandleistung"
-    }
-   ],
-   "marginalie": []
-  },
   "22": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Zuteilung nach der Reihenfolge des Eingangs der Bewilligungsgesuche"
+     "label": "2. Abschnitt: Risikomanagement"
     }
    ],
-   "marginalie": [
-    "Einreichung der Gesuche"
-   ],
+   "marginalie": [],
    "fussnoten": [
     {
-     "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6107).",
+     "nr": "37",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "Eingefügt durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
+      }
+     ],
+     "absatz": "3",
      "item": null
     }
    ]
@@ -581,40 +829,78 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Zuteilung nach der Reihenfolge des Eingangs der Bewilligungsgesuche"
+     "label": "3. Abschnitt: Verantwortlicher Aktuar oder verantwortliche Aktuarin"
     }
    ],
    "marginalie": [
-    "Zuteilung am Tag der Ausschöpfung"
+    "Bestellung und Funktion"
    ]
   },
   "24": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Zuteilung nach der Reihenfolge des Eingangs der Bewilligungsgesuche"
+     "label": "3. Abschnitt: Verantwortlicher Aktuar oder verantwortliche Aktuarin"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Aufgaben"
+   ],
    "fussnoten": [
     {
-     "nr": "27",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6107).",
+     "nr": "40",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "4",
      "item": null
     }
    ]
@@ -623,38 +909,140 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "5. Abschnitt: Zuteilung nach der Reihenfolge der Annahme der Zollanmeldungen"
+     "label": "4. Abschnitt: Berichterstattung"
     }
    ],
-   "marginalie": []
+   "marginalie": [
+    "Geschäftsbericht und Aufsichtsbericht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS 2012 6679; BBl 2008 1589).",
+     "links": [
+      {
+       "label": "AS 2012 6679",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/810"
+      },
+      {
+       "label": "BBl 2008 1589",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/416"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "45",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "5",
+     "item": "c"
+    },
+    {
+     "nr": "46",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
   },
   "26": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "6. Abschnitt: Verzicht auf die Verteilung von Zollkontingenten und Teilzollkontingenten"
+     "label": "4. Abschnitt: Berichterstattung"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Besondere Bestimmungen betreffend die Rechnungslegung"
+   ],
    "fussnoten": [
     {
-     "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4083).",
+     "nr": "47",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS 2012 6679; BBl 2008 1589).",
      "links": [
       {
-       "label": "AS 2016 4083",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2016/677"
+       "label": "AS 2012 6679",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/810"
+      },
+      {
+       "label": "BBl 2008 1589",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/416"
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "3",
      "item": null
     }
    ]
@@ -663,50 +1051,52 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Einfuhr von Tieren der Pferdegattung"
+     "label": "5. Abschnitt: Prüfung"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Interne Überwachung der Geschäftstätigkeit"
+   ],
    "fussnoten": [
     {
-     "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4191).",
+     "nr": "51",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2018 4191",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/678"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": "a"
+     "item": null
     },
     {
-     "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Okt. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4545).",
+     "nr": "50",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": "b"
-    },
-    {
-     "nr": "31",
-     "text": "SR 916.401",
-     "links": [
-      {
-       "label": "SR 916.401",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1995/3716_3716_3716"
-      }
-     ],
-     "absatz": "3",
-     "item": "b"
+     "item": null
     }
    ]
   },
@@ -714,63 +1104,83 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "5. Abschnitt: Prüfung"
     }
    ],
    "marginalie": [
-    "Festlegung der Zollansätze"
+    "Prüfgesellschaft"
    ],
    "fussnoten": [
     {
-     "nr": "32",
-     "text": "Die Bezeichnung wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Juni 2017 angepasst.",
+     "nr": "52",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
      "links": [
       {
-       "label": "SR 170.512",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "SR 221.302",
+     "links": [
+      {
+       "label": "SR 221.302",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
      "absatz": "1",
-     "item": "a"
+     "item": null
     },
     {
-     "nr": "33",
-     "text": "SR 531",
+     "nr": "54",
+     "text": "SR 956.1",
      "links": [
       {
-       "label": "SR 531",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2017/308"
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
      "absatz": "1",
-     "item": "a"
+     "item": null
     },
     {
-     "nr": "34",
-     "text": "SR 631.0",
+     "nr": "55",
+     "text": "SR 220",
      "links": [
       {
-       "label": "SR 631.0",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/249"
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "35",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "nr": "56",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2004 4937",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "3",
+     "absatz": "2",
      "item": null
     }
    ]
@@ -779,51 +1189,29 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "5. Abschnitt: Prüfung"
     }
    ],
-   "marginalie": [
-    "Einfuhr von Grobgetreide zur menschlichen Ernährung"
-   ],
+   "marginalie": [],
    "fussnoten": [
     {
-     "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Okt. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4545).",
+     "nr": "57",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
      "links": [
       {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
-      }
-     ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "37",
-     "text": "SR 631.01",
-     "links": [
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
       {
-       "label": "SR 631.01",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/250"
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
-     "absatz": "3",
-     "item": null
-    },
-    {
-     "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Okt. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4545).",
-     "links": [
-      {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
-      }
-     ],
-     "absatz": "3",
+     "absatz": null,
      "item": null
     }
    ]
@@ -832,182 +1220,138 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "5. Abschnitt: Prüfung"
     }
    ],
    "marginalie": [
-    "Zollkontingent Hartweizen"
-   ],
-   "fussnoten": [
-    {
-     "nr": "39",
-     "text": "SR 631.01",
-     "links": [
-      {
-       "label": "SR 631.01",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/250"
-      }
-     ],
-     "absatz": "3",
-     "item": null
-    },
-    {
-     "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Okt. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4545).",
-     "links": [
-      {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
-      }
-     ],
-     "absatz": "3",
-     "item": null
-    }
+    "Meldepflicht der Prüfgesellschaft"
    ]
   },
   "31": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Zollkontingent Brotgetreide"
+    "Einschränkende Vorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 5137; BBl 2012 1941).",
+     "links": [
+      {
+       "label": "AS 2015 5137",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/839"
+      },
+      {
+       "label": "BBl 2012 1941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2012/352"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "32": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Zollnachzahlung"
-   ],
-   "fussnoten": [
-    {
-     "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Okt. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4545).",
-     "links": [
-      {
-       "label": "AS 2015 4545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/761"
-      }
-     ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "42",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
-     "links": [
-      {
-       "label": "SR 170.512.1",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
-      },
-      {
-       "label": "AS 2021 589",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
-      }
-     ],
-     "absatz": "4",
-     "item": null
-    }
+    "Rechtsschutzversicherung"
    ]
   },
   "33": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Einfuhr von Getreide, Futtermitteln, Stroh sowie von Waren,bei deren Verarbeitung Futtermittel anfallen"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Reduktion der Zollnachzahlung"
+    "Elementarschadenversicherung"
    ]
   },
   "34": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "3. Abschnitt: Einfuhr von Milch und Milchprodukten sowie von Kaseinen und Kaseinaten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Geltungsbereich"
+    "Motorfahrzeug-Haftpflichtversicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "SR 741.01",
+     "links": [
+      {
+       "label": "SR 741.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "35": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "3. Abschnitt: Einfuhr von Milch und Milchprodukten sowie von Kaseinen und Kaseinaten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Zuteilung der Anteile an den Teilzollkontingenten"
+    "Rückversicherung"
    ],
    "fussnoten": [
     {
-     "nr": "43",
-     "text": "SR 0.631.256.934.953",
+     "nr": "65",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "SR 0.631.256.934.953",
-       "url": "https://fedlex.data.admin.ch/eli/cc/49/1002_1027_"
-      }
-     ],
-     "absatz": "1",
-     "item": null
-    },
-    {
-     "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5521).",
-     "links": [
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6107).",
-     "links": [
-      {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
-      }
-     ],
-     "absatz": "3",
+     "absatz": null,
      "item": null
     }
    ]
@@ -1016,27 +1360,31 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "3. Abschnitt: Einfuhr von Milch und Milchprodukten sowie von Kaseinen und Kaseinaten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Erhöhung des Teilzollkontingents Nr. 07.4"
+    "Lebensversicherung"
    ],
    "fussnoten": [
     {
-     "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5521).",
+     "nr": "66",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1045,24 +1393,28 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Warenkategorien des Teilzollkontingents Nr. 14.4 (Kartoffelprodukte)"
+    "Besondere Regelung für das Geschäft der beruflichen Vorsorge"
    ],
    "fussnoten": [
     {
-     "nr": "50",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5521).",
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": "2",
@@ -1074,70 +1426,76 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Freigabe der Teilzollkontingente"
+    "Prüfung der genehmigungspflichtigen Tarife"
+   ],
+   "fussnoten": [
+    {
+     "nr": "68",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "links": [
+      {
+       "label": "AS 2024 424",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
+      },
+      {
+       "label": "BBl 2021 1478",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "39": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
     }
    ],
    "marginalie": [
-    "Erhöhung von Teilzollkontingenten"
+    "Mindestleistungen"
    ]
   },
   "40": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
-    },
-    {
-     "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
    "marginalie": [
-    "Anteile an den Teilzollkontingenten"
+    "Definition"
    ],
    "fussnoten": [
     {
-     "nr": "51",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5521).",
+     "nr": "71",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "5",
+     "absatz": null,
      "item": null
-    },
-    {
-     "nr": "52",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5521).",
-     "links": [
-      {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
-      }
-     ],
-     "absatz": "6",
-     "item": "b"
     }
    ]
   },
@@ -1145,181 +1503,205 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
-    },
-    {
-     "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
    "marginalie": [
-    "Inlandleistung"
+    "Registrierungspflicht und Registrierungsvoraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "72",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+      }
+     ],
+     "absatz": "3",
+     "item": "a"
+    },
+    {
+     "nr": "73",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
    ]
   },
   "42": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
-    },
-    {
-     "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
    "marginalie": [
-    "Gesuche"
-   ],
-   "fussnoten": [
-    {
-     "nr": "53",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3617).",
-     "links": [
-      {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
+    "Register"
    ]
   },
   "43": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
-    },
-    {
-     "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
-   "marginalie": []
+   "marginalie": [
+    "Aus- und Weiterbildung"
+   ]
   },
   "44": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "5. Kapitel: Ausnahmen von der Einfuhrbewilligungspflicht, Einfuhrtoleranzen"
-    },
-    {
-     "ebene": 2,
-     "label": "1. Abschnitt: Landwirtschaftliche Erzeugnisse ohne Zollkontingent"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
    "marginalie": [
-    "Ausnahmen im Handelsverkehr"
-   ],
-   "fussnoten": [
-    {
-     "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6107).",
-     "links": [
-      {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
+    "Unzulässige Tätigkeiten"
    ]
   },
   "45": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "5. Kapitel: Ausnahmen von der Einfuhrbewilligungspflicht, Einfuhrtoleranzen"
-    },
-    {
-     "ebene": 2,
-     "label": "1. Abschnitt: Landwirtschaftliche Erzeugnisse ohne Zollkontingent"
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ],
    "marginalie": [
-    "Ausnahmen im Reiseverkehr"
-   ],
-   "fussnoten": [
-    {
-     "nr": "55",
-     "text": "Fassung gemäss Anhang der V vom 2. April 2014, in Kraft seit 1. Juli 2014 (AS 2014 979).",
-     "links": [
-      {
-       "label": "AS 2014 979",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2014/218"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "56",
-     "text": "SR 631.0",
-     "links": [
-      {
-       "label": "SR 631.0",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/249"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
+    "Informationspflicht"
    ]
   },
   "46": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "5. Kapitel: Ausnahmen von der Einfuhrbewilligungspflicht, Einfuhrtoleranzen"
+     "label": "5. Kapitel: Aufsicht"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Landwirtschaftliche Erzeugnisse mit Zollkontingent"
+     "label": "1. Abschnitt: Allgemeines"
     }
    ],
    "marginalie": [
-    "Ausnahmen im Handelsverkehr"
+    "Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "74",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "75",
+     "text": "SR 741.01",
+     "links": [
+      {
+       "label": "SR 741.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "76",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "77",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "links": [
+      {
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "47": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "5. Kapitel: Ausnahmen von der Einfuhrbewilligungspflicht, Einfuhrtoleranzen"
+     "label": "5. Kapitel: Aufsicht"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Landwirtschaftliche Erzeugnisse mit Zollkontingent"
+     "label": "1. Abschnitt: Allgemeines"
     }
    ],
    "marginalie": [
-    "Ausnahmen im Reiseverkehr"
+    "Prüfungsbefugnisse und Auskunftspflicht bei Ausgliederung von Funktionen"
    ],
    "fussnoten": [
     {
-     "nr": "57",
-     "text": "Fassung gemäss Anhang der V vom 2. April 2014, in Kraft seit 1. Juli 2014 (AS 2014 979).",
+     "nr": "78",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2014 979",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2014/218"
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "58",
-     "text": "SR 631.0",
+     "nr": "79",
+     "text": "SR 956.1",
      "links": [
       {
-       "label": "SR 631.0",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/249"
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
-     "absatz": "1",
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1328,22 +1710,30 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "5. Kapitel: Ausnahmen von der Einfuhrbewilligungspflicht, Einfuhrtoleranzen"
+     "label": "5. Kapitel: Aufsicht"
     },
     {
      "ebene": 2,
-     "label": "2. Abschnitt: Landwirtschaftliche Erzeugnisse mit Zollkontingent"
+     "label": "1. Abschnitt: Allgemeines"
     }
    ],
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "59",
-     "text": "Aufgehoben durch Anhang der V vom 2. April 2014, mit Wirkung seit 1. Juli 2014 (AS 2014 979).",
+     "nr": "80",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2014 979",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2014/218"
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
@@ -1355,29 +1745,45 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "6. Kapitel: Datenerhebung, Gebühren und Schutzmassnahmen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeines"
     }
    ],
    "marginalie": [
-    "Erhebung notwendiger Daten"
+    "Veröffentlichung von Entscheiden"
    ]
   },
   "50": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "6. Kapitel: Datenerhebung, Gebühren und Schutzmassnahmen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Allgemeines"
     }
    ],
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "60",
-     "text": "Aufgehoben durch Ziff. I der V vom 3. Nov. 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 696).",
+     "nr": "81",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
      "links": [
       {
-       "label": "AS 2021 696",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2021/696"
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
@@ -1389,209 +1795,237 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "6. Kapitel: Datenerhebung, Gebühren und Schutzmassnahmen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen, Massnahmen bei Insolvenzgefahr und Liquidation"
     }
    ],
    "marginalie": [
     "Schutzmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "83",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "85",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      }
+     ],
+     "absatz": "2",
+     "item": "h"
+    },
+    {
+     "nr": "86",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": "i"
+    },
+    {
+     "nr": "87",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "88",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "89",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "82",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "52": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen, Massnahmen bei Insolvenzgefahr und Liquidation"
     }
    ],
    "marginalie": [
-    "Vollzug"
+    "Liquidation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "94",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "53": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
     }
    ],
    "marginalie": [
-    "Aufhebung und Änderung bisherigen Rechts"
+    "Konkurseröffnung"
    ],
    "fussnoten": [
     {
-     "nr": "61",
-     "text": "[AS 1998 3125; 1999 3628; 2000 384, 2838; 2001 299, 2091 Anhang Ziff. 14, 2583; 2002 1482, 1789, 2506, 3486; 2003 529 Anhang Ziff. 6, 5397; 2004 3055; 2005 503 Anhang Ziff. 5; 2006 867 Anhang Ziff. 5, 889, 2507, 2995 Anhang 4 Ziff. II 11, 4845; 2007 1469 Anhang 4 Ziff. 49, 2327, 3417 Ziff. III 2, 4477 Ziff. IV 62, 4631, 4971, 6225; 2008 3559, 3817; 2009 1265, 2585, 5871; 2010 727, 2323, 3565, 5539; 2011 2395, 4389, 4463, 4773, 5313, 5317]",
+     "nr": "101",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 1998 3125",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1998/3125_3125_3125"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "1999 3628",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1999/529"
-      },
-      {
-       "label": "2000 384",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2000/77"
-      },
-      {
-       "label": "2838",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2000/483"
-      },
-      {
-       "label": "2001 299",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2001/62"
-      },
-      {
-       "label": "2091",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2001/305"
-      },
-      {
-       "label": "2583",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2001/388"
-      },
-      {
-       "label": "2002 1482",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2002/233"
-      },
-      {
-       "label": "1789",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2002/272"
-      },
-      {
-       "label": "2506",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2002/334"
-      },
-      {
-       "label": "3486",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2002/519"
-      },
-      {
-       "label": "2003 529",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2003/113"
-      },
-      {
-       "label": "5397",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2003/783"
-      },
-      {
-       "label": "2004 3055",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/395"
-      },
-      {
-       "label": "2005 503",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2005/62"
-      },
-      {
-       "label": "2006 867",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/151"
-      },
-      {
-       "label": "889",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/156"
-      },
-      {
-       "label": "2507",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/387"
-      },
-      {
-       "label": "2995",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/464"
-      },
-      {
-       "label": "4845",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/749"
-      },
-      {
-       "label": "2007 1469",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/250"
-      },
-      {
-       "label": "2327",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/324"
-      },
-      {
-       "label": "3417",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/417"
-      },
-      {
-       "label": "4477",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
-      },
-      {
-       "label": "4631",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/647"
-      },
-      {
-       "label": "4971",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/694"
-      },
-      {
-       "label": "6225",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/829"
-      },
-      {
-       "label": "2008 3559",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2008/459"
-      },
-      {
-       "label": "3817",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2008/515"
-      },
-      {
-       "label": "2009 1265",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2009/198"
-      },
-      {
-       "label": "2585",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2009/341"
-      },
-      {
-       "label": "5871",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2009/716"
-      },
-      {
-       "label": "2010 727",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/114"
-      },
-      {
-       "label": "2323",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/337"
-      },
-      {
-       "label": "3565",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/515"
-      },
-      {
-       "label": "5539",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/795"
-      },
-      {
-       "label": "2011 2395",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/344"
-      },
-      {
-       "label": "4389",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/603"
-      },
-      {
-       "label": "4463",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/614"
-      },
-      {
-       "label": "4773",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/678"
-      },
-      {
-       "label": "5313",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/768"
-      },
-      {
-       "label": "5317",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/769"
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
-     "absatz": "1",
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "100",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
      "item": null
     }
    ]
@@ -1600,18 +2034,105 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Durchführung des Konkurses"
+   ],
    "fussnoten": [
     {
-     "nr": "62",
-     "text": "Aufgehoben durch Ziff. I der V vom 23. Okt. 2019, mit Wirkung seit 1. Jan. 2020 (AS 2019 3617).",
+     "nr": "102",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
      "links": [
       {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "103",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "104",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "105",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Abschnitt: Zusätzliche Schutzmassnahmen für ausländische Versicherungsunternehmen"
+    }
+   ],
+   "marginalie": [
+    "Ausschluss der Forderungen Dritter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "131",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -1619,39 +2140,1001 @@
     }
    ]
   },
-  "55": {
+  "58": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Abschnitt: Zusätzliche Schutzmassnahmen für ausländische Versicherungsunternehmen"
     }
    ],
    "marginalie": [
-    "Inkrafttreten und Befristung"
+    "Betreibungsort und Zwangsverwertung"
    ],
    "fussnoten": [
     {
-     "nr": "66",
-     "text": "Dieser Art. hat eine neue Fassung (AS 2020 5521).",
+     "nr": "132",
+     "text": "SR 281.1",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Abschnitt: Zusätzliche Schutzmassnahmen für ausländische Versicherungsunternehmen"
+    }
+   ],
+   "marginalie": [
+    "Verfügungsbeschränkungen"
+   ]
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Abschnitt: Beendigung der Versicherungstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Verzicht"
+   ]
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Abschnitt: Beendigung der Versicherungstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Entzug der Bewilligung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "133",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "134",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
      "absatz": "2",
      "item": null
+    }
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
     },
     {
-     "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4083).",
+     "ebene": 2,
+     "label": "5. Abschnitt: Beendigung der Versicherungstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Übertragung des Versicherungsbestandes"
+   ]
+  },
+  "63": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Abschnitt: Beendigung der Versicherungstätigkeit"
+    }
+   ],
+   "marginalie": [
+    "Veröffentlichung"
+   ]
+  },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Versicherungsgruppe"
+   ]
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Unterstellung unter die Gruppenaufsicht"
+   ]
+  },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zur Einzelaufsicht"
+   ]
+  },
+  "67": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Instrumente der Gruppenaufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "135",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2016 4083",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2016/677"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Überwachung der Risiken"
+   ]
+  },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Solvabilität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "136",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Prüfgesellschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "137",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "links": [
+      {
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "138",
+     "text": "SR 221.302",
+     "links": [
+      {
+       "label": "SR 221.302",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "139",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "71": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Auskunfts- und Meldepflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "140",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "141",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Versicherungskonglomerat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "143",
+     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "links": [
+      {
+       "label": "AS 2018 5247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
+      },
+      {
+       "label": "2019 4631",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
+      },
+      {
+       "label": "BBl 2015 8901",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Unterstellung unter die Konglomeratsaufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "144",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "74": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zur Einzel- und Gruppenaufsicht"
+   ]
+  },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Instrumente der Konglomeratsaufsicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "145",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Überwachung der Risiken"
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Solvabilität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "146",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Prüfgesellschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "147",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "links": [
+      {
+       "label": "AS 2014 4073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
+      },
+      {
+       "label": "BBl 2013 6857",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "148",
+     "text": "SR 221.302",
+     "links": [
+      {
+       "label": "SR 221.302",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "149",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "79": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Auskunftspflicht"
+   ]
+  },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Herausgabe von Dokumenten an die Versicherungsnehmerinnen und -nehmer und an die versicherten Personen"
+    }
+   ],
+   "marginalie": [
+    "Anspruch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "152",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "151",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Herausgabe von Dokumenten an die Versicherungsnehmerinnen und -nehmer und an die versicherten Personen"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "153",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "84": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7a. Kapitel: Tarifverfügungen und Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Tarifverfügungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "156",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "157",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "155",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "85": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7a. Kapitel: Tarifverfügungen und Gerichte"
+    }
+   ],
+   "marginalie": [
+    "Gerichte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "158",
+     "text": "Aufgehoben gemäss Anhang 1 Ziff. II 31 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS 2010 1739; BBl 2006 7221).",
+     "links": [
+      {
+       "label": "AS 2010 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl 2006 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "86": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übertretungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "159",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "160",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "links": [
+      {
+       "label": "AS 2024 424",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
+      },
+      {
+       "label": "BBl 2021 1478",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "161",
+     "text": "Fassung gemäss Ziff. II des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "links": [
+      {
+       "label": "AS 2024 424",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
+      },
+      {
+       "label": "BBl 2021 1478",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "87": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Kapitel: Strafbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vergehen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "162",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "88": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vollzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "163",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "89": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufhebung und Änderung bisherigen Rechts"
+   ]
+  },
+  "90": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen"
+   ]
+  },
+  "91": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Referendum und Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "165",
+     "text": "BRB vom 9. Nov. 2005",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "14_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
+    }
+   ],
+   "marginalie": [
+    "Vermeidung von Interessenkonflikten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Ergänzende Voraussetzungen für ausländische Versicherungsunternehmen"
+    }
+   ],
+   "marginalie": [
+    "Als Lloyd’s bezeichnete Vereinigung von Versicherern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
      "item": null
     }
    ]
@@ -1660,24 +3143,28 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "3. Kapitel: Zollkontingente"
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Zuteilung nach der Reihenfolge des Eingangs der Bewilligungsgesuche"
+     "label": "2. Abschnitt: Risikomanagement"
     }
    ],
    "marginalie": [
-    "Anforderungen an die Gesuchstellenden und an die Gesuche"
+    "Stabilisierungspläne"
    ],
    "fussnoten": [
     {
-     "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6107).",
+     "nr": "39",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -1685,28 +3172,32 @@
     }
    ]
   },
-  "35_a": {
+  "2_a": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "1. Kapitel: Gegenstand, Zweck und Geltungsbereich"
     },
     {
      "ebene": 2,
-     "label": "3. Abschnitt: Einfuhr von Milch und Milchprodukten sowie von Kaseinen und Kaseinaten"
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ],
    "marginalie": [
-    "Einfuhr von Waren des Teilzollkontingents Nr. 07.3"
+    "Konzernobergesellschaften und wesentliche Gruppen- und Konglomeratsgesellschaften"
    ],
    "fussnoten": [
     {
-     "nr": "46",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6107).",
+     "nr": "15",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -1714,43 +3205,835 @@
     }
    ]
   },
-  "36_a": {
+  "2_b": {
    "gliederung": [
     {
      "ebene": 1,
-     "label": "4. Kapitel: Marktordnungsspezifische Vorschriften"
+     "label": "1. Kapitel: Gegenstand, Zweck und Geltungsbereich"
     },
     {
      "ebene": 2,
-     "label": "4. Abschnitt: Einfuhr von Kartoffeln und Kartoffelprodukten"
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ],
    "marginalie": [
-    "Teilzollkontingente des Zollkontingents Nr. 14"
+    "Sektorübergreifende Risiken"
    ],
    "fussnoten": [
     {
-     "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5521).",
+     "nr": "16",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 5521",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/959"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gegenstand, Zweck und Geltungsbereich"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Pflichten für von der Aufsicht ausgenommene Unternehmen und Personen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5a. Abschnitt: Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern, und konzerninterne Direkt- und Rückversicherung"
+    }
+   ],
+   "marginalie": [
+    "Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern: Erleichterungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "SR 221.229.1",
+     "links": [
+      {
+       "label": "SR 221.229.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "58",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "30_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5a. Abschnitt: Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern, und konzerninterne Direkt- und Rückversicherung"
+    }
+   ],
+   "marginalie": [
+    "Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern: Abklärungs- und Dokumentationspflicht"
+   ]
+  },
+  "30_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5a. Abschnitt: Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern, und konzerninterne Direkt- und Rückversicherung"
+    }
+   ],
+   "marginalie": [
+    "Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern: Informationspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "SR 221.229.1",
+     "links": [
+      {
+       "label": "SR 221.229.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "30_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5a. Abschnitt: Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern, und konzerninterne Direkt- und Rückversicherung"
+    }
+   ],
+   "marginalie": [
+    "Konzerninterne Direkt- und Rückversicherung"
+   ]
+  },
+  "30_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5b. Abschnitt: Versicherungszweckgesellschaften"
+    }
+   ],
+   "marginalie": [
+    "Begriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "30_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "5b. Abschnitt: Versicherungszweckgesellschaften"
+    }
+   ],
+   "marginalie": [
+    "Risikogruppen"
+   ]
+  },
+  "31_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Abschnitt: Besondere Bestimmungen für einzelne Versicherungszweige"
+    }
+   ],
+   "marginalie": [
+    "Regulierung der Vermittlertätigkeit im Bereich der Zusatzversicherung zur sozialen Krankenversicherung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014 (AS 2015 5137; BBl 2012 1941). Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "links": [
+      {
+       "label": "AS 2015 5137",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/839"
+      },
+      {
+       "label": "BBl 2012 1941",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2012/352"
+      },
+      {
+       "label": "AS 2024 424",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
+      },
+      {
+       "label": "BBl 2021 1478",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Begriff"
+   ],
+   "fussnoten": [
+    {
+     "nr": "69",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Basisinformationsblatt für qualifizierte Lebensversicherungen"
+   ]
+  },
+  "39_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Inhalt des Basisinformationsblatts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "70",
+     "text": "SR 950.1",
+     "links": [
+      {
+       "label": "SR 950.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "39_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Anforderungen"
+   ]
+  },
+  "39_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Anpassungen"
+   ]
+  },
+  "39_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Ergänzende Bestimmungen"
+   ]
+  },
+  "39_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Haftung"
+   ]
+  },
+  "39_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Informationspflichten bei der Empfehlung von qualifizierten Lebensversicherungen"
+   ]
+  },
+  "39_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Werbung"
+   ]
+  },
+  "39_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Angemessenheitsprüfung für qualifizierte Lebensversicherungen"
+   ]
+  },
+  "39_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Ausübung der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Abschnitt: Qualifizierte Lebensversicherungen"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation und Rechenschaft für qualifizierte Lebensversicherungen"
+   ]
+  },
+  "45_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
+    }
+   ],
+   "marginalie": [
+    "Vermeidung von Interessenkonflikten"
+   ]
+  },
+  "45_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
+    }
+   ],
+   "marginalie": [
+    "Offenlegung der Entschädigung"
+   ]
+  },
+  "51_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen, Massnahmen bei Insolvenzgefahr und Liquidation"
+    }
+   ],
+   "marginalie": [
+    "Massnahmen bei Insolvenzgefahr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "90",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2016, in Kraft seit 1. Jan. 2017, mit Ausnahme von Art. 40 Abs. 3–5 und 41 Abs. 1 Bst. c, in Kraft seit 1. Jan. 2018 (AS 2016 4083).",
+     "nr": "91",
+     "text": "SR 281.1",
      "links": [
       {
-       "label": "AS 2016 4083",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2016/677"
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    },
+    {
+     "nr": "92",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "51_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen, Massnahmen bei Insolvenzgefahr und Liquidation"
+    }
+   ],
+   "marginalie": [
+    "Vorrang von Aufrechnungs-, Verwertungs- und Übertragungsvereinbarungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "93",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "52_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "95",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "52_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Sanierungsplan"
+   ]
+  },
+  "52_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Übertragung des Versicherungsbestandes oder von Teilen davon sowie weiterer Teile des Versicherungsunternehmens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "96",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "SR 221.301",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "52_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Herabsetzung des bisherigen und Schaffung von neuem Eigenkapital sowie Wandlung von Fremd- in Eigenkapital und Forderungsreduktion"
+   ],
+   "fussnoten": [
+    {
+     "nr": "97",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "4",
+     "item": "c"
+    }
+   ]
+  },
+  "52_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Anpassung von Versicherungsverträgen"
+   ]
+  },
+  "52_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Rechte der Versicherten bei der Wandlung von Fremd- in Eigenkapital, bei der Forderungsreduktion sowie bei der Anpassung von Versicherungsverträgen"
+   ]
+  },
+  "52_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Aufschub der Beendigung von Verträgen"
+   ]
+  },
+  "52_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Aufschub der Beendigung von Rückversicherungsverträgen"
+   ]
+  },
+  "52_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Auswirkung der Sanierung eines Direktversicherungsunternehmens auf den Rückversicherungsvertrag"
+   ]
+  },
+  "52_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Genehmigung des Sanierungsplans"
+   ]
+  },
+  "52_k": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Ablehnung des Sanierungsplans"
+   ]
+  },
+  "52_l": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Rechtswirkung des Sanierungsplans"
+   ]
+  },
+  "52_m": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2a. Abschnitt: Sanierung"
+    }
+   ],
+   "marginalie": [
+    "Geltendmachung von Ansprüchen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "98",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "99",
+     "text": "SR 220",
+     "links": [
+      {
+       "label": "SR 220",
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+      }
+     ],
+     "absatz": "6",
      "item": null
     }
    ]
@@ -1759,22 +4042,114 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Forderungen Versicherter aus Versicherungsverträgen"
+   ],
    "fussnoten": [
     {
-     "nr": "63",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2016 (AS 2016 4083). Aufgehoben durch Ziff. I der V vom 23. Okt. 2019, mit Wirkung seit 1. Jan. 2020 (AS 2019 3617).",
+     "nr": "106",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2016 4083",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2016/677"
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "107",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "54_a_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
+    }
+   ],
+   "marginalie": [
+    "Gebundenes Vermögen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "108",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_a_ter": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
+    }
+   ],
+   "marginalie": [
+    "Fremdkapitalinstrumente mit Eigenkapitalcharakter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "109",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -1786,22 +4161,69 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Gläubigerversammlung und Gläubigerausschuss"
+   ],
    "fussnoten": [
     {
-     "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS 2017 6107). Aufgehoben durch Ziff. I der V vom 23. Okt. 2019, mit Wirkung seit 1. Jan. 2020 (AS 2019 3617).",
+     "nr": "110",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2017 6107",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/673"
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "AS 2019 3617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/660"
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_b_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
+    }
+   ],
+   "marginalie": [
+    "BeiSchutzmassnahmen oder im Sanierungsverfahren eingegangene Verbindlichkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "111",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
@@ -1813,18 +4235,683 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "7. Kapitel: Schlussbestimmungen"
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2b. Abschnitt: Versicherungskonkurs"
+    }
+   ],
+   "marginalie": [
+    "Verteilung und Schluss des Verfahrens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "112",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "113",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "114",
+     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "links": [
+      {
+       "label": "AS 2018 5247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
+      },
+      {
+       "label": "2019 4631",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
+      },
+      {
+       "label": "BBl 2015 8901",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "115",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "54_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Beschwerden gegen die Genehmigung des Sanierungsplans"
+   ],
+   "fussnoten": [
+    {
+     "nr": "117",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2011 3919",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      {
+       "label": "BBl 2010 3993",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "116",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Beschwerden der Gläubigerinnen und Gläubiger und der Eignerinnen und Eigner bei Insolvenzmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "118",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2015 5339",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
+      },
+      {
+       "label": "BBl 2014 7483",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "119",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "120",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "54_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Fristen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "121",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "122",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "54_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Aufschiebende Wirkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "123",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Nationaler Garantiefonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "124",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "125",
+     "text": "SR 741.01",
+     "links": [
+      {
+       "label": "SR 741.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "54_i": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Anerkennung ausländischer Konkursdekrete und Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "126",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "127",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "SR 281.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "128",
+     "text": "SR 291",
+     "links": [
+      {
+       "label": "SR 291",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "54_j": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "2c. Abschnitt: Verfahren"
+    }
+   ],
+   "marginalie": [
+    "Koordination mit ausländischen Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "129",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "55_56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Aufsicht"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: …"
     }
    ],
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "65",
-     "text": "Eingefügt durch Ziff. I 1 der COVID-19-Verordnung Landwirtschaft vom 1. April 2020, in Kraft vom 2. April 2020 bis zum 1. Okt. 2020 (AS 2020 1141).",
+     "nr": "130",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
      "links": [
       {
-       "label": "AS 2020 1141",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/208"
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "71_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Versicherungsgruppen"
+    }
+   ],
+   "marginalie": [
+    "Geschäftsplan"
+   ],
+   "fussnoten": [
+    {
+     "nr": "142",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2015 5339",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
+      },
+      {
+       "label": "BBl 2014 7483",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "79_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Besondere Bestimmungen betreffend die Aufsicht über Versicherungsgruppen und Versicherungskonglomerate"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Versicherungskonglomerate"
+    }
+   ],
+   "marginalie": [
+    "Geschäftsplan"
+   ],
+   "fussnoten": [
+    {
+     "nr": "150",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2015 5339",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
+      },
+      {
+       "label": "BBl 2014 7483",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
+      },
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "82_83": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Kapitel: Herausgabe von Dokumenten an die Versicherungsnehmerinnen und -nehmer und an die versicherten Personen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "154",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "links": [
+      {
+       "label": "AS 2008 5207",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
+      },
+      {
+       "label": "5205",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
+      },
+      {
+       "label": "BBl 2006 2829",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "90_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen zur Änderung vom 18. März 2022"
+   ],
+   "fussnoten": [
+    {
+     "nr": "164",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
+    }
+   ],
+   "marginalie": [
+    "Risikotragendes Kapital und Zielkapital"
+   ],
+   "fussnoten": [
+    {
+     "nr": "25",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
+    }
+   ],
+   "marginalie": [
+    "Weitere Vorschriften zur Solvabilität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "26",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Aufnahme der Versicherungstätigkeit"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Voraussetzungen"
+    }
+   ],
+   "marginalie": [
+    "Ergänzende internationale Versicherungskapitalstandards"
+   ],
+   "fussnoten": [
+    {
+     "nr": "27",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "links": [
+      {
+       "label": "AS 2023 355",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
+      },
+      {
+       "label": "BBl 2020 8967",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,

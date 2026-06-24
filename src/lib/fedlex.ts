@@ -175,7 +175,11 @@ export const FEDLEX = {
   KAG:     'https://www.fedlex.admin.ch/eli/cc/2006/822/de', // SR 951.31, Kons. 20240301
   FINIG:   'https://www.fedlex.admin.ch/eli/cc/2018/801/de', // SR 954.1, Kons. 20240301
   FINFRAG: 'https://www.fedlex.admin.ch/eli/cc/2015/853/de', // SR 958.1, Kons. 20240201
-  VAG:     'https://www.fedlex.admin.ch/eli/cc/2005/734/de', // SR 961.01, Kons. 20240901
+  // VAG: ACHTUNG html-Variante 1! Unter cc/2005/734/20240901 liegen ZWEI Erlasse —
+  // html-0 = Agrar-Einfuhr-VO (SR 916.01), html-1 = VAG (SR 961.01). Bug-Check
+  // 25.6.2026 fing den Fehlgriff (Snapshot trug zunächst die Agrar-VO); Cache-Tor
+  // um SR-Identitäts-Sonde gehärtet (fedlex-cache.sh, 6. Feld = erwartete SR).
+  VAG:     'https://www.fedlex.admin.ch/eli/cc/2005/734/de', // SR 961.01, Kons. 20240901 (html-1)
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
