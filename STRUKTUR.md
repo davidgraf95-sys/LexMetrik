@@ -22,6 +22,14 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Punkt-12-Bug-Check (VAG-Fehlerlass) + Scroll-Ruck + Tab-Kantonswappen (autonom, in `main` lokal, NICHT deployt/gepusht)
+
+Forts. derselben Session (Daueranweisung David: laufend Bug-Check). Reine Darstellung/Daten, gate grün (golden byte-gleich), Playwright-verifiziert.
+- **Bug-Check Punkt 12 (Commit `626927c`):** Zwei unabhängige adversariale Linien fanden denselben BLOCKER — **VAG-Snapshot trug den FALSCHEN Erlass** (Agrar-Einfuhr-VO SR 916.01 statt Versicherungsaufsichtsgesetz SR 961.01). Unter ELI cc/2005/734/20240901 liegen ZWEI Erlasse in verschiedenen html-Varianten; html-0 = Agrar-VO, html-1 = VAG. Der art_1-Anker existiert in BEIDEN → das Anker-Tor war blind. Fix: vag-Pin auf html-1 (61→149 Artikel, korrekt). **Strukturelle Härtung:** Cache-Tor (`fedlex-cache.sh`) prüft jetzt die im HTML eingebettete `<p class="srnummer">` gegen die erwartete SR (optionales 6. Cache-Feld); fängt die ganze Erlass-Kollisions-Klasse. Alle 25 Batch-1-Pins tragen die SR; Negativ-Test bestätigt. Übrige 24 Erlasse inhaltlich sauber (h1-Titel je Erlass gegen erwartete Norm geprüft).
+- **Scroll-Ruck beim Gesetz-Wechsel (Commit `ce3981b`):** David meldete den «an-den-Anfang»-Sprung ZUM WIEDERHOLTEN MAL. Diagnose+Playwright-Repro: der Fix vom 24.6. («(13)») ZEMENTIERTE das unerwünschte Verhalten — sein 360-Frame-Beharrlichkeits-Loop ist nur fürs Restaurieren einer NICHT-Null-Position nötig, riss aber jeden frisch besuchten Gesetz-Pfad wiederholt nach oben. Fix (`App.tsx` `ScrollWiederherstellung`): frischer Pfad/Ziel 0 → EINMALIGES scrollTo(0)+Nach-Frame, KEIN Loop; Rückkehr-zur-Position bleibt. Repro: neues Gesetz Y=0 ruckfrei, Rückkehr restauriert ~3000.
+- **Kantonswappen im Tab-Streifen (Commit `ce3981b`):** Reiter eines KANTONALEN Gesetzes zeigt jetzt das Kantonswappen statt des §-Glyphs (`TabStreifen.tsx`, Helper `kantonVon` aus dem Browse-Manifest, SSoT §5; `KantonWappen`+`public/wappen/*.svg` existierten). Einzel-Reiter + Dropdown. Bund/Manifest-noch-nicht-geladen → §-Fallback. Playwright hell+dunkel (AG-Wappen erscheint, OR/Bund ohne).
+- **Hinweis §12:** Parallel-Session arbeitet in Worktree `.claude/worktrees/batch2-verordnungen/` (Verordnungen-Batch) — nicht angefasst.
+
 ## Session 25.6.2026 — Punkt 12 Batch 1: 25 Bund-Gesetze Volltext (autonom, in `main` lokal, NICHT deployt/gepusht)
 
 Auftrag David (Punkt 12): Bund-Gesetze aus seiner Anwaltsprüfungs-Bookmark-Liste als Volltext im LexMetrik-Reader (statt nur-live-link-Stub). Erster sauber-verifizierter Batch der **Gesetze** (keine Verordnungen). Gate grün (golden byte-gleich, kanton unberührt via `--nur=bund`), `check:normtext` grün (12614 Bund-Snapshots).
