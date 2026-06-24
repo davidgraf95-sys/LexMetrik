@@ -61,6 +61,15 @@ describe('teileSachverhalt — sicheres Sub-Marker-Splitting', () => {
     expect(bl[0].text).toBe('Frau A. arbeitete beim Spital B. und stürzte.');
     expect(rekon(bl)).toBe(W(t));
   });
+  it('Top-Marker: Abkürzung/Initiale („Dr. B.") wird NICHT als Abschnitts-Marker gelesen (Bug-Check 24.6.)', () => {
+    // Reale Fehlklasse (151_II_625): „… Dr. B. B. Dagegen …" — die Anwalts-Initiale
+    // „Dr. B." darf nicht den Abschnitts-Marker B kapern.
+    const t = 'A. Die Klägerin klagte, vertreten durch Rechtsanwältin Dr. B. B. Dagegen wehrte sich die Gegenseite. C. Das Gericht entschied.';
+    const bl = teileSachverhalt(t);
+    // Kein Block trägt die Namens-Initiale „B." als Marker; lieber unstrukturiert als falsch (§1).
+    expect(bl.some((b) => b.marke === 'B.')).toBe(false);
+    expect(rekon(bl)).toBe(W(t));
+  });
   it('Top-Marker: kein Split bei nur einem Abschnitt (Namen wie „A. mbH"/„Spital B.")', () => {
     const t = 'A. Die A. mbH und die Spital B. AG schlossen einen Vertrag. Es gab keine weiteren Abschnitte.';
     const bl = teileSachverhalt(t);

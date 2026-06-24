@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
@@ -75,6 +75,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
   const [lese, setLese] = useState(false);
+  const closeLese = useCallback(() => setLese(false), []);
   const [fsIdx, setFsIdx] = useState<number>(ladeFsIdx);
   const setFs = (i: number) => {
     const x = Math.max(0, Math.min(FS_STUFEN.length - 1, i));
@@ -248,10 +249,14 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </section>
       )}
 
-      {/* Lesespalte 60–75 Zeichen (Reglement R1) — schmaler als die amtlichen Anzeigen. */}
-      <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
-        <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
-      </article>
+      {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —
+          der Overlay zeigt denselben EntscheidBody; doppelte Abschnitts-`id` wären
+          ungültiges HTML + bräche Anker-Sprünge. */}
+      {!lese && (
+        <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
+          <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+        </article>
+      )}
 
       {/* Provenienz / Rechtslage (§7/§8) */}
       <footer className="mt-12 border-t border-line pt-5 space-y-3 text-body-s text-ink-500">
@@ -275,7 +280,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       </nav>
 
       {lese && (
-        <LesemodusOverlay snap={snap} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={() => setLese(false)} />
+        <LesemodusOverlay snap={snap} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={closeLese} />
       )}
     </div>
   );
@@ -294,20 +299,33 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
   onClose: () => void;
 }) {
   const schliessRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const vorigerFokus = document.activeElement as HTMLElement | null;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { onClose(); return; }
+      // Fokus-Falle: Tab bleibt im Dialog (a11y, aria-modal).
+      if (e.key === 'Tab' && dialogRef.current) {
+        const f = dialogRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
+        if (f.length === 0) return;
+        const erst = f[0], letzt = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === erst) { e.preventDefault(); letzt.focus(); }
+        else if (!e.shiftKey && document.activeElement === letzt) { e.preventDefault(); erst.focus(); }
+      }
+    };
     document.addEventListener('keydown', onKey);
-    const vorher = typeof document !== 'undefined' ? document.body.style.overflow : '';
-    if (typeof document !== 'undefined') document.body.style.overflow = 'hidden';
+    const vorher = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     schliessRef.current?.focus();
     return () => {
       document.removeEventListener('keydown', onKey);
-      if (typeof document !== 'undefined') document.body.style.overflow = vorher;
+      document.body.style.overflow = vorher;
+      vorigerFokus?.focus?.();   // Fokus zum Auslöser zurück
     };
   }, [onClose]);
 
   return (
-    <div role="dialog" aria-modal="true" aria-label={`Lesemodus — ${snap.zitierung}`}
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Lesemodus — ${snap.zitierung}`}
       className="fixed inset-0 z-50 overflow-y-auto bg-paper">
       {/* schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen */}
       <div className="sticky top-0 z-10 flex items-center gap-3 border-b border-line bg-paper/95 px-5 py-2.5 backdrop-blur-sm">

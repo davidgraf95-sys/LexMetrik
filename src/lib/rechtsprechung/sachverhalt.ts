@@ -40,11 +40,32 @@ const SUB_RE = /(?:^|\s)([A-Z])\.([a-z])(?=\s+[A-ZÄÖÜ0-9])/g;
 // akzeptiert (Textanfang oder direkt nach Satzzeichen) + strenge A→B→C-Sequenz.
 const TOP_RE = /([A-Z])\.\s+(?=[A-ZÄÖÜ])/g;
 
-/** true, wenn die Position idx satz-initial ist (Textanfang oder nach .!?). */
+// Abkürzungen, deren Punkt KEIN Satzende ist (sonst würde „Dr. B." die Namens-
+// Initiale „B." satz-initial machen → Fehlsplit). Bug-Check 24.6.: 151_II_625.
+const ABKUERZUNG = new Set([
+  'dr', 'prof', 'lic', 'med', 'iur', 'rer', 'nat', 'phil', 'dipl', 'sc',
+  'art', 'abs', 'lit', 'ziff', 'bzw', 'vgl', 'ca', 'nr', 'al', 'sog', 'inkl', 'etc',
+]);
+
+/**
+ * true, wenn die Position idx satz-initial ist (Textanfang oder echtes Satzende
+ * .!?). Ein Punkt nach einer EINZELBUCHSTABEN-Initiale („B.") oder einer bekannten
+ * ABKÜRZUNG („Dr.") gilt NICHT als Satzende — sonst würde eine Namens-Initiale als
+ * Abschnitts-Marker gelesen (§1). Zahl-/Wort-Satzenden („…2020.", „…abgewiesen.")
+ * bleiben gültig.
+ */
 function istSatzInitial(t: string, idx: number): boolean {
   let i = idx - 1;
   while (i >= 0 && /\s/.test(t[i])) i--;
-  return i < 0 || /[.!?]/.test(t[i]);
+  if (i < 0) return true;
+  if (!/[.!?]/.test(t[i])) return false;
+  // Wort unmittelbar vor dem Punkt (nur Buchstaben) prüfen.
+  let j = i - 1;
+  let wort = '';
+  while (j >= 0 && /[A-Za-zäöüÄÖÜ]/.test(t[j])) { wort = t[j] + wort; j--; }
+  if (wort.length === 1) return false;                 // Initiale „B."
+  if (wort && ABKUERZUNG.has(wort.toLowerCase())) return false; // Abkürzung „Dr."
+  return true;
 }
 
 /**
