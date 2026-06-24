@@ -582,31 +582,37 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </div>
       </header>
 
-      {/* Norm↔Werkzeug-Brücke (D1): passende Rechner/Vorlagen zu diesem Erlass */}
+      {/* Norm↔Werkzeug-Brücke (D1): passende Rechner/Vorlagen zu diesem Erlass.
+          #11: standardmässig eingeklappt — öffnet nur auf Wunsch (Auftrag David). */}
       {(() => {
         const wz = werkzeugeFuer(erlass.key);
         return wz.length > 0 ? (
-          <div className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <p className="lc-overline mb-2">Passende Werkzeuge</p>
+          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
+            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
+              Passende Werkzeuge <span className="text-ink-400">({wz.length})</span>
+            </summary>
             {/* Mobile: eine horizontal scrollbare Chip-Reihe (sonst stapeln sich
                 viele Werkzeuge sehr hoch); ab sm normaler Umbruch. */}
-            <div className="flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
+            <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
               {wz.map((w) => (
                 <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
                   <span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
                 </Link>
               ))}
             </div>
-          </div>
+          </details>
         ) : null;
       })()}
 
       {/* Verzahnung (Norm→Entscheid): Bundesgerichtsentscheide zu diesem Erlass.
-          Quelle = maschinell extrahierte Norm-Nennungen → keine geprüfte Präjudizienliste (§8). */}
+          Quelle = maschinell extrahierte Norm-Nennungen → keine geprüfte Präjudizienliste (§8).
+          #11: standardmässig eingeklappt — öffnet nur auf Wunsch. */}
       {rspr.length > 0 && (
-        <div className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3 mt-3">
-          <p className="lc-overline mb-2">Bundesgerichtsentscheide zu diesem Erlass</p>
-          <ul className="flex flex-col gap-1.5">
+        <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3 mt-3">
+          <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
+            Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-400">({rspr.length})</span>
+          </summary>
+          <ul className="mt-2.5 flex flex-col gap-1.5">
             {rspr.slice(0, 8).map((r) => (
               <li key={r.key} className="text-sm">
                 <Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700">
@@ -618,7 +624,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             ))}
           </ul>
           <p className="text-micro text-ink-400 mt-2">Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.</p>
-        </div>
+        </details>
       )}
 
       {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt mit Suchleiste auf
