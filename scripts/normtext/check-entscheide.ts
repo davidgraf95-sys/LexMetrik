@@ -14,7 +14,10 @@ import type { NormEntscheidIndex } from '../../src/lib/rechtsprechung/norm-index
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
-const BUDGET_MB = 8;            // P0-Mengen-Budget (empirisch nachziehen, Fahrplan 6.5)
+// Mengen-Budget (empirisch nachgezogen): 23.6.2026 von 8 → 20 MB, weil die 265 deutschen
+// BGE-Leitentscheide ab 2024 (Volltexte ~22 KB) den P0-Demo-Wert sprengen. Bewusst mit
+// Reserve über dem Ist (~7 MB), aber als Deckel gegen unbeabsichtigte Massen-Importe.
+const BUDGET_MB = 20;
 const AHV = /\b756\.\d{4}\.\d{4}\.\d{2}\b/;   // CH-Sozialversicherungsnummer (darf nicht vorkommen)
 
 const fehler: string[] = [];
