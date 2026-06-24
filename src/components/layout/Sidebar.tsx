@@ -77,6 +77,41 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
   // offen, wenn standardOffen ODER ein Kind die aktuelle Seite ist.
   const kindAktiv = k.kinder.some((kk) => kk.art === 'link' && istAktiv(kk.ziel, loc));
   const [offen, setOffen] = useState(!!k.standardOffen || kindAktiv);
+
+  // Mit `ziel` (z.B. Bund/Kantone): die Überschrift navigiert zur Übersicht
+  // (Auftrag David), ein separater Chevron klappt die Kinder. KEIN natives
+  // <details> — ein Link in <summary> würde beim Klick zugleich navigieren UND
+  // umschalten.
+  if (k.ziel) {
+    const aktiv = istAktiv(k.ziel, loc);
+    return (
+      <div className="flex flex-col">
+        <div className="flex items-center gap-1 rounded-md px-2.5 py-2 hover:bg-brass-100/40">
+          <Link to={k.ziel} onClick={onNavigate} aria-current={aktiv ? 'page' : undefined}
+            className={`flex-1 truncate text-body-s font-medium no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-600 hover:text-ink-900'}`}
+            title={k.label}>{k.label}</Link>
+          <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
+            aria-label={`${k.label} ${offen ? 'einklappen' : 'aufklappen'}`}
+            className="shrink-0 p-0.5 text-ink-400 hover:text-brass-700 transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden
+              className={`transition-transform ${offen ? 'rotate-90' : ''}`}>
+              <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+        {offen && (
+          <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
+            {k.kinder.map((kk, i) => (
+              kk.art === 'link'
+                ? <Blatt key={i} k={kk} loc={loc} onNavigate={onNavigate} klein />
+                : <Knoten key={i} k={kk} loc={loc} onNavigate={onNavigate} />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <details className="group" open={offen} onToggle={(e) => setOffen((e.currentTarget as HTMLDetailsElement).open)}>
       {/* Disclosure-Dreieck liefert der globale details>summary::after (index.css). */}

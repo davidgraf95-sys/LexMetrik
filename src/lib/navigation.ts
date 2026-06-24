@@ -37,6 +37,9 @@ export interface NavLink {
 export interface NavGruppe {
   art: 'gruppe';
   label: string;
+  /** Optional: macht die Gruppen-Überschrift klickbar → Übersicht (z.B. Bund/
+   *  Kantone → /gesetze?ebene=…); der Chevron klappt die Kinder weiterhin auf. */
+  ziel?: string;
   /** true → als natives <details> rendern (aufklappbar, tastaturzugänglich). */
   aufklappbar?: boolean;
   /** Bei aufklappbar: Anfangszustand. Bund startet eingeklappt (Build-Plan). */
@@ -95,6 +98,7 @@ const GESETZE_KINDER: NavKnoten[] = [
   {
     art: 'gruppe',
     label: 'Bund',
+    ziel: '/gesetze?ebene=bund',
     aufklappbar: true,
     standardOffen: false,
     kinder: SYSTEMATIK.map((k) => link(k.titel, `/gesetze?ebene=bund#sys-${k.id}`)),
@@ -102,6 +106,7 @@ const GESETZE_KINDER: NavKnoten[] = [
   {
     art: 'gruppe',
     label: 'Kantone',
+    ziel: '/gesetze?ebene=kanton',
     aufklappbar: true,
     standardOffen: false,
     kinder: KANTONE.map((kt) => link(kt, `/gesetze?ebene=kanton&kt=${kt}`)),
