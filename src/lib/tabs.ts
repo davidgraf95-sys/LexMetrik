@@ -63,6 +63,20 @@ export function merkeTab(path: string, label?: string): void {
   schreibe([...bisher, { path, ...(label ? { label } : {}) }].slice(-MAX));
 }
 
+/** #12: Reiter per Drag-and-Drop umsortieren — verschiebt den gezogenen Reiter
+ *  (vonPath) an die Position des Ziel-Reiters (nachPath). Identifikation über
+ *  pfadTeil (stabile Reiter-Identität); deterministisch, kein Zeitstempel. */
+export function ordneTabsUm(vonPath: string, nachPath: string): void {
+  const bisher = ladeTabs();
+  const von = bisher.findIndex((t) => pfadTeil(t.path) === pfadTeil(vonPath));
+  const nach = bisher.findIndex((t) => pfadTeil(t.path) === pfadTeil(nachPath));
+  if (von === -1 || nach === -1 || von === nach) return;
+  const naechste = [...bisher];
+  const [bewegt] = naechste.splice(von, 1);
+  naechste.splice(nach, 0, bewegt);
+  schreibe(naechste);
+}
+
 export function schliesseTab(path: string): void {
   const teil = pfadTeil(path);
   const bisher = ladeTabs();

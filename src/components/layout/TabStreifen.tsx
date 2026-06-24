@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
-import { schliesseTab, leereTabs } from '../../lib/tabs';
+import { schliesseTab, leereTabs, ordneTabsUm } from '../../lib/tabs';
 import { verlaufLabel, gesetzPfad, entscheidPfad, pfadTeil, type VerlaufManifeste } from '../../lib/verlaufLabel';
 
 // ─── In-App-Reiter-Streifen (v1, Auftrag David) ─────────────────────────────
@@ -21,6 +21,10 @@ export function TabStreifen() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
+  // #12: Drag-and-Drop-Sortierung. gezogen = Pfad des gezogenen Reiters (Ref →
+  // kein Re-Render beim Ziehen); ueberTeil = Drop-Ziel für die visuelle Markierung.
+  const gezogen = useRef<string | null>(null);
+  const [ueberTeil, setUeberTeil] = useState<string | null>(null);
 
   // Reader-Labels (Gesetz/Entscheid) aus den ohnehin lazy ladbaren Manifesten —
   // nur laden, wenn ein Reiter eine solche Route trägt (wie die Verlauf-Schiene).
@@ -70,11 +74,24 @@ export function TabStreifen() {
         <ul className="flex items-stretch gap-1 overflow-x-auto min-w-0 lc-scroll-x" style={{ scrollSnapType: 'x proximity' }}>
           {tabs.map((t) => {
             const aktiv = pfadTeil(pathname) === pfadTeil(t.path);
+            const teil = pfadTeil(t.path);
             return (
-              <li key={t.path} className="shrink-0" style={{ scrollSnapAlign: 'start' }}>
-                <span className={`group/tab inline-flex items-center rounded-md border transition-colors ${
+              <li key={t.path} className="shrink-0" style={{ scrollSnapAlign: 'start' }}
+                onDragOver={(e) => { e.preventDefault(); if (gezogen.current) setUeberTeil(teil); }}
+                onDragLeave={() => setUeberTeil((u) => (u === teil ? null : u))}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  const von = gezogen.current;
+                  gezogen.current = null;
+                  setUeberTeil(null);
+                  if (von) ordneTabsUm(von, t.path);
+                }}>
+                <span draggable
+                  onDragStart={(e) => { gezogen.current = t.path; e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', t.path); }}
+                  onDragEnd={() => { gezogen.current = null; setUeberTeil(null); }}
+                  className={`group/tab inline-flex items-center rounded-md border transition-colors cursor-grab active:cursor-grabbing ${
                   aktiv ? 'border-brass-400 bg-brass-100/50 text-brass-800' : 'border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-300'
-                }`}>
+                } ${ueberTeil === teil ? 'ring-2 ring-brass-400' : ''}`}>
                   <button type="button" aria-current={aktiv ? 'page' : undefined}
                     onClick={() => navigate(t.path)}
                     className="max-w-[10rem] sm:max-w-[14rem] truncate pl-3 pr-1.5 py-1.5 text-body-s font-medium">

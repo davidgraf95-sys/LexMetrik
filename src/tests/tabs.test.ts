@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ladeTabs, merkeTab, schliesseTab, leereTabs } from '../lib/tabs';
+import { ladeTabs, merkeTab, schliesseTab, leereTabs, ordneTabsUm } from '../lib/tabs';
 
 // In-App-Reiter (lib/tabs.ts): Persistenz, stabile Reihenfolge, Dublette per
 // pathname, MAX-Kappung, korruptes localStorage. Reines Speicher-Werkzeug.
@@ -54,6 +54,29 @@ describe('tabs.ts — offene Reiter', () => {
   it('leereTabs leert die Liste', () => {
     merkeTab('/a'); leereTabs();
     expect(ladeTabs()).toEqual([]);
+  });
+
+  it('ordneTabsUm verschiebt den Reiter an die Zielposition (#12 Drag-and-Drop)', () => {
+    merkeTab('/a'); merkeTab('/b'); merkeTab('/c'); merkeTab('/d');
+    // /d nach vorne (an Position von /a)
+    ordneTabsUm('/d', '/a');
+    expect(ladeTabs().map((t) => t.path)).toEqual(['/d', '/a', '/b', '/c']);
+    // /d wieder nach hinten (an Position von /c)
+    ordneTabsUm('/d', '/c');
+    expect(ladeTabs().map((t) => t.path)).toEqual(['/a', '/b', '/c', '/d']);
+  });
+
+  it('ordneTabsUm: unbekannter Pfad oder gleiche Position → unverändert', () => {
+    merkeTab('/a'); merkeTab('/b');
+    ordneTabsUm('/x', '/a');   // /x existiert nicht
+    ordneTabsUm('/a', '/a');   // gleiche Position
+    expect(ladeTabs().map((t) => t.path)).toEqual(['/a', '/b']);
+  });
+
+  it('ordneTabsUm identifiziert per pathname (Query egal)', () => {
+    merkeTab('/a'); merkeTab('/b');
+    ordneTabsUm('/b?x=1', '/a?y=2');
+    expect(ladeTabs().map((t) => t.path)).toEqual(['/b', '/a']);
   });
 
   it('korruptes JSON / Nicht-Array → leere Liste (kein Crash)', () => {
