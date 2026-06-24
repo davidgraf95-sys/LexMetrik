@@ -19,7 +19,8 @@ import { VorlageGmbhGruendung } from '../src/pages/VorlageGmbhGruendung';
 import { VorlageAgGruendung } from '../src/pages/VorlageAgGruendung';
 import { VorlageKapitalerhoehung } from '../src/pages/VorlageKapitalerhoehung';
 import { Startseite } from '../src/pages/Startseite';
-import { Recherche } from '../src/pages/Recherche';
+import { RechnerUebersicht } from '../src/pages/RechnerUebersicht';
+import { VorlagenUebersicht } from '../src/pages/VorlagenUebersicht';
 import { Shell } from '../src/components/layout/Shell';
 import { Kontakt } from '../src/pages/Kontakt';
 import { Datenschutz } from '../src/pages/Datenschutz';
@@ -42,7 +43,8 @@ import { RechnerGebvKosten } from '../src/pages/RechnerGebvKosten';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
-  ['Recherche', Recherche],
+  ['RechnerUebersicht', RechnerUebersicht],
+  ['VorlagenUebersicht', VorlagenUebersicht],
   // App-Shell (Phase 3): Top-Streifen + Seitenleiste + Footer rendern fehlerfrei.
   ['Shell', () => <Shell><Startseite /></Shell>],
   ['Kontakt', Kontakt],
