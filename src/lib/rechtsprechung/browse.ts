@@ -110,12 +110,24 @@ export function istSynth(e: BrowseEntscheid): boolean {
 }
 
 /**
+ * Schmales Feld-Set für die Thema-Synthese — erfüllt von BrowseEntscheid (Übersicht)
+ * UND EntscheidSnapshot (Reader-Kopf). So bleibt synthThema die alleinige SSoT (§5),
+ * ohne dass der Reader casten oder eine zweite Kaskade pflegen müsste.
+ */
+export interface ThemaFelder {
+  sachgebiet: Rechtsgebiet;
+  gerichtName: string;
+  normKeys: string[];
+  datum: string;
+}
+
+/**
  * Deterministische Sachzeile als Regeste-Ersatz — NUR aus echten Feldern.
  * Kaskade: (Normen vorhanden) Gebiet — Gericht · angewandt: A, B, C
  *          (sonst)            Gebiet — Gericht, Jahr
  * Nennt nie etwas, das nicht im Datensatz steht (§8).
  */
-export function synthThema(e: BrowseEntscheid): string {
+export function synthThema(e: ThemaFelder): string {
   const gebiet = GEBIET_LABEL[e.sachgebiet];
   if (e.normKeys.length > 0) {
     const normen = e.normKeys.slice(0, 3).map(normLabel).join(', ');

@@ -4,6 +4,7 @@ import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
 import { NormText } from '../components/NormText';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
+import { kopfModell, type KopfLabelKey } from '../lib/rechtsprechung/kopf';
 import { normalisiereRegeste } from '../lib/rechtsprechung/register';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/rechtsprechung/typen';
@@ -20,6 +21,23 @@ function formatiereDatum(iso: string): string {
 
 const SPRACH_LABEL: Record<EntscheidSprache, string> = {
   de: 'Deutsch', fr: 'Französisch', it: 'Italienisch', rm: 'Rätoromanisch',
+};
+
+// Rubrum-Beschriftungen je Sprache (zukunftsfest; heute trägt der Korpus nur de,
+// fr/it greifen automatisch, sobald solche Entscheide importiert werden). rm → de.
+const KOPF_LABEL: Record<EntscheidSprache, Record<KopfLabelKey, string>> = {
+  de: { gegenstand: 'Gegenstand', parteien: 'Parteien', vorinstanz: 'Vorinstanz', besetzung: 'Besetzung' },
+  fr: { gegenstand: 'Objet', parteien: 'Parties', vorinstanz: 'Autorité précédente', besetzung: 'Composition' },
+  it: { gegenstand: 'Oggetto', parteien: 'Parti', vorinstanz: 'Autorità inferiore', besetzung: 'Composizione' },
+  rm: { gegenstand: 'Gegenstand', parteien: 'Parteien', vorinstanz: 'Vorinstanz', besetzung: 'Besetzung' },
+};
+
+// Ehrlicher Marker, wenn die Thema-Leitzeile abgeleitet ist (keine amtliche Regeste, §8).
+const SYNTH_MARKER: Record<EntscheidSprache, string> = {
+  de: 'Sachgebiet aus der Aktenstruktur abgeleitet — keine amtliche Regeste vorhanden.',
+  fr: 'Domaine déduit de la structure du dossier — aucun regeste officiel disponible.',
+  it: 'Ambito dedotto dalla struttura degli atti — nessuna massima ufficiale disponibile.',
+  rm: 'Sachgebiet aus der Aktenstruktur abgeleitet — keine amtliche Regeste vorhanden.',
 };
 
 // Reihenfolge der Sprung-Ziele (amtliche Gliederung); Regeste vorangestellt.
@@ -105,6 +123,9 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   }
 
   const regesteText = snap.regeste ? normalisiereRegeste(snap.regeste.text) : null;
+  // Einheitlicher Kopf: Modell aus der reinen Regel-Lib (§3) — Komponente rendert nur.
+  const kopf = kopfModell(snap);
+  const kopfLabel = KOPF_LABEL[snap.sprache];
   // Sprung-Ziele: nur die tatsächlich vorhandenen Abschnitte (+ Regeste, wenn da).
   const vorhandene = new Set<Abschnittstyp>(snap.abschnitte.map((a) => a.typ));
   if (regesteText) vorhandene.add('regeste');
@@ -136,12 +157,43 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       </div>
 
       <header className="space-y-2.5 border-b border-line pb-5">
+        {/* 1 Identität (stets): Gericht · Abteilung · Sachgebiet */}
         <p className="lc-overline">
           {snap.gerichtName}
           {snap.abteilung && <span className="text-ink-400"> · {snap.abteilung}</span>}
           <span className="text-brass-700"> · {GEBIET_LABEL[snap.sachgebiet]}</span>
         </p>
+        {/* 2 Zitierung = Identitäts-Anker (stets, prominent) */}
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
+
+        {/* 3 Thema-Leitzeile — nur wenn kein Rubrum-Gegenstand führt (kopf.ts entscheidet,
+            §3/§5). Amtliche Regeste in Serif/ink-900; abgeleitete Synthese nüchtern +
+            ehrlicher Marker (§8). So trägt JEDER Kopf genau eine Thema-Aussage. */}
+        {kopf.leitzeile && (
+          <div className="space-y-0.5">
+            <p className={`text-body-s leading-snug ${kopf.leitIstSynth ? 'text-ink-700' : 'font-serif text-ink-900'}`}>
+              {kopf.leitzeile}
+            </p>
+            {kopf.leitIstSynth && (
+              <p className="text-micro italic text-ink-400">{SYNTH_MARKER[snap.sprache]}</p>
+            )}
+          </div>
+        )}
+
+        {/* 4 Rubrum-Zeilen IM Kopf (Art. 112 BGG): nur befüllte Felder, feste Reihenfolge
+            Gegenstand→Parteien→Vorinstanz→Besetzung, per Haarlinie abgesetzt (kein Kasten). */}
+        {kopf.rubrumZeilen.length > 0 && (
+          <dl className="mt-1 grid grid-cols-1 sm:grid-cols-[7rem_minmax(0,1fr)] gap-x-4 gap-y-1.5 border-t border-line/60 pt-3 text-body-s">
+            {kopf.rubrumZeilen.map((z) => (
+              <div key={z.label} className="contents">
+                <dt className="lc-overline pt-0.5">{kopfLabel[z.label]}</dt>
+                <dd className={z.label === 'gegenstand' ? 'text-ink-800' : 'text-ink-700'}>{z.wert}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+
+        {/* 5 Meta + Badges + Lese-Steuerung — gedämpfte Schlusszeile */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>
           {snap.bgeReferenz && (
@@ -171,18 +223,6 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
           </span>
         </div>
       </header>
-
-      {/* Rubrum (Art. 112 BGG): Gegenstand / Parteien / Vorinstanz / Besetzung. */}
-      {snap.rubrum && (snap.rubrum.gegenstand || snap.rubrum.parteien || snap.rubrum.vorinstanz || snap.rubrum.besetzung) && (
-        <section aria-label="Rubrum" className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-          <dl className="grid grid-cols-1 sm:grid-cols-[8rem_minmax(0,1fr)] gap-x-4 gap-y-2 text-body-s">
-            {snap.rubrum.gegenstand && (<><dt className="lc-overline pt-0.5">Gegenstand</dt><dd className="text-ink-800">{snap.rubrum.gegenstand}</dd></>)}
-            {snap.rubrum.parteien && (<><dt className="lc-overline pt-0.5">Parteien</dt><dd className="text-ink-700">{snap.rubrum.parteien}</dd></>)}
-            {snap.rubrum.vorinstanz && (<><dt className="lc-overline pt-0.5">Vorinstanz</dt><dd className="text-ink-700">{snap.rubrum.vorinstanz}</dd></>)}
-            {snap.rubrum.besetzung && (<><dt className="lc-overline pt-0.5">Besetzung</dt><dd className="text-ink-700">{snap.rubrum.besetzung}</dd></>)}
-          </dl>
-        </section>
-      )}
 
       <SprungNavigation ziele={navZiele} />
 
