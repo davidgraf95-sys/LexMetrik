@@ -49,6 +49,10 @@ const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   // ink-500 gehoben; alle ÜBRIGEN serious/critical-Regeln (Label/ARIA/Struktur) gaten weiter.
   'gesetze-kanton-BS': ['link-in-text-block', 'color-contrast'],
   'gesetze-leser-BS': ['link-in-text-block', 'color-contrast'],
+  // Tab-Streifen-Prüfpunkt lädt /rechner/tagerechner: derselbe dokumentierte
+  // Inline-Link-Marken-Entscheid (B-2) der Seite. Der Streifen SELBST ist
+  // a11y-sauber (keine tablist/tab-Rollen, Kontraste auf ink-500/600 gehoben).
+  'tab-streifen': ['link-in-text-block'],
 }
 
 async function axePruefen(page: Page, testInfo: TestInfo, punkt: string) {
@@ -98,6 +102,22 @@ test('Tagerechner', async ({ page }, testInfo) => {
   await oeffnen(page, '/rechner/tagerechner')
   await expect(page.locator('h1').first()).toBeVisible()
   await axePruefen(page, testInfo, 'tagerechner')
+})
+
+// In-App-Tab-Streifen (UI-Welle): das Tor läuft sonst mit frischem Browser
+// (0 Reiter → Streifen unsichtbar) und wäre für diesen Zustand blind. Hier
+// werden 2 Reiter vorab geseedet, damit axe die sichtbare Leiste prüft.
+test('Tab-Streifen mit zwei offenen Reitern', async ({ page }, testInfo) => {
+  await page.addInitScript(() => {
+    try {
+      localStorage.setItem('lexmetrik-tabs', JSON.stringify([
+        { path: '/rechner/tagerechner' }, { path: '/rechner/verzugszins' },
+      ]))
+    } catch { /* privater Modus */ }
+  })
+  await oeffnen(page, '/rechner/tagerechner')
+  await page.locator('nav[aria-label="Geöffnete Reiter"]').waitFor({ state: 'visible' })
+  await axePruefen(page, testInfo, 'tab-streifen')
 })
 
 test('Tagerechner mit offenem Kalender-Popover', async ({ page }, testInfo) => {

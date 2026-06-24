@@ -57,39 +57,44 @@ export function TabStreifen() {
     }
   };
 
+  // Bewusst KEINE role="tablist"/role="tab"-Semantik: der Streifen ist
+  // Navigation (Klick navigiert Routen, kein In-Place-Panel-Wechsel) — ein
+  // tablist verlangt zudem ausschliesslich tab-Kinder (a11y-Befund). Stattdessen
+  // eine schlichte Liste mit aria-current="page" auf dem aktiven Reiter; der
+  // «Alle schliessen»-Knopf steht NEBEN der Liste, nicht darin.
   return (
     <nav aria-label="Geöffnete Reiter"
       className="sticky top-16 z-10 border-b border-line"
       style={{ background: 'color-mix(in srgb, var(--paper) 96%, transparent)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
-      <ul role="tablist" className="flex items-stretch gap-1 overflow-x-auto px-2 sm:px-4 py-1.5 lc-scroll-x" style={{ scrollSnapType: 'x proximity' }}>
-        {tabs.map((t) => {
-          const aktiv = pfadTeil(pathname) === pfadTeil(t.path);
-          return (
-            <li key={t.path} role="presentation" className="shrink-0" style={{ scrollSnapAlign: 'start' }}>
-              <span className={`group/tab inline-flex items-center rounded-md border transition-colors ${
-                aktiv ? 'border-brass-400 bg-brass-100/50 text-brass-800' : 'border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-300'
-              }`}>
-                <button type="button" role="tab" aria-selected={aktiv} aria-current={aktiv ? 'page' : undefined}
-                  onClick={() => navigate(t.path)}
-                  className="max-w-[10rem] sm:max-w-[14rem] truncate pl-3 pr-1.5 py-1.5 text-body-s font-medium">
-                  {verlaufLabel(t.path, manifeste)}
-                </button>
-                <button type="button" onClick={() => schliessen(t.path)}
-                  aria-label={`Reiter «${verlaufLabel(t.path, manifeste)}» schliessen`}
-                  className="inline-flex items-center justify-center w-7 h-7 mr-0.5 rounded text-ink-400 hover:text-danger-700 transition-colors">
-                  <span aria-hidden className="text-sm leading-none">✕</span>
-                </button>
-              </span>
-            </li>
-          );
-        })}
-        <li className="ml-auto shrink-0 self-center pl-1">
-          <button type="button" onClick={() => { leereTabs(); navigate('/'); }}
-            className="px-2.5 py-1.5 text-body-s text-ink-400 hover:text-brass-700 transition-colors whitespace-nowrap">
-            Alle schliessen
-          </button>
-        </li>
-      </ul>
+      <div className="flex items-stretch gap-2 px-2 sm:px-4 py-1.5">
+        <ul className="flex items-stretch gap-1 overflow-x-auto min-w-0 lc-scroll-x" style={{ scrollSnapType: 'x proximity' }}>
+          {tabs.map((t) => {
+            const aktiv = pfadTeil(pathname) === pfadTeil(t.path);
+            return (
+              <li key={t.path} className="shrink-0" style={{ scrollSnapAlign: 'start' }}>
+                <span className={`group/tab inline-flex items-center rounded-md border transition-colors ${
+                  aktiv ? 'border-brass-400 bg-brass-100/50 text-brass-800' : 'border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-300'
+                }`}>
+                  <button type="button" aria-current={aktiv ? 'page' : undefined}
+                    onClick={() => navigate(t.path)}
+                    className="max-w-[10rem] sm:max-w-[14rem] truncate pl-3 pr-1.5 py-1.5 text-body-s font-medium">
+                    {verlaufLabel(t.path, manifeste)}
+                  </button>
+                  <button type="button" onClick={() => schliessen(t.path)}
+                    aria-label={`Reiter «${verlaufLabel(t.path, manifeste)}» schliessen`}
+                    className="inline-flex items-center justify-center w-7 h-7 mr-0.5 rounded text-ink-500 hover:text-danger-700 transition-colors">
+                    <span aria-hidden className="text-sm leading-none">✕</span>
+                  </button>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+        <button type="button" onClick={() => { leereTabs(); navigate('/'); }}
+          className="ml-auto shrink-0 self-center px-2.5 py-1.5 text-body-s text-ink-600 hover:text-brass-700 transition-colors whitespace-nowrap">
+          Alle schliessen
+        </button>
+      </div>
     </nav>
   );
 }

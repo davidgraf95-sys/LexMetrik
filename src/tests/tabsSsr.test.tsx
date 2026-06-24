@@ -35,16 +35,19 @@ describe('TabStreifen — Guard + Render', () => {
     expect(html([{ path: '/rechner/tagerechner' }])).toBe('');
   });
 
-  it('ab 2 Reitern: tablist-Leiste mit zwei Reitern, Schliessen-Knöpfen und «Alle schliessen»', () => {
+  it('ab 2 Reitern: Navigations-Leiste mit zwei Reitern, Schliessen-Knöpfen und «Alle schliessen»', () => {
     const out = html(
       [{ path: '/rechner/tagerechner' }, { path: '/gesetze/bund/or' }],
       '/rechner/tagerechner',
     );
     expect(out).toContain('aria-label="Geöffnete Reiter"');
-    expect(out).toContain('role="tablist"');
-    expect((out.match(/role="tab"/g) ?? []).length).toBe(2);
+    // KEINE tablist/tab-Rollen (echte Navigation, kein ARIA-Tablist, a11y-Fix)
+    expect(out).not.toContain('role="tablist"');
+    expect(out).not.toContain('role="tab"');
+    // je Reiter ein Schliessen-Knopf
+    expect((out.match(/aria-label="Reiter «/g) ?? []).length).toBe(2);
     expect(out).toContain('Alle schliessen');
-    // aktiver Reiter (aktueller Pfad) trägt aria-selected
-    expect(out).toContain('aria-selected="true"');
+    // aktiver Reiter (aktueller Pfad) trägt aria-current="page"
+    expect(out).toContain('aria-current="page"');
   });
 });
