@@ -120,6 +120,29 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
     );
   }
 
+  // Sachverhalt: Buchstaben-Gliederung (A.a/A.b/B.a …) als Label je Absatz. Nackte
+  // Top-Marker („A." allein bzw. nachlaufendes „… B.") werden nicht angezeigt — das
+  // Sub-Label trägt den Top-Buchstaben bereits (Anzeige-Politur, Daten unberührt).
+  function Sachverhalt({ bloecke }: { bloecke: EntscheidBlock[] }) {
+    return (
+      <div className="space-y-4">
+        {bloecke.map((b, i) => {
+          if (!b.marke) {
+            if (/^[A-ZÄÖÜ]\.$/.test(b.text.trim())) return null;
+            return <p key={i} className={ABSATZ}><NormText text={b.text} /></p>;
+          }
+          const txt = b.text.replace(/\s+[A-ZÄÖÜ]\.$/, '').trim();
+          return (
+            <p key={i} className={ABSATZ}>
+              <span className="num mr-1.5 font-semibold text-ink-900">{b.marke}</span>
+              <NormText text={txt} />
+            </p>
+          );
+        })}
+      </div>
+    );
+  }
+
   function Abschnitt({ a }: { a: EntscheidAbschnitt }) {
     return (
       <section id={abschnittAnker(a.typ)} className="scroll-mt-[7rem] space-y-3">
@@ -131,7 +154,9 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           ? <Erwaegungen bloecke={a.bloecke} />
           : a.typ === 'dispositiv'
             ? <Dispositiv bloecke={a.bloecke} />
-            : <div className="space-y-4">{a.bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</div>}
+            : a.typ === 'sachverhalt'
+              ? <Sachverhalt bloecke={a.bloecke} />
+              : <div className="space-y-4">{a.bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</div>}
       </section>
     );
   }

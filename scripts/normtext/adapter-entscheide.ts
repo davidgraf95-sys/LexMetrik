@@ -11,6 +11,7 @@ import type {
 import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 import { normalisiereRegeste, bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 import { rubrumFeldPlausibel } from '../../src/lib/rechtsprechung/rubrum';
+import { teileSachverhalt } from '../../src/lib/rechtsprechung/sachverhalt';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import { normalisiereErwaegung } from './erwaegung-normalisieren';
 // markenPlausibel/MONAT leben jetzt in erwaegung-normalisieren.ts (Single Source, §5);
@@ -244,7 +245,9 @@ export function mappeEntscheidOCL(
   if (str) {
     // Sachverhalt: vollen Text aus full_text schneiden (Excerpt ist bei ~1000 Z. gekappt).
     const sv = extrahiereSachverhalt(det.full_text, str.sachverhalt_excerpt, str.sachverhalt_chars);
-    if (sv) abschnitte.push({ typ: 'sachverhalt', vollstaendig: sv.vollstaendig, bloecke: [{ marke: null, text: bereinigeFliesstext(sv.text) }] });
+    // In Buchstaben-Abschnitte teilen (A.a/A.b …) — sicher, sequenzvalidiert; ohne
+    // Gliederung kommt EIN bereinigter Block zurück (sachverhalt.ts, §1-Fallback).
+    if (sv) abschnitte.push({ typ: 'sachverhalt', vollstaendig: sv.vollstaendig, bloecke: teileSachverhalt(bereinigeFliesstext(sv.text)) });
 
     // Erwägungen: EINE reine Funktion (gleicher Pfad für Live-Import, Cache-Replay,
     // Bestands-Renormalisierung; §5). Setzt marke/tiefe aus e_number, wenn plausibel
