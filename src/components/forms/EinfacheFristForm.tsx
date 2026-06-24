@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { berechneAllgemeineFrist, type Einheit, type AllgFristResult } from '../../lib/allgemeineFrist';
+import { berechneAllgemeineFrist, type Einheit } from '../../lib/allgemeineFrist';
 import { berechneFrist } from '../../lib/zpoFristen';
 import { berechneSchkgFrist } from '../../lib/schkgFristen';
 import { berechneBggVwvgFrist, bvAusnahmenSatz } from '../../lib/bggVwvgFristen';
@@ -9,6 +9,7 @@ import { permalinkKodieren } from '../../lib/permalink';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 import { ErgebnisBlock } from '../ErgebnisBlock';
+import type { FristMarkierung } from '../start/FristenKalender';
 
 // ─── Einfacher Fristenrechner (S-5a FAHRPLAN-STRUKTUR-UMBAU) ────────────────
 //
@@ -48,23 +49,46 @@ const EINHEITEN: { code: Einheit; label: string }[] = [
 
 const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
+// Kalender-Markierung je Ferien-Regime (reine Komposition, §3 — jede Engine liefert
+// ein ISO-Enddatum). So zeigt der Kalender das Fristende für ALLE Regimes, nicht nur
+// «keine Ferien» (Auftrag David: Kalender immer ersichtlich). null bei Fehleingabe.
+function baueMarkierung(start: string, laenge: number, einheit: Einheit, ferien: Ferien, kanton: Kanton): FristMarkierung | null {
+  try {
+    if (ferien === 'keine') {
+      const r = berechneAllgemeineFrist({ start, laenge, einheit, wochenendeVerschieben: true, feiertageVerschieben: true, kanton });
+      return { startISO: r.startISO, endeISO: r.endDatumISO, fristbeginnISO: r.fristbeginnISO, verschiebeGruende: r.verschoben ? r.verschiebeGruende : undefined };
+    }
+    if (ferien === 'zpo') {
+      const r = berechneFrist({ ereignis: start, einheit, laenge, verfahren: 'ordentlich', kanton, fristnatur: 'gesetzlich' });
+      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? 'Stillstand (Art. 145 ZPO) berücksichtigt' : undefined };
+    }
+    if (ferien === 'vwvg' || ferien === 'bgg') {
+      const r = berechneBggVwvgFrist({ regime: ferien, ereignis: start, einheit, laenge, kanton });
+      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? `Stillstand (${ferien === 'vwvg' ? 'Art. 22a VwVG' : 'Art. 46 BGG'}) berücksichtigt` : undefined };
+    }
+    const r = berechneSchkgFrist({ ereignis: start, einheit: einheit as 'tage' | 'monate' | 'jahre', laenge, modus: 'schkg_betreibungsferien', fristnatur: 'frist', kanton });
+    return { startISO: start, endeISO: r.diesAdQuemISO };
+  } catch {
+    return null;
+  }
+}
+
 export function EinfacheFristForm({ minimal = false, onErgebnis }: {
   minimal?: boolean;
-  /** #7: meldet das berechnete Ergebnis nach oben (für die Kalender-Ansicht im
-   *  Schnellrechner). Nur die ALLGEMEINE Frist («keine Ferien») trägt die ISO-
-   *  Stichtage, die der Kalender braucht; bei Stillstand-Regimes → null. */
-  onErgebnis?: (e: { ergebnis: AllgFristResult; kanton: Kanton } | null) => void;
+  /** #7: meldet die Kalender-Markierung (Ereignis + Fristende) nach oben — für
+   *  ALLE Regimes (jede Engine liefert ein ISO-Enddatum); null bei Fehleingabe. */
+  onErgebnis?: (e: { markierung: FristMarkierung; kanton: Kanton } | null) => void;
 } = {}) {
   // Datum-Default heute in LOKALER Zeit (Bug-Check §9, NIEDRIG: toISOString
-  // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag).
-  // Im minimal-Modus (prerenderte Startseite) startet das Feld LEER: ein
-  // gebackenes Build-Datum würde sonst beim Hydrieren mit dem Client-Datum
-  // kollidieren (Hydration-Mismatch auf date-input + Fristende).
+  // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag). Auftrag David:
+  // standardmässig heute, auch auf der Startseite. Die App hydratisiert nicht
+  // (main.tsx createRoot render-then-replace) → kein date-input-Hydration-Mismatch.
   const heute = new Date().toLocaleDateString('sv-SE');
-  const [start, setStart] = useState(minimal ? '' : heute);
+  const [start, setStart] = useState(heute);
   const [laenge, setLaenge] = useState(10);
   const [einheit, setEinheit] = useState<Einheit>('tage');
-  const [ferien, setFerien] = useState<Ferien>('keine');
+  // Auftrag David: Ferien/Stillstand standardmässig ZPO (Gerichtsferien).
+  const [ferien, setFerien] = useState<Ferien>('zpo');
   const [kanton, setKanton] = useState<Kanton>('ZH');
 
   // Die SchKG-Engine führt keine Wochenfristen (gesetzliche SchKG-Fristen
@@ -123,22 +147,13 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
     }
   }
 
-  // #7: berechnetes Ergebnis nach oben melden (Kalender-Ansicht im Schnellrechner).
-  // Nur die allgemeine Frist trägt die ISO-Stichtage; Stillstand-Regimes → null
-  // (der Kalender weist dann auf das massgebende Fristende hin). Deterministisch.
+  // #7: Kalender-Markierung nach oben melden (Schnellrechner). Für ALLE Regimes,
+  // damit der Kalender immer das Fristende zeigt (Auftrag David). Deterministisch.
   useEffect(() => {
     if (!onErgebnis) return;
-    if (ferien !== 'keine' || !gueltig) { onErgebnis(null); return; }
-    try {
-      onErgebnis({
-        ergebnis: berechneAllgemeineFrist({
-          start, laenge, einheit: einheitEffektiv,
-          wochenendeVerschieben: true, feiertageVerschieben: true, kanton,
-        }),
-        kanton,
-      });
-    } catch { onErgebnis(null); }
-  }, [onErgebnis, ferien, gueltig, start, laenge, einheitEffektiv, kanton]);
+    const m = gueltig ? baueMarkierung(start, laenge, einheitEffektiv, ferien, kanton) : null;
+    onErgebnis(m ? { markierung: m, kanton } : null);
+  }, [onErgebnis, gueltig, start, laenge, einheitEffektiv, ferien, kanton]);
 
   const verfeinernZiel = ferien === 'zpo'
     ? zpoFristenLink({ ereignis: start, einheit: einheitEffektiv, laenge, verfahren: 'ordentlich', kanton, fristnatur: 'gesetzlich' })
@@ -155,7 +170,9 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
 
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
+      {/* items-end: bei verschieden hohen Labels (z.B. zweizeilig) bleiben die
+          Eingabefelder auf gleicher Höhe (Auftrag David). */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl items-end">
         <label className="block space-y-1">
           <span className="lc-overline block">Datum (Ereignis)</span>
           <input type="date" value={start} onChange={(e) => setStart(e.target.value)}

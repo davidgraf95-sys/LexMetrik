@@ -1,21 +1,32 @@
 import { useMemo } from 'react';
-import type { AllgFristResult } from '../../lib/allgemeineFrist';
 import { istArbeitsfreierTag } from '../../data/zpoFeiertage';
 import type { Kanton } from '../../types/legal';
 
 // ─── Fristen-Kalender im Schnellrechner (#7, Auftrag David) ─────────────────
 //
-// REINE Visualisierung (§3): zeigt das Ergebnis des Eingabe-Formulars (links)
-// als Monatskalender — Ereignistag, erster mitzählender Tag und Fristende
-// markiert, arbeitsfreie Tage schattiert. KEINE eigenen Eingaben, KEINE eigene
-// Rechnung mehr (früher duplizierte der Kalender Formular-Felder + Engine-Aufruf,
-// «beide Seiten machten dasselbe»). Das Ergebnis kommt als Prop von der
-// EinfacheFristForm (allgemeine Frist «keine Ferien»); bei Stillstand-Regimes
-// ist `ergebnis` null und der Kalender verweist auf das Fristende links.
+// REINE Visualisierung (§3): zeigt das Fristende des Eingabe-Formulars (links)
+// als Monatskalender — Ereignistag, (sofern bekannt) erster mitzählender Tag und
+// Fristende markiert, arbeitsfreie Tage schattiert. KEINE eigene Rechnung; die
+// Stichtage kommen als `FristMarkierung` von der EinfacheFristForm. Funktioniert
+// für ALLE Ferien-/Stillstand-Regimes (jede Engine liefert ein ISO-Enddatum), nicht
+// nur «keine Ferien» (Auftrag David: Kalender immer ersichtlich).
+
+/** Vom Formular gelieferte Stichtage (regimeneutral). */
+export interface FristMarkierung {
+  startISO: string;              // Ereignistag (zählt nicht)
+  endeISO: string;               // Fristende (massgebend, regime-korrekt)
+  fristbeginnISO?: string;       // erster mitzählender Tag (nur «keine Ferien»)
+  verschiebeGruende?: string[];  // Verschiebung (nur «keine Ferien»)
+  hinweis?: string;              // z.B. «Stillstand (Art. 145 ZPO) berücksichtigt»
+}
 
 const WOCHENTAGE_KURZ = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+const WOCHENTAGE_LANG = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+const MONATSNAMEN = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 const pad = (n: number) => String(n).padStart(2, '0');
 const isoVon = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const fmtDe = (iso: string) => { const [y, m, d] = iso.split('-'); return `${d}.${m}.${y}`; };
+const wochentagDe = (iso: string) => { const [y, m, d] = iso.split('-').map(Number); return WOCHENTAGE_LANG[new Date(y, m - 1, d).getDay()]; };
 
 /** Zellen eines Monats, montagsbündig (führende Leerzellen = null). */
 function monatsZellen(jahr: number, monat0: number): (Date | null)[] {
@@ -26,31 +37,28 @@ function monatsZellen(jahr: number, monat0: number): (Date | null)[] {
   return zellen;
 }
 
-const MONATSNAMEN = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-
-export function FristenKalender({ ergebnis, kanton }: {
-  ergebnis: AllgFristResult | null;
+export function FristenKalender({ markierung, kanton }: {
+  markierung: FristMarkierung | null;
   kanton: Kanton;
 }) {
   // Angezeigter Monat = Monat des Fristendes (der relevante Stichtag).
   const zellen = useMemo(() => {
-    if (!ergebnis) return null;
-    const [y, m] = ergebnis.endDatumISO.split('-').map(Number);
+    if (!markierung) return null;
+    const [y, m] = markierung.endeISO.split('-').map(Number);
     return { jahr: y, monat0: m - 1, zellen: monatsZellen(y, m - 1) };
-  }, [ergebnis]);
+  }, [markierung]);
 
   return (
     <div className="space-y-3">
-      {!ergebnis || !zellen ? (
+      {!markierung || !zellen ? (
         <p className="text-body-s text-ink-500 py-6 text-center">
           Datum und Frist links eingeben – der Kalender markiert dann Ereignis und Fristende.
-          Bei Gerichts-/Betreibungsferien gilt das berechnete Fristende links.
         </p>
       ) : (
         <div className="space-y-2.5" aria-live="polite">
           <div className="lc-tile lc-akzent-brass flex items-baseline justify-between gap-3 flex-wrap">
-            <span className="text-xs text-ink-500">Fristende ({ergebnis.endWochentag})</span>
-            <span className="num text-body-l font-semibold text-ink-900">{ergebnis.endDatum}</span>
+            <span className="text-xs text-ink-500">Fristende ({wochentagDe(markierung.endeISO)})</span>
+            <span className="num text-body-l font-semibold text-ink-900">{fmtDe(markierung.endeISO)}</span>
           </div>
 
           <div>
@@ -60,9 +68,9 @@ export function FristenKalender({ ergebnis, kanton }: {
               {zellen.zellen.map((d, i) => {
                 if (!d) return <span key={`l${i}`} aria-hidden />;
                 const iso = isoVon(d);
-                const istEreignis = iso === ergebnis.startISO;
-                const istBeginn = iso === ergebnis.fristbeginnISO;
-                const istEnde = iso === ergebnis.endDatumISO;
+                const istEreignis = iso === markierung.startISO;
+                const istBeginn = iso === markierung.fristbeginnISO;
+                const istEnde = iso === markierung.endeISO;
                 const frei = istArbeitsfreierTag(d, kanton);
                 const klasse = istEnde
                   ? 'bg-brass-600 text-white font-semibold'
@@ -89,8 +97,9 @@ export function FristenKalender({ ergebnis, kanton }: {
             </div>
           </div>
 
-          {ergebnis.verschoben && ergebnis.verschiebeGruende.length > 0 && (
-            <p className="text-xs text-ink-500">Verschoben: {ergebnis.verschiebeGruende.join(' · ')}</p>
+          {markierung.hinweis && <p className="text-xs text-ink-500">{markierung.hinweis}</p>}
+          {markierung.verschiebeGruende && markierung.verschiebeGruende.length > 0 && (
+            <p className="text-xs text-ink-500">Verschoben: {markierung.verschiebeGruende.join(' · ')}</p>
           )}
         </div>
       )}

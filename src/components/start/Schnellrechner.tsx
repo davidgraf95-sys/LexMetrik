@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { AllgFristResult } from '../../lib/allgemeineFrist';
 import type { Kanton } from '../../types/legal';
 import { EinfacheFristForm } from '../forms/EinfacheFristForm';
-import { FristenKalender } from './FristenKalender';
+import { FristenKalender, type FristMarkierung } from './FristenKalender';
 import { ProzesskostenForm } from '../forms/ProzesskostenForm';
 import { GebvKostenForm } from '../forms/GebvKostenForm';
 import { NotariatGrundbuchForm } from '../forms/NotariatGrundbuchForm';
@@ -79,7 +78,7 @@ export function Schnellrechner() {
   const [tab, setTab] = useState<Tab>('fristen');
   // #7: das Formular meldet sein Ergebnis hoch; der Kalender (rechts) ist reine
   // Visualisierung davon — keine doppelten Eingaben mehr.
-  const [fristErgebnis, setFristErgebnis] = useState<{ ergebnis: AllgFristResult; kanton: Kanton } | null>(null);
+  const [fristErgebnis, setFristErgebnis] = useState<{ markierung: FristMarkierung; kanton: Kanton } | null>(null);
   return (
     <div className="lc-card overflow-hidden">
       <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-line">
@@ -112,7 +111,7 @@ export function Schnellrechner() {
               </div>
               <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
                 <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
-                <FristenKalender ergebnis={fristErgebnis?.ergebnis ?? null} kanton={fristErgebnis?.kanton ?? 'ZH'} />
+                <FristenKalender markierung={fristErgebnis?.markierung ?? null} kanton={fristErgebnis?.kanton ?? 'ZH'} />
               </div>
             </div>
             <VollRechnerHinweis href="/rechner/tagerechner" name="Fristenrechner" was="Rückwärts, Zwischenfrist, ZPO/SchKG-Verfeinerung" />
