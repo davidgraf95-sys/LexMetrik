@@ -50,6 +50,12 @@ alle 93 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-ve
 aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-generieren.ts`
 (meldet Lücken — Stand: 0). Inhaltliche Abnahme der einzelnen Entscheide: David, offen.
 
+**BGE-Leitentscheide-Import:** [rechtsprechung/bge-leitentscheide-import.md](rechtsprechung/bge-leitentscheide-import.md) —
+Stufe 1 des Rechtsprechungs-Ausbaus (Auftrag David 23.6.2026): Import der amtlichen
+BGE-Leitentscheide ab 2024 (265 dt., curated statt Routine) aus OpenCaseLaw (Court `bge`);
+Quelle/Stand, Pipeline (`adapter-entscheide`/`normtext-entscheide`), Datum via aza-Cross-Fetch
++ Bandjahr-Fallback, Sachgebiet-Ableitung. Inhaltliche Einzelabnahme: David, offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
