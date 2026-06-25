@@ -43,16 +43,19 @@ export function wendeThemaAn(t: Thema): void {
   // prefers-color-scheme-Fallback (html:not(.light):not(.dark)).
   el.classList.toggle('light', !dunkel);
   el.style.colorScheme = dunkel ? 'dark' : 'light';
-  // Browser-Chrome (meta theme-color) ans aktive Thema koppeln. Die media-Tags
-  // in index.html decken den Vor-JS-Moment nach SYSTEM-Präferenz ab; dieses
-  // nachgereichte Tag ohne media gewinnt (letztes passendes Tag, HTML-Spec) und
-  // bildet auch eine manuelle Wahl gegen die Systemvorgabe korrekt ab.
+  // Browser-Chrome (meta theme-color) ans tatsächlich angezeigte Thema koppeln.
+  // Die media-Tags in index.html decken den Vor-JS-Moment nach SYSTEM-Präferenz
+  // ab. Der Browser nimmt laut WHATWG-Spec das ERSTE passende theme-color-Tag in
+  // Baumreihenfolge → dieses media-lose Tag wird deshalb VOR die media-Tags
+  // gestellt (gewinnt immer) und bildet so auch eine Wahl gegen die Systemvorgabe
+  // ab (z. B. zeitThema = dunkel bei hellem System → dunkles Chrome statt hell).
   try {
     let m = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]:not([media])');
     if (!m) {
       m = document.createElement('meta');
       m.name = 'theme-color';
-      document.head.appendChild(m);
+      // vor das erste vorhandene theme-color-Tag (null → ans Kopf-Ende = appendChild)
+      document.head.insertBefore(m, document.head.querySelector('meta[name="theme-color"]'));
     }
     m.content = dunkel ? '#16150F' : '#F7F4EC';
   } catch { /* SSR/Prerender ohne document.head — unkritisch */ }
