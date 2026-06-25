@@ -10,11 +10,14 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
   entscheidDetailPfad,
+  entscheidHatVolltext,
   entscheidVolltextHtml,
   erlassDetailPfad,
+  erlassHatVolltext,
   erlassVolltextHtml,
   jsonLdFuerEntscheid,
   jsonLdFuerErlass,
+  KEY_UNSICHER,
   metaFuerEntscheid,
   metaFuerErlass,
 } from '../lib/seo-detail';
@@ -91,6 +94,33 @@ describe('erlassVolltextHtml()', () => {
     // Beginn des echten Textes muss (escaped) im HTML stehen
     const probe = ersterText!.slice(0, 24).replace(/&/g, '&amp;').replace(/</g, '&lt;');
     expect(html).toContain(probe);
+  });
+});
+
+describe('Substanz-Prädikate (kein header-only «Volltext», §8)', () => {
+  it('erlassHatVolltext: true bei echtem Snapshot, false bei leer', () => {
+    const datei = JSON.parse(readFileSync(join(PUB, 'normtext', or.datei!), 'utf8'));
+    expect(erlassHatVolltext(datei)).toBe(true);
+    expect(erlassHatVolltext({ erzeugt: '', eintraege: [] })).toBe(false);
+    expect(
+      erlassHatVolltext({ erzeugt: '', eintraege: [{ artikelLabel: 'Art. 1', bloecke: [{ absatz: null, text: '  ' }] }] as never }),
+    ).toBe(false);
+  });
+  it('entscheidHatVolltext: false ohne Regeste und ohne Blöcke', () => {
+    expect(entscheidHatVolltext({ regeste: null, abschnitte: [] } as never)).toBe(false);
+    expect(entscheidHatVolltext({ regeste: { text: 'x', quelle: 'opencaselaw' }, abschnitte: [] } as never)).toBe(true);
+  });
+});
+
+describe('KEY_UNSICHER (Pfad-/URL-Sicherheit)', () => {
+  it('Leerzeichen ist SICHER (raw-Datei ↔ %20-URL), aber / \\ # ? nicht', () => {
+    expect(KEY_UNSICHER.test('BS-BeE 786.100')).toBe(false); // Leerzeichen ok
+    expect(KEY_UNSICHER.test('OR')).toBe(false);
+    expect(KEY_UNSICHER.test('AG-291.150')).toBe(false);
+    expect(KEY_UNSICHER.test('a/b')).toBe(true);
+    expect(KEY_UNSICHER.test('a#b')).toBe(true);
+    expect(KEY_UNSICHER.test('a?b')).toBe(true);
+    expect(KEY_UNSICHER.test('a\\b')).toBe(true);
   });
 });
 

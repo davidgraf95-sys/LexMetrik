@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — SEO W1.1: Detailseiten prerendern (1819 indexierbare URLs, in `main`, deployt)
+
+Auftrag David: `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` umsetzen, „so viel wie möglich, run till dry". W1.1 (grösster Hebel): `/gesetze/:ebene/:key` + `/rechtsprechung/:key` lieferten bisher die noindex-SPA-Hülle (`app.html`) — der ganze Volltext-Korpus war für Suchmaschinen unsichtbar (nur 56 Katalog-URLs in der Sitemap). Vorgehen: eigener Worktree (§12), TDD, voller Gate + ultracode-Code-Review (37 Agenten) vor Deploy.
+- **Build-Prerender erzeugt statisches Volltext-HTML** für 1449 Snapshot-Erlasse (218 Bund + 1231 Kanton) + 370 Entscheide = **1819 Detailseiten** (Sitemap-Index **1875 URLs**, vorher 56). Inhalt WÖRTLICH aus den on-disk-Snapshots (§7, gleiche Quelle wie der Reader); Meta/JSON-LD (`Legislation`+SR / `BreadcrumbList`) nur aus Strukturfeldern, KEINE Geltungsaussage (`legislationLegalForce` ausgelassen — snapshot≠in Kraft, TODO David). React ersetzt clientseitig (`createRoot` render-then-replace, kein hydrate) → Live-Reader unberührt; `vercel.json` unverändert (Vercel serviert die statische Datei vor dem `/(.*)→/app`-Rewrite).
+- **Neu `src/lib/seo-detail.ts`** (rein, SSR-/build-safe: Pfad/Meta/JSON-LD/Volltext-HTML + Substanz-Prädikate + Key-Safety) + 26 Tests; `scripts/prerender.ts` Detail-Phase; `sitemap.xml` ist jetzt ein **Index** (3 Teil-Sitemaps, skaliert).
+- **Kanton-Keys mit Leerzeichen** (165): Datei am ROHEN Key, URL prozentkodiert (`%20`) — Prod-Parität (sirv/Vercel decodiert beim Filesystem-Match) per `vite preview`+curl verifiziert.
+- **Review-Fixes (37 Agenten):** absoluter Manifest-Floor (fängt stilles Schrumpfen, das der relative Count allein nicht sieht) · Substanz-Check **skip-statt-build-halt** bei thin content (§8) · Key-Safety-Guard · Dedup-Set distinkter Zielpfade · `GEBIET_LABEL`-Fallback · `ABSCHNITT_TITEL`/`esc` entdoppelt (§5). **Gate voll grün, golden byte-gleich.** Build 10s, dist +23M.
+- **OFFEN (Fahrplan):** W1.2 per-Dokument-Meta-Feinschliff, W1.3 weitere JSON-LD-Typen, W1.9 Cache-Header `/normtext`+`/rechtsprechung`, W1.10 Twitter/og:image, A11y-Strang, W1.12 Search-Console-Setup.
+
 ## Session 25.6.2026 — Legal-Design: site-weites Dach-Reglement + Token-Disziplin maschinell erzwungen (in `main`, deployt)
 
 Auftrag David: Legal-Design recherchieren → Erkenntnisse als **site-weite Design-Regeln** ins Projekt; danach „1–5 machen" (die 5 offenen Audit-Punkte). Vorgehen: doppelt-verifizierte Deep-Research (22 Quellen, 25/25 Claims bestätigt; Hagan/Stanford, MIT-TedLab, WorldCC) → Regeln abgeleitet; pro Schritt Bug-Check (`gate:schnell`), §12-konform (Pathspec, Parallel-Session lief auf main).

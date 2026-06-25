@@ -19,17 +19,46 @@
 
 import { SITE_URL, type RouteMetadaten } from './seo';
 import { GEBIET_LABEL } from './normtext/register';
+import { ABSCHNITT_TITEL } from './rechtsprechung/abschnitte';
+import type { Rechtsgebiet } from './normtext/register';
 import type { BrowseErlass } from './normtext/browse-typen';
 import type { NormSnapshotDatei } from './normtext/typen';
 import type { BrowseEntscheid } from './rechtsprechung/register';
 import type { EntscheidSnapshot } from './rechtsprechung/typen';
 
-const esc = (s: string): string =>
+export const esc = (s: string): string =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/** Pfad-/URL-brechende Zeichen im Key. Leerzeichen ist NICHT unsicher: die
+ *  Datei wird am rohen Key geschrieben, die URL prozentkodiert (→ Vercel
+ *  decodiert beim Filesystem-Match). `/ \ # ?` und Steuerzeichen brechen
+ *  Pfad oder URL und werden übersprungen statt einen 404-Canonical zu erzeugen. */
+// eslint-disable-next-line no-control-regex -- Steuerzeichen 0x00–0x1f sind absichtlich als pfad-/URL-unsicher erfasst
+export const KEY_UNSICHER = /[\\/#?]|[\u0000-\u001f]/;
 
 /** sprache-Code → BCP-47 für inLanguage (mechanisch, keine Annahme). */
 function inSprache(s: string): string {
   return s === 'de' ? 'de-CH' : s === 'fr' ? 'fr-CH' : s === 'it' ? 'it-CH' : s;
+}
+
+/** Gebiet-Label mit Fallback auf die rohe id (statt esc(undefined)→throw bei
+ *  einem Manifest-Wert ohne Eintrag in GEBIETE). */
+function gebietLabel(g: Rechtsgebiet): string {
+  return GEBIET_LABEL[g] ?? g;
+}
+
+/** §8-Substanz: hat der Erlass-Snapshot überhaupt Artikel-Volltext? Verhindert
+ *  eine als «Volltext» betitelte, aber inhaltsleere (header-only) Detailseite. */
+export function erlassHatVolltext(datei: NormSnapshotDatei): boolean {
+  return Array.isArray(datei.eintraege) && datei.eintraege.some((a) => a.bloecke.some((b) => b.text.trim().length > 0));
+}
+
+/** §8-Substanz: hat der Entscheid eine Regeste ODER mindestens einen Block? */
+export function entscheidHatVolltext(snap: EntscheidSnapshot): boolean {
+  return (
+    Boolean(snap.regeste?.text?.trim()) ||
+    (Array.isArray(snap.abschnitte) && snap.abschnitte.some((a) => a.bloecke.some((b) => b.text.trim().length > 0)))
+  );
 }
 
 // ─── Pfade ─────────────────────────────────────────────────────────────────
@@ -112,7 +141,7 @@ export function jsonLdFuerErlass(e: BrowseErlass): object {
       legislation,
       breadcrumb([
         { name: 'Gesetze', pfad: '/gesetze' },
-        { name: GEBIET_LABEL[e.rechtsgebiet], pfad: '/gesetze' },
+        { name: gebietLabel(e.rechtsgebiet), pfad: '/gesetze' },
         { name: e.kuerzel, pfad },
       ]),
     ],
@@ -171,7 +200,7 @@ export function erlassVolltextHtml(e: BrowseErlass, datei: NormSnapshotDatei): s
   const srZeile = e.sr ? ` · SR ${esc(e.sr)}` : '';
   const kopf =
     `<header><nav aria-label="Brotkrumen"><a href="/gesetze">Gesetze</a> › ` +
-    `<a href="/gesetze">${esc(GEBIET_LABEL[e.rechtsgebiet])}</a> › ${esc(e.kuerzel)}</nav>` +
+    `<a href="/gesetze">${esc(gebietLabel(e.rechtsgebiet))}</a> › ${esc(e.kuerzel)}</nav>` +
     `<h1>${esc(e.kuerzel)} — ${esc(e.titel)}</h1>` +
     `<p>${esc(e.kuerzel)}${srZeile} · Stand ${esc(e.stand)} · ` +
     `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (geltend)</a></p>` +
@@ -185,13 +214,6 @@ export function erlassVolltextHtml(e: BrowseErlass, datei: NormSnapshotDatei): s
   return `<main>${kopf}<section>${artikel}</section></main>`;
 }
 
-const ABSCHNITT_LABEL: Record<string, string> = {
-  regeste: 'Regeste',
-  sachverhalt: 'Sachverhalt',
-  erwaegung: 'Erwägungen',
-  dispositiv: 'Dispositiv',
-};
-
 /** Volltext-HTML eines Entscheids: Kopf (Zitierung/Gericht/Live-Link) + Regeste
  *  (falls vorhanden) + Rubrum + Abschnitte. Eine <h1>. */
 export function entscheidVolltextHtml(e: BrowseEntscheid, snap: EntscheidSnapshot): string {
@@ -200,7 +222,7 @@ export function entscheidVolltextHtml(e: BrowseEntscheid, snap: EntscheidSnapsho
     `<header><nav aria-label="Brotkrumen"><a href="/rechtsprechung">Rechtsprechung</a> › ` +
     `<a href="/rechtsprechung">${esc(e.gerichtName)}</a> › ${esc(e.nummer)}</nav>` +
     `<h1>${esc(e.zitierung)}</h1>` +
-    `<p>${esc(e.gerichtName)} · ${esc(e.datum)}${bge} · ${esc(GEBIET_LABEL[e.sachgebiet])} · ` +
+    `<p>${esc(e.gerichtName)} · ${esc(e.datum)}${bge} · ${esc(gebietLabel(e.sachgebiet))} · ` +
     `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung</a></p>` +
     `</header>`;
   let inhalt = '';
@@ -220,7 +242,7 @@ export function entscheidVolltextHtml(e: BrowseEntscheid, snap: EntscheidSnapsho
     const bloecke = a.bloecke
       .map((b) => `<p>${b.marke ? `<b>${esc(b.marke)}</b> ` : ''}${esc(b.text)}</p>`)
       .join('');
-    if (bloecke) inhalt += `<section><h2>${esc(ABSCHNITT_LABEL[a.typ] ?? a.typ)}</h2>${bloecke}</section>`;
+    if (bloecke) inhalt += `<section><h2>${esc(ABSCHNITT_TITEL[a.typ] ?? a.typ)}</h2>${bloecke}</section>`;
   }
   return `<main>${kopf}${inhalt}</main>`;
 }

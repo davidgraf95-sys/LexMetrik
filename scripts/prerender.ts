@@ -20,10 +20,14 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../src/lib/seo';
 import {
+  entscheidHatVolltext,
   entscheidVolltextHtml,
+  erlassHatVolltext,
   erlassVolltextHtml,
+  esc,
   jsonLdFuerEntscheid,
   jsonLdFuerErlass,
+  KEY_UNSICHER,
   metaFuerEntscheid,
   metaFuerErlass,
 } from '../src/lib/seo-detail';
@@ -65,8 +69,7 @@ if (!template.includes(ROOT_MARKER)) {
   );
 }
 
-const esc = (s: string) =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// esc kommt aus lib/seo-detail (eine Quelle, §5).
 
 // Unbefüllte Hülle als SPA-Fallback (vercel.json-Rewrite-Ziel): Stub-Routen
 // für geplante Rechner und unbekannte Pfade — noindex, weil dünner Inhalt.
@@ -165,8 +168,8 @@ if (fehler > 0) {
 // ─── Detail-Seiten (W1.1): /gesetze/:ebene/:key + /rechtsprechung/:key ──────
 // Indexierbares Volltext-HTML aus den Manifesten + Snapshots (dieselbe Quelle,
 // die der Reader fetcht — §7); React ersetzt es clientseitig (render-then-
-// replace). Increment 1: Bund-Erlasse (saubere Keys) + alle Entscheide; die
-// kantonalen Erlasse (Keys mit Leerzeichen) folgen in Increment 2.
+// replace). Bund + kantonale Erlasse (Keys mit Leerzeichen: Datei am ROHEN Key,
+// URL prozentkodiert → Vercel decodiert beim Filesystem-Match) + alle Entscheide.
 const PUBLIC = join(ROOT, 'public');
 const erlassManifest = (
   JSON.parse(readFileSync(join(PUBLIC, 'normtext', 'register.json'), 'utf8')) as { erlasse: BrowseErlass[] }
@@ -175,75 +178,121 @@ const entscheidManifest = (
   JSON.parse(readFileSync(join(PUBLIC, 'rechtsprechung', 'register.json'), 'utf8')) as { entscheide: BrowseEntscheid[] }
 ).entscheide;
 
-const bundErlasse = erlassManifest.filter((e) => e.status === 'snapshot' && e.ebene === 'bund');
+const snapshotErlasse = erlassManifest.filter((e) => e.status === 'snapshot');
 const snapshotEntscheide = entscheidManifest.filter((e) => e.bestand === 'snapshot');
 
-function pruefeDetail(html: string, kontext: string): void {
-  if (html.length < MIN_ZEICHEN) throw new Error(`verdächtig kurzes Detail-HTML (${html.length} Zeichen)`);
-  if (html.includes('<script')) throw new Error('Inline-Script im Detail-HTML — Volltext-Builder prüfen');
-  if (html.includes(NOT_FOUND_MARKER)) throw new Error('404-Marker im Detail-HTML');
-  if (html.includes('Wird geladen')) throw new Error('Suspense-Fallback-Text im Detail-HTML');
-  void kontext;
+// Absoluter Floor: fängt stilles Schrumpfen des Input-Manifests (eine fehlerhafte
+// Regenerierung), das der relative geschrieben+übersprungen===total-Check allein
+// NICHT sieht. Bei gewolltem grossem Datenabbau bewusst senken (wie ERWARTETE_ROUTEN).
+const ERLASS_FLOOR = 1400; // aktuell 1449 snapshot (218 Bund + 1231 Kanton)
+const ENTSCHEID_FLOOR = 360; // aktuell 370 snapshot
+if (snapshotErlasse.length < ERLASS_FLOOR || snapshotEntscheide.length < ENTSCHEID_FLOOR) {
+  console.error(
+    `\nManifest-Schrumpfung: Erlasse ${snapshotErlasse.length} (Floor ${ERLASS_FLOOR}), ` +
+      `Entscheide ${snapshotEntscheide.length} (Floor ${ENTSCHEID_FLOOR}) — Register prüfen.`,
+  );
+  process.exit(1);
+}
+
+// Distinkte Zielpfade: ein doppelter Key würde sonst still die erste Datei
+// überschreiben, während die URL-Zählung weiter stimmt.
+const geschriebeneZiele = new Set<string>();
+function schreibeDetail(ziel: string, html: string): void {
+  if (geschriebeneZiele.has(ziel)) throw new Error(`doppelter Zielpfad ${ziel} (doppelter Key im Manifest?)`);
+  geschriebeneZiele.add(ziel);
+  mkdirSync(dirname(ziel), { recursive: true });
+  writeFileSync(ziel, html);
 }
 
 const gesetzeUrls: string[] = [];
 const rechtsprechungUrls: string[] = [];
+let erlassUebersprungen = 0;
+let entscheidUebersprungen = 0;
 let detailFehler = 0;
 
-for (const e of bundErlasse) {
+for (const e of snapshotErlasse) {
   try {
-    if (!e.datei) throw new Error('status snapshot, aber keine datei');
+    if (KEY_UNSICHER.test(e.key)) {
+      console.warn(`SKIP  /gesetze: Key pfad-/URL-unsicher: ${JSON.stringify(e.key)}`);
+      erlassUebersprungen++;
+      continue;
+    }
+    if (!e.datei) {
+      console.warn(`SKIP  /gesetze/${e.ebene}/${e.key}: status snapshot ohne datei`);
+      erlassUebersprungen++;
+      continue;
+    }
     const datei = JSON.parse(readFileSync(join(PUBLIC, 'normtext', e.datei), 'utf8')) as NormSnapshotDatei;
+    if (!erlassHatVolltext(datei)) {
+      // header-only «Volltext» wäre irreführend (§8) und thin content (W1.5) → nicht indexieren
+      console.warn(`SKIP  /gesetze/${e.ebene}/${e.key}: kein Artikel-Volltext`);
+      erlassUebersprungen++;
+      continue;
+    }
     const inhalt = erlassVolltextHtml(e, datei);
+    if (inhalt.includes('<script')) throw new Error('Inline-Script im Erlass-Volltext — Builder prüfen');
     const meta = metaFuerErlass(e);
-    pruefeDetail(inhalt, meta.pfad);
     const html = rendereTemplate(meta, jsonLdFuerErlass(e), inhalt, meta.pfad);
-    const ziel = join(DIST, 'gesetze', e.ebene, `${e.key}.html`);
-    mkdirSync(dirname(ziel), { recursive: true });
-    writeFileSync(ziel, html);
+    schreibeDetail(join(DIST, 'gesetze', e.ebene, `${e.key}.html`), html);
     gesetzeUrls.push(meta.canonical);
   } catch (err) {
     detailFehler++;
     console.error(`FEHLER  /gesetze/${e.ebene}/${e.key}:`, err);
   }
 }
-console.log(`OK  ${gesetzeUrls.length} Erlass-Detailseiten (Bund)`);
+console.log(`OK  ${gesetzeUrls.length} Erlass-Detailseiten (${erlassUebersprungen} übersprungen)`);
 
 for (const e of snapshotEntscheide) {
   try {
-    if (!e.datei) throw new Error('bestand snapshot, aber keine datei');
+    if (KEY_UNSICHER.test(e.key)) {
+      console.warn(`SKIP  /rechtsprechung: Key pfad-/URL-unsicher: ${JSON.stringify(e.key)}`);
+      entscheidUebersprungen++;
+      continue;
+    }
+    if (!e.datei) {
+      console.warn(`SKIP  /rechtsprechung/${e.key}: bestand snapshot ohne datei`);
+      entscheidUebersprungen++;
+      continue;
+    }
     const snap = JSON.parse(
       readFileSync(join(PUBLIC, 'rechtsprechung', e.datei), 'utf8'),
     ) as EntscheidSnapshotDatei;
     const eintrag = snap.eintraege[0];
-    if (!eintrag) throw new Error('Snapshot-Datei ohne eintraege');
+    if (!eintrag) {
+      console.warn(`SKIP  /rechtsprechung/${e.key}: Snapshot ohne eintraege`);
+      entscheidUebersprungen++;
+      continue;
+    }
+    if (!entscheidHatVolltext(eintrag)) {
+      console.warn(`SKIP  /rechtsprechung/${e.key}: kein Volltext/Regeste`);
+      entscheidUebersprungen++;
+      continue;
+    }
     const inhalt = entscheidVolltextHtml(e, eintrag);
+    if (inhalt.includes('<script')) throw new Error('Inline-Script im Entscheid-Volltext — Builder prüfen');
     const meta = metaFuerEntscheid(e);
-    pruefeDetail(inhalt, meta.pfad);
     const html = rendereTemplate(meta, jsonLdFuerEntscheid(e), inhalt, meta.pfad);
-    const ziel = join(DIST, 'rechtsprechung', `${e.key}.html`);
-    mkdirSync(dirname(ziel), { recursive: true });
-    writeFileSync(ziel, html);
+    schreibeDetail(join(DIST, 'rechtsprechung', `${e.key}.html`), html);
     rechtsprechungUrls.push(meta.canonical);
   } catch (err) {
     detailFehler++;
     console.error(`FEHLER  /rechtsprechung/${e.key}:`, err);
   }
 }
-console.log(`OK  ${rechtsprechungUrls.length} Entscheid-Detailseiten`);
+console.log(`OK  ${rechtsprechungUrls.length} Entscheid-Detailseiten (${entscheidUebersprungen} übersprungen)`);
 
-// Two-stage-Tor (FAHRPLAN W1.1): Katalog-Routen bleiben hart auf ERWARTETE_ROUTEN
-// gepinnt; die Detail-Mengen leiten sich aus den Manifesten ab, müssen aber
-// VOLLSTÄNDIG sein (kein stiller Drop — jeder snapshot bekommt eine Seite).
-if (gesetzeUrls.length !== bundErlasse.length || rechtsprechungUrls.length !== snapshotEntscheide.length) {
-  console.error(
-    `\nDetail-Drift: Erlasse ${gesetzeUrls.length}/${bundErlasse.length}, ` +
-      `Entscheide ${rechtsprechungUrls.length}/${snapshotEntscheide.length}`,
-  );
+// Tore (FAHRPLAN W1.1): (1) unerwartete Exceptions brechen; (2) Vollständigkeit
+// — jeder Eintrag ist entweder geschrieben oder BEWUSST übersprungen (kein
+// stiller Verlust). Der absolute Floor oben fängt zusätzlich Input-Schrumpfung.
+if (detailFehler > 0) {
+  console.error(`\n${detailFehler} Detailseite(n) mit unerwartetem Fehler`);
   process.exit(1);
 }
-if (detailFehler > 0) {
-  console.error(`\n${detailFehler} Detailseite(n) mit Fehler`);
+if (
+  gesetzeUrls.length + erlassUebersprungen !== snapshotErlasse.length ||
+  rechtsprechungUrls.length + entscheidUebersprungen !== snapshotEntscheide.length
+) {
+  console.error('\nVollständigkeits-Drift: geschrieben + übersprungen ≠ Manifest-Menge.');
   process.exit(1);
 }
 
