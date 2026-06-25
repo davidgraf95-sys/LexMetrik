@@ -29,31 +29,6 @@
       "fassungsToken": "5371e14760cf7da2f335f1055976200d2215eae6f0f1a9381fe4be61f0871a34"
     },
     {
-      "key": "gr_gerichte_ZR2202624",
-      "gericht": "gr_gerichte",
-      "gerichtName": "Kantonsgericht GR",
-      "gerichtstyp": "kantonal",
-      "kanton": "GR",
-      "nummer": "ZR2 2026 24",
-      "bgeReferenz": null,
-      "datum": "2026-06-18",
-      "zitierung": "Kantonsgericht GR ZR2 2026 24 vom 18.06.2026",
-      "leitcharakter": "routine",
-      "regesteVorhanden": false,
-      "regesteKurz": null,
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "ZPO"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "kanton/GR/gr_gerichte/ZR2202624.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://entscheidsuche.gr.ch/tribunavtplus/ServletDownload/ZR2_2026_24_ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd609763cc95a5503373e63c556b6d5eb39bddcd7f60c309b855179531fa317ff543789edc1bc0425c099a9488a18062b80f8de?path=ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd609763cc95a5503373e63c556b6d5eb39bddcd7f60c309b855179531fa317ff543789edc1bc0425c099a9488a18062b80f8de&pathIsEncrypted=1&dossiernummer=ZR2_2026_24",
-      "fassungsToken": "2aa9a4b720f50fcc3bec410080849baab5977293a16168bfd6fb64853e2d4a1a"
-    },
-    {
       "key": "be_verwaltungsgericht_2002026230",
       "gericht": "be_verwaltungsgericht",
       "gerichtName": "Verwaltungsgericht BE",
@@ -77,6 +52,31 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://www.vg-urteile.apps.be.ch/tribunapublikation/tribunavtplus/ServletDownload/200_2026_230_1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2de547295d41afb4e0daf8f4e61b4fa70fe74af34a19ea0111df82d744c2eb5bb99849ed07289a717e8f574fc555f3167?path=1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2de547295d41afb4e0daf8f4e61b4fa70fe74af34a19ea0111df82d744c2eb5bb99849ed07289a717e8f574fc555f3167&pathIsEncrypted=1&dossiernummer=200_2026_230",
       "fassungsToken": "8e095b5feceb14d27ad971dcf2e60230ce346daddbf01c47825a79507a6ae73c"
+    },
+    {
+      "key": "gr_gerichte_ZR2202624",
+      "gericht": "gr_gerichte",
+      "gerichtName": "Kantonsgericht GR",
+      "gerichtstyp": "kantonal",
+      "kanton": "GR",
+      "nummer": "ZR2 2026 24",
+      "bgeReferenz": null,
+      "datum": "2026-06-18",
+      "zitierung": "Kantonsgericht GR ZR2 2026 24 vom 18.06.2026",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "ZPO"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "kanton/GR/gr_gerichte/ZR2202624.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://entscheidsuche.gr.ch/tribunavtplus/ServletDownload/ZR2_2026_24_ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd609763cc95a5503373e63c556b6d5eb39bddcd7f60c309b855179531fa317ff543789edc1bc0425c099a9488a18062b80f8de?path=ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd609763cc95a5503373e63c556b6d5eb39bddcd7f60c309b855179531fa317ff543789edc1bc0425c099a9488a18062b80f8de&pathIsEncrypted=1&dossiernummer=ZR2_2026_24",
+      "fassungsToken": "2aa9a4b720f50fcc3bec410080849baab5977293a16168bfd6fb64853e2d4a1a"
     },
     {
       "key": "gr_gerichte_ZR1202620",
@@ -417,6 +417,32 @@
       "fassungsToken": "93ec6a54bf7ca8198ac0822e11cc34dbe75e96bd4b92e71a99c8d167022de769"
     },
     {
+      "key": "zh_obergericht_PQ260008",
+      "gericht": "zh_obergericht",
+      "gerichtName": "Obergericht ZH",
+      "gerichtstyp": "kantonal",
+      "kanton": "ZH",
+      "nummer": "PQ260008",
+      "bgeReferenz": null,
+      "datum": "2026-04-16",
+      "zitierung": "Obergericht ZH PQ260008 vom 16.04.2026",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "privat",
+      "sprache": "de",
+      "normKeys": [
+        "ZPO",
+        "ZGB"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "kanton/ZH/zh_obergericht/PQ260008.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://www.gerichte-zh.ch/entscheide/entscheide-drucken.html?tx_frpentscheidsammlungextended_pi3[entscheidDrucken]=40786",
+      "fassungsToken": "d37064f9d4b74d01fdb64f970b4a71ea8b5ee3f12b571b92e8c0073bd43c852c"
+    },
+    {
       "key": "zh_obergericht_PQ260027",
       "gericht": "zh_obergericht",
       "gerichtName": "Obergericht ZH",
@@ -442,32 +468,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://www.gerichte-zh.ch/entscheide/entscheide-drucken.html?tx_frpentscheidsammlungextended_pi3[entscheidDrucken]=40844",
       "fassungsToken": "ef131909d3073f899e5b27fe81affc9939fd02a378c57eb4b4c0906df5df09f4"
-    },
-    {
-      "key": "zh_obergericht_PQ260008",
-      "gericht": "zh_obergericht",
-      "gerichtName": "Obergericht ZH",
-      "gerichtstyp": "kantonal",
-      "kanton": "ZH",
-      "nummer": "PQ260008",
-      "bgeReferenz": null,
-      "datum": "2026-04-16",
-      "zitierung": "Obergericht ZH PQ260008 vom 16.04.2026",
-      "leitcharakter": "routine",
-      "regesteVorhanden": false,
-      "regesteKurz": null,
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "ZPO",
-        "ZGB"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "kanton/ZH/zh_obergericht/PQ260008.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://www.gerichte-zh.ch/entscheide/entscheide-drucken.html?tx_frpentscheidsammlungextended_pi3[entscheidDrucken]=40786",
-      "fassungsToken": "d37064f9d4b74d01fdb64f970b4a71ea8b5ee3f12b571b92e8c0073bd43c852c"
     },
     {
       "key": "bger_5A_79_2026",
@@ -524,31 +524,29 @@
       "fassungsToken": "9e1218b2de44299f2627346a3596bd55d70a517254a136498203260e5270eaef"
     },
     {
-      "key": "bger_7B_473_2023",
+      "key": "bger_1C_668_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "7B_473/2023",
+      "nummer": "1C_668/2024",
       "bgeReferenz": null,
       "datum": "2026-01-21",
-      "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
+      "zitierung": "BGer 1C_668/2024 vom 21. Januar 2026",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Entsiegelung",
-      "sachgebiet": "prozess",
+      "regesteKurz": "Baubewilligung für eine Mobilfunkanlage",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
-        "BGG",
-        "BV",
-        "STPO"
+        "BGG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/7B_473_2023.json",
+      "datei": "bund/bger/1C_668_2024.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-01-2026-7B_473-2023&lang=de&type=show_document",
-      "fassungsToken": "64514daa4a24de6700c559087c4b0f2109caa9411b40ceddbe85ba02ce9b6499"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-01-2026-1C_668-2024&lang=de&type=show_document",
+      "fassungsToken": "89774bf0ccfbdd37095a85deb5d3bc7eba0319bfb4f27dc3ef88aaab01bc642c"
     },
     {
       "key": "bger_7B_312_2023",
@@ -578,29 +576,31 @@
       "fassungsToken": "d61cffcc000ce97b67373880f7ec3bb8a758773c98259a8b10f8995d13f5fb0c"
     },
     {
-      "key": "bger_1C_668_2024",
+      "key": "bger_7B_473_2023",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "1C_668/2024",
+      "nummer": "7B_473/2023",
       "bgeReferenz": null,
       "datum": "2026-01-21",
-      "zitierung": "BGer 1C_668/2024 vom 21. Januar 2026",
+      "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Baubewilligung für eine Mobilfunkanlage",
-      "sachgebiet": "oeffentlich",
+      "regesteKurz": "Entsiegelung",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
-        "BGG"
+        "BGG",
+        "BV",
+        "STPO"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_668_2024.json",
+      "datei": "bund/bger/7B_473_2023.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-01-2026-1C_668-2024&lang=de&type=show_document",
-      "fassungsToken": "89774bf0ccfbdd37095a85deb5d3bc7eba0319bfb4f27dc3ef88aaab01bc642c"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-01-2026-7B_473-2023&lang=de&type=show_document",
+      "fassungsToken": "64514daa4a24de6700c559087c4b0f2109caa9411b40ceddbe85ba02ce9b6499"
     },
     {
       "key": "bger_4D_228_2025",
@@ -783,31 +783,6 @@
       "fassungsToken": "8c5dd7043deaef09d04c7442356c75a9e32e478dc64f05d014e5c15e595dae13"
     },
     {
-      "key": "bger_9C_270_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "9C_270/2025",
-      "bgeReferenz": null,
-      "datum": "2025-12-11",
-      "zitierung": "BGer 9C_270/2025 vom 11. Dezember 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "VOC-Lenkungsabgabe, Abgabeperiode 2016",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/9C_270_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-12-2025-9C_270-2025&lang=de&type=show_document",
-      "fassungsToken": "1d75cf4b36cf02c6518802139d61697a94dced88c8f88d2279a7ed833a03cb40"
-    },
-    {
       "key": "bger_1D_15_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -832,6 +807,31 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-12-2025-1D_15-2025&lang=de&type=show_document",
       "fassungsToken": "fd55ef670be599e3cc7cc30ecbd6ed64492a84343da3b4eb8646f1e5e03e8584"
+    },
+    {
+      "key": "bger_9C_270_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "9C_270/2025",
+      "bgeReferenz": null,
+      "datum": "2025-12-11",
+      "zitierung": "BGer 9C_270/2025 vom 11. Dezember 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "VOC-Lenkungsabgabe, Abgabeperiode 2016",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/9C_270_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-12-2025-9C_270-2025&lang=de&type=show_document",
+      "fassungsToken": "1d75cf4b36cf02c6518802139d61697a94dced88c8f88d2279a7ed833a03cb40"
     },
     {
       "key": "bger_6B_518_2024",
@@ -889,32 +889,55 @@
       "fassungsToken": "ab00d5fca8b67be2d292e0dea48e3092bbd324728c2c111ee0af86b5aa7e32fd"
     },
     {
-      "key": "bger_6B_85_2025",
+      "key": "bger_1C_383_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "6B_85/2025",
+      "nummer": "1C_383/2024",
       "bgeReferenz": null,
       "datum": "2025-12-04",
-      "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
+      "zitierung": "BGer 1C_383/2024 vom 4. Dezember 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
-      "sachgebiet": "straf",
+      "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
-        "STGB",
         "BGG",
-        "BV",
-        "STPO"
+        "BV"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/6B_85_2025.json",
+      "datei": "bund/bger/1C_383_2024.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-6B_85-2025&lang=de&type=show_document",
-      "fassungsToken": "6e37cbe8e13550483cb46422f11d4ad98067118c691bc60fdc58fdaf563c269b"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-1C_383-2024&lang=de&type=show_document",
+      "fassungsToken": "a626a01c191aae88acf71c6adf3922b8f2d2663b571b0d4a6e2a48e413d075e6"
+    },
+    {
+      "key": "bger_1C_539_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "1C_539/2024",
+      "bgeReferenz": null,
+      "datum": "2025-12-04",
+      "zitierung": "BGer 1C_539/2024 vom 4. Dezember 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Neubau Mobilfunkanlage",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/1C_539_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-1C_539-2024&lang=de&type=show_document",
+      "fassungsToken": "c27f79947a4f93ad6c9c1992db11bc0d400bcf204707997eb68dd46bb676020e"
     },
     {
       "key": "bger_6B_207_2025",
@@ -944,55 +967,32 @@
       "fassungsToken": "08c2fbf392ec9c4ba3b74032cf5ab1c43808bae68cdcd3e5d3248a3a276489a4"
     },
     {
-      "key": "bger_1C_539_2024",
+      "key": "bger_6B_85_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "1C_539/2024",
+      "nummer": "6B_85/2025",
       "bgeReferenz": null,
       "datum": "2025-12-04",
-      "zitierung": "BGer 1C_539/2024 vom 4. Dezember 2025",
+      "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Neubau Mobilfunkanlage",
-      "sachgebiet": "oeffentlich",
+      "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
+      "sachgebiet": "straf",
       "sprache": "de",
       "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_539_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-1C_539-2024&lang=de&type=show_document",
-      "fassungsToken": "c27f79947a4f93ad6c9c1992db11bc0d400bcf204707997eb68dd46bb676020e"
-    },
-    {
-      "key": "bger_1C_383_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "1C_383/2024",
-      "bgeReferenz": null,
-      "datum": "2025-12-04",
-      "zitierung": "BGer 1C_383/2024 vom 4. Dezember 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
+        "STGB",
         "BGG",
-        "BV"
+        "BV",
+        "STPO"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_383_2024.json",
+      "datei": "bund/bger/6B_85_2025.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-1C_383-2024&lang=de&type=show_document",
-      "fassungsToken": "a626a01c191aae88acf71c6adf3922b8f2d2663b571b0d4a6e2a48e413d075e6"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2025-6B_85-2025&lang=de&type=show_document",
+      "fassungsToken": "6e37cbe8e13550483cb46422f11d4ad98067118c691bc60fdc58fdaf563c269b"
     },
     {
       "key": "bger_2C_127_2023",
@@ -1020,33 +1020,6 @@
       "fassungsToken": "07ad7ab4074499fef175b77d8683bfebba79834087f9655ea5e9c849c1848f5d"
     },
     {
-      "key": "bger_6F_35_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "6F_35/2025",
-      "bgeReferenz": null,
-      "datum": "2025-11-14",
-      "zitierung": "BGer 6F_35/2025 vom 14. November 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 11. September 2025 (6B_549/2025)",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV",
-        "STPO"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/6F_35_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-11-2025-6F_35-2025&lang=de&type=show_document",
-      "fassungsToken": "a003a356353f34ce02b0da78614e5ef77bf12c7e7679bb6e6133bbd667413de3"
-    },
-    {
       "key": "bger_6B_118_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -1072,6 +1045,33 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-11-2025-6B_118-2024&lang=de&type=show_document",
       "fassungsToken": "afcab8a3ecb20a8307cbacd4b003382f86de88ae6eab1745d0219ebc8c07076d"
+    },
+    {
+      "key": "bger_6F_35_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "6F_35/2025",
+      "bgeReferenz": null,
+      "datum": "2025-11-14",
+      "zitierung": "BGer 6F_35/2025 vom 14. November 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 11. September 2025 (6B_549/2025)",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV",
+        "STPO"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/6F_35_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-11-2025-6F_35-2025&lang=de&type=show_document",
+      "fassungsToken": "a003a356353f34ce02b0da78614e5ef77bf12c7e7679bb6e6133bbd667413de3"
     },
     {
       "key": "bger_6B_220_2025",
@@ -1139,7 +1139,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "CO2-Sanktion gemäss Art. 13 des CO2-Gesetzes für das Jahr 2021",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG"
@@ -1229,6 +1229,33 @@
       "fassungsToken": "cf32d23c284d4acaff1baecec9f7b6d408e24f4b2ec8912dcb6021071e6fba32"
     },
     {
+      "key": "bger_7B_980_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "7B_980/2025",
+      "bgeReferenz": null,
+      "datum": "2025-10-15",
+      "zitierung": "BGer 7B_980/2025 vom 15. Oktober 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Verlängerung Untersuchungshaft",
+      "sachgebiet": "prozess",
+      "sprache": "de",
+      "normKeys": [
+        "STGB",
+        "STPO",
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/7B_980_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://15-10-2025-7B_980-2025&lang=de&type=show_document",
+      "fassungsToken": "e12520a7a9c1fad5dbc7cf7510f9628f53ec22110960af281306da33833525ce"
+    },
+    {
       "key": "bger_8C_681_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -1284,31 +1311,29 @@
       "fassungsToken": "eec96bbfd50e0ebc9a996b4ae9fb6875f21fd4e7ed0a3572ff8adb373f4c06bf"
     },
     {
-      "key": "bger_7B_980_2025",
+      "key": "bger_2C_566_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "7B_980/2025",
+      "nummer": "2C_566/2025",
       "bgeReferenz": null,
-      "datum": "2025-10-15",
-      "zitierung": "BGer 7B_980/2025 vom 15. Oktober 2025",
+      "datum": "2025-10-14",
+      "zitierung": "BGer 2C_566/2025 vom 14. Oktober 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Verlängerung Untersuchungshaft",
-      "sachgebiet": "prozess",
+      "regesteKurz": "Beschwerde gegen diverse Entscheide",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
-        "STGB",
-        "STPO",
         "BGG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/7B_980_2025.json",
+      "datei": "bund/bger/2C_566_2025.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://15-10-2025-7B_980-2025&lang=de&type=show_document",
-      "fassungsToken": "e12520a7a9c1fad5dbc7cf7510f9628f53ec22110960af281306da33833525ce"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-10-2025-2C_566-2025&lang=de&type=show_document",
+      "fassungsToken": "5b7532f094a4aa77be61231d3fc453278c8c11b48b29a66e280fbe6decb7cdd8"
     },
     {
       "key": "bger_6B_615_2025",
@@ -1361,31 +1386,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-10-2025-9C_395-2025&lang=de&type=show_document",
       "fassungsToken": "a0a1a2442efec7de4e2007c0f84967f2764699f3158c0fe277ed1a25ca27d177"
-    },
-    {
-      "key": "bger_2C_566_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_566/2025",
-      "bgeReferenz": null,
-      "datum": "2025-10-14",
-      "zitierung": "BGer 2C_566/2025 vom 14. Oktober 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Beschwerde gegen diverse Entscheide",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_566_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-10-2025-2C_566-2025&lang=de&type=show_document",
-      "fassungsToken": "5b7532f094a4aa77be61231d3fc453278c8c11b48b29a66e280fbe6decb7cdd8"
     },
     {
       "key": "bger_5A_853_2025",
@@ -1543,6 +1543,31 @@
       "fassungsToken": "5ea7aed8e0d27bd1de9296f29fb4983623bad44285fd83507177abb777a742fc"
     },
     {
+      "key": "bger_1C_403_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "1C_403/2024",
+      "bgeReferenz": null,
+      "datum": "2025-10-06",
+      "zitierung": "BGer 1C_403/2024 vom 6. Oktober 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Bauen ausserhalb der Bauzone (Umbau Mobilfunkanlage)",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/1C_403_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://06-10-2025-1C_403-2024&lang=de&type=show_document",
+      "fassungsToken": "59e7569740f34af06869ac33e42aa4eea0583b5ccdcf8dc4d61478acd4b0a4a2"
+    },
+    {
       "key": "bger_5A_738_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -1567,31 +1592,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://06-10-2025-5A_738-2024&lang=de&type=show_document",
       "fassungsToken": "27cc98f378afd3261d6ef139f97f51920a490b2ab39061a71f75bb15ebdcd020"
-    },
-    {
-      "key": "bger_1C_403_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "1C_403/2024",
-      "bgeReferenz": null,
-      "datum": "2025-10-06",
-      "zitierung": "BGer 1C_403/2024 vom 6. Oktober 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Bauen ausserhalb der Bauzone (Umbau Mobilfunkanlage)",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_403_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://06-10-2025-1C_403-2024&lang=de&type=show_document",
-      "fassungsToken": "59e7569740f34af06869ac33e42aa4eea0583b5ccdcf8dc4d61478acd4b0a4a2"
     },
     {
       "key": "bger_9C_426_2025",
@@ -1726,6 +1726,33 @@
       "fassungsToken": "7c83d44f4c33e1a7391056dc991e0ad47bd348ab7a19b4a0c183392bc1ea2fe5"
     },
     {
+      "key": "bger_2C_12_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_12/2025",
+      "bgeReferenz": null,
+      "datum": "2025-09-08",
+      "zitierung": "BGer 2C_12/2025 vom 8. September 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "AIG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_12_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://08-09-2025-2C_12-2025&lang=de&type=show_document",
+      "fassungsToken": "741e7b0924856ca3a787430b4d3e235300078b8935560e981ea77cc36b678c45"
+    },
+    {
       "key": "bger_7B_596_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -1749,33 +1776,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://08-09-2025-7B_596-2024&lang=de&type=show_document",
       "fassungsToken": "8d4eaffa4d9947350ba595dbf1b0c051b9ac880fb1d2e7c24983bf42c6589b77"
-    },
-    {
-      "key": "bger_2C_12_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_12/2025",
-      "bgeReferenz": null,
-      "datum": "2025-09-08",
-      "zitierung": "BGer 2C_12/2025 vom 8. September 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "AIG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_12_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://08-09-2025-2C_12-2025&lang=de&type=show_document",
-      "fassungsToken": "741e7b0924856ca3a787430b4d3e235300078b8935560e981ea77cc36b678c45"
     },
     {
       "key": "ag_gerichte_ZSU_2025_181",
@@ -1885,6 +1885,33 @@
       "fassungsToken": "2458c0c5986729fa9d9e8fd04c1db53026e5d3857ff5ce5493fe36f4a3a4592a"
     },
     {
+      "key": "bger_6B_1184_2023",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "6B_1184/2023",
+      "bgeReferenz": null,
+      "datum": "2025-08-18",
+      "zitierung": "BGer 6B_1184/2023 vom 18. August 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Fälschung von Ausweisen; rechtliches Gehör",
+      "sachgebiet": "straf",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "STPO",
+        "STGB"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/6B_1184_2023.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://18-08-2025-6B_1184-2023&lang=de&type=show_document",
+      "fassungsToken": "4f4a2a444364debba273bfb23d18431a3c31ea0ac789d21bd2a36bdc6bdb05c4"
+    },
+    {
       "key": "bger_6B_245_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -1938,31 +1965,29 @@
       "fassungsToken": "2226032bbd4f22b45fb0370ff87ef4109f86f059e5b179c6d3be6d1d9b06b346"
     },
     {
-      "key": "bger_6B_1184_2023",
+      "key": "bger_6B_175_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "6B_1184/2023",
+      "nummer": "6B_175/2025",
       "bgeReferenz": null,
-      "datum": "2025-08-18",
-      "zitierung": "BGer 6B_1184/2023 vom 18. August 2025",
+      "datum": "2025-08-14",
+      "zitierung": "BGer 6B_175/2025 vom 14. August 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Fälschung von Ausweisen; rechtliches Gehör",
+      "regesteKurz": "Erschleichung einer falschen Beurkundung; Strafzumessung etc.; Anklageprinzip, Beschleunigungsgebot etc.",
       "sachgebiet": "straf",
       "sprache": "de",
       "normKeys": [
-        "BGG",
-        "STPO",
-        "STGB"
+        "BGG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/6B_1184_2023.json",
+      "datei": "bund/bger/6B_175_2025.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://18-08-2025-6B_1184-2023&lang=de&type=show_document",
-      "fassungsToken": "4f4a2a444364debba273bfb23d18431a3c31ea0ac789d21bd2a36bdc6bdb05c4"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-08-2025-6B_175-2025&lang=de&type=show_document",
+      "fassungsToken": "9310af03ad5febb2d2ac436e768b2b6e43df277b3a3c2fe8b76bba702229ff0f"
     },
     {
       "key": "bger_8C_694_2024",
@@ -1992,31 +2017,6 @@
       "fassungsToken": "c21a7e09ca9638c42d5df6fcef6f998f7008b662a2674ea68c2a4a365d0fffac"
     },
     {
-      "key": "bger_6B_175_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "6B_175/2025",
-      "bgeReferenz": null,
-      "datum": "2025-08-14",
-      "zitierung": "BGer 6B_175/2025 vom 14. August 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Erschleichung einer falschen Beurkundung; Strafzumessung etc.; Anklageprinzip, Beschleunigungsgebot etc.",
-      "sachgebiet": "straf",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/6B_175_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-08-2025-6B_175-2025&lang=de&type=show_document",
-      "fassungsToken": "9310af03ad5febb2d2ac436e768b2b6e43df277b3a3c2fe8b76bba702229ff0f"
-    },
-    {
       "key": "bger_5A_477_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -2042,6 +2042,33 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://13-08-2025-5A_477-2025&lang=de&type=show_document",
       "fassungsToken": "eed04ef18e4f762a9b52a7c8b32cd82447da8872adedbef98f238bed20a7315e"
+    },
+    {
+      "key": "bger_5A_375_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "5A_375/2025",
+      "bgeReferenz": null,
+      "datum": "2025-08-11",
+      "zitierung": "BGer 5A_375/2025 vom 11. August 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Konkurseröffnung",
+      "sachgebiet": "privat",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "SCHKG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/5A_375_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-08-2025-5A_375-2025&lang=de&type=show_document",
+      "fassungsToken": "e4411f2eea4598494b5b4d1f5f47c817e3f8ea8030527c51bbae3a56ffc2b1fd"
     },
     {
       "key": "bger_5A_503_2024",
@@ -2096,33 +2123,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-08-2025-5A_726-2024&lang=de&type=show_document",
       "fassungsToken": "f1179101f9069aa6880311df40514b8f92f67b17b7ef0187d21acdc64c587afc"
-    },
-    {
-      "key": "bger_5A_375_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "5A_375/2025",
-      "bgeReferenz": null,
-      "datum": "2025-08-11",
-      "zitierung": "BGer 5A_375/2025 vom 11. August 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Konkurseröffnung",
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "SCHKG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/5A_375_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-08-2025-5A_375-2025&lang=de&type=show_document",
-      "fassungsToken": "e4411f2eea4598494b5b4d1f5f47c817e3f8ea8030527c51bbae3a56ffc2b1fd"
     },
     {
       "key": "bger_8C_750_2024",
@@ -2334,6 +2334,31 @@
       "fassungsToken": "54d34e1a197a2bae30901e78149902cfac32bfcf195b082c6de7bfa0203c388f"
     },
     {
+      "key": "bger_2C_276_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_276/2024",
+      "bgeReferenz": null,
+      "datum": "2025-07-21",
+      "zitierung": "BGer 2C_276/2024 vom 21. Juli 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Schutz des ökologischen Gleichgewichts; Ausstellung von Bescheinigungen für Emissionsverminderungen",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_276_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-07-2025-2C_276-2024&lang=de&type=show_document",
+      "fassungsToken": "1234aeaebb698b3632f805e7c4d009f5cfbdafee57fc62498e17e3564902eb4b"
+    },
+    {
       "key": "bger_6B_124_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -2385,31 +2410,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-07-2025-7B_378-2025&lang=de&type=show_document",
       "fassungsToken": "f9d9069ec0ed712ad6307a33c14996d51805b6c26304c0510cc86946fd4739d0"
-    },
-    {
-      "key": "bger_2C_276_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_276/2024",
-      "bgeReferenz": null,
-      "datum": "2025-07-21",
-      "zitierung": "BGer 2C_276/2024 vom 21. Juli 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Schutz des ökologischen Gleichgewichts; Ausstellung von Bescheinigungen für Emissionsverminderungen",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_276_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://21-07-2025-2C_276-2024&lang=de&type=show_document",
-      "fassungsToken": "1234aeaebb698b3632f805e7c4d009f5cfbdafee57fc62498e17e3564902eb4b"
     },
     {
       "key": "bger_7B_1376_2024",
@@ -2492,33 +2492,6 @@
       "fassungsToken": "f56d05be74ca45dc512de38d09e0d7c5a213450405aadb76e9f9fce248d851f8"
     },
     {
-      "key": "bger_9C_187_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "9C_187/2025",
-      "bgeReferenz": null,
-      "datum": "2025-07-03",
-      "zitierung": "BGer 9C_187/2025 vom 3. Juli 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperioden 2020 bis 2021",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV",
-        "STHG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/9C_187_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-07-2025-9C_187-2025&lang=de&type=show_document",
-      "fassungsToken": "9e32cec33f8f7150f79e55801a4a8f66d4f6dc556ecaffa9f2bb29b05b7e9065"
-    },
-    {
       "key": "bger_8C_102_2025",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -2545,6 +2518,33 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-07-2025-8C_102-2025&lang=de&type=show_document",
       "fassungsToken": "a3cd39e72c85cce1837d5f17853b3a414d98102755fb296537d8ef36fa60c382"
+    },
+    {
+      "key": "bger_9C_187_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "9C_187/2025",
+      "bgeReferenz": null,
+      "datum": "2025-07-03",
+      "zitierung": "BGer 9C_187/2025 vom 3. Juli 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperioden 2020 bis 2021",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV",
+        "STHG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/9C_187_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-07-2025-9C_187-2025&lang=de&type=show_document",
+      "fassungsToken": "9e32cec33f8f7150f79e55801a4a8f66d4f6dc556ecaffa9f2bb29b05b7e9065"
     },
     {
       "key": "bger_1C_187_2024",
@@ -2678,31 +2678,6 @@
       "fassungsToken": "e8cac1b49aacc8ebf57c78d4b264778699e3fc7fb75a28b7a7375781ea13d4e6"
     },
     {
-      "key": "bger_4A_66_2025",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "4A_66/2025",
-      "bgeReferenz": null,
-      "datum": "2025-05-19",
-      "zitierung": "BGer 4A_66/2025 vom 19. Mai 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Krankentaggeldversicherung,",
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/4A_66_2025.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://19-05-2025-4A_66-2025&lang=de&type=show_document",
-      "fassungsToken": "7bb0d2731f58c20baa344a5f9098e4881ef9246c1db406fe80bbc6961f23b8bd"
-    },
-    {
       "key": "bger_2D_14_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -2726,6 +2701,31 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://19-05-2025-2D_14-2024&lang=de&type=show_document",
       "fassungsToken": "f21fc652871024c123383ea9b553bc64281541e0861cf7e4a5cabbe0917f0456"
+    },
+    {
+      "key": "bger_4A_66_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "4A_66/2025",
+      "bgeReferenz": null,
+      "datum": "2025-05-19",
+      "zitierung": "BGer 4A_66/2025 vom 19. Mai 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Krankentaggeldversicherung,",
+      "sachgebiet": "privat",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/4A_66_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://19-05-2025-4A_66-2025&lang=de&type=show_document",
+      "fassungsToken": "7bb0d2731f58c20baa344a5f9098e4881ef9246c1db406fe80bbc6961f23b8bd"
     },
     {
       "key": "bger_5A_898_2024",
@@ -2754,6 +2754,33 @@
       "fassungsToken": "bac2cca70589284b43cfb1fdd396cf8e73002fc326f75aa9d43cbbfd56341905"
     },
     {
+      "key": "bger_2C_245_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_245/2025",
+      "bgeReferenz": null,
+      "datum": "2025-05-14",
+      "zitierung": "BGer 2C_245/2025 vom 14. Mai 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Widerruf der Aufenthaltsbewilligung EU/EFTA",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV",
+        "AIG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_245_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-05-2025-2C_245-2025&lang=de&type=show_document",
+      "fassungsToken": "7dea88323f8720159b26a183d6f6983741d8b784928caa50a838c4aafb995b37"
+    },
+    {
       "key": "bger_2C_570_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -2766,7 +2793,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Härtefallmassnahmen Covid-19-Epidemie (Rückforderung)",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -2808,31 +2835,29 @@
       "fassungsToken": "db49a8ca3fddc891aa0475c0a16a97310c2c7fbbfcd34774ca5d7315285afcea"
     },
     {
-      "key": "bger_2C_245_2025",
+      "key": "bger_1C_190_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "2C_245/2025",
+      "nummer": "1C_190/2024",
       "bgeReferenz": null,
-      "datum": "2025-05-14",
-      "zitierung": "BGer 2C_245/2025 vom 14. Mai 2025",
+      "datum": "2025-05-13",
+      "zitierung": "BGer 1C_190/2024 vom 13. Mai 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Widerruf der Aufenthaltsbewilligung EU/EFTA",
-      "sachgebiet": "sozial-abgaben",
+      "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
-        "BGG",
-        "BV",
-        "AIG"
+        "BGG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_245_2025.json",
+      "datei": "bund/bger/1C_190_2024.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://14-05-2025-2C_245-2025&lang=de&type=show_document",
-      "fassungsToken": "7dea88323f8720159b26a183d6f6983741d8b784928caa50a838c4aafb995b37"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://13-05-2025-1C_190-2024&lang=de&type=show_document",
+      "fassungsToken": "e1c7b42b9de76d5962fdfef178b559edb2ff8fbc9a63f31df14965fd5cfe8ccc"
     },
     {
       "key": "bger_6B_123_2025",
@@ -2859,31 +2884,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://13-05-2025-6B_123-2025&lang=de&type=show_document",
       "fassungsToken": "a64e3e9b566964de43aa2bf0849db6be52ed894cc06778fd577becf78cfa2bc6"
-    },
-    {
-      "key": "bger_1C_190_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "1C_190/2024",
-      "bgeReferenz": null,
-      "datum": "2025-05-13",
-      "zitierung": "BGer 1C_190/2024 vom 13. Mai 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_190_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://13-05-2025-1C_190-2024&lang=de&type=show_document",
-      "fassungsToken": "e1c7b42b9de76d5962fdfef178b559edb2ff8fbc9a63f31df14965fd5cfe8ccc"
     },
     {
       "key": "bger_7B_989_2024",
@@ -3069,6 +3069,32 @@
       "fassungsToken": "b02901c5b83e7065c6fa9549ea1693f1810be47bde0d365871daeda80839e359"
     },
     {
+      "key": "bger_7B_1224_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "7B_1224/2024",
+      "bgeReferenz": null,
+      "datum": "2025-04-04",
+      "zitierung": "BGer 7B_1224/2024 vom 4. April 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Entsiegelung",
+      "sachgebiet": "prozess",
+      "sprache": "de",
+      "normKeys": [
+        "STGB",
+        "STPO"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/7B_1224_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-04-2025-7B_1224-2024&lang=de&type=show_document",
+      "fassungsToken": "c832b3b3b6c0038c5410ba9189959550ac73f72034e981c1571a310560d5e958"
+    },
+    {
       "key": "bger_8C_555_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -3095,32 +3121,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-04-2025-8C_555-2024&lang=de&type=show_document",
       "fassungsToken": "6582fe3a82dd9d84147bb278b6fddce42c4cda56de2260c5457de16a27209a2a"
-    },
-    {
-      "key": "bger_7B_1224_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "7B_1224/2024",
-      "bgeReferenz": null,
-      "datum": "2025-04-04",
-      "zitierung": "BGer 7B_1224/2024 vom 4. April 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Entsiegelung",
-      "sachgebiet": "prozess",
-      "sprache": "de",
-      "normKeys": [
-        "STGB",
-        "STPO"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/7B_1224_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-04-2025-7B_1224-2024&lang=de&type=show_document",
-      "fassungsToken": "c832b3b3b6c0038c5410ba9189959550ac73f72034e981c1571a310560d5e958"
     },
     {
       "key": "bger_1C_439_2024",
@@ -3415,6 +3415,32 @@
       "fassungsToken": "f9929ab3199ae4fa4decd89ab53f5b90a7d35b18d3c61dfccfa5d4c141c285e1"
     },
     {
+      "key": "bger_6B_535_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "6B_535/2024",
+      "bgeReferenz": null,
+      "datum": "2025-02-04",
+      "zitierung": "BGer 6B_535/2024 vom 4. Februar 2025",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Fahrlässige einfache Körperverletzung",
+      "sachgebiet": "straf",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "STGB"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/6B_535_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-02-2025-6B_535-2024&lang=de&type=show_document",
+      "fassungsToken": "e169b12ee6328fadd22f428139721dd87a2dd0506821eb0c1c0b509091a7937a"
+    },
+    {
       "key": "bger_7F_70_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -3440,30 +3466,30 @@
       "fassungsToken": "4b9cb11865773afff90b9e419739749d472fb661d33cd970c971ef6a71c570fc"
     },
     {
-      "key": "bger_6B_535_2024",
+      "key": "bger_2C_349_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "6B_535/2024",
+      "nummer": "2C_349/2024",
       "bgeReferenz": null,
-      "datum": "2025-02-04",
-      "zitierung": "BGer 6B_535/2024 vom 4. Februar 2025",
+      "datum": "2025-02-03",
+      "zitierung": "BGer 2C_349/2024 vom 3. Februar 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Fahrlässige einfache Körperverletzung",
-      "sachgebiet": "straf",
+      "regesteKurz": "Erlöschen/Wiedererteilung der Aufenthaltsbewilligung",
+      "sachgebiet": "privat",
       "sprache": "de",
       "normKeys": [
         "BGG",
-        "STGB"
+        "ZGB"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/6B_535_2024.json",
+      "datei": "bund/bger/2C_349_2024.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-02-2025-6B_535-2024&lang=de&type=show_document",
-      "fassungsToken": "e169b12ee6328fadd22f428139721dd87a2dd0506821eb0c1c0b509091a7937a"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-02-2025-2C_349-2024&lang=de&type=show_document",
+      "fassungsToken": "eeea955e003cda340be2d9ae22f366216f6ec437d02656f286143fd40690d303"
     },
     {
       "key": "bger_6B_389_2023",
@@ -3493,30 +3519,29 @@
       "fassungsToken": "3999a1bb78439af72e6793ac5f27519050e52abd734b12070a1543010b2251fe"
     },
     {
-      "key": "bger_2C_349_2024",
+      "key": "bger_4D_155_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "2C_349/2024",
+      "nummer": "4D_155/2024",
       "bgeReferenz": null,
-      "datum": "2025-02-03",
-      "zitierung": "BGer 2C_349/2024 vom 3. Februar 2025",
+      "datum": "2025-01-30",
+      "zitierung": "BGer 4D_155/2024 vom 30. Januar 2025",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Erlöschen/Wiedererteilung der Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "regesteKurz": "definitve Rechtsöffnung,",
+      "sachgebiet": "schkg",
       "sprache": "de",
       "normKeys": [
-        "BGG",
-        "ZGB"
+        "BGG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_349_2024.json",
+      "datei": "bund/bger/4D_155_2024.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-02-2025-2C_349-2024&lang=de&type=show_document",
-      "fassungsToken": "eeea955e003cda340be2d9ae22f366216f6ec437d02656f286143fd40690d303"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://30-01-2025-4D_155-2024&lang=de&type=show_document",
+      "fassungsToken": "d650b705601cd0c4d0d8120bab820e4cfd1340e37abf3c2e859c1cc576b25af9"
     },
     {
       "key": "bger_8C_476_2024",
@@ -3544,31 +3569,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://30-01-2025-8C_476-2024&lang=de&type=show_document",
       "fassungsToken": "daf706ea3e8c7b3667f3aa1a17c6d20c10b715a20bdd09c7fa626d9338da9dc2"
-    },
-    {
-      "key": "bger_4D_155_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "4D_155/2024",
-      "bgeReferenz": null,
-      "datum": "2025-01-30",
-      "zitierung": "BGer 4D_155/2024 vom 30. Januar 2025",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "definitve Rechtsöffnung,",
-      "sachgebiet": "schkg",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/4D_155_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://30-01-2025-4D_155-2024&lang=de&type=show_document",
-      "fassungsToken": "d650b705601cd0c4d0d8120bab820e4cfd1340e37abf3c2e859c1cc576b25af9"
     },
     {
       "key": "bger_9C_219_2024",
@@ -3652,6 +3652,31 @@
       "fassungsToken": "93963589c3c621064a5d1c22d56723dfbd2f0aa331cb4830ab15ffc4a3e6c7cd"
     },
     {
+      "key": "bger_8C_702_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "8C_702/2024",
+      "bgeReferenz": null,
+      "datum": "2024-12-10",
+      "zitierung": "BGer 8C_702/2024 vom 10. Dezember 2024",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Sozialhilfe (Prozessvoraussetzung)",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/8C_702_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-12-2024-8C_702-2024&lang=de&type=show_document",
+      "fassungsToken": "afc2062c7e92e76d689d80ac5c818f2c4739c65f3f4d422572b28b26027666b9"
+    },
+    {
       "key": "bger_8C_703_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -3677,29 +3702,30 @@
       "fassungsToken": "4110df8a929ba52e7b7935396713da7383a626b94404d26b90e63d24384cab0b"
     },
     {
-      "key": "bger_8C_702_2024",
+      "key": "bger_1C_307_2023",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "nummer": "8C_702/2024",
+      "nummer": "1C_307/2023",
       "bgeReferenz": null,
-      "datum": "2024-12-10",
-      "zitierung": "BGer 8C_702/2024 vom 10. Dezember 2024",
+      "datum": "2024-12-09",
+      "zitierung": "BGer 1C_307/2023 vom 9. Dezember 2024",
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
-      "regesteKurz": "Sozialhilfe (Prozessvoraussetzung)",
-      "sachgebiet": "sozial-abgaben",
+      "regesteKurz": "Baubewilligung Mobilfunkantenne",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
-        "BGG"
+        "BGG",
+        "BV"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
-      "datei": "bund/bger/8C_702_2024.json",
+      "datei": "bund/bger/1C_307_2023.json",
       "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-12-2024-8C_702-2024&lang=de&type=show_document",
-      "fassungsToken": "afc2062c7e92e76d689d80ac5c818f2c4739c65f3f4d422572b28b26027666b9"
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://09-12-2024-1C_307-2023&lang=de&type=show_document",
+      "fassungsToken": "906fd712ab6ebd040ee02e5ac540d105253c7f4a9c5a5fbc6f35c0f4197b6109"
     },
     {
       "key": "bger_8C_709_2024",
@@ -3753,32 +3779,6 @@
       "fassungsToken": "ab8b301f71edcc7fb1e479e0c2efec585ee814a657217be825f3b8284a20c242"
     },
     {
-      "key": "bger_1C_307_2023",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "1C_307/2023",
-      "bgeReferenz": null,
-      "datum": "2024-12-09",
-      "zitierung": "BGer 1C_307/2023 vom 9. Dezember 2024",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Baubewilligung Mobilfunkantenne",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/1C_307_2023.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://09-12-2024-1C_307-2023&lang=de&type=show_document",
-      "fassungsToken": "906fd712ab6ebd040ee02e5ac540d105253c7f4a9c5a5fbc6f35c0f4197b6109"
-    },
-    {
       "key": "bger_8C_701_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -3803,6 +3803,33 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://05-12-2024-8C_701-2024&lang=de&type=show_document",
       "fassungsToken": "82bacc9a6e3abf3704c07f8c496d0e0414a153c20390dd0fddaccffa57f0e8de"
+    },
+    {
+      "key": "bger_4A_478_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "4A_478/2024",
+      "bgeReferenz": null,
+      "datum": "2024-12-04",
+      "zitierung": "BGer 4A_478/2024 vom 4. Dezember 2024",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Forderung aus Krankentaggeldversicherung,",
+      "sachgebiet": "privat",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "ZPO",
+        "VVG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/4A_478_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2024-4A_478-2024&lang=de&type=show_document",
+      "fassungsToken": "d87609fb265187816d5bd27a6a5058aebdf1d82bfc907e2f841bfce613166099"
     },
     {
       "key": "bger_6B_716_2024",
@@ -3831,33 +3858,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2024-6B_716-2024&lang=de&type=show_document",
       "fassungsToken": "704d3dc2497c6a5ebc91cf5fae8b88b7d77992fe7d7f430aeecada263dd001d3"
-    },
-    {
-      "key": "bger_4A_478_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "4A_478/2024",
-      "bgeReferenz": null,
-      "datum": "2024-12-04",
-      "zitierung": "BGer 4A_478/2024 vom 4. Dezember 2024",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Forderung aus Krankentaggeldversicherung,",
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "ZPO",
-        "VVG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/4A_478_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-12-2024-4A_478-2024&lang=de&type=show_document",
-      "fassungsToken": "d87609fb265187816d5bd27a6a5058aebdf1d82bfc907e2f841bfce613166099"
     },
     {
       "key": "bger_8C_260_2024",
@@ -4018,33 +4018,6 @@
       "fassungsToken": "4237c74f0c4444faf03471ed592aadfe592afe3f6e212beaf71a36e272757b0f"
     },
     {
-      "key": "bger_8C_150_2024",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "8C_150/2024",
-      "bgeReferenz": null,
-      "datum": "2024-10-10",
-      "zitierung": "BGer 8C_150/2024 vom 10. Oktober 2024",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "ATSG",
-        "UVG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/8C_150_2024.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-10-2024-8C_150-2024&lang=de&type=show_document",
-      "fassungsToken": "bb648f193e65026362f60914f50d8a5a585946f12733275fe3e056af068156b7"
-    },
-    {
       "key": "bger_7B_94_2022",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -4072,6 +4045,33 @@
       "fassungsToken": "230e1f0e343053395271da302e8c9a8c2e14281738eb3807a492dce2bb397242"
     },
     {
+      "key": "bger_8C_150_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "8C_150/2024",
+      "bgeReferenz": null,
+      "datum": "2024-10-10",
+      "zitierung": "BGer 8C_150/2024 vom 10. Oktober 2024",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "ATSG",
+        "UVG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/8C_150_2024.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-10-2024-8C_150-2024&lang=de&type=show_document",
+      "fassungsToken": "bb648f193e65026362f60914f50d8a5a585946f12733275fe3e056af068156b7"
+    },
+    {
       "key": "bger_2C_42_2024",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -4084,7 +4084,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Aufenthaltsbewilligung zur erwerbslosen Wohnsitznahme",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -4110,7 +4110,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -4454,7 +4454,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Widerruf der Niederlassungsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -4614,7 +4614,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Verlängerung der Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -4907,7 +4907,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Aufenthaltsbewilligung / Nichtverlängerung und Wegweisung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -5036,7 +5036,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Widerruf der Aufenthaltsbewilligung EU/EFTA und Wegweisung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -5087,7 +5087,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Feststellung der Rechtswidrigkeit der Haft",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -5244,7 +5244,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -5400,7 +5400,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschluss vom Präsenzunterricht",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -5729,6 +5729,32 @@
       "fassungsToken": "a8c238d4a1a3db8cb77ee135f19a90a60b8264baf1c33fbf3297594de0b69fea"
     },
     {
+      "key": "bger_2C_246_2022",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_246/2022",
+      "bgeReferenz": null,
+      "datum": "2023-01-31",
+      "zitierung": "BGer 2C_246/2022 vom 31. Januar 2023",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Erteilung einer Aufenthaltsbewilligung",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_246_2022.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=29.01.2023&to_date=01.02.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=40&azaclir=aza&highlight_docid=aza%3A%2F%2F31-01-2023-2C_246-2022&number_of_ranks=78",
+      "fassungsToken": "41e0df7f99e6104d5046d9dcb45da7ec9151803afaade4325bca4f64eef242f1"
+    },
+    {
       "key": "bger_5A_745_2022",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -5781,32 +5807,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=20&from_date=21.01.2023&to_date=09.02.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=198&azaclir=aza&highlight_docid=aza%3A%2F%2F31-01-2023-9C_628-2022&number_of_ranks=391",
       "fassungsToken": "05521b71a8e3a1ee2c672ebda758fb55fb9fa54cfd63ba5c14c3aea17b42b8e0"
-    },
-    {
-      "key": "bger_2C_246_2022",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_246/2022",
-      "bgeReferenz": null,
-      "datum": "2023-01-31",
-      "zitierung": "BGer 2C_246/2022 vom 31. Januar 2023",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Erteilung einer Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_246_2022.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=29.01.2023&to_date=01.02.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=40&azaclir=aza&highlight_docid=aza%3A%2F%2F31-01-2023-2C_246-2022&number_of_ranks=78",
-      "fassungsToken": "41e0df7f99e6104d5046d9dcb45da7ec9151803afaade4325bca4f64eef242f1"
     },
     {
       "key": "bger_2C_6_2023",
@@ -5963,6 +5963,32 @@
       "fassungsToken": "a1c3d6b866a983bb0688e1dc50c80e20235e102e1f6674ce3c25323100af99de"
     },
     {
+      "key": "bger_2C_765_2022",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_765/2022",
+      "bgeReferenz": null,
+      "datum": "2022-10-13",
+      "zitierung": "BGer 2C_765/2022 vom 13. Oktober 2022",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Ausschaffungshaft, Haftentlassungsgesuch",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_765_2022.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=6&from_date=12.10.2022&to_date=15.10.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=52&azaclir=aza&highlight_docid=aza%3A%2F%2F13-10-2022-2C_765-2022&number_of_ranks=79",
+      "fassungsToken": "a7e75595655aa5068b363953eacb5b090fcc18e5b187abb46c827586d0cac545"
+    },
+    {
       "key": "bger_8C_326_2022",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -5989,32 +6015,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=12.10.2022&to_date=15.10.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=20&azaclir=aza&highlight_docid=aza%3A%2F%2F13-10-2022-8C_326-2022&number_of_ranks=79",
       "fassungsToken": "0d8a1b5e264d5f10d5408db5a247bd10dd4156a353225747747b8ea91403915d"
-    },
-    {
-      "key": "bger_2C_765_2022",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_765/2022",
-      "bgeReferenz": null,
-      "datum": "2022-10-13",
-      "zitierung": "BGer 2C_765/2022 vom 13. Oktober 2022",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Ausschaffungshaft, Haftentlassungsgesuch",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_765_2022.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=6&from_date=12.10.2022&to_date=15.10.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=52&azaclir=aza&highlight_docid=aza%3A%2F%2F13-10-2022-2C_765-2022&number_of_ranks=79",
-      "fassungsToken": "a7e75595655aa5068b363953eacb5b090fcc18e5b187abb46c827586d0cac545"
     },
     {
       "key": "bger_1C_471_2021",
@@ -6239,7 +6239,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Gesuch um Erteilung einer Härtefallbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -6308,32 +6308,6 @@
       "fassungsToken": "cb12e2c0112ebe003e9660300aa0a1a364c066f838b92b68c025897185c464aa"
     },
     {
-      "key": "bger_6B_688_2021",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "6B_688/2021",
-      "bgeReferenz": null,
-      "datum": "2022-08-18",
-      "zitierung": "BGer 6B_688/2021 vom 18. August 2022",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Gewerbsmässiger Betrug, unrechtmässiger Bezug von Leistungen einer Sozialversicherung",
-      "sachgebiet": "straf",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "STGB"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/6B_688_2021.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=17.08.2022&to_date=20.08.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=38&azaclir=aza&highlight_docid=aza%3A%2F%2F18-08-2022-6B_688-2021&number_of_ranks=77",
-      "fassungsToken": "002e956e50a5108eb77e818609138be2ba23bb0e28f9c019f540e2eb89b86fe5"
-    },
-    {
       "key": "bger_5A_1045_2021",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -6359,6 +6333,32 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=3&from_date=17.08.2022&to_date=20.08.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=22&azaclir=aza&highlight_docid=aza%3A%2F%2F18-08-2022-5A_1045-2021&number_of_ranks=77",
       "fassungsToken": "e9cc92478cb2b2be84106e126558a833ff8e11467cacfe5c49b1dafdb3742dba"
+    },
+    {
+      "key": "bger_6B_688_2021",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "6B_688/2021",
+      "bgeReferenz": null,
+      "datum": "2022-08-18",
+      "zitierung": "BGer 6B_688/2021 vom 18. August 2022",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Gewerbsmässiger Betrug, unrechtmässiger Bezug von Leistungen einer Sozialversicherung",
+      "sachgebiet": "straf",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "STGB"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/6B_688_2021.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=17.08.2022&to_date=20.08.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=38&azaclir=aza&highlight_docid=aza%3A%2F%2F18-08-2022-6B_688-2021&number_of_ranks=77",
+      "fassungsToken": "002e956e50a5108eb77e818609138be2ba23bb0e28f9c019f540e2eb89b86fe5"
     },
     {
       "key": "bger_8C_244_2022",
@@ -6531,7 +6531,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -6611,7 +6611,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Asyl und Wegweisung; Rechtsverzögerung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -7191,7 +7191,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -7204,6 +7204,32 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=03.04.2021&to_date=06.04.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=2&azaclir=aza&highlight_docid=aza%3A%2F%2F06-04-2021-2C_855-2020&number_of_ranks=16",
       "fassungsToken": "aadb17ef81f0c5d2fef88c80ca35c909eb0b95285fa274bd691c0a3769dc7086"
+    },
+    {
+      "key": "bger_2C_993_2020",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_993/2020",
+      "bgeReferenz": null,
+      "datum": "2021-03-22",
+      "zitierung": "BGer 2C_993/2020 vom 22. März 2021",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Eingrenzung",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "AIG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_993_2020.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=22.03.2021&to_date=22.03.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=19&azaclir=aza&highlight_docid=aza%3A%2F%2F22-03-2021-2C_993-2020&number_of_ranks=34",
+      "fassungsToken": "dc24040ab865eabe3ddce52a921f686777d5aac12f902bd61fd42d53419cf3ac"
     },
     {
       "key": "bger_5A_732_2020",
@@ -7230,32 +7256,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=22.03.2021&to_date=22.03.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=13&azaclir=aza&highlight_docid=aza%3A%2F%2F22-03-2021-5A_732-2020&number_of_ranks=34",
       "fassungsToken": "d4b2a284d20581186ba978c668cb72e40c2bc7125084635d37eced9b5e808579"
-    },
-    {
-      "key": "bger_2C_993_2020",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_993/2020",
-      "bgeReferenz": null,
-      "datum": "2021-03-22",
-      "zitierung": "BGer 2C_993/2020 vom 22. März 2021",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Eingrenzung",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "AIG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_993_2020.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=22.03.2021&to_date=22.03.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=19&azaclir=aza&highlight_docid=aza%3A%2F%2F22-03-2021-2C_993-2020&number_of_ranks=34",
-      "fassungsToken": "dc24040ab865eabe3ddce52a921f686777d5aac12f902bd61fd42d53419cf3ac"
     },
     {
       "key": "bger_2C_182_2021",
@@ -7320,7 +7320,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Niederlassungsbewilligung; Nichteintreten",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "AIG",
@@ -7346,7 +7346,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -7385,31 +7385,6 @@
       "fassungsToken": "50a0e5b1eaa149e45ffecc090bd3e175656c417dbf557b24eac9fb5b44c72b15"
     },
     {
-      "key": "bger_2C_718_2020",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_718/2020",
-      "bgeReferenz": null,
-      "datum": "2021-01-11",
-      "zitierung": "BGer 2C_718/2020 vom 11. Januar 2021",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Öffentliches Beschaffungsrecht",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_718_2020.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=09.01.2021&to_date=12.01.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=33&azaclir=aza&highlight_docid=aza%3A%2F%2F11-01-2021-2C_718-2020&number_of_ranks=41",
-      "fassungsToken": "2876612469eb52b4e0d37ebdbbdcebd716421b65ec8e8a8b7e6344f7c901bc5b"
-    },
-    {
       "key": "bger_2C_717_2020",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -7433,6 +7408,31 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=09.01.2021&to_date=12.01.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=35&azaclir=aza&highlight_docid=aza%3A%2F%2F11-01-2021-2C_717-2020&number_of_ranks=41",
       "fassungsToken": "bb4bedf3ed8a47f6e021be73a33bed8b538e44eccaac21923cf03ae4eb939888"
+    },
+    {
+      "key": "bger_2C_718_2020",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_718/2020",
+      "bgeReferenz": null,
+      "datum": "2021-01-11",
+      "zitierung": "BGer 2C_718/2020 vom 11. Januar 2021",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Öffentliches Beschaffungsrecht",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_718_2020.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=09.01.2021&to_date=12.01.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=33&azaclir=aza&highlight_docid=aza%3A%2F%2F11-01-2021-2C_718-2020&number_of_ranks=41",
+      "fassungsToken": "2876612469eb52b4e0d37ebdbbdcebd716421b65ec8e8a8b7e6344f7c901bc5b"
     },
     {
       "key": "bger_4A_197_2020",
@@ -7487,6 +7487,31 @@
       "fassungsToken": "3d37f62ffefcc3432bf9727a8770b68d603f03f84a16d086b0e7136347d9df8f"
     },
     {
+      "key": "bger_2C_416_2020",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_416/2020",
+      "bgeReferenz": null,
+      "datum": "2020-11-10",
+      "zitierung": "BGer 2C_416/2020 vom 10. November 2020",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Tierhaltung",
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [
+        "BGG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/2C_416_2020.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=08.11.2020&to_date=11.11.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=50&azaclir=aza&highlight_docid=aza%3A%2F%2F10-11-2020-2C_416-2020&number_of_ranks=87",
+      "fassungsToken": "f369bc1e8191ebe75ebfe8a1d59c680f1097b80143d8fc4f9d49678f1275f336"
+    },
+    {
       "key": "bger_6B_1059_2019",
       "gericht": "bger",
       "gerichtName": "Bundesgericht",
@@ -7512,31 +7537,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=08.11.2020&to_date=11.11.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=47&azaclir=aza&highlight_docid=aza%3A%2F%2F10-11-2020-6B_1059-2019&number_of_ranks=87",
       "fassungsToken": "ac31683b967d8ec03fb60796e6657b8bb10a39f1c8e18c3aaa8f1df67af5e5b1"
-    },
-    {
-      "key": "bger_2C_416_2020",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_416/2020",
-      "bgeReferenz": null,
-      "datum": "2020-11-10",
-      "zitierung": "BGer 2C_416/2020 vom 10. November 2020",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Tierhaltung",
-      "sachgebiet": "sozial-abgaben",
-      "sprache": "de",
-      "normKeys": [
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bger/2C_416_2020.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=08.11.2020&to_date=11.11.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=50&azaclir=aza&highlight_docid=aza%3A%2F%2F10-11-2020-2C_416-2020&number_of_ranks=87",
-      "fassungsToken": "f369bc1e8191ebe75ebfe8a1d59c680f1097b80143d8fc4f9d49678f1275f336"
     },
     {
       "key": "bger_2C_1021_2019",
@@ -7578,7 +7578,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Anwaltsaufsicht, Löschung im Anwaltsregister",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG"
@@ -7733,7 +7733,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -8180,7 +8180,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Verlängerung der Ausschaffungshaft",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -8312,7 +8312,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -8364,7 +8364,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Wegweisung; Fristwiederherstellung im kantonalen Rechtsmittelverfahren",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "ZPO",
@@ -8391,7 +8391,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschaffungshaft / Haftüberprüfung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -8443,7 +8443,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Auschaffungshaft",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -8578,7 +8578,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung; unentgeltliche Rechtspflege",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -8922,7 +8922,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschaffungshaft / Haftüberprüfung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG"
@@ -9679,7 +9679,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nicherneuerung/Widerruf der Aufenthaltsbewilligung",
-      "sachgebiet": "sozial-abgaben",
+      "sachgebiet": "oeffentlich",
       "sprache": "de",
       "normKeys": [
         "BGG",
