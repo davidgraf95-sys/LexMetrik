@@ -39,10 +39,16 @@ const GRUPPEN: { id: string; titel: string; lede: string; keys: string[] }[] = [
     keys: ['HZUE', 'HBEWUE', 'HKUE'],
   },
   {
-    id: 'eu-datenschutz',
-    titel: 'Schweiz–EU & Datenschutz',
-    lede: 'Das Verhältnis Schweiz–EU und unmittelbar relevantes EU-Recht (DSGVO mit extraterritorialer Wirkung).',
-    keys: ['FZA', 'DSGVO'],
+    id: 'schweiz-eu',
+    titel: 'Schweiz–EU',
+    lede: 'Das bilaterale Verhältnis Schweiz–EU — das Freizügigkeitsabkommen als zentraler Pfeiler.',
+    keys: ['FZA'],
+  },
+  {
+    id: 'eu-verordnungen',
+    titel: 'EU-Verordnungen mit Praxisrelevanz',
+    lede: 'Spezifische EU-Verordnungen ohne Fedlex-Volltext, aber mit mittelbarer Wirkung auf Schweizer Sachverhalte (extraterritoriale Reichweite, grenzüberschreitendes Privatrecht) — je nur mit Link zur amtlichen EUR-Lex-Fassung.',
+    keys: ['DSGVO', 'DSA', 'DMA', 'KI_VO', 'MICA', 'ROM_I', 'ROM_II', 'BRUESSEL_IA'],
   },
 ];
 
