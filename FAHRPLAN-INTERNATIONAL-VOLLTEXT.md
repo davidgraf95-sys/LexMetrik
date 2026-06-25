@@ -62,7 +62,21 @@ Dann `npm run normtext -- --nur=bund --datum=$(date +%F)`; verifizieren:
 `check:normtext`, `check:fedlex-versionen`, adversarial (Snapshot-art-IDs == Fedlex
 `<article id="art_`); §8-Fallback (live-link) für jeden, den das Cache-Tor ablehnt.
 
-## OFFEN P2 — «viel mehr» weitere SR 0.* kuratieren
+## ERLEDIGT P2 — 10 weitere SR 0.* als Volltext (25.6.2026, LIVE)
+
+UNO-Pakt I (0.103.1), KRK (0.107), CEDAW (0.108), UN-Antifolter (0.105), Haager
+Erwachsenenschutz HEsÜ (0.211.232.1), Haager Adoption HAdoptÜ (0.211.221.311),
+PVÜ (0.232.04), ICAO (0.748.0), GFK (0.142.30), Staatenlose (0.142.40). Je ELI/
+Kons + Filestore-HTML-Gehalt verifiziert; check:fedlex-versionen «alle Pins aktuell»
+(3 Resolver-Altfassungen [Antifolter/PVÜ/Staatenlose] auf geltende Konsolidierung
+nachgepinnt). Neue Rubriken «Asyl & Migration», «Weitere Spezialgebiete». International-
+Volltext gesamt **18**, Bund 228. Gate grün, Prod verifiziert (KRK 54 Art.).
+
+**STRUKTURELL NICHT MÖGLICH (Fedlex liefert nur ~9-kB-Shell ohne `<article>`):**
+EMRK (0.101) — alle 10 Konsolidierungen 1982–2005 leer; NYÜ Schiedssprüche
+(0.277.12) — leer. Beide bleiben §8-Live-Link (kein Volltext-HTML existiert).
+
+## OFFEN P2-Rest — noch mehr SR 0.* (optional, gleiche Mechanik + Gehalt-Test)
 Kandidaten: weitere Haager Übk. (0.211.221.*, 0.211.231.*), Rechtshilfe Strafsachen
 (0.351.*), Doppelbesteuerung-Muster, NYÜ Schiedssprüche (0.277.12), UNO-Pakt I
 (0.103.1), Kinderrechtskonvention (0.107), CEDAW (0.108), Anti-Folter (0.105),
