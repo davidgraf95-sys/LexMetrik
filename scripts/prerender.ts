@@ -19,6 +19,18 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../src/lib/seo';
+import {
+  entscheidVolltextHtml,
+  erlassVolltextHtml,
+  jsonLdFuerEntscheid,
+  jsonLdFuerErlass,
+  metaFuerEntscheid,
+  metaFuerErlass,
+} from '../src/lib/seo-detail';
+import type { BrowseErlass } from '../src/lib/normtext/browse-typen';
+import type { NormSnapshotDatei } from '../src/lib/normtext/typen';
+import type { BrowseEntscheid } from '../src/lib/rechtsprechung/register';
+import type { EntscheidSnapshotDatei } from '../src/lib/rechtsprechung/typen';
 import { renderRoute } from '../src/entry-server';
 
 // Deklarierter Routen-Zähler (wie die Katalog-Zähler in den Tests): bei neuen
@@ -64,9 +76,14 @@ writeFileSync(
 );
 console.log('OK  app.html (unbefüllte Hülle, noindex)');
 
-function seitenHtml(pfad: string, inhalt: string): string {
-  const meta = metaFuerPfad(pfad);
-  if (!meta) throw new Error(`keine Metadaten für ${pfad} (lib/seo.ts)`);
+// Template-Erzeugung aus fertigen Meta/JSON-LD/Inhalt. Single Source für die
+// Katalog-Routen (seitenHtml) UND die Detail-Seiten (W1.1, aus den Manifesten).
+function rendereTemplate(
+  meta: { titel: string; beschreibung: string; ogBeschreibung?: string; canonical: string },
+  jsonLd: object | null,
+  inhalt: string,
+  kontext: string,
+): string {
   let out = template;
   out = out.replace(/<title>[^<]*<\/title>/, () => `<title>${esc(meta.titel)}</title>`);
   for (const [re, wert] of [
@@ -75,13 +92,12 @@ function seitenHtml(pfad: string, inhalt: string): string {
     [/(<meta property="og:description" content=")[^"]*(" \/>)/, meta.ogBeschreibung ?? meta.beschreibung],
     [/(<meta property="og:url" content=")[^"]*(" \/>)/, meta.canonical],
   ] as const) {
-    if (!re.test(out)) throw new Error(`Meta-Tag-Muster nicht gefunden (${pfad}): ${re}`);
+    if (!re.test(out)) throw new Error(`Meta-Tag-Muster nicht gefunden (${kontext}): ${re}`);
     out = out.replace(re, (_, vor: string, nach: string) => vor + esc(wert) + nach);
   }
   // JSON-LD (E4): nicht-ausführbarer Data-Block, von der CSP (script-src
   // 'self') nicht erfasst; «<» escapen, damit kein </script> im JSON-Inhalt
   // den Block beenden kann.
-  const jsonLd = jsonLdFuerPfad(pfad);
   const ldTag = jsonLd
     ? `    <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>\n`
     : '';
@@ -90,6 +106,12 @@ function seitenHtml(pfad: string, inhalt: string): string {
     `    <link rel="canonical" href="${meta.canonical}" />\n${ldTag}  </head>`,
   );
   return out.replace(ROOT_MARKER, () => `<div id="root">${inhalt}</div>`);
+}
+
+function seitenHtml(pfad: string, inhalt: string): string {
+  const meta = metaFuerPfad(pfad);
+  if (!meta) throw new Error(`keine Metadaten für ${pfad} (lib/seo.ts)`);
+  return rendereTemplate(meta, jsonLdFuerPfad(pfad), inhalt, pfad);
 }
 
 const routen = prerenderRouten();
@@ -140,17 +162,130 @@ if (fehler > 0) {
   process.exit(1);
 }
 
-// sitemap.xml — bewusst ohne lastmod (deterministischer Build-Output; kein
-// Datum erfinden, das nicht aus einer Quelle kommt).
-const sitemap = [
-  '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...routen.map((p) => `  <url><loc>${SITE_URL}${p === '/' ? '/' : p}</loc></url>`),
-  '</urlset>',
-  '',
-].join('\n');
-writeFileSync(join(DIST, 'sitemap.xml'), sitemap);
-console.log(`OK  sitemap.xml (${routen.length} URLs)`);
+// ─── Detail-Seiten (W1.1): /gesetze/:ebene/:key + /rechtsprechung/:key ──────
+// Indexierbares Volltext-HTML aus den Manifesten + Snapshots (dieselbe Quelle,
+// die der Reader fetcht — §7); React ersetzt es clientseitig (render-then-
+// replace). Increment 1: Bund-Erlasse (saubere Keys) + alle Entscheide; die
+// kantonalen Erlasse (Keys mit Leerzeichen) folgen in Increment 2.
+const PUBLIC = join(ROOT, 'public');
+const erlassManifest = (
+  JSON.parse(readFileSync(join(PUBLIC, 'normtext', 'register.json'), 'utf8')) as { erlasse: BrowseErlass[] }
+).erlasse;
+const entscheidManifest = (
+  JSON.parse(readFileSync(join(PUBLIC, 'rechtsprechung', 'register.json'), 'utf8')) as { entscheide: BrowseEntscheid[] }
+).entscheide;
+
+const bundErlasse = erlassManifest.filter((e) => e.status === 'snapshot' && e.ebene === 'bund');
+const snapshotEntscheide = entscheidManifest.filter((e) => e.bestand === 'snapshot');
+
+function pruefeDetail(html: string, kontext: string): void {
+  if (html.length < MIN_ZEICHEN) throw new Error(`verdächtig kurzes Detail-HTML (${html.length} Zeichen)`);
+  if (html.includes('<script')) throw new Error('Inline-Script im Detail-HTML — Volltext-Builder prüfen');
+  if (html.includes(NOT_FOUND_MARKER)) throw new Error('404-Marker im Detail-HTML');
+  if (html.includes('Wird geladen')) throw new Error('Suspense-Fallback-Text im Detail-HTML');
+  void kontext;
+}
+
+const gesetzeUrls: string[] = [];
+const rechtsprechungUrls: string[] = [];
+let detailFehler = 0;
+
+for (const e of bundErlasse) {
+  try {
+    if (!e.datei) throw new Error('status snapshot, aber keine datei');
+    const datei = JSON.parse(readFileSync(join(PUBLIC, 'normtext', e.datei), 'utf8')) as NormSnapshotDatei;
+    const inhalt = erlassVolltextHtml(e, datei);
+    const meta = metaFuerErlass(e);
+    pruefeDetail(inhalt, meta.pfad);
+    const html = rendereTemplate(meta, jsonLdFuerErlass(e), inhalt, meta.pfad);
+    const ziel = join(DIST, 'gesetze', e.ebene, `${e.key}.html`);
+    mkdirSync(dirname(ziel), { recursive: true });
+    writeFileSync(ziel, html);
+    gesetzeUrls.push(meta.canonical);
+  } catch (err) {
+    detailFehler++;
+    console.error(`FEHLER  /gesetze/${e.ebene}/${e.key}:`, err);
+  }
+}
+console.log(`OK  ${gesetzeUrls.length} Erlass-Detailseiten (Bund)`);
+
+for (const e of snapshotEntscheide) {
+  try {
+    if (!e.datei) throw new Error('bestand snapshot, aber keine datei');
+    const snap = JSON.parse(
+      readFileSync(join(PUBLIC, 'rechtsprechung', e.datei), 'utf8'),
+    ) as EntscheidSnapshotDatei;
+    const eintrag = snap.eintraege[0];
+    if (!eintrag) throw new Error('Snapshot-Datei ohne eintraege');
+    const inhalt = entscheidVolltextHtml(e, eintrag);
+    const meta = metaFuerEntscheid(e);
+    pruefeDetail(inhalt, meta.pfad);
+    const html = rendereTemplate(meta, jsonLdFuerEntscheid(e), inhalt, meta.pfad);
+    const ziel = join(DIST, 'rechtsprechung', `${e.key}.html`);
+    mkdirSync(dirname(ziel), { recursive: true });
+    writeFileSync(ziel, html);
+    rechtsprechungUrls.push(meta.canonical);
+  } catch (err) {
+    detailFehler++;
+    console.error(`FEHLER  /rechtsprechung/${e.key}:`, err);
+  }
+}
+console.log(`OK  ${rechtsprechungUrls.length} Entscheid-Detailseiten`);
+
+// Two-stage-Tor (FAHRPLAN W1.1): Katalog-Routen bleiben hart auf ERWARTETE_ROUTEN
+// gepinnt; die Detail-Mengen leiten sich aus den Manifesten ab, müssen aber
+// VOLLSTÄNDIG sein (kein stiller Drop — jeder snapshot bekommt eine Seite).
+if (gesetzeUrls.length !== bundErlasse.length || rechtsprechungUrls.length !== snapshotEntscheide.length) {
+  console.error(
+    `\nDetail-Drift: Erlasse ${gesetzeUrls.length}/${bundErlasse.length}, ` +
+      `Entscheide ${rechtsprechungUrls.length}/${snapshotEntscheide.length}`,
+  );
+  process.exit(1);
+}
+if (detailFehler > 0) {
+  console.error(`\n${detailFehler} Detailseite(n) mit Fehler`);
+  process.exit(1);
+}
+
+// ─── Sitemaps (W1.1): Index + Teil-Sitemaps ─────────────────────────────────
+// sitemap.xml ist jetzt ein Sitemap-INDEX (skaliert auf >1800 URLs). Bewusst
+// ohne lastmod (deterministischer Build; kein Datum erfinden — `stand` ist das
+// uniforme Fedlex-Konsolidierungsdatum, nicht die echte Änderungszeit, W1.4).
+const xmlEsc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function schreibeUrlset(datei: string, urls: string[]): void {
+  writeFileSync(
+    join(DIST, datei),
+    [
+      '<?xml version="1.0" encoding="UTF-8"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+      ...urls.map((u) => `  <url><loc>${xmlEsc(u)}</loc></url>`),
+      '</urlset>',
+      '',
+    ].join('\n'),
+  );
+}
+
+const seitenUrls = routen.map((p) => `${SITE_URL}${p === '/' ? '/' : p}`);
+const teilSitemaps: Array<{ datei: string; urls: string[] }> = [
+  { datei: 'sitemap-seiten.xml', urls: seitenUrls },
+  { datei: 'sitemap-gesetze.xml', urls: gesetzeUrls },
+  { datei: 'sitemap-rechtsprechung.xml', urls: rechtsprechungUrls },
+];
+const aktiveSitemaps = teilSitemaps.filter((s) => s.urls.length > 0);
+for (const s of aktiveSitemaps) schreibeUrlset(s.datei, s.urls);
+
+writeFileSync(
+  join(DIST, 'sitemap.xml'),
+  [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...aktiveSitemaps.map((s) => `  <sitemap><loc>${SITE_URL}/${s.datei}</loc></sitemap>`),
+    '</sitemapindex>',
+    '',
+  ].join('\n'),
+);
+const gesamtUrls = aktiveSitemaps.reduce((n, s) => n + s.urls.length, 0);
+console.log(`OK  sitemap.xml (Index → ${aktiveSitemaps.length} Teil-Sitemaps, ${gesamtUrls} URLs)`);
 
 // robots.txt: Sitemap-Zeile aus SITE_URL anhängen (§5: Domain nur in seo.ts;
 // public/robots.txt bleibt domainfrei).
