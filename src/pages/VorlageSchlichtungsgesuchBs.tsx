@@ -536,7 +536,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 {routing?.dokument && routing.behoerdeTyp !== 'ordentlich' ? (
                   <li><strong>Kosten:</strong> Das Schlichtungsverfahren ist hier gerichtskostenfrei ({routing.behoerdeTyp === 'paritaetisch_glg' ? 'Art. 113 Abs. 2 lit. a ZPO' : 'Art. 113 Abs. 2 lit. c ZPO'}); grundsätzlich keine Parteientschädigung (Art. 113 Abs. 1 ZPO).</li>
                 ) : (
-                  <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
+                  <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF {fmtCHF(String(SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS))}, Art. 113 f. ZPO).</>}</li>
                 )}
                 <li><strong>Fristen:</strong><NormText text={` Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren – dort gelten sie (BGE 138 III 615 – zu verifizieren).`} /></li>
               </ul>

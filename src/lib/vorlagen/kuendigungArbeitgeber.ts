@@ -58,6 +58,12 @@ export const KAG_DEFAULTS: KagAntworten = {
   begruendungAufnehmen: false, begruendungText: '',
 };
 
+/** Vereinbarte Probezeit: zwingende Grenzen nach Art. 335b Abs. 2 OR (1–3 Monate).
+ *  Single Source (§3/§5, D-5): sowohl die Engine-Klemmung als auch die Formular-
+ *  Validierung/Eingabegrenzen in der Page beziehen sich hierauf, statt 1/3 + Norm
+ *  ein zweites Mal in der Darstellungsschicht zu kodieren. */
+export const KAG_PROBEZEIT = { MIN_MONATE: 1, MAX_MONATE: 3, NORM: 'Art. 335b OR' } as const;
+
 // ── Engine-Adapter (M9): reine Feld-Umbenennung, keine Rechenregel ──────────
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
@@ -67,7 +73,7 @@ function kagEngineInput(a: KagAntworten) {
     vertragsbeginn: a.vertragsbeginn,
     zugangKuendigung: a.zugangKuendigung,
     kuendigendePartei: 'arbeitgeber' as const,
-    probezeitMonate: a.probezeit === 'keine' ? 0 : a.probezeit === 'gesetzlich' ? 1 : Math.min(Math.max(a.probezeitMonate, 1), 3),
+    probezeitMonate: a.probezeit === 'keine' ? 0 : a.probezeit === 'gesetzlich' ? 1 : Math.min(Math.max(a.probezeitMonate, KAG_PROBEZEIT.MIN_MONATE), KAG_PROBEZEIT.MAX_MONATE),
     abweichendeFristMonate: a.fristQuelle === 'abweichend' ? a.abweichendeFristMonate : undefined,
     abweichendeFristFormGueltig: a.fristQuelle === 'abweichend' ? a.abweichendeFristFormGueltig : undefined,
     abweichendeFristQuelleGAV: a.fristQuelle === 'abweichend' ? a.abweichendeFristQuelleGAV : undefined,

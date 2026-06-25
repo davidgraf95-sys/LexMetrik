@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { NormText } from '../components/NormText';
 import {
-  KAG_DEFAULTS, kagZusammenstellen, pruefeKagGates, type KagAntworten, type KagProbezeit,
+  KAG_DEFAULTS, KAG_PROBEZEIT, kagZusammenstellen, pruefeKagGates, type KagAntworten, type KagProbezeit,
 } from '../lib/vorlagen/kuendigungArbeitgeber';
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -67,7 +67,7 @@ export function VorlageKuendigungArbeitgeber() {
     }
     if (i === 1) {
       if (!ISO.test(a.vertragsbeginn)) f.push('Vertragsbeginn angeben (für Dienstjahr und Probezeit).');
-      if (a.probezeit === 'vereinbart' && (a.probezeitMonate < 1 || a.probezeitMonate > 3)) f.push('Vereinbarte Probezeit: 1–3 Monate (Art. 335b OR).');
+      if (a.probezeit === 'vereinbart' && (a.probezeitMonate < KAG_PROBEZEIT.MIN_MONATE || a.probezeitMonate > KAG_PROBEZEIT.MAX_MONATE)) f.push(`Vereinbarte Probezeit: ${KAG_PROBEZEIT.MIN_MONATE}–${KAG_PROBEZEIT.MAX_MONATE} Monate (${KAG_PROBEZEIT.NORM}).`);
     }
     if (i === 2) {
       a.sperrereignisse.forEach((e, j) => { if (e.bis < e.von) f.push(`Sperrereignis ${j + 1}: «Bis» liegt vor «Von».`); });
@@ -146,7 +146,7 @@ export function VorlageKuendigungArbeitgeber() {
           </Field>
           {a.probezeit === 'vereinbart' && (
             <Field label="Vereinbarte Probezeit (Monate)">
-              <input type="number" min={1} max={3} className={inputCls + ' num sm:max-w-[9rem]'} value={a.probezeitMonate}
+              <input type="number" min={KAG_PROBEZEIT.MIN_MONATE} max={KAG_PROBEZEIT.MAX_MONATE} className={inputCls + ' num sm:max-w-[9rem]'} value={a.probezeitMonate}
                 onChange={(e) => set('probezeitMonate', Number(e.target.value))} />
             </Field>
           )}

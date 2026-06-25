@@ -260,6 +260,7 @@ export function VorlageScheidungsbegehren() {
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SB, dateiName: 'Gemeinsames-Scheidungsbegehren.pdf' },
         docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_SB, dateiName: 'Gemeinsames-Scheidungsbegehren.docx' } : undefined,
+        blocker: maengel.map((m) => m.text), // B1-1: Direkt-Download respektiert dasselbe Mängel-Gate wie die ExportLeiste
       }} />}
     />
   );

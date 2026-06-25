@@ -288,6 +288,7 @@ export function VorlageScheidungsklage() {
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SK, dateiName: 'Scheidungsklage.pdf' },
         docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_SK, dateiName: 'Scheidungsklage.docx' } : undefined,
+        blocker: maengel.map((m) => m.text), // B1-1: Direkt-Download respektiert dasselbe Mängel-Gate
       }} />}
     />
   );

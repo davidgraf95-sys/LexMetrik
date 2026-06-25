@@ -1,6 +1,6 @@
 // Dossier: bibliothek/normen/zpo-zustaendigkeit-regelwerk.md · bibliothek/normen/zustaendigkeit-engine-verifikation.md
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
-import { bgerAbteilungZivil, type BgerZivilgebiet } from './bgerRechtsweg';
+import { bgerAbteilungZivil, BGER_SCHWELLEN, type BgerZivilgebiet } from './bgerRechtsweg';
 
 // ─── Zuständigkeits-Engine (ZPO) — Bundesrechtsschicht ──────────────────────
 //
@@ -665,10 +665,8 @@ export function zustaendigkeitErgebnis(
 export const RECHTSMITTEL_SCHWELLEN = {
   /** Art. 308 Abs. 2 ZPO */
   BERUFUNG_MIN: 10_000,
-  /** Art. 74 Abs. 1 lit. a BGG (arbeits- und mietrechtliche Fälle) */
-  BGER_MIETE_ARBEIT: 15_000,
-  /** Art. 74 Abs. 1 lit. b BGG (übrige vermögensrechtliche Fälle) */
-  BGER_UEBRIGE: 30_000,
+  // BGer-Streitwertgrenzen (Art. 74 Abs. 1 BGG) liegen zentral in
+  // bgerRechtsweg.ts (BGER_SCHWELLEN, §5, D-1) — hier nicht zweitdefiniert.
 } as const;
 
 /** Konkret aufgelöste Rechtsmittelfrist (eine Ebene). */
@@ -861,7 +859,7 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
   // ── Bundesgericht: Zulässigkeit (Art. 74 BGG) ─────────────────────────────
   let bger: RechtsmittelErgebnis['bger'];
   let bgerText: string;
-  const bgerSchwelle = mietArbeit ? RECHTSMITTEL_SCHWELLEN.BGER_MIETE_ARBEIT : RECHTSMITTEL_SCHWELLEN.BGER_UEBRIGE;
+  const bgerSchwelle = mietArbeit ? BGER_SCHWELLEN.MIETE_ARBEIT : BGER_SCHWELLEN.UEBRIGE;
   // Ultra-Review MITTEL (7.6.2026): Auch die Direktklage ans obere Gericht
   // (Art. 8 ZPO) ist eine bundesgesetzlich vorgesehene einzige kantonale
   // Instanz → Art. 74 Abs. 2 lit. b BGG, streitwertUNABHÄNGIG. Zuvor lief

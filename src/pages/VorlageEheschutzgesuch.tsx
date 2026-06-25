@@ -318,6 +318,7 @@ export function VorlageEheschutzgesuch() {
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_EG, dateiName: 'Eheschutzgesuch.pdf' },
         docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_EG, dateiName: 'Eheschutzgesuch.docx' } : undefined,
+        blocker: maengel.map((m) => m.text), // B1-1: Direkt-Download respektiert dasselbe Mängel-Gate
       }} />}
     />
   );

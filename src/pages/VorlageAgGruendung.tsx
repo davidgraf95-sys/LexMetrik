@@ -137,7 +137,9 @@ export function VorlageAgGruendung() {
   const [ntStatutenText, setNtStatutenText] = useState(() => txt(stand?.ntStatutenText, ''));
   const [ort, setOrt] = useState(() => txt(stand?.ort, ''));
   // Punkt 7: Datum-Default «heute» NUR, wenn kein gespeicherter Wert vorliegt.
-  const [datum, setDatum] = useState(() => txt(stand?.datum, '') || new Date().toISOString().slice(0, 10));
+  // E2-1: LOKALE Zeit (toLocaleDateString 'sv-SE') statt toISOString (UTC) — sonst
+  // zwischen 00:00 und 01/02:00 Schweizer Zeit der Vortag beim Beurkundungsdatum.
+  const [datum, setDatum] = useState(() => txt(stand?.datum, '') || new Date().toLocaleDateString('sv-SE'));
 
   // Zähler über den gespeicherten Stand heben: Hydration vergibt je Liste die
   // Keys 1…n neu, der Zähler startet darum oberhalb der längsten Liste (und
