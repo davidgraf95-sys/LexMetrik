@@ -215,19 +215,23 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
     }`;
   return (
     <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
-      <span className="table w-full">
+      {/* ARIA-Tabellen-Semantik auf den display:table-Spans (W2.2): Screenreader
+          lesen Zeilen/Spalten; KEINE visuelle Änderung (Rollen sind pixel-neutral).
+          Echtes <table> ist hier nicht möglich (Phrasing-/<p>-Kontext). */}
+      <span role="table" aria-label="Tarif-Tabelle" className="table w-full">
         {kopf && kopf.length > 0 && (
-          <span className="table-row bg-paper-sunken/40">
+          <span role="row" className="table-row bg-paper-sunken/40">
             {padZeile(kopf).map((h, ci) => (
-              <span key={ci} className={zelleCls(ci, true)}>{h}</span>
+              <span key={ci} role="columnheader" className={zelleCls(ci, true)}>{h}</span>
             ))}
           </span>
         )}
         {zeilen.map((z, ri) => (
-          <span key={ri} className="table-row">
+          <span key={ri} role="row" className="table-row">
             {padZeile(z).map((cell, ci) => (
               <span
                 key={ci}
+                role="cell"
                 className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-line/60' : ''}`}
               >
                 {gruppiereTausender(cell)}
@@ -244,11 +248,11 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
 // Reine Darstellung (§3); Wortlaut je Zelle unverändert.
 function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag: string }> }) {
   return (
-    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [text-indent:0] [font-variant-numeric:tabular-nums]">
+    <span role="table" aria-label="Tarif-Tabelle" className="mt-1.5 block rounded-md border border-line overflow-hidden [text-indent:0] [font-variant-numeric:tabular-nums]">
       {zeilen.map((z, j) => (
-        <span key={j} className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
-          <span className="text-ink-700">{z.beschreibung}</span>
-          <span className="shrink-0 text-right font-medium text-ink-800">{gruppiereTausender(z.betrag)}</span>
+        <span key={j} role="row" className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
+          <span role="cell" className="text-ink-700">{z.beschreibung}</span>
+          <span role="cell" className="shrink-0 text-right font-medium text-ink-800">{gruppiereTausender(z.betrag)}</span>
         </span>
       ))}
     </span>
