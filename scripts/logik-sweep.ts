@@ -1,6 +1,7 @@
 // ─── Fundamentaler Logik-Sweep: kompletter Eingaberaum × Widerspruchsregeln ──
 import { bestimmeZustaendigkeit, bestimmeRechtsmittel, ZPO_SCHWELLEN, RECHTSMITTEL_SCHWELLEN,
   type ZustaendigkeitInput, type Streitsache } from '../src/lib/zustaendigkeit';
+import { BGER_SCHWELLEN } from '../src/lib/bgerRechtsweg';
 import { fahrplanSchritte } from '../src/lib/zustaendigkeitFahrplan';
 import { bestimmeSchkgZustaendigkeit, gebuehrZahlungsbefehl,
   type SchkgInput } from '../src/lib/schkgZustaendigkeit';
@@ -95,7 +96,7 @@ for (const bundKlagerecht of ipUnterfall === 'uwg' ? [false, true] : [false]) {
   if (vermoegensrechtlich && sw !== null && !einzigeErwartet) {
     const erwartet = sw >= RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN ? 'berufung' : 'beschwerde';
     if (rm.kantonal !== erwartet) melde('Z-I13b', input, `kantonal=${rm.kantonal}, erwartet ${erwartet}`);
-    const grenze = ['arbeit','miete_wohn_geschaeft'].includes(streitsache) ? RECHTSMITTEL_SCHWELLEN.BGER_MIETE_ARBEIT : RECHTSMITTEL_SCHWELLEN.BGER_UEBRIGE;
+    const grenze = ['arbeit','miete_wohn_geschaeft'].includes(streitsache) ? BGER_SCHWELLEN.MIETE_ARBEIT : BGER_SCHWELLEN.UEBRIGE;
     if ((rm.bger === 'zulaessig') !== (sw >= grenze)) melde('Z-I13c', input, `bger=${rm.bger} bei sw=${sw}, Grenze ${grenze}`);
   }
   if (!vermoegensrechtlich && !einzigeErwartet && rm.kantonal !== 'berufung') melde('Z-I13d', input, 'nicht vermögensrechtlich ≠ Berufung');

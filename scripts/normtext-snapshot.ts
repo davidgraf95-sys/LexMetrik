@@ -26,7 +26,7 @@ import { discoveryZuInventar } from './normtext/kanton-discovery-quellen.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
-import { holePdf, PDF_PROFILE, type PdfProfilName } from './normtext/adapter-pdf.ts';
+import { holePdf, PDF_PROFILE } from './normtext/adapter-pdf.ts';
 import { pdfLawIdSafe } from './normtext/lawid-safe.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import { baueBrowseManifest } from './normtext/browse-manifest.ts';

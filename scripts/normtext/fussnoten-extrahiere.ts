@@ -90,7 +90,7 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
         const ddRoh = dlInner.slice(ddStart, ddEnde);
         dtRe.lastIndex = ddEnde + '</dd>'.length;
         const markeRoh = dm[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')
-          .replace(/<[^>]+>/g, '').replace(/&nbsp;| /g, ' ').trim();
+          .replace(/<[^>]+>/g, '').replace(/&nbsp;|\u00a0/g, ' ').trim();
         const mk = markeRoh.match(MARKE);
         const item = mk ? mk[1].toLowerCase() : null;
         const subDlIdx = ddRoh.search(/<dl\b[^>]*>/i);
