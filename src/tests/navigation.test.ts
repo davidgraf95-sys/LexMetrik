@@ -76,8 +76,12 @@ describe('Navigations-SSoT', () => {
   // Ausnahmeliste eintragen (mit Begründung).
   it('jeder Bund-Volltext-Erlass ist in der SYSTEMATIK eingeordnet (Sidebar-Vollständigkeit)', () => {
     const AUSNAHMEN = new Set<string>([]); // bewusst nicht eingeordnete Keys (mit Begründung)
+    // International (SR 0.*, rechtsgebiet 'international') gehört NICHT in die
+    // Bund-Systematik-Sidebar, sondern in die eigene Rubrik «International»
+    // (/international + International-Tab) — daher ausgenommen (Volltext-Promotion
+    // 25.6.2026, deklarierte Änderung §6.3).
     const fehlend = ERLASS_REGISTER
-      .filter((r) => r.ebene === 'bund' && r.status === 'snapshot')
+      .filter((r) => r.ebene === 'bund' && r.status === 'snapshot' && r.rechtsgebiet !== 'international')
       .map((r) => r.key)
       .filter((key) => !SYSTEMATIK_VON_KEY.has(key) && !AUSNAHMEN.has(key));
     expect(fehlend).toEqual([]);

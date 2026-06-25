@@ -39,17 +39,12 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   // (AHVV/IVV/ELV/BVV 2/UVV/AVIV/ATSV/KLV/MWSTV/VStV/VZAE/VRV/VZV/SSV/DSV →
   //  Volltext-Snapshot Punkt 12 Batch 2 (24.6.2026); ZStV 211.112.2 →
   //  Volltext Punkt 12 Batch 3 (25.6.2026); im ERLASS_REGISTER.)
-  // Völker- & Europarecht → Rubrik «International» (rechtsgebiet 'international').
-  // Staatsverträge SR 0.* — Titel/ELI/Stand verifiziert via Fedlex-SPARQL (§7).
-  ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention
-  ['0.221.211.1', 'CISG', 'international'],      // UN-/Wiener Kaufrecht
-  ['0.275.12', 'LugÜ', 'international'],         // Lugano-Übereinkommen
-  ['0.274.131', 'HZÜ', 'international'],         // Haager Zustellungsübereinkommen
-  ['0.274.132', 'HBewÜ', 'international'],       // Haager Beweisaufnahmeübereinkommen
-  ['0.211.230.02', 'HKÜ', 'international'],      // Haager Kindesentführungsübereinkommen
-  ['0.142.112.681', 'FZA', 'international'],     // Freizügigkeitsabkommen CH–EU
-  ['0.111', 'VRK', 'international'],             // Wiener Übereinkommen über das Recht der Verträge
-  ['0.103.2', 'UNO-Pakt II', 'international'],   // UNO-Pakt II (bürgerliche/politische Rechte)
+  // Völker- & Europarecht: 8 Staatsverträge SR 0.* (CISG/LugÜ/HZÜ/HBewÜ/HKÜ/FZA/
+  // VRK/UNO-Pakt II) wurden am 25.6.2026 von «nur-live-link» auf VOLLTEXT promoviert
+  // → bund()-Snapshot-Einträge im ERLASS_REGISTER + fedlex-cache.sh-Pins.
+  // EMRK (0.101) bleibt Stub: Fedlex hat für die geltende Konsolidierung nur eine
+  // ~9-kB-Shell ohne <article>-Anker (kein extrahierbarer Volltext, §8).
+  ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention (nur Live-Link)
 ];
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';

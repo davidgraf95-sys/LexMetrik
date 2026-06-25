@@ -303,6 +303,16 @@ EINTRAEGE=(
   "chemrrv|cc/2005/478|20260101|0|art_1|814.81"
   "veva|cc/2005/551|20250801|0|art_1|814.610"
   "vgvp|cc/2000/299|20220101|0|art_1|814.621"
+  # ── International: Staatsverträge SR 0.* als Volltext (Auftrag David 25.6.2026) ──
+  # ELI/Konsolidierung via fedlex:eli aufgelöst; SR-Sonde + art_1-Anker verifizieren je Vertrag.
+  "cisg|cc/1991/307_307_307|20260522|0|art_1|0.221.211.1"
+  "lugue|cc/2010/801|20160408|0|art_1|0.275.12"
+  "hzue|cc/1994/2809_2809_2809|20230612|0|art_1|0.274.131"
+  "hbewue|cc/1994/2824_2824_2824|20260101|0|art_1|0.274.132"
+  "hkue|cc/1983/1694_1694_1694|20240613|0|art_1|0.211.230.02"
+  "fza|cc/2002/243|20201215|0|art_1|0.142.112.681"
+  "vrk|cc/1990/1112_1112_1112|20200508|0|art_1|0.111"
+  "uno_pakt_ii|cc/1993/750_750_750|20220509|0|art_1|0.103.2"
 )
 
 fehler=0

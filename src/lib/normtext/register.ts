@@ -298,6 +298,20 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('KKV_FINMA', 'KKV-FINMA', 'Verordnung der FINMA über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)', '951.312', 'oeffentlich', 116, 'KKV-FINMA'),
   bund('FINFRAV_FINMA', 'FinfraV-FINMA', 'Verordnung der FINMA über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (FinfraV-FINMA)', '958.111', 'oeffentlich', 117, 'FinfraV-FINMA'),
   bund('FINMA_GEBV', 'FINMA-GebV', 'FINMA-Gebühren- und Abgabenverordnung (FINMA-GebV)', '956.122', 'oeffentlich', 118, 'FINMA-GebV'),
+  // ── International: Staatsverträge SR 0.* als VOLLTEXT (Auftrag David 25.6.2026,
+  //    Promotion nur-live-link → Volltext via Fedlex-Pipeline; je SR-Sonde+Anker
+  //    verifiziert). Rechtsgebiet 'international' → Rubrik «International» + Tab. ──
+  // EMRK (SR 0.101): bleibt nur-live-link — Fedlex liefert für die geltende
+  // Konsolidierung nur eine ~9-kB-Shell ohne <article>-Anker (kein extrahierbarer
+  // Volltext, §8); steht weiter als Stub in bund-stubs.generated.ts.
+  bund('CISG', 'CISG', 'Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf (Wiener Kaufrecht, CISG)', '0.221.211.1', 'international', 91),
+  bund('LUGUE', 'LugÜ', 'Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)', '0.275.12', 'international', 92),
+  bund('HZUE', 'HZÜ', 'Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen (HZÜ)', '0.274.131', 'international', 93),
+  bund('HBEWUE', 'HBewÜ', 'Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen (HBewÜ)', '0.274.132', 'international', 94),
+  bund('HKUE', 'HKÜ', 'Übereinkommen vom 25. Oktober 1980 über die zivilrechtlichen Aspekte internationaler Kindesentführung (HKÜ)', '0.211.230.02', 'international', 95),
+  bund('FZA', 'FZA', 'Abkommen vom 21. Juni 1999 zwischen der Schweiz und der EG und ihren Mitgliedstaaten über die Freizügigkeit (FZA)', '0.142.112.681', 'international', 96),
+  bund('VRK', 'VRK', 'Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (VRK)', '0.111', 'international', 97),
+  bund('UNO_PAKT_II', 'UNO-Pakt II', 'Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte (UNO-Pakt II)', '0.103.2', 'international', 98),
   // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
   //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
   ...BUND_STUBS,

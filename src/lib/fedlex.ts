@@ -300,6 +300,15 @@ export const FEDLEX = {
   ChemRRV: 'https://www.fedlex.admin.ch/eli/cc/2005/478/de', // SR 814.81, Kons. 20260101
   VeVA: 'https://www.fedlex.admin.ch/eli/cc/2005/551/de', // SR 814.610, Kons. 20250801
   VGV: 'https://www.fedlex.admin.ch/eli/cc/2000/299/de', // SR 814.621, Kons. 20220101
+  // ── International: Staatsverträge SR 0.* (Volltext-Promotion 25.6.2026) ──
+  CISG: 'https://www.fedlex.admin.ch/eli/cc/1991/307_307_307/de', // SR 0.221.211.1
+  LUGUE: 'https://www.fedlex.admin.ch/eli/cc/2010/801/de', // SR 0.275.12
+  HZUE: 'https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de', // SR 0.274.131
+  HBEWUE: 'https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de', // SR 0.274.132
+  HKUE: 'https://www.fedlex.admin.ch/eli/cc/1983/1694_1694_1694/de', // SR 0.211.230.02
+  FZA: 'https://www.fedlex.admin.ch/eli/cc/2002/243/de', // SR 0.142.112.681
+  VRK: 'https://www.fedlex.admin.ch/eli/cc/1990/1112_1112_1112/de', // SR 0.111
+  UNO_PAKT_II: 'https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de', // SR 0.103.2
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
