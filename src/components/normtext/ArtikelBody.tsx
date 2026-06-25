@@ -6,7 +6,7 @@ import { NormText, type InternRefs } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
  *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert. */
-export interface ZitierKontext { artikelLabel: string; kuerzel: string }
+interface ZitierKontext { artikelLabel: string; kuerzel: string }
 
 /** lit. (Buchstaben, Bund) vs. Ziff. (Zahlen, Kanton) anhand der Marke. */
 function litZiff(marke: string): string {

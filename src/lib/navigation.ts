@@ -51,7 +51,7 @@ export type NavKnoten = NavLink | NavGruppe;
 
 /** Ein Abschnitt der Hauptnavigation; titel === null bei den kopflosen
  *  Top-Einträgen (Start/Recherche) über den ersten Gruppentitel. */
-export interface NavAbschnitt {
+interface NavAbschnitt {
   titel: string | null;
   /** Optional: macht die Abschnitts-Überschrift selbst klickbar → Gesamtübersicht
    *  (Auftrag David 20.6.2026: Klick auf Rechner/Vorlagen/Gesetze öffnet die

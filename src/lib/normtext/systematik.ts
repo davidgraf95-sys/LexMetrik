@@ -11,14 +11,14 @@
 // Erlasse» — so geht nie ein Eintrag verloren. Praktikabilität: die geläufigen
 // Leitgesetze stehen in den oberen Kategorien/Gruppen; selteneres weiter unten.
 
-export interface SystematikGruppe {
+interface SystematikGruppe {
   id: string;
   titel: string;
   /** Register-Keys (UPPERCASE wie in register.ts) in Anzeige-Reihenfolge. */
   keys: string[];
 }
 
-export interface SystematikKategorie {
+interface SystematikKategorie {
   nr: string;        // '01' …
   id: string;
   titel: string;
