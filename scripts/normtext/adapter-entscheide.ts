@@ -345,6 +345,10 @@ export function mappeEntscheidOCL(
     sprache,
     leitcharakter: leit ? 'leitentscheid' : 'routine',
     sachgebiet,
+    // Provenienz-treu (§7): das rohe OCL legal_area persistieren, damit die
+    // Sachgebiet-Klassierung der mehrdeutigen II. öff.-rechtl. Abteilung (2A/2C/
+    // 2D) offline aus dem Snapshot reproduzierbar ist (kein Live-Fetch im Re-Map).
+    legalArea: det.legal_area ?? null,
     rubrum,
     regeste,
     regesteAmtlich,

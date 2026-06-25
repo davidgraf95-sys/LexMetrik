@@ -74,6 +74,13 @@ export interface EntscheidSnapshot {
   leitcharakter: Leitcharakter;
   /** Kuratierte Sach-Achse (deklariert, nie geraten — Verzahnung mit den Gesetzen). */
   sachgebiet: Rechtsgebiet;
+  /**
+   * Rohes OCL-Feld `legal_area` (Provenienz, NICHT verifiziert). Persistiert,
+   * damit die Sachgebiet-Klassierung der mehrdeutigen II. öff.-rechtl. Abteilung
+   * (2A/2C/2D) OFFLINE reproduzierbar bleibt (§2) — sie fällt ohne Norm-Signal
+   * auf diese legal_area zurück. null, wenn OCL keine liefert (z.B. kantonal).
+   */
+  legalArea: string | null;
 
   // ── Inhalt ──
   rubrum: EntscheidRubrum | null;    // Spruchkörper/Parteien/Gegenstand/Vorinstanz (Art. 112 BGG)

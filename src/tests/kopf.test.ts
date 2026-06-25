@@ -11,6 +11,7 @@ function mk(over: Partial<EntscheidSnapshot> = {}): EntscheidSnapshot {
     kanton: 'CH', abteilung: 'I. zivilrechtliche Abteilung',
     nummer: '5A_1/2024', bgeReferenz: '150 III 137', zitierung: 'BGE 150 III 137',
     datum: '2024-01-12', sprache: 'de', leitcharakter: 'leitentscheid', sachgebiet: 'privat',
+    legalArea: null,
     rubrum: null, regeste: null, regesteAmtlich: false,
     abschnitte: [], dispositivOrders: [],
     zitierteNormen: [], normKeys: [], zitierteEntscheide: [],
