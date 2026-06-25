@@ -155,7 +155,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <div className="flex items-center justify-between px-4 py-3 border-b border-line sticky top-0 bg-paper-raised">
               <span className="lc-overline">Navigation</span>
               <button type="button" className="lc-btn lc-btn-ghost lc-btn-sm" aria-label="Navigation schliessen" onClick={() => setSchubladeOffen(false)}>
-                <span aria-hidden className="text-[length:var(--fs-105)] leading-none">✕</span>
+                <span aria-hidden className="text-base leading-none">✕</span>
               </button>
             </div>
             {/* Schublade trägt eigenen Kopf + der mobile Top-Streifen das Logo

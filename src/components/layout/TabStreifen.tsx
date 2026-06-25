@@ -194,7 +194,7 @@ export function TabStreifen() {
                   {pikto}
                   <span className="truncate">{meta.label}</span>
                   <span className="text-micro text-ink-400 num">{items.length}</span>
-                  <span aria-hidden className={`text-ink-400 text-[length:var(--fs-70)] transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
+                  <span aria-hidden className={`text-ink-400 text-micro transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
                 </button>
               </li>
             );

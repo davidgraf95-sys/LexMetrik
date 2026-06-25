@@ -240,7 +240,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       {regesteText && snap.regeste && (
         <section id="abschnitt-regeste" className="scroll-mt-[7rem] lc-highlight space-y-2">
           <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
-          <p className="font-serif text-[length:var(--fs-110)] leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
+          <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
           <p className="text-micro text-ink-500">
             {snap.regesteAmtlich
               ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'
@@ -360,7 +360,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         {regesteText && snap.regeste && (
           <section className="lc-highlight mt-7 space-y-2">
             <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
-            <p className="font-serif text-[length:var(--fs-110)] leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
+            <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
           </section>
         )}
 

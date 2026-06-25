@@ -74,17 +74,10 @@
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
     /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
     --font-serif:'Source Serif 4 Variable','Charter','Georgia';
-    /* Fein-Typo-Skala (25.6.2026, DESIGN-REGLEMENT B2/§13): die Leser
-       (GesetzLeser/EntscheidLeser/EntscheidBody) und die UI-Chrome
-       (Topbar/Sidebar/Shell/TabStreifen/ThemaUmschalter) trugen rohe
-       text-[…rem]-Literale (Magic-Numbers). Hier byte-identisch als benannte
-       Tokens zentralisiert, damit die Token-Schranke (check:design-tokens)
-       greift; genutzt via text-[length:var(--fs-*)]. Name = rem × 100.
-       OFFEN (separater Vorlage-Punkt): diese 12 Feinstufen auf wenige echte
-       Schritte verdichten — das ändert bewusst Pixel und braucht Davids Blick. */
-    --fs-60:0.6rem; --fs-65:0.65rem; --fs-70:0.7rem; --fs-78:0.78rem; --fs-80:0.8rem;
-    --fs-95:0.95rem; --fs-98:0.98rem; --fs-105:1.05rem; --fs-110:1.1rem;
-    --fs-115:1.15rem; --fs-130:1.3rem; --fs-135:1.35rem;
+    /* Fein-Typo der Leser/Chrome (25.6.2026, DESIGN-REGLEMENT B2): die zuvor
+       12 rohen text-[…rem]-Sonderwerte sind auf die bestehende Skala
+       (micro/xs/body-s/base/body-l/h3) verdichtet — keine Sondertokens mehr,
+       voll scale-bound. Nutzerwählbare Lesegrösse bleibt --rsp-fs (Reader). */
   }
 
   /* ── Dunkelmodus (Auftrag David 19.6.2026) ───────────────────────────────

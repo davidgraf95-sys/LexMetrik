@@ -45,7 +45,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   function Ziffer({ label, marke, anker, stark }: { label: string; marke: string; anker: string; stark: boolean }) {
     return (
       <a href={`#${anker}`} onClick={(e) => kopiere(e, pinCite(marke), anker)} title={`${pinCite(marke)} — Fundstelle kopieren`}
-        className={`mb-1 inline-flex items-baseline no-underline num tabular-nums font-semibold ${stark ? 'text-ink-900 text-[length:var(--fs-105)]' : 'text-ink-700 text-[length:var(--fs-95)]'}`}>
+        className={`mb-1 inline-flex items-baseline no-underline num tabular-nums font-semibold ${stark ? 'text-ink-900 text-base' : 'text-ink-700 text-body-s'}`}>
         {label}
         <span aria-hidden className="ml-1.5 text-brass-600 opacity-0 group-hover:opacity-80 transition-opacity">§</span>
       </a>
