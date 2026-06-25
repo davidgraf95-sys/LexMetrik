@@ -696,23 +696,31 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           Sticky unter Header + Reiter-Streifen (--tabstreifen-h). Im 2-Spalten-Fall
           sitzt die Suche in der linken Spalte oberhalb der TOC (Auftrag David:
           nicht über dem Gesetzestext). */}
+      {/* Sticky Kopfzeile UNTER dem Reiter-Streifen. Zwei Varianten (Auftrag David
+          25.6.2026): ab xl (eingeklappte Spalte) die volle Suchleiste + ☰-Knopf zum
+          Wiedereinblenden der Spalte; UNTER xl nur EIN kompakter Knopf, der Suche +
+          Gliederung als Overlay-Drawer auf Wunsch öffnet (analog Seitenleiste) —
+          so nimmt der Reader keine zweite volle Bar weg, die den Reiter-Streifen
+          eng macht/abschneidet. */}
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
           style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
-          <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
-            {/* Gliederungs-Zugang IN der sticky Leiste → beim Lesen jederzeit
-                erreichbar (Auftrag David, analog Seitenleiste). Unter xl öffnet er
-                den Gliederungs-Drawer (tocAuf); ab xl (eingeklappt) holt er die
-                Spalte zurück (tocOffen). */}
-            {sektionen.length > 0 && (
-              <button type="button" aria-expanded={istXl ? tocOffen : tocAuf}
-                onClick={() => (istXl ? setTocOffen(true) : setTocAuf((v) => !v))}
-                title="Gliederung" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
-                <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
-              </button>
-            )}
-            {sucheEingabe}
-          </div>
+          {istXl ? (
+            <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
+              {sektionen.length > 0 && (
+                <button type="button" aria-expanded={tocOffen} onClick={() => setTocOffen(true)}
+                  title="Gliederung einblenden" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
+                  <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
+                </button>
+              )}
+              {sucheEingabe}
+            </div>
+          ) : (
+            <button type="button" aria-expanded={tocAuf} onClick={() => setTocAuf((v) => !v)}
+              className="inline-flex items-center gap-1.5 rounded-md border border-line bg-paper px-3 py-1.5 text-body-s font-medium text-ink-600 shadow-sm hover:text-brass-700 hover:border-brass-300 transition-colors">
+              <span aria-hidden>☰</span>{sektionen.length > 0 ? 'Gliederung & Suche' : 'Im Gesetz suchen'}
+            </button>
+          )}
         </div>
       )}
 
@@ -721,20 +729,23 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           volle Spaltenbreite, die Gliederung sitzt als einklappbarer Block darüber
           (wie mobil). So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da
           ist. Reine Darstellung (§3). */}
-      {/* Unter xl: Gliederung als Overlay-Drawer (analog Seitenleiste), geöffnet
-          über den sticky ☰-Knopf in der Suchleiste — jederzeit beim Lesen erreichbar
-          (Auftrag David). Auswahl einer Sektion schliesst den Drawer (springeZuSektion). */}
-      {!istXl && tocAuf && sektionen.length > 0 && (
+      {/* Unter xl: Suche + Gliederung als Overlay-Drawer (analog Seitenleiste),
+          NUR auf Wunsch über den sticky ☰-Knopf geöffnet (Auftrag David 25.6.2026)
+          — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
+          steht oben, darunter (falls vorhanden) der Gliederungsbaum; Sektionswahl
+          schliesst den Drawer (springeZuSektion). */}
+      {!istXl && tocAuf && (
         <>
           <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
-          <div role="dialog" aria-label="Gliederung"
-            className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[75vh] overflow-y-auto overscroll-contain"
+          <div role="dialog" aria-label="Suche & Gliederung"
+            className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain"
             style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
             <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
-              <p className="lc-overline">Gliederung</p>
+              <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
               <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
             </div>
-            <div className="px-3 py-2">{tocBaumEl}</div>
+            <div className="px-4 pt-3 pb-1">{sucheEingabe}</div>
+            {sektionen.length > 0 && <div className="px-3 py-2 border-t border-line mt-2">{tocBaumEl}</div>}
           </div>
         </>
       )}
