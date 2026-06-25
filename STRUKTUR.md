@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Feature «pdf-embed»: amtliches PDF in-app (ultracode, EMRK+NYÜ), LIVE
+
+Auftrag David: schwer extrahierbare Erlasse (kein Volltext-HTML) analog lexfind anders darstellen — wartungsarm, überprüfbar, doppelt kontrolliert; via ultracode gebaut + adversarial reviewed; nützlicher/besser als Konkurrenz. Andockpunkt wie in [[lexfind-clex-quelle-strategie]] vorgedacht: `ErlassStatus → render_mode`.
+- **Dritter Status `'pdf-embed'`** (neben snapshot/nur-live-link): amtliches Fedlex-PDF/A wird same-origin in den vollen Reader eingebettet (Kopf, Provenienz, ⬇ Download, ↗ geltende Fassung, Werkzeuge + BGer-Entscheide, native PDF-Suche). EMRK (0.101) + NYÜ (0.277.12) — beide haben KEINEN extrahierbaren HTML, aber valides PDF/A.
+- **Wartungsarm:** EINE deklarative Quelle `src/lib/normtext/pdf-embed.ts` (key/eli/kons) treibt Register + Build + Checks; sha/Stand generiert (`pdf-index.json`), pdf-a-URL abgeleitet. Build `normtext:pdf` → `public/normtext/pdf/<KEY>.pdf` (committet, Repo-Artefakt-Modell); Shell-Guard (%PDF + ≥20 kB) → §8-Fallback statt kaputtem Embed.
+- **Doppelte Kontrolle:** `check:pdf` (offline: Datei/%PDF/Bytes/sha, im Gate) + `check:pdf-netz` (Live-sha-Drift + geltende Konsolidierung via SPARQL, leeres Resultat = ROT, in check:netz).
+- **ultracode-Multi-Lens-Review fing 2 PROD-ONLY-BLOCKER** (lokal unsichtbar, beide gefixt + Prod-verifiziert): (1) PDF-Artefakte waren untracked + `build` ruft `normtext:pdf` nicht → jetzt committet; (2) `vercel.json` globale `X-Frame-Options: DENY`/CSP `frame-ancestors none` hätte den eigenen same-origin-iframe blockiert → eigene `/normtext/`-Regel SAMEORIGIN + `frame-ancestors 'self'`. + MAJORs (Currency-ROT-bei-leerem-SPARQL, Fetch-Timeouts, pdf-embed-Provenienz-Test-Tor). Prod: EMRK.pdf 200 application/pdf + X-Frame-Options SAMEORIGIN, 0 Framing-Konsolenfehler.
+- EMRK ist damit NICHT mehr nur-live-link, sondern pdf-embed. `verified` NICHT gesetzt (fachliche Abnahme David).
+
 ## Session 25.6.2026 (Forts.) — Live-Review-Iteration David + International, je Schritt Gate+Deploy+Push (autonom, David weg)
 
 Daueranweisung David: autonom weiterarbeiten, zwischen den Schritten Bug-Check über den neuen Code, nach jedem Schritt deployen+pushen. Mehrere Einzel-Deploys, jeder Gate-grün:
