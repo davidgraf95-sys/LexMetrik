@@ -27,6 +27,8 @@ export interface BrowseErlass {
   quelleUrl: string;
   /** Drift-Token des ersten Eintrags (UI-Anzeige) oder ''. */
   fassungsToken: string;
+  /** Nur status 'pdf-embed': Pfad zum gehosteten amtlichen PDF (z.B. 'pdf/EMRK.pdf'), sonst null. */
+  pdfPfad: string | null;
 }
 
 export interface BrowseManifest {

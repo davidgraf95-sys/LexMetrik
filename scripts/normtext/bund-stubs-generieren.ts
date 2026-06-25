@@ -42,9 +42,8 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   // Völker- & Europarecht: 8 Staatsverträge SR 0.* (CISG/LugÜ/HZÜ/HBewÜ/HKÜ/FZA/
   // VRK/UNO-Pakt II) wurden am 25.6.2026 von «nur-live-link» auf VOLLTEXT promoviert
   // → bund()-Snapshot-Einträge im ERLASS_REGISTER + fedlex-cache.sh-Pins.
-  // EMRK (0.101) bleibt Stub: Fedlex hat für die geltende Konsolidierung nur eine
-  // ~9-kB-Shell ohne <article>-Anker (kein extrahierbarer Volltext, §8).
-  ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention (nur Live-Link)
+  // EMRK (0.101) + NYÜ (0.277.12) sind 'pdf-embed' (amtliches PDF in-app, kein
+  // extrahierbarer Volltext-HTML) → src/lib/normtext/pdf-embed.ts, NICHT hier.
 ];
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';

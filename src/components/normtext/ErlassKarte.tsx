@@ -3,8 +3,13 @@ import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 
 // Erlass-Karte in der Übersicht /gesetze. Nüchtern/kanzleihaft (DESIGN-REGLEMENT):
 // Kürzel als Anker, Titel klein, Meta (SR · Artikelzahl), Stand als Chip. Reine
-// Darstellung (§3). Snapshot-Erlasse führen in die Lesesicht; nur-live-link-
-// Erlasse tragen ehrlich nur den amtlichen Link (§8).
+// Darstellung (§3). 'snapshot' UND 'pdf-embed' (amtliches PDF in-app) führen in
+// die In-App-Lesesicht; 'nur-live-link' trägt ehrlich nur den amtlichen Link (§8).
+
+/** Hat eine In-App-Lesesicht (Volltext-Snapshot ODER eingebettetes amtliches PDF). */
+function istLesbar(e: BrowseErlass): boolean {
+  return e.status === 'snapshot' || e.status === 'pdf-embed';
+}
 
 function StandChip({ stand }: { stand: string }) {
   if (!stand) return null;
@@ -27,7 +32,9 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
         {e.sr && <span>SR <span className="num">{e.sr}</span></span>}
         {e.status === 'snapshot'
           ? <span><span className="num">{e.artikelAnzahl}</span> Artikel</span>
-          : <span className="text-ink-400">nur Live-Link</span>}
+          : e.status === 'pdf-embed'
+            ? <span className="text-ink-500">amtliches PDF</span>
+            : <span className="text-ink-400">nur Live-Link</span>}
         <StandChip stand={e.stand} />
       </div>
     </>
@@ -43,18 +50,18 @@ export function ErlassZeile({ e }: { e: BrowseErlass }) {
       <span className="font-medium text-ink-700 shrink-0">{e.kuerzel}</span>
       <span className="text-ink-500 truncate">{e.titel}</span>
       {e.sr && <span className="num text-xs text-ink-400 shrink-0 ml-auto">SR {e.sr}</span>}
-      {e.status !== 'snapshot' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
+      {e.status === 'nur-live-link' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
     </>
   );
   const cls = 'flex items-baseline gap-2 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
-  return e.status !== 'snapshot'
-    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
-    : <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>;
+  return istLesbar(e)
+    ? <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>
+    : <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>;
 }
 
 export function ErlassKarte({ e }: { e: BrowseErlass }) {
   // nur-live-link: kein interner Reader (ehrlich, §8) → amtlicher Link extern.
-  if (e.status !== 'snapshot') {
+  if (!istLesbar(e)) {
     return (
       <a
         href={e.quelleUrl}
@@ -74,7 +81,7 @@ export function ErlassKarte({ e }: { e: BrowseErlass }) {
     >
       <KarteInhalt e={e} />
       <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-brass-700 opacity-0 transition-opacity group-hover:opacity-100">
-        Volltext lesen →
+        {e.status === 'pdf-embed' ? 'Amtliches PDF öffnen →' : 'Volltext lesen →'}
       </span>
     </Link>
   );

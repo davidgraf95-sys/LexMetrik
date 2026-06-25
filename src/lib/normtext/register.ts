@@ -14,6 +14,7 @@
 import { FEDLEX, type FedlexGesetz } from '../fedlex';
 import { BUND_STUBS } from './bund-stubs.generated';
 import { INTERNATIONAL_EXTERN } from './international-extern';
+import { PDF_EMBED } from './pdf-embed';
 
 /** Kanzleirelevante Sach-Achsen. Bund deklariert je Erlass; Kanton-Default unten. */
 export type Rechtsgebiet =
@@ -21,7 +22,12 @@ export type Rechtsgebiet =
   | 'oeffentlich' | 'schkg' | 'sozial-abgaben' | 'international';
 
 export type Sprache = 'de' | 'fr' | 'it';
-export type ErlassStatus = 'snapshot' | 'nur-live-link';
+// 'snapshot'      = strukturierter Volltext-Snapshot (public/normtext/.../KEY.json)
+// 'pdf-embed'     = amtliches PDF in-app eingebettet (public/normtext/pdf/KEY.pdf) —
+//                   Fallback, wenn kein extrahierbarer Volltext-HTML existiert; das
+//                   Angezeigte IST die amtliche Fassung (§7/§8, kein Extraktionsrisiko).
+// 'nur-live-link' = nur Link zur amtlichen Quelle (kein In-App-Text).
+export type ErlassStatus = 'snapshot' | 'pdf-embed' | 'nur-live-link';
 
 export interface ErlassRegistereintrag {
   /** == Snapshot-Datei-Stamm ohne .json: 'OR', 'GEBV_SCHKG', 'BE-161.12'. */
@@ -45,6 +51,9 @@ export interface ErlassRegistereintrag {
   /** Nur status 'nur-live-link' (kein Snapshot): Pflicht. */
   quelleUrl?: string;
   stand?: string;
+  /** Nur status 'pdf-embed': Pfad zum gehosteten amtlichen PDF (relativ zu
+   *  public/normtext, z.B. 'pdf/EMRK.pdf'). sha/Bytes stehen in pdf-index.json. */
+  pdfPfad?: string;
 }
 
 /** Anzeige-Reihenfolge + Labels der Sach-Achsen (Übersicht Bund). */
@@ -330,6 +339,9 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   // ── International: nicht-Fedlex-Erlasse (EU-Recht) als «nur-live-link»,
   //    amtliche EUR-Lex-Quelle. Rubrik «International» (§7/§8). ──
   ...INTERNATIONAL_EXTERN,
+  // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML),
+  //    z.B. EMRK, New Yorker Schiedsspruch-Übk. (§7/§8). ──
+  ...PDF_EMBED,
 ];
 
 // Bund-Eintrag mit Default-Sprache de + status 'snapshot'. fedlexKey default ==

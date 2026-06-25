@@ -291,7 +291,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     if (ebene === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
     void ladeErlass(schluessel).then(async (e) => {
       if (!lebt) return;
-      if (!e || !e.datei) { setFehler(true); return; }
+      if (!e) { setFehler(true); return; }
+      // pdf-embed: kein Snapshot-JSON — Erlass setzen, der Reader rendert das
+      // eingebettete amtliche PDF (eintraege bleibt null).
+      if (e.status === 'pdf-embed') { setErlass(e); return; }
+      if (!e.datei) { setFehler(true); return; }
       setErlass(e);
       const datei = await ladeErlassDatei(e.datei);
       if (!lebt) return;
@@ -462,6 +466,72 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       <div className="space-y-4">
         <Link to="/gesetze" className="text-body-s text-brass-700">‹ Zur Gesetzessammlung</Link>
         <div className="lc-notice lc-notice-warn">Dieser Erlass ist nicht als Volltext verfügbar.</div>
+      </div>
+    );
+  }
+  // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML) ──────
+  // Auftrag David 25.6.2026: statt nacktem Live-Link das amtliche Fedlex-PDF in
+  // den vollen Reader-Rahmen einbetten (Breadcrumb, Kopf, Provenienz, Download,
+  // native PDF-Suche). Fedlex setzt X-Frame-Options: DENY → Hotlink unmöglich,
+  // darum SELBST gehostet (same-origin). Wichtig: die globale DENY-Header-Politik
+  // (vercel.json) ist für /normtext/ auf SAMEORIGIN + frame-ancestors 'self'
+  // gelockert, sonst blockiert der Browser auch den eigenen PDF-iframe (Prod-only).
+  // Massgeblich bleibt die amtliche Quelle (sichtbarer Live-Link, §7/§8); Drift-
+  // Tor: check:pdf (offline Integrität + netz Drift & geltende Konsolidierung).
+  if (erlass && erlass.status === 'pdf-embed' && erlass.pdfPfad) {
+    const titelOhneSuffixP = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    const titelRedundantP = titelOhneSuffixP.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
+    return (
+      <div className="space-y-5">
+        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
+          <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
+          <span className="mx-1.5 text-ink-300">›</span>
+          {erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
+          <span className="mx-1.5 text-ink-300">›</span>
+          <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
+        </div>
+        <header className="space-y-2.5 border-b border-line pb-5">
+          <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
+          <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
+            {erlass.kuerzel}{!titelRedundantP && <span className="text-ink-400 font-normal"> — {erlass.titel}</span>}
+          </h1>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
+            {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
+            {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
+            {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
+            {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+            <a href={`/normtext/${erlass.pdfPfad}`} download={`${erlass.kuerzel}.pdf`} className="lc-chip no-underline hover:text-brass-700" title="Amtliches PDF herunterladen">⬇ PDF herunterladen</a>
+            <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-400">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
+          </div>
+        </header>
+        {(() => { const wz = werkzeugeFuer(erlass.key); return wz.length > 0 ? (
+          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
+            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Passende Werkzeuge <span className="text-ink-400">({wz.length})</span></summary>
+            <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
+              {wz.map((w) => <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400"><span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}</Link>)}
+            </div>
+          </details>
+        ) : null; })()}
+        {rspr.length > 0 && (
+          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
+            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-400">({rspr.length})</span></summary>
+            <ul className="mt-2.5 flex flex-col gap-1.5">
+              {rspr.slice(0, 8).map((r) => (
+                <li key={r.key} className="text-sm"><Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700"><span className="font-medium">{r.zitierung}</span>{r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}{r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}</Link></li>
+              ))}
+            </ul>
+          </details>
+        )}
+        {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
+            Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
+            ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
+        <iframe src={`/normtext/${erlass.pdfPfad}#view=FitH`} title={`${erlass.kuerzel} — amtliches PDF`}
+          className="w-full rounded-lg border border-line bg-paper-sunken/30"
+          style={{ height: 'min(82vh, 1100px)' }} />
+        <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
+          <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
+          <a href={`/normtext/${erlass.pdfPfad}`} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliches PDF in neuem Tab öffnen ↗</a>
+        </nav>
       </div>
     );
   }

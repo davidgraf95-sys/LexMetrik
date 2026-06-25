@@ -20,8 +20,8 @@ const INTERNATIONAL_GRUPPEN: { id: string; titel: string; lede: string; keys: st
   {
     id: 'privat-zivil',
     titel: 'Internationales Privat- & Zivilrecht',
-    lede: 'Vertrags-, Zuständigkeits- und Vollstreckungsrecht über die Grenze — vom Wiener Kaufrecht bis zum Lugano-Übereinkommen.',
-    keys: ['CISG', 'LUGUE', 'VRK'],
+    lede: 'Vertrags-, Zuständigkeits- und Vollstreckungsrecht über die Grenze — vom Wiener Kaufrecht über das Lugano-Übereinkommen bis zur Vollstreckung ausländischer Schiedssprüche.',
+    keys: ['CISG', 'LUGUE', 'VRK', 'NYUE'],
   },
   {
     id: 'rechtshilfe',

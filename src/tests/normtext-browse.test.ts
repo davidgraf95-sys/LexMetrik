@@ -10,6 +10,7 @@ function be(p: Partial<BrowseErlass>): BrowseErlass {
     key: 'X', ebene: 'bund', kanton: null, kuerzel: 'X', titel: 'Titel', sr: null,
     rechtsgebiet: 'privat', sprache: 'de', rang: 0, status: 'snapshot',
     datei: 'bund/X.json', artikelAnzahl: 1, stand: '2026-01-01', quelleUrl: 'u', fassungsToken: 't',
+    pdfPfad: null,
     ...p,
   };
 }

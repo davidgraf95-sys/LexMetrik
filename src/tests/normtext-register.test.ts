@@ -111,6 +111,17 @@ describe('Tor 6 — Manifest ⊇ alle Snapshots, kein Phantom', () => {
       expect(e.stand.length, e.key).toBeGreaterThan(0);
     }
   });
+  // pdf-embed: render-kritische Provenienz muss vollständig sein — ohne pdfPfad
+  // fällt der Reader still in den «nicht verfügbar»-Zweig, ohne stand/quelleUrl
+  // fehlt die §7-Provenienz. (Datei-Integrität prüft zusätzlich check:pdf.)
+  it('pdf-embed-Einträge tragen pdfPfad + quelleUrl + stand, keine Snapshot-Datei', () => {
+    for (const e of m.erlasse.filter((x) => x.status === 'pdf-embed')) {
+      expect(e.datei, e.key).toBeNull();
+      expect(e.pdfPfad ?? '', e.key).toMatch(/^pdf\/.+\.pdf$/);
+      expect(e.quelleUrl.length, e.key).toBeGreaterThan(0);
+      expect(e.stand.length, e.key).toBeGreaterThan(0);
+    }
+  });
 });
 
 describe('Tor 7 — committetes register.json ist aktuell (kein stiller Drift)', () => {

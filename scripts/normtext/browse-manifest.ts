@@ -128,6 +128,7 @@ function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei): Brow
     stand: spaetesterStand(datei),
     quelleUrl: ohneAnker(datei.eintraege[0]?.quelleUrl ?? ''),
     fassungsToken: datei.eintraege[0]?.fassungsToken ?? '',
+    pdfPfad: null,
   };
 }
 
@@ -144,6 +145,7 @@ function kantonEintrag(stamm: string, datei: NormSnapshotDatei): BrowseErlass {
     stand: spaetesterStand(datei),
     quelleUrl: ohneAnker(erstes?.quelleUrl ?? ''),
     fassungsToken: erstes?.fassungsToken ?? '',
+    pdfPfad: null,
   };
 }
 
@@ -154,6 +156,20 @@ function liveLinkEintrag(reg: ErlassRegistereintrag): BrowseErlass {
     rechtsgebiet: reg.rechtsgebiet, sprache: reg.sprache, rang: reg.rang, status: 'nur-live-link',
     datei: null, artikelAnzahl: 0,
     stand: reg.stand ?? '', quelleUrl: reg.quelleUrl ?? '', fassungsToken: '',
+    pdfPfad: null,
+  };
+}
+
+// pdf-embed: amtliches PDF in-app (kein Snapshot-JSON). datei=null; pdfPfad trägt
+// den gehosteten PDF-Pfad. Stand/quelleUrl aus dem Register (pdf-embed.ts).
+function pdfEmbedEintrag(reg: ErlassRegistereintrag): BrowseErlass {
+  return {
+    key: reg.key, ebene: reg.ebene, kanton: reg.kanton ?? null,
+    kuerzel: reg.kuerzel, titel: reg.titel, sr: reg.sr ?? null,
+    rechtsgebiet: reg.rechtsgebiet, sprache: reg.sprache, rang: reg.rang, status: 'pdf-embed',
+    datei: null, artikelAnzahl: 0,
+    stand: reg.stand ?? '', quelleUrl: reg.quelleUrl ?? '', fassungsToken: '',
+    pdfPfad: reg.pdfPfad ?? null,
   };
 }
 
@@ -193,9 +209,11 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
     erlasse.push(kantonEintrag(stamm, datei));
   }
 
-  // Register-Einträge ohne Snapshot (status 'nur-live-link') ergänzen.
+  // Register-Einträge ohne Snapshot ergänzen: 'nur-live-link' (externer Link) und
+  // 'pdf-embed' (amtliches PDF in-app).
   for (const reg of ERLASS_REGISTER) {
     if (reg.status === 'nur-live-link') erlasse.push(liveLinkEintrag(reg));
+    else if (reg.status === 'pdf-embed') erlasse.push(pdfEmbedEintrag(reg));
   }
 
   erlasse.sort(vergleiche);
