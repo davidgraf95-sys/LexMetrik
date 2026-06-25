@@ -215,9 +215,9 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
             {/* R17: Lese-Schriftgrösse */}
             <span className="inline-flex items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
               <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
-                className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
+                className="min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
               <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
-                className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40 border-l border-line" title="Schrift grösser">A+</button>
+                className="min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40 border-l border-line" title="Schrift grösser">A+</button>
             </span>
             <button type="button" onClick={kopiereZitat}
               className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
@@ -333,9 +333,9 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         <span className="ml-auto inline-flex items-center gap-2">
           <span className="inline-flex items-stretch overflow-hidden rounded border border-line" role="group" aria-label="Schriftgrösse">
             <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
-              className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
+              className="min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
             <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
-              className="border-l border-line px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift grösser">A+</button>
+              className="border-l border-line min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift grösser">A+</button>
           </span>
           <button ref={schliessRef} type="button" onClick={onClose}
             className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400" title="Lesemodus schliessen (Esc)">

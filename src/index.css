@@ -337,6 +337,7 @@
     border-left: 2px solid var(--brass-500); /* Messing-Tick (gravierte Skala) */
     font-family: var(--font-mono), ui-monospace, monospace;
     font-size: .75rem; font-weight: 500; padding: 2px 8px;
+    min-height: 24px; /* WCAG 2.2 Target-Size (2.5.8): ≥24px Tap-Ziel (Auftrag David 26.6.2026) */
   }
 
   /* Glas-Effekt für sticky Chrome (Topbar/TabStreifen) — eine Quelle statt
