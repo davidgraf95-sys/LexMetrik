@@ -9,11 +9,10 @@
 //
 // legal_area-Bedarf (§7-treu): die mehrdeutige II. öff.-rechtl. Abteilung (2A/2C/
 // 2D) ohne eindeutiges Norm-Signal fällt in der reparierten Logik auf die OCL-
-// legal_area zurück — diese ist NICHT im Snapshot gespeichert. Damit die Regen
-// die deployte Logik EXAKT reproduziert (statt zu raten), wird legal_area für
-// genau diese Dockets live über den keyed OCL-Lookup nachgeladen. Alle übrigen
-// Snapshots brauchen keinen Netz-Zugriff (ihre Präzedenz löst über Abteilung/
-// kantonales Präfix, nie über legal_area).
+// legal_area zurück. Diese ist seit dem Backfill (backfill-legal-area.ts) als
+// `legalArea` IM Snapshot gespeichert → der Re-Map liest sie OFFLINE aus dem Feld
+// (kein Live-Fetch mehr). Damit ist die Klassierung deterministisch (§2) und ohne
+// Netz reproduzierbar.
 //
 // HARTE INVARIANTEN (§1): nur `sachgebiet` ändert sich; alle übrigen Felder und
 // der Erwägungs-/Inhalts-sha bleiben byte-gleich (sha basiert nur auf Abschnitts-
@@ -27,14 +26,12 @@ import {
   istMehrdeutigeOerAbteilung, normSignalSachgebiet, abteilungZuSachgebiet,
   kantonalSachgebiet, legalAreaZuSachgebiet,
 } from './entscheide-mapping';
-import { jget } from './adapter-entscheide';
 import { schreibeKorpus } from './entscheide-schreiben';
 import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
-const API = 'https://mcp.opencaselaw.ch/api';
 
 const args = process.argv.slice(2);
 const schreiben = args.includes('--schreiben');
@@ -48,13 +45,6 @@ function alleSnapshotDateien(dir: string): string[] {
     else if (name.endsWith('.json') && name !== 'register.json' && name !== 'norm-index.json') out.push(p);
   }
   return out;
-}
-
-/** OCL legal_area für ein BGer-Docket (keyed Lookup; null bei Fehlschlag/leer). */
-async function holeLegalArea(gericht: string, docketSafe: string): Promise<string | null> {
-  const decisionId = `${gericht}_${docketSafe}`;
-  const d = await jget<{ legal_area?: string | null }>(`${API}/decisions/${decisionId}?fields=full`);
-  return d?.legal_area ?? null;
 }
 
 /** Reparierte Sachgebiets-Präzedenz — IDENTISCH zu mappeEntscheidOCL (ohne Hint). */
@@ -72,11 +62,11 @@ function leiteSachgebiet(
   );
 }
 
-async function main() {
+function main() {
   const dateien = alleSnapshotDateien(PUB);
   const snaps: EntscheidSnapshot[] = [];
   const wechsel: Array<{ nr: string; gericht: string; kanton: string; alt: Rechtsgebiet; neu: Rechtsgebiet; signal: string }> = [];
-  let oerLookups = 0;
+  let oerLegalArea = 0;
 
   for (const datei of dateien) {
     const wrap = JSON.parse(readFileSync(datei, 'utf8')) as EntscheidSnapshotDatei;
@@ -97,15 +87,13 @@ async function main() {
 
     if (ambig) {
       const signal = normSignalSachgebiet(normKeys);
-      let legalArea: string | null = null;
+      // legal_area kommt OFFLINE aus dem persistierten Snapshot-Feld (Backfill);
+      // kein Live-Fetch → deterministisch (§2). null, wenn OCL keine lieferte.
+      const legalArea = snap.legalArea ?? null;
       if (signal) {
         quelleSignal = 'norm-signal';
       } else {
-        // Kein eindeutiges Norm-Signal → deployte Logik fällt auf legal_area
-        // zurück; diese ist nicht im Snapshot → live keyed-Lookup (§7-treu).
-        const docketSafe = snap.id.split('/').pop()!;
-        legalArea = await holeLegalArea(snap.gericht, docketSafe);
-        oerLookups++;
+        oerLegalArea++;
         quelleSignal = legalAreaZuSachgebiet(legalArea) ? `legal_area=${legalArea}` : 'abteilung-default(sozial-abgaben)';
       }
       neu = leiteSachgebiet(docket, normKeys, legalArea);
@@ -125,7 +113,7 @@ async function main() {
     ?? new Date().toISOString().slice(0, 10);
 
   console.log(`[remap] ${snaps.length} Snapshots geprüft — ${schreiben ? 'SCHREIBEN' : 'DRY-RUN'}`);
-  console.log(`[remap] OeR-legal_area-Lookups (live): ${oerLookups}`);
+  console.log(`[remap] OeR-legal_area aus Snapshot (offline): ${oerLegalArea}`);
   console.log(`[remap] Sachgebiet-Wechsel: ${wechsel.length}`);
   const proGeb: Record<string, number> = {};
   for (const w of wechsel) { const k = `${w.alt} → ${w.neu}`; proGeb[k] = (proGeb[k] ?? 0) + 1; }
@@ -141,4 +129,4 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+try { main(); } catch (e) { console.error(e); process.exit(1); }
