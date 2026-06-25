@@ -128,7 +128,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+      className="nt-art-cv group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       {/* Marginalspalte erst ab xl (1280px) als eigene Druckfassungs-Randspalte —
           darunter (geteilter Bildschirm / mittlere Breiten) stapeln «Art. N» + die
           Randtitel ÜBER dem Fliesstext, damit der Normtext die volle Breite behält

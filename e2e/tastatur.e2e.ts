@@ -73,3 +73,46 @@ test('Monatsblättern ‹/›: Raster bleibt tabbar (Monatserster), kein Fokus-K
   const iso = await aktivesIso(page)
   expect(iso, 'Erster Pfeildruck landet auf dem Monatsersten').toMatch(/-01$/)
 })
+
+// ── W2.3: Erweiterung über das Kalender-Popover hinaus (Skip-Link, «/»-Suche,
+//    SchweizKarte-Tastaturbedienung — letztere sichert den W1.6-Fokus-Fix). ──
+
+test('Skip-Link: erstes Tab fokussiert «Zum Inhalt springen» und springt in den Inhalt', async ({ page }) => {
+  await page.goto('/')
+  await page.keyboard.press('Tab')
+  const skip = page.getByRole('link', { name: 'Zum Inhalt springen' })
+  await expect(skip).toBeFocused()
+  await page.keyboard.press('Enter')
+  await expect(page).toHaveURL(/#inhalt$/)
+})
+
+test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
+  await page.goto('/')
+  await page.keyboard.press('/')
+  await expect(page.getByRole('searchbox', { name: 'LexMetrik durchsuchen' })).toBeFocused()
+})
+
+test('SchweizKarte: Kanton-Fläche ist tastatur-fokussierbar und mit Enter wählbar (W1.6)', async ({ page }) => {
+  await page.goto('/gesetze?ebene=kanton')
+  // Karten-<details> öffnen (Default zu) — das <summary> ist eindeutig (der
+  // gleiche Text steht zusätzlich als Span in der Karte selbst).
+  const summary = page.locator('summary').filter({ hasText: 'Kanton auf der Karte wählen' })
+  await summary.click()
+  // Eine wählbare Fläche ist tastatur-fokussierbar (tabindex=0 + role=button —
+  // die Fokus-SICHTBARKEIT selbst ist in W1.6 per Screenshot belegt) und reagiert
+  // auf Enter (onKeyDown → Auswahl). Wir prüfen den Tastatur-Vertrag deterministisch
+  // per dispatch (SVG-Fokus in Playwright ist unzuverlässig).
+  const flaeche = page.locator('path[role="button"][tabindex="0"]').first()
+  await expect(flaeche).toHaveCount(1)
+  const kanton = await flaeche.getAttribute('aria-label')
+  const ausgeloest = await page.evaluate(() => {
+    const el = document.querySelector('path[role="button"][tabindex="0"]')
+    if (!el) return false
+    el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }))
+    return true
+  })
+  expect(ausgeloest).toBe(true)
+  // Nach der Wahl ist die «Karte wählen»-Auswahl weg (ein Kanton ist gewählt → Karte unmountet).
+  await expect(summary).toHaveCount(0)
+  expect(kanton, 'wählbare Fläche trägt einen Kantonsnamen').toBeTruthy()
+})
