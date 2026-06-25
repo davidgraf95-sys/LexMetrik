@@ -117,13 +117,13 @@ export function VorlageEheschutzgesuch() {
       case 'parteien': return (
         <div className="space-y-5">
           <Field label="Gesuchstellende Partei">
-            <ParteiEditor p={a.gesuchsteller} onChange={(p) => set('gesuchsteller', p)} />
+            <ParteiEditor p={a.gesuchsteller} onChange={(p) => set('gesuchsteller', p)} nurNatuerlich />
           </Field>
           <Field label="Vertretung" optional>
             <input className={inputCls} value={a.vertretung ?? ''} onChange={(e) => set('vertretung', e.target.value || undefined)} placeholder="z. B. RA lic. iur. X" />
           </Field>
           <Field label="Gesuchsgegnerische Partei">
-            <ParteiEditor p={a.gesuchsgegner} onChange={(p) => set('gesuchsgegner', p)} />
+            <ParteiEditor p={a.gesuchsgegner} onChange={(p) => set('gesuchsgegner', p)} nurNatuerlich />
           </Field>
           <Checkbox
             checked={a.kinderErfassen}

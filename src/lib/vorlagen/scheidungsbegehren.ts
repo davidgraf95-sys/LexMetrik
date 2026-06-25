@@ -84,6 +84,11 @@ export function sbMaengel(a: SbAntworten): SbMangel[] {
   }
   if (!parteiVollstaendig(a.ehegatte1)) m.push({ schritt: 1, text: 'Ehegatte/Ehegattin 1 vollständig bezeichnen (Art. 285 lit. a ZPO).' });
   if (!parteiVollstaendig(a.ehegatte2)) m.push({ schritt: 1, text: 'Ehegatte/Ehegattin 2 vollständig bezeichnen (Art. 285 lit. a ZPO).' });
+  // Ehegatten sind zwingend natürliche Personen — Absicherung in der Logikschicht
+  // (§3), unabhängig vom UI-Prop nurNatuerlich.
+  if (a.ehegatte1.typ === 'juristisch' || a.ehegatte2.typ === 'juristisch') {
+    m.push({ schritt: 1, text: 'Ein Ehegatte muss eine natürliche Person sein — juristische Person nicht zulässig.' });
+  }
   if (a.kinderErfassen && a.kinder.filter((k) => k.vorname.trim()).length === 0) {
     m.push({ schritt: 1, text: 'Mindestens ein Kind erfassen — oder die Kinder-Erfassung deaktivieren.' });
   }

@@ -135,12 +135,23 @@ export function pruefeVaGates(a: VaAntworten): VaGateErgebnis {
     blocker.push('Mindestens eine beauftragte Person mit mindestens einem Aufgabenbereich bezeichnen (Art. 360 Abs. 1 ZGB).');
   }
 
-  // Determinismus-Schwelle: medizinische Vertretung nur durch natürliche Person
-  const medizinJuristisch = a.beauftragte.some(
-    (b) => b.typ === 'juristisch' && b.bereiche.includes('personensorge') && a.module.personensorge.includes('medizin'),
+  // Personensorge nur durch natürliche Person (Korrektheits-Schwelle, §1).
+  // Die Personensorge (Art. 360 ZGB) ist höchstpersönlich; eine juristische
+  // Person kommt nur für Vermögenssorge/Vertretung im Rechtsverkehr in Betracht
+  // (h.L.). Der schärfste Teilfall — medizinische Vertretung (Art. 378 Abs. 1
+  // Ziff. 1 ZGB) — wird mit der spezifischeren Meldung benannt; sonst die
+  // allgemeine Personensorge-Meldung. (Befund Vorlagen-Audit 25.6.2026: vorher
+  // nur der medizin-Teilfall geblockt → juristische Personensorge ohne
+  // medizin-Modul lief durch.)
+  const personensorgeJuristisch = a.beauftragte.some(
+    (b) => b.typ === 'juristisch' && b.bereiche.includes('personensorge'),
   );
-  if (medizinJuristisch) {
-    blocker.push('Die Vertretung bei medizinischen Massnahmen kann nur einer NATÜRLICHEN Person übertragen werden (Art. 378 Abs. 1 Ziff. 1 ZGB) – bitte Person oder Modulauswahl anpassen.');
+  if (personensorgeJuristisch) {
+    blocker.push(
+      a.module.personensorge.includes('medizin')
+        ? 'Die Vertretung bei medizinischen Massnahmen kann nur einer NATÜRLICHEN Person übertragen werden (Art. 378 Abs. 1 Ziff. 1 ZGB) – bitte Person oder Modulauswahl anpassen.'
+        : 'Die Personensorge ist höchstpersönlich und kann nur einer NATÜRLICHEN Person übertragen werden (Art. 360 ZGB); eine juristische Person kommt nur für die Vermögenssorge oder die Vertretung im Rechtsverkehr in Betracht.',
+    );
   }
 
   // Liegenschaften → ausdrückliche Sondervollmacht (wird automatisch aufgenommen)

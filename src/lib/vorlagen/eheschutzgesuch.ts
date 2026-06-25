@@ -113,6 +113,12 @@ export function egMaengel(a: EgAntworten): EgMangel[] {
   }
   if (!parteiVollstaendig(a.gesuchsteller)) m.push({ schritt: 1, text: 'Gesuchstellende Partei vollständig bezeichnen.' });
   if (!parteiVollstaendig(a.gesuchsgegner)) m.push({ schritt: 1, text: 'Gesuchsgegnerische Partei vollständig bezeichnen.' });
+  // Ehegatten sind zwingend natürliche Personen (Eheschutz, Art. 172 ff. ZGB).
+  // Absicherung in der Logikschicht (§3), unabhängig vom UI-Prop nurNatuerlich
+  // — der Befund 25.6.2026 entstand, weil die Absicherung nur im UI lag.
+  if (a.gesuchsteller.typ === 'juristisch' || a.gesuchsgegner.typ === 'juristisch') {
+    m.push({ schritt: 1, text: 'Ein Ehegatte muss eine natürliche Person sein (Eheschutz nach Art. 172 ff. ZGB) — juristische Person nicht zulässig.' });
+  }
   if (a.kinderErfassen && a.kinder.filter((k) => k.vorname.trim()).length === 0) {
     m.push({ schritt: 1, text: 'Mindestens ein Kind erfassen — oder die Kinder-Erfassung deaktivieren.' });
   }

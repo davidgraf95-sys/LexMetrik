@@ -105,6 +105,11 @@ export function skMaengel(a: SkAntworten): SkMangel[] {
   }
   if (!parteiVollstaendig(a.klaeger)) m.push({ schritt: 1, text: 'Klagende Partei vollständig bezeichnen (Art. 290 lit. a ZPO).' });
   if (!parteiVollstaendig(a.beklagte)) m.push({ schritt: 1, text: 'Beklagte Partei vollständig bezeichnen (Art. 290 lit. a ZPO).' });
+  // Ehegatten sind zwingend natürliche Personen — Absicherung in der Logikschicht
+  // (§3), unabhängig vom UI-Prop nurNatuerlich.
+  if (a.klaeger.typ === 'juristisch' || a.beklagte.typ === 'juristisch') {
+    m.push({ schritt: 1, text: 'Ein Ehegatte muss eine natürliche Person sein — juristische Person nicht zulässig.' });
+  }
   if (a.kinderErfassen && a.kinder.filter((k) => k.vorname.trim()).length === 0) {
     m.push({ schritt: 1, text: 'Mindestens ein Kind erfassen — oder die Kinder-Erfassung deaktivieren.' });
   }
