@@ -1,0 +1,84 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/8C_703_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "IV. Öffentlich-rechtliche Abteilung",
+      "nummer": "8C_703/2024",
+      "bgeReferenz": null,
+      "zitierung": "BGer 8C_703/2024 vom 10. Dezember 2024",
+      "datum": "2024-12-10",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Wirthlin, Präsident, Gerichtsschreiber Grünvogel",
+        "parteien": "A.________, Beschwerdeführer, gegen Stadt Wallisellen, vertreten durch die Sozialbehörde, Zentralstrasse 9, 8304 Wallisellen, Beschwerdegegnerin",
+        "gegenstand": "Sozialhilfe (Prozessvoraussetzung)",
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Sozialhilfe (Prozessvoraussetzung)",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Zürich und dem Bezirksrat Bülach schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 10. Dezember 2024 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Wirthlin Der Gerichtsschreiber: Grünvogel"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Auf die Beschwerde wird nicht eingetreten.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Zürich und dem Bezirksrat Bülach schriftlich mitgeteilt.\nLuzern, 10. Dezember 2024"
+      ],
+      "zitierteNormen": [
+        "Art. 108 Abs. 1 BGG",
+        "Art. 66 Abs. 1 BGG",
+        "Art. 93 Abs. 1 BGG",
+        "Art. 93 Abs. 3 BGG",
+        "Art. 93 BGG"
+      ],
+      "normKeys": [
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "8C_578/2022",
+        "8C_703/2024",
+        "BGE 141 III 80",
+        "BGE 146 I 62",
+        "BGE 148 IV 159",
+        "VB.2024.00657"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-12-2024-8C_703-2024&lang=de&type=show_document",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "4110df8a929ba52e7b7935396713da7383a626b94404d26b90e63d24384cab0b",
+      "sha": "969e3ea0e9f17aa186bb9ae7420fa8a054c606bba396627fcda695415d2ee9d1"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/8C_709_2024",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "IV. Öffentlich-rechtliche Abteilung",
+      "nummer": "8C_709/2024",
+      "bgeReferenz": null,
+      "zitierung": "BGer 8C_709/2024 vom 9. Dezember 2024",
+      "datum": "2024-12-09",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Wirthlin, Präsident, Gerichtsschreiber Grünvogel",
+        "parteien": "A.________, Beschwerdeführer, gegen IV-Stelle für Versicherte im Ausland IVSTA, Avenue Edmond-Vaucher 18, 1203 Genf, Beschwerdegegnerin",
+        "gegenstand": "Invalidenversicherung (Prozessvoraussetzung)",
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Invalidenversicherung (Prozessvoraussetzung)",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Das Gesuch um Fristwiederherstellung wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "3.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien, dem Bundesverwaltungsgericht, Abteilung III, und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 9. Dezember 2024 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Wirthlin Der Gerichtsschreiber: Grünvogel"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Das Gesuch um Fristwiederherstellung wird abgewiesen.",
+        "Auf die Beschwerde wird nicht eingetreten.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Dieses Urteil wird den Parteien, dem Bundesverwaltungsgericht, Abteilung III, und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt.\nLuzern, 9. Dezember 2024"
+      ],
+      "zitierteNormen": [
+        "Art. 100 Abs. 1 BGG",
+        "Art. 108 Abs. 1 BGG",
+        "Art. 50 Abs. 1 BGG",
+        "Art. 53 Abs. 2 ATSG",
+        "Art. 66 Abs. 1 BGG"
+      ],
+      "normKeys": [
+        "BGG",
+        "ATSG"
+      ],
+      "zitierteEntscheide": [
+        "2C_451/2016",
+        "2F_15/2014",
+        "5A_656/2020",
+        "6B_954/2023",
+        "8C_709/2024",
+        "8F_3/2024",
+        "9C_316/2023",
+        "BGE 119 II 86",
+        "BGE 146 IV 30",
+        "C-3164/2024"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://09-12-2024-8C_709-2024&lang=de&type=show_document",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "2e8a148fc3e552867dba9420c480434b6d851692dcd026907b467980211e93f9",
+      "sha": "e2f8250ebb25ebfa0955e48ad39636706e1591e3719069fe32d5498dbba74622"
+    }
+  ]
+}

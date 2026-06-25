@@ -1,0 +1,81 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/4A_641_2016",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "4A_641/2016",
+      "bgeReferenz": null,
+      "zitierung": "BGer 4A_641/2016 vom 12. Dezember 2016",
+      "datum": "2016-12-12",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Kiss, Präsidentin, Gerichtsschreiber Th. Widmer",
+        "parteien": "A.________, Beschwerdeführerin, gegen Obergericht des Kantons Zürich, I. Zivilkammer, Beschwerdegegner B.________",
+        "gegenstand": "Auftrag; Protokollberichtigung",
+        "vorinstanz": "Obergerichts des Kantons Zürich, I. Zivilkammer, vom 29. September 2016"
+      },
+      "regeste": {
+        "text": "Auftrag; Protokollberichtigung",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird der Beschwerdeführerin, dem Obergericht des Kantons Zürich, I. Zivilkammer, und B.________ schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 12. Dezember 2016 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Kiss Der Gerichtsschreiber: Widmer"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Auf die Beschwerde wird nicht eingetreten.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Dieses Urteil wird der Beschwerdeführerin, dem Obergericht des Kantons Zürich, I. Zivilkammer, und B.________ schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 108 Abs. 1 BGG",
+        "Art. 235 Abs. 3 ZPO",
+        "Art. 49 BGG",
+        "Art. 68 BGG",
+        "Art. 90 BGG",
+        "Art. 92 BGG",
+        "Art. 93 Abs. 1 BGG",
+        "Art. 93 Abs. 3 BGG"
+      ],
+      "normKeys": [
+        "BGG",
+        "ZPO"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=12.12.2016&to_date=12.12.2016&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=5&azaclir=aza&highlight_docid=aza%3A%2F%2F12-12-2016-4A_641-2016&number_of_ranks=25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "62aaa865e292cd066b2741a6631a54438be9639dfda384d7c127ca0e7a1ce811",
+      "sha": "83a0afe9ce25abddbbb9d2819bcc50c728660fab5f2926e1fd695a0eb0a056af"
+    }
+  ]
+}

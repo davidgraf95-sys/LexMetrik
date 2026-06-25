@@ -1,0 +1,149 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/4A_631_2016",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "4A_631/2016",
+      "bgeReferenz": null,
+      "zitierung": "BGer 4A_631/2016 vom 21. April 2017",
+      "datum": "2017-04-21",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Kiss, Präsidentin, Bundesrichterinnen Klett, Niquille, Gerichtsschreiber Luczak",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Tobias Figi, Beschwerdeführer, gegen B.________ AG, Beschwerdegegnerin",
+        "gegenstand": "Krankentaggeldversicherung",
+        "vorinstanz": "Sozialversicherungsgerichts des Kantons Zürich, I. Kammer, vom 22. September 2016"
+      },
+      "regeste": {
+        "text": "Krankentaggeldversicherung",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.________ (Versicherter und Beschwerdeführer) war vom 7. April bis 9. Mai 2014 für die Gesellschaft C.________ GmbH (Arbeitgeberin) als Fassadenisoleur tätig und als deren Angestellter bei der B.________ AG (Versicherung und Beschwerdegegnerin) nach dem Versicherungsvertragsgesetz (VVG; SR 221.229.1) krankentaggeldversichert. Per 9. Mai 2014 wurde das Arbeitsverhältnis aufgelöst. Vom 15. Mai bis 16. Juli 2014 wurde der Versicherte wegen einer schizoaffektiven Störung stationär behandelt. Dieselbe Krankheit war schon vor seiner Anstellung aufgetreten. Am 24. Juni 2014 meldete die Arbeitgeberin der Versicherung die psychische Erkrankung des Versicherten und dessen ganztägige Absenz ab dem 9. Mai 2014. Die Versicherung lehnte ihre Leistungspflicht mit der Begründung ab, eine Arbeitsunfähigkeit sei erst nach Erlöschen des Versicherungsschutzes ausgewiesen, da sie erst am 15. Mai 2014 attestiert worden sei und eine solche gemäss den Versicherungsbedingungen rückwirkend höchstens 3 Tage vor der ersten ärztlichen Konsultation akzeptiert werden könne."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 13. März 2015 erhob der Versicherte Klage beim Sozialversicherungsgericht des Kantons Zürich. Er verlangte im Wesentlichen von der Versicherung Fr. 41'676.--, entsprechend den Taggeldansprüchen vom 11. Juni 2014 bis zur Klageeinleitung (276 Tage à Fr. 151.--), nebst Zins seit mittlerem Verfall. Zudem sei die Versicherung zu verpflichten, die Taggelder auch in Zukunft bis zur Heilung oder der Ausschöpfung des Taggeldanspruches von 730 Tagen zu erbringen, zuzüglich Zins seit dem mittleren Verfall bis zur Ausrichtung der Taggelder. Mit Urteil vom 22. September 2016 wies das Sozialversicherungsgericht die Klage ab. Es kam mit Blick auf das Rückwärtsversicherungsverbot (Art. 9 VVG) zum Schluss, der Vertrag sei in Bezug auf die aufgetretene Krankheit teilnichtig."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in Zivilsachen beantragt der Versicherte dem Bundesgericht, das Urteil des Sozialversicherungsgerichts aufzuheben, und er wiederholt die Begehren aus dem kantonalen Verfahren. Die Beschwerdegegnerin schliesst auf kostenfällige Abweisung der Beschwerde, soweit darauf einzutreten sei, während das Sozialversicherungsgericht auf Vernehmlassung verzichtet hat."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Vorinstanz hat über den vom Beschwerdeführer gestützt auf das VVG geltend gemachten Anspruch als einzige kantonale Instanz im Sinne von Art. 7 ZPO geurteilt. Damit ist die Beschwerde in Zivilsachen zulässig (Art. 74 Abs. 2 lit. b BGG)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Gemäss Art. 9 VVG ist ein Versicherungsvertrag u.a. nichtig, wenn bei Vertragsschluss das befürchtete Ereignis bereits eingetreten ist. Die Vorinstanz hielt fest, der Beschwerdeführer habe unstrittig bereits vor seiner Anstellung bei der Arbeitgeberin an einer schizoaffektiven Störung gelitten und sei bereits vom 26. Juli bis 12. September 2012 und vom 23. September bis am 12. Oktober 2012 stationär behandelt worden, weshalb bereits eine Arbeits- und Erwerbsunfähigkeit aufgrund derselben Krankheit bestanden habe. Daher sei der Vertrag in Bezug auf diese Krankheit als teilnichtig anzusehen."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Das Bundesgericht hat in seiner jüngsten Rechtsprechung festgestellt, dass es bei Krankentaggeldversicherungen bislang überwiegend die Arbeitsunfähigkeit als Versicherungsfall betrachtet und als befürchtetes Ereignis die geltend gemachte Erwerbsunfähigkeit beziehungsweise die Arbeitsunfähigkeit angesehen hat (BGE 142 III 671 E. 3.6 S. 677 mit zahlreichen Hinweisen; kritisch: STEPHAN FUHRER, Anmerkungen zu privatversicherungsrechtlichen Entscheidungen des Bundesgerichts, in: HAVE 2016 S. 451 ff.). Das Bundesgericht qualifizierte nicht die Krankheit als jeweiligen Versicherungsfall, sondern erst die Arbeitsunfähigkeit (BGE 142 III 671 E. 3.6 und 3.7.3 mit Hinweisen; zustimmend: KARIN FRIEDLI, Eintritt des befürchteten Ereignisses in der Krankentaggeldversicherung, in: ius.focus Februar 2017 Heft 2), wobei der Versicherungsfall als Verwirklichung der Gefahr, gegen welche die Versicherung abgeschlossen worden ist, definiert wird (BGE 142 III 671 E. 3.6 S. 677)."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Die Versicherung dient der rationellen Verteilung der Schäden auf eine grosse Anzahl gleichartig bedrohter Personen (Botschaft vom 2. Februar 1904 zu dem Entwurfe eines Bundesgesetzes über den Versicherungsvertrag [nachfolgend: Botschaft VVG], BBl 1904 I 259 Ziff. C.3a). Während der Eintritt des befürchteten Ereignisses für den einzelnen Bedrohten stets ein unberechenbarer Zufall ist, beruht die Versicherung auf der Erfahrung, dass bei einer grossen Anzahl gleichartig bedrohter Personen (Risiken) das Verhältnis der Geschädigten zu den Gefährdeten nur innerhalb enger Grenzen zu schwanken pflegt (Botschaft VVG, BBl 1904 I 260 Ziff. C.3a). Der Versicherer bestimmt anhand von statistischen Beobachtungsresultaten die Wahrscheinlichkeit des Eintrittes des befürchteten Ereignisses (vgl. Botschaft VVG, BBl 1904 I 259 f. Ziff. C.3a) und setzt gestützt darauf die Nettoprämie fest, das rechnungsmässige Äquivalent des versicherten Risikos (Botschaft VVG, BBl 1904 I 260 Ziff. C.3a). Der Versicherer haftet, sofern das VVG nicht anders bestimmt, für alle Ereignisse, welche die Merkmale der Gefahr, gegen deren Folgen Versicherung genommen wurde, an sich tragen, es sei denn, dass der Vertrag einzelne Ereignisse in bestimmter, unzweideutiger Fassung von der Versicherung ausschliesst (Art. 33 VVG). Das Gesetz lässt dem Versicherer grundsätzlich freie Hand, Umfang und Voraussetzungen seiner Haftpflicht zu fixieren (Botschaft VVG BBl 1904 I 288 Ziff. D.I.4b zu Art. 32 E-VVG; Urteil des Bundesgerichts 4A_153/2015 vom 25. Juni 2015 E. 4.1 mit Hinweisen). Der Versicherer allein vermag zu ermessen, ob und unter welchen Voraussetzungen Gefahrsereignisse, deren Gesetzmässigkeit nicht kontrollierbar ist, in die Versicherung eingeschlossen werden können (Botschaft VVG BBl 1904 I 289 Ziff. D.I.4b zu Art. 32 E-VVG). Das versicherte Risiko kann daher nicht losgelöst vom konkreten Versicherungsvertrag bestimmt werden. Vielmehr muss zunächst durch Auslegung des konkreten Versicherungsvertrages ermittelt werden, was das versicherte Risiko darstellt (vgl. BGE 142 III 671 E. 3.9 S. 682). Danach ist zu prüfen, ob dieses Risiko beziehungsweise das befürchtete Ereignis bei Vertragsschluss bereits eingetreten war, und der Vertrag daher gegen Art. 9 VVG verstösst."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "Die Police der zu beurteilenden Kollektiv-Krankenversicherung hält unter dem Titel \"Versicherungsschutz\" und dem Untertitel \"Versicherte Personen und Leistungen\" unter anderem fest: \"Vorbestandene Krankheiten sind vorbehältlich der Ausschlüsse in den Allgemeinen Bedingungen (AB) versichert.\" Bereits daraus ergibt sich, dass die Versicherung vorbehältlich dieser Ausschlüsse im Rahmen der versicherungstechnischen Kalkulation bei der statistischen Wahrscheinlichkeit des Eintritts des Versicherungsfalles die Möglichkeit eingerechnet hat, dass auch eine vorbestandene Krankheit die Leistungspflicht auslösen kann. Das bei Vertragsschluss befürchtete Ereignis ist mithin nicht das Auftreten der Krankheit, sondern das Auftreten einer krankheistbedingten Arbeitsunfähigkeit, unabhängig davon, wann die Krankheit diagnostiziert wurde oder sich erstmals manifestiert hat. Das verdeutlicht Art. 4 AB, der in Ziff. 2 lit. a folgenden zeitlich begrenzten Ausschluss statuiert: \"Krankheiten und Unfälle, welche bei Beginn des Vertrages oder bei Arbeitsantritt (nach Beginn des Vertrages) bereits eine ganze oder teilweise Arbeitsunfähigkeit bewirken, bleiben von der Versicherung ausgeschlossen, bis die versicherte Person ihre Arbeitsfähigkeit vollständig wieder erlangt hat. Die Arbeitsaufnahme beim Versicherungsnehmer im Rahmen des arbeitsvertraglich vereinbarten Beschäftigungspensums gilt nur dann als vollständige Wiedererlangung der Arbeitsfähigkeit, wenn dieses Beschäftigungspensum 100% beträgt und die versicherte Person mindestens während 20 Tagen ohne Unterbruch voll arbeitsfähig ist. \""
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "Nach dieser Bestimmung ist das befürchtete Ereignis nicht die Erkrankung als solche, die zu einer Arbeitsunfähigkeit führt, sondern der während der Vertragsgeltung eintretende krankheitsbedingte Verlust der vollen Arbeitsfähigkeit, unabhängig davon, wann die Krankheit aufgetreten ist und ob sie früher bereits einmal die Arbeitsfähigkeit beeinträchtigt hat. Dieses Risiko ist, da es Rückfälle einschliesst, höher als dasjenige, dass eine gesunde Person nach Arbeitsantritt erkrankt und infolge der Krankheit erstmals arbeitsunfähig wird. Das bedeutet aber lediglich, dass für die Berechnung der Eintrittswahrscheinlichkeit und die Festsetzung der Prämien für beide Fälle nicht dieselben statistischen Grundlagen verwendet werden können. Da nach dem klaren Sinn von Art. 4 Ziff. 2 lit. a AB nicht die Krankheit als solche, sondern die Arbeitsunfähigkeit (soweit sie krankheitsbedingt ist) das versicherte Risiko darstellt, liegt keine Rückwärtsversicherung vor."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Dass sich das versicherte Risiko zuvor bereits einmal verwirklicht hatte, ändert nichts. Der Beschwerdeführer leitet seinen Anspruch aus einer behaupteten erneuten Arbeitsunfähigkeit ab 9. Mai 2014 ab. Für einen Deckungsausschluss wird nach Art. 4 Ziffer. 2 lit. a AB vorausgesetzt, dass die Krankheit bei Arbeitsantritt bereits eine ganze oder teilweise Arbeitsunfähigkeit bewirkt hat, dass also der Beschwerdeführer am 7. April 2014 (zumindest teilweise) arbeitsunfähig war. Das befürchtete Ereignis, der krankheitsbedingte Verlust einer zuvor gegebenen vollen Arbeitsfähigkeit, war bei Arbeitseintritt am 7. April 2014 (trotz der Rückfallgefährdung) zukünftig und ungewiss. Art. 9 VVG ist daher nicht anwendbar."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Die Frage, ob der Beschwerdeführer Anspruch auf Taggelder hat, ist damit nicht geklärt, da die Beschwerdegegnerin ihre Leistungspflicht nicht nur mit Blick auf Art. 9 VVG bestritten hat. Auf diese Vorbringen ist die Vorinstanz aber nicht eingegangen. Die Beschwerde ist daher teilweise gutzuheissen, der angefochtene Entscheid aufzuheben und die Sache zu neuer Entscheidung an die Vorinstanz zurückzuweisen. Da der Beschwerdeführer vor Bundesgericht im wesentlichen Punkt obsiegt, wird die Beschwerdegegnerin kosten- und entschädigungspflichtig."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen, der angefochtene Entscheid aufgehoben und die Sache zu neuer Entscheidung an das Sozialversicherungsgericht zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 5'000.-- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat den Beschwerdeführer für das bundesgerichtliche Verfahren mit Fr. 6'000.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Sozialversicherungsgericht des Kantons Zürich, I. Kammer, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 21. April 2017 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Kiss Der Gerichtsschreiber: Luczak"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird teilweise gutgeheissen, der angefochtene Entscheid aufgehoben und die Sache zu neuer Entscheidung an das Sozialversicherungsgericht zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 5'000.-- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat den Beschwerdeführer für das bundesgerichtliche Verfahren mit Fr. 6'000.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Sozialversicherungsgericht des Kantons Zürich, I. Kammer, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 33 VVG",
+        "Art. 7 ZPO",
+        "Art. 74 Abs. 2 BGG",
+        "Art. 9 VVG"
+      ],
+      "normKeys": [
+        "VVG",
+        "ZPO",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=21.04.2017&to_date=21.04.2017&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=4&azaclir=aza&highlight_docid=aza%3A%2F%2F21-04-2017-4A_631-2016&number_of_ranks=26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "c3a4350dc114ea00381c883c54d6795d75ba93ab76c58c193f48fe141b2f0540",
+      "sha": "3278d06b58aa66c4fde35a0caccf97991c7cf6b8e6d60f570918d08c006e7ae7"
+    }
+  ]
+}

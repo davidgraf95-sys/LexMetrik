@@ -1,0 +1,75 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/9C_558_2021",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "9C_558/2021",
+      "bgeReferenz": null,
+      "zitierung": "BGer 9C_558/2021 vom 8. November 2021",
+      "datum": "2021-11-08",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Parrino, Präsident, Gerichtsschreiberin Keel Baumann",
+        "parteien": "A.________, Beschwerdeführerin, gegen Ausgleichskasse Glarus, c/o Sozialversicherungen Glarus, Burgstrasse 6, 8750 Glarus, Beschwerdegegnerin",
+        "gegenstand": "Ergänzungsleistung zur AHV/IV",
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Ergänzungsleistung zur AHV/IV",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Glarus und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 8. November 2021 Im Namen der II. sozialrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Parrino Die Gerichtsschreiberin: Keel Baumann"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Auf die Beschwerde wird nicht eingetreten.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Glarus und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt.\nLuzern, 8. November 2021"
+      ],
+      "zitierteNormen": [
+        "Art. 108 Abs. 1 BGG",
+        "Art. 66 Abs. 1 BGG",
+        "Art. 97 Abs. 1 BGG"
+      ],
+      "normKeys": [
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=05.11.2021&to_date=08.11.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=18&azaclir=aza&highlight_docid=aza%3A%2F%2F08-11-2021-9C_558-2021&number_of_ranks=63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "e88c73d710a3e0564f22ba760995c53d815c0916d943cda01318367efb6e67da",
+      "sha": "b0ebb30853e2f098f1db7e832e7a8f574acb01a9b12be2ff1274c7456ba7c16d"
+    }
+  ]
+}

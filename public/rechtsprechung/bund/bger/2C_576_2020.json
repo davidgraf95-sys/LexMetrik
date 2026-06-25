@@ -1,0 +1,223 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/bger/2C_576_2020",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "2C_576/2020",
+      "bgeReferenz": null,
+      "zitierung": "BGer 2C_576/2020 vom 17. August 2020",
+      "datum": "2020-08-17",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Seiler, Präsident, Bundesrichterin Aubry Girardin, Bundesrichter Beusch, Gerichtsschreiber Kocher",
+        "parteien": "Wohnbaugenossenschaft A.________, Beschwerdeführerin, vertreten durch B.________, gegen Steuerrekurskommission des Kantons Thurgau, Steuerverwaltung des Kantons Thurgau, Beschwerdegegnerin",
+        "gegenstand": "Direkte Bundessteuer, Steuerperiode 2016",
+        "vorinstanz": "Verwaltungsgerichts des Kantons Thurgau vom 29. April 2020 (VG.2019.206/E)"
+      },
+      "regeste": {
+        "text": "Direkte Bundessteuer, Steuerperiode 2016",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Wohnbaugenossenschaft A.________ (nachfolgend: die Steuerpflichtige) hat statutarischen Sitz in U.________/TG. Präsident der Verwaltung mit Kollektivunterschrift zu zweien war in der hier interessierenden Steuerperiode 2016 B.________ (nachfolgend: der Präsident). Er hatte gegenüber der Steuerpflichtigen eine Darlehensforderung, die zu Beginn der Steuerperiode 2016 den Stand von Fr. 6'609'380.40 erreichte (Konto 2560, \"Darlehen von [Präsident]\")."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Per Ende des Geschäftsjahrs 2016 baute die Steuerpflichtige das Darlehen um Fr. 5'609'380.40 auf Fr.1'000'000.-- ab. Zum einen schrieb sie dem Konto 2990 (\"Gewinn- und Verlustvortrag\") den Betrag von Fr. 5'289'248'40.-- gut, zum andern buchte sie eine Stockwerkeigentumseinheit für Fr. 320'132.-- aus (Konto 1661, \"Eigentumswohnungen Kradolf/TG\"), die sie am 7. April 2016 für Fr. 400'000.-- an die Ehefrau und die Tochter des Präsidenten verkauft hatte. Dadurch ergab sich im Geschäftsjahr 2016 ein handelsrechtlicher Gewinn von Fr. 1'547.--."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Die Steuererklärung zur Steuerperiode 2016 traf am 23. Februar 2018 bei der Steuerverwaltung des Kantons Thurgau (KSTV/TG; nachfolgend: die Veranlagungsbehörde) ein. Diese korrigierte den Abschluss dahingehend, dass sie für die Zwecke der direkten Bundessteuer einen Ertrag von insgesamt Fr. 4'191'000.-- aufrechnete (Veranlagungsverfügung vom 28. Mai 2018), was zu einem Gewinn von Fr. 4'192'547.-- führte Die Begründung ging dahin, dass es sich beim Darlehen im Umfang von Fr. 4'105'000.-- um eine Grundpfandforderung handle, die der Präsident im Jahr 2001 von der UBS AG zessionsweise erworben habe. Wenn er nun auf die Forderung verzichte, begründe dies auf Ebene der Steuerpflichtigen einen echten (also steuerwirksamen) Sanierungserfolg. Die Steuerpflichtige habe den Vorgang aber erfolgsneutral verbucht. Weiter liege eine geldwerte Leistung in Höhe von Fr. 86'000.-- vor, da die Steuerpflichtige die Stockwerkeigentumseinheit für Fr. 406'132.-- verkauft (Kaufpreis nebst der auf die Käuferschaft überwälzte Handänderungssteuer), aber lediglich einen Ertrag von Fr. 320'132.-- verbucht habe."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "Dagegen erhob die Steuerpflichtige Einsprache. Sie erklärte, der Präsident werde den Forderungsverzicht rückgängig machen, weshalb es auf Ebene der Steuerpflichtigen insoweit zu keiner Aufrechnung zu kommen habe. Die Veranlagungsbehörde wies die Einsprache ab (Ein spracheentscheid vom 10. September 2018), namentlich unter Hinweis darauf, dass eine Bilanzänderung vorliege. Die Werte einer handelsrechtskonformen Bilanz würden durch andere, ebenfalls handelsrechtlich korrekte Werte ersetzt, weshalb auf den Antrag nicht eingegangen werden könne. Am 13. September 2018 reichte die Steuerpflichtige eine neue Steuererklärung nach, in welcher das Darlehen in der ursprünglichen Höhe von Fr. 6'609'380.40 ausgewiesen wurde, mithin, als ob kein Forderungsverzicht vorgenommen worden wäre."
+            },
+            {
+              "marke": "E.",
+              "tiefe": 1,
+              "text": "Die Steuerpflichtige erhob gegen den Einspracheentscheid Beschwerde an die Steuerrekurskommission des Kantons Thurgau. Mit Entscheid vom 25. Oktober 2019 kam diese zum Ergebnis, dass eine Bilanzänderung nur bis zum Einreichen der Steuererklärung zulässig sei und daher im vorliegenden Fall auf die ursprüngliche Steuererklärung abzustellen sei. Ob der Präsident in der Steuerperiode 2016 noch Genossenschafter gewesen sei, könne offenblieben. So oder anders sei der Forderungsverzicht steuerwirksam zu behandeln. Weder sei das Darlehen bis dahin als verdecktes Eigenkapital behandelt worden, noch könne gesagt werden, dass eine Drittperson das Darlehen im Zeitpunkt der Gewährung nicht erteilt und dieses daher dem Drittvergleich nicht standgehalten hätte, da die Grundpfandforderung im Rahmen einer Zession von der UBS AG, einer Drittpartei, auf den Präsidenten übergegangen sei. Was die Stockwerkeigentumseinheit betreffe, habe die Veranlagungsbehörde zulässigerweise eine Bilanzberichtigung vorgenommen. Von den aufgerechneten Handänderungssteuern sei indes nur ein Anteil von Fr. 4'000.-- (anstelle von Fr. 6'132.--) gerechtfertigt, sodass von einem Gewinn von Fr. 4'190'415.-- auszugehen sei. Davon könnten die noch nicht verrechneten Vorjahresverluste von Fr. 1'456.-- (Art. 67 Abs. 1 DBG) bzw. Fr. 3'551'480.-- (Art. 67 Abs. 2 DBG) in Abzug gebracht werden, sodass sich ein Ertragsüberschuss von Fr. 637'479.-- einstelle. Die Beschwerde sei folglich teilweise gutzuheissen, soweit darauf einzutreten sei, und der Reingewinn auf Fr. 637'479.-- festzusetzen (Entscheid vom 25. Oktober 2019)."
+            },
+            {
+              "marke": "F.",
+              "tiefe": 1,
+              "text": "Dagegen gelangte die Steuerpflichtige an das Verwaltungsgericht des Kantons Thurgau, das die Beschwerde abwies, soweit es darauf eintrat (Entscheid VG.2019.206/E vom 29. April 2020). Das Verwaltungsgerichterkannte, die Steuerpflichtige ersuche um Veranlagung gemäss der Steuererklärung vom 13. September 2018 (vorne lit. C), sodass die im Zusammenhang mit der Veräusserung der Stockwerkeigentumseinheit stehende Aufrechnung nicht mehr streitig sei. Auf die aufsichtsrechtlichen Ausführungen der Steuerpflichtigen sei mangels Zuständigkeit nicht einzutreten. Der Anspruch auf rechtliches Gehör sei gewahrt, nachdem die Steuerpflichtige zu einer Einspracheverhandlung eingeladen worden sei und sich mündlich habe äussern können. Eine Pflicht des Veranlagungsbeamten, nach eingetretener Rechtshängigkeit des Rechtsmittelverfahrens zu einer (weiteren) Besprechung Hand zu bieten, bestehe nicht. In der Sache selbst sei festzustellen, dass ein Forderungsverzicht jederzeit zulässig sei und die Steuererklärung vom 23. Februar 2018 handelsrechtskonform ausgestaltet gewesen sei, da sie den tatsächlichen Verhältnissen entsprochen habe. Die Steuerpflichtige berufe sich im Ergebnis auf einen entschuldbaren Irrtum über die steuerlichen Folgen des Forderungsverzichts. Ein solcher berechtige zu keiner Bilanzänderung, weshalb die Steuerpflichtige auf die Steuererklärung zu behaften sei. Die Ausführungen der Steuerrekurskommission seien nicht zu beanstanden: Das Darlehen sei tatsächlich nicht als verdecktes Eigenkapital behandelt worden. Zudem sei die Forderung im Zeitpunkt der Zession werthaltig gewesen, habe sie doch auf Fr. 13'300'939.60 gelautet, wofür der Präsident lediglich Fr. 4'105'000.-- aufzuwenden gehabt habe."
+            },
+            {
+              "marke": "G.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 6. Juli 2020 erhebt die Steuerpflichtige beim Bundesgericht Beschwerde in öffentlich-rechtlichen Angelegenheiten. Sie ersucht sinngemäss um Aufhebung des angefochtenen Entscheids und Veranlagung unter Ausschluss des Forderungsverzichts."
+            },
+            {
+              "marke": "H.",
+              "tiefe": 1,
+              "text": "Der Abteilungspräsident als Instruktionsrichter (Art. 32 Abs. 1 BGG [SR 173.110]) hat von Instruktionsmassnahmen, insbesondere von einem Schriftenwechsel (Art. 102 Abs. 1 BGG), abgesehen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Die Voraussetzungen der Beschwerde in öffentlich-rechtlichen Angelegenheiten (Art. 82 lit. a, Art. 83 e contrario, Art. 89 Abs. 1, Art. 90 und Art. 100 Abs. 1 BGG in Verbindung mit Art. 146 DBG [SR 642.11]) sind gegeben. Auf die Beschwerde ist einzutreten."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Das Bundesgericht wendet das Bundesgesetzesrecht von Amtes wegen an (Art. 106 Abs. 1 BGG; BGE 146 IV 88 E. 1.3.2 S. 92) und prüft es mit uneingeschränkter (voller) Kognition (Art. 95 lit. a BGG; BGE 145 I 239 E. 2 S. 241). Unter Berücksichtigung der allgemeinen Begründungspflicht der Beschwerde (Art. 42 Abs. 1 und 2 BGG) untersucht es allerdings nur die geltend gemachten Rügen, sofern eine Rechtsverletzung nicht geradezu offensichtlich ist (BGE 145 II 153 E. 2.1 S. 156; 145 V 304 E. 1.1 S. 305 f.)."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Im Unterschied zum Bundesgesetzesrecht geht das Bundesgericht der Verletzung verfassungsmässiger Individualrechte (einschliesslich der Grundrechte) und des rein kantonalen und kommunalen Rechts nur nach, falls und soweit eine solche Rüge in der Beschwerde überhaupt vorgebracht und ausreichend begründet worden ist (qualifizierte Rüge- und Begründungsobliegenheit gemäss Art. 106 Abs. 2 BGG). Die beschwerdeführende Person hat daher klar und detailliert anhand der Erwägungen des angefochtenen Entscheids darzulegen, dass und inwiefern verfassungsmässige Individualrechte verletzt worden sein sollen (BGE 145 V 304 E. 1.1 S. 305 f.). Auf bloss allgemein gehaltene, appellatorische Kritik am vorinstanzlichen Entscheid geht das Bundesgericht nicht ein (BGE 146 IV 88 E. 1.3.1 S. 92)."
+            },
+            {
+              "marke": "E. 1.4",
+              "tiefe": 2,
+              "text": "Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Die vorinstanzlichen Sachverhaltsfeststellungen können von Amtes wegen oder auf Rüge hin berichtigt werden, wenn sie offensichtlich unrichtig sind oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruhen und wenn die Behebung des Mangels für den Verfahrensausgang entscheidend sein kann (Art. 105 Abs. 2 und Art. 97 Abs. 1 BGG). \"Offensichtlich unrichtig\" ist mit \"willkürlich\" gleichzusetzen (zum Ganzen: BGE 146 IV 88 E. 1.3.1 S. 91 f.). Tatfrage ist auch die Beweiswürdigung (BGE 144 V 111 E. 3 S. 112). Die Anfechtung der vorinstanzlichen Feststellungen unterliegt der qualifizierten Rüge- und Begründungsobliegenheit (BGE 144 V 50 E. 4.1 S. 52 f.; vorne E. 1.3)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Gewinnsteuerrechtlich ist vom Handelsrecht auszugehen (Massgeblichkeitsprinzip bzw. principe de l'autorité du bilan commercial ou de déterminance gemäss Art. 18 Abs. 3 in Verbindung mit Art. 58 Abs. 1 lit. a DBG; BGE 143 II 8 E. 7.1 S. 21 f.). Dieses bildet in Fragen der Buchführung und Rechnungslegung das \"Leitrecht\" und beruht seinerseits auf der Betriebswirtschaftslehre. Die Massgeblichkeit wird eingeschränkt durch die Korrekturen aufgrund abgaberechtlicher Vorschriften (BGE 141 II 83 E. 3.1 S. 85). Die handelsrechtskonforme Jahresrechnung bindet neben der Veranlagungsbehörde auch die steuerpflichtige Person; diese muss sich darauf behaften lassen. In begründeten Fällen ist allerdings denkbar, zugunsten der steuerpflichtigen Person von der Massgeblichkeit abzuweichen. Bestände etwa Art. 60 lit. c DBG nicht, hätte eine steuerpflichtige juristische Person die Gewinnsteuer auch auf dem Kapitalzuwachs zu entrichten, falls sie diesen erfolgswirksam verbucht hatte (BGE 143 II 674 E. 4.2 S. 684; Urteil 2C_793/2017 vom 28. Januar 2020 E. 2.2.1)."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Zu den Bilanzkorrekturen wird zwischen Bilanzänderungen und Bilanzberichtigungen unterschieden. Von einer Bilanzänderung ist zu sprechen, wenn die buchführende Person eine handelsrechtskonforme Buchung durch eine andere handelsrechtskonforme Buchung ersetzen will (Urteil 2C_515/2010 vom 13. September 2011 E. 2.2). Dies ist bis grundsätzlich nur zum Einreichen der Steuererklärung möglich. Eine Änderung der Bilanz durch die steuerpflichtige Gesellschaft im Laufe des Veranlagungsverfahrens ist jedoch auch danach noch zulässig, wenn sich zeigt, dass die steuerpflichtige Person die Buchung in einem entschuldbaren Irrtum über die steuerlichen Folgen vorgenommen hat. In der Regel ausgeschlossen sind hingegen Bilanzänderungen, mit denen Wertveränderungen zum Ausgleich von Aufrechnungen im Veranlagungsverfahren erfolgen oder lediglich aus Gründen der Steuerersparnis vorgenommen werden sollen (BGE 141 II 83 E. 3.4 S. 87)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Dagegen geht es bei der Bilanzberichtigung um den Ersatz einer handelsrechtswidrigen durch eine handelsrechtskonforme Buchung. Bilanzberichtigungen dienen damit der Behebung von Verstössen gegen das Handelsrecht und sind von Amtes wegen durchzuführen, bis die Veranlagungsverfügung in Rechtskraft erwachsen ist. Sie schlagen sich in der Steuerbilanz nieder und können zugunsten oder zuungunsten der steuerpflichtigen Person ausfallen. Ist die Veranlagungsverfügung in Rechtskraft erwachsen, ist eine Bilanzberichtigung nur bei einem Revisionsgrund zulässig (zugunsten der steuerpflichtigen Person) oder im Falle eines Nachsteuerverfahrens (zuungunsten der steuerpflichtigen Person; BGE 144 II 427 E. 6.5.1 S. 447; 141 II 83 E. 3.3 S. 86)."
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "Der Gegenwert aus einem Forderungsverzicht begründet betriebswirtschaftlich einen Erfolg (Max Boemle/Carsten Stolz, Unternehmensfinanzierung, Band 2, 14. Aufl. 2012, S. 282 f., 287 und 293). Dementsprechend ist er handelsrechtlich als Ertrag zu verbuchen (DIETER PFAFF, in: Dieter Pfaff/Stephan Glanz/Thomas Stenz/Florian Zihler [Hrsg.], Rechnungslegung nach Obligationenrecht, 2. Aufl. 2019, N. 95 zu Art. 959b OR) und führt er auch steuerlich zu einem Ertrag (BGE 140 II 353 E. 2.2 S. 355; 115 Ib 269 E. 4b S. 272 f.). In Übereinstimmung damit bewirkt der Forderungsverzicht zugunsten einer nicht buchführenden natürlichen Person steuerbares Einkommen (BGE 142 II 197 E. 5.1 S. 200; 140 II 353 E. 2.2. S. 355)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Uneingeschränkt erfolgs- und steuerwirksam zu behandeln sind Forderungsverzichte, die von unabhängigen Dritten ausgesprochen werden. Geht der Forderungsverzicht hingegen von einer dem Einzelunternehmer oder der Gesellschaft nahestehenden Person aus, sieht die steuerrechtliche Praxis zwei Ausnahmen vor: Forderungsverzichte von Nahestehenden wirken sich zum einen nicht steuerwirksam aus, wenn und soweit das Darlehen zuvor steuerlich als verdecktes Eigen-kapital behandelt wurde. Zum andern gilt dies für Darlehen von Nahestehenden, falls die Konditionen dem Drittvergleich nicht genügen, weil sie zum Beispiel erstmalig oder zusätzlich im Hinblick auf den schlechten Geschäftsgang gewährt wurden und unter den gleichen Umständen von unabhängigen Dritten nicht zugestanden worden wären. Dies hat das Bundesgericht zum seinerzeitigen BRB WSt 1941 bzw. BdBSt festgelegt (BGE 115 Ib 269 E. 4b S. 273) und zu Art. 60 lit. a DBG bestätigt (Urteil 2C_634/2012 vom 20. Oktober 2014 E. 4 und 5)."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Die Steuerpflichtige lässt sich im bundesgerichtlichen Verfahren durch den seinerzeitigen Vorsitzenden der Verwaltung vertreten. Dieser legt dem Bundesgericht gewissermassen eine konsolidierende Betrachtung vor."
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "So betont er mehrfach, dass er sämtliche Genossenschaftsanteile halte, dass er der einzige Gläubiger der Steuerpflichtigen sei und dass er aufgrund der Abschreibung der Forderung einen Buchverlust von Fr. 5'289'248.40 (dazu Sachverhalt, lit. B) erlitten habe. Dies alles mag zutreffen, es bleibt aber grundsätzlich ohne Belang, weil hier einzig die Ebene der Genossenschaft angesprochen ist. Zu den zweidimensionalen Verhältnissen hat das Bundesgericht immer wieder festgehalten, dass herrschende Ebene (hier: Genossenschafter) und beherrschte Ebene (hier: Genossenschaft) zwei unterschiedliche Rechts- und Steuersubjekte bilden (dazu u.a. Urteile 2C_32/2018 vom 11. November 2019 E. 3.1 und 3.3.3; 2C_489/2018 vom 13. Juli 2018 E. 2.2.2; zum Ganzen nunmehr Martin Kocher, Aspekte der steuerlichen Zweidimensionalität - Gedankensplitter im Licht der bundesgerichtlichen Rechtsprechung, in: OREF [Hrsg.], Au carrefour des contributions, 2020, S. 593, insb. 595)."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Die rechtsgestaltende natürliche oder juristische Person hat sich auf die von ihr im Rahmen ihrer Gestaltungsfreiheit getroffenen Strukturen behaften zu lassen (vgl. BGE 139 II 78 E. 3.2.1 S. 88 f.; Urteile 2C_171/2019 vom 11. Oktober 2019 E. 4.2.1; 2C_711/2017 vom 20. Februar 2015 E. 2.3.2; 2C_1158/2012 vom 27. August 2013 E. 3.5). Die Rechtsgestaltung kann darin bestehen, dass eine juristische Person gegründet oder gehalten wird, was dann aber - wie dargelegt - dazu führt, dass zwei unterschiedliche Rechts- und Steuersubjekte vorliegen. Entsprechend bleibt es unbehelflich, wenn der seinerzeitige Präsident die Sicht aus seiner eigenen Optik darstellt. Ob und gegebenenfalls inwiefern der Forderungsverzicht auf seiner Ebene mit Steuerfolgen verbunden ist, bleibt im vorliegenden Zusammenhang unerheblich."
+            },
+            {
+              "marke": "E. 3.3.1",
+              "tiefe": 3,
+              "text": "Eine andere Frage ist, ob die Voraussetzungen zu einer Bilanzänderung tatsächlich vorgelegen haben, wie die Unter- und die Vorinstanz dies annehmen. Von einer solchen kann (nur) gesprochen werden, wenn eine handelsrechtskonforme Buchung durch eine andere handelsrechtskonforme Buchung ersetzt werden soll (vorne E. 2.2.1). Die Vorinstanz geht davon aus, dass auch die zweite Jahresrechnung handelsrechtskonform erstellt worden sei, nachdem es dem Präsidenten freigestanden sei, auf die Forderung zu verzichten oder nicht. Damit lässt sie allerdings die Zweidimensionalität des Sachverhalts unberücksichtigt und vermengt sie die Ebene der Genossenschaft mit jener des Präsidenten."
+            },
+            {
+              "marke": "E. 3.3.2",
+              "tiefe": 3,
+              "text": "So oder anders müsste eine Bilanzänderung aber daran scheitern, dass die Steuerpflichtige eine solche erst unter dem Eindruck der Veranlagungsverfügung und - wie die Vorinstanz verfassungsrechtlich haltbar erwägt - zwecks Steuerersparnis vornehmen wollte (auch dazu vorne E. 2.2.1). Die Steuerpflichtige bestätigt dies im bundesgerichtlichen Verfahren, indem sie ausführt, \"kein Mensch\" hätte die ursprüngliche Bilanz eingereicht \"im Wissen um deren steuerlichen Folgen\". Sie macht in diesem Zusammenhang geltend, das Konkursgericht müsse nicht angerufen werden, wenn Gesellschaftsgläubiger im Ausmass der Unterdeckung im Rang hinter alle anderen Gesellschaftsgläubiger zurücktreten. Dadurch beruft sie sich sinngemäss auf Art. 725 Abs. 2 OR, wobei es dort nicht um einen Forderungsverzicht, sondern um den Rangrücktritt geht. Der Irrtum liegt also nicht in den tatsächlichen Verhältnissen, sondern im Rechtlichen begründet. Ein \"entschuldbarer Irrtum\", der auch nach Einreichung der Steuererklärung zu einer Bilanzänderung Anlass geben kann, fusst indessen auf den Sachumständen, nicht auf der Rechtslage (\"Nichtwissen schützt nicht\"; Urteil 2C_859/2019 vom 14. November 2019 E. 3.2.2). Eine Bilanzänderung ist unter den gegebenen Umständen ausgeschlossen, hätte sie doch einzig der Steuerersparnis dienen können."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Was die Aufrechnungen betrifft, führt die Steuerpflichtige eine grössere Zahl von Bestimmungen ins Feld (Art. 312 StGB; Art. 5 StG /TG; Art. 2, 9, 29, 35, 36 und 127 BV). Eine nachvollziehbare Auseinandersetzung mit diesen Bestimmungen unterbleibt indes (vorne E. 1.2). Der einzige einigermassen substanziell vorgetragene Einwand bezieht sich darauf, dass das Darlehen nicht (mehr) werthaltig sei. So wendet die Steuerpflichtige ein, es sei \"absolut nicht sicher\", dass eine Drittperson ihr unter den gegebenen Sachumständen (noch) ein Darlehen gewährt hätte. Sie macht damit sinngemäss einen unechten Sanierungserfolg geltend (vorne E. 2.3.2). Im Jahr 2001, als es zur Zession kam, hätten \"die Liegenschaften\" (womit wohl die damals im Eigentum der Steuerpflichtigen stehenden grundpfandgesicherten Objekte gemeint sind) \"keinen hohen Marktwert\" gehabt."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Dies überzeugt nicht: Nach den für das Bundesgericht verbindlichen Feststellungen hat der Präsident die Grundpfandforderung zu rund einem Drittel ihres damaligen Nennwerts erwerben können (Sachverhalt, lit. E). Dies bestreitet die Steuerpflichtige in keiner Form, mit welcher sie ihrer Rüge- und Begründungsobliegenheit genügen könnte (Art. 106 Abs. 2 BGG; vorne E. 1.3 und 1.4). Die vorinstanzliche Feststellung ist daher für das Bundesgericht verbindlich, weshalb der fehlende Drittvergleich nicht nachgewiesen ist. Zur Frage des verdeckten Eigenkapitals, das als zweiter Ausnahmetatbestand zu unechten Sanierungserfolg führen könnte (vorne E. 2.3.2), hat die Vorinstanz festgehalten, solches liege nicht vor (Sachverhalt, lit. F). Der Forderungsverzicht musste daher auf Ebene der Steuerpflichtigen zu echtem (und mithin zu steuerwirksamem) Sanierungserfolg führen, wie die Vorinstanz bundesrechtskonform erkannte."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Die Beschwerde erweist sich als unbegründet. Sie ist abzuweisen."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Nach dem Unterliegerprinzip (Art. 66 Abs. 1 Satz 1 BGG) sind die Kosten des bundesgerichtlichen Verfahrens der Steuerpflichtigen aufzuerlegen. Dem Kanton Thurgau, der in seinem amtlichen Wirkungskreis obsiegt, ist keine Parteientschädigung zuzusprechen (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Kosten des bundesgerichtlichen Verfahrens von Fr. 2'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Thurgau und der Eidgenössischen Steuerverwaltung schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 17. August 2020 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Seiler Der Gerichtsschreiber: Kocher"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird abgewiesen.",
+        "Die Kosten des bundesgerichtlichen Verfahrens von Fr. 2'000.-- werden der Beschwerdeführerin auferlegt.",
+        "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Thurgau und der Eidgenössischen Steuerverwaltung schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 100 Abs. 1 BGG",
+        "Art. 102 Abs. 1 BGG",
+        "Art. 105 Abs. 1 BGG",
+        "Art. 106 Abs. 1 BGG",
+        "Art. 106 Abs. 2 BGG",
+        "Art. 146 DBG",
+        "Art. 312 STGB",
+        "Art. 32 Abs. 1 BGG"
+      ],
+      "normKeys": [
+        "BGG",
+        "DBG",
+        "STGB"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=7&from_date=16.08.2020&to_date=19.08.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=62&azaclir=aza&highlight_docid=aza%3A%2F%2F17-08-2020-2C_576-2020&number_of_ranks=92",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "4c5045203e5fb869d0922dd3c11c53c217356c687c43732aa6332a670205db60",
+      "sha": "b6cd5dae729804776187c6e607cb22a92d6901705f9c1eed988fa5ebce54ae08"
+    }
+  ]
+}
