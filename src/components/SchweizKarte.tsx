@@ -68,7 +68,7 @@ export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className 
               tabIndex={waehlbar ? 0 : -1} role="button" aria-pressed={ist}
               aria-label={waehlbar ? name(k) : `${name(k)} — keine Erlasse`}
               style={{ fill, stroke: ist ? 'var(--brass-700)' : 'var(--paper)', strokeWidth: ist ? 1.6 : 0.8, opacity: waehlbar ? 1 : 0.8 }}
-              className={`outline-none transition-[fill] ${waehlbar ? 'cursor-pointer' : 'cursor-default'}`}>
+              className={`transition-[fill] ${waehlbar ? 'cursor-pointer' : 'cursor-default'}`}>
               <title>{name(k)}</title>
             </path>
           );

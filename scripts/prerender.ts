@@ -94,6 +94,8 @@ function rendereTemplate(
     [/(<meta property="og:title" content=")[^"]*(" \/>)/, meta.titel],
     [/(<meta property="og:description" content=")[^"]*(" \/>)/, meta.ogBeschreibung ?? meta.beschreibung],
     [/(<meta property="og:url" content=")[^"]*(" \/>)/, meta.canonical],
+    [/(<meta name="twitter:title" content=")[^"]*(" \/>)/, meta.titel],
+    [/(<meta name="twitter:description" content=")[^"]*(" \/>)/, meta.ogBeschreibung ?? meta.beschreibung],
   ] as const) {
     if (!re.test(out)) throw new Error(`Meta-Tag-Muster nicht gefunden (${kontext}): ${re}`);
     out = out.replace(re, (_, vor: string, nach: string) => vor + esc(wert) + nach);

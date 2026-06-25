@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — SEO/A11y Welle-1-Batch: Karten-Fokus, Twitter-Meta, Cache-Header (in `main`, deployt)
+
+Fortsetzung „mach alles" nach W1.1 — drei autonome Welle-1-Punkte in einem Worktree/Gate/Deploy:
+- **W1.6 (WCAG 2.4.7 / §13 F3):** `SchweizKarte`-Pfade trugen `outline-none` → Tastaturfokus unsichtbar. Klasse entfernt → site-globaler `:focus-visible` (2px brass, ≥3:1) greift; Outline-Rendering auf dem SVG-`<path>` per Playwright hell+dunkel verifiziert (`auto 5px`/solid 2px). Keine Rechtslogik (§1 nicht berührt).
+- **W1.10:** Twitter-Card-Meta (`summary` + title/description) in `index.html`; `rendereTemplate` spiegelt title/description per-Page → Startseite + alle Detailseiten. og:image bewusst offen (braucht 1200×630-Asset = Design).
+- **W1.9:** `Cache-Control: public, max-age=3600, must-revalidate` für `/normtext/*` + neu `/rechtsprechung/*` (konservativ, bounded staleness; massgeblich bleibt via Live-Link + Drift-Tor die amtliche Quelle, §7/§8).
+- Gate voll grün, golden byte-gleich.
+- **OFFEN:** W1.7 axe-Tor-Ausbau (Test-Infra, eigener Pass), og:image-Asset; **W1.12 Search Console zurückgestellt** — `lexmetrik.vercel.app` ist temporär (David zahlt nicht dafür, Domain-Wechsel geplant); GSC erst bei echter Domain (Wechsel = nur `SITE_URL` in `seo.ts` ändern, W3.4).
+
 ## Session 25.6.2026 — SEO W1.1: Detailseiten prerendern (1819 indexierbare URLs, in `main`, deployt)
 
 Auftrag David: `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` umsetzen, „so viel wie möglich, run till dry". W1.1 (grösster Hebel): `/gesetze/:ebene/:key` + `/rechtsprechung/:key` lieferten bisher die noindex-SPA-Hülle (`app.html`) — der ganze Volltext-Korpus war für Suchmaschinen unsichtbar (nur 56 Katalog-URLs in der Sitemap). Vorgehen: eigener Worktree (§12), TDD, voller Gate + ultracode-Code-Review (37 Agenten) vor Deploy.
