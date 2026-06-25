@@ -129,12 +129,16 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   return (
     <article id={`art-${e.artikel}`}
       className="group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
-      <div className="lg:grid lg:grid-cols-[12.5rem_minmax(0,1fr)] lg:gap-x-8">
+      {/* Marginalspalte erst ab xl (1280px) als eigene Druckfassungs-Randspalte —
+          darunter (geteilter Bildschirm / mittlere Breiten) stapeln «Art. N» + die
+          Randtitel ÜBER dem Fliesstext, damit der Normtext die volle Breite behält
+          statt von einer 200px-Randspalte gequetscht zu werden. Reine Darstellung (§3). */}
+      <div className="xl:grid xl:grid-cols-[12.5rem_minmax(0,1fr)] xl:gap-x-8">
         {/* Linke Marginalspalte: «Art. N» als ruhiger Anker, darunter die Randtitel
             (rechtsbündig, ruhig) — die statische Druckfassungs-Randspalte statt des
             früheren fliegenden Trackers. */}
-        <div className="mb-2 lg:mb-0 lg:pt-1 lg:text-right">
-          <div className="flex items-baseline gap-2 lg:justify-end">
+        <div className="mb-2 xl:mb-0 xl:pt-1 xl:text-right">
+          <div className="flex items-baseline gap-2 xl:justify-end">
             <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
               aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
               className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
@@ -158,7 +162,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             </div>
           )}
           {artOffen && (
-            <div className="mt-2 flex gap-3 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+            <div className="mt-2 flex gap-3 xl:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
               <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
               <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
             </div>
@@ -662,10 +666,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </div>
       )}
 
-      {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt. */}
-      <div className={sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
+      {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) erst ab xl (1280px) —
+          darunter (geteilter Bildschirm / mittlere Breiten) bekommt der Normtext die
+          volle Spaltenbreite, die Gliederung sitzt als einklappbarer Block darüber
+          (wie mobil). So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da
+          ist. Reine Darstellung (§3). */}
+      <div className={sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
         {sektionen.length > 0 && (
-          <aside className={`mb-4 lg:mb-0 lg:sticky lg:top-[10.5rem] lg:max-h-[calc(100vh-11rem)] lg:flex-col ${tocOffen ? 'lg:flex' : 'lg:hidden'}`}>
+          <aside className={`mb-4 xl:mb-0 xl:sticky xl:top-[10.5rem] xl:max-h-[calc(100vh-11rem)] xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
             {/* Suche oberhalb der Gliederung (Auftrag David) — im sticky Spaltenkopf,
                 die TOC scrollt darunter; der Gesetzestext rechts bleibt suchleisten­frei.
                 NUR im 2-Spalten-Fall: sonst (eingeklappt, auch wenn das Fenster mobil
@@ -677,14 +685,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 </div>
               </div>
             )}
-            <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
+            <button type="button" onClick={() => setTocAuf((v) => !v)} className="xl:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
-            <div className="mb-2 hidden lg:flex items-baseline justify-between shrink-0">
+            <div className="mb-2 hidden xl:flex items-baseline justify-between shrink-0">
               <p className="lc-overline">Gliederung</p>
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-400 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
-            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} ${tocOffen ? 'lg:block' : 'lg:hidden'} lg:flex-1 lg:min-h-0 lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
+            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} ${tocOffen ? 'xl:block' : 'xl:hidden'} xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
               <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivIds} offen={tocBaum}
                 onToggle={tocToggle}
                 onSprung={(id) => {
@@ -712,7 +720,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </aside>
         )}
 
-        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
+        {/* Lesespalte: ohne 2-Spalten-Sidebar zentriert + auf ~56rem begrenzt.
+            Im 2-Spalten-Fall greift die Begrenzung erst ab xl über das Grid; darunter
+            (lg–xl, geteilter Bildschirm) bleibt der Text zentriert + auf eine
+            komfortable Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
+        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? 'mx-auto w-full max-w-[52rem] xl:mx-0 xl:max-w-none' : 'mx-auto w-full max-w-[56rem]'}`}>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
