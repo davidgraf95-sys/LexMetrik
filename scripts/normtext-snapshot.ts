@@ -233,7 +233,12 @@ function konsZuIso(kons: string): string {
 
 // ── Artikel-Label: token → 'Art. 335c' ───────────────────────────────────────
 function artikelLabel(token: string): string {
-  return 'Art. ' + token.replace(/_/g, '');
+  // Sammel-/Bereichs-Artikel (Fedlex fasst aufgehobene Artikel zusammen, Token
+  // «26_28», «28_d_28_f») korrekt mit Trennstrich darstellen (Befund 25.6.2026:
+  // vorher «Art. 2628»). Regel: «_» VOR einer Ziffer = Bereichsgrenze → «–»;
+  // «_» vor einem Buchstaben = Sub-Artikel («335_c» → «335c») → entfernen.
+  // Reine Label-Ableitung; fliesst nicht in den sha (kein Drift-Token).
+  return 'Art. ' + token.replace(/_(?=\d)/g, '–').replace(/_/g, '');
 }
 
 // ── Token-Sortierung: numerisch nach Artikel-Nr., dann Suffix ─────────────────

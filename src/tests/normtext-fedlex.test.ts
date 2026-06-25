@@ -10,7 +10,7 @@
  *   - Absätze ohne führendes <sup> (Unterparagraphen) erhalten absatz: null
  */
 import { describe, it, expect } from 'vitest';
-import { extrahiereArtikel, alleArtikelTokens } from '../../scripts/normtext/extrahiere-fedlex';
+import { extrahiereArtikel, alleArtikelTokens, entferneFussnotenSups } from '../../scripts/normtext/extrahiere-fedlex';
 
 // ── Fixture 1: OR Art. 77 (3 nummerierte Absätze + 1 Unterabsatz ohne Nummer) ──
 // Echter Ausschnitt aus /tmp/or.html (Konsolidierung 20260101)
@@ -269,5 +269,32 @@ describe('alleArtikelTokens', () => {
 
   it('liefert leeres Array wenn keine art_-Anker vorhanden', () => {
     expect(alleArtikelTokens('<html><body><p>kein Artikel</p></body></html>')).toEqual([]);
+  });
+});
+
+// Regression (Bug-Befund 25.6.2026): Fussnoten-Ziffern-Leak im Fallback-Zweig.
+// Artikel, deren einziger Inhalt ein <p> mit Nicht-«absatz»-Klasse ist
+// (z.B. class="inkrafttreten"), trafen keinen Block-Zweig → Fallback. Der
+// Fallback strippte die <sup><a>NNN</a></sup>-Fussnote NICHT → die Ziffer
+// leakte in den Normtext (DBG art_222 «…1995 337», VwVG art_17).
+describe('Fussnoten-Marker werden auch im Fallback-Zweig entfernt', () => {
+  const HTML_DBG_222 = `
+    <html><body>
+    <article id="art_222"><a name="a222"></a><h6 class="heading"><a href="#art_222"><b>Art.&nbsp;222</b></a><sup><a href="#fn-336">336</a></sup></h6><div class="collapseable"><p class="inkrafttreten man-space-before-20">Datum des Inkrafttretens: 1. Januar 1995<sup><a href="#fn-337" id="fnbck-337">337</a></sup></p><div class="footnotes"><p id="fn-337"><sup><a href="#fnbck-337">337</a></sup> BRB vom 3. Juni 1991</p></div></div></article>
+    </body></html>
+  `;
+  it('lässt KEINE Fussnoten-Ziffer im Text stehen', () => {
+    const r = extrahiereArtikel(HTML_DBG_222, '222');
+    expect(r).not.toBeNull();
+    expect(r!.bloecke).toHaveLength(1);
+    expect(r!.bloecke[0].text).toBe('Datum des Inkrafttretens: 1. Januar 1995');
+    expect(r!.bloecke[0].text).not.toMatch(/33[67]/);
+  });
+
+  it('entferneFussnotenSups entfernt Marker samt Ziffer, robust gegen <inl>/Whitespace', () => {
+    expect(entferneFussnotenSups('Text<sup><a href="#x">12</a></sup>.')).toBe('Text.');
+    expect(entferneFussnotenSups('Text<sup> <inl><a href="#x">12</a></inl> </sup>.')).toBe('Text.');
+    // Absatznummer-<sup> OHNE <a> bleibt unberührt
+    expect(entferneFussnotenSups('<sup>2</sup>Absatztext')).toBe('<sup>2</sup>Absatztext');
   });
 });

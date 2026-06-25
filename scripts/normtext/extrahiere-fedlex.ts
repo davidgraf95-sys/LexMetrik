@@ -27,6 +27,20 @@ export interface ArtikelText {
 import { dekodiereEntities } from './html-entities.ts';
 
 /**
+ * Entfernt Fussnoten-Marker <sup><a …>NNN</a></sup> aus einem HTML-Fragment,
+ * SAMT der Ziffer (sonst leakt «337» o.ä. in den Normtext). Robust gegen
+ * Whitespace/&nbsp;/<inl>-Wrapper zwischen <sup> und <a> (Fedlex emittiert das
+ * vereinzelt). Absatznummern-<sup> (nacktes <sup>N</sup> OHNE <a>) bleiben
+ * unberührt — die werden separat als absatz erkannt.
+ */
+export function entferneFussnotenSups(html: string): string {
+  return html.replace(
+    /<sup\b[^>]*>(?:\s|&nbsp;|<\/?inl>)*<a\b[\s\S]*?<\/a>(?:\s|&nbsp;|<\/?inl>)*<\/sup>/gi,
+    '',
+  );
+}
+
+/**
  * Extrahiert einen einzelnen Artikel aus einem Fedlex-Filestore-HTML.
  *
  * @param html  - Volltext des heruntergeladenen HTML-Dokuments
@@ -111,7 +125,7 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
 
       // Fussnoten-<sup><a ...>…</a></sup> entfernen, BEVOR entferneTags läuft —
       // sonst bleibt die Zahl (z.B. «188») als Text stehen.
-      const ohneFootnotes = roh.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
+      const ohneFootnotes = entferneFussnotenSups(roh);
 
       // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
       // damit die Ziffer nicht in den sichtbaren Text einfließt.
@@ -144,9 +158,15 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
     }
   }
 
-  // Fallback: kein einziger <p class="absatz"> gefunden → ganzen Artikel-Text zurückgeben
+  // Fallback: kein einziger <p class="absatz"> gefunden → ganzen Artikel-Text zurückgeben.
+  // WICHTIG (Bug-Befund 25.6.2026): auch hier die Fussnoten-<sup><a>…</a></sup>
+  // entfernen, BEVOR entferneTags läuft — sonst leakt die Fussnoten-Ziffer in den
+  // Normtext (z.B. DBG art_222 «…1995 337», VwVG art_17). Betrifft Artikel, deren
+  // einziger Inhalt ein <p> mit Nicht-«absatz»-Klasse ist (class="inkrafttreten" u.ä.),
+  // das keinen Block-Zweig trifft. Mehrfach-Leerzeichen (nach Marker-Entfernung
+  // mitten im Satz) auf eines reduzieren.
   if (bloecke.length === 0) {
-    const text = entferneTags(inner).replace(/^\s*Art\.\s*\S+\s*/, '').trim();
+    const text = entferneTags(entferneFussnotenSups(inner)).replace(/^\s*Art\.\s*\S+\s*/, '').replace(/\s{2,}/g, ' ').replace(/\s+([.,;:])/g, '$1').trim();
     if (text) return { bloecke: [{ absatz: null, text }] };
     // Leerer Artikel-Körper (Fedlex rendert aufgehobene, aber noch nummerierte
     // Artikel als blosse Überschrift mit leerem <div class="collapseable">, z.B.
