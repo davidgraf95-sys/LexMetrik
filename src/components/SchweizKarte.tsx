@@ -40,11 +40,11 @@ export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className 
         {gezeigt ? (
           <>
             <span className="text-body-s font-semibold text-ink-900">{name(gezeigt)}</span>
-            <span aria-hidden className="num text-xs text-ink-400">{gezeigt}</span>
-            {verfuegbar && !verfuegbar(gezeigt) && <span className="text-xs text-ink-400">— keine Erlasse</span>}
+            <span aria-hidden className="num text-xs text-ink-500">{gezeigt}</span>
+            {verfuegbar && !verfuegbar(gezeigt) && <span className="text-xs text-ink-500">— keine Erlasse</span>}
           </>
         ) : (
-          <span className="text-xs text-ink-400">Kanton auf der Karte wählen</span>
+          <span className="text-xs text-ink-500">Kanton auf der Karte wählen</span>
         )}
       </div>
       <svg viewBox={KANTONE_KARTE.viewBox} role="group" aria-label="Karte der Schweizer Kantone — Kanton wählen"

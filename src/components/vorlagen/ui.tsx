@@ -59,7 +59,7 @@ export function Checkbox({ checked, onChange, label, hint, disabled, name, class
   className?: string;
 }) {
   return (
-    <label className={`flex items-start gap-2.5 py-1.5 min-h-[2.25rem] text-body-s ${disabled ? 'text-ink-400 cursor-not-allowed' : 'text-ink-700 cursor-pointer'}${className ? ' ' + className : ''}`}>
+    <label className={`flex items-start gap-2.5 py-1.5 min-h-[2.25rem] text-body-s ${disabled ? 'text-ink-500 cursor-not-allowed' : 'text-ink-700 cursor-pointer'}${className ? ' ' + className : ''}`}>
       <input type="checkbox" name={name} checked={checked} disabled={disabled}
         onChange={(e) => onChange(e.target.checked)} className="mt-0.5 shrink-0" />
       <span className="min-w-0">

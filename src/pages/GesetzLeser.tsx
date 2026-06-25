@@ -145,7 +145,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             <a href={`#art-${e.artikel}`} className="num text-base font-bold tracking-wide text-ink-900 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
           </div>
           {artOffen && marg && marg.length > 0 && (
-            <div className="mt-1.5 space-y-0.5 font-serif text-xs leading-snug text-ink-400">
+            <div className="mt-1.5 space-y-0.5 font-serif text-xs leading-snug text-ink-500">
               {marg.map((m, i) => (
                 <div key={i} className={i === marg.length - 1 ? 'italic text-ink-500' : ''}>{m}</div>
               ))}
@@ -163,8 +163,8 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           )}
           {artOffen && (
             <div className="mt-2 flex gap-3 xl:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-              <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-              <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+              <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
+              <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
             </div>
           )}
         </div>
@@ -183,7 +183,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
           {verweise.length > 0 && (
             <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="text-overline font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
+              <span className="text-overline font-semibold uppercase tracking-[0.13em] text-ink-500 mr-1">Verweise</span>
               {verweise.map((v) => <NormChip key={v} artikel={v} />)}
             </div>
           )}
@@ -192,7 +192,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {fussnotenAuf && fussAnzeige.length > 0 && (
             <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
-                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-400 target:bg-brass-100">
+                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-500 target:bg-brass-100">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                   {fnTextMitLinks(fn)}
                 </p>
@@ -228,9 +228,9 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
               inkl. Untergruppe ist klappbar — vorher war das Chevron zu blass/winzig,
               darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
               Steuerelement erkennbar. */}
-          <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-400'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
+          <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-500'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
           <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
-          {bereich && <span className="num shrink-0 text-xs font-normal text-ink-400">{bereich}</span>}
+          {bereich && <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>}
         </span>
       </button>
     </div>
@@ -493,7 +493,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         <header className="space-y-2.5 border-b border-line pb-5">
           <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
           <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
-            {erlass.kuerzel}{!titelRedundantP && <span className="text-ink-400 font-normal"> — {erlass.titel}</span>}
+            {erlass.kuerzel}{!titelRedundantP && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
           </h1>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
             {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
@@ -501,20 +501,20 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
             {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
             <a href={`/normtext/${erlass.pdfPfad}`} download={`${erlass.kuerzel}.pdf`} className="lc-chip no-underline hover:text-brass-700" title="Amtliches PDF herunterladen">⬇ PDF herunterladen</a>
-            <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-400">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
+            <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
           </div>
         </header>
         {(() => { const wz = werkzeugeFuer(erlass.key); return wz.length > 0 ? (
           <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Passende Werkzeuge <span className="text-ink-400">({wz.length})</span></summary>
+            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Passende Werkzeuge <span className="text-ink-500">({wz.length})</span></summary>
             <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
-              {wz.map((w) => <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400"><span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}</Link>)}
+              {wz.map((w) => <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400"><span className="text-ink-500 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}</Link>)}
             </div>
           </details>
         ) : null; })()}
         {rspr.length > 0 && (
           <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-400">({rspr.length})</span></summary>
+            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-500">({rspr.length})</span></summary>
             <ul className="mt-2.5 flex flex-col gap-1.5">
               {rspr.slice(0, 8).map((r) => (
                 <li key={r.key} className="text-body-s"><Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700"><span className="font-medium">{r.zitierung}</span>{r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}{r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}</Link></li>
@@ -657,7 +657,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
         className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
       <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-        className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+        className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}
         title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
     </>
   );
@@ -702,7 +702,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       <header className="space-y-2.5 border-b border-line pb-5">
         <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}{overlineGebiet ? ` · ${overlineGebiet}` : ''}</p>
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
-          {erlass.kuerzel}{!titelRedundant && <span className="text-ink-400 font-normal"> — {erlass.titel}</span>}
+          {erlass.kuerzel}{!titelRedundant && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
         </h1>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
@@ -712,7 +712,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
           {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
           <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
-          <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung</span>
+          <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>
 
@@ -723,14 +723,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         return wz.length > 0 ? (
           <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
             <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
-              Passende Werkzeuge <span className="text-ink-400">({wz.length})</span>
+              Passende Werkzeuge <span className="text-ink-500">({wz.length})</span>
             </summary>
             {/* Mobile: eine horizontal scrollbare Chip-Reihe (sonst stapeln sich
                 viele Werkzeuge sehr hoch); ab sm normaler Umbruch. */}
             <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
               {wz.map((w) => (
                 <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
-                  <span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
+                  <span className="text-ink-500 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
                 </Link>
               ))}
             </div>
@@ -744,7 +744,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       {rspr.length > 0 && (
         <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3 mt-3">
           <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
-            Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-400">({rspr.length})</span>
+            Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-500">({rspr.length})</span>
           </summary>
           <ul className="mt-2.5 flex flex-col gap-1.5">
             {rspr.slice(0, 8).map((r) => (
@@ -757,7 +757,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
               </li>
             ))}
           </ul>
-          <p className="text-micro text-ink-400 mt-2">Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.</p>
+          <p className="text-micro text-ink-500 mt-2">Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.</p>
         </details>
       )}
 
@@ -835,7 +835,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             )}
             <div className="mb-2 flex items-baseline justify-between shrink-0">
               <p className="lc-overline">Gliederung</p>
-              <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-400 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
+              <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-500 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
             <div data-toc className="xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
               {tocBaumEl}

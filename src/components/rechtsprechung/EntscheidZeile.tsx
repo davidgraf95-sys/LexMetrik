@@ -22,7 +22,7 @@ export function EntscheidZeile({ e, onNorm }: {
       className="group flex items-stretch gap-3 px-4 py-3 no-underline hover:bg-well transition-colors"
     >
       {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). */}
-      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-400 tabular-nums">
+      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500 tabular-nums">
         {formatiereDatum(e.datum)}
       </span>
 
@@ -32,7 +32,7 @@ export function EntscheidZeile({ e, onNorm }: {
           <span className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
             {themaText(e)}
           </span>
-          <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-400'}`}>
+          <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
             {hauptIdentitaet(e)}
           </span>
         </div>
@@ -40,13 +40,13 @@ export function EntscheidZeile({ e, onNorm }: {
         {/* Metazeile — Rechtsgebiet, Status, angewandte Normen (klickbar). */}
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
           <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
-          {synth && <span className="text-micro italic text-ink-400">ohne amtl. Regeste</span>}
+          {synth && <span className="text-micro italic text-ink-500">ohne amtl. Regeste</span>}
           {e.kuratierung === 'maschinell' && (
-            <span className="text-micro text-ink-400" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
+            <span className="text-micro text-ink-500" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}
-          {e.sprache !== 'de' && <span className="text-micro uppercase text-ink-400">{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="text-micro uppercase text-ink-500">{e.sprache}</span>}
           {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
-          {e.normKeys.length > 5 && <span className="num text-micro text-ink-400">+{e.normKeys.length - 5}</span>}
+          {e.normKeys.length > 5 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 5}</span>}
         </div>
       </div>
     </Link>

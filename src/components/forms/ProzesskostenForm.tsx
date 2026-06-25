@@ -246,7 +246,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           {vorschuss && (
             <div className="mt-3 lc-tile">
               <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                <p className="text-xs text-ink-500">Mutmasslicher Kostenvorschuss <span className="text-ink-400">({vorschuss.norm})</span></p>
+                <p className="text-xs text-ink-500">Mutmasslicher Kostenvorschuss <span className="text-ink-500">({vorschuss.norm})</span></p>
                 <p className="num text-body-l font-semibold text-ink-900">
                   {vorschuss.spanne ? (vorschuss.faktor === 0.5 ? `bis ${spanneText(vorschuss.spanne)}` : spanneText(vorschuss.spanne)) : '—'}
                 </p>
@@ -332,7 +332,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
                   <span className="num text-body-s font-semibold text-ink-900 w-12 text-right">{quote}%</span>
                 </div>
               )}
-              <p className="mt-2 text-xs text-ink-500"><NormText text={ausgangInfo.hinweis} /> <span className="text-ink-400">({ausgangInfo.norm})</span></p>
+              <p className="mt-2 text-xs text-ink-500"><NormText text={ausgangInfo.hinweis} /> <span className="text-ink-500">({ausgangInfo.norm})</span></p>
               <label className="mt-2 flex items-start gap-2 text-body-s text-ink-700">
                 <input type="checkbox" checked={ur} onChange={(e) => setUr(e.target.checked)} className="mt-0.5" />
                 <span>Unentgeltliche Rechtspflege bewilligt (Art. 117 ff. ZPO) — befreit von Vorschuss/Gerichtskosten, aber nicht von der gegnerischen Parteientschädigung</span>

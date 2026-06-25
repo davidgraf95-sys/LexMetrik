@@ -36,19 +36,23 @@ async function oeffnen(page: Page, url: string) {
 const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   'startseite': ['link-in-text-block'],
   'startseite-suche': ['link-in-text-block'],
-  'tagerechner': ['link-in-text-block', 'color-contrast'],
-  'tagerechner-kalender': ['link-in-text-block', 'color-contrast'],
+  'tagerechner': ['link-in-text-block'],
+  'tagerechner-kalender': ['link-in-text-block'],
   'vorlage-arbeitsvertrag': ['link-in-text-block'],
   'zustaendigkeit-plz-wahl': ['link-in-text-block'],
-  // Gesetze-Seite (BS-Audit 23.6.2026, S11): Inline-SR-Link-Marken ohne
-  // Unterstreichung = derselbe Markenentscheid wie überall (B-2). color-contrast:
-  // zwei vorbestehende, dokumentierte Klassen (BERICHT.md B-3) — brass-Aktionstext
-  // «Alle auf-/einklappen» (B-2-Familie) und gedämpftes «aufgehoben»/Zitiermarke im
-  // Reader (B-1-Familie, bewusste Gestaltungs-Zurücknahme aufgehobener Stellen).
-  // Die echten S10-Ordnungsmerkmale (SR-Nr, Kanton-Meta, Zähler, Pills) sind auf
-  // ink-500 gehoben; alle ÜBRIGEN serious/critical-Regeln (Label/ARIA/Struktur) gaten weiter.
-  'gesetze-kanton-BS': ['link-in-text-block', 'color-contrast'],
-  'gesetze-leser-BS': ['link-in-text-block', 'color-contrast'],
+  // W3.6 (25.6.2026): die früher hier dokumentierten color-contrast-Befunde
+  // (gedämpftes «aufgehoben»/Zitiermarke/Meta in ink-400) sind GEFIXT — der
+  // gesamte faintest-Text-Tier wurde ink-400→ink-500 gehoben (AA ≥4.5:1 in hell
+  // UND dunkel, per axe in beiden Modi auf 0 verifiziert). 'color-contrast' ist
+  // daher hier NICHT mehr whitelisted; ein neuer Kontrast-Verstoss gatet wieder.
+  // Bleibt: link-in-text-block = Inline-SR/Norm-Link-Marken ohne Unterstreichung
+  // (B-2 Markenentscheid, scheme-unabhängig).
+  'gesetze-kanton-BS': ['link-in-text-block'],
+  'gesetze-leser-BS': ['link-in-text-block'],
+  'gesetze-leser-bund': ['link-in-text-block'],
+  'rechtsprechung-uebersicht': ['link-in-text-block'],
+  'rechtsprechung-leser': ['link-in-text-block'],
+  'international': ['link-in-text-block'],
   // Tab-Streifen-Prüfpunkt lädt /rechner/tagerechner: derselbe dokumentierte
   // Inline-Link-Marken-Entscheid (B-2) der Seite. Der Streifen SELBST ist
   // a11y-sauber (keine tablist/tab-Rollen, Kontraste auf ink-500/600 gehoben).
@@ -156,4 +160,34 @@ test('Gesetze — Reader BS-640.100', async ({ page }, testInfo) => {
   await oeffnen(page, '/gesetze/kanton/BS-640.100')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'gesetze-leser-BS')
+})
+
+// W1.7 (SEO W1.1-Detailseiten + bisher ungetestete Rubriken): Rechtsprechung +
+// International + ein Bund-Reader ins Tor ziehen. Strukturell a11y-sauber
+// verifiziert (nur link-in-text-block/B-2; color-contrast nach W3.6 = 0).
+// Bund-Reader an einem KLEINEN Erlass (GebV-HReg, 11 Art.) statt OR (1099 Art.,
+// axe-Timeout): gleiche GesetzLeser-Komponente, und als Gebührenverordnung mit
+// Tarif-/Mehrspalten-Tabelle deckt sie den scrollable-region-Fix (tabIndex) ab.
+test('Gesetze — Reader Bund (GebV-HReg, Tarif-Tabelle)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/gesetze/bund/GEBV_HREG')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'gesetze-leser-bund')
+})
+
+test('Rechtsprechung — Übersicht', async ({ page }, testInfo) => {
+  await oeffnen(page, '/rechtsprechung')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-uebersicht')
+})
+
+test('Rechtsprechung — Entscheid-Reader', async ({ page }, testInfo) => {
+  await oeffnen(page, '/rechtsprechung/bger_5A_79_2026')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-leser')
+})
+
+test('International — Übersicht', async ({ page }, testInfo) => {
+  await oeffnen(page, '/international')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'international')
 })

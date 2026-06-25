@@ -3,6 +3,7 @@ import { OBERKATEGORIEN } from '../lib/oberkategorien';
 import { KategorieSektion } from '../components/Katalog';
 import { kartenDerKategorie } from '../lib/katalogKategorie';
 import { KatalogHinweis } from '../components/KatalogHinweis';
+import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 
 // ─── Vorlagen-Übersicht (/vorlagen) — UI-Welle, Ersatz für /recherche ───────
@@ -25,6 +26,7 @@ export function VorlagenUebersicht() {
 
       <KategorieSektion kat={VORLAGEN_KATEGORIE} karten={kartenDerKategorie(KATALOG_KARTEN, 'vorlagen')} ohneKopf />
 
+      <MassgebendeGesetze modus="vorlage" />
       <KatalogHinweis />
     </div>
   );

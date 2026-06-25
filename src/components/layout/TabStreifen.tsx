@@ -139,7 +139,7 @@ export function TabStreifen() {
         <ul className="flex items-stretch gap-1 overflow-x-auto min-w-0 lc-scroll-x" style={{ scrollSnapType: 'x proximity' }}>
           {gruppen.map(({ kat, items }) => {
             const meta = KAT_META[kat];
-            const pikto = <span aria-hidden className="shrink-0 text-ink-400">{meta.pikto}</span>;
+            const pikto = <span aria-hidden className="shrink-0 text-ink-500">{meta.pikto}</span>;
 
             // Einzelnes Element der Kategorie → direkter Reiter (kein Dropdown nötig),
             // zeigt das Piktogramm + den Element-Titel.
@@ -192,8 +192,8 @@ export function TabStreifen() {
                   }`}>
                   {pikto}
                   <span className="truncate">{meta.label}</span>
-                  <span className="text-micro text-ink-400 num">{items.length}</span>
-                  <span aria-hidden className={`text-ink-400 text-micro transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
+                  <span className="text-micro text-ink-500 num">{items.length}</span>
+                  <span aria-hidden className={`text-ink-500 text-micro transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
                 </button>
               </li>
             );
@@ -223,7 +223,7 @@ export function TabStreifen() {
                 </button>
                 <button type="button" onClick={() => schliessen(t.path)}
                   aria-label={`Reiter «${label(t)}» schliessen`}
-                  className="inline-flex items-center justify-center w-7 h-7 mr-1 shrink-0 rounded text-ink-400 hover:text-danger-700 transition-colors">
+                  className="inline-flex items-center justify-center w-7 h-7 mr-1 shrink-0 rounded text-ink-500 hover:text-danger-700 transition-colors">
                   <span aria-hidden className="text-body-s leading-none">✕</span>
                 </button>
               </div>

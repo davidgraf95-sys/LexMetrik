@@ -52,7 +52,7 @@ export function Favoriten() {
           <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brass-500 shrink-0" />
           <Link to={k.href!} className="no-underline text-ink-900 hover:text-brass-700">{k.title}</Link>
           <button type="button" onClick={() => entfernen(k.href!)} aria-label={`${k.title} aus Favoriten entfernen`}
-            className="inline-flex items-center justify-center w-5 h-5 rounded text-ink-400 hover:text-danger-700 transition-colors">
+            className="inline-flex items-center justify-center w-5 h-5 rounded text-ink-500 hover:text-danger-700 transition-colors">
             <span aria-hidden className="text-xs leading-none">✕</span>
           </button>
         </span>

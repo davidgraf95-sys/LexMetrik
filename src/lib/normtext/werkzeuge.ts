@@ -9,6 +9,7 @@
 // verfügbare (geplante) Karten werden ausgeblendet → nie ein toter Link (§8).
 
 import { ALLE_KARTEN, istVerfuegbar } from '../startseiteConfig';
+import { ERLASS_REGISTER } from './register';
 
 const ERLASS_WERKZEUGE: Readonly<Record<string, string[]>> = {
   OR: ['kuendigung-sperrfristen', 'lohnfortzahlung', 'ferienanspruch', 'dreizehnter-monatslohn', 'ueberstunden-zuschlag', 'verjaehrung', 'verzugszins', 'schadenszins', 'gewaehrleistung', 'mietrecht', 'mietzinsanpassung', 'arbeitsvertrag', 'mietvertrag-wohnen', 'auftrag', 'werkvertrag', 'mahnung'],
@@ -57,6 +58,25 @@ export function werkzeugeFuerEntscheid(normKeys: string[]): Werkzeug[] {
     for (const w of werkzeugeFuer(k)) {
       if (!seen.has(w.id)) { seen.add(w.id); out.push(w); }
     }
+  }
+  return out;
+}
+
+export interface MassgebenderErlass { key: string; kuerzel: string; titel: string; pfad: string }
+
+/**
+ * Inverse Norm↔Werkzeug-Brücke (W2.1): Erlasse mit Volltext-Detailseite
+ * (status 'snapshot' → kein toter Link, §8), die mindestens ein verfügbares
+ * Werkzeug des gegebenen Modus tragen — für den «Massgebende Gesetze»-Block der
+ * Rubrik-Übersichten (interne Verlinkung Werkzeug → Norm-Detailseite). Reihenfolge
+ * = ERLASS_REGISTER (rang/Gebiet). Pfad-Keys sind Bund (sauber, keine Kodierung).
+ */
+export function massgebendeErlasse(modus: 'rechner' | 'vorlage'): MassgebenderErlass[] {
+  const out: MassgebenderErlass[] = [];
+  for (const e of ERLASS_REGISTER) {
+    if (e.status !== 'snapshot') continue;
+    if (!werkzeugeFuer(e.key).some((w) => w.modus === modus)) continue;
+    out.push({ key: e.key, kuerzel: e.kuerzel, titel: e.titel, pfad: `/gesetze/${e.ebene}/${e.key}` });
   }
   return out;
 }

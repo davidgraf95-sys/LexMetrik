@@ -3,6 +3,7 @@ import { OBERKATEGORIEN } from '../lib/oberkategorien';
 import { KategorieSektion } from '../components/Katalog';
 import { kartenDerKategorie } from '../lib/katalogKategorie';
 import { KatalogHinweis } from '../components/KatalogHinweis';
+import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 
 // ─── Rechner-Übersicht (/rechner) — UI-Welle, Ersatz für /recherche ─────────
@@ -27,6 +28,7 @@ export function RechnerUebersicht() {
         <KategorieSektion key={kat.id} kat={kat} karten={kartenDerKategorie(KATALOG_KARTEN, kat.id)} />
       ))}
 
+      <MassgebendeGesetze modus="rechner" />
       <KatalogHinweis />
     </div>
   );

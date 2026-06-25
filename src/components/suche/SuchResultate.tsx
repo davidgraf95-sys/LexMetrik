@@ -33,7 +33,7 @@ function Gruppe({ g, index, onAuswahl }: { g: SuchGruppe; index: number; onAuswa
     <div className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
       <div className="flex items-baseline gap-2 px-4 pt-3 pb-1">
         <span className="lc-overline text-ink-500">{g.titel}</span>
-        {!g.laedt && <span className="num text-xs text-ink-400">{g.gesamt}</span>}
+        {!g.laedt && <span className="num text-xs text-ink-500">{g.gesamt}</span>}
         {g.mehrHref && (
           <Link to={g.mehrHref} onClick={onAuswahl} className="ml-auto text-body-s text-brass-700 no-underline hover:text-brass-600">
             alle {g.gesamt} →
@@ -41,7 +41,7 @@ function Gruppe({ g, index, onAuswahl }: { g: SuchGruppe; index: number; onAuswa
         )}
       </div>
       {g.laedt
-        ? <p className="px-4 pb-3 text-body-s text-ink-400">wird durchsucht …</p>
+        ? <p className="px-4 pb-3 text-body-s text-ink-500">wird durchsucht …</p>
         : <ul className="pb-1.5">{g.treffer.map((t) => <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl} />)}</ul>}
     </div>
   );

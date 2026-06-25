@@ -162,7 +162,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         {/* 1 Identität (stets): Gericht · Abteilung · Sachgebiet */}
         <p className="lc-overline">
           {snap.gerichtName}
-          {snap.abteilung && <span className="text-ink-400"> · {snap.abteilung}</span>}
+          {snap.abteilung && <span className="text-ink-500"> · {snap.abteilung}</span>}
           <span className="text-brass-700"> · {GEBIET_LABEL[snap.sachgebiet]}</span>
         </p>
         {/* 2 Zitierung = Identitäts-Anker (stets, prominent) */}
@@ -174,7 +174,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         {kopf.leitzeile && (
           <div className="space-y-0.5">
             <p className="text-body-s leading-snug text-ink-700">{kopf.leitzeile}</p>
-            <p className="text-micro italic text-ink-400">{SYNTH_MARKER[snap.sprache]}</p>
+            <p className="text-micro italic text-ink-500">{SYNTH_MARKER[snap.sprache]}</p>
           </div>
         )}
 
@@ -265,9 +265,9 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
             className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
             ↗ massgebliche Fassung
           </a>
-          <span className="text-ink-400">Daten: OpenCaseLaw</span>
+          <span className="text-ink-500">Daten: OpenCaseLaw</span>
         </div>
-        <p className="text-micro text-ink-400 max-w-reading leading-relaxed">
+        <p className="text-micro text-ink-500 max-w-reading leading-relaxed">
           Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG). Eine allfällige
           Regeste ist redaktionell. Diese Wiedergabe ersetzt die amtliche Fassung nicht und
           stellt keine Rechtsberatung dar — massgeblich ist stets die amtliche Quelle.
@@ -348,7 +348,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
         <p className="lc-overline">
           {snap.gerichtName}
-          {snap.abteilung && <span className="text-ink-400"> · {snap.abteilung}</span>}
+          {snap.abteilung && <span className="text-ink-500"> · {snap.abteilung}</span>}
           <span className="text-brass-700"> · {GEBIET_LABEL[snap.sachgebiet]}</span>
         </p>
         <h1 className="mt-2 text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
@@ -371,7 +371,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         <footer className="mt-12 border-t border-line pt-5 text-body-s text-ink-500">
           <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
             className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">↗ massgebliche Fassung</a>
-          <p className="mt-3 text-micro text-ink-400 leading-relaxed">
+          <p className="mt-3 text-micro text-ink-500 leading-relaxed">
             Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG); massgeblich ist stets die amtliche Quelle. Keine Rechtsberatung.
           </p>
         </footer>
@@ -384,7 +384,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
 // im Body) — über NormText, damit der Verweis selbst auch ein lebender Link ist.
 function NormTextHinweis() {
   return (
-    <p className="text-micro text-ink-400">
+    <p className="text-micro text-ink-500">
       Im Text genannte Bundesnormen (z. B. <NormText text="Art. 8 ZGB" />) sind direkt mit der Gesetzessammlung verlinkt.
     </p>
   );

@@ -214,7 +214,7 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
       kopfZeile ? ' font-medium text-ink-800' : spalteNumerisch[ci] ? ' font-medium text-ink-800' : ' text-ink-700'
     }`;
   return (
-    <span data-mehrspaltig="" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
+    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
       <span className="table w-full">
         {kopf && kopf.length > 0 && (
           <span className="table-row bg-paper-sunken/40">
@@ -327,7 +327,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
               {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-400" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
@@ -358,7 +358,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // «aufgehoben» fälschlich über der Liste stehen (Bug 22.6., 232 Blöcke,
                 // z.B. VWVG Art. 1). tabelle/mehrspaltig haben oben bereits Early-Return.
                 const hatItems = b.items != null && b.items.length > 0;
-                if ((!anzeige.trim() || istAufgehoben(anzeige)) && !hatItems) return <span className="italic text-ink-400">aufgehoben</span>;
+                if ((!anzeige.trim() || istAufgehoben(anzeige)) && !hatItems) return <span className="italic text-ink-500">aufgehoben</span>;
                 if (!anzeige.trim()) return null;
                 const zeilen = staffelZeilen(anzeige);
                 // Tausender-Gruppierung NUR in Geld-Kontext (§3, FIX 2 — 22.6.2026):
@@ -432,7 +432,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       }`}
                     >
                       {istStrich
-                        ? <span className="shrink-0 select-none text-ink-400">{markeAnzeige}</span>
+                        ? <span className="shrink-0 select-none text-ink-500">{markeAnzeige}</span>
                         : zk
                           ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
@@ -447,7 +447,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                             Text, §7). Leeren Item-Text wie eine Aufhebung gedämpft
                             zeigen — die Marke bleibt links sichtbar (Lücke geschlossen). */}
                         {it.text.trim() === '' || istAufgehoben(it.text)
-                          ? <span className="italic text-ink-400">aufgehoben</span>
+                          ? <span className="italic text-ink-500">aufgehoben</span>
                           : (() => {
                               // Tarif-Staffel auch in Items als Tabelle (viele
                               // Notariats-/Grundbuchtarife stehen als lit./Ziff.).

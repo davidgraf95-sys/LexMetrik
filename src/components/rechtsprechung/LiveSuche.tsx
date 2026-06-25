@@ -16,7 +16,7 @@ function TrefferZeile({ t }: { t: LiveTreffer }) {
       <div className="min-w-0 flex-1">
         <div className="truncate text-body-s text-ink-800 group-hover:text-brass-700">{t.titel}</div>
         {t.thema && <div className="mt-0.5 truncate text-xs text-ink-500">{t.thema}</div>}
-        <div className="mt-1 flex flex-wrap items-center gap-x-2 text-micro text-ink-400">
+        <div className="mt-1 flex flex-wrap items-center gap-x-2 text-micro text-ink-500">
           <span>{kantonLabel(t.kanton)}</span>
           {t.datum && <><span aria-hidden>·</span><span className="num">{formatiereDatum(t.datum)}</span></>}
           {t.aktenzeichen && <><span aria-hidden>·</span><span className="num">{t.aktenzeichen}</span></>}
@@ -80,7 +80,7 @@ export function LiveSuche({ initialQ = '' }: { initialQ?: string }) {
         <button type="button" onClick={() => setOffen(false)} className="text-xs text-ink-500 hover:text-ink-700">einklappen</button>
       </div>
 
-      <p className="text-micro text-ink-400 leading-relaxed">
+      <p className="text-micro text-ink-500 leading-relaxed">
         Durchsucht <span className="text-ink-600">{LIVE_QUELLE}</span> (Bund + alle Kantone, alle Sprachen) — weit über die
         kuratierte Auswahl hinaus. Die Treffer sind <span className="text-ink-600">extern und nicht von LexMetrik geprüft</span>;
         massgeblich ist die amtliche Fassung (Link je Treffer). Der Suchbegriff wird an {LIVE_QUELLE} übermittelt.

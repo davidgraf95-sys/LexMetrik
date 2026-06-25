@@ -29,7 +29,7 @@ export function EntscheidKarte({ e, onNorm }: {
             <span className="lc-overline text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
           </span>
           <span className="flex shrink-0 items-center gap-1.5">
-            {synth && <span className="text-ink-400 italic">ohne amtl. Regeste</span>}
+            {synth && <span className="text-ink-500 italic">ohne amtl. Regeste</span>}
             {e.kuratierung === 'maschinell' && (
               <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
             )}
@@ -45,7 +45,7 @@ export function EntscheidKarte({ e, onNorm }: {
         {e.normKeys.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5">
             {e.normKeys.slice(0, 4).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
-            {e.normKeys.length > 4 && <span className="num text-micro text-ink-400">+{e.normKeys.length - 4}</span>}
+            {e.normKeys.length > 4 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 4}</span>}
           </div>
         )}
       </Link>
@@ -57,16 +57,16 @@ export function EntscheidKarte({ e, onNorm }: {
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-ink-500">
           {/* Identität führend: amtliche BGE-Zitierung (erkannt/zitierbar) hervorgehoben,
               sonst das Aktenzeichen gedämpft. */}
-          <span className={`num ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-400'}`}>{hauptIdentitaet(e)}</span>
+          <span className={`num ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>{hauptIdentitaet(e)}</span>
           <span className="text-ink-300" aria-hidden>·</span>
           <span>{e.gerichtName}</span>
           <span className="text-ink-300" aria-hidden>·</span>
           <span className="num">{formatiereDatum(e.datum)}</span>
-          {istBge(e) && <span className="num text-ink-400" title="Aktenzeichen">({e.nummer})</span>}
+          {istBge(e) && <span className="num text-ink-500" title="Aktenzeichen">({e.nummer})</span>}
           {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
         </div>
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"
-          className="shrink-0 text-xs text-ink-400 no-underline hover:text-brass-700"
+          className="shrink-0 text-xs text-ink-500 no-underline hover:text-brass-700"
           title="Amtliche Fassung beim Gericht öffnen">
           ↗ amtlich
         </a>

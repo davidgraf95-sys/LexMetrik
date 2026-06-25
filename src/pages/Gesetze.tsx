@@ -82,7 +82,7 @@ function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] 
       {gesetze.length > 0 && <Gitter erlasse={gesetze} />}
       {verordnungen.length > 0 && (
         <div className="pl-3 border-l-2 border-line/70 ml-0.5">
-          <p className="lc-overline text-ink-400 mb-1">Verordnungen &amp; Ausführungsrecht</p>
+          <p className="lc-overline text-ink-500 mb-1">Verordnungen &amp; Ausführungsrecht</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
             {verordnungen.map((e) => <ErlassZeile key={e.key} e={e} />)}
           </div>
@@ -413,19 +413,19 @@ export function Gesetze() {
                 </div>
                 {bund.length > 0 && (
                   <section className="space-y-3">
-                    <h2 className="lc-overline">Bund <span className="text-ink-400">· {bund.length}</span></h2>
+                    <h2 className="lc-overline">Bund <span className="text-ink-500">· {bund.length}</span></h2>
                     <Gitter erlasse={bund} />
                   </section>
                 )}
                 {gruppiereNachKanton(kant).map((g) => (
                   <section key={g.kanton} className="space-y-3">
-                    <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
+                    <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-500">· {g.erlasse.length}</span></h2>
                     <Gitter erlasse={g.erlasse} />
                   </section>
                 ))}
                 {intl.length > 0 && (
                   <section className="space-y-3">
-                    <h2 className="lc-overline">International <span className="text-ink-400">· {intl.length}</span></h2>
+                    <h2 className="lc-overline">International <span className="text-ink-500">· {intl.length}</span></h2>
                     <Gitter erlasse={intl} />
                   </section>
                 )}
@@ -532,9 +532,9 @@ export function Gesetze() {
                         <span className="flex flex-col min-w-0">
                           <span className="flex items-baseline gap-1.5">
                             <span className="text-body-s font-medium text-ink-800 truncate group-hover:text-brass-700 transition-colors">{KANTON_NAMEN[g.kanton] ?? g.kanton}</span>
-                            <span aria-hidden className="num text-xs text-ink-400 shrink-0">{g.kanton}</span>
+                            <span aria-hidden className="num text-xs text-ink-500 shrink-0">{g.kanton}</span>
                           </span>
-                          <span className="text-xs text-ink-400"><span className="num">{g.erlasse.length}</span> Erlasse</span>
+                          <span className="text-xs text-ink-500"><span className="num">{g.erlasse.length}</span> Erlasse</span>
                         </span>
                       </button>
                     ))}

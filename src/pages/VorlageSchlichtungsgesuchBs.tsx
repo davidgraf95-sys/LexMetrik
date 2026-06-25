@@ -385,7 +385,7 @@ export function VorlageSchlichtungsgesuchBs() {
                       </div>
                     )}
                   </div>
-                  <label className={`flex items-start gap-2 text-body-s sm:col-span-2 ${a.betreibung?.rechtsvorschlagErhoben ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
+                  <label className={`flex items-start gap-2 text-body-s sm:col-span-2 ${a.betreibung?.rechtsvorschlagErhoben ? 'cursor-pointer text-ink-700' : 'text-ink-500 cursor-not-allowed'}`}>
                     <input type="checkbox" disabled={!a.betreibung?.rechtsvorschlagErhoben} checked={!!a.geld?.rechtsoeffnung}
                       onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), rechtsoeffnung: e.target.checked })} />
                     <span>Beseitigung des Rechtsvorschlags beantragen {!a.betreibung?.rechtsvorschlagErhoben && <span>(setzt erhobenen Rechtsvorschlag voraus – Schritt «Beklagte Partei»)</span>}</span>
@@ -465,7 +465,7 @@ export function VorlageSchlichtungsgesuchBs() {
       case 'abschluss': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <label className={`flex items-start gap-2 text-body-s ${verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
+            <label className={`flex items-start gap-2 text-body-s ${verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG ? 'cursor-pointer text-ink-700' : 'text-ink-500 cursor-not-allowed'}`}>
               <input type="checkbox" className="mt-0.5"
                 disabled={!(verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)}
                 checked={a.antragEntscheid} onChange={(e) => set('antragEntscheid', e.target.checked)} />

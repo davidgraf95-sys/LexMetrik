@@ -61,7 +61,7 @@ export function UniversalSuche() {
   return (
     <section role="search" aria-label="Universal-Suche" className="space-y-3">
       <div className="relative">
-        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-400">
+        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-500">
           <Lupe />
         </span>
         <input
@@ -75,7 +75,7 @@ export function UniversalSuche() {
         />
         {wert && (
           <button type="button" onClick={() => setze('')} aria-label="Suche leeren"
-            className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-7 w-7 items-center justify-center rounded-md text-ink-400 transition-colors hover:text-brass-700">
+            className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-7 w-7 items-center justify-center rounded-md text-ink-500 transition-colors hover:text-brass-700">
             <span aria-hidden className="text-base leading-none">✕</span>
           </button>
         )}

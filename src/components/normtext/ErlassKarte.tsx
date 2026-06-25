@@ -34,7 +34,7 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
           ? <span><span className="num">{e.artikelAnzahl}</span> Artikel</span>
           : e.status === 'pdf-embed'
             ? <span className="text-ink-500">amtliches PDF</span>
-            : <span className="text-ink-400">nur Live-Link</span>}
+            : <span className="text-ink-500">nur Live-Link</span>}
         <StandChip stand={e.stand} />
       </div>
     </>
@@ -49,7 +49,7 @@ export function ErlassZeile({ e }: { e: BrowseErlass }) {
     <>
       <span className="font-medium text-ink-700 shrink-0">{e.kuerzel}</span>
       <span className="text-ink-500 truncate">{e.titel}</span>
-      {e.sr && <span className="num text-xs text-ink-400 shrink-0 ml-auto">SR {e.sr}</span>}
+      {e.sr && <span className="num text-xs text-ink-500 shrink-0 ml-auto">SR {e.sr}</span>}
       {e.status === 'nur-live-link' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
     </>
   );

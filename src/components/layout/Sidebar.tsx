@@ -92,7 +92,7 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
             title={k.label}>{k.label}</Link>
           <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
             aria-label={`${k.label} ${offen ? 'einklappen' : 'aufklappen'}`}
-            className="shrink-0 p-0.5 text-ink-400 hover:text-brass-700 transition-colors">
+            className="shrink-0 p-0.5 text-ink-500 hover:text-brass-700 transition-colors">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden
               className={`transition-transform ${offen ? 'rotate-90' : ''}`}>
               <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -161,7 +161,7 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
         )}
         <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
           aria-label={`${a.titel} ${offen ? 'einklappen' : 'aufklappen'}`}
-          className="shrink-0 p-0.5 text-ink-400 hover:text-brass-700 transition-colors">
+          className="shrink-0 p-0.5 text-ink-500 hover:text-brass-700 transition-colors">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden
             className={`transition-transform ${offen ? 'rotate-90' : ''}`}>
             <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

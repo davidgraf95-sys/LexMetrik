@@ -51,7 +51,7 @@ function Sektion({ titel, liste, dichte, onNorm }: {
   return (
     <section className="space-y-3">
       <h2 className="lc-overline text-brass-700 flex items-center gap-3">
-        {titel}<span className="num text-ink-400">{liste.length}</span>
+        {titel}<span className="num text-ink-500">{liste.length}</span>
         <span aria-hidden className="h-px flex-1 bg-line" />
       </h2>
       <Liste liste={liste} dichte={dichte} onNorm={onNorm} />
@@ -223,7 +223,7 @@ export function Rechtsprechung() {
               <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />
             )}
 
-            <p className="border-t border-line/60 pt-3 text-micro text-ink-400">
+            <p className="border-t border-line/60 pt-3 text-micro text-ink-500">
               Keine Rechtsberatung. «ungeprüft» = maschinell erfasst, fachlich noch nicht abgenommen; massgeblich ist stets die amtliche Fassung (Link je Entscheid).
             </p>
           </div>

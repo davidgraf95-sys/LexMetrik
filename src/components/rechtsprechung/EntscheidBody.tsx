@@ -185,7 +185,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
       )}
       {sortiert.map((a) => <Abschnitt key={a.typ} a={a} />)}
       {hatErw && !hatDisp && (
-        <p className="text-micro text-ink-400">Das Urteilsdispositiv ist in dieser Erfassung nicht zuverlässig abgegrenzt — massgeblich ist die amtliche Fassung.</p>
+        <p className="text-micro text-ink-500">Das Urteilsdispositiv ist in dieser Erfassung nicht zuverlässig abgegrenzt — massgeblich ist die amtliche Fassung.</p>
       )}
     </div>
   );

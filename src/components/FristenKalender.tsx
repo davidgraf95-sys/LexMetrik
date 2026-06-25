@@ -138,7 +138,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
             <Fragment key={`${jahr}-${m}`}>
               {trenner && (
                 <div aria-hidden className="hidden sm:flex self-center px-0.5">
-                  <span className="lc-overline text-ink-400 tracking-[0.3em]">···</span>
+                  <span className="lc-overline text-ink-500 tracking-[0.3em]">···</span>
                 </div>
               )}
               <div className={kompakt ? 'w-[min(12.5rem,100%)]' : 'w-[min(15.5rem,100%)]'}>
@@ -167,7 +167,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                     const rundR = col === 6 || d.getDate() === anzahl || bandStatus(folgetag) !== band;
 
                     // Marker-Ebene: runde Schlüsseltage über dem Band
-                    let marker = frei ? 'text-ink-400' : 'text-ink-700'; // ink-400 statt 300: Kontrast-Kompromiss (FAHRPLAN-DESIGN 3.5)
+                    let marker = frei ? 'text-ink-500' : 'text-ink-700'; // W3.6 (25.6.2026): frei-Tage ink-400→ink-500 für AA in beiden Modi (≥4.5:1); Sa/So zusätzlich über title+Legende
                     let title = frei ? 'arbeitsfrei (Sa/So/Feiertag)' : '';
                     if (isAdQuem) { marker = 'bg-sage-500 text-paper font-semibold rounded-full lc-termin-ring'; title = L.adquem; }
                     else if (isAQuo) { marker = 'bg-brass-500 text-ink-900 font-semibold rounded-full'; title = L.aquo; }

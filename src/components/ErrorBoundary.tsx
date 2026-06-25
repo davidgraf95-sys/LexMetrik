@@ -47,7 +47,7 @@ export class ErrorBoundary extends Component<Props, State> {
           intro="Ein unerwarteter Fehler hat die Darstellung unterbrochen. Ihre Eingaben verlassen den Browser nicht; ein Neuladen der Seite stellt die Ansicht in der Regel wieder her." />
         {this.state.nachricht && (
           <p className="text-body-s text-ink-500">
-            <span className="text-ink-400">Technische Meldung:</span>{' '}
+            <span className="text-ink-500">Technische Meldung:</span>{' '}
             <code className="rounded bg-paper-sunken px-1.5 py-0.5 text-ink-700">{this.state.nachricht}</code>
           </p>
         )}
