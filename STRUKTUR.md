@@ -22,6 +22,12 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — W2.4 lang-Attribut (`de-CH`) (in `main`, deployt)
+
+`<html lang="de">` → `<html lang="de-CH">` (WCAG 3.1.1, korrektes Schweizer-Hochdeutsch-Tag; alle prerenderten Detailseiten erben es via Template). Gate grün, golden byte-gleich.
+- **OFFEN W2.4-Rest:** per-Element `lang` für fr/it-Zitate (braucht Reader- + Prerender-Sprachmarkierung, geringerer ROI).
+- **W2.1 (Rück-Verlinkung Rechner→Norm-Detailseiten) bewusst NICHT gemacht:** saubere Platzierung wäre die einzelnen Rechner-Seiten (Übersicht ist dichtes Karten-Raster, §13 Dichte) — echte UI-Platzierungs-Entscheidung + breite Fläche + visuelle Abnahme, David vorgelegt statt am Session-Ende durchgedrückt.
+
 ## Session 25.6.2026 — SEO/A11y Welle-1-Batch: Karten-Fokus, Twitter-Meta, Cache-Header (in `main`, deployt)
 
 Fortsetzung „mach alles" nach W1.1 — drei autonome Welle-1-Punkte in einem Worktree/Gate/Deploy:
