@@ -42,9 +42,9 @@ export function EntscheidZeile({ e, onNorm }: {
           <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
           {synth && <span className="text-micro italic text-ink-500">ohne amtl. Regeste</span>}
           {e.kuratierung === 'maschinell' && (
-            <span className="text-micro text-ink-500" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
+            <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}
-          {e.sprache !== 'de' && <span className="text-micro uppercase text-ink-500">{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
           {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
           {e.normKeys.length > 5 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 5}</span>}
         </div>

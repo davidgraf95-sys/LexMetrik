@@ -120,7 +120,7 @@ export function Shell({ children }: { children: ReactNode }) {
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (
-            <div className="bg-warn-bg border-b" style={{ borderColor: 'var(--warn-500)' }}>
+            <div className="bg-warn-bg border-b border-warn-500">
               <div className="max-w-content mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2">
                 <p className="text-body-s text-warn-700">
                   Diese Sprachfassung ist in Bearbeitung. Inhalte werden vorerst auf Deutsch angezeigt.

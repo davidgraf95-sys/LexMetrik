@@ -183,7 +183,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
           {verweise.length > 0 && (
             <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="text-overline font-semibold uppercase tracking-[0.13em] text-ink-500 mr-1">Verweise</span>
+              <span className="lc-overline mr-1">Verweise</span>
               {verweise.map((v) => <NormChip key={v} artikel={v} />)}
             </div>
           )}

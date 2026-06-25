@@ -166,7 +166,7 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-body-s text-ink-600">
           <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-ink-900 inline-block" />Offenes Kapital: CHF {e.kapitalOffenCHF}</span>
-          <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded inline-block" style={{ background: 'var(--brass-400)' }} />Offener Verzugszins: CHF {e.zinsOffenCHF}</span>
+          <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded inline-block bg-brass-400" />Offener Verzugszins: CHF {e.zinsOffenCHF}</span>
         </div>
       </div>
     </div>

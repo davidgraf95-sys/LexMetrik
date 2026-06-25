@@ -36,7 +36,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
       <p className="lc-overline">Zeitstrahl</p>
       <div className="relative h-24" role="img" aria-label="Zeitstrahl der Kündigungsfrist mit Sperr-/Hemmungsphasen (Details in der Tabelle und im Rechenweg)">
         {/* Basislinie */}
-        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px" style={{ background: 'var(--line-strong)' }} />
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-line-strong" />
 
         {/* Sperrfrist-Bänder auf der Linie (vgl. Fristband im Kalender) */}
         {(e.sperrIntervalle ?? []).map((iv, i) => {
@@ -65,7 +65,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
         <Leg swatch="bg-ink-900" label="Zugang der Kündigung" />
         {(e.sperrIntervalle ?? []).length > 0 && <Leg band label="Sperrfrist" />}
         {nichtig
-          ? <Leg style={{ background: 'var(--brass-500)' }} label="frühestens neu kündbar" />
+          ? <Leg swatch="bg-brass-500" label="frühestens neu kündbar" />
           : <Leg swatch="bg-sage-500" label="Beendigung" />}
         {e.gehemmtTage ? <span className="num text-ink-500">· Hemmung: {e.gehemmtTage} Tage</span> : null}
       </div>
