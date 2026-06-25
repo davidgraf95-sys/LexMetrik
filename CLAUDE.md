@@ -208,3 +208,30 @@ geteilten Index in fremde Commits gewandert, ein fremder Commit per
    Commit die `--stat`-Dateizahl gegen die eigene add-Liste prüfen.
 3. Deploys nie aus dem Arbeitsverzeichnis, immer aus einem sauberen
    HEAD-Worktree (Details: Skill `deploy-check`).
+
+## §13 Design folgt dem Dach-Reglement (Anweisung David 25.6.2026)
+
+Jede sichtbare Änderung — Seite, Komponente, generierter Text, Output — folgt
+`DESIGN-REGLEMENT.md`. Das ist die **site-weite Dach-Schicht**, aus der
+Legal-Design-Recherche abgeleitet (Hagan/Stanford, MIT-TedLab,
+WorldCC-Patterns; doppelt verifiziert). Darunter konkretisieren die drei
+Domänen-Reglemente (`DESIGN-REGLEMENT-RECHNER.md`,
+`-RECHTSPRECHUNG.md`, `-VORLAGEN.md`) ihren Bereich; bei Konflikt gewinnt das
+speziellere *innerhalb seiner Domäne*, sonst das Dach.
+
+Operativ heisst das für jede UI-/Text-Arbeit:
+
+1. **Tokens, keine Magic-Numbers** — Grössen/Farben/Abstände nur aus
+   `tailwind.config.js` + `src/index.css`. Verboten: Tailwind-Default-Grössen
+   `text-sm`/`text-lg`, Arbitrary-Sizes `text-[…px]`, Ad-hoc-Status-Farben
+   (`text-red-…`, `bg-green-…`), Hex/`rgb()` in Komponenten (§13/D2, B2, B3).
+2. **Verdikt zuerst, Warum auf Abruf**; Fliesstext in der Lesespalte
+   (`max-w-reading`), nie volle Fensterbreite (B1, B2).
+3. **Sprache:** Aktiv, kurze Sätze, keine Schachtelsätze, kein ALL-CAPS-
+   Fliesstext, Fachjargon erklärt; klar für Fach **und** Laie (A1–A3).
+   **Kein** Lesbarkeits-Score als Gütesiegel (A4).
+4. **Leeres Formular zeigt keine Fehler** vor der ersten Eingabe (C2).
+5. **Jeder Rechtswert mit Norm + Link + Stand** (D1, verzahnt mit §7).
+6. Maschinell prüfbare Regeln gehören in ESLint/Tests, nicht nur ins .md
+   (E1). Empirie ist überwiegend US-basiert — CH/DE-Detailentscheide an
+   echtem Verständnis prüfen, nicht aus US-Daten ableiten (E2).
