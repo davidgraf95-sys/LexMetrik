@@ -33,11 +33,29 @@ export function effektivesThema(): Thema {
   return gespeichertesThema() ?? zeitThema();
 }
 
-/** Wendet das Thema auf das Dokument an (Klasse + color-scheme). */
+/** Wendet das Thema auf das Dokument an (Klasse + color-scheme + Browser-Chrome). */
 export function wendeThemaAn(t: Thema): void {
   const el = document.documentElement;
-  el.classList.toggle('dark', t === 'dunkel');
-  el.style.colorScheme = t === 'dunkel' ? 'dark' : 'light';
+  const dunkel = t === 'dunkel';
+  el.classList.toggle('dark', dunkel);
+  // Explizite .light-Klasse (statt nur Abwesenheit von .dark): macht die manuelle
+  // Wahl eindeutig erkennbar — Grundlage für einen späteren Pre-Hydration-
+  // prefers-color-scheme-Fallback (html:not(.light):not(.dark)).
+  el.classList.toggle('light', !dunkel);
+  el.style.colorScheme = dunkel ? 'dark' : 'light';
+  // Browser-Chrome (meta theme-color) ans aktive Thema koppeln. Die media-Tags
+  // in index.html decken den Vor-JS-Moment nach SYSTEM-Präferenz ab; dieses
+  // nachgereichte Tag ohne media gewinnt (letztes passendes Tag, HTML-Spec) und
+  // bildet auch eine manuelle Wahl gegen die Systemvorgabe korrekt ab.
+  try {
+    let m = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]:not([media])');
+    if (!m) {
+      m = document.createElement('meta');
+      m.name = 'theme-color';
+      document.head.appendChild(m);
+    }
+    m.content = dunkel ? '#16150F' : '#F7F4EC';
+  } catch { /* SSR/Prerender ohne document.head — unkritisch */ }
 }
 
 export function speichereThema(t: Thema): void {

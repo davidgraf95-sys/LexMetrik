@@ -106,7 +106,7 @@ export function VorlageKonkubinat() {
               {KOSTEN_OPTIONEN.map((k) => (
                 <button key={k.id} type="button"
                   onClick={() => set('kostenschluessel', k.id)}
-                  className={`rounded-lg border px-3 py-2 text-body-s ${a.kostenschluessel === k.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                  className={`rounded-lg border px-3 py-2 text-body-s ${a.kostenschluessel === k.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                   {k.label}
                 </button>
               ))}

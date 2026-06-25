@@ -106,7 +106,7 @@ export function VorlageAuftrag() {
               {MANDAT_OPTIONEN.map((m) => (
                 <button key={m.id} type="button"
                   onClick={() => set('mandatstyp', m.id)}
-                  className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.mandatstyp === m.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                  className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.mandatstyp === m.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                   <span className="font-medium block">{m.label}</span>
                   <span className="text-ink-500 text-xs">{m.hint}</span>
                 </button>
@@ -124,7 +124,7 @@ export function VorlageAuftrag() {
               {VERGUETUNG_OPTIONEN.map((v) => (
                 <button key={v.id} type="button"
                   onClick={() => set('verguetung', v.id)}
-                  className={`rounded-lg border px-3 py-2 text-body-s ${a.verguetung === v.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                  className={`rounded-lg border px-3 py-2 text-body-s ${a.verguetung === v.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                   {v.label}
                 </button>
               ))}

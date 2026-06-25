@@ -31,7 +31,7 @@ export function VariantenKopf<T extends string>({
             {untertypOptionen.map((o) => (
               <button key={o.id} type="button" onClick={() => onUntertyp?.(o.id)}
                 aria-pressed={untertyp === o.id}
-                className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${untertyp === o.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
+                className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${untertyp === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
                 <span className="font-medium block leading-tight">{o.label}</span>
                 {o.sub && <span className="text-ink-500 text-xs">{o.sub}</span>}
               </button>
@@ -45,7 +45,7 @@ export function VariantenKopf<T extends string>({
           {DETAILGRAD_OPTIONEN.map((o) => (
             <button key={o.id} type="button" onClick={() => onDetailgrad(o.id)}
               aria-pressed={detailgrad === o.id}
-              className={`rounded-lg border px-3 py-2 text-left text-body-s ${detailgrad === o.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
+              className={`rounded-lg border px-3 py-2 text-left text-body-s ${detailgrad === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
               <span className="font-medium block leading-tight">{o.label}</span>
               <span className="text-ink-500 text-xs">{o.sub}</span>
             </button>

@@ -6,9 +6,11 @@ import { KANTONE_KARTE } from '../data/kantoneKarte';
 // (Pastell), damit es zum Papier-Look passt; Hover/aktiv vertiefen den Ton.
 function farbe(i: number, zustand: 'basis' | 'hover' | 'aktiv'): string {
   const h = Math.round((i * 137.508) % 360);
-  if (zustand === 'aktiv') return `hsl(${h} 58% 58%)`;
-  if (zustand === 'hover') return `hsl(${h} 50% 72%)`;
-  return `hsl(${h} 38% 84%)`;
+  // Lightness aus Token (--karte-l-*): im Dunkelmodus gedämpft, sonst glühen
+  // die Pastelle grell. Farbwinkel/Sättigung bleiben hier (reine Geometrie, §3).
+  if (zustand === 'aktiv') return `hsl(${h} 58% var(--karte-l-aktiv))`;
+  if (zustand === 'hover') return `hsl(${h} 50% var(--karte-l-hover))`;
+  return `hsl(${h} 38% var(--karte-l-basis))`;
 }
 
 // Interaktive Schweiz-Karte: jeder Kanton ist ein klickbarer, farblich
@@ -51,7 +53,9 @@ export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className 
           const ist = aktiv === k;
           const waehlbar = verfuegbar ? verfuegbar(k) : true;
           const ueber = hover === k;
-          const fill = !waehlbar ? 'var(--paper-sunken)'
+          // Nicht-wählbare Kantone: sichtbares Linien-Token statt --paper-sunken
+          // (das mit dem Hintergrund verschmolz) — als gedämpfte Landmasse erkennbar.
+          const fill = !waehlbar ? 'var(--line-strong)'
             : ist ? farbe(idx(k), 'aktiv')
             : ueber ? farbe(idx(k), 'hover')
             : farbe(idx(k), 'basis');
@@ -63,7 +67,7 @@ export function SchweizKarte({ aktiv, onWaehle, nameFuer, verfuegbar, className 
               onKeyDown={waehlbar ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onWaehle(k); } } : undefined}
               tabIndex={waehlbar ? 0 : -1} role="button" aria-pressed={ist}
               aria-label={waehlbar ? name(k) : `${name(k)} — keine Erlasse`}
-              style={{ fill, stroke: ist ? 'var(--brass-700)' : 'var(--paper)', strokeWidth: ist ? 1.6 : 0.8, opacity: waehlbar ? 1 : 0.45 }}
+              style={{ fill, stroke: ist ? 'var(--brass-700)' : 'var(--paper)', strokeWidth: ist ? 1.6 : 0.8, opacity: waehlbar ? 1 : 0.8 }}
               className={`outline-none transition-[fill] ${waehlbar ? 'cursor-pointer' : 'cursor-default'}`}>
               <title>{name(k)}</title>
             </path>

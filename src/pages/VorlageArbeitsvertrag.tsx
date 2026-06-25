@@ -69,7 +69,7 @@ function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvR
         {REGIME_OPTIONEN.map((o) => (
           <button key={o.id} type="button" onClick={() => onWahl(o.id)}
             aria-pressed={regime === o.id}
-            className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${regime === o.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
+            className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${regime === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
             <span className="font-medium block leading-tight">{o.label}</span>
             <span className="text-ink-500 text-xs">{o.sub}</span>
           </button>

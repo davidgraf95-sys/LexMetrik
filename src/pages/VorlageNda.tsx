@@ -71,12 +71,12 @@ export function VorlageNda() {
           <Field label="Richtung der Geheimhaltung">
             <div className="grid grid-cols-2 gap-2">
               <button type="button" onClick={() => set('gegenseitig', true)}
-                className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.gegenseitig ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.gegenseitig ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                 <span className="font-medium block">Gegenseitig</span>
                 <span className="text-ink-500 text-xs">beide Parteien verpflichtet</span>
               </button>
               <button type="button" onClick={() => set('gegenseitig', false)}
-                className={`rounded-lg border px-3 py-2 text-left text-body-s ${einseitig ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                className={`rounded-lg border px-3 py-2 text-left text-body-s ${einseitig ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                 <span className="font-medium block">Einseitig</span>
                 <span className="text-ink-500 text-xs">nur Partei B verpflichtet</span>
               </button>

@@ -57,7 +57,7 @@ export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; kl
   return (
     <span ref={ref} className="relative">
       <button type="button" onClick={umschalten} aria-expanded={auf} aria-label={`Fussnote ${nr}`}
-        className={`num align-super text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 ${klasse ?? ''}`}>{nr}</button>
+        className={`num align-super text-[0.62em] font-medium text-brass-700 hover:text-brass-800 ${klasse ?? ''}`}>{nr}</button>
       {auf && html && (
         <span role="note" dangerouslySetInnerHTML={{ __html: html }}
           className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
@@ -304,9 +304,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
               blockStark
                 ? 'rounded-md border-l-4 border-brass-500 bg-brass-100 px-3 py-2 text-ink-900'
                 : blockDezent
-                  ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
+                  ? 'rounded-md border-l-2 border-brass-300 bg-brass-100 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-50/60' : ''}`}
+            }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-100/60' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent). Auch ein absatzloser Artikel wird

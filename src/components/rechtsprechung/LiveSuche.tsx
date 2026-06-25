@@ -90,7 +90,7 @@ export function LiveSuche({ initialQ = '' }: { initialQ?: string }) {
         <input
           type="search" value={q} onChange={(e) => setQ(e.target.value)}
           placeholder="Begriff, Norm oder Aktenzeichen …" aria-label="Live-Suchbegriff"
-          className="min-w-0 flex-1 rounded border border-line bg-paper px-3 py-1.5 text-body-s text-ink-900 placeholder:text-ink-400 focus:border-brass-400 focus:outline-none"
+          className="min-w-0 flex-1 rounded border border-line bg-paper px-3 py-1.5 text-body-s text-ink-900 placeholder:text-[var(--placeholder)] focus:border-brass-600 focus:outline-none focus:shadow-[var(--ring)]"
         />
         <div className="inline-flex items-stretch overflow-hidden rounded border border-line" role="group" aria-label="Sortierung">
           {(['relevanz', 'datum'] as const).map((s) => (

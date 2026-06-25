@@ -108,7 +108,7 @@ export function VorlageWerkvertrag() {
               {WERKART_OPTIONEN.map((w) => (
                 <button key={w.id} type="button"
                   onClick={() => set('werkArt', w.id)}
-                  className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.werkArt === w.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                  className={`rounded-lg border px-3 py-2 text-left text-body-s ${a.werkArt === w.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                   <span className="font-medium block">{w.label}</span>
                   <span className="text-ink-500 text-xs">{w.hint}</span>
                 </button>
@@ -123,7 +123,7 @@ export function VorlageWerkvertrag() {
               {PREIS_OPTIONEN.map((p) => (
                 <button key={p.id} type="button"
                   onClick={() => set('preis', p.id)}
-                  className={`rounded-lg border px-3 py-2 text-body-s ${a.preis === p.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700'}`}>
+                  className={`rounded-lg border px-3 py-2 text-body-s ${a.preis === p.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700'}`}>
                   {p.label}
                 </button>
               ))}

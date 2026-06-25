@@ -99,7 +99,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   }
   const fnMarker = fussnotenAuf && fnArtikelEbene.length > 0
     ? <span className="ml-0.5">{fnArtikelEbene.map((nr, i) => (
-        <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-300">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
+        <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
     : null;
   // VERWEISE: im Artikel genannte, auflösbare (Bund-)Normverweise als Chips am
@@ -192,7 +192,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {fussnotenAuf && fussAnzeige.length > 0 && (
             <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
-                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
+                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-400 target:bg-brass-100">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                   {fnTextMitLinks(fn)}
                 </p>
