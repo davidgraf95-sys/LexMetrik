@@ -22,6 +22,19 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — SEO/A11y Welle-1/2-Block: Kontrast, axe-Ausbau, Norm-Rückverlinkung, Tabellen-Semantik, Perf (in `main`, deployt)
+
+Fortsetzung „mach alles / los", David-Entscheide: W3.6 delegiert, W2.1 kompakter Block ok, og:image nein, Tabellen nur pixel-identisch, alles inkl. Perf, **ein** Sammel-Deploy. Eigener Worktree, pro Einheit committet, ein Gate+Deploy am Schluss.
+- **W3.6 Kontrast (delegiert):** `text-ink-400`→`text-ink-500` an 78 Stellen/22 Dateien. ink-400 fiel als Text in BEIDEN Modi unter AA (Light ~3.2:1, Dark 3.43:1) → ink-500 (Light ~4.7, Dark ~5.2). Per axe in hell+dunkel auf **color-contrast=0** verifiziert. `--ink-400`-Token bleibt (dekorativer Summary-Pfeil).
+- **W1.7 axe-Tor 9→13** (Bund-Reader/Rechtsprechung/International). `color-contrast` aus allen BEKANNTE_BEFUNDE entfernt (W3.6 fixte → Tor strenger). **Realer Bug gefixt:** scrollbare Mehrspalten-Tabelle nicht tastaturfokussierbar (WCAG 2.1.1) → `tabIndex`/role/label.
+- **W2.1 Norm-Rückverlinkung:** kompakter «Massgebende Gesetze»-Chip-Block auf `/rechner`+`/vorlagen` (`MassgebendeGesetze` + `massgebendeErlasse` invers, nur snapshot = kein toter Link, §8) → interner Link-Juice auf die Detailseiten; prerendert.
+- **W2.2 Tabellen-Semantik:** ARIA-Rollen (table/row/columnheader/cell) auf die `display:table`-Spans (MehrspaltigeTabelle = 83 reale Tarif-Tabellen + TarifTabelle). **Pixel-neutral** (echtes `<table>` im Phrasing-/`<p>`-Kontext unmöglich → ARIA-Weg; deine „nur pixel-identisch"-Vorgabe erfüllt).
+- **W2.6 Touch:** Favoriten-Button 20→24px (WCAG 2.5.8). (Breiter 2.2-Target-Audit separat — axe-Tags decken 2.5.8 noch nicht.)
+- **W2.8 Perf (verhaltensneutral):** `content-visibility:auto`+`contain-intrinsic-size:auto 320px` pro Reader-Artikel (`.nt-art-cv`). Off-screen-Artikel überspringen Layout/Paint (LCP/INP-Gewinn OR/ZGB ~1099 Art.). **Verifiziert:** 1603 Artikel im DOM, Anker-Sprung #art-700 rendert+scrollt korrekt. KEIN JSON-Split (Suche/Anker/SR/Crawler unberührt, §6.4).
+- **W2.4 Rest:** `<html lang="de-CH">` (war schon im vorigen Block).
+- **W2.3 Tastatur-e2e +3** (Skip-Link, «/»-Suche, Karten-Kanton via Enter). 5/5 grün.
+- Gate voll grün, golden byte-gleich. **OFFEN:** W2.5 Screenreader-Baseline (manuell VoiceOver/NVDA), breiter WCAG-2.2-Target-Size-Audit, W1.12 Search Console (Domain-abhängig).
+
 ## Session 25.6.2026 — W2.4 lang-Attribut (`de-CH`) (in `main`, deployt)
 
 `<html lang="de">` → `<html lang="de-CH">` (WCAG 3.1.1, korrektes Schweizer-Hochdeutsch-Tag; alle prerenderten Detailseiten erben es via Template). Gate grün, golden byte-gleich.
