@@ -312,7 +312,13 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 in der linken Rinne (Hanging Indent). Auch ein absatzloser Artikel wird
                 eingerückt (pl-9) — Auftrag David: einheitliches Schriftbild, als hätte er
                 einen Absatz. Popover (kein zk): hochgestellt/bündig wie bisher (golden §6). */}
-            <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : 'pl-9') : undefined}>
+            {/* Lange deutsche Komposita («Krankenversicherungsaufsichtsverordnung»)
+                sprengten auf schmalem Viewport den negativ eingerückten Absatz
+                (pl-9 -indent-9) → horizontaler Overflow des ganzen Readers (KVV
+                u.a., ~360–414px). overflow-wrap/hyphens brechen das Kompositum,
+                statt es überlaufen zu lassen — wie bereits beim Item-Text (S13).
+                Nur in der Lesesicht (zk); das Popover (kein zk) bleibt byte-gleich. */}
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto ${absMarke != null ? 'pl-9 -indent-9' : 'pl-9'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-400" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
