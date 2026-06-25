@@ -76,7 +76,7 @@ export function massgebendeErlasse(modus: 'rechner' | 'vorlage'): MassgebenderEr
   for (const e of ERLASS_REGISTER) {
     if (e.status !== 'snapshot') continue;
     if (!werkzeugeFuer(e.key).some((w) => w.modus === modus)) continue;
-    out.push({ key: e.key, kuerzel: e.kuerzel, titel: e.titel, pfad: `/gesetze/${e.ebene}/${e.key}` });
+    out.push({ key: e.key, kuerzel: e.kuerzel, titel: e.titel, pfad: `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}` });
   }
   return out;
 }

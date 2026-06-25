@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — WCAG-2.2-Target-Size + UI-Einheitlichkeits-Audit (in `main`, deployt)
+
+Auftrag David: Target-Size-Chips vergrössern → ganze UI auf Einheitlichkeit gegen die Design-Reglemente testen + Befunde umsetzen → Bug/Logik-Check von allem Geänderten → Deploy → Session schliessen.
+- **WCAG 2.2 Target-Size (2.5.8):** `lc-chip` `min-height:24px` (→ alle Chips; **836** Norm-Kürzel-Chip-Verstösse in der Rechtsprechungs-Liste → **0**) + EntscheidLeser-Schriftbuttons A−/A+ `py-1`+`min-h-6` (≥24px). Lese-Passus-Zeilen (Lesefluss) bewusst belassen. Liste dadurch etwas weniger dicht (von David gewählt).
+- **UI-Einheitlichkeits-Audit (3 Opus-Agenten gegen DESIGN-REGLEMENT.md):** harte Regeln sauber (keine rohen Farben/Default-Status/No-op-Klassen; Typo-Skala diszipliniert). Umgesetzt — sichere/bounded Fixes: F7 Inline-Style→Token (KuendigungTimeline/VerzugszinsTimeline/Shell, pixel-identisch), `lc-overline` statt einmaligem `text-overline`+arbitrary tracking (GesetzLeser «Verweise»), Status-Marker «ungeprüft»+Sprachtag in EntscheidZeile → `lc-badge lc-badge-soft` (§8/D3-Konsistenz). **Verifiziert FALSCH & verworfen:** `bg-black/50`→`bg-ink-900/50` (Dark-Scrim-Regression).
+- **Bug-/Logik-Check (2 adversariale Opus-Reviews über `d8d78d1c..HEAD`):** **0 Logik-Bugs, 0 Regressionen** (live Desktop+Mobil+Print+Deep-Link). Härtung: `massgebendeErlasse` `encodeURIComponent` (Konsistenz). Deep-Link-Frisch-Laden mit content-visibility verifiziert (`#art-700` korrekt).
+- Gate voll grün, golden byte-gleich, a11y 13/13.
+- **BACKLOG (breitflächige Neu-Abstraktionen, brauchen visuelle QA pro Stelle, bewusst nicht am Marathon-Ende gerammt):** SelectionGrid-Adoption (~10 Formulare), `lc-segment`-Komponente (~6 Umschalter), Akkordeon-Kopf-Komponente (~5), `leading-reading`-Token + `--rsp-fs`-Fallback-Vereinheitlichung, `Card`-Inline→`<Card>` (3); breiter WCAG-2.2-Target-Size-Audit (axe-Tags auf 2.2 erweitern).
+
 ## Session 26.6.2026 — SEO/A11y Welle-1/2-Block: Kontrast, axe-Ausbau, Norm-Rückverlinkung, Tabellen-Semantik, Perf (in `main`, deployt)
 
 Fortsetzung „mach alles / los", David-Entscheide: W3.6 delegiert, W2.1 kompakter Block ok, og:image nein, Tabellen nur pixel-identisch, alles inkl. Perf, **ein** Sammel-Deploy. Eigener Worktree, pro Einheit committet, ein Gate+Deploy am Schluss.
