@@ -93,8 +93,8 @@ async function main() {
       const legalArea = await holeLegalArea(decisionId(snap));
       verarbeitet[my] = { datei, wrap, snap, legalArea };
       const bund = snap.kanton === 'CH';
-      if (legalArea) { bund ? bundOk++ : kantOk++; }
-      else { bund ? bundNull++ : kantNull++; if (bund) fehlten.push(snap.id); }
+      if (legalArea) { if (bund) bundOk++; else kantOk++; }
+      else { if (bund) bundNull++; else kantNull++; if (bund) fehlten.push(snap.id); }
       process.stdout.write(legalArea ? '.' : (bund ? 'o' : '·'));
     }
   }));
