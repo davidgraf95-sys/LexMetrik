@@ -41,7 +41,6 @@
     --danger-500:#9A3F30; --danger-700:#7A2F23;
     --danger-bg:color-mix(in srgb, var(--danger-500) var(--status-tint), var(--paper));
     /* Semantische Aliase */
-    --accent:var(--brass-500);       /* nur Linien/Icons/grosse Flächen */
     --accent-text:var(--brass-700);  /* Brass-Text & Links (kontraststark) */
     --focus:var(--brass-500);
     /* Abgesetzter Doppelring (Fokus): Papier-Spalt + Messing — auf warmem
@@ -164,7 +163,7 @@
      Echte Kapitälchen (smcp) führen Geist/Geist Mono nicht → Uppercase+Tracking
      der Overlines bleibt; Mediävalziffern im Fliesstext bewusst NICHT (Daten und
      Normzitate sollen versalziffrig bleiben). */
-  .num, .lc-num { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: lining-nums tabular-nums; }
+  .num { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: lining-nums tabular-nums; }
 
   /* «&» in Display-Titeln: ruhige Sans-Glyphe (Geist) statt der
      verschnörkelten Fraunces-Form; leicht reduziert für optischen Ausgleich. */
@@ -297,11 +296,19 @@
     font-size: .75rem; font-weight: 500; padding: 2px 8px;
   }
 
+  /* Glas-Effekt für sticky Chrome (Topbar/TabStreifen) — eine Quelle statt
+     byte-identischem Inline-Style an zwei Stellen. */
+  .lc-glass {
+    background: color-mix(in srgb, var(--paper) 96%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
   .lc-badge {
     @apply inline-flex items-center rounded-full;
     font-size: .75rem; font-weight: 500; padding: 2px 10px;
   }
   .lc-badge-ok { @apply bg-sage-bg text-sage-700; }
+  /* «massgeblich»-Hervorhebung (Messing) — eigene Klasse statt Inline-Override von lc-badge-ok */
+  .lc-badge-massgeblich { @apply bg-brass-100 text-brass-700; }
   .lc-badge-warn { @apply bg-warn-bg text-warn-700; }
   /* Status-Badge «Entwurf» (Katalog): Outline statt Füllung — die Information
      bleibt (§8), die Lautstärke sinkt; das Flächensignal trägt die warn-

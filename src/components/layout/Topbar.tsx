@@ -17,8 +17,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
 }) {
   return (
     <header
-      className="sticky top-0 z-20 border-b border-line"
-      style={{ background: 'color-mix(in srgb, var(--paper) 96%, transparent)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+      className="sticky top-0 z-20 border-b border-line lc-glass"
     >
       <div className="px-4 sm:px-6 h-16 flex items-center gap-3 sm:gap-5">
         {/* Mobil: Schublade öffnen — auf Desktop trägt die persistente Leiste. */}

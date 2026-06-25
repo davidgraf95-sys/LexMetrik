@@ -67,7 +67,7 @@ function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: str
     <div className={`lc-tile ${massgeblich ? 'border-brass-500 border-t-[3px]' : ''}`}>
       <div className="flex items-start justify-between gap-2 mb-1">
         <p className="text-xs text-ink-500">{label}</p>
-        {massgeblich && <span className="lc-badge lc-badge-ok shrink-0" style={{ background: 'var(--brass-100)', color: 'var(--brass-700)' }}>massgeblich</span>}
+        {massgeblich && <span className="lc-badge lc-badge-massgeblich shrink-0">massgeblich</span>}
       </div>
       <p className="text-body-l font-semibold text-ink-900 num">{wert}</p>
       <p className="text-xs text-ink-500 mt-0.5">{sub}</p>

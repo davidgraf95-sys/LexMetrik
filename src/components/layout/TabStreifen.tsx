@@ -134,8 +134,7 @@ export function TabStreifen() {
 
   return (
     <nav aria-label="Geöffnete Reiter" ref={navRef}
-      className="relative sticky top-16 z-10 border-b border-line"
-      style={{ background: 'color-mix(in srgb, var(--paper) 96%, transparent)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
+      className="relative sticky top-16 z-10 border-b border-line lc-glass">
       <div className="flex items-stretch gap-2 px-2 sm:px-4 py-1.5">
         <ul className="flex items-stretch gap-1 overflow-x-auto min-w-0 lc-scroll-x" style={{ scrollSnapType: 'x proximity' }}>
           {gruppen.map(({ kat, items }) => {
