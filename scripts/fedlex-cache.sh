@@ -313,6 +313,18 @@ EINTRAEGE=(
   "fza|cc/2002/243|20201215|0|art_1|0.142.112.681"
   "vrk|cc/1990/1112_1112_1112|20200508|0|art_1|0.111"
   "uno_pakt_ii|cc/1993/750_750_750|20220509|0|art_1|0.103.2"
+  # ── International P2 (25.6.2026): weitere Staatsverträge SR 0.* als Volltext.
+  # ELI/Kons via SPARQL + Filestore-HTML-Gehalt (art_-Anker) je Vertrag verifiziert.
+  "uno_pakt_i|cc/1993/725_725_725|20241128|0|art_1|0.103.1"
+  "krk|cc/1998/2055_2055_2055|20260612|0|art_1|0.107"
+  "cedaw|cc/1999/239|20230419|0|art_1|0.108"
+  "uno_antifolter|cc/1987/1307_1307_1307|20260528|0|art_1|0.105"
+  "heue|cc/2009/381|20230509|0|art_1|0.211.232.1"
+  "haue|cc/2003/99|20250507|0|art_1|0.211.221.311"
+  "pvue|cc/1970/620_620_620|20240109|0|art_1|0.232.04"
+  "icao|cc/63/1377_1378_1381|20251127|0|art_1|0.748.0"
+  "staatenlose|cc/1972/2320_2374_2150|20260522|0|art_1|0.142.40"
+  "gfk|cc/1955/443_461_469|20120614|0|art_1|0.142.30"
 )
 
 fehler=0

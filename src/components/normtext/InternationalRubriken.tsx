@@ -15,7 +15,7 @@ const INTERNATIONAL_GRUPPEN: { id: string; titel: string; lede: string; keys: st
     id: 'menschenrechte',
     titel: 'Menschenrechte',
     lede: 'Die für die Schweiz verbindlichen Menschenrechtsgarantien — wirken über Querverweise in alle nationalen Rechtsgebiete hinein.',
-    keys: ['EMRK', 'UNO_PAKT_II'],
+    keys: ['EMRK', 'UNO_PAKT_II', 'UNO_PAKT_I', 'KRK', 'CEDAW', 'UNO_ANTIFOLTER'],
   },
   {
     id: 'privat-zivil',
@@ -25,9 +25,21 @@ const INTERNATIONAL_GRUPPEN: { id: string; titel: string; lede: string; keys: st
   },
   {
     id: 'rechtshilfe',
-    titel: 'Rechtshilfe (Haager Übereinkommen)',
-    lede: 'Internationale Zusammenarbeit in Zivil- und Handelssachen — Zustellung, Beweisaufnahme und Kindesentführung.',
-    keys: ['HZUE', 'HBEWUE', 'HKUE'],
+    titel: 'Rechtshilfe & Kindes-/Erwachsenenschutz (Haager Übereinkommen)',
+    lede: 'Internationale Zusammenarbeit in Zivil- und Handelssachen — Zustellung, Beweisaufnahme, Kindesentführung, internationale Adoption und Erwachsenenschutz.',
+    keys: ['HZUE', 'HBEWUE', 'HKUE', 'HAUE', 'HEUE'],
+  },
+  {
+    id: 'asyl-migration',
+    titel: 'Asyl & Migration',
+    lede: 'Die völkerrechtlichen Grundlagen des Flüchtlings- und Staatenlosenrechts.',
+    keys: ['GFK', 'STAATENLOSE'],
+  },
+  {
+    id: 'weitere-spezial',
+    titel: 'Weitere Spezialgebiete',
+    lede: 'Gewerblicher Rechtsschutz und internationale Zivilluftfahrt.',
+    keys: ['PVUE', 'ICAO'],
   },
   {
     id: 'schweiz-eu',

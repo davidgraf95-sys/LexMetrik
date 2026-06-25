@@ -312,6 +312,18 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('FZA', 'FZA', 'Abkommen vom 21. Juni 1999 zwischen der Schweiz und der EG und ihren Mitgliedstaaten über die Freizügigkeit (FZA)', '0.142.112.681', 'international', 96),
   bund('VRK', 'VRK', 'Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (VRK)', '0.111', 'international', 97),
   bund('UNO_PAKT_II', 'UNO-Pakt II', 'Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte (UNO-Pakt II)', '0.103.2', 'international', 98),
+  // ── International P2 (25.6.2026): weitere Staatsverträge SR 0.* als Volltext;
+  //    ELI/Kons + Filestore-HTML-Gehalt je Vertrag verifiziert. ──
+  bund('UNO_PAKT_I', 'UNO-Pakt I', 'Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte (UNO-Pakt I)', '0.103.1', 'international', 99),
+  bund('KRK', 'KRK', 'Übereinkommen vom 20. November 1989 über die Rechte des Kindes (Kinderrechtskonvention, KRK)', '0.107', 'international', 100),
+  bund('CEDAW', 'CEDAW', 'Übereinkommen vom 18. Dezember 1979 zur Beseitigung jeder Form von Diskriminierung der Frau (CEDAW)', '0.108', 'international', 101),
+  bund('UNO_ANTIFOLTER', 'UN-Antifolterkonvention', 'Übereinkommen vom 10. Dezember 1984 gegen Folter und andere grausame, unmenschliche oder erniedrigende Behandlung oder Strafe', '0.105', 'international', 102),
+  bund('HEUE', 'HEsÜ', 'Übereinkommen vom 13. Januar 2000 über den internationalen Schutz von Erwachsenen (Haager Erwachsenenschutzübereinkommen)', '0.211.232.1', 'international', 103),
+  bund('HAUE', 'HAdoptÜ', 'Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der internationalen Adoption (Haager Adoptionsübereinkommen)', '0.211.221.311', 'international', 104),
+  bund('PVUE', 'PVÜ', 'Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums (revidiert in Stockholm am 14. Juli 1967)', '0.232.04', 'international', 105),
+  bund('ICAO', 'ICAO-Übk.', 'Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt', '0.748.0', 'international', 106),
+  bund('GFK', 'GFK', 'Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (Genfer Flüchtlingskonvention, GFK)', '0.142.30', 'international', 107),
+  bund('STAATENLOSE', 'Staatenlose', 'Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen', '0.142.40', 'international', 108),
   // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
   //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
   ...BUND_STUBS,

@@ -309,6 +309,17 @@ export const FEDLEX = {
   FZA: 'https://www.fedlex.admin.ch/eli/cc/2002/243/de', // SR 0.142.112.681
   VRK: 'https://www.fedlex.admin.ch/eli/cc/1990/1112_1112_1112/de', // SR 0.111
   UNO_PAKT_II: 'https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de', // SR 0.103.2
+  // ── International P2 (25.6.2026): weitere Staatsverträge SR 0.* ──
+  UNO_PAKT_I: 'https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de', // SR 0.103.1
+  KRK: 'https://www.fedlex.admin.ch/eli/cc/1998/2055_2055_2055/de', // SR 0.107
+  CEDAW: 'https://www.fedlex.admin.ch/eli/cc/1999/239/de', // SR 0.108
+  UNO_ANTIFOLTER: 'https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de', // SR 0.105
+  HEUE: 'https://www.fedlex.admin.ch/eli/cc/2009/381/de', // SR 0.211.232.1
+  HAUE: 'https://www.fedlex.admin.ch/eli/cc/2003/99/de', // SR 0.211.221.311
+  PVUE: 'https://www.fedlex.admin.ch/eli/cc/1970/620_620_620/de', // SR 0.232.04
+  ICAO: 'https://www.fedlex.admin.ch/eli/cc/63/1377_1378_1381/de', // SR 0.748.0
+  STAATENLOSE: 'https://www.fedlex.admin.ch/eli/cc/1972/2320_2374_2150/de', // SR 0.142.40
+  GFK: 'https://www.fedlex.admin.ch/eli/cc/1955/443_461_469/de', // SR 0.142.30
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
