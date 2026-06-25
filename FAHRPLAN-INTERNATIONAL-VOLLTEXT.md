@@ -15,7 +15,20 @@ designen, sodass International gleichwertig abgedeckt ist.
   (EMRK, CISG, LugÜ, HZÜ, HBewÜ, HKÜ, FZA, VRK, UNO-Pakt II) — Quelle
   `scripts/normtext/bund-stubs-generieren.ts` LISTE.
 
-## OFFEN P1 — SR-0.* als Volltext (Groundwork erledigt: ELIs aufgelöst)
+## ERLEDIGT P1 — SR-0.* als Volltext (25.6.2026, LIVE + Prod-verifiziert)
+
+8 von 9 promoviert nur-live-link → Volltext (CISG/LugÜ/HZÜ/HBewÜ/HKÜ/FZA/VRK/
+UNO-Pakt II) via Fedlex-Pipeline (Pins+FEDLEX+register bund()+stub-LISTE bereinigt+
+Manifest). `check:fedlex-versionen` = alle neueste Konsolidierung; adversarial
+Snapshot-Artikel == Live-Fedlex-Anker; Gate grün; golden re-baselined.
+**EMRK (0.101) NICHT promoviert (§8 Live-Link):** Fedlex liefert für die geltende
+Konsolidierung (cc/1974/2151_2151_2151/20050323) nur eine ~9-kB-Shell OHNE
+`<article>`-Anker → kein extrahierbarer Volltext. Für EMRK-Volltext braucht es die
+korrekte (jüngere) Konsolidierung MIT Filestore-HTML — der SPARQL-Resolver gab nur
+die leere Altfassung (Lektion [[lexmetrik-bund-volltext-ausbau]]).
+**P3 (/gesetze-Redesign) ebenfalls erledigt** (International als 3. Säule, deployt).
+
+## OFFEN P1-Rest — Referenz (ELIs, falls Re-Pin/EMRK-Fix nötig)
 
 Geltende Fedlex-ELIs am 25.6.2026 via `npm run fedlex:eli` aufgelöst (Start-Pins;
 **vor dem Pinnen je via `scripts/fedlex-cache.sh` + `check:fedlex-versionen`
