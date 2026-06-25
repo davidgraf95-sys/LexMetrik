@@ -113,13 +113,12 @@ function BundSystematik({ erlasse, hashOffen }: { erlasse: BrowseErlass[]; hashO
   const weitere = erlasse.filter((e) => !zugeordnet.has(e.key));
   const alleIds = [...kategorien.map((k) => k.id), ...(weitere.length ? ['weitere'] : [])];
 
-  // Bund (klein, kuratiert): die als standardOffen markierten geläufigen Kategorien
-  // (Privatrecht/Verfahren/Straf) sind anfangs offen — anders als die Kanton-Ansicht
-  // (alle zu, da Vollkorpus). Ein Sidebar-Deeplink (#sys-<id>) öffnet zusätzlich
-  // seine Zielkategorie (hashOffen, vom Eltern via key= bei Hash-Wechsel frisch
-  // gemountet) und springt sie an (ScrollZuHash in App.tsx).
+  // Bund-Übersicht: standardmässig ALLES eingeklappt (Auftrag David 25.6.2026 —
+  // Kategorien-Überblick auf einen Blick, wie die Kanton-Ansicht). Nur ein
+  // Sidebar-Deeplink (#sys-<id>) öffnet zusätzlich seine Zielkategorie (hashOffen,
+  // vom Eltern via key= bei Hash-Wechsel frisch gemountet) + springt sie an.
   const [offen, setOffen] = useState<Set<string>>(() => {
-    const initial = new Set<string>(SYSTEMATIK.filter((k) => k.standardOffen).map((k) => k.id));
+    const initial = new Set<string>();
     if (hashOffen) initial.add(hashOffen);
     return initial;
   });

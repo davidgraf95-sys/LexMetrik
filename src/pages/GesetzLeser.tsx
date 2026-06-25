@@ -168,9 +168,13 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             </div>
           )}
         </div>
-        {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern. */}
+        {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
+            overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der
+            Artikel-Block (hängender Absatz-Einzug pl-9/-indent-9) NICHT über die
+            Spalte hinausragen → sonst wurde Text rechts abgeschnitten (Befund David
+            25.6.2026). Der Wortumbruch im Absatz (overflow-wrap:anywhere) bleibt. */}
         {artOffen && (
-        <div className="max-w-[46rem]">
+        <div className="max-w-[46rem] min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
             fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}

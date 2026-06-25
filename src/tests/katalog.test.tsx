@@ -168,9 +168,10 @@ describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte A
     expect(html).toContain('Schnellrechner');
     expect(html).toContain('Zeiterfassung');
     expect(html).toContain('Favoriten');
-    // Schnellrechner ruft die ECHTEN Engines: Default-Streitwert ergibt ein
-    // Gebühren-/Zuständigkeits-Kopfergebnis (kein Platzhalter «—»).
-    expect(html).toContain('live hergeleitet');
+    // Schnellrechner rechnet live (der «live hergeleitet»-Badge wurde 25.6.2026
+    // auf Wunsch David als redundant entfernt — der Live-Hinweis im Ergebnisblock
+    // genügt; §6 Ziff. 3 deklarierte fachliche Änderung).
+    expect(html).toContain('Live-Berechnung');
     // Pflichthinweis (§8) bleibt
     expect(html).toContain('Rechtlicher Hinweis');
     // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite
