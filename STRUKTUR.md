@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 (Forts.) — Live-Review-Iteration David + International, je Schritt Gate+Deploy+Push (autonom, David weg)
+
+Daueranweisung David: autonom weiterarbeiten, zwischen den Schritten Bug-Check über den neuen Code, nach jedem Schritt deployen+pushen. Mehrere Einzel-Deploys, jeder Gate-grün:
+- **UI-Fix-Batch** (`31bce32`): Sidebar/Sachgebiet-Labels umbrechen statt abschneiden (David «Tableiste schneidet ab» = Navigations-/Sachgebiet-Leiste, cw=168 truncate); absatzloser Einzug `-indent-9`→`-indent-4` (erste Zeile nicht mehr zu weit links); nda-Titel `overflow-wrap` (Kompositum sprengte 360px). Mobil-Crawl-Befund nda-12px war KEIN Phantom → Wizard-`h1`.
+- **Sticky Gliederung** (`134667f`): GesetzLeser — echte xl-Erkennung (matchMedia 1280); unter xl trägt die sticky Suchleiste einen ☰-Knopf → Gliederungs-**Overlay-Drawer** (analog Seitenleiste), jederzeit beim Lesen erreichbar (vorher scrollte sie oben weg). TOC-Baum als geteilte Variable (§5). Repro: @1000px ☰ sichtbar+öffnet, @1400px 2-Spalten.
+- **Einklapp-Marke deutlich** (`…`): alle 124 Flowtext-Sektionen waren bereits klappbar, aber Chevron zu blass/winzig → Messing-Akzent+grösser (David «analog Fedlex, auch Untergruppen»).
+- **EU-Rubrik** (`ca59859`, LIVE verifiziert): eigene Gruppe «EU-Verordnungen mit Praxisrelevanz» auf `/international` — 8 nur-live-link EU-VO (DSGVO/DSA/DMA/KI-VO/MiCA/Rom I/Rom II/Brüssel Ia), CELEX gegen EUR-Lex geprüft (§7/§8, kein Extraktionsrisiko). Manifest regeneriert (1449 Erlasse).
+- **OFFEN (Groundwork gelegt, bewusst nicht am Budget-Ende gerusht — §1 vor Tempo):** SR-0.*-Verträge als VOLLTEXT (9 ELIs aufgelöst), weitere SR 0.* kuratieren, `/gesetze`-Redesign, Startseiten-Kalender. Alles in **`FAHRPLAN-INTERNATIONAL-VOLLTEXT.md`** (inkl. ELI-Pins + Key-Normalisierungs-Caveat LugÜ→LUGUE).
+
 ## Session 25.6.2026 — Autonomer Sammel-Batch David-Live-Review (Mobil/Lesbarkeit/Vorlagen-Logik/Normtext-Leak/Scroll/Rechtsprechung), Gate grün, Deploy
 
 Auftrag David: «mach was du für richtig empfindest um nochmals alles komplett zu überprüfen», dann eine Reihe konkreter Befunde — alles autonom durchziehen, erst am Schluss melden, Deploy-Ja für die ganze Session. Vorgehen: 4 read-only Opus-Reviewer (Normtext/Vorlagen-Logik/Extraktor-Register/Farben) + eigene Playwright-Repros; je Befund Fix, Gate grün (`npm run gate`: tsc/vitest/golden/lint/check), bund-golden re-baselined. HEAD vorher `61d223a`.
