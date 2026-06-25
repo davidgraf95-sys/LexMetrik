@@ -87,6 +87,14 @@ export function pruefeHaGates(a: HaAntworten): HaGateErgebnis {
   // G3 — Prüfung/Abnahme (Art. 353 OR).
   hinweise.push('Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt Mängel spätestens innert einer Woche bekannt; unterlässt er dies, gilt die Arbeit als abgenommen (Art. 353 OR).');
 
+  // B2-1: Probearbeit (bestimmte Zeit zur Probe, Art. 354 Abs. 1 OR) und
+  // ununterbrochener Dienst (unbestimmte Zeit, Art. 354 Abs. 2 OR) beschreiben
+  // einander ausschliessende Dauer-Regimes; gemeinsam erzeugen sie im Vertrag
+  // widersprüchliche Aussagen (Dauer-Klausel «zur Probe» vs. Hinweis «unbefristet»).
+  if (a.probearbeit && a.ununterbrochen) {
+    warnungen.push('Probearbeit und ununterbrochener Dienst sind zugleich angekreuzt: Die Probearbeit gilt als auf bestimmte Zeit zur Probe (Art. 354 Abs. 1 OR), der ununterbrochene Dienst als auf unbestimmte Zeit (Art. 354 Abs. 2 OR) – bitte klären, welches Regime gelten soll (die Vertrags-Dauerklausel folgt der Probearbeit).');
+  }
+
   // G4 — Lohn bei Verhinderung/Annahmeverzug (Art. 353b OR).
   if (a.ununterbrochen) {
     hinweise.push('Da der Heimarbeitnehmer ununterbrochen im Dienst steht, ist der Lohn bei Annahmeverzug des Arbeitgebers und bei unverschuldeter Verhinderung nach Art. 324 und 324a OR geschuldet; das Arbeitsverhältnis gilt als auf unbestimmte Zeit eingegangen (Art. 353b, 354 Abs. 2 OR).');
