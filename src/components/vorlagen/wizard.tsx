@@ -72,7 +72,10 @@ export function VorlagenWizardRahmen({
   };
 
   return (
-    <div className="space-y-6">
+    // pb-20 mobil (Auftrag David 25.6.2026): der schwebende «Vorschau ↓»-FAB
+    // (fixed bottom-4 right-4) deckte sonst die letzten Felder / den Weiter-
+    // Knopf zu — die Boden-Polsterung lässt sie frei darüber scrollen.
+    <div className="space-y-6 pb-20 md:pb-0">
       {/* Kopf */}
       <div className="space-y-3">
         <Link to={zurueckHref} className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">

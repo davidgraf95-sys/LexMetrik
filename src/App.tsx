@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useRef } from 'react';
+import { Suspense, useEffect, useLayoutEffect, useRef } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
@@ -65,6 +65,10 @@ function AltRouteRedirect() {
 // NICHT an den Anfang springen, sondern dort weitermachen, wo man war. Neue,
 // noch nie besuchte Pfade starten weiterhin oben (keine gespeicherte Position).
 // Trägt die Route einen Anker (#…), übernimmt ScrollZuHash.
+// SSR-sicherer Layout-Effekt (Prerender rendert serverseitig — dort gibt es
+// keinen Layout-Effekt; useEffect ist der harmlose Fallback).
+const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
 function ScrollWiederherstellung() {
   const { pathname, hash } = useLocation();
   const positionen = useRef<Map<string, number>>(new Map());
@@ -89,9 +93,21 @@ function ScrollWiederherstellung() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  // ENDGÜLTIGER Fix Scroll-Reset (Auftrag David 25.6.2026): Pfadwechsel + Sperre
+  // SYNCHRON im Commit setzen — VOR dem ersten Paint und damit vor dem
+  // scroll-Event, das der Browser beim Schrumpfen der Dokumenthöhe (der neue,
+  // noch nicht geladene Reader ist kurz) auslöst. Lag das in einem useEffect
+  // (nach dem Paint), konnte jenes Clamp-scroll-Event noch mit dem ALTEN
+  // aktiv.current feuern und dem VORHERIGEN Gesetz die ~0-Position zuschreiben
+  // → beim Zurückwechseln landete man am Anfang («ab und zu», timing-abhängig;
+  // das war die Wurzel hinter den früheren Teil-Fixes). useLayoutEffect
+  // garantiert die Reihenfolge unabhängig vom Timing.
+  useIsoLayoutEffect(() => {
+    wiederherstellend.current = true;       // Clamp-/Transient-Scrolls NICHT speichern
+    aktiv.current = hash ? '' : pathname;    // ab sofort gehört jeder Save dem NEUEN Pfad
+  }, [pathname, hash]);
   useEffect(() => {
-    aktiv.current = hash ? '' : pathname;
-    if (hash) return; // Anker-Sprung übernimmt ScrollZuHash
+    if (hash) { wiederherstellend.current = false; return; } // Anker-Sprung übernimmt ScrollZuHash
     const gespeichert = positionen.current.get(pathname);
     const ziel = gespeichert ?? 0;
     // Neu besuchter Pfad OHNE gespeicherte Position (Ziel = Anfang): EINMALIG nach
@@ -106,8 +122,9 @@ function ScrollWiederherstellung() {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
       const raf = requestAnimationFrame(() => {
         if (window.scrollY > 0) window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+        wiederherstellend.current = false; // Sperre lösen → ab jetzt wird die Position des neuen Pfads gespeichert
       });
-      return () => cancelAnimationFrame(raf);
+      return () => { cancelAnimationFrame(raf); wiederherstellend.current = false; };
     }
     // Gespeicherte NICHT-Null-Position wiederherstellen (Tab verlassen → zurück):
     // Lazy geladene Seiten (Reader-Chunk + Normtext-JSON erst nach dem Routenwechsel)

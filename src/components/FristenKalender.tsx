@@ -91,9 +91,9 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
     <div className="lc-card p-5 lc-reveal">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 mb-4">
         <p className="lc-overline">Fristenlauf</p>
-        {feiertage && (
-          <p className="lc-overline text-ink-500">Feiertage <span className="text-ink-600">{kanton}</span></p>
-        )}
+        {/* Feiertage-Kopf entfernt (Auftrag David 25.6.2026): redundant zur
+            Legende unten («arbeitsfreie Tage abgeschwächt (Sa/So/Feiertage
+            {kanton})»). Die Abschwächung im Raster bleibt (feiertage-Prop). */}
       </div>
       {/* Die grafische Matrix transportiert ihre Bedeutung nur visuell (Farbe/
           Form/title) — für Screenreader aria-hidden und durch die sr-only-

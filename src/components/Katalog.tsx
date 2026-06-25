@@ -386,11 +386,11 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf }: { kat: Ob
           Einsatzbereite, Geplantes liegt im Sammelblock unten. */}
       {filterAktiv && vorhandeneGebiete.length > 1 && (
         <div className="flex flex-wrap items-center gap-3" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
-          <label className="flex items-center gap-2 text-body-s text-ink-600">
+          <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
             <span>Rechtsgebiet</span>
             <select value={[...aktiveGebiete][0] ?? ''}
               onChange={(e) => setzeFilter(e.target.value ? new Set([e.target.value]) : new Set(), false)}
-              className="lc-select lc-input-sm w-auto min-w-[12rem]">
+              className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[12rem]">
               <option value="">Alle</option>
               {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
             </select>

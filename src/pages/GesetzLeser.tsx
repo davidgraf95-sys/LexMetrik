@@ -685,8 +685,13 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 </div>
               </div>
             )}
-            <button type="button" onClick={() => setTocAuf((v) => !v)} className="xl:hidden text-micro text-brass-700 mb-1">
-              {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
+            {/* Deutlich sichtbarer Gliederungs-Öffner unter xl / bei geteiltem
+                Bildschirm (Auftrag David 25.6.2026): vorher nur winzige text-micro-
+                Zeile, leicht zu übersehen → jetzt klarer Button mit ☰-Symbol, damit
+                die Gliederung auch bei schmaler/geteilter Breite aufrufbar bleibt. */}
+            <button type="button" onClick={() => setTocAuf((v) => !v)} aria-expanded={tocAuf}
+              className="xl:hidden lc-btn-outline lc-btn-sm mb-2 inline-flex items-center gap-1.5">
+              <span aria-hidden>☰</span>{tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
             <div className="mb-2 hidden xl:flex items-baseline justify-between shrink-0">
               <p className="lc-overline">Gliederung</p>

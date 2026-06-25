@@ -191,7 +191,7 @@ export function VerzugszinsForm() {
 
       {/* Teilzahlungen & Satzänderungen */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
           <div className="flex gap-2">
             <button type="button" onClick={() => addRow('teilzahlung')} className="lc-btn-outline lc-btn-sm">+ Teilzahlung</button>
