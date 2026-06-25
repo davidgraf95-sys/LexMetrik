@@ -220,7 +220,11 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
         {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
         <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          <span className="text-ink-300 text-[0.6rem] shrink-0 w-3">{offen ? '▾' : '▸'}</span>
+          {/* Einklapp-Marke deutlich (analog Fedlex, Auftrag David): jede Stufe
+              inkl. Untergruppe ist klappbar — vorher war das Chevron zu blass/winzig,
+              darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
+              Steuerelement erkennbar. */}
+          <span className={`shrink-0 w-4 text-sm transition-colors ${offen ? 'text-brass-600' : 'text-ink-400'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
           <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
           {bereich && <span className="num shrink-0 text-[0.78rem] font-normal text-ink-400">{bereich}</span>}
         </span>
