@@ -1,0 +1,1906 @@
+{
+ "erzeugt": "2026-06-25",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Zweck"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    }
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Kapitel: Gemeinsame Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 952.0",
+     "links": [
+      {
+       "label": "SR 952.0",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "5",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 31. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3909).",
+     "links": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "6",
+     "text": "SR 954.1",
+     "links": [
+      {
+       "label": "SR 954.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "7",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 31. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3909).",
+     "links": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "8",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 31. Okt. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 3909).",
+     "links": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "nr": "9",
+     "text": "SR 951.31",
+     "links": [
+      {
+       "label": "SR 951.31",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "nr": "10",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "11",
+     "text": "SR 961.01",
+     "links": [
+      {
+       "label": "SR 961.01",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "12",
+     "text": "SR 831.40",
+     "links": [
+      {
+       "label": "SR 831.40",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "13",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    },
+    {
+     "nr": "14",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    },
+    {
+     "nr": "15",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "i"
+    },
+    {
+     "nr": "16",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "j"
+    },
+    {
+     "nr": "17",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013 (AS 2013 1987). Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "k"
+    },
+    {
+     "nr": "18",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013 (AS 2013 1987). Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "l"
+    },
+    {
+     "nr": "19",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013 (AS 2013 1987). Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "m"
+    },
+    {
+     "nr": "20",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013 (AS 2013 1987). Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "nr": "21",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "o"
+    },
+    {
+     "nr": "22",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "p"
+    },
+    {
+     "nr": "23",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013 (AS 2013 1987). Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "q"
+    },
+    {
+     "nr": "24",
+     "text": "SR 952.03",
+     "links": [
+      {
+       "label": "SR 952.03",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
+      }
+     ],
+     "absatz": "1",
+     "item": "q"
+    },
+    {
+     "nr": "25",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "r"
+    },
+    {
+     "nr": "26",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "1",
+     "item": "s"
+    },
+    {
+     "nr": "27",
+     "text": "Rechnungslegungsverordnung-FINMA vom 31. Oktober 2019 (SR 952.024.1) sowie FINMA-Rundschreiben 2020/1 vom 31. Oktober 2019 betreffend Rechnungslegung ‒ Banken.",
+     "links": [
+      {
+       "label": "SR 952.024.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2019/760"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 2. Juli 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4627).",
+     "links": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand"
+   ],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    }
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze der Datenerhebung"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Erhebungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 10. Juni 2013, mit Wirkung seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Zusatzerhebungen"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Geltungsbereich"
+    }
+   ],
+   "marginalie": [
+    "Anhörung der Auskunftspflichtigen"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Durchführung der Erhebungen"
+    }
+   ],
+   "marginalie": [
+    "Mitwirkung der Befragten"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Durchführung der Erhebungen"
+    }
+   ],
+   "marginalie": [
+    "Beizug von Dritten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "SR 235.11. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Sept. 2023 angepasst.",
+     "links": [
+      {
+       "label": "SR 235.11",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
+      },
+      {
+       "label": "SR 170.512",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Durchführung der Erhebungen"
+    }
+   ],
+   "marginalie": [
+    "Form der Meldungen"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Kapitel: Statistische Erhebungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Durchführung der Erhebungen"
+    }
+   ],
+   "marginalie": [
+    "Vertraulichkeit und Datenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "32",
+     "text": "SR 152.1",
+     "links": [
+      {
+       "label": "SR 152.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1999/354"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Anrechenbare Aktiven"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Massgebliche Verbindlichkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "33",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 7. Mai 2014, in Kraft seit 1. Jan. 2015 (AS 2014 3023).",
+     "links": [
+      {
+       "label": "AS 2014 3023",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/511"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "34",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 11. April 2024, in Kraft seit 1. Juli 2024 (AS 2024 232).",
+     "links": [
+      {
+       "label": "AS 2024 232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/232"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "35",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 31. Okt. 2019, mit Wirkung seit 1. Jan. 2020 (AS 2019 3909).",
+     "links": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "36",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 31. Okt. 2019, mit Wirkung seit 1. Jan. 2020 (AS 2019 3909).",
+     "links": [
+      {
+       "label": "AS 2019 3909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/706"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "Rechnungslegungsverordnung-FINMA vom 31. Oktober 2019 (SR 952.024.1) sowie FINMA-Rundschreiben 2020/1 vom 31. Oktober 2019 betreffend Rechnungslegung ‒ Banken.",
+     "links": [
+      {
+       "label": "SR 952.024.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2019/760"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "38",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 2. Juli 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4627).",
+     "links": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 2. Juli 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4627).",
+     "links": [
+      {
+       "label": "AS 2020 4627",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/827"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Höhe der Mindestreserve und Erfüllung des Mindestreserveerfordernisses"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 11. April 2024, in Kraft seit 1. Juli 2024 (AS 2024 232).",
+     "links": [
+      {
+       "label": "AS 2024 232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/232"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Nachweispflicht"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Mindestreserven"
+    }
+   ],
+   "marginalie": [
+    "Zinspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 3. Sept. 2009, in Kraft seit 1. Jan. 2010 (AS 2009 6373).",
+     "links": [
+      {
+       "label": "AS 2009 6373",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/780"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bestimmung der systemisch bedeutsamen Finanzmarktinfrastrukturen und Geschäftsprozesse"
+    }
+   ],
+   "marginalie": [
+    "Offenlegungspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bestimmung der systemisch bedeutsamen Finanzmarktinfrastrukturen und Geschäftsprozesse"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bestimmung der systemisch bedeutsamen Finanzmarktinfrastrukturen und Geschäftsprozesse"
+    }
+   ],
+   "marginalie": [
+    "Kriterien für systemisch bedeutsame Finanzmarktinfrastrukturen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "45",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Unternehmensführung und Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Vertragliche Grundlagen"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Zugang und Ausschluss"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Zahlungsmittel"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Aufrechterhaltung und Beendigung systemisch bedeutsamer Geschäftsprozesse"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze des Risikomanagements"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der Kreditrisiken"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der Liquiditätsrisiken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "SR 958.11",
+     "links": [
+      {
+       "label": "SR 958.11",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/854"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "64",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "65",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der Verwahrungs- und Anlagerisiken"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der allgemeinen Geschäftsrisiken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "66",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der operationellen Risiken"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der Risiken aus indirekter Teilnahme"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Management der Risiken aus Verbindungen zwischen Finanzmarktinfrastrukturen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "69",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    }
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Beurteilung der Einhaltung der besonderen Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Auskunftspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "71",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "70",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Beurteilung der Einhaltung der besonderen Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Berichterstattungs- und Informationspflicht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "72",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "n"
+    },
+    {
+     "nr": "74",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Beurteilung der Einhaltung der besonderen Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Prüfungen vor Ort"
+   ],
+   "fussnoten": [
+    {
+     "nr": "75",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Beurteilung der Einhaltung der besonderen Anforderungen"
+    }
+   ],
+   "marginalie": [
+    "Verfahren bei Nichteinhalten von besonderen Anforderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "77",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "78",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Beurteilung der Einhaltung der besonderen Anforderungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "79",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Kapitel: Kontrolle"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "80",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "81",
+     "text": "SR 956.1",
+     "links": [
+      {
+       "label": "SR 956.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "82",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "83",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Kapitel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Inkrafttreten"
+   ]
+  },
+  "20_a_21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Abschnitt: Bestimmung der systemisch bedeutsamen Finanzmarktinfrastrukturen und Geschäftsprozesse"
+    }
+   ],
+   "marginalie": []
+  },
+  "21_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Anwendbarkeit der besonderen Anforderungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "48",
+     "text": "Eingefügt durch Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "SR 958.1",
+     "links": [
+      {
+       "label": "SR 958.1",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "46",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1987).",
+     "links": [
+      {
+       "label": "AS 2013 1987",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Verwaltungsrat, Geschäftsführung und interne Revision"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "22_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Dokumentation und Aufbewahrung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "52",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "23_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Transparenz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "53",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "54",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "h"
+    }
+   ]
+  },
+  "24_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Ausfall eines Teilnehmers"
+   ]
+  },
+  "24_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "55",
+     "text": "Aufgehoben durch Ziff. I der V der SNB vom 26. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Finalität"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "25_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Abwicklung wechselseitiger Verpflichtungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Zentralverwahrer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "28_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Sicherheiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "28_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Finanzmittel und Wasserfallprinzip einer zentralen Gegenpartei"
+   ]
+  },
+  "28_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Berechnung der Einschusszahlungen einer zentralen Gegenpartei"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "62",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "28_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Risikokontrolle einer zentralen Gegenpartei"
+   ]
+  },
+  "32_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Informationssicherheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": "3",
+     "item": "j"
+    }
+   ]
+  },
+  "32_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Geschäftskontinuität"
+   ]
+  },
+  "32_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Rechenzentren"
+   ]
+  },
+  "32_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Kapitel: Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Besondere Anforderungen für systemisch bedeutsame Finanzmarktinfrastrukturen"
+    }
+   ],
+   "marginalie": [
+    "Auslagerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "68",
+     "text": "Fassung gemäss Ziff. I der V der SNB vom 26. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5307).",
+     "links": [
+      {
+       "label": "AS 2015 5307",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/850"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ }
+}

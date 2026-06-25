@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-19",
+ "erzeugt": "2026-06-25",
  "artikel": {
   "1": {
    "gliederung": [
@@ -165,7 +165,7 @@
       }
      ],
      "absatz": "1",
-     "item": "a"
+     "item": "abis"
     },
     {
      "nr": "9",
@@ -1833,7 +1833,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": null
     }
    ]
@@ -2127,7 +2127,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/95"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -2143,7 +2143,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": "c"
     },
     {
@@ -2387,7 +2387,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
@@ -2491,7 +2491,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": "a"
     },
     {
@@ -2507,7 +2507,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": "b"
     },
     {
@@ -3055,7 +3055,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null,
+     "absatz": "6bis",
      "item": null
     },
     {
@@ -3228,7 +3228,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
@@ -3244,7 +3244,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": null
     },
     {
@@ -3260,7 +3260,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null,
+     "absatz": "4ter",
      "item": null
     }
    ]
@@ -3972,7 +3972,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/555"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     }
    ]
@@ -4671,7 +4671,7 @@
       }
      ],
      "absatz": "2",
-     "item": "b"
+     "item": "bbis"
     },
     {
      "nr": "185",
@@ -6231,7 +6231,7 @@
       }
      ],
      "absatz": "2",
-     "item": "a"
+     "item": "abis"
     },
     {
      "nr": "252",
@@ -8720,7 +8720,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -10297,7 +10297,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -11354,7 +11354,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null,
+     "absatz": "6bis",
      "item": null
     },
     {
@@ -12512,7 +12512,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -13811,7 +13811,7 @@
       }
      ],
      "absatz": "1",
-     "item": "c"
+     "item": "cbis"
     },
     {
      "nr": "342",
@@ -13827,7 +13827,7 @@
       }
      ],
      "absatz": "1",
-     "item": "f"
+     "item": "fbis"
     },
     {
      "nr": "343",
@@ -14117,8 +14117,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "g"
     }
    ]
   },
@@ -17142,7 +17142,7 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": "b"
     },
     {
      "nr": "50",
@@ -17158,7 +17158,7 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": "c"
     },
     {
      "nr": "51",
@@ -18146,8 +18146,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "5",
+     "item": "b"
     },
     {
      "nr": "108",
@@ -18303,7 +18303,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null,
+     "absatz": "6bis",
      "item": null
     },
     {
@@ -18319,7 +18319,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null,
+     "absatz": "7bis",
      "item": null
     }
    ]

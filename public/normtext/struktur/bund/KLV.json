@@ -1,0 +1,5849 @@
+{
+ "erzeugt": "2026-06-25",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Vergütungspflicht"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "links": [
+      {
+       "label": "AS 2020 529",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > ärztliche Leistungen",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Ärztliche Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Ärztliche Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "Kostenübernahme"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Von Chiropraktoren und Chiropraktorinnen verordnete Leistungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 5283).",
+     "links": [
+      {
+       "label": "AS 2003 5283",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2003/775"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "19",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "20",
+     "text": "Fassung gemäss Anhang 6 Ziff. II 5 der Arzneimittelverordnung vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3577).",
+     "links": [
+      {
+       "label": "AS 2018 3577",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/588"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "21",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "links": [
+      {
+       "label": "AS 2019 1931",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "22",
+     "text": "Berichtigung vom 16. Dez. 2025 (AS 2025 845).",
+     "links": [
+      {
+       "label": "AS 2025 845",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/845"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "23",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "links": [
+      {
+       "label": "AS 2019 1931",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    },
+    {
+     "nr": "24",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "links": [
+      {
+       "label": "AS 2022 840",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "25",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "26",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juli 2000 (AS 2000 2546). Fassung gemäss Ziff. I der V des EDI vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1925).",
+     "links": [
+      {
+       "label": "AS 2000 2546",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/406"
+      },
+      {
+       "label": "AS 2013 1925",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/414"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "27",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Physiotherapie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 885).",
+     "links": [
+      {
+       "label": "AS 2021 885",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/885"
+      }
+     ],
+     "absatz": "1",
+     "item": "8"
+    },
+    {
+     "nr": "41",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Okt. 2009, in Kraft seit 1. Jan. 2010 (AS 2009 6083).",
+     "links": [
+      {
+       "label": "AS 2009 6083",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/744"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "1",
+     "item": "6"
+    },
+    {
+     "nr": "43",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "44",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "1ter",
+     "item": null
+    },
+    {
+     "nr": "45",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "46",
+     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS 2002 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2002 4253",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/692"
+      },
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "SR 831.20",
+     "links": [
+      {
+       "label": "SR 831.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS 2008 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2008 6493",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/885"
+      },
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Ergotherapie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "49",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "50",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "links": [
+      {
+       "label": "AS 1997 564",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "51",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS 2002 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2002 4253",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/692"
+      },
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "SR 831.20",
+     "links": [
+      {
+       "label": "SR 831.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "54",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS 2008 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2008 6493",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/885"
+      },
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Umschreibung des Leistungsbereichs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "56",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "57",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "58",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "59",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "60",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "links": [
+      {
+       "label": "AS 2006 5769",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "61",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "links": [
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "62",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": "2",
+     "item": "1"
+    },
+    {
+     "nr": "63",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "links": [
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      }
+     ],
+     "absatz": "2",
+     "item": "3"
+    },
+    {
+     "nr": "64",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "links": [
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      }
+     ],
+     "absatz": "2",
+     "item": "7"
+    },
+    {
+     "nr": "65",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "links": [
+      {
+       "label": "AS 2006 5769",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
+      }
+     ],
+     "absatz": "2",
+     "item": "13"
+    },
+    {
+     "nr": "66",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "links": [
+      {
+       "label": "AS 2006 5769",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
+      }
+     ],
+     "absatz": "2",
+     "item": "14"
+    },
+    {
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "links": [
+      {
+       "label": "AS 2006 5769",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
+      }
+     ],
+     "absatz": "2",
+     "item": "2"
+    },
+    {
+     "nr": "68",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006 (AS 2006 5769). Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "links": [
+      {
+       "label": "AS 2006 5769",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
+      },
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "nr": "69",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": "2ter",
+     "item": null
+    },
+    {
+     "nr": "70",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS 1997 2039). Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 1997 2039",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2039_2039_2039"
+      },
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "71",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Ärztlicher Auftrag oder ärztliche Anordnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "77",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "78",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "79",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "80",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    }
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Abrechnung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "88",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "101",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. April 2020 (AS 2020 519).",
+     "links": [
+      {
+       "label": "AS 2020 519",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/98"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "102",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Logopädie"
+    }
+   ],
+   "marginalie": [
+    "Voraussetzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "103",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS 2016 2537).",
+     "links": [
+      {
+       "label": "AS 2016 2537",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/396"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "104",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "111",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "112",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Besondere Leistungen bei Mutterschaft"
+    }
+   ],
+   "marginalie": [
+    "Kontrolluntersuchungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "156",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "157",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 885).",
+     "links": [
+      {
+       "label": "AS 2021 885",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/885"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "158",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "159",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "160",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": null,
+     "item": "bbis"
+    },
+    {
+     "nr": "161",
+     "text": "SR 810.12",
+     "links": [
+      {
+       "label": "SR 810.12",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9232"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "162",
+     "text": "Das Dokument ist einsehbar unter www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "163",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": null,
+     "item": "bter"
+    },
+    {
+     "nr": "164",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "165",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "166",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "links": [
+      {
+       "label": "AS 2020 6327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Besondere Leistungen bei Mutterschaft"
+    }
+   ],
+   "marginalie": [
+    "Geburtsvorbereitung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "167",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Besondere Leistungen bei Mutterschaft"
+    }
+   ],
+   "marginalie": [
+    "Stillberatung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "168",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "169",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Besondere Leistungen bei Mutterschaft"
+    }
+   ],
+   "marginalie": [
+    "Leistungen der Hebammen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "170",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "171",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "172",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "links": [
+      {
+       "label": "AS 2019 1931",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
+      }
+     ],
+     "absatz": "1",
+     "item": "abis"
+    }
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Zahnärztliche Behandlungen"
+    }
+   ],
+   "marginalie": [
+    "Erkrankungen des Kausystems"
+   ],
+   "fussnoten": [
+    {
+     "nr": "173",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Zahnärztliche Behandlungen"
+    }
+   ],
+   "marginalie": [
+    "Allgemeinerkrankungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "174",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "175",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "176",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "177",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 9. Juli 1998, mit Wirkung seit 1. Jan. 1999 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "178",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 7151).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      },
+      {
+       "label": "AS 2017 7151",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/773"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Zahnärztliche Behandlungen"
+    }
+   ],
+   "marginalie": [
+    "Zahnärztliche Behandlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "179",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "180",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "181",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "182",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "191",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "links": [
+      {
+       "label": "AS 2021 347",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "192",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Anmeldung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "198",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Jan. 2008 (AS 2007 3581).",
+     "links": [
+      {
+       "label": "AS 2007 3581",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Limitierungen"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Anforderungen"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Höhe der Vergütung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "199",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "links": [
+      {
+       "label": "AS 2021 347",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "200",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "6",
+     "item": null
+    }
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Beitrag an die Kosten von Badekuren sowie an Transport- und Rettungskosten"
+    }
+   ],
+   "marginalie": [
+    "Beitrag an die Kosten von Badekuren"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Beitrag an die Kosten von Badekuren sowie an Transport- und Rettungskosten"
+    }
+   ],
+   "marginalie": [
+    "Beitrag an die Transportkosten"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: Beitrag an die Kosten von Badekuren sowie an Transport- und Rettungskosten"
+    }
+   ],
+   "marginalie": [
+    "Beitrag an die Rettungskosten"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Analysenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "201",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "202",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 10. Juli 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2546).",
+     "links": [
+      {
+       "label": "AS 2000 2546",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/406"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "203",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > Analysenliste (AL)",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "204",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "links": [
+      {
+       "label": "AS 2020 529",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "205",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "links": [
+      {
+       "label": "AS 2021 347",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Arzneimittelliste mit Tarif"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "206",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS 1996 1232).",
+     "links": [
+      {
+       "label": "AS 1996 1232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "207",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "208",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > Arzneimittel > Arzneimittelliste mit Tarif (ALT)",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "209",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "links": [
+      {
+       "label": "AS 2020 529",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "210",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "211",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "212",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "213",
+     "text": "Aufgehoben durch Ziff. II 2 der V des EDI vom 26. Okt. 2001, mit Wirkung seit 1. Jan. 2002 (AS 2001 3397).",
+     "links": [
+      {
+       "label": "AS 2001 3397",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/514"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Aufnahmeverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "221",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "222",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "223",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "224",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "225",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "2",
+     "item": "abis"
+    },
+    {
+     "nr": "226",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "nr": "227",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "SR 812.21",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Wirksamkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "234",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Zweckmässigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "235",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "236",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "237",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Ausserordentliche Massnahme zur Eindämmung der Kostenentwicklung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "260",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2024, verlängert bis zum 31. Dez. 2025 und bis zum 31. Dez. 2026 (AS 2023 571, 807 Ziff. IV Abs. 5; AS 2024 788 Ziff. III Abs. 2; 2025 851 Ziff. III Abs. 3).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      },
+      {
+       "label": "807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      },
+      {
+       "label": "AS 2024 788",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/788"
+      },
+      {
+       "label": "2025 851",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Wirtschaftlichkeitsbeurteilung während der ersten 15 Jahre"
+   ],
+   "fussnoten": [
+    {
+     "nr": "264",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "265",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "266",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2013, in Kraft seit 1. Juni 2013 (AS 2013 1357).",
+     "links": [
+      {
+       "label": "AS 2013 1357",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/319"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Aufnahmebedingungen nach Patentablauf"
+   ],
+   "fussnoten": [
+    {
+     "nr": "267",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Vertriebsanteil"
+   ],
+   "fussnoten": [
+    {
+     "nr": "276",
+     "text": "Ursprünglich: Art. 35a. Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS 2000 3088). Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Juli 2024 (AS 2023 773). Siehe auch die UeB am Schluss des Textes.",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      },
+      {
+       "label": "AS 2023 773",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Voraussetzungen der Leistungserbringung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: …"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "282",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Juli 2002, mit Wirkung seit 1. Juli 2002 (AS 2002 3013).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Voraussetzungen der Leistungserbringung"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: …"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "283",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 23. Juni 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Voraussetzungen der Leistungserbringung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: …"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "284",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. Juni 1999, mit Wirkung seit 1. Jan. 2000 (AS 1999 2517).",
+     "links": [
+      {
+       "label": "AS 1999 2517",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/399"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Voraussetzungen der Leistungserbringung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Laboratorien"
+    }
+   ],
+   "marginalie": [
+    "Aus- und Weiterbildung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "285",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "links": [
+      {
+       "label": "AS 2025 851",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "286",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > Analysenliste (AL) > Laboratorien und Laborleiter > Weitere Informationen > Dokumente > Anforderungen an die Hochschulausbildung.",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "287",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "links": [
+      {
+       "label": "AS 2025 851",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "288",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "nr": "289",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "290",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. April 2007, mit Wirkung seit 1. April 2007 (AS 2007 1367).",
+     "links": [
+      {
+       "label": "AS 2007 1367",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/227"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Voraussetzungen der Leistungserbringung"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Laboratorien"
+    }
+   ],
+   "marginalie": [
+    "Weitergehende Anforderungen im Bereich der medizinischen Genetik"
+   ],
+   "fussnoten": [
+    {
+     "nr": "291",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "292",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "293",
+     "text": "SR 810.12",
+     "links": [
+      {
+       "label": "SR 810.12",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9232"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "294",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    }
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "295",
+     "text": "[AS 1965 127; 1970 949; 1971 1714; 1986 1487 Ziff. II]",
+     "links": [
+      {
+       "label": "AS 1965 127",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/127_131_131"
+      },
+      {
+       "label": "1970 949",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1970/949_949_949"
+      },
+      {
+       "label": "1971 1714",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1714_1719_1719"
+      },
+      {
+       "label": "1986 1487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "296",
+     "text": "[AS 1965 425; 1968 1012; 1974 688; 1986 891]",
+     "links": [
+      {
+       "label": "AS 1965 425",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/425_429_423"
+      },
+      {
+       "label": "1968 1012",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/1012_1052_968"
+      },
+      {
+       "label": "1974 688",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/688_688_688"
+      },
+      {
+       "label": "1986 891",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/891_891_891"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "297",
+     "text": "[AS 1965 613; 1986 1487 Ziff. II]",
+     "links": [
+      {
+       "label": "AS 1965 613",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/613_619_612"
+      },
+      {
+       "label": "1986 1487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "298",
+     "text": "[AS 1965 1199; 1986 1487 Ziff. II; 1988 973]",
+     "links": [
+      {
+       "label": "AS 1965 1199",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/1199_1211_1201"
+      },
+      {
+       "label": "1986 1487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
+      },
+      {
+       "label": "1988 973",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1988/973_973_973"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "299",
+     "text": "[AS 1965 1201; 1968 798; 1971 1262; 1986 1487 Ziff. II; 1988 2012; 1993 349; 1995 890]",
+     "links": [
+      {
+       "label": "AS 1965 1201",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/1201_1213_1202"
+      },
+      {
+       "label": "1968 798",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/798_838_754"
+      },
+      {
+       "label": "1971 1262",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1262_1258_1258"
+      },
+      {
+       "label": "1986 1487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
+      },
+      {
+       "label": "1988 2012",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1988/2012_2012_2012"
+      },
+      {
+       "label": "1993 349",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/349_349_349"
+      },
+      {
+       "label": "1995 890",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/890_890_890"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "nr": "300",
+     "text": "[AS 1986 87]",
+     "links": [
+      {
+       "label": "AS 1986 87",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/87_87_87"
+      }
+     ],
+     "absatz": null,
+     "item": "f"
+    },
+    {
+     "nr": "301",
+     "text": "[AS 1991 519; 1995 891]",
+     "links": [
+      {
+       "label": "AS 1991 519",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/519_519_519"
+      },
+      {
+       "label": "1995 891",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/891_891_891"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    },
+    {
+     "nr": "302",
+     "text": "[AS 1968 1496; 1986 1487]",
+     "links": [
+      {
+       "label": "AS 1968 1496",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/1496_1543_1463"
+      },
+      {
+       "label": "1986 1487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
+      }
+     ],
+     "absatz": null,
+     "item": "h"
+    },
+    {
+     "nr": "303",
+     "text": "[AS 1990 127; 1991 959; 1994 765]",
+     "links": [
+      {
+       "label": "AS 1990 127",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1990/127_127_127"
+      },
+      {
+       "label": "1991 959",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/959_959_959"
+      },
+      {
+       "label": "1994 765",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/765_765_765"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    },
+    {
+     "nr": "304",
+     "text": "[AS 1989 374; 1995 750, 3688]",
+     "links": [
+      {
+       "label": "AS 1989 374",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1989/374_374_374"
+      },
+      {
+       "label": "1995 750",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/750_750_750"
+      },
+      {
+       "label": "3688",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/3688_3688_3688"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    }
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "305",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 27. Nov. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "306",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS 1996 1232).",
+     "links": [
+      {
+       "label": "AS 1996 1232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "307",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 15. Jan. 1996, mit Wirkung seit 1. Mai 1996 (AS 1996 909).",
+     "links": [
+      {
+       "label": "AS 1996 909",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/909_909_909"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "308",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 26. Febr. 1996, mit Wirkung seit 1. Juni 1996 (AS 1996 1232).",
+     "links": [
+      {
+       "label": "AS 1996 1232",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "11_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Neuropsychologie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "106",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "105",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Juli 2017 (AS 2016 4933).",
+     "links": [
+      {
+       "label": "AS 2016 4933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "6. Abschnitt: Psychologische Psychotherapie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "108",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "links": [
+      {
+       "label": "AS 2022 840",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "109",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "links": [
+      {
+       "label": "AS 2022 840",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
+      }
+     ],
+     "absatz": "3bis",
+     "item": null
+    },
+    {
+     "nr": "107",
+     "text": "Eingefügt durch Ziff. I der V vom 19. März 2021 (AS 2021 189). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Juli 2022 (AS 2021 440). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "links": [
+      {
+       "label": "AS 2021 189",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/189"
+      },
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "7. Abschnitt: Podologie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "110",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. Mai 2021 (AS 2021 324). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 324",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/324"
+      },
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Prophylaktische Impfungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "113",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS 2007 6839). Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      },
+      {
+       "label": "AS 2025 851",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "114",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "115",
+     "text": "Berichtigung vom 11. Mai 2026 (AS 2026 209).",
+     "links": [
+      {
+       "label": "AS 2026 209",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/209"
+      }
+     ],
+     "absatz": "1",
+     "item": "t"
+    }
+   ]
+  },
+  "12_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Massnahmen zur Prophylaxe von Krankheiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "116",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS 2007 6839). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      },
+      {
+       "label": "AS 2022 840",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "117",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS 2009 2821). Fassung gemäss Ziff. I der V des EDI vom 20. Nov. 2014, in Kraft seit 1. Jan. 2015 (AS 2014 4393).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      },
+      {
+       "label": "AS 2014 4393",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/724"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "118",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "119",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS 2009 2821). Fassung gemäss Ziff. I der V des EDI vom 31. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2669).",
+     "links": [
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      },
+      {
+       "label": "AS 2011 2669",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/370"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "120",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "121",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011 (AS 2011 6487). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "links": [
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      },
+      {
+       "label": "AS 2025 419",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "nr": "122",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "123",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "links": [
+      {
+       "label": "AS 2021 392",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
+      }
+     ],
+     "absatz": null,
+     "item": "f"
+    },
+    {
+     "nr": "124",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022 (AS 2022 369). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "links": [
+      {
+       "label": "AS 2022 369",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
+      },
+      {
+       "label": "AS 2025 419",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    },
+    {
+     "nr": "125",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "126",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "127",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "128",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "129",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "130",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 369).",
+     "links": [
+      {
+       "label": "AS 2022 369",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
+      }
+     ],
+     "absatz": null,
+     "item": "h"
+    },
+    {
+     "nr": "131",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "132",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. Nov. 2023 (AS 2023 807). Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS 2024 303).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      },
+      {
+       "label": "AS 2024 303",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/303"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    },
+    {
+     "nr": "133",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref .",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    }
+   ]
+  },
+  "12_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Untersuchungen des allgemeinen Gesundheitszustandes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "134",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "135",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 25. Nov. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4639).",
+     "links": [
+      {
+       "label": "AS 2016 4639",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/750"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "136",
+     "text": "Die Checklisten sind einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "12_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Massnahmen zur frühzeitigen Erkennung von Krankheiten bei bestimmten Risikogruppen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "137",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "138",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Jan. 2019, in Kraft seit 1. März 2019 (AS 2019 439).",
+     "links": [
+      {
+       "label": "AS 2019 439",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/78"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "139",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "140",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "141",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 7151).",
+     "links": [
+      {
+       "label": "AS 2017 7151",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/773"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "nr": "142",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "links": [
+      {
+       "label": "AS 2020 6327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "143",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "144",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": "1",
+     "item": "2"
+    },
+    {
+     "nr": "145",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": "1",
+     "item": "2"
+    },
+    {
+     "nr": "146",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": "1",
+     "item": "2"
+    },
+    {
+     "nr": "147",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "links": [
+      {
+       "label": "AS 2011 6487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "148",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS 2016 2537).",
+     "links": [
+      {
+       "label": "AS 2016 2537",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/396"
+      }
+     ],
+     "absatz": "1",
+     "item": "g"
+    },
+    {
+     "nr": "149",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 17. Juni 2015, in Kraft seit 15. Juli 2015 (AS 2015 2197).",
+     "links": [
+      {
+       "label": "AS 2015 2197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/406"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "12_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Massnahmen der Prävention"
+    }
+   ],
+   "marginalie": [
+    "Massnahmen zur frühzeitigen Erkennung von Krankheiten in der allgemeinen Bevölkerung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "150",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "links": [
+      {
+       "label": "AS 2007 6839",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "151",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS 2024 303).",
+     "links": [
+      {
+       "label": "AS 2024 303",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/303"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "152",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "links": [
+      {
+       "label": "AS 2020 6327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "153",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5125).",
+     "links": [
+      {
+       "label": "AS 2015 5125",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/837"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "154",
+     "text": "SR 832.102.4",
+     "links": [
+      {
+       "label": "SR 832.102.4",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10139"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "155",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juni 2013 (AS 2013 1925). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "links": [
+      {
+       "label": "AS 2013 1925",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/414"
+      },
+      {
+       "label": "AS 2025 419",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    }
+   ]
+  },
+  "19_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Zahnärztliche Behandlungen"
+    }
+   ],
+   "marginalie": [
+    "Geburtsgebrechen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "183",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "links": [
+      {
+       "label": "AS 1997 564",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "184",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juli 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2697).",
+     "links": [
+      {
+       "label": "AS 1997 2697",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2697_2697_2697"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "185",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "186",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": "2",
+     "item": "16"
+    },
+    {
+     "nr": "187",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS 1998 2923).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      }
+     ],
+     "absatz": "2",
+     "item": "17"
+    },
+    {
+     "nr": "188",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS 2001 2150).",
+     "links": [
+      {
+       "label": "AS 2001 2150",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/315"
+      }
+     ],
+     "absatz": "2",
+     "item": "28"
+    },
+    {
+     "nr": "189",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Juli 1998 (AS 1998 2923). Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS 2001 2150).",
+     "links": [
+      {
+       "label": "AS 1998 2923",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
+      },
+      {
+       "label": "AS 2001 2150",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/315"
+      }
+     ],
+     "absatz": "2",
+     "item": "28a"
+    }
+   ]
+  },
+  "19_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "5. Kapitel: Zahnärztliche Behandlungen"
+    }
+   ],
+   "marginalie": [
+    "Narkose bei zahnärztlichen Behandlungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "190",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Mai 2020, in Kraft seit 1. Juli 2020 (AS 2020 2539).",
+     "links": [
+      {
+       "label": "AS 2020 2539",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/464"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "20_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen"
+    }
+   ],
+   "marginalie": [
+    "Liste der Mittel und Gegenstände"
+   ],
+   "fussnoten": [
+    {
+     "nr": "193",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Aug. 2007 (AS 2007 3581).",
+     "links": [
+      {
+       "label": "AS 2007 3581",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "194",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "links": [
+      {
+       "label": "AS 2021 347",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "195",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. Juni 2021, mit Wirkung seit 1. Okt. 2021 (AS 2021 347).",
+     "links": [
+      {
+       "label": "AS 2021 347",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "196",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > Liste der Mittel und Gegenstände (MiGeL)",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "197",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "links": [
+      {
+       "label": "AS 2020 529",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "30_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Aufnahmegesuch"
+   ],
+   "fussnoten": [
+    {
+     "nr": "214",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013). Siehe auch die UeB Änd. 21.3.2012 am Schluss dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "215",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "216",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017 (AS 2017 633). Fassung gemäss Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 369).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      },
+      {
+       "label": "AS 2022 369",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
+      }
+     ],
+     "absatz": "1",
+     "item": "abis"
+    },
+    {
+     "nr": "217",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      }
+     ],
+     "absatz": "1",
+     "item": "bbis"
+    },
+    {
+     "nr": "218",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "219",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "220",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 8. Mai 2013, mit Wirkung seit 1. Juni 2013 (AS 2013 1357).",
+     "links": [
+      {
+       "label": "AS 2013 1357",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/319"
+      }
+     ],
+     "absatz": "1",
+     "item": "g"
+    }
+   ]
+  },
+  "31_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Beschleunigtes Aufnahmeverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "228",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      },
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "229",
+     "text": "SR 812.212.21. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "links": [
+      {
+       "label": "SR 812.212.21",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9362"
+      },
+      {
+       "label": "SR 170.512",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "31_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Dauer des Verfahrens zur Aufnahme in die Spezialitätenliste"
+   ],
+   "fussnoten": [
+    {
+     "nr": "230",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "31_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Meldung über die Gesuchseinreichung bei der Swissmedic"
+   ],
+   "fussnoten": [
+    {
+     "nr": "231",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "31_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Vorabklärung und vorzeitige Gesuchseinreichung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "232",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "233",
+     "text": "SR 812.21",
+     "links": [
+      {
+       "label": "SR 812.21",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "34_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Aufnahme neuer Packungsgrössen oder Dosisstärken"
+   ],
+   "fussnoten": [
+    {
+     "nr": "238",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015 (AS 2015 4189). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2015 4189",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/700"
+      },
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "34_a_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Auslandpreisvergleich: Referenzländer und Gegenstand des Vergleichs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "239",
+     "text": "Ursprünglich: Art. 34a. Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      },
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "34_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Auslandpreisvergleich: Abzüge und Herstellerrabatt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "240",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      },
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "241",
+     "text": "Siehe auch die UeB Änd. 29.11.2023 am Schluss des Textes.",
+     "links": [],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "242",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    },
+    {
+     "nr": "243",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "34_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Auslandpreisvergleich: Berechnung und Meldung des Fabrikabgabepreises der Referenzländer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "244",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "245",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "34_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Aufnahmebedingungen alle drei Jahre: Einteilung der Arzneimittel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "246",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB Änd. 29.4.2015, Änd. 1.2.2017 und Änd. 22.9.2023 am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "247",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "248",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "5"
+    },
+    {
+     "nr": "249",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "links": [
+      {
+       "label": "AS 2021 392",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "6a"
+    },
+    {
+     "nr": "250",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015, in Kraft seit 15. Nov. 2015 (AS 2015 4189). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2015 4189",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/700"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "12"
+    },
+    {
+     "nr": "251",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "252",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571). Siehe auch die UeB Änd. 22.9.2023 am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    }
+   ]
+  },
+  "34_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Aufnahmebedingungen alle drei Jahre: Auslandpreisvergleich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "253",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB der Änd. 29.4.15 und 1.2.2017 am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "254",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "34_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Aufnahmebedingungen alle drei Jahre: therapeutischer Quervergleich"
+   ],
+   "fussnoten": [
+    {
+     "nr": "255",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      },
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "256",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "34_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "257",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Aufgehoben durch Ziff. I der V des EDI vom 22. Sept. 2023, mit Wirkung seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      },
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "34_h": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Aufnahmebedingungen alle drei Jahre: Umfang und Zeitpunkt der Senkung des Fabrikabgabepreises"
+   ],
+   "fussnoten": [
+    {
+     "nr": "258",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "259",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "35_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "261",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS 2000 3088). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      },
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "35_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "262",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2002 3013",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
+      },
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "35_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "263",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 30. Juni 2010 (AS 2010 3249). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2010 3249",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/436"
+      },
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Indikationserweiterung und Limitierungsänderung: einzureichende Unterlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "268",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      },
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Indikationseinschränkung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "269",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      },
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "270",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "37_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "271",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Aufgehoben durch Ziff. I der V des EDI vom 24. Sept. 2007, mit Wirkung seit 1. Okt. 2007 (AS 2007 4443 4633).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      },
+      {
+       "label": "AS 2007 4443",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/618"
+      },
+      {
+       "label": "4633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/648"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "37_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Umfang und Zeitpunkt der Überprüfungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "272",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "links": [
+      {
+       "label": "AS 2006 1757",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "273",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "37_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Spezialitätenliste"
+    }
+   ],
+   "marginalie": [
+    "Rückerstattung der Mehreinnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "274",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "links": [
+      {
+       "label": "AS 2015 1359",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "275",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      }
+     ],
+     "absatz": "7",
+     "item": null
+    }
+   ]
+  },
+  "38_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Selbstbehalt bei Arzneimitteln"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "278",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Feb. 2017 (AS 2017 633). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2017 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
+      },
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "279",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 773).",
+     "links": [
+      {
+       "label": "AS 2023 773",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "277",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Nov. 2005 (AS 2006 23). Fassung gemäss Ziff. I der V des EDI vom 2. Febr. 2011, in Kraft seit 1. März 2011 (AS 2011 657).",
+     "links": [
+      {
+       "label": "AS 2006 23",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/10"
+      },
+      {
+       "label": "AS 2011 657",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/105"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Bewertung des therapeutischen Nutzens"
+   ],
+   "fussnoten": [
+    {
+     "nr": "280",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "links": [
+      {
+       "label": "AS 2023 571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Übernahme der Kosten aufgrund des therapeutischen Nutzens des Arzneimittels"
+   ]
+  },
+  "38_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Preisabschlag auf Arzneimittel der Spezialitätenliste ausserhalb der genehmigten Fachinformation oder Limitierung im Rahmen von Artikel 71 Absatz 1 Buchstabe b KVV"
+   ]
+  },
+  "38_e": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Preisabschlag auf durch die Swissmedic zugelassene nicht in die Spezialitätenliste aufgenommene Arzneimittel im Rahmen von Artikel 71 Absatz 1 Buchstabe b KVV"
+   ]
+  },
+  "38_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Preisabschlag auf Arzneimittel der Spezialitätenliste ausserhalb der genehmigten Fachinformation oder Limitierung im Rahmen von Artikel 71 Absatz 1 Buchstaben a und c KVV"
+   ],
+   "fussnoten": [
+    {
+     "nr": "281",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 773).",
+     "links": [
+      {
+       "label": "AS 2023 773",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38_g": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "8. Kapitel: Analysen und Arzneimittel"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
+    }
+   ],
+   "marginalie": [
+    "Preisabschlag auf durch die Swissmedic zugelassene nicht in die Spezialitätenliste aufgenommene Arzneimittel im Rahmen von Artikel 71 Absatz 1 Buchstabe a und c KVV"
+   ]
+  },
+  "3_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Ärztliche Psychotherapie"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2006 2957",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
+      },
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Ärztliche Psychotherapie"
+    }
+   ],
+   "marginalie": [
+    "Verfahren zur Kostenübernahme bei Fortsetzung der Therapie nach 40 Sitzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2006 2957",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
+      },
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "3_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2a. Abschnitt: Einschränkung der Kostenübernahme bei bestimmten elektiven Eingriffen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Fassung gemäss Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 2361). Die Berichtigung vom 24. Juli 2018 betrifft nur den französischen Text (AS 2018 2837).",
+     "links": [
+      {
+       "label": "AS 2006 2957",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
+      },
+      {
+       "label": "AS 2018 2361",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/339"
+      },
+      {
+       "label": "AS 2018 2837",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/432"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "14",
+     "text": "www.bag.admin.ch > Versicherungen > Krankenversicherung > Leistungen und Tarife > Ärztliche Leistungen > Anhang 1a der KLV",
+     "links": [
+      {
+       "label": "www.bag.admin.ch",
+       "url": "http://www.bag.admin.ch"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "15",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "links": [
+      {
+       "label": "AS 2020 529",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "12",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Juli 2018 (AS 2018 2361).",
+     "links": [
+      {
+       "label": "AS 2018 2361",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/339"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "3_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "2a. Abschnitt: Einschränkung der Kostenübernahme bei bestimmten elektiven Eingriffen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS 2009 2821).",
+     "links": [
+      {
+       "label": "AS 2006 2957",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
+      },
+      {
+       "label": "AS 2009 2821",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "4. Abschnitt: Pharmazeutische Leistungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "29",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "28",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "links": [
+      {
+       "label": "AS 2000 3088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "4_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "5. Abschnitt: Ärztliche komplementärmedizinische Leistungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "links": [
+      {
+       "label": "AS 2020 6327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "32",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "33",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "34",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "links": [
+      {
+       "label": "AS 2020 6327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "35",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "36",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "links": [
+      {
+       "label": "AS 2021 392",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "37",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "38",
+     "text": "Das Dokument ist einsehbar unter: www.bag.admin.ch/ref",
+     "links": [
+      {
+       "label": "www.bag.admin.ch/ref",
+       "url": "http://www.bag.admin.ch/ref"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "nr": "30",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Juni 2017, in Kraft seit 1. Aug. 2017 (AS 2017 3689).",
+     "links": [
+      {
+       "label": "AS 2017 3689",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/421"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "7_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Beiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "72",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "73",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "74",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": "3",
+     "item": "l"
+    }
+   ]
+  },
+  "7_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Übernahme der Kosten für Leistungen der Akut- und Übergangspflege"
+   ],
+   "fussnoten": [
+    {
+     "nr": "75",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "8_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Bedarfsermittlung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "81",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS 1997 2039). Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 1997 2039",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2039_2039_2039"
+      },
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "82",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "83",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "links": [
+      {
+       "label": "AS 2024 221",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
+      }
+     ],
+     "absatz": "8",
+     "item": null
+    }
+   ]
+  },
+  "8_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Bedarfsermittlung in Pflegeheimen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "85",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [
+    "Kontrollverfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "86",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "links": [
+      {
+       "label": "AS 2019 2145",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "87",
+     "text": "SR 832.10",
+     "links": [
+      {
+       "label": "SR 832.10",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "89",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Sept. 1997 (AS 1997 2436). Aufgehoben durch Ziff. I der V des EDI vom 24. Juni 2009, mit Wirkung seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "links": [
+      {
+       "label": "AS 1997 2436",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2436_2436_2436"
+      },
+      {
+       "label": "AS 2009 3527",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
+      },
+      {
+       "label": "6849",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2009/837"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3a. Abschnitt: Ernährungsberatung"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "91",
+     "text": "Ursprünglich Art. 9a.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "92",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "links": [
+      {
+       "label": "AS 2021 440",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "93",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "links": [
+      {
+       "label": "AS 1999 528",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "94",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "links": [
+      {
+       "label": "AS 2023 807",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "95",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Dez. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 5329).",
+     "links": [
+      {
+       "label": "AS 2013 5329",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/850"
+      }
+     ],
+     "absatz": "1",
+     "item": "bbis"
+    },
+    {
+     "nr": "96",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "links": [
+      {
+       "label": "AS 1999 528",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "97",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "90",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "links": [
+      {
+       "label": "AS 1997 564",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Leistungen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbrachte Leistungen"
+    },
+    {
+     "ebene": 3,
+     "label": "3b. Abschnitt: Diabetesberatung"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "99",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5401).",
+     "links": [
+      {
+       "label": "AS 2004 5401",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/827"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "100",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "links": [
+      {
+       "label": "AS 2014 1251",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "98",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "links": [
+      {
+       "label": "AS 1999 528",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ }
+}

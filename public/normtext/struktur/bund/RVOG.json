@@ -162,8 +162,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/602"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "5",
+     "item": "b"
     }
    ]
   },
@@ -614,7 +614,7 @@
       }
      ],
      "absatz": "2",
-     "item": "a"
+     "item": "abis"
     },
     {
      "nr": "31",
@@ -654,7 +654,7 @@
       }
      ],
      "absatz": "2",
-     "item": "b"
+     "item": "bbis"
     }
    ]
   },
@@ -801,7 +801,7 @@
       }
      ],
      "absatz": null,
-     "item": "c"
+     "item": "cbis"
     },
     {
      "nr": "36",
@@ -821,7 +821,7 @@
       }
      ],
      "absatz": null,
-     "item": "c"
+     "item": "cter"
     },
     {
      "nr": "37",
@@ -877,7 +877,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -3400,7 +3400,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1972"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -3569,7 +3569,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1138"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     }
    ]

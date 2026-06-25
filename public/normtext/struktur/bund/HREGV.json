@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-19",
+ "erzeugt": "2026-06-25",
  "artikel": {
   "1": {
    "gliederung": [
@@ -577,7 +577,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/600"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
@@ -589,7 +589,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/634"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     }
    ]
@@ -760,8 +760,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/114"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "4",
+     "item": "b"
     },
     {
      "nr": "48",
@@ -3593,7 +3593,7 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": "l"
     }
    ]
   },
@@ -3703,8 +3703,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/667"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "h"
     },
     {
      "nr": "197",
@@ -3715,8 +3715,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/179"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "k"
     },
     {
      "nr": "198",
@@ -3727,8 +3727,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/634"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "l"
     },
     {
      "nr": "199",
@@ -3739,8 +3739,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/460"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "n"
     },
     {
      "nr": "200",
@@ -3751,8 +3751,8 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "n"
     },
     {
      "nr": "201",
@@ -3763,8 +3763,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/179"
       }
      ],
-     "absatz": null,
-     "item": null
+     "absatz": "1",
+     "item": "o"
     },
     {
      "nr": "202",
@@ -6451,7 +6451,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/634"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     }
    ]

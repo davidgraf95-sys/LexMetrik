@@ -1,0 +1,2465 @@
+{
+ "erzeugt": "2026-06-25",
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gegenstand"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Abschnitt: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Begriffe"
+   ],
+   "fussnoten": [
+    {
+     "nr": "2",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "a"
+    },
+    {
+     "nr": "3",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "4",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "5",
+     "text": "Der Titel wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "links": [
+      {
+       "label": "SR 170.512",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "6",
+     "text": "Fassung gemäss Anhang Ziff. II 3 der Bürgerrechtsverordnung vom 17. Juni 2016, in Kraft seit 1. Jan. 2018 (AS 2016 2577).",
+     "links": [
+      {
+       "label": "AS 2016 2577",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/405"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "7",
+     "text": "SR 141.0",
+     "links": [
+      {
+       "label": "SR 141.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4841"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "8",
+     "text": "SR 0.142.112.681",
+     "links": [
+      {
+       "label": "SR 0.142.112.681",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "9",
+     "text": "SR 0.632.31",
+     "links": [
+      {
+       "label": "SR 0.632.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    },
+    {
+     "nr": "10",
+     "text": "Eingefügt durch Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": null,
+     "item": "5"
+    },
+    {
+     "nr": "11",
+     "text": "Eingefügt durch Ziff. III 3 der V vom 22. März 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5853).",
+     "links": [
+      {
+       "label": "AS 2020 5853",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/984"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "12",
+     "text": "SR 0.142.113.672",
+     "links": [
+      {
+       "label": "SR 0.142.113.672",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/261"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "13",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "14",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "15",
+     "text": "SR 321.0",
+     "links": [
+      {
+       "label": "SR 321.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "16",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "17",
+     "text": "SR 0.142.30",
+     "links": [
+      {
+       "label": "SR 0.142.30",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/432"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "18",
+     "text": "SR 0.142.40",
+     "links": [
+      {
+       "label": "SR 0.142.40",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/460"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "19",
+     "text": "Eingefügt durch Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Struktur und Inhalt von ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Struktur von ZEMIS"
+   ],
+   "fussnoten": [
+    {
+     "nr": "20",
+     "text": "Aufgehoben durch Anhang 4 der Visa-Informationssystem-Verordnung vom 18. Dez. 2013, mit Wirkung seit 20. Jan. 2014 (AS 2014 3).",
+     "links": [
+      {
+       "label": "AS 2014 3",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/2"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "21",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Febr. 2022, in Kraft seit 1. März 2022 (AS 2022 73).",
+     "links": [
+      {
+       "label": "AS 2022 73",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/73"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "22",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Sept. 2023, in Kraft seit 15. Okt. 2023 (AS 2023 552).",
+     "links": [
+      {
+       "label": "AS 2023 552",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/552"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "23",
+     "text": "SR 142.512",
+     "links": [
+      {
+       "label": "SR 142.512",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4899"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "24",
+     "text": "SR 361.0",
+     "links": [
+      {
+       "label": "SR 361.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6308"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "nr": "25",
+     "text": "SR 362.0",
+     "links": [
+      {
+       "label": "SR 362.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6314"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "nr": "26",
+     "text": "SR 366.1",
+     "links": [
+      {
+       "label": "SR 366.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6327"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "nr": "27",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Sept. 2023, in Kraft seit 15. Okt. 2023 (AS 2023 552).",
+     "links": [
+      {
+       "label": "AS 2023 552",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/552"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    },
+    {
+     "nr": "28",
+     "text": "SR 330",
+     "links": [
+      {
+       "label": "SR 330",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6257"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    },
+    {
+     "nr": "29",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    },
+    {
+     "nr": "30",
+     "text": "Eingefügt durch Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS 2017 2177).",
+     "links": [
+      {
+       "label": "AS 2017 2177",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/201"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Abschnitt: Struktur und Inhalt von ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Inhalt von ZEMIS"
+   ],
+   "fussnoten": [
+    {
+     "nr": "31",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Registerharmonisierungsverordnung vom 21. Nov. 2007 (AS 2007 6719). Fassung gemäss Anhang Ziff. II 3 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 800).",
+     "links": [
+      {
+       "label": "AS 2007 6719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/868"
+      },
+      {
+       "label": "AS 2021 800",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "nr": "32",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Febr. 2020, in Kraft seit 1. April 2020 (AS 2020 933).",
+     "links": [
+      {
+       "label": "AS 2020 933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/176"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "33",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007 (AS 2007 5615). Aufgehoben durch Ziff. I der V vom 1. Mai 2019, mit Wirkung seit 1. Juni 2019 (AS 2019 1453).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      },
+      {
+       "label": "AS 2019 1453",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/282"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Meldepflichten"
+    }
+   ],
+   "marginalie": [
+    "Meldungen der kantonalen und kommunalen Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "34",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Mai 2019, in Kraft seit 1. Juni 2019 (AS 2019 1453).",
+     "links": [
+      {
+       "label": "AS 2019 1453",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/282"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "35",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "36",
+     "text": "SR 823.20",
+     "links": [
+      {
+       "label": "SR 823.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9950"
+      }
+     ],
+     "absatz": "1",
+     "item": "m"
+    },
+    {
+     "nr": "37",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": "1",
+     "item": "o"
+    },
+    {
+     "nr": "38",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": "1",
+     "item": "p"
+    }
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Meldepflichten"
+    }
+   ],
+   "marginalie": [
+    "Meldungen weiterer Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "39",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "40",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "Fassung gemäss Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS 2017 2177).",
+     "links": [
+      {
+       "label": "AS 2017 2177",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/201"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "43",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "44",
+     "text": "Diese Abk. sind in Anhang 4 Ziff. 1 aufgeführt.",
+     "links": [],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "45",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2015 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "links": [
+      {
+       "label": "AS 2004 4937",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    }
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Meldepflichten"
+    }
+   ],
+   "marginalie": [
+    "Meldeverfahren und Erfassung der Daten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "47",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Febr. 2022, in Kraft seit 1. März 2022 (AS 2022 73).",
+     "links": [
+      {
+       "label": "AS 2022 73",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/73"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "48",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Febr. 2022, in Kraft seit 1. März 2022 (AS 2022 73).",
+     "links": [
+      {
+       "label": "AS 2022 73",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/73"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "49",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Meldepflichten"
+    }
+   ],
+   "marginalie": [
+    "Daten über Beschwerden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "Fassung gemäss Ziff. II 7 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "links": [
+      {
+       "label": "AS 2006 4705",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Zugriff auf ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Daten des Ausländerbereichs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "abis"
+    },
+    {
+     "nr": "52",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": null,
+     "item": "abis"
+    },
+    {
+     "nr": "53",
+     "text": "SR 321.0",
+     "links": [
+      {
+       "label": "SR 321.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
+      }
+     ],
+     "absatz": null,
+     "item": "abis"
+    },
+    {
+     "nr": "54",
+     "text": "Fassung gemäss Ziff. I 4 der V vom 4. Mai 2022 über polizeiliche Massnahmen zur Bekämpfung von Terrorismus, in Kraft seit 1. Juni 2022 (AS 2022 301).",
+     "links": [
+      {
+       "label": "AS 2022 301",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/301"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "55",
+     "text": "SR 120",
+     "links": [
+      {
+       "label": "SR 120",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4735"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "56",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "57",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "58",
+     "text": "SR 361.0",
+     "links": [
+      {
+       "label": "SR 361.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6308"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "59",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "60",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 7. Nov. 2012 über den ausserprozessualen Zeugenschutz, in Kraft seit 1. Jan. 2013 (AS 2012 6731).",
+     "links": [
+      {
+       "label": "AS 2012 6731",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/815"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    },
+    {
+     "nr": "61",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "62",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "63",
+     "text": "SR 955.0",
+     "links": [
+      {
+       "label": "SR 955.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11599"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "64",
+     "text": "Eingefügt durch Anhang 2 Ziff. 1 der Vorläuferstoffverordnung vom 25. Mai 2022, in Kraft seit 1. Jan. 2023 (AS 2022 353).",
+     "links": [
+      {
+       "label": "AS 2022 353",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/353"
+      }
+     ],
+     "absatz": null,
+     "item": "8"
+    },
+    {
+     "nr": "65",
+     "text": "SR 941.42",
+     "links": [
+      {
+       "label": "SR 941.42",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11231"
+      }
+     ],
+     "absatz": null,
+     "item": "8"
+    },
+    {
+     "nr": "66",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Mai 2025, in Kraft seit 15. Juni 2025 (AS 2025 344).",
+     "links": [
+      {
+       "label": "AS 2025 344",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/344"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "68",
+     "text": "SR 351.1",
+     "links": [
+      {
+       "label": "SR 351.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6277"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "69",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Mai 2025, in Kraft seit 15. Juni 2025 (AS 2025 344).",
+     "links": [
+      {
+       "label": "AS 2025 344",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/344"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "70",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "71",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "nr": "72",
+     "text": "Fassung gemäss Anhang 4 der Visa-Informationssystem-Verordnung vom 18. Dez. 2013, in Kraft seit 20. Jan. 2014 (AS 2014 3).",
+     "links": [
+      {
+       "label": "AS 2014 3",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/2"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    },
+    {
+     "nr": "73",
+     "text": "Ausdruck gemäss Anhang Ziff. II 3 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 800). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "links": [
+      {
+       "label": "AS 2021 800",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
+      }
+     ],
+     "absatz": null,
+     "item": "h"
+    },
+    {
+     "nr": "74",
+     "text": "SR 823.20",
+     "links": [
+      {
+       "label": "SR 823.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9950"
+      }
+     ],
+     "absatz": null,
+     "item": "j"
+    },
+    {
+     "nr": "75",
+     "text": "SR 823.201",
+     "links": [
+      {
+       "label": "SR 823.201",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9951"
+      }
+     ],
+     "absatz": null,
+     "item": "j"
+    },
+    {
+     "nr": "76",
+     "text": "Fassung gemäss Anhang Ziff. I der V vom 4. Juni 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3061).",
+     "links": [
+      {
+       "label": "AS 2010 3061",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/412"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "77",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "SR 210",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "78",
+     "text": "SR 211.231",
+     "links": [
+      {
+       "label": "SR 211.231",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5750"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "79",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": null,
+     "item": "l"
+    },
+    {
+     "nr": "80",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Registerharmonisierungsverordnung vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6719).",
+     "links": [
+      {
+       "label": "AS 2007 6719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/868"
+      }
+     ],
+     "absatz": null,
+     "item": "m"
+    },
+    {
+     "nr": "81",
+     "text": "SR 431.02",
+     "links": [
+      {
+       "label": "SR 431.02",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6950"
+      }
+     ],
+     "absatz": null,
+     "item": "m"
+    },
+    {
+     "nr": "82",
+     "text": "Eingefügt durch Anhang Ziff. 9 der V vom 12. Dez. 2008 (AS 2008 6305). Fassung gemäss Ziff. I 4 der V vom 4. Mai 2022 über polizeiliche Massnahmen zur Bekämpfung von Terrorismus, in Kraft seit 1. Juni 2022 (AS 2022 301).",
+     "links": [
+      {
+       "label": "AS 2008 6305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/858"
+      },
+      {
+       "label": "AS 2022 301",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/301"
+      }
+     ],
+     "absatz": null,
+     "item": "n"
+    },
+    {
+     "nr": "83",
+     "text": "SR 121",
+     "links": [
+      {
+       "label": "SR 121",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "84",
+     "text": "SR 141.0",
+     "links": [
+      {
+       "label": "SR 141.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4841"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "85",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": null,
+     "item": "o"
+    },
+    {
+     "nr": "86",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011 (AS 2011 5197). Fassung gemäss Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4569).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      },
+      {
+       "label": "AS 2018 4569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      }
+     ],
+     "absatz": null,
+     "item": "p"
+    },
+    {
+     "nr": "87",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "links": [
+      {
+       "label": "SR 170.512.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4976"
+      },
+      {
+       "label": "AS 2021 589",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
+      }
+     ],
+     "absatz": null,
+     "item": "p"
+    },
+    {
+     "nr": "88",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011 (AS 2011 5197). Aufgehoben durch Ziff. I der V vom 21. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 4569).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      },
+      {
+       "label": "AS 2018 4569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      }
+     ],
+     "absatz": null,
+     "item": "q"
+    },
+    {
+     "nr": "89",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Sept. 2015, in Kraft seit 1. Okt. 2015 (AS 2015 3047).",
+     "links": [
+      {
+       "label": "AS 2015 3047",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/573"
+      }
+     ],
+     "absatz": null,
+     "item": "r"
+    },
+    {
+     "nr": "90",
+     "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit, ABl. L 166 vom 30.4.2004, S. 1; zuletzt geändert durch Verordnung (EU) Nr. 1372/2013, ABl. L 346 vom 20.12.2013, S. 27.",
+     "links": [],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "91",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "s"
+    },
+    {
+     "nr": "92",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": null,
+     "item": "s"
+    },
+    {
+     "nr": "93",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "t"
+    }
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Zugriff auf ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Daten des Asylbereichs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "94",
+     "text": "Fassung gemäss Anhang Ziff. 9 der V vom 12. Dez. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6305).",
+     "links": [
+      {
+       "label": "AS 2008 6305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/858"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "95",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "96",
+     "text": "SR 361.0",
+     "links": [
+      {
+       "label": "SR 361.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6308"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "97",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Okt. 2022, in Kraft seit 22. Nov. 2022 (AS 2022 647).",
+     "links": [
+      {
+       "label": "AS 2022 647",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/647"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "98",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 7. Nov. 2012 über den ausserprozessualen Zeugenschutz, in Kraft seit 1. Jan. 2013 (AS 2012 6731).",
+     "links": [
+      {
+       "label": "AS 2012 6731",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/815"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    },
+    {
+     "nr": "99",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "100",
+     "text": "SR 955.0",
+     "links": [
+      {
+       "label": "SR 955.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11599"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "101",
+     "text": "Eingefügt durch Anhang 2 Ziff. 1 der Vorläuferstoffverordnung vom 25. Mai 2022, in Kraft seit 1. Jan. 2023 (AS 2022 353).",
+     "links": [
+      {
+       "label": "AS 2022 353",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/353"
+      }
+     ],
+     "absatz": null,
+     "item": "8"
+    },
+    {
+     "nr": "102",
+     "text": "SR 941.42",
+     "links": [
+      {
+       "label": "SR 941.42",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11231"
+      }
+     ],
+     "absatz": null,
+     "item": "8"
+    },
+    {
+     "nr": "103",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "104",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Mai 2025, in Kraft seit 15. Juni 2025 (AS 2025 344).",
+     "links": [
+      {
+       "label": "AS 2025 344",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/344"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "105",
+     "text": "SR 351.1",
+     "links": [
+      {
+       "label": "SR 351.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6277"
+      }
+     ],
+     "absatz": null,
+     "item": "1"
+    },
+    {
+     "nr": "106",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Mai 2025, in Kraft seit 15. Juni 2025 (AS 2025 344).",
+     "links": [
+      {
+       "label": "AS 2025 344",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/344"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "107",
+     "text": "SR 211.222.32",
+     "links": [
+      {
+       "label": "SR 211.222.32",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5742"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "108",
+     "text": "Fassung gemäss Ziff. II 7 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "links": [
+      {
+       "label": "AS 2006 4705",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
+      }
+     ],
+     "absatz": null,
+     "item": "d"
+    },
+    {
+     "nr": "109",
+     "text": "Fassung gemäss Anhang Ziff. I der V vom 4. Juni 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3061).",
+     "links": [
+      {
+       "label": "AS 2010 3061",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/412"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    },
+    {
+     "nr": "110",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "SR 210",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    },
+    {
+     "nr": "111",
+     "text": "SR 211.231",
+     "links": [
+      {
+       "label": "SR 211.231",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5750"
+      }
+     ],
+     "absatz": null,
+     "item": "i"
+    },
+    {
+     "nr": "112",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Registerharmonisierungsverordnung vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6719).",
+     "links": [
+      {
+       "label": "AS 2007 6719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/868"
+      }
+     ],
+     "absatz": null,
+     "item": "j"
+    },
+    {
+     "nr": "113",
+     "text": "SR 431.02",
+     "links": [
+      {
+       "label": "SR 431.02",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6950"
+      }
+     ],
+     "absatz": null,
+     "item": "j"
+    },
+    {
+     "nr": "114",
+     "text": "Eingefügt durch Anhang Ziff. 9 der V vom 12. Dez. 2008 (AS 2008 6305). Fassung gemäss Ziff. I der V vom 19. Febr. 2020, in Kraft seit 1. April 2020 (AS 2020 933).",
+     "links": [
+      {
+       "label": "AS 2008 6305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/858"
+      },
+      {
+       "label": "AS 2020 933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/176"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "115",
+     "text": "SR 121",
+     "links": [
+      {
+       "label": "SR 121",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "116",
+     "text": "SR 141.0",
+     "links": [
+      {
+       "label": "SR 141.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4841"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "117",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": null,
+     "item": "k"
+    },
+    {
+     "nr": "118",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": null,
+     "item": "l"
+    },
+    {
+     "nr": "119",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011 (AS 2011 5197). Fassung gemäss Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4569).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      },
+      {
+       "label": "AS 2018 4569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      }
+     ],
+     "absatz": null,
+     "item": "m"
+    },
+    {
+     "nr": "120",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Nov. 2011 (AS 2011 5197). Aufgehoben durch Ziff. I der V vom 21. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 4569).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      },
+      {
+       "label": "AS 2018 4569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      }
+     ],
+     "absatz": null,
+     "item": "n"
+    },
+    {
+     "nr": "121",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Sept. 2015, in Kraft seit 1. Okt. 2015 (AS 2015 3047).",
+     "links": [
+      {
+       "label": "AS 2015 3047",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/573"
+      }
+     ],
+     "absatz": null,
+     "item": "o"
+    },
+    {
+     "nr": "122",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Sept. 2015, in Kraft seit 1. Okt. 2015 (AS 2015 3047).",
+     "links": [
+      {
+       "label": "AS 2015 3047",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/573"
+      }
+     ],
+     "absatz": null,
+     "item": "p"
+    },
+    {
+     "nr": "123",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "q"
+    },
+    {
+     "nr": "124",
+     "text": "SR 311.0",
+     "links": [
+      {
+       "label": "SR 311.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": null,
+     "item": "q"
+    },
+    {
+     "nr": "125",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Mai 2023, in Kraft seit 15. Juni 2023 (AS 2023 247).",
+     "links": [
+      {
+       "label": "AS 2023 247",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/247"
+      }
+     ],
+     "absatz": null,
+     "item": "r"
+    }
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Zugriff auf ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Gewährung des Zugriffs an beauftragte Dritte"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "4. Abschnitt: Zugriff auf ZEMIS"
+    }
+   ],
+   "marginalie": [
+    "Gewährung des Zugriffs"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Bekanntgabe von Daten durch das SEM"
+    }
+   ],
+   "marginalie": [
+    "An Behörden oder Organisationen zur Erfüllung ihrer gesetzlichen Aufgaben"
+   ],
+   "fussnoten": [
+    {
+     "nr": "126",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": "1",
+     "item": "c"
+    },
+    {
+     "nr": "127",
+     "text": "SR 431.011",
+     "links": [
+      {
+       "label": "SR 431.011",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6947"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "128",
+     "text": "SR 431.021",
+     "links": [
+      {
+       "label": "SR 431.021",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6951"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "129",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Registerharmonisierungsverordnung vom 21. Nov. 2007 (AS 2007 6719). Fassung gemäss Anhang 3 Ziff. 1 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS 2025 318).",
+     "links": [
+      {
+       "label": "AS 2007 6719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/868"
+      },
+      {
+       "label": "AS 2025 318",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "130",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 26. Jan. 2011 über die Unternehmens-Identifikationsnummer, in Kraft seit 1. April 2011 (AS 2011 533).",
+     "links": [
+      {
+       "label": "AS 2011 533",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/81"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Bekanntgabe von Daten durch das SEM"
+    }
+   ],
+   "marginalie": [
+    "Für planerische, wissenschaftliche und statistische Zwecke"
+   ],
+   "fussnoten": [
+    {
+     "nr": "131",
+     "text": "Aufgehoben durch Anhang 2 Ziff. II 8 der Datenschutzverordnung vom 31. Aug. 2022, mit Wirkung seit 1. Sept. 2023 (AS 2022 568).",
+     "links": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Bekanntgabe von Daten durch das SEM"
+    }
+   ],
+   "marginalie": [
+    "An ausländische Behörden und Private"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Datenschutz und Informatiksicherheit"
+    }
+   ],
+   "marginalie": [
+    "Datenschutz- und Informatiksicherheitsberatung"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Datenschutz und Informatiksicherheit"
+    }
+   ],
+   "marginalie": [
+    "Daten- und Informationssicherheit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "133",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 6 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 735).",
+     "links": [
+      {
+       "label": "AS 2023 735",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/735"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "134",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 8 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "links": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "135",
+     "text": "SR 235.11",
+     "links": [
+      {
+       "label": "SR 235.11",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
+      }
+     ],
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "136",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 6 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 735).",
+     "links": [
+      {
+       "label": "AS 2023 735",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/735"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "137",
+     "text": "SR 128.1",
+     "links": [
+      {
+       "label": "SR 128.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40166"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "138",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 24. Febr. 2021, in Kraft seit 1. April 2021 (AS 2021 132).",
+     "links": [
+      {
+       "label": "AS 2021 132",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/132"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "139",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Datenschutz und Informatiksicherheit"
+    }
+   ],
+   "marginalie": [
+    "Archivierung und Vernichtung, Einschränkung des Zugriffs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "140",
+     "text": "Ausdruck gemäss Ziff. I der V vom 19. Febr. 2020, in Kraft seit 1. April 2020 (AS 2020 933). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "links": [
+      {
+       "label": "AS 2020 933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/176"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "141",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": "4",
+     "item": "e"
+    },
+    {
+     "nr": "142",
+     "text": "SR 142.201",
+     "links": [
+      {
+       "label": "SR 142.201",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4852"
+      }
+     ],
+     "absatz": "4",
+     "item": "e"
+    },
+    {
+     "nr": "143",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": "4",
+     "item": "f"
+    },
+    {
+     "nr": "144",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 17. Dez. 2010, in Kraft seit 24. Jan. 2011 (AS 2011 99).",
+     "links": [
+      {
+       "label": "AS 2011 99",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/18"
+      }
+     ],
+     "absatz": "4",
+     "item": "g"
+    },
+    {
+     "nr": "145",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Sept. 2023, in Kraft seit 15. Okt. 2023 (AS 2023 552).",
+     "links": [
+      {
+       "label": "AS 2023 552",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/552"
+      }
+     ],
+     "absatz": "4",
+     "item": "h"
+    }
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Abschnitt: Datenschutz und Informatiksicherheit"
+    }
+   ],
+   "marginalie": [
+    "Rechte der Betroffenen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "146",
+     "text": "SR 235.1",
+     "links": [
+      {
+       "label": "SR 235.1",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "147",
+     "text": "SR 172.021",
+     "links": [
+      {
+       "label": "SR 172.021",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "148",
+     "text": "SR 142.20. Dieser Verweis ist heute gegenstandslos: Art. 111e und 111f sind aufgehoben. Art. 111g hat eine neue Fassung.",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "149",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 8 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "links": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "150",
+     "text": "SR 235.11",
+     "links": [
+      {
+       "label": "SR 235.11",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "151",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 8 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "links": [
+      {
+       "label": "AS 2022 568",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Statistiken und Kontrollen"
+    }
+   ],
+   "marginalie": [
+    "Statistik"
+   ],
+   "fussnoten": [
+    {
+     "nr": "152",
+     "text": "SR 142.20",
+     "links": [
+      {
+       "label": "SR 142.20",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "153",
+     "text": "SR 142.31",
+     "links": [
+      {
+       "label": "SR 142.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "154",
+     "text": "SR 141.0",
+     "links": [
+      {
+       "label": "SR 141.0",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4841"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "155",
+     "text": "SR 0.142.112.681",
+     "links": [
+      {
+       "label": "SR 0.142.112.681",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "156",
+     "text": "SR 0.632.31",
+     "links": [
+      {
+       "label": "SR 0.632.31",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "157",
+     "text": "Diese Abk. sind in Anhang 4 Ziff. 1 aufgeführt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "158",
+     "text": "Diese Abk. sind in Anhang 4 Ziff. 2 aufgeführt.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "159",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS 2008 5421).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "160",
+     "text": "Verordnung (EU) 2016/399 des Europäischen Parlaments und des Rates vom 9. März 2016 über einen Gemeinschaftskodex für das Überschreiten der Grenzen durch Personen (Schengener Grenzkodex), ABl. L 77 vom 23.3.2016, S. 1; zuletzt geändert durch Verordnung (EU) 2024/1717, ABl. L, 2024/1717, 20.6.2024.",
+     "links": [],
+     "absatz": "2bis",
+     "item": null
+    },
+    {
+     "nr": "161",
+     "text": "Eingefügt durch Ziff. I der V vom 6. Mai 2026, in Kraft seit 12. Juni 2026 (AS 2026 242).",
+     "links": [
+      {
+       "label": "AS 2026 242",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/242"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    },
+    {
+     "nr": "162",
+     "text": "SR 431.011",
+     "links": [
+      {
+       "label": "SR 431.011",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6947"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "163",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS 2025 318).",
+     "links": [
+      {
+       "label": "AS 2025 318",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "164",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": "5",
+     "item": "b"
+    }
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "7. Abschnitt: Statistiken und Kontrollen"
+    }
+   ],
+   "marginalie": [
+    "Kontrollen"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "8. Abschnitt: Gebühren"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "165",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Nov. 2011, in Kraft seit 1. Dez. 2011 (AS 2011 5197).",
+     "links": [
+      {
+       "label": "AS 2011 5197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/750"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "166",
+     "text": "SR 142.209",
+     "links": [
+      {
+       "label": "SR 142.209",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4858"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "167",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5615).",
+     "links": [
+      {
+       "label": "AS 2007 5615",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/770"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "168",
+     "text": "[AS 1994 2859; 1996 194; 1999 1240; 2001 3184; 2002 1741 Art. 35 Ziff. 3; 2003 1380 Art. 18 Ziff. 1; 2004 1569 Ziff. II 3, 4813 Anhang Ziff. 4; 2005 1321]",
+     "links": [
+      {
+       "label": "AS 1994 2859",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2859_2859_2859"
+      },
+      {
+       "label": "1996 194",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/194_194_194"
+      },
+      {
+       "label": "1999 1240",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/169"
+      },
+      {
+       "label": "2001 3184",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/481"
+      },
+      {
+       "label": "2002 1741",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/261"
+      },
+      {
+       "label": "2003 1380",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2003/232"
+      },
+      {
+       "label": "2004 1569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/186"
+      },
+      {
+       "label": "4813",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/728"
+      },
+      {
+       "label": "2005 1321",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2005/203"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Änderung bisherigen Rechts"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "169",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Febr. 2022, mit Wirkung seit 1. März 2022 (AS 2022 73).",
+     "links": [
+      {
+       "label": "AS 2022 73",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/73"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Inkrafttreten"
+   ]
+  },
+  "15_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "5. Abschnitt: Bekanntgabe von Daten durch das SEM"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "132",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 17. Dez. 2010 (AS 2011 99). Aufgehoben durch Ziff. I der V vom 19. Febr. 2020, mit Wirkung seit 1. April 2020 (AS 2020 933).",
+     "links": [
+      {
+       "label": "AS 2011 99",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/18"
+      },
+      {
+       "label": "AS 2020 933",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/176"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "9. Abschnitt: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmungen zur Änderung vom 21. November 2007"
+   ],
+   "fussnoten": [
+    {
+     "nr": "170",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Registerharmonisierungsverordnung vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6719).",
+     "links": [
+      {
+       "label": "AS 2007 6719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/868"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "171",
+     "text": "SR 431.02",
+     "links": [
+      {
+       "label": "SR 431.02",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6950"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "172",
+     "text": "SR 831.101",
+     "links": [
+      {
+       "label": "SR 831.101",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Meldepflichten"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "Eingefügt durch Ziff. I 1 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS 2008 5421). Aufgehoben durch Ziff. I der V vom 27. Nov. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 716).",
+     "links": [
+      {
+       "label": "AS 2008 5421",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
+      },
+      {
+       "label": "AS 2024 716",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/716"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  }
+ }
+}
