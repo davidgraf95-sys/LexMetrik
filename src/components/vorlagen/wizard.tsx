@@ -83,7 +83,10 @@ export function VorlagenWizardRahmen({
           Zurück zum Katalog
         </Link>
         <p className="lc-overline">{overline}</p>
-        <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">{titel}</h1>
+        {/* overflow-wrap/hyphens: lange Komposita (z.B. «Geheimhaltungsvereinbarung»)
+            sprengten den Titel bei 360px → 12px horizontaler Seiten-Overflow
+            (Befund David 25.6.2026, nda). Brechen statt überlaufen. */}
+        <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">{titel}</h1>
         <p className="text-body-l text-ink-600 max-w-reading">{intro}</p>
         <div className="flex flex-wrap items-center gap-1.5">
           {norms.map((n) => (

@@ -319,7 +319,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 u.a., ~360–414px). overflow-wrap/hyphens brechen das Kompositum,
                 statt es überlaufen zu lassen — wie bereits beim Item-Text (S13).
                 Nur in der Lesesicht (zk); das Popover (kein zk) bleibt byte-gleich. */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 -indent-9` : undefined}>
+            {/* Hängeeinzug: nummerierter Absatz → voller Hang (-indent-9), die
+                Messing-Marke sitzt in der Rinne (x=0). Absatzloser Artikel → KLEINER
+                Hang (-indent-4): erste Zeile beginnt dort, wo bei nummerierten der
+                Text anfängt (nicht ganz in der Rinne), Folgezeilen leicht eingerückt
+                (Auftrag David 25.6.2026: «erste Zeile reicht sonst zu weit zurück»). */}
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-400" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>

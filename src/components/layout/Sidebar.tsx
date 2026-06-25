@@ -60,7 +60,7 @@ function Blatt({ k, loc, onNavigate, klein }: {
       <span aria-hidden className={`h-3.5 w-0.5 rounded-full shrink-0 transition-colors ${
         aktiv ? 'bg-brass-600' : 'bg-transparent group-hover/blatt:bg-brass-300'
       }`} />
-      <span className="truncate" title={k.label}>{k.label}</span>
+      <span className="leading-snug" title={k.label}>{k.label}</span>
     </Link>
   );
 }
@@ -88,7 +88,7 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
       <div className="flex flex-col">
         <div className="flex items-center gap-1 rounded-md px-2.5 py-2 hover:bg-brass-100/40">
           <Link to={k.ziel} onClick={onNavigate} aria-current={aktiv ? 'page' : undefined}
-            className={`flex-1 truncate text-body-s font-medium no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-600 hover:text-ink-900'}`}
+            className={`flex-1 leading-snug text-body-s font-medium no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-600 hover:text-ink-900'}`}
             title={k.label}>{k.label}</Link>
           <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
             aria-label={`${k.label} ${offen ? 'einklappen' : 'aufklappen'}`}
@@ -116,7 +116,7 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
     <details className="group" open={offen} onToggle={(e) => setOffen((e.currentTarget as HTMLDetailsElement).open)}>
       {/* Disclosure-Dreieck liefert der globale details>summary::after (index.css). */}
       <summary className="flex items-center gap-2 cursor-pointer select-none rounded-md px-2.5 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
-        <span className="flex-1 truncate" title={k.label}>{k.label}</span>
+        <span className="flex-1 leading-snug" title={k.label}>{k.label}</span>
       </summary>
       <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
         {k.kinder.map((kk, i) => (

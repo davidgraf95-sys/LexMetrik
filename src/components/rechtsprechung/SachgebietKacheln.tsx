@@ -30,13 +30,17 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
                 type="button"
                 onClick={() => onWaehle(e.id)}
                 aria-current={an ? 'true' : undefined}
-                className={`flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-md border-l-2 px-3 py-2 text-left text-body-s transition-colors ${
+                className={`flex w-full items-center justify-between gap-2 whitespace-nowrap lg:whitespace-normal rounded-md border-l-2 px-3 py-2 text-left text-body-s transition-colors ${
                   an
                     ? 'border-brass-500 bg-brass-100 font-medium text-brass-800'
                     : 'border-transparent text-ink-700 hover:bg-well'
                 }`}
               >
-                <span className="truncate">{e.label}</span>
+                {/* lg (vertikale Leiste): Label voll umbrechen statt abschneiden
+                    (Auftrag David: «nicht abschneiden», z.B. «Steuern, Sozial­
+                    versicherung & Abgaben»). Mobil (horizontale Scroll-Reihe)
+                    bleibt es einzeilig. */}
+                <span className="truncate lg:overflow-visible lg:whitespace-normal lg:leading-snug">{e.label}</span>
                 <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-400'}`}>{e.count}</span>
               </button>
             </li>
