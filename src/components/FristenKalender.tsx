@@ -77,20 +77,26 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
   // (§8): der Stillstand kann ganz in einem ausgelassenen Zwischenmonat
   // liegen (z. B. Ostern zwischen Fristbeginn März und Fristende Mai) —
   // dann entfällt der Schraffur-Eintrag, statt Unsichtbares zu erklären.
+  // Band-Ebene: NUR innerhalb des Frist-Zeitraums [fristStart..fristEnde] zeichnen.
+  // Ein Gerichtsstillstand NACH dem Fristende (z. B. Sommer-Gerichtsferien 15.7.–
+  // 15.8. bei einer am 6.7. endenden Frist) ist für DIESE Frist irrelevant und
+  // wurde sonst fälschlich als «Gerichtsstillstand» gezeigt (Befund David
+  // 25.6.2026: «Kalender immer noch nicht richtig»). Innerhalb des Zeitraums:
+  // Stillstand-Tage schraffiert, übrige als laufende Frist.
+  const bandStatus = (d: Date): BandStatus => {
+    if (!isWithinInterval(d, { start: fristStart, end: fristEnde })) return null;
+    return istStill(d) ? 'still' : 'frist';
+  };
+
+  // Legende erklärt nur, was wirklich GEZEICHNET wird (§8): ein Stillstand zählt
+  // nur, wenn er IM Frist-Zeitraum liegt (sonst wird er gar nicht dargestellt).
   const stillstandSichtbar = monate.some((monat) => {
     const tage = new Date(monat.getFullYear(), monat.getMonth() + 1, 0).getDate();
     for (let t = 1; t <= tage; t++) {
-      if (istStill(new Date(monat.getFullYear(), monat.getMonth(), t))) return true;
+      if (bandStatus(new Date(monat.getFullYear(), monat.getMonth(), t)) === 'still') return true;
     }
     return false;
   });
-
-  // Band-Ebene: laufende Frist (Messing) bzw. Gerichtsstillstand (Schraffur)
-  const bandStatus = (d: Date): BandStatus => {
-    if (istStill(d)) return 'still';
-    if (isWithinInterval(d, { start: fristStart, end: fristEnde })) return 'frist';
-    return null;
-  };
 
   // kompakt: ein Tag ist «relevant», wenn er ein Schlüsseltag ist oder im Band/
   // Stillstand liegt → nur Wochen mit relevanten Tagen werden gezeigt.
