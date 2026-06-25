@@ -187,7 +187,7 @@ export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () =>
         <Link to="/" onClick={onNavigate}
           className="flex items-center gap-2.5 px-2.5 pt-1 pb-1 no-underline" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
-          <LexMetrikWortmarke className="text-[1.3rem]" />
+          <LexMetrikWortmarke className="text-[length:var(--fs-130)]" />
         </Link>
       )}
 

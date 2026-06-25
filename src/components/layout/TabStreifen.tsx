@@ -162,7 +162,7 @@ export function TabStreifen() {
                     <button type="button" onClick={() => schliessen(t.path)}
                       aria-label={`Reiter «${label(t)}» schliessen`}
                       className="inline-flex items-center justify-center w-7 h-7 mr-0.5 rounded text-ink-500 hover:text-danger-700 transition-colors">
-                      <span aria-hidden className="text-sm leading-none">✕</span>
+                      <span aria-hidden className="text-body-s leading-none">✕</span>
                     </button>
                   </span>
                 </li>
@@ -194,7 +194,7 @@ export function TabStreifen() {
                   {pikto}
                   <span className="truncate">{meta.label}</span>
                   <span className="text-micro text-ink-400 num">{items.length}</span>
-                  <span aria-hidden className={`text-ink-400 text-[0.7rem] transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
+                  <span aria-hidden className={`text-ink-400 text-[length:var(--fs-70)] transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
                 </button>
               </li>
             );
@@ -225,7 +225,7 @@ export function TabStreifen() {
                 <button type="button" onClick={() => schliessen(t.path)}
                   aria-label={`Reiter «${label(t)}» schliessen`}
                   className="inline-flex items-center justify-center w-7 h-7 mr-1 shrink-0 rounded text-ink-400 hover:text-danger-700 transition-colors">
-                  <span aria-hidden className="text-sm leading-none">✕</span>
+                  <span aria-hidden className="text-body-s leading-none">✕</span>
                 </button>
               </div>
             );

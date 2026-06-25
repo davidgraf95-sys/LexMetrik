@@ -141,11 +141,11 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           <div className="flex items-baseline gap-2 xl:justify-end">
             <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
               aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
-              className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
-            <a href={`#art-${e.artikel}`} className="num text-[1.05rem] font-bold tracking-wide text-ink-900 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+              className="shrink-0 text-[length:var(--fs-65)] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+            <a href={`#art-${e.artikel}`} className="num text-[length:var(--fs-105)] font-bold tracking-wide text-ink-900 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
           </div>
           {artOffen && marg && marg.length > 0 && (
-            <div className="mt-1.5 space-y-0.5 font-serif text-[0.8rem] leading-snug text-ink-400">
+            <div className="mt-1.5 space-y-0.5 font-serif text-[length:var(--fs-80)] leading-snug text-ink-400">
               {marg.map((m, i) => (
                 <div key={i} className={i === marg.length - 1 ? 'italic text-ink-500' : ''}>{m}</div>
               ))}
@@ -157,7 +157,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
               (LexWork-Erlasse ohne struktur-File). «…»-Aufhebungstitel liefert der
               Extraktor gar nicht erst (§7). */}
           {artOffen && (!marg || marg.length === 0) && e.titel && (
-            <div className="mt-1.5 font-serif text-[0.8rem] leading-snug italic text-ink-500">
+            <div className="mt-1.5 font-serif text-[length:var(--fs-80)] leading-snug italic text-ink-500">
               {e.titel}
             </div>
           )}
@@ -179,11 +179,11 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
             fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
             intern={intern}
-            className="space-y-3.5 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
+            className="space-y-3.5 font-serif text-[length:var(--fs-115)] leading-[1.65] text-ink-800" />
           {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
           {verweise.length > 0 && (
             <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
+              <span className="text-[length:var(--fs-60)] font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
               {verweise.map((v) => <NormChip key={v} artikel={v} />)}
             </div>
           )}
@@ -218,7 +218,7 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   const regel = s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
   // Titelgrösse nach Tiefe: oberste Stufen prominent, tiefere ruhiger.
-  const titelStil = s.ebene <= 1 ? 'text-[1.3rem]' : s.ebene === 2 ? 'text-[1.15rem]' : s.ebene === 3 ? 'text-[1.05rem]' : 'text-[0.98rem]';
+  const titelStil = s.ebene <= 1 ? 'text-[length:var(--fs-130)]' : s.ebene === 2 ? 'text-[length:var(--fs-115)]' : s.ebene === 3 ? 'text-[length:var(--fs-105)]' : 'text-[length:var(--fs-98)]';
   return (
     <div ref={refCb} data-sek={s.id} className={`scroll-mt-[8.5rem] ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
@@ -228,9 +228,9 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
               inkl. Untergruppe ist klappbar — vorher war das Chevron zu blass/winzig,
               darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
               Steuerelement erkennbar. */}
-          <span className={`shrink-0 w-4 text-sm transition-colors ${offen ? 'text-brass-600' : 'text-ink-400'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
+          <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-400'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
           <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
-          {bereich && <span className="num shrink-0 text-[0.78rem] font-normal text-ink-400">{bereich}</span>}
+          {bereich && <span className="num shrink-0 text-[length:var(--fs-78)] font-normal text-ink-400">{bereich}</span>}
         </span>
       </button>
     </div>
@@ -517,7 +517,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-400">({rspr.length})</span></summary>
             <ul className="mt-2.5 flex flex-col gap-1.5">
               {rspr.slice(0, 8).map((r) => (
-                <li key={r.key} className="text-sm"><Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700"><span className="font-medium">{r.zitierung}</span>{r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}{r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}</Link></li>
+                <li key={r.key} className="text-body-s"><Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700"><span className="font-medium">{r.zitierung}</span>{r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}{r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}</Link></li>
               ))}
             </ul>
           </details>
@@ -748,7 +748,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </summary>
           <ul className="mt-2.5 flex flex-col gap-1.5">
             {rspr.slice(0, 8).map((r) => (
-              <li key={r.key} className="text-sm">
+              <li key={r.key} className="text-body-s">
                 <Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700">
                   <span className="font-medium">{r.zitierung}</span>
                   {r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}
@@ -894,7 +894,7 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
       <li key={s.id}>
         <div className="flex items-start" style={{ paddingLeft: `${tiefe * 0.6}rem` }}>
           {hatKinder
-            ? <button type="button" onClick={() => onToggle(s.id)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-[0.6rem] w-4">{auf ? '▾' : '▸'}</button>
+            ? <button type="button" onClick={() => onToggle(s.id)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-[length:var(--fs-60)] w-4">{auf ? '▾' : '▸'}</button>
             : <span className="shrink-0 w-4" aria-hidden />}
           <button type="button" onClick={() => onSprung(s.id)} data-toc-aktiv={aktiv ? '1' : undefined} aria-current={aktiv ? 'true' : undefined}
             className={`flex-1 text-left rounded px-1.5 py-0.5 leading-snug transition-colors ${tiefe === 0 ? 'text-body-s' : 'text-xs'} ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}>

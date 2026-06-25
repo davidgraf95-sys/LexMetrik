@@ -134,7 +134,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                       <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
                         <RechtsprechungAnker aktenzeichen={r.aktenzeichen}
                           className="no-underline hover:underline" />
-                        {!r.verifiziert && <span className="font-sans" style={{ fontSize: '10px' }}>· zu verifizieren</span>}
+                        {!r.verifiziert && <span className="font-sans text-micro">· zu verifizieren</span>}
                       </span>
                     ))}
                   </div>

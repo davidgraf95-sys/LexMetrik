@@ -29,7 +29,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
           aria-controls="seitenleisten-schublade"
           onClick={onMenu}
         >
-          <span aria-hidden className="text-[1.1rem] leading-none">☰</span>
+          <span aria-hidden className="text-[length:var(--fs-110)] leading-none">☰</span>
         </button>
 
         {/* Desktop: persistente Seitenleiste ein-/ausklappen. */}
@@ -51,7 +51,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
         <Link to="/" className="lg:hidden inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
           {/* Wortmarke ab sm — auf schmalen Schirmen trägt die Suche die Mitte. */}
-          <LexMetrikWortmarke className="hidden sm:block text-[1.35rem]" />
+          <LexMetrikWortmarke className="hidden sm:block text-[length:var(--fs-135)]" />
         </Link>
 
         <div className="flex-1 min-w-0 max-w-xl">
