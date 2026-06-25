@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md · bibliothek/recherche/familienrecht-klagen-vorlagen.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, fmtDatum, zahl } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, NUR_EXPERTE } from './detailgrad';
 
 // ─── Konkubinatsvertrag ─────────────────────────────────────────────────────
@@ -237,11 +237,7 @@ export function kkZusammenstellen(a: KkAntworten) {
       ? ' Die Zuordnung der wesentlichen Gegenstände hält eine als Beilage unterzeichnete '
         + 'Inventarliste fest.'
       : '',
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtDatum(a.datum),
   };
   return { ergebnis: assemble(KK_SCHEMA, antworten) };
-}
-
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
 }

@@ -226,9 +226,11 @@ export function allgemeineFristErgebnis(input: AllgFristInput): Berechnungsergeb
 // Rückrechnung ist anerkannt (BGE 134 III 354 – zu verifizieren; Art. 700
 // Abs. 1 OR: Einberufung «mindestens 20 Tage vor dem Versammlungstag»,
 // Wortlaut am Fedlex-Text verifiziert 5.6.2026). Arithmetik als exakte
-// Spiegelung der Vorwärtsregel: spätester Tag = (Stichtag + 1) − Frist − 1,
+// Spiegelung der Vorwärtsregel: spätester Tag = (Stichtag − Frist) − 1,
 // womit zwischen Handlung und Stichtag die vollen Tage/Monate liegen
-// (Termin 20.4. − 10 Tage → 10.4.; Quartalsende 30.6. − 3 Monate → 31.3.).
+// (Termin 20.4. − 10 Tage → 9.4.; Quartalsende 30.6. − 3 Monate → 29.3. – so
+// auch Tests AF-18/AF-19). Hinweis: andere Engines mit eigener Termin-
+// Konvention (z. B. Kündigungstermine im Mietrecht) rechnen bewusst abweichend.
 //
 // VERSCHIEBUNG: Art. 78 OR ist auf Vorwärtsfristen zugeschnitten («…endet
 // am nächstfolgenden Werktag»). Ob bei Rückwärtsfristen eine Wochenend-/

@@ -76,7 +76,7 @@ export function pruefeGates(a: TestamentAntworten): GateErgebnis {
     }
     const summe = a.erben.reduce((s, e) => s + (Number.isFinite(e.quoteProzent) ? e.quoteProzent : 0), 0);
     if (Math.abs(summe - 100) > 0.01) {
-      warnungen.push(`Die Erbquoten ergeben zusammen ${summe} % statt 100 % – der ganze Nachlass sollte abgedeckt sein; der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 Abs. 2 ZGB).`);
+      warnungen.push(`Die Erbquoten ergeben zusammen ${Number(summe.toFixed(2))} % statt 100 % – der ganze Nachlass sollte abgedeckt sein; der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 Abs. 2 ZGB).`);
     }
   }
 

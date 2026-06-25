@@ -124,7 +124,8 @@ const GESETZE_KINDER: NavKnoten[] = [
       link('Menschenrechte', '/international#menschenrechte'),
       link('Int. Privat- & Zivilrecht', '/international#privat-zivil'),
       link('Rechtshilfe (Haager)', '/international#rechtshilfe'),
-      link('Schweiz–EU & Datenschutz', '/international#eu-datenschutz'),
+      link('Schweiz–EU', '/international#schweiz-eu'),
+      link('EU-Verordnungen (DSGVO u. a.)', '/international#eu-verordnungen'),
     ],
   },
 ];
