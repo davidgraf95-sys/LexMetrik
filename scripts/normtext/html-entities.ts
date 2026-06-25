@@ -106,29 +106,21 @@ const NAMED_ENTITIES: Record<string, string> = {
 /**
  * Dekodiert alle HTML-Entities in einem String.
  *
- * - Numerische Entities (&#NNN; / &#xHH;) werden zuerst dekodiert.
- * - Benannte Entities werden danach in einem linearen Durchlauf ersetzt.
- * - &amp; ist in NAMED_ENTITIES → wird wie alle anderen ersetzt; da die
- *   numerische Phase &amp; NICHT produziert, entsteht kein Doppel-Dekodieren.
+ * Token-basierter EINMAL-Durchlauf (C1-5): jede Entity – numerisch (&#NNN; /
+ * &#xHH;) wie benannt – wird in EINEM links-nach-rechts-Scan genau einmal
+ * ersetzt, das Ergebnis NICHT erneut gescannt. So kann z. B. literales `&amp;lt;`
+ * nicht über `&` doppelt zu `<` dekodiert werden (vorher lief `&amp;` als erster
+ * Eintrag von NAMED_ENTITIES vor `&lt;` → Doppel-Dekodierung). Unbekannte
+ * Entities bleiben unverändert.
  *
  * @param s - Eingabestring mit möglicherweise kodierten HTML-Entities
  * @returns  String mit dekodierten Zeichen
  */
+const ENTITY_RE = /&#x([0-9a-fA-F]+);|&#(\d+);|&[a-zA-Z][a-zA-Z0-9]*;/g;
 export function dekodiereEntities(s: string): string {
-  // 1. Numerische Entities (hex vor dezimal, da &#x... sonst nie matcht)
-  let out = s.replace(/&#x([0-9a-fA-F]+);/g, (_m, hex) =>
-    String.fromCodePoint(parseInt(hex, 16)),
-  );
-  out = out.replace(/&#(\d+);/g, (_m, dec) =>
-    String.fromCodePoint(parseInt(dec, 10)),
-  );
-
-  // 2. Benannte Entities — linearer, nicht-rekursiver Durchlauf
-  for (const [ent, ch] of Object.entries(NAMED_ENTITIES)) {
-    if (out.includes(ent)) {
-      out = out.split(ent).join(ch);
-    }
-  }
-
-  return out;
+  return s.replace(ENTITY_RE, (m, hex, dec) => {
+    if (hex !== undefined) return String.fromCodePoint(parseInt(hex, 16));
+    if (dec !== undefined) return String.fromCodePoint(parseInt(dec, 10));
+    return Object.prototype.hasOwnProperty.call(NAMED_ENTITIES, m) ? NAMED_ENTITIES[m] : m;
+  });
 }

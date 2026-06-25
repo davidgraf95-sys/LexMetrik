@@ -27,6 +27,7 @@ import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE, type PdfProfilName } from './normtext/adapter-pdf.ts';
+import { pdfLawIdSafe } from './normtext/lawid-safe.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import { baueBrowseManifest } from './normtext/browse-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
@@ -677,50 +678,7 @@ async function erzeugeZhPdfSnapshots(
   return cov;
 }
 
-// lawIdSafe für die generischen PDF-Quellen (SZ/TI/VD/JU): ein stabiler,
-// dateisicherer Schlüssel je quelleUrl.
-//   SZ  …/assets/<n>/173_111.pdf          → «173.111»
-//   TI  …/pdfatto/atto/137                → «ti-137»
-//   VD  …/tolv/105539/fr                  → «vd-105539»
-//   JU  …viewdocument.html?idn=20021&id=34172… → «ju-20021-34172»
-function pdfLawIdSafe(profil: PdfProfilName, url: string): string {
-  if (profil === 'sz') {
-    const m = url.match(/\/(\d+_\d+)\.pdf$/i);
-    if (m) return m[1].replace(/_/g, '.');
-    const t = url.match(/\/tolv\/(\d+)\//i); // SZ-lexfind (82040/de)
-    if (t) return t[1];
-  }
-  if (profil === 'ti') {
-    const a = url.match(/\/pdfatto\/atto\/(\d+)/i);
-    if (a) return `ti-${a[1]}`;
-    const t = url.match(/\/tolv\/(\d+)\//i); // TI-lexfind (125101/it)
-    if (t) return `ti-${t[1]}`;
-  }
-  if (profil === 'vd') {
-    const m = url.match(/\/tolv\/(\d+)\//i);
-    if (m) return `vd-${m[1]}`;
-  }
-  // Generische OrdoLex-Familie: /api/<lang>/versions/<N>/pdf_file → «<N>»
-  // (kanton-präfix wird vom Aufrufer angehängt → eindeutig je Kanton);
-  // lexfind /tolv/<id>/<lang> → «<id>».
-  if (profil === 'olexAt' || profil === 'olexPar') {
-    const v = url.match(/\/versions\/(\d+)\/pdf_file/i);
-    if (v) return v[1];
-    const t = url.match(/\/tolv\/(\d+)\//i);
-    if (t) return t[1];
-  }
-  if (profil === 'ju') {
-    const idn = url.match(/[?&]idn=(\d+)/i);
-    const id = url.match(/[?&]id=(\d+)/i);
-    // Die Download-Variante (…&download=1) ist eine EIGENE Tarif-quelleUrl (=
-    // eigener Manifest-Key) — sie bekommt einen eigenen safe-Dateinamen, damit
-    // sie die Nicht-Download-Variante NICHT überschreibt (beide Keys müssen ins
-    // Manifest; identischer Inhalt, aber distinct quelleUrl).
-    const dl = /[?&]download=1/i.test(url) ? '-dl' : '';
-    if (idn && id) return `ju-${idn[1]}-${id[1]}${dl}`;
-  }
-  return url.replace(/[^a-z0-9.]+/gi, '_');
-}
+// pdfLawIdSafe liegt zentral in ./normtext/lawid-safe.ts (§5, C1-1) — importiert oben.
 
 // ── PDF-Snapshots (SZ/TI/VD/JU, generischer Einzelspalten-PDF-Adapter) ────────
 // Spiegelt die ZH-Phase: Inventar → holePdf (quelleUrl je Profil → PDF) →

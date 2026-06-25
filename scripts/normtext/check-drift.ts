@@ -27,6 +27,7 @@ import { holeLexWork } from './adapter-lexwork.ts';
 import { holeHtm } from './adapter-htm.ts';
 import { holeZhPdf } from './adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE } from './adapter-pdf.ts';
+import { pdfLawIdSafe } from './lawid-safe.ts';
 import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
 import type { NormSnapshot } from './drift-logik.ts';
 
@@ -44,28 +45,8 @@ function zhLawIdSafe(url: string): string {
   return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
 }
 
-// lawIdSafe für die generischen PDF-Quellen (kongruent zu normtext-snapshot.ts).
-function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
-  if (profil === 'sz') {
-    const m = url.match(/\/(\d+_\d+)\.pdf$/i);
-    if (m) return m[1].replace(/_/g, '.');
-  }
-  if (profil === 'ti') {
-    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
-    if (m) return `ti-${m[1]}`;
-  }
-  if (profil === 'vd') {
-    const m = url.match(/\/tolv\/(\d+)\//i);
-    if (m) return `vd-${m[1]}`;
-  }
-  if (profil === 'ju') {
-    const idn = url.match(/[?&]idn=(\d+)/i);
-    const id = url.match(/[?&]id=(\d+)/i);
-    const dl = /[?&]download=1/i.test(url) ? '-dl' : '';
-    if (idn && id) return `ju-${idn[1]}-${id[1]}${dl}`;
-  }
-  return url.replace(/[^a-z0-9.]+/gi, '_');
-}
+// pdfLawIdSafe (inkl. olexAt/olexPar) liegt zentral in ./lawid-safe.ts (§5, C1-1)
+// — importiert oben; die frühere Handkopie kannte die olex-Profile nicht.
 
 interface SnapshotDatei {
   erzeugt: string;
@@ -304,11 +285,16 @@ async function main(): Promise<void> {
     let pdfGeprüft = 0;
     let pdfDrift = 0;
     let pdfWarnungen = 0;
+    // C1-1: Gruppen ohne Snapshot-Treffer NICHT mehr still überspringen, sondern
+    // sammeln und sichtbar machen. Ein Teil davon ist legitim (PDF-Quelle ohne
+    // Snapshot = Live-Link-Fallback) → kein harter Tor-Fehler; aber ein erneuter
+    // Schlüssel-Drift (wie der olex-Bug) fällt so sofort in der Gate-Ausgabe auf.
+    const pdfOhneSnapshot: string[] = [];
 
     for (const g of pdfGruppen) {
       const key = `${g.kanton}/${pdfLawIdSafe(g.profil, g.quelleUrl)}`;
       const snapshotToken = kantonTokens.get(key);
-      if (snapshotToken === undefined) continue;
+      if (snapshotToken === undefined) { pdfOhneSnapshot.push(`${g.kanton}/${g.profil} ${key}`); continue; }
       try {
         const ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]);
         pdfGeprüft++;
@@ -328,8 +314,12 @@ async function main(): Promise<void> {
     }
 
     console.log(
-      `check:normtext-netz: ${pdfGeprüft} PDF-Gruppen geprüft — Drift: ${pdfDrift}, Netz-Warnungen: ${pdfWarnungen}`,
+      `check:normtext-netz: ${pdfGeprüft} PDF-Gruppen geprüft — Drift: ${pdfDrift}, Netz-Warnungen: ${pdfWarnungen}, ohne Snapshot (Live-Link/ungeprüft): ${pdfOhneSnapshot.length}`,
     );
+    if (pdfOhneSnapshot.length) {
+      console.log('  PDF-Gruppen ohne Snapshot-Treffer (Drift NICHT geprüft):');
+      for (const z of pdfOhneSnapshot) console.log(`    – ${z}`);
+    }
   }
 
   process.exit(exitCode);

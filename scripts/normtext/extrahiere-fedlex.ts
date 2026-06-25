@@ -187,7 +187,7 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
  * non-greedy Regex stoppte am falschen (inneren) </dl>. Fehlt das schliessende
  * Tag (malformed), wird das Stringende zurückgegeben (defensiv).
  */
-function findeDlEnde(html: string, startIdx: number): number {
+export function findeDlEnde(html: string, startIdx: number): number {
   const tagRe = /<dl\b[^>]*>|<\/dl>/gi;
   tagRe.lastIndex = startIdx;
   let tiefe = 0;
@@ -303,7 +303,7 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
  * Verschachtelte <dl><dt>…<dd>…</dd></dl> dürfen das <dd>-Ende nicht vortäuschen;
  * darum werden <dd>/</dd> gezählt (Start-Tiefe 1 für das offene <dd>).
  */
-function findeDdEnde(html: string, startIdx: number): number {
+export function findeDdEnde(html: string, startIdx: number): number {
   const tagRe = /<dd\b[^>]*>|<\/dd>/gi;
   tagRe.lastIndex = startIdx;
   let tiefe = 1;

@@ -13,6 +13,8 @@
  *    (eli/oc = Amtliche Sammlung, eli/fga = Bundesblatt)
  */
 
+import { findeDlEnde, findeDdEnde } from './extrahiere-fedlex';
+
 export interface FnLink { label: string; url: string }
 export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null; item?: string | null }
 
@@ -71,29 +73,54 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
     const setze = (id: string, item: string | null) => {
       if (!fnAbsatz.has(id)) { fnAbsatz.set(id, letzterAbsatz); fnItem.set(id, item); }
     };
-    const blockRe = /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>|<dl[^>]*>([\s\S]*?)<\/dl>/gi;
-    for (const m of body.matchAll(blockRe)) {
-      if (m[1] !== undefined) {
-        const seg = m[1];
+    // C1-4: <dl> BALANCIERT (findeDlEnde/findeDdEnde) statt non-greedy — sonst
+    // stoppte der Block am inneren </dl> verschachtelter Listen (lit. -> Ziff.) und
+    // die Marker der Eltern-Items NACH der Unterliste fielen auf die Artikelebene.
+    // Marker im <dt>+Einleitungstext gehoeren zu DIESER Marke; verschachtelte
+    // Unterlisten werden rekursiv der tieferen Marke zugeordnet.
+    const MARKE = /^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i;
+    const walkDl = (dlInner: string): number => {
+      const dtRe = /<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>/gi;
+      let dm: RegExpExecArray | null;
+      let paare = 0;
+      while ((dm = dtRe.exec(dlInner)) !== null) {
+        paare++;
+        const ddStart = dtRe.lastIndex;
+        const ddEnde = findeDdEnde(dlInner, ddStart);
+        const ddRoh = dlInner.slice(ddStart, ddEnde);
+        dtRe.lastIndex = ddEnde + '</dd>'.length;
+        const markeRoh = dm[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')
+          .replace(/<[^>]+>/g, '').replace(/&nbsp;| /g, ' ').trim();
+        const mk = markeRoh.match(MARKE);
+        const item = mk ? mk[1].toLowerCase() : null;
+        const subDlIdx = ddRoh.search(/<dl\b[^>]*>/i);
+        const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
+        for (const fm of (dm[1] + ddVorListe).matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], item);
+        if (subDlIdx >= 0) {
+          const subEnde = findeDlEnde(ddRoh, subDlIdx);
+          const subOpenLen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i)![0].length;
+          walkDl(ddRoh.slice(subDlIdx + subOpenLen, subEnde - '</dl>'.length));
+        }
+      }
+      return paare;
+    };
+    // Block-Walk in DOKUMENTREIHENFOLGE: <p ...absatz...> ODER balancierte <dl>.
+    const blockStart = /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>|<dl\b[^>]*>/gi;
+    let bm: RegExpExecArray | null;
+    while ((bm = blockStart.exec(body)) !== null) {
+      if (bm[0].toLowerCase().startsWith('<p')) {
+        const pEnd = body.indexOf('</p>', blockStart.lastIndex);
+        const seg = body.slice(blockStart.lastIndex, pEnd < 0 ? body.length : pEnd);
         const supM = seg.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
-        letzterAbsatz = supM && !/<a[\s>]/i.test(supM[1]) && /^\d+[a-z]?$/.test(supM[1].trim())
+        letzterAbsatz = supM && !/<a[\s>]/i.test(supM[1]) && /^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supM[1].trim())
           ? supM[1].trim() : null;
         for (const fm of seg.matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], null);
+        if (pEnd >= 0) blockStart.lastIndex = pEnd + '</p>'.length;
       } else {
-        // <dl>: pro <dt>/<dd>-Paar die lit/Ziff-Marke erfassen — Marker im Paar
-        // gehören zu DIESEM Item (nicht nur zum Absatz). Marke-Format wie der
-        // Snapshot-Extraktor (klein, ohne Punkt: «a», «17»). Gedankenstrich → null.
-        const dlInner = m[2];
-        let paare = 0;
-        for (const pm of dlInner.matchAll(/<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/gi)) {
-          paare++;
-          const markeRoh = pm[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')
-            .replace(/<[^>]+>/g, '').replace(/&nbsp;|\u00a0/g, ' ').trim();
-          const mk = markeRoh.match(/^([0-9]+[a-z]?|[a-z])\s*[.)]?/i);
-          const item = mk ? mk[1].toLowerCase() : null;
-          for (const fm of (pm[1] + pm[2]).matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], item);
-        }
-        if (!paare) for (const fm of dlInner.matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], null);
+        const dlEnde = findeDlEnde(body, bm.index);
+        const dlInner = body.slice(bm.index + bm[0].length, dlEnde - '</dl>'.length);
+        if (!walkDl(dlInner)) for (const fm of dlInner.matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], null);
+        blockStart.lastIndex = dlEnde;
       }
     }
     const gesehen = new Set<string>();
