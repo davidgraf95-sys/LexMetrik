@@ -22,6 +22,16 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Ultracode-Gesamt-Bug-Check (88 Agenten) + alle 22 bestätigten Befunde gefixt (in `main`)
+
+Auftrag David: fundierter Bug-Check über den GESAMTEN Code mit ultracode, „so viel wie möglich abdecken mit Prioritäten". Vorgehen: eingefrorener Worktree @`86197d9` (§12, Parallel-Agent lief auf main), 14 §-priorisierte Finder-Linsen (loop-until-dry, Opus) → 29 Rohbefunde → adversariale Verifikation (refute-by-default) → **22 bestätigt, 1 unsicher, 6 widerlegt**. Danach alle 22 gefixt (7 Commits `e0c4d1c`..`1026359`), **Gate voll grün, Golden durchgehend byte-identisch** (kein Re-Baseline nötig).
+- **Echter Rechtswert-Fehler (A5-1, §1/§7):** Art. 472 ZGB nF (Pflichtteilsverlust bei hängiger Scheidung) griff ohne `rechtsstand`-Guard auch auf altrechtliche Todesfälle (≤31.12.2022) → Ehegatten-Pflichtteil zu Unrecht 0. Guard + ehrlicher Alt-Fall-Hinweis + fassungsabhängige Anker 470/471 (A5-2). Regressionstest.
+- **A4 Beurkundung:** LU fehlte im `FREIES_NOTARIAT` → MwSt 8,1% fiel für ganz LU still weg (verifiziert: `notariate.ts`+Bibliothek = freies Notariat); Emissionsabgabe-Hinweis Freibetrag statt „ganzer Betrag"; Satz+Freibetrag in **eine** §5-Quelle `src/lib/emissionsabgabe.ts` (beide Engines behalten ihren Null-/Rundungs-Vertrag).
+- **§3-Lecks/§5-Dedup:** Probezeit-/BGG-/Schlichtungs-Schwellen + Normanker aus der Engine statt 2. Kopie in Pages (D-1/D-5/D-7); UTC-Datum-Default → lokal (E2-1); Direkt-Download-Gate in 3 Familienmasken (B1-1); toter Nav-Anker, Float-Quote, Doku-Frist-Beispiele, Nits.
+- **Normtext-Pipeline C1 (Logik gefixt):** verschachtelte `<dl>` balanciert + Fussnoten-Ebene (bis/ter) korrekt; `pdfLawIdSafe` inkl. olex zentral (`lawid-safe.ts`), Drift-Skip sichtbar. **OFFEN: Daten-Regenerierung über Fedlex-Netz** (committete Sidecars tragen noch alte Platzierung).
+- **Rechtsprechung C2 (Logik gefixt):** 2A/2C/2D-Disambiguierung — Norm-Signal (AIG→öffentlich, DBG/StHG→sozial-abgaben) vor grobem Abteilungs-Default; `proNorm`-Index nur Bund. **OFFEN: `register.json`+`norm-index.json` regenerieren + fachliche Abnahme David** (Klassifikations-/Status-Änderung) — committete Entscheid-Daten bewusst NICHT umgeschrieben.
+- `verified`/„geprüft" NICHT gesetzt. Befund-Bänder: 1 unsicher (D-3 Mahnung-Doppelung, SSoT-Hygiene), 6 widerlegt (als nicht-auslösbar nachgewiesen).
+
 ## Session 25.6.2026 — Feature «pdf-embed»: amtliches PDF in-app (ultracode, EMRK+NYÜ), LIVE
 
 Auftrag David: schwer extrahierbare Erlasse (kein Volltext-HTML) analog lexfind anders darstellen — wartungsarm, überprüfbar, doppelt kontrolliert; via ultracode gebaut + adversarial reviewed; nützlicher/besser als Konkurrenz. Andockpunkt wie in [[lexfind-clex-quelle-strategie]] vorgedacht: `ErlassStatus → render_mode`.
