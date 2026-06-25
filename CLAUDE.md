@@ -235,3 +235,12 @@ Operativ heisst das für jede UI-/Text-Arbeit:
 6. Maschinell prüfbare Regeln gehören in ESLint/Tests, nicht nur ins .md
    (E1). Empirie ist überwiegend US-basiert — CH/DE-Detailentscheide an
    echtem Verständnis prüfen, nicht aus US-Daten ableiten (E2).
+7. **UI-Design (Block F, gegründet auf `docs/recherche-ui-design-2026-06-25.md`):**
+   Kontrast WCAG 2.2 — Text ≥ 4.5:1, Nicht-Text/Fokus/Borders ≥ 3:1, in Hell
+   UND Dunkel (F2). Sichtbarer Fokus über **Outline, nicht Farbe allein** (F3).
+   Interaktive Komponenten bedienen die **volle Zustands-Matrix** inkl.
+   disabled/loading/selected/empty/error (F4). Jede `bg-*`/`border-*`/`text-*`-
+   **Farbe muss in `tailwind.config.js` existieren** (sonst stiller No-op), keine
+   toten Tokens/Klassen, kein Ad-hoc-Inline-Style wo ein Token existiert (F7).
+   Abstand aus der Mass-Skala, Dichte als bewusster Hebel (F1). Politur/
+   Fehlerfreiheit = Trust, nicht Kosmetik (F6).

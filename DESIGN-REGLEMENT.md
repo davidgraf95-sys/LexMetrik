@@ -172,6 +172,55 @@ passen), sobald Lexmetrik mehrsprachig wächst.
 
 ---
 
+## F · UI-Design (visuell & interaktiv)
+
+Gegründet auf doppelt-verifizierte UI-Design-Recherche (25.6.2026,
+`docs/recherche-ui-design-2026-06-25.md`; IBM Carbon, Atlassian, Material 3,
+W3C WCAG 2.2, Nielsen Norman Group, Stanford/Fogg) **und** das ultracode-
+Struktur-Audit. Prinzipien übernehmen, nicht Hersteller-Pixel dogmatisch.
+
+**F1 — Abstand & Raster aus Tokens, gestuft nach Dichte.** Spacing nur aus der
+Mass-Skala (`--space-*`/Tailwind), keine Ad-hoc-Pixel. Dichte ist ein bewusster
+Hebel: kompakt-aber-scanbar ist für Lexmetrik richtig (dicht ⇒ wirkt seriöser/
+fokussierter). Gruppierung über Weissraum/Nähe **vor** Linien/Rahmen.
+Beschriftete Eingaben grosszügig im Gutter, Text nie in den Gutter hängen.
+
+**F2 — Kontrast nach WCAG 2.2 (Pflicht, maschinell zu prüfen).** Text ≥ 4.5:1
+(AA), grosser/fetter Text ≥ 3:1; **Nicht-Text — UI-Komponenten, Zustände, Icons,
+Input-Borders, Fokus — ≥ 3:1** gegen die Nachbarfarbe. Wo erreichbar 7:1 (AAA)
+für tragenden Text (Trust). Gilt **in Hell- UND Dunkelmodus** (Parität). Disabled/
+Deko/Logo ausgenommen.
+
+**F3 — Sichtbarer Fokus über Outline, nicht Farbe allein.** Jede fokussierbare
+Komponente trägt einen sichtbaren Tastatur-Fokus: ≥ 2px-Perimeter, ≥ 3:1
+Change-of-Contrast fokussiert↔unfokussiert. Kein `outline:none` ohne
+gleichwertigen Ersatz; kein Fokus, der nur die Farbe wechselt.
+
+**F4 — Vollständige Zustands-Matrix.** Jede interaktive Komponente bedient
+*alle* Zustände: default · hover · focus-visible · active · **disabled ·
+loading · selected** — plus **empty- und error-State** der Sicht. Kein Zustand
+fehlt still. (Verzahnt mit C2: leeres Formular zeigt noch keinen Fehler.)
+
+**F5 — Zwei Typografie-Register.** «Produktiv» (kompakt, Sans) für Rechner/
+Generatoren/Tabellen/UI; «expressiv/Lese» (Lese-Serif, ruhige Lesespalte) nur
+für Gesetzes-/Rechtsprechungs-Volltext. Expressive Lesestile gehören NICHT in
+die Produkt-UI. Beide aus der einen verdichteten Skala (Block B2).
+
+**F6 — Politur & Fehlerfreiheit sind Trust, nicht Kosmetik.** Sichtbare
+Kleinfehler — Typos, tote Links, **stille No-op-Klassen**, inkonsistente
+Abstände — senken die Glaubwürdigkeit messbar (Prominence × Interpretation).
+Für ein Rechts-Werkzeug ist visuelle Disziplin ein Vertrauens-Mechanismus.
+
+**F7 — Token-Disziplin site-weit, ohne Leichen.** Keine toten Tokens/`lc-*`-
+Klassen. **Jede `bg-*`/`text-*`/`border-*`/`ring-*`-Farbe muss in
+`tailwind.config.js` existieren** — sonst rendert das Utility stumm nichts
+(Befund-Klasse brass-300/50). Kein Ad-hoc-Inline-Style für Farbe/Abstand/Grösse,
+wo Token/Utility existiert (datengetriebene Inline-Werte — Timelines, Karten-
+Fill — sind ausgenommen). Dark-Mode-Parität ist Teil jeder Farb-Entscheidung.
+
+**F8 — Motion zurückhaltend.** Mechanisch-präzise, kein Overshoot (Token-
+Kurven/-Dauern); `prefers-reduced-motion` wird respektiert (Base-Reset).
+
 ## Audit: Stand der Webseite gegen dieses Reglement
 
 Code-Audit 25.6.2026 (adversarial, read-only). Gesamtbild: **Die Webseite
