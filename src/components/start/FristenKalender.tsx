@@ -41,6 +41,7 @@ export function FristenKalender({ markierung, kanton }: {
         kanton={kanton}
         stillstandAktiv={(markierung.stillstand?.length ?? 0) > 0}
         stillstandPerioden={markierung.stillstand}
+        kompakt
       />
       {markierung.hinweis && <p className="text-xs text-ink-500">{markierung.hinweis}</p>}
       {markierung.verschiebeGruende && markierung.verschiebeGruende.length > 0 && (

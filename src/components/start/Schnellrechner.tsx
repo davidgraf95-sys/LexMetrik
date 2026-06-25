@@ -81,9 +81,10 @@ export function Schnellrechner() {
   const [fristErgebnis, setFristErgebnis] = useState<{ markierung: FristMarkierung; kanton: Kanton } | null>(null);
   return (
     <div className="lc-card overflow-hidden">
+      {/* «live hergeleitet»-Badge entfernt (Auftrag David 25.6.2026): redundant zum
+          Live-Hinweis im Ergebnisblock des Formulars — ein Live-Indikator genügt. */}
       <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-line">
         <span className="lc-overline text-ink-500">Schnell rechnen</span>
-        <span className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>live hergeleitet</span>
       </div>
       <div role="tablist" aria-label="Schnellrechner" className="flex gap-1 px-3 pt-3">
         {TABS.map((t) => {

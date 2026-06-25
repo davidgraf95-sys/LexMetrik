@@ -33,6 +33,11 @@ type Props = {
   // die sechs Fristen-Formulare — byte-gleiches Verhalten).
   stillstandPerioden?: { vonISO: string; bisISO: string }[];
   feiertage?: boolean;                 // Sa/So/Feiertage abschwächen (default true)
+  // kompakt: Startseiten-Schnellrechner-Variante (Auftrag David 25.6.2026) —
+  // NUR die relevanten Wochen (Ereignis→Fristende-Band + Marker) statt voller
+  // Monate, schmalere Tiles (Monate nebeneinander), engere Abstände. Opt-in;
+  // ohne den Prop unverändertes Verhalten für die sechs Fristen-Formulare.
+  kompakt?: boolean;
   // band: Beschriftung der Messing-Fläche in der Legende — Standard
   // «laufende Frist»; abweichend, wo das Band keine Frist ist (z. B.
   // Lohnfortzahlung: bezahlter Zeitraum).
@@ -45,7 +50,7 @@ const fmtDatum = (d: Date) => `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYea
 
 type BandStatus = 'frist' | 'still' | null;
 
-export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, stillstandAktiv, stillstandPerioden, feiertage = true, labels }: Props) {
+export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, stillstandAktiv, stillstandPerioden, feiertage = true, labels, kompakt = false }: Props) {
   const L = labels ?? { ereignis: 'Ereignistag', aquo: 'Fristbeginn', adquem: 'Fristende' };
   const ereignis = parseISO(ereignisISO);
   const aQuo = aQuoISO ? parseISO(aQuoISO) : null;
@@ -87,9 +92,14 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
     return null;
   };
 
+  // kompakt: ein Tag ist «relevant», wenn er ein Schlüsseltag ist oder im Band/
+  // Stillstand liegt → nur Wochen mit relevanten Tagen werden gezeigt.
+  const istRelevant = (d: Date): boolean =>
+    bandStatus(d) !== null || isSameDay(d, ereignis) || (aQuo != null && isSameDay(d, aQuo)) || isSameDay(d, adQuem);
+
   return (
-    <div className="lc-card p-5 lc-reveal">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 mb-4">
+    <div className={`lc-card lc-reveal ${kompakt ? 'p-3.5' : 'p-5'}`}>
+      <div className={`flex flex-wrap items-baseline justify-between gap-x-4 ${kompakt ? 'mb-2.5' : 'mb-4'}`}>
         <p className="lc-overline">Fristenlauf</p>
         {/* Feiertage-Kopf entfernt (Auftrag David 25.6.2026): redundant zur
             Legende unten («arbeitsfreie Tage abgeschwächt (Sa/So/Feiertage
@@ -104,7 +114,17 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
           const m = monat.getMonth();
           const anzahl = new Date(jahr, m + 1, 0).getDate();
           const offset = (new Date(jahr, m, 1).getDay() + 6) % 7; // Mo-first
-          const zellen: (Date | null)[] = [...Array(offset).fill(null), ...Array.from({ length: anzahl }, (_, i) => new Date(jahr, m, i + 1))];
+          const alleZellen: (Date | null)[] = [...Array(offset).fill(null), ...Array.from({ length: anzahl }, (_, i) => new Date(jahr, m, i + 1))];
+          // kompakt: nur Wochen (7er-Zeilen) mit einem relevanten Tag zeigen
+          // (Ereignis→Fristende-Band + Marker) → leere Vor-/Nachwochen entfallen.
+          // i % 7 bleibt korrekt: ganze (volle) Wochen werden gedroppt (Vielfaches 7).
+          const zellen: (Date | null)[] = kompakt
+            ? (() => {
+                const w: (Date | null)[][] = [];
+                for (let i = 0; i < alleZellen.length; i += 7) w.push(alleZellen.slice(i, i + 7));
+                return w.filter((woche) => woche.some((d) => d && istRelevant(d))).flat();
+              })()
+            : alleZellen;
           // Nicht angrenzende Monate: ···-Trenner statt nahtlosem Anschluss
           // (die Fussnote unten bleibt als explizite Aussage bestehen).
           const trenner = idx > 0 && keys[idx] - keys[idx - 1] > 1;
@@ -115,7 +135,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   <span className="lc-overline text-ink-400 tracking-[0.3em]">···</span>
                 </div>
               )}
-              <div className="w-[min(15.5rem,100%)]">
+              <div className={kompakt ? 'w-[min(12.5rem,100%)]' : 'w-[min(15.5rem,100%)]'}>
                 {/* Almanach-Monatskopf: Display-Name, Messing-Jahr, Haarlinie */}
                 <p className="flex items-baseline justify-between gap-2 border-b border-line pb-1.5 mb-2">
                   <span className="font-display text-body-s font-semibold tracking-[-0.01em] text-ink-900">{MONATE[m]}</span>
@@ -149,13 +169,13 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                     else if (band === 'still') { marker = 'text-warn-700'; title = 'Gerichtsstillstand'; }
 
                     return (
-                      <div key={i} title={title} className="relative h-9 flex items-center justify-center">
+                      <div key={i} title={title} className={`relative flex items-center justify-center ${kompakt ? 'h-8' : 'h-9'}`}>
                         {band && (
-                          <span aria-hidden className={`absolute inset-x-0 top-1/2 -translate-y-1/2 h-7 ${
+                          <span aria-hidden className={`absolute inset-x-0 top-1/2 -translate-y-1/2 ${kompakt ? 'h-6' : 'h-7'} ${
                             band === 'still' ? 'lc-hatch-warn' : 'bg-brass-100'
                           } ${rundL ? 'rounded-l-full' : ''} ${rundR ? 'rounded-r-full' : ''}`} />
                         )}
-                        <span className={`num relative w-8 h-8 flex items-center justify-center text-body-s ${marker}`}>
+                        <span className={`num relative flex items-center justify-center text-body-s ${kompakt ? 'w-7 h-7' : 'w-8 h-8'} ${marker}`}>
                           {d.getDate()}
                         </span>
                       </div>
