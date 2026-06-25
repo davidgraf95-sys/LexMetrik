@@ -62,6 +62,32 @@ export function abteilungZuSachgebiet(docket: string): Rechtsgebiet | null {
   return m ? (ABTEILUNG[m[1]] ?? null) : null;
 }
 
+// Mehrdeutige BGer-Abteilungen: Die II. öffentlich-rechtliche Abteilung (2A/2C/2D)
+// führt SOWOHL Steuer- ALS AUCH Ausländer-/Migrationssachen — der pauschale
+// Abteilungs-Default «sozial-abgaben» ist für sie zu grob (C2-1). Für sie wird
+// vorrangig das eindeutige Norm-Signal ausgewertet.
+const ZWEIER_OER_ABTEILUNG = new Set(['2A', '2C', '2D']);
+export function istMehrdeutigeOerAbteilung(docket: string): boolean {
+  const m = /^(\d[A-Z])/.exec(String(docket).trim());
+  return m ? ZWEIER_OER_ABTEILUNG.has(m[1]) : false;
+}
+
+// Eindeutiges Sachgebiets-Signal aus den zitierten Normen (Register-keys):
+// Migrations-/Ausländerrecht → öffentlich; Steuerrecht → sozial-abgaben.
+// Kein Treffer → null (der Aufrufer fällt dann auf legal_area / Abteilung zurück).
+const NORM_SIGNAL: Record<string, Rechtsgebiet> = {
+  AIG: 'oeffentlich', ASYLG: 'oeffentlich', BEWG: 'oeffentlich',
+  DBG: 'sozial-abgaben', STHG: 'sozial-abgaben', MWSTG: 'sozial-abgaben',
+  STG: 'sozial-abgaben', VSTG: 'sozial-abgaben',
+};
+export function normSignalSachgebiet(normKeys: Iterable<string>): Rechtsgebiet | null {
+  for (const k of normKeys) {
+    const g = NORM_SIGNAL[String(k).toUpperCase()];
+    if (g) return g;
+  }
+  return null;
+}
+
 import type { Gerichtstyp } from '../../src/lib/rechtsprechung/typen';
 export function gerichtstypFuerCourt(court: string): Gerichtstyp {
   switch (court) {

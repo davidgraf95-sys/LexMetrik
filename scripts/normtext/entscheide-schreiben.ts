@@ -45,11 +45,18 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
       datei, quelle: snap.quelle, quelleUrl: snap.quelleUrl, fassungsToken: snap.fassungsToken,
     });
 
-    for (const nk of snap.normKeys) {
-      (proNorm[nk] ??= []).push({
-        key, zitierung: snap.zitierung, regesteKurz, datum: snap.datum,
-        leitcharakter: snap.leitcharakter, gericht: snap.gericht, kanton: snap.kanton,
-      });
+    // C2-4: Der Norm→Entscheid-Index speist im UI die Liste «Bundesgerichts-
+    // entscheide zu diesem Erlass» (norm-index.ts). Darum NUR Bundes-Entscheide
+    // (kanton==='CH') aufnehmen — kantonale Entscheide würden sonst unter der
+    // BGer-Überschrift erscheinen (sie bleiben über die Rechtsprechungs-Rubrik
+    // auffindbar). Drift/Status: norm-index.json muss regeneriert werden + Abnahme David.
+    if (snap.kanton === 'CH') {
+      for (const nk of snap.normKeys) {
+        (proNorm[nk] ??= []).push({
+          key, zitierung: snap.zitierung, regesteKurz, datum: snap.datum,
+          leitcharakter: snap.leitcharakter, gericht: snap.gericht, kanton: snap.kanton,
+        });
+      }
     }
   }
 

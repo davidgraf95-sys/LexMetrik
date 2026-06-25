@@ -20,6 +20,7 @@ export { markenPlausibel, MONAT } from './erwaegung-normalisieren';
 import {
   statutesZuNormKeys, legalAreaZuSachgebiet, abteilungZuSachgebiet, gerichtstypFuerCourt,
   gerichtAnzeigename, kantonalSachgebiet, fmtDatumDe,
+  istMehrdeutigeOerAbteilung, normSignalSachgebiet,
 } from './entscheide-mapping';
 
 const API = 'https://mcp.opencaselaw.ch/api';
@@ -300,6 +301,13 @@ export function mappeEntscheidOCL(
   const docket = String(det.docket_number ?? det.decision_id).replace(/^(\d[A-Z])\s+(?=\d)/, '$1_');
   const sachgebiet: Rechtsgebiet =
     opts.sachgebietHint
+    // C2-1: Für die mehrdeutige II. öffentlich-rechtliche Abteilung (2A/2C/2D,
+    // Steuern UND Migration) zuerst das eindeutige Norm-Signal (AIG→öffentlich,
+    // DBG/StHG→sozial-abgaben), dann die OCL legal_area — sonst landeten alle
+    // 2C-Migrationsfälle pauschal unter «sozial-abgaben».
+    ?? (istMehrdeutigeOerAbteilung(docket)
+        ? (normSignalSachgebiet(normKeys) ?? legalAreaZuSachgebiet(det.legal_area))
+        : null)
     ?? abteilungZuSachgebiet(docket)        // BGer-Abteilung (z.B. 5A→privat) ist präziser …
     ?? kantonalSachgebiet(docket)           // … kantonale Aktenzeichen-Präfixe …
     ?? legalAreaZuSachgebiet(det.legal_area) // … als die grobe OCL legal_area (erst Fallback).

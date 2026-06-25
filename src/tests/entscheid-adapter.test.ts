@@ -9,7 +9,7 @@ import {
   citedRefZuId, mappeEntscheidOCL, extrahiereSachverhalt, markenPlausibel,
   teileDispositivInline, extrahiereRubrum,
 } from '../../scripts/normtext/adapter-entscheide';
-import { statutesZuNormKeys, abteilungZuSachgebiet, legalAreaZuSachgebiet } from '../../scripts/normtext/entscheide-mapping';
+import { statutesZuNormKeys, abteilungZuSachgebiet, legalAreaZuSachgebiet, istMehrdeutigeOerAbteilung, normSignalSachgebiet } from '../../scripts/normtext/entscheide-mapping';
 
 const FIX = join(process.cwd(), 'src', 'tests', 'fixtures');
 const lade = (f: string) => JSON.parse(readFileSync(join(FIX, f), 'utf8'));
@@ -92,6 +92,21 @@ describe('abteilung/legalArea → Sachgebiet (deklariert)', () => {
     expect(legalAreaZuSachgebiet('Civil law')).toBe('privat');
     expect(legalAreaZuSachgebiet('criminal')).toBe('straf');
     expect(legalAreaZuSachgebiet(null)).toBeNull();
+  });
+  // C2-1: Disambiguierung der mehrdeutigen II. öffentlich-rechtlichen Abteilung.
+  it('2A/2C/2D sind mehrdeutig (Steuern UND Migration), eindeutige Abteilungen nicht', () => {
+    expect(istMehrdeutigeOerAbteilung('2C_63/2023')).toBe(true);
+    expect(istMehrdeutigeOerAbteilung('2A_1/2010')).toBe(true);
+    expect(istMehrdeutigeOerAbteilung('2D_5/2024')).toBe(true);
+    expect(istMehrdeutigeOerAbteilung('5A_1/2025')).toBe(false);
+    expect(istMehrdeutigeOerAbteilung('6B_1/2024')).toBe(false);
+  });
+  it('Norm-Signal: Migration → öffentlich, Steuer → sozial-abgaben, sonst null', () => {
+    expect(normSignalSachgebiet(['AIG'])).toBe('oeffentlich');
+    expect(normSignalSachgebiet(['DBG'])).toBe('sozial-abgaben');
+    expect(normSignalSachgebiet(['STHG'])).toBe('sozial-abgaben');
+    expect(normSignalSachgebiet(['OR'])).toBeNull();
+    expect(normSignalSachgebiet([])).toBeNull();
   });
 });
 
