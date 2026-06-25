@@ -247,8 +247,20 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const jumpLock = useRef(false);
   const tocToggle = (id: string) => setTocBaum((o) => ({ ...o, [id]: !o[id] }));
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
-  const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
-  const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
+  const [tocAuf, setTocAuf] = useState(false); // unter xl: Gliederungs-Drawer offen?
+  const [tocOffen, setTocOffen] = useState(true); // ab xl: Gliederungsspalte ein-/ausklappen
+  // Echte xl-Erkennung (2-Spalten gibt es nur ab 1280px). Ohne sie behandelte der
+  // Code «tocOffen» fälschlich als 2-Spalten-aktiv → unter xl verschwand der
+  // Gliederungs-Zugang beim Scrollen (Auftrag David: «bei geteiltem Bildschirm
+  // jederzeit ausklappbar, analog Seitenleiste»). SSR-Default false = mobil-Layout.
+  const [istXl, setIstXl] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1280px)');
+    const upd = () => setIstXl(mq.matches);
+    upd();
+    mq.addEventListener('change', upd);
+    return () => mq.removeEventListener('change', upd);
+  }, []);
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
@@ -573,7 +585,30 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   );
   // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
   // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
-  const zweiSpalten = sektionen.length > 0 && tocOffen;
+  // 2-Spalten-Layout ist NUR ab xl aktiv (xl:grid). Darunter immer einspaltig →
+  // die Suche + der Gliederungs-Zugang leben in der STICKY Vollbreiten-Leiste.
+  const zweiSpalten = sektionen.length > 0 && tocOffen && istXl;
+
+  // Gliederungs-Baum EINMAL beschreiben (genutzt in der xl-Spalte UND im
+  // mobilen Drawer, §5 — kein doppelter onSprung). Beim Sprung den mobilen
+  // Drawer schliessen (analog Seitenleiste: Auswahl schliesst das Overlay).
+  const springeZuSektion = (id: string) => {
+    const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
+    jumpLock.current = true;
+    aktivIdRef.current = id;
+    setAktivIds(ids);
+    setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+    setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+    setTocAuf(false); // mobilen Drawer schliessen
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
+      requestAnimationFrame(() => { jumpLock.current = false; });
+    }));
+  };
+  const tocBaumEl = (
+    <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivIds} offen={tocBaum}
+      onToggle={tocToggle} onSprung={springeZuSektion} />
+  );
 
   return (
     <div className="space-y-5">
@@ -656,10 +691,17 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
           style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
-          <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
-            {sektionen.length > 0 && !tocOffen && (
-              <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
-                className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
+          <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
+            {/* Gliederungs-Zugang IN der sticky Leiste → beim Lesen jederzeit
+                erreichbar (Auftrag David, analog Seitenleiste). Unter xl öffnet er
+                den Gliederungs-Drawer (tocAuf); ab xl (eingeklappt) holt er die
+                Spalte zurück (tocOffen). */}
+            {sektionen.length > 0 && (
+              <button type="button" aria-expanded={istXl ? tocOffen : tocAuf}
+                onClick={() => (istXl ? setTocOffen(true) : setTocAuf((v) => !v))}
+                title="Gliederung" className="shrink-0 inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-micro font-medium text-ink-600 hover:text-brass-700 hover:border-brass-300 transition-colors">
+                <span aria-hidden>☰</span><span className="hidden sm:inline">Gliederung</span>
+              </button>
             )}
             {sucheEingabe}
           </div>
@@ -671,13 +713,30 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           volle Spaltenbreite, die Gliederung sitzt als einklappbarer Block darüber
           (wie mobil). So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da
           ist. Reine Darstellung (§3). */}
+      {/* Unter xl: Gliederung als Overlay-Drawer (analog Seitenleiste), geöffnet
+          über den sticky ☰-Knopf in der Suchleiste — jederzeit beim Lesen erreichbar
+          (Auftrag David). Auswahl einer Sektion schliesst den Drawer (springeZuSektion). */}
+      {!istXl && tocAuf && sektionen.length > 0 && (
+        <>
+          <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
+          <div role="dialog" aria-label="Gliederung"
+            className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[75vh] overflow-y-auto overscroll-contain"
+            style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
+            <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
+              <p className="lc-overline">Gliederung</p>
+              <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+            </div>
+            <div className="px-3 py-2">{tocBaumEl}</div>
+          </div>
+        </>
+      )}
+
       <div className={sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
+        {/* xl-Spalte (nur ab 1280px): Suche + Gliederungsbaum, sticky. Unter xl
+            wird die Gliederung NICHT inline hier gerendert (sie scrollte sonst weg),
+            sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
         {sektionen.length > 0 && (
-          <aside className={`mb-4 xl:mb-0 xl:sticky xl:top-[10.5rem] xl:max-h-[calc(100vh-11rem)] xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
-            {/* Suche oberhalb der Gliederung (Auftrag David) — im sticky Spaltenkopf,
-                die TOC scrollt darunter; der Gesetzestext rechts bleibt suchleisten­frei.
-                NUR im 2-Spalten-Fall: sonst (eingeklappt, auch wenn das Fenster mobil
-                schmal wird) trägt die Vollbreiten-Bar die Suche → kein Doppel (Review). */}
+          <aside className={`hidden xl:mb-0 xl:sticky xl:top-[10.5rem] xl:max-h-[calc(100vh-11rem)] xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
                 <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
@@ -685,42 +744,12 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 </div>
               </div>
             )}
-            {/* Deutlich sichtbarer Gliederungs-Öffner unter xl / bei geteiltem
-                Bildschirm (Auftrag David 25.6.2026): vorher nur winzige text-micro-
-                Zeile, leicht zu übersehen → jetzt klarer Button mit ☰-Symbol, damit
-                die Gliederung auch bei schmaler/geteilter Breite aufrufbar bleibt. */}
-            <button type="button" onClick={() => setTocAuf((v) => !v)} aria-expanded={tocAuf}
-              className="xl:hidden lc-btn-outline lc-btn-sm mb-2 inline-flex items-center gap-1.5">
-              <span aria-hidden>☰</span>{tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
-            </button>
-            <div className="mb-2 hidden xl:flex items-baseline justify-between shrink-0">
+            <div className="mb-2 flex items-baseline justify-between shrink-0">
               <p className="lc-overline">Gliederung</p>
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-400 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
-            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} ${tocOffen ? 'xl:block' : 'xl:hidden'} xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
-              <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivIds} offen={tocBaum}
-                onToggle={tocToggle}
-                onSprung={(id) => {
-                  const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
-                  // Spy stilllegen + Ziel markieren. Den Pfad NUR aufklappen (andere
-                  // Sektionen NICHT zuklappen) — sonst schrumpft das Layout ÜBER dem
-                  // Ziel und der Sprung landet zu kurz (im Vorabschnitt, Bug David).
-                  jumpLock.current = true;
-                  aktivIdRef.current = id;
-                  setAktivIds(ids);
-                  setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-                  // Lesebereich-Pfad öffnen, damit die Ziel-Überschrift gerendert IST
-                  // (zugeklappt existiert sie nicht im DOM → Sprung verpufft).
-                  setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-                  // Nach dem Render (zwei Frames) präzise positionieren. INSTANT statt
-                  // smooth → kein Scroll-Spy-Race, der den Treffer mitten in der
-                  // Animation auf den Vorabschnitt umlatcht. scrollIntoView respektiert
-                  // das scroll-mt (Header + Suchleiste) → Überschrift landet sichtbar.
-                  requestAnimationFrame(() => requestAnimationFrame(() => {
-                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
-                    requestAnimationFrame(() => { jumpLock.current = false; });
-                  }));
-                }} />
+            <div data-toc className="xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+              {tocBaumEl}
             </div>
           </aside>
         )}
