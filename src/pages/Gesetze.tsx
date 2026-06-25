@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
+import { InternationalRubriken } from '../components/normtext/InternationalRubriken';
 import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
@@ -10,12 +11,13 @@ import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppe
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
 
-type Ebene = 'bund' | 'kanton';
+type Ebene = 'bund' | 'kanton' | 'international';
 
 function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }) {
   const opt: { id: Ebene; label: string }[] = [
     { id: 'bund', label: 'Bund' },
     { id: 'kanton', label: 'Kantone' },
+    { id: 'international', label: 'International' },
   ];
   return (
     <div role="tablist" aria-label="Ebene" className="inline-flex rounded-md border border-line bg-paper-sunken/50 p-0.5">
@@ -300,11 +302,12 @@ export function Gesetze() {
   // Systematik; key= an BundSystematik mountet bei Hash-Wechsel frisch.
   const { hash } = useLocation();
   const hashSys = hash.startsWith('#sys-') ? hash.slice(5) : null;
-  const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton' : 'bund';
+  const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton'
+    : params.get('ebene') === 'international' ? 'international' : 'bund';
   const kanton = ebene === 'kanton' ? params.get('kt') : null;
   const setzeEbene = (e: Ebene) => {
     const p = new URLSearchParams(params);
-    if (e === 'kanton') p.set('ebene', 'kanton'); else p.delete('ebene');
+    if (e === 'bund') p.delete('ebene'); else p.set('ebene', e);
     p.delete('kt');
     setParams(p, { replace: true });
   };
@@ -319,19 +322,27 @@ export function Gesetze() {
     ladeBrowseManifest().then((m) => {
       if (!lebt) return;
       if (!m) { setFehler(true); return; }
-      // Internationale Erlasse (Staatsverträge SR 0.*, EU-Recht) erscheinen nur
-      // in der eigenständigen Rubrik «International» (/international), nicht in
-      // der Bund/Kantone-Gesetzessammlung — sonst doppelt (Auftrag David 24.6.2026).
-      setErlasse(m.erlasse.filter((e) => e.rechtsgebiet !== 'international'));
+      // ALLE Erlasse halten — die International-Erlasse (SR 0.* + EU-Recht,
+      // rechtsgebiet 'international') gehören jetzt in den eigenen International-Tab
+      // der Übersicht (Auftrag David 25.6.2026: International gleichwertig hier
+      // abdecken). Die Bund-Ansicht blendet sie weiter aus (istIntl-Filter unten).
+      setErlasse(m.erlasse);
     });
     // Systematik-Bäume parallel; fehlen sie, greift der neutrale Fallback (§8).
     ladeKantonSystematik().then((s) => { if (lebt) setSystematik(s); });
     return () => { lebt = false; };
   }, []);
 
+  const istIntl = (e: BrowseErlass) => e.rechtsgebiet === 'international';
+  // Bund-Ansicht: nur echte Bundeserlasse (International sind ebene 'bund', aber
+  // rechtsgebiet 'international' → hier ausgeschlossen, sie haben den eigenen Tab).
   const gefiltert = useMemo(
-    () => (erlasse ? filtern(erlasse.filter((e) => e.ebene === ebene), suche) : []),
-    [erlasse, ebene, suche],
+    () => (erlasse ? filtern(erlasse.filter((e) => e.ebene === 'bund' && !istIntl(e)), suche) : []),
+    [erlasse, suche],
+  );
+  const international = useMemo(
+    () => (erlasse ? erlasse.filter(istIntl) : []),
+    [erlasse],
   );
   const kantone = useMemo(
     () => (erlasse ? [...new Set(erlasse.filter((e) => e.ebene === 'kanton').map((e) => e.kanton!))].sort() : []),
@@ -341,9 +352,9 @@ export function Gesetze() {
   return (
     <div className="space-y-8">
       <SeitenKopf
-        overline="Bund & Kantone"
+        overline="Bund · Kantone · International"
         titel="Schweizer Gesetzessammlung"
-        intro="Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link. Massgeblich bleibt stets die amtliche Quelle."
+        intro="Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link — sowie die für die Schweiz massgeblichen Staatsverträge und EU-Verordnungen (International). Massgeblich bleibt stets die amtliche Quelle."
       />
 
       {fehler && (
@@ -369,7 +380,7 @@ export function Gesetze() {
               type="search"
               value={suche}
               onChange={(e) => setSuche(e.target.value)}
-              placeholder="Suchen — Bund & Kantone (Kürzel, Titel, SR-Nr.) …"
+              placeholder="Suchen — Bund, Kantone & International (Kürzel, Titel, SR-Nr.) …"
               aria-label="Gesetze durchsuchen"
               className="lc-input h-9 py-0 text-body-s w-full max-w-sm"
             />
@@ -381,8 +392,9 @@ export function Gesetze() {
             const aufKanton = !!kanton && nurKanton;
             const basis = aufKanton ? erlasse.filter((e) => e.kanton === kanton) : erlasse;
             const treffer = filtern(basis, suche);
-            const bund = treffer.filter((e) => e.ebene === 'bund');
+            const bund = treffer.filter((e) => e.ebene === 'bund' && !istIntl(e));
             const kant = treffer.filter((e) => e.ebene === 'kanton');
+            const intl = treffer.filter(istIntl);
             return (
               <div className="space-y-8">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
@@ -412,6 +424,12 @@ export function Gesetze() {
                     <Gitter erlasse={g.erlasse} />
                   </section>
                 ))}
+                {intl.length > 0 && (
+                  <section className="space-y-3">
+                    <h2 className="lc-overline">International <span className="text-ink-400">· {intl.length}</span></h2>
+                    <Gitter erlasse={intl} />
+                  </section>
+                )}
                 {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
               </div>
             );
@@ -421,6 +439,18 @@ export function Gesetze() {
             gefiltert.length === 0
               ? <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>
               : <BundSystematik key={hashSys ?? 'base'} erlasse={gefiltert} hashOffen={hashSys} />
+          )}
+
+          {/* International-Tab (Auftrag David 25.6.2026): gleichwertige Säule neben
+              Bund/Kantone — Staatsverträge SR 0.* + EU-Verordnungen, geteilte
+              Rubriken-Darstellung (§5, identisch zu /international). */}
+          {!suche.trim() && ebene === 'international' && (
+            <div className="space-y-3">
+              <p className="text-body-s text-ink-500 max-w-reading">
+                Für die Schweiz massgebliche Staatsverträge und internationales Recht — je mit Live-Link zur amtlichen Fassung (Fedlex SR 0.* bzw. EUR-Lex). Diese Rubrik führt keine eigenen Volltexte; massgeblich ist stets die amtliche Quelle.
+              </p>
+              <InternationalRubriken erlasse={international} />
+            </div>
           )}
 
           {!suche.trim() && ebene === 'kanton' && (
