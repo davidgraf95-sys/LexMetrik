@@ -17,11 +17,21 @@
 import { MWST_NORMALSATZ_PROZENT, type KantonCode } from '../data/tarif/typen';
 import type { GeschaeftsartId } from '../data/tarif/beurkundung-typen';
 import type { Spanne } from './notariatGrundbuch';
+import { EMISSIONSABGABE_FREIBETRAG_CHF, emissionsabgabeRoh } from './emissionsabgabe';
 
-/** Kantone mit freiem (MwSt-pflichtigem) Notariat. Hoheitliches Amtsnotariat
- *  (ZH, LU, SZ, NW, GL, ZG, SO, SH, AR, AI, SG, TG) erhebt keine MwSt. */
+/** Kantone, deren Notariatsgebühr der MwSt 8,1 % unterliegt (freies/privat-
+ *  wirtschaftliches Notariat). Hoheitliches Amtsnotariat (z. B. ZH, NW, TG) ist
+ *  von der MwSt ausgenommen. Diese Menge muss konsistent mit `notariate.ts`
+ *  (`system: 'frei'`) bleiben — Quelle dort ist führend (§5).
+ *  A4-1 (25.6.2026): LU ergänzt — Luzern ist freies Notariat (notariate.ts:41
+ *  «Notarenregister Kanton Luzern», bibliothek/kosten/notariatstarife-gruendung-
+ *  kantone.md «LU — Luzern (freies Notariat)»); der frühere Kommentar führte LU
+ *  fälschlich als Amtsnotariat → MwSt fiel für ganz LU still weg.
+ *  OFFEN (David): OW ist in `notariate.ts` als `gemischt` geführt und hier als
+ *  MwSt-pflichtig gelistet; die MwSt-Behandlung der `gemischt`-Kantone
+ *  (SZ/GL/ZG/SO/AR/AI/SG) ist einzelfallabhängig und bewusst NICHT verändert. */
 export const FREIES_NOTARIAT: ReadonlySet<KantonCode> = new Set<KantonCode>(
-  ['BE', 'UR', 'OW', 'FR', 'BS', 'BL', 'GR', 'AG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'],
+  ['BE', 'LU', 'UR', 'OW', 'FR', 'BS', 'BL', 'GR', 'AG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'],
 );
 
 export const MWST_QUELLE = { erlass: 'MWSTG (SR 641.20), Art. 25 Abs. 1', url: 'https://www.fedlex.admin.ch/eli/cc/2009/615/de', stand: '1.1.2024' };
@@ -50,16 +60,13 @@ export const EMISSIONSABGABE_ARTEN: ReadonlySet<GeschaeftsartId> = new Set<Gesch
 
 export const EMISSIONSABGABE_QUELLE = { erlass: 'StG (SR 641.10), Art. 8 Abs. 1 i.V.m. Art. 6 Abs. 1 lit. h', url: 'https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de', stand: '1.1.2024' };
 
-/** Emissionsabgabe: 1 % auf den CHF 1 Mio ÜBERSTEIGENDEN Teil von Nennwert + Agio.
- *  Art. 6 Abs. 1 lit. h StG normiert einen **Freibetrag** von CHF 1 Mio: befreit,
- *  «soweit die Leistungen der Gesellschafter gesamthaft eine Million Franken nicht
- *  übersteigen» — nur der übersteigende Teil ist steuerbar (gefestigte ESTV-Praxis,
- *  Bundesstempelabgabe). Bug-Audit 19.6.2026 (H6): zuvor fälschlich als Freigrenze
- *  (ganzer Betrag) gerechnet; jetzt deckungsgleich mit gruendungsunterlagen.ts. */
-const EMISSIONSABGABE_FREIBETRAG_CHF = 1_000_000;
+/** Emissionsabgabe für die Zusatzkosten-Anzeige: auf ganze Franken gerundet,
+ *  0 bei fehlender/zu kleiner Bemessung. Satz + Freibetrag (Freibetrag, nicht
+ *  Freigrenze — nur der übersteigende Teil ist steuerbar) kommen aus der zentralen
+ *  §5-Quelle `./emissionsabgabe` (A4-3b); hier nur die Rundungs-/Null-Konvention. */
 export function emissionsabgabe(bemessungChf: number): number {
   if (!Number.isFinite(bemessungChf) || bemessungChf <= EMISSIONSABGABE_FREIBETRAG_CHF) return 0;
-  return Math.round((bemessungChf - EMISSIONSABGABE_FREIBETRAG_CHF) * 0.01);
+  return Math.round(emissionsabgabeRoh(bemessungChf));
 }
 
 /** MwSt 8,1 % auf die Notariatsgebühr (nur freies Notariat). */
@@ -145,16 +152,18 @@ export function weitereKosten(
     });
   }
 
-  // 3. Emissionsabgabe (1 % über Freigrenze 1 Mio), nur AG/GmbH-Kapital.
+  // 3. Emissionsabgabe (1 % auf den CHF 1 Mio übersteigenden Teil = Freibetrag), nur AG/GmbH-Kapital.
   if (EMISSIONSABGABE_ARTEN.has(art) && wertChf !== undefined) {
     const abgabe = emissionsabgabe(wertChf);
     posten.push({
       label: 'Emissionsabgabe (StG)',
       von: abgabe, bis: abgabe,
       erlass: EMISSIONSABGABE_QUELLE.erlass, url: EMISSIONSABGABE_QUELLE.url, stand: EMISSIONSABGABE_QUELLE.stand,
+      // A4-3a: Art. 6 Abs. 1 lit. h StG ist ein FREIBETRAG (nur der übersteigende Teil
+      // ist steuerbar), keine Freigrenze (ganzer Betrag) — Text an die Rechnung angeglichen.
       hinweis: abgabe === 0
-        ? 'Kapital (inkl. Agio) bis CHF 1 Mio: abgabefrei (Freigrenze Art. 6 Abs. 1 lit. h StG).'
-        : 'Bemessung Nennwert + Agio; über der Freigrenze 1 Mio ist der ganze Betrag steuerbar. Befreiungen (Sanierung, Umstrukturierung Art. 6 StG) nicht berücksichtigt.',
+        ? 'Kapital (inkl. Agio) bis CHF 1 Mio: abgabefrei (Freibetrag Art. 6 Abs. 1 lit. h StG).'
+        : 'Bemessung Nennwert + Agio; steuerbar ist nur der CHF 1 Mio übersteigende Teil (Freibetrag Art. 6 Abs. 1 lit. h StG). Befreiungen (Sanierung, Umstrukturierung Art. 6 StG) nicht berücksichtigt.',
     });
   }
 

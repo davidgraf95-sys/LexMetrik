@@ -25,7 +25,10 @@ const N_462: Normverweis = { artikel: 'Art. 462 ZGB', bemerkung: 'Ehegatte/einge
 const N_466: Normverweis = { artikel: 'Art. 466 ZGB', bemerkung: 'Erbschaft fällt an das Gemeinwesen' };
 const N_470: Normverweis = { artikel: 'Art. 470 ZGB', bemerkung: 'Kreis der Pflichtteilsberechtigten (seit 1.1.2023 ohne Eltern)' };
 const N_471: Normverweis = { artikel: 'Art. 471 ZGB', bemerkung: 'Pflichtteil = Hälfte des gesetzlichen Erbanspruchs (Fassung ab 1.1.2023)' };
-const N_472: Normverweis = { artikel: 'Art. 472 ZGB', bemerkung: 'Verlust des Pflichtteils bei hängigem Scheidungsverfahren' };
+// Altrechtliche Fassungen (Tod ≤ 31.12.2022) – andere Pflichtteilsquoten und Berechtigtenkreis.
+const N_470_AF: Normverweis = { artikel: 'Art. 470 ZGB', bemerkung: 'Kreis der Pflichtteilsberechtigten (Fassung bis 31.12.2022, inkl. Eltern)' };
+const N_471_AF: Normverweis = { artikel: 'Art. 471 ZGB', bemerkung: 'Pflichtteile (Fassung bis 31.12.2022): Nachkommen 3/4, Eltern 1/2, überlebender Ehegatte 1/2' };
+const N_472: Normverweis = { artikel: 'Art. 472 ZGB', bemerkung: 'Verlust des Pflichtteils bei hängigem Scheidungsverfahren (Fassung ab 1.1.2023)' };
 const N_473: Normverweis = { artikel: 'Art. 473 ZGB', bemerkung: 'Nutzniessungslösung gegenüber gemeinsamen Nachkommen' };
 const N_215: Normverweis = { artikel: 'Art. 215 ZGB', bemerkung: 'Hälftige Vorschlagsbeteiligung (Errungenschaftsbeteiligung)' };
 const N_210_2: Normverweis = { artikel: 'Art. 210 Abs. 2 ZGB', bemerkung: 'Rückschlag wird nicht geteilt' };
@@ -195,13 +198,17 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
 
   // Rechtsstand (Art. 15/16 SchlT ZGB) – ISO-Vergleich genügt.
   const rechtsstand: 'neu' | 'alt' = input.todesdatum >= '2023-01-01' ? 'neu' : 'alt';
+  // Fassungsabhängige Pflichtteils-Normanker (Art. 470/471 ZGB; A5-2): altrechtliche
+  // Todesfälle dürfen nicht die nF-Bemerkung zitieren.
+  const N470 = rechtsstand === 'neu' ? N_470 : N_470_AF;
+  const N471 = rechtsstand === 'neu' ? N_471 : N_471_AF;
   rechenweg.push({
     beschreibung: 'Rechtsstand (Übergangsrecht)',
     zwischenergebnis:
       rechtsstand === 'neu'
         ? `Todesdatum ${input.todesdatum.split('-').reverse().join('.')} ≥ 1.1.2023 → neues Recht: einheitlicher Pflichtteil 1/2 des gesetzlichen Erbanspruchs; Eltern ohne Pflichtteil (BG vom 18.12.2020, AS 2021 312).`
         : `Todesdatum ${input.todesdatum.split('-').reverse().join('.')} ≤ 31.12.2022 → altes Recht: Pflichtteil Nachkommen 3/4, Eltern 1/2, Ehegatte 1/2.`,
-    normen: [N_SCHLT, N_471],
+    normen: [N_SCHLT, N471],
   });
 
   // Schritt 1 – Güterrecht
@@ -231,7 +238,18 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
   });
 
   // Schritt 4 – Pflichtteile
-  const art472 = hatEhe && input.scheidungHaengig === true && input.scheidung472Erfuellt === true;
+  // Art. 472 ZGB (Pflichtteilsverlust bei hängigem Scheidungsverfahren) existiert in dieser
+  // Fassung erst seit 1.1.2023 (BG vom 18.12.2020, AS 2021 312). Massgebend ist nach Art. 15/16
+  // SchlT ZGB das Todesdatum → für altrechtliche Todesfälle (≤ 31.12.2022) greift er NICHT (A5-1).
+  const art472 = rechtsstand === 'neu' && hatEhe
+    && input.scheidungHaengig === true && input.scheidung472Erfuellt === true;
+  if (rechtsstand === 'alt' && hatEhe && input.scheidungHaengig === true && input.scheidung472Erfuellt === true) {
+    annahmen.push(
+      'Hängiges Scheidungsverfahren bei altrechtlichem Todesfall (≤ 31.12.2022): Der automatische ' +
+      'Pflichtteilsverlust nach Art. 472 ZGB gilt erst für Todesfälle ab 1.1.2023 und wird hier daher ' +
+      'NICHT angewandt – der überlebende Ehegatte behält seinen altrechtlichen Pflichtteil (1/2).',
+    );
+  }
   let ptBasis: Position[] = positionen;
   if (art472) {
     // Pflichtteile, «wie wenn der Erblasser nicht verheiratet wäre» (Art. 472 Abs. 2).
@@ -271,7 +289,7 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
     zwischenergebnis:
       faktorText + ' Ergebnis: ' +
       erben.map((e) => `${e.bezeichnung}: ${fmtB(e.pflichtteil)}${e.anzahl ? ' je Person' : ''}`).join('; ') + '.',
-    normen: [N_470, N_471],
+    normen: [N470, N471],
   });
 
   // Schritt 5 – verfügbare Quote
@@ -282,7 +300,7 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
     zwischenergebnis:
       `Verfügbare Quote = Nachlass − Summe der Pflichtteile = 1 − ${fmtB(summePt)} = ${fmtB(verfuegbareQuote)}. ` +
       'Über diesen Teil kann durch Verfügung von Todes wegen frei verfügt werden; bei Verletzung eines Pflichtteils steht die Herabsetzungsklage offen (Art. 522 ff. ZGB).',
-    normen: [N_470, N_471],
+    normen: [N470, N471],
   });
 
   // Nutzniessungs-Hinweis (Art. 473) bei Ehegatte + Nachkommen
@@ -332,7 +350,7 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
     ...(parentel === 1 ? [N_457] : parentel === 2 ? [N_458] : parentel === 3 ? [N_459, N_460] : []),
     ...(hatEhe ? [N_462] : []),
     ...(parentel === 0 && !hatEhe ? [N_466] : []),
-    N_470, N_471,
+    N470, N471,
     ...(art472 ? [N_472] : []),
     N_SCHLT,
   ];

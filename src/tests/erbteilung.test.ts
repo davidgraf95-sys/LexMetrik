@@ -158,6 +158,15 @@ describe('Art. 472 ZGB – hängiges Scheidungsverfahren', () => {
     expect(quoten(inp)['Ehegatte/Partner']).toEqual(['1/2', '1/4']);
     expect(r.warnungen.some((w) => w.includes('Art. 472'))).toBe(true);
   });
+
+  // A5-1: Art. 472 ZGB nF gilt erst für Todesfälle ab 1.1.2023 (Art. 15/16 SchlT ZGB).
+  // Bei altrechtlichem Tod darf der automatische Pflichtteilsverlust NICHT greifen.
+  it('altrechtlicher Tod (≤ 31.12.2022): Art. 472 greift NICHT – Ehegatte behält Pflichtteil 1/4 + Hinweis', () => {
+    const inp = base({ todesdatum: '2022-06-01', zivilstand: 'verheiratet', kinderLebend: 1, scheidungHaengig: true, scheidung472Erfuellt: true });
+    const r = berechneErbteilung(inp);
+    expect(quoten(inp)['Ehegatte/Partner']).toEqual(['1/2', '1/4']); // PT NICHT 0
+    expect(r.annahmen.some((a) => a.includes('Art. 472') && a.includes('ab 1.1.2023'))).toBe(true);
+  });
 });
 
 describe('Güterrechtliche Vorstufe', () => {

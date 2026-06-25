@@ -51,9 +51,14 @@ describe('weitereKosten — Zusammensetzung je Geschäftsart/Kanton', () => {
     expect(zh.posten).toHaveLength(0);
   });
 
-  it('FREIES_NOTARIAT: 14 Kantone, ZH/LU/SG nicht enthalten', () => {
-    expect(FREIES_NOTARIAT.size).toBe(14);
+  // A4-1 (25.6.2026): LU ist freies, MwSt-pflichtiges Notariat (notariate.ts «frei»,
+  // bibliothek/kosten/notariatstarife-gruendung-kantone.md «LU — freies Notariat»);
+  // vorher fälschlich ausgeschlossen → MwSt fiel für ganz LU weg. Test korrigiert.
+  it('FREIES_NOTARIAT: 15 Kantone, ZH/SG nicht – LU/GE enthalten', () => {
+    expect(FREIES_NOTARIAT.size).toBe(15);
     expect(FREIES_NOTARIAT.has('ZH')).toBe(false);
+    expect(FREIES_NOTARIAT.has('SG')).toBe(false);
+    expect(FREIES_NOTARIAT.has('LU')).toBe(true);
     expect(FREIES_NOTARIAT.has('GE')).toBe(true);
   });
 });

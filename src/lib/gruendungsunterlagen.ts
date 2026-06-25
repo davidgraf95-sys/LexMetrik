@@ -108,13 +108,12 @@ export interface GmbhGruendungEingaben {
 
 // ─── geteilte Bausteine (fachneutral) ───────────────────────────────────────
 
-/** Emissionsabgabe: 1 % des CHF 1 Mio. übersteigenden Teils der Leistungen
- *  (Art. 8 Abs. 1 + Art. 6 Abs. 1 lit. h StG, SR 641.10 – Freibetrag gilt
- *  ausdrücklich für AG, Kommandit-AG und GmbH; Wortlaut am Cache verifiziert,
- *  Stand 1.1.2024 = neuste Konsolidierung). Bemessung mind. Nennwert,
- *  Sachen zum Verkehrswert (Art. 8 Abs. 3) – hier bewusst nur die
- *  Leistungs-Eingabe, keine Steuerberatung. */
-export const EMISSIONSABGABE_FREIBETRAG_CHF = 1_000_000;
+// Emissionsabgabe-Stammregel (Satz + Freibetrag) liegt zentral in
+// `./emissionsabgabe` (§5, A4-3b); hier nur re-exportiert für bestehende
+// Verwender/Tests. Bemessung mind. Nennwert, Sachen zum Verkehrswert
+// (Art. 8 Abs. 3 StG) – hier bewusst nur die Leistungs-Eingabe, keine Steuerberatung.
+import { EMISSIONSABGABE_FREIBETRAG_CHF, emissionsabgabeRoh } from './emissionsabgabe';
+export { EMISSIONSABGABE_FREIBETRAG_CHF };
 
 // FINMA-Bewilligungs-Bezeichnungen (Merkblatt HRegA ZH «Belege für die
 // Neueintragung», 11.12.2024) — deterministische Wortprüfung über
@@ -139,7 +138,7 @@ export function finmaBegriffsTreffer(firma: string, zweck: string): string[] {
 export function emissionsabgabe(leistungenChf: number | undefined): number | null {
   if (leistungenChf === undefined || !Number.isFinite(leistungenChf)) return null;
   if (leistungenChf <= EMISSIONSABGABE_FREIBETRAG_CHF) return null;
-  return (leistungenChf - EMISSIONSABGABE_FREIBETRAG_CHF) * 0.01;
+  return emissionsabgabeRoh(leistungenChf); // ungerundet (Form-Anzeige), §5-Quelle
 }
 
 const STAMPA_HINWEIS =
