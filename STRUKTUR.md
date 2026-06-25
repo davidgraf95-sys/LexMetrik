@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Legal-Design: site-weites Dach-Reglement + Token-Disziplin maschinell erzwungen (in `main`, deployt)
+
+Auftrag David: Legal-Design recherchieren → Erkenntnisse als **site-weite Design-Regeln** ins Projekt; danach „1–5 machen" (die 5 offenen Audit-Punkte). Vorgehen: doppelt-verifizierte Deep-Research (22 Quellen, 25/25 Claims bestätigt; Hagan/Stanford, MIT-TedLab, WorldCC) → Regeln abgeleitet; pro Schritt Bug-Check (`gate:schnell`), §12-konform (Pathspec, Parallel-Session lief auf main).
+- **Dach-Reglement `DESIGN-REGLEMENT.md` + `CLAUDE.md §13`** (`1a4fc6ce`): site-weite Regeln in 5 Blöcken (A Sprache · B Darstellung · C UX · D Vertrauen · E Governance), an bestehende Tokens gebunden, ehrlicher CH-Evidenz-Vorbehalt; steht über den 3 Domänen-Reglementen. Enthält Code-Audit (erfüllt/teilweise/offen je Regel).
+- **#2/#4 Off-Scale-Typo → Tokens** (`c7aa3e5d`, **byte-identisch**): rohe `text-[…rem]`-Literale in Lesern (GesetzLeser/EntscheidLeser/EntscheidBody) + UI-Chrome (Topbar/Sidebar/Shell/TabStreifen/ThemaUmschalter) auf zentrale `--fs-*`-Tokens (`index.css`, genutzt via `text-[length:var(--fs-*)]`); `text-sm`→`text-body-s`; `#3` `fontSize:'10px'`→`text-micro`. Golden durchgehend byte-gleich.
+- **#1 Token-Schranke** (`7f9f0319`, E1): `scripts/check-design-tokens.ts` verbietet `text-sm/lg/xl…` + rohe `text-[…px|rem]` (erlaubt Skala/`var`/`em`), in `npm run check`→gate. Regex gegen 13 Fälle gegengeprüft.
+- **#5 D1 — verifiziert, bereits erfüllt (§7, keine Änderung):** `TarifQuelle` (prozesskosten/grundbuchgebuehren) trägt `stand`+`quelleUrl` **typ-erzwungen**; Audit-Heuristik (norm 750× vs stand 51×) war by-design (norm-Zitate = NormLinks mit eigener Provenienz). Provenienz erfinden wäre §7-Verstoss.
+- **Fremder Lint-Rot auf main behoben:** `backfill-legal-area.ts:96-97` (Parallel-Session `d5622250`) nutzte Ternary-als-Statement (`no-unused-expressions`) → if/else, verhaltensneutral. **Gate voll grün** (tsc·vitest·golden·lint·check). OFFEN (separat vorzulegen): die 12 `--fs-*`-Feinstufen auf wenige echte Schritte verdichten (ändert bewusst Pixel).
+
 ## Session 25.6.2026 — Ultracode-Gesamt-Bug-Check (88 Agenten) + alle 22 bestätigten Befunde gefixt (in `main`)
 
 Auftrag David: fundierter Bug-Check über den GESAMTEN Code mit ultracode, „so viel wie möglich abdecken mit Prioritäten". Vorgehen: eingefrorener Worktree @`86197d9` (§12, Parallel-Agent lief auf main), 14 §-priorisierte Finder-Linsen (loop-until-dry, Opus) → 29 Rohbefunde → adversariale Verifikation (refute-by-default) → **22 bestätigt, 1 unsicher, 6 widerlegt**. Danach alle 22 gefixt (7 Commits `e0c4d1c`..`1026359`), **Gate voll grün, Golden durchgehend byte-identisch** (kein Re-Baseline nötig).

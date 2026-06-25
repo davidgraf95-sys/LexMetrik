@@ -181,6 +181,13 @@ Drilldown und ALL-CAPS sind sauber. Die Lücken sind eng umrissen: **Typografie-
 Magic-Numbers in den Leser-Komponenten**, **fehlende maschinelle Erzwingung**
 (E1) und **Stand/Link nicht an jedem Einzelwert** (D1).
 
+**Nachtrag 25.6. (Umsetzung, Auftrag «1–5 machen»):** #1–#4 umgesetzt — Off-
+Scale-Typo byte-identisch auf `--fs-*`-Tokens (B2/D2), `fontSize:'10px'`→
+`text-micro` (#3), und die Token-Schranke `check:design-tokens` ist scharf
+(E1, in `npm run check`/gate). #5 (D1) wurde verifiziert und ist **bereits
+erfüllt** (typ-erzwungene `TarifQuelle`) — keine Änderung, da Erfinden von
+Provenienz §7 verletzt hätte. B2/D2/E1 sind damit maschinell abgesichert.
+
 | Regel | Status | Kern-Beleg | Befund |
 |---|---|---|---|
 | A1/A3 Sprache (UI) | n. i. Code prüfbar | — | Manuell/Stichprobe; siehe A2b |
@@ -195,7 +202,7 @@ Magic-Numbers in den Leser-Komponenten**, **fehlende maschinelle Erzwingung**
 | C1 Überblick→Drilldown | ✅ erfüllt | `Startseite.tsx` + `src/components/start/*` | Cockpit → Detailseiten |
 | C2 leeres Formular ohne Fehler | ✅ erfüllt | `ui.tsx:372` `BeruehrtRahmen`, `:392` `FehlerBox` | Fehler erst nach «berührt»; 15 Forms gewrappt |
 | C3 Warum-Layer | ✅ erfüllt | Rechner-Reglement R | «Was gilt → warum» durchgängig |
-| D1 Norm + Link + Stand | 🟡 teilweise | `src/lib/`: `norm` 750× vs `stand` 51× / `quelleUrl` 21× | Norm-Anker fast durchgängig; Stand+Link nicht an jedem Tarif-/Rechenwert |
+| D1 Norm + Link + Stand | ✅ erfüllt (verifiziert 25.6.) | `prozesskosten.ts:98-103` `TarifQuelle` (stand/quelleUrl = Pflicht) | Tarif-/Rechenwerte tragen Quelle+Stand+Link **typ-erzwungen**; bare `norm`-Zitate sind NormLinks, die die Provenienz des verlinkten Erlasses erben (kein Duplikat nötig). Audit-Heuristik (51 vs 750) war by-design, kein echter Mangel. |
 | D2 keine Magic-Numbers | 🟡 teilweise | `ErgebnisAnzeige.tsx:137` (`fontSize:'10px'`) | Farben/Abstände token-rein; Restmenge = die Typo-Magic-Numbers aus B2 |
 | D3 Status-Marker ehrlich | ✅ erfüllt | `verified` 177× in `src/lib` | Recherche/geprüft sichtbar |
 | E1 in Code erzwungen | 🟠 offen | `eslint.config.js` (nur §2-Determinismus) | KEINE Schranke gegen `text-sm`/Arbitrary-`text-[…]`/Ad-hoc-Farben — B2/D2 sind reine Disziplin |
@@ -216,9 +223,15 @@ Magic-Numbers in den Leser-Komponenten**, **fehlende maschinelle Erzwingung**
    auf `text-micro` o. ä. heben.
 4. **`EntscheidBody.tsx:16,48,112` + `EntscheidLeser.tsx:243,363`** — off-scale
    `text-[…rem]`; wenn nutzerwählbar, als CSS-Var dokumentieren statt frei.
-5. **D1 Stand+Link nachziehen** — Tarif-Engines ohne `stand`/`quelleUrl`
-   (Kandidaten: prozesskosten, grundbuchgebuehren) an das Snapshot-Muster der
-   Normtext-Schicht angleichen.
+5. ~~D1 Stand+Link nachziehen~~ — **verifiziert 25.6., bereits erfüllt, keine
+   Änderung (§7).** Die Audit-Kandidaten prozesskosten/grundbuchgebuehren tragen
+   `stand`+`quelleUrl` **typ-erzwungen** (`TarifQuelle`, nicht-optional →
+   `prozesskosten.ts:98-103`, gerendert in `grundbuchgebuehren.ts:114-123`). Die
+   Korpus-Metrik (norm 750× vs stand 51×) ist by-design: `norm`-Zitate sind
+   NormLinks auf den in-app-Erlass (mit eigenem Stand), kein dupliziertes
+   stand/url nötig. Provenienz zu erfinden wäre ein §7-Verstoss — daher bewusst
+   keine Code-Änderung. (Ein echter D1-Sweep über ALLE Engines bliebe ein
+   separater, verifiziert-zu-belegender Auftrag — nichts Fabrizierbares.)
 
 > Reine Disziplin-Befunde (A2b) und domänenbedingte Ausnahmen (2-spaltiges
 > Normtext-Layout, Druckbild-`em`-Grössen in `vorschauStil.ts`) sind bewusst
