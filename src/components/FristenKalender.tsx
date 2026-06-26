@@ -114,7 +114,11 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
       {/* Die grafische Matrix transportiert ihre Bedeutung nur visuell (Farbe/
           Form/title) — für Screenreader aria-hidden und durch die sr-only-
           Zusammenfassung unten ersetzt (E9, WCAG 1.3.1/1.4.1). */}
-      <div className="flex flex-wrap items-start gap-x-7 gap-y-6" aria-hidden>
+      {/* kompakt (Startseiten-Schnellrechner): Monate zentriert + fraktional
+          wachsend, damit der Kalender seine Karte ausfüllt statt links zu
+          kleben (Befund David 26.6.2026 «füllt nicht alles aus»). Nicht-kompakt
+          (sechs Fristen-Formulare) bleibt byte-gleich. */}
+      <div className={`flex flex-wrap items-start ${kompakt ? 'justify-center gap-x-6 gap-y-5' : 'gap-x-7 gap-y-6'}`} aria-hidden>
         {monate.map((monat, idx) => {
           const jahr = monat.getFullYear();
           const m = monat.getMonth();
@@ -141,7 +145,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   <span className="lc-overline text-ink-500 tracking-[0.3em]">···</span>
                 </div>
               )}
-              <div className={kompakt ? 'w-[min(12.5rem,100%)]' : 'w-[min(15.5rem,100%)]'}>
+              <div className={kompakt ? 'flex-1 basis-[12.5rem] max-w-[17rem]' : 'w-[min(15.5rem,100%)]'}>
                 {/* Almanach-Monatskopf: Display-Name, Messing-Jahr, Haarlinie */}
                 <p className="flex items-baseline justify-between gap-2 border-b border-line pb-1.5 mb-2">
                   <span className="font-display text-body-s font-semibold tracking-[-0.01em] text-ink-900">{MONATE[m]}</span>
