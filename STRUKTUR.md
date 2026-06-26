@@ -22,6 +22,16 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — UI-Politur: A11y-Restpunkte (Combobox/Stretched-Link/Tab-Panels; deployt)
+
+Nachzug zum Audit (David: «mach weiter bis alles fertig ist das du machen kannst»).
+Branch `fix/ui-politur-2026-06-26`. 6 technisch ohne Davids Fachzeit machbare Punkte:
+- HeaderSuche: Combobox-Parität zum Hero (Pfeil/Enter, role=combobox + ARIA, geteilte suchOptionId).
+- EntscheidKarte/-Zeile: **Stretched-Link** (Norm-Chips nicht mehr fokussierbare <a>-Nachkommen; valides Markup, Fläche klickbar).
+- SuchResultate role=group · UniversalSuche aria-controls-Guard · Gesetze Ebene-Tabs id+aria-controls+role=tabpanel · AllgemeineFristForm Längenfeld bleibt leer statt «0».
+- Tore grün (tsc · eslint 0 · vitest 2601 · golden byte-gleich · build). **E2E gegen Baseline (1ea399c2) verglichen: KEINE neue Regression** (16 passed / 11 failed identisch).
+- **BEFUND offen (nicht in diesem Batch behoben):** Die E2E-Suite (Playwright, NICHT im `check`-Gate) ist an der Baseline **rot — 11 Fehler** (7 axe-A11y u.a. `nested-interactive` Listbox-Option-Links + `color-contrast` brass-700; 4 funktionale/Inhalts-Asserts). Teils Davids dokumentierte Design-Entscheide (brass-700-Kontrast), teils Listbox-vs-Link-Designfrage → bewusst NICHT autonom gefixt. **Empfehlung: E2E ins Gate aufnehmen + eigener A11y-Durchgang.**
+
 ## Session 26.6.2026 — UI Bug- & Logik-Audit, 43 Fixes (Multi-Agent, gegengeprüft; deployt)
 
 Auftrag David (ultracode): UI komplettem Bug-/Logik-Check unterziehen, Handlungsplan
