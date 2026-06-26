@@ -41,19 +41,19 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible();
   });
 
-  test('P3: vertikales «Alle Reiter»-Panel, gruppiert (Gesetze→Bund)', async ({ page }) => {
+  test('P3/B: Reiter-Übersicht im Header, gruppiert (Gesetze→Bund)', async ({ page }) => {
     // Zwei Gesetze öffnen → Reiter entstehen.
     await page.goto('/gesetze/bund/OR');
     await expect(page.locator('#art-1')).toBeVisible();
     await page.goto('/gesetze/bund/ZGB');
     await expect(page.locator('article').first()).toBeVisible();
-    // Panel öffnen.
-    await page.getByRole('button', { name: /Alle Reiter/ }).click();
+    // Übersicht aus der TOPBAR öffnen (Trigger trägt aria-label «Alle geöffneten Reiter»).
+    await page.getByRole('button', { name: 'Alle geöffneten Reiter' }).click();
     const dialog = page.getByRole('dialog', { name: 'Alle geöffneten Reiter' });
     await expect(dialog).toBeVisible();
     await expect(dialog.getByText('Gesetze', { exact: true })).toBeVisible();
     await expect(dialog.getByText('Bund', { exact: true })).toBeVisible();
-    await page.screenshot({ path: `${SHOT}/p3-panel-desktop.png` });
+    await page.screenshot({ path: `${SHOT}/p3-panel-header.png` });
   });
 
   test('Such-Bug: Suchleiste bleibt nach Aktivieren im Bild (nicht nach oben raus)', async ({ page }) => {
@@ -76,6 +76,28 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await page.reload();
     await expect(page.locator('#art-1')).toBeVisible();
     await page.screenshot({ path: `${SHOT}/leser-desktop-dunkel.png`, fullPage: false });
+  });
+
+  test('C: aktueller Artikel wird bei KANTONALEM Gesetz verfolgt (Reiter-Anker)', async ({ page }) => {
+    await page.goto('/gesetze/kanton/BS-640.100');
+    await expect(page.locator('article').first()).toBeVisible();
+    await page.evaluate(() => window.scrollTo(0, 3000));
+    await page.waitForTimeout(600);
+    // Der geteilte Observer muss den Reiter-Pfad in localStorage mit #art-… aktualisiert haben.
+    const hatAnker = await page.evaluate(() => {
+      const roh = localStorage.getItem('lexmetrik-tabs');
+      if (!roh) return false;
+      const tabs = JSON.parse(roh) as Array<{ path: string }>;
+      return tabs.some((t) => t.path.includes('/gesetze/kanton/BS-640.100') && t.path.includes('#art-'));
+    });
+    expect(hatAnker).toBe(true);
+  });
+
+  test('H: Absatzmarker 2bis/2ter verschieben den Text nicht (ZGB Art. 61)', async ({ page }) => {
+    await page.goto('/gesetze/bund/ZGB#art-61');
+    await expect(page.locator('#art-61')).toBeVisible();
+    await page.waitForTimeout(300);
+    await page.locator('#art-61').screenshot({ path: `${SHOT}/h-zgb-art61.png` });
   });
 
   test('Screenshot Mobil', async ({ page }) => {

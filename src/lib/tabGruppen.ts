@@ -1,6 +1,6 @@
 // Geteilte Reiter-Gruppierung (SSoT §5): EINE Stelle für die Kategorie- und
-// Herkunfts-Achse der offenen Reiter — genutzt vom horizontalen TabStreifen UND
-// vom vertikalen TabPanel (Auftrag David 26.6.2026). Reine, deterministische
+// Herkunfts-Achse der offenen Reiter — genutzt von der Topbar-Reiter-Übersicht
+// (ReiterUebersicht/TabPanel, Auftrag David 26.6.2026). Reine, deterministische
 // Funktionen (§2/§3): aus Pfad bzw. aufgelöstem Erlass; kein DOM, kein Register.
 
 import { pfadTeil, erlassVonPfad, type VerlaufManifeste } from './verlaufLabel';
@@ -44,6 +44,18 @@ export function herkunftVon(path: string, m: VerlaufManifeste = {}): Herkunft | 
   if (!e) return null;
   if (e.rechtsgebiet === 'international') return 'international';
   return e.ebene === 'bund' ? 'bund' : 'kanton';
+}
+
+/** Same-Group-Guard fürs Umsortieren (Drag&Drop UND Tastatur-Pfeile): ein Reiter
+ *  darf NUR innerhalb derselben Blatt-Liste verschoben werden, wie das TabPanel
+ *  sie rendert — gleiche Kategorie, bei Gesetzen zusätzlich gleiche Herkunft
+ *  (bzw. dieselbe «ungeklärte» Sammelliste, wenn das Manifest noch nicht geladen
+ *  ist → herkunftVon === null für beide). Reine, deterministische Funktion (§2/§3). */
+export function gleicheReiterGruppe(vonPath: string, nachPath: string, m: VerlaufManifeste = {}): boolean {
+  const kat = reiterKategorie(vonPath);
+  if (kat !== reiterKategorie(nachPath)) return false;
+  if (kat === 'gesetze') return herkunftVon(vonPath, m) === herkunftVon(nachPath, m);
+  return true;
 }
 
 /** Kantonskürzel eines Reiters, falls er ein KANTONALES Gesetz zeigt; sonst null. */

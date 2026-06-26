@@ -1,15 +1,30 @@
+import type { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
-import type { BrowseErlass } from '../../lib/normtext/browse-typen';
+import { istLesbar, type BrowseErlass } from '../../lib/normtext/browse-typen';
+import { useErlassOeffnen, istErlassOffen } from '../../lib/useErlassOeffnen';
+
+// Klick-Handler für eine Erlass-Verlinkung (Punkt G): der <Link> trägt weiter den
+// nackten Basispfad (SEO/Mittelklick/Cmd-Klick/Copy-Link). Nur der EINFACHE
+// Linksklick wird abgefangen — und auch nur, wenn das Gesetz schon offen ist:
+// dann öffnet der Hook eine neue Instanz (?r). Sonst läuft der normale
+// Link-Navigate, der ohnehin den Basispfad öffnet.
+function macheOeffnenHandler(
+  e: BrowseErlass,
+  basePath: string,
+  oeffne: (ebene: string, key: string, kuerzel?: string) => void,
+) {
+  return (ev: MouseEvent) => {
+    if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    if (!istErlassOffen(basePath)) return;
+    ev.preventDefault();
+    oeffne(e.ebene, e.key, e.kuerzel);
+  };
+}
 
 // Erlass-Karte in der Übersicht /gesetze. Nüchtern/kanzleihaft (DESIGN-REGLEMENT):
 // Kürzel als Anker, Titel klein, Meta (SR · Artikelzahl), Stand als Chip. Reine
 // Darstellung (§3). 'snapshot' UND 'pdf-embed' (amtliches PDF in-app) führen in
 // die In-App-Lesesicht; 'nur-live-link' trägt ehrlich nur den amtlichen Link (§8).
-
-/** Hat eine In-App-Lesesicht (Volltext-Snapshot ODER eingebettetes amtliches PDF). */
-function istLesbar(e: BrowseErlass): boolean {
-  return e.status === 'snapshot' || e.status === 'pdf-embed';
-}
 
 function StandChip({ stand }: { stand: string }) {
   if (!stand) return null;
@@ -54,12 +69,17 @@ export function ErlassZeile({ e }: { e: BrowseErlass }) {
     </>
   );
   const cls = 'flex items-baseline gap-2 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
+  const oeffne = useErlassOeffnen();
+  const basePath = `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`;
   return istLesbar(e)
-    ? <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>
+    ? <Link to={basePath} onClick={macheOeffnenHandler(e, basePath, oeffne)} className={cls}>{inhalt}</Link>
     : <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>;
 }
 
 export function ErlassKarte({ e }: { e: BrowseErlass }) {
+  // Hook vor jeder Verzweigung (Rules of Hooks) — auch wenn der nur-live-link-
+  // Pfad ihn nicht braucht.
+  const oeffne = useErlassOeffnen();
   // nur-live-link: kein interner Reader (ehrlich, §8) → amtlicher Link extern.
   if (!istLesbar(e)) {
     return (
@@ -74,9 +94,11 @@ export function ErlassKarte({ e }: { e: BrowseErlass }) {
       </a>
     );
   }
+  const basePath = `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`;
   return (
     <Link
-      to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`}
+      to={basePath}
+      onClick={macheOeffnenHandler(e, basePath, oeffne)}
       className="lc-card group block p-4 no-underline transition-colors hover:border-brass-400"
     >
       <KarteInhalt e={e} />

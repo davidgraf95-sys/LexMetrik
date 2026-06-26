@@ -33,7 +33,7 @@ export function tabSchluessel(path: string): string {
   return r ? `${pfad}?r=${r}` : pfad;
 }
 /** Event, mit dem Schreiber (TabTracker, Schliess-Buttons) die Leser
- *  (useTabs → TabStreifen) im selben Browser-Tab synchron halten. */
+ *  (useTabs → ReiterUebersicht/TabPanel) im selben Browser-Tab synchron halten. */
 export const TABS_EVENT = 'lexmetrik:tabs';
 
 export function ladeTabs(): TabEintrag[] {

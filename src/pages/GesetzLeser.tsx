@@ -152,13 +152,15 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
               N1 (BS-Audit 23.6.2026): amtlicher Randtitel (article_title) nur, wenn
               KEINE feinere struktur-Marginalie (marg) vorliegt. */}
           {marg && marg.length > 0 ? (
-            <div className="mb-1 space-y-0.5 font-serif text-xs leading-snug text-ink-600">
+            <div className="mb-1 space-y-0.5 font-serif leading-snug">
               {marg.map((m, i) => (
-                <div key={i} className={i === marg.length - 1 ? 'font-medium text-ink-700' : ''}>{m}</div>
+                <div key={i} className={i === marg.length - 1
+                  ? 'text-base font-semibold text-ink-800'
+                  : 'text-body-s text-ink-600'}>{m}</div>
               ))}
             </div>
           ) : e.titel ? (
-            <div className="mb-1 font-serif text-xs leading-snug font-medium text-ink-700">
+            <div className="mb-1 font-serif leading-snug text-base font-semibold text-ink-800">
               {e.titel}
             </div>
           ) : null}
@@ -234,8 +236,10 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   // wieder die Standort-Info im Text (der frühere fliegende Running-Header entfällt).
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   const regel = s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
-  // Titelgrösse nach Tiefe: oberste Stufen prominent, tiefere ruhiger.
-  const titelStil = s.ebene <= 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : s.ebene === 3 ? 'text-base' : 'text-base';
+  // Titelgrösse nach Tiefe (E, Auftrag David 26.6.2026): Fedlex-artig abgestuft —
+  // oberste Stufe prominent (h2), dann h3, body-l, sonst base. font-semibold liegt
+  // am Titel-Span (unten). Nur existierende Tokens (§13).
+  const titelStil = s.ebene === 0 ? 'text-h2' : s.ebene === 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : 'text-base';
   return (
     <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
@@ -269,14 +273,40 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // (springt stattdessen zum Artikel).
   const scrollVorSuche = useRef<number | null>(null);
   const sucheVorher = useRef('');
+  // Auf-/Zu-Zustand des FLIESSTEXTS (Sektionen im Lesefluss). Default OFFEN
+  // (renderSektion mit defOpen=true) — Fedlex-treu der ganze Erlass lesbar; jede
+  // Stufe ist per SektionKopf-Toggle einzeln einklappbar. Eigener State, vom TOC
+  // entkoppelt (D, Auftrag David 26.6.2026).
   const [offen, setOffen] = useState<Record<string, boolean>>({});
-  // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext, der
-  // immer offen bleibt) — beim Scrollen klappt die aktive Sektion auf, die übrige zu.
+  // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext).
+  // Default ZU (SektionBaumTOC: `?? false`); beim Scrollen klappt der Spy die
+  // aktive Sektion auf und beim Verlassen wieder zu (K) — manuell geöffnete
+  // Zweige bleiben offen (autoOffenRef).
   const [tocBaum, setTocBaum] = useState<Record<string, boolean>>({});
   // Während eines Klick-Sprungs den Scroll-Spy stilllegen, damit der Baum nicht
   // durch die durchscrollten Zwischen-Sektionen flackert (auf/zu).
   const jumpLock = useRef(false);
-  const tocToggle = (id: string) => setTocBaum((o) => ({ ...o, [id]: !o[id] }));
+  // K (Auftrag David 26.6.2026): Zweige, die der Scroll-Spy AUTOMATISCH geöffnet
+  // hat. Nur diese darf der Spy wieder zuklappen, sobald die Leseposition den
+  // Zweig verlässt — manuell (Klick) geöffnete Zweige bleiben offen, weil sie
+  // nicht in diesem Set stehen (tocToggle/springeZuSektion nehmen sie heraus).
+  const autoOffenRef = useRef<Set<string>>(new Set());
+  // Zweige, die der NUTZER selbst aufgeklappt hat (Klick/Sprung). Der Scroll-Spy
+  // darf diese NIE ins Auto-Set adoptieren und NIE auto-zuklappen — auch dann
+  // nicht, wenn die Leseposition durch sie hindurchscrollt (David: «nur was
+  // automatisch geöffnet wurde, geht wieder zu»).
+  const manuellOffenRef = useRef<Set<string>>(new Set());
+  // Manuelles Auf-/Zuklappen im TOC: beim Öffnen in manuellOffenRef aufnehmen
+  // (bleibt offen), beim Schliessen aus beiden Sets entfernen; nie im Auto-Set (K).
+  const tocToggle = (id: string) => {
+    setTocBaum((o) => {
+      const offenJetzt = !o[id];
+      autoOffenRef.current.delete(id);
+      if (offenJetzt) manuellOffenRef.current.add(id);
+      else manuellOffenRef.current.delete(id);
+      return { ...o, [id]: offenJetzt };
+    });
+  };
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
   const [tocAuf, setTocAuf] = useState(false); // unter xl: Gliederungs-Drawer offen?
   const [tocOffen, setTocOffen] = useState(true); // ab xl: Gliederungsspalte ein-/ausklappen
@@ -446,8 +476,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return { tokenMap, basisPfad, springeZu: springeZuArtikel };
   }, [eintraege, basisPfad, springeZuArtikel]);
 
-  // Offen-Zustand (TOC + Fliesstext geteilt). Default: erster Pfad aufgeklappt,
-  // alles andere zu (Perf + Fedlex-Gefühl). Toggle an jeder Stufe.
+  // Offen-Zustand des FLIESSTEXTS (eigener State; der TOC-Baum hat seinen eigenen
+  // `tocBaum`). renderSektion ruft mit defOpen=true → der ganze Erlass ist
+  // Fedlex-treu standardmässig aufgeklappt; jede Stufe bleibt per Toggle
+  // einklappbar. Reine Darstellung (§3).
   const istOffen = (id: string, defOpen: boolean) => offen[id] ?? defOpen;
   const toggle = (id: string, defOpen: boolean) => setOffen((o) => ({ ...o, [id]: !(o[id] ?? defOpen) }));
   const oeffnePfad = (ids: string[]) => setOffen((o) => {
@@ -477,7 +509,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
   // daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-Markierung +
-  // expand-only-Aufklappen (P9) UND (b) das Live-Label des aktiven Reiters
+  // automatisches Auf-/Zuklappen des aktiven Zweigs (P9/K) UND (b) das Live-Label des aktiven Reiters
   // «Kürzel – Art. X» (P2). IntersectionObserver statt getBoundingClientRect-
   // Schleife wegen content-visibility:auto (Off-Screen-Artikel sind nur Platz-
   // halter); das schmale Mittel-Band (rootMargin -45%/-45%) meldet genau den
@@ -485,7 +517,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // aktiverArtikel (§2/§3).
   const letzterArtToken = useRef<string | null>(null);
   useEffect(() => {
-    if (!sektionen.length || typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
+    // C (Auftrag David 26.6.2026): auch starten, wenn der Erlass KEINE Gliederung
+    // hat (kantonale Erlasse → alle Artikel in `ohneGliederung`). Sonst lief der
+    // Beobachter nie an und «aktueller Artikel» (Reiter-Live-Label, P2) blieb
+    // bei Kanton stehen. Artikel tragen bei Bund UND Kanton id="art-<token>".
+    if ((!sektionen.length && !ohneGliederung.length) || typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
     const sichtbar = new Map<Element, IntersectionObserverEntry>();
     let raf = 0;
     const auswerten = () => {
@@ -504,17 +540,29 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       aktualisiereTabArtikel(`${basisPfad}${window.location.search}#art-${token}`);
-      // (a) Gliederung: aktiven Pfad markieren + EXPAND-ONLY aufklappen (nie
-      //     zuklappen → kein Flackern, Constraint David). Der Mitscroll-Effekt
-      //     hält den aktiven Eintrag dann im TOC-Container sichtbar.
+      // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
+      //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
+      //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
+      //     manuell geöffnete bleiben offen. Der Mitscroll-Effekt hält den
+      //     aktiven Eintrag dann im TOC-Container sichtbar.
       const ids = pfadZu(sektionen, (s) => s.artikel.some((x) => x.artikel === token)) ?? [];
       if (!ids.length) return;
       setAktivIds(ids);
+      // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
+      // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
+      // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
+      const auto = autoOffenRef.current;
+      const schliessen: string[] = [];
+      for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
+      // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
+      // adoptieren (die bleiben dauerhaft offen, kein Auto-Collapse beim Verlassen).
+      for (const id of ids) if (!manuellOffenRef.current.has(id)) auto.add(id);
       setTocBaum((o) => {
         let geaendert = false;
         const n = { ...o };
         for (const id of ids) if (!n[id]) { n[id] = true; geaendert = true; }
-        return geaendert ? n : o; // identische Referenz, wenn schon alles offen → kein Re-Render
+        for (const id of schliessen) if (n[id]) { n[id] = false; geaendert = true; }
+        return geaendert ? n : o; // identische Referenz, wenn nichts ändert → kein Re-Render
       });
     };
     const io = new IntersectionObserver((entries) => {
@@ -526,7 +574,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     // neu und beobachtet die dann sichtbaren Artikel.
     document.querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
     return () => { io.disconnect(); if (raf) cancelAnimationFrame(raf); };
-  }, [sektionen, basisPfad, offen, suche]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, suche]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach
@@ -774,6 +822,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
     jumpLock.current = true;
     setAktivIds(ids);
+    // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
+    // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
+    // gleich wieder zuklappt.
+    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); }
     setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
     setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
     setTocAuf(false); // mobilen Drawer schliessen
@@ -874,7 +926,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
       {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
           eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
-          Sticky unter Header + Reiter-Streifen (--tabstreifen-h). Im 2-Spalten-Fall
+          Sticky direkt unter dem 4rem-Header (der Reiter-Streifen entfiel; die
+          Reiter-Übersicht lebt jetzt in der Topbar). Im 2-Spalten-Fall
           sitzt die Suche in der linken Spalte oberhalb der TOC (Auftrag David:
           nicht über dem Gesetzestext). */}
       {/* Sticky Kopfzeile UNTER dem Reiter-Streifen. Zwei Varianten (Auftrag David
@@ -885,7 +938,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           eng macht/abschneidet. */}
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-          style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
+          style={{ top: '4rem' }}>
           {istXl ? (
             <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && (
@@ -920,7 +973,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
           <div role="dialog" aria-label="Suche & Gliederung"
             className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain"
-            style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
+            style={{ top: '4rem' }}>
             <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
               <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
               <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
@@ -937,7 +990,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
         {sektionen.length > 0 && (
           <aside
-            style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px) + 0.75rem)', maxHeight: 'calc(100vh - 4rem - var(--tabstreifen-h, 0px) - 1.5rem)' }}
+            style={{ top: 'calc(4rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 1.5rem)' }}
             className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
@@ -995,9 +1048,10 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
   sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>; // aktivPfad = Sektions-IDs
   onToggle: (id: string) => void; onSprung: (id: string) => void;
 }) {
-  // Akkordeon: Standard zu — aufgeklappt wird NUR durch Klick (Chevron oder
-  // Sprung). Scrollen klappt nichts auf/zu (Auftrag David: kein Flackern); der
-  // Scroll-Spy markiert nur den aktiven Pfad, ohne den Baum umzubauen.
+  // Akkordeon: Standard zu. Aufgeklappt wird durch Klick (Chevron/Sprung) ODER
+  // automatisch durch den Scroll-Spy (K): der aktive Zweig klappt beim Scrollen
+  // auf und beim Verlassen wieder zu. Manuell (Klick) geöffnete Zweige bleiben
+  // offen (autoOffenRef im Reader steuert das). Markierung über `aktivPfad`.
   const zeile = (s: Sektion, tiefe: number): ReactNode => {
     const auf = offen[s.id] ?? false;
     const { pre, rest } = romanFrei(s.label);

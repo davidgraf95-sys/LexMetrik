@@ -178,7 +178,7 @@
   /* Anker-Offset für #art-/#fn-/Sektions-Sprünge: folgt Header + Tab-Streifen
      dynamisch (C4-Konsistenz), statt der statischen Magic-Number 8.5rem — so
      landen native Anker-Sprünge auch bei offenen Reitern korrekt unter der Leiste. */
-  .nt-anker { scroll-margin-top: calc(4rem + var(--tabstreifen-h, 0px) + 1rem); }
+  .nt-anker { scroll-margin-top: calc(4rem + 1rem); }
 
   /* Ankreuzfelder im Hausakzent (Messing) statt Browser-Blau, dazu etwas
      grösser für die Fingerbedienung (Redesign E7: native ~13px waren auf

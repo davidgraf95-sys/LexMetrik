@@ -102,29 +102,73 @@ describe('ArtikelBody', () => {
   });
 });
 
-// Auftrag David 26.6.2026 (P5/P6/P7): In der Lesesicht (zitierKontext) soll beim
-// Hover NUR das angewählte lit./Ziff.-Item dezent reagieren — kein Ganz-Absatz-
-// «Rauspoppen» (Scale), kein dadurch abgeschnittener Text (-mx-2/scale), kein
-// umrandender Kasten (ring/shadow). Das Popover (kein zitierKontext) bleibt
-// byte-gleich (NormPopover.test.tsx golden).
-describe('Lesesicht-Hover ohne Pop/Clipping/Rahmen (P5/P6/P7)', () => {
+// Auftrag David 26.6.2026 (H/I/J): In der Lesesicht (zitierKontext) gilt:
+//  J — beim Hover «poppt» NUR die angewählte Bestimmung pro Element leicht
+//      heraus (<p> bzw. <li> je einzeln, vertikaler Lift hover:-translate-y-0.5) —
+//      NICHT der ganze Block-<div> (kein Ganz-Absatz-Pop). Vertikaler Lift statt
+//      Breiten-scale, damit am overflow-x-clip-Container NICHTS abgeschnitten wird
+//      (P6); OHNE -mx-2/will-change und OHNE Rahmen (kein ring/shadow, P7).
+//  I — Marken-Nummern (Absatznr. + lit./Ziff.) kleiner (text-body-s).
+//  H — zk-Absatzmarke als feste Rinnen-Box (inline-block w-9, kein mr-3),
+//      damit «2bis/2ter» die erste Textzeile nicht verschiebt.
+// Das Popover (kein zitierKontext) bleibt byte-gleich (NormPopover.test.tsx golden).
+describe('Lesesicht H/I/J — Pop pro Element, kleinere Marken, feste Rinne', () => {
   const zk = { artikelLabel: 'Art. 1', kuerzel: 'ZGB' };
   const out = () => renderToString(
     <ArtikelBody bloecke={bloecke} artikel="1" passus={{ absatz: null }} zitierKontext={zk} className="space-y-3" />,
   );
-  it('P5/P6: kein hover:scale / will-change / -mx-2 am Absatz-Block (kein Ganz-Absatz-Pop, kein Clipping)', () => {
+  it('J: Pop pro Element wieder da — <p>/<li> tragen den vertikalen Lift (hover:-translate-y-0.5)', () => {
+    const o = out();
+    expect(o).toContain('hover:-translate-y-0.5');
+  });
+  it('J: der Block-<div> selbst poppt NICHT (kein Pop auf der Block-Klasse)', () => {
+    // Bei passus=null sind alle Blöcke nicht zitiert → Block-<div>-Klasse ist
+    // exakt «leading-relaxed text-ink-700» (kein Lift/scale/ring/shadow).
+    expect(out()).toContain('class="leading-relaxed text-ink-700"');
+  });
+  it('J/P6: kein Clipping (kein scale, kein -mx-2, kein will-change-transform)', () => {
     const o = out();
     expect(o).not.toContain('hover:scale-');
-    expect(o).not.toContain('will-change-transform');
     expect(o).not.toContain('-mx-2');
+    expect(o).not.toContain('will-change-transform');
   });
-  it('P7: kein Rahmen am Item (kein hover:ring / hover:shadow)', () => {
+  it('J/P7: kein Rahmen (kein hover:ring / hover:shadow)', () => {
     const o = out();
     expect(o).not.toContain('hover:ring-');
     expect(o).not.toContain('hover:shadow-');
   });
   it('P5/P7: dezenter Hintergrund-Hover am Item bleibt erhalten', () => {
     expect(out()).toContain('hover:bg-brass-200/60');
+  });
+  it('I/H: zk-Absatzmarke ist kleiner (text-body-s) und feste Rinnen-Box (inline-block w-9, kein mr-3)', () => {
+    const o = renderToString(
+      <ArtikelBody bloecke={[{ absatz: '2', text: 'Zweiter Absatz.' }]} artikel="1" passus={{ absatz: null }} zitierKontext={zk} />,
+    );
+    expect(o).toContain('text-body-s');
+    expect(o).toContain('inline-block');
+    expect(o).toContain('w-9');
+    expect(o).not.toContain('mr-3');
+  });
+  it('I: zk-Item-Marke ist kleiner (text-body-s) bei erhaltener Rinnen-Breite', () => {
+    const o = renderToString(
+      <ArtikelBody
+        artikel="1"
+        passus={{ absatz: null }}
+        zitierKontext={zk}
+        bloecke={[{ absatz: '1', text: 'Liste:', items: [{ marke: 'a', text: 'erster Buchstabe;' }] }]}
+      />,
+    );
+    expect(o).toContain('w-6 text-right !font-medium !text-ink-500 text-body-s');
+  });
+  it('non-zk (Popover): kein Pop/Clipping/Rahmen, kein zk-Item-Hover', () => {
+    const o = renderToString(
+      <ArtikelBody bloecke={bloecke} artikel="1" passus={{ absatz: null }} />,
+    );
+    expect(o).not.toContain('hover:scale-');
+    expect(o).not.toContain('hover:-translate-y-0.5');
+    expect(o).not.toContain('hover:bg-brass-200/60');
+    expect(o).not.toContain('hover:ring-');
+    expect(o).not.toContain('hover:shadow-');
   });
 });
 

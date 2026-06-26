@@ -6,10 +6,11 @@ import { InternationalRubriken } from '../components/normtext/InternationalRubri
 import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
-import type { BrowseErlass } from '../lib/normtext/browse-typen';
+import { istLesbar, type BrowseErlass } from '../lib/normtext/browse-typen';
 import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang, srVergleich, type KantonSystematik } from '../lib/normtext/systematik';
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
+import { useErlassOeffnen, istErlassOffen } from '../lib/useErlassOeffnen';
 
 type Ebene = 'bund' | 'kanton' | 'international';
 
@@ -183,7 +184,7 @@ function SysZeile({ e }: { e: BrowseErlass }) {
     <>
       <span className="num text-xs text-ink-500 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
       <span className="text-ink-700 truncate group-hover/z:text-brass-700">{e.titel}</span>
-      {e.status === 'snapshot' ? (
+      {istLesbar(e) ? (
         <span className="ml-auto shrink-0 flex items-baseline gap-2 num text-xs tabular-nums">
           {e.artikelAnzahl > 0 && <span className="text-ink-500">{e.artikelAnzahl} Art.</span>}
           {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
@@ -195,9 +196,25 @@ function SysZeile({ e }: { e: BrowseErlass }) {
     </>
   );
   const cls = 'group/z flex items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
-  return e.status !== 'snapshot'
+  // Punkt G: erneutes Öffnen eines bereits offenen Erlasses → neue Instanz (?r).
+  // <Link> behält den nackten Basispfad (SEO/Mittelklick/Cmd-Klick/Copy-Link);
+  // nur der einfache Linksklick auf ein schon offenes Gesetz wird abgefangen.
+  const oeffne = useErlassOeffnen();
+  const basePath = `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`;
+  return !istLesbar(e)
     ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
-    : <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>;
+    : (
+      <Link
+        to={basePath}
+        onClick={(ev) => {
+          if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+          if (!istErlassOffen(basePath)) return;
+          ev.preventDefault();
+          oeffne(e.ebene, e.key, e.kuerzel);
+        }}
+        className={cls}
+      >{inhalt}</Link>
+    );
 }
 
 // Ein gewählter Kanton, gegliedert nach der OFFIZIELLEN Systematik (systematik.ts:
@@ -452,7 +469,7 @@ export function Gesetze() {
           {!suche.trim() && ebene === 'international' && (
             <div className="space-y-3">
               <p className="text-body-s text-ink-500 max-w-reading">
-                Für die Schweiz massgebliche Staatsverträge und internationales Recht — je mit Live-Link zur amtlichen Fassung (Fedlex SR 0.* bzw. EUR-Lex). Diese Rubrik führt keine eigenen Volltexte; massgeblich ist stets die amtliche Quelle.
+                Für die Schweiz massgebliche Staatsverträge und internationales Recht — je mit Live-Link zur amtlichen Fassung (Fedlex SR 0.* bzw. EUR-Lex). Einzelne Erlasse (z. B. EMRK) werden als amtliches PDF in-app angezeigt; massgeblich bleibt stets die amtliche Quelle.
               </p>
               <InternationalRubriken erlasse={international} />
             </div>

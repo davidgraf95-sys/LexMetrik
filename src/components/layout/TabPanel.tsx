@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { tabSchluessel, type TabEintrag } from '../../lib/tabs';
+import { useRef, useState } from 'react';
+import { ordneTabsUm, tabSchluessel, type TabEintrag } from '../../lib/tabs';
 import { erlassVonPfad, verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import {
-  reiterKategorie, herkunftVon, kantonVonPfad, artikelLabelVonPfad,
+  reiterKategorie, herkunftVon, kantonVonPfad, artikelLabelVonPfad, gleicheReiterGruppe,
   KAT_META, KAT_ORDER, HERKUNFT_ORDER, HERKUNFT_LABEL,
   type Herkunft,
 } from '../../lib/tabGruppen';
@@ -31,6 +31,11 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   const toggle = (id: string) => setZu((o) => ({ ...o, [id]: !o[id] }));
   const offen = (id: string) => !zu[id];
 
+  // Drag&Drop-Umsortieren (#F): gezogener Pfad in einer Ref (überlebt Re-Render
+  // während des Ziehens), der gerade überfahrene Pfad als Drop-Indikator im State.
+  const gezogenRef = useRef<string | null>(null);
+  const [ueberPath, setUeberPath] = useState<string | null>(null);
+
   const gruppen = KAT_ORDER
     .map((kat) => ({ kat, items: tabs.filter((t) => reiterKategorie(t.path) === kat) }))
     .filter((g) => g.items.length > 0);
@@ -38,7 +43,9 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   if (gruppen.length === 0) return null;
 
   // Eine Reiter-Zeile: dreispaltig (Icon · Name · Artikel) + Schliessen-Knopf.
-  const zeile = (t: TabEintrag, alsGesetz: boolean, kat: typeof KAT_ORDER[number]) => {
+  // `liste`/`idx` sind die Blatt-Liste dieser Zeile und ihre Position darin —
+  // daraus leiten sich die Nachbarn für die ▲/▼-Tasten ab (immer dieselbe Gruppe).
+  const zeile = (t: TabEintrag, alsGesetz: boolean, kat: typeof KAT_ORDER[number], liste: TabEintrag[], idx: number) => {
     const aktiv = tabSchluessel(t.path) === aktivSchluessel;
     const e = alsGesetz ? erlassVonPfad(t.path, manifeste) : null;
     const name = (alsGesetz && e?.kuerzel) ? e.kuerzel : verlaufLabel(t.path, manifeste);
@@ -47,8 +54,30 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
     // KEIN (falsches) Schweizerkreuz, sondern das neutrale Kategorie-Piktogramm.
     const herkunft = alsGesetz ? herkunftVon(t.path, manifeste) : null;
     const kanton = alsGesetz ? kantonVonPfad(t.path, manifeste) : null;
+    const ueber = ueberPath === t.path;
+    const vorher = liste[idx - 1];
+    const nachher = liste[idx + 1];
     return (
-      <li key={tabSchluessel(t.path)} className={`flex items-center rounded-md ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
+      <li key={tabSchluessel(t.path)}
+        draggable
+        onDragStart={(ev) => { gezogenRef.current = t.path; ev.dataTransfer.setData('text/plain', t.path); ev.dataTransfer.effectAllowed = 'move'; }}
+        onDragOver={(ev) => {
+          const von = gezogenRef.current;
+          // Drop nur innerhalb derselben Blatt-Liste zulassen (Same-Group-Guard).
+          if (von && von !== t.path && gleicheReiterGruppe(von, t.path, manifeste)) {
+            ev.preventDefault();
+            if (ueberPath !== t.path) setUeberPath(t.path);
+          }
+        }}
+        onDrop={(ev) => {
+          ev.preventDefault();
+          const von = gezogenRef.current ?? ev.dataTransfer.getData('text/plain');
+          if (von && von !== t.path && gleicheReiterGruppe(von, t.path, manifeste)) ordneTabsUm(von, t.path);
+          gezogenRef.current = null;
+          setUeberPath(null);
+        }}
+        onDragEnd={() => { gezogenRef.current = null; setUeberPath(null); }}
+        className={`flex items-center rounded-md ${ueber ? 'border-t-2 border-brass-400' : ''} ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
         <button type="button" aria-current={aktiv ? 'page' : undefined}
           onClick={() => onNavigate(t.path)}
           className={`grid flex-1 min-w-0 grid-cols-[1rem_1fr_auto] items-center gap-2 text-left px-2 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
@@ -60,6 +89,20 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
           <span className="truncate">{name}</span>
           {/* Spalte 3 — aktueller Artikel (nur Gesetze) */}
           {art ? <span className="num shrink-0 text-micro text-ink-500">{art}</span> : <span />}
+        </button>
+        {/* ▲/▼ — Umsortieren per Tastatur/Touch (Alternative zu Drag&Drop, a11y).
+            Bewegt den Reiter an die Position des Nachbarn IN DERSELBEN Gruppe. */}
+        <button type="button" disabled={!vorher}
+          onClick={() => vorher && ordneTabsUm(t.path, vorher.path)}
+          aria-label={`Reiter «${name}» nach oben`}
+          className="inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 disabled:opacity-30 disabled:hover:text-ink-500 transition-colors">
+          <span aria-hidden className="text-micro leading-none">▲</span>
+        </button>
+        <button type="button" disabled={!nachher}
+          onClick={() => nachher && ordneTabsUm(t.path, nachher.path)}
+          aria-label={`Reiter «${name}» nach unten`}
+          className="inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 disabled:opacity-30 disabled:hover:text-ink-500 transition-colors">
+          <span aria-hidden className="text-micro leading-none">▼</span>
         </button>
         <button type="button" onClick={() => onSchliessen(t.path)}
           aria-label={`Reiter «${name}» schliessen`}
@@ -108,15 +151,15 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
                           return (
                             <div key={h}>
                               {kopf(subId, HERKUNFT_LABEL[h], subItems.length, true)}
-                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t) => zeile(t, true, kat))}</ul>}
+                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t, i) => zeile(t, true, kat, subItems, i))}</ul>}
                             </div>
                           );
                         })}
-                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t) => zeile(t, true, kat))}</ul>}
+                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t, i) => zeile(t, true, kat, ungeklaert, i))}</ul>}
                       </div>
                     );
                   })()
-                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t) => zeile(t, false, kat))}</ul>
+                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t, i) => zeile(t, false, kat, items, i))}</ul>
             )}
           </div>
         );

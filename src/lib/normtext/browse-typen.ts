@@ -35,3 +35,11 @@ export interface BrowseManifest {
   erzeugt: string;
   erlasse: BrowseErlass[];
 }
+
+/** Hat eine In-App-Lesesicht (Volltext-Snapshot ODER eingebettetes amtliches PDF).
+ *  SSoT (§5): genutzt von ErlassKarte/ErlassZeile UND der Systematik-Zeile, damit
+ *  pdf-embed-Erlasse (z. B. EMRK/NYUE) überall in den In-App-Reader führen statt
+ *  extern. */
+export function istLesbar(e: Pick<BrowseErlass, 'status'>): boolean {
+  return e.status === 'snapshot' || e.status === 'pdf-embed';
+}

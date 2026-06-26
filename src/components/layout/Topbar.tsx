@@ -3,6 +3,7 @@ import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { HeaderSuche } from './HeaderSuche';
 import { SprachUmschalter } from '../SprachUmschalter';
 import { ThemaUmschalter } from './ThemaUmschalter';
+import { ReiterUebersicht } from './ReiterUebersicht';
 
 // ─── Top-Streifen der App-Shell (Build-Plan App-Shell, Phase 3) ─────────────
 //
@@ -58,6 +59,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
         </div>
 
         <div className="shrink-0 flex items-center gap-1.5 sm:gap-2">
+          <ReiterUebersicht />
           <ThemaUmschalter />
           <SprachUmschalter />
         </div>

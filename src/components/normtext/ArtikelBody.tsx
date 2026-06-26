@@ -317,10 +317,10 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 Hang (-indent-4): erste Zeile beginnt dort, wo bei nummerierten der
                 Text anfängt (nicht ganz in der Rinne), Folgezeilen leicht eingerückt
                 (Auftrag David 25.6.2026: «erste Zeile reicht sonst zu weit zurück»). */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
               {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
@@ -418,7 +418,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                       style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
-                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors hover:bg-brass-200/60' : ''} ${
+                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition hover:-translate-y-0.5 hover:bg-brass-200/60' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
@@ -427,7 +427,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       {istStrich
                         ? <span className="shrink-0 select-none text-ink-500">{markeAnzeige}</span>
                         : zk
-                          ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
+                          ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500 text-body-s" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
                       <span className="min-w-0 [overflow-wrap:anywhere] hyphens-auto">
                         {/* S13 (BS-Audit 23.6.2026): lange Komposita in Aufzählungen

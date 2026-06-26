@@ -331,7 +331,7 @@ export type FedlexGesetz = keyof typeof FEDLEX;
 // Spannen-/Folgeverweise (–, f., ff.) verlinken den führenden Artikel.
 // Audit 5.6.2026: auch Kombi-Anker Buchstabe+lat. Suffix abgedeckt —
 // im OR real: 329gbis/663bbis/697hbis → art_329_g_bis (Form n_b_suffix).
-const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/;
+const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies|sexies)?$/;
 
 export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
   const token = String(artikel).toLowerCase().replace(/\s+/g, '')
@@ -358,7 +358,7 @@ export function erkenneFedlexGesetz(text: string): FedlexGesetz | null {
   const bereinigt = text.trim();
   const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
   return alias?.[1]
-    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt))
+    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`).test(bereinigt))
     ?? null;
 }
 
@@ -377,7 +377,7 @@ export function fedlexLinkFuerArtikel(text: string): string | null {
   // Bug-Check 10.6.2026 (NIEDRIG): Buchstabe UND lat. Suffix kombinierbar
   // (329gbis/663bbis/697hbis) — vorher matchte der Extraktor solche Artikel
   // gar nicht und lieferte die Gesetzes-URL ohne Anker.
-  const m = text.match(/^Art\.\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/);
+  const m = text.match(/^Art\.\s*(\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?)\b/);
   return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
 }
 
@@ -404,8 +404,8 @@ const NORM_NAMEN_ESC = (['GebV SchKG', ...Object.keys(FEDLEX)] as string[])
   .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
 
 export const NORM_IM_TEXT = new RegExp(
-  'Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies)?' +
-    '(?:\\s+(?:Abs\\.|lit\\.|Bst\\.|Ziff\\.|Ziffer|Satz)\\s*(?:\\d+[a-z]?(?:bis|ter|quater|quinquies)?|[a-z]))*' +
+  'Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?' +
+    '(?:\\s+(?:Abs\\.|lit\\.|Bst\\.|Ziff\\.|Ziffer|Satz)\\s*(?:\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?|[a-z]))*' +
     '\\s+(?:' + NORM_NAMEN_ESC.join('|') + ')\\b',
   'g',
 );

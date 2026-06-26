@@ -22,6 +22,43 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — Gesetze-UX Batch 2 (Reiter ins Header, Fedlex-Feinschliff; ultracode)
+
+Auftrag David (ultracode: Investigation → 4 parallele Impl-Agenten → ultracode-
+Einheitlichkeits-/Verweis-Prüfung). 11 Punkte A–K, §12-isoliert auf
+`feat/gesetze-ux-batch2`.
+- **A/B** Horizontalen Reiter-Streifen aufgelöst; Reiter-Übersicht wandert als
+  Flyout in die **Topbar** (`ReiterUebersicht.tsx`, nutzt `TabPanel`); `TabStreifen.tsx`
+  gelöscht, `--tabstreifen-h` (tot) → konstante `4rem`. Tab-Funktion bleibt.
+- **C** Bug: aktueller Artikel wurde bei **kantonalen** Gesetzen (ohne Gliederung)
+  nicht verfolgt — Observer-Tor liess `ohneGliederung`-only-Erlasse aus → gefixt
+  (Tor + Deps), Reiter-Live-Label läuft jetzt auch kantonal.
+- **D** Bund-Einklappen verifiziert (Toggles intakt, Fliesstext default offen,
+  TOC-Klick öffnet Pfad); stale Kommentare berichtigt. Die 9 gliederungslosen
+  Bund-Erlasse bleiben ehrlich flach (§8).
+- **E** Gliederungs-/Randtitel **grösser + nach Ebene abgestuft** (Fedlex: marg
+  Sachüberschrift `text-base` semibold, SektionKopf `text-h2/h3/body-l/base`).
+- **F** Drag&Drop + ▲▼-Tastatur-Umsortieren in der Übersicht (`ordneTabsUm`,
+  Same-Group-Guard `gleicheReiterGruppe` in `tabGruppen.ts`).
+- **G** Erneutes Öffnen eines offenen Gesetzes über `/gesetze` → neue Instanz
+  (`?r`); Hook `useErlassOeffnen.ts`, Link/Mittelklick/Copy erhalten.
+- **H** Absatz-Marker `2bis`/`2ter` verschieben den Text nicht mehr (feste
+  Rinnen-Box `inline-block w-9`). **I** Marken-Nummern kleiner (`text-body-s`).
+  **J** «Rauspoppen» pro Element wieder da — vertikaler Lift `-translate-y-0.5`
+  (kein Clipping/Rahmen, P6/P7 gewahrt; nur zk-Zweig → Popover golden).
+- **K** Gliederung klappt beim Scrollen automatisch auf UND beim Verlassen wieder
+  zu — aber NUR auto-geöffnete Zweige; manuell geöffnete bleiben offen
+  (`autoOffenRef`/`manuellOffenRef`).
+- **Such-Bug** aus Batch 1 bleibt gefixt.
+- **Aufräumen**: `istLesbar` als SSoT (§5, pdf-embed führt überall in den
+  In-App-Reader), `istErlassOffen` encoding-robust, fedlex-Suffix `sexies` +
+  Key-RegExp escaped, International-Intro präzisiert (§8).
+- **Bug-Check**: zwei ultracode-Reviews (Impl-Investigation + Einheitlichkeits-/
+  Verweis-Prüfung: keine Blocker/Major — alle Bund-Gesetze einheitlicher
+  Render-Pfad, alle Verweise korrekt). Gate voll grün, build 56 Routen + 1449
+  Erlass-Seiten (0 übersprungen), 9 E2E grün + neue Unit-Tests
+  (`tabPanelDnd`, `useErlassOeffnen`, ArtikelBody H/I/J).
+
 ## Session 26.6.2026 — Gesetze-UX 9 Punkte (Reiter-Panel, Fedlex-Render, Scroll-Spy; deployt)
 
 Auftrag David (ultracode-Handlungsplan zuerst, dann «go»): 9 Punkte in der
