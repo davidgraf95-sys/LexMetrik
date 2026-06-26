@@ -246,10 +246,12 @@ export function AllgemeineFristForm() {
             </Field>
             <div className="grid grid-cols-[7rem_1fr] gap-3">
               <Field label="Länge">
-                {/* Rohwert zulassen (Feld leerbar); die >0-Prüfung läuft über die
+                {/* Feld leerbar: bei ungültigem/leerem Wert bleibt es LEER (statt
+                    sichtbar auf «0» zu schnappen); die >0-Prüfung läuft über die
                     FehlerBox (fehler-Validierung oben) – konsistent zum Rückwärts-Tab,
                     statt im onChange hart auf 1 zu klammern. */}
-                <input type="number" inputMode="decimal" min={1} step={1} className={inputCls + ' num'} value={form.laenge}
+                <input type="number" inputMode="decimal" min={1} step={1} className={inputCls + ' num'}
+                  value={form.laenge > 0 ? form.laenge : ''}
                   aria-invalid={!Number.isInteger(form.laenge) || form.laenge <= 0}
                   onChange={(e) => set('laenge', Number(e.target.value))} />
               </Field>

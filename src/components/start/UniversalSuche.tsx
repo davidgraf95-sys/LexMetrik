@@ -115,7 +115,7 @@ export function UniversalSuche() {
           enterKeyHint="search"
           role="combobox"
           aria-expanded={q !== ''}
-          aria-controls={listboxId}
+          aria-controls={q !== '' ? listboxId : undefined}
           aria-activedescendant={aktivId}
           aria-autocomplete="list"
         />

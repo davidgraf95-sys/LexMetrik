@@ -51,7 +51,8 @@ function Gruppe({ g, index, onAuswahl, listboxId, aktivId }: {
   aktivId?: string;
 }) {
   return (
-    <div className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
+    <div role={listboxId ? 'group' : undefined} aria-label={listboxId ? g.titel : undefined}
+      className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
       <div className="flex items-baseline gap-2 px-4 pt-3 pb-1">
         <span className="lc-overline text-ink-500">{g.titel}</span>
         {!g.laedt && <span className="num text-xs text-ink-500">{g.gesamt}</span>}

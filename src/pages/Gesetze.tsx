@@ -41,6 +41,8 @@ function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }
           key={o.id}
           type="button"
           role="tab"
+          id={`ebene-tab-${o.id}`}
+          aria-controls={`ebene-panel-${o.id}`}
           aria-selected={aktiv === o.id}
           tabIndex={aktiv === o.id ? 0 : -1}
           onKeyDown={(e) => aufTaste(e, i)}
@@ -474,7 +476,11 @@ export function Gesetze() {
             );
           })()}
 
-          {!suche.trim() && ebene === 'bund' && (
+          {/* Ein Tab-Panel pro Ebene (nur das aktive rendert); id/aria-labelledby
+              folgen der aktiven Ebene und verbinden es mit dem gewählten Tab. */}
+          {!suche.trim() && (
+          <div role="tabpanel" id={`ebene-panel-${ebene}`} aria-labelledby={`ebene-tab-${ebene}`}>
+          {ebene === 'bund' && (
             gefiltert.length === 0
               ? <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>
               : <BundSystematik key={hashSys ?? 'base'} erlasse={gefiltert} hashOffen={hashSys} />
@@ -583,6 +589,8 @@ export function Gesetze() {
               )}
               {kantGefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
             </div>
+          )}
+          </div>
           )}
         </>
       )}

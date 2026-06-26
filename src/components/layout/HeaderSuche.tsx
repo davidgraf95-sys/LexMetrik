@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
+import { suchOptionId } from '../suche/suchOptionId';
 
 // ─── Globale Suche im Top-Streifen (UI-Welle: Dropdown überall) ─────────────
 //
@@ -12,6 +13,7 @@ import { SuchResultate } from '../suche/SuchResultate';
 // geteilten Hook useUniversalSuche (§5). «/» fokussiert das Feld global.
 export function HeaderSuche() {
   const navigate = useNavigate();
+  const listboxId = useId();
   const [wert, setWert] = useState('');
   const [q, setQ] = useState('');
   const [offen, setOffen] = useState(false);
@@ -25,6 +27,19 @@ export function HeaderSuche() {
   }, [wert]);
 
   const { gruppen, allesGeladen } = useUniversalSuche(q);
+
+  // Flache Trefferliste + Hervorhebungs-Index für Pfeil-Navigation — identisch
+  // zum Hero (EIN Suchweg, §5); geteilte Options-IDs via suchOptionId.
+  const flach = gruppen.flatMap((g) => g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })));
+  const [aktivIndex, setAktivIndex] = useState(-1);
+  // Bei neuer Query zurücksetzen (Render-Phasen-Abgleich statt setState-im-Effekt).
+  const [letzteQuery, setLetzteQuery] = useState(q);
+  if (q !== letzteQuery) {
+    setLetzteQuery(q);
+    setAktivIndex(-1);
+  }
+  const zeigtPanel = offen && q !== '';
+  const aktivId = zeigtPanel && aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].oid : undefined;
 
   // «/» fokussiert das Feld global (nicht in Eingabefeldern).
   useEffect(() => {
@@ -49,15 +64,30 @@ export function HeaderSuche() {
     return () => { window.removeEventListener('pointerdown', aus); window.removeEventListener('keydown', esc); };
   }, [offen]);
 
-  const auswahl = () => { setOffen(false); setWert(''); setQ(''); };
+  const auswahl = () => { setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); };
 
-  // Enter öffnet den obersten Treffer der ersten nicht-leeren Gruppe (Komfort).
-  const absenden = () => {
-    const ziel = gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
-    if (ziel) { navigate(ziel); auswahl(); }
+  // Aktiven Treffer in den sichtbaren Bereich rollen (lange Trefferliste).
+  useEffect(() => {
+    if (aktivId) document.getElementById(aktivId)?.scrollIntoView({ block: 'nearest' });
+  }, [aktivId]);
+
+  // Pfeil-/Enter-Navigation wie im Hero (§5): Enter öffnet den hervorgehobenen
+  // bzw. — ohne Auswahl — den obersten Treffer der ersten nicht-leeren Gruppe.
+  const aufTaste = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'ArrowDown' && flach.length > 0) {
+      e.preventDefault();
+      setOffen(true);
+      setAktivIndex((i) => (i + 1) % flach.length);
+    } else if (e.key === 'ArrowUp' && flach.length > 0) {
+      e.preventDefault();
+      setAktivIndex((i) => (i <= 0 ? flach.length - 1 : i - 1));
+    } else if (e.key === 'Enter') {
+      const ziel = aktivIndex >= 0 && aktivIndex < flach.length
+        ? flach[aktivIndex].href
+        : gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
+      if (ziel) { navigate(ziel); auswahl(); }
+    }
   };
-
-  const zeigtPanel = offen && q !== '';
 
   return (
     <div ref={huelle} className="relative" role="search">
@@ -67,16 +97,21 @@ export function HeaderSuche() {
         value={wert}
         onChange={(e) => { setWert(e.target.value); setOffen(true); }}
         onFocus={() => { if (wert.trim()) setOffen(true); }}
-        onKeyDown={(e) => { if (e.key === 'Enter') absenden(); }}
+        onKeyDown={aufTaste}
         placeholder="Suchen …  ( / )"
         className="lc-input h-9 py-0 text-body-s w-full"
         aria-label="LexMetrik durchsuchen"
         aria-keyshortcuts="/"
         autoComplete="off"
+        role="combobox"
+        aria-expanded={zeigtPanel}
+        aria-controls={zeigtPanel ? listboxId : undefined}
+        aria-activedescendant={aktivId}
+        aria-autocomplete="list"
       />
       {zeigtPanel && (
         <div className="absolute left-0 right-0 top-full mt-2 z-30">
-          <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} />
+          <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId} />
         </div>
       )}
     </div>

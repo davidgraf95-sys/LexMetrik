@@ -10,7 +10,10 @@ import { formatiereDatum } from './format';
 // Identitäts-Anker rechts, das Datum ganz links. Darunter Rechtsgebiet + die in der
 // Regeste genannten Normen als klickbare Chips. Fehlt die amtliche Regeste, zeigt die
 // Bezeichnung die deterministische Synth-Zeile, ehrlich markiert (§8). Reine
-// Darstellung (§3); NormChip ist <button> (stopPropagation), kein <a> im <Link>.
+// Darstellung (§3). Stretched-Link: ein absoluter Overlay-<Link> deckt die ganze
+// Zeile ab (Navigation), Inhalt liegt als Geschwister darunter; die klickbaren
+// Norm-Chips (NormChip = span role=button) stehen mit relative/z über dem Overlay
+// — so ist KEIN fokussierbares Element ein Nachkomme des <a> (valides Markup).
 export function EntscheidZeile({ e, onNorm }: {
   e: BrowseEntscheid;
   onNorm: (k: string) => void;
@@ -20,11 +23,12 @@ export function EntscheidZeile({ e, onNorm }: {
   const ziel = verweis
     ? `/rechtsprechung/${encodeURIComponent(verweis.zielKey)}?ansicht=voll`
     : `/rechtsprechung/${encodeURIComponent(e.key)}`;
+  const bezeichnung = verweis ? `Vollständiges Urteil zu BGE ${verweis.bgeReferenz}` : themaText(e);
   return (
-    <Link
-      to={ziel}
-      className="group flex items-stretch gap-3 px-4 py-3 no-underline hover:bg-well transition-colors"
-    >
+    <div className="group relative flex items-stretch gap-3 px-4 py-3 hover:bg-well transition-colors">
+      {/* Overlay-Link über der ganzen Zeile (Navigation); Name = Bezeichnung. */}
+      <Link to={ziel} aria-label={bezeichnung} className="absolute inset-0 no-underline" />
+
       {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). */}
       <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500 tabular-nums">
         {formatiereDatum(e.datum)}
@@ -34,14 +38,15 @@ export function EntscheidZeile({ e, onNorm }: {
         {/* Bezeichnung — Thema/Leitsatz führt; BGE-Nummer als Identität rechtsbündig. */}
         <div className="flex items-baseline gap-3">
           <span className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
-            {verweis ? `Vollständiges Urteil zu BGE ${verweis.bgeReferenz}` : themaText(e)}
+            {bezeichnung}
           </span>
           <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
             {hauptIdentitaet(e)}
           </span>
         </div>
 
-        {/* Metazeile — Rechtsgebiet, Status, angewandte Normen (klickbar). */}
+        {/* Metazeile — Rechtsgebiet, Status, angewandte Normen (klickbar). Chips
+            mit relative/z über dem Overlay-Link, damit sie klickbar bleiben. */}
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
           <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
           {synth && <span className="text-micro italic text-ink-500">ohne amtl. Regeste</span>}
@@ -49,10 +54,14 @@ export function EntscheidZeile({ e, onNorm }: {
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
           )}
           {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
-          {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
-          {e.normKeys.length > 5 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 5}</span>}
+          {e.normKeys.length > 0 && (
+            <span className="relative z-10 flex flex-wrap items-center gap-x-2 gap-y-1">
+              {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
+              {e.normKeys.length > 5 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 5}</span>}
+            </span>
+          )}
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

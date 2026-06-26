@@ -25,8 +25,13 @@ export function EntscheidKarte({ e, onNorm }: {
     : `/rechtsprechung/${encodeURIComponent(e.key)}`;
   return (
     <div className="lc-card group flex h-full flex-col p-4 transition-colors hover:border-brass-400">
-      {/* Lese-Bereich (klickbar). flex-1 schiebt den Fuss auf gleiche Höhe. */}
-      <Link to={ziel} className="block flex-1 no-underline">
+      {/* Lese-Bereich (klickbar). flex-1 schiebt den Fuss auf gleiche Höhe.
+          Stretched-Link: der Link deckt die ganze Lesefläche per ::after ab, die
+          Norm-Chips liegen als GESCHWISTER darüber (relative) — so ist der
+          interaktive Chip kein fokussierbarer Nachkomme des <a> (valides Markup),
+          die ganze Fläche bleibt aber klickbar. */}
+      <div className="relative flex flex-1 flex-col">
+      <Link to={ziel} className="block no-underline after:absolute after:inset-0 after:content-['']">
         {/* Statuszeile: Gebiet + Leit-Marker links, Status rechts. */}
         <div className="flex items-center justify-between gap-2 text-micro">
           <span className="flex items-center gap-2">
@@ -51,14 +56,17 @@ export function EntscheidKarte({ e, onNorm }: {
             ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">{themaText(e)}</p>
             : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
 
-        {/* Norm-Zeile — führend (nicht am Fuss): zweite Navigationsachse. */}
-        {e.normKeys.length > 0 && (
-          <div className="mt-3 flex flex-wrap items-center gap-1.5">
-            {e.normKeys.slice(0, 4).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
-            {e.normKeys.length > 4 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 4}</span>}
-          </div>
-        )}
       </Link>
+
+      {/* Norm-Zeile — führend (nicht am Fuss): zweite Navigationsachse.
+          Geschwister des Links (nicht Nachfahre), relativ über dem Stretch-::after. */}
+      {e.normKeys.length > 0 && (
+        <div className="relative mt-3 flex flex-wrap items-center gap-1.5">
+          {e.normKeys.slice(0, 4).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
+          {e.normKeys.length > 4 && <span className="num text-micro text-ink-500">+{e.normKeys.length - 4}</span>}
+        </div>
+      )}
+      </div>
 
       <div className="scale-rule-sm mt-3" aria-hidden />
 
