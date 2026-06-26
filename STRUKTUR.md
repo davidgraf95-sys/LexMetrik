@@ -22,6 +22,32 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — UI Bug- & Logik-Audit, 43 Fixes (Multi-Agent, gegengeprüft; deployt)
+
+Auftrag David (ultracode): UI komplettem Bug-/Logik-Check unterziehen, Handlungsplan
+vorbereiten, dann fixen + checken + deployen. §12-isoliert (Branch
+`fix/ui-bugcheck-2026-06-26`, Worktree), da paralleler Agent auf `main` lief.
+- **Audit (read-only):** 8 Bereichs-Finder über `src/components`+`src/pages`+`src/App`,
+  jeder Befund einzeln adversarial gegengeprüft → **52 Befunde, 44 real** (0 Blocker,
+  4 Major, 24 Minor, 16 Nit), 8 false-positive verworfen. Plan im Scratchpad.
+- **Umgesetzt: 43/44.** #15 (Tausender-Gruppierung nur in Zahlenspalten) bewusst
+  **revertiert**, weil er getestetes Streitwert-Verhalten brach (§6.3 — Tests nicht
+  anpassen). #22 Theme auf David-treue Variante umgesetzt: zeitbasierter Default
+  (Auftrag 19.6.) BEWAHRT, nur Pristine-Label ehrlich «Tageszeit» statt «System» (§8).
+- **Neu:** geteilter Hook `useDialogFokus` (Fokus-Falle + Escape + Fokus-Rückgabe, baut
+  auf bestehendem `naechsterFokus` auf) für Shell-Schublade, Reiter-Flyout, mobilen
+  Gesetze-Drawer; `suchOptionId` ausgelagert (react-refresh).
+- **Major-Fixes:** Fussnoten-Popover via Portal aus `overflow-x-clip` gelöst; Kontakt
+  zeigt keine Fehler auf leerem Formular (§13/4); Rechtsprechung-Zähler «Alle» = Summe
+  der Kacheln (Verweis-Ausnahme konsistent, auch Filter-Dropdowns); Shell-Schublade
+  Fokus-Falle.
+- **Bug-Check:** Gate voll grün (tsc · eslint 0 · vitest 2601 · golden byte-gleich ·
+  check:* · build 56 Routen + 1776 Detailseiten 0 übersprungen) + **2 adversariale
+  Reviewer** (Logik/Regression + React-19/A11y): keine Regression, §1 unberührt.
+- **Offen (Nits, bewusst zurückgestellt):** NormChip strikt spec-clean (Stretched-Link
+  in EntscheidKarte/-Zeile), Gesetze-Ebene-Tabs `aria-controls`, HeaderSuche-Combobox-
+  Pfeilnav. Modell: alle Sub-Agenten Opus.
+
 ## Session 26.6.2026 — Gesetze-UX Batch 2 (Reiter ins Header, Fedlex-Feinschliff; ultracode)
 
 Auftrag David (ultracode: Investigation → 4 parallele Impl-Agenten → ultracode-
