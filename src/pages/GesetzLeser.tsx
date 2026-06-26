@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../lib/tabs';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import type { InternRefs } from '../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
@@ -239,6 +240,8 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
 
 function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
+  const navigate = useNavigate();
+  const location = useLocation();
   const [erlass, setErlass] = useState<BrowseErlass | null>(null);
   const [eintraege, setEintraege] = useState<NormSnapshot[] | null>(null);
   const [struktur, setStruktur] = useState<StrukturMap | null>(null);
@@ -352,7 +355,12 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     if (ids.length) setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
     if (typeof window === 'undefined') return;
-    window.history.replaceState(null, '', `${basisPfad}#art-${token}`);
+    // ?search (Instanz-Diskriminator ?r) erhalten, sonst verliert ein Mehrfach-
+    // Reiter seine Identität. Aktiven Reiter auf diesen Artikel melden → Live-
+    // Label «Kürzel – Art. X» bei Mehrfach-Instanz (Auftrag David).
+    const ziel = `${basisPfad}${window.location.search}#art-${token}`;
+    window.history.replaceState(null, '', ziel);
+    aktualisiereTabArtikel(ziel);
     // Erst nach dem Aufklapp-Render scrollen (behavior:auto wie der Hash-Sprung);
     // grosse Sektionen wachsen beim Aufklappen → nach Settle ein Korrektur-Scroll.
     const scrolle = () => {
@@ -364,6 +372,19 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     };
     window.requestAnimationFrame(() => window.setTimeout(() => { scrolle(); window.setTimeout(scrolle, 400); }, 110));
   }, [sektionen, basisPfad]);
+
+  // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
+  // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
+  // Navigation mit Artikel-Anker gezielt dorthin springen (Auftrag David: Klick
+  // auf den Reiter führt zum gemerkten Artikel der Instanz).
+  useEffect(() => {
+    if (!sektionen.length || typeof window === 'undefined') return;
+    const m = location.hash.match(/^#art-(.+)$/);
+    if (!m) return;
+    const token = decodeURIComponent(m[1]);
+    const id = window.requestAnimationFrame(() => springeZuArtikel(token));
+    return () => window.cancelAnimationFrame(id);
+  }, [location.key, location.hash, sektionen, springeZuArtikel]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -386,6 +407,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
     const m = window.location.hash.match(/^#art-(.+)$/);
     if (!m) return;
+    // Deep-Link mit Artikel-Anker → aktiven Reiter darauf melden (Live-Label).
+    aktualisiereTabArtikel(window.location.pathname + window.location.search + window.location.hash);
     const token = decodeURIComponent(m[1]);
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     window.requestAnimationFrame(() => {
@@ -712,6 +735,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
           {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
           <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
+          {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
+              David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
+              im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
+          <button type="button"
+            onClick={() => {
+              const ziel = naechsteInstanz(window.location.pathname + window.location.hash);
+              merkeTab(ziel, erlass.kuerzel);
+              navigate(ziel);
+            }}
+            className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
           <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>

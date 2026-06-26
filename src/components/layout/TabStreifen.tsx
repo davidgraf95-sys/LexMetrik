@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
-import { schliesseTab, leereTabs, type TabEintrag } from '../../lib/tabs';
+import { schliesseTab, leereTabs, tabSchluessel, type TabEintrag } from '../../lib/tabs';
 import { verlaufLabel, pfadTeil, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { KantonWappen } from '../KantonWappen';
 
@@ -37,8 +37,8 @@ function tabKat(path: string): TabKat {
 const KAT_META: Record<TabKat, { label: string; pikto: string }> = {
   gesetze: { label: 'Gesetze', pikto: '§' },
   rechtsprechung: { label: 'Rechtsprechung', pikto: '⚖' },
-  vorlagen: { label: 'Vorlagen', pikto: '▤' },
-  rechner: { label: 'Rechner', pikto: '⊞' },
+  vorlagen: { label: 'Vorlagen', pikto: '✎' },
+  rechner: { label: 'Rechner', pikto: '∑' },
   sonstiges: { label: 'Weitere', pikto: '◦' },
 };
 // Feste Reihenfolge der Sammel-Reiter (stabil, unabhängig von Öffnungs-Reihenfolge).
@@ -46,7 +46,7 @@ const KAT_ORDER: TabKat[] = ['gesetze', 'rechtsprechung', 'vorlagen', 'rechner',
 
 export function TabStreifen() {
   const tabs = useTabs();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const navigate = useNavigate();
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
   const [offeneKat, setOffeneKat] = useState<TabKat | null>(null);
@@ -93,11 +93,15 @@ export function TabStreifen() {
     return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
   }, [offeneKat]);
 
-  // Guard: weniger als 2 Reiter → nichts rendern (Optik/golden/prerender
-  // byte-gleich). Im Prerender liefert ladeTabs() [] → immer unsichtbar.
-  if (tabs.length < 2) return null;
+  // Guard: KEIN Reiter → nichts rendern (Optik/golden/prerender byte-gleich;
+  // im Prerender liefert ladeTabs() [] → immer unsichtbar). Ab dem ERSTEN Reiter
+  // ist der Streifen sichtbar (Auftrag David: «direkt ein Tab entstehen», auch
+  // beim ersten geöffneten Gesetz/Engine).
+  if (tabs.length < 1) return null;
 
-  const aktivTeil = pfadTeil(pathname);
+  // Identität inkl. Instanz-Diskriminator (?r): dasselbe Gesetz kann mehrfach
+  // offen sein, der aktive Reiter ist genau die passende Instanz (Auftrag David).
+  const aktivSchluessel = tabSchluessel(pathname + search);
   const aktivKat = tabKat(pathname);
 
   // Nach Kategorie gruppieren, in fester Reihenfolge; leere Kategorien weglassen.
@@ -106,10 +110,10 @@ export function TabStreifen() {
     .filter((g) => g.items.length > 0);
 
   const schliessen = (path: string) => {
-    const teil = pfadTeil(path);
-    if (aktivTeil === teil) {
+    const teil = tabSchluessel(path);
+    if (aktivSchluessel === teil) {
       // Aktiven Reiter schliessen → auf den linken Nachbarn (sonst rechten, sonst Start).
-      const idx = tabs.findIndex((t) => pfadTeil(t.path) === teil);
+      const idx = tabs.findIndex((t) => tabSchluessel(t.path) === teil);
       const nachbar = tabs[idx - 1] ?? tabs[idx + 1];
       schliesseTab(path);
       navigate(nachbar ? nachbar.path : '/');
@@ -118,7 +122,27 @@ export function TabStreifen() {
     }
   };
 
-  const label = (t: TabEintrag) => verlaufLabel(t.path, manifeste);
+  // Wie oft ist ein Erlass-Kürzel offen? Nur bei MEHRFACH-Instanz ergänzt das
+  // Label den Artikel (»OR – Art. 41«), sonst nur das Kürzel (Auftrag David).
+  const kuerzelHaeufig: Record<string, number> = {};
+  for (const t of tabs) {
+    const e = erlassVonPfad(t.path, manifeste);
+    if (e?.kuerzel) kuerzelHaeufig[e.kuerzel] = (kuerzelHaeufig[e.kuerzel] ?? 0) + 1;
+  }
+  const artikelLabel = (path: string): string | null => {
+    const m = /#art-(.+)$/.exec(path);
+    if (!m) return null;
+    const tok = decodeURIComponent(m[1]).replace(/_/g, '');
+    return tok ? `Art. ${tok}` : null;
+  };
+  const label = (t: TabEintrag) => {
+    const e = erlassVonPfad(t.path, manifeste);
+    if (e?.kuerzel && (kuerzelHaeufig[e.kuerzel] ?? 0) >= 2) {
+      const art = artikelLabel(t.path);
+      if (art) return `${e.kuerzel} – ${art}`;
+    }
+    return verlaufLabel(t.path, manifeste);
+  };
 
   // Kantonskürzel eines Reiters, falls er ein KANTONALES Gesetz zeigt (Auftrag
   // David: «der Tab soll anzeigen, wenn man kantonales Gesetz hat, um welchen
@@ -145,7 +169,7 @@ export function TabStreifen() {
             // zeigt das Piktogramm + den Element-Titel.
             if (items.length === 1) {
               const t = items[0];
-              const aktiv = pfadTeil(t.path) === aktivTeil;
+              const aktiv = tabSchluessel(t.path) === aktivSchluessel;
               const kanton = kantonVon(t);
               return (
                 <li key={kat} className="shrink-0" style={{ scrollSnapAlign: 'start' }}>
@@ -211,10 +235,10 @@ export function TabStreifen() {
         <div role="menu" style={{ left: menuPos.left, top: menuPos.top }}
           className="absolute z-30 w-[18rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg py-1 max-h-[70vh] overflow-y-auto">
           {tabs.filter((t) => tabKat(t.path) === offeneKat).map((t) => {
-            const aktiv = pfadTeil(t.path) === aktivTeil;
+            const aktiv = tabSchluessel(t.path) === aktivSchluessel;
             const kanton = kantonVon(t);
             return (
-              <div key={t.path} className={`flex items-center ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
+              <div key={tabSchluessel(t.path)} className={`flex items-center ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
                 <button type="button" role="menuitem" aria-current={aktiv ? 'page' : undefined}
                   onClick={() => { navigate(t.path); setOffeneKat(null); }}
                   className={`flex-1 min-w-0 inline-flex items-center gap-1.5 truncate text-left px-3 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>

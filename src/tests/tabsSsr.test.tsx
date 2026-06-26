@@ -30,9 +30,13 @@ const html = (eintraege: { path: string; label?: string }[], url = '/') => {
 };
 
 describe('TabStreifen — Guard + Render', () => {
-  it('rendert NICHTS bei 0 oder 1 Reiter', () => {
+  it('rendert NICHTS bei 0 Reitern; AB dem 1. Reiter sichtbar (Auftrag David: Tab sofort)', () => {
     expect(html([])).toBe('');
-    expect(html([{ path: '/rechner/tagerechner' }])).toBe('');
+    // Ein einzelner Reiter erscheint jetzt sofort (Guard <1 statt <2). Im echten
+    // Prerender bleibt der Streifen leer, weil ladeTabs() dort [] liefert.
+    const eins = html([{ path: '/rechner/tagerechner' }], '/rechner/tagerechner');
+    expect(eins).toContain('aria-label="Geöffnete Reiter"');
+    expect(eins).toContain('aria-current="page"');
   });
 
   it('ab 2 Reitern: Navigations-Leiste mit zwei Reitern, Schliessen-Knöpfen und «Alle schliessen»', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ladeTabs, merkeTab, schliesseTab, leereTabs, ordneTabsUm } from '../lib/tabs';
+import { ladeTabs, merkeTab, schliesseTab, leereTabs, ordneTabsUm, naechsteInstanz, aktualisiereTabArtikel } from '../lib/tabs';
 
 // In-App-Reiter (lib/tabs.ts): Persistenz, stabile Reihenfolge, Dublette per
 // pathname, MAX-Kappung, korruptes localStorage. Reines Speicher-Werkzeug.
@@ -37,12 +37,37 @@ describe('tabs.ts — offene Reiter', () => {
     expect(ladeTabs().length).toBe(1);
   });
 
-  it('MAX 8: der älteste (vorn) fällt heraus', () => {
-    for (let i = 0; i < 10; i++) merkeTab(`/rechner/r${i}`);
+  it('MAX 50: der älteste (vorn) fällt heraus (Limit 8→50, Auftrag David)', () => {
+    for (let i = 0; i < 52; i++) merkeTab(`/rechner/r${i}`);
     const t = ladeTabs();
-    expect(t.length).toBe(8);
+    expect(t.length).toBe(50);
     expect(t[0].path).toBe('/rechner/r2');
-    expect(t[7].path).toBe('/rechner/r9');
+    expect(t[49].path).toBe('/rechner/r51');
+  });
+
+  it('?r-Diskriminator: dasselbe Gesetz mehrfach offen (Auftrag David)', () => {
+    merkeTab('/gesetze/bund/OR');
+    merkeTab('/gesetze/bund/OR?r=2');
+    expect(ladeTabs().map((t) => t.path)).toEqual(['/gesetze/bund/OR', '/gesetze/bund/OR?r=2']);
+    // andere Query (kein ?r) bleibt EIN Reiter
+    merkeTab('/gesetze/bund/OR?preset=x');
+    expect(ladeTabs().length).toBe(2);
+  });
+
+  it('naechsteInstanz: nächster freier ?r, Artikel-Anker bleibt erhalten', () => {
+    merkeTab('/gesetze/bund/OR');
+    expect(naechsteInstanz('/gesetze/bund/OR#art-41')).toBe('/gesetze/bund/OR?r=2#art-41');
+    merkeTab('/gesetze/bund/OR?r=2');
+    expect(naechsteInstanz('/gesetze/bund/OR')).toBe('/gesetze/bund/OR?r=3');
+  });
+
+  it('aktualisiereTabArtikel ändert nur den Anker des passenden Reiters', () => {
+    merkeTab('/gesetze/bund/OR?r=2');
+    aktualisiereTabArtikel('/gesetze/bund/OR?r=2#art-97');
+    expect(ladeTabs()[0].path).toBe('/gesetze/bund/OR?r=2#art-97');
+    // kein passender Reiter → keine Änderung, kein Crash
+    aktualisiereTabArtikel('/gesetze/bund/ZGB#art-1');
+    expect(ladeTabs().length).toBe(1);
   });
 
   it('schliesseTab entfernt per pathname', () => {
