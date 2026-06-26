@@ -21,32 +21,56 @@ function Marke({ text, ton }: NonNullable<SuchTreffer['marke']>) {
   return <span className={`lc-badge ${cls} shrink-0`}>{text}</span>;
 }
 
-function Zeile({ t, onAuswahl, optionId, aktiv, alsOption }: {
+const ZEILE_CLS = 'group/z flex items-center gap-3 px-4 py-2 no-underline transition-colors hover:bg-brass-100/40';
+
+function ZeileInhalt({ t }: { t: SuchTreffer }) {
+  return (
+    <>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-body-s font-medium text-ink-900 transition-colors group-hover/z:text-brass-800">{t.label}</span>
+        {t.untertitel && <span className="block truncate text-body-s text-ink-500">{t.untertitel}</span>}
+      </span>
+      {t.marke && <Marke {...t.marke} />}
+      <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
+    </>
+  );
+}
+
+function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption }: {
   t: SuchTreffer;
   onAuswahl?: () => void;
+  onNavigate?: (href: string) => void;
   optionId?: string;
   aktiv?: boolean;
   alsOption?: boolean;
 }) {
+  // Listbox-Option: KEIN inneres <a> (ein fokussierbarer Link in role=option ist
+  // nested-interactive, axe serious — Entscheid David 26.6.2026). Maus/Touch
+  // navigieren über onNavigate; die Tastatur läuft über die Combobox (Enter im
+  // Feld öffnet den aktiven Treffer, aria-activedescendant zeigt ihn an).
+  if (alsOption) {
+    return (
+      <li role="option" id={optionId} aria-selected={!!aktiv}
+        onClick={() => { onAuswahl?.(); onNavigate?.(t.href); }}
+        className={`${ZEILE_CLS} cursor-pointer${aktiv ? ' bg-brass-100/40' : ''}`}>
+        <ZeileInhalt t={t} />
+      </li>
+    );
+  }
   return (
-    <li role={alsOption ? 'option' : undefined} id={optionId} aria-selected={alsOption ? !!aktiv : undefined}>
-      <Link to={t.href} onClick={onAuswahl} tabIndex={alsOption ? -1 : undefined}
-        className={`group/z flex items-center gap-3 px-4 py-2 no-underline transition-colors hover:bg-brass-100/40${aktiv ? ' bg-brass-100/40' : ''}`}>
-        <span className="min-w-0 flex-1">
-          <span className="block truncate text-body-s font-medium text-ink-900 transition-colors group-hover/z:text-brass-800">{t.label}</span>
-          {t.untertitel && <span className="block truncate text-body-s text-ink-500">{t.untertitel}</span>}
-        </span>
-        {t.marke && <Marke {...t.marke} />}
-        <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
+    <li>
+      <Link to={t.href} onClick={onAuswahl} className={ZEILE_CLS}>
+        <ZeileInhalt t={t} />
       </Link>
     </li>
   );
 }
 
-function Gruppe({ g, index, onAuswahl, listboxId, aktivId }: {
+function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
   g: SuchGruppe;
   index: number;
   onAuswahl?: () => void;
+  onNavigate?: (href: string) => void;
   listboxId?: string;
   aktivId?: string;
 }) {
@@ -67,7 +91,7 @@ function Gruppe({ g, index, onAuswahl, listboxId, aktivId }: {
         : <ul role={listboxId ? 'none' : undefined} className="pb-1.5">
             {g.treffer.map((t) => {
               const oid = listboxId ? suchOptionId(listboxId, g.id, t.id) : undefined;
-              return <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl}
+              return <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl} onNavigate={onNavigate}
                 optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} />;
             })}
           </ul>}
@@ -75,11 +99,13 @@ function Gruppe({ g, index, onAuswahl, listboxId, aktivId }: {
   );
 }
 
-export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, listboxId, aktivId }: {
+export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate, listboxId, aktivId }: {
   gruppen: SuchGruppe[];
   allesGeladen: boolean;
   q: string;
   onAuswahl?: () => void;
+  /** Maus/Touch-Navigation im Listbox-Modus (Optionen sind keine <a> mehr). */
+  onNavigate?: (href: string) => void;
   /** Setzt das Panel in den ARIA-Listbox-Modus (Pfeil-Nav vom steuernden Feld). */
   listboxId?: string;
   /** Options-ID des aktuell hervorgehobenen Treffers (aria-activedescendant). */
@@ -105,7 +131,7 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, listboxId, 
                 ? <>Keine Treffer zu «{q}». Versuchen Sie einen Erlass, eine Norm oder ein Stichwort.</>
                 : <>wird durchsucht …</>}
             </p>
-          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} listboxId={listboxId} aktivId={aktivId} />)}
+          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} />)}
       </div>
     </>
   );

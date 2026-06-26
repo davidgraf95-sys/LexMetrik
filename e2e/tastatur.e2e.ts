@@ -89,7 +89,9 @@ test('Skip-Link: erstes Tab fokussiert «Zum Inhalt springen» und springt in de
 test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
   await page.goto('/')
   await page.keyboard.press('/')
-  await expect(page.getByRole('searchbox', { name: 'LexMetrik durchsuchen' })).toBeFocused()
+  // Die Header-Suche ist eine ARIA-Combobox (Vorschlags-Listbox), kein reiner
+  // searchbox — der «/»-Shortcut fokussiert sie weiterhin.
+  await expect(page.getByRole('combobox', { name: 'LexMetrik durchsuchen' })).toBeFocused()
 })
 
 test('SchweizKarte: Kanton-Fläche ist tastatur-fokussierbar und mit Enter wählbar (W1.6)', async ({ page }) => {

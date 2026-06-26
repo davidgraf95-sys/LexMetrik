@@ -358,7 +358,9 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
         <section id="abschnitt-regeste" className="scroll-mt-[var(--rsp-stick,7rem)] lc-highlight space-y-2">
           <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
           <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
-          <p className="text-micro text-ink-500">
+          {/* ink-600 (nicht ink-500): die Regeste-Box (lc-highlight) hat brass-100-
+              Grund — ink-500 = 4.23:1 bei 11px (axe serious), ink-600 ≥ 6:1. */}
+          <p className="text-micro text-ink-600">
             {snap.regesteAmtlich
               ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'
               : 'Quelle: OpenCaseLaw — automatisch übernommen; Herkunft (amtliche Regeste oder maschinelle Zusammenfassung) nicht abschliessend geprüft'}

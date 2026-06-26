@@ -111,7 +111,8 @@ export function HeaderSuche() {
       />
       {zeigtPanel && (
         <div className="absolute left-0 right-0 top-full mt-2 z-30">
-          <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId} />
+          <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId}
+            onNavigate={(href) => navigate(href)} />
         </div>
       )}
     </div>

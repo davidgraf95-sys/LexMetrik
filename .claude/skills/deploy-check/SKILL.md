@@ -28,7 +28,15 @@ npm run lint        # nie tail/Pipe — hat schon 8 Fehler verschluckt
 npm run build
 npm run golden:vergleich   # byte-gleich; Exit-Code prüfen!
 npm run check       # Sweep, Smoke, Register; check:caches VOR check:zitate
+npm run test:e2e    # Playwright (a11y/axe beide Theme-Modi + Funktions-Smokes);
+                    # braucht dist (nach build), startet vite preview selbst.
 ```
+
+- **E2E ins Deploy-Tor (26.6.2026):** `test:e2e` ist NICHT im schnellen `gate`
+  (build+Browser, zu langsam pro Iteration), gehört aber zwingend vor jeden
+  Deploy — sonst rottet die Suite (axe-Befunde + veraltete Locator blieben lange
+  unentdeckt, weil nur `check` lief). Die a11y-Prüfpunkte pinnen das Theme
+  (hell + Reader zusätzlich dunkel), sind also uhrzeitunabhängig deterministisch.
 
 - Golden-Abweichungen ERST den interleaved Commits der Parallel-Session
   zuordnen, dann erst über Neu-Schreiben entscheiden (nur deklariert).

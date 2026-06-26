@@ -127,7 +127,8 @@ export function UniversalSuche() {
         )}
       </div>
 
-      <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} listboxId={listboxId} aktivId={aktivId} />
+      <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} listboxId={listboxId} aktivId={aktivId}
+        onNavigate={(href) => navigate(href)} />
     </section>
   );
 }

@@ -21,14 +21,17 @@ test.describe('/rechtsprechung — Übersicht', () => {
     expect(fehler).toEqual([])
   })
 
-  test('trennt Bund und Kantone (Segment + beschriftete Abschnitte)', async ({ page }) => {
+  test('trennt Bund und Kantone über das Ebene-Segment', async ({ page }) => {
+    // Rechtsprechung-Redesign (Leitentscheide-first): die Trennung Bund/Kantone
+    // läuft jetzt über das Ebene-Segment (Alle · Bundesgericht · Kantone), nicht
+    // mehr über zwei feste «Bundesgericht»/«Kantonale Gerichte»-Abschnitte.
     await page.goto('/rechtsprechung')
-    // Segment-Schalter mit beiden Ebenen
-    await expect(page.getByRole('button', { name: /Bundesgericht/ })).toBeVisible()
-    await expect(page.getByRole('button', { name: /Kantone/ })).toBeVisible()
-    // Beide beschrifteten Abschnitte erscheinen
-    await expect(page.getByRole('heading', { name: /Bundesgericht/ })).toBeVisible()
-    await expect(page.getByRole('heading', { name: /Kantonale Gerichte/ })).toBeVisible()
+    // exact: true — sonst matcht «Kantone» auch «Kantone aufklappen» (Filter).
+    await expect(page.getByRole('button', { name: 'Bundesgericht', exact: true })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Kantone', exact: true })).toBeVisible()
+    // Auf «Kantone» wechseln → die Liste zeigt weiterhin Entscheid-Links.
+    await page.getByRole('button', { name: 'Kantone', exact: true }).click()
+    await expect(page.locator('a[href^="/rechtsprechung/"]').first()).toBeVisible()
   })
 
   test('kein horizontaler Overflow bei 390px', async ({ page }) => {
@@ -58,8 +61,9 @@ test.describe('Reader (über Klick aus der Übersicht)', () => {
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
     // Gegliederte Lesesicht: mindestens die Erwägungen-Überschrift.
     await expect(page.getByText('Erwägungen', { exact: false }).first()).toBeVisible()
-    // Provenienz-Fuss: Live-Link auf die amtliche Fassung.
-    await expect(page.getByText('massgebliche Fassung', { exact: false })).toBeVisible()
+    // Provenienz-Fuss: Live-Link auf die amtliche Fassung (kommt im Reader
+    // mehrfach vor — Kopf-Link + Hinweis im Body, daher .first()).
+    await expect(page.getByText('massgebliche Fassung', { exact: false }).first()).toBeVisible()
     await page.screenshot({ path: 'e2e-shots/rechtsprechung-reader.png', fullPage: true })
     expect(fehler).toEqual([])
   })

@@ -33,7 +33,9 @@ export function VariantenKopf<T extends string>({
                 aria-pressed={untertyp === o.id}
                 className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${untertyp === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
                 <span className="font-medium block leading-tight">{o.label}</span>
-                {o.sub && <span className="text-ink-500 text-xs">{o.sub}</span>}
+                {/* ink-600 (nicht ink-500): das Unterlabel sitzt im selektierten
+                    Chip auf bg-brass-100 — ink-500 = 4.4:1 (axe serious), ink-600 = 6.3:1. */}
+                {o.sub && <span className="text-ink-600 text-xs">{o.sub}</span>}
               </button>
             ))}
           </div>
@@ -47,7 +49,7 @@ export function VariantenKopf<T extends string>({
               aria-pressed={detailgrad === o.id}
               className={`rounded-lg border px-3 py-2 text-left text-body-s ${detailgrad === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
               <span className="font-medium block leading-tight">{o.label}</span>
-              <span className="text-ink-500 text-xs">{o.sub}</span>
+              <span className="text-ink-600 text-xs">{o.sub}</span>
             </button>
           ))}
         </div>

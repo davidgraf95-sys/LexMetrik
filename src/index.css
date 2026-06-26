@@ -27,7 +27,11 @@
     --line-strong:color-mix(in srgb, var(--ink-900) 18%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
     --brass-800:#654C1E; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) */
-    --brass-700:#8A6A2F; --brass-500:#B08D4A; --brass-300:#DDC9A0;
+    /* brass-700 a11y-kalibriert (Entscheid David 26.6.2026): WCAG 4.5:1 für
+       Kleintext auf ALLEN hellen Flächen — min 4.63:1 auch auf brass-100/
+       paper-sunken (vorher #8A6A2F = 4.37 auf paper-sunken → axe serious).
+       Marke praktisch unverändert. Dunkel-brass-700 ist separat (s. html.dark). */
+    --brass-700:#826225; --brass-500:#B08D4A; --brass-300:#DDC9A0;
     --brass-600:#9D7B3C; --brass-400:#C7AB75;
     --brass-200:#E6D7B8; --brass-100:#F1E8D6;
     /* Fixe dunkle Tinte für Text auf STETS hellen Gold-Flächen (brass-300 ist

@@ -19,8 +19,16 @@ const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
 // fg #78786f statt ink-500). Die CSS respektiert prefers-reduced-motion
 // (index.css); test.use({reducedMotion}) griff hier nicht → explizit
 // emulieren, VOR der Interaktion, die die Animation auslöst.
-async function oeffnen(page: Page, url: string) {
-  await page.emulateMedia({ reducedMotion: 'reduce' })
+// Theme DETERMINISTISCH pinnen (26.6.2026): ohne gespeicherte Wahl folgt die App
+// zeitThema (nach 20:00 dunkel) → axe mass je nach Uhrzeit hell ODER dunkel, also
+// flaky. Wir setzen die Wahl per localStorage VOR dem ersten Skript-Lauf und
+// emulieren das passende color-scheme. Default 'hell' (Referenzmodus); die
+// Reader-Prüfpunkte laufen zusätzlich in 'dunkel' (Kontrast in BEIDEN Modi, §13/F2).
+async function oeffnen(page: Page, url: string, thema: 'hell' | 'dunkel' = 'hell') {
+  await page.addInitScript((t) => {
+    try { localStorage.setItem('lexmetrik-thema', t) } catch { /* privater Modus */ }
+  }, thema)
+  await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: thema === 'dunkel' ? 'dark' : 'light' })
   await page.goto(url)
 }
 
@@ -108,10 +116,11 @@ test('Tagerechner', async ({ page }, testInfo) => {
   await axePruefen(page, testInfo, 'tagerechner')
 })
 
-// In-App-Tab-Streifen (UI-Welle): das Tor läuft sonst mit frischem Browser
-// (0 Reiter → Streifen unsichtbar) und wäre für diesen Zustand blind. Hier
-// werden 2 Reiter vorab geseedet, damit axe die sichtbare Leiste prüft.
-test('Tab-Streifen mit zwei offenen Reitern', async ({ page }, testInfo) => {
+// In-App-Reiter-Übersicht (Gesetze-UX Batch 2 ersetzte den horizontalen
+// TabStreifen durch einen Topbar-Trigger ☰ + Dialog-Panel). 2 Reiter vorab
+// seeden, sonst ist der Trigger unsichtbar (tabs.length < 1). Geprüft wird der
+// sichtbare Trigger UND das geöffnete Dialog-Panel (die reiche interaktive Fläche).
+test('Reiter-Übersicht mit zwei offenen Reitern', async ({ page }, testInfo) => {
   await page.addInitScript(() => {
     try {
       localStorage.setItem('lexmetrik-tabs', JSON.stringify([
@@ -120,7 +129,10 @@ test('Tab-Streifen mit zwei offenen Reitern', async ({ page }, testInfo) => {
     } catch { /* privater Modus */ }
   })
   await oeffnen(page, '/rechner/tagerechner')
-  await page.locator('nav[aria-label="Geöffnete Reiter"]').waitFor({ state: 'visible' })
+  const trigger = page.getByRole('button', { name: 'Alle geöffneten Reiter' })
+  await trigger.waitFor({ state: 'visible' })
+  await trigger.click()
+  await page.getByRole('dialog', { name: 'Alle geöffneten Reiter' }).waitFor({ state: 'visible' })
   await axePruefen(page, testInfo, 'tab-streifen')
 })
 
@@ -181,7 +193,7 @@ test('Rechtsprechung — Übersicht', async ({ page }, testInfo) => {
 })
 
 test('Rechtsprechung — Entscheid-Reader', async ({ page }, testInfo) => {
-  await oeffnen(page, '/rechtsprechung/bger_5A_79_2026')
+  await oeffnen(page, '/rechtsprechung/bger_1B_278_2022')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'rechtsprechung-leser')
 })
@@ -190,4 +202,19 @@ test('International — Übersicht', async ({ page }, testInfo) => {
   await oeffnen(page, '/international')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'international')
+})
+
+// Dunkelmodus-Abdeckung (§13/F2): dieselben Reader-Prüfpunkte explizit in
+// 'dunkel' — fängt Kontrast-Verstösse, die nur im Dunkel auftreten (z. B. der
+// gedämpfte «aufgehoben»-Tier), unabhängig von der Uhrzeit/zeitThema.
+test('Gesetze — Reader BS-640.100 (dunkel)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/gesetze/kanton/BS-640.100', 'dunkel')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'gesetze-leser-BS')
+})
+
+test('Rechtsprechung — Entscheid-Reader (dunkel)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/rechtsprechung/bger_1B_278_2022', 'dunkel')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'rechtsprechung-leser')
 })

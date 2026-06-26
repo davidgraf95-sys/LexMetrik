@@ -19,10 +19,14 @@ test.describe('/gesetze — Übersicht', () => {
     await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
     // Auf den Hauptinhalt scopen: die Seitenleiste trägt dieselben Begriffe, ist
     // aber je nach Breakpoint ausgeblendet → ein ungescoptes .first() träfe ein
-    // hidden-Element. Privatrecht ist standardOffen → OR-Volltitel sichtbar.
+    // hidden-Element.
     const inhalt = page.getByRole('main')
-    await expect(inhalt.getByRole('link', { name: /Obligationenrecht/ }).first()).toBeVisible()
+    // Kategorie-Überschriften sind auch eingeklappt sichtbar (details/summary).
     await expect(inhalt.getByText('Privatrecht', { exact: false }).first()).toBeVisible()
+    // Bund-Systematik ist seit 25.6.2026 default EINGEKLAPPT (Kategorien-Überblick
+    // zuerst, Auftrag David) → erst aufklappen, dann ist der OR-Volltitel sichtbar.
+    await inhalt.getByRole('button', { name: 'Alle aufklappen' }).click()
+    await expect(inhalt.getByRole('link', { name: /Obligationenrecht/ }).first()).toBeVisible()
     expect(fehler).toEqual([])
   })
 
@@ -50,6 +54,9 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
   test('OR öffnet mit Volltext, TOC und funktionierender In-Gesetz-Suche', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
+    // Bund-Systematik default eingeklappt (25.6.2026) → erst aufklappen, dann
+    // ist der OR-Link in der Kategorie klickbar.
+    await page.getByRole('main').getByRole('button', { name: 'Alle aufklappen' }).click()
     await page.getByRole('main').getByRole('link', { name: /Obligationenrecht/ }).first().click()
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR/)
     // Kopf + Inhaltsverzeichnis + Artikel 1 (erstes Band offen)
