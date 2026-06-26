@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../lib/tabs';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import type { InternRefs } from '../components/NormText';
-import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeKantonSystematik,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
@@ -60,13 +60,20 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg }: {
+function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, imTreffer, onSpringe }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
   marg?: string[];
+  // Treffer-Modus (Auftrag David): Klick auf die Artikelnummer springt in den
+  // VOLLTEXT zu diesem Artikel und löscht die Suche, statt nur innerhalb der
+  // Trefferliste zu ankern.
+  imTreffer?: boolean; onSpringe?: (token: string) => void;
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
   const zitat = `${label} ${erlass.kuerzel}`;
+  // Vollständig aufgehobener Artikel → dezent + standardmässig eingeklappt
+  // (Auftrag David: «nicht so präsent», aufklappbar über den ▾/▸-Toggle).
+  const ganzAufgehoben = artikelGanzAufgehoben(e.bloecke);
   // Fussnoten am Fuss: amtliche Sidecar-Fussnoten bevorzugen; fehlen sie, die
   // aus dem Wortlaut-Block abgetrennte Änderungshistorie (Extraktions-Artefakt)
   // hier zeigen — einheitlich EINE Quelle, keine Doppelung.
@@ -76,7 +83,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
         .map((b) => trenneAenderungshistorie(b.text).historie)
         .filter((h): h is string => !!h)
         .map((text): Fussnote => ({ nr: '', text, links: [] }));
-  const [artOffen, setArtOffen] = useState(true); // einzelner Artikel ein-/ausklappbar
+  const [artOffen, setArtOffen] = useState(!ganzAufgehoben); // einzelner Artikel ein-/ausklappbar; aufgehoben → zu
   // Fussnoten dem Absatz zuordnen, den sie betreffen: trägt der Absatz einen
   // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
   // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
@@ -130,25 +137,30 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   return (
     <article id={`art-${e.artikel}`}
       className="nt-art-cv group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
-      {/* Marginalspalte erst ab xl (1280px) als eigene Druckfassungs-Randspalte —
-          darunter (geteilter Bildschirm / mittlere Breiten) stapeln «Art. N» + die
-          Randtitel ÜBER dem Fliesstext, damit der Normtext die volle Breite behält
-          statt von einer 200px-Randspalte gequetscht zu werden. Reine Darstellung (§3). */}
-      <div className="xl:grid xl:grid-cols-[12.5rem_minmax(0,1fr)] xl:gap-x-8">
-        {/* Linke Marginalspalte: «Art. N» als ruhiger Anker, darunter die Randtitel
-            (rechtsbündig, ruhig) — die statische Druckfassungs-Randspalte statt des
-            früheren fliegenden Trackers. */}
-        <div className="mb-2 xl:mb-0 xl:pt-1 xl:text-right">
-          <div className="flex items-baseline gap-2 xl:justify-end">
+      {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
+          IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
+          der Normtext die volle Lesespaltenbreite bekommt. Reine Darstellung (§3). */}
+      <div>
+        {/* Kopfzeile des Artikels: «Art. N» als Anker, darunter die Randtitel
+            (linksbündig, Sachüberschrift zuunterst) — über dem Fliesstext. */}
+        <div className="mb-2.5">
+          <div className="flex items-baseline gap-2">
             <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
               aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
               className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
-            <a href={`#art-${e.artikel}`} className="num text-base font-bold tracking-wide text-ink-900 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+            {imTreffer && onSpringe ? (
+              <button type="button" onClick={() => onSpringe(e.artikel)}
+                title="Im Volltext zu diesem Artikel springen"
+                className={`num text-base font-bold tracking-wide hover:text-brass-700 text-left ${ganzAufgehoben ? 'text-ink-400 font-normal' : 'text-ink-900'}`}>{label}</button>
+            ) : (
+              <a href={`#art-${e.artikel}`} className={`num text-base font-bold tracking-wide hover:text-brass-700 no-underline ${ganzAufgehoben ? 'text-ink-400 font-normal' : 'text-ink-900'}`}>{label}</a>
+            )}{fnMarker}
+            {ganzAufgehoben && <span className="text-xs italic text-ink-400">· aufgehoben</span>}
           </div>
           {artOffen && marg && marg.length > 0 && (
-            <div className="mt-1.5 space-y-0.5 font-serif text-xs leading-snug text-ink-500">
+            <div className="mt-1 space-y-0.5 font-serif text-xs leading-snug text-ink-600">
               {marg.map((m, i) => (
-                <div key={i} className={i === marg.length - 1 ? 'italic text-ink-500' : ''}>{m}</div>
+                <div key={i} className={i === marg.length - 1 ? 'font-medium text-ink-700' : ''}>{m}</div>
               ))}
             </div>
           )}
@@ -158,12 +170,12 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
               (LexWork-Erlasse ohne struktur-File). «…»-Aufhebungstitel liefert der
               Extraktor gar nicht erst (§7). */}
           {artOffen && (!marg || marg.length === 0) && e.titel && (
-            <div className="mt-1.5 font-serif text-xs leading-snug italic text-ink-500">
+            <div className="mt-1 font-serif text-xs leading-snug font-medium text-ink-700">
               {e.titel}
             </div>
           )}
           {artOffen && (
-            <div className="mt-2 flex gap-3 xl:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+            <div className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
               <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
               <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
             </div>
@@ -175,7 +187,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             Spalte hinausragen → sonst wurde Text rechts abgeschnitten (Befund David
             25.6.2026). Der Wortumbruch im Absatz (overflow-wrap:anywhere) bleibt. */}
         {artOffen && (
-        <div className="max-w-[46rem] min-w-0 overflow-x-clip">
+        <div className="max-w-[52rem] min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
             fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
@@ -248,6 +260,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [manifest, setManifest] = useState<BrowseManifest | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
+  // Scrollposition VOR der Suche merken → beim Leeren der Suche dorthin zurück,
+  // statt an den Anfang zu springen (Auftrag David). Ein Treffer-Klick nullt das
+  // (springt stattdessen zum Artikel).
+  const scrollVorSuche = useRef<number | null>(null);
+  const sucheVorher = useRef('');
   const [offen, setOffen] = useState<Record<string, boolean>>({});
   // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext, der
   // immer offen bleibt) — beim Scrollen klappt die aktive Sektion auf, die übrige zu.
@@ -350,7 +367,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // Permalink setzen — derselbe Mechanismus wie der Hash-Sprung.
   const springeZuArtikel = useCallback((token: string) => {
     // Im Suchmodus erst die Suche verlassen, sonst ist das Ziel nicht im DOM
-    // (nur Treffer gerendert) → Permalink änderte sich ohne Sprung.
+    // (nur Treffer gerendert) → Permalink änderte sich ohne Sprung. Kein Zurück
+    // zur Vor-Such-Position (wir springen ja gezielt zum Artikel).
+    scrollVorSuche.current = null;
     setSuche('');
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     if (ids.length) setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
@@ -385,6 +404,22 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     const id = window.requestAnimationFrame(() => springeZuArtikel(token));
     return () => window.cancelAnimationFrame(id);
   }, [location.key, location.hash, sektionen, springeZuArtikel]);
+
+  // Suche schliessen/leeren → an die Scrollposition VOR der Suche zurück, statt an
+  // den Anfang zu springen (Auftrag David). Reine Scroll-Wiederherstellung (kein
+  // setState) → kein Effekt-Render-Kaskaden-Problem.
+  useEffect(() => {
+    const war = sucheVorher.current;
+    sucheVorher.current = suche;
+    if (typeof window === 'undefined') return;
+    if (!war && suche) {
+      scrollVorSuche.current = window.scrollY;
+    } else if (war && !suche && scrollVorSuche.current != null) {
+      const y = scrollVorSuche.current;
+      scrollVorSuche.current = null;
+      window.requestAnimationFrame(() => window.scrollTo(0, y));
+    }
+  }, [suche]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -858,7 +893,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             wird die Gliederung NICHT inline hier gerendert (sie scrollte sonst weg),
             sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
         {sektionen.length > 0 && (
-          <aside className={`hidden xl:mb-0 xl:sticky xl:top-[10.5rem] xl:max-h-[calc(100vh-11rem)] xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
+          <aside
+            style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px) + 0.75rem)', maxHeight: 'calc(100vh - 4rem - var(--tabstreifen-h, 0px) - 1.5rem)' }}
+            className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
                 <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
@@ -884,7 +921,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
