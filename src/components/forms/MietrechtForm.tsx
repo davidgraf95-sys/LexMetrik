@@ -229,7 +229,11 @@ export function MietrechtForm() {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {(brauchtMietbeginn || objekt === 'moebliertes_zimmer' || quelle === 'gesetzlich') && (
+        {/* brauchtMietbeginn deckt die Fälle moebliertes_zimmer/gesetzlich bereits
+            ab – aber nur, solange terminsucheAktiv gilt; das verhindert, dass ein
+            nach Art-Wechsel (z. B. Zahlungsverzug) stehengebliebener quelle-State
+            das Feld irreführend weiter einblendet. */}
+        {brauchtMietbeginn && (
           <Field label="Mietbeginn" hint="Für die gesetzliche Auffangregel (Ende einer Mietdauer-Periode)">
             <DatumsFeld value={mietbeginn} onChange={(v) => setMietbeginn(v)} className={inputCls} />
           </Field>

@@ -246,8 +246,12 @@ export function AllgemeineFristForm() {
             </Field>
             <div className="grid grid-cols-[7rem_1fr] gap-3">
               <Field label="Länge">
+                {/* Rohwert zulassen (Feld leerbar); die >0-Prüfung läuft über die
+                    FehlerBox (fehler-Validierung oben) – konsistent zum Rückwärts-Tab,
+                    statt im onChange hart auf 1 zu klammern. */}
                 <input type="number" inputMode="decimal" min={1} step={1} className={inputCls + ' num'} value={form.laenge}
-                  onChange={(e) => set('laenge', Math.max(1, Math.round(Number(e.target.value) || 1)))} />
+                  aria-invalid={!Number.isInteger(form.laenge) || form.laenge <= 0}
+                  onChange={(e) => set('laenge', Number(e.target.value))} />
               </Field>
               <Field label="Einheit">
                 <select className={inputCls} value={form.einheit} onChange={(e) => set('einheit', e.target.value as Einheit)}>

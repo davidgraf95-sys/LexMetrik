@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
@@ -90,6 +90,7 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 }
 
 function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string; ansichtParam: string | null }) {
+  const navigate = useNavigate();
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
@@ -110,7 +111,15 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
     let lebt = true;
     void ladeEntscheidEintrag(schluessel).then(async (eintrag) => {
       if (!lebt) return;
-      if (!eintrag || !eintrag.datei) { setZustand('fehlt'); return; }
+      if (!eintrag) { setZustand('fehlt'); return; }
+      // Direktaufruf eines Verweis-Keys (vollständiges Urteil zu einem BGE; kein eigener
+      // Snapshot, datei=null): auf das Ziel-BGE mit voraktivierter Ansicht weiterleiten
+      // statt «nicht verfügbar» zu zeigen — das Ziel ist im Manifest bekannt (§8).
+      if (eintrag.verweis && !eintrag.datei) {
+        navigate(`/rechtsprechung/${encodeURIComponent(eintrag.verweis.zielKey)}?ansicht=${eintrag.verweis.ansicht}`, { replace: true });
+        return;
+      }
+      if (!eintrag.datei) { setZustand('fehlt'); return; }
       const s = await ladeEntscheid(eintrag.datei);
       if (!lebt) return;
       if (!s) { setZustand('fehlt'); return; }
@@ -128,7 +137,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
       setBodyTab(init);
     });
     return () => { lebt = false; };
-  }, [schluessel, ansichtParam]);
+  }, [schluessel, ansichtParam, navigate]);
 
   // Browser-Tab: Zitierung des Entscheids.
   useEffect(() => {

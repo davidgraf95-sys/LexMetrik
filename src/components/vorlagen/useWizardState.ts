@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // ─── Geteilter Zustands-Rahmen der Vorlagen-Wizards ─────────────────────────
 //
@@ -56,9 +56,19 @@ export function useWizardState<T extends object>(opts: {
     if (speicherKey) { try { localStorage.removeItem(speicherKey); } catch { /* ignorieren */ } }
   };
 
+  // Rücksetz-Timer des «Kopiert ✓»-Häkchens: Handle halten, damit eine zweite
+  // Kopie den ersten Timer ersetzt (kein vorzeitiges Verschwinden) und der
+  // Timer beim Unmount aufgeräumt wird (kein setState auf weg-Komponente).
+  const kopierTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (kopierTimer.current) clearTimeout(kopierTimer.current); }, []);
+
   const kopieren = (text: string) => {
     navigator.clipboard?.writeText(text).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
+      () => {
+        setKopiert(true);
+        if (kopierTimer.current) clearTimeout(kopierTimer.current);
+        kopierTimer.current = setTimeout(() => setKopiert(false), 2000);
+      },
       () => {},
     );
   };

@@ -20,13 +20,30 @@ function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }
     { id: 'kanton', label: 'Kantone' },
     { id: 'international', label: 'International' },
   ];
+  // APG-Tabs-Muster (analog src/components/ui/Tabs.tsx, §10): roving tabindex
+  // (genau ein tabbarer Tab) + Pfeiltasten/Home/End — sonst trägt role=tab das
+  // ARIA-Versprechen ohne das erwartete Tastaturverhalten.
+  const aufTaste = (e: React.KeyboardEvent<HTMLButtonElement>, i: number) => {
+    let ziel: number;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') ziel = (i + 1) % opt.length;
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ziel = (i - 1 + opt.length) % opt.length;
+    else if (e.key === 'Home') ziel = 0;
+    else if (e.key === 'End') ziel = opt.length - 1;
+    else return;
+    e.preventDefault();
+    onWahl(opt[ziel].id);
+    (e.currentTarget.parentElement?.children[ziel] as HTMLElement | undefined)?.focus();
+  };
   return (
     <div role="tablist" aria-label="Ebene" className="inline-flex rounded-md border border-line bg-paper-sunken/50 p-0.5">
-      {opt.map((o) => (
+      {opt.map((o, i) => (
         <button
           key={o.id}
+          type="button"
           role="tab"
           aria-selected={aktiv === o.id}
+          tabIndex={aktiv === o.id ? 0 : -1}
+          onKeyDown={(e) => aufTaste(e, i)}
           onClick={() => onWahl(o.id)}
           className={`rounded px-4 py-1.5 text-body-s font-medium transition-colors ${
             aktiv === o.id ? 'bg-paper text-ink-900 shadow-sm' : 'text-ink-500 hover:text-ink-800'

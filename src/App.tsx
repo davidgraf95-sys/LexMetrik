@@ -6,6 +6,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
 import { TabTracker } from './components/TabTracker';
 import { ROUTEN_MANIFEST } from './routesManifest';
+import { tabSchluessel } from './lib/tabs';
 import { lazyRetry } from './lazyRetry';
 
 // Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk – der
@@ -71,9 +72,14 @@ function AltRouteRedirect() {
 const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 function ScrollWiederherstellung() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, search } = useLocation();
+  // Positions-Schlüssel = Reiter-Identität (pathname + ?r), NICHT pathname allein:
+  // dasselbe Gesetz kann mehrfach offen sein (?r=<n>), jede Instanz hält ihre
+  // eigene Scrollposition. tabSchluessel ignoriert #Anker und ?preset (gehören
+  // nicht zur Reiter-Identität) — read-only aus lib/tabs (§5).
+  const schluessel = tabSchluessel(pathname + search);
   const positionen = useRef<Map<string, number>>(new Map());
-  const aktiv = useRef(hash ? '' : pathname);
+  const aktiv = useRef(hash ? '' : schluessel);
   const wiederherstellend = useRef(false);
   // Native Scroll-Wiederherstellung abschalten — wir verwalten sie selbst (sonst
   // konkurriert der Browser bei Back/Forward mit der manuellen Wiederherstellung).
@@ -105,11 +111,11 @@ function ScrollWiederherstellung() {
   // garantiert die Reihenfolge unabhängig vom Timing.
   useIsoLayoutEffect(() => {
     wiederherstellend.current = true;       // Clamp-/Transient-Scrolls NICHT speichern
-    aktiv.current = hash ? '' : pathname;    // ab sofort gehört jeder Save dem NEUEN Pfad
-  }, [pathname, hash]);
+    aktiv.current = hash ? '' : schluessel;  // ab sofort gehört jeder Save dem NEUEN Reiter
+  }, [schluessel, hash]);
   useEffect(() => {
     if (hash) { wiederherstellend.current = false; return; } // Anker-Sprung übernimmt ScrollZuHash
-    const gespeichert = positionen.current.get(pathname);
+    const gespeichert = positionen.current.get(schluessel);
     const ziel = gespeichert ?? 0;
     // Neu besuchter Pfad OHNE gespeicherte Position (Ziel = Anfang): EINMALIG nach
     // oben, KEIN beharrlicher Loop. Der 360-Frame-Loop ist nur für das
@@ -152,7 +158,7 @@ function ScrollWiederherstellung() {
       else wiederherstellend.current = false;
     });
     return () => { cancelAnimationFrame(raf); wiederherstellend.current = false; };
-  }, [pathname, hash]);
+  }, [schluessel, hash]);
   return null;
 }
 

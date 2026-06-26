@@ -1,4 +1,4 @@
-import type { MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 import type { EntscheidAbschnitt, EntscheidBlock } from '../../lib/rechtsprechung/typen';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../../lib/rechtsprechung/abschnitte';
 import { NormText } from '../NormText';
@@ -29,6 +29,9 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   zitierung: string;
   bgeReferenz: string | null;
 }) {
+  // Kopier-Bestätigung für Screenreader (aria-live): zählt mit hoch, damit auch das
+  // wiederholte Kopieren derselben Fundstelle erneut angekündigt wird.
+  const [kopiert, setKopiert] = useState<{ text: string; n: number }>({ text: '', n: 0 });
   // Volle Fundstelle einer Erwägung (Pin-Cite): amtlich BGE bzw. übriges Urteil + „E. x.y".
   function pinCite(marke: string): string {
     const e = segmente(marke).join('.');
@@ -38,7 +41,9 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   function kopiere(ev: MouseEvent, zitat: string, anker: string) {
     if (typeof navigator !== 'undefined' && navigator.clipboard && typeof location !== 'undefined') {
       ev.preventDefault();
-      navigator.clipboard.writeText(`${zitat}\n${location.origin}${location.pathname}#${anker}`).catch(() => {});
+      navigator.clipboard.writeText(`${zitat}\n${location.origin}${location.pathname}#${anker}`)
+        .then(() => setKopiert((k) => ({ text: `Fundstelle ${zitat} kopiert`, n: k.n + 1 })))
+        .catch(() => {});
       if (typeof history !== 'undefined') history.replaceState(null, '', `#${anker}`);
     }
   }
@@ -47,7 +52,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
       <a href={`#${anker}`} onClick={(e) => kopiere(e, pinCite(marke), anker)} title={`${pinCite(marke)} — Fundstelle kopieren`}
         className={`mb-1 inline-flex items-baseline no-underline num tabular-nums font-semibold ${stark ? 'text-ink-900 text-base' : 'text-ink-700 text-body-s'}`}>
         {label}
-        <span aria-hidden className="ml-1.5 text-brass-600 opacity-0 group-hover:opacity-80 transition-opacity">§</span>
+        <span aria-hidden className="ml-1.5 text-brass-600 opacity-0 group-hover:opacity-80 group-focus-within:opacity-80 transition-opacity">§</span>
       </a>
     );
   }
@@ -181,6 +186,8 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
 
   return (
     <div className="rsp-prose space-y-9">
+      {/* Kopier-Bestätigung für Screenreader (visuell versteckt) — sonst still (a11y). */}
+      <p aria-live="polite" className="sr-only">{kopiert.text}</p>
       {ohneStruktur && (
         <p className="lc-notice text-body-s">
           Strukturierte Gliederung (Sachverhalt / Erwägungen / Dispositiv) nicht verfügbar — der Text wird unverändert wiedergegeben.

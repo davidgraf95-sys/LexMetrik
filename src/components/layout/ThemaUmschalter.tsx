@@ -11,16 +11,29 @@ const META: Record<ThemaWahl, { icon: string; label: string }> = {
   dunkel: { icon: '☾', label: 'Dunkler Modus' },
   auto: { icon: '◐', label: 'Automatisch (System)' },
 };
+// Pristine-Zustand (noch keine ausdrückliche Wahl): zeitbasierter Standard
+// (Auftrag David 19.6.2026, zeitThema). EHRLICH gelabelt als «Tageszeit», NICHT
+// als «System» — sonst verspräche das Icon ein System-Verhalten, das hier (noch)
+// nicht greift (§8 Ehrlichkeit: Anzeige = Verhalten).
+const PRISTINE_META = { icon: '◐', label: 'Automatisch (Tageszeit)' };
 
 export function ThemaUmschalter() {
   // Geteilter Store (synchron mit dem Einstellungen-Segment). null = noch keine
-  // ausdrückliche Wahl → bisheriges Verhalten (effektivesThema/zeitbasiert) bleibt.
+  // ausdrückliche Wahl → zeitbasierter Standard (effektivesThema), passend zum
+  // Pre-React-Paint in main.tsx (kein Flash). Erst eine Wahl auf 'auto' aktiviert
+  // das System-Verhalten samt Live-Listener.
   const wahl = useThemaWahl();
 
   useEffect(() => {
-    const aufgeloest: Thema = wahl === null ? effektivesThema() : wahl === 'auto' ? systemThema() : wahl;
+    // 'hell'/'dunkel' direkt; 'auto' folgt dem System (Live-Listener unten); ohne
+    // Wahl der zeitbasierte Standard (effektivesThema — identisch zum Pre-React-
+    // Paint in main.tsx, daher kein Flash). Anzeige unten ist darauf abgestimmt.
+    const aufgeloest: Thema =
+      wahl === 'hell' || wahl === 'dunkel' ? wahl
+      : wahl === 'auto' ? systemThema()
+      : effektivesThema();
     wendeThemaAn(aufgeloest);
-    if (wahl !== 'auto') return;
+    if (wahl !== 'auto') return; // nur die Wahl 'auto' reagiert live auf System-Wechsel
     let mql: MediaQueryList;
     try { mql = window.matchMedia('(prefers-color-scheme: dark)'); } catch { return; }
     const onChange = () => wendeThemaAn(systemThema());
@@ -28,8 +41,8 @@ export function ThemaUmschalter() {
     return () => mql.removeEventListener('change', onChange);
   }, [wahl]);
 
-  const anzeige: ThemaWahl = wahl ?? 'auto';
-  const meta = META[anzeige];
+  const anzeige: ThemaWahl = wahl ?? 'auto'; // Position im 3er-Zyklus
+  const meta = wahl === null ? PRISTINE_META : META[anzeige];
   // speichereThema benachrichtigt den Store → useThemaWahl re-rendert (hier UND
   // im Einstellungen-Segment), der Effekt oben wendet das neue Thema an.
   const umschalten = () => speichereThema(NAECHSTE[anzeige]);

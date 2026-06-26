@@ -36,9 +36,12 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
     .sort((a, b) => a.name.localeCompare(b.name, 'de'));
   const kantone = einzigartig(bestand.map((e) => e.kanton)).sort();
   const sprachen = einzigartig(bestand.map((e) => e.sprache)).sort();
-  const gerichtN = (id: string) => bestand.filter((e) => e.gericht === id).length;
-  const kantonN = (k: string) => bestand.filter((e) => e.kanton === k).length;
-  const spracheN = (s: string) => bestand.filter((e) => e.sprache === s).length;
+  // Verweis-Einträge (vollständige Urteile zu einem BGE) NICHT mitzählen — sonst
+  // widerspricht der Dropdown-Zähler dem Ergebnis-Counter (echtAnzahl, !e.verweis),
+  // symmetrisch zur hausweiten Verweis-Ausnahme (zaehleSachgebiete/normHaeufigkeit).
+  const gerichtN = (id: string) => bestand.filter((e) => !e.verweis && e.gericht === id).length;
+  const kantonN = (k: string) => bestand.filter((e) => !e.verweis && e.kanton === k).length;
+  const spracheN = (s: string) => bestand.filter((e) => !e.verweis && e.sprache === s).length;
 
   // Aktive Sekundärfilter (ohne Sachgebiet — das zeigt die Rail) als entfernbare Chips.
   const aktiveChips: { key: string; label: string; loesche: () => void }[] = [];

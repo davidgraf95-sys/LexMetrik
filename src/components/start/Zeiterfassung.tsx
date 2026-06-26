@@ -17,9 +17,9 @@ function heuteSchluessel(): string {
   return `${KEY}-${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
-function ladeEintraege(): Eintrag[] {
+function ladeEintraege(schluessel: string): Eintrag[] {
   try {
-    const roh = localStorage.getItem(heuteSchluessel());
+    const roh = localStorage.getItem(schluessel);
     const arr = roh ? JSON.parse(roh) : [];
     return Array.isArray(arr) ? arr.filter((e) => typeof e?.label === 'string' && typeof e?.ms === 'number') : [];
   } catch {
@@ -27,8 +27,8 @@ function ladeEintraege(): Eintrag[] {
   }
 }
 
-function speichereEintraege(es: Eintrag[]): void {
-  try { localStorage.setItem(heuteSchluessel(), JSON.stringify(es)); } catch { /* privater Modus */ }
+function speichereEintraege(schluessel: string, es: Eintrag[]): void {
+  try { localStorage.setItem(schluessel, JSON.stringify(es)); } catch { /* privater Modus */ }
 }
 
 const zwei = (n: number) => String(n).padStart(2, '0');
@@ -43,12 +43,19 @@ function dauer(ms: number): string {
 }
 
 export function Zeiterfassung() {
-  const [eintraege, setEintraege] = useState<Eintrag[]>(ladeEintraege);
+  // Tagesschlüssel EINMAL beim Mount festhalten und für Laden UND Speichern
+  // nutzen. Sonst wandern bei über Mitternacht offenem Tab die geladenen
+  // Vortags-Einträge beim Buchen in den frisch berechneten neuen Tagesschlüssel
+  // und verfälschen dessen Summe. (Kein neues Date.now() in Rechenlogik — die
+  // Auswertung passiert einmalig an der bestehenden Lade-Stelle, §2.)
+  // Lazy-State (einmal beim Mount, nie geändert) statt Ref — render-sicher und
+  // dieselbe Semantik wie ein beim Mount fixierter Schlüssel.
+  const [schluessel] = useState(heuteSchluessel);
+  const [eintraege, setEintraege] = useState<Eintrag[]>(() => ladeEintraege(schluessel));
   const [aufgabe, setAufgabe] = useState('');
   const [laeuft, setLaeuft] = useState(false);
   const [verstrichen, setVerstrichen] = useState(0); // ms, nur Anzeige
   const startRef = useRef(0);   // Date.now() beim Start
-  const accRef = useRef(0);     // bereits gelaufene ms der aktuellen Aufgabe
   const ivRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const stoppeUhr = () => {
@@ -61,32 +68,30 @@ export function Zeiterfassung() {
     stoppeUhr(); // doppelten Interval ausschliessen
     setLaeuft(true);
     startRef.current = Date.now();
-    ivRef.current = setInterval(() => setVerstrichen(accRef.current + (Date.now() - startRef.current)), 250);
+    ivRef.current = setInterval(() => setVerstrichen(Date.now() - startRef.current), 250);
   };
   const stoppenUndBuchen = () => {
     stoppeUhr();
     setLaeuft(false);
-    const total = accRef.current + (Date.now() - startRef.current);
-    accRef.current = 0;
+    const total = Date.now() - startRef.current;
     setVerstrichen(0);
     if (total > 0) {
       const label = aufgabe.trim() || 'Ohne Bezeichnung';
       const naechste = [{ label, ms: total }, ...eintraege];
       setEintraege(naechste);
-      speichereEintraege(naechste);
+      speichereEintraege(schluessel, naechste);
       setAufgabe('');
     }
   };
   const zuruecksetzen = () => {
     stoppeUhr();
     setLaeuft(false);
-    accRef.current = 0;
     setVerstrichen(0);
     setAufgabe('');
   };
   const loeschen = () => {
     setEintraege([]);
-    speichereEintraege([]);
+    speichereEintraege(schluessel, []);
   };
 
   const summe = eintraege.reduce((a, e) => a + e.ms, 0);
@@ -107,7 +112,7 @@ export function Zeiterfassung() {
         />
         <div className="flex gap-2">
           <button type="button" onClick={laeuft ? stoppenUndBuchen : starten}
-            className={`lc-btn ${laeuft ? 'lc-btn-primary' : 'lc-btn-primary'}`}
+            className="lc-btn lc-btn-primary"
             style={laeuft ? { background: 'var(--danger-700)' } : undefined}>
             {laeuft ? 'Stopp & buchen' : 'Start'}
           </button>

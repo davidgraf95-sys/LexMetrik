@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
-import { schliesseTab, leereTabs, tabSchluessel } from '../../lib/tabs';
+import { schliesseTab, leereTabs, tabSchluessel, type TabEintrag } from '../../lib/tabs';
 import { type VerlaufManifeste } from '../../lib/verlaufLabel';
-import { reiterKategorie } from '../../lib/tabGruppen';
+import { reiterKategorie, herkunftVon, KAT_ORDER, HERKUNFT_ORDER } from '../../lib/tabGruppen';
 import { TabPanel } from './TabPanel';
+import { useDialogFokus } from './useDialogFokus';
 
 // ─── «Alle Reiter»-Übersicht in der Topbar (Auftrag David 26.6.2026) ────────
 //
@@ -46,9 +47,10 @@ export function ReiterUebersicht() {
     return () => { lebt = false; };
   }, [tabs]);
 
-  // Klick ausserhalb / ESC schliesst das Flyout. «Innen» = Trigger ODER das
-  // portalierte Panel (beide Refs prüfen, da das Panel an <body> hängt und nicht
-  // im DOM-Teilbaum des Triggers liegt).
+  // Klick ausserhalb schliesst das Flyout. «Innen» = Trigger ODER das portalierte
+  // Panel (beide Refs prüfen, da das Panel an <body> hängt und nicht im DOM-
+  // Teilbaum des Triggers liegt). Escape, Fokus-Verlagerung INS Panel, Fokus-Falle
+  // und Fokus-Rückgabe übernimmt useDialogFokus (unten) — hier nur Outside-Klick.
   useEffect(() => {
     if (!panelOffen) return;
     const zu = (e: MouseEvent) => {
@@ -56,22 +58,46 @@ export function ReiterUebersicht() {
       if (triggerRef.current?.contains(ziel) || panelRef.current?.contains(ziel)) return;
       setPanelOffen(false);
     };
-    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setPanelOffen(false); };
     document.addEventListener('mousedown', zu);
-    document.addEventListener('keydown', esc);
-    return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
+    return () => document.removeEventListener('mousedown', zu);
   }, [panelOffen]);
+
+  // Dialog-Fokusverwaltung (role="dialog"): Fokus beim Öffnen INS portalierte
+  // Panel setzen, Tab darin halten und beim Schliessen an den ☰-Trigger zurück-
+  // geben — das als Dialog angekündigte Overlay wird so auch tastatur-/SR-tauglich.
+  useDialogFokus(panelOffen, panelRef, () => setPanelOffen(false));
 
   // Identität inkl. Instanz-Diskriminator (?r): dasselbe Gesetz kann mehrfach
   // offen sein, der aktive Reiter ist genau die passende Instanz.
   const aktivSchluessel = tabSchluessel(pathname + search);
 
+  // Visuelle Reihenfolge der Reiter — exakt wie das TabPanel rendert: nach
+  // KAT_ORDER, innerhalb «gesetze» nach HERKUNFT_ORDER, Reiter ohne auflösbare
+  // Herkunft (Manifest noch nicht geladen) ans Ende. Grundlage für den Nachbarn
+  // beim Schliessen des AKTIVEN Reiters: der sichtbar benachbarte Reiter, NICHT
+  // der rohe tabs-Array-(Speicher-)Nachbar.
+  const visuelleReihenfolge = (): TabEintrag[] => {
+    const out: TabEintrag[] = [];
+    for (const kat of KAT_ORDER) {
+      const inKat = tabs.filter((t) => reiterKategorie(t.path) === kat);
+      if (kat === 'gesetze') {
+        for (const h of HERKUNFT_ORDER) out.push(...inKat.filter((t) => herkunftVon(t.path, manifeste) === h));
+        out.push(...inKat.filter((t) => herkunftVon(t.path, manifeste) === null));
+      } else {
+        out.push(...inKat);
+      }
+    }
+    return out;
+  };
+
   const schliessen = (path: string) => {
     const teil = tabSchluessel(path);
     if (aktivSchluessel === teil) {
-      // Aktiven Reiter schliessen → auf den linken Nachbarn (sonst rechten, sonst Start).
-      const idx = tabs.findIndex((t) => tabSchluessel(t.path) === teil);
-      const nachbar = tabs[idx - 1] ?? tabs[idx + 1];
+      // Aktiven Reiter schliessen → auf den VISUELL benachbarten Reiter (gruppierte
+      // Panel-Reihenfolge), sonst Start. NICHT der rohe tabs-Array-Nachbar.
+      const ordnung = visuelleReihenfolge();
+      const idx = ordnung.findIndex((t) => tabSchluessel(t.path) === teil);
+      const nachbar = ordnung[idx - 1] ?? ordnung[idx + 1];
       schliesseTab(path);
       navigate(nachbar ? nachbar.path : '/');
     } else {
@@ -100,9 +126,10 @@ export function ReiterUebersicht() {
       {panelOffen && createPortal(
         <div
           ref={panelRef}
+          tabIndex={-1}
           role="dialog"
           aria-label="Alle geöffneten Reiter"
-          className="fixed top-16 right-2 sm:right-4 z-40 mt-1 w-[20rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg p-2 max-h-[70vh] overflow-y-auto"
+          className="fixed top-16 right-2 sm:right-4 z-40 mt-1 w-[20rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg p-2 max-h-[70vh] overflow-y-auto focus:outline-none"
         >
           <TabPanel
             tabs={tabs}

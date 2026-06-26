@@ -276,7 +276,7 @@ export function SchkgFristenForm() {
         {aktiv?.modusUmstritten && (
           <Field label="Override (umstrittene Summarsache, Art. 251 ZPO)" hint="Default folgt der aktuellen kantonalen Praxis (Art. 56 ff. SchKG)">
             <select value={override} onChange={(e) => setOverride(e.target.value as SchkgModus | '')} className={inputCls}>
-              <option value="">Kein Override (Default: {form.modus})</option>
+              <option value="">Kein Override (Default: {MODI.find((m) => m.code === form.modus)?.label ?? form.modus})</option>
               {MODI.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
             </select>
           </Field>

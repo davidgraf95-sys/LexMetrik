@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
 import { trenneAenderungshistorie, absatzMarke, gruppiereTausender, gruppiereBetraege, istAufgehoben } from '../../lib/normtext/darstellung';
@@ -38,14 +39,44 @@ function ZitierMarke({ zitat, sup, klasse, children }: {
 export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; klasse?: string }) {
   const [auf, setAuf] = useState(false);
   const [html, setHtml] = useState('');
-  const ref = useRef<HTMLSpanElement>(null);
+  // Popover-Position (viewport-fixiert). Das Popover wird per Portal an
+  // document.body gerendert und ABSICHTLICH NICHT mehr absolut zum Anker
+  // positioniert: der Lesecontainer (GesetzLeser) etabliert mit overflow-x-clip
+  // einen Clip-Kontext für alle Nachfahren — ein absolutes Popover am rechten
+  // Spaltenrand wurde dort horizontal abgeschnitten. Fixed + Portal entkommt dem
+  // Clip (und der hover:-translate-Transform des Absatzes, die sonst den Fixed-
+  // Bezug verschöbe). Links/rechts an den Viewport geklemmt (8px Rand).
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+  const ankerRef = useRef<HTMLSpanElement>(null);
+  const popRef = useRef<HTMLSpanElement>(null);
+  const positioniere = () => {
+    const a = ankerRef.current;
+    if (a == null || typeof window === 'undefined') return;
+    const r = a.getBoundingClientRect();
+    const breite = Math.min(288, window.innerWidth * 0.78); // w-72 bzw. max-w-[78vw]
+    const left = Math.max(8, Math.min(r.left, window.innerWidth - breite - 8));
+    setPos({ top: r.bottom + 4, left });
+  };
   useEffect(() => {
     if (!auf) return;
-    const zu = (e: Event) => { if (ref.current && !ref.current.contains(e.target as Node)) setAuf(false); };
+    positioniere();
+    const zu = (e: Event) => {
+      const t = e.target as Node;
+      if (ankerRef.current?.contains(t) || popRef.current?.contains(t)) return;
+      setAuf(false);
+    };
     const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setAuf(false); };
+    const neu = () => positioniere();
     document.addEventListener('mousedown', zu);
     document.addEventListener('keydown', esc);
-    return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
+    window.addEventListener('scroll', neu, true);
+    window.addEventListener('resize', neu);
+    return () => {
+      document.removeEventListener('mousedown', zu);
+      document.removeEventListener('keydown', esc);
+      window.removeEventListener('scroll', neu, true);
+      window.removeEventListener('resize', neu);
+    };
   }, [auf]);
   const umschalten = () => {
     if (!auf) {
@@ -55,12 +86,14 @@ export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; kl
     setAuf((v) => !v);
   };
   return (
-    <span ref={ref} className="relative">
+    <span ref={ankerRef} className="relative">
       <button type="button" onClick={umschalten} aria-expanded={auf} aria-label={`Fussnote ${nr}`}
         className={`num align-super text-[0.62em] font-medium text-brass-700 hover:text-brass-800 ${klasse ?? ''}`}>{nr}</button>
-      {auf && html && (
-        <span role="note" dangerouslySetInnerHTML={{ __html: html }}
-          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
+      {auf && html && pos && typeof document !== 'undefined' && createPortal(
+        <span ref={popRef} role="note" dangerouslySetInnerHTML={{ __html: html }}
+          style={{ top: pos.top, left: pos.left }}
+          className="fixed z-30 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />,
+        document.body,
       )}
     </span>
   );
@@ -223,6 +256,11 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
                 role="cell"
                 className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-line/60' : ''}`}
               >
+                {/* Tausender-Apostroph in allen Zellen: auch die Streitwert-Spalte
+                    («über 5 000 bis 10 000») soll gruppiert werden — so von den
+                    Render-Tests verlangt. Eine seltene 4-stellige Nicht-Geld-Zahl
+                    (Jahr/Referenz) in einer Textspalte ist der bewusst in Kauf
+                    genommene Preis (§3 Darstellung, Quellwert unberührt). */}
                 {gruppiereTausender(cell)}
               </span>
             ))}
@@ -410,7 +448,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                         lvl--;
                       }
                     }
-                    return `${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${seg.join(' ')} ${zk.kuerzel}`;
+                    // Dieselbe normalisierte Absatzmarke wie das Absatz-Zitat
+                    // (absMarke aus absatzMarke/normalisiereAbsatzNummer) statt des
+                    // rohen b.absatz — sonst weichen die zwei Zitierknöpfe desselben
+                    // Absatzes bei Suffixen/Ziff.-Resten voneinander ab.
+                    return `${zk.artikelLabel}${absMarke != null ? ` Abs. ${absMarke}` : ''} ${seg.join(' ')} ${zk.kuerzel}`;
                   })() : '';
                   return (
                     <li

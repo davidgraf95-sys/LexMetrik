@@ -147,6 +147,7 @@ export function ZpoFristenForm() {
   //    Eintrag darf dann nicht mehr «Berufung» heissen (§8). Reine Beschriftung (§3).
   const aktPreset = PRESETS.find((p) => p.key === presetKey);
   const presetPasst = !!aktPreset && form.einheit === aktPreset.einheit
+    && form.verfahren === aktPreset.verfahren
     && form.fristnatur === aktPreset.fristnatur
     && (aktPreset.laenge == null || form.laenge === aktPreset.laenge);
   const icsTitel = presetPasst

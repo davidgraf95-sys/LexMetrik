@@ -14,8 +14,8 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { FristenKalender } from '../FristenKalender';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
-
-const KANTONE_SELECT: Kanton[] = ['BS','BL','ZH','SH','TG','ZG','GR','BE','AG','SO','LU','SZ','UR','OW','NW','GL','FR','VS','VD','GE','NE','JU','TI','SG','AR','AI'];
+import { KANTONE } from '../../lib/kantone';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (lit. b)' },
@@ -46,7 +46,9 @@ const DEFAULTS: ArbeitsrechtInput = {
 };
 
 export function KombinierteAnsicht() {
-  const [form, setForm] = useState<ArbeitsrechtInput>(DEFAULTS);
+  // Standard-Kanton (Einstellungen) als Default – konsistent zu den
+  // Schwesterformularen (Auftrag David); DEFAULTS.kanton ist nur Fallback.
+  const [form, setForm] = useState<ArbeitsrechtInput>(() => ({ ...DEFAULTS, kanton: getStandardKanton() }));
 
   const set = <K extends keyof ArbeitsrechtInput>(k: K, v: ArbeitsrechtInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -78,7 +80,7 @@ export function KombinierteAnsicht() {
         vertragsbeginn: form.vertragsbeginn,
         verhinderungBeginn: form.verhinderungBeginn,
         arbeitsunfaehigkeitProzent: form.arbeitsunfaehigkeitProzent ?? 100,
-        kanton: form.kanton ?? 'BE',
+        kanton: form.kanton ?? getStandardKanton(),
         ktgGleichwertigVorhanden: form.ktgGleichwertigVorhanden ?? false,
         monatslohnBrutto: form.monatslohnBrutto,
       });
@@ -156,8 +158,8 @@ export function KombinierteAnsicht() {
 
         <div className="space-y-1">
           <label className="block text-body-s font-medium text-ink-700">Kanton</label>
-          <select value={form.kanton ?? 'BE'} onChange={(e) => set('kanton', e.target.value as Kanton)} className={inputCls}>
-            {KANTONE_SELECT.map((k) => <option key={k} value={k}>{k}</option>)}
+          <select value={form.kanton ?? getStandardKanton()} onChange={(e) => set('kanton', e.target.value as Kanton)} className={inputCls}>
+            {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
           </select>
         </div>
 
@@ -239,7 +241,7 @@ export function KombinierteAnsicht() {
             ereignisISO={ergebnisse.lohnfortzahlung.zeitraumVonISO}
             aQuoISO={ergebnisse.lohnfortzahlung.zeitraumVonISO}
             adQuemISO={ergebnisse.lohnfortzahlung.letzterTagISO}
-            kanton={form.kanton ?? 'BE'}
+            kanton={form.kanton ?? getStandardKanton()}
             stillstandAktiv={false}
             feiertage={false}
             labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag', band: 'bezahlter Zeitraum' }}

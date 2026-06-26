@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../lib/tabs';
 import { aktiverArtikel } from '../lib/normtext/aktuellerArtikel';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
+import { useDialogFokus } from '../components/layout/useDialogFokus';
 import type { InternRefs } from '../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../lib/normtext/darstellung';
 import {
@@ -106,7 +107,10 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
       (fnProAbsatz[idx] ??= []).push(f.nr); // am Absatz
     } else fnArtikelEbene.push(f.nr); // am Artikel
   }
-  const fnMarker = fussnotenAuf && fnArtikelEbene.length > 0
+  // Marker nur, wenn der Artikel offen ist (Ziel <p id=fn-…> lebt im artOffen-Block):
+  // sonst öffnete der sichtbare Marker am eingeklappten Artikel ein leeres Popover
+  // (toter Bedienpfad — typisch bei aufgehobenen Artikeln, Default eingeklappt).
+  const fnMarker = artOffen && fussnotenAuf && fnArtikelEbene.length > 0
     ? <span className="ml-0.5">{fnArtikelEbene.map((nr, i) => (
         <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
@@ -180,7 +184,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
             )}{fnMarker}
             {ganzAufgehoben && <span className="text-xs italic text-ink-400">· aufgehoben</span>}
             {artOffen && (
-              <span className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+              <span className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
                 <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
                 <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
               </span>
@@ -296,14 +300,20 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // nicht, wenn die Leseposition durch sie hindurchscrollt (David: «nur was
   // automatisch geöffnet wurde, geht wieder zu»).
   const manuellOffenRef = useRef<Set<string>>(new Set());
+  // Zweige, die der NUTZER selbst zugeklappt hat — auch wenn sie im aktiven
+  // Lesepfad liegen. Der Scroll-Spy darf sie NICHT wieder auto-aufklappen,
+  // solange der Nutzer sie nicht selbst wieder öffnet (sonst überschreibt der
+  // Spy das explizite Einklappen des gerade gelesenen Zweigs).
+  const manuellZuRef = useRef<Set<string>>(new Set());
   // Manuelles Auf-/Zuklappen im TOC: beim Öffnen in manuellOffenRef aufnehmen
-  // (bleibt offen), beim Schliessen aus beiden Sets entfernen; nie im Auto-Set (K).
+  // (bleibt offen) + aus manuellZuRef nehmen; beim Schliessen umgekehrt (in
+  // manuellZuRef, aus manuellOffenRef); nie im Auto-Set (K).
   const tocToggle = (id: string) => {
     setTocBaum((o) => {
       const offenJetzt = !o[id];
       autoOffenRef.current.delete(id);
-      if (offenJetzt) manuellOffenRef.current.add(id);
-      else manuellOffenRef.current.delete(id);
+      if (offenJetzt) { manuellOffenRef.current.add(id); manuellZuRef.current.delete(id); }
+      else { manuellOffenRef.current.delete(id); manuellZuRef.current.add(id); }
       return { ...o, [id]: offenJetzt };
     });
   };
@@ -334,6 +344,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return () => { lebt = false; };
   }, [erlass]);
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
+  // Mobiler Suche-&-Gliederung-Drawer (role=dialog): Esc-Schliessen, Fokus
+  // setzen + fangen, Fokus-Rückgabe an den Auslöser über den geteilten Hook (§5).
+  const tocDrawerRef = useRef<HTMLDivElement | null>(null);
+  useDialogFokus(!istXl && tocAuf, tocDrawerRef, () => setTocAuf(false));
+  // Live-Label des aktiven Reiters beim Scrollen entprellen (Trailing-Debounce):
+  // sonst ein localStorage-Write + globales TABS_EVENT pro überschrittener
+  // Artikelgrenze (Scroll-Jank auf langen Erlassen). Reine Timing-Optimierung (§6.4).
+  const tabArtikelTimer = useRef<number | null>(null);
 
   useEffect(() => {
     let lebt = true;
@@ -386,12 +404,21 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const margAnzeige = useMemo(() => {
     const map = new Map<string, string[]>();
     let prev: string[] = [];
+    let prevGl = '';
     for (const e of eintraege ?? []) {
       const m = struktur?.[e.artikel]?.marginalie ?? [];
+      // Delta nur INNERHALB derselben Gliederungs-Sektion: am Sektionsanfang den
+      // vollen Randtitel zeigen (prev zurücksetzen). Sonst fehlt dem ersten
+      // Artikel einer Sektion der gegen den — evtl. verborgenen — Vorartikel der
+      // VORigen Sektion weggekürzte Randtitel (Befund 26.6.2026: DBG Art. 18 zeigte
+      // sonst gar keinen, SVG 26→27 unterdrückte die obere Stufe). Reine Darstellung.
+      const gl = (struktur?.[e.artikel]?.gliederung ?? []).map((g) => g.label).join('');
+      if (gl !== prevGl) prev = [];
       let i = 0;
       while (i < m.length && i < prev.length && m[i] === prev[i]) i++;
       map.set(e.artikel, m.slice(i));
       prev = m;
+      prevGl = gl;
     }
     return map;
   }, [eintraege, struktur]);
@@ -405,7 +432,18 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     scrollVorSuche.current = null;
     setSuche('');
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
-    if (ids.length) setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
+    if (ids.length) {
+      setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
+      // TOC sofort auf den Zielpfad + Spy während des (zweistufigen, wegen
+      // content-visibility ungenauen) Sprungs stilllegen — sonst flackert der Baum
+      // durch die kurz zentrierten Zwischensektionen auf/zu. autoOffenRef/manuellOffenRef
+      // bleiben unangetastet (der Zweig wird vom Spy normal nachgeführt + collabiert
+      // beim Wegscrollen wieder), nur ein evtl. manuelles ZU wird aufgehoben.
+      for (const id of ids) manuellZuRef.current.delete(id);
+      setAktivIds(ids);
+      setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((id) => [id, true])) }));
+      jumpLock.current = true;
+    }
     if (typeof window === 'undefined') return;
     // ?search (Instanz-Diskriminator ?r) erhalten, sonst verliert ein Mehrfach-
     // Reiter seine Identität. Aktiven Reiter auf diesen Artikel melden → Live-
@@ -422,7 +460,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       el.classList.add('lc-ziel-blink');
       window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
     };
-    window.requestAnimationFrame(() => window.setTimeout(() => { scrolle(); window.setTimeout(scrolle, 400); }, 110));
+    window.requestAnimationFrame(() => window.setTimeout(() => {
+      scrolle();
+      window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
+    }, 110));
   }, [sektionen, basisPfad]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
@@ -539,7 +580,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       letzterArtToken.current = token;
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
-      aktualisiereTabArtikel(`${basisPfad}${window.location.search}#art-${token}`);
+      //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
+      //     localStorage-Write + globales TABS_EVENT pro Artikelgrenze.
+      const tabZiel = `${basisPfad}${window.location.search}#art-${token}`;
+      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+      tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
       // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
       //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
       //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
@@ -547,7 +592,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       //     aktiven Eintrag dann im TOC-Container sichtbar.
       const ids = pfadZu(sektionen, (s) => s.artikel.some((x) => x.artikel === token)) ?? [];
       if (!ids.length) return;
-      setAktivIds(ids);
+      // Wertgleichen Pfad nicht neu setzen (pfadZu liefert stets ein neues Array):
+      // sonst Re-Render + Mitscroll-Effekt bei jedem Artikel derselben Blatt-Sektion.
+      setAktivIds((prev) => prev.length === ids.length && prev.every((v, i) => v === ids[i]) ? prev : ids);
       // Auto-Set fortschreiben (Seiteneffekt ausserhalb des State-Updaters, der
       // rein bleibt): zuklappen, was automatisch offen war und nicht mehr im
       // aktiven Pfad liegt; aufklappen, was jetzt im Pfad liegt.
@@ -555,12 +602,13 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       const schliessen: string[] = [];
       for (const id of [...auto]) if (!ids.includes(id)) { auto.delete(id); schliessen.push(id); }
       // Aktive Pfad-IDs auto-aufklappen — aber manuell geöffnete NICHT ins Auto-Set
-      // adoptieren (die bleiben dauerhaft offen, kein Auto-Collapse beim Verlassen).
-      for (const id of ids) if (!manuellOffenRef.current.has(id)) auto.add(id);
+      // adoptieren (die bleiben dauerhaft offen) und manuell ZUgeklappte (manuellZuRef)
+      // gar nicht auto-aufklappen (explizites Einklappen des aktiven Zweigs gewinnt).
+      for (const id of ids) if (!manuellOffenRef.current.has(id) && !manuellZuRef.current.has(id)) auto.add(id);
       setTocBaum((o) => {
         let geaendert = false;
         const n = { ...o };
-        for (const id of ids) if (!n[id]) { n[id] = true; geaendert = true; }
+        for (const id of ids) if (!n[id] && !manuellZuRef.current.has(id)) { n[id] = true; geaendert = true; }
         for (const id of schliessen) if (n[id]) { n[id] = false; geaendert = true; }
         return geaendert ? n : o; // identische Referenz, wenn nichts ändert → kein Re-Render
       });
@@ -573,7 +621,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     // Suche (suche) verändern die DOM-Artikelmenge → Effekt läuft über die Deps
     // neu und beobachtet die dann sichtbaren Artikel.
     document.querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
-    return () => { io.disconnect(); if (raf) cancelAnimationFrame(raf); };
+    return () => {
+      io.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+    };
   }, [sektionen, ohneGliederung, basisPfad, offen, suche]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
@@ -825,7 +877,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
     // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
     // gleich wieder zuklappt.
-    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); }
+    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
     setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
     setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
     setTocAuf(false); // mobilen Drawer schliessen
@@ -971,7 +1023,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       {!istXl && tocAuf && (
         <>
           <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
-          <div role="dialog" aria-label="Suche & Gliederung"
+          <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
             className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain"
             style={{ top: '4rem' }}>
             <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">

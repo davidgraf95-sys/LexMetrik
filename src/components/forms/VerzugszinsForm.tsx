@@ -39,14 +39,24 @@ const BEGINN: { code: VerzugsbeginnTyp; label: string }[] = [
   { code: 'klage', label: 'Klage/Betreibung – ab Zustellung' },
 ];
 
-type EreignisRow = { typ: 'teilzahlung' | 'satzaenderung'; datum: string; wert: number };
+// Reine Eingabedaten (Permalink/Beispiele) vs. State-Zeile mit stabiler id.
+// Die id ist nur UI-Identität (React-key) und erreicht die Engine NIE.
+type EreignisEingabe = { typ: 'teilzahlung' | 'satzaenderung'; datum: string; wert: number };
+type EreignisRow = EreignisEingabe & { id: string };
+
+const neueRowId = (): string =>
+  (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function')
+    ? crypto.randomUUID()
+    : `r-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}`;
+
+const mitId = (r: EreignisEingabe): EreignisRow => ({ ...r, id: neueRowId() });
 
 const DEFAULTS: VerzugszinsInput = {
   kapital: 10000, verzugsbeginn: '2024-01-01', beginnTyp: 'mahnung', stichtag: '2025-01-01',
   zinssatzProzent: 5, satzGrund: 'gesetzlich', methode: 'act365',
 };
 
-type State = { form: VerzugszinsInput; rows: EreignisRow[]; zinsforderung: boolean };
+type State = { form: VerzugszinsInput; rows: EreignisEingabe[]; zinsforderung: boolean };
 
 const BEISPIELE: { label: string; state: State }[] = [
   { label: 'Rechnung offen, 5%', state: { form: { ...DEFAULTS, kapital: 5000, verzugsbeginn: '2025-03-01', stichtag: '2025-09-01' }, rows: [], zinsforderung: false } },
@@ -63,7 +73,7 @@ function heuteISO(): string {
 
 
 // Permalink (FAHRPLAN-PRAXIS 1.3): Input + Ereignis-Zeilen + Zinsforderung.
-type VzLink = VerzugszinsInput & { rows?: EreignisRow[]; zinsforderung?: boolean } & Record<string, unknown>;
+type VzLink = VerzugszinsInput & { rows?: EreignisEingabe[]; zinsforderung?: boolean } & Record<string, unknown>;
 const VZ_LINK_SPEC: PermalinkSpec<VzLink> = {
   kapital: { p: 'c', typ: 'num', gueltig: (n) => n > 0 },
   verzugsbeginn: { p: 'vb', typ: 'str', gueltig: istISO },
@@ -92,14 +102,14 @@ export function VerzugszinsForm() {
     delete rest.rows; delete rest.zinsforderung;
     return { ...DEFAULTS, ...rest };
   });
-  const [rows, setRows] = useState<EreignisRow[]>(ausLink.rows ?? []);
+  const [rows, setRows] = useState<EreignisRow[]>(() => (ausLink.rows ?? []).map(mitId));
   const [zinsforderung, setZinsforderung] = useState(ausLink.zinsforderung ?? false);
 
   const set = <K extends keyof VerzugszinsInput>(k: K, v: VerzugszinsInput[K]) => setForm((f) => ({ ...f, [k]: v }));
-  const addRow = (typ: EreignisRow['typ']) => setRows((r) => [...r, { typ, datum: form.verzugsbeginn, wert: typ === 'teilzahlung' ? 1000 : 5 }]);
-  const updateRow = (i: number, patch: Partial<EreignisRow>) => setRows((r) => r.map((row, j) => (j === i ? { ...row, ...patch } : row)));
+  const addRow = (typ: EreignisEingabe['typ']) => setRows((r) => [...r, mitId({ typ, datum: form.verzugsbeginn, wert: typ === 'teilzahlung' ? 1000 : 5 })]);
+  const updateRow = (i: number, patch: Partial<EreignisEingabe>) => setRows((r) => r.map((row, j) => (j === i ? { ...row, ...patch } : row)));
   const removeRow = (i: number) => setRows((r) => r.filter((_, j) => j !== i));
-  const ladeBeispiel = (s: State) => { setForm(s.form); setRows(s.rows); setZinsforderung(s.zinsforderung); };
+  const ladeBeispiel = (s: State) => { setForm(s.form); setRows(s.rows.map(mitId)); setZinsforderung(s.zinsforderung); };
 
   // Live-Berechnung
   const ereignisse: VzEreignis[] = rows.map((r) =>
@@ -129,8 +139,12 @@ export function VerzugszinsForm() {
     inputs: eingaben,
     // Ergebnis-Hero aus bereits berechneten Werten (kein neuer Inhalt)
     hero: ergebnis ? {
-      hauptlabel: 'Verzugszins',
-      hauptwert: `CHF ${ergebnis.zinsOffenCHF}`,
+      // Gleiche Hauptkennzahl wie die akzentuierte Bildschirm-Kachel
+      // («Verzugszins (gesamt)» = zinsTotalCHF); ohne Teilzahlungs-Tilgung
+      // ist zinsTotalCHF == zinsOffenCHF. Reine Anzeige-Wahl (§5/§8), der
+      // offene Zins bleibt in der Volltext-Section aufgeschlüsselt.
+      hauptlabel: 'Verzugszins (gesamt)',
+      hauptwert: `CHF ${ergebnis.zinsTotalCHF}`,
       nebenwerte: [{ label: 'Total inkl. Kapital', wert: `CHF ${ergebnis.totalOffenCHF}` }],
       kontext: `${form.zinssatzProzent ?? 5} % auf CHF ${form.kapital} für ${ergebnis.tageTotal} Tage (${fmtISO(ergebnis.ersterZinstag)} – ${fmtISO(ergebnis.stichtag)})`,
     } : undefined,
@@ -200,7 +214,7 @@ export function VerzugszinsForm() {
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
         {rows.map((row, i) => (
-          <div key={i} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={row.id} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">Typ</label>
               <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
@@ -252,7 +266,7 @@ export function VerzugszinsForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(VZ_LINK_SPEC, { ...form, rows, zinsforderung } as VzLink)} />
+            <LinkTeilenButton query={() => permalinkKodieren(VZ_LINK_SPEC, { ...form, rows: rows.map((r): EreignisEingabe => ({ typ: r.typ, datum: r.datum, wert: r.wert })), zinsforderung } as VzLink)} />
           </div>
         </ErgebnisBlock>
       )}

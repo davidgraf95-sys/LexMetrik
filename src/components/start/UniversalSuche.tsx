@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useEffect, useId, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
+import { suchOptionId } from '../suche/suchOptionId';
 
 // ─── Universal-Suche (Held der Startseite) ──────────────────────────────────
 //
@@ -22,6 +23,8 @@ function Lupe() {
 }
 
 export function UniversalSuche() {
+  const navigate = useNavigate();
+  const listboxId = useId();
   const [params, setParams] = useSearchParams();
   const initialQ = params.get('q') ?? '';
   const [wert, setWert] = useState(initialQ);
@@ -58,6 +61,43 @@ export function UniversalSuche() {
 
   const { gruppen, allesGeladen } = useUniversalSuche(q);
 
+  // Flache Trefferliste in Anzeigereihenfolge — Basis für Pfeil-Navigation und
+  // die geteilten Options-IDs (suchOptionId, identisch im Panel gerendert).
+  const flach = gruppen.flatMap((g) => g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })));
+  const [aktivIndex, setAktivIndex] = useState(-1);
+  // Bei jeder neuen Query die Hervorhebung zurücksetzen (sonst zeigt der Index
+  // auf einen Treffer, der nach dem Tippen nicht mehr an gleicher Stelle steht).
+  // Anpassung während des Renders (React-Muster statt setState-im-Effekt).
+  const [letzteQuery, setLetzteQuery] = useState(q);
+  if (q !== letzteQuery) {
+    setLetzteQuery(q);
+    setAktivIndex(-1);
+  }
+  const aktivId = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].oid : undefined;
+
+  // Aktiven Treffer in den sichtbaren Bereich rollen (Hero-Liste kann lang sein).
+  useEffect(() => {
+    if (aktivId) document.getElementById(aktivId)?.scrollIntoView({ block: 'nearest' });
+  }, [aktivId]);
+
+  // Pfeil-/Enter-Navigation wie in der Header-Suche (EIN Suchweg, §5): Enter
+  // öffnet den hervorgehobenen bzw. — ohne Auswahl — den obersten Treffer.
+  const aufTaste = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'ArrowDown' && flach.length > 0) {
+      e.preventDefault();
+      setAktivIndex((i) => (i + 1) % flach.length);
+    } else if (e.key === 'ArrowUp' && flach.length > 0) {
+      e.preventDefault();
+      setAktivIndex((i) => (i <= 0 ? flach.length - 1 : i - 1));
+    } else if (e.key === 'Enter' && flach.length > 0) {
+      e.preventDefault();
+      const ziel = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].href : flach[0].href;
+      navigate(ziel);
+    } else if (e.key === 'Escape') {
+      setAktivIndex(-1);
+    }
+  };
+
   return (
     <section role="search" aria-label="Universal-Suche" className="space-y-3">
       <div className="relative">
@@ -68,10 +108,16 @@ export function UniversalSuche() {
           type="search"
           value={wert}
           onChange={(e) => setze(e.target.value)}
+          onKeyDown={aufTaste}
           placeholder="Frist, Rechner, Vorlage, Gesetz oder Entscheid …"
           aria-label="Über Rechner, Vorlagen, Gesetze und Rechtsprechung suchen"
           className="lc-input h-[3.25rem] w-full pl-12 pr-11 text-body-l"
           enterKeyHint="search"
+          role="combobox"
+          aria-expanded={q !== ''}
+          aria-controls={listboxId}
+          aria-activedescendant={aktivId}
+          aria-autocomplete="list"
         />
         {wert && (
           <button type="button" onClick={() => setze('')} aria-label="Suche leeren"
@@ -81,7 +127,7 @@ export function UniversalSuche() {
         )}
       </div>
 
-      <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} />
+      <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} listboxId={listboxId} aktivId={aktivId} />
     </section>
   );
 }

@@ -103,6 +103,10 @@ export function Rechtsprechung() {
     [alle, rest, norm],
   );
   const railZaehler = useMemo(() => zaehleSachgebiete(fuerRail), [fuerRail]);
+  // «Alle Sachgebiete» = Summe der Kacheln: Verweis-Einträge (vollständige Urteile zu
+  // einem BGE) ausschliessen, symmetrisch zu zaehleSachgebiete/echtAnzahl — sonst zeigt
+  // der Aggregat-Zähler einen Wert ≠ Summe seiner Teile (Doppelzählung der BGE).
+  const railGesamt = useMemo(() => fuerRail.filter((e) => !e.verweis).length, [fuerRail]);
 
   const gefiltert = useMemo(
     () => (alle ? sortiere(filterEntscheide(alle, werte), sort) : []),
@@ -161,7 +165,7 @@ export function Rechtsprechung() {
           <div className="mb-4 lg:mb-0">
             <SachgebietKacheln
               zaehler={railZaehler}
-              gesamt={fuerRail.length}
+              gesamt={railGesamt}
               aktiv={sachgebiet}
               onWaehle={waehleSachgebiet}
             />

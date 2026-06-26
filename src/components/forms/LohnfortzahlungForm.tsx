@@ -16,6 +16,7 @@ import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { FristenKalender } from '../FristenKalender';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 const KANTONE: { code: Kanton; name: string }[] = [
   { code: 'BS', name: 'Basel-Stadt' },
@@ -99,8 +100,10 @@ const LF_LINK_SPEC: PermalinkSpec<LohnfortzahlungInput & Record<string, unknown>
 
 export function LohnfortzahlungForm() {
   const [form, setForm] = useState<LohnfortzahlungInput>(() => {
-    try { return { ...DEFAULTS, ...permalinkLesen(LF_LINK_SPEC, window.location.search) }; }
-    catch { return DEFAULTS; }
+    // Standard-Kanton (Einstellungen) als Default; ein Permalink-Kanton geht
+    // weiter vor (Auftrag David – konsistent zu den Schwesterformularen).
+    try { return { ...DEFAULTS, kanton: getStandardKanton(), ...permalinkLesen(LF_LINK_SPEC, window.location.search) }; }
+    catch { return { ...DEFAULTS, kanton: getStandardKanton() }; }
   });
   const [erweitert, setErweitert] = useState(false);
 
@@ -267,12 +270,13 @@ export function LohnfortzahlungForm() {
           DatumsFeld-Popover abgeschnitten; Rundung trägt der Button selbst. */}
       <div className="border border-line rounded-md">
         <button type="button" onClick={() => setErweitert(!erweitert)}
+          aria-expanded={erweitert} aria-controls="lf-erweiterte-eingaben"
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-md ${erweitert ? '' : 'rounded-b-md'}`}>
           <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
-          <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
+          <span className="text-ink-500" aria-hidden="true">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
-          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div id="lf-erweiterte-eingaben" className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Ende der Verhinderung (optional)" hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
               <DatumsFeld value={form.verhinderungEnde ?? ''} className={inputCls}
                 onChange={(v) => set('verhinderungEnde', v || undefined)} />

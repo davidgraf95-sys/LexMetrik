@@ -6,6 +6,7 @@ import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
+import { useDialogFokus } from './useDialogFokus';
 
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
 // ziehen ODER per Tastatur (Pfeil ←/→) verstellen. role="separator" mit
@@ -73,14 +74,12 @@ export function Shell({ children }: { children: ReactNode }) {
   const [letzterPfad, setLetzterPfad] = useState(pathname);
   if (pathname !== letzterPfad) { setLetzterPfad(pathname); if (schubladeOffen) setSchubladeOffen(false); }
 
-  // Escape schliesst; Fokus beim Öffnen in den Dialog (SSR-sicher: nur im Effekt).
-  useEffect(() => {
-    if (!schubladeOffen) return;
-    schubladeRef.current?.focus();
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setSchubladeOffen(false); };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [schubladeOffen]);
+  // Fokus-Falle + Escape + Fokus-Rückgabe an den ☰-Auslöser über den geteilten
+  // Dialog-Hook (§5: dieselbe Fokusverwaltung wie alle Overlays). Der Container
+  // trägt role="dialog"/aria-modal + tabIndex={-1}; so wird aria-modal auch für
+  // die Tastatur eingelöst (Tab bleibt in der Schublade, WCAG 2.4.3), und beim
+  // Schliessen kehrt der Fokus auf den ☰-Knopf zurück statt an <body>.
+  useDialogFokus(schubladeOffen, schubladeRef, () => setSchubladeOffen(false));
 
   return (
     <div className="min-h-screen bg-paper">

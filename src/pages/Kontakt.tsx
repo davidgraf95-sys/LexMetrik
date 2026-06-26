@@ -15,7 +15,13 @@ export function Kontakt() {
   const [e, setE] = useState<KontaktEingaben>(DEFAULTS);
   const [einwilligung, setEinwilligung] = useState(false);
   const [kopiert, setKopiert] = useState(false);
-  const set = <K extends keyof KontaktEingaben>(k: K, v: string) => setE((alt) => ({ ...alt, [k]: v }));
+  // §13/4 (C2): Ein leeres, noch nie berührtes Formular zeigt keine Fehler.
+  // Erst nach der ersten Eingabe (oder Einwilligungs-Klick) blendet die Fehlerbox ein.
+  const [beruehrt, setBeruehrt] = useState(false);
+  const set = <K extends keyof KontaktEingaben>(k: K, v: string) => {
+    setBeruehrt(true);
+    setE((alt) => ({ ...alt, [k]: v }));
+  };
 
   const emailOk = e.email.trim() === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.email.trim());
   const fehler: string[] = [];
@@ -60,14 +66,14 @@ export function Kontakt() {
         </div>
 
         <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={einwilligung} onChange={(ev) => setEinwilligung(ev.target.checked)} />
+          <input type="checkbox" className="mt-0.5" checked={einwilligung} onChange={(ev) => { setBeruehrt(true); setEinwilligung(ev.target.checked); }} />
           <span>
             Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
             Details in der <Link to="/datenschutz" className="text-brass-700 hover:text-brass-600">Datenschutzerklärung</Link>.
           </span>
         </label>
 
-        {fehler.length > 0 && (
+        {beruehrt && fehler.length > 0 && (
           <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
             {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
           </div>

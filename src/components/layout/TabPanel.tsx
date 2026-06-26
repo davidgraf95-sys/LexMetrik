@@ -40,6 +40,29 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
     .map((kat) => ({ kat, items: tabs.filter((t) => reiterKategorie(t.path) === kat) }))
     .filter((g) => g.items.length > 0);
 
+  // Verwaiste Klapp-Zustände beim Render abgleichen (React «adjust state when
+  // inputs change»): schliesst man alle Reiter einer Gruppe/Untergruppe, fällt
+  // deren ID weg → ihr eingeklappt-Zustand wird verworfen, damit ein später neu
+  // geöffneter Reiter wieder im Default «offen» erscheint statt im alten «zu».
+  const aktiveIds = new Set<string>();
+  for (const { kat, items } of gruppen) {
+    aktiveIds.add(`kat:${kat}`);
+    if (kat === 'gesetze') for (const t of items) {
+      const h = herkunftVon(t.path, manifeste);
+      if (h) aktiveIds.add(`herk:${h}`);
+    }
+  }
+  const idSchluessel = [...aktiveIds].sort().join('|');
+  const [letzteIds, setLetzteIds] = useState('');
+  if (idSchluessel !== letzteIds) {
+    setLetzteIds(idSchluessel);
+    setZu((o) => {
+      const behalten = Object.keys(o).filter((k) => aktiveIds.has(k));
+      if (behalten.length === Object.keys(o).length) return o;
+      return Object.fromEntries(behalten.map((k) => [k, o[k]]));
+    });
+  }
+
   if (gruppen.length === 0) return null;
 
   // Eine Reiter-Zeile: dreispaltig (Icon · Name · Artikel) + Schliessen-Knopf.
