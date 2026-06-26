@@ -22,6 +22,40 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — Gesetze-UX 9 Punkte (Reiter-Panel, Fedlex-Render, Scroll-Spy; deployt)
+
+Auftrag David (ultracode-Handlungsplan zuerst, dann «go»): 9 Punkte in der
+Gesetze-Lesesicht. Plan in `FAHRPLAN-GESETZE-UX-9PUNKTE.md` (Abschnitt 0 =
+Davids Entscheide). §12-isoliert auf Branch `feat/gesetze-ux-9punkte`.
+- **P1 Duplikate** (dasselbe Gesetz mehrfach offen): war via `?r`-Diskriminator
+  in `lib/tabs.ts` bereits gebaut → nur verifiziert (Tab-Umschaltung, kein Split-View).
+- **P2 + P9 geteilter «aktueller-Artikel»-Observer** (`lib/normtext/aktuellerArtikel.ts`,
+  rein/getestet): EIN IntersectionObserver (Mittel-Band) ersetzt den alten Section-
+  Scroll-Spy → speist Reiter-Live-Label «Kürzel – Art. X» (P2) UND TOC-Markierung +
+  Mitscrollen (Dep-Fix `[aktivIds,tocBaum]`) + **expand-only**-Aufklappen (P9, kein
+  Flackern). Toter `aktivIdRef` entfernt.
+- **P3 vertikales Reiter-Panel** (`components/layout/TabPanel.tsx`): «Alle Reiter»-
+  Trigger im TabStreifen öffnet gruppierte Liste — Top-Gruppen (Gesetze/Rechtsprechung/
+  Vorlagen/Rechner), Gesetze nach Herkunft Bund→Kanton→International, dreispaltig
+  (Herkunft-Icon · Name · Artikel). Geteilte Helfer `lib/tabGruppen.ts`
+  (`reiterKategorie`/`herkunftVon`/`artikelLabelVonPfad`, SSoT §5 — TabStreifen nutzt
+  sie jetzt mit), `HerkunftIcon` (Schweizerkreuz `public/wappen/CH.svg`, Welt-SVG,
+  Kantonswappen).
+- **P4 Fedlex-Reihenfolge**: Gliederung/Randtitel stehen im `GesetzLeser` jetzt ÜBER
+  der Artikelnummer (vorher darunter), auch bei eingeklapptem Artikel sichtbar.
+- **P5/P6/P7** (`components/normtext/ArtikelBody.tsx`, nur `zk`-Zweig → Popover golden):
+  Block-Hover-Scale + `-mx-2` raus (nur das angewählte Item poppt, kein Clipping),
+  Item-Rahmen (`hover:ring/shadow`) raus, dezenter bg-Hover bleibt.
+- **P8**: Zitat/Link-Knöpfe inline in die Art.-Nr-Zeile (`ml-auto`), Abstand
+  `mb-2.5→mb-1.5`.
+- **Such-Bug (David, Live-Review)**: beim Aktivieren der Suche nach oben scrollen,
+  sonst rutschte der sticky-Container (Suchleiste + Gliederung) mit der geschrumpften
+  Trefferliste aus dem Bild (Restore beim Leeren bestand schon).
+- **Bug-Check**: Gate voll grün (tsc · alle Tests · golden 187 byte-gleich · lint ·
+  check), build prerendert alle 56 Routen + 1449 Erlass-Seiten (0 übersprungen),
+  adversarialer Opus-Review (keine Blocker/Major), 7 neue E2E + neue Unit-Tests
+  (`aktuellerArtikel`, `tabGruppen`, ArtikelBody-Hover). Regelmässig aufgeräumt.
+
 ## Session 26.6.2026 — Leitentscheid≠Urteil-Darstellung + getrennte Übersicht + Abdeckung (deployt)
 
 Auftrag David (Folge-Schärfung): Leitentscheid anders darstellen als das vollständige

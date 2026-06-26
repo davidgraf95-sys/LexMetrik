@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../lib/tabs';
+import { aktiverArtikel } from '../lib/normtext/aktuellerArtikel';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import type { InternRefs } from '../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../lib/normtext/darstellung';
@@ -143,7 +144,27 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
       <div>
         {/* Kopfzeile des Artikels: «Art. N» als Anker, darunter die Randtitel
             (linksbündig, Sachüberschrift zuunterst) — über dem Fliesstext. */}
-        <div className="mb-2.5">
+        <div className="mb-1.5">
+          {/* Fedlex-Reihenfolge (Auftrag David 26.6.2026): Gliederungs-/Randtitel
+              stehen ÜBER der Artikelnummer (nicht darunter) — und bleiben auch bei
+              eingeklapptem/aufgehobenem Artikel sichtbar (Fedlex-treu). Die unterste
+              Stufe (Sachüberschrift) zuunterst, font-medium. Reine Darstellung (§3).
+              N1 (BS-Audit 23.6.2026): amtlicher Randtitel (article_title) nur, wenn
+              KEINE feinere struktur-Marginalie (marg) vorliegt. */}
+          {marg && marg.length > 0 ? (
+            <div className="mb-1 space-y-0.5 font-serif text-xs leading-snug text-ink-600">
+              {marg.map((m, i) => (
+                <div key={i} className={i === marg.length - 1 ? 'font-medium text-ink-700' : ''}>{m}</div>
+              ))}
+            </div>
+          ) : e.titel ? (
+            <div className="mb-1 font-serif text-xs leading-snug font-medium text-ink-700">
+              {e.titel}
+            </div>
+          ) : null}
+          {/* Artikelnummer-Zeile: «Art. N» als Anker; Zitat/Link rechtsbündig INLINE
+              (ml-auto) statt als eigene Zeile darunter — schliesst den Abstand zum
+              ersten Absatz (Auftrag David 26.6.2026, P8). */}
           <div className="flex items-baseline gap-2">
             <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
               aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
@@ -156,30 +177,13 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
               <a href={`#art-${e.artikel}`} className={`num text-base font-bold tracking-wide hover:text-brass-700 no-underline ${ganzAufgehoben ? 'text-ink-400 font-normal' : 'text-ink-900'}`}>{label}</a>
             )}{fnMarker}
             {ganzAufgehoben && <span className="text-xs italic text-ink-400">· aufgehoben</span>}
+            {artOffen && (
+              <span className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+                <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
+                <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+              </span>
+            )}
           </div>
-          {artOffen && marg && marg.length > 0 && (
-            <div className="mt-1 space-y-0.5 font-serif text-xs leading-snug text-ink-600">
-              {marg.map((m, i) => (
-                <div key={i} className={i === marg.length - 1 ? 'font-medium text-ink-700' : ''}>{m}</div>
-              ))}
-            </div>
-          )}
-          {/* N1 (BS-Audit 23.6.2026): amtlicher Randtitel (article_title) aus dem
-              Snapshot. Nur zeigen, wenn KEINE feinere struktur-Marginalie (marg)
-              vorliegt — dann ist der article_title die einzige Randtitel-Quelle
-              (LexWork-Erlasse ohne struktur-File). «…»-Aufhebungstitel liefert der
-              Extraktor gar nicht erst (§7). */}
-          {artOffen && (!marg || marg.length === 0) && e.titel && (
-            <div className="mt-1 font-serif text-xs leading-snug font-medium text-ink-700">
-              {e.titel}
-            </div>
-          )}
-          {artOffen && (
-            <div className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-              <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-              <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-            </div>
-          )}
         </div>
         {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
             overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der
@@ -269,7 +273,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext, der
   // immer offen bleibt) — beim Scrollen klappt die aktive Sektion auf, die übrige zu.
   const [tocBaum, setTocBaum] = useState<Record<string, boolean>>({});
-  const aktivIdRef = useRef<string | null>(null);
   // Während eines Klick-Sprungs den Scroll-Spy stilllegen, damit der Baum nicht
   // durch die durchscrollten Zwischen-Sektionen flackert (auf/zu).
   const jumpLock = useRef(false);
@@ -414,15 +417,20 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return () => window.cancelAnimationFrame(id);
   }, [location.key, location.hash, sektionen, springeZuArtikel]);
 
-  // Suche schliessen/leeren → an die Scrollposition VOR der Suche zurück, statt an
-  // den Anfang zu springen (Auftrag David). Reine Scroll-Wiederherstellung (kein
-  // setState) → kein Effekt-Render-Kaskaden-Problem.
+  // Suche aktivieren → an den Anfang scrollen; Suche schliessen/leeren → an die
+  // Scrollposition VOR der Suche zurück (Auftrag David). Grund fürs Hoch-Scrollen
+  // beim Aktivieren (Bug David 26.6.2026): die Trefferliste ist kürzer als der
+  // Volltext — war man tief gescrollt, rutschte der sticky-Container (Suchleiste +
+  // Gliederung) mit seinem geschrumpften Inhalt über den Viewport hinaus und war
+  // «aus dem Bild». Nach oben scrollen holt Suchleiste + Gliederung zurück ins
+  // Sichtfeld. Reine Scroll-Steuerung (kein setState) → keine Render-Kaskade.
   useEffect(() => {
     const war = sucheVorher.current;
     sucheVorher.current = suche;
     if (typeof window === 'undefined') return;
     if (!war && suche) {
       scrollVorSuche.current = window.scrollY;
+      window.requestAnimationFrame(() => window.scrollTo(0, 0));
     } else if (war && !suche && scrollVorSuche.current != null) {
       const y = scrollVorSuche.current;
       scrollVorSuche.current = null;
@@ -466,41 +474,66 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     });
   }, [eintraege, sektionen]);
 
-  // Scrollspy: aktiver Pfad = UNTERSTE Sektion, deren Überschrift bereits über die
-  // Schwelle (knapp unter dem Site-Header) gescrollt ist. Funktioniert auch tief in
-  // den Artikeln einer Sektion — nicht nur, wenn eine Überschrift gerade im Bild ist.
+  // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
+  // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
+  // daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-Markierung +
+  // expand-only-Aufklappen (P9) UND (b) das Live-Label des aktiven Reiters
+  // «Kürzel – Art. X» (P2). IntersectionObserver statt getBoundingClientRect-
+  // Schleife wegen content-visibility:auto (Off-Screen-Artikel sind nur Platz-
+  // halter); das schmale Mittel-Band (rootMargin -45%/-45%) meldet genau den
+  // zentrierten Artikel. Die Auswahl-Logik ist die reine, getestete Funktion
+  // aktiverArtikel (§2/§3).
+  const letzterArtToken = useRef<string | null>(null);
   useEffect(() => {
-    if (!sektionen.length || typeof window === 'undefined') return;
+    if (!sektionen.length || typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
+    const sichtbar = new Map<Element, IntersectionObserverEntry>();
     let raf = 0;
-    const mess = () => {
+    const auswerten = () => {
       raf = 0;
-      if (jumpLock.current) return;
-      const schwelle = 150;
-      let beste: string | null = null;
-      let besteTop = -Infinity;
-      sekRefs.current.forEach((el, id) => {
-        const top = el.getBoundingClientRect().top;
-        if (top <= schwelle && top > besteTop) { besteTop = top; beste = id; }
+      if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
+      const mitte = window.innerHeight / 2;
+      const rects = [...sichtbar.values()]
+        .filter((en) => en.isIntersecting)
+        .map((en) => {
+          const r = en.target.getBoundingClientRect();
+          return { token: (en.target as HTMLElement).id.replace(/^art-/, ''), top: r.top, bottom: r.bottom };
+        });
+      const token = aktiverArtikel(rects, mitte);
+      if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
+      letzterArtToken.current = token;
+      // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
+      //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
+      aktualisiereTabArtikel(`${basisPfad}${window.location.search}#art-${token}`);
+      // (a) Gliederung: aktiven Pfad markieren + EXPAND-ONLY aufklappen (nie
+      //     zuklappen → kein Flackern, Constraint David). Der Mitscroll-Effekt
+      //     hält den aktiven Eintrag dann im TOC-Container sichtbar.
+      const ids = pfadZu(sektionen, (s) => s.artikel.some((x) => x.artikel === token)) ?? [];
+      if (!ids.length) return;
+      setAktivIds(ids);
+      setTocBaum((o) => {
+        let geaendert = false;
+        const n = { ...o };
+        for (const id of ids) if (!n[id]) { n[id] = true; geaendert = true; }
+        return geaendert ? n : o; // identische Referenz, wenn schon alles offen → kein Re-Render
       });
-      if (beste && beste !== aktivIdRef.current) {
-        aktivIdRef.current = beste;
-        const ids = pfadZu(sektionen, (s) => s.id === beste) ?? [];
-        // NUR die aktive Gliederung markieren (Klassen) — der Baum wird beim
-        // Scrollen NICHT mehr auf-/zugeklappt (Auftrag David: kein Akkordeon-
-        // Flackern). Auf-/Zuklappen passiert ausschliesslich auf Klick/Sprung.
-        setAktivIds(ids);
-      }
     };
-    const onScroll = () => { if (!raf) raf = window.requestAnimationFrame(mess); };
-    mess();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); };
-    // `offen` bewusst NICHT in den Deps: mess() liest nur Refs + Live-DOM, sonst
-    // unnötiger Listener-Neuaufbau bei jedem Sektions-Toggle.
-  }, [sektionen]);
+    const io = new IntersectionObserver((entries) => {
+      for (const en of entries) sichtbar.set(en.target, en);
+      if (!raf) raf = window.requestAnimationFrame(auswerten);
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    // Alle aktuell gerenderten Artikel beobachten. Auf-/Zuklappen (offen) und
+    // Suche (suche) verändern die DOM-Artikelmenge → Effekt läuft über die Deps
+    // neu und beobachtet die dann sichtbaren Artikel.
+    document.querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
+    return () => { io.disconnect(); if (raf) cancelAnimationFrame(raf); };
+  }, [sektionen, basisPfad, offen, suche]);
 
-  // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, erst
-  // nach dem Akkordeon-Settle (tocBaum), nie die Seite scrollen.
+  // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
+  // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach
+  // dem Aufklapp-Settle (tocBaum): so folgt die Gliederung beim Scrollen der
+  // Leseposition (P9b — vorher fehlte aktivIds in den Deps, darum scrollte der TOC
+  // beim Scrollen nicht mit). Nur scrollen, wenn der aktive Eintrag aus dem Sicht-
+  // feld des TOC-Containers gelaufen ist (sonst kein unnötiger Sprung).
   useEffect(() => {
     if (typeof document === 'undefined') return;
     const cont = document.querySelector('[data-toc]') as HTMLElement | null;
@@ -513,7 +546,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     if (er.top < cr.top + 8 || er.bottom > cr.bottom - 8) {
       cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
     }
-  }, [tocBaum]);
+  }, [aktivIds, tocBaum]);
 
   const sucheTrim = suche.trim().toLowerCase();
   const treffer = useMemo(
@@ -740,7 +773,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const springeZuSektion = (id: string) => {
     const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
     jumpLock.current = true;
-    aktivIdRef.current = id;
     setAktivIds(ids);
     setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
     setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));

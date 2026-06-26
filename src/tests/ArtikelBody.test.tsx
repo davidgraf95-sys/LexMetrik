@@ -102,6 +102,32 @@ describe('ArtikelBody', () => {
   });
 });
 
+// Auftrag David 26.6.2026 (P5/P6/P7): In der Lesesicht (zitierKontext) soll beim
+// Hover NUR das angewählte lit./Ziff.-Item dezent reagieren — kein Ganz-Absatz-
+// «Rauspoppen» (Scale), kein dadurch abgeschnittener Text (-mx-2/scale), kein
+// umrandender Kasten (ring/shadow). Das Popover (kein zitierKontext) bleibt
+// byte-gleich (NormPopover.test.tsx golden).
+describe('Lesesicht-Hover ohne Pop/Clipping/Rahmen (P5/P6/P7)', () => {
+  const zk = { artikelLabel: 'Art. 1', kuerzel: 'ZGB' };
+  const out = () => renderToString(
+    <ArtikelBody bloecke={bloecke} artikel="1" passus={{ absatz: null }} zitierKontext={zk} className="space-y-3" />,
+  );
+  it('P5/P6: kein hover:scale / will-change / -mx-2 am Absatz-Block (kein Ganz-Absatz-Pop, kein Clipping)', () => {
+    const o = out();
+    expect(o).not.toContain('hover:scale-');
+    expect(o).not.toContain('will-change-transform');
+    expect(o).not.toContain('-mx-2');
+  });
+  it('P7: kein Rahmen am Item (kein hover:ring / hover:shadow)', () => {
+    const o = out();
+    expect(o).not.toContain('hover:ring-');
+    expect(o).not.toContain('hover:shadow-');
+  });
+  it('P5/P7: dezenter Hintergrund-Hover am Item bleibt erhalten', () => {
+    expect(out()).toContain('hover:bg-brass-200/60');
+  });
+});
+
 describe('trenneAenderungshistorie (§3 — Extraktions-Artefakt-Trennung)', () => {
   it('in-Kraft-Artikel mit angehängter Fussnote: Wortlaut bleibt, Historie abgetrennt, doppelte Nr weg', () => {
     const t = 'Artikel 20 Absatz 3 ist sinngemäss anwendbar. 53 53 Fassung gemäss Ziff. I des BG vom 20. März 1998 (AS 2000 1569).';

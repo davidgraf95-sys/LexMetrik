@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTabs } from './useTabs';
 import { schliesseTab, leereTabs, tabSchluessel, type TabEintrag } from '../../lib/tabs';
-import { verlaufLabel, pfadTeil, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { verlaufLabel, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { reiterKategorie, artikelLabelVonPfad, KAT_META, KAT_ORDER, type TabKat } from '../../lib/tabGruppen';
 import { KantonWappen } from '../KantonWappen';
+import { TabPanel } from './TabPanel';
 
 // ─── In-App-Reiter-Streifen (v2, Auftrag David) ─────────────────────────────
 //
@@ -18,38 +20,13 @@ import { KantonWappen } from '../KantonWappen';
 // GOLDEN/PRERENDER-SCHUTZ: bei SSR (kein window) ODER weniger als 2 Reitern
 // rendert der Streifen NICHTS — der prerenderte HTML bleibt byte-gleich.
 
-type TabKat = 'gesetze' | 'rechtsprechung' | 'vorlagen' | 'rechner' | 'sonstiges';
-
-// Kategorie rein aus dem Pfad-Präfix ableiten (deterministisch, kein Register):
-// die Tool-Routen sind /rechner/* bzw. /vorlagen/*, die Reader /gesetze/:e/:k
-// bzw. /rechtsprechung/:k.
-function tabKat(path: string): TabKat {
-  const p = pfadTeil(path);
-  if (p.startsWith('/gesetze/')) return 'gesetze';
-  if (p.startsWith('/rechtsprechung/')) return 'rechtsprechung';
-  if (p.startsWith('/vorlagen/')) return 'vorlagen';
-  if (p.startsWith('/rechner/')) return 'rechner';
-  return 'sonstiges';
-}
-
-// Piktogramm + Sammel-Label je Kategorie (Auftrag David: «mit kleinem Piktogramm
-// sichtbar, um was es sich handelt»). Glyphen im Messing-Stil der App.
-const KAT_META: Record<TabKat, { label: string; pikto: string }> = {
-  gesetze: { label: 'Gesetze', pikto: '§' },
-  rechtsprechung: { label: 'Rechtsprechung', pikto: '⚖' },
-  vorlagen: { label: 'Vorlagen', pikto: '✎' },
-  rechner: { label: 'Rechner', pikto: '∑' },
-  sonstiges: { label: 'Weitere', pikto: '◦' },
-};
-// Feste Reihenfolge der Sammel-Reiter (stabil, unabhängig von Öffnungs-Reihenfolge).
-const KAT_ORDER: TabKat[] = ['gesetze', 'rechtsprechung', 'vorlagen', 'rechner', 'sonstiges'];
-
 export function TabStreifen() {
   const tabs = useTabs();
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
   const [offeneKat, setOffeneKat] = useState<TabKat | null>(null);
+  const [panelOffen, setPanelOffen] = useState(false); // vertikales «Alle Reiter»-Panel (P3)
   // Dropdown-Position relativ zur nav (das Dropdown wird AUSSERHALB des
   // scrollenden <ul> auf nav-Ebene gerendert, sonst schneidet dessen overflow-x
   // es vertikal ab — Bug David «Tab-Dropdown abgeschnitten»).
@@ -68,8 +45,8 @@ export function TabStreifen() {
   // Reader-Labels (Gesetz/Entscheid) aus den ohnehin lazy ladbaren Manifesten —
   // nur laden, wenn ein Reiter eine solche Route trägt.
   useEffect(() => {
-    const brauchtG = tabs.some((t) => tabKat(t.path) === 'gesetze');
-    const brauchtE = tabs.some((t) => tabKat(t.path) === 'rechtsprechung');
+    const brauchtG = tabs.some((t) => reiterKategorie(t.path) === 'gesetze');
+    const brauchtE = tabs.some((t) => reiterKategorie(t.path) === 'rechtsprechung');
     if (!brauchtG && !brauchtE) return;
     let lebt = true;
     (async () => {
@@ -85,13 +62,13 @@ export function TabStreifen() {
   // Klick ausserhalb schliesst ein offenes Dropdown (die Menüpunkte schliessen es
   // bei Auswahl selbst über setOffeneKat(null) → kein State-Set im Effekt nötig).
   useEffect(() => {
-    if (!offeneKat) return;
-    const zu = (e: MouseEvent) => { if (navRef.current && !navRef.current.contains(e.target as Node)) setOffeneKat(null); };
-    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setOffeneKat(null); };
+    if (!offeneKat && !panelOffen) return;
+    const zu = (e: MouseEvent) => { if (navRef.current && !navRef.current.contains(e.target as Node)) { setOffeneKat(null); setPanelOffen(false); } };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') { setOffeneKat(null); setPanelOffen(false); } };
     document.addEventListener('mousedown', zu);
     document.addEventListener('keydown', esc);
     return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
-  }, [offeneKat]);
+  }, [offeneKat, panelOffen]);
 
   // Guard: KEIN Reiter → nichts rendern (Optik/golden/prerender byte-gleich;
   // im Prerender liefert ladeTabs() [] → immer unsichtbar). Ab dem ERSTEN Reiter
@@ -102,11 +79,11 @@ export function TabStreifen() {
   // Identität inkl. Instanz-Diskriminator (?r): dasselbe Gesetz kann mehrfach
   // offen sein, der aktive Reiter ist genau die passende Instanz (Auftrag David).
   const aktivSchluessel = tabSchluessel(pathname + search);
-  const aktivKat = tabKat(pathname);
+  const aktivKat = reiterKategorie(pathname);
 
   // Nach Kategorie gruppieren, in fester Reihenfolge; leere Kategorien weglassen.
   const gruppen = KAT_ORDER
-    .map((kat) => ({ kat, items: tabs.filter((t) => tabKat(t.path) === kat) }))
+    .map((kat) => ({ kat, items: tabs.filter((t) => reiterKategorie(t.path) === kat) }))
     .filter((g) => g.items.length > 0);
 
   const schliessen = (path: string) => {
@@ -129,16 +106,10 @@ export function TabStreifen() {
     const e = erlassVonPfad(t.path, manifeste);
     if (e?.kuerzel) kuerzelHaeufig[e.kuerzel] = (kuerzelHaeufig[e.kuerzel] ?? 0) + 1;
   }
-  const artikelLabel = (path: string): string | null => {
-    const m = /#art-(.+)$/.exec(path);
-    if (!m) return null;
-    const tok = decodeURIComponent(m[1]).replace(/_/g, '');
-    return tok ? `Art. ${tok}` : null;
-  };
   const label = (t: TabEintrag) => {
     const e = erlassVonPfad(t.path, manifeste);
     if (e?.kuerzel && (kuerzelHaeufig[e.kuerzel] ?? 0) >= 2) {
-      const art = artikelLabel(t.path);
+      const art = artikelLabelVonPfad(t.path);
       if (art) return `${e.kuerzel} – ${art}`;
     }
     return verlaufLabel(t.path, manifeste);
@@ -223,8 +194,20 @@ export function TabStreifen() {
             );
           })}
         </ul>
-        <button type="button" onClick={() => { leereTabs(); navigate('/'); }}
-          className="ml-auto shrink-0 self-center px-2.5 py-1.5 text-body-s text-ink-600 hover:text-brass-700 transition-colors whitespace-nowrap">
+        {/* «Alle Reiter» — öffnet das vertikale, nach Rubrik gruppierte Panel (P3).
+            aria-label trägt bewusst NICHT das «Reiter «…» schliessen»-Muster, damit
+            der SSR-Knopfzähler (tabsSsr) unberührt bleibt. */}
+        <button type="button" aria-haspopup="dialog" aria-expanded={panelOffen}
+          onClick={() => { setOffeneKat(null); setPanelOffen((v) => !v); }}
+          className={`ml-auto shrink-0 self-center inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-body-s font-medium transition-colors whitespace-nowrap ${
+            panelOffen ? 'border-brass-400 bg-brass-100/50 text-brass-800' : 'border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-300'
+          }`}>
+          <span aria-hidden className="text-ink-500">☰</span>
+          <span className="hidden sm:inline">Alle Reiter</span>
+          <span className="num text-micro text-ink-500">{tabs.length}</span>
+        </button>
+        <button type="button" onClick={() => { leereTabs(); navigate('/'); setPanelOffen(false); }}
+          className="shrink-0 self-center px-2.5 py-1.5 text-body-s text-ink-600 hover:text-brass-700 transition-colors whitespace-nowrap">
           Alle schliessen
         </button>
       </div>
@@ -234,7 +217,7 @@ export function TabStreifen() {
       {offeneKat && menuPos && (
         <div role="menu" style={{ left: menuPos.left, top: menuPos.top }}
           className="absolute z-30 w-[18rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg py-1 max-h-[70vh] overflow-y-auto">
-          {tabs.filter((t) => tabKat(t.path) === offeneKat).map((t) => {
+          {tabs.filter((t) => reiterKategorie(t.path) === offeneKat).map((t) => {
             const aktiv = tabSchluessel(t.path) === aktivSchluessel;
             const kanton = kantonVon(t);
             return (
@@ -253,6 +236,22 @@ export function TabStreifen() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Vertikales «Alle Reiter»-Panel (P3): rechtsbündige Flyout-Spalte unter dem
+          Streifen, nach Rubrik gruppiert (Gesetze → Bund/Kanton/International). Auf
+          nav-Ebene (absolut), damit der overflow-x des <ul> es nicht abschneidet. */}
+      {panelOffen && (
+        <div role="dialog" aria-label="Alle geöffneten Reiter"
+          className="absolute right-2 sm:right-4 top-full z-30 mt-1 w-[20rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg p-2 max-h-[70vh] overflow-y-auto">
+          <TabPanel
+            tabs={tabs}
+            manifeste={manifeste}
+            aktivSchluessel={aktivSchluessel}
+            onNavigate={(p) => { navigate(p); setPanelOffen(false); }}
+            onSchliessen={schliessen}
+          />
         </div>
       )}
     </nav>
