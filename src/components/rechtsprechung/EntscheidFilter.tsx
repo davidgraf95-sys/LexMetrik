@@ -27,12 +27,15 @@ function FacettenGruppe({ label, optionen }: {
   optionen: { id: string; text: string; n: number; aktiv: boolean; waehle: () => void }[];
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-      <span className="lc-overline shrink-0 text-ink-500">{label}</span>
+    <div role="group" aria-label={label} className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+      <span aria-hidden className="lc-overline shrink-0 text-ink-500">{label}</span>
       {optionen.map((o) => (
         <button key={o.id} type="button" aria-pressed={o.aktiv} onClick={o.waehle}
+          aria-label={`${label}: ${o.text} (${o.n})`}
           className={`lc-chip ${o.aktiv ? 'border-brass-400 text-brass-700' : ''}`}>
-          {o.text}<span className="num ml-1.5 text-ink-500">{o.n}</span>
+          {/* ink-600 (nicht ink-500): 12px-Ziffer auf --well ≥4.5:1 (R4/WCAG 1.4.3,
+              Werte nicht runden — ink-500 lag bei 4.47:1). Aktiv erbt brass-700. */}
+          {o.text}<span className={`num ml-1.5 ${o.aktiv ? '' : 'text-ink-600'}`}>{o.n}</span>
         </button>
       ))}
     </div>
