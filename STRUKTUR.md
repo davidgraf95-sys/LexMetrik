@@ -43,8 +43,15 @@ Worktree, nach main gemergt, deployt. **Rest des Plans bewusst offen** (s. u.).
   `margStufeStil(level)` formatiert je ABSOLUTER Tiefe (0 Abschnitt uppercase,
   1 mittel, ≥2 Sachtitel fett). Daten unberührt (§3). Neues e2e
   `gesetze-marginalie` (Monotonie + ≤3 Stilstufen). DOM-Sonde ZGB bestätigt.
-- **Bug-Check:** je Worktree tsc/eslint/build grün; e2e 73 passed (inkl. die 2
-  neuen Suiten); Playwright-Screenshots hell/dunkel/mobil.
+- **Bug-Check §9 (2 unabh. Agenten) fand eine Regression:** die erste
+  6a-Version formatierte rein je absoluter Tiefe → einstufige Sachüberschriften
+  (Tiefe 0, **82.8 %** der Bund-Randtitel, oft ohne Aufzähler) wurden zu blassen
+  Abschnittslabeln. Fix `116d6eb7`: `margStufeStil(level, istBlatt)` — das Blatt
+  ist immer prominent, nur Vorfahren ruhig. Empirisch (ADOV Plain-Titel + ZGB)
+  + e2e auf Blatt-Prominenz-Invariante umgestellt nachgeprüft.
+- **Tore + Deploy:** voller Gate grün (tsc · vitest · golden byte-gleich · lint
+  0 · check · build) + e2e 75/75; deployt **116d6eb7** auf lexmetrik.vercel.app
+  (Asset-Hash live=dist, 7 Kernrouten 200).
 - **OFFEN (gleiche JETZT-MACHEN-Direktive, Folge-Sessions):** 6b einklappbare
   Buchstaben-Ebenen; Lane R Batch 1–3 (Seitenzahlen A1 · mehrsprachige Extraktion
   FR/IT A2 + Regen 272 BGE adversarial · nicht-amtliche Urteile A3 · Achsen-UX
