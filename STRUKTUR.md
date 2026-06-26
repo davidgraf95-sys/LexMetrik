@@ -22,6 +22,35 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — JETZT-MACHEN Welle 0 + Lane G 6a: Kalender-Füllung & einheitliche Randtitel (deployt)
+
+«jetzt machen» (JETZT-MACHEN.md). F5 (6 Regeln nicht-amtliche Urteile) von David
+bestätigt; F1–F4 als Default. Zwei eigenständige Wellen umgesetzt, je eigener
+Worktree, nach main gemergt, deployt. **Rest des Plans bewusst offen** (s. u.).
+- **Welle 0 / Auftrag 7 — Schnellrechner-Kalender füllt seine Karte:** der
+  kompakte Startseiten-Kalender klebte als feste 12.5rem-Kachel links im nicht-
+  streckenden `flex-wrap`-Container → rechts Leerraum («füllt nicht alles aus»).
+  Fix nur im `kompakt`-Pfad (`src/components/FristenKalender.tsx`): Monate
+  `justify-center` + `flex-1 basis-[12.5rem] max-w-[17rem]` → ein Monat zentriert,
+  zwei teilen die Breite, mobil gestapelt füllend. Nicht-kompakt (6 Fristen-
+  Formulare) byte-gleich (beide Änderungen hinter `kompakt`). Neues e2e
+  `schnellrechner-kalender` (zentriert + Füllgrad >55 %, kein Overflow 390px).
+- **Lane G / Auftrag 6a — Randtitel einheitlich je Gliederungstiefe:** Stufen
+  («A.» / «I.» / «1.») wurden je Position im Delta formatiert (`i===marg.length-1`
+  → fett), wodurch dieselbe Stufe («II. Handlungsfähigkeit») zwischen fett (Blatt)
+  und klein (Vorfahre) flippte. Fix (F3, Laufzeit, kein Massen-Regen):
+  `margAnzeige` liefert den absoluten Tiefen-Offset `ab`; neue reine Funktion
+  `margStufeStil(level)` formatiert je ABSOLUTER Tiefe (0 Abschnitt uppercase,
+  1 mittel, ≥2 Sachtitel fett). Daten unberührt (§3). Neues e2e
+  `gesetze-marginalie` (Monotonie + ≤3 Stilstufen). DOM-Sonde ZGB bestätigt.
+- **Bug-Check:** je Worktree tsc/eslint/build grün; e2e 73 passed (inkl. die 2
+  neuen Suiten); Playwright-Screenshots hell/dunkel/mobil.
+- **OFFEN (gleiche JETZT-MACHEN-Direktive, Folge-Sessions):** 6b einklappbare
+  Buchstaben-Ebenen; Lane R Batch 1–3 (Seitenzahlen A1 · mehrsprachige Extraktion
+  FR/IT A2 + Regen 272 BGE adversarial · nicht-amtliche Urteile A3 · Achsen-UX
+  Auftrag 4 · Sprachfilter 8 · neue Gerichte 9) inkl. B1/B2-Golden; Welle Final
+  (Materialien-Korpus Auftrag 5 + B3 Kontext-Panel).
+
 ## Session 26.6.2026 — A11y/E2E-Strang: Kontrast WCAG hell+dunkel, Suche ARIA-rein, E2E gegated (deployt)
 
 Folgeauftrag David («ja» auf E2E-/A11y-Strang). Branch `fix/e2e-a11y`. Zwei
