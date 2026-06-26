@@ -544,7 +544,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
           <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
           <span className="mx-1.5 text-ink-300">›</span>
-          {erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
+          {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
           <span className="mx-1.5 text-ink-300">›</span>
           <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
         </div>
@@ -752,13 +752,15 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
         <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
         <span className="mx-1.5 text-ink-300">›</span>
-        {erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
+        {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
         <span className="mx-1.5 text-ink-300">›</span>
         <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
       </div>
 
       <header className="space-y-2.5 border-b border-line pb-5">
-        <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}{overlineGebiet ? ` · ${overlineGebiet}` : ''}</p>
+        <p className="lc-overline">{erlass.rechtsgebiet === 'international'
+          ? (overlineGebiet ?? 'Staatsvertrag')
+          : `${erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}${overlineGebiet ? ` · ${overlineGebiet}` : ''}`}</p>
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
           {erlass.kuerzel}{!titelRedundant && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
         </h1>
