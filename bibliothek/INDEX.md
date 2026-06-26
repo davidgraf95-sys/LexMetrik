@@ -78,6 +78,15 @@ Teil B (Auftrag David 24.6.2026): Browser-Live-Suche über den ganzen CH-Korpus 
 sequenzvalidiert, 0 Fehl-Splits über 258 BGE) inkl. Bug-Check-MAJOR-Fix (Schluss-Namen).
 Branch, nicht deployt; Abnahme David offen.
 
+**Render-Noise-Sweep (B1, Steuer-Liste für A1/A2):** [rechtsprechung/render-noise-sweep-2026-06-27.md](rechtsprechung/render-noise-sweep-2026-06-27.md) —
+adversarialer read-only Sweep über den ganzen Entscheid-Korpus (327 Snapshots, 27.6.2026,
+JETZT-MACHEN §4.2). Befunde: Inline-Seitenmarker in **273** Entscheiden (261 Auszug + 16 VOLL,
+korrigiert die Plan-Annahme «0 in abschnitte»); **4** FR-Bodies fälschlich `sprache:'de'`
+(korrigiert «genau ein FR-Body»: 151_IV_357/152_II_75/152_II_98/152_I_105); 7 gekappte
+Sachverhalte; **Fussnoten-Leak Heuristik = Falsch-Positiv** (41 «Fn.»-Treffer = Doktrin-Zitate),
+nur 1 echter kantonaler Superscript-Leak; Regeste-Leak/verirrte Marken = 0. Priorisierte
+Fix-Liste steuert A1/A2/A3. Kein Code-Fix; `verifiziert:false`, Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
