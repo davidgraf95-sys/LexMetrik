@@ -90,7 +90,7 @@ describe('Navigations-SSoT', () => {
   it('jedes Blatt-Ziel löst auf eine echte Route auf (keine toten Links)', () => {
     // Statische Seiten + alle Karten-Routen (Rechner/Vorlagen) aus dem Manifest.
     const echteRouten = new Set<string>([
-      '/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/methodik', '/ueber', '/kontakt', '/datenschutz',
+      '/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/einstellungen', '/methodik', '/ueber', '/kontakt', '/datenschutz',
       ...ROUTEN_MANIFEST.map((r) => r.pfad),
     ]);
     for (const l of alleNavLinks()) {
@@ -99,8 +99,8 @@ describe('Navigations-SSoT', () => {
     }
   });
 
-  it('Meta-Bereich trägt die vier Vertrauens-/Pflichtseiten', () => {
+  it('Meta-Bereich trägt Einstellungen + die vier Vertrauens-/Pflichtseiten', () => {
     expect(NAVIGATION_META.map((l) => l.ziel))
-      .toEqual(['/methodik', '/ueber', '/kontakt', '/datenschutz']);
+      .toEqual(['/einstellungen', '/methodik', '/ueber', '/kontakt', '/datenschutz']);
   });
 });

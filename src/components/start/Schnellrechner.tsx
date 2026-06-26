@@ -7,6 +7,7 @@ import { ProzesskostenForm } from '../forms/ProzesskostenForm';
 import { GebvKostenForm } from '../forms/GebvKostenForm';
 import { NotariatGrundbuchForm } from '../forms/NotariatGrundbuchForm';
 import { ZustaendigkeitForm } from '../forms/ZustaendigkeitForm';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Schnellrechner der Startseite (Startseite V2) ──────────────────────────
 //
@@ -105,13 +106,13 @@ export function Schnellrechner() {
           <div className="space-y-4">
             {/* Zwei Hälften: links rechnen (Eingabe), rechts der Kalender als reine
                 Visualisierung DESSELBEN Ergebnisses (#7 — keine doppelten Eingaben). */}
-            <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
+            <div className="grid gap-5 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
               <div className="space-y-2">
                 <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
               <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
                 <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
-                <FristenKalender markierung={fristErgebnis?.markierung ?? null} kanton={fristErgebnis?.kanton ?? 'ZH'} />
+                <FristenKalender markierung={fristErgebnis?.markierung ?? null} kanton={fristErgebnis?.kanton ?? getStandardKanton()} />
               </div>
             </div>
             <VollRechnerHinweis href="/rechner/tagerechner" name="Fristenrechner" was="Rückwärts, Zwischenfrist, ZPO/SchKG-Verfeinerung" />

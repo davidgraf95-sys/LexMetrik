@@ -11,6 +11,7 @@ import { stillstandsperioden } from '../../data/zpoFeiertage';
 import type { Kanton } from '../../types/legal';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import type { FristMarkierung } from '../start/FristenKalender';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Einfacher Fristenrechner (S-5a FAHRPLAN-STRUKTUR-UMBAU) ────────────────
 //
@@ -104,7 +105,7 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
   const [einheit, setEinheit] = useState<Einheit>('tage');
   // Auftrag David: Ferien/Stillstand standardmässig ZPO (Gerichtsferien).
   const [ferien, setFerien] = useState<Ferien>('zpo');
-  const [kanton, setKanton] = useState<Kanton>('ZH');
+  const [kanton, setKanton] = useState<Kanton>(getStandardKanton);
 
   // Die SchKG-Engine führt keine Wochenfristen (gesetzliche SchKG-Fristen
   // sind tage-/monatsbasiert; types/schkg.ts) — die Option entfällt dort.
@@ -187,7 +188,7 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
     <div className="space-y-4">
       {/* items-end: bei verschieden hohen Labels (z.B. zweizeilig) bleiben die
           Eingabefelder auf gleicher Höhe (Auftrag David). */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl items-end">
+      <div className={`grid grid-cols-2 ${minimal ? '' : 'sm:grid-cols-4'} gap-3 max-w-2xl items-end`}>
         <label className="block space-y-1">
           <span className="lc-overline block">Datum (Ereignis)</span>
           <input type="date" value={start} onChange={(e) => setStart(e.target.value)}

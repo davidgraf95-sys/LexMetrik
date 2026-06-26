@@ -27,14 +27,11 @@ function Seclabel({ children }: { children: React.ReactNode }) {
 export function Startseite() {
   return (
     <div className="max-w-[58rem]">
-      {/* Kopf: Gruss (zufällig, tageszeitpassend) + Datum/Uhr + «Berechnung statt KI» */}
+      {/* Kopf: Gruss (zufällig, tageszeitpassend) + Datum/Uhr */}
       <section className="space-y-3">
         <Begruessung />
         <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
           Schweizer Recht berechnen und erstellen – nach festen Gesetzesregeln, jeder Schritt nachvollziehbar.
-        </p>
-        <p className="inline-flex items-center gap-2 text-body-s font-medium text-brass-700 bg-brass-100 border border-brass-200 rounded-full px-3 py-1">
-          <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brass-600" /> Berechnung statt KI
         </p>
       </section>
 

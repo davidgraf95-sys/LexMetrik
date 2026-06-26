@@ -13,10 +13,13 @@ import { labelAusMeta } from '../lib/verlaufLabel';
 const INHALT_ITEM = /^\/(rechner|vorlagen|gesetze|rechtsprechung)\/.+/;
 
 export function TabTracker() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   useEffect(() => {
     if (!INHALT_ITEM.test(pathname)) return;
-    merkeTab(pathname, labelAusMeta(pathname) ?? undefined);
-  }, [pathname]);
+    // pathname + ?search: der Instanz-Diskriminator ?r=<n> (dasselbe Gesetz
+    // mehrfach offen, Auftrag David) gehört zur Reiter-Identität; merkeTab/
+    // tabSchluessel ignorieren übrige Query-Parameter für die Dedup-Identität.
+    merkeTab(pathname + search, labelAusMeta(pathname) ?? undefined);
+  }, [pathname, search]);
   return null;
 }

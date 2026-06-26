@@ -17,6 +17,7 @@ import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { BGER_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
+import { getStandardKanton } from '../../lib/einstellungen';
 import {
   berechneBgerRechtsweg,
   type BgerInput, type BgerWeg, type BgerZivilgebiet, type BgerObjekt, type BgerVerwaltungSonderfall,
@@ -103,7 +104,7 @@ export function BgerRechtswegForm() {
   const [wechsel, setWechsel] = useState<boolean>((ausLink.wechsel as boolean) ?? false);
   const [sonderfall, setSonderfall] = useState<BgerVerwaltungSonderfall>((ausLink.sonderfall as BgerVerwaltungSonderfall) ?? 'keiner');
   const [eroeffnung, setEroeffnung] = useState<string>((ausLink.eroeffnung as string) ?? '');
-  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton) ?? getStandardKanton());
   const [aktenzeichen, setAktenzeichen] = useState('');
 
   const input: BgerInput = useMemo(() => ({

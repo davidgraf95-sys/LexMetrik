@@ -162,6 +162,7 @@ export const NAVIGATION: NavAbschnitt[] = [
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.
 export const NAVIGATION_META: NavLink[] = [
+  link('Einstellungen', '/einstellungen'),
   link('Methodik', '/methodik'),
   link('Über', '/ueber'),
   link('Kontakt', '/kontakt'),

@@ -22,6 +22,7 @@ import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 const GW_DISCLAIMER =
   'Automatisierte Orientierungsberechnung zu Gewährleistung und Mängelrüge (Art. 197 ff., 219/219a, 367 ff. OR; ' +
@@ -96,7 +97,7 @@ export function GewaehrleistungForm() {
   const [gebraucht, setGebraucht] = useState(ausLink.gebraucht ?? false);
   const [sia, setSia] = useState(ausLink.sia ?? false);
   const [vereinbart, setVereinbart] = useState(ausLink.vereinbart ?? '');
-  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? getStandardKanton());
   const [stichtag, setStichtag] = useState(ausLink.stichtag ?? heute);
 
   const istGrundstueck = typ === 'grundstueckkauf';

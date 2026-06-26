@@ -158,12 +158,13 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
 });
 
 describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte Anpassung §6 Ziff. 3)', () => {
-  it('zeigt Begrüssung, KI-Hinweis, Schnellrechner, Zeiterfassung und Favoriten — KEIN Katalog-Deckblatt', () => {
+  it('zeigt Begrüssung, Schnellrechner, Zeiterfassung und Favoriten — KEIN Katalog-Deckblatt', () => {
     const html = startHtml('/');
-    // Begrüssung (zufällig, tageszeitpassend → kein fixer Text) + Datum/Uhr-Zeile
-    // + ehrlicher KI-Hinweis (§8).
+    // Begrüssung (zufällig, tageszeitpassend → kein fixer Text) + Datum/Uhr-Zeile.
+    // Das «Berechnung statt KI»-Badge wurde 26.6.2026 entfernt (Auftrag David) —
+    // der ehrliche KI-/Determinismus-Hinweis trägt jetzt allein der §8-Disclaimer.
     expect(html).toMatch(/·\s\d{2}:\d{2}:\d{2}/); // Datum · HH:MM:SS
-    expect(html).toContain('Berechnung statt KI');
+    expect(html).not.toContain('Berechnung statt KI');
     // Sektionen des Cockpits
     expect(html).toContain('Schnellrechner');
     expect(html).toContain('Zeiterfassung');

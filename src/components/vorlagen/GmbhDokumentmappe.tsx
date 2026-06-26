@@ -14,6 +14,7 @@ import {
   type GmbhZeichnungsArt,
 } from '../../lib/vorlagen/gruendungGmbhDokumente';
 import { KANTONE } from '../../lib/kantone';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Dokumentmappe der GmbH-Gründung (Plan 9b Ausbaustufe, 7.6.2026) ─────────
 // Darstellung + Eingabesammlung; sämtliche Rechtslogik (Gates, Schemas,
@@ -37,7 +38,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
   // Identität & Parameter (Weichen kommen als Props von der Checkliste)
   const [firma, setFirma] = useState('');
   const [sitz, setSitz] = useState('');
-  const [kanton, setKanton] = useState('ZH');
+  const [kanton, setKanton] = useState<string>(getStandardKanton);
   const [zweck, setZweck] = useState('');
   const [zweckErweiterung, setZweckErweiterung] = useState(true);
   const [stammkapital, setStammkapital] = useState(GMBH_DOK_DEFAULTS.stammkapitalChf);

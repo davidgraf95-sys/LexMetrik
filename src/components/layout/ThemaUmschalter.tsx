@@ -1,34 +1,48 @@
-import { useEffect, useState } from 'react';
-import { effektivesThema, speichereThema, wendeThemaAn, type Thema } from '../thema';
+import { useEffect } from 'react';
+import { effektivesThema, systemThema, speichereThema, useThemaWahl, wendeThemaAn, type Thema, type ThemaWahl } from '../thema';
 
-// Thema-Umschalter im Top-Streifen (Build-Plan: Theme-Toggle, jetzt mit Inhalt).
-// SSR-sicher: erster Render IMMER 'hell' (= prerendertes Light-HTML, keine
-// Hydration-Abweichung); im Effekt auf das effektive Thema (gespeichert/System)
-// synchronisieren. Klick schaltet zwischen hell und dunkel und merkt die Wahl.
+// Thema-Umschalter im Top-Streifen: 3er-Zyklus hell → dunkel → auto (Auftrag
+// David). 'auto' folgt der System-Präferenz (prefers-color-scheme) und reagiert
+// live auf Umschaltungen. SSR-sicher (createRoot, kein Hydration-Diff); der
+// Effect WENDET nur an (kein setState im Effect-Body → react-hooks-konform).
+const NAECHSTE: Record<ThemaWahl, ThemaWahl> = { hell: 'dunkel', dunkel: 'auto', auto: 'hell' };
+const META: Record<ThemaWahl, { icon: string; label: string }> = {
+  hell: { icon: '☀', label: 'Heller Modus' },
+  dunkel: { icon: '☾', label: 'Dunkler Modus' },
+  auto: { icon: '◐', label: 'Automatisch (System)' },
+};
+
 export function ThemaUmschalter() {
-  // Lazy-Initializer (SSR-sicher: effektivesThema fällt serverseitig auf 'hell')
-  // — gleiches Muster wie LocaleProvider; der Effect WENDET nur an (kein setState
-  // im Effect, react-hooks/set-state-in-effect).
-  const [thema, setThema] = useState<Thema>(effektivesThema);
-  useEffect(() => { wendeThemaAn(thema); }, [thema]);
+  // Geteilter Store (synchron mit dem Einstellungen-Segment). null = noch keine
+  // ausdrückliche Wahl → bisheriges Verhalten (effektivesThema/zeitbasiert) bleibt.
+  const wahl = useThemaWahl();
 
-  const dunkel = thema === 'dunkel';
-  const umschalten = () => {
-    const next: Thema = dunkel ? 'hell' : 'dunkel';
-    setThema(next);
-    speichereThema(next);
-  };
+  useEffect(() => {
+    const aufgeloest: Thema = wahl === null ? effektivesThema() : wahl === 'auto' ? systemThema() : wahl;
+    wendeThemaAn(aufgeloest);
+    if (wahl !== 'auto') return;
+    let mql: MediaQueryList;
+    try { mql = window.matchMedia('(prefers-color-scheme: dark)'); } catch { return; }
+    const onChange = () => wendeThemaAn(systemThema());
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, [wahl]);
+
+  const anzeige: ThemaWahl = wahl ?? 'auto';
+  const meta = META[anzeige];
+  // speichereThema benachrichtigt den Store → useThemaWahl re-rendert (hier UND
+  // im Einstellungen-Segment), der Effekt oben wendet das neue Thema an.
+  const umschalten = () => speichereThema(NAECHSTE[anzeige]);
 
   return (
     <button
       type="button"
       onClick={umschalten}
-      aria-label={dunkel ? 'Zu hellem Modus wechseln' : 'Zu dunklem Modus wechseln'}
-      aria-pressed={dunkel}
-      title={dunkel ? 'Heller Modus' : 'Dunkler Modus'}
+      aria-label={`Farbschema: ${meta.label} — weiterschalten`}
+      title={meta.label}
       className="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors"
     >
-      <span aria-hidden className="text-base leading-none">{dunkel ? '☀' : '☾'}</span>
+      <span aria-hidden className="text-base leading-none">{meta.icon}</span>
     </button>
   );
 }

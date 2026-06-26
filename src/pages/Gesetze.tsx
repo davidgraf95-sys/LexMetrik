@@ -347,6 +347,12 @@ export function Gesetze() {
     () => (erlasse ? [...new Set(erlasse.filter((e) => e.ebene === 'kanton').map((e) => e.kanton!))].sort() : []),
     [erlasse],
   );
+  // Kanton-Ansicht: nur kantonale Erlasse (sonst zeigte der Kanton-Zweig das
+  // Bund-only `gefiltert` → leeres Raster, keine Kantone). Suche mitgeführt.
+  const kantGefiltert = useMemo(
+    () => (erlasse ? filtern(erlasse.filter((e) => e.ebene === 'kanton'), suche) : []),
+    [erlasse, suche],
+  );
 
   return (
     <div className="space-y-8">
@@ -512,9 +518,9 @@ export function Gesetze() {
                         </span>
                         <span className="lc-overline text-ink-500">Kantonale Erlasse</span>
                       </span>
-                      <span className="num text-body-s text-ink-500 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
+                      <span className="num text-body-s text-ink-500 ml-auto self-end">{kantGefiltert.filter((e) => e.kanton === kanton).length}</span>
                     </div>
-                    <KantonSystematik erlasse={gefiltert.filter((e) => e.kanton === kanton)} sys={systematik[kanton]} />
+                    <KantonSystematik erlasse={kantGefiltert.filter((e) => e.kanton === kanton)} sys={systematik[kanton]} />
                   </section>
                 </>
               ) : (
@@ -525,7 +531,7 @@ export function Gesetze() {
                     Kanton wählen — die Erlasse werden dann nach der amtlichen Systematik des Kantons (Sachgebiete) gegliedert.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
-                    {gruppiereNachKanton(gefiltert).map((g) => (
+                    {gruppiereNachKanton(kantGefiltert).map((g) => (
                       <button type="button" key={g.kanton} onClick={() => setzeKanton(g.kanton)}
                         className="lc-card group flex items-center gap-3 p-3.5 text-left transition-colors hover:border-brass-400">
                         <KantonWappen kanton={g.kanton} className="h-9 w-8 transition-transform group-hover:scale-105" />
@@ -541,7 +547,7 @@ export function Gesetze() {
                   </div>
                 </>
               )}
-              {gefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
+              {kantGefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
             </div>
           )}
         </>

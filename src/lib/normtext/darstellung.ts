@@ -208,3 +208,34 @@ export function labelMitBereich(label: string, id: string): string {
   const prefix = label.match(/^(Art\.|§)/)?.[1] ?? 'Art.';
   return `${prefix} ${g1}–${g2}`;
 }
+
+// «aufgehoben»: faithful-Snapshot trägt für aufgehobene Stellen (§7) entweder «…»
+// oder ein nacktes «Aufgehoben» → einheitlich gedämpftes «aufgehoben». Gilt für
+// Absätze UND Items. Echte Sätze mit «aufgehoben» (Art. 57 ZGB) bleiben unberührt.
+export function istAufgehoben(text: string): boolean {
+  const t = text.trim();
+  if (t === '') return false;
+  if (/^[….\s]*$/.test(t)) return true;
+  const ohneBereich = t.replace(/^(?:(?:und|et|bis|[–-]|\d+)\s+)+/i, '');
+  return /^aufgehoben\.?$/i.test(ohneBereich);
+}
+
+/** Ist der GANZE Artikel aufgehoben (kein lebender Wortlaut, keine Items)? Dann
+ *  zeigt der Reader ihn dezent + standardmässig eingeklappt (Auftrag David:
+ *  aufgehobene Artikel «nicht so präsent», aufklappbar). */
+export function artikelGanzAufgehoben(
+  bloecke: { text: string; items?: { text: string }[]; tabelle?: unknown[]; mehrspaltig?: { zeilen: unknown[] } }[],
+): boolean {
+  if (!bloecke.length) return false;
+  return bloecke.every((b) => {
+    // Tabelle/Mehrspaltig = LEBENDER Inhalt (text ist dort konventionsgemäss leer)
+    // → hat Vorrang vor der «aufgehoben»-Heuristik, sonst würden Tarif-Tabellen-
+    //   Artikel fälschlich dezent + eingeklappt (Bug-Fix 26.6., analog ArtikelBody).
+    if ((b.tabelle?.length ?? 0) > 0 || (b.mehrspaltig?.zeilen.length ?? 0) > 0) return false;
+    const items = b.items ?? [];
+    // Lebender Einleitungstext (Lead) mit nur aufgehobenen Items ist NICHT ganz tot.
+    const leadTot = !b.text.trim() || istAufgehoben(b.text);
+    if (items.length) return leadTot && items.every((it) => it.text.trim() === '' || istAufgehoben(it.text));
+    return leadTot;
+  });
+}

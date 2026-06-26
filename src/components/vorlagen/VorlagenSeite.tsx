@@ -8,6 +8,7 @@ import { karte } from '../../lib/startseiteConfig';
 import { docxAktiv, istIsoDatum } from './seiteHelfer';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
+import { getProfil, getVorlagenDetailgrad } from '../../lib/einstellungen';
 
 // ─── Generische Vorlagen-Seite (FUNDAMENT-UMBAU Thema A, opt-in) ────────────
 //
@@ -81,8 +82,23 @@ export function VorlagenSeite<T extends { ort: string; datum: string }>(
   { config }: { config: VorlagenSeitenConfig<T> },
 ) {
   const card = karte(config.cardId);
+  // Profil-Prefill (Auftrag David): nur die SELBST-evidenten Absender-/Verfasser-
+  // Felder vorbelegen (= die nutzende Person), und nur wenn das Schema sie führt.
+  // Reiner Komfort (§3); leere Felder, gespeicherte Werte gewinnen (useWizardState).
+  const prefill = ((): Partial<T> => {
+    const profil = getProfil();
+    const p: Record<string, unknown> = {};
+    if (profil.name && 'absenderName' in config.defaults) p.absenderName = profil.name;
+    if (profil.adresse && 'absenderAdresse' in config.defaults) p.absenderAdresse = profil.adresse;
+    return p as Partial<T>;
+  })();
+  // Globaler Vorlagen-Detailgrad (Einstellungen) als Default, wenn die Vorlage das
+  // Feld führt — ein gespeicherter Wizard-Stand oder eine Wizard-Wahl gewinnt weiter.
+  const defaults = 'detailgrad' in config.defaults
+    ? { ...config.defaults, detailgrad: getVorlagenDetailgrad() }
+    : config.defaults;
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
-    useWizardState<T>({ defaults: config.defaults, speicherKey: config.speicherKey });
+    useWizardState<T>({ defaults, speicherKey: config.speicherKey, prefill });
 
   const { ergebnis } = useMemo(() => config.zusammenstellen(a), [a, config]);
   const gates = useMemo(() => config.pruefeGates(a), [a, config]);

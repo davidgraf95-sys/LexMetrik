@@ -18,6 +18,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 const MIET_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Kündigungstermine und -fristen im Mietrecht (Art. 253 ff. OR) – ' +
@@ -89,7 +90,7 @@ export function MietrechtForm() {
   const [objekt, setObjekt] = useState<Mietobjekt>((ausLink.objekt as Mietobjekt | undefined) ?? 'wohnung');
   const [partei, setPartei] = useState<MietPartei>((ausLink.partei as MietPartei | undefined) ?? 'mieter');
   const [zugang, setZugang] = useState(ausLink.zugang ?? '2025-06-23');
-  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? getStandardKanton());
   const [quelle, setQuelle] = useState<TerminQuelle>((ausLink.quelle as TerminQuelle | undefined) ?? 'ortsueblich');
   const [monate, setMonate] = useState<number[]>(ausLink.monate ?? [3, 9]);
   const [ohneDez, setOhneDez] = useState(ausLink.ohneDez ?? true);

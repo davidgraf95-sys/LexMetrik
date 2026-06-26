@@ -100,7 +100,7 @@ export function GebvKostenForm({ minimal = false }: { minimal?: boolean } = {}) 
       {/* minimal = Startseite-Schnellrechner: globaler Pflicht-Hinweis dort (§8). */}
       {!minimal && <PflichtDisclaimer kurz="Amtliche Gebühren je Betreibungsschritt (GebV SchKG); Rahmengebühren nur als Bandbreite, Auslagen effektiv." text={GK_DISCLAIMER} />}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
         <Field label="Forderung in Betreibung (CHF)" hint="bezifferte Forderung — nicht bezifferte Zinsen ausser Betracht (Art. 6 GebV SchKG)">
           <BetragsFeld value={forderung} onChange={setForderung} className={inputCls}
             placeholder="z. B. 5'000" aria-label="Forderung in Franken" />

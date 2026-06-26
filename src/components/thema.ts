@@ -6,17 +6,29 @@
 // angewandt (main.tsx) und vom Umschalter gepflegt. Liegt neben components/
 // locale.tsx, weil es zur App-/UI-Schicht gehört, nicht zur Engine-Schicht.
 
-export type Thema = 'hell' | 'dunkel';
+import { useSyncExternalStore } from 'react';
+
+export type Thema = 'hell' | 'dunkel';        // aufgelöst (was tatsächlich angewandt wird)
+export type ThemaWahl = Thema | 'auto';       // Nutzer-Wahl ('auto' folgt dem System)
 
 const KEY = 'lexmetrik-thema';
 
-/** Ausdrückliche Wahl aus dem letzten Besuch (sonst null → System entscheidet). */
-export function gespeichertesThema(): Thema | null {
+/** Ausdrückliche Wahl aus dem letzten Besuch (inkl. 'auto'); null → noch keine. */
+export function gespeicherteWahl(): ThemaWahl | null {
   try {
     const v = localStorage.getItem(KEY);
-    return v === 'hell' || v === 'dunkel' ? v : null;
+    return v === 'hell' || v === 'dunkel' || v === 'auto' ? v : null;
   } catch {
     return null;
+  }
+}
+
+/** System-Präferenz (prefers-color-scheme) — Grundlage der Wahl 'auto'. */
+export function systemThema(): Thema {
+  try {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dunkel' : 'hell';
+  } catch {
+    return 'hell';
   }
 }
 
@@ -28,9 +40,13 @@ export function zeitThema(): Thema {
   return h >= 20 || h < 8 ? 'dunkel' : 'hell';
 }
 
-/** Gespeicherte (manuelle) Wahl gewinnt; sonst die zeitbasierte Vorgabe. */
+/** Wahl → tatsächlich anzuwendendes Thema: 'auto' folgt dem System, 'hell'/
+ *  'dunkel' direkt; ohne Wahl die zeitbasierte Vorgabe (bisheriges Verhalten). */
 export function effektivesThema(): Thema {
-  return gespeichertesThema() ?? zeitThema();
+  const w = gespeicherteWahl();
+  if (w === 'auto') return systemThema();
+  if (w === 'hell' || w === 'dunkel') return w;
+  return zeitThema();
 }
 
 /** Wendet das Thema auf das Dokument an (Klasse + color-scheme + Browser-Chrome). */
@@ -61,10 +77,28 @@ export function wendeThemaAn(t: Thema): void {
   } catch { /* SSR/Prerender ohne document.head — unkritisch */ }
 }
 
-export function speichereThema(t: Thema): void {
+// Kleiner Abonnement-Mechanismus, damit ALLE Theme-Anzeigen (Topbar-Umschalter
+// UND Einstellungen-Segment) synchron bleiben (Bug-Fix 26.6.: sonst hing der
+// Indikator der jeweils anderen Stelle nach). getSnapshot = gespeicherteWahl()
+// liefert einen Primitive → stabil by-value, kein Tearing/Loop.
+const themaHoerer = new Set<() => void>();
+
+export function speichereThema(t: ThemaWahl): void {
   try {
     localStorage.setItem(KEY, t);
   } catch {
     /* privater Modus o. Ä. — Thema gilt dann nur für die Sitzung */
   }
+  themaHoerer.forEach((f) => f());
+}
+
+function abonniereThema(f: () => void): () => void {
+  themaHoerer.add(f);
+  try { window.addEventListener('storage', f); } catch { /* SSR */ }
+  return () => { themaHoerer.delete(f); try { window.removeEventListener('storage', f); } catch { /* SSR */ } };
+}
+
+/** React-Hook auf die gespeicherte Theme-Wahl (hell/dunkel/auto/null). */
+export function useThemaWahl(): ThemaWahl | null {
+  return useSyncExternalStore(abonniereThema, gespeicherteWahl, () => null);
 }

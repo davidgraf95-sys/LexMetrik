@@ -21,6 +21,7 @@ import { ZPO_LINK_SPEC, type ZpoLink } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 
 const EINHEITEN: { code: ZpoEinheit; label: string }[] = [
@@ -74,6 +75,7 @@ export function ZpoFristenForm() {
   });
   const [form, setForm] = useState<ZpoInput>(() => ({
     ...DEFAULTS,
+    kanton: getStandardKanton(), // Standard-Kanton (Einstellungen); Permalink unten geht vor
     ...(ausLink.ereignis ? { ereignis: ausLink.ereignis } : {}),
     ...(ausLink.einheit ? { einheit: ausLink.einheit as ZpoInput['einheit'] } : {}),
     ...(ausLink.laenge != null ? { laenge: ausLink.laenge } : {}),

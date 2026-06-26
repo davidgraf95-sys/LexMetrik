@@ -22,6 +22,7 @@ import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { SCHKG_LINK_SPEC, type SchkgLink } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 
 const EINHEITEN: { code: SchkgEinheit; label: string }[] = [
@@ -82,6 +83,7 @@ export function SchkgFristenForm() {
   });
   const [form, setForm] = useState<FormState>(() => ({
     ...DEFAULTS,
+    kanton: getStandardKanton(), // Standard-Kanton (Einstellungen); Permalink unten geht vor
     ...(ausLink.ereignis ? { ereignis: ausLink.ereignis } : {}),
     ...(ausLink.einheit ? { einheit: ausLink.einheit as FormState['einheit'] } : {}),
     ...(ausLink.laenge != null ? { laenge: ausLink.laenge } : {}),
