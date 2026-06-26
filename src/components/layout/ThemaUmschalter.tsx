@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { effektivesThema, gespeicherteWahl, systemThema, speichereThema, wendeThemaAn, type Thema, type ThemaWahl } from '../thema';
+import { useEffect } from 'react';
+import { effektivesThema, systemThema, speichereThema, useThemaWahl, wendeThemaAn, type Thema, type ThemaWahl } from '../thema';
 
 // Thema-Umschalter im Top-Streifen: 3er-Zyklus hell → dunkel → auto (Auftrag
 // David). 'auto' folgt der System-Präferenz (prefers-color-scheme) und reagiert
@@ -13,9 +13,9 @@ const META: Record<ThemaWahl, { icon: string; label: string }> = {
 };
 
 export function ThemaUmschalter() {
-  // null = noch keine ausdrückliche Wahl → bisheriges Verhalten (effektivesThema,
-  // d.h. zeitbasiert) bleibt erhalten, kein Flip beim Laden.
-  const [wahl, setWahl] = useState<ThemaWahl | null>(gespeicherteWahl);
+  // Geteilter Store (synchron mit dem Einstellungen-Segment). null = noch keine
+  // ausdrückliche Wahl → bisheriges Verhalten (effektivesThema/zeitbasiert) bleibt.
+  const wahl = useThemaWahl();
 
   useEffect(() => {
     const aufgeloest: Thema = wahl === null ? effektivesThema() : wahl === 'auto' ? systemThema() : wahl;
@@ -30,11 +30,9 @@ export function ThemaUmschalter() {
 
   const anzeige: ThemaWahl = wahl ?? 'auto';
   const meta = META[anzeige];
-  const umschalten = () => {
-    const next = NAECHSTE[anzeige];
-    setWahl(next);
-    speichereThema(next);
-  };
+  // speichereThema benachrichtigt den Store → useThemaWahl re-rendert (hier UND
+  // im Einstellungen-Segment), der Effekt oben wendet das neue Thema an.
+  const umschalten = () => speichereThema(NAECHSTE[anzeige]);
 
   return (
     <button

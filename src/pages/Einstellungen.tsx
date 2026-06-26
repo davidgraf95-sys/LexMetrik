@@ -5,7 +5,7 @@ import { KANTON_NAMEN } from '../data/tarif/typen';
 import type { Kanton } from '../types/legal';
 import { useEinstellungen, setzeEinstellung } from '../lib/einstellungen';
 import { DETAILGRAD_OPTIONEN } from '../lib/vorlagen/detailgrad';
-import { gespeicherteWahl, speichereThema, wendeThemaAn, effektivesThema, systemThema, type ThemaWahl } from '../components/thema';
+import { speichereThema, wendeThemaAn, systemThema, useThemaWahl, type ThemaWahl } from '../components/thema';
 import { useAusgabeStil, setAusgabeStil } from '../components/vorlagen/ausgabeStil';
 
 // ─── Rubrik «Einstellungen» (Auftrag David) ─────────────────────────────────
@@ -53,15 +53,10 @@ const DICHTE_KEY = 'rsp:dichte';
 const FS_KEY = 'rsp-fs-idx';
 const FS_LABELS = ['Klein', 'Normal', 'Gross', 'Sehr gross'];
 
-// Alle persistenten Keys für den Gesamt-Reset (Inventar 26.6.2026).
-const RESET_KEYS = [
-  'lexmetrik-thema', 'lexmetrik.locale', 'lexmetrik-seitenleiste-breite',
-  'lexmetrik-seitenleiste-eingeklappt', 'lexmetrik-favoriten', 'lexmetrik.ausgabeStil',
-  'lexmetrik-tabs', 'lexmetrik.einstellungen.v1', 'lexmetrik.vorlage.arbeitsvertrag.regime.v1',
-  'lexmetrik.vorlage.arbeitsvertrag.v1', 'lexmetrik.vorlage.lehrvertrag.v1',
-  'lexmetrik.vorlage.handelsreisendenvertrag.v1', 'lexmetrik.vorlage.heimarbeitsvertrag.v1',
-  'lexmetrik:ag-gruendung:v1', 'rsp:dichte', 'rsp-fs-idx',
-];
+// Gesamt-Reset über PRÄFIX statt Allowlist (Bug-Fix 26.6.2026): eine hartcodierte
+// Liste verfehlte ~17 Vorlagen-Entwurf-Keys (`lexmetrik.vorlage.*`) und veraltete
+// bei jeder neuen Vorlage. Alle App-Keys tragen ein bekanntes Präfix.
+const RESET_PRAEFIXE = ['lexmetrik', 'rsp:', 'rsp-'];
 
 function leseKey(key: string, fallback: string): string {
   try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
@@ -73,24 +68,26 @@ function schreibeKey(key: string, wert: string): void {
 export function Einstellungen() {
   const e = useEinstellungen();
   const stil = useAusgabeStil();
-  // lokale Spiegel für Theme + Rechtsprechungs-Ansicht (clientseitig, opt-in)
-  const [themaWahl, setThemaWahl] = useState<ThemaWahl>(() => gespeicherteWahl() ?? 'auto');
+  // Theme aus dem geteilten Store (synchron mit dem Topbar-Umschalter); Rechtsprechungs-
+  // Ansicht lokal (clientseitig, opt-in).
+  const themaWahl: ThemaWahl = useThemaWahl() ?? 'auto';
   const [dichte, setDichte] = useState<string>(() => leseKey(DICHTE_KEY, 'liste'));
   const [fsIdx, setFsIdx] = useState<string>(() => leseKey(FS_KEY, '1'));
 
   const themaSetzen = (w: ThemaWahl) => {
-    setThemaWahl(w); speichereThema(w);
-    wendeThemaAn(w === 'auto' ? systemThema() : w === 'hell' || w === 'dunkel' ? w : effektivesThema());
+    speichereThema(w); // benachrichtigt Store → Segment + Topbar synchron
+    wendeThemaAn(w === 'auto' ? systemThema() : w);
   };
 
   const reset = () => {
     if (!window.confirm('Alle gespeicherten Einstellungen, Reiter, Favoriten und Vorlagen-Entwürfe zurücksetzen? Das kann nicht rückgängig gemacht werden.')) return;
     try {
-      for (const k of RESET_KEYS) localStorage.removeItem(k);
-      // Tages-/Zeiterfassungs-Keys (dynamische Präfixe).
+      // Rückwärts iterieren (removeItem verschiebt die Indizes); alles mit einem
+      // App-Präfix löschen — deckt ALLE Einstellungen/Reiter/Favoriten/Vorlagen-
+      // Entwürfe/Zeiterfassung ab, ohne fragile Allowlist (Bug-Fix 26.6.).
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
-        if (k && k.startsWith('lexmetrik-zeit-')) localStorage.removeItem(k);
+        if (k && RESET_PRAEFIXE.some((p) => k.startsWith(p))) localStorage.removeItem(k);
       }
     } catch { /* privat-Modus */ }
     window.location.reload();

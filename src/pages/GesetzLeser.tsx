@@ -136,7 +136,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="nt-art-cv group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+      className="nt-art-cv group relative z-0 nt-anker border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
           IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
           der Normtext die volle Lesespaltenbreite bekommt. Reine Darstellung (§3). */}
@@ -205,7 +205,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {fussnotenAuf && fussAnzeige.length > 0 && (
             <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
-                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-500 target:bg-brass-100">
+                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="nt-anker text-xs leading-normal text-ink-500 target:bg-brass-100">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                   {fnTextMitLinks(fn)}
                 </p>
@@ -233,7 +233,7 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   // Titelgrösse nach Tiefe: oberste Stufen prominent, tiefere ruhiger.
   const titelStil = s.ebene <= 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : s.ebene === 3 ? 'text-base' : 'text-base';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[8.5rem] ${mt} ${regel}`}>
+    <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
         {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
         <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
@@ -396,8 +396,17 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
   // Navigation mit Artikel-Anker gezielt dorthin springen (Auftrag David: Klick
   // auf den Reiter führt zum gemerkten Artikel der Instanz).
+  const letzteNavKey = useRef<string | null>(null);
   useEffect(() => {
     if (!sektionen.length || typeof window === 'undefined') return;
+    // Nur bei ECHTER Navigation (location.key wechselt), nicht wenn sektionen
+    // nachlädt. Den Initial-Load (erster key) deckt der Lade-Hash-Effekt ab →
+    // kein doppelter Sprung/Blink. Dieser Effekt trägt nur den Instanz-Wechsel
+    // (gleicher pathname, nur ?r/#).
+    if (letzteNavKey.current === location.key) return;
+    const erstmalig = letzteNavKey.current === null;
+    letzteNavKey.current = location.key;
+    if (erstmalig) return;
     const m = location.hash.match(/^#art-(.+)$/);
     if (!m) return;
     const token = decodeURIComponent(m[1]);

@@ -1,7 +1,33 @@
 import { describe, it, expect } from 'vitest';
 import {
   gruppiereTausender, gruppiereBetraege, normalisiereAbsatzNummer, absatzMarke,
+  artikelGanzAufgehoben,
 } from '../lib/normtext/darstellung';
+
+// artikelGanzAufgehoben: nur EINKLAPPEN, wenn KEIN lebender Inhalt übrig ist.
+// Tabelle/Mehrspaltig (text leer per Konvention) sind lebender Inhalt — sie
+// dürfen NIE als aufgehoben gelten (Bug-Fix 26.6.2026: 389 Tarif-Artikel).
+describe('artikelGanzAufgehoben', () => {
+  it('echt aufgehoben: «Aufgehoben» / «…» ohne Items', () => {
+    expect(artikelGanzAufgehoben([{ text: 'Aufgehoben' }])).toBe(true);
+    expect(artikelGanzAufgehoben([{ text: '…' }])).toBe(true);
+  });
+  it('Tarif-Tabelle (text leer + tabelle) ist NICHT aufgehoben', () => {
+    expect(artikelGanzAufgehoben([{ text: '', tabelle: [{ beschreibung: 'x', betrag: '10' }] }])).toBe(false);
+  });
+  it('mehrspaltige Tabelle (text leer + zeilen) ist NICHT aufgehoben', () => {
+    expect(artikelGanzAufgehoben([{ text: '', mehrspaltig: { zeilen: [['a', 'b']] } }])).toBe(false);
+  });
+  it('lebender Einleitungstext + nur aufgehobene Items ist NICHT aufgehoben', () => {
+    expect(artikelGanzAufgehoben([{ text: 'Der Regierungsrat ist zuständig für', items: [{ text: '…' }] }])).toBe(false);
+  });
+  it('leerer Lead + alle Items aufgehoben ist aufgehoben', () => {
+    expect(artikelGanzAufgehoben([{ text: '', items: [{ text: '…' }, { text: 'Aufgehoben' }] }])).toBe(true);
+  });
+  it('leere Blockliste ist nicht aufgehoben', () => {
+    expect(artikelGanzAufgehoben([])).toBe(false);
+  });
+});
 
 // Stufe-2-D (22.6.2026): Schweizer Tausender-Apostrophe in der Betrag-Spalte
 // der TarifTabelle. Zeichen: U+0027 (gerader Apostroph) — übereinstimmend mit

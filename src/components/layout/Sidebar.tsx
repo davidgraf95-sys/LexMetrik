@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Link, useLocation, type Location } from 'react-router-dom';
 import {
-  NAVIGATION, NAVIGATION_META, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
+  NAVIGATION, NAVIGATION_META, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
 } from '../../lib/navigation';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
+
+// Alle Nav-Ziele inkl. #Anker (statisch) — zum Erkennen, ob ein aktiver Hash
+// überhaupt einem Geschwister-Eintrag entspricht (Bug-Fix 26.6.: sonst verlieren
+// Single-Entry-Seiten mit internen Hash-Tabs wie /rechner/tagerechner#zpo ihre
+// Aktiv-Markierung).
+const NAV_ZIELE = new Set(alleNavLinks().map((l) => l.ziel));
 
 // ─── App-Shell-Seitenleiste (Build-Plan App-Shell, Phase 3) ─────────────────
 //
@@ -26,9 +32,11 @@ function istAktiv(ziel: string, loc: Location): boolean {
   // Trägt das Ziel einen Anker, muss er stimmen (Vorlagen-Gruppe / Bund-Gebiet).
   if (hash && loc.hash !== `#${hash}`) return false;
   // Hash-LOSES Ziel auf exaktem Pfad (z.B. «Zivilprozess» /rechner/zustaendigkeit)
-  // darf NICHT mitleuchten, wenn ein Hash-Geschwister aktiv ist (#straf/#schkg).
-  // Nur für exakte Pfade — die `/gesetze`-startsWith-Gruppe bleibt unberührt.
-  if (!hash && loc.hash && pfad !== '/' && pfad !== '/gesetze') return false;
+  // darf NICHT mitleuchten, wenn ein Hash-GESCHWISTER aktiv ist (#straf/#schkg).
+  // Aber NUR, wenn der aktive Hash auch wirklich ein Nav-Ziel ist — sonst verlöre
+  // eine Single-Entry-Seite mit internen Hash-Tabs (z.B. /rechner/tagerechner#zpo)
+  // ihre Markierung. `/gesetze`-startsWith-Gruppe bleibt unberührt.
+  if (!hash && loc.hash && pfad !== '/' && pfad !== '/gesetze' && NAV_ZIELE.has(pfad + loc.hash)) return false;
 
   if (pfad === '/') {
     // «Start» ist aktiv, solange «/» ohne aktive Hero-Suche (?q=) offen ist.

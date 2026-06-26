@@ -223,11 +223,19 @@ export function istAufgehoben(text: string): boolean {
 /** Ist der GANZE Artikel aufgehoben (kein lebender Wortlaut, keine Items)? Dann
  *  zeigt der Reader ihn dezent + standardmässig eingeklappt (Auftrag David:
  *  aufgehobene Artikel «nicht so präsent», aufklappbar). */
-export function artikelGanzAufgehoben(bloecke: { text: string; items?: { text: string }[] }[]): boolean {
+export function artikelGanzAufgehoben(
+  bloecke: { text: string; items?: { text: string }[]; tabelle?: unknown[]; mehrspaltig?: { zeilen: unknown[] } }[],
+): boolean {
   if (!bloecke.length) return false;
   return bloecke.every((b) => {
+    // Tabelle/Mehrspaltig = LEBENDER Inhalt (text ist dort konventionsgemäss leer)
+    // → hat Vorrang vor der «aufgehoben»-Heuristik, sonst würden Tarif-Tabellen-
+    //   Artikel fälschlich dezent + eingeklappt (Bug-Fix 26.6., analog ArtikelBody).
+    if ((b.tabelle?.length ?? 0) > 0 || (b.mehrspaltig?.zeilen.length ?? 0) > 0) return false;
     const items = b.items ?? [];
-    if (items.length) return items.every((it) => it.text.trim() === '' || istAufgehoben(it.text));
-    return !b.text.trim() || istAufgehoben(b.text);
+    // Lebender Einleitungstext (Lead) mit nur aufgehobenen Items ist NICHT ganz tot.
+    const leadTot = !b.text.trim() || istAufgehoben(b.text);
+    if (items.length) return leadTot && items.every((it) => it.text.trim() === '' || istAufgehoben(it.text));
+    return leadTot;
   });
 }

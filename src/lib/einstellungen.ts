@@ -12,7 +12,6 @@ import { type Detailgrad, DETAILGRAD_DEFAULT } from './vorlagen/detailgrad';
 // nach dem Muster von ausgabeStil.ts; KEIN Date.now() (§2, liegt in src/lib).
 
 const KEY = 'lexmetrik.einstellungen.v1';
-export const EINSTELLUNGEN_EVENT = 'lexmetrik:einstellungen';
 
 export interface Einstellungen {
   standardKanton: Kanton;
@@ -56,7 +55,8 @@ export const ladeEinstellungen = (): Einstellungen => aktuell;
 function schreibe(e: Einstellungen): void {
   aktuell = e;
   try { localStorage.setItem(KEY, JSON.stringify(e)); } catch { /* privat-Modus */ }
-  try { window.dispatchEvent(new Event(EINSTELLUNGEN_EVENT)); } catch { /* SSR */ }
+  // Sync: same-tab über hoerer (useSyncExternalStore-Subscriber), cross-tab über
+  // den 'storage'-Listener in abonniere() — kein eigenes Custom-Event nötig.
   hoerer.forEach((f) => f());
 }
 
