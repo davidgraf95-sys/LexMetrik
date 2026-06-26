@@ -12,11 +12,16 @@
       "bgeReferenz": "152 I 105",
       "zitierung": "BGE 152 I 105",
       "datum": "2025-10-30",
-      "sprache": "de",
+      "sprache": "fr",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "straf",
       "legalArea": null,
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Mmes et MM. les Juges fédéraux Jacquemoud-Rossari, Présidente, Muschietti, von Felten, Wohlhauser et Guidon. Greffier: M. Vallat",
+        "parteien": "A.________, recourant, contre Ministère public central du canton du Valais, rue des Vergers 9, case postale, 1950 Sion 2, intimé",
+        "gegenstand": "Interdiction à vie d'exercer toute activité professionnelle et non professionnelle organisée impliquant des contacts réguliers avec des mineurs",
+        "vorinstanz": "Tribunal cantonal du Valais, Cour pénale I, du 14 mars 2023 (P1 21 45)"
+      },
       "regeste": {
         "text": "Art. 8 EMRK; Art. 67 Abs. 3 lit. d StGB; Verbot einer Tätigkeit mit Minderjährigen nach Verurteilung wegen Pornografie, die sexuelle Handlungen mit Minderjährigen zum Gegenstand hatte. Beschränkungen des Zugangs zu einem oder mehreren Berufen können das Privatleben im Sinne von Art. 8 EMRK beeinträchtigen. Ein derartiger Eingriff ist vorliegend gegeben und beruht auf einer genügenden gesetzlichen Grundlage (E. 4.3.2). Bestimmung des Ermessensspielraums, über den der Staat im Hinblick auf die Notwendigkeit des Eingriffs in einer demokratischen Gesellschaft verfügt; rechtsvergleichende Übersicht (E. 4.3.3 und 4.3.4). Grundsätzlich kann das Verbot einer Tätigkeit, die einen regelmässigen Kontakt zu Minderjährigen umfasst, auch wenn es im Zusammenhang mit dem Konsum oder der Zugänglichmachung von Kinderpornografie angeordnet wird, dem Erfordernis nach Schutz der sexuellen Integrität Minderjähriger entsprechen (E. 4.4). Prüfung der Verhältnismässigkeit der gegen den Beschwerdeführer angeordneten Massnahme, der an einer Hochschule eine Ausbildung im Bereich der Krankenpflege zu absolvieren wünschte. Verhältnismässigkeit vorliegend bejaht (E. 4.4.2 und 4.4.3).",
         "quelle": "opencaselaw"
@@ -25,11 +30,22 @@
       "abschnitte": [
         {
           "typ": "sachverhalt",
-          "vollstaendig": false,
+          "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. À la suite de deux dénonciations de l'Office fédéral de la police, le ministère public a, le 27 août 2020, ouvert une instruction pénale à l'encontre de A.________ pour des soupçons de diffusion de pornographie dure. L'analyse du matériel informatique et du téléphone portable saisis le 2 octobre 2020 chez l'intéressé a révélé qu'entre le 1er octobre 2019 et le 21 août 2020, celui-ci avait, depuis son domicile de U.________, diffusé à des tiers, au moyen de son téléphone portable, via son compte Snapchat ou l'application Skype, une trentaine de fichiers sous forme d'images ou de vidéos représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement consultées ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. Certains de ces fichiers se trouvaient encore sur son téléphone portable lors de son arrestation, le 2 oct"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "À la suite de deux dénonciations de l'Office fédéral de la police, le ministère public a, le 27 août 2020, ouvert une instruction pénale à l'encontre de A.________ pour des soupçons de diffusion de pornographie dure. L'analyse du matériel informatique et du téléphone portable saisis le 2 octobre 2020 chez l'intéressé a révélé qu'entre le 1er octobre 2019 et le 21 août 2020, celui-ci avait, depuis son domicile de U.________, diffusé à des tiers, au moyen de son téléphone portable, via son compte Snapchat ou l'application Skype, une trentaine de fichiers sous forme d'images ou de vidéos représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement consultées ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. Certains de ces fichiers se trouvaient encore sur son téléphone portable lors de son arrestation, le 2 octobre 2020. Cette analyse a également mis en lumière qu'entre le 7 juillet et le 2 octobre 2020, date à laquelle son matériel informatique et son téléphone portable ont été saisis, A.________ avait, à son domicile, enregistré dans la mémoire de son téléphone portable neuf fichiers vidéos ainsi qu'une centaine d'images représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement obtenues ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. A.________ a admis les faits décrits ci-dessus. Par jugement du 18 mars 2021, le Tribunal des districts de Martigny et St-Maurice a reconnu A.________ coupable de pornographie au sens de l'article 197 al. 4 et 5 CP et l'a condamné à une peine pécuniaire de 150 jours-amende avec sursis pendant deux ans, ainsi qu'à une amende de 300 fr. (ch. 1 et 2). Le tribunal de district a également prononcé à son encontre une interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Saisie par le condamné, par arrêt du 14 mars 2023, la Cour pénale I du Tribunal cantonal valaisan a rejeté l'appel, en confirmant, avec suite de frais, l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Par acte du 27 avril 2023, A.________ recourt en matière pénale au Tribunal fédéral contre l'arrêt du 14 mars 2023. Il conclut avec suite de frais et dépens, principalement, à la réforme de la décision entreprise en ce sens qu'il soit renoncé à l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs. À titre subsidiaire, il demande que cette interdiction soit réformée en ce sens qu'elle soit prononcée pour une durée limitée et susceptible de réexamen à intervalle régulier. Il demande également, dans le cours de ses développements, que soit constaté le caractère disproportionné de la mesure. La demande d'effet suspensif a été rejetée par ordonnance du 9 juin 2023."
             }
           ]
         },
@@ -283,15 +299,26 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-I-105%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-26",
       "fassungsToken": "9ef43568a63c6790256df8006bcc18f52b23f9bcca109a2722662fa0d7ffb62f",
-      "sha": "94396f448419009ed05a95359ab8191d75a85f0ef8f75c5a08417de48d2afa9f",
+      "sha": "277dc6ef8e60bc949c82ed3b0cad80b816742e238f2c4282ee3bb0f6f489e9bf",
       "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
           "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. À la suite de deux dénonciations de l'Office fédéral de la police, le Ministère public a, le 27 août 2020, ouvert une instruction pénale à l'encontre de A. pour des soupçons de diffusion de pornographie dure. L'analyse du matériel informatique et du téléphone portable saisis le 2 octobre 2020 chez l'intéressé a révélé qu'entre le 1 er octobre 2019 et le 21 août 2020, celui-ci avait, depuis son domicile de U., diffusé à des tiers, au moyen de son téléphone portable, via son compte Snapchat ou l'application Skype, une trentaine de fichiers sous forme d'images ou de vidéos représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement consultées ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. Certains de ces fichiers se trouvaient encore sur son téléphone portable lors de son arrestation, le 2 octobre 2020. Cette analyse a également mis en lumière qu'entre le 7 juillet et le 2 octobre 2020, date à laquelle son matériel informatique et son téléphone portable ont été saisis, A. avait, à son domicile, enregistré dans la mémoire de son téléphone portable neuf fichiers vidéos ainsi qu'une centaine d'images représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement obtenues ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. A. a admis les faits décrits ci-dessus. Par jugement du 18 mars 2021, le Tribunal des districts de Martigny et St-Maurice a reconnu A. coupable de pornographie au sens de l'article 197 al. 4 et 5 CP et l'a condamné à une peine pécuniaire de 150 jours-amende avec sursis pendant deux ans, ainsi qu'à une amende de 300 fr. (ch. 1 et 2). Le tribunal de district a également prononcé à son encontre une interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs. B. Saisie par le condamné, par arrêt du 14 mars 2023, la Cour pénale I du Tribunal cantonal valaisan a rejeté l'appel, en confirmant, avec suite de frais, l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs. C. Par acte du 27 avril 2023, A. recourt en matière pénale au Tribunal fédéral contre l'arrêt du 14 mars 2023. Il conclut avec suite de frais et dépens, principalement, à la réforme de la décision entreprise en ce sens qu'il soit renoncé à l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs. À titre subsidiaire, il demande que cette interdiction soit réformée en ce sens qu'elle soit prononcée pour une durée limitée et susceptible de réexamen à intervalle régulier. Il demande également, dans le cours de ses développements, que soit constaté le caractère disproportionné de la mesure. La demande d'effet suspensif a été rejetée par ordonnance du 9 juin 2023. Le Tribunal fédéral a rejeté le recours dans la mesure où il est recevable."
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "À la suite de deux dénonciations de l'Office fédéral de la police, le Ministère public a, le 27 août 2020, ouvert une instruction pénale à l'encontre de A. pour des soupçons de diffusion de pornographie dure. L'analyse du matériel informatique et du téléphone portable saisis le 2 octobre 2020 chez l'intéressé a révélé qu'entre le 1 er octobre 2019 et le 21 août 2020, celui-ci avait, depuis son domicile de U., diffusé à des tiers, au moyen de son téléphone portable, via son compte Snapchat ou l'application Skype, une trentaine de fichiers sous forme d'images ou de vidéos représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement consultées ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. Certains de ces fichiers se trouvaient encore sur son téléphone portable lors de son arrestation, le 2 octobre 2020. Cette analyse a également mis en lumière qu'entre le 7 juillet et le 2 octobre 2020, date à laquelle son matériel informatique et son téléphone portable ont été saisis, A. avait, à son domicile, enregistré dans la mémoire de son téléphone portable neuf fichiers vidéos ainsi qu'une centaine d'images représentant des scènes réelles de filles ou de jeunes garçons mineurs adoptant des positions sexuellement suggestives ou commettant des actes d'ordre sexuel, images ou vidéos qu'il avait préalablement obtenues ou téléchargées via Internet afin de les visionner à des fins d'excitation sexuelle. A. a admis les faits décrits ci-dessus. Par jugement du 18 mars 2021, le Tribunal des districts de Martigny et St-Maurice a reconnu A. coupable de pornographie au sens de l'article 197 al. 4 et 5 CP et l'a condamné à une peine pécuniaire de 150 jours-amende avec sursis pendant deux ans, ainsi qu'à une amende de 300 fr. (ch. 1 et 2). Le tribunal de district a également prononcé à son encontre une interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Saisie par le condamné, par arrêt du 14 mars 2023, la Cour pénale I du Tribunal cantonal valaisan a rejeté l'appel, en confirmant, avec suite de frais, l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Par acte du 27 avril 2023, A. recourt en matière pénale au Tribunal fédéral contre l'arrêt du 14 mars 2023. Il conclut avec suite de frais et dépens, principalement, à la réforme de la décision entreprise en ce sens qu'il soit renoncé à l'interdiction à vie d'exercer toute activité professionnelle et toute activité non professionnelle organisée impliquant des contacts réguliers avec des mineurs. À titre subsidiaire, il demande que cette interdiction soit réformée en ce sens qu'elle soit prononcée pour une durée limitée et susceptible de réexamen à intervalle régulier. Il demande également, dans le cours de ses développements, que soit constaté le caractère disproportionné de la mesure. La demande d'effet suspensif a été rejetée par ordonnance du 9 juin 2023. Le Tribunal fédéral a rejeté le recours dans la mesure où il est recevable."
             }
           ]
         },

@@ -84,8 +84,13 @@ export function extrahiereSachverhalt(
   fullText: string | undefined, excerpt: string | undefined, erwartetChars?: number,
 ): { text: string; vollstaendig: boolean } | null {
   const ft = String(fullText ?? '');
-  const mS = /(?:^|\n)\s*Sachverhalt\s*:?\s*\n/i.exec(ft);
-  const mE = /(?:^|\n)\s*(?:Erw[aä]gungen?|In Erwägung|Considérant|Diritto)\s*:?\s*\n/i.exec(ft);
+  // A2: Start-Marker mehrsprachig (DE: Sachverhalt · FR: Faits/En fait · IT:
+  // Fatti/In fatto) — sonst fiel jeder fr/it-Body auf den gekürzten OCL-Auszug
+  // (vollstaendig:false, kein Kopf). End-Marker zusätzlich «Considérant en
+  // droit/fait …» (fr) und «In diritto/Considerando» (it); DE-Alternativen
+  // stehen zuerst → DE-Extraktion byte-stabil (§6, kein DE-Regen).
+  const mS = /(?:^|\n)\s*(?:Sachverhalt|Faits|En fait|Fatti|In fatto)\s*:?\s*\n/i.exec(ft);
+  const mE = /(?:^|\n)\s*(?:Erw[aä]gungen?|In Erwägung|Consid[eé]rant(?:\s+en\s+(?:droit|fait)[^\n]*)?|Considerando|In diritto|Diritto)\s*:?\s*\n/i.exec(ft);
   if (mS && mE && mE.index > mS.index) {
     const txt = ft.slice(mS.index + mS[0].length, mE.index).trim();
     if (txt.length >= 200) {
@@ -131,15 +136,21 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
       const m = /\b(und beantragt|mit dem Antrag|Eventualiter|Subeventualiter|stellt? den Antrag)\b/i.exec(t);
       if (m && m.index > 15) t = t.slice(0, m.index).trim();
     }
-    if (/(geboren am|Mit (?:Urteil|Verfügung|Entscheid|Eingabe) vom|Erw[aä]gung(?:en)?\s*:|In Erwägung|Sachverhalt|und beantragt|Eventualiter)/i.test(t)) return null;
+    if (/(geboren am|Mit (?:Urteil|Verfügung|Entscheid|Eingabe) vom|Erw[aä]gung(?:en)?\s*:|In Erwägung|Sachverhalt|Faits\s*:|Fatti\s*:|Consid[eé]rant|Considerando|und beantragt|Eventualiter)/i.test(t)) return null;
     return t.replace(/[\s,;:.–-]+$/, '').trim() || null;
   };
-  const besetzung = sauber(cut(/\bBesetzung\b[\s:]*/, /\b(Verfahrensbeteiligte|Partei|Gegenstand|Sachverhalt)\b/));
-  const parteien = sauber(cut(/\b(?:Verfahrensbeteiligte|Parteien)\b[\s:]*/, /\bGegenstand\b/, 800));
-  const gegenstand = sauber(cut(/\bGegenstand\b[\s:]*/, /\b(Beschwerde|Berufung|Rekurs|Klage|Gesuch|Sachverhalt|In Erwägung|Erwägung)\b/, 300));
-  // Floskel „das Urteil/den Entscheid des …" abstreifen → Wert beginnt mit dem Gericht.
-  const vorinstanzRoh = cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 400)
-    ?.replace(/^(?:das|der|die|den|dem|des)\s+(?:Urteil|Urteils|Entscheid|Entscheids|Beschluss|Beschlusses|Verfügung)\s+(?:des|der|vom|von)\s+/i, '') ?? null;
+  // A2: Rubrum-Labels mehrsprachig (DE/FR/IT). DE-Alternativen zuerst → DE-
+  // Extraktion byte-stabil. FR: Composition/Participants à la procédure/Objet/
+  // recours … contre · IT: Composizione/Parti/Oggetto/ricorso … contro.
+  const besetzung = sauber(cut(/\b(?:Besetzung|Composition|Composizione)\b[\s:]*/, /\b(?:Verfahrensbeteiligte|Partei(?:en)?|Parties|Participants|Parti|Gegenstand|Objet|Oggetto|Sachverhalt|Faits|Fatti)\b/));
+  const parteien = sauber(cut(/\b(?:Verfahrensbeteiligte|Parteien|Parties|Participants(?:\s+à\s+la\s+proc[ée]dure)?|Parti)\b[\s:]*/, /\b(?:Gegenstand|Objet|Oggetto)\b/, 800));
+  const gegenstand = sauber(cut(/\b(?:Gegenstand|Objet|Oggetto)\b[\s:]*/, /\b(?:Beschwerde|Berufung|Rekurs|Klage|Gesuch|recours|ricorso|Sachverhalt|Faits|Fatti|In Erwägung|Erwägung|Consid[eé]rant|Considerando)\b/, 300));
+  // Floskel abstreifen → Wert beginnt mit dem Gericht (DE: „das Urteil/den
+  // Entscheid des …"; FR: „l'arrêt/le jugement du …"; IT: „la sentenza del …").
+  const vorinstanzRoh = cut(/\b(?:(?:Beschwerde|Berufung|Rekurs)\s+gegen|recours(?:\s+en\s+mati[èe]re[^\n]{0,30})?\s+contre|ricorso(?:\s+in\s+materia[^\n]{0,30})?\s+contro)\s*/, /\b(?:Sachverhalt|Faits|Fatti|In Erwägung|Erwägung|Consid[eé]rant|Considerando)\b/, 400)
+    ?.replace(/^(?:das|der|die|den|dem|des)\s+(?:Urteil|Urteils|Entscheid|Entscheids|Beschluss|Beschlusses|Verfügung)\s+(?:des|der|vom|von)\s+/i, '')
+    ?.replace(/^l['’]?(?:arr[êe]t|jugement|d[ée]cision|ordonnance|prononc[ée])\s+(?:du|de\s+la|de\s+l['’]|des|de)\s+/i, '')
+    ?.replace(/^(?:la\s+|il\s+)?(?:sentenza|decisione|giudizio|pronuncia)\s+(?:del(?:la)?|dell['’]|di)\s+/i, '') ?? null;
   const vorinstanz = sauber(vorinstanzRoh, { salvage: true });
   // §1/§8-Tor: erkennbar fragmentarische Werte (Erwägungs-/Satzmitten-Reste) verwerfen.
   const rubrum = {
@@ -150,6 +161,31 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
   };
   if (!rubrum.besetzung && !rubrum.parteien && !rubrum.gegenstand && !rubrum.vorinstanz) return null;
   return rubrum;
+}
+
+// A2: Sprach-Label aus dem BODY bestimmen (nicht aus dem OCL-Record kopieren —
+// das war die Quelle des Mislabels: ein fr/it-BGE trägt im 'bge'-Record
+// language='de', der FR/IT-Body stammt aber aus dem unterliegenden aza-Urteil).
+// Deterministisch (§2): distinkte Funktionswörter je Sprache zählen, klarer
+// Sieger (≥5 Treffer und ≥1.25× Zweitplatzierter) gewinnt, sonst null →
+// der Aufrufer fällt auf det.language zurück. Empirisch über den ganzen Korpus
+// (327 Bodies) verifiziert: 323 de / 4 fr / 0 it, kein DE-Fehlklassifikat.
+const SPRACH_SIGNAL: { code: EntscheidSprache; re: RegExp }[] = [
+  { code: 'de', re: /\b(?:der|die|das|und|nicht|dass|eine|auch|über|dem|den|des|ist|gegen|durch|bei|vom|wird|werden|sich|Urteil|Beschwerde|zur|zum|nach)\b/giu },
+  { code: 'fr', re: /\b(?:recours|contre|cette|selon|dans|pour|qui|que|est|les|une|aux|ainsi|droit|arr[êe]t|fait|elle|leur|ont|avec|sans|sous|été)\b/giu },
+  { code: 'it', re: /\b(?:che|della|nella|sono|essere|questo|ricorso|delle|dalla|alla|dei|degli|sentenza|dell|viene|stato|secondo|nonché)\b/giu },
+];
+
+/** Sprache eines Entscheids aus seinem gerenderten Body-Text ableiten (§2). */
+export function spracheAusBody(abschnitte: EntscheidAbschnitt[]): EntscheidSprache | null {
+  const text = abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join(' ').slice(0, 6000);
+  if (text.replace(/\s/g, '').length < 80) return null; // zu wenig Text → kein Override
+  const score = SPRACH_SIGNAL
+    .map(({ code, re }) => ({ code, n: (text.match(re) ?? []).length }))
+    .sort((a, b) => b.n - a.n);
+  const [top, zweit] = score;
+  if (top.n < 5 || top.n < (zweit?.n ?? 0) * 1.25) return null;
+  return top.code;
 }
 
 /**
@@ -239,7 +275,6 @@ export function mappeEntscheidOCL(
   // → nicht aufnehmen (ehrlich weglassen statt ein Zukunftsdatum zeigen, §8).
   const datumRoh = String(det.decision_date ?? '');
   if (datumRoh && abgerufen && datumRoh > abgerufen) return null;
-  const sprache = (det.language ?? 'de') as EntscheidSprache;
 
   // ── Abschnitte aus der amtlichen Gliederung (oder Fallback full_text) ──
   const abschnitte: EntscheidAbschnitt[] = [];
@@ -273,6 +308,9 @@ export function mappeEntscheidOCL(
     abschnitte.push({ typ: 'erwaegung', bloecke: [{ marke: null, text: bereinigeFliesstext(det.full_text) }] });
   }
   if (abschnitte.length === 0) return null;
+
+  // A2: Sprache aus dem BODY (Quelle des Mislabel-Fixes), Fallback OCL-Record.
+  const sprache: EntscheidSprache = spracheAusBody(abschnitte) ?? ((det.language ?? 'de') as EntscheidSprache);
 
   // ── Regeste (lizenz-getrennt) ──
   const regesteRoh: string | null = det.regeste ?? str?.regeste ?? null;
@@ -553,6 +591,11 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
     return {
       ...basis,
       datum: azaSnap.datum,
+      // A2: `abschnitte` ist jetzt das (oft fr/it) aza-Urteil → Sprache folgt dem
+      // BODY, nicht dem 'bge'-Record (der trägt language='de'). Behebt den
+      // Mislabel der fr-Leitentscheide (152_I_105 u.a.); der dt. Sammlungs-Auszug
+      // bleibt in `auszugAbschnitte`.
+      sprache: spracheAusBody(azaSnap.abschnitte) ?? azaSnap.sprache,
       abschnitte: azaSnap.abschnitte,
       auszugAbschnitte: basis.abschnitte,
       rubrum: azaSnap.rubrum ?? basis.rubrum,

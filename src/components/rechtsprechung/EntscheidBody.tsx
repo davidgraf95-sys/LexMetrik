@@ -16,6 +16,57 @@ import { NormText } from '../NormText';
 const ABSATZ = 'font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.7] text-ink-800 whitespace-pre-line';
 const SEKTIONS_ORDNUNG: Record<string, number> = { sachverhalt: 0, erwaegung: 1, dispositiv: 2 };
 
+// ── A1: Inline-Kolumnentitel der amtlichen Sammlung dezent herauslösen ────────
+// Quell-Artefakt: der laufende Kolumnentitel «BGE 152 I 105 S. 114» der amtlichen
+// Wiedergabe steht MITTEN IM SATZ der Erwägungen (B1-Sweep 27.6.: 273 Entscheide,
+// in `abschnitte` UND `auszugAbschnitte` — beide laufen durch diesen Body). Der
+// bestehende Strip greift nur im Sachverhalt (sachverhalt.ts:entrausche). A1 löst
+// den Marker DISPLAY-FIRST (§3, kein Daten-Regen) aus dem Satzfluss und ERHÄLT die
+// Seitenzahl als dezenten, hochgestellten Marker (Default F2: zitierfähig, nicht
+// gelöscht). Idempotent: ohne Marker zeichenidentisch zu <NormText> — das
+// B2-Golden-Tor (VOLL-Body ohne Inline-Seitenmarker) bleibt grün, die 272 DE-BGE
+// driften nicht. Regex identisch zur Strip-Regel (sachverhalt.ts:27), Gruppe 1 =
+// die zu erhaltende Seitenangabe «S. 114».
+const KOLUMNENTITEL = /\bBGE\s+\d+\s+[IVXLCDM]+\s+\d+\s+(S\.\s*\d+)/g;
+// Endet der Text DIREKT VOR dem Kolumnentitel auf eine Entscheid-Zitierung
+// (BGE-Band oder BGer-Aktenzeichen)? Dann hat die Quelle den laufenden Titel
+// MITTEN in eine fremde Zitierung geschoben (Sweep 27.6.: 8 Auszüge, z.B.
+// 150_II_379: «(BGE 139 II 134 ‹BGE 150 II 379 S. 384› E. 5.2 …»). Den
+// Seiten-Marker dort hochgestellt zu ERHALTEN, hinge ihn als falsche Fundstelle
+// an die fremde Zitierung (§1). Erkennungsmuster = RECHTSPRECHUNG_IM_TEXT, am
+// Ende verankert.
+const ZITAT_AM_ENDE = /(?:BGE\s+\d+\s+(?:III|II|I(?:a|b)?|IV|V)\s+\d+|(?:BGer\s+)?\d[A-Z][._]\d+\/\d{4})\s*$/;
+
+function BodyText({ text }: { text: string }) {
+  // matchAll statt stateful exec/lastIndex (react-hooks/immutability: kein Mutieren
+  // des Modul-Regex in der Komponente; deterministisch, §2).
+  const treffer = [...text.matchAll(KOLUMNENTITEL)];
+  if (treffer.length === 0) return <NormText text={text} />;
+  const teile: React.ReactNode[] = [];
+  let zuletzt = 0;
+  for (const m of treffer) {
+    const vor = text.slice(zuletzt, m.index);
+    if (m.index > zuletzt) teile.push(<NormText key={`t${zuletzt}`} text={vor} />);
+    // Default F2 (David): Seitenzahl dezent ERHALTEN. Ausnahme (§1 > F2): steht der
+    // Marker direkt hinter einer Zitierung, würde er als falsche Fundstelle gelesen —
+    // dann den reinen Paginierungs-Marker STILL entfernen (wie im Sachverhalt,
+    // sachverhalt.ts:entrausche). Die Seitenzahl bleibt über die amtliche Quelle
+    // (massgebliche Fassung) erreichbar, die UI verliert nur das irreführende Artefakt.
+    if (!ZITAT_AM_ENDE.test(vor)) {
+      // ink-600 (nicht heller): eine hochgestellte, kleine Seitenangabe ist Text →
+      // WCAG ≥ 4.5:1 (ink-500 unterschreitet das laut Regeste-Box-Befund); `align-super`
+      // + native <sup>-Grösse machen sie optisch dezent, ohne die Lesbarkeit zu opfern.
+      teile.push(
+        <sup key={`s${m.index}`} className="num mx-0.5 align-super font-normal text-ink-600"
+          title="Seitenzahl der amtlichen Sammlung (BGE)">{m[1]}</sup>,
+      );
+    }
+    zuletzt = m.index + m[0].length;
+  }
+  if (zuletzt < text.length) teile.push(<NormText key={`t${zuletzt}`} text={text.slice(zuletzt)} />);
+  return <>{teile}</>;
+}
+
 function segmente(marke: string | null): number[] {
   const m = /(\d+(?:\.\d+)*)/.exec(marke ?? '');
   return m ? m[1].split('.').map(Number) : [];
@@ -72,7 +123,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           if (g.top === 0) {
             return (
               <div key={`roh-${gi}`} className="space-y-4">
-                {g.bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}
+                {g.bloecke.map((b, i) => <p key={i} className={ABSATZ}><BodyText text={b.text} /></p>)}
               </div>
             );
           }
@@ -84,7 +135,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
             <section key={g.top} className="mt-7 pt-5 border-t border-line first:mt-2 first:pt-0 first:border-0">
               <div id={kopfAnker} className="group scroll-mt-[7rem]">
                 <Ziffer label={`${g.top}.`} marke={`E. ${g.top}`} anker={kopfAnker} stark />
-                {kopf && <p className={`${ABSATZ} mt-1`}><NormText text={kopf.text} /></p>}
+                {kopf && <p className={`${ABSATZ} mt-1`}><BodyText text={kopf.text} /></p>}
               </div>
               {subs.map((b, i) => {
                 const ein = Math.max(0, (b.tiefe ?? segmente(b.marke).length) - 1); // Tiefe 1 = bündig
@@ -93,7 +144,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
                   <div key={i} id={anker} className="group scroll-mt-[7rem] mt-4 border-l border-line/70 pl-4"
                     style={ein > 1 ? { marginLeft: `${(ein - 1)}rem` } : undefined}>
                     {b.marke && <Ziffer label={b.marke.replace(/^E\.\s*/, '')} marke={b.marke} anker={anker} stark={false} />}
-                    <p className={ABSATZ}><NormText text={b.text} /></p>
+                    <p className={ABSATZ}><BodyText text={b.text} /></p>
                   </div>
                 );
               })}
@@ -107,14 +158,14 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   function Dispositiv({ bloecke }: { bloecke: EntscheidBlock[] }) {
     const nummeriert = bloecke.filter((b) => b.marke);
     const schluss = bloecke.filter((b) => !b.marke);
-    if (!nummeriert.length) return <>{bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</>;
+    if (!nummeriert.length) return <>{bloecke.map((b, i) => <p key={i} className={ABSATZ}><BodyText text={b.text} /></p>)}</>;
     return (
       <>
         <ol className="space-y-3">
           {nummeriert.map((b, i) => (
             <li key={i} className="grid grid-cols-[1.7rem_minmax(0,1fr)] gap-x-2">
               <span className="num tabular-nums font-semibold text-ink-700">{b.marke}</span>
-              <p className="font-serif text-[length:var(--rsp-fs,1.05rem)] leading-[1.65] text-ink-800 whitespace-pre-line"><NormText text={b.text} /></p>
+              <p className="font-serif text-[length:var(--rsp-fs,1.05rem)] leading-[1.65] text-ink-800 whitespace-pre-line"><BodyText text={b.text} /></p>
             </li>
           ))}
         </ol>
@@ -139,12 +190,12 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           if (!b.text.trim()) return null;
           if (!b.marke) {
             if (/^[A-ZÄÖÜ]\.$/.test(b.text.trim())) return null;
-            return <p key={i} className={ABSATZ}><NormText text={b.text} /></p>;
+            return <p key={i} className={ABSATZ}><BodyText text={b.text} /></p>;
           }
           return (
             <p key={i} className={ABSATZ}>
               <span className="num mr-1.5 font-semibold text-ink-900">{b.marke}</span>
-              <NormText text={b.text} />
+              <BodyText text={b.text} />
             </p>
           );
         })}
@@ -165,7 +216,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
             ? <Dispositiv bloecke={a.bloecke} />
             : a.typ === 'sachverhalt'
               ? <Sachverhalt bloecke={a.bloecke} />
-              : <div className="space-y-4">{a.bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</div>}
+              : <div className="space-y-4">{a.bloecke.map((b, i) => <p key={i} className={ABSATZ}><BodyText text={b.text} /></p>)}</div>}
       </section>
     );
   }

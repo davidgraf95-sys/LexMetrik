@@ -12,11 +12,16 @@
       "bgeReferenz": "152 II 98",
       "zitierung": "BGE 152 II 98",
       "datum": "2025-08-14",
-      "sprache": "de",
+      "sprache": "fr",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "sozial-abgaben",
       "legalArea": null,
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Mmes et MM. les Juges fédéraux Moser-Szeless, Présidente, Stadelmann, Parrino, Beusch et Bollinger. Greffier: M. Feller",
+        "parteien": "A.A.________, recourant, contre Administration cantonale des impôts du canton de Vaud, route de Berne 46, 1014 Lausanne, intimée, B.A.________",
+        "gegenstand": "Impôts cantonaux et communaux du canton de Vaud et impôt fédéral direct, période fiscale 2014",
+        "vorinstanz": "Tribunal cantonal du canton de Vaud du 8 juillet 2024"
+      },
       "regeste": {
         "text": "Art. 127 Abs. 1 und 2 BV; Art. 7 Abs. 1, Art. 8 und 40 Abs. 3 DBG; Art. 1 Abs. 3 und Art. 15 Abs. 3 StHG; Besteuerung einer natürlichen Person, deren Steuerpflicht sich während der Steuerperiode ändert; Aufteilung der Steuerperiode. Fall eines Steuerpflichtigen, der ursprünglich im Ausland wohnhaft war, aber wirtschaftlich mit der Schweiz verbunden ist (beschränkte Steuerpflicht), wo seine Ehefrau lebt, und im Laufe derselben Steuerperiode in die Schweiz umzieht (unbeschränkte Steuerpflicht). Art. 7 Abs. 1 DBG (Progressionsvorbehalt) ist unabhängig von der beschränkten oder unbeschränkten Steuerpflicht sowie von der Aufteilung oder Nicht-Aufteilung der Steuerperiode auf Personen, die dem ordentlichen Veranlagungsverfahren unterliegen, anwendbar (E. 7.2 und 9.1.3). Die Aufteilung der Steuerperiode und damit die Anwendung von Art. 40 Abs. 3 DBG (Annualisierung periodischer Einkünfte) ermöglicht eine bessere Gewährleistung der Grundsätze der Gesetzmässigkeit, der Gleichbehandlung und der Besteuerung nach der wirtschaftlichen Leistungsfähigkeit (E. 9.3.1-9.3.3). Durch die Aufteilung der Steuerperiode kann im internationalen Verhältnis das Risiko einer Unter- oder Überbesteuerung vermieden werden (E. 9.4.2).",
         "quelle": "opencaselaw"
@@ -25,11 +30,22 @@
       "abschnitte": [
         {
           "typ": "sachverhalt",
-          "vollstaendig": false,
+          "vollstaendig": true,
           "bloecke": [
             {
-              "marke": null,
-              "text": "A. A.a. B.A.________ et A.A.________, alors mariés et copropriétaires depuis les années 2000 d'un bien immobilier situé dans le canton de Vaud, ont formellement annoncé leur arrivée dans la commune de U.________ respectivement le 18 août 2011 et le 1er mars 2014. A.A.________ était inscrit en résidence principale en France jusqu'au 28 février 2014. A.b. Le 8 Juin 2015, B.A.________ et A.A.________ ont déposé leur déclaration d'impôt relative à la période fiscale 2014 auprès de l'Office d'impôt de C.________ (ci-après: l'Office). Par décision du 24 décembre 2015, l'Office a taxé les époux pour la période fiscale 2014 en arrêtant leur revenu imposable à 154'500 fr. au taux de 294'300 fr., à titre de l'impôt fédéral direct (IFD), et à 155'400 fr. au taux de 123'400 fr. à titre de l'impôt cantonal et communal (ICC). A.c. Le 5 janvier 2016, B.A.________ et A.A.________ ont formé une réclamation contre la décision de taxation du 24 décembre 2015. L'Administration cantonale des impôts du cant"
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. B.A.________ et A.A.________, alors mariés et copropriétaires depuis les années 2000 d'un bien immobilier situé dans le canton de Vaud, ont formellement annoncé leur arrivée dans la commune de U.________ respectivement le 18 août 2011 et le 1er mars 2014. A.A.________ était inscrit en résidence principale en France jusqu'au 28 février 2014. A.b. Le 8 Juin 2015, B.A.________ et A.A.________ ont déposé leur déclaration d'impôt relative à la période fiscale 2014 auprès de l'Office d'impôt de C.________ (ci-après: l'Office). Par décision du 24 décembre 2015, l'Office a taxé les époux pour la période fiscale 2014 en arrêtant leur revenu imposable à 154'500 fr. au taux de 294'300 fr., à titre de l'impôt fédéral direct (IFD), et à 155'400 fr. au taux de 123'400 fr. à titre de l'impôt cantonal et communal (ICC). A.c. Le 5 janvier 2016, B.A.________ et A.A.________ ont formé une réclamation contre la décision de taxation du 24 décembre 2015. L'Administration cantonale des impôts du canton de Vaud (ci-après: l'ACI) l'a rejetée par décision sur réclamation du 8 septembre 2023."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Par arrêt du 8 juillet 2024, la Cour de droit administratif et public du Tribunal cantonal du canton de Vaud (ci-après: la CDAP) a rejeté le recours déposé le 2 octobre 2023 par A.A.________ contre cette décision."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.A.________ (ci-après: le contribuable) interjette un recours en matière de droit public contre cet arrêt. Il requiert préalablement \"qu'il soit débattu et statué publiquement en séance\" dans la présente cause. Principalement, il demande le renvoi de la cause à l'ACI pour qu'elle détermine à nouveau le montant de l'impôt pour l'année 2014 sur la base de la circulaire n° 30 de l'Administration fédérale des contributions (ci-après: l'AFC) du 21 décembre 2010 sur l'imposition des époux et de la famille selon la loi fédérale sur l'impôt fédéral direct (ci-après: la circulaire n° 30). Il demande, en substance, que le montant de l'impôt soit calculé séparément pour lui-même et son ex-épouse et que l'année fiscale 2014 soit scindée en deux périodes de taxation, soit du 1er janvier jusqu'au 28 février 2014 et du 1er mars jusqu'au 31 décembre 2014. Il conclut, en particulier, à ce que son ex-épouse soit imposée sur un montant égal à la moitié de la valeur locative aux taux de 98'529 fr. (salaires français, 86'604 euros) pour la première période et de 161'994 fr. (salaires et indemnités de chômage perçus en Suisse) pour la deuxième période. Il requiert, en outre, qu'il soit lui-même imposé sur la moitié de la valeur locative au taux de 98'529 fr. pour la première période, et sur un montant imposable de 161'994 fr. au taux de 194'393 fr., correspondant à l'annualisation de 161'994 fr. (divisé par dix, fois douze). Subsidiairement, il conclut au renvoi de la cause à la CDAP pour nouvelle décision. B.A.________ s'est déterminée en se limitant à exposer sa situation personnelle. L'ACI et l'AFC concluent au rejet du recours. Par courrier daté du 21 octobre 2024, A.A.________ a requis la production des deux pièces mentionnées dans la cause FI.2022.0151 ayant fait l'objet d'un arrêt de la CDAP rendu le 1er juin 2023. Il s'est encore ultérieurement déterminé sur la réponse de son ex-épouse et de l'ACI en confirmant ses conclusions."
             }
           ]
         },
@@ -363,7 +379,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-II-98%3Ade&lang=de&zoom=&type=show_document",
       "abgerufen": "2026-06-26",
       "fassungsToken": "e63d00083b84bde45122c806cb0ca016a255c6e4fce1815a970e35f1a5d05e51",
-      "sha": "cdad7e0cbe5e5feb2660c932dc819640631781bd9ff4a04f7d19714b4ec0e70c",
+      "sha": "69d8224977cbd69eb0e17f228668bcc6f39bcd2d8430485ea3aaf96933ab791f",
       "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
