@@ -329,3 +329,46 @@ Falls dieses Dokument später formalisiert/erweitert wird, diese Abschnitte:
 - **Offen/bewusst später:** Dispositiv-Liste (sichere Split-Heuristik), Sachverhalt-
   Sublabel-Absätze, Status-/Treatment-Farben (R16), Reader-Steuerung (R17), Facetten-
   Trefferzahlen + CH-Datumsformat im Filter (R15), Datums-Plausibilität (1 GR-Zukunftsdatum).
+
+## Verbindliche Regeln: nicht amtlich publizierte Urteile (A3, Stand 27.6.2026)
+
+> **Status (§8):** verbindliche Darstellungs-Konvention, von David freigegeben
+> (F5, JETZT-MACHEN §4.5). Fachliche Einzelabnahme der Inhalte bleibt offen
+> (`verifiziert:false` / `kuratierung:'maschinell'`), Abnahme-Zeitsperre bis
+> 1.12.2026. Ein «nicht amtlich publiziertes Urteil» = jeder Entscheid mit
+> `leitcharakter !== 'leitentscheid'` (kein amtlicher BGE-Sammlungs-Auszug).
+
+1. **Identische Voll-Urteil-Struktur** wie beim Leitentscheid-Volltext: derselbe
+   Reader/`EntscheidBody` (Kopf-Block aus `kopfModell`, gegliederter Sachverhalt
+   A./B./C., E.-Erwägungen, Dispositiv). Fehlt der Quelle Struktur (kantonal:
+   `/structure` ist Bund-only), greift der ehrliche Fliesstext-Fallback mit
+   sichtbarem §8-Hinweis — die **Vorlage** bleibt identisch, nur die Datentiefe
+   variiert. *Andock:* `EntscheidLeser.tsx`, `EntscheidBody.tsx`, `kopf.ts`.
+2. **Kein Auszug/Volltext-Umschalter** — es gibt keinen amtlichen Auszug → direkt
+   Volltext. Der Tab-Umschalter erscheint ausschliesslich beim BGE mit Volltext
+   (`switcherSichtbar = gericht==='bge' && hatAuszug`). *Andock:* `EntscheidLeser.tsx`.
+3. **Regeste-Box nur bei amtlicher Regeste** (`regesteAmtlich`); sonst Überschrift
+   «Zusammenfassung» + `maschinell`-Marker, nie als «Regeste» etikettiert.
+   *Andock:* `EntscheidLeser.tsx` (Box-Label), `EntscheidZeile.tsx` («ohne amtl.
+   Regeste»).
+4. **Kein «Leitentscheid (BGE)»-Badge** → neutrale Identitäts-Kennung
+   (Gericht · Abteilung · Sachgebiet, «Urteil vom <Datum>»). Das Badge hängt
+   strikt an `leitcharakter==='leitentscheid'`. *Andock:* `EntscheidLeser.tsx`.
+5. **Übersicht: eigene Voll-Urteil-Zeile, GRUPPIERT UNTER IHRER INSTANZ**
+   (`gerichtstyp`: Bundesgericht → Bundesverwaltungs-/Bundesstrafgericht →
+   Bundespatentgericht → Kantonale Gerichte; feste Reihenfolge, nur belegte
+   Gruppen). Die **«verweis»-Karte** (vollständiges Urteil zu einem BGE) bleibt
+   der **BGE-Auszug→Volltext-Brücke** vorbehalten und erscheint in der eigenen
+   Sektion «Vollständige Urteile zu den Leitentscheiden», nie unter «Weitere».
+   *Andock:* `browse.ts` (`gruppiereNachInstanz`, `istVolltextVerweis`),
+   `Rechtsprechung.tsx`. *Tor:* `rechtsprechung-browse.test.ts`.
+6. **Status-Marker bis Davids Abnahme:** `kuratierung:'maschinell'` (UI:
+   «ungeprüft»/«maschinell erfasst»), `verifiziert:false`; massgeblich bleibt die
+   amtliche Quelle (Live-Link je Entscheid). *Andock:* `entscheide-schreiben.ts`,
+   `register.ts`, `EntscheidLeser.tsx`, `EntscheidZeile.tsx`.
+
+**Maschinell geprüft (§13/E1):** Regel 4/6 (Badge/Marker an `leitcharakter` bzw.
+`kuratierung`) sind im Render an genau diese Felder gebunden; Regel 5
+(Instanz-Gruppierung, verweis-Reservierung) ist in `rechtsprechung-browse.test.ts`
+festgenagelt; das B2-Konsistenz-Tor (`entscheid-konsistenz.test.tsx`) sichert
+Regel 1/3 je (Gericht × Sprache).

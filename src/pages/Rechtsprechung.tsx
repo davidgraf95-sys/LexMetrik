@@ -7,7 +7,7 @@ import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
 import { SachgebietKacheln } from '../components/rechtsprechung/SachgebietKacheln';
 import { LiveSuche } from '../components/rechtsprechung/LiveSuche';
 import {
-  ladeEntscheidManifest, filterEntscheide, sortiere, gruppiereNachLeit,
+  ladeEntscheidManifest, filterEntscheide, sortiere, gruppiereNachLeit, gruppiereNachInstanz,
   zaehleSachgebiete, normLabel,
   type EntscheidFilterWerte, type SortModus,
 } from '../lib/rechtsprechung/browse';
@@ -228,7 +228,21 @@ export function Rechtsprechung() {
                 {gruppen.volltexte.length > 0 && (
                   <Sektion titel="Vollständige Urteile zu den Leitentscheiden" liste={gruppen.volltexte} dichte={dichte} onNorm={waehleNorm} />
                 )}
-                <Sektion titel="Weitere Entscheide (nicht amtlich publiziert)" liste={gruppen.weitere} dichte={dichte} onNorm={waehleNorm} />
+                {/* A3-Regel 5: nicht amtlich publizierte Urteile als eigene Voll-Urteil-
+                    Zeilen, GRUPPIERT UNTER IHRER INSTANZ (gerichtstyp). Die «verweis»-
+                    Karte bleibt der BGE-Auszug→Volltext-Brücke vorbehalten (oben). */}
+                {gruppen.weitere.length > 0 && (
+                  <div className="space-y-6">
+                    <h2 className="lc-overline text-ink-500 flex items-center gap-3">
+                      Weitere Entscheide — nicht amtlich publiziert
+                      <span className="num text-ink-500">{gruppen.weitere.length}</span>
+                      <span aria-hidden className="h-px flex-1 bg-line" />
+                    </h2>
+                    {gruppiereNachInstanz(gruppen.weitere).map((g) => (
+                      <Sektion key={g.typ} titel={g.label} liste={g.liste} dichte={dichte} onNorm={waehleNorm} />
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />

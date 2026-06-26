@@ -5,7 +5,7 @@
 // Reine Ladeschicht (§3) — kein Inhalt erzeugt.
 
 import type { EntscheidManifest, BrowseEntscheid } from './register';
-import type { EntscheidSnapshot, EntscheidSnapshotDatei } from './typen';
+import type { EntscheidSnapshot, EntscheidSnapshotDatei, Gerichtstyp } from './typen';
 import { GEBIETE, GEBIET_LABEL, type Rechtsgebiet } from '../normtext/register';
 
 // ── Manifest (einmal, gecacht als laufende Promise) ──────────────────────────
@@ -284,6 +284,28 @@ export function gruppiereNachLeit(liste: BrowseEntscheid[]): {
     volltexte: liste.filter((e) => istVolltextVerweis(e)),
     weitere: liste.filter((e) => !istVolltextVerweis(e) && e.leitcharakter !== 'leitentscheid'),
   };
+}
+
+/** Feste Instanz-Reihenfolge + Labels für die Übersichts-Gruppierung (A3-Regel 5). */
+const INSTANZ_ORDNUNG: { typ: Gerichtstyp; label: string }[] = [
+  { typ: 'bundesgericht', label: 'Bundesgericht' },
+  { typ: 'bundesverwaltungsgericht', label: 'Bundesverwaltungsgericht' },
+  { typ: 'bundesstrafgericht', label: 'Bundesstrafgericht' },
+  { typ: 'bundespatentgericht', label: 'Bundespatentgericht' },
+  { typ: 'kantonal', label: 'Kantonale Gerichte' },
+];
+
+/**
+ * A3-Regel 5: nicht amtlich publizierte Urteile nach ihrer INSTANZ (gerichtstyp)
+ * gruppieren — feste Reihenfolge (Bund vor Kanton), nur belegte Gruppen, stabile
+ * Eingangsreihenfolge je Gruppe. Reine Anordnung (§3), keine Filterlogik.
+ */
+export function gruppiereNachInstanz(liste: BrowseEntscheid[]): {
+  typ: Gerichtstyp; label: string; liste: BrowseEntscheid[];
+}[] {
+  return INSTANZ_ORDNUNG
+    .map(({ typ, label }) => ({ typ, label, liste: liste.filter((e) => e.gerichtstyp === typ) }))
+    .filter((g) => g.liste.length > 0);
 }
 
 // ── Aggregate für die Navigation (Rail-Zähler, Norm-Häufigkeit) ──────────────
