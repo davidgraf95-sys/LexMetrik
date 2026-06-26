@@ -48,6 +48,50 @@ verbotene Datei berührt.
 - Maschinell kuratiert, **fachliche Abnahme David offen** (Zeitsperre bis 1.12.2026).
   Deploy gesperrt — gebündelte §9-Freigabe am Ende.
 
+## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 1: A1 + A2 + A3 (Worktree, nicht deployt)
+
+«jetzt machen» — die drei Schritte A1→A2→A3 seriell (teilen Dateien), §12-isoliert
+im Worktree, abgebrancht vom main mit B2-Tor + B1-Sweep. F5 (6 Regeln) von David
+bestätigt. Gate vorher + nach jedem Schritt + am Schluss GRÜN, golden:vergleich
+byte-gleich, DE-BGE driften NICHT. Drei getrennte Commits (A1/A2/A3). Nicht deployt.
+- **A1 — BGE-Seitenmarker display-first aus dem Satzfluss gelöst**
+  (`EntscheidBody.tsx`): der Inline-Kolumnentitel «BGE … S. ###» (B1: 273 Entscheide
+  in `abschnitte` UND `auszugAbschnitte`) wird im Render herausgelöst und als
+  dezenter, hochgestellter Seiten-Marker ERHALTEN (Default F2, `text-ink-600`/WCAG).
+  Idempotent (ohne Marker zeichenidentisch zu `<NormText>`) → B2-Tor bleibt grün.
+  §1-Ausnahme: steht der Marker hinter einer fremden Zitierung (8 Auszüge), wird der
+  Paginierungs-Marker still entfernt (sonst falsche Fundstelle). Adversariale Render-
+  Sonde über den ganzen Korpus: **0 verbleibende Inline-Marker, 2269 erhaltene
+  Seiten-Marker**. Visuell (hell/mobil) bestätigt: dezentes `ˢ·³⁷`.
+- **A2 — Mehrsprachige Extraktion (FR/IT) + Sprach-Label aus dem Body**
+  (`adapter-entscheide.ts`, `sachverhalt.ts`): vier FR-Leitentscheide trugen
+  fälschlich `sprache:'de'` (Body aus dem fr-aza-Urteil, Sprache aus dem 'bge'-Record
+  kopiert). Fix: Sachverhalt-/Rubrum-Marker mehrsprachig (Faits/Composition/
+  Participants/Objet/recours…contre + it), `spracheAusBody()`-Detektor (über 327
+  Bodies verifiziert: 323 de / 4 fr / 0 it, kein DE-Fehlklassifikat), Top-/Sub-Marker-
+  Lookahead um Latin-1-Akzent-Grossbuchstaben erweitert (A./B./C. bei «À/É…»).
+  Nur die **4 FR regeneriert** (datum=Korpus-Datum → kein DE-Drift; register.json nur
+  sprache de→fr, norm-index inhaltsgleich, KEIN anderes Snapshot-File berührt). Alle 4
+  jetzt `sprache:'fr'`, Kopf-Block + A./B./C.-Gliederung (152_II_75 nur Teil-Rubrum:
+  label-loses fr-Format → TODO(David)). **B2-Golden §6.3 deklariert gehoben**: fr-Zelle
+  (152_I_105) trägt die korrekten Werte, de-Zelle byte-stabil. Adversarial: A1-Sweep
+  post-A2 = 0 Leaks, check:entscheide OK. Visuell: FR-Kopf-Block (Objet/Parties/
+  Autorité/Composition) + A./B./C. bestätigt.
+- **A3 — Verbindliche Regeln für nicht-amtlich publizierte Urteile (F5 ✓)**:
+  Reader/Reihenfolge waren schon konform (Regel 1–4,6: gleicher `EntscheidBody`,
+  kein Auszug-Umschalter, Regeste→«Zusammenfassung», kein Leit-Badge, `maschinell`).
+  **Regel 5 umgesetzt** (`browse.ts` `gruppiereNachInstanz` + `Rechtsprechung.tsx`):
+  nicht-amtliche Urteile als eigene Voll-Urteil-Zeilen GRUPPIERT UNTER IHRER INSTANZ
+  (Bundesgericht→…→Kantonale Gerichte), «verweis»-Karte bleibt der BGE→Volltext-
+  Brücke vorbehalten. Tor: 2 neue Fälle in `rechtsprechung-browse.test.ts`. **Regeln
+  verbindlich dokumentiert** in `DESIGN-REGLEMENT-RECHTSPRECHUNG.md` (Abschnitt
+  «Verbindliche Regeln: nicht amtlich publizierte Urteile», mit Andockpunkten +
+  Tor-Verweisen). Visuell (Reader + Übersicht) bestätigt.
+- **Offen / TODO(David):** fachliche Einzelabnahme aller 4 FR + der A3-Inhalte
+  (`verifiziert:false`); voll-Rubrum des label-losen fr-Formats (152_II_75); IT-Bodies
+  0 im Korpus (Pfad nicht regressiv, aber unbelegt); kantonaler PDF-Superscript-Glue
+  (`AG/HOR_2024_19`, B1-Klasse C/D) bleibt A1-Folge. Deploy = Davids Entscheid.
+
 ## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 1: B2 (Konsistenz-Tor) + B1 (Render-Noise-Sweep) (Worktree, nicht deployt)
 
 «jetzt machen» — nur die ersten zwei Schritte B2+B1 von Lane R Batch 1 (A1/A2/A3

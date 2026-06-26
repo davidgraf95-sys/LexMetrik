@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   themaText, regesteLeitsatz, synthThema, istSynth, normLabel, istBge, hauptIdentitaet,
-  nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit,
+  nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit, gruppiereNachInstanz,
   zaehleSachgebiete, normHaeufigkeit, filterEntscheide, filterNachNorm,
 } from '../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
@@ -132,6 +132,25 @@ describe('gruppiereNachLeit', () => {
     ]);
     expect(g.leitentscheide.map((e) => e.key)).toEqual(['l1', 'l2']);
     expect(g.weitere.map((e) => e.key)).toEqual(['r1']);
+  });
+});
+
+describe('gruppiereNachInstanz (A3-Regel 5)', () => {
+  it('gruppiert nach Instanz, Bund vor Kanton, nur belegte Gruppen, stabil', () => {
+    const g = gruppiereNachInstanz([
+      be({ key: 'k1', gerichtstyp: 'kantonal', kanton: 'ZH' }),
+      be({ key: 'b1', gerichtstyp: 'bundesgericht' }),
+      be({ key: 'k2', gerichtstyp: 'kantonal', kanton: 'BE' }),
+      be({ key: 'b2', gerichtstyp: 'bundesgericht' }),
+    ]);
+    expect(g.map((x) => x.typ)).toEqual(['bundesgericht', 'kantonal']);
+    expect(g.find((x) => x.typ === 'bundesgericht')?.liste.map((e) => e.key)).toEqual(['b1', 'b2']);
+    expect(g.find((x) => x.typ === 'kantonal')?.liste.map((e) => e.key)).toEqual(['k1', 'k2']);
+    expect(g.find((x) => x.typ === 'kantonal')?.label).toBe('Kantonale Gerichte');
+  });
+  it('lässt unbelegte Instanzen weg', () => {
+    const g = gruppiereNachInstanz([be({ gerichtstyp: 'bundesgericht' })]);
+    expect(g.map((x) => x.typ)).toEqual(['bundesgericht']);
   });
 });
 
