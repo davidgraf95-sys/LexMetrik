@@ -1,5 +1,5 @@
 import type { EntscheidFilterWerte, SortModus } from '../../lib/rechtsprechung/browse';
-import { normLabel } from '../../lib/rechtsprechung/browse';
+import { normLabel, filterEntscheide } from '../../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
@@ -60,8 +60,14 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   // widerspricht der Dropdown-Zähler dem Ergebnis-Counter (echtAnzahl, !e.verweis),
   // symmetrisch zur hausweiten Verweis-Ausnahme (zaehleSachgebiete/normHaeufigkeit).
   const gerichtN = (id: string) => bestand.filter((e) => !e.verweis && e.gericht === id).length;
-  // Trefferzahl je Facetten-Option (Verweis-Einträge ausgenommen, hausweite Konvention).
-  const echteN = (pred: (e: BrowseEntscheid) => boolean) => bestand.filter((e) => !e.verweis && pred(e)).length;
+  // Cross-gefilterte Facetten-Zähler (konsistent mit der Sachgebiets-Rail, R15): je
+  // Achse die Resttreffer-Zahl über den Bestand MIT allen anderen aktiven Filtern, aber
+  // OHNE die eigene Achse — so zeigt jeder Chip seine echte Menge, und Null-Optionen
+  // werden ausgeblendet (kein Null-Treffer-Klick). Verweis-Einträge nie mitzählen.
+  const zaehle = (basis: BrowseEntscheid[], pred: (e: BrowseEntscheid) => boolean) =>
+    basis.filter((e) => !e.verweis && pred(e)).length;
+  const gwBasis = filterEntscheide(bestand, { ...werte, ebene: null, kanton: null });
+  const sprBasis = filterEntscheide(bestand, { ...werte, sprache: null });
 
   // ── Gemeinwesen-Achse (Auftrag 4): Bund/Kanton + Kanton-Drilldown als sichtbare
   //    Toggle-Chips. Ersetzt das frühere Ebene-Segment UND den Kanton-Select — EINE
@@ -73,32 +79,32 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   const hatKantonal = echteKantone.length > 0;
   const gwAlle = () => setze({ ebene: null, kanton: null });
   const gemeinwesenOpt = [
-    { id: 'alle', text: 'Alle', n: echteN(() => true), aktiv: !werte.ebene && !werte.kanton, waehle: gwAlle },
-    { id: 'bund', text: 'Bund', n: echteN((e) => e.kanton === 'CH'),
+    { id: 'alle', text: 'Alle', n: zaehle(gwBasis, () => true), aktiv: !werte.ebene && !werte.kanton, waehle: gwAlle },
+    { id: 'bund', text: 'Bund', n: zaehle(gwBasis, (e) => e.kanton === 'CH'),
       aktiv: werte.ebene === 'bund',
       waehle: () => (werte.ebene === 'bund' ? gwAlle() : setze({ ebene: 'bund', kanton: null })) },
     ...(hatKantonal ? [
-      { id: 'kantone', text: 'Kantone', n: echteN((e) => e.kanton !== 'CH'),
+      { id: 'kantone', text: 'Kantone', n: zaehle(gwBasis, (e) => e.kanton !== 'CH'),
         aktiv: werte.ebene === 'kanton',
         waehle: () => (werte.ebene === 'kanton' ? gwAlle() : setze({ ebene: 'kanton', kanton: null })) },
       ...echteKantone.map((k) => ({
-        id: k, text: k, n: echteN((e) => e.kanton === k), aktiv: werte.kanton === k,
+        id: k, text: k, n: zaehle(gwBasis, (e) => e.kanton === k), aktiv: werte.kanton === k,
         waehle: () => (werte.kanton === k ? gwAlle() : setze({ kanton: k, ebene: null })),
       })),
     ] : []),
-  ];
+  ].filter((o) => o.id === 'alle' || o.n > 0 || o.aktiv); // Null-Optionen aus (ausser aktiv)
 
   // ── Sprache-Achse (Auftrag 8): seit A2 gibt es echte FR-Entscheide → die Sprache
   //    aus dem vergrabenen <details>-Select in dieselbe Facetten-Leiste hochgezogen
-  //    (eine kohärente Leiste, nicht zwei konkurrierende). Toggle wie Gemeinwesen.
+  //    (eine kohärente Leiste, nicht zwei konkurrierende). Toggle + Null-Prune wie oben.
   const hatMehrsprachig = sprachen.length > 1;
   const spracheOpt = [
-    { id: 'alle', text: 'Alle', n: echteN(() => true), aktiv: !werte.sprache, waehle: () => setze({ sprache: null }) },
+    { id: 'alle', text: 'Alle', n: zaehle(sprBasis, () => true), aktiv: !werte.sprache, waehle: () => setze({ sprache: null }) },
     ...sprachen.map((s) => ({
-      id: s, text: SPRACH_LABEL[s] ?? s, n: echteN((e) => e.sprache === s), aktiv: werte.sprache === s,
+      id: s, text: SPRACH_LABEL[s] ?? s, n: zaehle(sprBasis, (e) => e.sprache === s), aktiv: werte.sprache === s,
       waehle: () => (werte.sprache === s ? setze({ sprache: null }) : setze({ sprache: s })),
     })),
-  ];
+  ].filter((o) => o.id === 'alle' || o.n > 0 || o.aktiv);
 
   // Aktive Sekundärfilter (ohne Sachgebiet — das zeigt die Rail) als entfernbare Chips.
   const aktiveChips: { key: string; label: string; loesche: () => void }[] = [];
@@ -153,8 +159,8 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
 
       {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»,
           Auftrag 8 «Sprache»), statt im <details> vergraben. Trefferzahl je Chip (R15). */}
-      {hatKantonal && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
-      {hatMehrsprachig && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
+      {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
+      {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
 
       {/* Sekundärfilter — standardmässig zu (Inhalt steht oben, nicht der Filter). */}
       <details className="lc-card px-4 py-2.5">
