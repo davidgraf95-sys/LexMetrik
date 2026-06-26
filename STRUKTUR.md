@@ -22,6 +22,22 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — Leitentscheid≠Urteil-Darstellung + getrennte Übersicht + Abdeckung (deployt)
+
+Auftrag David (Folge-Schärfung): Leitentscheid anders darstellen als das vollständige
+Urteil; mehr BGE umschaltbar; Übersicht trennt beide. Geplant + 2× adversarialer
+Bug-Check (ultracode), integriert implementiert.
+- **Abdeckung:** aza-Extraktion mehrsprachig (vom|du|del) + verbundene Verfahren (erstes Az.)
+  + sprachunabhängiger Abruf → Volltext-Rate **90→97 %** (fr/it/verbundene BGE jetzt umschaltbar).
+- **Detail-Ansicht-Weiche:** Leitentscheid (Regeste-forward, «massgebliche Fassung»→BGE) vs.
+  Vollständiges Urteil (Rubrum/Gegenstand/Parteien, keine Regeste, →Urteil). Default folgt
+  Klick-Herkunft via `?ansicht=voll`-Deep-Link. Sticky-Fix (Tabs+Sprungleiste ein Block).
+- **Übersicht:** getrennte Einträge Leitentscheid (BGE-Nr) + vollständiges Urteil (aza-Nr) via
+  Verweis-Manifest (datei:null, Deep-Link, keine Doppelzählung); dritte Sektion.
+- **Datenkontrakt** `azaUrteil.quelleUrl` (Generator + gate-Tor). Bug-Check-Fixes:
+  massgeblichFehlt nur BGE; Sachverhalt ohne leere Marker-Blöcke; Gate Verweis-Invarianten.
+- Korpus 588 Manifest (272 BGE + 261 Volltext-Verweise + 55 routine), 22 MB. Abnahme David: offen.
+
 ## Session 26.6.2026 — Echte Leitentscheide (amtliche BGE) + Volltext-Umschalter (deployt)
 
 Auftrag David: «Leitentscheid» soll nur heissen, was das Bundesgericht amtlich
