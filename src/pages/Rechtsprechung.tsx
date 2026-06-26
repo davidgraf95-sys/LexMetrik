@@ -201,23 +201,13 @@ export function Rechtsprechung() {
               </div>
             )}
 
-            {/* Treffer-Zähler + Ebene-Segment (klare Trennung Bund ↔ Kantone, Auftrag David). */}
+            {/* Treffer-Zähler. Die Bund↔Kanton-Trennung (früher ein eigenes Ebene-
+                Segment, Auftrag David) liegt jetzt in der «Gemeinwesen»-Facetten-
+                Leiste der Filterzeile — eine kohärente Achse statt zweier Controls. */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-ink-500">
               <span><span className="num text-ink-700">{echtAnzahl}</span> {echtAnzahl === 1 ? 'Entscheid' : 'Entscheide'}</span>
               {leitAnzahl > 0 && <span>· <span className="num">{leitAnzahl}</span> Leitentscheide</span>}
               {volltextAnzahl > 0 && <span>· <span className="num">{volltextAnzahl}</span> Volltext-Verweise</span>}
-              <div className="ml-auto flex flex-wrap items-center gap-1.5">
-                {([['', 'Alle'], ['bund', 'Bundesgericht'], ['kanton', 'Kantone']] as const).map(([id, label]) => {
-                  const aktivE = (rest.ebene ?? '') === id;
-                  return (
-                    <button key={id || 'alle'} type="button" aria-pressed={aktivE}
-                      onClick={() => setRest({ ...rest, ebene: (id || null) as 'bund' | 'kanton' | null })}
-                      className={`lc-chip ${aktivE ? 'border-brass-400 text-brass-700' : ''}`}>
-                      {label}
-                    </button>
-                  );
-                })}
-              </div>
             </div>
 
             {gefiltert.length === 0 ? (
