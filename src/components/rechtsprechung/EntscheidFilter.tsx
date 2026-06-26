@@ -3,12 +3,12 @@ import { normLabel } from '../../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
-// Filterblock): EINE Toolbar-Zeile (Suche + Sortierung + Dichte) + ein
-// zugeklapptes <details> für Sekundärfilter (Kanton/Gericht/Sprache/Datum/
-// «nur Leitentscheide») + eine Reihe entfernbarer Aktiv-Filter-Chips, damit
-// nichts unsichtbar filtert. Das Sachgebiet steuert die Rail (Entdoppelung) —
-// hier kein Sachgebiet-Select. Reine Darstellung (§3); Filterung macht
-// filterEntscheide() im Eltern. Auswahllisten aus dem Bestand abgeleitet.
+// Filterblock): EINE Toolbar-Zeile (Suche + Sortierung + Dichte) + eine sichtbare
+// Facetten-Leiste (Gemeinwesen, Sprache) als Toggle-Chips mit Trefferzahl + ein
+// zugeklapptes <details> für die Langläufer (Gericht/Datum/«nur Leitentscheide»)
+// + eine Reihe entfernbarer Aktiv-Filter-Chips, damit nichts unsichtbar filtert.
+// Das Sachgebiet steuert die Rail (Entdoppelung) — hier kein Sachgebiet-Select.
+// Reine Darstellung (§3); Filterung macht filterEntscheide() im Eltern.
 
 const SPRACH_LABEL: Record<string, string> = { de: 'Deutsch', fr: 'Französisch', it: 'Italienisch', rm: 'Rätoromanisch' };
 const SORT_LABEL: Record<SortModus, string> = {
@@ -17,6 +17,26 @@ const SORT_LABEL: Record<SortModus, string> = {
 
 function einzigartig<T>(werte: T[]): T[] {
   return [...new Set(werte)];
+}
+
+/** Eine Facetten-Achse (Auftrag 4/8) als Toggle-Chips mit Trefferzahl (Reglement
+ *  R15: «Trefferzahl je Facette» gegen Null-Treffer-Klicks). Die primären Achsen
+ *  sichtbar in der Ergebnis-Spalte statt im zugeklappten <details>. Reine Anzeige (§3). */
+function FacettenGruppe({ label, optionen }: {
+  label: string;
+  optionen: { id: string; text: string; n: number; aktiv: boolean; waehle: () => void }[];
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+      <span className="lc-overline shrink-0 text-ink-500">{label}</span>
+      {optionen.map((o) => (
+        <button key={o.id} type="button" aria-pressed={o.aktiv} onClick={o.waehle}
+          className={`lc-chip ${o.aktiv ? 'border-brass-400 text-brass-700' : ''}`}>
+          {o.text}<span className="num ml-1.5 text-ink-500">{o.n}</span>
+        </button>
+      ))}
+    </div>
+  );
 }
 
 export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte, onDichte }: {
@@ -40,13 +60,40 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   // widerspricht der Dropdown-Zähler dem Ergebnis-Counter (echtAnzahl, !e.verweis),
   // symmetrisch zur hausweiten Verweis-Ausnahme (zaehleSachgebiete/normHaeufigkeit).
   const gerichtN = (id: string) => bestand.filter((e) => !e.verweis && e.gericht === id).length;
-  const kantonN = (k: string) => bestand.filter((e) => !e.verweis && e.kanton === k).length;
   const spracheN = (s: string) => bestand.filter((e) => !e.verweis && e.sprache === s).length;
+  // Trefferzahl je Facetten-Option (Verweis-Einträge ausgenommen, hausweite Konvention).
+  const echteN = (pred: (e: BrowseEntscheid) => boolean) => bestand.filter((e) => !e.verweis && pred(e)).length;
+
+  // ── Gemeinwesen-Achse (Auftrag 4): Bund/Kanton + Kanton-Drilldown als sichtbare
+  //    Toggle-Chips. Ersetzt das frühere Ebene-Segment UND den Kanton-Select — EINE
+  //    kohärente Achse statt zweier konkurrierender Controls. «Bund»/«Kantone» laufen
+  //    über die `ebene`-Achse, einzelne Kantone über `kanton`; ein aktiver Chip schaltet
+  //    auf «Alle» zurück (Toggle). Instanz (gerichtstyp) ist heute deckungsgleich mit
+  //    Bund/Kanton (nur 2 Werte) → erst mit Batch 3 (BVGer/BStGer/BPatGer) eigene Achse.
+  const echteKantone = kantone.filter((k) => k !== 'CH');
+  const hatKantonal = echteKantone.length > 0;
+  const gwAlle = () => setze({ ebene: null, kanton: null });
+  const gemeinwesenOpt = [
+    { id: 'alle', text: 'Alle', n: echteN(() => true), aktiv: !werte.ebene && !werte.kanton, waehle: gwAlle },
+    { id: 'bund', text: 'Bund', n: echteN((e) => e.kanton === 'CH'),
+      aktiv: werte.ebene === 'bund',
+      waehle: () => (werte.ebene === 'bund' ? gwAlle() : setze({ ebene: 'bund', kanton: null })) },
+    ...(hatKantonal ? [
+      { id: 'kantone', text: 'Kantone', n: echteN((e) => e.kanton !== 'CH'),
+        aktiv: werte.ebene === 'kanton',
+        waehle: () => (werte.ebene === 'kanton' ? gwAlle() : setze({ ebene: 'kanton', kanton: null })) },
+      ...echteKantone.map((k) => ({
+        id: k, text: k, n: echteN((e) => e.kanton === k), aktiv: werte.kanton === k,
+        waehle: () => (werte.kanton === k ? gwAlle() : setze({ kanton: k, ebene: null })),
+      })),
+    ] : []),
+  ];
 
   // Aktive Sekundärfilter (ohne Sachgebiet — das zeigt die Rail) als entfernbare Chips.
   const aktiveChips: { key: string; label: string; loesche: () => void }[] = [];
+  // Gemeinwesen (kanton/ebene) steht als sichtbare Facetten-Leiste mit Toggle —
+  // darum KEIN zusätzlicher Aktiv-Chip dafür (sonst doppelte Repräsentation).
   if (werte.norm) aktiveChips.push({ key: 'norm', label: `Norm: ${normLabel(werte.norm)}`, loesche: () => setze({ norm: null }) });
-  if (werte.kanton) aktiveChips.push({ key: 'kanton', label: `Kanton: ${werte.kanton === 'CH' ? 'Bund' : werte.kanton}`, loesche: () => setze({ kanton: null }) });
   if (werte.gericht) aktiveChips.push({ key: 'gericht', label: `Gericht: ${bestand.find((e) => e.gericht === werte.gericht)?.gerichtName ?? werte.gericht}`, loesche: () => setze({ gericht: null }) });
   if (werte.sprache) aktiveChips.push({ key: 'sprache', label: `Sprache: ${SPRACH_LABEL[werte.sprache] ?? werte.sprache}`, loesche: () => setze({ sprache: null }) });
   // F4 (JETZT-MACHEN §5): «nur Leitentscheide» und «nur BGE» wählten exakt dieselbe
@@ -94,20 +141,16 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
         </div>
       </div>
 
+      {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»),
+          statt im <details> vergraben. Trefferzahl je Chip (R15). */}
+      {hatKantonal && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
+
       {/* Sekundärfilter — standardmässig zu (Inhalt steht oben, nicht der Filter). */}
       <details className="lc-card px-4 py-2.5">
         <summary className="cursor-pointer select-none text-body-s font-medium text-brass-700">Erweiterte Filter</summary>
+        {/* Kanton/Bund steht jetzt als «Gemeinwesen»-Facetten-Leiste oben — hier nur
+            die Langläufer (Gericht, Datum). Sprache-Facette: s. Auftrag 8. */}
         <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-          {kantone.length > 1 && (
-            <label className="flex flex-col gap-1 text-xs text-ink-500">
-              <span>Kanton / Bund</span>
-              <select className="lc-input h-9 py-0 text-body-s" value={werte.kanton ?? ''}
-                onChange={(e) => setze({ kanton: e.target.value || null })}>
-                <option value="">Alle</option>
-                {kantone.map((k) => <option key={k} value={k}>{k === 'CH' ? 'Bund (CH)' : k} ({kantonN(k)})</option>)}
-              </select>
-            </label>
-          )}
           {gerichte.length > 1 && (
             <label className="flex flex-col gap-1 text-xs text-ink-500">
               <span>Gericht</span>
