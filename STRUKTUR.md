@@ -22,6 +22,25 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — BGer-Korpus-Ausbau 370→610 (Parallel-Session, deployt)
+
+Auftrag David: «zwischenzeitlich mehr Leitentscheide des Bundesgerichts scrapen»
+(während die UX-Session lief). §12-isoliert im Worktree
+`rechtsprechung-ausbau` ab `197bb37e`, nach Abschluss der UX-Session per FF in main.
+- **Generator-Rebuild (§7)** Court `bger` Citation-Graph: **610 Entscheide** =
+  580 Bund (**+240 Leitentscheide**) + 30 kantonal (gr/be/zh/sg/ag je 6 = Superset
+  gegen main, keine kantonale Löschung). `npm run entscheide -- --limit=580
+  --courts=… --kanton-pro=6`.
+- **`BUDGET_MB=20` ist der echte «sinnvoll»-Deckel** (nicht die Quelle): 1500 = 42.9 MB
+  rissen das Tor → bewusst auf 18.93 MB / 610 begrenzt, Deckel NICHT eigenmächtig
+  angehoben.
+- **Bug-Check grün:** gate (tsc/vitest/lint), `check:entscheide` (610, 18.93 MB,
+  5 nicht-fatale Warnungen), build prerendert **alle 610 Entscheid-Seiten, 0 übersprungen**;
+  kein App-Code mit hartcodierten Korpus-IDs.
+- §11-Doku `bibliothek/rechtsprechung/bger-korpus-ausbau-2026-06-26.md` + INDEX.
+- **OFFEN (David/Integrator):** amtliche BGE (`bge`, echte Regesten) vs. Zitiergraph-BGer
+  (`bger`, aktuell) vs. beides — Diskrepanz zur Stufe-1-Doku festgehalten.
+
 ## Session 26.6.2026 — UX-Punkteliste (20 Anweisungen David, autonom in Batches, deployt)
 
 Auftrag David: 20 mündliche UX-/Darstellungs-Anweisungen → Handlungsplan
