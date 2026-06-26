@@ -60,7 +60,6 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   // widerspricht der Dropdown-Zähler dem Ergebnis-Counter (echtAnzahl, !e.verweis),
   // symmetrisch zur hausweiten Verweis-Ausnahme (zaehleSachgebiete/normHaeufigkeit).
   const gerichtN = (id: string) => bestand.filter((e) => !e.verweis && e.gericht === id).length;
-  const spracheN = (s: string) => bestand.filter((e) => !e.verweis && e.sprache === s).length;
   // Trefferzahl je Facetten-Option (Verweis-Einträge ausgenommen, hausweite Konvention).
   const echteN = (pred: (e: BrowseEntscheid) => boolean) => bestand.filter((e) => !e.verweis && pred(e)).length;
 
@@ -89,13 +88,24 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
     ] : []),
   ];
 
+  // ── Sprache-Achse (Auftrag 8): seit A2 gibt es echte FR-Entscheide → die Sprache
+  //    aus dem vergrabenen <details>-Select in dieselbe Facetten-Leiste hochgezogen
+  //    (eine kohärente Leiste, nicht zwei konkurrierende). Toggle wie Gemeinwesen.
+  const hatMehrsprachig = sprachen.length > 1;
+  const spracheOpt = [
+    { id: 'alle', text: 'Alle', n: echteN(() => true), aktiv: !werte.sprache, waehle: () => setze({ sprache: null }) },
+    ...sprachen.map((s) => ({
+      id: s, text: SPRACH_LABEL[s] ?? s, n: echteN((e) => e.sprache === s), aktiv: werte.sprache === s,
+      waehle: () => (werte.sprache === s ? setze({ sprache: null }) : setze({ sprache: s })),
+    })),
+  ];
+
   // Aktive Sekundärfilter (ohne Sachgebiet — das zeigt die Rail) als entfernbare Chips.
   const aktiveChips: { key: string; label: string; loesche: () => void }[] = [];
   // Gemeinwesen (kanton/ebene) steht als sichtbare Facetten-Leiste mit Toggle —
   // darum KEIN zusätzlicher Aktiv-Chip dafür (sonst doppelte Repräsentation).
   if (werte.norm) aktiveChips.push({ key: 'norm', label: `Norm: ${normLabel(werte.norm)}`, loesche: () => setze({ norm: null }) });
   if (werte.gericht) aktiveChips.push({ key: 'gericht', label: `Gericht: ${bestand.find((e) => e.gericht === werte.gericht)?.gerichtName ?? werte.gericht}`, loesche: () => setze({ gericht: null }) });
-  if (werte.sprache) aktiveChips.push({ key: 'sprache', label: `Sprache: ${SPRACH_LABEL[werte.sprache] ?? werte.sprache}`, loesche: () => setze({ sprache: null }) });
   // F4 (JETZT-MACHEN §5): «nur Leitentscheide» und «nur BGE» wählten exakt dieselbe
   // Menge (am Korpus geprüft 272=272, 0 Divergenz) → zu EINEM sichtbaren Filter
   // zusammengeführt. Semantik trägt `leitcharakter`; der `nurBge`-Prädikat bleibt in
@@ -141,15 +151,16 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
         </div>
       </div>
 
-      {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»),
-          statt im <details> vergraben. Trefferzahl je Chip (R15). */}
+      {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»,
+          Auftrag 8 «Sprache»), statt im <details> vergraben. Trefferzahl je Chip (R15). */}
       {hatKantonal && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
+      {hatMehrsprachig && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
 
       {/* Sekundärfilter — standardmässig zu (Inhalt steht oben, nicht der Filter). */}
       <details className="lc-card px-4 py-2.5">
         <summary className="cursor-pointer select-none text-body-s font-medium text-brass-700">Erweiterte Filter</summary>
-        {/* Kanton/Bund steht jetzt als «Gemeinwesen»-Facetten-Leiste oben — hier nur
-            die Langläufer (Gericht, Datum). Sprache-Facette: s. Auftrag 8. */}
+        {/* Kanton/Bund («Gemeinwesen») und Sprache stehen jetzt als Facetten-Leiste
+            oben — hier nur die Langläufer (Gericht, Datum). */}
         <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
           {gerichte.length > 1 && (
             <label className="flex flex-col gap-1 text-xs text-ink-500">
@@ -158,16 +169,6 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
                 onChange={(e) => setze({ gericht: e.target.value || null })}>
                 <option value="">Alle</option>
                 {gerichte.map((g) => <option key={g.id} value={g.id}>{g.name} ({gerichtN(g.id)})</option>)}
-              </select>
-            </label>
-          )}
-          {sprachen.length > 1 && (
-            <label className="flex flex-col gap-1 text-xs text-ink-500">
-              <span>Sprache</span>
-              <select className="lc-input h-9 py-0 text-body-s" value={werte.sprache ?? ''}
-                onChange={(e) => setze({ sprache: e.target.value || null })}>
-                <option value="">Alle</option>
-                {sprachen.map((s) => <option key={s} value={s}>{SPRACH_LABEL[s] ?? s} ({spracheN(s)})</option>)}
               </select>
             </label>
           )}
