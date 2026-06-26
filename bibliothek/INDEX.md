@@ -56,6 +56,14 @@ BGE-Leitentscheide ab 2024 (265 dt., curated statt Routine) aus OpenCaseLaw (Cou
 Quelle/Stand, Pipeline (`adapter-entscheide`/`normtext-entscheide`), Datum via aza-Cross-Fetch
 + Bandjahr-Fallback, Sachgebiet-Ableitung. Inhaltliche Einzelabnahme: David, offen.
 
+**BGer-Korpus-Ausbau (Zitiergraph-Pfad):** [rechtsprechung/bger-korpus-ausbau-2026-06-26.md](rechtsprechung/bger-korpus-ausbau-2026-06-26.md) —
+Ausbau auf 610 Entscheide (580 Bund + 30 kantonal, +240 BGer) via Default-`bger`-
+Citation-Graph (Auftrag David 26.6.2026, §12-isoliert auf Branch
+`rechtsprechung/mehr-bge-leitentscheide`). Quelle/Stand, Rebuild-Befehl, der echte
+«sinnvoll»-Deckel `BUDGET_MB=20` (18.93 MB), Superset-Garantie gegen main, sowie die
+offene Entscheidung amtliche BGE (`bge`) vs. Zitiergraph-BGer (`bger`). Mechanik
+verifiziert (Gate grün); Einzelabnahme: David, offen.
+
 **Rubrum-Darstellung + Daten-Befund:** [rechtsprechung/rubrum-darstellung-regelwerk.md](rechtsprechung/rubrum-darstellung-regelwerk.md) —
 einheitlicher BGE-Detailseiten-Kopf (Auftrag David 24.6.2026, ultracode); Cross-Check
 gegen entscheidsuche-mcp deckte auf, dass alle 178 gespeicherten Rubrum-Felder

@@ -1,7 +1,16 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-26",
   "proNorm": {
-    "BV": [
+    "ZPO": [
+      {
+        "key": "bger_5A_79_2026",
+        "zitierung": "BGer 5A_79/2026 vom 29. Januar 2026",
+        "regesteKurz": "Fristwiederherstellungsgesuch (Kindesrückführung)",
+        "datum": "2026-01-29",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
       {
         "key": "bger_5A_242_2025",
         "zitierung": "BGer 5A_242/2025 vom 28. Januar 2026",
@@ -12,46 +21,102 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_473_2023",
-        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
-        "regesteKurz": "Entsiegelung",
-        "datum": "2026-01-21",
+        "key": "bger_4A_515_2025",
+        "zitierung": "BGer 4A_515/2025 vom 8. Januar 2026",
+        "regesteKurz": "Organisationsmangel,",
+        "datum": "2026-01-08",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_312_2023",
-        "zitierung": "BGer 7B_312/2023 vom 21. Januar 2026",
-        "regesteKurz": "Entsiegelung",
-        "datum": "2026-01-21",
+        "key": "bger_5A_588_2024",
+        "zitierung": "BGer 5A_588/2024 vom 21. November 2025",
+        "regesteKurz": "Aufhebung des Miteigentums, Zuständigkeit",
+        "datum": "2025-11-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_1C_549_2025",
-        "zitierung": "BGer 1C_549/2025 vom 6. Januar 2026",
-        "regesteKurz": "Erneuerungswahlen der Mitglieder des Stadtparlaments St. Gallen für die Amtsdauer 2025-2028",
-        "datum": "2026-01-06",
+        "key": "bger_4A_242_2025",
+        "zitierung": "BGer 4A_242/2025 vom 9. September 2025",
+        "regesteKurz": "unerlaubte Handlung,",
+        "datum": "2025-09-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_1D_15_2025",
-        "zitierung": "BGer 1D_15/2025 vom 11. Dezember 2025",
-        "regesteKurz": "Ordentliche Einbürgerung",
-        "datum": "2025-12-11",
+        "key": "bger_7B_595_2024",
+        "zitierung": "BGer 7B_595/2024 vom 8. September 2025",
+        "regesteKurz": "Einstellung",
+        "datum": "2025-09-08",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_518_2024",
-        "zitierung": "BGer 6B_518/2024 vom 10. Dezember 2025",
-        "regesteKurz": "Landesverweisung (versuchte schwere Körperverletzung)",
-        "datum": "2025-12-10",
+        "key": "bger_5A_477_2025",
+        "zitierung": "BGer 5A_477/2025 vom 13. August 2025",
+        "regesteKurz": "Konkurseröffnung, Wiederherstellung der Beschwerdefrist",
+        "datum": "2025-08-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5D_55_2024",
+        "zitierung": "BGer 5D_55/2024 vom 22. Mai 2025",
+        "regesteKurz": "Erbbescheinigung",
+        "datum": "2025-05-22",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_29_2025",
+        "zitierung": "BGer 5A_29/2025 vom 16. April 2025",
+        "regesteKurz": "Verwaltung von Miteigentum",
+        "datum": "2025-04-16",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_1C_713_2024",
+        "zitierung": "BGer 1C_713/2024 vom 5. März 2025",
+        "regesteKurz": "Öffentliches Personalrecht; Lohnfortzahlung wegen krankheitsbedingter Arbeitsverhinderung",
+        "datum": "2025-03-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_4A_476_2024",
+        "zitierung": "BGer 4A_476/2024 vom 3. März 2025",
+        "regesteKurz": "Auftrag,",
+        "datum": "2025-03-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_11_2025",
+        "zitierung": "BGer 5A_11/2025 vom 27. Februar 2025",
+        "regesteKurz": "Einsetzung einer Kindesvertretung",
+        "datum": "2025-02-27",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "ZGB": [
+      {
+        "key": "bger_5A_79_2026",
+        "zitierung": "BGer 5A_79/2026 vom 29. Januar 2026",
+        "regesteKurz": "Fristwiederherstellungsgesuch (Kindesrückführung)",
+        "datum": "2026-01-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -66,156 +131,91 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_85_2025",
-        "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
-        "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
-        "datum": "2025-12-04",
+        "key": "bger_2C_422_2025",
+        "zitierung": "BGer 2C_422/2025 vom 3. Dezember 2025",
+        "regesteKurz": "Verlängerung der Aufenthaltsbewilligung",
+        "datum": "2025-12-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_1C_383_2024",
-        "zitierung": "BGer 1C_383/2024 vom 4. Dezember 2025",
-        "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
-        "datum": "2025-12-04",
+        "key": "bger_5A_588_2024",
+        "zitierung": "BGer 5A_588/2024 vom 21. November 2025",
+        "regesteKurz": "Aufhebung des Miteigentums, Zuständigkeit",
+        "datum": "2025-11-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6F_35_2025",
-        "zitierung": "BGer 6F_35/2025 vom 14. November 2025",
-        "regesteKurz": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 11. September 2025 (6B_549/2025)",
-        "datum": "2025-11-14",
+        "key": "bger_5A_858_2024",
+        "zitierung": "BGer 5A_858/2024 vom 4. November 2025",
+        "regesteKurz": "Nichtanerkennung eines Urteils, Obhut und weitere Kindesbelange",
+        "datum": "2025-11-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_615_2025",
-        "zitierung": "BGer 6B_615/2025 vom 14. Oktober 2025",
-        "regesteKurz": "Einsprache gegen Strafbefehl; Wiederherstellung der Einsprachefrist; Nichteintreten",
-        "datum": "2025-10-14",
+        "key": "bger_5A_503_2024",
+        "zitierung": "BGer 5A_503/2024 vom 11. August 2025",
+        "regesteKurz": "Vorsorgliche Massnahmen (Ehescheidung)",
+        "datum": "2025-08-11",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_426_2025",
-        "zitierung": "BGer 9C_426/2025 vom 19. September 2025",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperiode 2024",
-        "datum": "2025-09-19",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "STPO": [
-      {
-        "key": "bger_7B_473_2023",
-        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
-        "regesteKurz": "Entsiegelung",
-        "datum": "2026-01-21",
+        "key": "bger_2C_332_2024",
+        "zitierung": "BGer 2C_332/2024 vom 21. Juli 2025",
+        "regesteKurz": "Gesundheitsrecht (Entbindung von der beruflichen Schweigepflicht)",
+        "datum": "2025-07-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_312_2023",
-        "zitierung": "BGer 7B_312/2023 vom 21. Januar 2026",
-        "regesteKurz": "Entsiegelung",
-        "datum": "2026-01-21",
+        "key": "bger_2C_575_2024",
+        "zitierung": "BGer 2C_575/2024 vom 17. Juli 2025",
+        "regesteKurz": "Verlängerung der Aufenthaltsbewilligung",
+        "datum": "2025-07-17",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_85_2025",
-        "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
-        "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
-        "datum": "2025-12-04",
+        "key": "bger_5D_55_2024",
+        "zitierung": "BGer 5D_55/2024 vom 22. Mai 2025",
+        "regesteKurz": "Erbbescheinigung",
+        "datum": "2025-05-22",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_207_2025",
-        "zitierung": "BGer 6B_207/2025 vom 4. Dezember 2025",
-        "regesteKurz": "Strafzumessung; Kosten",
-        "datum": "2025-12-04",
+        "key": "bger_5A_750_2024",
+        "zitierung": "BGer 5A_750/2024 vom 2. Mai 2025",
+        "regesteKurz": "Weisung zum persönlichen Verkehr (Kontakt zur Grossmutter)",
+        "datum": "2025-05-02",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6F_35_2025",
-        "zitierung": "BGer 6F_35/2025 vom 14. November 2025",
-        "regesteKurz": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 11. September 2025 (6B_549/2025)",
-        "datum": "2025-11-14",
+        "key": "bger_5A_29_2025",
+        "zitierung": "BGer 5A_29/2025 vom 16. April 2025",
+        "regesteKurz": "Verwaltung von Miteigentum",
+        "datum": "2025-04-16",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_118_2024",
-        "zitierung": "BGer 6B_118/2024 vom 14. November 2025",
-        "regesteKurz": "Hinderung einer Amtshandlung, Pflichtverletzung im Sinne der aCovid-19-Verordnung besondere Lage, Widerhandlung gegen das kantonale Gastgewerbegesetz; Verwertbarkeit; Willkür",
-        "datum": "2025-11-14",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_6B_220_2025",
-        "zitierung": "BGer 6B_220/2025 vom 13. November 2025",
-        "regesteKurz": "Versuchte vorsätzliche Tötung; mehrfache Körperverletzung; Strafzumessung; Landesverweisung; Willkür",
-        "datum": "2025-11-13",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_7B_980_2025",
-        "zitierung": "BGer 7B_980/2025 vom 15. Oktober 2025",
-        "regesteKurz": "Verlängerung Untersuchungshaft",
-        "datum": "2025-10-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_6B_615_2025",
-        "zitierung": "BGer 6B_615/2025 vom 14. Oktober 2025",
-        "regesteKurz": "Einsprache gegen Strafbefehl; Wiederherstellung der Einsprachefrist; Nichteintreten",
-        "datum": "2025-10-14",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_6B_569_2025",
-        "zitierung": "BGer 6B_569/2025 vom 9. Oktober 2025",
-        "regesteKurz": "Mehrfacher versuchter Mord, Strafzumessung, Widerruf der bedingten Geldstrafe",
-        "datum": "2025-10-09",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_7B_1370_2024",
-        "zitierung": "BGer 7B_1370/2024 vom 7. Oktober 2025",
-        "regesteKurz": "Aktenentfernung",
-        "datum": "2025-10-07",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_6B_527_2025",
-        "zitierung": "BGer 6B_527/2025 vom 12. September 2025",
-        "regesteKurz": "Übertretung von Verkehrsvorschriften, Berufungsrückzug, Abschreibung des Verfahrens",
-        "datum": "2025-09-12",
+        "key": "bger_5A_779_2024",
+        "zitierung": "BGer 5A_779/2024 vom 24. März 2025",
+        "regesteKurz": "Vorsorgliche Massnahmen (Entzug des Aufenthaltsbestimmungsrechts)",
+        "datum": "2025-03-24",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -241,9 +241,18 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_473_2023",
-        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
-        "regesteKurz": "Entsiegelung",
+        "key": "bger_7F_59_2025",
+        "zitierung": "BGer 7F_59/2025 vom 22. Januar 2026",
+        "regesteKurz": "Revisionsgesuch gegen das Urteil 7B_792/2025 des Schweizerischen Bundesgerichts vom 24. Oktober 2025",
+        "datum": "2026-01-22",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_1C_668_2024",
+        "zitierung": "BGer 1C_668/2024 vom 21. Januar 2026",
+        "regesteKurz": "Baubewilligung für eine Mobilfunkanlage",
         "datum": "2026-01-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
@@ -259,9 +268,9 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_1C_668_2024",
-        "zitierung": "BGer 1C_668/2024 vom 21. Januar 2026",
-        "regesteKurz": "Baubewilligung für eine Mobilfunkanlage",
+        "key": "bger_7B_473_2023",
+        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung",
         "datum": "2026-01-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
@@ -304,10 +313,75 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_270_2025",
-        "zitierung": "BGer 9C_270/2025 vom 11. Dezember 2025",
-        "regesteKurz": "VOC-Lenkungsabgabe, Abgabeperiode 2016",
-        "datum": "2025-12-11",
+        "key": "bger_2F_22_2025",
+        "zitierung": "BGer 2F_22/2025 vom 19. Dezember 2025",
+        "regesteKurz": "Verweigerung der medizinischen Flugtauglichkeit",
+        "datum": "2025-12-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_598_2025",
+        "zitierung": "BGer 7B_598/2025 vom 12. Dezember 2025",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2025-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "BV": [
+      {
+        "key": "bger_5A_242_2025",
+        "zitierung": "BGer 5A_242/2025 vom 28. Januar 2026",
+        "regesteKurz": "Nichteintreten bei nicht vollständiger Bezahlung des Kostenvorschusses (definitive Eintragung eines Bauhandwerkerpfandrechts)",
+        "datum": "2026-01-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_312_2023",
+        "zitierung": "BGer 7B_312/2023 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2026-01-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_473_2023",
+        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2026-01-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_1C_549_2025",
+        "zitierung": "BGer 1C_549/2025 vom 6. Januar 2026",
+        "regesteKurz": "Erneuerungswahlen der Mitglieder des Stadtparlaments St. Gallen für die Amtsdauer 2025-2028",
+        "datum": "2026-01-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_1C_153_2025",
+        "zitierung": "BGer 1C_153/2025 vom 5. Januar 2026",
+        "regesteKurz": "Baubewilligung für Photovoltaikanlage",
+        "datum": "2026-01-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_598_2025",
+        "zitierung": "BGer 7B_598/2025 vom 12. Dezember 2025",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2025-12-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -329,14 +403,95 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_509_2024",
+        "zitierung": "BGer 6B_509/2024 vom 8. Dezember 2025",
+        "regesteKurz": "Entschädigung der amtlichen Verteidigung",
+        "datum": "2025-12-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_449_2025",
+        "zitierung": "BGer 5A_449/2025 vom 5. Dezember 2025",
+        "regesteKurz": "Anfechtung Vereinsbeschluss",
+        "datum": "2025-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_1C_383_2024",
+        "zitierung": "BGer 1C_383/2024 vom 4. Dezember 2025",
+        "regesteKurz": "Baubewilligung (Mobilfunkanlage)",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_85_2025",
+        "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
+        "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
       }
     ],
-    "STGB": [
+    "STPO": [
       {
-        "key": "bger_6B_518_2024",
-        "zitierung": "BGer 6B_518/2024 vom 10. Dezember 2025",
-        "regesteKurz": "Landesverweisung (versuchte schwere Körperverletzung)",
-        "datum": "2025-12-10",
+        "key": "bger_7B_312_2023",
+        "zitierung": "BGer 7B_312/2023 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2026-01-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_473_2023",
+        "zitierung": "BGer 7B_473/2023 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2026-01-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_924_2025",
+        "zitierung": "BGer 7B_924/2025 vom 21. Januar 2026",
+        "regesteKurz": "Entsiegelung und Durchsuchung",
+        "datum": "2026-01-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_598_2025",
+        "zitierung": "BGer 7B_598/2025 vom 12. Dezember 2025",
+        "regesteKurz": "Entsiegelung",
+        "datum": "2025-12-12",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_509_2024",
+        "zitierung": "BGer 6B_509/2024 vom 8. Dezember 2025",
+        "regesteKurz": "Entschädigung der amtlichen Verteidigung",
+        "datum": "2025-12-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_207_2025",
+        "zitierung": "BGer 6B_207/2025 vom 4. Dezember 2025",
+        "regesteKurz": "Strafzumessung; Kosten",
+        "datum": "2025-12-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -351,10 +506,122 @@
         "kanton": "CH"
       },
       {
+        "key": "bger_6B_1270_2023",
+        "zitierung": "BGer 6B_1270/2023 vom 4. Dezember 2025",
+        "regesteKurz": "Nichttragen einer Hygienenmaske am Bahnhof (aCovid-19-Verordung besondere Lage), Missachten von Anordnungen des Sicherheitspersonals usw.; Unschuldsvermutung, willkürliche Beweiswürdigung",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_1001_2024",
+        "zitierung": "BGer 7B_1001/2024 vom 1. Dezember 2025",
+        "regesteKurz": "Nichtanhandnahme",
+        "datum": "2025-12-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_118_2024",
+        "zitierung": "BGer 6B_118/2024 vom 14. November 2025",
+        "regesteKurz": "Hinderung einer Amtshandlung, Pflichtverletzung im Sinne der aCovid-19-Verordnung besondere Lage, Widerhandlung gegen das kantonale Gastgewerbegesetz; Verwertbarkeit; Willkür",
+        "datum": "2025-11-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6F_35_2025",
+        "zitierung": "BGer 6F_35/2025 vom 14. November 2025",
+        "regesteKurz": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 11. September 2025 (6B_549/2025)",
+        "datum": "2025-11-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_220_2025",
+        "zitierung": "BGer 6B_220/2025 vom 13. November 2025",
+        "regesteKurz": "Versuchte vorsätzliche Tötung; mehrfache Körperverletzung; Strafzumessung; Landesverweisung; Willkür",
+        "datum": "2025-11-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "HREGV": [
+      {
+        "key": "bger_4A_515_2025",
+        "zitierung": "BGer 4A_515/2025 vom 8. Januar 2026",
+        "regesteKurz": "Organisationsmangel,",
+        "datum": "2026-01-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "STGB": [
+      {
+        "key": "bger_6B_433_2025",
+        "zitierung": "BGer 6B_433/2025 vom 11. Dezember 2025",
+        "regesteKurz": "Sachbeschädigung; Strafzumessung",
+        "datum": "2025-12-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_518_2024",
+        "zitierung": "BGer 6B_518/2024 vom 10. Dezember 2025",
+        "regesteKurz": "Landesverweisung (versuchte schwere Körperverletzung)",
+        "datum": "2025-12-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_403_2024",
+        "zitierung": "BGer 6B_403/2024 vom 8. Dezember 2025",
+        "regesteKurz": "Schwere Widerhandlung gegen das Betäubungsmittelgesetz etc., Strafzumessung; Beschleunigungsgebot",
+        "datum": "2025-12-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
         "key": "bger_6B_207_2025",
         "zitierung": "BGer 6B_207/2025 vom 4. Dezember 2025",
         "regesteKurz": "Strafzumessung; Kosten",
         "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_85_2025",
+        "zitierung": "BGer 6B_85/2025 vom 4. Dezember 2025",
+        "regesteKurz": "Übertretung des Epidemiengesetzes und der aCovid-19-Verordnung besondere Lage (Stand 19. April 2021)",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_1270_2023",
+        "zitierung": "BGer 6B_1270/2023 vom 4. Dezember 2025",
+        "regesteKurz": "Nichttragen einer Hygienenmaske am Bahnhof (aCovid-19-Verordung besondere Lage), Missachten von Anordnungen des Sicherheitspersonals usw.; Unschuldsvermutung, willkürliche Beweiswürdigung",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_1001_2024",
+        "zitierung": "BGer 7B_1001/2024 vom 1. Dezember 2025",
+        "regesteKurz": "Nichtanhandnahme",
+        "datum": "2025-12-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -396,102 +663,286 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_682_2025",
-        "zitierung": "BGer 7B_682/2025 vom 19. August 2025",
-        "regesteKurz": "Haftentlassung / Verlängerung Untersuchungshaft",
-        "datum": "2025-08-19",
+        "key": "bger_6B_45_2025",
+        "zitierung": "BGer 6B_45/2025 vom 9. Oktober 2025",
+        "regesteKurz": "Landesverweisung, Ausschreibung im SIS",
+        "datum": "2025-10-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "IVG": [
+      {
+        "key": "bger_8C_104_2025",
+        "zitierung": "BGer 8C_104/2025 vom 11. Dezember 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente; Valideneinkommen)",
+        "datum": "2025-12-11",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_1184_2023",
-        "zitierung": "BGer 6B_1184/2023 vom 18. August 2025",
-        "regesteKurz": "Fälschung von Ausweisen; rechtliches Gehör",
+        "key": "bger_8C_286_2025",
+        "zitierung": "BGer 8C_286/2025 vom 9. Dezember 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-12-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_428_2025",
+        "zitierung": "BGer 9C_428/2025 vom 7. November 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-11-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_214_2025",
+        "zitierung": "BGer 9C_214/2025 vom 15. Oktober 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-10-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_733_2024",
+        "zitierung": "BGer 8C_733/2024 vom 18. August 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente; Revision)",
         "datum": "2025-08-18",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_1014_2023",
-        "zitierung": "BGer 6B_1014/2023 vom 24. Juli 2025",
-        "regesteKurz": "Gewerbsmässiger Betrug, mehrfache Urkundenfälschung; Kosten der Beschlagnahme",
-        "datum": "2025-07-24",
+        "key": "bger_8C_750_2024",
+        "zitierung": "BGer 8C_750/2024 vom 7. August 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-08-07",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_6B_124_2024",
-        "zitierung": "BGer 6B_124/2024 vom 21. Juli 2025",
-        "regesteKurz": "Qualifizierte ungetreue Geschäftsbesorgung und Gehilfenschaft zu qualifizierter ungetreuer Geschäftsbesorgung; Beschlagnahme",
-        "datum": "2025-07-21",
+        "key": "bger_9C_42_2025",
+        "zitierung": "BGer 9C_42/2025 vom 4. August 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-08-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_1376_2024",
-        "zitierung": "BGer 7B_1376/2024 vom 16. Juli 2025",
-        "regesteKurz": "Gewerbsmässiger Betrug, mehrfacher, teilweise betrügerischer Missbrauch einer Datenverarbeitungsanlage; Willkür; Strafzumessung",
-        "datum": "2025-07-16",
+        "key": "bger_8C_28_2025",
+        "zitierung": "BGer 8C_28/2025 vom 7. Juli 2025",
+        "regesteKurz": "Invalidenversicherung (Arbeitsfähigkeit; Einkommensvergleich; Invalidenrente)",
+        "datum": "2025-07-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_513_2024",
+        "zitierung": "BGer 8C_513/2024 vom 15. April 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
+        "datum": "2025-04-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_183_2024",
+        "zitierung": "BGer 8C_183/2024 vom 14. April 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-04-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_555_2024",
+        "zitierung": "BGer 8C_555/2024 vom 4. April 2025",
+        "regesteKurz": "Invalidenversicherung (Arbeitsfähigkeit, Invalidenrente)",
+        "datum": "2025-04-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_272_2024",
+        "zitierung": "BGer 8C_272/2024 vom 4. März 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente, Invalideneinkommen)",
+        "datum": "2025-03-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       }
     ],
-    "ZPO": [
+    "ATSG": [
       {
-        "key": "bger_5A_79_2026",
-        "zitierung": "BGer 5A_79/2026 vom 29. Januar 2026",
-        "regesteKurz": "Fristwiederherstellungsgesuch (Kindesrückführung)",
-        "datum": "2026-01-29",
+        "key": "bger_8C_104_2025",
+        "zitierung": "BGer 8C_104/2025 vom 11. Dezember 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente; Valideneinkommen)",
+        "datum": "2025-12-11",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_242_2025",
-        "zitierung": "BGer 5A_242/2025 vom 28. Januar 2026",
-        "regesteKurz": "Nichteintreten bei nicht vollständiger Bezahlung des Kostenvorschusses (definitive Eintragung eines Bauhandwerkerpfandrechts)",
-        "datum": "2026-01-28",
+        "key": "bger_8C_286_2025",
+        "zitierung": "BGer 8C_286/2025 vom 9. Dezember 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-12-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_4A_515_2025",
-        "zitierung": "BGer 4A_515/2025 vom 8. Januar 2026",
-        "regesteKurz": "Organisationsmangel,",
-        "datum": "2026-01-08",
+        "key": "bger_8C_224_2025",
+        "zitierung": "BGer 8C_224/2025 vom 4. Dezember 2025",
+        "regesteKurz": "Unfallversicherung",
+        "datum": "2025-12-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_477_2025",
-        "zitierung": "BGer 5A_477/2025 vom 13. August 2025",
-        "regesteKurz": "Konkurseröffnung, Wiederherstellung der Beschwerdefrist",
-        "datum": "2025-08-13",
+        "key": "bger_8C_313_2024",
+        "zitierung": "BGer 8C_313/2024 vom 13. November 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-11-13",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5D_55_2024",
-        "zitierung": "BGer 5D_55/2024 vom 22. Mai 2025",
-        "regesteKurz": "Erbbescheinigung",
-        "datum": "2025-05-22",
+        "key": "bger_9C_214_2025",
+        "zitierung": "BGer 9C_214/2025 vom 15. Oktober 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-10-15",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_1C_713_2024",
-        "zitierung": "BGer 1C_713/2024 vom 5. März 2025",
-        "regesteKurz": "Öffentliches Personalrecht; Lohnfortzahlung wegen krankheitsbedingter Arbeitsverhinderung",
-        "datum": "2025-03-05",
+        "key": "bger_8C_681_2024",
+        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
+        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
+        "datum": "2025-10-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_733_2024",
+        "zitierung": "BGer 8C_733/2024 vom 18. August 2025",
+        "regesteKurz": "Invalidenversicherung (Invalidenrente; Revision)",
+        "datum": "2025-08-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_694_2024",
+        "zitierung": "BGer 8C_694/2024 vom 14. August 2025",
+        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
+        "datum": "2025-08-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_750_2024",
+        "zitierung": "BGer 8C_750/2024 vom 7. August 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-08-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_42_2025",
+        "zitierung": "BGer 9C_42/2025 vom 4. August 2025",
+        "regesteKurz": "Invalidenversicherung",
+        "datum": "2025-08-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_446_2024",
+        "zitierung": "BGer 8C_446/2024 vom 25. Juli 2025",
+        "regesteKurz": "Unfallversicherung (natürliche Kausalität)",
+        "datum": "2025-07-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_28_2025",
+        "zitierung": "BGer 8C_28/2025 vom 7. Juli 2025",
+        "regesteKurz": "Invalidenversicherung (Arbeitsfähigkeit; Einkommensvergleich; Invalidenrente)",
+        "datum": "2025-07-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "OR": [
+      {
+        "key": "bger_5A_449_2025",
+        "zitierung": "BGer 5A_449/2025 vom 5. Dezember 2025",
+        "regesteKurz": "Anfechtung Vereinsbeschluss",
+        "datum": "2025-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B_595_2024",
+        "zitierung": "BGer 7B_595/2024 vom 8. September 2025",
+        "regesteKurz": "Einstellung",
+        "datum": "2025-09-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_503_2024",
+        "zitierung": "BGer 5A_503/2024 vom 11. August 2025",
+        "regesteKurz": "Vorsorgliche Massnahmen (Ehescheidung)",
+        "datum": "2025-08-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_4A_477_2024",
+        "zitierung": "BGer 4A_477/2024 vom 14. Juli 2025",
+        "regesteKurz": "Herausgabe- und Rechenschaftsplicht d. Revisionsstelle",
+        "datum": "2025-07-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_570_2024",
+        "zitierung": "BGer 2C_570/2024 vom 14. Mai 2025",
+        "regesteKurz": "Härtefallmassnahmen Covid-19-Epidemie (Rückforderung)",
+        "datum": "2025-05-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_29_2025",
+        "zitierung": "BGer 5A_29/2025 vom 16. April 2025",
+        "regesteKurz": "Verwaltung von Miteigentum",
+        "datum": "2025-04-16",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -506,167 +957,156 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_4A_478_2024",
-        "zitierung": "BGer 4A_478/2024 vom 4. Dezember 2024",
-        "regesteKurz": "Forderung aus Krankentaggeldversicherung,",
-        "datum": "2024-12-04",
+        "key": "bger_4A_158_2024",
+        "zitierung": "BGer 4A_158/2024 vom 5. November 2024",
+        "regesteKurz": "Mietvertrag; clausula rebus sic stantibus,",
+        "datum": "2024-11-05",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_801_2022",
-        "zitierung": "BGer 5A_801/2022 vom 10. Mai 2024",
-        "regesteKurz": "Ehescheidung",
-        "datum": "2024-05-10",
+        "key": "bger_7B_64_2023",
+        "zitierung": "BGer 7B_64/2023 vom 17. September 2024",
+        "regesteKurz": "Nichtanhandnahme (Urkundenfälschung usw.)",
+        "datum": "2024-09-17",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_828_2023",
-        "zitierung": "BGer 5A_828/2023 vom 18. April 2024",
-        "regesteKurz": "Eheschutz",
-        "datum": "2024-04-18",
+        "key": "bger_4A_503_2023",
+        "zitierung": "BGer 4A_503/2023 vom 29. Juli 2024",
+        "regesteKurz": "Versicherungsvertrag,",
+        "datum": "2024-07-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_241_2023",
-        "zitierung": "BGer 5A_241/2023 vom 27. Juli 2023",
-        "regesteKurz": "Verfahrensdisziplin (Ehescheidung)",
-        "datum": "2023-07-27",
+        "key": "bger_7B_126_2024",
+        "zitierung": "BGer 7B_126/2024 vom 22. April 2024",
+        "regesteKurz": "Einstellung (ungetreue Geschäftsbesorgung)",
+        "datum": "2024-04-22",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_890_2022",
-        "zitierung": "BGer 5A_890/2022 vom 27. April 2023",
-        "regesteKurz": "Vorsorgliche Massnahmen (Ehescheidung)",
-        "datum": "2023-04-27",
+        "key": "bger_4A_440_2022",
+        "zitierung": "BGer 4A_440/2022 vom 16. November 2023",
+        "regesteKurz": "Versicherungsvertrag,",
+        "datum": "2023-11-16",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       }
     ],
-    "STHG": [
+    "UVG": [
       {
-        "key": "bger_9C_187_2025",
-        "zitierung": "BGer 9C_187/2025 vom 3. Juli 2025",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperioden 2020 bis 2021",
+        "key": "bger_8C_224_2025",
+        "zitierung": "BGer 8C_224/2025 vom 4. Dezember 2025",
+        "regesteKurz": "Unfallversicherung",
+        "datum": "2025-12-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_681_2024",
+        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
+        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
+        "datum": "2025-10-15",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_694_2024",
+        "zitierung": "BGer 8C_694/2024 vom 14. August 2025",
+        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
+        "datum": "2025-08-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_446_2024",
+        "zitierung": "BGer 8C_446/2024 vom 25. Juli 2025",
+        "regesteKurz": "Unfallversicherung (natürliche Kausalität)",
+        "datum": "2025-07-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_102_2025",
+        "zitierung": "BGer 8C_102/2025 vom 3. Juli 2025",
+        "regesteKurz": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld)",
         "datum": "2025-07-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_219_2024",
-        "zitierung": "BGer 9C_219/2024 vom 30. Januar 2025",
-        "regesteKurz": "Staats-, Bezirks- und Gemeindesteuern des Kantons Appenzell Innerrhoden und direkte Bundessteuer, Steuerperiode 2019",
+        "key": "bger_8C_38_2025",
+        "zitierung": "BGer 8C_38/2025 vom 1. Juli 2025",
+        "regesteKurz": "Unfallversicherung",
+        "datum": "2025-07-01",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_828_2023",
+        "zitierung": "BGer 8C_828/2023 vom 6. Februar 2025",
+        "regesteKurz": "Unfallversicherung (Kausalzusammenhang; Fallabschluss)",
+        "datum": "2025-02-06",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C_476_2024",
+        "zitierung": "BGer 8C_476/2024 vom 30. Januar 2025",
+        "regesteKurz": "Unfallversicherung (Invalidenrente)",
         "datum": "2025-01-30",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_628_2022",
-        "zitierung": "BGer 9C_628/2022 vom 31. Januar 2023",
-        "regesteKurz": "Grundstückgewinnsteuer des Kantons Zürich, Steuerperiode 2013",
-        "datum": "2023-01-31",
+        "key": "bger_8C_150_2024",
+        "zitierung": "BGer 8C_150/2024 vom 10. Oktober 2024",
+        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
+        "datum": "2024-10-10",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_2C_1021_2019",
-        "zitierung": "BGer 2C_1021/2019 vom 30. Oktober 2020",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Graubünden sowie direkte Bundessteuer, Steuerperiode 2015",
-        "datum": "2020-10-30",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "DBG": [
-      {
-        "key": "bger_9C_426_2025",
-        "zitierung": "BGer 9C_426/2025 vom 19. September 2025",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperiode 2024",
-        "datum": "2025-09-19",
+        "key": "bger_8C_603_2023",
+        "zitierung": "BGer 8C_603/2023 vom 25. September 2024",
+        "regesteKurz": "Unfallversicherung (Arbeitsfähigkeit, Invalidenrente, Integritätsentschädigung)",
+        "datum": "2024-09-25",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_219_2024",
-        "zitierung": "BGer 9C_219/2024 vom 30. Januar 2025",
-        "regesteKurz": "Staats-, Bezirks- und Gemeindesteuern des Kantons Appenzell Innerrhoden und direkte Bundessteuer, Steuerperiode 2019",
-        "datum": "2025-01-30",
+        "key": "bger_8C_75_2024",
+        "zitierung": "BGer 8C_75/2024 vom 12. August 2024",
+        "regesteKurz": "Unfallversicherung (Versicherungsdeckung)",
+        "datum": "2024-08-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_9C_678_2021",
-        "zitierung": "BGer 9C_678/2021 vom 17. März 2023",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Nidwalden und direkte Bundessteuer, Steuerperiode 2015",
-        "datum": "2023-03-17",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_741_2021",
-        "zitierung": "BGer 2C_741/2021 vom 11. Oktober 2021",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Solothurn und direkte Bundessteuer, Steuerperioden 2018 und 2019",
-        "datum": "2021-10-11",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_1021_2019",
-        "zitierung": "BGer 2C_1021/2019 vom 30. Oktober 2020",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Graubünden sowie direkte Bundessteuer, Steuerperiode 2015",
-        "datum": "2020-10-30",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_298_2020",
-        "zitierung": "BGer 2C_298/2020 vom 9. Oktober 2020",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Thurgau und direkte Bundessteuer, Steuerperiode 2013, versuchte Steuerhinterziehung",
-        "datum": "2020-10-09",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_576_2020",
-        "zitierung": "BGer 2C_576/2020 vom 17. August 2020",
-        "regesteKurz": "Direkte Bundessteuer, Steuerperiode 2016",
-        "datum": "2020-08-17",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_590_2019",
-        "zitierung": "BGer 9C_590/2019 vom 15. Juni 2020",
-        "regesteKurz": "Alters- und Hinterlassenenversicherung",
-        "datum": "2020-06-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_760_2018",
-        "zitierung": "BGer 2C_760/2018 vom 10. September 2018",
-        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zug und direkte Bundessteuer, Steuerperioden 2013-2017",
-        "datum": "2018-09-10",
+        "key": "bger_8C_562_2023",
+        "zitierung": "BGer 8C_562/2023 vom 29. Mai 2024",
+        "regesteKurz": "Unfallversicherung (Invalidenrente, Integritätsentschädigung)",
+        "datum": "2024-05-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -674,10 +1114,37 @@
     ],
     "AIG": [
       {
+        "key": "bger_2C_422_2025",
+        "zitierung": "BGer 2C_422/2025 vom 3. Dezember 2025",
+        "regesteKurz": "Verlängerung der Aufenthaltsbewilligung",
+        "datum": "2025-12-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_164_2025",
+        "zitierung": "BGer 2C_164/2025 vom 3. Oktober 2025",
+        "regesteKurz": "Nichterteilung einer Aufenthaltsbewilligung / Verlängerung des Schengenvisums",
+        "datum": "2025-10-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
         "key": "bger_2C_12_2025",
         "zitierung": "BGer 2C_12/2025 vom 8. September 2025",
         "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
         "datum": "2025-09-08",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_261_2025",
+        "zitierung": "BGer 2C_261/2025 vom 23. Mai 2025",
+        "regesteKurz": "Einreiseverbot",
+        "datum": "2025-05-23",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -692,10 +1159,46 @@
         "kanton": "CH"
       },
       {
+        "key": "bger_2C_406_2024",
+        "zitierung": "BGer 2C_406/2024 vom 19. März 2025",
+        "regesteKurz": "Verlängerung der Aufenthaltsbewilligung",
+        "datum": "2025-03-19",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_234_2024",
+        "zitierung": "BGer 2C_234/2024 vom 11. November 2024",
+        "regesteKurz": "Kurzaufenthaltsbewilligung zwecks Vorbereitung der Eheschliessung",
+        "datum": "2024-11-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_189_2024",
+        "zitierung": "BGer 2C_189/2024 vom 4. November 2024",
+        "regesteKurz": "Familiennachzug",
+        "datum": "2024-11-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
         "key": "bger_2C_202_2023",
         "zitierung": "BGer 2C_202/2023 vom 28. August 2024",
         "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
         "datum": "2024-08-28",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_570_2023",
+        "zitierung": "BGer 2C_570/2023 vom 19. August 2024",
+        "regesteKurz": "Niederlassungsbewilligung (Rückstufung)",
+        "datum": "2024-08-19",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -717,250 +1220,77 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_144_2023",
-        "zitierung": "BGer 2C_144/2023 vom 6. November 2023",
-        "regesteKurz": "Widerruf der Aufenthaltsbewilligung EU/EFTA und Wegweisung",
-        "datum": "2023-11-06",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_855_2020",
-        "zitierung": "BGer 2C_855/2020 vom 6. April 2021",
-        "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung und Wegweisung",
-        "datum": "2021-04-06",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_993_2020",
-        "zitierung": "BGer 2C_993/2020 vom 22. März 2021",
-        "regesteKurz": "Eingrenzung",
-        "datum": "2021-03-22",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_1060_2020",
-        "zitierung": "BGer 2C_1060/2020 vom 19. Februar 2021",
-        "regesteKurz": "Niederlassungsbewilligung; Nichteintreten",
-        "datum": "2021-02-19",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_35_2021",
-        "zitierung": "BGer 2C_35/2021 vom 10. Februar 2021",
-        "regesteKurz": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft",
-        "datum": "2021-02-10",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_375_2020",
-        "zitierung": "BGer 2C_375/2020 vom 24. Juli 2020",
-        "regesteKurz": "Nichtverlängerung der Aufenthaltsbewilligung",
-        "datum": "2020-07-24",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
       }
     ],
-    "ZGB": [
+    "AHVG": [
       {
-        "key": "bger_5A_79_2026",
-        "zitierung": "BGer 5A_79/2026 vom 29. Januar 2026",
-        "regesteKurz": "Fristwiederherstellungsgesuch (Kindesrückführung)",
-        "datum": "2026-01-29",
+        "key": "bger_8C_681_2024",
+        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
+        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
+        "datum": "2025-10-15",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_449_2025",
-        "zitierung": "BGer 5A_449/2025 vom 5. Dezember 2025",
-        "regesteKurz": "Anfechtung Vereinsbeschluss",
-        "datum": "2025-12-05",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_503_2024",
-        "zitierung": "BGer 5A_503/2024 vom 11. August 2025",
-        "regesteKurz": "Vorsorgliche Massnahmen (Ehescheidung)",
-        "datum": "2025-08-11",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5D_55_2024",
-        "zitierung": "BGer 5D_55/2024 vom 22. Mai 2025",
-        "regesteKurz": "Erbbescheinigung",
-        "datum": "2025-05-22",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_750_2024",
-        "zitierung": "BGer 5A_750/2024 vom 2. Mai 2025",
-        "regesteKurz": "Weisung zum persönlichen Verkehr (Kontakt zur Grossmutter)",
-        "datum": "2025-05-02",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_7B_131_2024",
-        "zitierung": "BGer 7B_131/2024 vom 24. Februar 2025",
-        "regesteKurz": "Vollzug der obligatorischen Landesverweisung",
-        "datum": "2025-02-24",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_6B_389_2023",
-        "zitierung": "BGer 6B_389/2023 vom 3. Februar 2025",
-        "regesteKurz": "Widerhandlung gegen das BG über die Sicherheitsorgane der Transportunternehmen im öffentlichen Verkehr (aCovid-19-Verordnung besondere Lage)",
-        "datum": "2025-02-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_2C_349_2024",
-        "zitierung": "BGer 2C_349/2024 vom 3. Februar 2025",
-        "regesteKurz": "Erlöschen/Wiedererteilung der Aufenthaltsbewilligung",
-        "datum": "2025-02-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_293_2024",
-        "zitierung": "BGer 5A_293/2024 vom 27. Januar 2025",
-        "regesteKurz": "Änderung persönlicher Verkehr und Kindesschutzmassnahmen (Beistandschaft, Weisung)",
+        "key": "bger_9C_612_2024",
+        "zitierung": "BGer 9C_612/2024 vom 27. Januar 2025",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung",
         "datum": "2025-01-27",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_7B_780_2024",
-        "zitierung": "BGer 7B_780/2024 vom 18. Oktober 2024",
-        "regesteKurz": "Ausstand",
-        "datum": "2024-10-18",
+        "key": "bger_8C_75_2024",
+        "zitierung": "BGer 8C_75/2024 vom 12. August 2024",
+        "regesteKurz": "Unfallversicherung (Versicherungsdeckung)",
+        "datum": "2024-08-12",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_801_2022",
-        "zitierung": "BGer 5A_801/2022 vom 10. Mai 2024",
-        "regesteKurz": "Ehescheidung",
-        "datum": "2024-05-10",
+        "key": "bger_9C_95_2023",
+        "zitierung": "BGer 9C_95/2023 vom 9. November 2023",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung (Haftung des Arbeitgebers)",
+        "datum": "2023-11-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_2C_852_2022",
-        "zitierung": "BGer 2C_852/2022 vom 2. Mai 2023",
-        "regesteKurz": "Ausschluss vom Präsenzunterricht",
-        "datum": "2023-05-02",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "OR": [
-      {
-        "key": "bger_5A_449_2025",
-        "zitierung": "BGer 5A_449/2025 vom 5. Dezember 2025",
-        "regesteKurz": "Anfechtung Vereinsbeschluss",
-        "datum": "2025-12-05",
+        "key": "bger_8C_441_2022",
+        "zitierung": "BGer 8C_441/2022 vom 1. Juni 2023",
+        "regesteKurz": "Unfallversicherung (Invalidenrente;Wiedererwägung)",
+        "datum": "2023-06-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_503_2024",
-        "zitierung": "BGer 5A_503/2024 vom 11. August 2025",
-        "regesteKurz": "Vorsorgliche Massnahmen (Ehescheidung)",
-        "datum": "2025-08-11",
+        "key": "bger_9C_321_2022",
+        "zitierung": "BGer 9C_321/2022 vom 29. März 2023",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung (Haftung des Arbeitgebers; Schaden)",
+        "datum": "2023-03-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_2C_570_2024",
-        "zitierung": "BGer 2C_570/2024 vom 14. Mai 2025",
-        "regesteKurz": "Härtefallmassnahmen Covid-19-Epidemie (Rückforderung)",
-        "datum": "2025-05-14",
+        "key": "bger_9C_665_2019",
+        "zitierung": "BGer 9C_665/2019 vom 25. Juni 2020",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung (Beitragspflicht; Nichterwerbstätige Bindung an das Steuerrecht)",
+        "datum": "2020-06-25",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_4A_476_2024",
-        "zitierung": "BGer 4A_476/2024 vom 3. März 2025",
-        "regesteKurz": "Auftrag,",
-        "datum": "2025-03-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_503_2023",
-        "zitierung": "BGer 4A_503/2023 vom 29. Juli 2024",
-        "regesteKurz": "Versicherungsvertrag,",
-        "datum": "2024-07-29",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_440_2022",
-        "zitierung": "BGer 4A_440/2022 vom 16. November 2023",
-        "regesteKurz": "Versicherungsvertrag,",
-        "datum": "2023-11-16",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_768_2021",
-        "zitierung": "BGer 5A_768/2021 vom 16. August 2022",
-        "regesteKurz": "Vorsorgliche Massnahmen im Ehescheidungsverfahren",
-        "datum": "2022-08-16",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_28_2021",
-        "zitierung": "BGer 5A_28/2021 vom 31. März 2022",
-        "regesteKurz": "Unterlassung (Dienstbarkeit)",
-        "datum": "2022-03-31",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_412_2019",
-        "zitierung": "BGer 4A_412/2019 vom 27. April 2020",
-        "regesteKurz": "Schadenersatz; Minderung",
-        "datum": "2020-04-27",
+        "key": "bger_9C_590_2019",
+        "zitierung": "BGer 9C_590/2019 vom 15. Juni 2020",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung",
+        "datum": "2020-06-15",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -970,73 +1300,6 @@
         "zitierung": "BGer 8C_218/2019 vom 15. Oktober 2019",
         "regesteKurz": "Unfallversicherung; Alters- und Hinterlassenenversicherung (Beitragspflicht; Abgrenzung selbstständige und unselbstständige Erwerbstätigkeit)",
         "datum": "2019-10-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_27_2018",
-        "zitierung": "BGer 4A_27/2018 vom 3. Januar 2019",
-        "regesteKurz": "Alleinvertriebsvertrag",
-        "datum": "2019-01-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_412_2017",
-        "zitierung": "BGer 5A_412/2017 vom 8. Januar 2018",
-        "regesteKurz": "Auszahlung des Vermächtnisses usw.",
-        "datum": "2018-01-08",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "VVG": [
-      {
-        "key": "bger_4A_478_2024",
-        "zitierung": "BGer 4A_478/2024 vom 4. Dezember 2024",
-        "regesteKurz": "Forderung aus Krankentaggeldversicherung,",
-        "datum": "2024-12-04",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_503_2023",
-        "zitierung": "BGer 4A_503/2023 vom 29. Juli 2024",
-        "regesteKurz": "Versicherungsvertrag,",
-        "datum": "2024-07-29",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_440_2022",
-        "zitierung": "BGer 4A_440/2022 vom 16. November 2023",
-        "regesteKurz": "Versicherungsvertrag,",
-        "datum": "2023-11-16",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_631_2016",
-        "zitierung": "BGer 4A_631/2016 vom 21. April 2017",
-        "regesteKurz": "Krankentaggeldversicherung",
-        "datum": "2017-04-21",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "HREGV": [
-      {
-        "key": "bger_4A_515_2025",
-        "zitierung": "BGer 4A_515/2025 vom 8. Januar 2026",
-        "regesteKurz": "Organisationsmangel,",
-        "datum": "2026-01-08",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -1107,10 +1370,37 @@
         "kanton": "CH"
       },
       {
+        "key": "bger_5A_471_2024",
+        "zitierung": "BGer 5A_471/2024 vom 3. Dezember 2024",
+        "regesteKurz": "Neuschätzung",
+        "datum": "2024-12-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_4A_279_2023",
+        "zitierung": "BGer 4A_279/2023 vom 14. September 2023",
+        "regesteKurz": "Krankentaggeldversicherung; Konkurs,",
+        "datum": "2023-09-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
         "key": "bger_5A_34_2023",
         "zitierung": "BGer 5A_34/2023 vom 22. August 2023",
         "regesteKurz": "Neuschätzung von Grundstücken",
         "datum": "2023-08-22",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_321_2022",
+        "zitierung": "BGer 9C_321/2022 vom 29. März 2023",
+        "regesteKurz": "Alters- und Hinterlassenenversicherung (Haftung des Arbeitgebers; Schaden)",
+        "datum": "2023-03-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -1123,30 +1413,113 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
-      },
+      }
+    ],
+    "DBG": [
       {
-        "key": "bger_5A_315_2021",
-        "zitierung": "BGer 5A_315/2021 vom 29. März 2022",
-        "regesteKurz": "Gültigkeit des Rechtsvorschlags",
-        "datum": "2022-03-29",
+        "key": "bger_9C_426_2025",
+        "zitierung": "BGer 9C_426/2025 vom 19. September 2025",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperiode 2024",
+        "datum": "2025-09-19",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_672_2021",
-        "zitierung": "BGer 5A_672/2021 vom 14. Dezember 2021",
-        "regesteKurz": "Arresteinsprache",
-        "datum": "2021-12-14",
+        "key": "bger_9C_97_2025",
+        "zitierung": "BGer 9C_97/2025 vom 4. April 2025",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zug und direkte Bundessteuer, Steuerperiode 2022",
+        "datum": "2025-04-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_680_2019",
-        "zitierung": "BGer 5A_680/2019 vom 10. Dezember 2019",
-        "regesteKurz": "Konkursandrohung",
-        "datum": "2019-12-10",
+        "key": "bger_9C_219_2024",
+        "zitierung": "BGer 9C_219/2024 vom 30. Januar 2025",
+        "regesteKurz": "Staats-, Bezirks- und Gemeindesteuern des Kantons Appenzell Innerrhoden und direkte Bundessteuer, Steuerperiode 2019",
+        "datum": "2025-01-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_585_2024",
+        "zitierung": "BGer 9C_585/2024 vom 3. Dezember 2024",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich, Steuerperioden 2009 und 2010",
+        "datum": "2024-12-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_244_2021",
+        "zitierung": "BGer 6B_244/2021 vom 17. April 2023",
+        "regesteKurz": "Strafzumessung; Verfolgungsverfährung (6B_244/2021); mehrfacher Betrug, Misswirtschaft; Strafzumessung (6B_254/2021)",
+        "datum": "2023-04-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_678_2021",
+        "zitierung": "BGer 9C_678/2021 vom 17. März 2023",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Nidwalden und direkte Bundessteuer, Steuerperiode 2015",
+        "datum": "2023-03-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_741_2021",
+        "zitierung": "BGer 2C_741/2021 vom 11. Oktober 2021",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Solothurn und direkte Bundessteuer, Steuerperioden 2018 und 2019",
+        "datum": "2021-10-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_596_2020",
+        "zitierung": "BGer 2C_596/2020 vom 10. März 2021",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich, Steuerperiode 2017",
+        "datum": "2021-03-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_872_2020",
+        "zitierung": "BGer 2C_872/2020 vom 2. März 2021",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons St. Gallen, direkte Bundessteuer, Steuerperiode 2018",
+        "datum": "2021-03-02",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_103_2021",
+        "zitierung": "BGer 2C_103/2021 vom 9. Februar 2021",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperioden 2015-2016",
+        "datum": "2021-02-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_1021_2019",
+        "zitierung": "BGer 2C_1021/2019 vom 30. Oktober 2020",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Graubünden sowie direkte Bundessteuer, Steuerperiode 2015",
+        "datum": "2020-10-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_908_2019",
+        "zitierung": "BGer 2C_908/2019 vom 20. Oktober 2020",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Thurgau und direkte Bundessteuer, Steuerperiode 2014",
+        "datum": "2020-10-20",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
@@ -1161,350 +1534,121 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
+      },
+      {
+        "key": "bger_6B_1035_2023",
+        "zitierung": "BGer 6B_1035/2023 vom 13. Mai 2024",
+        "regesteKurz": "Verletzung der Meldepflicht nach Art. 31 Abs. 1 lit. d ELG, Verletzung der Auskunftspflicht nach Art. 31 Abs. 2 lit. a ELG",
+        "datum": "2024-05-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_9C_618_2020",
+        "zitierung": "BGer 9C_618/2020 vom 17. Dezember 2020",
+        "regesteKurz": "Ergänzungsleistung zur AHV/IV",
+        "datum": "2020-12-17",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
       }
     ],
-    "BVG": [
+    "STHG": [
       {
-        "key": "bger_5A_730_2020",
-        "zitierung": "BGer 5A_730/2020 vom 21. Juni 2021",
-        "regesteKurz": "Eheschutzmassnahmen",
-        "datum": "2021-06-21",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "ATSG": [
-      {
-        "key": "bger_8C_313_2024",
-        "zitierung": "BGer 8C_313/2024 vom 13. November 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-11-13",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_214_2025",
-        "zitierung": "BGer 9C_214/2025 vom 15. Oktober 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-10-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_681_2024",
-        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
-        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
-        "datum": "2025-10-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_733_2024",
-        "zitierung": "BGer 8C_733/2024 vom 18. August 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente; Revision)",
-        "datum": "2025-08-18",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_694_2024",
-        "zitierung": "BGer 8C_694/2024 vom 14. August 2025",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
-        "datum": "2025-08-14",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_750_2024",
-        "zitierung": "BGer 8C_750/2024 vom 7. August 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-08-07",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_42_2025",
-        "zitierung": "BGer 9C_42/2025 vom 4. August 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-08-04",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_102_2025",
-        "zitierung": "BGer 8C_102/2025 vom 3. Juli 2025",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld)",
+        "key": "bger_9C_187_2025",
+        "zitierung": "BGer 9C_187/2025 vom 3. Juli 2025",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich und direkte Bundessteuer, Steuerperioden 2020 bis 2021",
         "datum": "2025-07-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_8C_513_2024",
-        "zitierung": "BGer 8C_513/2024 vom 15. April 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
-        "datum": "2025-04-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_555_2024",
-        "zitierung": "BGer 8C_555/2024 vom 4. April 2025",
-        "regesteKurz": "Invalidenversicherung (Arbeitsfähigkeit, Invalidenrente)",
-        "datum": "2025-04-04",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_476_2024",
-        "zitierung": "BGer 8C_476/2024 vom 30. Januar 2025",
-        "regesteKurz": "Unfallversicherung (Invalidenrente)",
+        "key": "bger_9C_219_2024",
+        "zitierung": "BGer 9C_219/2024 vom 30. Januar 2025",
+        "regesteKurz": "Staats-, Bezirks- und Gemeindesteuern des Kantons Appenzell Innerrhoden und direkte Bundessteuer, Steuerperiode 2019",
         "datum": "2025-01-30",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_8C_255_2024",
-        "zitierung": "BGer 8C_255/2024 vom 27. Januar 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
-        "datum": "2025-01-27",
+        "key": "bger_9C_628_2022",
+        "zitierung": "BGer 9C_628/2022 vom 31. Januar 2023",
+        "regesteKurz": "Grundstückgewinnsteuer des Kantons Zürich, Steuerperiode 2013",
+        "datum": "2023-01-31",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_596_2020",
+        "zitierung": "BGer 2C_596/2020 vom 10. März 2021",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Zürich, Steuerperiode 2017",
+        "datum": "2021-03-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_1021_2019",
+        "zitierung": "BGer 2C_1021/2019 vom 30. Oktober 2020",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Graubünden sowie direkte Bundessteuer, Steuerperiode 2015",
+        "datum": "2020-10-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C_908_2019",
+        "zitierung": "BGer 2C_908/2019 vom 20. Oktober 2020",
+        "regesteKurz": "Staats- und Gemeindesteuern des Kantons Thurgau und direkte Bundessteuer, Steuerperiode 2014",
+        "datum": "2020-10-20",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       }
     ],
-    "UVG": [
+    "VVG": [
       {
-        "key": "bger_8C_681_2024",
-        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
-        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
-        "datum": "2025-10-15",
+        "key": "bger_4A_478_2024",
+        "zitierung": "BGer 4A_478/2024 vom 4. Dezember 2024",
+        "regesteKurz": "Forderung aus Krankentaggeldversicherung,",
+        "datum": "2024-12-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_8C_694_2024",
-        "zitierung": "BGer 8C_694/2024 vom 14. August 2025",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
-        "datum": "2025-08-14",
+        "key": "bger_4A_503_2023",
+        "zitierung": "BGer 4A_503/2023 vom 29. Juli 2024",
+        "regesteKurz": "Versicherungsvertrag,",
+        "datum": "2024-07-29",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_8C_102_2025",
-        "zitierung": "BGer 8C_102/2025 vom 3. Juli 2025",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld)",
-        "datum": "2025-07-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_828_2023",
-        "zitierung": "BGer 8C_828/2023 vom 6. Februar 2025",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang; Fallabschluss)",
-        "datum": "2025-02-06",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_476_2024",
-        "zitierung": "BGer 8C_476/2024 vom 30. Januar 2025",
-        "regesteKurz": "Unfallversicherung (Invalidenrente)",
-        "datum": "2025-01-30",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_150_2024",
-        "zitierung": "BGer 8C_150/2024 vom 10. Oktober 2024",
-        "regesteKurz": "Unfallversicherung (Kausalzusammenhang)",
-        "datum": "2024-10-10",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_75_2024",
-        "zitierung": "BGer 8C_75/2024 vom 12. August 2024",
-        "regesteKurz": "Unfallversicherung (Versicherungsdeckung)",
-        "datum": "2024-08-12",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_326_2022",
-        "zitierung": "BGer 8C_326/2022 vom 13. Oktober 2022",
-        "regesteKurz": "Invalidenversicherung (Eingliederungsmassnahmen, Invalidenrente)",
-        "datum": "2022-10-13",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_24_2022",
-        "zitierung": "BGer 8C_24/2022 vom 20. September 2022",
-        "regesteKurz": "Unfallversicherung (Unfallbegriff)",
-        "datum": "2022-09-20",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_528_2021",
-        "zitierung": "BGer 8C_528/2021 vom 3. Mai 2022",
-        "regesteKurz": "Unfallversicherung (Invalidenrente)",
-        "datum": "2022-05-03",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_728_2020",
-        "zitierung": "BGer 8C_728/2020 vom 23. Juni 2021",
-        "regesteKurz": "Unfallversicherung (Heilbehandlung, Invalidenrente)",
-        "datum": "2021-06-23",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_785_2020",
-        "zitierung": "BGer 8C_785/2020 vom 7. Mai 2021",
-        "regesteKurz": "Unfallversicherung (Heilbehandlung)",
-        "datum": "2021-05-07",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "IVG": [
-      {
-        "key": "bger_9C_214_2025",
-        "zitierung": "BGer 9C_214/2025 vom 15. Oktober 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-10-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_733_2024",
-        "zitierung": "BGer 8C_733/2024 vom 18. August 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente; Revision)",
-        "datum": "2025-08-18",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_750_2024",
-        "zitierung": "BGer 8C_750/2024 vom 7. August 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-08-07",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_42_2025",
-        "zitierung": "BGer 9C_42/2025 vom 4. August 2025",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2025-08-04",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_513_2024",
-        "zitierung": "BGer 8C_513/2024 vom 15. April 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
-        "datum": "2025-04-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_555_2024",
-        "zitierung": "BGer 8C_555/2024 vom 4. April 2025",
-        "regesteKurz": "Invalidenversicherung (Arbeitsfähigkeit, Invalidenrente)",
-        "datum": "2025-04-04",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_255_2024",
-        "zitierung": "BGer 8C_255/2024 vom 27. Januar 2025",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
-        "datum": "2025-01-27",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_260_2024",
-        "zitierung": "BGer 8C_260/2024 vom 25. November 2024",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2024-11-25",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_455_2024",
-        "zitierung": "BGer 8C_455/2024 vom 19. November 2024",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente)",
-        "datum": "2024-11-19",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_217_2024",
-        "zitierung": "BGer 9C_217/2024 vom 30. Juli 2024",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente; Valideneinkommen; Invalideneinkommen)",
-        "datum": "2024-07-30",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_572_2023",
-        "zitierung": "BGer 9C_572/2023 vom 18. Juni 2024",
-        "regesteKurz": "Invalidenversicherung (Invalidenrente; Arbeitsunfähigkeit; Invalideneinkommen)",
-        "datum": "2024-06-18",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_177_2024",
-        "zitierung": "BGer 9C_177/2024 vom 3. April 2024",
-        "regesteKurz": "Invalidenversicherung",
-        "datum": "2024-04-03",
+        "key": "bger_4A_440_2022",
+        "zitierung": "BGer 4A_440/2022 vom 16. November 2023",
+        "regesteKurz": "Versicherungsvertrag,",
+        "datum": "2023-11-16",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       }
     ],
     "AVIG": [
+      {
+        "key": "bger_8C_721_2023",
+        "zitierung": "BGer 8C_721/2023 vom 30. April 2024",
+        "regesteKurz": "Arbeitslosenversicherung (Arbeitslosenentschädigung)",
+        "datum": "2024-04-30",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
       {
         "key": "bger_8C_150_2020",
         "zitierung": "BGer 8C_150/2020 vom 8. April 2020",
@@ -1524,39 +1668,23 @@
         "kanton": "CH"
       }
     ],
-    "AHVG": [
+    "DSG": [
       {
-        "key": "bger_8C_681_2024",
-        "zitierung": "BGer 8C_681/2024 vom 15. Oktober 2025",
-        "regesteKurz": "Unfallversicherung (Berufskrankheit; Invalidenrente; Einkommensvergleich)",
-        "datum": "2025-10-15",
+        "key": "bger_1C_788_2021",
+        "zitierung": "BGer 1C_788/2021 vom 7. März 2022",
+        "regesteKurz": "Auslieferung an Albanien",
+        "datum": "2022-03-07",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
-      },
+      }
+    ],
+    "BVG": [
       {
-        "key": "bger_8C_75_2024",
-        "zitierung": "BGer 8C_75/2024 vom 12. August 2024",
-        "regesteKurz": "Unfallversicherung (Versicherungsdeckung)",
-        "datum": "2024-08-12",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_9C_590_2019",
-        "zitierung": "BGer 9C_590/2019 vom 15. Juni 2020",
-        "regesteKurz": "Alters- und Hinterlassenenversicherung",
-        "datum": "2020-06-15",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_8C_218_2019",
-        "zitierung": "BGer 8C_218/2019 vom 15. Oktober 2019",
-        "regesteKurz": "Unfallversicherung; Alters- und Hinterlassenenversicherung (Beitragspflicht; Abgrenzung selbstständige und unselbstständige Erwerbstätigkeit)",
-        "datum": "2019-10-15",
+        "key": "bger_5A_730_2020",
+        "zitierung": "BGer 5A_730/2020 vom 21. Juni 2021",
+        "regesteKurz": "Eheschutzmassnahmen",
+        "datum": "2021-06-21",
         "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"

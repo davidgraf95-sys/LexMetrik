@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-26",
   "eintraege": [
     {
       "id": "kanton/GR/gr_gerichte/ZR1202620",
@@ -15,7 +15,7 @@
       "sprache": "de",
       "leitcharakter": "routine",
       "sachgebiet": "privat",
-      "legalArea": null,
+      "legalArea": "civil",
       "rubrum": null,
       "regeste": null,
       "regesteAmtlich": false,
@@ -181,7 +181,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://entscheidsuche.gr.ch/tribunavtplus/ServletDownload/ZR1_2026_20_ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd6097657aaf2885e56f7406bfd2814542097f0a67142aec037db737c27c1a2be201ec0edc1bc0425c099a9488a18062b80f8de?path=ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd6097657aaf2885e56f7406bfd2814542097f0a67142aec037db737c27c1a2be201ec0edc1bc0425c099a9488a18062b80f8de&pathIsEncrypted=1&dossiernummer=ZR1_2026_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-26",
       "fassungsToken": "a3ccc1a2257d6aa0c8530d211f52bff81250884e7c04cd7b18eab1876e079925",
       "sha": "04f715e09edad261b5337e40253fc1d6ded5e5893ac85fd45eeca7674e592a62"
     }

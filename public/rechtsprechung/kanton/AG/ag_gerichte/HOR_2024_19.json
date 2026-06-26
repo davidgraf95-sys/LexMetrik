@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-26",
   "eintraege": [
     {
       "id": "kanton/AG/ag_gerichte/HOR_2024_19",
@@ -15,7 +15,7 @@
       "sprache": "de",
       "leitcharakter": "routine",
       "sachgebiet": "privat",
-      "legalArea": null,
+      "legalArea": "civil",
       "rubrum": null,
       "regeste": null,
       "regesteAmtlich": false,
@@ -228,7 +228,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://decwork.ag.ch/api/main/v1/de/decrees_pdf/12143",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-26",
       "fassungsToken": "8c5dd7043deaef09d04c7442356c75a9e32e478dc64f05d014e5c15e595dae13",
       "sha": "00ea022eb3b7b3ac298473f22de80f3414c347e4556e01645a78ac48c3a6bd02"
     }

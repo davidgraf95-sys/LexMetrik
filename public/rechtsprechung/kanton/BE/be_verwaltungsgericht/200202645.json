@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-26",
   "eintraege": [
     {
       "id": "kanton/BE/be_verwaltungsgericht/200202645",
@@ -15,7 +15,7 @@
       "sprache": "de",
       "leitcharakter": "routine",
       "sachgebiet": "oeffentlich",
-      "legalArea": null,
+      "legalArea": "public",
       "rubrum": null,
       "regeste": null,
       "regesteAmtlich": false,
@@ -167,7 +167,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://www.vg-urteile.apps.be.ch/tribunapublikation/tribunavtplus/ServletDownload/200_2026_45_1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2b9597f119a514f786990aec4297f1a1805f21c4269f9aa825315f3dd5a0d86a1662fdedfac158674c698a9c72224d159?path=1135a87fe828ea5c36ac883cc48cd62c9aece1cd4f76dda28e1f3d8ce0d6f5f916b78087c64293a8e261373f3af02ad2b9597f119a514f786990aec4297f1a1805f21c4269f9aa825315f3dd5a0d86a1662fdedfac158674c698a9c72224d159&pathIsEncrypted=1&dossiernummer=200_2026_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-26",
       "fassungsToken": "74f041d9fba6852994627dc234b436d02b240009cdf2a2e464e7a6adeed94e22",
       "sha": "8816ba9458f200da6a78997ab7f3ad761926deaec735e4d33096ad5544afe717"
     }

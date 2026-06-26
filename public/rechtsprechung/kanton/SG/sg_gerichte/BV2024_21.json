@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-26",
   "eintraege": [
     {
       "id": "kanton/SG/sg_gerichte/BV2024_21",
@@ -15,7 +15,7 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "sozial-abgaben",
-      "legalArea": null,
+      "legalArea": "civil",
       "rubrum": null,
       "regeste": {
         "text": "Art. 122 ff. ZGB; Art. 281 Abs. 3 ZPO; Art. 22c FZG. Vorsorgeausgleich (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 4. August 2025, BV 2024/21).",
@@ -233,7 +233,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://publikationen.sg.ch/rechtsprechung-gerichte?tx_diamjudicalsg_judicalpublicationpdf%5Bcontroller%5D=DownloadPdf&tx_diamjudicalsg_judicalpublicationpdf%5Bpublication%5D=13971&type=1563347022&cHash=d17b83f01a0ea19c90f1d41b5743d673",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-26",
       "fassungsToken": "f56d05be74ca45dc512de38d09e0d7c5a213450405aadb76e9f9fce248d851f8",
       "sha": "2889c3ef3d21216a5cad2e9259f0332996ae4648f47e55d98e508fafa7111feb"
     }
