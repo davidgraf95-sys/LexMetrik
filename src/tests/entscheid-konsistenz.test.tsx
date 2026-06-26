@@ -70,24 +70,22 @@ const REFERENZEN: Referenzzelle[] = [
     sachverhaltMarken: ['A.', 'B.', 'C.'],
     sha: '2ff9af1de1005f656c197b7d806fe88aab7ef3ab639f80a4f664778da4bb4635',
   },
-  // ── bge × fr: der EINZIGE französische Body im Korpus, der HEUTE noch
-  //    degradiert dargestellt wird (Vor-A2-Baseline, §8 ehrlich eingefroren):
-  //    fälschlich sprache='de', KEIN Kopf-Block (rubrum=null), Sachverhalt
-  //    UNGEGLIEDERT (ein Block). Diese Zelle dokumentiert die A2-Lücke als
-  //    Regressions-Anker. A2 hebt sie: dann rubrumLabels gefüllt, sprache='fr',
-  //    Marken A./B./C. — und der `hinweis` entfällt (deklarierte §6.3-Änderung).
+  // ── bge × fr: der erste mehrsprachig korrekt extrahierte Leitentscheid.
+  //    A2 hat diese Zelle DEKLARIERT gehoben (§6.3): das Sprach-Label folgt dem
+  //    Body (fr statt des 'bge'-Record-Mislabels 'de'), der Kopf-Block ist über
+  //    die mehrsprachige Rubrum-Extraktion vollständig gefüllt (Objet/Parties/
+  //    Autorité précédente/Composition) und der Sachverhalt ist A./B./C.-
+  //    gegliedert. Damit schützt diese Zelle die fr-Darstellung gegen Regression,
+  //    so wie die de-Zelle die 272 DE-BGE schützt.
   //    Hinweis B1: es gibt vier solcher FR-Bodies (152_I_105, 152_II_75,
-  //    152_II_98, 151_IV_357); hier als Referenzzelle nur einer.
+  //    152_II_98, 151_IV_357), alle mit A2 regeneriert; hier als Referenzzelle einer.
   {
     zelle: 'bge×fr',
     key: 'bund/bge/152_I_105',
-    sprache: 'de', // TODO(David)/A2: Mislabel — A2 dreht dies auf 'fr'.
-    rubrumLabels: [], // TODO(David)/A2: FR-Rubrum-Extraktion fehlt — A2 füllt den Kopf-Block.
-    sachverhaltMarken: [null], // TODO(David)/A2: ungegliedert — A2 erzeugt A./B./C.
-    sha: '94396f448419009ed05a95359ab8191d75a85f0ef8f75c5a08417de48d2afa9f',
-    hinweis:
-      'Vor-A2-Baseline: FR-Body fälschlich sprache=de, ohne Kopf-Block, Sachverhalt ungegliedert. ' +
-      'A2 (Folge-Session) hebt diese Zelle — danach Werte aus dem neuen Snapshot übernehmen.',
+    sprache: 'fr',
+    rubrumLabels: ['gegenstand', 'parteien', 'vorinstanz', 'besetzung'],
+    sachverhaltMarken: ['A.', 'B.', 'C.'],
+    sha: '277dc6ef8e60bc949c82ed3b0cad80b816742e238f2c4282ee3bb0f6f489e9bf',
   },
 ];
 

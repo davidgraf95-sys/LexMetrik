@@ -33,12 +33,16 @@ export function entrauscheSachverhalt(text: string): string {
 interface Marker { top: string; sub: string; at: number; end: number }
 
 // Sub-Marker: Gross.Klein, gefolgt von Whitespace + Gross/Ziffer (Abschnitt-Anfang).
-const SUB_RE = /(?:^|\s)([A-Z])\.([a-z])(?=\s+[A-ZÄÖÜ0-9])/g;
+// Folge-Grossbuchstabe inkl. Latin-1-Akzente (À-Ö, Ø-Þ) — sonst bräche ein fr/it-
+// Abschnitt, der mit «À/É/È …» beginnt (A2, Bug-Check 152_I_105). DE unverändert
+// (deutsche Abschnitte beginnen nie mit Akzent-Grossbuchstaben → Superset).
+const SUB_RE = /(?:^|\s)([A-Z])\.([a-z])(?=\s+[A-ZÀ-ÖØ-Þ0-9])/g;
 
 // Top-Marker: Gross. + Whitespace + Grossbuchstabe. UNSICHER bei naiver Anwendung
 // (kollidiert mit Namen „Spital B.", „A. mbH", „B.A."). Darum nur SATZ-INITIAL
 // akzeptiert (Textanfang oder direkt nach Satzzeichen) + strenge A→B→C-Sequenz.
-const TOP_RE = /([A-Z])\.\s+(?=[A-ZÄÖÜ])/g;
+// Folge-Grossbuchstabe inkl. Latin-1-Akzente (s. SUB_RE) für fr/it (A2).
+const TOP_RE = /([A-Z])\.\s+(?=[A-ZÀ-ÖØ-Þ])/g;
 
 // Abkürzungen, deren Punkt KEIN Satzende ist (sonst würde „Dr. B." die Namens-
 // Initiale „B." satz-initial machen → Fehlsplit). Bug-Check 24.6.: 151_II_625.
