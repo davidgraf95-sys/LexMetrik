@@ -22,6 +22,58 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 2: Achsen-UX (4) + Sprachfilter (8) + Leit/BGE-Merge (F4) (Worktree, NICHT deployt)
+
+«jetzt machen» Batch 2, §12-isoliert im Worktree (abgebrancht vom main mit Batch 1
+A1/A2/A3 + B2/B1-Tor + Lane G 6b — Worktree war anfangs 11 Commits hinter main,
+auf `eb66609c` per `--ff-only` vorgezogen). Reine Darstellungsschicht (§3): **kein
+Daten-/Build-Eingriff**, `public/rechtsprechung/register.json` byte-unverändert,
+B2-Tor + `check:entscheide` grün, kein DE-BGE-Drift. Golden byte-gleich (187).
+
+**Auftrag 4 — Achsen-UX (Design zuerst, 3 Varianten bewertet):** (1) Achsen-
+Umschalter (Gruppieren-nach-Segment) — verworfen (konflatiert Filtern/Gruppieren,
+grosser Rail-Umbau, mobil gedrängt); (2) zweite Kachel-Schiene — verworfen (zwei
+Rails konkurrieren, Instanz redundant zum Ebene-Segment, mobil zwei Chip-Bänder vor
+dem Inhalt); (3) **kohärente Facetten-Leiste — GEWÄHLT**: EINE sichtbare Leiste in
+der Ergebnis-Spalte mit Toggle-Chips + Trefferzahl (Reglement R15). Umgesetzt:
+`«Gemeinwesen»`-Achse (Alle/Bund/Kantone + Kanton-Drilldown GR/BE/ZH/SG/AG) —
+**ersetzt** das alte Ebene-Segment (`Rechtsprechung.tsx`) UND den Kanton-Select
+(`<details>`), also EINE Achse statt zweier konkurrierender Controls. **Instanz
+(gerichtstyp)** ist heute deckungsgleich mit Bund/Kanton (nur 2 Werte: bundesgericht/
+kantonal) → bewusst KEINE eigene Facette; lebt schon als `gruppiereNachInstanz`
+(Weitere-Sektion) und wird mit Batch 3 (BVGer/BStGer/BPatGer) zur echten Achse.
+**Abteilung NICHT ins Manifest gehoben** (begründet): nur 2 gerichtstyp-Werte →
+geringer Achsen-Nutzen, `abteilung` ist Freitext-Chamber, das Heben erzwänge eine
+register.json-Regeneration (Drift-Risiko gegen B2/`check:entscheide`) ohne UI-Gewinn
+in diesem Batch → §7-konform weggelassen, A2-Zusatz bleibt offen für Batch 3.
+
+**Auftrag 8 — Sprachfilter:** echte FR-Entscheide vorhanden (4 real, Keys
+`bge_152_I_105`/`bge_151_IV_357`/`bge_152_II_75`/`bge_152_II_98`). Sprache aus dem
+vergrabenen `<details>`-Select in **dieselbe** Facetten-Leiste hochgezogen
+(Alle/Deutsch/Französisch) — eine kohärente Leiste, nicht zwei konkurrierende.
+Empirisch verifiziert: Klick «Französisch» → Treffer 4, jeder Eintrag trägt FR-Marke.
+
+**F4 — Leit/BGE-Merge:** am aktuellen Korpus erneut geprüft `nurLeitentscheide`==
+`nurBge` (272=272, 0 Divergenz, real ohne Verweise) → die zwei Häkchen zu EINEM
+sichtbaren Filter «Nur Leitentscheide (amtliche BGE)» zusammengeführt. Feld
+`leitcharakter` + `nurBge`-Prädikat (browse.ts) als latente Grundlage **behalten**
+(spätere Trennung amtliche-BGE ⟂ Leitentscheid bleibt möglich).
+
+**Bug-/Logik-Check + adversarial:** Facetten-Zähler **cross-gefiltert** (konsistent
+mit der Sachgebiets-Rail, R15) — je Achse Resttreffer MIT allen anderen Filtern, aber
+OHNE die eigene Achse; Null-Optionen ausgeblendet (FR aktiv → Gemeinwesen prunt auf
+Alle 4/Bund 4; ZH aktiv → Sprache prunt auf Alle 6/Deutsch 6, kein Null-Treffer-Klick).
+A11y: jede Achse `role=group`+aria-label, sprechendes Chip-aria-label; Ziffer
+ink-500→ink-600 (12px auf --well 4.47→≥4.5:1, WCAG 1.4.3, Werte nicht runden). axe
+wcag2aa/21aa/22aa: 0 Kontrast-Verstösse hell+dunkel. Playwright-Sicht hell/dunkel/
+mobil (390) ok, Chips wrappen, kein Querscroll.
+
+**5 Commits** (Pathspec, §12): F4-Merge · Auftrag 4 Gemeinwesen · Auftrag 8 Sprache ·
+Bug-Check Cross-Filter · a11y. **Keine** verbotene Nacht-Session-Datei berührt
+(materialien/App/navigation/seo/Suche/prerender/vercel/werkzeuge = 0). **NICHT
+deployt** (§9 — Davids Ja offen). `npm run gate` (voll) grün. Offen/TODO(David):
+fachliche Abnahme der Achsen-UX; Abteilung+Instanz als echte Achsen mit Batch 3.
+
 ## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 1: A1 + A2 + A3 (Worktree, nicht deployt)
 
 «jetzt machen» — die drei Schritte A1→A2→A3 seriell (teilen Dateien), §12-isoliert
