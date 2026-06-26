@@ -5,6 +5,10 @@
 > diese hier) an Lane R/G der Rechtsprechung + Gesetze laufen. Damit nichts
 > zerstört wird (CLAUDE.md §12 — parallele Sessions haben hier schon Arbeit
 > stumm überschrieben), gilt der **Isolations-Vertrag** unten ZWINGEND.
+>
+> **AUSLÖSER:** Sagt David **«jetzt los»**, ist das die Freigabe, dieses Briefing
+> **vollständig + autonom bis «dry»** abzuarbeiten (Paket A + Paket B), ohne pro
+> Schritt rückzufragen. Deploy bleibt gesperrt (§0.3).
 
 ---
 
