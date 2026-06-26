@@ -22,6 +22,34 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 1: B2 (Konsistenz-Tor) + B1 (Render-Noise-Sweep) (Worktree, nicht deployt)
+
+«jetzt machen» — nur die ersten zwei Schritte B2+B1 von Lane R Batch 1 (A1/A2/A3
+bewusst NICHT angefasst, Folge-Session). §12-isoliert im Worktree, Gate vorher
+und nachher grün, Golden byte-gleich (keine Verhaltensänderung).
+- **B2 — Konsistenz-Golden-Tor je (Gericht × Sprache):** neues
+  `src/tests/entscheid-konsistenz.test.tsx` friert die heute gute BGE-de-
+  Darstellung ein, **bevor** A2 die Extraktion anfasst. Mechanik bewusst zur
+  Infrastruktur passend (explizite vitest-Assertions auf echtem Korpus-Entscheid
+  via `react-dom/server`, wie ArtikelBody.test — KEINE `toMatchSnapshot`-Dateien,
+  KEINE golden-outputs-Aufnahme). Zwei Zellen im erweiterbaren `REFERENZEN`-Array:
+  `bge×de` (`150_III_137`: Kopf-Block 4 Rubrum-Zeilen, Sachverhalt A./B./C., kein
+  Seitenmarker im VOLL-Body) + `bge×fr` (`152_I_105`: bewusst auf den degradierten
+  **Vor-A2-Zustand** eingefroren — sprache=de-Mislabel, kein Kopf, ungegliedert,
+  mit `TODO(David)`/A2-Hinweis). Je Zelle eingefroren: sha, Rubrum-Labels,
+  Sachverhalts-Marken, sprache, marker-freier Render. Erweitern = ein Array-
+  Eintrag (Batch 3/A2). Adversarial geprüft (Marker-Regex feuert auf Auszug-Body
+  + bekannte Leaker → Tor kann fallen). 11 Tests grün.
+- **B1 — Render-Noise-Sweep (read-only, kein Code-Fix):** Fix-Liste in
+  `bibliothek/render-noise-sweep-2026-06-27.md` (+ INDEX). Befunde (empirisch,
+  327 Snapshots): **Seitenmarker in 273 Entscheiden** (261 Auszug + 16 VOLL —
+  korrigiert die Plan-Annahme «0 in abschnitte»); **4 FR-Bodies fälschlich
+  `sprache:'de'`** (`151_IV_357`/`152_II_75`/`152_II_98`/`152_I_105` — korrigiert
+  §7 «genau ein FR-Body»); 7 gekappte Sachverhalte; **Fussnoten-Leak = Heuristik-
+  Falsch-Positiv** (41 «Fn.» = Doktrin-Zitate), nur 1 echter kantonaler
+  Superscript-Leak (`AG/HOR_2024_19`); Regeste-Leak/verirrte Marken = 0.
+  Steuert A1/A2/A3. Alles `verifiziert:false`, Abnahme David offen.
+
 ## Session 26.6.2026 — JETZT-MACHEN Welle 0 + Lane G 6a: Kalender-Füllung & einheitliche Randtitel (deployt)
 
 «jetzt machen» (JETZT-MACHEN.md). F5 (6 Regeln nicht-amtliche Urteile) von David
