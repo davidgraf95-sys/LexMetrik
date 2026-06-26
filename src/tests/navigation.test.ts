@@ -90,7 +90,7 @@ describe('Navigations-SSoT', () => {
   it('jedes Blatt-Ziel löst auf eine echte Route auf (keine toten Links)', () => {
     // Statische Seiten + alle Karten-Routen (Rechner/Vorlagen) aus dem Manifest.
     const echteRouten = new Set<string>([
-      '/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/einstellungen', '/methodik', '/ueber', '/kontakt', '/datenschutz',
+      '/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/materialien', '/einstellungen', '/methodik', '/ueber', '/kontakt', '/datenschutz',
       ...ROUTEN_MANIFEST.map((r) => r.pfad),
     ]);
     for (const l of alleNavLinks()) {

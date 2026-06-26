@@ -23,6 +23,7 @@ import { istVorlage } from './vorlagenKategorie';
 import { SYSTEMATIK } from './normtext/systematik';
 import { GEBIETE } from './normtext/register';
 import { KANTONE } from '../data/tarif/typen';
+import { BEHOERDEN } from './materialien/register';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
 export interface NavLink {
@@ -148,6 +149,19 @@ const RECHTSPRECHUNG_KINDER: NavKnoten[] = [
   },
 ];
 
+// Materialien: amtliche Ressourcen (Soft-Law) je Behörde — EINE einklappbare
+// Gruppe «Nach Behörde» (wie Rechtsprechung «Nach Sachgebiet»), standardmässig
+// zu. Ziel je Behörde: /materialien#b-<id> (Sprung-Anker der Übersicht).
+const MATERIALIEN_KINDER: NavKnoten[] = [
+  {
+    art: 'gruppe',
+    label: 'Nach Behörde',
+    aufklappbar: true,
+    standardOffen: false,
+    kinder: BEHOERDEN.map((b) => link(b.kuerzel, `/materialien#b-${b.id}`)),
+  },
+];
+
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
 
 export const NAVIGATION: NavAbschnitt[] = [
@@ -158,6 +172,7 @@ export const NAVIGATION: NavAbschnitt[] = [
   { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
   { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
+  { titel: 'Materialien', ziel: '/materialien', kinder: MATERIALIEN_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.

@@ -31,6 +31,7 @@ bibliothek/
   recherche/   Dossiers zu geplanten Engines/Vorlagen → eigener INDEX.md dort
   muster/      Amtliche Vorlagen verbatim (.txt) + MANIFEST (Quellen-URLs/Stände)
   rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
+  materialien/ Amtliche Ressourcen / Soft-Law (Behörden-Publikationen) — Rubrik «Materialien»
   quellen/     Lokale Quellkopien aus Davids Ablagen (gitignored, Urheberrecht) — committet nur die Sichtung [SICHTUNG.md](quellen/SICHTUNG.md)
 ```
 
@@ -86,6 +87,22 @@ korrigiert die Plan-Annahme «0 in abschnitte»); **4** FR-Bodies fälschlich `s
 Sachverhalte; **Fussnoten-Leak Heuristik = Falsch-Positiv** (41 «Fn.»-Treffer = Doktrin-Zitate),
 nur 1 echter kantonaler Superscript-Leak; Regeste-Leak/verirrte Marken = 0. Priorisierte
 Fix-Liste steuert A1/A2/A3. Kein Code-Fix; `verifiziert:false`, Abnahme David offen.
+
+**Neue eidg. Gerichte (Auftrag 9, read-only):** [rechtsprechung/neue-gerichte-dossier-2026-06-27.md](rechtsprechung/neue-gerichte-dossier-2026-06-27.md) —
+Dossier BVGer/BStGer/BPatGer (Nacht-Session 27.6.2026, ultracode-Fan-out, doppelt
+verifiziert). Je Gericht: Publikationsart + Leitentscheid-Kriterium, Portal/entscheidsuche-
+Spider (`CH_BVGer`/`CH_BSTG`/bpatger), Geschäftsnummer-Regex, Sprachen (FR/IT zwingend → A2),
+Regel-Synthese (Aufnahme→Manifest→Darstellung am BGer-Muster) + neueste Kandidaten. Steuert den
+späteren Bau (nach A2); KEIN Code. Abnahme David offen.
+
+## Amtliche Ressourcen / Materialien
+
+**Materialien-Rubrik P0 (Auftrag 5):** [materialien/amtliche-ressourcen-2026-06-27.md](materialien/amtliche-ressourcen-2026-06-27.md) —
+Grundlage der neuen Rubrik «Materialien» (`src/lib/materialien/`, `/materialien`). 28 Behörden-
+Publikationen (Soft-Law, kein Gesetzesrang) von 7 Bundesbehörden (ESTV·EDÖB·SECO·BSV·EHRA·FINMA·IGE),
+alle `nur-live-link` (Erreichbarkeit 27.6.2026 geprüft). Beschaffungs-Regel (stabile Verzeichnis-
+URL vs. Direkt-Link), Determinismus/Tor, normKeys-Verzahnung, Pflegebedarf, P1-Backlog (SEM/BAG).
+Maschinell kuratiert; fachliche Abnahme David offen (Zeitsperre bis 1.12.2026).
 
 ## register/ — fortlaufend gepflegt
 

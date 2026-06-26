@@ -100,12 +100,12 @@ describe('universalSuche: Rechtsprechung-Gruppe', () => {
 
 describe('universalSuche: Aggregation', () => {
   it('leere Suche → keine Gruppen', () => {
-    expect(sucheAlles('', { presets: null, gesetze: null, entscheide: null })).toEqual([]);
+    expect(sucheAlles('', { presets: null, gesetze: null, entscheide: null, materialien: null })).toEqual([]);
   });
 
   it('lässt geladene leere Gruppen weg, behält ladende als Platzhalter', () => {
-    const g = sucheAlles('zzzznogibtsnicht', { presets: [], gesetze: [], entscheide: null });
-    // Katalog/Preset/Gesetz geladen+leer → raus; Entscheid lädt noch → bleibt.
+    const g = sucheAlles('zzzznogibtsnicht', { presets: [], gesetze: [], entscheide: null, materialien: [] });
+    // Katalog/Preset/Gesetz/Material geladen+leer → raus; Entscheid lädt noch → bleibt.
     expect(g.map((x) => x.id)).toEqual(['entscheid']);
     expect(g[0].laedt).toBe(true);
   });

@@ -18,8 +18,10 @@ import { filtern } from './normtext/browse';
 import type { BrowseEntscheid } from './rechtsprechung/register';
 import { filterEntscheide, nachDatum } from './rechtsprechung/browse';
 import type { PresetIndexEintrag } from './presetIndex';
+import type { BrowseMaterial } from './materialien/typen';
+import { filtere as filtereMaterialien, vergleicheGlobal } from './materialien/browse';
 
-export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'entscheid';
+export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'entscheid' | 'material';
 
 export interface SuchTreffer {
   id: string;
@@ -115,12 +117,29 @@ export function entscheidGruppe(liste: BrowseEntscheid[] | null, q: string, kapp
   };
 }
 
+export function materialGruppe(liste: BrowseMaterial[] | null, q: string, kappung = KAPPUNG): SuchGruppe {
+  if (liste === null) return { id: 'material', titel: 'Materialien', treffer: [], gesamt: 0, laedt: true };
+  const getroffen = filtereMaterialien(liste, { suche: q }).sort(vergleicheGlobal);
+  const treffer: SuchTreffer[] = getroffen.slice(0, kappung).map((m) => ({
+    id: m.key,
+    label: m.nummer ? `${m.behoerdeKuerzel} ${m.nummer} · ${m.titel}` : `${m.behoerdeKuerzel} · ${m.titel}`,
+    untertitel: [m.behoerdeName, m.doktypLabel].filter(Boolean).join(' — '),
+    marke: { text: 'Material', ton: 'soft' as const },
+    href: `/materialien/${encodeURIComponent(m.key)}`,
+  }));
+  return {
+    id: 'material', titel: 'Materialien', treffer, gesamt: getroffen.length,
+    mehrHref: getroffen.length > kappung ? '/materialien' : undefined,
+  };
+}
+
 // ── Aggregation ──────────────────────────────────────────────────────────────
 
 export interface SuchDaten {
   presets: PresetIndexEintrag[] | null;
   gesetze: BrowseErlass[] | null;
   entscheide: BrowseEntscheid[] | null;
+  materialien: BrowseMaterial[] | null;
 }
 
 /** Alle Gruppen in fester Reihenfolge; leere (aber geladene) Gruppen entfallen,
@@ -132,6 +151,7 @@ export function sucheAlles(q: string, daten: SuchDaten, kappung = KAPPUNG): Such
     presetGruppe(daten.presets, kappung),
     gesetzGruppe(daten.gesetze, q, kappung),
     entscheidGruppe(daten.entscheide, q, kappung),
+    materialGruppe(daten.materialien, q, kappung),
   ];
   return gruppen.filter((g) => g.laedt || g.treffer.length > 0);
 }

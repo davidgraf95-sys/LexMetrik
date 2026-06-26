@@ -10,6 +10,7 @@
 
 import { ALLE_KARTEN, istVerfuegbar } from '../startseiteConfig';
 import { ERLASS_REGISTER } from './register';
+import { MATERIAL_REGISTER, behoerdeVon, DOKTYP_LABEL } from '../materialien/register';
 
 const ERLASS_WERKZEUGE: Readonly<Record<string, string[]>> = {
   OR: ['kuendigung-sperrfristen', 'lohnfortzahlung', 'ferienanspruch', 'dreizehnter-monatslohn', 'ueberstunden-zuschlag', 'verjaehrung', 'verzugszins', 'schadenszins', 'gewaehrleistung', 'mietrecht', 'mietzinsanpassung', 'arbeitsvertrag', 'mietvertrag-wohnen', 'auftrag', 'werkvertrag', 'mahnung'],
@@ -79,4 +80,30 @@ export function massgebendeErlasse(modus: 'rechner' | 'vorlage'): MassgebenderEr
     out.push({ key: e.key, kuerzel: e.kuerzel, titel: e.titel, pfad: `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}` });
   }
   return out;
+}
+
+// ─── Norm ↔ Material-Brücke (Auftrag 5, additiv) ────────────────────────────
+//
+// Inverse zu MaterialRegistereintrag.normKeys: zu einem Erlass-Key die amtlichen
+// Materialien (Kreisschreiben/Wegleitungen/Leitfäden …), die ihn auslegen — für
+// einen «Materialien zu diesem Erlass»-Block im Gesetze-Reader (Burggraben:
+// Norm + Behördenpraxis an einer Stelle). Reine Daten-Projektion aus dem
+// MATERIAL_REGISTER (§3); Reihenfolge = Behörde-rang → eigener rang.
+
+export interface MaterialBezug { key: string; titel: string; behoerdeKuerzel: string; doktypLabel: string; nummer: string | null; pfad: string }
+
+export function materialienFuerNorm(normKey: string): MaterialBezug[] {
+  const out: MaterialBezug[] = [];
+  for (const m of MATERIAL_REGISTER) {
+    if (!(m.normKeys ?? []).includes(normKey)) continue;
+    out.push({
+      key: m.key,
+      titel: m.titel,
+      behoerdeKuerzel: behoerdeVon(m.behoerde).kuerzel,
+      doktypLabel: DOKTYP_LABEL[m.doktyp],
+      nummer: m.nummer ?? null,
+      pfad: `/materialien/${encodeURIComponent(m.key)}`,
+    });
+  }
+  return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
 }

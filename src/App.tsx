@@ -47,6 +47,12 @@ const EntscheidLeser = lazyRetry(() => import('./pages/EntscheidLeser').then((m)
 // nur-live-link (amtliche Quelle), kein Volltext-Snapshot. Übersicht /international
 // wird prerendert (seo.ts). Routenzahl +1.
 const International = lazyRetry(() => import('./pages/International').then((m) => ({ default: m.International })));
+// Rubrik «Materialien»: amtliche Ressourcen / Soft-Law (Kreisschreiben,
+// Wegleitungen, Leitfäden …) — alle nur-live-link (amtliche Quelle), kein
+// Volltext-Snapshot. Übersicht /materialien wird prerendert, Detail /materialien/:key
+// als Metadaten-/Live-Link-Seite (seo-detail.ts). Routenzahl +1.
+const Materialien = lazyRetry(() => import('./pages/Materialien').then((m) => ({ default: m.Materialien })));
+const MaterialLeser = lazyRetry(() => import('./pages/MaterialLeser').then((m) => ({ default: m.MaterialLeser })));
 const NotFound = lazyRetry(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
@@ -235,6 +241,9 @@ export default function App() {
         <Route path="/rechtsprechung/:key" element={<EntscheidLeser />} />
         {/* Rubrik «International»: Übersicht (prerendert), nur-live-link-Karten */}
         <Route path="/international" element={<International />} />
+        {/* Rubrik «Materialien»: Übersicht (prerendert) + Detail (Metadaten/Live-Link) */}
+        <Route path="/materialien" element={<Materialien />} />
+        <Route path="/materialien/:key" element={<MaterialLeser />} />
         <Route path="/methodik" element={<Methodik />} />
         <Route path="/ueber" element={<Ueber />} />
         <Route path="/kontakt" element={<Kontakt />} />

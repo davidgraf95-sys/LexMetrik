@@ -30,11 +30,15 @@ import {
   KEY_UNSICHER,
   metaFuerEntscheid,
   metaFuerErlass,
+  metaFuerMaterial,
+  jsonLdFuerMaterial,
+  materialDetailHtml,
 } from '../src/lib/seo-detail';
 import type { BrowseErlass } from '../src/lib/normtext/browse-typen';
 import type { NormSnapshotDatei } from '../src/lib/normtext/typen';
 import type { BrowseEntscheid } from '../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshotDatei } from '../src/lib/rechtsprechung/typen';
+import type { BrowseMaterial } from '../src/lib/materialien/typen';
 import { renderRoute } from '../src/entry-server';
 
 // Deklarierter Routen-Zähler (wie die Katalog-Zähler in den Tests): bei neuen
@@ -50,7 +54,7 @@ import { renderRoute } from '../src/entry-server';
 // src/tests/routenManifest.test.ts gegated (Manifest === katalogRouten()).
 // Dieser Zähler bleibt als sekundärer Drift-Backstop (fängt auch statische
 // Seiten) — bei neuen Karten/Seiten weiter im selben Commit nachführen.
-const ERWARTETE_ROUTEN = 56; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); +1: /international (24.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1)
+const ERWARTETE_ROUTEN = 57; // +1: /gesetze (17.6.2026); +1: /rechtsprechung (23.6.2026); +1: /international (24.6.2026); +1: /materialien (27.6.2026); UI-Welle: −/recherche, +/rechner +/vorlagen (netto +1)
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite
@@ -179,6 +183,9 @@ const erlassManifest = (
 const entscheidManifest = (
   JSON.parse(readFileSync(join(PUBLIC, 'rechtsprechung', 'register.json'), 'utf8')) as { entscheide: BrowseEntscheid[] }
 ).entscheide;
+const materialManifest = (
+  JSON.parse(readFileSync(join(PUBLIC, 'materialien', 'register.json'), 'utf8')) as { materialien: BrowseMaterial[] }
+).materialien;
 
 const snapshotErlasse = erlassManifest.filter((e) => e.status === 'snapshot');
 // Verweis-Einträge (vollständiges Urteil zu einem BGE) haben kein eigenes File —
@@ -193,10 +200,18 @@ const ERLASS_FLOOR = 1400; // aktuell 1449 snapshot (218 Bund + 1231 Kanton)
 // der aufgeblähte 610er-Korpus (96 % falsch etikettiert) wich 327 ehrlichen Einträgen
 // (272 amtliche BGE + 55 routine). Floor unter dem neuen Ist, fängt weiter echte Verluste.
 const ENTSCHEID_FLOOR = 300; // aktuell 327 snapshot (272 BGE + 25 bger + 30 kantonal)
-if (snapshotErlasse.length < ERLASS_FLOOR || snapshotEntscheide.length < ENTSCHEID_FLOOR) {
+// Materialien (27.6.2026): jeder Eintrag bekommt eine Metadaten-/Live-Link-Detailseite
+// (kein Volltext, §7). Floor unter dem Ist, fängt stilles Register-Schrumpfen.
+const MATERIAL_FLOOR = 20; // aktuell 28 (7 Behörden)
+if (
+  snapshotErlasse.length < ERLASS_FLOOR ||
+  snapshotEntscheide.length < ENTSCHEID_FLOOR ||
+  materialManifest.length < MATERIAL_FLOOR
+) {
   console.error(
     `\nManifest-Schrumpfung: Erlasse ${snapshotErlasse.length} (Floor ${ERLASS_FLOOR}), ` +
-      `Entscheide ${snapshotEntscheide.length} (Floor ${ENTSCHEID_FLOOR}) — Register prüfen.`,
+      `Entscheide ${snapshotEntscheide.length} (Floor ${ENTSCHEID_FLOOR}), ` +
+      `Materialien ${materialManifest.length} (Floor ${MATERIAL_FLOOR}) — Register prüfen.`,
   );
   process.exit(1);
 }
@@ -213,8 +228,10 @@ function schreibeDetail(ziel: string, html: string): void {
 
 const gesetzeUrls: string[] = [];
 const rechtsprechungUrls: string[] = [];
+const materialienUrls: string[] = [];
 let erlassUebersprungen = 0;
 let entscheidUebersprungen = 0;
+let materialUebersprungen = 0;
 let detailFehler = 0;
 
 for (const e of snapshotErlasse) {
@@ -288,6 +305,28 @@ for (const e of snapshotEntscheide) {
 }
 console.log(`OK  ${rechtsprechungUrls.length} Entscheid-Detailseiten (${entscheidUebersprungen} übersprungen)`);
 
+// Materialien-Detailseiten (Metadaten + Live-Link, KEIN Normtext §7). Jeder Eintrag
+// hat einen Live-Link (Pflicht im Register/check) → kein thin-content-Skip nötig.
+for (const m of materialManifest) {
+  try {
+    if (KEY_UNSICHER.test(m.key)) {
+      console.warn(`SKIP  /materialien: Key pfad-/URL-unsicher: ${JSON.stringify(m.key)}`);
+      materialUebersprungen++;
+      continue;
+    }
+    const inhalt = materialDetailHtml(m);
+    if (inhalt.includes('<script')) throw new Error('Inline-Script im Material-HTML — Builder prüfen');
+    const meta = metaFuerMaterial(m);
+    const html = rendereTemplate(meta, jsonLdFuerMaterial(m), inhalt, meta.pfad);
+    schreibeDetail(join(DIST, 'materialien', `${m.key}.html`), html);
+    materialienUrls.push(meta.canonical);
+  } catch (err) {
+    detailFehler++;
+    console.error(`FEHLER  /materialien/${m.key}:`, err);
+  }
+}
+console.log(`OK  ${materialienUrls.length} Material-Detailseiten (${materialUebersprungen} übersprungen)`);
+
 // Tore (FAHRPLAN W1.1): (1) unerwartete Exceptions brechen; (2) Vollständigkeit
 // — jeder Eintrag ist entweder geschrieben oder BEWUSST übersprungen (kein
 // stiller Verlust). Der absolute Floor oben fängt zusätzlich Input-Schrumpfung.
@@ -297,7 +336,8 @@ if (detailFehler > 0) {
 }
 if (
   gesetzeUrls.length + erlassUebersprungen !== snapshotErlasse.length ||
-  rechtsprechungUrls.length + entscheidUebersprungen !== snapshotEntscheide.length
+  rechtsprechungUrls.length + entscheidUebersprungen !== snapshotEntscheide.length ||
+  materialienUrls.length + materialUebersprungen !== materialManifest.length
 ) {
   console.error('\nVollständigkeits-Drift: geschrieben + übersprungen ≠ Manifest-Menge.');
   process.exit(1);
@@ -326,6 +366,7 @@ const teilSitemaps: Array<{ datei: string; urls: string[] }> = [
   { datei: 'sitemap-seiten.xml', urls: seitenUrls },
   { datei: 'sitemap-gesetze.xml', urls: gesetzeUrls },
   { datei: 'sitemap-rechtsprechung.xml', urls: rechtsprechungUrls },
+  { datei: 'sitemap-materialien.xml', urls: materialienUrls },
 ];
 const aktiveSitemaps = teilSitemaps.filter((s) => s.urls.length > 0);
 for (const s of aktiveSitemaps) schreibeUrlset(s.datei, s.urls);

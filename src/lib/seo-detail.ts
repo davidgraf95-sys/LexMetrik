@@ -25,6 +25,7 @@ import type { BrowseErlass } from './normtext/browse-typen';
 import type { NormSnapshotDatei } from './normtext/typen';
 import type { BrowseEntscheid } from './rechtsprechung/register';
 import type { EntscheidSnapshot } from './rechtsprechung/typen';
+import type { BrowseMaterial } from './materialien/typen';
 
 export const esc = (s: string): string =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -75,6 +76,10 @@ export function entscheidDetailPfad(e: Pick<BrowseEntscheid, 'key'>): string {
   return `/rechtsprechung/${encodeURIComponent(e.key)}`;
 }
 
+export function materialDetailPfad(m: Pick<BrowseMaterial, 'key'>): string {
+  return `/materialien/${encodeURIComponent(m.key)}`;
+}
+
 // ─── Metadaten (mechanisches Template, kein Rechtstext §7) ───────────────────
 
 export function metaFuerErlass(e: BrowseErlass): RouteMetadaten {
@@ -101,6 +106,20 @@ export function metaFuerEntscheid(e: BrowseEntscheid): RouteMetadaten {
       `${e.gerichtName}: ${e.zitierung}${bge}, ${e.datum}. ` +
       `Entscheid im Volltext auf LexMetrik, mit den zitierten Normen verzahnt und ` +
       `Live-Link zur amtlichen Fassung. Keine Rechtsberatung.`,
+    canonical: SITE_URL + pfad,
+  };
+}
+
+export function metaFuerMaterial(m: BrowseMaterial): RouteMetadaten {
+  const pfad = materialDetailPfad(m);
+  const nr = m.nummer ? ` ${m.nummer}` : '';
+  return {
+    pfad,
+    titel: `${m.titel} — ${m.behoerdeKuerzel} — LexMetrik`,
+    beschreibung:
+      `${m.behoerdeName}: ${m.doktypLabel}${nr} «${m.titel}», Stand ${m.stand}. ` +
+      `Amtliche Ressource (Soft-Law, kein Gesetzesrang) mit Live-Link zur amtlichen Fassung ` +
+      `und Verzahnung zu den massgebenden Gesetzen. Keine Rechtsberatung.`,
     canonical: SITE_URL + pfad,
   };
 }
@@ -160,6 +179,49 @@ export function jsonLdFuerEntscheid(e: BrowseEntscheid): object {
       ]),
     ],
   };
+}
+
+// Material: schema.org Article (Behörden-Publikation, identitäts-/metadatenbasiert)
+// + BreadcrumbList. NUR Identitätsfelder (name, author=Behörde, inLanguage,
+// datePublished=Stand, url) — KEINE Geltungs-/Rechtsaussage (§8). Kein
+// legislationLegalForce: Soft-Law ist kein Gesetz.
+export function jsonLdFuerMaterial(m: BrowseMaterial): object {
+  const pfad = materialDetailPfad(m);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        name: m.titel,
+        inLanguage: inSprache(m.sprache),
+        datePublished: m.stand,
+        author: { '@type': 'GovernmentOrganization', name: m.behoerdeName, alternateName: m.behoerdeKuerzel },
+        url: SITE_URL + pfad,
+        isPartOf: { '@type': 'WebSite', name: 'LexMetrik', url: `${SITE_URL}/` },
+      },
+      breadcrumb([
+        { name: 'Materialien', pfad: '/materialien' },
+        { name: m.behoerdeKuerzel, pfad: '/materialien' },
+        { name: m.nummer ?? m.doktypLabel, pfad },
+      ]),
+    ],
+  };
+}
+
+// Crawler-/First-Paint-HTML der Material-Detailseite (Metadaten + Live-Link, KEIN
+// Normtext §7). React ERSETZT es clientseitig (render-then-replace), es muss den
+// React-Output also nicht matchen.
+export function materialDetailHtml(m: BrowseMaterial): string {
+  const nr = m.nummer ? ` ${esc(m.nummer)}` : '';
+  return (
+    `<article>` +
+    `<p>${esc(m.behoerdeKuerzel)} · ${esc(m.doktypLabel)}${nr}</p>` +
+    `<h1>${esc(m.titel)}</h1>` +
+    `<p>${esc(m.behoerdeName)} · Stand ${esc(m.stand)} · ${esc(inSprache(m.sprache))}</p>` +
+    `<p>Amtliche Ressource (Soft-Law, kein Gesetzesrang). Massgeblich ist die amtliche Quelle.</p>` +
+    `<p><a href="${esc(m.quelleUrl)}" rel="noopener noreferrer">Zur amtlichen Fassung</a></p>` +
+    `</article>`
+  );
 }
 
 // ─── Volltext-HTML (wörtlich aus dem Snapshot) ───────────────────────────────

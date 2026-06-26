@@ -3,6 +3,7 @@ import { sucheAlles, type SuchGruppe } from '../../lib/universalSuche';
 import type { PresetIndexEintrag } from '../../lib/presetIndex';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
+import type { BrowseMaterial } from '../../lib/materialien/typen';
 
 // ─── Gemeinsamer Such-Hook (Header-Dropdown UND Startseiten-Hero, §5) ────────
 //
@@ -26,6 +27,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
   const [presetSucheFn, setPresetSucheFn] = useState<((s: string, limit?: number) => PresetIndexEintrag[]) | null>(null);
   const [gesetze, setGesetze] = useState<BrowseErlass[] | null>(null);
   const [entscheide, setEntscheide] = useState<BrowseEntscheid[] | null>(null);
+  const [materialien, setMaterialien] = useState<BrowseMaterial[] | null>(null);
   const gestartet = useRef(false);
 
   useEffect(() => {
@@ -34,14 +36,15 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
     import('../../lib/presetIndex').then((m) => setPresetSucheFn(() => m.presetSuche)).catch(() => setPresetSucheFn(() => () => []));
     import('../../lib/normtext/browse').then((m) => m.ladeBrowseManifest()).then((m) => setGesetze(m?.erlasse ?? [])).catch(() => setGesetze([]));
     import('../../lib/rechtsprechung/browse').then((m) => m.ladeEntscheidManifest()).then((m) => setEntscheide(m?.entscheide ?? [])).catch(() => setEntscheide([]));
+    import('../../lib/materialien/browse').then((m) => m.ladeMaterialManifest()).then((m) => setMaterialien(m?.materialien ?? [])).catch(() => setMaterialien([]));
   }, [q]);
 
   const gruppen = useMemo(
     // Presets ungekappt holen (limit 999) — `gesamt` soll die ECHTE Trefferzahl
     // sein, nicht das Default-Suchlimit (§8). Die Anzeige kappt in der Gruppe.
-    () => sucheAlles(q, { presets: presetSucheFn ? presetSucheFn(q, 999) : null, gesetze, entscheide }),
-    [q, presetSucheFn, gesetze, entscheide],
+    () => sucheAlles(q, { presets: presetSucheFn ? presetSucheFn(q, 999) : null, gesetze, entscheide, materialien }),
+    [q, presetSucheFn, gesetze, entscheide, materialien],
   );
-  const allesGeladen = presetSucheFn !== null && gesetze !== null && entscheide !== null;
+  const allesGeladen = presetSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
   return { gruppen, allesGeladen };
 }
