@@ -22,6 +22,50 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — UX-Punkteliste (20 Anweisungen David, autonom in Batches, deployt)
+
+Auftrag David: 20 mündliche UX-/Darstellungs-Anweisungen → Handlungsplan
+(`FAHRPLAN-UX-PUNKTELISTE.md`) → autonom in Batches umsetzen, pro Schritt
+Bug-Check, nach jedem Batch deployen, am Ende voller adversarialer Durchgang.
+Eigener Worktree `feat/ux-punkteliste` ab `197bb37e`. **16/20 live + D-Teil + 2 Pläne.**
+- **Batch A (Quick-Wins):** `/gesetze?ebene=kanton` zeigte keine Kantone (Bund-only
+  `gefiltert` → eigene `kantGefiltert`); Sidebar-Hash-Bug (Zivilprozess leuchtete
+  bei #straf/#schkg mit → `istAktiv` hash-loses Ziel nur bei leerem `loc.hash`);
+  Fristen-Kalender breiter; «Berechnung statt KI»-Badge weg; «blauer Kreis» =
+  UA-Tap/Maus-Fokus (kein Blau-Token) → `-webkit-tap-highlight-color:transparent`
+  + `:focus:not(:focus-visible)` (Tastatur-Fokus brass bleibt); Betreibungs-Grid
+  `items-start`.
+- **Batch B (Tabs):** Limit 8→50; **dasselbe Gesetz mehrfach** (Instanz-`?r=`,
+  `⧉ In neuem Reiter`-Knopf, `naechsteInstanz`/`aktualisiereTabArtikel`); Streifen
+  ab dem ERSTEN Reiter (Guard `<1`; Prerender bleibt leer, createRoot=keine
+  Hydration); Label «Kürzel – Art. X» NUR bei Doppelinstanz; Typ-Piktogramme
+  § ⚖ ✎ ∑. Tab-Klick scrollt zum gemerkten Artikel.
+- **Batch C (Reader):** Marginalien/Sachüberschrift IMMER OBERHALB der Absätze
+  (Fedlex-Stil, xl-Randspalte raus), Lesespalte 52rem; aufgehobene Artikel dezent
+  + eingeklappt/aufklappbar (`artikelGanzAufgehoben`→darstellung.ts §5); Suche
+  leeren hält Scrollposition, Treffer-Klick springt in Volltext + löscht Suche;
+  Gliederung/Suchfeld bündig an Header+`--tabstreifen-h` (Magic-Number raus).
+- **Batch E (ultracode):** Rubrik «Einstellungen» (/einstellungen). Inventar+Design
+  via 7-Agenten-Workflow. Store `lib/einstellungen.ts` hält nur heimatlose Felder;
+  Theme/Stil/Dichte/Lesegrösse gebrückt (§5, kein Mega-Store). Standard-Kanton in
+  16 Formularen verdrahtet (Permalink/Wahl gewinnt, Default 'ZH' → golden
+  byte-gleich); Profil Name/Adresse → Prefill der Absender-Felder (VorlagenSeite,
+  leere Felder); Theme hell/dunkel/**auto** (prefers-color-scheme live); Detailgrad/
+  Schriftbild-Defaults; Gesamt-Reset (alle Keys + Tages-Präfixe).
+- **D (Teil):** internationale Volltext-Staatsverträge nicht mehr «Bundesgesetz»/
+  «Bund» (→ «International»/Gebiets-Label). OFFEN: Anhänge/Schlussklauseln nicht im
+  Snapshot (Extraktor-Daten-Schritt).
+- **F (Plan):** `FAHRPLAN-KANTONALE-ENTSCHEIDE.md` (2 Web-Agenten): entscheidsuche.ch
+  als Open-Data-Hebel, Vendor-Cluster (Tribuna/Findinfo/DECIS) → ein Adapter je
+  Vendor; PDF-embed-Fallback; Phasen P0–P4.
+- **C5 OFFEN (geflaggt):** Erlass-Ingress («Die Bundesversammlung … beschliesst:»)
+  steckt NICHT im Snapshot → braucht Fedlex-Extraktor-Erweiterung + Netz-
+  Regenerierung der ~200 Bund-Snapshots unter §7 (Currency-Arbiter/SHA/Drift/
+  Golden) — bewusst NICHT im Marathon überstürzt, eigener Daten-Lauf.
+- **Bug-Check:** pro Batch Gate + Playwright-Verifikation; am Ende **Gate voll grün**
+  (tsc · vitest 2560 · golden byte-gleich · lint · check). Tests deklariert
+  angepasst (Badge weg, MAX 50, Tab-Guard, Nav-Meta).
+
 ## Session 26.6.2026 — WCAG-2.2-Target-Size + UI-Einheitlichkeits-Audit (in `main`, deployt)
 
 Auftrag David: Target-Size-Chips vergrössern → ganze UI auf Einheitlichkeit gegen die Design-Reglemente testen + Befunde umsetzen → Bug/Logik-Check von allem Geänderten → Deploy → Session schliessen.
