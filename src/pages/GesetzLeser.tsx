@@ -62,18 +62,23 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-// Randtitel-Stufe einheitlich je ABSOLUTER Gliederungstiefe formatieren (Index
-// in der Randtitel-Kette: 0 = «A./B.» Abschnitt, 1 = «I./II.», 2 = «1./2.»,
-// …) — NICHT je Position im angezeigten Delta. Vorher entschied
-// `i === marg.length-1` (letzte gezeigte Stufe → fett), wodurch dieselbe Stufe
-// (z. B. «II. Handlungsfähigkeit») zwischen fett (wenn Blatt) und klein (wenn
-// Vorfahre eines tieferen Artikels) flippte (Befund David 26.6.2026). Jetzt
-// sieht jede Stufe überall gleich aus; tiefer = spezifischer = prominenter.
-// Reine Darstellung (§3), zur Laufzeit abgeleitet (kein Massen-Regen, F3).
-function margStufeStil(level: number): string {
+// Randtitel-Stufe einheitlich formatieren (Auftrag 6a, David 26.6.2026 «un-
+// einheitliche Bold-Formatierung»). Zwei stabile Rollen statt der früheren
+// Positions-Logik `i === marg.length-1`:
+//   • Das BLATT (unterste gezeigte Stufe = die eigentliche Sachüberschrift des
+//     Artikels) ist IMMER prominent — auch wenn es allein steht. Das ist der
+//     Normalfall: ~83 % der Randtitel sind eine einzige Sachüberschrift (oft
+//     ohne Aufzähler, z. B. «Gegenstand und Geltungsbereich»); die dürfen nicht
+//     zu einem blassen Abschnittslabel verkümmern.
+//   • Die darüberliegenden VORFAHREN sind ruhiger Kontext, einheitlich je
+//     ABSOLUTER Gliederungstiefe (0 = Abschnitt «A.» uppercase, tiefer schlicht)
+//     — so flippt kein Vorfahre mehr zwischen den Artikeln (Befund: «II. Hand-
+//     lungsfähigkeit» mal fett, mal klein). Reine Darstellung (§3), zur Laufzeit
+//     abgeleitet aus Delta-Offset + Position (kein Massen-Regen, F3).
+function margStufeStil(level: number, istBlatt: boolean): string {
+  if (istBlatt) return 'text-base font-semibold text-ink-800';
   if (level <= 0) return 'text-body-s font-medium uppercase tracking-wide text-ink-500';
-  if (level === 1) return 'text-body-s font-medium text-ink-700';
-  return 'text-base font-semibold text-ink-800';
+  return 'text-body-s text-ink-600';
 }
 
 function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe }: {
@@ -176,7 +181,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {marg && marg.length > 0 ? (
             <div className="mb-1 space-y-0.5 font-serif leading-snug">
               {marg.map((m, i) => (
-                <div key={i} className={margStufeStil((margBasis ?? 0) + i)}>{m}</div>
+                <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>{m}</div>
               ))}
             </div>
           ) : e.titel ? (
