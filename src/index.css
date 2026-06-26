@@ -162,6 +162,12 @@
      brass-800 der hellste Messing-Textton → Hover wird dort heller = stärker. */
   a:hover { color: var(--brass-800); }
   :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm); }
+  /* Kein UA-Artefakt («blauer Kreis», Auftrag David) beim Antippen/Maus-Fokus
+     der Ziffer-/Litera-Marken: Tap-Highlight transparent + UA-Ring nur bei
+     Maus-/Programm-Fokus unterdrücken. Tastatur-Fokus (:focus-visible, brass)
+     und damit die Permalink-Funktion bleiben unberührt (§13 F3). */
+  html { -webkit-tap-highlight-color: transparent; }
+  :focus:not(:focus-visible) { outline: none; }
 
   /* W2.8: lange Erlasse (OR/ZGB ~1099 Art.) — off-screen-Artikel überspringen
      Layout/Paint. Inhalt bleibt im DOM (Suche/Anker/Screenreader/Crawler

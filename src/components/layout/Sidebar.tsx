@@ -25,6 +25,10 @@ function istAktiv(ziel: string, loc: Location): boolean {
   if (!pfadOk) return false;
   // Trägt das Ziel einen Anker, muss er stimmen (Vorlagen-Gruppe / Bund-Gebiet).
   if (hash && loc.hash !== `#${hash}`) return false;
+  // Hash-LOSES Ziel auf exaktem Pfad (z.B. «Zivilprozess» /rechner/zustaendigkeit)
+  // darf NICHT mitleuchten, wenn ein Hash-Geschwister aktiv ist (#straf/#schkg).
+  // Nur für exakte Pfade — die `/gesetze`-startsWith-Gruppe bleibt unberührt.
+  if (!hash && loc.hash && pfad !== '/' && pfad !== '/gesetze') return false;
 
   if (pfad === '/') {
     // «Start» ist aktiv, solange «/» ohne aktive Hero-Suche (?q=) offen ist.

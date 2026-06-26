@@ -105,7 +105,7 @@ export function Schnellrechner() {
           <div className="space-y-4">
             {/* Zwei Hälften: links rechnen (Eingabe), rechts der Kalender als reine
                 Visualisierung DESSELBEN Ergebnisses (#7 — keine doppelten Eingaben). */}
-            <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
+            <div className="grid gap-5 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
               <div className="space-y-2">
                 <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
