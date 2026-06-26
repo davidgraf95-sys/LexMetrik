@@ -1,0 +1,305 @@
+{
+  "erzeugt": "2026-06-26",
+  "eintraege": [
+    {
+      "id": "bund/bge/152_IV_107",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "152 IV 107",
+      "bgeReferenz": "152 IV 107",
+      "zitierung": "BGE 152 IV 107",
+      "datum": "2026-01-23",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "prozess",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterinnen van de Graaf, Koch, Bundesrichter Kölz, Hofmann, Gerichtsschreiber Hahn",
+        "parteien": "A.________, vertreten durch Rechtsanwältin Mehtap Giunuzoglu, Beschwerdeführer, gegen Jugendanwaltschaft Winterthur, Hermann-Götz-Strasse 24, 8400 Winterthur",
+        "gegenstand": "Entsiegelung",
+        "vorinstanz": "Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 18. April 2024 (GT240042-L / U)"
+      },
+      "regeste": {
+        "text": "Art. 248 Abs. 1 StPO; Siegelung und Entsiegelung sichergestellter elektronischer Datenträger; Zulässigkeit der Anordnung einer Datenspiegelung durch die Strafverfolgungsbehörden. Zuständigkeiten und Befugnisse der Strafverfolgungsbehörden und der Zwangsmassnahmengerichte im Entsiegelungsverfahren (E. 5.2). Nach bisheriger Rechtsprechung (BGE 148 IV 221) ist es den Strafverfolgungsbehörden untersagt, im Zusammenhang mit der Sicherstellung von elektronischen Datenträgern selber die Erstellung einer Datenkopie (sog. Spiegelung) durch eine sachverständige Person anzuordnen (E. 5.3). Insbesondere der aufgrund des technischen Fortschritts zunehmend fragiler werdende Zustand von elektronisch gespeicherten Daten hat in der Lehre zu Kritik an dieser Rechtsprechung geführt, da eine zeitnahe Datenextraktion für die Beweissicherung von zentraler Bedeutung ist (E. 5.6). Eine Analyse der per 1. Januar 2024 in Kraft getretenen revidierten Bestimmungen des Siegelungsverfahrens, der kritischen Lehrmeinungen, des technischen Prozesses des Datenspiegelungsvorgangs sowie des technischen Fortschritts bei der Datensicherung führt zum Ergebnis, dass es den Strafverfolgungsbehörden möglich sein muss, in Fällen eines unmittelbar drohenden Beweisverlusts selber eine Datenspiegelung durch eine sachverständige Person anzuordnen (Änderung der Rechtsprechung; E. 5.7). Die für die Datenspiegelung eingesetzte sachverständige Person darf jedoch nicht auch in die eigentliche Ermittlungstätigkeit eingebunden werden (E. 5.7.8).",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Jugendanwaltschaft Winterthur führt eine Strafuntersuchung gegen A.________ wegen Verdachts auf Vergehen gegen das Waffengesetz etc. Im Rahmen der Strafuntersuchung wurden am 3. März 2024 die Mobiltelefone \"iPhone\" (Asservat A018'422'690) und \"Samsung\" (Asservat A018'422'703) sichergestellt. Am 4. März 2024 verlangte A.________ anlässlich der polizeilichen Einvernahme die Siegelung der Mobiltelefone. Mit Eingabe vom 5. März 2024 reichte die Verteidigung von A.________ eine schriftliche Begründung des Siegelungsantrags ein."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Die Jugendanwaltschaft stellte am 5. März 2024 ein Gesuch um Entsiegelung der beiden Mobiltelefone. Mit Verfügung vom 12. März 2024 setzte das Zwangsmassnahmengericht des Bezirks Zürich der Jugendanwaltschaft eine Frist zur Einreichung der streitgegenständlichen Mobiltelefone an. Am 15. März 2024 reichte die Jugendanwaltschaft beim Zwangsmassnahmengericht vier Datensicherungen (Asservate A018'431'373; A018'431'395; A018'431'408; A018'431'419) in einem Kartoncouvert ein. Mit Verfügung vom 25. März 2024 stellte das Zwangsmassnahmengericht fest, dass die im Entsiegelungsgesuch vom 5. März 2024 genannten Asservate nicht mit jenen vier Asservaten übereinstimmten, welche die Jugendanwaltschaft am 15. März 2024 eingereicht habe. Das Zwangsmassnahmengericht setzte der Jugendanwaltschaft deshalb eine Nachfrist für die Einreichung eines korrigierten Entsiegelungsgesuchs an. Am 28. März 2024 kam die Jugendanwaltschaft dieser gerichtlichen Aufforderung nach und reichte ein berichtigtes Entsiegelungsgesuch ein. Mit Verfügung vom 18. April 2024 hiess das Zwangsmassnahmengericht das Entsiegelungsgesuch gut und gab die von der Jugendanwaltschaft am 15. März 2024 eingereichten Datensicherungen zur Durchsuchung frei."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 15. Mai 2024 führt A.________ Beschwerde in Strafsachen an das Bundesgericht. Er beantragt die Aufhebung der Verfügung des Zwangsmassnahmengerichts des Bezirks Zürich vom 18. April 2024 und die Rückweisung der Sache zur Neubeurteilung an die Vorinstanz. Eventualiter sei Dispositiv-Ziffer 1 der angefochtenen Verfügung dahingehend abzuändern, dass vor der Durchsuchung der vier Datensicherungen durch die Jugendanwaltschaft die auf den Datenträgern abgespeicherte Anwaltskorrespondenz auszusondern sei. In verfahrensrechtlicher Hinsicht beantragt er die Erteilung der aufschiebenden Wirkung und ersucht zudem um die Gewährung der unentgeltlichen Rechtspflege. Die Vorinstanz und Jugendanwaltschaft haben auf die Einreichung von Vernehmlassungen verzichtet. Die kantonalen Akten wurden eingeholt."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Angefochten ist ein kantonal letztinstanzlicher Entsiegelungsentscheid eines Zwangsmassnahmengerichts (Art. 80 Abs. 2 Satz 3 BGG i.V.m. Art. 248a Abs. 1 lit. a und Art. 248a Abs. 4 StPO). Dagegen steht die Beschwerde in Strafsachen nach Art. 78 ff. BGG grundsätzlich offen (Urteil 7B_576/2024 vom 20. März 2025 E. 1.1)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Der angefochtene Entscheid schliesst das Strafverfahren gegen den Beschwerdeführer nicht ab (vgl. Art. 90 f. BGG); es liegt ein selbstständig eröffneter Zwischenentscheid im Sinne von Art. 93 Abs. 1 BGG vor. Der Beschwerdeführer legt schlüssig dar, dass auf den sichergestellten Datenträgern Anwaltskorrespondenz zwischen ihm und seiner in seinem Heimatland Frankreich praktizierenden Anwältin gespeichert sei. Damit droht ihm praxisgemäss ein nicht wieder gutzumachender Rechtsnachteil im Sinne von Art. 93 Abs. 1 lit. a BGG, weshalb die Beschwerde gegen den Zwischenentscheid zulässig ist (BGE 143 IV 462 E. 1; Urteile 7B_576/2024 vom 20. März 2025 E. 1.1; 1B_473/2022 vom 12. April 2023 E. 1.2). Als beschuldigte Person und Inhaber der sichergestellten Datenträger ist der Beschwerdeführer zudem zur Beschwerde befugt (Art. 81 Abs. 1 lit. a und lit. b Ziff. 1 BGG). Auch sonst steht einem Eintreten auf die Beschwerde grundsätzlich nichts entgegen."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer macht zunächst geltend, die angefochtene Verfügung sei von einer örtlich und sachlich unzuständigen Behörde gefällt worden. Gemäss Art. 3 Abs. 2 lit. c JStPO (SR 312.1) sei die in Art. 32 Abs. 2 StPO normierte Gerichtsstandsbestimmung, mit welchen die Vorinstanz ihre Zuständigkeit begründe, im Jugendstrafverfahren nicht anwendbar. Anstatt der Vorinstanz wäre daher das Zwangsmassnahmengericht des Bezirks Winterthur zuständig gewesen, um über das Entsiegelungsgesuch zu entscheiden."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Tatsächlich wird in Art. 3 Abs. 2 lit. c StPO ausdrücklich festgehalten, dass die Bestimmungen der StPO über den Gerichtsstand gemäss Art. 32 StPO im Jugendstrafverfahren nicht anwendbar sind (vgl. EBERLE/HUG/SCHLÄFLI/VALÄR, in: Basler Kommentar JStPO, 3. Aufl. 2023, N. 5 zu Art. 3 JStPO). Der Gerichtsstand bestimmt sich im vorliegenden Verfahren daher nach den Vorgaben von Art. 10 JStPO. Insoweit gilt es zu beachten, dass in Art. 10 Abs. 2 lit. a JStPO für Fälle, in den die beschuldigte Person - wie vorliegend der Beschwerdeführer - keinen gewöhnlichen Aufenthaltsort in der Schweiz hat, bei Taten im Inland die behördliche Zuständigkeit aufgrund des Ortes bestimmt wird, an dem die Straftat begangen worden ist. Im vorliegenden Fall handelt es sich bei diesem Ort unbestrittenermassen um den Hauptbahnhof Zürich. Hierbei handelt es sich zugleich auch um den Ort, an dem der Beschwerdeführer im Sinne von Art. 32 Abs. 2 StPO angehalten bzw. angetroffen wurde. Auch wenn die Vorinstanz ihre örtliche Zuständigkeit fälschlicherweise gestützt auf Art. 32 Abs. 2 StPO bejaht, hat dieser Irrtum aufgrund der vorliegend massgebenden Gerichtsstandsbestimmung gemäss 10 Abs. 2 JStPO im Ergebnis keinen Einfluss auf den Gerichtsstand, da dieser gemäss Art. 32 Abs. 2 StPO und Art. 10 Abs. 2 JStPO auf den gleichen Ort fällt. Die Beschwerde ist in diesem Punkt unbegründet."
+            },
+            {
+              "marke": "E. 2.3",
+              "tiefe": 2,
+              "text": "Soweit der Beschwerdeführer in Bezug auf den Gerichtsstand auch mit den Bestimmungen gemäss dem Gesetz über die Gerichts- und Behördenorganisation im Zivil- und Strafprozess des Kantons Zürich vom 10. Mai 2010 (GOG/ZH; LS 211.1) argumentiert, zeigt er in Verletzung der gesetzlichen Rüge- und Begründungspflichten nicht auf, inwiefern die Vorinstanz das kantonale Recht willkürlich angewandt haben soll (vgl. dazu BGE 141 IV 305 E. 1.2; 138 IV 13 E. 2; Urteil 7B_288/2023 vom 20. März 2025 E. 3.2; je mit Hinweisen). Insoweit ist auf die Beschwerde nicht einzutreten."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Unbegründet ist die Rüge des Beschwerdeführers, wonach es an einem rechtsgültigen Entsiegelungsgesuch fehle. Zutreffend ist zwar, dass die Jugendanwaltschaft in ihrem Entsiegelungsgesuch vom 5. März 2024 die Entsiegelung der beiden sichergestellten Mobiltelefone verlangte, obwohl sie der Vorinstanz am 15. März 2024 einzig die vier ab den Mobiltelefonen erstellten Datensicherungsträger einreichte und dem Beschwerdeführer die Mobiltelefone gemäss seinen Angaben bereits zuvor zurückgegeben hatte. Da sich der Entsiegelungsantrag der Jugendanwaltschaft unter diesen Umständen offensichtlich auf die vier Datenträger und nicht auf die dem Beschwerdeführer bereits wieder ausgehändigten Mobiltelefone bezog, setzte die Vorinstanz der Jugendanwaltschaft mit Verfügung vom 25. März 2024 eine kurze Nachfrist von drei Tagen, um ihren Entsiegelungsantrag zu korrigieren. Der dem ursprünglichen Entsiegelungsantrag anhaftende Fehler ist unter den gegebenen Umständen rein redaktioneller Natur, weshalb das Vorgehen der Vorinstanz auch mit Blick auf die bundesgerichtliche Rechtsprechung nicht zu beanstanden ist (vgl. Urteil 1B_563/2021 vom 31. August 2022 E. 4.3, wonach selbst die Einräumung einer Nachfrist an die Strafverfolgungsbehörde zur Einreichung von zusätzlichen Beweismitteln als bundesrechtskonform erachtet wurde). Der Einwand des Beschwerdeführers, die Jugendanwaltschaft habe gemäss Art. 248 Abs. 3 StPO kein fristgerechtes Entsiegelungsgesuch bzw. keinen fristgerechten Entsiegelungsantrag gestellt, weil der korrigierte Entsiegelungsantrag nach Ablauf der in Art. 248 Abs. 3 StPO normierten Frist von 20 Tagen erfolgte, ist daher nicht zu hören. Der ursprüngliche Entsiegelungsantrag erfolgte fristgerecht."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer bestreitet das Vorliegen eines hinreichenden Tatverdachts. Mit rechtskräftigem Strafbefehl vom 11. März 2024 sei er bereits wegen Vergehens gegen das Waffengesetz vom 20. Juni 1997 (WG; SR 514.54) gemäss Art. 33 Abs. 1 lit. a WG in Verbindung mit Art. 25 WG sowie wegen rechtswidriger Einreise gemäss Art. 115 Abs. 1 lit. a in Verbindung mit Art. 5 Abs. 1 lit. a des Ausländer und Integrationsgesetzes vom 16. Dezember 2005 (AIG; SR 142.20) verurteilt worden. Da er keine Kenntnis über ein weiteres gegen ihn geführtes Strafverfahren habe und die Jugendanwaltschaft in ihrem Entsiegelungsgesuch auch keine neuen Sachverhaltsumstände nenne, sei das vorliegende Entsiegelungsverfahren durch den rechtskräftigen Strafbefehl gegenstandslos geworden bzw. handle es sich offenkundig um eine unzulässige \"fishing expedition\"."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Zwangsmassnahmen können nur ergriffen werden, wenn ein hinreichender Tatverdacht vorliegt (Art. 197 Abs. 1 lit. b StPO). Im Gegensatz zum erkennenden Sachrichter hat das für die Beurteilung von Zwangsmassnahmen im Vorverfahren zuständige Gericht bei der Überprüfung des hinreichenden Tatverdachtes keine erschöpfende Abwägung sämtlicher belastender und entlastender Beweisergebnisse vorzunehmen. Bestreitet die betroffene Person den Tatverdacht, ist vielmehr zu prüfen, ob aufgrund der bisherigen Untersuchungsergebnisse genügend konkrete Anhaltspunkte für eine Straftat und eine Beteiligung der beschuldigten Person an dieser Tat vorliegen, die Strafbehörden somit das Bestehen eines hinreichenden Tatverdachts mit vertretbaren Gründen bejahen durften. Hinweise auf eine strafbare Handlung müssen erheblich und konkreter Natur sein, um einen hinreichenden Tatverdacht begründen zu können (BGE 150 IV 239 E. 3.2; Urteil 7B_94/2022 vom 10. Oktober 2024 E. 2.1; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Entgegen der Auffassung des Beschwerdeführers ist der hinreichende Tatverdacht in Übereinstimmung mit der Vorinstanz zu bejahen. Es mag zwar stimmen, dass der Beschwerdeführer in Bezug auf zwei ihm vorgeworfene Straftaten mit Strafbefehl vom 11. März 2024 bereits rechtskräftig verurteilt wurde. Dies lässt den hinreichenden Tatverdacht indessen nicht automatisch dahinfallen. Wie die Vorinstanz unter Hinweis auf die Ausführungen der Jugendanwaltschaft für das Bundesgericht in tatsächlicher Hinsicht verbindlich festhält (vgl. Art. 105 Abs. 1 BGG), ist gegen den Beschwerdeführer ein weiteres Strafverfahren wegen des Verdachts des Waffenschmuggels sowie wegen strafbaren Vorbereitungshandlungen (Art. 260bis StGB) hängig, welches auch Ermittlungen im Ausland zum Gegenstand hat. Der Beschwerdeführer macht insoweit zwar geltend, er habe keine Aktenkenntnis über ein zweites Verfahren. Mit einer solch pauschalen Behauptung vermag er insoweit jedoch keine willkürliche vorinstanzliche Sachverhaltsfeststellung darzutun. Jedenfalls nennt die Vorinstanz unter Hinweis auf die Ausführungen der Jugendanwaltschaft im kantonalen Entsiegelungsverfahren mehrere konkrete Verdachtsmomente, welche einen hinreichenden Verdacht in Bezug auf die aktuell noch untersuchten Tatvorwürfe der strafbaren Vorbereitungshandlungen und des mehrere Länder umfassenden Waffenschmuggels begründen. So handelt es sich beim aus Frankreich stammenden und mehrfach vorbestraften Beschwerdeführer gemäss den verbindlichen Feststellungen der Vorinstanz um einen im mutmasslichen Tatzeitpunkt 16-jährigen Schüler, welcher trotz in Frankreich angeordneter Schriftensperre und Ausreiseverbots am Hauptbahnhof Zürich unter Mitfüh-rung einer abgesägten Schrottflinte (inkl. scharfer Ersatzpatronen) angehalten wurde. Zusätzlich trug er auf Servietten skizzierte mutmassliche Wegbeschreibungen auf sich. Erschwerend hinzu kommt, dass die Vorinstanz zusätzlich weitere Vorfälle nennt, bei denen Jugendliche im gleichen Zeitraum mit mitgeführten Schusswaffen angehalten werden konnten. Hierzu äussert sich der Beschwerdeführer nicht bzw. er liefert keine nachvollziehbare Erklärung für seine unter Mitführung einer Schusswaffe getätigte Einreise in die Schweiz. Bei dieser Sachlage durfte die Vorinstanz mit vertretbaren Gründen den hinreichenden Tatverdacht in Bezug auf die vorgenannten Deliktsvorwürfe bejahen, zumal sich das Verfahren erst am Anfang befindet und unter den gegebenen Umständen - wie die Vorinstanz zu Recht festhält - namentlich auch ein möglicher terroristischer Hintergrund zu untersuchen ist. Die Beschwerde erweist sich in diesem Punkt als unbegründet."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Nicht zu hören ist auch die vom Beschwerdeführer im Zusammenhang mit seinen Vorbringen zum hinreichenden Tatverdacht beiläufig erhobene Rüge einer Verletzung seines Anspruchs auf rechtliches Gehör (Art. 29 Abs. 2 BV). Entgegen seinen Vorbringen war die Thematik des von der Jugendanwaltschaft weiterhin gegen ihn geführten Strafverfahrens wegen des Verdachts des Waffenschmuggels und der strafbaren Vorbereitungshandlungen (Art. 260bis StGB) nach dem soeben Gesagten Thema des vorinstanzlichen Entsiegelungsverfahrens und er konnte seinen Standpunkt insoweit in das vorinstanzliche Verfahren einbringen. Eine Verletzung des rechtlichen Gehörs gemäss 29 Abs. 2 BV ist vor diesem Hintergrund nicht auszumachen."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Der Beschwerdeführer stellt sich weiter auf den Standpunkt, gemäss Art. 248 Abs. 1 StPO könne die beschuldigte Person innert drei Tagen seit der Sicherstellung von Aufzeichnungen und Gegenständen durch die Strafverfolgungsbehörde die Siegelung verlangen. Während dieser Frist und nach einer allfällig bereits erfolgten Siegelungserklärung dürften die Strafverfolgungsbehörden die sichergestellten Asservate weder einsehen noch verwenden. Vorliegend habe die Jugendanwaltschaft unmittelbar nach der Sicherstellung der beiden Mobiltelefone eine vorsorgliche Datensicherung angeordnet. Dies verletze die Vorgaben von Art. 248 Abs. 1 StPO, da durch das gewählte Vorgehen der vorsorglichen Datensicherung nicht gewährleistet sei, dass die Strafverfolgungsbehörden vor Abschluss des Entsiegelungsverfahrens keine Einsicht in geheimnisgeschützte Daten erhalte. Gemäss BGE 148 IV 221 (E. 4) sei im Vorgehen der Jugendanwaltschaft ein schwerer Verfahrensfehler zu sehen, der zur Abweisung des Entsiegelungsgesuchs führen müsse. Namentlich könne die erfolgte vorsorgliche Datensicherung nicht durch eine nachträgliche Genehmigung durch das Zwangsmassnahmengericht gerechtfertigt werden, zumal im vorliegenden Fall eine rechtzeitige Anrufung des Zwangsmassnahmengerichts möglich gewesen wäre."
+            },
+            {
+              "marke": "E. 5.2.1",
+              "tiefe": 3,
+              "text": "Ersucht die Strafverfolgungsbehörde nach erfolgter Siegelung um Entsiegelung der betreffenden Aufzeichnungen und Gegenstände, hat sie dem Zwangsmassnahmengericht die versiegelten Aufzeichnungen und Gegenstände zur Verfügung zu stellen (Urteil 7B_127/2022 vom 5. April 2024 E. 3.3 mit Hinweisen). Im Entsiegelungsverfahren hat nicht die Untersuchungsbehörde, sondern, allenfalls unter Beizug einer sachverständigen Person, das Zwangsmassnahmengericht zu prüfen, ob schutzwürdige Geheimnisinteressen oder andere gesetzliche Entsiegelungshindernisse einer Durchsuchung entgegenstehen (BGE 148 IV 221 E. 2.3 mit Hinweisen; Urteil 7B_805/2023 vom 28. Juni 2024 E. 2.1). Ausnahmen bzw. Erledigungen schon im Siegelungsverfahren durch die Strafverfolgungsbehörde können nur in liquiden Fällen in Frage kommen, etwa wenn das Siegelungsbegehren offensichtlich unbegründet bzw. rechtsmissbräuchlich erhoben erscheint und ein förmliches Entsiegelungsverfahren mit materieller Prüfung aller substanziierten Durchsuchungshindernisse geradezu einem Prozessleerlauf gleichkäme (Urteile 7B_1154/2024 vom 2. Oktober 2025 E. 2.4.1; 7B_515/2024 vom 3. April 2025 E. 2.2.3, zur Publikation vorgesehen; 7B_998/2023 vom 30. September 2024 E. 3; 7B_313/2024 vom 24. September 2024 E. 3.2; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 5.2.2",
+              "tiefe": 3,
+              "text": "Das Zwangsmassnahmengericht hat im Entsiegelungsverfahren auch zu prüfen, ob die Strafbehörden die Vorschriften über die Siegelung eingehalten haben. Bei rechtswidrigem Vorgehen im Zusammenhang mit der Siegelung von Aufzeichnungen und Gegenständen ist zwischen der Fortsetzung des Entsiegelungsverfahrens einerseits und der Verwertbarkeit von Beweismitteln andererseits zu unterscheiden. Bei schweren Verfahrensmängeln ist nach der Rechtsprechung eine Fortsetzung des Entsiegelungsverfahrens ausgeschlossen und das Entsiegelungsbegehren abzuweisen (Urteile 7B_515/2024 vom 3. April 2025 E. 2.2.3, zur Publikation vorgesehen; 7B_127/2022 vom 5. April 2024 E. 3.3; 7B_54/2023 vom 12. Oktober 2023 E. 4.1 f.; je mit Hinweis auf BGE 148 IV 221 E. 4)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "In BGE 148 IV 221 hatte das Bundesgericht über die Entsiegelung von elektronischen Geräten in einem Verwaltungsstrafverfahren wegen Widerhandlungen gegen das Zollgesetz und das Mehrwertsteuergesetz zu entscheiden. Die Geräte waren von der Zollverwaltung sichergestellt und anschliessend dem Bundesamt für Polizei (fedpol) zwecks Entsperrung und Datenspiegelung übermittelt worden. Im Anschluss stellte die Zollverwaltung bei der Beschwerdekammer des Bundesstrafgerichts ein Entsiegelungsgesuch betreffend die zwischenzeitlich versiegelten Datenträger. Dieses wurde gutgeheissen. Das Bundesgericht hiess die Beschwerde des Beschuldigten gegen die bewilligte Entsiegelung gut.\n\nEs hielt im Wesentlichen fest, Zweck der Siegelung sei, jegliche Gelegenheit für die Untersuchungsbehörde zur Kenntnisnahme der sichergestellten Daten auszuschliessen, bevor ein Gericht über die Zulässigkeit des Zugangs zu diesen Daten entscheide. Nehme die Untersuchungsbehörde selber eine Spiegelung vor oder gebe sie diese in Auftrag, lasse sich die Möglichkeit einer verfrühten Kenntnisnahme der Daten nicht ausschliessen. Eine entsprechende Praxis vermöge den Zweck der Siegelung somit nicht zu gewährleisten (a.a.O., E. 2.5). Erweise sich eine Kopie der Daten als angebracht, habe die Untersuchungsbehörde nach der sofortigen Siegelung der Datenträger beim Zwangsmassnahmengericht ein \"Spiegelungsgesuch\" zu stellen. Sie dürfe in keiner Weise in die Entsperrung der Geräte und Spiegelung der Daten als Realakte einbezogen werden (a.a.O., E. 2.6). Die Entsperrung der Geräte und die Datenspiegelung durch eine von der Untersuchungsbehörde beauftragte Behörde vor der Siegelung stelle einen erheblichen Verfahrensmangel dar, der sich nicht mehr korrigieren lasse. Die Rechtswidrigkeit des behördlichen Vorgehens wiege derart schwer, dass nicht ersichtlich sei, wie die Daten noch verwertbar sein könnten. Dies führe zur Vernichtung der erstellten Datenkopien sowie zur Rückgabe der sichergestellten Geräte an die berechtigte Person (a.a.O., E. 4)."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Nach den für das Bundesgericht gemäss Art. 105 Abs. 1 BGG verbindlichen Feststellungen der Vorinstanz wurde der Beschwerdeführer am 3. März 2024 (Sonntag) um ca. 15:30 Uhr verhaftet. Bereits zu diesem Zeitpunkt wurden die Daten auf den sichergestellten zwei Mobiltelefonen vorsorglich durch den kriminaltechnischen Dienst der Kantonspolizei Zürich mittels Datenspiegelung gesichert, um einen Datenverlust zu verhindern. Die auf diesem Weg gespiegelten Daten wurden unmittelbar auf zwei Datenträger abgespeichert und in ein Lagerbehältnis verpackt, an welchem aufgrund des Siegelungsantrags des Beschwerdeführers vom 4. März 2024 ein amtliches Siegel angebracht wurde. Am 6. März 2025 (Dienstag) stellte die Jugendanwaltschaft bei der Vorinstanz nachträglich ein Gesuch um unverzügliche Spiegelung der sichergestellten Mobiltelefone. Mit korrigiertem Gesuch vom 8. März 2025 legte die Jugendanwaltschaft gegenüber der Vorinstanz offen, dass bereits am Tag der Festnahme des Beschwerdeführers vorab eine Datensicherung bzw. Datenspiegelung durch die Kantonspolizei erfolgt sei. Die Vorinstanz bewilligte die vorsorgliche Datenspiegelung mit Verfügung vom 8. März 2024."
+            },
+            {
+              "marke": "E. 5.5",
+              "tiefe": 2,
+              "text": "Mit Blick auf BGE 148 IV 221 ist dem Beschwerdeführer zuzustimmen, dass vergleichbar mit der dem Leitentscheid zugrunde liegenden Sachverhaltskonstellation auch im vorliegenden Fall die Strafverfolgungsbehörden ohne vorgängige Genehmigung durch das Zwangsmassnahmengericht eine Datenspiegelung durch die Dienstabteilung Forensik der Kantonspolizei Zürich anordneten. Es stellt sich deshalb die Frage, ob die Rechtsprechung, die noch unter dem bis zum 31. Dezember 2023 geltenden Siegelungsrecht ergangen ist, auch nach dem per 1. Januar 2024 in Kraft getretenen neuen Siegelungsrecht uneingeschränkt auf das neue Recht übertragen werden kann. Dabei ist namentlich auch der technische Fortschritt bei der elektronischen Datenverarbeitung und Datensicherung zu berücksichtigen."
+            },
+            {
+              "marke": "E. 5.6",
+              "tiefe": 2,
+              "text": "Die in BGE 148 IV 221 entwickelte Rechtsprechung ist von Lehre und Praxis unterschiedlich aufgenommen worden. Es erging Zustimmung wie auch Kritik. Insoweit kann auf die Erwägungen im zur Publikation bestimmten Urteil 7B_515/2024 vom 3. April 2025 (E. 3.3) verwiesen werden. Ein ernst zu nehmender Kritikpunkt betraf namentlich den gestützt auf den fortlaufenden technischen Fortschritt zunehmend fragiler werdenden Zustand von Daten. Die heutzutage auf Mobiltelefonen gespeicherten Daten werden immer flüchtiger, da sie wegen den in den Betriebsystemen enthaltenen Datenschutzprogrammen oder den darauf gespeicherten Applikationen (sog. \"Apps\") nach einer immer kürzer werdenden Zeitspanne automatisch, dass heisst ohne weiteres Zutun, gelöscht werden. Eine Datenlöschung kann zudem vermehrt auch mittels Fernzugriff erfolgen (vgl. Urteil 7B_515/2024 vom 3. April 2025 E. 3.3, zur Publikation vorgesehen; DAMIAN GRAF/SERDAR RÜTSCHE, Datensicherung von Mobiltelefonen und Tablets - technische und (siegelungs-) rechtliche Herausforderungen im Strafverfahren, in: SJZ 121 [2025], S. 607 ff.; vgl. auch CHRISTOPHER GETH/WOLFGANG WOHLERS, Das Strafverfahren in den Zeiten der Digitalisierung, in: ZStR 142/2024, S. 166). Namentlich bei Mobiltelefonen des Typs \"iPhone\" und dem sich darauf befindenden Betriebssystem iOS ist es vom Hersteller als Sicherheitsmassnahme verbreitet, dass sich das Betriebssystem nach einer immer kürzeren Zeitspanne aufgrund von Inaktivität automatisch herunterfährt und sich das System danach neu startet. Dies ist für die forensische Datensicherung mit weitreichenden Nachteilen verbunden, weil sich das Mobiltelefon danach im sogenannten \"Before First Unlock-Modus\" befindet, der eine Datenextraktion nahezu unmöglich macht (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 607 f. mit detaillierten technischen Ausführungen zur Datenextraktion bei Mobiltelefonen und Tablets). Hinzu kommen zusätzliche Schwierigkeiten in Bezug auf Daten, die sich auf einer sogenannten \"Cloud\", also nicht direkt auf dem eigentlichen Mobiltelefon, befinden. Der Zugriff auf Daten einer \"Cloud\" kann jederzeit aus der Ferne unterbunden werden (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 615). Eine zeitnahe Datenextraktion ist daher von zentraler Bedeutung, weil eine Datensicherung aufgrund der genannten technischen Fortschritte nach Ablauf einer immer kürzer werdenden Zeitspanne nahezu unmöglich wird."
+            },
+            {
+              "marke": "E. 5.7",
+              "tiefe": 2,
+              "text": "Die per 1. Januar 2024 in Kraft getretenen neuen Bestimmungen des Siegelungsrechts wie auch die Rechtsprechung gemäss BGE 148 IV 221 sind im Lichte dieser sich fortlaufend verändernden technischen Entwicklungen zu würdigen."
+            },
+            {
+              "marke": "E. 5.7.1",
+              "tiefe": 3,
+              "text": "Wie der Beschwerdeführer zu Recht vorbringt, wurde mit Inkrafttreten des neuen Siegelungsrechts für den Inhaber von im Rahmen eines Strafverfahrens sichergestellten Aufzeichnungen und Gegenständen in Art. 248 Abs. 1 StPO eine Bedenkfrist von drei Tagen seit der Sicherstellung eingeführt, um gegenüber den Strafverfolgungsbehörden die Siegelung zu beantragen. Der Beschwerdeführer vertritt insoweit die Auffassung, ausgehend von der Rechtsprechung gemäss BGE 148 IV 221 sei es den Strafverfolgungsbehörden untersagt, vor Ablauf dieser Frist von drei Tagen ohne vorgängige Genehmigung durch das Zwangsmassnahmengericht eine Datensicherung mittels Datenspiegelung anzuordnen. Er begründet dies damit, dass das Bundesgericht im genannten Leitentscheid ausdrücklich festgehalten habe, bei einer eigenmächtigen Datenspiegelung durch die Polizei oder die Staatsanwaltschaft könne nicht hinreichend sichergestellt werden, dass die Strafverfolgungsbehörden vor Abschluss des Entsiegelungsverfahrens keine Kenntnis vom Inhalt der Datenträger erhielten. Eine wie im vorliegenden Fall erfolgte nachträgliche Genehmigung der vorsorglichen Datenspiegelung durch das Zwangsmassnahmengericht vermöge daran nichts zu ändern. Vielmehr liege ein schwerer Verfahrensmangel vor, der zwingend zur Unverwertbarkeit und Vernichtung der sichergestellten Datenträger führen müsse."
+            },
+            {
+              "marke": "E. 5.7.2",
+              "tiefe": 3,
+              "text": "Im vorliegenden Fall gilt es zunächst festzuhalten, dass der Beschwerdeführer anlässlich seiner Festnahme und der Sicherstellung seiner beiden Mobiltelefone am 3. März 2024 keinen Siegelungsantrag stellte. Dieser erfolgte erst am nachfolgenden Tag im Rahmen seiner polizeilichen Einvernahme. Zu diesem Zeitpunkt war der Auftrag zur Datensicherung mittels Spiegelung der Mobiltelefondaten bereits erfolgt und der entsprechende Extraktionsprozess im Gang. Es stellt sich damit die Frage, ob die in Art. 248 Abs. 1 StPO normierte Frist für einen Siegelungsantrag dahingehend zu verstehen ist, dass die Strafverfolgungsbehörden in jedem Fall den Fristablauf abwarten müssen, bevor sie eine Datenspiegelung anordnen, oder ob sie zur Verhinderung eines unwiderruflichen Datenverlusts bereits zum Zeitpunkt der Sicherstellung eine sachverständige Person mit der vorsorglichen Datensicherung beauftragen dürfen."
+            },
+            {
+              "marke": "E. 5.7.3",
+              "tiefe": 3,
+              "text": "Gemäss Art. 248 Abs. 1 erster Satz StPO hat die Strafverfolgungsbehörde sichergestellte Gegenstände und Aufzeichnungen zu siegeln, sofern die Inhaberin oder der Inhaber geltend machen, diese dürften aufgrund von Art. 264 Abs. 1 StPO nicht beschlagnahmt werden. Art. 248 Abs. 1 zweiter Satz StPO sieht weiter vor, dass die Inhaberin oder der Inhaber das Siegelungsbegehren innert drei Tagen seit der Sicherstellung vorzubringen hat. Während dieser Frist und nach einer allfälligen Siegelung darf die Strafbehörde die Aufzeichnungen und Gegenstände weder einsehen noch verwenden (Art. 248 Abs. 1 dritter Satz StPO)."
+            },
+            {
+              "marke": "E. 5.7.4",
+              "tiefe": 3,
+              "text": "Diesem Gesetzeswortlaut folgend ist es den Strafverfolgungsbehörden ab dem Moment der Sicherstellung untersagt, während der gesetzlich normierten Siegelungsfrist von drei Tagen die auf sichergestellten elektronischen Datenträgern enthaltenen Aufzeichnungen einzusehen oder zu verwenden. Es stellt sich insoweit die Frage, ob der Vorgang der Sicherstellung der Daten mittels Spiegelung des Datenträgers ein Einsehen oder eine Verwendung darstellt beziehungsweise ob ein Einsehen in den Datenträger in diesem Zeitpunk überhaupt möglich ist."
+            },
+            {
+              "marke": "E. 5.7.5",
+              "tiefe": 3,
+              "text": "Um einen Fernzugriff auf die Mobiltelefone zu verunmöglichen, werden diese nach der Sicherstellung in faradayschen Behältnissen verschlossen und zugleich an den Strom angeschlossen, um eine automatische Rückversetzung des Geräts zufolge Inaktivität in den \"Before First Unlock-Modus\" und einen damit einhergehenden endgültigen Datenverlust zu vermeiden (vgl. E. 5.6 hiervor). Durch die faradayschen Behältnisse ist eine Bedienung des Bildschirms des Geräts und damit ein Einsehen in die darauf gespeicherten Daten unmöglich (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 614). Sofern der Entsperrungscode des Geräts nicht bekannt ist, wäre eine haptische Manipulation des Bildschirms ohnehin nicht zielführend, weil sich die Geräte aus Sicherheitsgründen oftmals nach mehrfacher Eingabe eines falschen Codes automatisch sperren, was eine Datenextraktion erheblich erschwert oder gar unmöglich macht (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 608).\n\nDie eigentliche Datenspiegelung ist ihrerseits kein Prozess, bei welchem das Mobiltelefon bedient wird und erfolgt ohne bildgebende Technik. Es handelt sich vielmehr um einen technischen Prozess, bei welchem mittels forensischen Programmen über Sicherheitslücken versucht wird, im Betriebssystem des Mobiltelefons auf das verschlüsselte Gerät zuzugreifen und die darauf befindlichen Daten abzuspeichern (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 606 und S. 616). Und selbst danach erfordert die Aufbereitung der gespiegelten und auf elektronischen Datenträgern gespeicherten Daten spezielle forensische Programme, die ein grosses Fachwissen verlangen, damit das Datenmaterial für die Strafverfolgung überhaupt in einem tauglichen und einsehbaren Datenformat erhältlich gemacht werden kann (vgl. Urteil 7B_610/2023 vom 15. Januar 2025 E. 3.2 f.)."
+            },
+            {
+              "marke": "E. 5.7.6",
+              "tiefe": 3,
+              "text": "Zusammengefasst stellt die Extraktion von Mobiltelefon-, Tablet- und Computerdaten auf externe Datenträger einen komplexen technischen Vorgang dar, der ohne bildgebende technische Mittel abläuft und darüber hinaus nur von hierzu speziell befähigten sachverständigen Personen vorgenommen werden kann. Und selbst wenn bei diesem Vorgang auf Umwegen dennoch ein Einblick in die gespeicherten Dateien stattfinden sollte, könnte bei einem entsprechenden Verdacht ein unzulässiger Zugriff auf das Mobiltelefon mittels Auswertung der System- und Logdaten des Geräts nachverfolgt werden (vgl. DAMIAN GRAF/SERDAR RÜTSCHE, a.a.O., S. 614). Die Anordnung einer Spiegelung beziehungsweise der Spiegelungsvorgang stellt damit kein eigentliches Auslesen und auch keine Datenverwendung dar. Vielmehr handelt es sich um einen rein technischen Vorgang zur Datensicherstellung, bei dem keine Einsicht in die Daten erfolgt, sondern diese auf einen Datenträger extrahiert werden, der im Anschluss versiegelt wird. Durch diesen Prozess der Datenextraktion, der nicht durch die Strafverfolgungsbehörde, sondern durch einen forensischen Sachverständigen zu erfolgen hat, ist hinreichend garantiert, dass die Strafverfolgungsbehörde vor Abschluss des Entsiegelungsverfahrens keine Kenntnis vom Dateninhalt erhält. Mit anderen Worten ausgedrückt stellt die im Rahmen einer Spiegelung erfolgende Datenextraktion kein eigentliches Sichten und auch keine Datenverwendung durch die Strafverfolgungsbehörde im Sinne von Art. 248 Abs. 1 StPO dar, weil bei diesem Prozess noch gar keine inhaltliche Durchsuchung oder Auswertung der Daten vorgenommen wird (vgl. Urteil 7B_515/2024 vom 3. April 2025 E. 3.4.2, zur Publikation vorgesehen)."
+            },
+            {
+              "marke": "E. 5.7.7",
+              "tiefe": 3,
+              "text": "Selbstredend ist dem Beschwerdeführer zu folgen, wenn er ausführt, bei einer direkt durch die Strafverfolgungsbehörde angeordneten Spiegelung könne nicht mit absoluter Sicherheit garantiert werden, dass keine Kenntnisnahme des Dateninhalts durch die Strafverfolgungsbehörde erfolge. Wie das Bundesgericht in der Vergangenheit bereits wiederholt festgehalten hat, lässt sich eine solche vorzeitige Kenntnisnahme aber auch bei der Sicherstellung physischer Unterlagen nicht vollends vermeiden. Dies schadet allerdings deshalb nicht, weil die Untersuchungsbehörde nach der Rechtsprechung zum Zwecke der vorläufigen Sicherstellung eine thematische Grobsichtung von Aufzeichnungen vornehmen darf, um zu gewährleisten, dass nur Gegenstände sichergestellt werden, die potentiell untersuchungsrelevant erscheinen (BGE 143 IV 270 E. 7.5). Dies gilt auch bei elektronischen Datenträgern (Urteil 7B_515/2024 vom 3. April 2025 E. 3.4.2, zur Publikation vorgesehen). Insoweit ist präzisierend festzuhalten, dass die elektronischen Datenträger nicht durch die Untersuchungsbehörden grob gesichtet werden, sondern diese zur Durchführung einer Datenspiegelung eine sachverständige Person beizieht. Diese unterliegt nach Art. 184 Abs. 2 lit. e StPO ihrerseits einer gesetzlichen Geheimhaltungspflicht und sie wird durch die Verfahrensleitung gemäss Art. 184 Abs. 2 lit. f StPO auf die Straffolgen eines falschen Gutachtens nach Art. 307 StGB hingewiesen. Vor dem Hintergrund, dass bei einer Datenspiegelung keine eigentliche Sichtung des Dateninhalts erfolgt und die sachverständige Person in derselben Strafuntersuchung nicht mit weiteren Ermittlungstätigkeiten beauftragt werden darf (vgl. E. 5.7.8 hiernach), besteht beim Vorgang der Datenspiegelung im Vergleich zu einer Grobsichtung von physischen Aufzeichnungen damit gar ein geringeres Risiko einer Kenntnisnahme durch die Strafverfolgungsbehörden."
+            },
+            {
+              "marke": "E. 5.7.8",
+              "tiefe": 3,
+              "text": "Angesichts des vorgenannten technischen Fortschritts bei der Datensicherung von Mobiltelefonen ist die Zulässigkeit einer vorsorglichen Datenspiegelung umso mehr angezeigt, als angesichts des immer kürzer werdenden Zeitfensters für eine Datensicherung grundsätzlich nahezu in jedem Fall der Sicherstellung eines Mobiltelefons ein unmittelbarer Datenverlust droht. Wird dieser Gedanke fortgeführt, wäre ein Zuwarten mit der Datenspiegelung bis zum Ablauf der in Art. 248 Abs. 1 StPO normierten Bedenkfrist von drei Tagen zwangsläufig mit einem erheblichen und irreversiblen Datenverlust verbunden, was nicht dem Sinn und Zweck des Siegelungsverfahrens entspricht. Damit liegen ernsthafte und sachliche Gründe vor, die in Situationen mit einem aufgrund des technischen Fortschritts unmittelbar drohenden Datenverlust eine Abkehr von der mit BGE 148 IV 221 eingeführten Rechtsprechung rechtfertigen (vgl. BGE 150 IV 277 E. 2.3.1 mit Hinweisen).\n\nPräzisierend gilt es allerdings festzuhalten, dass die mit der Datensicherung betrauten forensischen Sachverständigen später nicht auch in die eigentliche Ermittlungstätigkeit des konkreten Strafverfahrens eingebunden werden dürfen. Durch diese Massnahme ist in Berücksichtigung der mit BGE 148 IV 221 begründeten Praxis weiterhin hinreichend gewährleistet, dass eventuelle grobe Kenntnis von Dateninhalten durch die sachverständige Person nicht auf Umwegen trotzdem Eingang in die Ermittlungshandlungen finden."
+            },
+            {
+              "marke": "E. 5.7.9",
+              "tiefe": 3,
+              "text": "Zusammengefasst ist festzuhalten, dass eine durch die Strafverfolgungsbehörden aufgrund eines konkret drohenden Beweisverlusts vorsorglich angeordnete Datenspiegelung keine Verletzung von Bundesrecht darstellt, sofern die Datenspiegelung durch eine sachverständige Person durchgeführt wird und diese später nicht auch in die eigentlichen Strafermittlungen involviert ist. Jedenfalls in Situationen eines unmittelbar drohenden Beweisverlusts gilt die Rechtsprechung gemäss BGE 148 IV 221 somit als überholt. Die Rügen des Beschwerdeführers, wonach die durch die Jugendanwaltschaft angeordnete Datenspiegelung bundesrechtswidrig sei, sind damit unbegründet."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Beschwerdeführer macht schliesslich geltend, die Vorinstanz habe zu Unrecht darauf verzichtet, die von ihm geltend gemachte Anwaltskorrespondenz zwischen ihm und seiner Anwältin in Frankreich auszusondern."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Wird die Entsiegelung beantragt, prüft das zuständige Gericht, ob schutzwürdige Geheimnisinteressen oder andere gesetzliche Entsiegelungshindernisse einer Durchsuchung entgegenstehen (BGE 144 IV 74 E. 2.2; 141 IV 77 E. 4.1). Nach der Rechtsprechung des Bundesgerichts obliegt es der siegelungsberechtigten Person, die von ihr angerufenen Geheimhaltungsinteressen im Entsiegelungsverfahren ausreichend zu substanziieren, damit das Gericht eine sachgerechte und gezielte Triage vornehmen und die geheimnisgeschützten Gegenstände und Aufzeichnungen aussondern kann. Dazu muss sie ihre rechtlich geschützten Geheimnisse inhaltlich zwar nicht offenlegen, aber sie muss ihre Geheimhaltungsinteressen wenigstens kurz umschreiben und glaubhaft machen (Urteile 7B_861/2023 vom 10. Juli 2024 E. 3.1; 7B_554/2023 vom 23. April 2024 E. 4.3; 7B_106/2022 vom 16. November 2023 E. 3.2; je mit Hinweisen; vgl. BGE 145 IV 273 E. 3.2; 142 IV 207 E. 7.1.5 und E. 11). Kommt sie dieser Mitwirkungs- und Substanziierungsobliegenheit nicht nach, ist das Gericht nicht gehalten, von Amtes wegen nach allfälligen materiellen Durchsuchungshindernissen zu forschen (statt vieler Urteil 7B_795/2024 vom 10. Juli 2025 E. 5.1).\n\nUm ihrer Obliegenheit nachzukommen, muss die siegelungsberechtigte Person dem Gericht mitteilen, welche Aufzeichnungen und Gegenstände im Einzelnen dem von ihr geltend gemachten Geheimnisschutz unterliegen (Urteil 7B_627/2024 vom 28. November 2024 E. 2.2.3 mit Hinweisen). Bei physischen Unterlagen ist deshalb Bezug auf die einzelnen Sicherstellungspositionen zu nehmen; ein Pauschalverweis genügt nicht (Urteil 7B_1253/2024 vom 10. Juni 2025 E. 2.3.2 mit Hinweis). Bei elektronischen Dateien muss sie dem Gericht den Speicherort der dem Beschlagnahmeverbot unterliegenden Daten mitteilen. Ruft sie Berufsgeheimnisse (wie etwa das Anwalts- oder Arztgeheimnis) an, ohne selbst Träger dieses Berufsgeheimnisses zu sein, hat sie dem Gericht in der Regel zumindest den Namen des Trägers des betreffenden Berufsgeheimnisses, also etwa ihres Rechtsanwaltes oder ihrer Ärztin, mitzuteilen und muss sie spezifizieren, in welchem Zeitraum sie mit diesem Geheimnisträger korrespondiert hat, damit die fraglichen Unterlagen ohne unverhältnismässigen Aufwand gefunden und aussortiert werden können (Urteile 7B_576/2024 vom 20. März 2025 E. 6.2; 7B_94/2022 vom 10. Oktober 2024 E. 4.1.1; 7B_875/2023 vom 14. Juni 2024 E. 3.3; je mit weiterem Hinweis). Ruft sie das Anwaltsgeheimnis an, muss sie zudem plausibilisieren, dass im von den Strafverfolgungsbehörden anvisierten Durchsuchungszeitraum ein anwaltliches Vertretungsverhältnis bestanden hat, wenn dies fraglich erscheint (Urteile 7B_795/2024 vom 10. Juli 2025 E. 5.1; 1B_473/2022 vom 12. April 2023 E. 3.3.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz führt aus, der Beschwerdeführer mache zwar geltend, dass sich auf den sichergestellten Mobiltelefonen Anwaltskorrespondenz mit seiner Anwältin in Frankreich befinde, führe aber nicht aus, in welchen Applikationen diese abgespeichert seien. Insbesondere habe er keine Liste mit konkreten Suchbegriffen eingereicht. Damit komme er seinen gesetzlichen Substanziierungsobliegenheiten nicht nach, weshalb die sichergestellten Datenträger zur Durchsuchung freizugeben seien."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Dieser Rechtsauffassung der Vorinstanz kann mit Blick auf die vorgenannte Rechtsprechung nicht beigepflichtet werden. Nach den für das Bundesgericht gemäss Art. 105 Abs. 1 BGG verbindlichen vorinstanzlichen Sachverhaltsfeststellungen hat der Beschwerdeführer gegenüber der Vorinstanz den Namen seiner Anwältin in Frankreich bekannt gegeben und scheint ein Vertretungsverhältnis aufgrund seiner Strafverfahren in Frankreich zudem plausibel zu sein, was die Vorinstanz nicht in Abrede stellt. Weiter gab der Beschwerdeführer an, die Korrespondenz sei ihm teilweise auch über seine namentlich bekannten Eltern weitergeleitet worden. Darüber hinaus führte der Beschwerdeführer im vorinstanzlichen Verfahren aus, bei der Korrespondenz handle es sich um E-Mails und Kurznachrichten. Damit ist er seiner Mitwirkungspflicht hinreichend nachgekommen, denn entgegen der Auffassung der Vorinstanz war er nicht gehalten, nebst den Namen auch noch die E-Mail-Adressen seiner Rechtsanwältin anzugeben (vgl. Urteil 7B_576/2024 vom 20. März 2025 E. 6.3). Ferner hat der Beschwerdeführer mit seinen Angaben auch den Speicherort der angeblich geheimnisgeschützten Daten bekanntgegeben, indem er geltend machte, diese seien in der E-Mail und Kurznachrichtenkorrespondenz zu finden. Die Vorinstanz war angesichts dieser Angaben zwar nicht gehalten, die gesamten gesiegelten Daten nach Anwaltskorrespondenz zu durchsuchen, sie hätte aber zumindest die E-Mail-Applikationen sowie die SMS-Kurznachrichten danach durchsuchen müssen (vgl. Urteil 7B_576/2024 vom 20. März 2025 E. 6.3; 1B_473/2022 vom 12. April 2023 E.6.3). Indem die Vorinstanz das Entsiegelungsgesuch der Staatsanwaltschaft gutheisst, ohne die gesiegelten Daten nach durch das Anwaltsgeheimnis geschützten Dokumenten zu durchsuchen und diese gegebenenfalls auszusondern, verletzt sie somit Bundesrecht. Die Beschwerde ist insoweit begründet und gutzuheissen."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist teilweise gutzuheissen. Die angefochtene Verfügung ist aufzuheben und die Sache zu neuer Entscheidung an die Vorinstanz zurückzuweisen. Diese wird die in den gesiegelten Datenträgern vorhandenen Daten durchsuchen und allfällige durch das Anwaltsgeheimnis geschützte E-Mails und SMS-Nachrichten aussondern müssen. Im Übrigen ist die Beschwerde abzuweisen, soweit darauf einzutreten ist.\n\nDer Kanton Zürich trägt keine Gerichtskosten (Art. 66 Abs. 4 BGG), hat aber dem Beschwerdeführer, der als obsiegend zu gelten hat, die durch den Rechtsstreit verursachten notwendigen Kosten zu ersetzen (Art. 68 Abs. 1 und 2 BGG). Da der Beschwerdeführer um unentgeltliche Rechtspflege ersucht, ist die Entschädigung praxisgemäss seiner Rechtsvertreterin zuzusprechen (vgl. Urteil 7B_576/2024 vom 20. März 2025 E. 7). Das Gesuch um unentgeltliche Rechtspflege wird damit gegenstandslos."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen. Die angefochtene Verfügung des Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 18. April 2024 wird aufgehoben und die Sache zur neuen Entscheidung im Sinne der Erwägungen an die Vorinstanz zurückge-wiesen. Im Übrigen wird die Beschwerde abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Der Kanton Zürich hat die Rechtsvertreterin des Beschwerdeführers, Rechtsanwältin Mehtap Giunuzoglu, für das bundesgerichtliche Beschwerdeverfahren mit Fr. 1'500.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, der Jugendanwaltschaft Winterthur und dem Bezirksgericht Zürich, Zwangsmassnahmengericht, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 23. Januar 2026\n\nIm Namen der II. strafrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Abrecht\n\nDer Gerichtsschreiber: Hahn"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird teilweise gutgeheissen. Die angefochtene Verfügung des Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 18. April 2024 wird aufgehoben und die Sache zur neuen Entscheidung im Sinne der Erwägungen an die Vorinstanz zurückge-wiesen. Im Übrigen wird die Beschwerde abgewiesen, soweit darauf einzutreten ist.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Der Kanton Zürich hat die Rechtsvertreterin des Beschwerdeführers, Rechtsanwältin Mehtap Giunuzoglu, für das bundesgerichtliche Beschwerdeverfahren mit Fr. 1'500.-- zu entschädigen.",
+        "Dieses Urteil wird dem Beschwerdeführer, der Jugendanwaltschaft Winterthur und dem Bezirksgericht Zürich, Zwangsmassnahmengericht, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 105 Abs. 1 BGG",
+        "Art. 184 Abs. 2 STPO",
+        "Art. 248 Abs. 1 STPO",
+        "Art. 264 Abs. 1 STPO",
+        "Art. 307 STGB"
+      ],
+      "normKeys": [
+        "BGG",
+        "STPO",
+        "STGB"
+      ],
+      "zitierteEntscheide": [
+        "1B_473/2022",
+        "1B_563/2021",
+        "7B_106/2022",
+        "7B_1154/2024",
+        "7B_1253/2024",
+        "7B_127/2022",
+        "7B_288/2023",
+        "7B_313/2024",
+        "7B_515/2024",
+        "7B_54/2023",
+        "7B_550/2024",
+        "7B_554/2023",
+        "7B_576/2024",
+        "7B_610/2023",
+        "7B_627/2024",
+        "7B_795/2024",
+        "7B_805/2023",
+        "7B_861/2023",
+        "7B_875/2023",
+        "7B_94/2022",
+        "7B_998/2023",
+        "BGE 141 IV 305",
+        "BGE 143 IV 270",
+        "BGE 143 IV 462",
+        "BGE 144 IV 74",
+        "BGE 145 IV 273",
+        "BGE 148 IV 221",
+        "BGE 150 IV 239",
+        "BGE 150 IV 277"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-IV-107%3Ade&lang=de&zoom=&type=show_document",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "096f5a430b501d3369873609e94e66e124e5043ab33adfc181c5e1b4cfb4d20e",
+      "sha": "17506ab5d54351d80ad8d66858dbb479f0989201a941e05e8445cd36543e6b76",
+      "azaUrteil": {
+        "aktenzeichen": "7B_550/2024",
+        "key": "bger_7B_550_2024"
+      }
+    }
+  ]
+}

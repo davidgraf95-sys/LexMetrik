@@ -7,7 +7,8 @@ import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
 import { sha256EntscheidBloecke } from '../../scripts/normtext/sha-entscheide';
 import {
   citedRefZuId, mappeEntscheidOCL, extrahiereSachverhalt, markenPlausibel,
-  teileDispositivInline, extrahiereRubrum,
+  teileDispositivInline, extrahiereRubrum, azaAusBgeKopf, bgeRoemischSachgebiet,
+  type OclDecision,
 } from '../../scripts/normtext/adapter-entscheide';
 import { statutesZuNormKeys, abteilungZuSachgebiet, legalAreaZuSachgebiet, istMehrdeutigeOerAbteilung, normSignalSachgebiet } from '../../scripts/normtext/entscheide-mapping';
 
@@ -216,7 +217,9 @@ describe('mappeEntscheidOCL (echte Fixture)', () => {
     expect(snap.kanton).toBe('CH');
     expect(snap.nummer).toBe('5A_1100/2025');
     expect(snap.sprache).toBe('fr');
-    expect(snap.leitcharakter).toBe('leitentscheid'); // marked_for_publication
+    // Fachliche Änderung 26.6.2026 (§8): «Leitentscheid» ⟺ amtlicher BGE. Ein bger-
+    // Urteil (auch mit marked_for_publication/Regeste) ist KEIN amtlicher BGE → routine.
+    expect(snap.leitcharakter).toBe('routine');
     expect(snap.bestand).toBe('snapshot');
     expect(snap.kuratierung).toBe('maschinell');
   });
@@ -236,6 +239,44 @@ describe('mappeEntscheidOCL (echte Fixture)', () => {
     expect(snap.quelleUrl).toMatch(/^https?:\/\//);
     expect(snap.fassungsToken).toBeTruthy();
     expect(snap.abgerufen).toBe('2026-06-23');
+  });
+});
+
+describe('Leitentscheid-Klassifizierung (§8, 26.6.2026)', () => {
+  const det = (over: Partial<OclDecision>): OclDecision => ({
+    decision_id: 'x', court: 'bger', canton: 'CH', language: 'de',
+    docket_number: '6B_9/2025', full_text: 'Sachverhalt: A. Test-Erwägung.', ...over,
+  });
+  it('bge-Court → leitentscheid, regesteAmtlich, bgeReferenz aus docket (Präfix gestrippt)', () => {
+    const s = mappeEntscheidOCL(det({ court: 'bge', docket_number: 'BGE 152 IV 14', regeste: 'Regeste. Art. 1.', citation_string_de: 'BGE 152 IV 14' }), null, '2026-06-26')!;
+    expect(s.leitcharakter).toBe('leitentscheid');
+    expect(s.regesteAmtlich).toBe(true);
+    expect(s.bgeReferenz).toBe('152 IV 14');
+    expect(s.gerichtstyp).toBe('bundesgericht');
+    expect(s.id).toBe('bund/bge/152_IV_14');
+  });
+  it('bger mit Regeste & marked_for_publication aber ohne BGE → routine (§8-Invariante)', () => {
+    const s = mappeEntscheidOCL(det({ regeste: 'Maschinelle Zusammenfassung.', marked_for_publication: true }), null, '2026-06-26')!;
+    expect(s.leitcharakter).toBe('routine');
+    expect(s.bgeReferenz).toBeNull();
+    expect(s.regesteAmtlich).toBe(false);
+  });
+});
+
+describe('azaAusBgeKopf / bgeRoemischSachgebiet', () => {
+  it('greift das eigene Az. vor «vom <Datum>», nicht ein zitiertes Präjudiz', () => {
+    const ft = 'Urteilskopf 152 IV 14 i.S. der I. strafrechtlichen Abteilung 6B_924/2023 und andere '
+      + 'vom 26. August 2025 Regeste a Art. 259 StGB. Erwägung: vgl. Urteil 6B_111/2020 vom 1. Januar 2021 E. 3.';
+    expect(azaAusBgeKopf(ft)).toBe('6B_924/2023');
+  });
+  it('null ohne «vom <Datum>»-Signatur (kein vermuteter Volltext, §8)', () => {
+    expect(azaAusBgeKopf('Regeste. Text ohne Aktenzeichen-Signatur.')).toBeNull();
+  });
+  it('römisches BGE-Band → Sachgebiet', () => {
+    expect(bgeRoemischSachgebiet('152 IV 14')).toBe('straf');
+    expect(bgeRoemischSachgebiet('152 III 7')).toBe('privat');
+    expect(bgeRoemischSachgebiet('150 I 17')).toBe('oeffentlich');
+    expect(bgeRoemischSachgebiet('152 V 1')).toBe('sozial-abgaben');
   });
 });
 

@@ -10,7 +10,9 @@
 //   vite-node scripts/normtext-entscheide.ts -- --datum=2026-06-23 --limit=45 \
 //     --courts=zh_obergericht,be_verwaltungsgericht --kanton-pro=8
 //
-import { holeEntscheidOCL, enumeriereNeueste, citedRefZuId } from './normtext/adapter-entscheide';
+import {
+  holeEntscheidOCL, enumeriereNeueste, citedRefZuId, enumeriereBge, holeBgeLeitentscheid,
+} from './normtext/adapter-entscheide';
 import { schreibeKorpus } from './normtext/entscheide-schreiben';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 
@@ -22,6 +24,9 @@ const datum = arg('--datum') ?? new Date().toISOString().slice(0, 10);
 const bundLimit = Number(arg('--limit') ?? '45');
 const kantonPro = Number(arg('--kanton-pro') ?? '8');
 const kantCourts = (arg('--courts') ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+// Amtliche Leitentscheide (BGE): --bge-von=YYYY-MM-DD aktiviert den dritten Quell-Zweig.
+const bgeVon = arg('--bge-von');
+const bgeLimit = Number(arg('--bge-limit') ?? '300');
 
 async function mapLimit<T, R>(items: T[], n: number, fn: (t: T, i: number) => Promise<R>): Promise<R[]> {
   const out: R[] = new Array(items.length);
@@ -98,14 +103,41 @@ async function kantonKorpus(): Promise<EntscheidSnapshot[]> {
   return out;
 }
 
+/** Amtliche Leitentscheide (BGE): Enumeration → angereicherter A2-Merge je BGE. */
+async function bgeKorpus(): Promise<EntscheidSnapshot[]> {
+  const ids = await enumeriereBge(bgeVon!, bgeLimit);
+  if (!ids.length) { console.log('[bge] 0 IDs (Listing nicht erreichbar)'); return []; }
+  const snaps = await mapLimit(ids, 4, async (id) => {
+    const s = await holeBgeLeitentscheid(id, datum);
+    process.stdout.write(s ? (s.azaUrteil ? '.' : '·') : 'x');
+    return s;
+  });
+  process.stdout.write('\n');
+  const ok = snaps.filter((s): s is EntscheidSnapshot => !!s);
+  const mitVoll = ok.filter((s) => s.azaUrteil).length;
+  console.log(`[bge] ${ids.length} BGE → ${ok.length} erfasst (Volltext: ${mitVoll}, Auszug: ${ok.length - mitVoll})`);
+  return ok;
+}
+
+/** docket → dateisicheres Slug-Tail (identisch zu mappeEntscheidOCL, §5). */
+const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_');
+
 async function main() {
-  console.log(`[entscheide] Build ${datum} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}`);
+  console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}`);
+  const bge = bgeVon ? await bgeKorpus() : [];
   const bund = await bundKorpus();
   const kanton = kantCourts.length ? await kantonKorpus() : [];
 
-  // Vereinen + global dedupen (id stabil).
+  // Dedup (Budget + §8): bger-Urteile, die bereits als BGE-Volltext erfasst sind, nicht
+  // zusätzlich als Routine-Eintrag führen (sonst derselbe Entscheid als Leit- UND Routine).
+  const bgeAzaIds = new Set(
+    bge.filter((s) => s.azaUrteil).map((s) => `bund/bger/${docketSlug(s.azaUrteil!.aktenzeichen)}`),
+  );
+  const bundGefiltert = bund.filter((s) => !bgeAzaIds.has(s.id));
+
+  // Vereinen + global dedupen (id stabil; BGE ZUERST = kanonisch bei Kollision).
   const seen = new Set<string>();
-  const auswahl = [...bund, ...kanton].filter((s) => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
+  const auswahl = [...bge, ...bundGefiltert, ...kanton].filter((s) => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
 
   // Leer-Guard: nie einen bestehenden Korpus durch einen fehlgeschlagenen Lauf überschreiben.
   if (auswahl.length === 0) {
@@ -113,8 +145,9 @@ async function main() {
     return;
   }
   const res = schreibeKorpus(auswahl, datum);
+  const bgeN = auswahl.filter((s) => s.gericht === 'bge').length;
   const kantN = auswahl.filter((s) => s.kanton !== 'CH').length;
-  console.log(`[entscheide] geschrieben: ${res.anzahl} Snapshots (Bund ${res.anzahl - kantN}, Kanton ${kantN}), ${res.normBuckets} Norm-Buckets.`);
+  console.log(`[entscheide] geschrieben: ${res.anzahl} Snapshots (BGE ${bgeN}, Bund ${res.anzahl - bgeN - kantN}, Kanton ${kantN}), ${res.normBuckets} Norm-Buckets.`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

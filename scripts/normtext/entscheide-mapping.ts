@@ -91,6 +91,7 @@ export function normSignalSachgebiet(normKeys: Iterable<string>): Rechtsgebiet |
 import type { Gerichtstyp } from '../../src/lib/rechtsprechung/typen';
 export function gerichtstypFuerCourt(court: string): Gerichtstyp {
   switch (court) {
+    case 'bge': return 'bundesgericht';   // amtliche Sammlung (BGE) = Bundesgericht
     case 'bger': return 'bundesgericht';
     case 'bvger': return 'bundesverwaltungsgericht';
     case 'bstger': return 'bundesstrafgericht';

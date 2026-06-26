@@ -1,0 +1,81 @@
+{
+  "erzeugt": "2026-06-26",
+  "eintraege": [
+    {
+      "id": "bund/bger/9C_409_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III. Öffentlich-rechtliche Abteilung",
+      "nummer": "9C_409/2025",
+      "bgeReferenz": null,
+      "zitierung": "BGer 9C_409/2025 vom 11. August 2025",
+      "datum": "2025-08-11",
+      "sprache": "de",
+      "leitcharakter": "routine",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "Invalidenversicherung",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Bollinger, als Einzelrichterin, Gerichtsschreiber Williner",
+        "parteien": "A.________, Beschwerdeführer, gegen Verwaltungsgericht des Kantons Bern, Sozialversicherungsrechtliche Abteilung, Speichergasse 12, 3011 Bern, Beschwerdegegner",
+        "gegenstand": "Invalidenversicherung",
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Invalidenversicherung",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird als gegenstandslos abgeschrieben."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Diese Verfügung wird den Parteien, dem Bundesamt für Sozialversicherungen und der IV-Stelle Bern schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 11. August 2025 Im Namen der III. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Einzelrichterin: Bollinger Der Gerichtsschreiber: Williner"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird als gegenstandslos abgeschrieben.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Diese Verfügung wird den Parteien, dem Bundesamt für Sozialversicherungen und der IV-Stelle Bern schriftlich mitgeteilt.\nLuzern, 11. August 2025"
+      ],
+      "zitierteNormen": [
+        "Art. 103 Abs. 1 BGG",
+        "Art. 32 Abs. 2 BGG",
+        "Art. 66 Abs. 1 BGG",
+        "Art. 93 Abs. 3 BGG",
+        "Art. 93 BGG"
+      ],
+      "normKeys": [
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "5A_776/2014",
+        "9C_409/2025"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://11-08-2025-9C_409-2025&lang=de&type=show_document",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "26bd1d39319e922aeb9aedbfe7aeebda61184359c06ac590794b719ed9672dcc",
+      "sha": "724b1cd57ee24aae5936aacf1bf8a3760ef4c2b3c345654842913c6ce7ad37a9"
+    }
+  ]
+}

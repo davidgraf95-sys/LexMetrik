@@ -50,6 +50,12 @@ function main() {
     for (const f of ['datum', 'quelleUrl', 'quelle', 'fassungsToken'] as const) {
       if (!e[f]) fehler.push(`${e.key}: Provenienz-Feld '${f}' fehlt`);
     }
+    // §8-Invariante: 'leitentscheid' ⟺ amtlicher BGE (bgeReferenz). Eine maschinelle/
+    // kantonale Regeste begründet KEINEN Leitstatus (Befund 26.6.2026: verriegelt gegen
+    // ein versehentliches Wiedereinführen des '!!regeste'-Glieds in der Klassifizierung).
+    if (e.leitcharakter === 'leitentscheid' && !e.bgeReferenz) {
+      fehler.push(`${e.key}: 'leitentscheid' ohne bgeReferenz — kein amtlicher BGE (§8)`);
+    }
     if (e.kuratierung === 'geprueft') warn.push(`${e.key}: kuratierung 'geprueft' ohne Abnahme? (P0 erwartet 'maschinell')`);
     if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {
       warn.push(`${e.key}: Entscheiddatum ${e.datum} liegt nach dem Erzeugungsdatum ${manifest.erzeugt} (OCL-Publikations-/Datumsartefakt prüfen)`);

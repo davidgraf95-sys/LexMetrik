@@ -1,0 +1,252 @@
+{
+  "erzeugt": "2026-06-26",
+  "eintraege": [
+    {
+      "id": "bund/bge/151_III_475",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "151 III 475",
+      "bgeReferenz": "151 III 475",
+      "zitierung": "BGE 151 III 475",
+      "datum": "2025-05-06",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "oeffentlich",
+      "legalArea": "public",
+      "rubrum": {
+        "besetzung": "Bundesrichter Hurni, Präsident Bundesrichterin Kiss, Bundesrichter Denys, Rüedi, Bundesrichterin May Canellas, Gerichtsschreiber Tanner",
+        "parteien": "A.________ GmbH, vertreten durch Rechtsanwälte Dr. Simon Holzer und Matthias Leemann, Gesuchstellerin, gegen B.________ SA, vertreten durch Rechtsanwalt Dr. Andri Hess und Rechtsanwältin Dr. Angela Casey, Gesuchsgegnerin, Bundespatentgericht, St. Leonhard-Strasse 49, 9023 St. Gallen. weitere Verfahrensbeteiligte",
+        "gegenstand": null,
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Art. 123 Abs. 2 lit. a BGG; neu entdeckte Tatsachen; Erheblichkeit des Ausstandsgrundes; Verbindung eines Mitgliedes des Bundespatentgerichts zu einer Zulieferin einer Partei. Wird die Revision des bundesgerichtlichen Urteils mit einer neu entdeckten Tatsache begründet, welche die Befangenheit eines vorinstanzlichen Gerichtsmitgliedes indiziert, setzt deren \"Erheblichkeit\" im Sinne von Art. 123 Abs. 2 lit. a BGG voraus, dass die neue Tatsache den Ausstand dieses Mitgliedes eindeutig nahegelegt hätte, wenn sie dem Bundesgericht schon im Ausgangsverfahren bekannt gewesen wäre (E. 6.4). Die Verbindung einer Richterin oder eines Richters des Bundespatentgerichts zu einer blossen Zulieferin einer Prozesspartei bildet grundsätzlich keinen Ausstandsgrund. Ausnahmen fallen in Betracht, wenn objektive Umstände die Verbindung als besonders intensiv qualifizieren, so dass diese aufgrund der besonderen Gegebenheiten des Falles geeignet erscheint, die Unabhängigkeit des Mitglieds im betreffenden Verfahren effektiv zu beeinflussen (E. 6.5).\nRegeste\n Art. 123 al. 2 let. a LTF; faits nouvellement découverts; pertinence du motif de récusation; lien entre un membre du Tribunal fédéral des brevets et une fournisseuse d'une partie. Si la révision de l'arrêt du Tribunal fédéral est motivée par un fait nouvellement découvert qui indique la partialité d'un membre de la juridiction précédente, sa \"pertinence\" au sens de l'art. 123 al. 2 let. a LTF présuppose que le fait nouveau aurait clairement justifié la récusation de ce membre si le Tribunal fédéral en avait déjà eu connaissance dans la procédure précédente (consid. 6.4). Le lien entre une juge ou un juge du Tribunal fédéral des brevets et une simple fournisseuse d'une partie au procès ne constitue en principe pas un motif de récusation. Des exceptions peuvent entrer en considération lorsque des circonstances objectives qualifient ce lien de particulièrement intense, de sorte qu'il est susceptible, en raison des circonstances particulières du cas, d'influencer effectivement l'indépendance du membre dans la procédure concernée (consid. 6.5).\nRegesto\n Art. 123 cpv. 2 lett. a LTF; nuovi fatti scoperti posteriormente; rilevanza del motivo di ricusa; legame di un membro del Tribunale federale dei brevetti con una fornitrice di una parte. Se la revisione di una sentenza del Tribunale federale viene motivata con la successiva scoperta di un nuovo fatto che indica la parzialità di un membro del tribunale inferiore, la sua \"rilevanza\" nel senso dell'art. 123 cpv. 2 lett. a LTF presuppone che il fatto nuovo avrebbe chiaramente deposto per la ricusa di questo membro, se fosse già stato noto al Tribunale federale nel procedimento iniziale (consid. 6.4). Il legame di un o una giudice del Tribunale federale dei brevetti con una semplice fornitrice di una parte al processo non costituisce in linea di principio un motivo di ricusa. Eccezioni entrano in linea di conto se circostanze oggettive qualificano il legame come particolarmente intenso, cosicché in ragione delle circostanze particolari del caso questo appare idoneo a effettivamente influenzare l'indipendenza del membro nel relativo procedimento (consid. 6.5).",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die A.________ GmbH (Klägerin, Gesuchstellerin) mit Sitz in Deutschland ist Inhaberin der schweizerischen/liechtensteinischen Teile der europäischen Patente EP www B1, EP xxx und EP yyy (alle zusammen: Streitpatente). Diese drei Patente gehören zu derselben Patentfamilie, zurückgehend auf die internationale Anmeldung WO zzz. Sie schützen Portionskapseln zur Herstellung eines Getränks mit einer als Barcode ausgestalteten Kennung. Die B.________ SA (Beklagte, Gesuchsgegnerin) mit Sitz in U.________ (Schweiz) vertreibt unter der Marke X.________ folgende Portionskapseln für die Zubereitung von Kaffee: Die X.________-Portionskapseln weisen auf der Rückseite des Flansches eine Kennung auf. Diese Kennung setzt sich aus 140 Segmenten (Winkelbereichen) zusammen. Jeder Winkelbereich hat eine Winkelweite von 2.5714° (360°/140). Ein Winkelbereich ist entweder reflektierend (weiss) oder nicht reflektierend (schwarz). Während der Kaffeezubereitung wird die Kennung von der Kaffeemaschine ausgelesen und interpretiert."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "B.a. Am 26. August 2021 reichte die Klägerin beim Bundespatentgericht eine Patentverletzungsklage ein. Sie machte im Wesentlichen geltend, die von der Beklagten vertriebenen X.________-Portionskapseln fielen in den Schutzbereich der Streitpatente. Die Beklagte trug auf Klageabweisung an. Sie stellte sich auf den Standpunkt, dass die X.________-Portionskapseln die Streitpatente nicht verletzten. Ohnehin seien die Streitpatente wegen unzulässigen Änderungen, mangelnder Neuheit und fehlender erfinderischer Tätigkeit nicht rechtsbeständig. Ferner erhob sie eine Eventualwiderklage auf Erteilung einer Zwangslizenz. Am 23. Januar 2023 erstattete Bundespatentrichter Tobias Bremi ein Fachrichtervotum. Mit Urteil vom 11. Mai 2023 wies das Bundespatentgericht die Klage mangels Eingriffs in den Schutzbereich der Streitpatente ab. Dabei stützte es sich auf eine vom Fachrichtervotum abweichende übereinstimmende Auslegung der Parteien des Anspruchsmerkmals \"Barcode\". Die Frage, ob die Streitpatente rechtsbeständig sind, liess es offen. Die Eventualwiderklage erachtete es als hinfällig. An diesem Urteil wirkten folgende Richter mit: Mark Schweizer (Präsident), Tobias Bremi und Lorenzo Parrini. B.b. Die dagegen von der Klägerin erhobene Beschwerde in Zivilsachen wies das Bundesgericht mit Urteil vom 21. November 2023 ab (4A_320/2023). Es erkannte, das Bundespatentgericht sei zutreffend zum Ergebnis gelangt, dass die X.________-Portionskapseln nicht in den sachlichen Geltungsbereich der Streitpatente fallen."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Revisionsgesuch vom 10. September 2024 beantragt die Gesuchstellerin dem Bundesgericht, das Urteil des Bundesgerichts vom 21. November 2023 und das Urteil des Bundespatentgerichts vom 11. Mai 2023 seien aufzuheben. Die Angelegenheit sei zur Neubeurteilung an das Bundespatentgericht zurückzuweisen, unter erneuter Durchführung aller Prozesshandlungen, an denen Bundespatentrichter Bremi beteiligt war, insbesondere ab und einschliesslich der Instruktionsverhandlung. Die Gesuchsgegnerin beantragt, das Revisionsgesuch sei abzuweisen, soweit darauf eingetreten wird. Eventualiter - falls die zu revidierenden Urteile aufgehoben werden sollten - sei die Angelegenheit zur Neubeurteilung an das Bundespatentgericht zurückzuweisen, unter erneuter Durchführung aller Prozesshandlungen (erst) ab dem Verfassen des Fachrichtervotums. Das Bundespatentgericht liess sich nicht vernehmen. Die Parteien replizierten bzw. duplizierten."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Ausser in internationalen Schiedssachen (Art. 119a BGG) ist das Bundesgericht nur zur Revision von Entscheiden zuständig, die es selber gefällt hat (Art. 121 Einleitungssatz BGG; Elisabeth Escher, in: Basler Kommentar, Bundesgerichtsgesetz, 3. Aufl. 2018, N. 2 zu Art. 122 BGG, N. 3 zu Art. 127 BGG)."
+            },
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Soweit die Gesuchstellerin ihr Revisionsgesuch gegen das Bundesgerichtsurteil vom 21. November 2023 richtet, ist das Bundesgericht für dessen Behandlung zuständig."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Hingegen kann auf das Revisionsgesuch nicht eingetreten werden, soweit die Gesuchstellerin direkt die Revision des Urteils des Bundespatentgerichts vom 11. Mai 2023 anstrebt (vgl. Urteil 4F_11/2013 vom 16. Oktober 2013 E. 3.2)."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Urteile des Bundesgerichts erwachsen am Tag ihrer Ausfällung in Rechtskraft (Art. 61 BGG). Sie können mit keinem ordentlichen Rechtsmittel angefochten werden und eine nochmalige Überprüfung der einem Urteil des Bundesgerichts zu Grunde liegenden Streitsache ist grundsätzlich ausgeschlossen. Das Bundesgericht kann aber auf sein Urteil zurückkommen, wenn einer der in den Art. 121-123 BGG abschliessend aufgeführten Revisionsgründe vorliegt."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Das Revisionsverfahren vor Bundesgericht ist mehrstufig (zum Ganzen BGE 147 III 238 E. 1 mit zahlreichen Hinweisen):"
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Das Bundesgericht prüft vorab die Zulässigkeit des Revisionsgesuchs. Sind die Sachurteilsvoraussetzungen nicht erfüllt, tritt das Bundesgericht auf das Revisionsgesuch nicht ein."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Erachtet das Bundesgericht das Revisionsgesuch demgegenüber als zulässig, tritt es darauf ein und prüft, ob der geltend gemachte Revisionsgrund gegeben ist. Ob tatsächlich ein Grund zur Revision vorliegt, ist demnach keine Frage des Eintretens, sondern der materiellen Beurteilung."
+            },
+            {
+              "marke": "E. 2.2.3",
+              "tiefe": 3,
+              "text": "Kommt das Bundesgericht zum Schluss, dass der angerufene Revisionsgrund gegeben ist, fällt es nacheinander zwei Entscheide, die normalerweise aber in einem einzigen Urteil ergehen.\n\nIm ersten Entscheid hebt das Bundesgericht das Urteil auf, das Gegenstand des Revisionsgesuchs ist (Art. 128 Abs. 1 BGG). Dieser Aufhebungsentscheid, das sogenannte iudicium rescindens, beendet das eigentliche Revisionsverfahren und hat die Wiederaufnahme des vorherigen Beschwerdeverfahrens zur Folge.\n\nIm zweiten Entscheid, dem sogenannten iudicium rescissorium, befindet das Bundesgericht erneut über die Beschwerde, mit der es sich im ursprünglichen Verfahren befasst hatte (vgl. Art. 128 Abs. 1 BGG: \"und entscheidet neu\"). Dabei wird das bundesgerichtliche Verfahren in jenen Zustand versetzt, in dem es sich vor der damaligen Urteilsfällung befunden hatte. Die Parteien werden also so behandelt, wie wenn das Urteil nicht existiert hätte, das Gegenstand der Revision bildete. Das Beschwerdeverfahren ist indes nur soweit wieder aufzurollen, als der Revisionsgrund reicht (BGE 147 III 238 E. 1.2.3; 120 V 150 E. 3a)."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Die Gesuchstellerin beruft sich auf den Revisionsgrund nach Art. 123 Abs. 2 lit. a BGG. Sie habe nachträglich erhebliche Tatsachen entdeckt, die sie im früheren Verfahren nicht habe beibringen können. Die neu entdeckten Tatsachen belegen nach Ansicht der Gesuchstellerin die Befangenheit von Bundespatentrichter Bremi. Wären diese Tatsachen dem Bundesgericht im Ausgangsverfahren bekannt gewesen, hätte es das von einem teilweise befangenen Spruchkörper gefällte Urteil des Bundespatentgerichts vom 11. Mai 2023 wegen Verletzung von Art. 30 Abs. 1 BV aufgehoben."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Die Gesuchstellerin reicht ihr Revisionsgesuch\n\npropter nova zu Recht beim Bundesgericht und nicht beim Bundespatentgericht ein. Denn das Bundesgericht hat sich im Ausgangsverfahren materiell mit der Sache befasst. Es ist auf die Beschwerde in Zivilsachen eingetreten und hat diese abgewiesen. In einem solchen Fall ist das Bundesgericht für die Revision zuständig (BGE 147 III 238 E. 3.2)."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Die Revision eines Entscheids kann verlangt werden, wenn die Vorschriften über den Ausstand verletzt worden sind (Art. 121 lit. a BGG, vgl. auch Art. 38 Abs. 3 BGG). Damit sind allerdings die in Art. 34 BGG festgelegten Ausstandsvorschriften für das bundesgerichtliche Verfahren gemeint (Urteil 5F_5/2010 vom 7. Juli 2010 E. 3.1). Die Gesuchstellerin beruft sich denn auch zu Recht nicht auf den Revisionsgrund nach Art. 121 lit. a BGG, sondern auf denjenigen nach Art. 123 Abs. 2 lit. a BGG. Nach dieser Bestimmung kann die Revision in Zivilsachen verlangt werden, wenn die ersuchende Partei nachträglich erhebliche Tatsachen erfährt oder entscheidende Beweismittel auffindet, die sie im früheren Verfahren nicht beibringen konnte, unter Ausschluss der Tatsachen und Beweismittel, die erst nach dem Entscheid entstanden sind.\n\nDieser Revisionsgrund kann unter anderem in Fällen zum Zuge kommen, in denen ein Verfahrensbeteiligter nach Abschluss des kantonalen Verfahrens und nach Ergehen des bundesgerichtlichen Urteils Umstände entdeckt, die einen am kantonalen Verfahren beteiligten Richter als befangen erscheinen lassen (Urteile 4F_11/2013 vom 16. Oktober 2013 E. 3.2; 4F_8/2010 vom 18. April 2011).\n\nDas mit einem nach dem bundesgerichtlichen Urteil entdeckten Ausstandsgrund gegen Bundespatentrichter Bremi begründete Revisionsgesuch ist daher grundsätzlich zulässig."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Gesuchsgegnerin hält das Revisionsgesuch vom 10. September 2024 für verspätet, weshalb sie Nichteintreten beantragt."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Nach Art. 124 Abs. 1 lit. d BGG ist das Revisionsgesuch\n\npropter nova innert 90 Tagen nach der Entdeckung der betreffenden Tatsache beim Bundesgericht einzureichen. Mit dem Begriff der Entdeckung ist sichere Kenntnis gemeint. Blosse Vermutungen oder gar Gerüchte genügen nicht und vermögen den Lauf der Revisionsfrist nicht in Gang zu setzen (BGE 149 III 277 E. 4.1.2 zur parallelen Bestimmung von Art. 190a Abs. 1 lit. a IPRG mit Hinweisen). Vorausgesetzt ist dabei allerdings, dass die betreffende Tatsache trotz hinreichender Sorgfalt im früheren Verfahren nicht in Erfahrung gebracht werden konnte, d.h. dass die Entdeckung der neuen Tatsache nicht auf Nachforschungen zurückzuführen ist, die bereits im früheren Verfahren hätten angestellt werden können und müssen (Urteile 5F_28/2022 vom 19. Oktober 2022 E. 2; 4F_7/2020 vom 22. Februar 2021 E. 5.5.2 nicht publ. in: BGE 147 III 238).\n\nEs obliegt der gesuchstellenden Partei, die für die Fristwahrung relevanten Umstände nachzuweisen (BGE 149 III 277 E. 4.1.2)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Die Gesuchstellerin begründet die Befangenheit von Richter Bremi mit dessen Verbindung zur C.________ AG. Sie behauptet, dass die C.________ AG schon \"seit mehreren Jahren von der Kanzlei D.________ und insbesondere auch von Richter Bremi patentrechtlich betreut\" werde. Die C.________ AG stelle die umstrittenen X.________-Kapseln in sehr grossen Mengen her und liefere sie der Gesuchsgegnerin. De facto sei sie eine \"verlängerte Werkbank\" der Gesuchsgegnerin und erziele mit den X.________-Kapseln einen jährlichen Umsatz von 42 Mio. Franken. Die C.________ AG sei daher vom Urteil im Ausgangsverfahren unmittelbar betroffen gewesen. Sie habe ein eigenes Interesse am Ausgang des Verfahrens gehabt, weil sie bei einer Gutheissung der Klage die patentverletzenden X.________-Kapseln der Gesuchsgegnerin nicht mehr hätte verkaufen dürfen. Dies wiederum hätte für die C.________ AG gravierende wirtschaftliche Folgen gehabt.\n\nWährend der Umstand, dass die C.________ AG der Gesuchsgegnerin X.________-Kapseln lieferte, aufgrund der eingereichten Akten bereits im Ausgangsverfahren bekannt war, will die Gesuchstellerin von der Verbindung von Richter Bremi bzw. seiner Kanzlei zur C.________ AG erst am 12. Juni 2024 \"in einem anderen Zusammenhang\" erfahren haben (Erstellen eines Gutachtens für die C.________ AG zur Frage, ob gewisse andere von der C.________ AG hergestellte Kapseln Patentrechte der B.________-Gruppe verletzten). Nachdem die Gesuchstellerin die entdeckte Verbindung in einem anderen von der Gesuchsgegnerin am 14. Juni 2023 eingeleiteten Verfahren (02023_009; \"Nichtigkeitsverfahren\") dem Bundespatentgericht zur Kenntnis gebracht habe, sei Richter Bremi in jenem Verfahren am 12. August 2024 von sich aus in den Ausstand getreten. Im Ausgangsverfahren habe er dies noch nicht getan und die Parteien auch nicht \"über sein Mandatsverhältnis zu C.________\" informiert.\n\nDie Gesuchsgegnerin situiert die fristauslösende Kenntnis in den Zeitraum um Ende Februar 2024, als den Rechtsanwälten der Gesuchstellerin die Klagen im Nichtigkeitsverfahren zugestellt wurden. Spätestens dann hätten diese Nachforschungen über Richter Bremi anstellen müssen. Dabei wären sie auf die am 4. Januar 2024 veröffentlichte Patentanmeldung WO vvv gestossen. Weil die Prioritätsanmeldung dieser internationalen Patentanmeldung die einzige Interaktion von Richter Bremi mit der C.________ AG während der Hängigkeit des Ausgangsverfahrens darstellte, sei der Zeitpunkt der Entdeckung des heute geltend gemachten Revisionsgrundes der Zeitraum um Ende Februar 2024. Damit sei die Revisionsfrist von 90 Tagen seit Entdeckung am 10. September 2024 (Datum des Revisionsgesuchs) längst abgelaufen gewesen. Die Ereignisse im Sommer 2024 seien dagegen nicht fristauslösend. Denn die Gesuchstellerin, welcher bekannt gewesen sei, dass die C.________ AG eine Zulieferin der Gesuchsgegnerin ist, habe sich im Sommer 2024 ihrerseits an die C.________ AG mit einer Anfrage auf Lieferung von Kaffeekapseln gewandt. Daraufhin habe die C.________ AG bei Richter Bremi eine Beurteilung eingeholt, ob sie, ohne Patente der Gesuchsgegnerin zu verletzen, der Anfrage der Gesuchstellerin nachkommen könne. Richter Bremi sei somit im Interesse der C.________ AG sowie der Gesuchstellerin - und gerade nicht der Gesuchsgegnerin - tätig geworden.\n\nIn der Replik tritt die Gesuchstellerin den Vorbringen der Gesuchsgegnerin mit einer schematischen Darstellung der behaupteten Abläufe auf der Zeitachse entgegen."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Beide Parteien operieren im Wesentlichen mit blossen Behauptungen, die es dem Bundesgericht erschweren, gestützt auf feststehende Tatsachen über die Rechtzeitigkeit des Revisionsgesuchs zu befinden. Beweispflichtig für die Rechtzeitigkeit ist die Gesuchstellerin, nachdem die Gesuchsgegnerin substantiiert bestreitet, dass sie bei gehöriger Nachforschung von der Verbindung von Richter Bremi zur C.________ AG nicht schon früher hätte Kenntnis erlangen können. Die Beschwerdeführerin kommt der ihr obliegenden Beweispflicht nur ungenügend nach. Denn sie erklärt nicht nachvollziehbar, weshalb sie erst im Juni 2024 von der beklagten Verbindung von Richter Bremi bzw. seiner Kanzlei zur C._______ AG Kenntnis erlangt habe. Die von ihr geschilderten Ereignisse im Juni 2024 wirken konstruiert. Mit ihrem Schema auf der Zeitachse entkräftet sie das berechtigte Argument der Gesuchsgegnerin nicht, dass die Rechtsanwälte der Gesuchstellerin spätestens, nachdem ihnen im Februar 2024 im Nichtigkeitsverfahren die Klage zugestellt worden war, Erkundigungen über Richter Bremi hätten anstellen sollen und dabei schon damals auf die bereits am 4. Januar 2024 veröffentlichte Patentanmeldung WO vvv gestossen wären, auf die sie sich zur Begründung des verlangten Ausstands berufen.\n\nDie Gesuchstellerin bestreitet eine Verletzung ihrer Nachforschungspflicht bloss damit, dass sie bis zum Gutachten vom Juni 2024 keine Veranlassung gehabt habe, eine Interessenbindung zwischen der C.________ AG und Richter Bremi zu vermuten. Diese Argumentation fällt auf sie selber zurück. Wenn sie auf der einen Seite der Verbindung einer blossen Zulieferin (hier der C.________ AG) einer Prozesspartei (hier der Gesuchsgegnerin) zu einem Richter unter Befangenheitsaspekten eine Bedeutung zumessen will, wie sie dies mit dem vorliegenden Gesuch tut, muss sie sich auf der anderen Seite folgerichtig entgegenhalten lassen, dass sie auch diesbezüglich nachforschungspflichtig ist. Es kann nicht nachvollzogen werden, weshalb sie erst im Juni 2024 diesbezüglich aktiv wurde.\n\nEs mangelt daher an einem überzeugenden Beweis der Rechtzeitigkeit des Revisionsgesuchs. Letztlich kann aber dahingestellt bleiben, ob die Gesuchstellerin die genannten Tatsachen, gestützt auf die sie die Befangenheit von Richter Bremi geltend macht, mit dem Gesuch vom 10. September 2024 zeitgerecht angerufen hat, und somit auf das damit begründete Revisionsgesuch überhaupt eingetreten werden kann. Denn wie zu zeigen sein wird (E. 6.4 und 6.5), ist es ohnehin abzuweisen, da es jedenfalls an der Voraussetzung gebricht, dass die neu entdeckte Tatsache erheblich im Sinne von Art. 123 Abs. 2 lit. a BGG ist. Denn auch bei Kenntnis der Tatsache wäre ein damit begründetes Ausstandsgesuch gegenüber Richter Bremi wohl kaum gutgeheissen worden."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Für eine Revision aufgrund nachträglich entdeckter Tatsachen müssen die folgenden fünf Voraussetzungen erfüllt sein (BGE 147 III 238 E. 4.1):\n\n1. Der Gesuchsteller beruft sich auf eine Tatsache.\n\n2. Diese Tatsache ist erheblich, d.h. sie ist geeignet, die tatsächliche Grundlage des angefochtenen Urteils zu verändern und bei zutreffender rechtlicher Würdigung zu einer anderen Entscheidung zu führen.\n\n3. Die Tatsache existierte bereits, als das bundesgerichtliche Urteil gefällt wurde (unechtes Novum). Es handelt sich - präziser ausgedrückt - um eine Tatsache, die sich bis zum Zeitpunkt verwirklichte, als im Hauptverfahren noch tatsächliche Vorbringen prozessual zulässig waren. Tatsachen, die später entstanden sind, also echte Noven, werden nach Art. 123 Abs. 2 lit. a BGG ausdrücklich ausgeschlossen.\n\n4. Die Tatsache muss nachträglich, mithin nach diesem Zeitpunkt, entdeckt worden sein.\n\n5. Der Gesuchsteller konnte die Tatsache im Hauptverfahren trotz hinreichender Sorgfalt nicht vorbringen. Der Gesetzgeber hat dieses Erfordernis in der seit dem 1. Januar 2025 gültigen Fassung von Art. 123 Abs. 2 lit. a BGG kodifiziert."
+            },
+            {
+              "marke": "E. 6.1.1",
+              "tiefe": 3,
+              "text": "Betreffend die erste Voraussetzung ist zunächst fraglich, ob sich die Gesuchstellerin auf eine \"Tatsache\" beruft, wenn sie den geforderten Ausstand von Richter Bremi im Ausgangsverfahren allgemein mit \"seiner Tätigkeit für die C.________\" bzw. mit \"dem aktuell und zuvor bestehenden Mandatsverhältnis zwischen C.________ und Richter Bremi bzw. seiner Kanzlei D.________\" begründet. Sie konkretisiert zwar diese Tätigkeit damit, dass Richter Bremi für die C.________ AG am 20. Juni 2023 die am 4. Januar 2024 veröffentlichte internationale Patentanmeldung WO vvv eingereicht habe \"und davon ausgegangen werden muss, dass auch die dazugehörende Prioritätsanmeldung vom 28. Juni 2022 von Richter Bremi stammt\". Daraus leitet sie \"nach allgemeiner Lebenserfahrung\" ab, dass das Mandatsverhältnis nicht erst ab dem 28. Juni 2022, sondern schon deutlich früher bestanden habe. Belegt bzw. bloss mit Nichtwissen bestritten sind einzig folgende Handlungen der behaupteten Mandatstätigkeit von Richter Bremi bzw. seiner Kanzlei für die C.________ AG:\n\n- 28. Juni 2022: Prioritätsanmeldung von EP uuu, die von der C.________ AG nicht weiterverfolgt wurde;\n\n- 20. Juni 2023: internationale Patentanmeldung WO vvv (publiziert am 4. Januar 2024).\n\nSomit kommen als revisionsrelevante Tatsachen einzig diese beiden Umstände in Betracht, nicht aber ein generelles, zuvor und aktuell bestehendes Mandatsverhältnis von Richter Bremi bzw. seiner Kanzlei mit der C.________ AG."
+            },
+            {
+              "marke": "E. 6.1.2",
+              "tiefe": 3,
+              "text": "Ausser Betracht muss die weitere Behauptung der Gesuchstellerin fallen, bei der C.________ AG handle es sich \"de facto um eine verlängerte Werkbank der Gesuchsgegnerin\" und um \"eine engstens mit [ihr] verbundende Gesellschaft\", die ein \"enormes unmittelbares ökonomisches Interesse der C.________ am Ausgang des [Ausgangs-]Verfahrens\" gehabt habe. Diese Vorbringen werden von der Gesuchsgegnerin substantiiert bestritten. Sie betont, dass die C.________ AG seit über zwanzig Jahren nicht mehr zur B.________-Gruppe gehöre und heute eine von über 120'000 Zulieferinnen der B.________-Gruppe sei. Das Fortkommen der C.________ AG habe in keiner Weise vom Ausgang des Ausgangsverfahrens abgehangen. Die Gesuchstellerin vermag dies nicht zu widerlegen."
+            },
+            {
+              "marke": "E. 6.1.3",
+              "tiefe": 3,
+              "text": "Ebenso wenig präsentiert die Gesuchstellerin eine zu berücksichtigende Tatsache, wenn sie vorbringt, Richter Bremi sei im Nichtigkeitsverfahren am 12. August 2024 in den Ausstand getreten. Dabei handelt es sich um eine Tatsache, die sich erst\n\nnach dem zu revidierenden Urteil vom 21. November 2023 zugetragen hat und die als echtes Novum von vornherein keinen Revisionsgrund nach Art. 123 Abs. 2 lit. a BGG begründen kann (vgl. Urteil 4F_1/2025 vom 28. Januar 2025 E. 5.2)."
+            },
+            {
+              "marke": "E. 6.1.4",
+              "tiefe": 3,
+              "text": "Als Tatsachen im Sinne von Art. 123 Abs. 2 lit. a BGG sind somit lediglich zu berücksichtigen, dass Richter Bremi bzw. seine Kanzlei am 28. Juni 2022 für die C.________ AG die Prioritätsanmeldung von EP uuu und am 20. Juni 2023 die internationale Patentanmeldung WO vvv vornahm."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die dritte Bedingung, dass die Tatsache bereits existierte, als das bundesgerichtliche Urteil vom 21. November 2023 gefällt wurde, es sich mithin um ein unechtes Novum handelt, trifft auf beide genannten Umstände zu. Allerdings muss es sich um eine Tatsache handeln, die sich bis zum Zeitpunkt verwirklichte, als im Hauptverfahren noch tatsächliche Vorbringen prozessual zulässig waren (BGE 147 III 238 E. 4.1). Tatsachen, die später entstanden sind, also echte Noven, werden nach Art. 123 Abs. 2 lit. a BGG ausdrücklich ausgeschlossen. Die internationale Patentanmeldung WO vvv vom 20. Juni 2023 erfolgte erst nach dem Urteil des Bundespatentgerichts vom 11. Mai 2023. Das Bundesgericht hätte sie als echtes Novum nicht berücksichtigen können (Art. 99 BGG), wenn die Gesuchstellerin und damalige Beschwerdeführerin gestützt darauf die Aufhebung des Urteils des Bundespatentgerichts vom 11. Mai 2023 wegen Befangenheit von Richter Bremi verlangt hätte. Diese Tatsache muss daher ausscheiden, und es verbleibt einzig die Prioritätsanmeldung vom 28. Juni 2022."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Die Gesuchstellerin behauptet, diese Tatsache erst nach dem bundesgerichtlichen Urteil entdeckt zu haben. Ob sie diese Tatsache - wie die Gesuchsgegnerin vorbringt - bei gehöriger Nachforschung bereits Ende Februar 2024 hätte entdecken können oder - wie die Gesuchstellerin behauptet - erst am 20. Juni 2024 entdeckt hat bzw. mangels Hinweises entdecken musste, spielt anders als für die Rechtzeitigkeit des Revisionsgesuchs (dazu E. 5.3) keine Rolle. Denn so oder anders wurde die Tatsache erst nach dem massgebenden Zeitpunkt entdeckt. Die vierte und die fünfte Voraussetzung wären mithin als erfüllt zu betrachten."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Hingegen mangelt es an der zweiten Voraussetzung der Erheblichkeit.\n\nEine Tatsache ist erheblich im Sinne von Art. 123 Abs. 2 lit. a BGG, wenn sie geeignet ist, die tatsächliche Grundlage des angefochtenen Urteils zu verändern und bei zutreffender rechtlicher Würdigung zu einer anderen Entscheidung zu führen. Soll mit einer\n\nrevisio propter nova erreicht werden, dass das vorinstanzliche Verfahren wegen Befangenheit eines vorinstanzlichen Richters neu aufgenommen werden muss, ist zu beachten, dass auf diese Weise die gesuchstellende Partei mitunter eigene prozessuale Fehler und Versäumnisse im ersten Durchgang beim zweiten Durchgang korrigieren könnte. \"Erheblichkeit\" der geltend gemachten Tatsache im Sinne von Art. 123 Abs. 2 lit. a BGG setzt daher in diesem Kontext voraus, dass die neue Tatsache den Ausstand des Richters eindeutig indiziert hätte, wenn sie dem Bundesgericht schon im Ausgangsverfahren bekannt gewesen wäre.\n\nVorliegend ist mithin zu entscheiden, ob das Bundesgericht bei Kenntnis der Prioritätsanmeldung von EP uuu für die C.________ AG durch Richter Bremi am 28. Juni 2022 die Beschwerde der Gesuchstellerin und damaligen Beschwerdeführerin wegen Verletzung von Art. 30 Abs. 1 BV klarerweise gutgeheissen hätte, wenn diese gestützt darauf wegen Befangenheit von Richter Bremi die Aufhebung des Urteils des Bundespatentgerichts vom 11. Mai 2023 und die Wiederholung aller Prozesshandlungen verlangt hätte."
+            },
+            {
+              "marke": "E. 6.5",
+              "tiefe": 2,
+              "text": "Die Frage ist zu verneinen.\n\nDer Gesetzgeber hat sich bei der Organisation des Bundespatentgerichts bewusst für ein spezialisiertes Fachgericht entschieden, das aus juristisch und technisch ausgebildeten Richtern und Richterinnen zusammengesetzt ist, die über ausgewiesene Kenntnisse im Patentrecht verfügen müssen (Art. 8 PatGG). Teilzeitlich oder nebenamtlich tätige Mitglieder sollen hauptberuflich im Umfeld des Patentwesens tätig sein, damit sich die gewünschte Verknüpfung von juristischem und technischem Wissen einstellen kann (Botschaft vom 7. Dezember 2007 zum Patentgerichtsgesetz, BBl 2008 455, insb. 472). Dies ist bei der Beurteilung von Ausstandsgesuchen zu berücksichtigen (BGE 147 III 89 E. 4.2.1; 147 III 577 E. 6). In Anbetracht dessen kann der hier zu beurteilende Umstand, dass ein Richter bzw. seine Kanzlei für eine Zulieferin einer Prozesspartei eine Prioritätsanmeldung vorgenommen hat, für dessen Ausstand nicht genügen. Würde eine derart schwache Verbindung für den objektiven Anschein der Befangenheit eines Bundespatentrichters ausreichen, liesse sich die vom Gesetzgeber gewollte Zusammensetzung des Bundespatentgerichts kaum aufrecht erhalten.\n\nDie Gesuchstellerin kann auch nichts aus den ebenfalls Richter Bremi betreffenden Urteilen 4A_243/2020 vom 5. November 2020 (teilweise publ. in: BGE 147 III 89) und 4A_232/2021 vom 30. August 2021 (teilweise publ. in: BGE 147 III 577) für sich ableiten. Dort ging es um administrative Tätigkeiten des Richters bzw. seiner Kanzlei für eine Prozesspartei eines anderen (konnexen) Verfahrens, wobei das Bundesgericht auch insofern eine gewisse Intensität der Beziehung voraussetzte (BGE 147 III 577 E. 6). Hier geht es nicht um die Tätigkeit für eine Prozesspartei, sondern für eine von vielen Zulieferinnen einer Prozesspartei.\n\nDie Klientenverbindung eines Richters bzw. seiner Kanzlei zu einer blossen\n\nZulieferin einer Prozesspartei vermag für sich allein keine objektive Befangenheit eines Bundespatentrichters zu indizieren. Ansonsten liessen sich die Ausstandspflicht der Mitglieder des Bundespatentgerichts und - spiegelbildlich - die Nachforschungspflicht der Parteien nicht mehr vernünftig eingrenzen.\n\nIn der arbeitsteiligen Wirtschaft greifen wohl alle vor Bundespatentgericht auftretenden Parteien auf Zuliefererinnen und Dienstleisterinnen zurück. Deren Zahl dürfte bei grösseren Unternehmen ganz erheblich sein. Die Gesuchsgegnerin hebt denn auch hervor, dass ihr Unternehmen mit weit über 100'000 Zulieferinnen und Dienstleisterinnen geschäftet. Daher ist die Wahrscheinlichkeit gross, dass die meisten hauptberuflich als Patent- oder Rechtsanwälte tätigen Mitglieder des Bundespatentgerichts bzw. ihre Kanzleien Zulieferinnen von Prozessparteien zu ihren Klienten zählen oder gelegentlich für sie tätig wurden. Wären alle diese Vertragsbeziehungen von der richterlichen Offenlegungspflicht erfasst, ergäben sich nicht nur kaum überblickbare praktische Schwierigkeiten, sondern auch heikle Probleme mit Geheimhaltungspflichten (Amtsgeheimnis, Anwaltsgeheimnis, Geschäftsgeheimnisse).\n\nDiesen Besonderheiten von Patentrechtsstreitigkeiten ist unter Befangenheitsaspekten Rechnung zu tragen. Die Verbindung eines Bundespatentrichters oder einer Bundespatentrichterin zu einer blossen Zulieferin einer Prozesspartei bildet daher grundsätzlich keinen Ausstandsgrund. Ausnahmen fallen in Betracht, wenn objektive Umstände die Verbindung als besonders intensiv qualifizieren, so dass diese aufgrund der besonderen Gegebenheiten des Falles geeignet erscheint, die Unabhängigkeit des Mitglieds im betreffenden Verfahren effektiv zu beeinflussen. Solches ist vorliegend nicht erstellt.\n\nDie geltend gemachte neue Tatsache ist daher nicht erheblich im Sinne von Art. 123 Abs. 2 lit. a BGG, weil sie den Ausstand von Richter Bremi nicht eindeutig zu begründen vermocht hätte."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Das Revisionsgesuch ist abzuweisen, soweit darauf eingetreten werden kann.\n\nBei diesem Ausgang des Verfahrens wird die Gesuchstellerin kosten- und entschädigungspflichtig (Art. 66 Abs. 1 und Art. 68 Abs. 2 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Das Revisionsgesuch wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 25'000.-- werden der Gesuchstellerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gesuchstellerin hat die Gesuchsgegnerin für das bundesgerichtliche Verfahren mit Fr. 30'000.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 6. Mai 2025\n\nIm Namen der I. zivilrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Hurni\n\nDer Gerichtsschreiber: Tanner"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Das Revisionsgesuch wird abgewiesen, soweit darauf eingetreten wird.",
+        "Die Gerichtskosten von Fr. 25'000.-- werden der Gesuchstellerin auferlegt.",
+        "Die Gesuchstellerin hat die Gesuchsgegnerin für das bundesgerichtliche Verfahren mit Fr. 30'000.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Bundespatentgericht schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 123 Abs. 2 BGG",
+        "Art. 123 Abs. 2 LTF",
+        "Art. 30 Abs. 1 BV"
+      ],
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "zitierteEntscheide": [
+        "4A_232/2021",
+        "4A_243/2020",
+        "4A_320/2023",
+        "4F_1/2025",
+        "4F_11/2013",
+        "4F_24/2024",
+        "4F_7/2020",
+        "4F_8/2010",
+        "5F_28/2022",
+        "5F_5/2010",
+        "BGE 147 III 238",
+        "BGE 147 III 577",
+        "BGE 147 III 89",
+        "BGE 149 III 277"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-475%3Ade&lang=de&zoom==&type=show_document",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "64c7a0226879b55865b7e627fd42bff2ffaad3b4437c27d660099c5e43767775",
+      "sha": "e33f7ff8d1ff0cec83892c75306dac6d8329b1db6d9d7c76f000e7f54750eb6a",
+      "azaUrteil": {
+        "aktenzeichen": "4F_24/2024",
+        "key": "bger_4F_24_2024"
+      }
+    }
+  ]
+}

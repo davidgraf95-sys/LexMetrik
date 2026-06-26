@@ -279,8 +279,11 @@ export function mappeEntscheidOCL(
   const regeste = regesteRoh && String(regesteRoh).trim()
     ? { text: normalisiereRegeste(String(regesteRoh)), quelle: 'opencaselaw' as const }
     : null;
-  // Amtliche Regeste gibt es definitionsgemäss nur beim publizierten BGE; sonst maschinell.
-  const regesteAmtlich = !!det.bge_reference;
+  // Der Court 'bge' IST die amtliche Sammlung; bei anderen Courts trägt bge_reference
+  // die Fundstelle. Maschinelle/kantonale Regesten sind NICHT amtlich (§8). Spike 26.6.:
+  // bge-Records tragen KEIN bge_reference (Fundstelle steht in docket_number) → court prüfen.
+  const istBge = String(det.court ?? '') === 'bge';
+  const regesteAmtlich = istBge || !!det.bge_reference;
 
   // ── zitierte Entscheide (OCL liefert JSON-STRING) ──
   let zitierteEntscheide: string[] = [];
@@ -298,7 +301,11 @@ export function mappeEntscheidOCL(
   const court = String(det.court ?? 'bger');
   const canton = String(det.canton ?? 'CH');
   // Aktenzeichen-Normalisierung (Abnahme P3): „5A 229/2017" → „5A_229/2017".
-  const docket = String(det.docket_number ?? det.decision_id).replace(/^(\d[A-Z])\s+(?=\d)/, '$1_');
+  // BGE: OCL ist inkonsistent — ältere docket tragen «BGE »-Präfix, neuere nicht
+  // (Spike 26.6.). Für die Fundstelle einheitlich strippen → bgeReferenz «150 I 17».
+  const docket = String(det.docket_number ?? det.decision_id)
+    .replace(/^(\d[A-Z])\s+(?=\d)/, '$1_')
+    .replace(/^(?:BGE|ATF|DTF)\s+/i, '');
   const sachgebiet: Rechtsgebiet =
     opts.sachgebietHint
     // C2-1: Für die mehrdeutige II. öffentlich-rechtliche Abteilung (2A/2C/2D,
@@ -322,10 +329,14 @@ export function mappeEntscheidOCL(
     ? String(det.citation_string_de ?? `BGer ${docket} vom ${datumDe}`)
     : `${gerichtName} ${docket} vom ${datumDe}`).replace(/\b(\d[A-Z])\s+(\d+\/\d{4})/g, '$1_$2');
 
-  // Leitentscheid = amtliche Publikation: marked_for_publication ODER BGE-Fundstelle
-  // ODER vorhandene amtliche Regeste (eine Regeste tragen nur publizierte Entscheide).
-  const leit = det.marked_for_publication === true || !!det.bge_reference || !!regeste;
-  const docketSafe = docket.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_');
+  // Leitentscheid ⟺ amtliche Sammlung (BGE): Court 'bge' ODER BGE-Fundstelle.
+  // KEIN '!!regeste'-Glied mehr — eine maschinelle/kantonale Regeste begründet keinen
+  // amtlichen Leitstatus (§8; Befund 26.6.: 96 % der Alt-Etiketten waren so falsch).
+  // Invariante (gate-geprüft): leitcharakter==='leitentscheid' ⟺ bgeReferenz≠null.
+  const leit = istBge || !!det.bge_reference;
+  // BGE-Slug mit Unterstrichen («150_I_17») für lesbare Keys/URLs; bger unverändert
+  // (Leerzeichen entfernt, §6 byte-stabil für den bestehenden bger-Korpus).
+  const docketSafe = (istBge ? docket.replace(/\s+/g, '_') : docket.replace(/\s+/g, '')).replace(/[^A-Za-z0-9_]/g, '_');
   // Bund unter bund/, kantonale Gerichte unter kanton/<KT>/ (eigener Pfad-Zweig).
   const idSafe = canton === 'CH'
     ? `bund/${court}/${docketSafe}`
@@ -339,7 +350,7 @@ export function mappeEntscheidOCL(
     kanton: canton,
     abteilung: det.chamber ? String(det.chamber) : null,
     nummer: docket,
-    bgeReferenz: det.bge_reference ? String(det.bge_reference) : null,
+    bgeReferenz: istBge ? docket : (det.bge_reference ? String(det.bge_reference) : null),
     zitierung,
     datum: String(det.decision_date ?? ''),
     sprache,
@@ -437,4 +448,98 @@ export function citedRefZuId(ref: string): string | null {
   const m = /^(\d[A-Z])[._](\d+)\/(\d{4})$/.exec(r);
   if (!m) return null;
   return `bger_${m[1]}_${m[2]}_${m[3]}`;
+}
+
+// ─── Amtliche Leitentscheide (BGE, Court 'bge') ──────────────────────────────
+//
+// Schritt 1b + Schritt 2 (A2-Merge) in EINER angereicherten Funktion: BGE-Identität
+// + amtliche Regeste + (wenn eindeutig auflösbar) das vollständige unterliegende
+// bger-Urteil (echtes Datum, voller Body, präzises Sachgebiet). Spike 26.6.2026 belegt:
+// 'bge'-Records tragen die Fundstelle in docket_number, das aza-Az. im Urteilskopf.
+
+/** Enumeriert amtliche BGE (compact-Listing), deutsch, neueste zuerst, ab dateFrom. */
+export async function enumeriereBge(dateFrom: string, anzahl = 300): Promise<string[]> {
+  const url = `${API}/decisions?court=bge&language=de&date_from=${dateFrom}&sort=date_desc&limit=${anzahl}&fields=compact`;
+  type Liste = { results?: OclDecision[]; decisions?: OclDecision[] };
+  const d = await jget<Liste | OclDecision[]>(url, 3, 60000);
+  const arr: OclDecision[] = Array.isArray(d) ? d : (d?.results ?? d?.decisions ?? []);
+  return arr.map((x) => String(x.decision_id ?? x.id ?? '')).filter(Boolean);
+}
+
+/**
+ * aza-Aktenzeichen des EIGENEN Falls aus dem BGE-Urteilskopf (R8-sicher, §8).
+ * Im Kopf steht das Az. unmittelbar vor «vom <Datum>» (Eigenfall-Signatur), NICHT
+ * als zitiertes Präjudiz (die stehen erst in den Erwägungen). Quarantäne: nur im
+ * Kopf-Bereich (vor «Regeste») gesucht. null ⇒ kein eindeutiges Az. → Auszug-Fallback.
+ */
+export function azaAusBgeKopf(fullText: string | undefined): string | null {
+  if (!fullText) return null;
+  // Suchfenster: bis zum Beginn der Erwägungen (dort leben zitierte Präjudizien),
+  // höchstens die ersten 8000 Zeichen. Das eigene aza-Az. steht im Urteilskopf/
+  // Sachverhalt DAVOR — als erstes «<aza> (und andere)? vom <Datum>» (Eigenfall-
+  // Signatur). Deckt beide OCL-Kopfformate ab (2026: Az. vor Regeste; 2024: nach Regeste).
+  const erw = fullText.search(/\b(?:Erwägung|Erwägungen|Considérant|Considerando|Diritto|Ragioni)\b/);
+  const fenster = fullText.slice(0, erw > 400 ? Math.min(erw, 8000) : 8000);
+  const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s+(?:und\s+andere|und\s+[^\n]{0,40}))?\s+vom\s+\d{1,2}\.\s*\w+\s+\d{4}/.exec(fenster);
+  return m ? m[1].replace(/\s+/, '_') : null;
+}
+
+/** BGE-Band (römisch) → Sachgebiet: I/II öffentl., III Zivil→privat, IV straf, V Sozialvers. */
+export function bgeRoemischSachgebiet(docket: string): Rechtsgebiet | null {
+  const m = /\b(IV|III|II|I|V)\b/.exec(String(docket));
+  switch (m?.[1]) {
+    case 'I': case 'II': return 'oeffentlich';
+    case 'III': return 'privat';
+    case 'IV': return 'straf';
+    case 'V': return 'sozial-abgaben';
+    default: return null;
+  }
+}
+
+/**
+ * Holt einen amtlichen Leitentscheid (BGE) und reichert ihn mit dem vollständigen
+ * unterliegenden bger-Urteil an (A2-Merge). Ohne eindeutig/plausibel auflösbares
+ * aza-Az.: ehrlicher Sammlungs-Auszug (azaUrteil=null), nie ein vermuteter Body (§8).
+ */
+export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Promise<EntscheidSnapshot | null> {
+  const det = await jget<OclDecision>(`${API}/decisions/${encodeURIComponent(bgeId)}?fields=full`);
+  if (!det || !det.decision_id || det.court !== 'bge') return null;
+  if ((det.language ?? 'de') !== 'de') return null;
+  const str = await jget<OclStructure>(`${API}/structure/${encodeURIComponent(bgeId)}?paragraph_excerpt_chars=5000`);
+
+  const azaAz = azaAusBgeKopf(det.full_text);
+  const azaKey = azaAz ? citedRefZuId(azaAz) : null;
+  const bandJahr = Number(String(det.decision_date ?? '').slice(0, 4)) || null;
+
+  // aza-Volltext nur bei plausibler Confidence übernehmen (Jahr-Fenster, §8/R8).
+  let azaSnap: EntscheidSnapshot | null = null;
+  if (azaKey) {
+    const cand = await holeEntscheidOCL(azaKey, abgerufen, { sprache: 'de' });
+    if (cand) {
+      const azaJahr = Number(String(cand.datum).slice(0, 4)) || null;
+      const plausibel = !bandJahr || !azaJahr || (azaJahr <= bandJahr && azaJahr >= bandJahr - 3);
+      if (plausibel) azaSnap = cand;
+    }
+  }
+
+  const roemHint = bgeRoemischSachgebiet(String(det.docket_number ?? ''));
+  const basis = mappeEntscheidOCL(det, str, abgerufen, { sachgebietHint: azaSnap?.sachgebiet ?? roemHint ?? undefined });
+  if (!basis) return null;
+  basis.gerichtName = 'Bundesgericht';
+
+  if (azaSnap) {
+    // A2-Merge: amtliche BGE-Identität + Regeste + echtes Datum + voller Urteils-Body.
+    return {
+      ...basis,
+      datum: azaSnap.datum,
+      abschnitte: azaSnap.abschnitte,
+      rubrum: azaSnap.rubrum ?? basis.rubrum,
+      dispositivOrders: azaSnap.dispositivOrders,
+      zitierteEntscheide: azaSnap.zitierteEntscheide.length ? azaSnap.zitierteEntscheide : basis.zitierteEntscheide,
+      normKeys: [...new Set([...basis.normKeys, ...azaSnap.normKeys])],
+      azaUrteil: { aktenzeichen: azaAz!, key: azaKey! },
+      sha: azaSnap.sha,
+    };
+  }
+  return { ...basis, azaUrteil: null };
 }

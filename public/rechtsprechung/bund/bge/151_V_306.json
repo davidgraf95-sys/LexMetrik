@@ -1,0 +1,255 @@
+{
+  "erzeugt": "2026-06-26",
+  "eintraege": [
+    {
+      "id": "bund/bge/151_V_306",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "151 V 306",
+      "bgeReferenz": "151 V 306",
+      "zitierung": "BGE 151 V 306",
+      "datum": "2025-06-12",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "legalArea": "social_insurance",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Moser-Szeless, Präsidentin, Bundesrichter Stadelmann, Parrino, Beusch, Bundesrichterin Bollinger, Gerichtsschreiber Traub",
+        "parteien": "A.________, vertreten durch Rechtsanwältin Jeannette Frech, Beschwerdeführer, gegen IV-Stelle Solothurn, Allmendweg 6, 4528 Zuchwil, Beschwerdegegnerin",
+        "gegenstand": "Invalidenversicherung",
+        "vorinstanz": "Versicherungsgerichts des Kantons Solothurn vom 30. August 2024"
+      },
+      "regeste": {
+        "text": "Art. 6 f. und Art. 44 ATSG; Art. 1a lit. a, Art. 8 Abs. 1, 1 bis und 1 ter , Art. 28 Abs. 1 lit. a und Abs. 1 bis , Art. 57 Abs. 1 lit. e und f, Art. 59 Abs. 3 IVG; Verlauf der beruflichen Eingliederung im Verhältnis zur Arbeitsfähigkeit als Gegenstand der versicherungsmedizinischen Begutachtung; Grundsatz \"Eingliederung vor Rente\". Die Sachverständigen müssen eine Diskrepanz zwischen attestierter Arbeitsfähigkeit und aktenkundig fehlendem Eingliederungserfolg erläutern, ansonsten die Beweiskraft ihrer Arbeitsunfähigkeitsschätzung infrage gestellt sein kann (E. 4.3 und 4.4). Ist die Arbeitsfähigkeit bloss medizinisch-theoretischer Natur, gilt es zu prüfen, inwiefern vorweg Eingliederungsfähigkeit hergestellt werden muss, damit die berufliche Integration gelingen kann. Gerade bei jüngeren Versicherten soll das Risiko einer Berentung so weit wie möglich reduziert werden (E. 4.5).",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.________ (geb. 1991), zuletzt als Telesales Agent für einen Marketingdienstleister erwerbstätig, meldete sich im Januar 2020 unter anderem wegen Rücken- und Kopfschmerzen sowie psychischen Problemen bei der Invalidenversicherung zum Leistungsbezug an. Das seit Mai 2015 bestehende Arbeitsverhältnis war auf Ende August 2018 aus gesundheitsbezogenen Gründen aufgelöst worden. Eine Beschäftigungsmassnahme der Arbeitslosenversicherung wurde vorzeitig beendet. Ende November 2020 eingeleitete berufliche Massnahmen der Invalidenversicherung in Form eines Belastungstrainings (leichte Verpackungsarbeiten) wurden unter Hinweis auf starke Schmerzen und eine Verschlechterung des psychischen Zustands ebenfalls früher als vorgesehen abgebrochen (Abschlussbericht der IV-Stelle vom 21. Januar 2021). Auf Anraten des Regionalen Ärztlichen Dienstes (RAD) holte die IV-Stelle des Kantons Solothurn beim Rheumatologen Dr. B.________ und beim Psychiater Dr. C.________ ein bidisziplinäres Gutachten vom 28. Januar 2022 ein. Der psychiatrische Sachverständige diagnostizierte eine nicht näher bezeichnete Angststörung sowie eine rezidivierende depressive Störung mit chronischem Verlauf, gegenwärtig leichtgradige Episode mit somatischem Syndrom. Aufgrund dieser Diagnosen sei die Arbeitsfähigkeit (in der zuletzt ausgeübten Tätigkeit) um 30 Prozent eingeschränkt. Die bloss verdachtsweise diagnostizierbare chronische Schmerzstörung mit körperlichen und psychischen Anteilen habe keinen Einfluss auf die Arbeitsfähigkeit. Aus rheumatologischer Sicht blieben u.a. ausgeprägte Zeichen einer Schmerzfehlverarbeitung ebenfalls ohne Auswirkung auf die Arbeitsfähigkeit. Leichte bis mittelschwere, rückenadaptierte Tätigkeiten seien zumutbar. Mit Verfügung vom 22. September 2022 lehnte die IV-Stelle nach durchgeführtem Vorbescheidverfahren weitere berufliche Massnahmen ab und verneinte den Anspruch auf eine Invalidenrente."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Das Versicherungsgericht des Kantons Solothurn wies die gegen die Verfügung vom 22. September 2022 gerichtete Beschwerde ab (Urteil vom 30. August 2024)."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.________ führt Beschwerde in öffentlich-rechtlichen Angelegenheiten. Er beantragt, das angefochtene Urteil sei aufzuheben und die Sache zur hinreichenden Abklärung des rechtserheblichen Sachverhalts und neuen Entscheidung an die IV-Stelle zurückzuweisen. Eventuell sei ihm eine ganze Rente der Invalidenversicherung zuzusprechen. Die IV-Stelle und das Bundesamt für Sozialversicherungen verzichten auf eine Stellungnahme."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Am 1. Januar 2022 trat das revidierte Bundesgesetz über die Invalidenversicherung (IVG; SR 831.20) in Kraft (Weiterentwicklung der IV [WEIV]; Änderung vom 19. Juni 2020, AS 2021 705, BBl 2017 2535). Die dem angefochtenen Urteil zugrunde liegende Verfügung erging nach dem 1. Januar 2022, betrifft aufgrund der Anmeldung im Januar 2020 jedoch Leistungen mit allfälligem Anspruchsbeginn vor dem 31. Dezember 2021. In dieser übergangsrechtlichen Konstellation sind die Bestimmungen des IVG und diejenigen der Verordnung über die Invalidenversicherung (IVV; SR 831.201) in der bis 31. Dezember 2021 gültig gewesenen Fassung massgebend (BGE 150 V 323 E. 4.2; Urteil 8C_586/2023 vom 21. Februar 2024 E. 3)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten kann unter anderem die Verletzung von Bundesrecht gerügt werden (Art. 95 lit. a BGG). Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Indessen überprüft das Bundesgericht tatsächliche Feststellungen der Vorinstanz, die für den Ausgang des Verfahrens entscheidend sein können, auf qualifizierte Rüge hin (Art. 106 Abs. 2 BGG) oder auch von Amtes wegen, wenn jene Feststellungen offensichtlich unrichtig sind oder auf einer Rechtsverletzung im Sinn von Art. 95 BGG beruhen (Art. 97 Abs. 1 BGG und Art. 105 Abs. 2 BGG). In die Beweiswürdigung des kantonalen Gerichts greift das Bundesgericht also nur bei Willkür ein, so wenn die Vorinstanz offensichtlich unhaltbare Schlüsse zieht oder erhebliche Beweise übersieht resp. grundlos ausser Acht lässt (BGE 144 V 50 E. 4.2).\n\nDie Rechtsanwendung erfolgt von Amtes wegen (Art. 106 Abs. 1 BGG). Mit Blick auf die Pflicht zur ausreichenden Begründung der Beschwerde (Art. 42 Abs. 1 und 2 BGG) überprüft das Bundesgericht das angefochtene Urteil grundsätzlich nur in den gerügten Punkten, es sei denn, es weise offensichtliche Rechtsmängel auf (BGE 141 V 234 E. 1)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Die tatsächliche Ausgangslage in dieser Beschwerdesache stellt sich wie folgt dar: Der Beschwerdeführer leidet nach gutachterlicher Erkenntnis u.a. an einer Angststörung, einer depressiven Störung sowie (verdachtsweise) an einer chronischen Schmerzstörung. Sein letzter Arbeitgeber löste das Arbeitsverhältnis (Bürotätigkeit) per Ende August 2018 unter Verweisung auf gesundheitliche Gründe auf. Arbeitsmarktliche Massnahmen der Arbeitslosenversicherung (Beschäftigung im Bereich Recycling) wurden wegen vieler gesundheitsbedingter Absenzen frühzeitig beendet. Zur Abklärung des IV-Leistungsanspruchs veranlasste die IV-Stelle zunächst ein auf drei Monate angelegtes Belastbarkeitstraining (leichte Verpackungsarbeiten). Mitte Januar 2021 wurde die berufliche Massnahme nach anderthalb Monaten unter Hinweis auf starke Schmerzen und eine damit einhergehende Verschlechterung des psychischen Gesundheitszustands abgebrochen. Die IV-Stelle holte daraufhin ein bidisziplinäres (rheumatologisch-psychiatrisches) Gutachten vom 28. Januar 2022 ein. Gemäss diesem ist der Beschwerdeführer in rückenschonenden leichteren Tätigkeiten zu 70 Prozent arbeitsfähig."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Der Beschwerdeführer rügt, die Vorinstanz verletze den Untersuchungsgrundsatz (Art. 61 lit. c ATSG) und seinen Anspruch auf rechtliches Gehör (Art. 29 Abs. 2 BV und Art. 42 ATSG), indem sie das bidisziplinäre Administrativgutachten als vollständig beweiswertig anerkenne. Das Gutachten werde formellen und materiellen Anforderungen nicht gerecht."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Zunächst bemängelt der Beschwerdeführer, das Gutachten enthalte keine echte interdisziplinäre Konsensbeurteilung."
+            },
+            {
+              "marke": "E. 3.1.1",
+              "tiefe": 3,
+              "text": "Er führt aus, die beiden Sachverständigen hätten im Abschnitt Konsensbeurteilung eine \"Beurteilung der medizinischen Situation\" des RAD vom 29. Juni 2021 eins zu eins wiederholt. Die \"integrative medizinische Beurteilung\" (Ziff. 4.1 des Gutachtens) verweise sodann pauschal auf die psychiatrische Teilbegutachtung. Entgegen der Meinung der Vorinstanz sei nicht nachvollziehbar, wie die Gesamtbeurteilung zustande gekommen sei, so, was die beiden Gutachter in ihrem (zwecks \"Erarbeitung einer gemeinsamen Konsensbeurteilung\" geführten) Telefongespräch vom 25. Januar 2022 besprochen hätten. Ebensowenig werde ersichtlich, aufgrund welcher Überlegungen die Gutachter zur Auffassung gelangten, dass das psychiatrische Teilgutachten für die Konsensbeurteilung uneingeschränkt übernommen werden könne. Immerhin habe der rheumatologische Teilgutachter ausgehend von morphologischen Veränderungen an der Wirbelsäule und unspezifischen Kreuzschmerzen \"sowohl qualitative als auch quantitative Beeinträchtigungen\" attestiert. In der Konsensbeurteilung hätte jedenfalls die - ebenfalls limitierend wirkende - Schmerzfehlverarbeitung thematisiert werden müssen; ebenso, ob die rheumatologisch bedingten Einschränkungen sich (als \"Trigger\") auf die bereits aus psychischen Gründen beeinträchtigte Leistungsfähigkeit auswirkten."
+            },
+            {
+              "marke": "E. 3.1.2",
+              "tiefe": 3,
+              "text": "Die Vorinstanz räumt ein, der interdisziplinäre Teil des Gutachtens sei nicht besonders ausführlich. Da aber aus rheumatologischer Sicht keine Diagnosen mit Auswirkung auf die Arbeitsfähigkeit gestellt würden und lediglich ein Belastungsprofil für eine zumutbare Tätigkeit umrissen werde, sei die Verweisung auf das psychiatrische Teilgutachten nachvollziehbar (angefochtenes Urteil E. 3.3.2).\n\nMit dieser Würdigung verletzt das kantonale Gericht keine beweisrechtliche Regel. Es entspricht zwar kaum einem\n\nBest-practice -Standard der Gutachtenserstellung, wenn die Sachverständigen im Rahmen ihrer Konsensbeurteilung - anstelle einer eigenen Darstellung des aus ihrer Sicht wesentlichen medizinischen Sachverhalts - die in einer Stellungnahme des RAD enthaltene Zusammenfassung einkopieren und dann unter dem Titel \"Beurteilung\" wörtlich die Einschätzung des RAD wiederholen, weshalb ein psychiatrisch-rheumatologisches Gutachten zu erstellen sei. Zudem wäre das bidisziplinäre Gutachten überzeugender ausgefallen, wenn die Synthese seiner beiden Teile ausformuliert worden wäre; die \"Interdisziplinäre Gesamtbeurteilung (Konsensbeurteilung) \" der beiden Administrativsachverständigen beschränkt sich auf den einen Satz \"Unter Berücksichtigung des rheumatologischen Belastbarkeitsprofils kann als gemeinsame Konsensbeurteilung diejenige des psychiatrischen Gutachtens uneingeschränkt übernommen werden\".\n\nDennoch wird aus der Expertise insgesamt hinreichend deutlich, dass beide Sachverständigen übereinstimmend der Meinung sind, die Arbeitsunfähigkeit leite sich allein aus dem psychiatrisch beurteilten Teil des Leidens ab, soweit die aus rheumatologischer Sicht definierten Belastungsgrenzen respektiert werden. Dem rheumatologischen Teilgutachten (S. 16) ist zu entnehmen, dass dieser Sachverständige die in der Beschwerdeschrift angesprochenen \"sowohl qualitativen als auch quantitativen Beeinträchtigungen\" abschliessend über jene Rahmenbedingungen (keine körperlichen Schwerarbeiten und keine \"die Wirbelsäule spezifisch belastende Arbeitshaltungen oder Bewegungen\") berücksichtigen möchte. Angesichts der weitgehend verselbständigten Natur der psychischen Beeinträchtigungen scheinen im Wesentlichen keine disziplinenübergreifenden Wechselwirkungen stattzufinden, sondern allenfalls solche innerhalb des psychiatrischen Fachgebiets (Schmerzsyndrom und depressive Störung). Eine eingehendere interdisziplinäre Auseinandersetzung im Rahmen einer Konsensbeurteilung erscheint auch deswegen nicht unverzichtbar. Insoweit bleibt der Beweiswert des Gutachtens grundsätzlich gegeben."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Nach Auffassung des Beschwerdeführers erfüllt das psychiatrische Teilgutachten die materiellen Anforderungen an eine beweiswertige Expertise nicht (vgl. BGE 134 V 231 E. 5.1; 143 V 124 E. 2.2.2). Die Vorinstanz stelle den medizinischen Sachverhalt diesbezüglich unvollständig und unrichtig fest und verletze dadurch das Untersuchungsprinzip (Art. 61 lit. c ATSG)."
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Dies begründet der Beschwerdeführer einmal damit, der psychiatrische Sachverständige habe zur Frage der depressiven Symptomatik mit der Begründung auf Zusatzdiagnostik verzichtet, eine solche lieferte mit Blick auf sein Aussageverhalten und eine mögliche Aggravation ohnehin keine zuverlässigen Ergebnisse. Er schildere aber nicht, inwiefern er aggravierende Verhaltensweisen annehme. Der rheumatologische Teilgutachter und alle medizinischen Behandler attestierten ihm ein konsistentes Aussageverhalten und schrieben das subjektive Schmerzgebaren einer Schmerzfehlverarbeitung zu.\n\nEs ist in erster Linie Sache des Gutachters festzulegen, in welchem Umfang zu Zwecken der Begutachtung (zusätzlicher) diagnostischer Aufwand betrieben werden muss. Der Beschwerdeführer macht nicht geltend, dass der psychiatrische Gutachter etwa in einer versicherungspsychiatrischen Leitlinie verankerte einschlägige Mindestanforderungen missachtet hätte. Wie es sich mit dem unter Vorwegnahme des zu erwartenden Ergebnisses erfolgten Verzicht auf Zusatzdiagnostik letztlich verhält, kann an dieser Stelle offenbleiben. Die im Zusammenhang mit der Eingliederungsfrage notwendigen Abklärungen (unten E. 4) werden weitere Erkenntnisse darüber zeitigen, inwiefern sich aggravierende Verhaltensweisen (z.B. Inkonsistenzen und übertriebene Beschwerdenschilderung; E. 4.2.2 hernach) einerseits und die Schmerzfehlverarbeitung anderseits auf die Arbeitsfähigkeit auswirken."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Weiter macht der Beschwerdeführer geltend, die Herleitung der Diagnose \"rezidivierende depressive Störung mit chronischem Verlauf und gegenwärtig\n\nleichtgradiger Episode mit somatischem Syndrom (ICD-10 F33.11) \" sei nicht nachvollziehbar, geschweige denn schlüssig. Die Klassifikation ICD-10 umschreibe den vom Gutachter angegebenen Code F33.11 mit \"rezidivierende depressive Störung, gegenwärtig\n\nmittelgradige Episode mit somatischem Syndrom\" (Kursivsetzung jeweils nicht im Original). Die - zur Sachverhaltsabklärung von Amtes wegen verpflichtete - Vorinstanz habe diese Unstimmigkeit nicht bemerkt.\n\nDie vom Gutachter angeführte Diagnose einer \"rezidivierenden depressiven Störung, gegenwärtig leichte Episode mit somatischem Syndrom\" entspricht tatsächlich dem ICD-10-Code F33.\n\n01. Diese Diagnose stimmt mit der Beschreibung im psychiatrischen Teilgutachten (S. 19 f.) überein. Die versehentlich unzutreffende Bezeichnung des Codes allein stellt den Beweiswert der Expertise nicht ernsthaft infrage, zumal ansonsten keine Häufung von ähnlichen Fehlern oder Ungenauigkeiten festzustellen ist, anhand derer auf mangelnde Sorgfalt des Gutachters zu schliessen wäre."
+            },
+            {
+              "marke": "E. 3.2.3",
+              "tiefe": 3,
+              "text": "Schliesslich wendet der Beschwerdeführer ein, die gutachtlichen Befunde, wonach er, der Beschwerdeführer, bis Mitte 2020 nie psychiatrische Hilfe in Anspruch genommen habe, sich ein erheblicher Leidensdruck rückblickend nicht nachweisen lasse und er auch keinen schwer depressiven Eindruck mache, passten nicht zur gestellten Diagnose \"\n\nrezidivierende und\n\nchronifizierte depressive Störung\": Sei die depressive Symptomatik nach Feststellung des Sachverständigen lang andauernd und chronisch, so müsste er einen erheblichen Leidensdruck festgestellt haben und die Arbeitsfähigkeit auch retrospektiv einschätzen können. Zudem benenne der Gutachter bloss in pauschaler Weise gewisse Auffälligkeiten, die gegen eine schwere psychische Erkrankung sprächen (erhaltenes Aktivitätsniveau, Behandlung erst seit Mitte 2020, monatliche Therapiesitzungen und kaum pharmakologische Medikation). Er lege aber nicht dar, weshalb er teilweise zu anderen Schlüssen gelange als die in den Vorakten liegenden Berichte; namentlich die Stellungnahme des behandelnden Psychiaters Dr. D.________ vom 10. März 2022 sei geeignet, das bidisziplinäre Gutachten beweisrechtlich in Zweifel zu ziehen. Ebensowenig setze sich der Sachverständige mit den Vorakten auseinander, was die (gemäss psychiatrischem Teilgutachten ohne Auswirkung auf die Arbeitsfähigkeit bleibende) Verdachtsdiagnose \"chronische Schmerzstörung mit körperlichen und psychischen Anteilen\" (ICD-10 F45.41) betreffe. So äussere er sich mit keinem Wort zu einem Bericht des Spitals E.________ vom 30. Juli 2020, wonach von einer derartigen Störung auszugehen sei. Insgesamt verkenne die Vorinstanz, dass es eine neue Begutachtung brauche.\n\nWas zunächst die Rüge angeht, es sei in sich widersprüchlich, einerseits eine\n\nchronifizierte depressive Symptomatik festzustellen und anderseits einen erheblichen Leidensdruck zu verneinen resp. keine retrospektive Einschätzung abzugeben, ist festzustellen, dass die Chronifizierung als solche noch nichts über den Schweregrad des Leidens aussagt. Die Diagnose einer depressiven Episode dokumentiert die zum Zeitpunkt der gutachterlichen Exploration gemachten Beobachtungen. Was sodann die fragliche chronische Schmerzstörung betrifft, erscheint die gutachtliche Beschränkung auf eine blosse Verdachtsdiagnose wenig schlüssig, solange der Sachverständige Umstände wie verdeutlichende und inkonsistente Verhaltensweisen, die seiner Ansicht nach einer einschlägigen Diagnose entgegenstehen, nicht im Hinblick auf ihre Krankheitsbedingtheit einordnet. Ebendies wäre aber nach den auf medizinischen Erkenntnissen beruhenden Anforderungen der Rechtsprechung erforderlich (vgl. E. 4.3.2).\n\nIndessen erübrigen sich hier Weiterungen zu diesen Fragen. Die zusätzlichen Abklärungen, die im Hinblick auf Diskrepanzen zwischen den gutachtlichen Feststellungen (Diagnosen und Folgenabschätzung) und den Erkenntnissen aus der gescheiterten beruflichen Integration zu tätigen sind (unten E. 4), werden zu einem besseren Verständnis oder allenfalls zu einer Neubewertung der im Administrativgutachten festgehaltenen Ergebnisse beitragen; so etwa, in welchem Umfang die von den Gutachtern beobachteten Verhaltens- und Aussageinkonsistenzen allenfalls in der Natur der Gesundheitsschädigung liegen, und ob ihnen insoweit mit Eingliederungsmassnahmen zu begegnen ist."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Gegenstand der vorinstanzlich bestätigten Verwaltungsverfügung ist - nebst der Rentenberechtigung - auch der Anspruch auf weitere berufliche Massnahmen. Der Beschwerdeführer beantragt, die Sache sei an die Verwaltung zurückzuweisen, damit diese den rechtserheblichen Sachverhalt hinreichend abkläre und gestützt darauf zu einem neuen Entscheid finde. Er bestreitet namentlich die Eignung der Administrativexpertise als abschliessende medizinische Entscheidungsgrundlage. Dem Rügeprinzip (E. 1.2 a.E.) entsprechend sind damit die Fragestellungen umrissen, hinsichtlich derer Bundesrecht von Amtes wegen anzuwenden ist (Art. 95 lit. a und Art. 106 Abs. 1 BGG).\n\nAngesichts der augenscheinlichen Gegensätzlichkeit der seitens der Gutachter auf 70 Prozent eingeschätzten Arbeitsfähigkeit einerseits und des klaren Scheiterns aller bisheriger Eingliederungsbemühungen anderseits drängen sich in rechtlicher Hinsicht verschiedene Fragen auf."
+            },
+            {
+              "marke": "E. 4.2.1",
+              "tiefe": 3,
+              "text": "Arbeitsmarktliche Massnahmen der Arbeitslosenversicherung (Beschäftigung im Bereich Recycling) scheiterten Ende 2019 schon nach kurzer Zeit wegen vieler gesundheitsbedingter Absenzen, für die jeweils Arztzeugnisse vorlagen (Austrittsbericht vom 17. Januar 2020). Die Eingliederungsbemühungen der Invalidenversicherung - unklar ist, ob es sich beim \"Belastbarkeitstraining\" (Mitteilung der IV-Stelle vom 26. November 2020) um eine Integrationsmassnahme nach Art. 14a IVG oder doch eher um einen Arbeitsversuch nach Art. 18a IVG handelte - blieben ebenfalls erfolglos: Der RAD hielt in seiner Stellungnahme vom 29. Juni 2021 fest, das Ende November 2020 begonnene Belastbarkeitstraining (leichte Verpackungsarbeit an vier Tagen wöchentlich je zwei Stunden, entsprechend einem Pensum von 20 Prozent) sei am 14. Januar 2021 vorzeitig abgebrochen worden. Die geplante zeitliche Steigerung sei nicht gelungen. Der Versicherte sei nach zwei Stunden jeweils erschöpft gewesen und habe starke Schmerzen im Rücken und in den Beinen (Schwierigkeiten beim Gehen) sowie eine Verschlechterung des psychischen Zustands beklagt. Der Betrieb, in dem der Versuch zur Arbeitsintegration stattgefunden hatte, berichtete am 8. Februar 2021 detailliert über psychische und soziale Auffälligkeiten, die Rückenschmerzen und den Umgang des Versicherten damit. Das Pensum sei für ihn bereits nach einer Woche sehr erschöpfend gewesen; er habe versucht, sich \"einfach durchzubeissen\", und die ihm gewährten Ruhepausen nicht vollständig beansprucht. Eine Arbeits- und Tagesstruktur habe nicht aufgebaut werden können. Die IV-Stelle schloss die berufliche Eingliederung u.a. mit Hinweis auf die gesundheitlichen Umstände ab und stellte die Rentenprüfung in Aussicht (Abschlussbericht vom 21. Januar 2021)."
+            },
+            {
+              "marke": "E. 4.2.2",
+              "tiefe": 3,
+              "text": "Zur Beurteilung des Schmerzzustands geht der psychiatrische Teilgutachter anamnestisch von einem andauernden, stark empfundenen Schmerzsyndrom im Bereich der Kreuzregion mit Ausstrahlung in beide Beine sowie im Bereich der Halswirbelsäule mit Ausstrahlung in beide Schultern aus. Klare Gründe für die 2018 eingetretene Intensivierung der Schmerzen seien nicht auszumachen. Psychiatrische Hilfe beansprucht habe der Versicherte erst seit Mitte 2020; ein erheblicher Leidensdruck sei retrospektiv nicht nachweisbar. Während einer psychosomatisch begründeten Hospitalisation habe er die Verabreichung von Psychopharmazeutika abgelehnt; eine solche finde erst seit ca. Herbst 2021 statt. Das Verhalten und die Angaben des Beschwerdeführers beurteilt der psychiatrische Experte als \"oft inkonsistent\". So passten etwa die Mimik und Gestik nicht zur Angabe einer sehr hohen Schmerzintensität; die als stark beeinträchtigt beklagte Konzentrationsfähigkeit sei während der knapp zweistündigen Untersuchung ununterbrochen vorhanden gewesen. Die Sitzungsfrequenz beim behandelnden Psychiater scheine zudem gering. Aus diesen Gründen könne die chronische Schmerzstörung nicht sicher, sondern nur verdachtsweise diagnostiziert werden.\n\nWeiter leitet der Sachverständige u.a. aus biographischen Tatsachen eine \"nicht näher bezeichnete\" Angststörung leicht- bis mittelgradiger Ausprägung her. Die vom behandelnden Psychiater Dr. D.________ mit Bericht vom 17. Februar 2021 diagnostizierte\n\ngeneralisierte Angststörung könne aber nicht bestätigt werden, da sich der Versicherte zuhause in seinem Zimmer nach eigenen Angaben wohl fühle und nicht unter Ängsten leide. Ausserdem erfüllten anamnestisch eruierbare Symptome beim \"hereditär mit Depressionen belasteten\" Exploranden die Kriterien einer depressiven Episode. Als ursächliche Faktoren nennt der Gutachter u.a. die andauernden Schmerzen, damit einhergehendes Mobbing am Arbeitsplatz, soziale Isolation sowie nicht adäquat verarbeitete frühkindliche Belastungen. In der aktuellen Untersuchung hinterlasse der Versicherte aber keinen\n\nschwer depressiven Eindruck. Gegen eine solche Ausprägung (mit entsprechendem Leidensdruck) spreche auch, dass die Konzentration des verordneten Antidepressivums im Blut unterhalb der Nachweisgrenze liege und davon auszugehen sei, der Versicherte nehme das Medikament nicht ein. Die deutliche Diskrepanz zwischen den geklagten Beschwerden und der während der Untersuchung erhobenen Befunde sei wohl als Verdeutlichungstendenz zu interpretieren; eine bewusstseinsnahe Tendenz zur Aggravation könne nicht mit Sicherheit ausgeschlossen werden. Insgesamt sei von einer rezidivierenden depressiven Störung mit gegenwärtig leichtgradiger Episode auszugehen. Die vom behandelnden Psychiater diagnostizierte\n\nmittelgradige depressive Episode lasse sich aktuell nicht begründen; es sei anzunehmen, dass der Behandler den Schweregrad der Depression vorwiegend anhand von Testdiagnostik und den vom Versicherten geklagten Beschwerden, aber ohne Symptomvalidierung bestimmt habe.\n\nZu den - das Mass der Arbeitsunfähigkeit begründenden - funktionalen Folgen der gesundheitlichen Beeinträchtigungen führt der psychiatrische Teilgutachter aus, wegen vieler inkonsistenter und widersprüchlicher Angaben des Versicherten liessen sich keine verlässlichen Aussagen gemäss Internationaler Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit (ICF) treffen. Massgebende Funktionseinschränkungen ergäben sich aus den Symptomatiken der leicht- bis mittelgradigen Angststörung und der rezidivierenden, gegenwärtig leichtgradigen depressiven Störung mit chronischem Verlauf, nicht aber aus der bloss verdachtsweise diagnostizierbaren chronischen Schmerzstörung mit körperlichen und psychischen Anteilen. Der Beschwerdeführer sei in der bisherigen Tätigkeit mit einem zeitlichen Pensum von 70 Prozent arbeitsfähig; die Einschränkung bestehe wohl seit Beginn der psychiatrischen Behandlung Mitte 2020. Dieses Leistungsvermögen könne durch geeignete Therapie mit grosser Wahrscheinlichkeit bis hin zu einer vollständigen Arbeitsfähigkeit verbessert werden. Es sei davon auszugehen, dass der Versicherte von einer stationären und anschliessend teilstationären psychotherapeutischen Behandlung profitieren werde; ebenso von einer Weiterführung der schon laufenden ambulanten Psychotherapie, wobei die Compliance bezüglich Medikamenteneinnahme noch besser werden könne."
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Die erfolglosen Eingliederungsbemühungen von Arbeitslosen- und Invalidenversicherung werden im psychiatrischen Teilgutachten nur in Form der nicht näher kommentierten Feststellung aufgegriffen, beide Belastbarkeitstrainings seien wegen Schmerzen resp. zu häufiger Absenzen vorzeitig abgebrochen worden. Der Explorand gehe davon aus, wegen seiner Schmerzen zu keiner beruflichen Tätigkeit mehr fähig zu sein. Aufgrund der aktuellen Untersuchung lasse sich aber, so der Sachverständige, eine solch hohe Einschränkung der Arbeitsfähigkeit nicht objektivieren.\n\nDen einschlägigen Dokumentationen ist zu entnehmen, dass es aus Sicht der Eingliederungsfachleute \"sehr viele gesundheitsbedingte Absenzen\" (arbeitsmarktliche Massnahme der Arbeitslosenversicherung) resp. chronische starke Schmerzen und eine damit einhergehende Verschlechterung der psychischen Verfassung (Belastbarkeitstraining der Invalidenversicherung) waren, die zum Scheitern der Eingliederungsbemühungen führten. Dennoch belässt es der Gutachter beim Hinweis, eine hohe Einschränkung der Arbeitsfähigkeit lasse sich aufgrund der aktuellen Untersuchung nicht objektivieren. Er unterlässt es, den Verlauf der Eingliederungsversuche ins Verhältnis zu seinen eigenen Schlussfolgerungen betreffend Diagnosen und Arbeitsfähigkeit zu setzen. Obwohl namentlich seine Feststellung, die (verdachtsweise diagnostizierte) Schmerzstörung beeinflusse die Arbeitsfähigkeit nicht, mit den Ergebnissen der bisherigen Massnahmen zur beruflichen Eingliederung offenkundig kontrastiert, löst er diese Diskrepanz nicht nachvollziehbar auf."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Die attestierte Arbeitsfähigkeit wäre beweisrechtlich nicht zu beanstanden und es dürfte - mangels entsprechender Perspektiven - auf weitere Abklärungen im Hinblick auf eine berufliche Eingliederung verzichtet werden, wenn das Scheitern der Arbeitsversuche überwiegend einer nicht-pathologischen Tendenz zur Aggravation und Dramatisierung zuzuschreiben wäre. Daraus könnte auf willentliche Nichtkooperation seitens des Beschwerdeführers geschlossen werden. Nach der Rechtsprechung darf eine Verdeutlichungstendenz allerdings nicht mit einer anspruchsausschliessenden Aggravation gleichgesetzt werden. Gerade bei Schmerzstörungen ist eine unbewusste Ausweitung und Verdeutlichung der Beschwerden charakteristischer Teil des Krankheitsbildes. Zudem kann eine verdeutlichende Darstellung der Beschwerden und Einschränkungen durch die - in der Anspruchsprüfung materiell beweisbelastete - versicherte Person bis zu einem gewissen Grad durch die Abklärungssituation bedingt sein, ohne dass sie dadurch gänzlich unglaubhaft würde. Eine potentiell invalidisierende Gesundheitsschädigung fällt (nur) insoweit ausser Betracht, wie klar ist, dass Anhaltspunkte für eine (nicht krankheitsbedingte) Aggravation eindeutig überwiegen und die Grenzen eines bloss verdeutlichenden Verhaltens klar überschritten sind (Urteile 9C_154/2016 vom 19. Oktober 2016 E. 4.3 und 9C_899/2014 vom 29. Juni 2015 E. 4.2 mit Hinweisen).\n\nDie im Gutachten geschilderten Verhaltensweisen des Beschwerdeführers deuten nicht mit genügender Klarheit darauf hin, dass das Scheitern der Eingliederungsversuche überwiegend auf aggravierendes Verhalten resp. fehlende Mitwirkung des Beschwerdeführers zurückzuführen ist. Der Sachverständige setzt sich auch nicht mit der Erklärung des behandelnden Psychiaters auseinander, wie es aus seiner Sicht zu einem appellativ wirkenden Verhalten des Versicherten gekommen sei (vgl. Bericht von Dr. D.________ an die IV-Stelle vom 17. Februar 2021). Unter diesen Voraussetzungen beruht das angefochtene Urteil nicht auf einer ausreichenden Entscheidungsgrundlage. Dies gilt nicht nur dann, wenn man davon ausginge, die diskutierte Diskrepanz schwäche (auch mit Blick auf aktenkundige ärztliche Beurteilungen, die vom Gutachten abweichen) die Beweiskraft der gutachtlichen Arbeitsfähigkeitsschätzung (vgl. sogleich E. 4.4). Auch wenn auf die attestierte 70-prozentige Arbeitsfähigkeit abgestellt wird, bleiben angesichts des Vorrangs der Eingliederung entscheidende Fragen offen (E. 4.5)."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Nach der Rechtsprechung ist für die Ermittlung des erwerblich nutzbaren Leistungsvermögens ergänzend zur ärztlichen Beurteilung mitunter auch auf Angaben von Fachpersonen der beruflichen Integration abzustellen (BGE 140 V 193 E. 3.2). Unterscheidet sich eine ärztliche Einschätzung der Leistungsfähigkeit offensichtlich und erheblich von der effektiv realisierten und nach Einschätzung der Berufsfachleute objektiv realisierbaren Leistung in der eingehenden beruflichen Abklärung, kann dies zu ernsthaften Zweifeln an der ärztlichen Beurteilung der Arbeitsfähigkeit führen und ist eine klärende medizinische Stellungnahme grundsätzlich unabdingbar. Vorausgesetzt ist freilich ein einwandfreies Arbeitsverhalten (Urteil 8C_236/2024 vom 9. Oktober 2024 E. 4.2 mit Hinweis). Die Akten enthalten wie erwähnt keine Anhaltspunkte dafür, dass sich der Beschwerdeführer bei den Arbeitsversuchen unkooperativ verhalten hätte (oben E. 4.3.2). In diesem Zusammenhang fällt ausserdem die wenig schlüssige Auseinandersetzung des psychiatrischen Gutachters mit dem Schmerzsyndrom (\"Verdachtsdiagnose\"; oben E. 3.2.3 und 4.2.2) ins Gewicht, weil eine allenfalls verifizierte chronische Schmerzstörung mit körperlichen und psychischen Anteilen nicht nur als solche allein für die Einschätzung der Arbeitsfähigkeit relevant wäre, sondern dabei auch allfällige Wechselwirkungen mit der Angst- und der depressiven Störung zu betrachten wären.\n\nInsoweit ist fraglich, ob die Vorinstanz ohne Weiteres auf die gutachtliche Arbeitsunfähigkeitsschätzung abstellen durfte."
+            },
+            {
+              "marke": "E. 4.5",
+              "tiefe": 2,
+              "text": "Selbst wenn die gutachtliche Einschätzung der Arbeitsfähigkeit - direkt oder unter Vorbehalt der Durchführung von medizinischen und beruflichen Massnahmen - übernommen werden sollte, verletzt das angefochtene Urteil den bundesrechtlichen Grundsatz \"Eingliederung vor resp. statt Rente\" (dazu statt vieler SILVIA BUCHER, Eingliederungsrecht der Invalidenversicherung, 2011, Rz. 31 ff.)."
+            },
+            {
+              "marke": "E. 4.5.1",
+              "tiefe": 3,
+              "text": "Invalide oder von einer Invalidität bedrohte Versicherte haben Anspruch auf Eingliederungsmassnahmen, soweit diese notwendig und geeignet sind, die Erwerbsfähigkeit oder die Fähigkeit, sich im Aufgabenbereich zu betätigen, wieder herzustellen, zu erhalten oder zu verbessern (Art. 8 Abs. 1 lit. a IVG). Einmal hat die versicherte Person einen eigenständigen Anspruch unter anderem auf Integrationsmassnahmen zur Vorbereitung auf die berufliche Eingliederung (Art. 14a IVG) und auf Massnahmen beruflicher Art nach Art. 15 ff. IVG (vgl. Art. 8 Abs. 3 IVG); der Anspruch richtet sich nach dem leistungsspezifischen Invaliditätsbegriff (Art. 4 Abs. 2 IVG) resp. den leistungsspezifischen Anspruchsvoraussetzungen (Art. 8 Abs. 1 lit. b IVG; vgl. ERWIN MURER, Invalidenversicherungsgesetz [Art. 1-27 bis IVG], 2014, N. 28 zu Art. 8 IVG). Darüber hinaus dienen Eingliederungsleistungen der Schadenminderung im Verhältnis zur Dauerleistung Invalidenrente. Nach dem Grundsatz \"Eingliederung vor/statt Rente\" sollen rentenanspruchsrelevante Sachverhalte günstig beeinflusst werden; dies meist, indem der versicherten Person Zugang zu einer \"leidensangepassten\" Tätigkeit ermöglicht wird, deren Anforderungsprofil bestmöglich mit dem Belastbarkeitsprofil der versicherten Person übereinstimmt. In diesem Sinn stellt Art. 28 Abs. 1 lit. a IVG sicher, dass der Anspruch auf eine Invalidenrente erst entstehen kann, wenn keine geeigneten Integrations- und berufliche Massnahmen mehr infrage kommen. Ist die versicherte Person grundsätzlich eingliederungsfähig, kann der Rentenanspruch somit unabhängig vom Eingliederungserfolg erst nach Beendigung dieser Massnahmen entstehen (BGE 148 V 397 E. 6.2.4; zur Publ. bestimmte E. 5.1.2 des Urteils 9C_443/2023 vom 28. Februar 2025; Urteil 9C_380/2021 vom 31. Januar 2022 E. 5.1). Nunmehr hält auch Art. 28 Abs. 1bis IVG (in Kraft seit 1. Januar 2022) den von der Rechtsprechung und den vorangegangenen IVG-Revisionen verfolgten Grundsatz, dass eine Invalidenrente nicht zugesprochen wird, solange die Möglichkeiten zur Eingliederung nicht ausgeschöpft sind, ausdrücklich fest (Urteil 8C_24/2024 vom 23. Dezember 2024 E. 5.2.1; KASPAR GERBER, Kommentar zum schweizerischen Sozialversicherungsrecht, IVG, Die Renten [Art. 28-41], 2022, N. 272 zu Art. 28 IVG)."
+            },
+            {
+              "marke": "E. 4.5.2",
+              "tiefe": 3,
+              "text": "Im Umkehrschluss kann eine versicherte Person auch rückwirkend Anspruch auf eine Invalidenrente haben, wenn Abklärungsmassnahmen zeigen, dass sie nicht eingliederungsfähig ist (Urteile 8C_24/2024 vom 23. Dezember 2024 und 9C_380/2021 vom 31. Januar 2022 E. 5.1). Im Fall des Beschwerdeführers deutet einiges darauf hin, dass das Scheitern der Arbeitsversuche auf (noch) fehlende Eingliederungsfähigkeit zurückzuführen sein könnte (vgl. oben E. 4.2.1 und 4.3). Deren ressourcenorientierte Abklärung gehört zu den Aufgaben der IV-Stelle (Art. 57 Abs. 1 lit. e IVG).\n\nMit Blick auf den Grundsatz \"Eingliederung vor/statt Rente\" gilt es somit grundsätzlich auch hier, die berufliche Integration weiterzuverfolgen. Dabei ist u.a. dem noch jungen Alter des Beschwerdeführers (Jahrgang 1991) Rechnung zu tragen (Art. 8 Abs. 1bis lit. a IVG). In diesem Zusammenhang ist auf den seit 2022 in Kraft stehenden Abs. 1ter von Art. 8 IVG hinzuweisen, wonach bei Abbruch einer Eingliederungsmassnahme eine wiederholte Zusprache derselben oder einer anderen Eingliederungsmassnahme geprüft wird. Damit das Risiko einer Berentung von jungen versicherten Personen so weit wie möglich reduziert werden kann, soll dabei ausserdem dem Entwicklungsstand, den Fähigkeiten der versicherten Person und der zu erwartenden Dauer des Erwerbslebens Rechnung getragen werden (Art. 8 Abs. 1bis lit. b-d IVG; Botschaft vom 15. Februar 2017 zur Änderung des Bundesgesetzes über die Invalidenversicherung [Weiterentwicklung der IV], BBl 2017 2584 f. Ziff. 1.2.2.8, 2647, 2697). Art. 57 Abs. 1 lit. f IVG trägt den IV-Stellen denn auch unter anderem auf, die Eingliederungsmassnahmen unter Einbezug der jeweils relevanten Akteure zu bestimmen (Eingliederungsplan), diese Massnahmen durchzuführen und zu überwachen (Erfolgsmonitoring) sowie insbesondere bei jungen Versicherten die Wiederholung einer Eingliederungsmassnahme zu prüfen und das Eingliederungsziel bei Abbruch der Massnahme anzupassen (vgl. Botschaft, a.a.O., 2671 f.). Art. 8 Abs. 1ter IVG wurde im Rahmen der jüngsten Revision \"Weiterentwicklung der IV [WEIV]\" vor allem mit Blick auf die \"Zielgruppe 2\" (Jugendliche sowie junge Erwachsene im Alter von 18 bis 25 Jahren) in das Gesetz eingefügt (Botschaft, a.a.O., 2647). Diese Einschränkung kommt indessen im Wortlaut der Bestimmung selbst nicht zum Ausdruck; die normative Wirkung von Art. 8 Abs. 1ter IVG reicht denn auch - im Rahmen des jeweils Verhältnismässigen - darüber hinaus und erfasst gerade mit Blick auf die noch zu erwartende Dauer des Erwerbslebens ohne Weiteres auch den Beschwerdeführer.\n\nDie Gründe einer Eingliederungsunfähigkeit sind gerichtsnotorisch häufig darin zu suchen, dass es zunächst vor allem auf psychischer Ebene an den Voraussetzungen für eine erfolgreiche berufliche Integration fehlt; in solchen Fällen müssen diese Bedingungen durch eine eingliederungswirksame Therapie im Sinn von Art. 25 KVG erst einmal geschaffen werden. Die beruflichen Massnahmen der Invalidenversicherung stehen dann nicht für sich allein, sondern kommen in Abstimmung mit therapeutischen Vorkehrungen zum Tragen. Im Fall des Beschwerdeführers stünde die gutachtlich attestierte Arbeitsfähigkeit von 70 Prozent einer (befristeten) rentenbegründenden Invalidität insoweit nicht entgegen, wenn sie bloss medizinisch-theoretischer Natur wäre; dies weil er es nicht ohne Weiteres selber in der Hand hätte, die betreffende Leistungskapazität eigenverantwortlich umzusetzen (sog. Selbsteingliederung) oder wenigstens auf seine Eingliederungsfähigkeit hinzuwirken, sondern er dafür auf eine - nicht aus eigener Initiative umsetzbare - spezifische medizinische Behandlung angewiesen wäre (vgl. zur Publ. bestimmte E. 5.1.4 des Urteils 9C_443/2023 vom 28. Februar 2025 mit Hinweisen). In dieser Situation fiele ein vorläufiger Rentenanspruch dann weg, sobald der Weg für eine erfolgversprechende berufliche Eingliederung frei wird."
+            },
+            {
+              "marke": "E. 4.5.3",
+              "tiefe": 3,
+              "text": "Bewahrheitet sich die Annahme, die Arbeitsfähigkeit sei vorerst nur eine medizinisch-theoretische, so ist ferner der Gefahr einer anhaltenden beruflichen Desintegration und weiteren Verschlimmerung der gesundheitlichen Situation Rechnung zu tragen. Das Gesetz sieht vor, dass nicht nur invalide, sondern auch von einer Invalidität\n\nbedrohte Versicherte Anspruch auf Eingliederungsmassnahmen haben (Art. 8 Abs. 1 IVG; vgl. Art. 1a lit. a IVG). Anders als nach der bis Ende 2007 geltenden Fassung von Art. 8 Abs. 1 IVG setzt diese Bestimmung nicht eine\n\nunmittelbar drohende Invalidität voraus (Urteil 9C_547/2009 vom 30. Oktober 2009 E. 2): Der Zeitpunkt des Eintritts einer Erwerbsunfähigkeit ist unerheblich; drohende Invalidität liegt vor, wenn deren Eintritt überwiegend wahrscheinlich ist (Art. 1novies IVV; vgl. BUCHER, a.a.O., Rz. 112 ff.). In sinngemässer Anwendung von Art. 8 Abs. 1 IVG muss eine drohende Invalidität auch dann angenommen werden, wenn die spätere Umsetzung einer vorerst nur medizinisch-theoretischen (mithin vorläufig invalidisierenden und allenfalls rentenbegründenden) Arbeitsfähigkeit wie hier gefährdet ist, sofern Eingliederungsmassnahmen nicht rechtzeitig unternommen werden.\n\nDem Gedanken der Schadenminderung folgend ist das gesetzliche Instrumentarium der beruflichen Eingliederung so einzusetzen, dass es - die medizinischen Vorkehrungen unterstützend und diese für erwerbliche Belange umsetzend - dazu beiträgt, chronifizierende und sich ausweitende Gesundheitsschädigungen zu stabilisieren und somit einer überwiegend wahrscheinlichen (zusätzlichen) Invalidisierung vorzubeugen (vgl. Urteil 9C_52/2023 vom 12. Februar 2025 E. 2.3). Anzufügen bleibt für den vorliegenden Fall, dass die berufliche Eingliederung - als die medizinische Rehabilitation begleitende Vorkehr - wohl auch im Zusammenhang mit der Einschätzung des Gutachters bedeutsam wird, prospektiv sei mithilfe therapeutischer Massnahmen ([teil-]stationäre psychotherapeutische Behandlung) eine vollständige Arbeitsfähigkeit erreichbar."
+            },
+            {
+              "marke": "E. 4.6",
+              "tiefe": 2,
+              "text": "Zusammengefasst ist das Administrativgutachten als in medizinischer Hinsicht wesentliche Entscheidungsgrundlage des angefochtenen Urteils offenkundig mangelhaft, weil es keine nachvollziehbare Stellungnahme dazu enthält, inwiefern die auf 70 Prozent eingeschätzte Arbeitsfähigkeit mit dem bisher vollständig ausgebliebenen Eingliederungserfolg vereinbar sein sollte (E. 4.2). Die dadurch entstandene Sachverhaltslücke bedingt jedenfalls zusätzliche Erhebungen (E. 4.3). Die aus dem Verlauf der Eingliederungsmassnahmen gewonnenen Erkenntnisse stellen die Beweiskraft der Arbeitsunfähigkeitsschätzung wohl infrage (E. 4.4). Selbst wenn darauf abgestellt wird, müssen nach dem Grundsatz \"Eingliederung vor/statt Rente\" weitere Schritte im Hinblick auf die berufliche Integration geprüft werden. Namentlich gilt es abzuklären, inwiefern - gemeinsam mit eingliederungswirksamen therapeutischen Vorkehrungen - vorweg Eingliederungsfähigkeit hergestellt werden muss, damit eine allenfalls nur medizinisch-theoretisch gegebene Arbeitsfähigkeit umsetzbar wird. Auch unter präventiven Gesichtspunkten verlangt der Vorrang der Eingliederung in der vorliegenden Situation, dass allfällige weitere Massnahmen der beruflichen Integration geprüft werden (E. 4.5). In diesem Sinn ist die Sache zur weiteren Abklärung und neuen Verfügung an die IV-Stelle zurückzuweisen."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Rückweisung der Sache zu weiterer Abklärung gilt für die Frage der Auferlegung der Gerichtskosten wie auch der Parteientschädigung als vollständiges Obsiegen im Sinn von Art. 66 Abs. 1 sowie Art. 68 Abs. 1 und 2 BGG (BGE 141 V 281 E. 11.1). Die Beschwerdegegnerin trägt die Gerichtskosten (Art. 66 Abs. 1 BGG) und bezahlt dem Beschwerdeführer eine Parteientschädigung (Art. 68 Abs. 1 und 2 BGG). Zur Neuverlegung der Kosten und der Parteientschädigung des vorangegangenen Verfahrens ist die Sache an die Vorinstanz zurückzuweisen (Art. 67 und 68 Abs. 5 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen. Das Urteil des Versicherungsgerichts des Kantons Solothurn vom 30. August 2024 und die Verfügung der IV-Stelle des Kantons Solothurn vom 22. September 2022 werden aufgehoben. Die Sache wird zur weiteren Abklärung und neuen Verfügung im Sinn der Erwägungen an die IV-Stelle zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 800.- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat den Beschwerdeführer für das bundesgerichtliche Verfahren mit Fr. 3'000.- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Sache wird zur Neuverlegung der Kosten und der Parteientschädigung des vorangegangenen Verfahrens an das Versicherungsgericht des Kantons Solothurn zurückgewiesen."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Parteien, dem Versicherungsgericht des Kantons Solothurn und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Luzern, 12. Juni 2025\n\nIm Namen der III. öffentlich-rechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: Moser-Szeless\n\nDer Gerichtsschreiber: Traub"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird teilweise gutgeheissen. Das Urteil des Versicherungsgerichts des Kantons Solothurn vom 30. August 2024 und die Verfügung der IV-Stelle des Kantons Solothurn vom 22. September 2022 werden aufgehoben. Die Sache wird zur weiteren Abklärung und neuen Verfügung im Sinn der Erwägungen an die IV-Stelle zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 800.- werden der Beschwerdegegnerin auferlegt.",
+        "Die Beschwerdegegnerin hat den Beschwerdeführer für das bundesgerichtliche Verfahren mit Fr. 3'000.- zu entschädigen.",
+        "Die Sache wird zur Neuverlegung der Kosten und der Parteientschädigung des vorangegangenen Verfahrens an das Versicherungsgericht des Kantons Solothurn zurückgewiesen.",
+        "Dieses Urteil wird den Parteien, dem Versicherungsgericht des Kantons Solothurn und dem Bundesamt für Sozialversicherungen schriftlich mitgeteilt.\n\nLuzern, 12. Juni 2025"
+      ],
+      "zitierteNormen": [
+        "Art. 14a IVG",
+        "Art. 15 IVG",
+        "Art. 1a IVG",
+        "Art. 25 KVG",
+        "Art. 28 Abs. 1 IVG",
+        "Art. 28 Abs. 1bis IVG",
+        "Art. 28 IVG",
+        "Art. 4 Abs. 2 IVG"
+      ],
+      "normKeys": [
+        "IVG",
+        "BGG"
+      ],
+      "zitierteEntscheide": [
+        "8C_236/2024",
+        "8C_24/2024",
+        "8C_586/2023",
+        "9C_154/2016",
+        "9C_380/2021",
+        "9C_443/2023",
+        "9C_52/2023",
+        "9C_539/2024",
+        "9C_547/2009",
+        "9C_899/2014",
+        "BGE 134 V 231",
+        "BGE 140 V 193",
+        "BGE 141 V 234",
+        "BGE 141 V 281",
+        "BGE 144 V 50",
+        "BGE 148 V 397",
+        "BGE 150 V 323"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-V-306%3Ade&lang=de&zoom=&type=show_document",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "b481167d82abb50811d6bdbcb79d5718e2a2792b3177b7e1cbe3f042bccc6320",
+      "sha": "37e7f2859efe7069f2442718232fc6fb903f21d476ddc151b11c7258ba07528f",
+      "azaUrteil": {
+        "aktenzeichen": "9C_539/2024",
+        "key": "bger_9C_539_2024"
+      }
+    }
+  ]
+}

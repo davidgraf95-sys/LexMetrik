@@ -216,8 +216,8 @@ export function Rechtsprechung() {
               <div className="lc-notice">Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.</div>
             ) : alsSektionen ? (
               <div className="space-y-8">
-                <Sektion titel="Leitentscheide" liste={gruppen.leitentscheide} dichte={dichte} onNorm={waehleNorm} />
-                <Sektion titel="Weitere Entscheide" liste={gruppen.weitere} dichte={dichte} onNorm={waehleNorm} />
+                <Sektion titel="Amtliche Leitentscheide (BGE)" liste={gruppen.leitentscheide} dichte={dichte} onNorm={waehleNorm} />
+                <Sektion titel="Weitere Entscheide (nicht amtlich publiziert)" liste={gruppen.weitere} dichte={dichte} onNorm={waehleNorm} />
               </div>
             ) : (
               <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />

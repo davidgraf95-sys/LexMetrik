@@ -68,6 +68,13 @@ export interface EntscheidSnapshot {
   abteilung: string | null; // OCL chamber
   nummer: string;           // OCL docket_number ('5A_1100/2025')
   bgeReferenz: string | null;
+  /**
+   * Nur bei amtlichen BGE: das zugrunde liegende bger-Urteil (aza-Aktenzeichen
+   * + Snapshot-key), aus dessen Volltext der Body dieses Leitentscheids stammt.
+   * null, wenn kein aza-Az. eindeutig auflösbar war (dann trägt der Body nur den
+   * Sammlungs-Auszug; UI zeigt ehrlich «Auszug» + Live-Link, §8).
+   */
+  azaUrteil?: { aktenzeichen: string; key: string } | null;
   zitierung: string;        // OCL citation_string_de
   datum: string;            // OCL decision_date ('YYYY-MM-DD')
   sprache: EntscheidSprache;

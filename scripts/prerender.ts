@@ -187,7 +187,10 @@ const snapshotEntscheide = entscheidManifest.filter((e) => e.bestand === 'snapsh
 // Regenerierung), das der relative geschrieben+übersprungen===total-Check allein
 // NICHT sieht. Bei gewolltem grossem Datenabbau bewusst senken (wie ERWARTETE_ROUTEN).
 const ERLASS_FLOOR = 1400; // aktuell 1449 snapshot (218 Bund + 1231 Kanton)
-const ENTSCHEID_FLOOR = 360; // aktuell 370 snapshot
+// Bewusst gesenkt 26.6.2026: «Leitentscheid» strikt auf amtliche BGE eingeengt (§8) →
+// der aufgeblähte 610er-Korpus (96 % falsch etikettiert) wich 327 ehrlichen Einträgen
+// (272 amtliche BGE + 55 routine). Floor unter dem neuen Ist, fängt weiter echte Verluste.
+const ENTSCHEID_FLOOR = 300; // aktuell 327 snapshot (272 BGE + 25 bger + 30 kantonal)
 if (snapshotErlasse.length < ERLASS_FLOOR || snapshotEntscheide.length < ENTSCHEID_FLOOR) {
   console.error(
     `\nManifest-Schrumpfung: Erlasse ${snapshotErlasse.length} (Floor ${ERLASS_FLOOR}), ` +

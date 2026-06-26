@@ -19,6 +19,13 @@ function formatiereDatum(iso: string): string {
   return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
 }
 
+// BGE ohne aufgelöstes Urteil tragen nur das Bandjahr-Platzhalterdatum (YYYY-01-01).
+// Ehrlich als «BGE-Jahrgang» zeigen statt eines fingierten «1.1.» (§8). Ein echtes
+// Urteil datiert nie auf den 1.1. (Feiertag) — Sentinel: gericht 'bge' & kein azaUrteil.
+function istBandjahr(snap: EntscheidSnapshot): boolean {
+  return snap.gericht === 'bge' && !snap.azaUrteil;
+}
+
 const SPRACH_LABEL: Record<EntscheidSprache, string> = {
   de: 'Deutsch', fr: 'Französisch', it: 'Italienisch', rm: 'Rätoromanisch',
 };
@@ -193,14 +200,16 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
 
         {/* 5 Meta + Badges + Lese-Steuerung — gedämpfte Schlusszeile */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
-          <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>
+          {istBandjahr(snap)
+            ? <span>BGE-Jahrgang <span className="num">{snap.datum.slice(0, 4)}</span></span>
+            : <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>}
           {snap.bgeReferenz && (
             <>
               <span className="text-ink-300" aria-hidden>·</span>
               <span className="num">{snap.bgeReferenz}</span>
             </>
           )}
-          {snap.leitcharakter === 'leitentscheid' && <span className="lc-badge lc-badge-ok">Leitentscheid</span>}
+          {snap.leitcharakter === 'leitentscheid' && <span className="lc-badge lc-badge-ok">Leitentscheid (BGE)</span>}
           <span className="lc-badge lc-badge-soft uppercase" title={SPRACH_LABEL[snap.sprache]}>{snap.sprache}</span>
           {snap.kuratierung === 'maschinell' && (
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell erfasst</span>
@@ -247,6 +256,17 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
               : 'Quelle: OpenCaseLaw — automatisch übernommen; Herkunft (amtliche Regeste oder maschinelle Zusammenfassung) nicht abschliessend geprüft'}
           </p>
         </section>
+      )}
+
+      {/* Schritt-2-Provenienz (§8): bei BGE getrennt ausweisen, ob der Body das
+          vollständige unterliegende Urteil ist (aza aufgelöst) oder nur der
+          Sammlungs-Auszug — kein Etikettenschwindel zwischen Regeste- und Body-Quelle. */}
+      {snap.gericht === 'bge' && (
+        <p className="text-micro text-ink-500 max-w-reading">
+          {snap.azaUrteil
+            ? <>Nachstehend das vollständige Urteil <span className="num">{snap.azaUrteil.aktenzeichen}</span> — Grundlage der amtlichen Sammlung BGE <span className="num">{snap.bgeReferenz}</span>.</>
+            : <>Auszug aus der amtlichen Sammlung (BGE <span className="num">{snap.bgeReferenz}</span>). Das vollständige Urteil ist bei der Quelle verfügbar (↗ massgebliche Fassung oben).</>}
+        </p>
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —
@@ -353,7 +373,9 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         </p>
         <h1 className="mt-2 text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
         <p className="mt-1 text-xs text-ink-500">
-          Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span>
+          {istBandjahr(snap)
+            ? <>BGE-Jahrgang <span className="num">{snap.datum.slice(0, 4)}</span></>
+            : <>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></>}
           {snap.bgeReferenz && <> · <span className="num">{snap.bgeReferenz}</span></>}
         </p>
 
