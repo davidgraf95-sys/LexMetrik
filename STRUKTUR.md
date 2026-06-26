@@ -22,6 +22,29 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — A11y/E2E-Strang: Kontrast WCAG hell+dunkel, Suche ARIA-rein, E2E gegated (deployt)
+
+Folgeauftrag David («ja» auf E2E-/A11y-Strang). Branch `fix/e2e-a11y`. Zwei
+Entscheid-Fragen vorab geklärt (AskUserQuestion): brass-700 abdunkeln + Such-
+Optionen ohne `<a>`.
+- **Kontrast (axe, WCAG 4.5:1 hell UND dunkel):** `--brass-700` #8A6A2F→#826225
+  (nur Hell; Dunkel-brass-700 separat unberührt) = min 4.63:1. Aufgehobene Artikel-
+  Links ink-400→ink-500 (GesetzLeser, Dunkel 3.6→5.5). Regeste-Provenienz
+  (EntscheidLeser) + Varianten-Unterlabel (VariantenKopf) ink-500→ink-600 auf
+  brass-100-Grund (4.2→6.3).
+- **Suche a11y-rein:** Listbox-Optionen sind `role=option` OHNE inneres `<a>`
+  (Navigation per onNavigate-Callback) → `nested-interactive` weg; Cmd-/Mittelklick
+  auf Vorschläge entfällt bewusst (David). Tastatur/Combobox + Header-Schliessen intakt.
+- **E2E entrottet + deterministisch:** a11y-Prüfpunkte pinnen das Theme (hell +
+  Reader zusätzlich dunkel) statt zeitabhängig (zeitThema) zu flippen; 5 veraltete
+  Funktions-/Locator-Tests auf reale UI nachgezogen (Reiter-Übersicht-Dialog, Ebene-
+  Segment, eingeklappte Bund-Systematik, massgebliche-Fassung `.first()`, searchbox→
+  combobox). **Ursache der Verrottung:** Suite lief nie im `check`-Gate → jetzt
+  `npm run test:e2e` ins **deploy-check §1** verdrahtet.
+- **Bug-Check:** volles Gate grün (tsc · eslint 0 · vitest 2601 · golden byte-gleich
+  · check · build) + **E2E 71 passed** (beide Theme-Modi) + adversarialer Review
+  (keine Regression, §1/§3 unberührt — nur Farbklassen/ARIA/Tests/Doku).
+
 ## Session 26.6.2026 — UI-Politur: A11y-Restpunkte (Combobox/Stretched-Link/Tab-Panels; deployt)
 
 Nachzug zum Audit (David: «mach weiter bis alles fertig ist das du machen kannst»).
