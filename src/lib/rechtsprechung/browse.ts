@@ -206,6 +206,9 @@ export function filterEntscheide(liste: BrowseEntscheid[], f: EntscheidFilterWer
     if (f.ebene === 'bund' && e.kanton !== 'CH') return false;
     if (f.ebene === 'kanton' && e.kanton === 'CH') return false;
     if (f.nurLeitentscheide && e.leitcharakter !== 'leitentscheid') return false;
+    // F4 (JETZT-MACHEN §5): die UI führt «nur Leitentscheide»/«nur BGE» zu EINEM
+    // Filter zusammen (heute deckungsgleich, 272=272). Dieses Prädikat bleibt als
+    // latente Grundlage erhalten, falls amtliche-BGE ⟂ Leitentscheid später getrennt wird.
     if (f.nurBge && !e.bgeReferenz) return false;
     if (f.datumVon && e.datum < f.datumVon) return false;
     if (f.datumBis && e.datum > f.datumBis) return false;

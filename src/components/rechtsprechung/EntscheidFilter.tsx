@@ -49,8 +49,11 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   if (werte.kanton) aktiveChips.push({ key: 'kanton', label: `Kanton: ${werte.kanton === 'CH' ? 'Bund' : werte.kanton}`, loesche: () => setze({ kanton: null }) });
   if (werte.gericht) aktiveChips.push({ key: 'gericht', label: `Gericht: ${bestand.find((e) => e.gericht === werte.gericht)?.gerichtName ?? werte.gericht}`, loesche: () => setze({ gericht: null }) });
   if (werte.sprache) aktiveChips.push({ key: 'sprache', label: `Sprache: ${SPRACH_LABEL[werte.sprache] ?? werte.sprache}`, loesche: () => setze({ sprache: null }) });
-  if (werte.nurLeitentscheide) aktiveChips.push({ key: 'leit', label: 'Nur Leitentscheide', loesche: () => setze({ nurLeitentscheide: false }) });
-  if (werte.nurBge) aktiveChips.push({ key: 'bge', label: 'Nur BGE (amtlich publiziert)', loesche: () => setze({ nurBge: false }) });
+  // F4 (JETZT-MACHEN §5): «nur Leitentscheide» und «nur BGE» wählten exakt dieselbe
+  // Menge (am Korpus geprüft 272=272, 0 Divergenz) → zu EINEM sichtbaren Filter
+  // zusammengeführt. Semantik trägt `leitcharakter`; der `nurBge`-Prädikat bleibt in
+  // browse.ts erhalten (spätere Trennung amtliche-BGE ⟂ Leitentscheid bleibt möglich).
+  if (werte.nurLeitentscheide) aktiveChips.push({ key: 'leit', label: 'Nur Leitentscheide (amtliche BGE)', loesche: () => setze({ nurLeitentscheide: false }) });
   if (werte.datumVon) aktiveChips.push({ key: 'von', label: `ab ${werte.datumVon}`, loesche: () => setze({ datumVon: null }) });
   if (werte.datumBis) aktiveChips.push({ key: 'bis', label: `bis ${werte.datumBis}`, loesche: () => setze({ datumBis: null }) });
   const suchAktiv = !!werte.q?.trim();
@@ -135,15 +138,12 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
             <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
               value={werte.datumBis ?? ''} onChange={(e) => setze({ datumBis: e.target.value || null })} />
           </label>
+          {/* F4: EIN zusammengeführter Filter (Leitentscheid == amtlicher BGE, deckungs-
+              gleiche Menge) statt zweier redundanter Häkchen. */}
           <label className="flex items-center gap-2 self-end pb-1 text-body-s text-ink-700">
             <input type="checkbox" className="h-4 w-4 accent-brass-600"
               checked={!!werte.nurLeitentscheide} onChange={(e) => setze({ nurLeitentscheide: e.target.checked })} />
-            Nur Leitentscheide
-          </label>
-          <label className="flex items-center gap-2 self-end pb-1 text-body-s text-ink-700">
-            <input type="checkbox" className="h-4 w-4 accent-brass-600"
-              checked={!!werte.nurBge} onChange={(e) => setze({ nurBge: e.target.checked })} />
-            Nur BGE (amtlich publiziert)
+            Nur Leitentscheide (amtliche BGE)
           </label>
         </div>
       </details>
