@@ -31,6 +31,14 @@ export interface EntscheidRegistereintrag {
   quelleUrl: string;
 }
 
+/** Verweis-Eintrag: das vollständige Urteil zu einem BGE als eigene Übersichts-Karte,
+ *  per Deep-Link auf die Detailseite des BGE mit voraktivierter Voll-Ansicht (kein Daten-Duplikat). */
+export interface VolltextVerweis {
+  zielKey: string;          // Snapshot-key des BGE (Detailseite)
+  ansicht: 'voll';
+  bgeReferenz: string;      // für das Karten-Label «… zu BGE 152 IV 14»
+}
+
 /** Manifest-Eintrag (Register + aus dem Snapshot abgeleitete Felder). */
 export interface BrowseEntscheid {
   key: string;
@@ -57,6 +65,8 @@ export interface BrowseEntscheid {
   quelle: Entscheidquelle;
   quelleUrl: string;
   fassungsToken: string;
+  /** Gesetzt nur bei Verweis-Einträgen (vollständiges Urteil zu einem BGE); sonst undefined. */
+  verweis?: VolltextVerweis | null;
 }
 
 export interface EntscheidManifest {

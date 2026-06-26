@@ -108,7 +108,10 @@ export function Rechtsprechung() {
     () => (alle ? sortiere(filterEntscheide(alle, werte), sort) : []),
     [alle, werte, sort],
   );
-  const leitAnzahl = useMemo(() => gefiltert.filter((e) => e.leitcharakter === 'leitentscheid').length, [gefiltert]);
+  const leitAnzahl = useMemo(() => gefiltert.filter((e) => !e.verweis && e.leitcharakter === 'leitentscheid').length, [gefiltert]);
+  // Verweis-Einträge (vollständige Urteile) zählen nicht als eigenständige Entscheide.
+  const echtAnzahl = useMemo(() => gefiltert.filter((e) => !e.verweis).length, [gefiltert]);
+  const volltextAnzahl = useMemo(() => gefiltert.filter((e) => !!e.verweis).length, [gefiltert]);
 
   // Zwei Sektionen (Leitentscheide / Weitere) nur im Default-Sort ohne aktive
   // Suche/Norm — sonst EIN sortierter Strom (Leit oben via Sortierung).
@@ -196,8 +199,9 @@ export function Rechtsprechung() {
 
             {/* Treffer-Zähler + Ebene-Segment (klare Trennung Bund ↔ Kantone, Auftrag David). */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-ink-500">
-              <span><span className="num text-ink-700">{gefiltert.length}</span> {gefiltert.length === 1 ? 'Entscheid' : 'Entscheide'}</span>
+              <span><span className="num text-ink-700">{echtAnzahl}</span> {echtAnzahl === 1 ? 'Entscheid' : 'Entscheide'}</span>
               {leitAnzahl > 0 && <span>· <span className="num">{leitAnzahl}</span> Leitentscheide</span>}
+              {volltextAnzahl > 0 && <span>· <span className="num">{volltextAnzahl}</span> Volltext-Verweise</span>}
               <div className="ml-auto flex flex-wrap items-center gap-1.5">
                 {([['', 'Alle'], ['bund', 'Bundesgericht'], ['kanton', 'Kantone']] as const).map(([id, label]) => {
                   const aktivE = (rest.ebene ?? '') === id;
@@ -217,6 +221,9 @@ export function Rechtsprechung() {
             ) : alsSektionen ? (
               <div className="space-y-8">
                 <Sektion titel="Amtliche Leitentscheide (BGE)" liste={gruppen.leitentscheide} dichte={dichte} onNorm={waehleNorm} />
+                {gruppen.volltexte.length > 0 && (
+                  <Sektion titel="Vollständige Urteile zu den Leitentscheiden" liste={gruppen.volltexte} dichte={dichte} onNorm={waehleNorm} />
+                )}
                 <Sektion titel="Weitere Entscheide (nicht amtlich publiziert)" liste={gruppen.weitere} dichte={dichte} onNorm={waehleNorm} />
               </div>
             ) : (

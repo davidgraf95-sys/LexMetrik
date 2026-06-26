@@ -45,6 +45,22 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
       datei, quelle: snap.quelle, quelleUrl: snap.quelleUrl, fassungsToken: snap.fassungsToken,
     });
 
+    // Getrennter Übersichts-Eintrag (Auftrag David 26.6.): das vollständige Urteil zu
+    // einem BGE als EIGENE Karte, per Deep-Link auf die BGE-Detailseite mit Voll-Ansicht
+    // — KEIN Daten-/Datei-Duplikat (datei:null), keine BGE-/Norm-Doppelzählung.
+    if (snap.gericht === 'bge' && snap.azaUrteil && snap.auszugAbschnitte?.length) {
+      manifest.push({
+        key: `${key}__voll`, gericht: 'bger', gerichtName: snap.gerichtName, gerichtstyp: 'bundesgericht',
+        kanton: 'CH', nummer: snap.azaUrteil.aktenzeichen, bgeReferenz: null, datum: snap.datum,
+        zitierung: `BGer ${snap.azaUrteil.aktenzeichen}`, leitcharakter: 'routine',
+        regesteVorhanden: false, regesteKurz: null, sachgebiet: snap.sachgebiet, sprache: snap.sprache,
+        normKeys: [], bestand: snap.bestand, kuratierung: snap.kuratierung,
+        datei: null, quelle: snap.quelle, quelleUrl: snap.azaUrteil.quelleUrl ?? snap.quelleUrl,
+        fassungsToken: snap.fassungsToken,
+        verweis: { zielKey: key, ansicht: 'voll', bgeReferenz: snap.bgeReferenz! },
+      });
+    }
+
     // C2-4: Der Norm→Entscheid-Index speist im UI die Liste «Bundesgerichts-
     // entscheide zu diesem Erlass» (norm-index.ts). Darum NUR Bundes-Entscheide
     // (kanton==='CH') aufnehmen — kantonale Entscheide würden sonst unter der

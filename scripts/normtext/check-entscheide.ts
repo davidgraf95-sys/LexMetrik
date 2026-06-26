@@ -52,6 +52,16 @@ function main() {
   const azaKeys: Record<string, string[]> = {};   // aza-Key → BGE-Keys (Kollisions-Backstop)
 
   for (const e of manifest.entscheide) {
+    // Verweis-Eintrag (vollständiges Urteil zu einem BGE, Deep-Link): KEIN eigenes
+    // Snapshot-File; eigene Invarianten, dann überspringen (keine Datei-/sha-Prüfung).
+    if (e.verweis) {
+      if (e.datei) fehler.push(`${e.key}: Verweis-Eintrag darf keine datei haben`);
+      if (e.bgeReferenz) fehler.push(`${e.key}: Verweis-Eintrag mit bgeReferenz (Doppelzählung §8)`);
+      if (e.leitcharakter !== 'routine') fehler.push(`${e.key}: Verweis-Eintrag muss 'routine' sein`);
+      if (!/^https?:\/\//.test(e.quelleUrl)) fehler.push(`${e.key}: Verweis-quelleUrl nicht http(s)`);
+      if (!keys.has(e.verweis.zielKey)) fehler.push(`${e.key}: Verweis-zielKey ${e.verweis.zielKey} unbekannt`);
+      continue;
+    }
     // Provenienz (§7)
     for (const f of ['datum', 'quelleUrl', 'quelle', 'fassungsToken'] as const) {
       if (!e[f]) fehler.push(`${e.key}: Provenienz-Feld '${f}' fehlt`);
@@ -87,6 +97,11 @@ function main() {
     }
     if (snap.azaUrteil) {
       (azaKeys[snap.azaUrteil.key] ??= []).push(e.key);
+      // §7/§8-Tor: aufgelöstes Urteil MUSS eine http(s)-Live-Quelle (massgebliche Fassung)
+      // tragen — sonst zeigt die Voll-Ansicht/Übersichts-Karte still auf den BGE statt aufs Urteil.
+      if (!/^https?:\/\//.test(snap.azaUrteil.quelleUrl ?? '')) {
+        fehler.push(`${e.key}: azaUrteil ohne http(s)-quelleUrl (massgebliche Fassung fehlt)`);
+      }
       const len = (a?: typeof snap.abschnitte) => (a ?? []).reduce((n, ab) => n + ab.bloecke.reduce((m, b) => m + b.text.length, 0), 0);
       if (snap.auszugAbschnitte?.length && len(snap.abschnitte) < len(snap.auszugAbschnitte) * 0.85) {
         warn.push(`${e.key}: Volltext kürzer als Auszug (mögliche aza-Fehlzuordnung/Inversion)`);

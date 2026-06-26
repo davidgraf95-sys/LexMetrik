@@ -65,33 +65,43 @@ test.describe('Reader (über Klick aus der Übersicht)', () => {
   })
 })
 
-test.describe('Leitentscheid — Umschalter «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»', () => {
-  test('zeigt zwei Tabs und wechselt den gerenderten Body (§8)', async ({ page }) => {
+test.describe('Leitentscheid — Ansichten «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»', () => {
+  test('Default Auszug; Wechsel auf Vollständiges Urteil ändert den Body (§8)', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/rechtsprechung/bge_152_IV_14')
     await expect(page.getByRole('heading', { level: 1, name: /BGE 152 IV 14/ })).toBeVisible()
 
     const voll = page.getByRole('tab', { name: /Vollständiges Urteil/ })
     const auszug = page.getByRole('tab', { name: /Amtlicher BGE-Auszug/ })
-    await expect(voll).toBeVisible()
     await expect(auszug).toBeVisible()
-
-    const body = page.locator('article').first()
-    const vollText = (await body.innerText()).trim()
-    expect(vollText.length).toBeGreaterThan(200)
-
-    await auszug.click()
+    await expect(voll).toBeVisible()
+    // Leitentscheid ist Default-Ansicht (Regeste-forward).
     await expect(auszug).toHaveAttribute('aria-selected', 'true')
+    const body = page.locator('article').first()
     const auszugText = (await body.innerText()).trim()
-    // Der amtliche Sammlungs-Auszug ist ein ANDERER (kürzerer) Text als das volle Urteil.
-    expect(auszugText).not.toEqual(vollText)
-    expect(auszugText.length).toBeGreaterThan(0)
+    expect(auszugText.length).toBeGreaterThan(100)
 
     await voll.click()
     await expect(voll).toHaveAttribute('aria-selected', 'true')
-    expect((await body.innerText()).trim()).toEqual(vollText)
+    const vollText = (await body.innerText()).trim()
+    expect(vollText).not.toEqual(auszugText)
 
-    await page.screenshot({ path: 'e2e-shots/leitentscheid-umschalter.png', fullPage: true })
+    await auszug.click()
+    await expect(auszug).toHaveAttribute('aria-selected', 'true')
+    expect((await body.innerText()).trim()).toEqual(auszugText)
+
+    await page.screenshot({ path: 'e2e-shots/leitentscheid-ansichten.png', fullPage: true })
     expect(fehler).toEqual([])
+  })
+
+  test('Deep-Link ?ansicht=voll öffnet direkt die Voll-Ansicht', async ({ page }) => {
+    await page.goto('/rechtsprechung/bge_152_IV_14?ansicht=voll')
+    await expect(page.getByRole('tab', { name: /Vollständiges Urteil/ })).toHaveAttribute('aria-selected', 'true')
+  })
+
+  test('Übersicht führt vollständige Urteile als getrennte Einträge', async ({ page }) => {
+    await page.goto('/rechtsprechung')
+    await expect(page.getByRole('heading', { name: /Vollständige Urteile zu den Leitentscheiden/ })).toBeVisible()
+    await expect(page.locator('a[href*="ansicht=voll"]').first()).toBeVisible()
   })
 })

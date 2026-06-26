@@ -483,7 +483,12 @@ export function azaAusBgeKopf(fullText: string | undefined): string | null {
   // Monat als \S+ (nicht \w+): \w matcht ohne Unicode-Flag das «ä» in «März» NICHT —
   // sonst fiele jeder im März entschiedene Eigenfall durch und die Regex griffe das
   // nächste (zitierte) Az. (Bug-Check 26.6.2026, kritisch). \S+ deckt jeden Monatsnamen.
-  const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s+(?:und\s+andere|und\s+[^\n]{0,40}))?\s+vom\s+\d{1,2}\.\s*\S+\s+\d{4}/.exec(fenster);
+  // Mehrsprachig (fr/it-BGE tragen «… du/del <Datum>» statt «vom») + verbundene
+  // Verfahren «A / B [/ C] vom …»: die /-Kette wird mitgelesen, GRUPPE 1 bleibt das
+  // ERSTE Az. (das verbundene Leiturteil; das zweite ist als Einzelurteil oft nicht
+  // abrufbar). Tag-Punkt optional (fr/it «du 14 août», kein Punkt). Anker bleibt die
+  // Eigenfall-Datums-Signatur im Kopf-Fenster (R8/§8) — kein zitiertes Präjudiz.
+  const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s*\/\s*\d[A-Z][_ ]\d+\/\d{4})*(?:\s+(?:und\s+andere|et\s+autres?|e\s+altri|und\s+[^\n]{0,40}))?\s+(?:vom|du|del|dell['’])\s+\d{1,2}\.?\s*\S+\s+\d{4}/.exec(fenster);
   return m ? m[1].replace(/\s+/, '_') : null;
 }
 
@@ -517,7 +522,10 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
   // aza-Volltext nur bei plausibler Confidence übernehmen (Jahr-Fenster, §8/R8).
   let azaSnap: EntscheidSnapshot | null = null;
   if (azaKey) {
-    const cand = await holeEntscheidOCL(azaKey, abgerufen, { sprache: 'de' });
+    // sprache:null — das unterliegende bger-Urteil eines fr/it-BGE ist im Original
+    // (fr/it) abgelegt; der 'de'-Filter verwarf es bisher und der Leitentscheid blieb
+    // Auszug-only. Der amtliche Sammlungstext (auszugAbschnitte) bleibt deutsch.
+    const cand = await holeEntscheidOCL(azaKey, abgerufen, { sprache: null });
     if (cand) {
       const azaJahr = Number(String(cand.datum).slice(0, 4)) || null;
       const plausibel = !bandJahr || !azaJahr || (azaJahr <= bandJahr && azaJahr >= bandJahr - 3);
@@ -551,7 +559,9 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
       dispositivOrders: azaSnap.dispositivOrders,
       zitierteEntscheide: azaSnap.zitierteEntscheide.length ? azaSnap.zitierteEntscheide : basis.zitierteEntscheide,
       normKeys: [...new Set([...basis.normKeys, ...azaSnap.normKeys])],
-      azaUrteil: { aktenzeichen: azaAz!, key: azaKey! },
+      // quelleUrl = bger.ch-Live-URL des unterliegenden Urteils = massgebliche Fassung
+      // der Voll-Ansicht (Detail) und Quelle-Link der getrennten Übersichts-Karte (§5/§8).
+      azaUrteil: { aktenzeichen: azaAz!, key: azaKey!, quelleUrl: azaSnap.quelleUrl },
       sha: azaSnap.sha,
     };
   }

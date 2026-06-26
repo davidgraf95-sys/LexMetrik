@@ -18,14 +18,21 @@ export function EntscheidKarte({ e, onNorm }: {
 }) {
   const leit = e.leitcharakter === 'leitentscheid';
   const synth = istSynth(e);
+  // Verweis-Eintrag: das vollständige Urteil zu einem BGE → Deep-Link in die Voll-Ansicht.
+  const verweis = e.verweis ?? null;
+  const ziel = verweis
+    ? `/rechtsprechung/${encodeURIComponent(verweis.zielKey)}?ansicht=voll`
+    : `/rechtsprechung/${encodeURIComponent(e.key)}`;
   return (
     <div className="lc-card group flex h-full flex-col p-4 transition-colors hover:border-brass-400">
       {/* Lese-Bereich (klickbar). flex-1 schiebt den Fuss auf gleiche Höhe. */}
-      <Link to={`/rechtsprechung/${encodeURIComponent(e.key)}`} className="block flex-1 no-underline">
+      <Link to={ziel} className="block flex-1 no-underline">
         {/* Statuszeile: Gebiet + Leit-Marker links, Status rechts. */}
         <div className="flex items-center justify-between gap-2 text-micro">
           <span className="flex items-center gap-2">
-            {leit && <span className="lc-badge lc-badge-ok">Leitentscheid</span>}
+            {verweis
+              ? <span className="lc-badge lc-badge-soft">Vollständiges Urteil</span>
+              : leit && <span className="lc-badge lc-badge-ok">Leitentscheid</span>}
             <span className="lc-overline text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
           </span>
           <span className="flex shrink-0 items-center gap-1.5">
@@ -36,10 +43,13 @@ export function EntscheidKarte({ e, onNorm }: {
           </span>
         </div>
 
-        {/* THEMA — Leitelement. Echte Regeste in Serif (Lesebild), Synth in Sans. */}
-        {synth
-          ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">{themaText(e)}</p>
-          : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
+        {/* THEMA — Leitelement. Verweis: klarer Bezug zum BGE; sonst echte Regeste in
+            Serif (Lesebild), Synth in Sans. */}
+        {verweis
+          ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">Vollständiges Urteil zu <span className="num">BGE {verweis.bgeReferenz}</span></p>
+          : synth
+            ? <p className="mt-2 text-body-s text-ink-700 leading-snug line-clamp-2">{themaText(e)}</p>
+            : <p className="mt-2 font-serif text-body-l text-ink-900 leading-snug line-clamp-2">{themaText(e)}</p>}
 
         {/* Norm-Zeile — führend (nicht am Fuss): zweite Navigationsachse. */}
         {e.normKeys.length > 0 && (

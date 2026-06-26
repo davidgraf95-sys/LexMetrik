@@ -16,9 +16,13 @@ export function EntscheidZeile({ e, onNorm }: {
   onNorm: (k: string) => void;
 }) {
   const synth = istSynth(e);
+  const verweis = e.verweis ?? null;
+  const ziel = verweis
+    ? `/rechtsprechung/${encodeURIComponent(verweis.zielKey)}?ansicht=voll`
+    : `/rechtsprechung/${encodeURIComponent(e.key)}`;
   return (
     <Link
-      to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
+      to={ziel}
       className="group flex items-stretch gap-3 px-4 py-3 no-underline hover:bg-well transition-colors"
     >
       {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). */}
@@ -30,7 +34,7 @@ export function EntscheidZeile({ e, onNorm }: {
         {/* Bezeichnung — Thema/Leitsatz führt; BGE-Nummer als Identität rechtsbündig. */}
         <div className="flex items-baseline gap-3">
           <span className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
-            {themaText(e)}
+            {verweis ? `Vollständiges Urteil zu BGE ${verweis.bgeReferenz}` : themaText(e)}
           </span>
           <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
             {hauptIdentitaet(e)}

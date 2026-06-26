@@ -128,7 +128,10 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
     return (
       <div className="space-y-4">
         {bloecke.map((b, i) => {
-          if (b.tiefe === 1 && !b.text.trim()) return null;
+          // Leere Marker-Blöcke (z.B. «A.»/«B.» im BGE-Sammlungstext, deren Inhalt in
+          // den Sub-Punkten A.a/A.b steckt) NIE als hängende Marke rendern — egal welche
+          // Tiefe; sonst wirkt der Sachverhalt unsauber unterteilt (Befund David 26.6.).
+          if (!b.text.trim()) return null;
           if (!b.marke) {
             if (/^[A-ZÄÖÜ]\.$/.test(b.text.trim())) return null;
             return <p key={i} className={ABSATZ}><NormText text={b.text} /></p>;

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
@@ -69,10 +69,13 @@ function ladeFsIdx(): number {
   return 1;
 }
 
+// Reine Chip-Reihe (Sprung-Ziele). Der sticky-Rahmen liegt im gemeinsamen
+// Kopf-Block (zusammen mit den BGE-Tabs), damit sich nicht zwei sticky-Leisten
+// überlagern (Bug-Fix: Sprung-Leiste verdeckte die Tab-Leiste beim Scrollen).
 function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[] }) {
   if (ziele.length === 0) return null;
   return (
-    <nav aria-label="Abschnitte" className="sticky top-16 z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line">
+    <nav aria-label="Abschnitte">
       {/* Mobil: horizontaler Chip-Streifen (scrollbar); Desktop: normale Reihe. */}
       <div className="flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
         {ziele.map((z) => (
@@ -86,7 +89,7 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
   );
 }
 
-function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
+function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string; ansichtParam: string | null }) {
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
@@ -113,9 +116,19 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       if (!s) { setZustand('fehlt'); return; }
       setSnap(s);
       setZustand('da');
+      // Start-Ansicht GENAU EINMAL festlegen (Lade-Effekt, nicht pro Render →
+      // kein Flash, Davids manueller Tab-Wechsel wird nie überschrieben):
+      // ?ansicht= aus der Übersicht hat Vorrang, sonst öffnen Leitentscheide mit
+      // amtlichem Auszug zuerst den BGE-Auszug, alles andere das volle Urteil.
+      const init: 'voll' | 'auszug' =
+          ansichtParam === 'voll'   ? 'voll'
+        : ansichtParam === 'auszug' ? 'auszug'
+        : (s.leitcharakter === 'leitentscheid' && (s.auszugAbschnitte?.length ?? 0) > 0) ? 'auszug'
+        : 'voll';
+      setBodyTab(init);
     });
     return () => { lebt = false; };
-  }, [schluessel]);
+  }, [schluessel, ansichtParam]);
 
   // Browser-Tab: Zitierung des Entscheids.
   useEffect(() => {
@@ -148,10 +161,38 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   const kopfLabel = KOPF_LABEL[snap.sprache];
   // BGE-Umschalter: nur wenn ein separater amtlicher Sammlungs-Auszug vorliegt.
   const hatAuszug = !!snap.auszugAbschnitte && snap.auszugAbschnitte.length > 0;
-  const aktiveAbschnitte = hatAuszug && bodyTab === 'auszug' ? snap.auszugAbschnitte! : snap.abschnitte;
-  // Sprung-Ziele: nach dem aktiven Body (+ Regeste, wenn da) — passt zur sichtbaren Ansicht.
+
+  // ── EINE Ansicht-Weiche (SSoT) — alles Sichtbare hängt an `ansicht` ────────
+  // Der Tab-Umschalter erscheint nur beim BGE mit Volltext; sonst steht die
+  // Ansicht fest (BGE ohne Volltext = amtlicher Auszug, alles übrige = Urteil).
+  const switcherSichtbar = snap.gericht === 'bge' && hatAuszug;
+  const ansicht: 'voll' | 'auszug' = switcherSichtbar ? bodyTab : (snap.gericht === 'bge' ? 'auszug' : 'voll');
+  // Rubrum (Art. 112 BGG) gehört zum vollständigen Urteil, nicht zum kuratierten
+  // Sammlungs-Auszug. Regeste umgekehrt: prominent im Leitentscheid-Auszug, nicht
+  // über dem vollständigen Urteil (David: «bei vollständiges urteil nicht regeste oben»).
+  const zeigeRubrum = ansicht === 'voll' && kopf.rubrumZeilen.length > 0;
+  const zeigeRegeste = !!regesteText && (ansicht === 'auszug' || snap.gericht !== 'bge');
+  // Massgebliche Fassung folgt der Ansicht: Voll → unterliegendes Urteil (aza),
+  // Auszug → BGE-Sammlung. Fehlt die Urteils-Quelle, ehrlich markieren statt den
+  // BGE als Urteil auszugeben (§8) und auf die BGE-Quelle zurückfallen.
+  const massgeblicheUrl = ansicht === 'voll' ? (snap.azaUrteil?.quelleUrl ?? snap.quelleUrl) : snap.quelleUrl;
+  // NUR beim BGE-Volltext ohne aufgelöstes aza-Urteil ist die Urteils-Quelle der Fallback
+  // (BGE-Sammlung). Kantonale/Nicht-BGE-Entscheide haben quelleUrl = ihr eigenes Urteil →
+  // kein «n.v.»-Marker, kein erfundener «BGE-Sammlungs»-Bezug (Bug-Check 26.6., §8).
+  const massgeblichFehlt = snap.gericht === 'bge' && ansicht === 'voll' && !snap.azaUrteil?.quelleUrl;
+  const massgeblichTitel = massgeblichFehlt
+    ? 'Urteils-Quelle nicht verfügbar — dieser Link führt zur amtlichen BGE-Sammlungsquelle'
+    : 'Die amtliche, massgebliche Fassung bei der Quelle öffnen';
+
+  // Body folgt der Ansicht (nicht nur dem rohen Tab): im Auszug der amtliche
+  // Sammlungstext, sonst das vollständige Urteil.
+  const aktiveAbschnitte = ansicht === 'auszug' && hatAuszug ? snap.auszugAbschnitte! : snap.abschnitte;
+  // sticky-Höhe als CSS-Variable: zweizeilig (Tabs + Sprung-Chips) bzw. einzeilig
+  // (nur Sprung-Chips). Anker-Sektionen verrechnen das als scroll-margin-top.
+  const stickHoehe = switcherSichtbar ? '10.5rem' : '7rem';
+  // Sprung-Ziele: nach dem aktiven Body (+ Regeste, wenn sie gezeigt wird) — passt zur sichtbaren Ansicht.
   const vorhandene = new Set<Abschnittstyp>(aktiveAbschnitte.map((a) => a.typ));
-  if (regesteText) vorhandene.add('regeste');
+  if (zeigeRegeste) vorhandene.add('regeste');
   const navZiele = NAV_TYPEN
     .filter((t) => vorhandene.has(t))
     .map((t) => ({
@@ -169,7 +210,12 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   };
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5" style={{ '--rsp-stick': stickHoehe } as CSSProperties}>
+      {/* Anker-Sektionen des EntscheidBody tragen ein festes scroll-mt-[7rem]; hier
+          auf die tatsächliche sticky-Höhe (--rsp-stick) heben, damit ein angesprungener
+          Abschnitt nicht hinter dem gemeinsamen Kopf-Block verschwindet. Greift nur im
+          Haupt-Body (.rsp-anker), nicht im Lesemodus-Overlay (eigene schlanke Leiste). */}
+      <style>{`.rsp-anker [id]{scroll-margin-top:var(--rsp-stick,7rem)}`}</style>
       {/* Breadcrumb (scrollt weg; die Sprung-Navigation ist die sticky Kopfzeile) */}
       <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
         <Link to="/rechtsprechung" className="hover:text-brass-700">Rechtsprechung</Link>
@@ -200,8 +246,9 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         )}
 
         {/* 4 Rubrum-Zeilen IM Kopf (Art. 112 BGG): nur befüllte Felder, feste Reihenfolge
-            Gegenstand→Parteien→Vorinstanz→Besetzung, per Haarlinie abgesetzt (kein Kasten). */}
-        {kopf.rubrumZeilen.length > 0 && (
+            Gegenstand→Parteien→Vorinstanz→Besetzung, per Haarlinie abgesetzt (kein Kasten).
+            Nur in der Voll-Ansicht — der amtliche BGE-Auszug trägt kein Rubrum. */}
+        {zeigeRubrum && (
           <dl className="mt-1 grid grid-cols-1 sm:grid-cols-[7rem_minmax(0,1fr)] gap-x-4 gap-y-1.5 border-t border-line/60 pt-3 text-body-s">
             {kopf.rubrumZeilen.map((z) => (
               <div key={z.label} className="contents">
@@ -229,11 +276,12 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell erfasst</span>
           )}
           <span className="ml-auto inline-flex items-center gap-2">
-            {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8). */}
-            <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
+            {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8) —
+                folgt der Ansicht (Voll → Urteil/aza, Auszug → BGE-Sammlung). */}
+            <a href={massgeblicheUrl} target="_blank" rel="noopener noreferrer"
               className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
-              title="Die amtliche, massgebliche Fassung bei der Quelle öffnen">
-              ↗ massgebliche Fassung
+              title={massgeblichTitel}>
+              ↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}
             </a>
             {/* R17: Lese-Schriftgrösse */}
             <span className="inline-flex items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
@@ -256,12 +304,49 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </div>
       </header>
 
-      <SprungNavigation ziele={navZiele} />
+      {/* Gemeinsamer sticky Kopf-Block (§13-Bug-Fix: EIN sticky-Element statt zweier
+          sich überlagernder). Oben — beim BGE mit Volltext — der Fassungs-Umschalter
+          (§8: «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»), darunter die Sprung-Chips.
+          Die App-Topbar liegt mit z-20 darüber, dieser Block mit z-[15] darunter. */}
+      {(switcherSichtbar || navZiele.length > 0) && (
+        <div className="sticky top-16 z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line space-y-2">
+          {switcherSichtbar && (
+            <Tabs
+              items={[
+                { code: 'auszug', label: 'Amtlicher BGE-Auszug' },
+                { code: 'voll', label: <>Vollständiges Urteil{snap.azaUrteil && <span className="num"> · {snap.azaUrteil.aktenzeichen}</span>}</> },
+              ]}
+              value={bodyTab}
+              onChange={setBodyTab}
+              mode="tab"
+              ariaLabel="Textfassung des Entscheids"
+            />
+          )}
+          <SprungNavigation ziele={navZiele} />
+        </div>
+      )}
 
-      {/* Regeste nur beim amtlich publizierten BGE; sonst maschinelle Zusammenfassung —
-          ehrlich gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
-      {regesteText && snap.regeste && (
-        <section id="abschnitt-regeste" className="scroll-mt-[7rem] lc-highlight space-y-2">
+      {/* Einordnung der gewählten Fassung (nicht sticky), gekoppelt an die Ansicht. */}
+      {switcherSichtbar && (
+        <p className="text-micro text-ink-500 max-w-reading">
+          {ansicht === 'voll'
+            ? <>Das vollständige unterliegende Urteil <span className="num">{snap.azaUrteil?.aktenzeichen}</span> — Grundlage der amtlichen Sammlung BGE <span className="num">{snap.bgeReferenz}</span>.</>
+            : <>Der amtlich publizierte Auszug der Sammlung BGE <span className="num">{snap.bgeReferenz}</span> — vom Gericht kuratiert.</>}
+        </p>
+      )}
+
+      {/* BGE ohne aufgelösten Volltext: nur der Sammlungs-Auszug + Live-Link (§8). */}
+      {snap.gericht === 'bge' && !hatAuszug && (
+        <p className="text-micro text-ink-500 max-w-reading">
+          Auszug aus der amtlichen Sammlung (BGE <span className="num">{snap.bgeReferenz}</span>). Das vollständige Urteil ist bei der Quelle verfügbar (↗ massgebliche Fassung oben).
+        </p>
+      )}
+
+      {/* Regeste prominent im Leitentscheid-Auszug (zeigeRegeste). Beim amtlich
+          publizierten BGE «Regeste», sonst maschinelle «Zusammenfassung» — ehrlich
+          gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
+      {zeigeRegeste && snap.regeste && (
+        <section id="abschnitt-regeste" className="scroll-mt-[var(--rsp-stick,7rem)] lc-highlight space-y-2">
           <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
           <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
           <p className="text-micro text-ink-500">
@@ -272,41 +357,11 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </section>
       )}
 
-      {/* BGE-Umschalter (§8): «Vollständiges Urteil» ⟷ «Amtlicher BGE-Auszug». Beide
-          Texte stehen im Snapshot; nur der aktive Body wird gemountet (Anker-ids eindeutig,
-          kein doppeltes EntscheidBody — wie der exklusive Lesemodus). */}
-      {snap.gericht === 'bge' && hatAuszug && (
-        <div className="space-y-2">
-          <Tabs
-            items={[
-              { code: 'voll', label: <>Vollständiges Urteil{snap.azaUrteil && <span className="num"> · {snap.azaUrteil.aktenzeichen}</span>}</> },
-              { code: 'auszug', label: 'Amtlicher BGE-Auszug' },
-            ]}
-            value={bodyTab}
-            onChange={setBodyTab}
-            mode="tab"
-            ariaLabel="Textfassung des Entscheids"
-          />
-          <p className="text-micro text-ink-500 max-w-reading">
-            {bodyTab === 'voll'
-              ? <>Das vollständige unterliegende Urteil <span className="num">{snap.azaUrteil?.aktenzeichen}</span> — Grundlage der amtlichen Sammlung BGE <span className="num">{snap.bgeReferenz}</span>.</>
-              : <>Der amtlich publizierte Auszug der Sammlung BGE <span className="num">{snap.bgeReferenz}</span> — vom Gericht kuratiert.</>}
-          </p>
-        </div>
-      )}
-
-      {/* BGE ohne aufgelösten Volltext: nur der Sammlungs-Auszug + Live-Link (§8). */}
-      {snap.gericht === 'bge' && !hatAuszug && (
-        <p className="text-micro text-ink-500 max-w-reading">
-          Auszug aus der amtlichen Sammlung (BGE <span className="num">{snap.bgeReferenz}</span>). Das vollständige Urteil ist bei der Quelle verfügbar (↗ massgebliche Fassung oben).
-        </p>
-      )}
-
       {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —
           der Overlay zeigt denselben EntscheidBody; doppelte Abschnitts-`id` wären
           ungültiges HTML + bräche Anker-Sprünge. */}
       {!lese && (
-        <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
+        <article className="rsp-anker mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
           <EntscheidBody abschnitte={aktiveAbschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
         </article>
       )}
@@ -314,9 +369,10 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       {/* Provenienz / Rechtslage (§7/§8) */}
       <footer className="mt-12 border-t border-line pt-5 space-y-3 text-body-s text-ink-500">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
-          <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
-            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
-            ↗ massgebliche Fassung
+          <a href={massgeblicheUrl} target="_blank" rel="noopener noreferrer"
+            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
+            title={massgeblichTitel}>
+            ↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}
           </a>
           <span className="text-ink-500">Daten: OpenCaseLaw</span>
         </div>
@@ -333,7 +389,10 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       </nav>
 
       {lese && (
-        <LesemodusOverlay snap={snap} abschnitte={aktiveAbschnitte} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={closeLese} />
+        <LesemodusOverlay snap={snap} abschnitte={aktiveAbschnitte}
+          regesteText={zeigeRegeste ? regesteText : null}
+          massgeblicheUrl={massgeblicheUrl} massgeblichTitel={massgeblichTitel} massgeblichFehlt={massgeblichFehlt}
+          fsIdx={fsIdx} setFs={setFs} onClose={closeLese} />
       )}
     </div>
   );
@@ -344,10 +403,15 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
 // Weissraum), blendet die App-Shell aus. Wiederverwendung des EntscheidBody +
 // der Regeste (keine Duplizierung der Rechtsdarstellung, §3/§5). Provenienz/
 // massgebliche Fassung bleibt sichtbar (§8). ESC schliesst, Body-Scroll gesperrt.
-function LesemodusOverlay({ snap, abschnitte, regesteText, fsIdx, setFs, onClose }: {
+function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, massgeblichTitel, massgeblichFehlt, fsIdx, setFs, onClose }: {
   snap: EntscheidSnapshot;
   abschnitte: EntscheidSnapshot['abschnitte'];
+  // Bereits an der Ansicht ausgerichtet (null = im vollständigen Urteil keine Regeste oben);
+  // kein Fassungs-Desync zwischen Hauptspalte und Lesemodus.
   regesteText: string | null;
+  massgeblicheUrl: string;
+  massgeblichTitel: string;
+  massgeblichFehlt: boolean;
   fsIdx: number;
   setFs: (i: number) => void;
   onClose: () => void;
@@ -425,8 +489,8 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, fsIdx, setFs, onClose
         </div>
 
         <footer className="mt-12 border-t border-line pt-5 text-body-s text-ink-500">
-          <a href={snap.quelleUrl} target="_blank" rel="noopener noreferrer"
-            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">↗ massgebliche Fassung</a>
+          <a href={massgeblicheUrl} target="_blank" rel="noopener noreferrer" title={massgeblichTitel}
+            className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}</a>
           <p className="mt-3 text-micro text-ink-500 leading-relaxed">
             Der Urteilstext ist als amtliches Werk gemeinfrei (Art. 5 URG); massgeblich ist stets die amtliche Quelle. Keine Rechtsberatung.
           </p>
@@ -449,5 +513,8 @@ function NormTextHinweis() {
 export function EntscheidLeser() {
   const { key: keyRoh } = useParams<{ key: string }>();
   const schluessel = keyRoh ? decodeURIComponent(keyRoh) : '';
-  return <EntscheidLeserInhalt key={schluessel} schluessel={schluessel} />;
+  // Übersicht→Detail-Brücke: ?ansicht=voll|auszug wählt die Start-Fassung.
+  const [sp] = useSearchParams();
+  const ansichtParam = sp.get('ansicht');
+  return <EntscheidLeserInhalt key={schluessel} schluessel={schluessel} ansichtParam={ansichtParam} />;
 }

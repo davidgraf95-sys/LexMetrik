@@ -269,14 +269,20 @@ export function sortiere(liste: BrowseEntscheid[], modus: SortModus): BrowseEnts
   }
 }
 
-/** Zwei Sektionen für das Default-Layout (Kuratierung als Struktur lesbar). */
+/** Verweis-Eintrag = das vollständige Urteil zu einem BGE (eigene Karte, Deep-Link). */
+export const istVolltextVerweis = (e: BrowseEntscheid): boolean => !!e.verweis;
+
+/** Drei Sektionen fürs Default-Layout: amtliche Leitentscheide, die zugehörigen
+ *  vollständigen Urteile (getrennte Einträge, Auftrag David 26.6.), übrige Entscheide. */
 export function gruppiereNachLeit(liste: BrowseEntscheid[]): {
   leitentscheide: BrowseEntscheid[];
+  volltexte: BrowseEntscheid[];
   weitere: BrowseEntscheid[];
 } {
   return {
-    leitentscheide: liste.filter((e) => e.leitcharakter === 'leitentscheid'),
-    weitere: liste.filter((e) => e.leitcharakter !== 'leitentscheid'),
+    leitentscheide: liste.filter((e) => !istVolltextVerweis(e) && e.leitcharakter === 'leitentscheid'),
+    volltexte: liste.filter((e) => istVolltextVerweis(e)),
+    weitere: liste.filter((e) => !istVolltextVerweis(e) && e.leitcharakter !== 'leitentscheid'),
   };
 }
 
@@ -288,10 +294,12 @@ export interface SachgebietZaehler {
   count: number;
 }
 
-/** Sachgebiet-Zähler in GEBIETE-Reihenfolge, nur belegte Gebiete (Rail). */
+/** Sachgebiet-Zähler in GEBIETE-Reihenfolge, nur belegte Gebiete (Rail). Verweis-
+ *  Einträge (vollständige Urteile) ausgenommen — sonst zählt jeder BGE doppelt. */
 export function zaehleSachgebiete(liste: BrowseEntscheid[]): SachgebietZaehler[] {
+  const echte = liste.filter((e) => !istVolltextVerweis(e));
   return GEBIETE
-    .map((g) => ({ sachgebiet: g.id, label: g.label, count: liste.filter((e) => e.sachgebiet === g.id).length }))
+    .map((g) => ({ sachgebiet: g.id, label: g.label, count: echte.filter((e) => e.sachgebiet === g.id).length }))
     .filter((g) => g.count > 0);
 }
 
@@ -303,7 +311,8 @@ export interface NormZaehler {
 /** Häufigkeit der angewandten Erlasse, absteigend, key-stabil (Top-Normen-Leiste). */
 export function normHaeufigkeit(liste: BrowseEntscheid[]): NormZaehler[] {
   const zahl = new Map<string, number>();
-  for (const e of liste) for (const k of e.normKeys) zahl.set(k, (zahl.get(k) ?? 0) + 1);
+  // Verweis-Einträge ausgenommen (Drift-Schutz, symmetrisch zu zaehleSachgebiete).
+  for (const e of liste) if (!istVolltextVerweis(e)) for (const k of e.normKeys) zahl.set(k, (zahl.get(k) ?? 0) + 1);
   return [...zahl.entries()]
     .map(([normKey, count]) => ({ normKey, count }))
     .sort((a, b) => b.count - a.count || (a.normKey < b.normKey ? -1 : a.normKey > b.normKey ? 1 : 0));

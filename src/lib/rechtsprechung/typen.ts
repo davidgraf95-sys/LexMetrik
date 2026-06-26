@@ -74,7 +74,7 @@ export interface EntscheidSnapshot {
    * null, wenn kein aza-Az. eindeutig auflösbar war (dann trägt der Body nur den
    * Sammlungs-Auszug; UI zeigt ehrlich «Auszug» + Live-Link, §8).
    */
-  azaUrteil?: { aktenzeichen: string; key: string } | null;
+  azaUrteil?: { aktenzeichen: string; key: string; quelleUrl: string } | null;
   zitierung: string;        // OCL citation_string_de
   datum: string;            // OCL decision_date ('YYYY-MM-DD')
   sprache: EntscheidSprache;

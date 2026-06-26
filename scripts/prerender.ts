@@ -181,7 +181,9 @@ const entscheidManifest = (
 ).entscheide;
 
 const snapshotErlasse = erlassManifest.filter((e) => e.status === 'snapshot');
-const snapshotEntscheide = entscheidManifest.filter((e) => e.bestand === 'snapshot');
+// Verweis-Einträge (vollständiges Urteil zu einem BGE) haben kein eigenes File —
+// sie sind Deep-Links auf die BGE-Detailseite, KEINE eigene prerenderte Seite.
+const snapshotEntscheide = entscheidManifest.filter((e) => e.bestand === 'snapshot' && !e.verweis);
 
 // Absoluter Floor: fängt stilles Schrumpfen des Input-Manifests (eine fehlerhafte
 // Regenerierung), das der relative geschrieben+übersprungen===total-Check allein
