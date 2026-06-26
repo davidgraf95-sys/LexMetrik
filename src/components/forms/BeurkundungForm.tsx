@@ -22,6 +22,7 @@ import {
   GESCHAEFTSARTEN_NACH_GRUPPE, geschaeftsart, GESCHAEFTSART_IDS, type GeschaeftsartId,
 } from '../../data/tarif/beurkundung-typen';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Allgemeiner Beurkundungskosten-Rechner (alle Geschäftsarten) ───────────
 // Reine Darstellung (§3): gerechnet wird in lib/beurkundung.ts über die amtlich
@@ -294,7 +295,7 @@ export function BeurkundungForm() {
         {bereich === 'beurkundung' && (
           <div className="space-y-4">
             <GeschaeftsartWahl value={art} onChange={setArt} />
-            <AllgemeineBeurkundung art={art} startKanton={(ausLink.kanton as KantonCode) ?? 'ZH'} startWert={ausLink.wert as number | undefined} />
+            <AllgemeineBeurkundung art={art} startKanton={(ausLink.kanton as KantonCode) ?? getStandardKanton()} startWert={ausLink.wert as number | undefined} />
           </div>
         )}
         {bereich === 'grundbuch' && <GrundbuchEintragForm />}

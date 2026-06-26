@@ -21,6 +21,7 @@ import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 const VERJ_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Verjährung (Art. 60, 67, 127 ff. OR, Stand Revision 1.1.2020) – ' +
@@ -104,7 +105,7 @@ export function VerjaehrungForm() {
   const [beginnRelativ, setBeginnRelativ] = useState(ausLink.beginnRelativ ?? '2024-03-01');
   const [beginnAbsolut, setBeginnAbsolut] = useState(ausLink.beginnAbsolut ?? '');
   const [stichtag, setStichtag] = useState(ausLink.stichtag ?? heute);
-  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? getStandardKanton());
   const [strafbar, setStrafbar] = useState(ausLink.strafbar ?? false);
   const [stillstaende, setStillstaende] = useState<Stillstand[]>(ausLink.stillstaende ?? []);
   const [unterbrechungen, setUnterbrechungen] = useState<Unterbrechung[]>(ausLink.unterbrechungen ?? []);

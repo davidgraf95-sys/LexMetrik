@@ -13,18 +13,31 @@ export function useWizardState<T extends object>(opts: {
   speicherKey?: string;
   /** Hydration absichern: Array-/Record-Felder aus älteren Speicherständen normalisieren. */
   normalisieren?: (geladen: T) => T;
+  /** Profil-Prefill (Auftrag David): füllt NUR leere Felder vor (gespeicherte
+   *  Nutzerwerte/Defaults gewinnen). Reiner Komfort (§3), nie Rechtsinhalt. */
+  prefill?: Partial<T>;
 }) {
-  const { defaults, speicherKey, normalisieren } = opts;
+  const { defaults, speicherKey, normalisieren, prefill } = opts;
   const [a, setA] = useState<T>(() => {
-    if (!speicherKey) return defaults;
-    try {
-      const roh = localStorage.getItem(speicherKey);
-      if (roh) {
-        const geladen = { ...defaults, ...JSON.parse(roh) } as T;
-        return normalisieren ? normalisieren(geladen) : geladen;
+    let basis = defaults;
+    if (speicherKey) {
+      try {
+        const roh = localStorage.getItem(speicherKey);
+        if (roh) {
+          const geladen = { ...defaults, ...JSON.parse(roh) } as T;
+          basis = normalisieren ? normalisieren(geladen) : geladen;
+        }
+      } catch { /* defekter Speicher → Defaults */ }
+    }
+    if (prefill) {
+      const ergaenzt = { ...basis } as Record<string, unknown>;
+      for (const k in prefill) {
+        const cur = ergaenzt[k];
+        if ((cur === undefined || cur === '') && prefill[k]) ergaenzt[k] = prefill[k];
       }
-    } catch { /* defekter Speicher → Defaults */ }
-    return defaults;
+      return ergaenzt as T;
+    }
+    return basis;
   });
   const [schritt, setSchritt] = useState(0);
   const [bestaetigt, setBestaetigt] = useState(false);

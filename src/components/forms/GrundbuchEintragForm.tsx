@@ -17,6 +17,7 @@ import {
   GB_EINTRAGSARTEN_NACH_GRUPPE, gbEintragsart, GB_EINTRAGSART_IDS, type GbEintragsartId,
 } from '../../data/tarif/grundbuch-typen';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Grundbuchgebühren je Eintragungsart (reine Darstellung, §3) ────────────
 // Gerechnet wird in lib/grundbuchgebuehren.ts; §8: fehlt ein kantonaler Tarif
@@ -50,7 +51,7 @@ export function GrundbuchEintragForm() {
   }, []);
   const startArt = (ausLink.art as GbEintragsartId);
   const [art, setArt] = useState<GbEintragsartId>(ALLOWED.includes(startArt) ? startArt : 'grundpfand');
-  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? 'ZH');
+  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? getStandardKanton());
   const [wert, setWert] = useState<string>(ausLink.wert != null ? String(ausLink.wert) : '');
   const [vergleich, setVergleich] = useState(false);
   const [aktenzeichen, setAktenzeichen] = useState('');

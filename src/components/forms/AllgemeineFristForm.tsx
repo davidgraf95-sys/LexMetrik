@@ -23,6 +23,7 @@ import { IcsExportButton } from '../IcsExportButton';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Allgemeiner Fristenrechner (Free) – UI ─────────────────────────────────
 // Reine Darstellung; sämtliche Rechtsregeln liegen in lib/allgemeineFrist.ts.
@@ -67,7 +68,9 @@ export function AllgemeineFristForm() {
   const [form, setForm] = useState<State>(() => {
     try {
       const aus = fristQueryLesen(window.location.search);
-      const basis = aus ? { ...DEFAULTS, ...aus } : DEFAULTS;
+      // Standard-Kanton (Einstellungen) als Default; ein Permalink-Kanton (aus)
+      // geht weiter vor (Auftrag David).
+      const basis = { ...DEFAULTS, kanton: getStandardKanton(), ...(aus ?? {}) };
       return famAusLink
         ? { ...basis, laenge: famAusLink.laenge, einheit: famAusLink.einheit, wochenendeVerschieben: true, feiertageVerschieben: true }
         : basis;

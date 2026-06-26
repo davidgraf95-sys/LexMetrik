@@ -22,6 +22,7 @@ import { berechneErbgangsSpiegel } from '../../lib/fristenspiegel/erbgang';
 import { berechneAgKuendigungsSpiegel } from '../../lib/fristenspiegel/agKuendigung';
 import type { Fristnatur, FristenspiegelErgebnis, SpiegelZeile } from '../../lib/fristenspiegel/typen';
 import type { Kanton } from '../../types/legal';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Ereignis-Fristen (S-5c FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
 // EIN Ereignis → ALLE parallelen Fristen als Tabelle. Reine Darstellung (§3):
@@ -136,7 +137,7 @@ export function EreignisFristen({ ereignisse, zustellungVorgabe }: {
   const [ereignis, setEreignis] = useState<Ereignis>(
     EREIGNIS_CODES.includes(start.ereignis as Ereignis) && ereignisse.includes(start.ereignis as Ereignis)
       ? (start.ereignis as Ereignis) : erlaubt[0].code);
-  const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? getStandardKanton());
 
   // ── A.4 Vermieter-Kündigung ──
   const [zugang, setZugang] = useState<string>(start.zugang ?? '');

@@ -16,6 +16,7 @@ import {
   type NotariatGrundbuchErgebnis, type NgPosten, type Spanne,
 } from '../../lib/notariatGrundbuch';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Notariats- & Grundbuchkosten beim Grundstückkauf ───────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/notariatGrundbuch.ts über die
@@ -91,7 +92,7 @@ export function NotariatGrundbuchForm({ minimal = false }: { minimal?: boolean }
     catch { return {} as Record<string, unknown>; }
   }, []);
 
-  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? 'ZH');
+  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? getStandardKanton());
   const [kp, setKp] = useState<string>(ausLink.kp != null ? String(ausLink.kp) : '');
   // Im minimal-Modus (Startseiten-Schnellrechner) bleibt Grundpfand AUS — die
   // Checkbox ist dort ausgeblendet, ein ?pf=1-Permalink dürfte sonst einen nicht

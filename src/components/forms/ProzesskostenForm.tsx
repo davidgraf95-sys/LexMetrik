@@ -19,6 +19,7 @@ import {
   type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type Verfahrensausgang, type PostenErgebnis,
 } from '../../lib/prozesskosten';
 import { KANTON_NAMEN } from '../../data/tarif/typen';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Prozesskosten-Cockpit (Art. 95/96 ZPO) ─────────────────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/prozesskosten.ts über die
@@ -97,7 +98,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
     catch { return {} as Record<string, unknown>; }
   }, []);
 
-  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? 'ZH');
+  const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? getStandardKanton());
   const [sw, setSw] = useState<string>(ausLink.sw != null ? String(ausLink.sw) : '');
   const [phase, setPhase] = useState<Verfahrensphase>((ausLink.phase as Verfahrensphase) ?? 'entscheid');
   const [materie, setMaterie] = useState<Materie>((ausLink.materie as Materie) ?? 'allgemein');

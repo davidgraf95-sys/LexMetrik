@@ -15,6 +15,7 @@ import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
+import { getStandardKanton } from '../../lib/einstellungen';
 
 // ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
 // Reine Darstellung über src/lib/erbFristen.ts (§3): Tatbestand wählen,
@@ -44,7 +45,7 @@ export function ErbFristenForm() {
   const [key, setKey] = useState<ErbFristKey>((ausLink.key as ErbFristKey | undefined) ?? 'ausschlagung_gesetzlich');
   const [trigger, setTrigger] = useState(ausLink.trigger ?? '2026-03-10');
   const [verschieben, setVerschieben] = useState(ausLink.verschieben ?? true);
-  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? getStandardKanton());
 
   const preset = ERB_FRISTEN.find((p) => p.key === key)!;
   const erbgang = ERB_FRISTEN.filter((p) => p.gruppe === 'erbgang');

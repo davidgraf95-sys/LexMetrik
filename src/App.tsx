@@ -29,6 +29,7 @@ const Methodik = lazyRetry(() => import('./pages/Methodik').then((m) => ({ defau
 const Ueber = lazyRetry(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
 const Kontakt = lazyRetry(() => import('./pages/Kontakt').then((m) => ({ default: m.Kontakt })));
 const Datenschutz = lazyRetry(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
+const Einstellungen = lazyRetry(() => import('./pages/Einstellungen').then((m) => ({ default: m.Einstellungen })));
 // Rubrik V «Gesetze» (browsbare Rechtssammlung) — eigenständige Nav-Sektion,
 // KEINE Katalog-Oberkategorie (oberkategorien.ts unberührt). Übersicht /gesetze
 // wird prerendert (seo.ts), die Lesesicht /gesetze/:ebene/:key ist client-lazy
@@ -232,6 +233,7 @@ export default function App() {
         <Route path="/ueber" element={<Ueber />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/einstellungen" element={<Einstellungen />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>
