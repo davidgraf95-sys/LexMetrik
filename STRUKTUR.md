@@ -22,6 +22,25 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 26.6.2026 — Echte Leitentscheide (amtliche BGE) + Volltext-Umschalter (deployt)
+
+Auftrag David: «Leitentscheid» soll nur heissen, was das Bundesgericht amtlich
+publiziert (BGE), mit eigener harmonisierter Darstellung; zudem von jedem
+Leitentscheid zwischen amtlichem Auszug und ganzem Urteil umschaltbar. Geplant per
+ultracode-Workflow, autonom umgesetzt im Worktree `leitentscheide` ab `004d7b74`.
+- **§8-Befund:** der deployte 610er-Korpus etikettierte ~96 % falsch als Leitentscheid
+  (ODER-Glied `!!regeste`). Neu: `leitcharakter ⟺ amtlicher BGE`, bikonditional gate-verriegelt.
+- **Daten:** neue bge-Pipeline (`enumeriereBge`/`holeBgeLeitentscheid`, A2-Merge): BGE-
+  Identität + amtliche Regeste + aza-Volltext-Cross-Fetch (R8-Confidence-Quarantäne).
+  Korpus 610→**327** (272 amtliche BGE, 243 mit Volltext, + 55 routine), 19.5 MB.
+- **Umschalter:** `auszugAbschnitte` (Sammlungstext) neben `abschnitte` (Volltext);
+  bestehende `Tabs`-Komponente «Vollständiges Urteil» ⟷ «Amtlicher BGE-Auszug» (E2E belegt).
+- **Zwei adversariale Bug-Checks** (je 11–15 Agenten) fanden + fixten: kritischer März-
+  Regex (`\w`→`\S`, Volltext 75→89 %), aza-Kollision (OCL-Quirk 152 V 2/20) → Quarantäne,
+  Inversion (151 III 336) → verworfen, Bandjahr-Sentinel, Lesemodus-Desync. Gate-Backstops:
+  aza-Kollision=Fehler, Inversion=Warnung. `BUDGET_MB` 20→35 (zwei Texte/BGE, fliessend).
+- **OFFEN:** juristische Einzelabnahme (David, Zeitsperre); Korpus-Ausweitung BGE <2024 möglich.
+
 ## Session 26.6.2026 — BGer-Korpus-Ausbau 370→610 (Parallel-Session, deployt)
 
 Auftrag David: «zwischenzeitlich mehr Leitentscheide des Bundesgerichts scrapen»
