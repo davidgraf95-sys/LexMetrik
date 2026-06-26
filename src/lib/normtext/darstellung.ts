@@ -73,6 +73,39 @@ export function randtitelEintraege(marginalie: string[]): { mark: string; titel:
     .filter((e) => !istLeererTitel(e.titel));
 }
 
+// Den Marker (Aufzähler) einer Randtitel-Stufe vom Sachtitel trennen — für die
+// Leer-Prüfung (aufgehobene Stufe «c. …»). Reine Darstellung (§3).
+function randtitelSachtitel(stufe: string): string {
+  const m = stufe.match(ENUM_RUN);
+  return (m ? m[2] : stufe).trim();
+}
+
+// Randtitel-Kette eines Artikels in Knoten zerlegen (Auftrag 6b, David
+// 26.6.2026 «Buchstaben-/Randtitel-Ebenen einklappbar, analog Fedlex»):
+//   • `ahnen` = die übergeordneten, von mehreren Artikeln GETEILTEN Gruppierungen
+//     («A. Persönlichkeit im Allgemeinen» → «II. Handlungsfähigkeit» …). Diese
+//     werden im Reader zu echten, einklappbaren Gliederungs-Knoten promotet
+//     (baueGliederungsbaum) — MIT Aufzähler im Label (Fedlex-Anzeige).
+//   • `blatt` = die unterste, artikel-EIGENE Sachüberschrift; sie bleibt die
+//     Überschrift des Artikels selbst (kein eigener Knoten), damit nicht jeder
+//     einzelne Randtitel (≈83 % sind eine einzige Sachüberschrift) zu einer
+//     eigenen 1-Artikel-Sektion verkümmert.
+// Das Blatt wird POSITIONSWEISE bestimmt (letzte Stufe der Kette), nicht über die
+// gefilterte Liste: trägt die letzte Stufe nur ein Auslassungszeichen («c. …»,
+// aufgehobene Sachüberschrift), hat der Artikel KEINE eigene Überschrift (blatt =
+// null) und die darüber liegende, geteilte Stufe bleibt ein Ahnen-Knoten — sonst
+// risse ein aufgehobener Artikel aus seiner Gruppe und doppelte deren Titel.
+export function randtitelKnoten(marginalie: string[]): { ahnen: string[]; blatt: string | null } {
+  const raw = marginalie.map((s) => s.trim());
+  if (raw.length === 0) return { ahnen: [], blatt: null };
+  const blattLeer = istLeererTitel(randtitelSachtitel(raw[raw.length - 1]));
+  const blatt = blattLeer ? null : raw[raw.length - 1];
+  const ahnenRoh = blatt ? raw.slice(0, -1) : raw;
+  // Leere Zwischenstufen («…») nie als Knoten zeigen (reine Darstellung, §3).
+  const ahnen = ahnenRoh.filter((s) => !istLeererTitel(randtitelSachtitel(s)));
+  return { ahnen, blatt };
+}
+
 // Absatznummern mit lat. Suffix («1bis», «2ter») wurden bei der Extraktion teils
 // NICHT ins absatz-Feld übernommen, sondern stehen am Textanfang («1bis Wurde …»),
 // oder nur das Suffix leckte aus dem Feld («absatz=1», Text «bis Erfordert …»).

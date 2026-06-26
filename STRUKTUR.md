@@ -50,6 +50,43 @@ und nachher grün, Golden byte-gleich (keine Verhaltensänderung).
   Superscript-Leak (`AG/HOR_2024_19`); Regeste-Leak/verirrte Marken = 0.
   Steuert A1/A2/A3. Alles `verifiziert:false`, Abnahme David offen.
 
+## Session 27.6.2026 — Lane G / Auftrag 6b: Randtitel-Ebenen einklappbar (Worktree, NICHT deployt)
+
+JETZT-MACHEN §7 Lane G Punkt b (eigener Worktree, von main abgebrancht). Die
+Buchstaben-/Randtitel-Ebenen des Gesetze-Readers («A. Persönlichkeit im
+Allgemeinen → II. Handlungsfähigkeit → 2. Voraussetzungen») sind jetzt — analog
+Fedlex — echte, einklappbare Gliederungs-Knoten statt blosser Artikel-Marginalien.
+Default F3 (Laufzeit-Ableitung, KEIN Massen-Regen der struktur-Sidecars, §7
+unberührt). Reine Präsentation (§3) — keine Rechtsregel/Normtext berührt.
+- **Promotion (`src/lib/normtext/browse.ts` `baueGliederungsbaum`):** zur amtlichen
+  Gliederung werden die von mehreren Artikeln GETEILTEN Randtitel-Ahnen als
+  Sektions-Knoten angehängt (Ebene = unter der tiefsten Gliederungsstufe ansetzend;
+  `randtitel:true`-Flag auf `Sektion`). Die artikel-EIGENE Sachüberschrift (das
+  «Blatt») bleibt die Artikel-Überschrift — so verkümmert nicht jeder Einzel-Randtitel
+  (≈83 %) zu einer 1-Artikel-Sektion. Neue reine Funktion `randtitelKnoten` in
+  `darstellung.ts` (teilt Kette positionsweise in `ahnen`/`blatt`; aufgehobenes Blatt
+  «c. …» → blatt=null, Artikel bleibt in seiner Gruppe).
+- **Reader (`src/pages/GesetzLeser.tsx`):** `margAnzeige` zeigt im Fliesstext nur noch
+  das Blatt (keine Doppel-Darstellung mehr, da die Ahnen jetzt Sektionsköpfe sind).
+  `renderSektion` mischt direkte Artikel + Unter-Knoten in DOKUMENT-Reihenfolge
+  (neuer `sekPos`-Memo, da ein Knoten seit 6b oft beides trägt). `SektionKopf` gibt
+  Randtitel-Knoten eine ruhige Serif-Stimme + Einzug-Strich (`border-l/pl-3`, Tokens).
+  Der bestehende Klapp-/TOC-/Scroll-Spy-Stack greift automatisch (Knoten sind jetzt
+  echte `Sektion`en). Such-/Treffersicht unverändert (volle Marginalie).
+- **Tore:** voller Gate grün (tsc · vitest · **golden byte-gleich** · lint 0 · check)
+  + build (56 Routen, 1449 Erlasse 0 übersprungen) + e2e 76/76 (inkl. neuem
+  `gesetze-randtitel-6b`; 6a-`gesetze-marginalie` weiter grün). Neue Unit-Tests:
+  `randtitelKnoten` (darstellung), `baueGliederungsbaum`-Promotion (normtext-browse).
+- **Visuell verifiziert** (Playwright via Bash, ZGB hell/dunkel/mobil): TOC zeigt die
+  volle Verschachtelung A.→II.→2.; Fliesstext klappt «2. Voraussetzungen» sauber
+  ein/aus; aufgehobener Art. 15 bleibt in Dokument-Reihenfolge in seiner Gruppe ohne
+  Doppel-Titel; kein 390px-Overflow.
+- **OFFEN/Annahmen:** Deploy entscheidet David (NICHT deployt). Randtitel-Knoten-Ebene
+  wird positionsweise abgeleitet (Marker-Tier A./I./1. ist mehrdeutig) — bei
+  inkonsistenter Kette theoretisch ein Doppel-Knoten (reine Anzeige, kein Logikfehler).
+  `randtitelTeile`/`randtitelEintraege` bleiben (test-gedeckt, für eine spätere schmale
+  Ansicht) — bewusst nicht entfernt.
+
 ## Session 26.6.2026 — JETZT-MACHEN Welle 0 + Lane G 6a: Kalender-Füllung & einheitliche Randtitel (deployt)
 
 «jetzt machen» (JETZT-MACHEN.md). F5 (6 Regeln nicht-amtliche Urteile) von David

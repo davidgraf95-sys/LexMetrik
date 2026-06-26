@@ -6,6 +6,7 @@ import type { BrowseManifest, BrowseErlass } from './browse-typen';
 import type { NormSnapshot, NormSnapshotDatei } from './typen';
 import { GEBIETE, type Rechtsgebiet } from './register';
 import type { KantonSystematik } from './systematik';
+import { randtitelKnoten } from './darstellung';
 
 // ── Manifest (einmal, gecacht als laufende Promise) ──────────────────────────
 let manifestPromise: Promise<BrowseManifest | null> | null = null;
@@ -170,11 +171,25 @@ export interface Sektion {
   label: string;
   kinder: Sektion[];
   artikel: NormSnapshot[];
+  /** true, wenn der Knoten aus einer Randtitel-/Buchstaben-Ebene (Marginalie)
+   *  promotet wurde — nicht aus der amtlichen Teil/Titel/Abschnitt-Gliederung
+   *  (Auftrag 6b). Steuert die ruhigere, eingerückte Darstellung im Reader. */
+  randtitel?: boolean;
 }
 
 /**
  * Baut aus den Artikeln + ihrer Gliederung einen Sektions-Baum. Artikel ohne
- * Gliederung landen in `ohneGliederung` (flach). Reine Darstellungs-Vorstufe.
+ * amtliche Gliederung UND ohne geteilte Randtitel-Gruppierungen landen in
+ * `ohneGliederung` (flach). Reine Darstellungs-Vorstufe (§3).
+ *
+ * 6b (Auftrag David 26.6.2026): Die Randtitel-/Buchstaben-Ebenen («A. … → II. …»)
+ * werden — analog Fedlex — als zusätzliche, einklappbare Knoten UNTER die amtliche
+ * Gliederung promotet. Nur die von mehreren Artikeln GETEILTEN Ahnen-Stufen werden
+ * Knoten (randtitelKnoten.ahnen); die artikel-eigene Sachüberschrift (blatt) bleibt
+ * die Überschrift des Artikels selbst. Die Ebene der promoteten Knoten setzt direkt
+ * unter der tiefsten amtlichen Gliederungsstufe an, sodass sie sich darunter
+ * einreihen (und der Reader sie kleiner/eingerückt darstellt). Rein abgeleitet zur
+ * Laufzeit — die struktur-Sidecars bleiben unangetastet (§7).
  */
 export function baueGliederungsbaum(
   eintraege: NormSnapshot[],
@@ -185,7 +200,17 @@ export function baueGliederungsbaum(
   let nr = 0;
 
   for (const e of eintraege) {
-    const pfad = struktur?.[e.artikel]?.gliederung ?? [];
+    const st = struktur?.[e.artikel];
+    const gliederung = st?.gliederung ?? [];
+    const { ahnen } = randtitelKnoten(st?.marginalie ?? []);
+    // Promotete Randtitel-Knoten reihen sich direkt unter der tiefsten amtlichen
+    // Gliederungsstufe ein. Ohne amtliche Gliederung beginnen sie bei 0 (dann
+    // tragen sie selbst die Haupt-Hierarchie, z. B. kantonale Erlasse).
+    const basis = gliederung.length ? Math.max(...gliederung.map((g) => g.ebene)) + 1 : 0;
+    const pfad: Array<{ ebene: number; label: string; randtitel: boolean }> = [
+      ...gliederung.map((g) => ({ ebene: g.ebene, label: g.label, randtitel: false })),
+      ...ahnen.map((label, i) => ({ ebene: basis + i, label, randtitel: true })),
+    ];
     if (pfad.length === 0) { ohneGliederung.push(e); continue; }
     let ebeneListe = sektionen;
     let knoten: Sektion | null = null;
@@ -194,7 +219,7 @@ export function baueGliederungsbaum(
       // Gleicher Knoten nur, wenn er der letzte auf dieser Ebene ist UND Label
       // passt (Gliederung ist dokumentlinear, daher genügt der letzte).
       if (!treffer || treffer.label !== stufe.label || treffer.ebene !== stufe.ebene) {
-        treffer = { id: `sek-${nr++}`, ebene: stufe.ebene, label: stufe.label, kinder: [], artikel: [] };
+        treffer = { id: `sek-${nr++}`, ebene: stufe.ebene, label: stufe.label, kinder: [], artikel: [], randtitel: stufe.randtitel };
         ebeneListe.push(treffer);
       }
       knoten = treffer;

@@ -5,7 +5,7 @@ import { aktiverArtikel } from '../lib/normtext/aktuellerArtikel';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import { useDialogFokus } from '../components/layout/useDialogFokus';
 import type { InternRefs } from '../components/NormText';
-import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben, randtitelKnoten } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeKantonSystematik,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
@@ -261,12 +261,18 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   // Vollwertige Abschnitts-Überschrift im Fliesstext: feine Overline mit dem
   // Aufzähler («Erster Abschnitt»), darunter der Sachtitel + Artikel-Bereich. Trägt
   // wieder die Standort-Info im Text (der frühere fliegende Running-Header entfällt).
-  const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
-  const regel = s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
+  // Randtitel-promotete Knoten (6b: «A. …», «II. …») sind feine Marginalien-
+  // Gruppierungen, KEINE amtlichen Teil/Titel/Abschnitt — darum durchgehend ruhig
+  // (Serif-Stimme der Randtitel, kein Trenn-Strich, keine grossen Stufengrössen),
+  // unabhängig von der Roh-Ebene. Die Verschachtelung trägt der Einzug-Strich
+  // (renderSektion). Reine Darstellung (§3/§13, nur vorhandene Tokens).
+  const mt = s.randtitel ? 'mt-4' : s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
+  const regel = s.randtitel ? '' : s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
   // Titelgrösse nach Tiefe (E, Auftrag David 26.6.2026): Fedlex-artig abgestuft —
   // oberste Stufe prominent (h2), dann h3, body-l, sonst base. font-semibold liegt
   // am Titel-Span (unten). Nur existierende Tokens (§13).
-  const titelStil = s.ebene === 0 ? 'text-h2' : s.ebene === 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : 'text-base';
+  const titelStil = s.randtitel ? 'text-base' : s.ebene === 0 ? 'text-h2' : s.ebene === 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : 'text-base';
+  const titelFont = s.randtitel ? 'font-serif font-semibold text-ink-800' : 'font-display font-semibold text-ink-900';
   return (
     <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
@@ -277,7 +283,7 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
               darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
               Steuerelement erkennbar. */}
           <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-500'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
-          <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
+          <span className={`${titelFont} ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
           {bereich && <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>}
         </span>
       </button>
@@ -412,6 +418,26 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     [eintraege, struktur],
   );
 
+  // Dokument-Position (Index des ersten enthaltenen Artikels) je Sektion — EINMAL
+  // bottom-up berechnet, damit renderSektion die Kinder + direkten Artikel eines
+  // Knotens in Dokument-Reihenfolge mischen kann, ohne pro Scroll-Render erneut den
+  // Teilbaum zu durchlaufen (6b: Knoten tragen seit der Randtitel-Promotion oft
+  // beides). Reine Darstellung (§3).
+  const sekPos = useMemo(() => {
+    const pos = new Map<string, number>();
+    const artPos = new Map<string, number>();
+    (eintraege ?? []).forEach((e, i) => artPos.set(e.artikel, i));
+    const walk = (s: Sektion): number => {
+      let min = Infinity;
+      for (const a of s.artikel) min = Math.min(min, artPos.get(a.artikel) ?? Infinity);
+      for (const k of s.kinder) min = Math.min(min, walk(k));
+      pos.set(s.id, min);
+      return min;
+    };
+    for (const s of sektionen) walk(s);
+    return pos;
+  }, [sektionen, eintraege]);
+
   // Dokument-Position je Artikel-Token (für den Artikel-Bereich «Art. 1–10» in den
   // Sektionsüberschriften).
   const artIndex = useMemo(() => {
@@ -420,31 +446,21 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return map;
   }, [eintraege]);
 
-  // Randtitel je Artikel als DELTA zum Vorartikel (amtliche Druck-/Fedlex-Manier):
-  // nur die gegenüber dem vorigen Artikel geänderten Randtitel-Stufen werden in der
-  // linken Marginalspalte gezeigt (Art. 1 alle, Art. 2 nur «2. Betreffend
-  // Nebenpunkte» …). Reine Darstellung — ersetzt den früheren fliegenden Tracker.
+  // Ueberschrift je Artikel im FLIESSTEXT: nur noch die artikel-EIGENE
+  // Sachueberschrift (das Randtitel-Blatt). Die uebergeordneten, von mehreren
+  // Artikeln geteilten Randtitel-Gruppierungen (A. ... -> II. ...) sind seit 6b
+  // eigene, einklappbare Gliederungs-Knoten (baueGliederungsbaum) und erscheinen
+  // als Sektions-Ueberschriften -- sie hier zusaetzlich je Artikel zu wiederholen,
+  // waere die vom Auftrag gewarnte Doppel-Darstellung. Hat der Artikel keine eigene
+  // Sachueberschrift (blatt = null, z. B. aufgehoben), faellt ArtikelLeser auf
+  // e.titel zurueck. Form wie die Such-/Volltextsicht erwartet ({ teile, ab }); das
+  // Blatt wird ueber margStufeStil(_, istBlatt=true) prominent gesetzt. Reine
+  // Darstellung (Sektions-Knoten zur Laufzeit abgeleitet, Sidecars unberuehrt).
   const margAnzeige = useMemo(() => {
-    // Wert = die gezeigten (geänderten) Stufen PLUS ihr absoluter Tiefen-Offset
-    // `ab` (Index der ersten gezeigten Stufe in der vollen Randtitel-Kette),
-    // damit die Anzeige je absoluter Tiefe einheitlich formatiert (margStufeStil).
     const map = new Map<string, { teile: string[]; ab: number }>();
-    let prev: string[] = [];
-    let prevGl = '';
     for (const e of eintraege ?? []) {
-      const m = struktur?.[e.artikel]?.marginalie ?? [];
-      // Delta nur INNERHALB derselben Gliederungs-Sektion: am Sektionsanfang den
-      // vollen Randtitel zeigen (prev zurücksetzen). Sonst fehlt dem ersten
-      // Artikel einer Sektion der gegen den — evtl. verborgenen — Vorartikel der
-      // VORigen Sektion weggekürzte Randtitel (Befund 26.6.2026: DBG Art. 18 zeigte
-      // sonst gar keinen, SVG 26→27 unterdrückte die obere Stufe). Reine Darstellung.
-      const gl = (struktur?.[e.artikel]?.gliederung ?? []).map((g) => g.label).join('');
-      if (gl !== prevGl) prev = [];
-      let i = 0;
-      while (i < m.length && i < prev.length && m[i] === prev[i]) i++;
-      map.set(e.artikel, { teile: m.slice(i), ab: i });
-      prev = m;
-      prevGl = gl;
+      const { blatt } = randtitelKnoten(struktur?.[e.artikel]?.marginalie ?? []);
+      map.set(e.artikel, { teile: blatt ? [blatt] : [], ab: 0 });
     }
     return map;
   }, [eintraege, struktur]);
@@ -859,17 +875,27 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   };
 
   // Jede Sektionsstufe ist klappbar (Fedlex-analog); Inhalt rendert nur offen.
+  // Randtitel-promotete Knoten (s.randtitel) bekommen einen ruhigen Einzug-Strich,
+  // damit die Buchstaben-/Ziffern-Gruppierung als Verschachtelung lesbar bleibt.
+  // Ein Knoten kann seit 6b DIREKTE Artikel UND Unter-Knoten tragen (z. B.
+  // «II. Handlungsfähigkeit» enthält Art. 12 direkt und die Untergruppe
+  // «2. Voraussetzungen») — beide werden in Dokument-Reihenfolge gemischt.
   const renderSektion = (s: Sektion, defOpen: boolean): ReactNode => {
     const auf = istOffen(s.id, defOpen);
+    // Kinder + direkte Artikel in EINER nach Dokument-Position sortierten Liste.
+    const inhalt = auf
+      ? [
+          ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true) })),
+          ...s.artikel.map((e) => ({
+            pos: artIndex.get(e.artikel) ?? 0,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />,
+          })),
+        ].sort((a, b) => a.pos - b.pos)
+      : [];
     return (
-      <section key={s.id} className="space-y-3">
+      <section key={s.id} className={`space-y-3 ${s.randtitel ? 'border-l border-line/60 pl-3' : ''}`}>
         <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} />
-        {auf && (
-          <div className="space-y-5">
-            {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />)}
-          </div>
-        )}
+        {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
   };
