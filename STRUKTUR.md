@@ -22,6 +22,32 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — Nacht-Session «jetzt los»: Materialien-Rubrik (Auftrag 5) + Gerichts-Dossier (Auftrag 9) (Worktree `nacht-materialien-2026-06-27`, NICHT deployt)
+
+Parallele, isolierte Nacht-Session (HANDOFF-NACHT-MATERIALIEN.md, §12). Beide
+Pakete erschöpft, Gate vorher und nachher grün, Golden byte-gleich, keine
+verbotene Datei berührt.
+
+- **Paket A — Auftrag 5 «Materialien» (Vollbau):** neue Top-Rubrik für amtliche
+  Ressourcen / Soft-Law (Verwaltungsverordnungen, kein Gesetzesrang, §8). Eigener
+  Namespace `src/lib/materialien/{typen,register,browse}.ts` (klont das normtext-Trio,
+  berührt es nie), Generator `scripts/materialien/material-manifest*.ts` +
+  `public/materialien/register.json` (deterministisch §2, sha-Provenienz) + Offline-Tor
+  `check:materialien` (im `check` verdrahtet). **28 Einträge, alle `nur-live-link`**, von
+  7 Bundesbehörden (ESTV·EDÖB·SECO·BSV·EHRA·FINMA·IGE), Fan-out-Recherche doppelt
+  verifiziert (URLs alle 200 geprüft). Seiten `/materialien` (Filter Behörde/Doktyp/Suche)
+  + `/materialien/:key` (Metadaten + Live-Link + normKeys-Verzahnung, KEIN Normtext §7).
+  Additiv verdrahtet: App-Route, Navigation, SEO + SEO-Detail (28 prerenderte Detailseiten
+  + Sitemap), vercel.json, Universal-Suche, `werkzeuge.ts` (`materialienFuerNorm` —
+  Burggraben Norm↔Behördenpraxis). Tests `materialien-register.test.ts`. Visuell geprüft
+  (Playwright hell/dunkel/mobil). Grundlage: `bibliothek/materialien/amtliche-ressourcen-2026-06-27.md`.
+- **Paket B — Auftrag 9 (read-only):** Recherche-Dossier BVGer/BStGer/BPatGer in
+  `bibliothek/rechtsprechung/neue-gerichte-dossier-2026-06-27.md` (Publikationsart,
+  Leitentscheid-Kriterium, entscheidsuche-Spider, Geschäftsnummer-Regex, Sprachen FR/IT,
+  Regel-Synthese am BGer-Muster, Kandidaten). Kein Code; steuert den Bau nach A2.
+- Maschinell kuratiert, **fachliche Abnahme David offen** (Zeitsperre bis 1.12.2026).
+  Deploy gesperrt — gebündelte §9-Freigabe am Ende.
+
 ## Session 27.6.2026 — JETZT-MACHEN Lane R · Batch 1: B2 (Konsistenz-Tor) + B1 (Render-Noise-Sweep) (Worktree, nicht deployt)
 
 «jetzt machen» — nur die ersten zwei Schritte B2+B1 von Lane R Batch 1 (A1/A2/A3
