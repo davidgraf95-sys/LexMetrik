@@ -62,9 +62,27 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, imTreffer, onSpringe }: {
+// Randtitel-Stufe einheitlich je ABSOLUTER Gliederungstiefe formatieren (Index
+// in der Randtitel-Kette: 0 = «A./B.» Abschnitt, 1 = «I./II.», 2 = «1./2.»,
+// …) — NICHT je Position im angezeigten Delta. Vorher entschied
+// `i === marg.length-1` (letzte gezeigte Stufe → fett), wodurch dieselbe Stufe
+// (z. B. «II. Handlungsfähigkeit») zwischen fett (wenn Blatt) und klein (wenn
+// Vorfahre eines tieferen Artikels) flippte (Befund David 26.6.2026). Jetzt
+// sieht jede Stufe überall gleich aus; tiefer = spezifischer = prominenter.
+// Reine Darstellung (§3), zur Laufzeit abgeleitet (kein Massen-Regen, F3).
+function margStufeStil(level: number): string {
+  if (level <= 0) return 'text-body-s font-medium uppercase tracking-wide text-ink-500';
+  if (level === 1) return 'text-body-s font-medium text-ink-700';
+  return 'text-base font-semibold text-ink-800';
+}
+
+function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
   marg?: string[];
+  // Absolute Tiefe der ERSTEN gezeigten Randtitel-Stufe (Delta-Offset). Damit
+  // wird die Stufe einheitlich je absoluter Tiefe formatiert, auch wenn nur
+  // die geänderten Stufen gezeigt werden. 0 (Default) = volle Kette (Suchsicht).
+  margBasis?: number;
   // Treffer-Modus (Auftrag David): Klick auf die Artikelnummer springt in den
   // VOLLTEXT zu diesem Artikel und löscht die Suche, statt nur innerhalb der
   // Trefferliste zu ankern.
@@ -158,9 +176,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {marg && marg.length > 0 ? (
             <div className="mb-1 space-y-0.5 font-serif leading-snug">
               {marg.map((m, i) => (
-                <div key={i} className={i === marg.length - 1
-                  ? 'text-base font-semibold text-ink-800'
-                  : 'text-body-s text-ink-600'}>{m}</div>
+                <div key={i} className={margStufeStil((margBasis ?? 0) + i)}>{m}</div>
               ))}
             </div>
           ) : e.titel ? (
@@ -404,7 +420,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // linken Marginalspalte gezeigt (Art. 1 alle, Art. 2 nur «2. Betreffend
   // Nebenpunkte» …). Reine Darstellung — ersetzt den früheren fliegenden Tracker.
   const margAnzeige = useMemo(() => {
-    const map = new Map<string, string[]>();
+    // Wert = die gezeigten (geänderten) Stufen PLUS ihr absoluter Tiefen-Offset
+    // `ab` (Index der ersten gezeigten Stufe in der vollen Randtitel-Kette),
+    // damit die Anzeige je absoluter Tiefe einheitlich formatiert (margStufeStil).
+    const map = new Map<string, { teile: string[]; ab: number }>();
     let prev: string[] = [];
     let prevGl = '';
     for (const e of eintraege ?? []) {
@@ -418,7 +437,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       if (gl !== prevGl) prev = [];
       let i = 0;
       while (i < m.length && i < prev.length && m[i] === prev[i]) i++;
-      map.set(e.artikel, m.slice(i));
+      map.set(e.artikel, { teile: m.slice(i), ab: i });
       prev = m;
       prevGl = gl;
     }
@@ -843,7 +862,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         {auf && (
           <div className="space-y-5">
             {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />)}
           </div>
         )}
       </section>
@@ -1078,7 +1097,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true))}
