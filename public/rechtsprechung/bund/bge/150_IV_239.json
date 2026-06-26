@@ -14,15 +14,237 @@
       "datum": "2024-03-21",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
       "legalArea": null,
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterin Koch, Bundesrichter Hurni, Kölz, Hofmann, Gerichtsschreiber Caprara",
+        "parteien": "Oberstaatsanwaltschaft des Kantons Zürich, Güterstrasse 33, Postfach, 8010 Zürich, Beschwerdeführerin, gegen A.________, vertreten durch Rechtsanwalt Ivo Harb, Beschwerdegegner",
+        "gegenstand": "Strafverfahren; Entsiegelung",
+        "vorinstanz": "Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 6. September 2022 (GT220070-L / U)"
+      },
       "regeste": {
         "text": "Art. 197 Abs. 1 lit. b StPO, Art. 221 Abs. 1 Ingress StPO; Anforderungen an den hinreichenden Tatverdacht bei der Anordnung von Zwangsmassnahmen; Abgrenzung zum dringenden Tatverdacht als Haftvoraussetzung. Unterschiedliche Anforderungen an die Intensität des Verdachts bei der Anordnung von Zwangsmassnahmen und bei der Anordnung von Untersuchungs- oder Sicherheitshaft (E. 3.2-3.4).\nRegeste\n Art. 197 al. 1 let. b CPP, art. 221 al. 1 in limine CPP; exigences relatives aux soupçons suffisants pour ordonner des mesures de contrainte; délimitation par rapport aux forts soupçons en tant que condition de détention. Exigences différentes quant à l'intensité des soupçons pour ordonner des mesures de contrainte et la mise en détention provisoire ou pour des motifs de sûreté (consid. 3.2-3.4).\nRegesto\n Art. 197 cpv. 1 lett. b CPP, art. 221 cpv. 1 preambolo CPP; esigenze relative ai sufficienti indizi di reato per ordinare provvedimenti coerciviti; delimitazione rispetto ai gravi indizi di reato quali condizione per la carcerazione. Esigenze differenti per quanto concerne l'intensità degli indizi di reato per ordinare provvedimenti coercitivi e per ordinare la carcerazione preventiva o di sicurezza (consid. 3.2-3.4).",
         "quelle": "opencaselaw"
       },
       "regesteAmtlich": true,
       "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Staatsanwaltschaft III des Kantons Zürich führt eine Strafuntersuchung betreffend Betrug etc. gegen A.________ (nachfolgend: Beschuldigter). Dieser ist alleiniger Verwaltungsrat der B.________ AG. Die Staatsanwaltschaft wirft ihm zusammengefasst vor, er habe durch fiktive Rechnungen der vom Mitbeschuldigten C.________ verwalteten D.________ AG die Bank E.________) am 9. Februar 2015 zur Vergabe eines durch ein Grundpfand auf seiner Liegenschaft U.________ gesicherten Baukredits im Betrag von Fr. 446'000.-- veranlasst. Zudem habe der Beschuldigte den am 17. März 2015 durch die Bank E.________ direkt auf das Konto der D.________ AG bei der Bank F.________ ausgezahlten Teilbeitrag von Fr. 312'750.10 auf kompliziertem Weg über mehrere durch C.________ verwaltete Scheinunternehmen bis auf einige tausend Franken an sich zurück transferieren lassen und keinen Anteil des Kreditbetrags für die Finanzierung von Bauleistungen verwendet. Zwar hätten im Jahr 2014 Bauleistungen an der betroffenen Liegenschaft stattgefunden, doch seien - abgesehen von der Erstellung einer Baueingabe - bislang keinerlei Hinweise bekannt, wer diese erbracht habe und mit welchem Geld diese finanziert worden seien. Es bestünden Verdachtsgründe dafür, dass diese Bauleistungen nur einen Bruchteil der Kreditsumme abdecken würden. Die aufwendige Verheimlichung der Finanzierung der realen Bauleistungen in Verbindung mit der Vorstrafe des Beschuldigten im Betäubungsmittelhandel begründe zudem einen zumindest hinreichenden Anfangstatverdacht dafür, dass er den Umbau mit aus Verbrechen stammendem Geld finanziert habe und die Ermittlung dieses Umstandes durch die fiktiven Rechnungen und den Baukredit habe erschweren wollen. Der Tatverdacht beruhe im Wesentlichen auf dem Geldfluss, den Verdachtsgründen gegen C.________ aufgrund der gesamten Ermittlungen in der verzweigten Untersuchung xxx sowie den Verhältnissen des Beschuldigten und der B.________ AG."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Am 29. Juni 2022 führte die Staatsanwaltschaft am Wohnort des Beschuldigten, in den Büroräumlichkeiten der B.________ AG und an deren Domizil Hausdurchsuchungen durch und stellte Papiere und Speichergeräte mit Aufzeichnungen sicher. Im Anschluss an die delegierte Einvernahme des Beschuldigten vom 29. Juni 2022 stellte dessen Verteidiger ein umfassendes Siegelungsbegehren. Am 14. Juli 2022 ersuchte die Staatsanwaltschaft beim Bezirksgericht Zürich, Zwangsmassnahmengericht, um Entsiegelung der sichergestellten Papiere und Speichergeräte. Mit Verfügung vom 6. September 2022 wies das Bezirksgericht Zürich, Zwangsmassnahmengericht, das Entsiegelungsgesuch mangels hinreichenden Tatverdachts ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Dagegen gelangt die Oberstaatsanwaltschaft des Kantons Zürich mit Beschwerde in Strafsachen an das Bundesgericht. Sie beantragt die Aufhebung der Verfügung des Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 6. September 2022 und die Gutheissung des Entsiegelungsgesuchs der Staatsanwaltschaft vom 14. Juli 2022. Das Bezirksgericht Zürich, Zwangsmassnahmengericht, verzichtet auf eine Stellungnahme. Der Beschwerdegegner beantragt die Abweisung der Beschwerde, unter Kosten- und Entschädigungsfolgen zulasten des Staates. Die Oberstaatsanwaltschaft hat auf die Einreichung einer Stellungnahme zur Vernehmlassung des Beschwerdegegners verzichtet."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Angefochten ist eine Verfügung des Zwangsmassnahmengerichts betreffend Entsiegelung, die in Anwendung der bis zum 31. Dezember 2023 gültigen Bestimmungen der StPO erging.\n\nDie Zuständigkeit des Zwangsmassnahmengerichts für den Entscheid über die Entsiegelung im Vorverfahren (aArt. 248 Abs. 3 lit. a StPO) wurde in der auf den 1. Januar 2024 in Kraft gesetzten Gesetzesreform (AS 2023 468) beibehalten (Art. 248a Abs. 1 lit. a StPO; siehe auch Botschaft vom 28. August 2019 zur Änderung der Strafprozessordnung [Umsetzung der Motion 14.3383, Kommission für Rechtsfragen des Ständerats, Anpassung der Strafprozessordnung], BBl 2019 6751). Ist ein Entscheid vor Inkrafttreten der StPO gefällt worden, so werden Rechtsmittel dagegen ohnehin nach bisherigem Recht und von den bisher zuständigen Behörden beurteilt (Art. 453 Abs. 1 StPO).\n\nDie hier streitige Verfügung datiert vom 6. September 2022, weshalb die dagegen erhobene Beschwerde altrechtlich zu beurteilen ist. Es handelt sich um einen kantonal letztinstanzlichen Entscheid betreffend eine Strafsache (vgl. Art. 78 Abs. 1 und Art. 80 Abs. 2 Satz 3 BGG i.V.m. aArt. 248 Abs. 3 lit. a StPO und Art. 380 StPO)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Die Oberstaatsanwaltschaft ist zur Beschwerde in Strafsachen legitimiert (Art. 81 Abs. 1 lit. b Ziff. 3 BGG i.V.m. Art. 381 Abs. 2 StPO; vgl. BGE 142 IV 196 E. 1.5.2; Urteile 1B_241/2022 vom 27. Juni 2023 E. 1; 1B_395/2022 vom 23. Juni 2023 E. 1 mit Hinweis)."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Die angefochtene Verfügung schliesst das Verfahren nicht ab. Sie stellt einen Zwischenentscheid dar, der weder die Zuständigkeit noch den Ausstand betrifft (vgl. Art. 92 BGG). Gemäss Art. 93 Abs. 1 lit. a BGG ist die Beschwerde dagegen prinzipiell nur zulässig, wenn der Zwischenentscheid einen nicht wieder gutzumachenden Nachteil bewirken kann.\n\nDie Oberstaatsanwaltschaft macht geltend, durch die verweigerte Entsiegelung drohten eine Beeinträchtigung der strafprozessualen Wahrheitsfindung im Vorverfahren und ein empfindlicher Beweisverlust. Es bestünden konkrete Anhaltspunkte dafür, dass der Beschwerdegegner gegenüber der Bank E.________ durch täuschende Angaben und Urkunden in den Jahren 2012 und 2015 Hypothekar-Kredite erhältlich gemacht und mit dem im Jahr 2015 erhaltenen Baukredit von Fr. 446'000.-- zusammen mit dem Mitbeschuldigten C.________ wirtschaftlich unsinnige Transaktionen mit Kontodurchläufen und Rundflüssen über mehrere Kapitalgesellschaften und Kapitaleinzahlungen veranstaltet habe. Diese Verdachtsgründe würden auf vertuschende Aktivitäten hinweisen. Da zudem diese Aktivitäten zur Befürchtung führten, dass die bei der Bank E.________ und weiteren Dritten vorhandenen Beweismittel manipuliert worden seien, bestehe der einzige aussichtsreiche Weg der Wahrheitsfindung darin, die bei Hausdurchsuchungen im Umfeld des Beschwerdegegners sichergestellten und nun gesiegelten Aufzeichnungen zu durchsuchen und auszuwerten.\n\nDie Oberstaatsanwaltschaft legt damit hinreichend dar, dass der Staatsanwaltschaft bei der Aufklärung eines Verbrechens oder Vergehens ein empfindlicher Beweisverlust droht. Damit ist das Erfordernis des nicht wieder gutzumachenden Rechtsnachteils (Art. 93 Abs. 1 lit. a BGG) erfüllt (vgl. Urteile 7B_173/2022 vom 23. Oktober 2023 E. 1; 1B_395/2022 vom 23. Juni 2023 E. 1). Da auch die übrigen Sachurteilsvoraussetzungen erfüllt sind, ist unter Vorbehalt der nachfolgenden Erwägungen auf die Beschwerde einzutreten."
+            },
+            {
+              "marke": "E. 1.4",
+              "tiefe": 2,
+              "text": "Neue Tatsachen und Beweismittel dürfen vor Bundesgericht nur so weit vorgebracht werden, als erst der Entscheid der Vorinstanz dazu Anlass gibt (Art. 99 Abs. 1 BGG).\n\nDie Beschwerde enthält neue Vorbringen, welche sich auf Akten stützten, die vor Erlass der angefochtenen Verfügung (am 6. September 2022) datieren und der Staatsanwaltschaft erst nach der Einreichung des Entsiegelungsgesuchs vom 14. Juli 2022 zugestellt worden sind, nämlich einen Brief der Bank E.________ vom 11. August 2022, die mit Schreiben vom 8. August 2022 beim Steueramt des Kantons Zürich beigezogene Steuerklärung 2011 der B.________ AG und die mit Schreiben vom 24. August 2022 beim Steueramt des Kantons Schwyz beigezogenen Steuerakten des Beschwerdegegners, bei denen sich sein Lohnausweis 2011 und die Veranlagungsverfügung 2011 der Steuerverwaltung des Kantons Schwyz befinden. Zudem sind der Beschwerde verschiedene Dokumente der Steuerbehörde der Kantone Zürich und Schwyz betreffend den Beschwerdegegner beigelegt, welche die Periode 2009-2019 umfassen.\n\nMit dem blossen Hinweis darauf, dass es \"ineffizient\" wäre, die aktuelle Aktenlage ausser Acht zu lassen, legt die Beschwerdeführerin nicht dar, dass und inwiefern die Voraussetzungen für die Einreichung neuer Beweismitteln vor Bundesgericht erfüllt wären (vgl. Art. 99 Abs. 1 BGG). Soweit sich die Beschwerde auf neue Vorbringen stützt, ist darauf nicht einzutreten."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Vorinstanz stellt im Wesentlichen auf den Beschluss vom 3. August 2022 ab, mit dem das Obergericht des Kantons Zürich (III. Strafkammer) das Vorliegen eines dringenden Tatverdachts verneint und die Beschwerde des Beschwerdegegners gegen die Anordnung von Untersuchungshaft gutheisst."
+            },
+            {
+              "marke": "E. 2.1.1",
+              "tiefe": 3,
+              "text": "Das Obergericht hält betreffend den\n\nBetrugsverdacht fest, es lasse sich tatsächlich nicht von der Hand weisen, dass die von der Staatsanwaltschaft im Antrag auf Anordnung von Untersuchungshaft angeführten Umstände den Eindruck vertuschender Aktivitäten erwecken würden. So sei unklar, ob die der Bank E.________ anlässlich der Hypothekenaufstockung vorgelegten sechs Baurechnungen der D.________ AG vom 30. Januar 2015 im Betrag von Fr. 312'750.10 echt gewesen seien und dem Gegenwert der tatsächlich erbrachten Leistungen entsprochen hätten. Ebenso falle auf, dass kurz nach der Auszahlung des Kredits ein ähnlich hoher Betrag wieder an den Beschwerdegegner (bzw. die G.________ AG) zurückgeflossen und verdachtsweise nicht bei der D.________ AG (als Entgelt für die angeblich ausgeführten Bauleistungen) verblieben sei. Gleichwohl müsse auch zu Beginn der Strafuntersuchung das Augenmerk auf die Merkmale des Betrugstatbestands gerichtet bleiben, insbesondere auf das Tatbestandsmerkmal des Vermögensschadens.\n\nEs sei unbestritten, so das Obergericht weiter, dass die fragliche Hypothekenerhöhung im Betrag von Fr. 446'000.-- zu einer Gesamtbelastung der fraglichen Liegenschaft im Umfang von Fr. 1'544'000.-- per 10. März 2015 geführt habe. Unstreitig sei auch, dass es an der fraglichen Liegenschaft effektiv zu\n\nwertsteigernden Umbau- bzw. Renovationsarbeiten gekommen sei. Unklar sei hingegen der Umfang der durchgeführten Arbeiten und/oder ob diese den sechs (mutmasslich) fiktiven Baurechnungen der D.________ AG vom 30. Januar 2015 im Gesamtbetrag von Fr. 312'750.10 wertmässig entsprochen hätten. Die Bank E.________ habe den Wert der Liegenschaft im November 2011 auf Fr. 1'760'000.-- geschätzt, worauf die Immobilienfirma H.________ den Verkaufspreis des Hauses \"im Renovationszustand\" in der Verkaufsdokumentation per 2005 auf Fr. 1'750'000.-- festgelegt habe.\n\nWenn aber die Liegenschaft bereits im Jahr 2011 einen geschätzten Marktwert von Fr. 1'760'000.-- aufgewiesen habe, könne - selbst bei vorsichtiger Einschätzung - nicht angenommen werden, dass die Hypothekarschuld im Nominalwert von (gesamthaft) Fr. 1'540'000.-- im Zeitpunkt der Aufstockung (d.h. im März 2015) erheblich gefährdet und infolgedessen in ihrem Wert herabgesetzt gewesen wäre. Dies umso weniger, als die (unbestrittenermassen) zwischenzeitlich (jedenfalls in erheblichem Umfang bzw. zumindest im Betrag von ca. Fr. 200'000.--) bereits erfolgten wertsteigernden Umbau- und Renovationsarbeiten und die (zweifellos erfolgte) allgemeine Wertsteigerung für Wohnbauland bzw. ein alleinstehendes Einfamilienhaus in der steuergünstigen Seegemeinde Küsnacht zwischen 2011 und 2015 dabei noch nicht berücksichtigt worden seien.\n\nBei dieser Sachlage lasse sich der Verdacht auf eine tatbestandsmässige Vermögensgefährdung zum Nachteil der Bank E.________ im März 2015 nicht mit der erforderlichen Dringlichkeit aufrechterhalten, da nicht von einem objektivierbaren Ausfallrisiko ausgegangen werden könne. Dies selbst dann, wenn die der Bank E.________ vorgelegten Baurechnungen der D.________ AG fiktiv gewesen seien und die Bank E.________ die Aufstockung der Hypothek vertraglich daran geknüpft habe, dass die Fr. 446'000.-- vollumfänglich in die Umbau- und Renovationsarbeiten fliessen würden. Es sei namentlich nicht entscheidend, ob die Bank E.________ die Aufstockung (rückblickend betrachtet) gewährt hätte, wenn sie gewusst hätte, dass mit den Bauabrechnungen (wie vermutet) etwas nicht habe stimmen können, und ebenso wenig, warum der Beschwerdegegner verdachtsweise fiktive Bauabrechnung eingereicht habe, wenn er die Hypothekenaufstockung ohnehin bekommen hätte. Der springende Punkt bleibe, dass der Rückzahlungsanspruch der Bank E.________ aufgrund der Vermögenslage des Beschwerdegegners im Zeitpunkt der Kreditgewährung vollständig gesichert erschienen habe. Damit einhergehend könne nicht von einem dringenden Tatverdacht hinsichtlich des Betrugsvorwurfs ausgegangen werden.\n\nDer Umstand, dass ein ähnlich hoher Betrag kurz nach der Kreditvergabe wieder an den Beschwerdegegner (bzw. an die G.________ AG) zurückgeflossen (anstatt bei der D.________ AG als Entgelt für die angeblichen Bauleistungen geblieben) sei, sei zwar merkwürdig, vermöge aber für sich betrachtet ebenfalls keinen dringenden Betrugsverdacht zu begründen. So vermöchte nicht schon die Vertragsverletzung (anderweitige Verwendung des Darlehens anstatt für Umbau/Renovation) für sich einen relevanten Schaden zu begründen. Vielmehr bliebe es auch in diesem Fall dabei, \"dass erst die Auswirkung auf den Nominalwert der Forderung für eine tatbestandsmässige Vermögensgefährdung massgeblich wäre\". Hierfür hätten zum Nachteil der Bank E.________ angesichts des Schätzwertes der Liegenschaft in Relation zur Höhe der grundpfandrechtlichen Belastung keine konkreten Anzeichen bestanden."
+            },
+            {
+              "marke": "E. 2.1.2",
+              "tiefe": 3,
+              "text": "Betreffend den\n\nGeldwäschereiverdacht erwägt das Obergericht, die Staatsanwaltschaft räume selber ein, dass die angeblich deliktische Geldquelle (noch) \"unbekannt\" sei. Eine Involvierung des Beschwerdegegners in den gewerbsmässigen Drogenhandel aufgrund der typischen Geldflüsse sei ebenfalls (erst noch) zu prüfen bzw. ein entsprechender Anfangstatverdacht werde durch die einschlägige Vorstrafe (lediglich) verstärkt. Effektiv mache die Staatsanwaltschaft keine konkrete Vortat namhaft. Der Vorwurf der Geldwäscherei erschöpfe sich in lediglich vagen Verdachtsmomenten, die - auch insgesamt betrachtet und trotz frühem Untersuchungsstadium - keinen dringenden Tatverdacht zu begründen vermöchten.\n\nWenn der innerhalb weniger Wochen auf Umwegen erfolgte Rückfluss von Fr. 400'000.-- in die G.________ AG (wie vermutet) eine Geldwäschereihandlung bedeuten solle, müsste der fragliche Betrag kausal auf eine verbrecherische Quelle bzw. Vortat zurückgeführt werden können. Hierfür lägen zurzeit keinerlei konkrete Anhaltspunkte vor. Die Staatsanwaltschaft vermute lediglich gewerbsmässigen Drogenhandel, der zudem aber noch geprüft werden müsse. Demgegenüber sei der Beschwerdegegner Unternehmer und besitze eine Firma im Bereich Sicherheitsdienstleistungen, die jährlich 1,5 Millionen Franken Umsatz generieren solle. Zwar stelle die Staatsanwaltschaft in Frage, dass es sich dabei um ein erfolgreiches Unternehmen handle. Die Unternehmung verweise auf ihrer Webseite jedoch auf diverse namhafte Referenzen, unter anderem auf das Festival I.________, und sie sei auch diesjährige Kooperationspartnerin dieses Festivals. Daraus, dass die Unternehmung höchstens zehn festangestellte Mitarbeitende habe, könne nicht auf ein wenig erfolgreiches, amateurhaftes Kleinstunternehmen geschlossen werden. Es sei vielmehr notorisch, dass im Securitybereich je nach Bedarf (z.B. für Grossanlässe) oft aus einem erweiterten Pool von Angestellten Personal für Teilzeiteinsätze rekrutiert werde."
+            },
+            {
+              "marke": "E. 2.1.3",
+              "tiefe": 3,
+              "text": "Die Vorinstanz erwägt, diesen obergerichtlichen Ausführungen sei \"beizupflichten\". Sie hält fest, das Obergericht habe zwar im Rahmen des Haftprüfungsverfahrens den dringenden Tatverdacht prüfen müssen, an welchen höhere Anforderungen zu stellen seien als an den vorliegend massgeblichen hinreichenden Tatverdacht. Gleichwohl genügten auch hierfür die Voraussetzungen nicht. Diesbezüglich könne \"vollumfänglich auf die obergerichtlichen Erwägungen\" verwiesen werden. Zusammenfassend - so die Vorinstanz - bestünden \"keine konkreten Verdachtsmomente, wonach der von der Staatsanwaltschaft geschilderte Lebenssachverhalt mit\n\nerheblicher Wahrscheinlichkeit die fraglichen Tatbestandsmerkmale des Betrugs- oder Geldwäschereitatbestands erfüllen könnte\"."
+            },
+            {
+              "marke": "E. 2.2",
+              "tiefe": 2,
+              "text": "Die Oberstaatsanwaltschaft kritisiert, die Vorinstanz stelle überhöhte Anforderungen an den hinreichenden Tatverdacht gemäss Art. 197 Abs. 1 lit. b StPO. Sie erkenne zwar, dass aus der Verneinung der Dringlichkeit des Tatverdachts nicht ohne Weiteres folge, dieser sei nicht hinreichend. Dennoch führe sie ohne jegliche Begründung aus, dass auch die Voraussetzungen für die Annahme eines hinreichenden Tatverdachts nicht erfüllt seien. Dabei verweise sie vollumfänglich auf die obergerichtlichen Erwägungen (im Beschluss vom 3. August 2022), wo jedoch weder eine Abgrenzung zum hinreichenden Tatverdacht erfolgt noch dieser verneint worden sei. Die Vorinstanz nehme eine der Prüfung einer Anklageschrift in unzulässigem Mass angenäherte Verdachtsprüfung vor.\n\nDas Obergericht, auf welches die Vorinstanz verweise, habe sich einzig mit dem Vermögensschaden als Tatbestandsmerkmal des Betrugs näher auseinandergesetzt. Das Vorliegen hinreichender Verdachtsmomente dafür, dass der Beschwerdegegner mit täuschenden Machenschaften die Auszahlung eines Kredits bewirkt habe, stelle das Obergericht zu Recht nicht in Frage. Der Verdacht, dass die täuschenden Aktivitäten die Bank E.________ zur Freigabe des Kredits veranlasst hätten, sei durch die internen Notizen der Bank deutlich belegt.\n\nDas Obergericht stütze seine Auffassung, wonach kein Vermögensschaden vorliege, weil der Rückzahlungsanspruch der Bank E.________ aufgrund der Vermögenslage des Beschwerdegegners im Zeitpunkt der Kreditgewährung vollständig gesichert erschiene, auf die vorläufige Beweislage, insbesondere auf den anscheinend aus dem Jahr 2011 stammenden PrintScreen mit der Angabe eines Marktwertes von Fr. 1'760'000.-- in den Akten der Bank E.________ und auf ein neues privates Gutachten des Beschwerdegegners. Der PrintScreen gebe jedoch keinen Aufschluss darüber, wie der Schätzwert von Fr. 1'760'000.-- zustande gekommen sei. Sei eine Strafuntersuchung - wie vorliegend - durch den dringenden Verdacht auf aufwendig inszenierte täuschende Machenschaften ausgelöst worden, bestehe Anlass, eine solche Bewertung durch geeignete Ermittlungen zu hinterfragen, bevor entlastend darauf abgestützt werden könne. Vorliegend sei das Personal der Bank E.________ über den PrintScreen und den Hintergrund des Marktwertes von Fr. 1'760'000.-- zu befragen.\n\nIn den Akten sei es klar belegt, dass die Bank E.________ den \"Kreditplafond\" als ausgeschöpft beurteilt und Wert darauf gelegt habe, die Bauabrechnung vor der Auszahlung des Kredits zu erhalten. Diese Sachlage sei als zumindest hinreichender Verdacht dafür zu werten, dass die Bauabrechnung Bedingung für die Kreditfreigabe gewesen sei. Gemäss der (weiter zu klärenden) Verdachtslage hätten die für die Bank E.________ entscheidenden und handelnden Personen den Willen gebildet, dem Beschwerdegegner den Kredit nur gestützt auf inhaltlich wahre Bauabrechnungen auszuzahlen. Die Kreditauszahlung gestützt auf die gemäss der Verdachtslage fiktiven Baurechnungen sei gegen diesen Willen geschehen. Der Betrugsschaden sei nicht dadurch beseitigt worden, dass mit der durch Irrtum veranlassten Vermögensdisposition eine \"objektiv gleichwertige Gegenleistung\" einhergehe. Denn diese Gegenleistung könne den Schaden nur dann ausgleichen, wenn die irrende Person diese Gegenleistung auch wolle, und zwar ohne Manipulation ihres Willens.\n\nVorliegend habe die Bank E.________ liquides Buchgeld hingegeben und dafür als Gegenleistung eine grundpfandgesicherte Darlehensforderung gegen den Beschwerdegegner erhalten. Sei die Bank E.________ - wofür die Verdachtslage spreche - vor der Auszahlung durch falsche Bauabrechnungen über den Wert des Pfandes getäuscht worden, habe sie nicht diejenige Gegenleistung erhalten, für die sie das Buchgeld habe hingeben wollen. Es bestehe ein gründlich abzuklärender Verdacht eines Vermögensschadens, wenn eine Bank mit falschen Angaben zur Kreditauszahlung veranlasst werde. Eine hinreichend gründliche Abklärung sei vorliegend ausstehend. Die Vorinstanz verneine den Verdacht eines Vermögensschadens zu Unrecht durch unzulässige vorgezogene Beweiswürdigung.\n\nEine weitere Verletzung von Bundesrecht liege darin, dass die Vorinstanz bei der Prüfung des Geldwäschereiverdachts gemäss Art. 305bis StGB die Geldwäschereiregulierung zu Unrecht nicht berücksichtige. Der Verdacht der Geldwäscherei beruhe im jetzigen Verfahrensstadium im Wesentlichen auf dem Wahrscheinlichkeitsschluss, dass wirtschaftlich sinnlose Transaktionen und Transaktionen mit vorgespiegelter Begründung ein Indiz dafür seien, dass damit die Einziehung von aus Verbrechen herrührenden Geldern vereitelt werden solle. Auf diesem Wahrscheinlichkeitsschluss beruhe ein wesentlicher Teil der Geldwäschereibekämpfung. Bei der Prüfung und Verneinung des hinreichenden Geldwäschereiverdachts sei zu Unrecht ausser Acht gelassen worden, dass die in der Geldwäschereigesetzgebung kodifizierten Verdachtsgründe auch für die Auslegung und Konkretisierung des hinreichenden Tatverdachts gemäss Art. 197 Abs. 1 lit. b StPO massgebend sein müssen. Die vorliegenden Verdachtsgründe würden mehrere Kriterien gemäss dem Anhang zur Geldwäschereiverordnung der FINMA vom 3. Juni 2015 (SR 955.033.0) erfüllen. Das Geldwäschereigesetz und die Verordnung dazu würden zu Makulatur, wollte man einen Geldwäschereiverdacht nur bei konkreten Hinweisen auf die Vortat bejahen. Es sei ausdrücklicher Wille des schweizerischen Gesetzgebers und entspreche einem internationalen Standard, nicht nur die auf eine ermittelte Straftat folgenden Transaktionen abzuklären, sondern auch die Hintergründe von bekanntgewordenen verdächtigen Transaktionen sorgfältig zu untersuchen. Dem folge auch die bundesgerichtliche Rechtsprechung zur internationalen Rechtshilfe in Strafsachen, wonach in einem Rechtshilfeersuchen wegen Geldwäschereiverdachts die Vortat nicht notwendigerweise zu erwähnen sei (BGE 129 II 97).\n\nFolge man der Sachverhaltsdarstellung des Beschwerdegegners, wonach im Jahr 2014 tatsächlich Bauleistungen in der Art und dem Umfang erfolgt seien, wie er es der Bank E.________ anhand der Rechnungen der D.________ AG dargelegt habe, so müsse es eine sonstige Erklärung dafür geben, dass er der Bank E.________ nicht die Rechnungen der Bauunternehmer vorgelegt habe, die den Umbau tatsächlich ausgeführt hätten, und stattdessen mit einem komplizierten Geldfluss vorgespiegelt habe, das Geld sei an die D.________ AG gegangen. Der Beschwerdegegner habe keine Erklärung abgegeben, welchem Zweck dieses Vorgehen dienen sollte. Eine naheliegende Erklärung für den Hintergrund dieser Finanzoperation gehe dahin, dass der tatsächliche Umbau mit deliktischem Geld finanziert worden sei. Die für gewerbsmässige Geldwäscherei typischen Geldflüsse legten es nahe, die Involvierung des Beschwerdegegners in den gewerbsmässigen Betäubungsmittelhandel zu prüfen. Der allein schon aufgrund der Transaktionsstruktur bestehende hinreichende Tatverdacht werde durch eine einschlägige Vorstrafe verstärkt: Gegen den Beschwerdegegner sei am 27. August 2009 ein Strafbefehl wegen des Kaufs von 170 kg Marihuana-Stauden zum Preis von Fr. 30'000.-- erlassen worden. Er sei ein Nebenbeschuldigter in einem insgesamt sehr grossen Verfahren betreffend gewerbsmässigen illegalen Cannabishandel gewesen. In Verbindung mit den äusserst verdächtigen Geldflüssen begründe dieser Strafbefehl den Verdacht, dass es sich dabei nur um die Spitze seiner Involvierung in den Betäubungsmittelhandel handle."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Nach Art. 246 StPO dürfen Schriftstücke, Ton-, Bild- und andere Aufzeichnungen, Datenträger sowie Anlagen zur Verarbeitung und Speicherung von Informationen durchsucht werden, wenn zu vermuten ist, dass sich darin Informationen befinden, die der Beschlagnahme unterliegen. Aufzeichnungen und Gegenstände, die nach Angabe der Inhaberin oder des Inhabers wegen eines Aussage- oder Zeugnisverweigerungsrechts oder aus anderen Gründen nicht durchsucht oder beschlagnahmt werden dürfen, sind zu versiegeln und dürfen von den Strafbehörden weder eingesehen noch verwendet werden (aArt. 248 Abs. 1 StPO). Stellt die Staatsanwaltschaft im Vorverfahren ein Entsiegelungsgesuch, hat das Zwangsmassnahmengericht im Entsiegelungsverfahren zu prüfen, ob von den Betroffenen angerufene schutzwürdige Geheiminteressen oder andere gesetzliche Entsiegelungshindernisse einer Durchsuchung entgegenstehen (aArt. 248 Abs. 2-4 StPO; BGE 144 IV 74 E. 2.2; 141 IV 77 E. 4.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Zwangsmassnahmen können nur ergriffen werden, wenn ein hinreichender Tatverdacht vorliegt (Art. 197 Abs. 1 lit. b StPO). Im Gegensatz zum erkennenden Sachrichter hat das für die Beurteilung von Zwangsmassnahmen im Vorverfahren zuständige Gericht bei der Überprüfung des hinreichenden Tatverdachts keine erschöpfende Abwägung sämtlicher belastender und entlastender Beweisergebnisse vorzunehmen. Bestreitet eine betroffene Person den Tatverdacht, ist vielmehr zu prüfen, ob aufgrund der bisherigen Untersuchungsergebnisse genügend konkrete Anhaltspunkte für eine Straftat und eine Beteiligung der beschuldigten Person an dieser Tat vorliegen. Hinweise auf eine strafbare Handlung müssen erheblich und konkreter Natur sein, um einen hinreichenden Tatverdacht begründen zu können (BGE 141 IV 87 E. 1.3.1; Urteile 7B_128/2023 vom 14. Dezember 2023 E. 2.1; 7B_184/2022 vom 30. November 2023 E. 2.1.1; je mit weiteren Hinweisen). Zur Frage des Tatverdachts bzw. zur Schuldfrage hat das Bundesgericht weder ein eigentliches Beweisverfahren durchzuführen noch dem erkennenden Sachgericht vorzugreifen (Urteile 7B_161/2022 vom 5. Oktober 2023 E. 2.2; 1B_208/2022 vom 14. April 2023 E. 3.1; vgl. BGE 143 IV 330 E. 2.1 betreffend den dringenden Tatverdacht im Haftverfahren)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Die Anordnung von Untersuchungs- und Sicherheitshaft setzt das Vorliegen eines dringenden Tatverdachts voraus (Art. 221 Abs. 1 Ingress StPO). Erforderlich sind konkrete Verdachtsmomente, wonach das untersuchte Verhalten mit erheblicher Wahrscheinlichkeit die fraglichen Tatbestandsmerkmale erfüllen könnte (BGE 143 IV 330 E. 2.1, 316 E. 3.1; 137 IV 122 E. 3.2; Urteile 7B_53/2024 vom 7. Februar 2024 E. 6.1; 7B_1028/2023 vom 12. Januar 2024 E. 7.1; je mit Hinweisen). In einzelnen nicht amtlich publizierten Urteilen hat das Bundesgericht dieselbe Formulierung auch bei der Überprüfung des hinreichenden Tatverdachts (im Sinne von Art. 197 Abs. 1 lit. b StPO) im Entsiegelungsverfahren verwendet (vgl. z.B. Urteile 1B_273/2022 vom 22. November 2022 E. 6.1; 1B_656/2021 vom 4. August 2022 E. 9.2; 1B_427/2021 vom 21. Januar 2022 E. 4.2; 1B_435/2021 vom 8. Dezember 2021 E. 2.1), was in der Lehre teils auf Kritik gestossen ist. Konkret wurde dagegen eingewendet, dass das Erfordernis von \"konkreten Verdachtsmomenten, wonach das inkriminierte Verhalten mit erheblicher Wahrscheinlichkeit die fraglichen Tatbestandsmerkmale erfüllen könnte\", ein zu hoher Standard sei. Da die Entsiegelung deutlich weniger eingriffsintensiv sei als die Untersuchungshaft, seien hier an den Tatverdacht weniger hohe Anforderungen zu stellen. Es sei daher sachgerechter, darauf abzustellen, dass aufgrund einer vorläufigen Einschätzung von einer gewissen Wahrscheinlichkeit der Strafhandlungen ausgegangen werden könne (DAMIAN K. GRAF, Praxishandbuch zur Siegelung, 2022, Rz. 473 mit Verweis auf die Urteile 1B_322/2021 vom 22. Dezember 2021 E. 2.2 und 1B_439/2020 vom 21. Januar 2021 E. 7.1)."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "In der Tat setzen nichtfreiheitsentziehende strafprozessuale Zwangsmassnahmen nach der bundesgerichtlichen Rechtsprechung nicht die gleich hohe Intensität eines Tatverdachts voraus wie Untersuchungs- und Sicherheitshaft (so etwa ausdrücklich Urteile 1B_691/2021 vom 21. Juli 2022 E. 2.2; 1B_193/2017 vom 24. August 2017 E. 3.3; 1B_516/2011 vom 17. November 2011 E. 2.1; 1B_212/2010 vom 22. September 2010 E. 3.1; 1B_120/2008 vom 24. Oktober 2008 E. 4). Vor diesem Hintergrund ist es ungenau, bei der Überprüfung des hinreichenden Tatverdachts im Sinne von Art. 197 Abs. 1 lit. b StPO auf das Kriterium abzustellen, das in der publizierten Rechtsprechung des Bundesgerichts im Zusammengang mit der Überprüfung des dringenden Tatverdachts im Haftverfahren entwickelt worden ist. Richtigerweise ist für die Annahme eines hinreichenden Tatverdachts im Entsiegelungsverfahren nur, aber immerhin das Vorliegen erheblicher und konkreter Hinweise auf eine strafbare Handlung verlangt."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Gemäss Art. 146 Abs. 1 StGB macht sich des Betrugs schuldig, wer in der Absicht, sich oder einen andern unrechtmässig zu bereichern, jemanden durch Vorspiegelung oder Unterdrückung von Tatsachen arglistig irreführt oder ihn in einem Irrtum arglistig bestärkt und so den Irrenden zu einem Verhalten bestimmt, wodurch dieser sich selbst oder einen andern am Vermögen schädigt.\n\nEin Vermögensschaden liegt vor, wenn das Vermögen des Täuschungsopfers nach Vornahme der irrtumsbedingten Vermögensverfügung in seinem Gesamtwert - durch Verringerung der Aktiven, Vermehrung der Passiven, Nicht-Verminderung der Passiven oder Nicht-Vermehrung der Aktiven - tatsächlich verringert ist, wobei ein vorübergehender Schaden genügt (BGE 147 IV 73 E. 6.1; 142 IV 346 E. 3.2; Urteil 6B_1161/2021 vom 21. April 2023 E. 8.9.4; je mit Hinweisen). Unter wirtschaftlichen Gesichtspunkten ist das Vermögen auch dann vermindert, wenn es in seinem wirtschaftlichen Wert herabgesetzt ist, mithin wenn der Gefährdung im Rahmen einer sorgfältigen Bilanzierung durch Wertberichtigung oder Rückstellung Rechnung getragen werden muss (BGE 142 IV 346 E. 3.2; 129 IV 124 E. 3.1; 122 IV 279 E. 2a; Urteil 6B_219/2021 vom 19. April 2023 E. 4.2, nicht publ. in: BGE 149 IV 248; je mit Hinweisen). Massgebend für den Zeitpunkt der Schädigung ist der Abschluss des Verpflichtungsgeschäfts. Eine vorübergehende Schädigung genügt. Späterer Ersatz schliesst Betrug mithin nicht aus. Da der Schaden im Risiko begründet liegt, vermag den Täter auch eine Rückzahlung nicht zu entlasten (vgl. Urteile 6B_219/2021 vom 19. April 2023 E. 4.2, nicht publ. in: BGE 149 IV 248; 6B_150/2017 vom 11. Januar 2018 E. 3.3, nicht publ. in: BGE 144 IV 52; je mit Hinweisen).\n\nBei einem Kreditbetrug täuscht der Borger beim Abschluss des Darlehensvertrags über seine Rückzahlungsfähigkeit, d.h. seine Kreditwürdigkeit und demzufolge die Sicherheit der Forderung bzw. über seinen Rückzahlungswillen. Der Vermögensschaden ist gegeben und der Betrug somit vollendet, wenn der Borger entgegen der beim Darleiher geweckten Erwartungen im Zeitpunkt der Kreditgewährung dermassen wenig Gewähr für eine vertragsgemässe Rückzahlung des Geldes bietet, dass die Darlehensforderung erheblich gefährdet und infolgedessen in ihrem Wert wesentlich herabgesetzt ist (vgl. BGE 102 IV 84 E. 4; Urteile 6B_219/2021 vom 19. April 2023 E. 4.2, nicht publ. in: BGE 149 IV 248; 6B_236/2020 vom 27. August 2020 E. 4.3.1; 6B_383/2019 vom 8. November 2019 E. 6.5.1, nicht publ. in: BGE 145 IV 470; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Den Tatbestand der Geldwäscherei nach Art. 305bis Ziff. 1 StGB erfüllt unter anderem, wer eine Handlung vornimmt, die geeignet ist, die Ermittlung der Herkunft, die Auffindung oder die Einziehung von Vermögenswerten zu vereiteln, die, wie er weiss oder annehmen muss, aus einem Verbrechen herrühren. Tathandlung der Geldwäscherei ist jeder Vorgang, der geeignet ist, den Zugriff der Strafbehörden auf die verbrecherisch erlangten Vermögenswerte zu vereiteln (BGE 149 IV 248 E. 6.3; 145 IV 335 E. 3.1; 144 IV 172 E. 7.2.2; je mit Hinweisen). Der Tatbestand verlangt aufgrund seines akzessorischen Charakters neben dem Nachweis der Geldwäschereihandlung sowohl den Nachweis der Vortat als auch den Nachweis, dass die Vermögenswerte aus eben dieser Vortat herrühren (BGE 145 IV 335 E. 3.1 mit Hinweis). Den Tatbestand der Geldwäscherei kann auch erfüllen, wer Vermögenswerte wäscht, die er selber durch ein Verbrechen erlangt hat (BGE 149 IV 248 E. 6.3; 144 IV 172 E. 7.2; Urteil 6B_604/2022 vom 11. Januar 2024 E. 7.2.1; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Die Beschwerde der Oberstaatsanwaltschaft ist begründet:"
+            },
+            {
+              "marke": "E. 4.3.1",
+              "tiefe": 3,
+              "text": "Es trifft zwar zu, dass das Obergericht bei der Beurteilung des Antrags auf Anordnung von Untersuchungshaft einen dringenden Tatverdacht gegen den Beschwerdegegner in Bezug auf Betrug und Geldwäscherei verneint hat (vgl. oben E. 2.1.1 f.). Dieser Entscheid war für die Vorinstanz jedoch nicht bindend, zumal es sich beim Entsiegelungsverfahren um ein eigenständiges Verfahren handelt und für die Entsiegelung im Gegensatz zur Untersuchungshaft ein hinreichender statt ein dringender Tatverdacht genügt (vgl. oben E. 3.2 f.; vgl. dazu auch Urteil 1B_193/2021 vom 6. Dezember 2021 E. 5.3 betreffend Überwachung des Fernmeldeverkehrs).\n\nAus den obergerichtlichen Ausführungen (vgl. oben E. 2.1.1) geht hervor, dass das Obergericht durchaus von erheblichen und konkreten Hinweisen auf strafbare Handlungen ausging. So führte es aus, es lasse sich nicht von der Hand weisen, dass die von der Staatsanwaltschaft im Antrag auf Anordnung von Untersuchungshaft angeführten Umstände den Eindruck vertuschender Aktivitäten erwecken würden. Es sei unklar, ob die der Bank E.________ anlässlich der Hypothekenaufstockung vorgelegten sechs Baurechnungen der D.________ AG vom 30. Januar 2015 im Betrag von Fr. 312'750.10 echt gewesen seien und dem Gegenwert der tatsächlich erbrachten Bauleistungen entsprochen hätten. Ebenso falle auf, dass kurz nach Auszahlung des Kredits ein ähnlich hoher Betrag wieder an den Beschwerdegegner (bzw. die G.________ AG) zurückgeflossen und verdachtsweise nicht bei der D.________ AG (als Entgelt für die angeblich ausgeführten Bauleistungen) verblieben sei. Aufgrund dieser obergerichtlichen Ausführungen, auf welche die Vorinstanz \"vollumfänglich\" verweist (vgl. oben E. 2.1.3), hätte sie das Vorliegen eines hinreichenden Tatverdachts nicht ohne Weiteres verneinen dürfen."
+            },
+            {
+              "marke": "E. 4.3.2",
+              "tiefe": 3,
+              "text": "Die Staatsanwaltschaft hat im Entsiegelungsgesuch ausführlich und nachvollziehbar dargelegt, weshalb sie bei der vorliegenden Sachlage den Beschwerdegegner des Betrugs verdächtigt. Dabei war sie (insbesondere angesichts des frühen Untersuchungsstadiums) nicht gehalten, alle Tatbestandsmerkmale von Art. 146 StGB detailliert abzuhandeln (vgl. Urteile 1B_395/2022 vom 23. Juni 2023 E. 3.5; 1B_656/2021 vom 4. August 2022 E. 9.5). Vielmehr hatte die Staatsanwaltschaft darzulegen, ob erhebliche und konkrete Hinweise auf eine strafbare Handlung vorlagen (vgl. oben E. 3.4), und das hat sie getan.\n\nDie Beschwerdeführerin bringt betreffend den Vermögensschaden zutreffend vor, dass Anlass bestehe, die in den Akten der Bank E.________ und im privaten Gutachten des Beschwerdegegners erfolgte Bewertung des Marktwertes der fraglichen Liegenschaft durch geeignete Ermittlungen zu hinterfragen, bevor entlastend darauf abgestellt werden könne, wenn eine Strafuntersuchung - wie vorliegend - durch den dringenden Tatverdacht auf aufwendig inszenierte täuschende Machenschaften ausgelöst worden sei (vgl. oben E. 2.2). Ziel des Entsiegelungsgesuches ist es, die dargelegten Verdachtsgründe mithilfe der versiegelten Unterlagen zu erhellen. Der Strafbehörde, welche den Endentscheid zu fällen haben wird, ist dabei nicht vorzugreifen (vgl. oben E. 3.2). Indem die Vorinstanz unter Verweis auf den obergerichtlichen Beschluss vom 3. August 2022 das Vorliegen eines Vermögensschadens bei der Bank E.________ verneint, überspannt sie im vorliegenden Fall die Anforderungen an den Nachweis eines hinreichenden Tatverdachts."
+            },
+            {
+              "marke": "E. 4.3.3",
+              "tiefe": 3,
+              "text": "Gemäss der bundesgerichtlichen Rechtsprechung kann ein Geldwäschereiverdacht insbesondere vorliegen, wenn von den Strafbehörden eine auffällige Verknüpfung geldwäschereitypischer Vorkehren dargetan wird. Dies ist etwa der Fall, wenn hohe Geldbeiträge über komplexe Kontenbewegungen unter zahlreichen involvierten Personen und Firmen in verschiedenen Ländern (darunter typischerweise \"Offshore\"-Domizilien) verschoben wurden und für diese komplizierten Transaktionen kein plausibler wirtschaftlicher Grund ersichtlich ist (BGE 129 II 97 E. 3.3; siehe auch BGE 142 IV 207 E. 7.2.2; 120 IV 323 E. 3d; Urteile 1B_125/2022 vom 6. Dezember 2022 E. 4.2; 1B_564/2021 vom 31. August 2022 E. 3.4 mit Hinweisen).\n\nZwar liegt im vorliegenden Fall kein grenzüberschreitender Sachverhalt im Sinne der zitierten Rechtsprechung vor. Da der Tatbestand der Geldwäscherei jedoch zwei voneinander unabhängige Elemente enthält (Vereitelungshandlung einerseits und Vortat andererseits), reicht es gemäss bundesgerichtlicher Rechtsprechung in einer ersten Phase der Strafuntersuchung aus, dass ein hinreichender Tatverdacht bloss bezüglich einem der beiden Elemente besteht, es jedoch aufgrund der besonderen Umstände im Sinne eines Anfangsverdachts naheliegt, dass auch das andere Tatbestandsmerkmal erfüllt sein dürfte (Urteil 1P.64/2007 vom 29. Mai 2007 E. 5.1; vgl. auch Urteil 1B_195/2018 vom 7. Juni 2018 E. 3.2).\n\nDie Staatsanwaltschaft hat im Entsiegelungsgesuch - insbesondere aufgrund der erfolgten verdächtigen Geldflüsse - das Vorliegen geldwäschereitypischer Vorkehren nachvollziehbar dargelegt. Dass sie in diesem frühen Zeitpunkt der Strafuntersuchung aufgrund der einschlägigen Vorstrafe des Beschwerdegegners wegen des Kaufs von 170 kg Marihuana-Stauden von einem hinreichenden Tatverdacht betreffend gewerbsmässigen Betäubungsmittelhandel ausgeht, steht im Einklang mit der dargelegten bundesgerichtlichen Rechtsprechung und ist nicht zu beanstanden.\n\nDas Obergericht, auf dessen Erwägungen die Vorinstanz \"vollumfänglich\" verweist, hat im Übrigen erwogen, dass die Staatsanwaltschaft als Vortat gewerbsmässigen Drogenhandel vermute, welcher \"aber noch geprüft werden müsse\". Daraus folgt, dass auch nach Einschätzung des Obergerichts für die Beurteilung bzw. den Nachweis der Geldwäschereivortat weitere Untersuchungen erforderlich sind. Indem die Vorinstanz (implizit) zum Ergebnis gelangt, mangels Nachweises der Vortat sei das Vorliegen eines hinreichenden Geldwäschereiverdachts zu verneinen, überspannt sie die Anforderungen an den Nachweis eines hinreichenden Tatverdachts im Untersuchungsstadium."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist gutzuheissen, soweit darauf einzutreten ist. Die Sache ist daher an die Vorinstanz zur Prüfung der weiteren Entsiegelungsvoraussetzungen zurückzuweisen. Bei diesem Ausgang des Verfahrens sind die Gerichtskosten dem in der Sache unterliegenden Beschwerdegegner aufzuerlegen (Art. 66 Abs. 1 BGG). Parteientschädigungen sind keine zuzusprechen (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen, soweit darauf eingetreten wird. Die Verfügung des Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 6. September 2022 wird aufgehoben und die Sache zu neuer Entscheidung an die Vorinstanz zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 2'000.-- werden dem Beschwerdegegner auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien und dem Bezirksgericht Zürich, Zwangsmassnahmengericht, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 21. März 2024\n\nIm Namen der II. strafrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Abrecht\n\nDer Gerichtsschreiber: Caprara"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen, soweit darauf eingetreten wird. Die Verfügung des Bezirksgerichts Zürich, Zwangsmassnahmengericht, vom 6. September 2022 wird aufgehoben und die Sache zu neuer Entscheidung an die Vorinstanz zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 2'000.-- werden dem Beschwerdegegner auferlegt.",
+        "Dieses Urteil wird den Parteien und dem Bezirksgericht Zürich, Zwangsmassnahmengericht, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 197 Abs. 1 CPP",
+        "Art. 197 Abs. 1 STPO",
+        "Art. 246 STPO"
+      ],
+      "normKeys": [
+        "STPO",
+        "STGB"
+      ],
+      "zitierteEntscheide": [
+        "1B_120/2008",
+        "1B_125/2022",
+        "1B_193/2017",
+        "1B_193/2021",
+        "1B_195/2018",
+        "1B_208/2022",
+        "1B_212/2010",
+        "1B_241/2022",
+        "1B_273/2022",
+        "1B_322/2021",
+        "1B_395/2022",
+        "1B_427/2021",
+        "1B_435/2021",
+        "1B_439/2020",
+        "1B_516/2011",
+        "1B_564/2021",
+        "1B_656/2021",
+        "1B_691/2021",
+        "1P.64/2007",
+        "6B_1161/2021",
+        "6B_150/2017",
+        "6B_219/2021",
+        "6B_236/2020",
+        "6B_383/2019",
+        "6B_604/2022",
+        "7B_1028/2023",
+        "7B_128/2023",
+        "7B_161/2022",
+        "7B_172/2022",
+        "7B_173/2022",
+        "7B_184/2022",
+        "7B_53/2024",
+        "BGE 102 IV 84",
+        "BGE 129 II 97",
+        "BGE 141 IV 87",
+        "BGE 142 IV 196",
+        "BGE 142 IV 207",
+        "BGE 142 IV 346",
+        "BGE 143 IV 330",
+        "BGE 144 IV 52",
+        "BGE 144 IV 74",
+        "BGE 145 IV 335",
+        "BGE 145 IV 470",
+        "BGE 147 IV 73",
+        "BGE 149 IV 248"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=130&highlight_docid=atf%3A%2F%2F150-IV-239%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "70bfc38bf75d32a86f5ec502be7496f3bd11d7fdf80161a5adf9093b9bc88366",
+      "sha": "e77e993cf980949220f21f72b9a06030e3cd5b8fb00f80d8a92f478bd2cfad83",
+      "auszugAbschnitte": [
         {
           "typ": "erwaegung",
           "bloecke": [
@@ -49,24 +271,10 @@
           ]
         }
       ],
-      "dispositivOrders": [],
-      "zitierteNormen": [
-        "Art. 197 Abs. 1 CPP",
-        "Art. 197 Abs. 1 STPO",
-        "Art. 246 STPO"
-      ],
-      "normKeys": [
-        "STPO"
-      ],
-      "zitierteEntscheide": [],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=130&highlight_docid=atf%3A%2F%2F150-IV-239%3Ade&number_of_ranks=177&azaclir=clir",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "70bfc38bf75d32a86f5ec502be7496f3bd11d7fdf80161a5adf9093b9bc88366",
-      "sha": "97b3f0d64c84c74b598e79180af73d1338396bdea5af76a892a7f62ec0fc9a8e",
-      "azaUrteil": null
+      "azaUrteil": {
+        "aktenzeichen": "7B_172/2022",
+        "key": "bger_7B_172_2022"
+      }
     }
   ]
 }

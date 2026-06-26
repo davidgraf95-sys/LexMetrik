@@ -14,10 +14,15 @@ import type { NormEntscheidIndex } from '../../src/lib/rechtsprechung/norm-index
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
-// Mengen-Budget (empirisch nachgezogen): 23.6.2026 von 8 → 20 MB, weil die 265 deutschen
-// BGE-Leitentscheide ab 2024 (Volltexte ~22 KB) den P0-Demo-Wert sprengen. Bewusst mit
-// Reserve über dem Ist (~7 MB), aber als Deckel gegen unbeabsichtigte Massen-Importe.
-const BUDGET_MB = 20;
+// Mengen-Budget (empirisch nachgezogen): 23.6.2026 8 → 20 MB; 26.6.2026 20 → 35 MB, weil
+// jeder BGE-Leitentscheid nun ZWEI Texte trägt (voller Urteils-Body + amtlicher
+// Sammlungs-Auszug) für den UI-Umschalter. Bewusst angehoben (Entscheid David 26.6.):
+// der Browse-Index register.json bleibt klein (Metadaten); die Bodies sind lazy geladene
+// statische Assets. Bleibt Deckel gegen unbeabsichtigte Massen-Importe, auf realem Niveau.
+// Freigabe David 26.6.2026: dieser Deckel wird pro Aufgabe FLIESSEND gesetzt (Ist +
+// grosszügige Reserve) und bei Bedarf deliberat angehoben — er bremst Unfälle, limitiert
+// aber nicht künstlich. Bei Korpus-Ausbau bewusst nachziehen.
+const BUDGET_MB = 35;
 const AHV = /\b756\.\d{4}\.\d{4}\.\d{2}\b/;   // CH-Sozialversicherungsnummer (darf nicht vorkommen)
 
 const fehler: string[] = [];
@@ -44,6 +49,7 @@ function main() {
   }
   const manifest = JSON.parse(readFileSync(join(PUB, 'register.json'), 'utf8')) as EntscheidManifest;
   const keys = new Set(manifest.entscheide.map((e) => e.key));
+  const azaKeys: Record<string, string[]> = {};   // aza-Key → BGE-Keys (Kollisions-Backstop)
 
   for (const e of manifest.entscheide) {
     // Provenienz (§7)
@@ -55,6 +61,9 @@ function main() {
     // ein versehentliches Wiedereinführen des '!!regeste'-Glieds in der Klassifizierung).
     if (e.leitcharakter === 'leitentscheid' && !e.bgeReferenz) {
       fehler.push(`${e.key}: 'leitentscheid' ohne bgeReferenz — kein amtlicher BGE (§8)`);
+    }
+    if (e.bgeReferenz && e.leitcharakter !== 'leitentscheid') {
+      fehler.push(`${e.key}: bgeReferenz ohne 'leitentscheid' — Invariante verletzt (§8)`);
     }
     if (e.kuratierung === 'geprueft') warn.push(`${e.key}: kuratierung 'geprueft' ohne Abnahme? (P0 erwartet 'maschinell')`);
     if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {
@@ -71,6 +80,18 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // BGE-Umschalter-Integrität (§8, Bug-Check 26.6.): auszugAbschnitte ⟹ azaUrteil; und
+    // der Volltext darf nicht deutlich kürzer sein als der Auszug (Inversion = falscher aza).
+    if (snap.auszugAbschnitte?.length && !snap.azaUrteil) {
+      fehler.push(`${e.key}: auszugAbschnitte ohne azaUrteil — Umschalter-Invariante verletzt (§8)`);
+    }
+    if (snap.azaUrteil) {
+      (azaKeys[snap.azaUrteil.key] ??= []).push(e.key);
+      const len = (a?: typeof snap.abschnitte) => (a ?? []).reduce((n, ab) => n + ab.bloecke.reduce((m, b) => m + b.text.length, 0), 0);
+      if (snap.auszugAbschnitte?.length && len(snap.abschnitte) < len(snap.auszugAbschnitte) * 0.85) {
+        warn.push(`${e.key}: Volltext kürzer als Auszug (mögliche aza-Fehlzuordnung/Inversion)`);
+      }
+    }
     // Vollständigkeits-/Plausibilitäts-Warnungen (P4, nicht-blockierend).
     const sv = snap.abschnitte.find((a) => a.typ === 'sachverhalt');
     if (sv && sv.vollstaendig === false) warn.push(`${e.key}: Sachverhalt nur Auszug (full_text-Schnitt fehlgeschlagen?)`);
@@ -80,6 +101,12 @@ function main() {
     const tops = (snap.abschnitte.find((a) => a.typ === 'erwaegung')?.bloecke ?? [])
       .map((b) => Number(/(\d+)/.exec(b.marke ?? '')?.[1] ?? NaN)).filter(Number.isFinite);
     for (let i = 1; i < tops.length; i++) if (tops[i] - tops[i - 1] >= 3) { warn.push(`${e.key}: Erwägungs-Top-Sprung ${tops[i - 1]}→${tops[i]}`); break; }
+  }
+
+  // aza-Kollision (§8-Backstop, Bug-Check 26.6.): kein aza-Urteil darf von ZWEI BGE als
+  // Volltext beansprucht werden — sonst ist mindestens eine Zuordnung falsch.
+  for (const [k, refs] of Object.entries(azaKeys)) {
+    if (refs.length > 1) fehler.push(`aza-Kollision: ${k} von mehreren BGE beansprucht (${refs.join(', ')}) — Fehlzuordnung (§8)`);
   }
 
   // Norm-Index: jede referenzierte key ⊆ Manifest

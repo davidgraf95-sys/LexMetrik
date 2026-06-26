@@ -95,6 +95,13 @@ export interface EntscheidSnapshot {
   /** true nur beim amtlich publizierten BGE; sonst maschinelle Zusammenfassung. */
   regesteAmtlich: boolean;
   abschnitte: EntscheidAbschnitt[];  // sachverhalt / erwaegung / dispositiv
+  /**
+   * Nur bei BGE mit aufgelöstem Volltext: der amtliche BGE-Sammlungstext (der
+   * publizierte «Auszug aus dem Urteil»). `abschnitte` trägt dann das VOLLSTÄNDIGE
+   * unterliegende Urteil, `auszugAbschnitte` den kuratierten Sammlungs-Auszug — die
+   * UI bietet einen Umschalter zwischen beiden. null/leer ⇒ kein separater Auszug.
+   */
+  auszugAbschnitte?: EntscheidAbschnitt[];
   dispositivOrders: string[];
 
   // ── Verzahnung ──

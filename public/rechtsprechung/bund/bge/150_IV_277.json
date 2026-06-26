@@ -14,15 +14,232 @@
       "datum": "2024-03-18",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
       "legalArea": "public",
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterin Koch, Bundesrichter Hurni, Kölz, Hofmann, Gerichtsschreiber Caprara",
+        "parteien": "A.________, vertreten durch Rechtsanwälte Alexander Kunz und Lea Leiser, Beschwerdeführerin, gegen 1. Generalstaatsanwaltschaft des Kantons Bern, Nordring 8, Postfach, 3001 Bern, 2. Sicherheitsdirektion des Kantons Bern (SID), Kramgasse 20, 3011 Bern, Beschwerdegegnerinnen",
+        "gegenstand": "Vollzug der Strafe in der besonderen Vollzugsform des Electronic Monitoring (Front Door)",
+        "vorinstanz": "Obergerichts des Kantons Bern, 2. Strafkammer, vom 16. März 2023 (SK 22 584)"
+      },
       "regeste": {
         "text": "Art. 79b Abs. 1 lit. a StGB; elektronische Überwachung; Bemessung der Maximalstrafe bei teilbedingten Freiheitsstrafen. Für die Bemessung der Maximaldauer von 12 Monaten für den Vollzug einer Freiheitsstrafe in der Form der elektronischen Überwachung (Art. 79b Abs. 1 lit. a StGB) ist der unbedingt vollziehbare Teil der ausgesprochenen teilbedingten Freiheitsstrafe massgebend (Änderung der Rechtsprechung; E. 2).\nRegeste\n Art. 79b al. 1 let. a CP; surveillance électronique; calcul de la peine maximale en cas de sursis partiel. Pour le calcul de la durée maximale de 12 mois pour l'exécution d'une peine privative de liberté sous la forme de la surveillance électronique (art. 79b al. 1 let. a CP), est déterminante la partie de la peine privative de liberté avec sursis partiel à exécuter (modification de la jurisprudence; consid. 2).\nRegesto\n Art. 79b cpv. 1 lett. a CP; sorveglianza elettronica; calcolo della pena massima in caso di pene detentive con sospensione condizionale parziale. Per il calcolo della durata massima di 12 mesi per l'esecuzione di una pena detentiva in forma di sorveglianza elettronica (art. 79b cpv. 1 lett. a CP) è determinante la parte da eseguire della pena detentiva pronunciata con sospensione condizionale parziale (cambiamento di giurisprudenza; consid. 2).",
         "quelle": "opencaselaw"
       },
       "regesteAmtlich": true,
       "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Das Obergericht des Kantons Bern verurteilte A.________, geboren 1963, mit Urteil vom 10. Mai 2019 zu einer Freiheitsstrafe von 36 Monaten (unter Anrechnung der vorläufigen Festnahme von einem Tag), wovon 10 Monate als unbedingt vollziehbar erklärt wurden. Der Vollzug der restlichen 26 Monate wurde aufgeschoben und die Probezeit auf zwei Jahre festgesetzt. Das Urteil erwuchs unangefochten in Rechtskraft."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "B.a. Mit Verfügung vom 7. April 2021 boten die Bewährungs- und Vollzugsdienste des Amts für Justizvollzug des Kantons Bern (BVD) A.________ zum Vollzugsantritt per 16. August 2021 auf. Hierauf stellte diese am 9. April 2021 ein Gesuch um Bewilligung der besonderen Vollzugsform des Electronic Monitoring (auch: elektronische Überwachung), eventualiter um Bewilligung von Halbgefangenschaft. Mit Eingabe vom 1. Juli 2021 hielt sie an ihren Anträgen fest und beantragte ihre Begutachtung im Hinblick auf eine Hafterstehungsfähigkeit. Die BVD wiesen die Anträge von A.________ mit Verfügung vom 23. August 2021 ab. B.b. Dagegen erhob A.________ am 23. September 2021 bei der Sicherheitsdirektion des Kantons Bern (SID) Beschwerde, wobei sie die Aufhebung der Verfügung der BVD vom 23. August 2021 beantragte und ihre Anträge in der Sache wiederholte. Mit Entscheid vom 27. September 2022 wies die SID die Beschwerde ab. Eine von A.________ hiergegen erhobene Beschwerde wies das Obergericht des Kantons Bern mit Beschluss vom 16. März 2023 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "A.________ führt Beschwerde in Strafsachen an das Bundesgericht. Sie beantragt, der Beschluss des Obergerichts des Kantons Bern vom 16. März 2023 sei aufzuheben. Ihr sei der Strafvollzug in der besonderen Form des Electronic Monitoring (Front Door) zu gewähren. Die Sache sei zur neuen Entscheidung bezüglich Kosten an die Vorinstanz zurückzuweisen. Eventualiter sei das Verfahren zur Einholung eines Gutachtens über ihre Hafterstehungsfähigkeit und zur neuen Entscheidung an die Vorinstanz zurückzuweisen. Sie ersucht um unentgeltliche Rechtspflege und Verbeiständung. Die SID hat mit Eingabe vom 20. Juli 2023 auf eine Vernehmlassung verzichtet. Das Obergericht des Kantons Bern reicht mit Eingabe vom 30. August 2023 eine Vernehmlassung ein, in welcher es auf die Ausführungen des angefochtenen Beschlusses vom 16. März 2023 verweist und um Abweisung der Beschwerde ersucht. Die Generalstaatsanwaltschaft des Kantons Bern lässt sich innert Frist (4. September 2023) nicht vernehmen. A.________ wurden die eingegangenen Stellungnahmen zur Kenntnisnahme zugestellt. Die vorinstanzlichen Akten wurden beigezogen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerin wendet sich gegen die Abweisung ihres Gesuchs um Vollzug des unbedingt vollziehbaren Teils der ausgesprochenen Freiheitsstrafe in der besonderen Vollzugsform des Electronic Monitoring nach Art. 79b Abs. 1 lit. a StGB (sogenannte Front Door-Variante). In der Hauptsache geht es um den Vollzug von Strafen, wogegen die Beschwerde in Strafsachen zulässig ist (Art. 78 Abs. 2 lit. b BGG). Die Beschwerdelegitimation der Beschwerdeführerin ist gegeben (Art. 81 Abs. 1 BGG). Die Beschwerde wurde frist- (Art. 100 Abs. 1 i.V.m. Art. 46 Abs. 1 lit. a BGG) und formgerecht (Art. 42 Abs. 1 BGG) gegen einen letztinstanzlichen kantonalen Entscheid (Art. 80 Abs. 1 BGG) eingereicht. Darauf ist einzutreten."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerin rügt eine Verletzung von Art. 79b StGB, Art. 13 Abs. 1 BV und Art. 8 Ziff. 1 EMRK. Sie macht geltend, bei teilbedingten Strafen sei Electronic Monitoring (Front Door) bei einem unbedingt vollziehbaren Teil bis zu 12 Monaten zu gewähren. Die Formulierung der zeitlichen Obergrenze in Art. 79b Abs. 1 lit. a StGB beziehe sich nicht wie nach der bisherigen bundesgerichtlichen Rechtsprechung auf die ausgesprochene Gesamtfreiheitsstrafe (\"ab initio\"). Das Bundesgericht habe sich seit Inkrafttreten der gesetzlichen Regelung per 1. Januar 2018 noch nicht mit dieser Frage auseinandergesetzt. Auf das Urteil 6B_223/2021 vom 27. April 2022 [E. 2.2.6] könne nicht abgestellt werden, zumal es sich bloss um einen obiter dictum ohne eingehende Würdigung handle."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Am 1. Januar 2018 ist das revidierte Sanktionenrecht in Kraft getreten (AS 2016 1249). Dabei wurden als Alternative zum Normalvollzug in einer Strafanstalt (Art. 77 StGB) die Halbgefangenschaft (Art. 77b StGB), die gemeinnützige Arbeit (Art. 79a StGB) und die elektronische Überwachung (Art. 79b StGB) als besondere Vollzugsformen für kurze Freiheitsstrafen eingeführt (Botschaft vom 4. April 2012 zur Änderung des Strafgesetzbuchs und des Militärstrafgesetzes [Änderung des Sanktionenrechts], BBl 2012 4738 ff. Ziff. 1.4.4, 4746 ff. Ziff. 2.1)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Gemäss Art. 79b Abs. 1 lit. a StGB kann die Vollzugsbehörde auf Gesuch des Verurteilten hin den Einsatz elektronischer Geräte und deren feste Verbindung mit dem Körper des Verurteilten (elektronische Überwachung) für den Vollzug einer Freiheitsstrafe oder einer Ersatzfreiheitsstrafe von 20 Tagen bis zu 12 Monaten anordnen. Nach Art. 79b Abs. 2 StGB kann die Vollzugsbehörde die elektronische Überwachung nur anordnen, wenn nicht zu erwarten ist, dass der Verurteilte flieht oder weitere Straftaten begeht (lit. a), der Verurteilte über eine dauerhafte Unterkunft verfügt (lit. b), er einer geregelten Arbeit, Ausbildung oder Beschäftigung von mindestens 20 Stunden pro Woche nachgeht oder ihm eine solche zugewiesen werden kann (lit. c), die mit dem Verurteilten in derselben Wohnung lebenden erwachsenen Personen zustimmen (lit. d) und der Verurteilte einem für ihn ausgearbeiteten Vollzugsplan zustimmt (lit. e). Sind die Voraussetzungen nach Absatz 2 lit. a, b oder c nicht mehr erfüllt oder verletzt der Verurteilte seine im Vollzugsplan festgehaltenen Pflichten, so kann die Vollzugsbehörde den Vollzug in Form der elektronischen Überwachung abbrechen und den Vollzug der Freiheitsstrafe im Normalvollzug oder in der Form der Halbgefangenschaft anordnen oder die dem Verurteilten zustehende freie Zeit einschränken (Art. 79b Abs. 3 StGB)."
+            },
+            {
+              "marke": "E. 2.2.3",
+              "tiefe": 3,
+              "text": "Das Bundesgericht hielt zu den kantonalen Modellversuchen vor Einführung einer Regelung auf Bundesebene fest, es sei nicht willkürlich, dass eine kantonale Rechtsgrundlage die Vollzugsform der elektronischen Überwachung nur bei Gesamtfreiheitsstrafen (d.h. bedingter und unbedingter Teil) von bis zu 12 Monaten zulasse (Urteil 6B_582/2008 vom 5. November 2008 E. 2.4; etwa bestätigt in: Urteile 6B_240/2009 vom 8. Mai 2009 E. 2.3; 6B_874/2016 vom 25. Oktober 2016 E. 2.2). Es ging weiter davon aus, eine kantonale Regelung, die bei teilbedingten Strafen bloss auf den vollziehbaren Strafteil abstelle, verletze die im Bundesratsbeschluss vom 2. September 2015 (BBl 2015 6925) bewilligte Strafmassobergrenze und sei bundesrechtswidrig. Massgebend sei das vom Gericht \"ausgesprochene Strafmass\" (Urteil 6B_1253/2015 vom 17. März 2016 E. 2.5 f. mit Verweis auf BBl 2012 4748). Diese Rechtsprechung wurde in der Folge unter altem Recht mehrfach bestätigt (vgl. Urteile 6B_1204/2015 vom 3. Oktober 2016 E. 1.4; 6B_51/2016 vom 3. Juni 2016 E. 5.4)."
+            },
+            {
+              "marke": "E. 2.2.4",
+              "tiefe": 3,
+              "text": "Das Bundesgericht hat auch nach Inkrafttreten von Art. 79b StGB am 1. Januar 2018 auf seine Rechtsprechung zu den kantonalen Modellversuchen verwiesen (vgl. Urteile 6B_223/2021 vom 27. April 2022 E. 2.2.6; 6B_627/2020 vom 21. April 2021 E. 1.2), allerdings ohne sich mit der neuen Regelung auf Bundesebene näher zu befassen. Gemäss dieser bundesgerichtlichen Rechtsprechung ist bei teilbedingten Strafen auf die Gesamtstrafe (bedingter plus unbedingter Teil der Strafe) abzustellen, d.h. der Vollzug des unbedingten Teils der Freiheitsstrafe in Form der elektronischen Überwachung ist nur zulässig, wenn die ausgesprochene Strafe insgesamt nicht höher als 12 Monate ist (vgl. Urteile 6B_223/2021 vom 27. April 2022 E. 2.2.6; 6B_1204/2015 vom 3. Oktober 2016 E. 1.4; 6B_51/2016 vom 3. Juni 2016 E. 5.4; 6B_1253/2015 vom 17. März 2016 E. 2.6). Die elektronische Überwachung als Vollzugsform kommt demnach nur bei teilbedingten Strafen mit der absoluten Mindestdauer von 12 Monaten Gesamtstrafe, davon sechs Monate bedingt und sechs Monate unbedingt (vgl. Art. 43 Abs. 1 und 3 StGB) in Betracht (Urteil 6B_223/2021 vom 27. April 2022 E. 2.2.6 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 2.2.5",
+              "tiefe": 3,
+              "text": "Im Gegensatz zum Vollzug von teilbedingten Strafen mittels elektronischer Überwachung wird beim Vollzug teilbedingter Freiheitsstrafen in Form von Halbgefangenschaft nach Art. 77b Abs. 1 StGB für die Bemessung der Maximaldauer der Freiheitsstrafe in ständiger bundesgerichtlicher Rechtsprechung an den unbedingten Teil der ausgesprochenen Strafe angeknüpft (vgl. Urteile 6B_1321/2016 vom 8. Mai 2017 E. 2.4; 6B_51/2016 vom 3. Juni 2016 E. 5.4; 6B_494/2011 vom 4. Oktober 2011 E. 2.3; 6B_175/2011 vom 1. September 2011 E. 1.7; 6B_169/2011 vom 8. Juni 2011 E. 3.4.2; 6B_471/2009 vom 24. Juli 2009 E. 4.2; 6B_668/2007 vom 15. April 2008 E. 5.4; implizit auch: Urteile 6B_607/2014 vom 27. Oktober 2014 E. 1.5; 6B_164/2011 vom 23. Dezember 2011 E. 4.4.3; vgl. zur seit dem 1. Januar 2018 geltenden Fassung von Art. 77b Abs. 1 StGB: Urteile 6B_1273/2021 vom 14. März 2023 E. 5.4.2; 6B_942/2019 vom 2. Oktober 2020 E. 1.3.2)."
+            },
+            {
+              "marke": "E. 2.2.6",
+              "tiefe": 3,
+              "text": "Die bundesgerichtliche Rechtsprechung zu den kantonalen Modellversuchen ist in der Literatur teils auf Kritik gestossen (vgl. Fabienne Germanier, Angehörigeninteressen in der Strafzumessung, 2019, S. 296 ff.; Markus Husmann, in: Annotierter Kommentar StGB, Damian K. Graf [Hrsg.], 2020, N. 9 zu Art. 79b StGB; Jasmine Stössel, Electronic Monitoring im Schweizer Erwachsenenstrafrecht unter besonderer Berücksichtigung der Änderungen des Sanktionenrechts, 2018 [zit. Jasmine Stössel, Electronic Monitoring], S. 183 f.; dies., Unterschiedliche Massstäbe für Electronic Monitoring und Halbgefangenschaft, ContraLegem 2019/2 [zit. Jasmine Stössel, ContraLegem 2019/2], S. 84 ff.; Thierry Urwyler, Electronic Monitoring [Front Door]: Berechnung der zulässigen Maximalstrafe bei teilbedingten Freiheitsstrafen, recht 1/2022, S. 24 ff.). Eine Auseinandersetzung mit der Kritik erfolgte in der bisherigen bundesgerichtlichen Rechtsprechung indes nicht (s. Urteil 6B_223/2021 vom 27. April 2022 E. 2.2.6). Eine solche Auseinandersetzung drängt sich im vorliegenden Fall angesichts der vorgebrachten Rügen der Beschwerdeführerin (vgl. oben E. 2.1) auf."
+            },
+            {
+              "marke": "E. 2.2.7",
+              "tiefe": 3,
+              "text": "Nach einem Teil der Lehre soll für die Bemessung der zulässigen Maximaldauer der Freiheitsstrafe im Rahmen von Art. 79b Abs. 1 lit. a StGB - wie bei der Halbgefangenschaft (Art. 77b Abs. 1 StGB; vgl. oben E. 2.2.5) - bei teilbedingten Strafen nur der unbedingte Teil der ausgesprochenen Freiheitsstrafe massgebend sein (vgl. Ludivine Ferreira Broquet, Le bracelet électronique en Suisse: hier, aujourd'hui et demain, 2015, Rz. 844; Fabienne Germanier, a.a.O., S. 303; Markus Husmann, a.a.O., N. 9 zu Art. 79b StGB; Jasmine Stössel, ContraLegem 2019/2, S. 87 f.; Thierry Urwyler, a.a.O., S. 31). Ein Teil der Lehre ist hingegen der Ansicht, dass auch bei der Halbgefangenschaft (Art. 77b Abs. 1 StGB) - wie bei der elektronischen Überwachung (Art. 79b Abs. 1 lit. a StGB; vgl. oben E. 2.2.4) - für die Bemessung der zulässigen Maximaldauer bei teilbedingten Strafen an die ausgesprochene Gesamtfreiheitsstrafe und nicht an den unbedingten Teil der Freiheitsstrafe angeknüpft werden soll (vgl. Benjamin F. Brägger, Vollzugsrechtliche Auswirkungen der jüngsten Revision des Schweizerischen Sanktionenrechts, SZK 2/2017 [zit. Benjamin F. Brägger, SZK 2/2017], S. 25 f.; ders., Halbgefangenschaft, in: Das schweizerische Vollzugslexikon, Von der vorläufigen Festnahme zur bedingten Entlassung, Benjamin F. Brägger [Hrsg.], 2. Aufl. 2022 [zit. Benjamin F. Brägger, Halbgefangenschaft], S. 317; ders., Voraussetzungen für die Zulassung zur Halbgefangenschaft, in: Jusletter 18. Mai 2009, Rz. 12 ff.; Sophie Werninger, Die elektronische Überwachung [Art. 79b StGB], ZStrR 136/2018, S. 226). Weitere Autoren schliessen sich der bisherigen bundesgerichtlichen Rechtsprechung zu den kantonalen Modellversuchen an, ohne diese näher zu kommentieren (vgl. Peter Aebersold, in: Schweizerisches Strafgesetzbuch, Praxiskommentar, Trechsel/Pieth [Hrsg.], 4. Aufl. 2021, N. 8 zu Art. 79b StGB; Baechtold/Weber/Hostettler, Strafvollzug, Straf- und Massnahmenvollzug an Erwachsenen in der Schweiz, 3. Aufl. 2016, S. 147; Cornelia Koller, in: Basler Kommentar, Strafrecht, Bd. I, 4. Aufl. 2019, N. 12 zu Art. 79b StGB; Gino Lohri, Electronic Monitoring, in: Das schweizerische Vollzugslexikon, Von der vorläufigen Festnahme zur bedingten Entlassung, Benjamin F. Brägger [Hrsg.], 2. Aufl. 2022, S. 206; Stratenwerth/Bommer, Schweizerisches Strafrecht, Allgemeiner Teil II: Strafen und Massnahmen, 3. Aufl. 2020, § 3 Rz. 66; Wolfgang Wohlers, in: Schweizerisches Strafgesetzbuch, Handkommentar, Wohlers/Schlegel/Godenzi [Hrsg.], 4. Aufl. 2020, N. 3 zu Art. 79b StGB; Baptiste Viredaz, in: Commentaire romand, Code pénal, Bd. I, 2. Aufl. 2021, N. 8 zu Art. 79b StGB)."
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "Eine Änderung der Rechtsprechung muss sich auf ernsthafte, sachliche Gründe stützen können, die - vor allem im Hinblick auf das Gebot der Rechtssicherheit - umso gewichtiger sein müssen, je länger die als falsch oder nicht mehr zeitgemäss erkannte Rechtsanwendung für zutreffend erachtet worden ist. Eine Praxisänderung lässt sich nur begründen, wenn die neue Lösung besserer Erkenntnis des Gesetzeszweckes, veränderten äusseren Verhältnissen oder gewandelten Rechtsanschauungen entspricht, andernfalls ist die bisherige Praxis beizubehalten (BGE 149 II 381 E. 7.3.1; 149 V 177 E. 4.5; 148 III 270 E. 7.1; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Das Gesetz ist in erster Linie nach seinem Wortlaut auszulegen (grammatikalische Auslegung). Ist der Text nicht ganz klar und sind verschiedene Auslegungen möglich, so muss der Richter unter Berücksichtigung aller Auslegungselemente nach der wahren Tragweite der Norm suchen. Dabei hat er insbesondere den Willen des Gesetzgebers zu berücksichtigen, wie er sich namentlich aus den Gesetzesmaterialien ergibt (historische Auslegung). Weiter hat der Richter nach dem Zweck, dem Sinn und den dem Text zugrunde liegenden Wertungen zu forschen, namentlich nach dem durch die Norm geschützten Interesse (teleologische Auslegung). Wichtig ist auch der Sinn, der einer Norm im Kontext zukommt, und das Verhältnis, in welchem sie zu anderen Gesetzesvorschriften steht (systematische Auslegung). Das Bundesgericht befolgt bei der Auslegung von Gesetzesnormen einen pragmatischen Methodenpluralismus und lehnt es ab, die einzelnen Auslegungselemente einer Prioritätsordnung zu unterstellen (BGE 148 IV 398 E. 4.8, 247 E. 3; je mit Hinweisen)."
+            },
+            {
+              "marke": "E. 2.3.3",
+              "tiefe": 3,
+              "text": "Das Gesetz sieht für die besonderen Vollzugsformen der Halbgefangenschaft (Art. 77b Abs. 1 StGB) und der elektronischen Überwachung (Art. 79b Abs. 1 lit. a StGB) hinsichtlich der Maximaldauer der Freiheitsstrafe eine zeitliche Obergrenze von 12 Monaten vor. Dem Wortlaut der genannten Bestimmungen kann jedoch keine eindeutige Antwort in Bezug auf die Frage nach der massgeblichen Berechnungsgrundlage bei teilbedingten Freiheitsstrafen (Art. 43 StGB) entnommen werden (Thierry Urwyler, a.a.O., S. 29; a.M. Fabienne Germanier, a.a.O., S. 297 f., wonach der Wortlaut von Art. 79b Abs. 1 lit. a StGB die Massgeblichkeit des unbedingten Teils der teilbedingten Freiheitsstrafe indiziere). Dass der Wortlaut von Art. 79b Abs. 1 lit. a StGB den \"Vollzug einer Freiheitsstrafe\" erwähnt, lässt entgegen der Beschwerde (S. 7) nicht zwingend darauf schliessen, dass damit der zu vollziehende Teil einer teilbedingten Freiheitsstrafe (mit-) gemeint ist."
+            },
+            {
+              "marke": "E. 2.3.4",
+              "tiefe": 3,
+              "text": "Gemäss der Botschaft vom 4. April 2012 zur Änderung des Strafgesetzbuchs und des Militärstrafgesetzbuchs (Änderung des Sanktionenrechts) kann Electronic Monitoring nach Art. 79b Abs. 1 lit. a StGB für den Vollzug von Freiheitsstrafen von 20 Tagen bis zu 12 Monaten eingesetzt werden. Dabei sei das vom Gericht ausgesprochene Strafmass massgebend und nicht die nach Abzug ausgestandener Untersuchungs- oder Sicherheitshaft noch zu verbüssende Reststrafe (BBl 2012 4748 Ziff. 2.1). Selbst wenn in der Botschaft auf das \"vom Gericht ausgesprochene Strafmass\" verwiesen wird, können ihr keine Ausführungen betreffend die massgebende Berechnungsgrundlage bei teilbedingten Freiheitsstrafen (vgl. Art. 43 StGB) entnommen werden. Insofern erweist sich die Kritik gegen die Verweisung auf die Botschaft in der bisherigen bundesgerichtlichen Rechtsprechung zu den früheren kantonalen Modellversuchen (vgl. Urteil 6B_1253/2015 vom 17. März 2016 E. 2.6) als berechtigt (vgl. Markus Husmann, a.a.O., N. 9 zu Art. 79b StGB; Thierry Urwyler, a.a.O., S. 27; Beschwerde S. 7). Zwecks historischer Auslegung erweist sich damit ein Rückgriff auf die Materialien zur parlamentarischen Debatte als unverzichtbar. Im Nationalrat beantragte die Mehrheit der Kommission die Annahme des Entwurfs des Bundesrats (AB 2013 N 1649). Dieser sah die Möglichkeit des elektronisch überwachten Vollzugs bei Freiheitsstrafen von 20 Tagen bis 12 Monaten vor (vgl. BBl 2012 4748 Ziff. 2.1). Eine Minderheit der Kommission befürwortete hingegen eine restriktivere Regelung und schlug vor, die elektronische Überwachung nur \"für den Vollzug einer Freiheitsstrafe von zwanzig Tagen bis sechs Monaten [zuzulassen], soweit es sich nicht um den vollziehbaren Teil einer teilbedingten Freiheitsstrafe von insgesamt zwei oder mehr als zwei Jahre handelt\" (AB 2013 N 1649). Eine Vertreterin der Minderheit ging im Rahmen der parlamentarischen Debatte davon aus, dass für die Berechnung der Maximalstrafe nach Art. 79b Abs. 1 lit. a StGB nur der unbedingte Teil der teilbedingten Freiheitsstrafe massgeblich war (Votum Rickli, AB 2013 N 1649). Im anschliessenden Votum hielt ein Vertreter der Mehrheit fest, dass es keinen Grund gebe, zwischen den zwei Formen der Freiheitsstrafe derselben Dauer zu unterscheiden (d.h. zwischen unbedingter Kurzfreiheitsstrafe und unbedingtem Teil einer teilbedingten Freiheitsstrafe). Es sei zudem widersprüchlich, wenn Personen mit teilbedingten Freiheitsstrafen, die eine bessere Legalprognose als Personen mit Kurzstrafe und ungünstiger Legalprognose aufwiesen, nicht vom elektronisch überwachten Vollzug profitieren könnten (Votum Schwaab, AB 2013 N 1651). In der Folge wurde der Antrag der Mehrheit vom Nationalrat angenommen (AB 2013 N 1651). Aus den Materialien zur parlamentarischen Debatte im Nationalrat ergibt sich, dass dieser mit der Maximalstrafe nach Art. 79b Abs. 1 lit. a StGB neben einer unbedingten Freiheitsstrafe bis 12 Monate auch den unbedingten Teil einer teilbedingten Freiheitsstrafe von bis zu 12 Monaten meinte bzw. diese einander gleichstellte (vgl. Thierry Urwyler, a.a.O., S. 28). Im Ständerat gab die durch den Nationalrat angenommene Fassung von Art. 79b StGB zu keinen grossen Diskussionen Anlass. Das einzige Votum erfolgte von Ständerat Engler, der ausführte, dass die Artikel 77b, 79a und 79b in einem \"engen systematischen Zusammenhang\" zueinander stehen und die Voraussetzungen für die alternativen Vollzugsformen einheitlich und in gleicher Struktur ordnen würden (AB 2014 S 642; vgl. BGE 145 IV 10 E. 2.3 S. 14 f.)."
+            },
+            {
+              "marke": "E. 2.3.5",
+              "tiefe": 3,
+              "text": "Das Bundesgericht hielt im Urteil 6B_1253/2015 vom 17. März 2016 fest, gegen einen Vollzug in Form der elektronischen Überwachung [für teilbedingte Strafen nach Art. 43 StGB, die mehr als 12 Monate betragen] spreche der Zweck der mit dem teilbedingten Vollzug angestrebten Spezialprävention, der seine Schranke im gesetzlichen Erfordernis finde, dass angesichts der Schwere des Verschuldens wenigstens ein Teil der Strafe vollzogen werde (BGE 134 IV 1 E. 5.5.1 S. 14). Andernfalls stünde der Vollzug mittels elektronischer Überwachung sogar für \"schwere Delikte\" offen, was dem Willen des Gesetzgebers widerspräche (Urteil 6B_1253/2015 vom 17. März 2016 E. 2.6 mit Verweis auf BBl 2012 4748). Beim Strafvollzug mittels elektronischer Überwachung nach Art. 79b StGB handelt es sich um eine besondere, seit dem 1. Januar 2018 gesetzlich vorgesehene Vollzugsform (vgl. oben E. 2.2.1). Wird diese Vollzugsform bei einer teilbedingten Freiheitsstrafe angeordnet, hat dies nicht zur Folge, dass der unbedingt zu vollziehende Teil der ausgesprochenen Freiheitsstrafe nicht vollzogen wird. Der unbedingte Teil wird vielmehr vollzogen, und zwar in einer gesetzlich vorgesehenen, besonderen Vollzugsform (vgl. Fabienne Germanier, a.a.O., S. 300; Jasmine Stössel, ContraLegem 2019/2, S. 87; Thierry Urwyler, a.a.O., S. 29). Die Kritik gegen das oben dargelegte Argument des Bundesgerichts (\"Vollzug wenigstens eines Teils der Strafe\") gegen den EM-Vollzug bei teilbedingten Strafen, die mehr als 12 Monate betragen, erweist sich damit als berechtigt."
+            },
+            {
+              "marke": "E. 2.3.6",
+              "tiefe": 3,
+              "text": "Das Bundesgericht hielt mit Verweis auf die Botschaft weiter fest, dass \"schwere Delikte\" vom Anwendungsbereich der Vollzugsform der elektronischen Überwachung auszuschliessen seien (Urteil 6B_1253/2015 vom 17. März 2016 E. 2.6). Weder der Botschaft (BBl 2012 4748 Ziff. 2.1) noch der bisherigen bundesgerichtlichen Rechtsprechung kann indes entnommen werden, welche Delikte zu dieser Kategorie gehören sollen. Unklar bleibt insbesondere, ob für die Unterscheidung zwischen \"schweren\" und \"weniger schweren\" Delikten die Einteilung in Verbrechen und Vergehen nach Art. 10 StGB und damit die im Gesetz angedrohte Höchststrafe (vgl. Jasmine Stössel, ContraLegem 2019/2, S. 85) oder die im Einzelfall verhängte Strafe massgebend sein soll. Dies kann vorliegend indes offenbleiben. Entscheidend ist, dass Art. 79b StGB keinen Ausschluss der Vollzugsform der elektronischen Überwachung für bestimmte Deliktskategorien vorsieht (vgl. Jasmine Stössel, ContraLegem 2019/2, S. 86). Zu beachten ist in diesem Zusammenhang zudem, dass weder die angedrohte Höchststrafe noch die im Einzelfall verhängte Strafe einen automatischen Rückschluss auf die \"Schwere\" eines Delikts erlauben. Die Strafe ist im Einzelfall nach dem Verschulden des Täters (Art. 47 Abs. 1 StGB; vgl. BGE 136 IV 55 E. 5.4 ff.) und gegebenenfalls unter Einschluss des Asperationsprinzips (Art. 49 Abs. 1 StGB; vgl. BGE 144 IV 217 E. 2.1 f.) festzusetzen. Entsprechend ist es möglich, dass bei nicht so erheblichen Straftaten (bzw. mehreren geringfügigen Straftaten) und schwerem Verschulden eine hohe Strafe resultiert, bzw. dass bei nominal schweren Straftaten und leichtem Verschulden eine niedrige Strafe ausgesprochen wird (vgl. Jasmine Stössel, ContraLegem 2019/2, S. 85; Thierry Urwyler, a.a.O., S. 30). Das Kriterium der \"Schwere\" eines Delikts erweist sich damit als ungeeignet, die Zulässigkeit verschiedener Vollzugsformen abzugrenzen."
+            },
+            {
+              "marke": "E. 2.3.7",
+              "tiefe": 3,
+              "text": "Gemäss der Rechtsprechung zu den kantonalen Modellversuchen kommt die elektronische Überwachung als Vollzugsform für eine teilbedingte Freiheitsstrafe mit der absoluten Mindestdauer von 12 Monaten Gesamtstrafe, davon sechs Monate bedingt und sechs Monate unbedingt (vgl. Art. 43 Abs. 1 und 2 StGB), in Betracht (vgl. oben E. 2.2.4). Grundvoraussetzung für eine teilbedingte Strafe gemäss Art. 43 StGB ist wie bei Art. 42 StGB, dass die Legalprognose des Täters nicht schlecht ausfällt (vgl. BGE 144 IV 277 E. 3.1.1; 139 IV 270 E. 3.3; 134 IV 1 E. 5.3.1). Eine Strafe wird hingegen unbedingt ausgesprochen (d.h. ist in voller Länge zu vollziehen), wenn eine ungünstige Legalprognose vorliegt, d.h. wenn keinerlei Aussicht besteht, dass der Täter sich durch den ganz oder teilweise gewährten Strafaufschub im Hinblick auf sein zukünftiges Legalverhalten positiv beeinflussen lässt (vgl. BGE 144 IV 277 E. 3.1.1; 134 IV 1 E. 5.3.1; Urteile 6B_962/2023 vom 26. Februar 2024 E. 2.3.2; 6B_1157/2022 vom 24. Februar 2023 E. 2.3.2; 6B_1485/2022 vom 23. Februar 2023 E. 2.3). Die in Bezug auf die kantonalen Modellversuche ergangene bundesgerichtliche Rechtsprechung (vgl. oben E. 2.2.4) führt im Ergebnis dazu, dass etwa bei Verhängung einer unbedingten Freiheitsstrafe von 10 Monaten eine ungünstige Prognose vorliegt, der elektronisch überwachte Vollzug nach Art. 79b Abs. 1 lit. a StGB jedoch möglich ist, während bei einer teilbedingten Freiheitsstrafe im überschneidenden Anwendungsbereich von bedingter und teilbedingter Strafe (d.h. zwischen einem und zwei Jahren) die Prognose an sich besser ist (vgl. BGE 134 IV 1 E. 5.5.2), der Vollzug mittels elektronischer Überwachung jedoch nicht zulässig ist. Diese Rechtsfolge wird zu Recht als widersprüchlich kritisiert (vgl. Markus Husmann, a.a.O., N. 9 zu Art. 79b StGB; Jasmine Stössel, ContraLegem 2019/2, S. 87; Thierry Urwyler, a.a.O., S. 30 f.; vgl. in diesem Sinne bereits Votum Schwaab, AB 2013 N 1651 [\"pas cohérent\"])."
+            },
+            {
+              "marke": "E. 2.3.8",
+              "tiefe": 3,
+              "text": "Wie bereits erwähnt (vgl. oben E. 2.2.7), wird in der Literatur zum Teil postuliert, dass für die Bemessung der zulässigen Maximalstrafe von 12 Monaten bei teilbedingten Strafen sowohl bei der Halbgefangenschaft als auch bei der elektronischen Überwachung an die ausgesprochene Gesamtstrafe angeknüpft werden soll. Als Begründung wird vorgebracht, dass im Falle von teilbedingten Strafen Angeschuldigte zu Freiheitsstrafen bis zu 36 Monaten verurteilt werden könnten, wobei der nicht aufgeschobene Teil vielfach eine Dauer von 12 Monaten nicht übersteige. Diese Fälle beträfen den Bereich der mittleren bis schweren Kriminalität. Aus dem Blickwinkel der öffentlichen Sicherheit sei anzuzweifeln, ob diese Täterkategorie automatisch in den Genuss der Halbgefangenschaft kommen solle (Benjamin F. Brägger, SZK 2/2017, S. 25 f.; ders., Halbgefangenschaft, S. 317). Diese Ansicht vermag nicht zu überzeugen. Zunächst trifft keineswegs zu, dass eine bestimmte Täterkategorie \"automatisch\" in den Genuss einer besonderen Vollzugsform kommen würde. Vielmehr setzt die Gewährung einer besonderen Vollzugsform stets die Erfüllung bestimmter, im Gesetz genannter Voraussetzungen voraus. Dem Aspekt der öffentlichen Sicherheit wird unabhängig von der Strafdauer und der Deliktsart mit der Voraussetzung der fehlenden Rückfallgefahr im Rahmen der Anordnung der besonderen Vollzugsformen der elektronischen Überwachung (Art. 79b Abs. 2 lit. a StGB) und der Halbgefangenschaft (Art. 77b Abs. 1 lit. a StGB) Rechnung getragen (vgl. Fabienne Germanier, a.a.O., S. 300 Fn. 1144; Cornelia Koller, in: Basler Kommentar, Strafrecht, Bd. I, 4. Aufl. 2019, N. 8 zu Art. 77b StGB; Jasmine Stössel, ContraLegem 2019/2, S. 86; Thierry Urwyler, a.a.O., S. 30; Sophie Werninger, a.a.O., S. 223 und 226). Das Gesetz sieht die Voraussetzung der fehlenden Rückfallgefahr für beide besondere Vollzugsformen vor. Diese ist in beiden Bestimmungen gleich anzuwenden (Urteile 7B_130/2023 vom 9. Februar 2024 E. 2.2.3; 6B_1261/2021 vom 5. Oktober 2022 E. 2.1; 6B_872/2021 vom 28. Juni 2022 E. 2.2; Cornelia Koller, a.a.O., N. 17 zu Art. 79b StGB). Die Rückfallgefahr muss von einer gewissen Bedeutung sein und die zu erwartenden neuen Straftaten müssen eine gewisse Erheblichkeit aufweisen, um eine der genannten besonderen Vollzugsformen auszuschliessen (BGE 145 IV 10 E. 2.2.1; Urteile 7B_130/2023 vom 9. Februar 2024 E. 2.2.3; 6B_1261/2021 vom 5. Oktober 2022 E. 2.2; 6B_872/2021 vom 28. Juni 2022 E. 2.1; 6B_1082/2016 vom 28. Juni 2017 E. 2.1; Cornelia Koller, a.a.O., N. 9 zu Art. 77b StGB; Baptiste Viredaz, in: Commentaire romand, Code pénal, Bd. I, 2. Aufl. 2021, N. 9 zu Art. 77b StGB). Für die Prognose im Hinblick auf das künftige Verhalten des Verurteilten hat die Vollzugsbehörde namentlich seine Vorstrafen, seine Persönlichkeit, sein Verhalten im Allgemeinen und bei der Arbeit sowie die Umstände, unter denen er leben wird, zu berücksichtigen (BGE 145 IV 10 E. 2.2.1; Urteile 7B_130/2023 vom 9. Februar 2024 E. 2.2.3; 6B_1261/2021 vom 5. Oktober 2022 E. 2.2; 6B_872/2021 vom 28. Juni 2022 E. 2.1; je mit Hinweisen). Zu berücksichtigen ist ferner, dass Electronic Monitoring ohnehin kein taugliches Mittel ist, um (weitere) Straftaten zu verhindern (vgl. BGE 145 IV 503 E. 3.3.1; Cornelia Koller, a.a.O., N. 17 zu Art. 79b StGB; Gino Lohri, a.a.O., S. 207; vgl. dazu bereits Votum Sommaruga, AB 2013 N 1650, und Votum Jositsch, AB 2013 N 1649). Diese besondere Vollzugsform - wie auch die Halbgefangenschaft - kommt damit von vornherein ausschliesslich in Fällen in Betracht, bei welchen eine Rückfallgefahr des Verurteilten ausgeschlossen ist, was im Gesetzestext klar zum Ausdruck gebracht wird (vgl. Art. 79b Abs. 2 lit. a StGB). Eine unterschiedliche Behandlung der elektronischen Überwachung und der Halbgefangenschaft bei teilbedingten Strafen lässt sich auch nicht damit begründen, dass im Falle der Halbgefangenschaft auf Grund des Aufenthaltes des Verurteilten innerhalb der Strafanstalt (vgl. Art. 77b Abs. 2 StGB) bessere Kontrollmöglichkeiten bestünden und der Verurteilte enger betreut und überwacht würde (vgl. die für das Ostschweizer Strafvollzugskonkordat und für das Strafvollzugskonkordat Nordwest- und Innerschweiz einschlägigen Richtlinien für die besonderen Vollzugsformen [gemeinnützige Arbeit, elektronische Überwachung, Halbgefangenschaft] vom 31. März 2017, Fn. 5). Der Aspekt der Kontrollmöglichkeit zielt auf die mögliche Gefahr, die vom Verurteilten ausgehen könnte. Indes setzt die Gewährung der besonderen Vollzugsform der elektronischen Überwachung voraus, dass weder eine Flucht- noch eine Rückfallgefahr des Verurteilten vorliegt (Art. 79b Abs. 2 lit. a StGB; vgl. Fabienne Germanier, a.a.O., S. 300 Fn. 1144)."
+            },
+            {
+              "marke": "E. 2.3.9",
+              "tiefe": 3,
+              "text": "Sofern im Rahmen der parlamentarischen Debatte Zweifel betreffend den Strafcharakter von Electronic Monitoring geäussert wurden (vgl. Votum Rickli, AB 2013 N 1649), gilt es Folgendes zu beachten: Die besondere Vollzugsform der elektronischen Überwachung ist - wie die Halbgefangenschaft - an strenge Auflagen gebunden. Verlangt wird unter anderem, dass der Verurteilte einer geregelten Arbeit, Ausbildung oder Beschäftigung von mindestens 20 Stunden pro Woche nachgeht (Art. 79b Abs. 2 lit. c StGB) und dass er einem für ihn ausgearbeiteten Vollzugsplan zustimmt (Art. 79b Abs. 2 lit. e StGB). Die verurteilte Person ist in ihrer Lebensgestaltung beim Strafvollzug in Form der elektronischen Überwachung nicht frei (vgl. Votum Guhl, AB 2013 N 1650). Sie verpflichtet sich vielmehr, den festgelegten Wochenplan und das Betreuungsprogramm einzuhalten. Nebst der Arbeits- oder Ausbildungszeit von mindestens 20 Stunden pro Woche besteht auch Anspruch auf Freizeit ausserhalb der Wohnung. Diese Zeitfenster zur freien Verfügung ausserhalb der Wohnung sind jedoch zeitlich limitiert. Ausserhalb der Arbeits- oder Ausbildungszeit sowie der limitierten Zeit zur freien Verfügung befindet sich die verurteilte Person grundsätzlich im elektronisch überwachten Hausarrest (Urteil 6B_223/2021 vom 27. April 2022 E. 2.2.5). Electronic Monitoring verlangt vom Verurteilten mehr Selbstdisziplin als die Halbgefangenschaft, weshalb diese Vollzugsform durchaus als Strafe empfunden wird (vgl. Votum Sommaruga, AB 2014 S 630). Auch die Lehre hat bereits wiederholt auf den Strafcharakter von Electronic Monitoring hingewiesen (vgl. dazu Fabienne Germanier, a.a.O., S. 301 ff.; Richter/Ryser/Hostettler, Punitiveness of electronic monitoring: Perception and experience of an alternative sanction, European Journal of Probation 2021, S. 262 ff.; Thierry Urwyler, a.a.O., S. 29 Fn. 32)."
+            },
+            {
+              "marke": "E. 2.3.10",
+              "tiefe": 3,
+              "text": "Für eine Gleichbehandlung der besonderen Vollzugsformen der Halbgefangenschaft und der elektronischen Überwachung hinsichtlich der Bemessung der zeitlichen Obergrenze spricht auch deren spezialpräventive Zielsetzung. Diese liegt gemäss gesetzlicher Konzeption darin, die negativen Auswirkungen eines vollständigen Freiheitsentzugs für Freiheitsstrafen bis zu einem Jahr einzuschränken (vgl. BBl 2012 4736 Ziff. 1.4.2; Jasmine Stössel, ContraLegem 2019/2, S. 86). Die Halbgefangenschaft ist spezialpräventiv ausgerichtet und soll dem Verurteilten ermöglichen, seinen Arbeits- oder Ausbildungsplatz zu behalten, und so eine Desintegration aus der Arbeitswelt verhindern (vgl. BGE 145 IV 10 E. 2.2.1; Cornelia Koller, a.a.O., N. 2 zu Art. 77b StGB; Jasmine Stössel, Electronic Monitoring, S. 370). In dieser Vollzugsform setzt der Verurteilte \"seine Arbeit, Ausbildung oder Beschäftigung ausserhalb der Anstalt fort und verbringt die Ruhe- und Freizeit in der Anstalt\" (Art. 77b Abs. 2 StGB). Auch die Vollzugsform mittels elektronischer Überwachung ist spezialpräventiv ausgerichtet. Im Gegensatz zur Halbgefangenschaft werden mit dem elektronisch überwachten Vollzug die negativen Auswirkungen des Strafvollzugs nicht nur im Arbeitsbereich, sondern auch im privaten, sozialen und familiären Bereich eingeschränkt (vgl. Fabienne Germanier, a.a.O., S. 298; Cornelia Koller, a.a.O., N. 5 zu Art. 79b StGB; Jasmine Stössel, ContraLegem 2019/2, S. 86; dies., Electronic Monitoring, S. 370). Die dargelegte spezialpräventive Zielsetzung beider Vollzugsformen lässt sich unabhängig davon erreichen, ob es sich um eine unbedingte Freiheitsstrafe oder um den unbedingten Teil einer teilbedingten Freiheitsstrafe handelt (vgl. Thierry Urwyler, a.a.O., S. 31)."
+            },
+            {
+              "marke": "E. 2.3.11",
+              "tiefe": 3,
+              "text": "Aus dem Erfordernis des Gesuchs des Verurteilten, welches für sämtliche besondere Vollzugsformen gilt (vgl. Art. 77b Abs. 1, Art. 79a Abs. 1 und Art. 79b Abs. 1 StGB), ergibt sich, dass die besonderen Vollzugsformen gleichgestellt sind (vgl. Votum Engler, AB 2014 S 642). Bei gegebenen Voraussetzungen geht der Vollzug mittels elektronischer Überwachung als mildere Vollzugsform der Halbgefangenschaft allerdings vor (Cornelia Koller, a.a.O., N. 1 zu Art. 77b StGB und N. 9 zu Art. 79b StGB; Jasmine Stössel, ContraLegem 2019/2, S. 85). Dies ergibt sich sowohl aus dem Verhältnismässigkeitsgrundsatz (vgl. Art. 5 Abs. 2, Art. 36 Abs. 3 BV) als auch aus Art. 79b Abs. 3 StGB, wonach die weitere Verbüssung der Strafe in der Form von Halbgefangenschaft beim Scheitern des elektronisch überwachten Vollzugs nach Art. 79b Abs. 1 lit. a StGB möglich sein soll, während beim Scheitern der Halbgefangenschaft gemäss Art. 77b Abs. 4 StGB nur noch der Normalvollzug (Art. 77 StGB) offensteht (Cornelia Koller, a.a.O., N. 1 zu Art. 77b StGB und N. 9 zu Art. 79b StGB)."
+            },
+            {
+              "marke": "E. 2.3.12",
+              "tiefe": 3,
+              "text": "Entgegen der Ansicht der Vorinstanz hätte eine Angleichung der Anwendungsbereiche des Electronic Monitoring (Front Door) und der Halbgefangenschaft hinsichtlich der Bemessung der zeitlichen Obergrenze von 12 Monaten Freiheitsstrafe nicht zur Folge, dass letztere \"entbehrlich\" gemacht würde (angefochtener Beschluss S. 7). Die Halbgefangenschaft setzt gleich wie die elektronische Überwachung voraus, dass weder Flucht- noch Rückfallgefahr vorliegt (Art. 77b Abs. 1 lit. a StGB, Art. 79b Abs. 2 lit. a StGB; vgl. oben E. 2.3.8) und der Verurteilte einer geregelten Arbeit, Ausbildung oder Beschäftigung von mindestens 20 Stunden pro Woche nachgeht (Art. 77b Abs. 1 lit. b StGB, Art. 79b Abs. 2 lit. c StGB). Für die Gewährung der besonderen Vollzugsform der elektronischen Überwachung wird darüber hinaus vorausgesetzt, dass der Verurteilte über eine dauerhafte Unterkunft verfügt (Art. 79b Abs. 2 lit. b StGB), die mit ihm in derselben Wohnung lebenden erwachsenen Personen zustimmen (Art. 79b Abs. 2 lit. d StGB) und er einem für ihn ausgearbeiteten Vollzugsplan zustimmt (Art. 79b Abs. 2 lit. e StGB). Der Umstand, dass - wie die Vorinstanz meint - diese zusätzlichen Voraussetzungen in den allermeisten Fällen erfüllt wären, weil sie \"weitestgehend vom Willen der verurteilten Person sowie deren Umfeld\" abhängen würden, sodass kaum noch Anwendungsfälle für die Halbgefangenschaft denkbar wären (angefochtener Beschluss S. 7), vermag eine unterschiedliche Bemessung der zeitlichen Obergrenze von 12 Monaten bei der Halbgefangenschaft und bei der elektronischen Überwachung nicht zu rechtfertigen."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Insgesamt liegen ernsthafte, sachliche Gründe vor, die für eine gleiche Bemessung der zeitlichen Höchststrafe von 12 Monaten bei den besonderen Vollzugsformen der Halbgefangenschaft (Art. 77b Abs. 1 StGB) und der elektronischen Überwachung (Art. 79b Abs. 1 lit. a StGB) sprechen. Die Gründe, die für eine unterschiedliche Behandlung dieser Vollzugsformen hinsichtlich dieser zeitlichen Voraussetzung in der bisherigen bundesgerichtlichen Praxis vorgebracht wurden (vgl. oben E. 2.3.4-2.3.7), erweisen sich unter Berücksichtigung der berechtigten Kritik in der Lehre nicht mehr als stichhaltig. Aus der Auslegung der seit dem 1. Januar 2018 geltenden Fassung von Art. 79b Abs. 1 lit. a StGB ergibt sich, dass angesichts der spezialpräventiven Zielsetzung (vgl. oben E. 2.3.10) und der grundsätzlichen Gleichstellung der besonderen Vollzugsformen (vgl. oben E. 2.3.11) in Abänderung der bisherigen bundesgerichtlichen Rechtsprechung bei teilbedingten Freiheitsstrafen (Art. 43 StGB) für die Bemessung der massgebenden Maximaldauer von 12 Monaten sowohl bei der Halbgefangenschaft (Art. 77b Abs. 1 StGB) als auch bei der elektronischen Überwachung (Art. 79b Abs. 1 lit. a StGB) auf den unbedingt vollziehbaren Teil der ausgesprochenen teilbedingten Strafe und nicht auf die Gesamtfreiheitsstrafe abzustellen ist."
+            },
+            {
+              "marke": "E. 2.5",
+              "tiefe": 2,
+              "text": "Vorliegend wurde die Beschwerdeführerin zu einer teilbedingten Freiheitsstrafe von insgesamt 36 Monaten verurteilt, wovon 10 Monate als unbedingt vollziehbar erklärt wurden (vgl. Sachverhalt A). Folglich erfüllt sie die zeitlichen Voraussetzungen für die Gewährung des elektronisch überwachten Vollzugs nach Art. 79b Abs. 1 lit. a StGB. Entsprechend erweist sich die Beschwerde als begründet. Die Vorinstanz wird nach der Rückweisung prüfen müssen, ob die weiteren Voraussetzungen für die Gewährung der besonderen Vollzugsform der elektronischen Überwachung nach Art. 79b Abs. 2 StGB erfüllt sind."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Bei dieser Ausgangslage ist auf den Eventualantrag der Beschwerdeführerin betreffend Einholung eines Gutachtens über ihre Hafterstehungsfähigkeit (Beschwerde S. 8 ff.) nicht weiter einzugehen."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Die Beschwerde ist gutzuheissen. Der Beschluss des Obergerichts des Kantons Bern vom 16. März 2023 ist aufzuheben und die Sache zur neuen Entscheidung an die Vorinstanz zurückzuweisen. Der Kanton Bern trägt keine Gerichtskosten (Art. 66 Abs. 4 BGG), hat jedoch der Beschwerdeführerin für das bundesgerichtliche Verfahren eine angemessene Parteientschädigung auszurichten (Art. 68 Abs. 1 und 2 BGG). Die Entschädigung wird praxisgemäss ihrer Rechtsvertretung ausgerichtet. Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird entsprechend gegenstandslos."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Der Beschluss des Obergerichts des Kantons Bern vom 16. März 2023 wird aufgehoben und die Sache zur neuen Entscheidung an die Vorinstanz zurückgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Der Kanton Bern hat der Rechtsvertretung der Beschwerdeführerin für das bundesgerichtliche Verfahren eine Entschädigung von Fr. 3'000.-- zu bezahlen."
+            },
+            {
+              "marke": "4.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird gegenstandslos."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, 2. Strafkammer, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 18. März 2024 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Der Gerichtsschreiber: Caprara"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Der Beschluss des Obergerichts des Kantons Bern vom 16. März 2023 wird aufgehoben und die Sache zur neuen Entscheidung an die Vorinstanz zurückgewiesen.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Der Kanton Bern hat der Rechtsvertretung der Beschwerdeführerin für das bundesgerichtliche Verfahren eine Entschädigung von Fr. 3'000.-- zu bezahlen.",
+        "Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird gegenstandslos.",
+        "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, 2. Strafkammer, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 10 STGB",
+        "Art. 13 Abs. 1 BV",
+        "Art. 36 Abs. 3 BV",
+        "Art. 42 STGB",
+        "Art. 43 STGB",
+        "Art. 47 Abs. 1 STGB",
+        "Art. 49 Abs. 1 STGB",
+        "Art. 77 STGB"
+      ],
+      "normKeys": [
+        "STGB",
+        "BV",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=14&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=133&highlight_docid=atf%3A%2F%2F150-IV-277%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-06-26",
+      "fassungsToken": "5866a609751abb562f5d1c68115ee48925de45c9941531dda448ef53ee6e2a98",
+      "sha": "845137670d65cc01d9b739de7b1356ecc194372dd835a3bc0b880cff4f84004f",
+      "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
           "vollstaendig": true,
@@ -164,30 +381,10 @@
           ]
         }
       ],
-      "dispositivOrders": [],
-      "zitierteNormen": [
-        "Art. 10 STGB",
-        "Art. 13 Abs. 1 BV",
-        "Art. 36 Abs. 3 BV",
-        "Art. 42 STGB",
-        "Art. 43 STGB",
-        "Art. 47 Abs. 1 STGB",
-        "Art. 49 Abs. 1 STGB",
-        "Art. 77 STGB"
-      ],
-      "normKeys": [
-        "STGB",
-        "BV"
-      ],
-      "zitierteEntscheide": [],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=14&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=133&highlight_docid=atf%3A%2F%2F150-IV-277%3Ade&number_of_ranks=177&azaclir=clir",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "5866a609751abb562f5d1c68115ee48925de45c9941531dda448ef53ee6e2a98",
-      "sha": "ef4825c128aae1047714df098bf9f3e97f64a40cc0c123d0cfa836706bc6b68e",
-      "azaUrteil": null
+      "azaUrteil": {
+        "aktenzeichen": "7B_261/2023",
+        "key": "bger_7B_261_2023"
+      }
     }
   ]
 }

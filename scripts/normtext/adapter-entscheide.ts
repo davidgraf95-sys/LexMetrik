@@ -480,7 +480,10 @@ export function azaAusBgeKopf(fullText: string | undefined): string | null {
   // Signatur). Deckt beide OCL-Kopfformate ab (2026: Az. vor Regeste; 2024: nach Regeste).
   const erw = fullText.search(/\b(?:Erwägung|Erwägungen|Considérant|Considerando|Diritto|Ragioni)\b/);
   const fenster = fullText.slice(0, erw > 400 ? Math.min(erw, 8000) : 8000);
-  const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s+(?:und\s+andere|und\s+[^\n]{0,40}))?\s+vom\s+\d{1,2}\.\s*\w+\s+\d{4}/.exec(fenster);
+  // Monat als \S+ (nicht \w+): \w matcht ohne Unicode-Flag das «ä» in «März» NICHT —
+  // sonst fiele jeder im März entschiedene Eigenfall durch und die Regex griffe das
+  // nächste (zitierte) Az. (Bug-Check 26.6.2026, kritisch). \S+ deckt jeden Monatsnamen.
+  const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s+(?:und\s+andere|und\s+[^\n]{0,40}))?\s+vom\s+\d{1,2}\.\s*\S+\s+\d{4}/.exec(fenster);
   return m ? m[1].replace(/\s+/, '_') : null;
 }
 
@@ -527,12 +530,23 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
   if (!basis) return null;
   basis.gerichtName = 'Bundesgericht';
 
+  // Inversions-Schutz (§8): das volle Urteil muss mindestens annähernd so umfangreich
+  // sein wie der publizierte Sammlungs-Auszug (der Auszug ist eine Teilmenge). Ist der
+  // aza-Body deutlich KÜRZER, wurde eine prozessuale Nebenentscheidung erwischt → kein
+  // Volltext (auszug-only), nie ein falscher Body unter dem Leitentscheid.
+  const bodyLen = (a: EntscheidAbschnitt[]) => a.reduce((n, ab) => n + ab.bloecke.reduce((m, b) => m + b.text.length, 0), 0);
+  if (azaSnap && bodyLen(azaSnap.abschnitte) < bodyLen(basis.abschnitte) * 0.85) azaSnap = null;
+
   if (azaSnap) {
-    // A2-Merge: amtliche BGE-Identität + Regeste + echtes Datum + voller Urteils-Body.
+    // A2-Merge mit Umschalter: `abschnitte` = VOLLES unterliegendes Urteil (Default),
+    // `auszugAbschnitte` = amtlicher BGE-Sammlungstext (der publizierte «Auszug»).
+    // Die UI bietet beide als Tabs. basis.abschnitte ist der Sammlungstext aus dem
+    // BGE-Record (vor dem Merge), azaSnap.abschnitte das volle Urteil.
     return {
       ...basis,
       datum: azaSnap.datum,
       abschnitte: azaSnap.abschnitte,
+      auszugAbschnitte: basis.abschnitte,
       rubrum: azaSnap.rubrum ?? basis.rubrum,
       dispositivOrders: azaSnap.dispositivOrders,
       zitierteEntscheide: azaSnap.zitierteEntscheide.length ? azaSnap.zitierteEntscheide : basis.zitierteEntscheide,

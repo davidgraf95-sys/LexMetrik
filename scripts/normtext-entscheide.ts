@@ -14,7 +14,21 @@ import {
   holeEntscheidOCL, enumeriereNeueste, citedRefZuId, enumeriereBge, holeBgeLeitentscheid,
 } from './normtext/adapter-entscheide';
 import { schreibeKorpus } from './normtext/entscheide-schreiben';
+import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
+
+/** Stuft einen BGE auf Auszug-only zurück (Body = Sammlungstext, kein azaUrteil/Volltext,
+ *  Bandjahr-Platzhalterdatum). Für die Kollisions-Quarantäne (§8): unsichere aza-Zuordnung. */
+function aufAuszugZurueck(s: EntscheidSnapshot): void {
+  if (s.auszugAbschnitte && s.auszugAbschnitte.length) {
+    s.abschnitte = s.auszugAbschnitte;
+    s.auszugAbschnitte = undefined;
+    s.sha = sha256EntscheidBloecke(s.abschnitte);
+  }
+  const band = parseInt(s.bgeReferenz ?? '', 10);
+  if (band) s.datum = `${band + 1874}-01-01`;   // Bandjahr-Platzhalter (UI: «BGE-Jahrgang»)
+  s.azaUrteil = null;
+}
 
 const arg = (name: string): string | null => {
   const p = process.argv.find((a) => a.startsWith(name + '='));
@@ -125,6 +139,14 @@ const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g,
 async function main() {
   console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}`);
   const bge = bgeVon ? await bgeKorpus() : [];
+  // Kollisions-Quarantäne (§8): griff dieselbe aza-id für ZWEI BGE, ist mindestens eine
+  // Zuordnung falsch (OCL-Quirk/zitiertes Präjudiz) — beide auf Auszug zurückstufen, nie
+  // ein potenziell falscher Volltext unter einem Leitentscheid.
+  const azaN: Record<string, number> = {};
+  for (const s of bge) if (s.azaUrteil) azaN[s.azaUrteil.key] = (azaN[s.azaUrteil.key] ?? 0) + 1;
+  let quar = 0;
+  for (const s of bge) if (s.azaUrteil && azaN[s.azaUrteil.key] > 1) { aufAuszugZurueck(s); quar++; }
+  if (quar) console.log(`[bge] Kollisions-Quarantäne: ${quar} BGE auf Auszug zurückgestuft (aza-Mehrfachzuordnung).`);
   const bund = await bundKorpus();
   const kanton = kantCourts.length ? await kantonKorpus() : [];
 

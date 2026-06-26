@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
+import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
 import { NormText } from '../components/NormText';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
@@ -19,11 +20,19 @@ function formatiereDatum(iso: string): string {
   return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
 }
 
-// BGE ohne aufgelöstes Urteil tragen nur das Bandjahr-Platzhalterdatum (YYYY-01-01).
-// Ehrlich als «BGE-Jahrgang» zeigen statt eines fingierten «1.1.» (§8). Ein echtes
-// Urteil datiert nie auf den 1.1. (Feiertag) — Sentinel: gericht 'bge' & kein azaUrteil.
+// Manche BGE tragen nur das Bandjahr-Platzhalterdatum (YYYY-01-01) statt eines echten
+// Urteilsdatums (ein echtes Urteil datiert nie auf den 1.1. — Feiertag). Diese ehrlich
+// als «BGE-Jahrgang» zeigen statt eines fingierten «1.1.» (§8). Sentinel = das
+// Platzhalterdatum selbst, NICHT azaUrteil (Bug-Check 26.6.: Auszug-BGE können ein
+// echtes Datum tragen trotz fehlendem azaUrteil — die zeigen korrekt «Urteil vom …»).
 function istBandjahr(snap: EntscheidSnapshot): boolean {
-  return snap.gericht === 'bge' && !snap.azaUrteil;
+  return snap.gericht === 'bge' && /-01-01$/.test(snap.datum);
+}
+// Angezeigter Jahrgang folgt der BGE-Band-Nummer (Band N → Jahr 1874+N), deterministisch
+// (§2) — robuster als das Platzhalter-Jahr, das bei OCL gelegentlich um 1 abweicht.
+function bgeJahrgang(snap: EntscheidSnapshot): string {
+  const band = parseInt(snap.bgeReferenz ?? '', 10);
+  return band ? String(band + 1874) : snap.datum.slice(0, 4);
 }
 
 const SPRACH_LABEL: Record<EntscheidSprache, string> = {
@@ -82,6 +91,8 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
   const [lese, setLese] = useState(false);
+  // BGE-Umschalter: 'voll' = vollständiges Urteil (Default), 'auszug' = amtl. BGE-Sammlungstext.
+  const [bodyTab, setBodyTab] = useState<'voll' | 'auszug'>('voll');
   const closeLese = useCallback(() => setLese(false), []);
   const [fsIdx, setFsIdx] = useState<number>(ladeFsIdx);
   const setFs = (i: number) => {
@@ -135,8 +146,11 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   // Einheitlicher Kopf: Modell aus der reinen Regel-Lib (§3) — Komponente rendert nur.
   const kopf = kopfModell(snap);
   const kopfLabel = KOPF_LABEL[snap.sprache];
-  // Sprung-Ziele: nur die tatsächlich vorhandenen Abschnitte (+ Regeste, wenn da).
-  const vorhandene = new Set<Abschnittstyp>(snap.abschnitte.map((a) => a.typ));
+  // BGE-Umschalter: nur wenn ein separater amtlicher Sammlungs-Auszug vorliegt.
+  const hatAuszug = !!snap.auszugAbschnitte && snap.auszugAbschnitte.length > 0;
+  const aktiveAbschnitte = hatAuszug && bodyTab === 'auszug' ? snap.auszugAbschnitte! : snap.abschnitte;
+  // Sprung-Ziele: nach dem aktiven Body (+ Regeste, wenn da) — passt zur sichtbaren Ansicht.
+  const vorhandene = new Set<Abschnittstyp>(aktiveAbschnitte.map((a) => a.typ));
   if (regesteText) vorhandene.add('regeste');
   const navZiele = NAV_TYPEN
     .filter((t) => vorhandene.has(t))
@@ -201,7 +215,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         {/* 5 Meta + Badges + Lese-Steuerung — gedämpfte Schlusszeile */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           {istBandjahr(snap)
-            ? <span>BGE-Jahrgang <span className="num">{snap.datum.slice(0, 4)}</span></span>
+            ? <span>BGE-Jahrgang <span className="num">{bgeJahrgang(snap)}</span></span>
             : <span>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></span>}
           {snap.bgeReferenz && (
             <>
@@ -258,14 +272,33 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </section>
       )}
 
-      {/* Schritt-2-Provenienz (§8): bei BGE getrennt ausweisen, ob der Body das
-          vollständige unterliegende Urteil ist (aza aufgelöst) oder nur der
-          Sammlungs-Auszug — kein Etikettenschwindel zwischen Regeste- und Body-Quelle. */}
-      {snap.gericht === 'bge' && (
+      {/* BGE-Umschalter (§8): «Vollständiges Urteil» ⟷ «Amtlicher BGE-Auszug». Beide
+          Texte stehen im Snapshot; nur der aktive Body wird gemountet (Anker-ids eindeutig,
+          kein doppeltes EntscheidBody — wie der exklusive Lesemodus). */}
+      {snap.gericht === 'bge' && hatAuszug && (
+        <div className="space-y-2">
+          <Tabs
+            items={[
+              { code: 'voll', label: <>Vollständiges Urteil{snap.azaUrteil && <span className="num"> · {snap.azaUrteil.aktenzeichen}</span>}</> },
+              { code: 'auszug', label: 'Amtlicher BGE-Auszug' },
+            ]}
+            value={bodyTab}
+            onChange={setBodyTab}
+            mode="tab"
+            ariaLabel="Textfassung des Entscheids"
+          />
+          <p className="text-micro text-ink-500 max-w-reading">
+            {bodyTab === 'voll'
+              ? <>Das vollständige unterliegende Urteil <span className="num">{snap.azaUrteil?.aktenzeichen}</span> — Grundlage der amtlichen Sammlung BGE <span className="num">{snap.bgeReferenz}</span>.</>
+              : <>Der amtlich publizierte Auszug der Sammlung BGE <span className="num">{snap.bgeReferenz}</span> — vom Gericht kuratiert.</>}
+          </p>
+        </div>
+      )}
+
+      {/* BGE ohne aufgelösten Volltext: nur der Sammlungs-Auszug + Live-Link (§8). */}
+      {snap.gericht === 'bge' && !hatAuszug && (
         <p className="text-micro text-ink-500 max-w-reading">
-          {snap.azaUrteil
-            ? <>Nachstehend das vollständige Urteil <span className="num">{snap.azaUrteil.aktenzeichen}</span> — Grundlage der amtlichen Sammlung BGE <span className="num">{snap.bgeReferenz}</span>.</>
-            : <>Auszug aus der amtlichen Sammlung (BGE <span className="num">{snap.bgeReferenz}</span>). Das vollständige Urteil ist bei der Quelle verfügbar (↗ massgebliche Fassung oben).</>}
+          Auszug aus der amtlichen Sammlung (BGE <span className="num">{snap.bgeReferenz}</span>). Das vollständige Urteil ist bei der Quelle verfügbar (↗ massgebliche Fassung oben).
         </p>
       )}
 
@@ -274,7 +307,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
           ungültiges HTML + bräche Anker-Sprünge. */}
       {!lese && (
         <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
-          <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+          <EntscheidBody abschnitte={aktiveAbschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
         </article>
       )}
 
@@ -300,7 +333,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       </nav>
 
       {lese && (
-        <LesemodusOverlay snap={snap} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={closeLese} />
+        <LesemodusOverlay snap={snap} abschnitte={aktiveAbschnitte} regesteText={regesteText} fsIdx={fsIdx} setFs={setFs} onClose={closeLese} />
       )}
     </div>
   );
@@ -311,8 +344,9 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
 // Weissraum), blendet die App-Shell aus. Wiederverwendung des EntscheidBody +
 // der Regeste (keine Duplizierung der Rechtsdarstellung, §3/§5). Provenienz/
 // massgebliche Fassung bleibt sichtbar (§8). ESC schliesst, Body-Scroll gesperrt.
-function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
+function LesemodusOverlay({ snap, abschnitte, regesteText, fsIdx, setFs, onClose }: {
   snap: EntscheidSnapshot;
+  abschnitte: EntscheidSnapshot['abschnitte'];
   regesteText: string | null;
   fsIdx: number;
   setFs: (i: number) => void;
@@ -374,7 +408,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         <h1 className="mt-2 text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
         <p className="mt-1 text-xs text-ink-500">
           {istBandjahr(snap)
-            ? <>BGE-Jahrgang <span className="num">{snap.datum.slice(0, 4)}</span></>
+            ? <>BGE-Jahrgang <span className="num">{bgeJahrgang(snap)}</span></>
             : <>Urteil vom <span className="num">{formatiereDatum(snap.datum)}</span></>}
           {snap.bgeReferenz && <> · <span className="num">{snap.bgeReferenz}</span></>}
         </p>
@@ -387,7 +421,7 @@ function LesemodusOverlay({ snap, regesteText, fsIdx, setFs, onClose }: {
         )}
 
         <div className="mt-9">
-          <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+          <EntscheidBody abschnitte={abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
         </div>
 
         <footer className="mt-12 border-t border-line pt-5 text-body-s text-ink-500">
