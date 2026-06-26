@@ -1,8 +1,31 @@
 import { describe, it, expect } from 'vitest';
 import {
   gruppiereTausender, gruppiereBetraege, normalisiereAbsatzNummer, absatzMarke,
-  artikelGanzAufgehoben,
+  artikelGanzAufgehoben, randtitelKnoten,
 } from '../lib/normtext/darstellung';
+
+// randtitelKnoten (6b): Ahnen-Gruppierungen (eigene Knoten) vom artikel-eigenen
+// Blatt (Sachüberschrift) trennen. Das Blatt wird POSITIONSWEISE bestimmt.
+describe('randtitelKnoten', () => {
+  it('teilt mehrstufige Kette in Ahnen + Blatt (Marker bleibt im Ahnen-Label)', () => {
+    expect(randtitelKnoten(['A. Abschluss', 'II. Antrag', '1. Frist']))
+      .toEqual({ ahnen: ['A. Abschluss', 'II. Antrag'], blatt: '1. Frist' });
+  });
+  it('Einzel-Sachüberschrift → kein Ahn, nur Blatt', () => {
+    expect(randtitelKnoten(['Gegenstand'])).toEqual({ ahnen: [], blatt: 'Gegenstand' });
+  });
+  it('leere Kette → kein Ahn, kein Blatt', () => {
+    expect(randtitelKnoten([])).toEqual({ ahnen: [], blatt: null });
+  });
+  it('aufgehobenes Blatt («c. …») → kein Blatt, tiefste echte Stufe bleibt Ahn', () => {
+    expect(randtitelKnoten(['A. X', '2. Voraussetzungen', 'c. …']))
+      .toEqual({ ahnen: ['A. X', '2. Voraussetzungen'], blatt: null });
+  });
+  it('verwirft leere Zwischenstufen, nicht echte Titel', () => {
+    expect(randtitelKnoten(['A. X', '…', '1. Frist']))
+      .toEqual({ ahnen: ['A. X'], blatt: '1. Frist' });
+  });
+});
 
 // artikelGanzAufgehoben: nur EINKLAPPEN, wenn KEIN lebender Inhalt übrig ist.
 // Tabelle/Mehrspaltig (text leer per Konvention) sind lebender Inhalt — sie
