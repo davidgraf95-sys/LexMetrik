@@ -22,10 +22,11 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 28.6.2026 — Aufräumung + Roadmap-Konsolidierung (BRANCH `roadmap-konsolidierung`, NICHT gemergt, NICHT deployt — wartet auf Davids §9/Integration)
+## Session 28.6.2026 — Aufräumung + Roadmap-Konsolidierung + §9-Deploy (auf `main` `a58ee276`, DEPLOYT `dpl_AXWbUpKqycDEZWXKNpa1e3aqcx75`, prod verifiziert lexmetrik.vercel.app)
 
 Auftrag David: «räum auf · tiefer · setze alle Befunde um · mach den Weiterbau
-sinnvoller · run till dry». Isolierter Worktree (§12), abgebrancht von `a1fdd1bd`.
+sinnvoller · run till dry · push + deploy». Isolierter Worktree (§12), abgebrancht
+von `a1fdd1bd`, am Ende per Fast-Forward in `main` integriert + deployt.
 
 - **Doc/Memory-Aufräumung** (`a1fdd1bd`): 5 abgeschlossene Pläne → `archiv/`
   (JETZT-MACHEN, HANDOFF-NACHT-MATERIALIEN, GESETZE-REVIEW [3 davon konvergent mit
@@ -36,8 +37,7 @@ sinnvoller · run till dry». Isolierter Worktree (§12), abgebrancht von `a1fdd
   Selbstwiderspruch→erledigt `0f9a9043`).
 - **§12-Artefakt-Fix** (`5eb37f43`): Beim Doc-Commit ging die Lösch-Seite zweier
   `git mv` verloren, als HEAD durch die Parallel-Session wechselte (Root+archiv-
-  Duplikat). Root-Duplikate entfernt. **HINWEIS: `main` (`a1fdd1bd`) trägt das
-  Duplikat noch, bis dieser Branch integriert wird.**
+  Duplikat). Root-Duplikate entfernt — mit dem FF nach `main` geheilt.
 - **Audit der Parallel-Aufräumung statt Redo** (Batch A–E waren schon erledigt):
   ein test-abgeschirmtes totes Residuum gefunden + §6-verifiziert entfernt
   (`72d174a0`, `randtitelTeile`/`randtitelEintraege`; tsc grün, golden 187 byte-
@@ -45,8 +45,18 @@ sinnvoller · run till dry». Isolierter Worktree (§12), abgebrancht von `a1fdd
 - **ROADMAP.md** (`d07b79cf`): 26 aktive Fahrpläne via ultracode (26 Extrakte +
   Rahmen-Synthese) zu EINEM priorisierten Steuerungsblick konsolidiert. Sortier-
   Hebel = Abnahme-Zeitsperre bis 1.12. ([OF] vor [D]). JETZT-Block P0 ohne Fachzeit.
-- **Offen:** Davids §9-Entscheid zur Integration/Push/Deploy — es bestehen mehrere
-  Stände (Parallel-Ultracode auf `main`/origin; diese Doc+Roadmap-Branch lokal).
+- **e2e-Fix** (`a58ee276`): 2 stale rechtsprechung-Locator an die deployte UI
+  nachgezogen (Gemeinwesen-aria-label + B3-Panel-Titel) — waren seit dem 27.6.-
+  Redesign blind rot, da e2e nicht im schnellen Gate läuft. UI unverändert.
+- **§9-Deploy:** Tore voll grün (gate + build + golden byte-gleich + e2e 86);
+  unabhängiger ultracode-Bug-Check über das Delta `4906e537..HEAD` (5 Stränge,
+  adversarial) = **0 Verhaltensänderungen, verhaltensneutral bestätigt**. Push +
+  Prod-Deploy (`dpl_AXWbUpKqycDEZWXKNpa1e3aqcx75`), 8 Kernrouten HTTP 200,
+  Asset-Hash live = lokal. **Deployt = Parallel-Ultracode-Code-Aufräumung
+  (Batch A–E) + diese Doc/Roadmap/Aufräum-Arbeit gebündelt.**
+- **Hinweis:** GitHub-Actions-CI ist wegen **Billing** dunkel (Job startet nicht,
+  4 s; trifft alle letzten Pushes inkl. des zuvor live deployten Commits) — kein
+  Code-Problem; lokale §9-Tore sind der massgebliche Gate. David: Billing prüfen.
 
 ## Session 27.6.2026 — Ultracode-Versimpelung/Verbesserung UI·CI·Logik·Sicherheit (BRANCH `verbesserung-ultracode-2026-06-27`, NICHT gemergt, NICHT deployt — wartet auf Davids Freigabe §9)
 
