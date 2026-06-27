@@ -233,7 +233,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
                   <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
                     onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
                     placeholder="PLZ" aria-label="Postleitzahl" />
-                  <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+                  <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" aria-label="Gemeinde" />
                 </div>
                 {f.plz.length === 4 && plzTreffer === null && (
                   <p className="text-xs text-warn-700">PLZ {f.plz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
@@ -695,8 +695,8 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               // BS-spezifisch (Schema klage-vereinfacht-bs, BS-Gerichtsrouting) —
               // für andere Kantone wäre Titel + Prefill-Link irreführend (§8).
               // Bug-Check 10.6.2026 (MITTEL): K-2-Guard entfernt — die
-              // KV-Vorlage adressiert seit dem Kantonsausbau alle 26 Kantone.
-              const kantonsfremd = false;
+              // KV-Vorlage adressiert seit dem Kantonsausbau alle 26 Kantone;
+              // der frühere `kantonsfremd`-Zweig ist damit toter Code (entfernt).
               const gebaut = k && k.status !== 'geplant' && k.href;
               // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
               // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
@@ -724,7 +724,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
                   <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
                   <p className="text-body-s text-ink-900 font-medium">
                     {k ? k.title : (ziel as { titel: string }).titel}
-                    {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">{kantonsfremd ? `Für ${f.kanton} in Vorbereitung` : 'In Vorbereitung'}</span>}
+                    {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}
                   </p>
                   {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
                   {linkZiel ? (
@@ -748,9 +748,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
                     </div>
                   ) : (
                     <p className="text-xs text-ink-500">
-                      {kantonsfremd
-                        ? `Die gebaute Vorlage deckt zurzeit Basel-Stadt ab (BS-Gerichtsrouting) — für ${f.kanton} ist sie in Vorbereitung. Die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.`
-                        : 'Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.'}
+                      Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.
                     </p>
                   )}
                 </div>

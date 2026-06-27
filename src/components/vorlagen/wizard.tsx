@@ -285,15 +285,23 @@ function VorschauAbsatz({ abs, stil }: { abs: AssembleErgebnis['dokument']['absa
 
 function useExportAktion() {
   const [fehler, setFehler] = useState<string | null>(null);
+  const [laeuft, setLaeuft] = useState(false);
+  // Während des Nachladens/Erzeugens (lazy jsPDF/docx + Dokumentbau) hält
+  // `laeuft` die Knöpfe disabled und verhindert Mehrfachklicks/-downloads
+  // (§13/F4) — analog PdfExportButton.
   const exportieren = async (aktion: () => Promise<void>, standardMeldung: string) => {
+    if (laeuft) return;
     setFehler(null);
+    setLaeuft(true);
     try {
       await aktion();
     } catch (e) {
       setFehler(e instanceof Error ? e.message : standardMeldung);
+    } finally {
+      setLaeuft(false);
     }
   };
-  return { fehler, exportieren };
+  return { fehler, laeuft, exportieren };
 }
 
 // Der Ausgabe-Stil wird beim Klick aus dem geteilten Store gelesen (getAusgabeStil),
@@ -313,7 +321,7 @@ const docxExport = (ergebnis: AssembleErgebnis, ziel: ExportZiel) => async () =>
 function DirektExportZeile({ ergebnis, pdf, docx, blocker }: {
   ergebnis: AssembleErgebnis; pdf: ExportZiel; docx?: ExportZiel; blocker?: string[];
 }) {
-  const { fehler, exportieren } = useExportAktion();
+  const { fehler, laeuft, exportieren } = useExportAktion();
   const gesperrt = (blocker?.length ?? 0) > 0;
   return (
     <div className="space-y-2">
@@ -321,14 +329,14 @@ function DirektExportZeile({ ergebnis, pdf, docx, blocker }: {
         <span className="text-xs text-ink-500">
           Direkt herunterladen – auch unausgefüllt (leere Felder bleiben Ausfüll-Striche):
         </span>
-        <button type="button" disabled={gesperrt}
+        <button type="button" disabled={gesperrt || laeuft} aria-busy={laeuft}
           title={gesperrt ? blocker![0] : undefined}
           onClick={() => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
           className="lc-btn-outline lc-btn-sm">
           PDF
         </button>
         {docx && (
-          <button type="button" disabled={gesperrt}
+          <button type="button" disabled={gesperrt || laeuft} aria-busy={laeuft}
             title={gesperrt ? blocker![0] : undefined}
             onClick={() => exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
             className="lc-btn-outline lc-btn-sm">
@@ -462,17 +470,17 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
   // Renderer oder die Dokument-Erzeugung – etwa der bewusste Sperr-Wurf des
   // Word-Exports bei eigenhändigkeitspflichtigen Geschäften (vorlagenDocx.ts)
   // –, erscheint die Meldung sichtbar statt als stille Unhandled Rejection.
-  const { fehler, exportieren } = useExportAktion();
+  const { fehler, laeuft, exportieren } = useExportAktion();
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap gap-3">
-        <button type="button" disabled={deaktiviert}
+        <button type="button" disabled={deaktiviert || laeuft} aria-busy={laeuft}
           onClick={() => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
           className="lc-btn-primary">
           {pdf.label}
         </button>
         {docx && (
-          <button type="button" disabled={deaktiviert}
+          <button type="button" disabled={deaktiviert || laeuft} aria-busy={laeuft}
             onClick={() => exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
             className="lc-btn-outline">
             {docx.label}
