@@ -17,6 +17,7 @@ import {
 } from '../../lib/notariatGrundbuch';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { chfGanz as chf } from '../../lib/vorlagen/datum';
 
 // ─── Notariats- & Grundbuchkosten beim Grundstückkauf ───────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/notariatGrundbuch.ts über die
@@ -36,7 +37,6 @@ const NG_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   steuer: { p: 'st', typ: 'bool' },
 };
 
-const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
 const spanneText = (s: Spanne | null): string =>
   !s ? '—' : s.vonChf === s.bisChf ? chf(s.vonChf) : `${chf(s.vonChf)} – ${chf(s.bisChf)}`;
 const zahl = (roh: string): number | undefined => {

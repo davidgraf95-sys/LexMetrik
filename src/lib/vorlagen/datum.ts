@@ -41,6 +41,15 @@ export function fmtCHF(roh: string): string {
 export const chf = (n: number): string =>
   n.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
+/**
+ * CHF-Betrag GERUNDET auf GANZE Franken mit «CHF »-Präfix (de-CH-Trennung).
+ * Reiner Anzeige-Helfer der Gebühren-/Kosten-Formulare. BEWUSST verschieden von
+ * `chf` (zwei Dezimalen, kein Präfix): hier ganze Franken — daher eigener Name,
+ * nicht zusammenführen (§1). Zuvor 4× wortgleich in GrundbuchEintragForm/
+ * BeurkundungForm/NotariatGrundbuchForm/ProzesskostenForm (Entdopplung, §6 Ziff.6).
+ */
+export const chfGanz = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+
 /** Robuste Zahl aus Nutzereingabe (Apostroph/Komma toleriert) – sonst null. */
 export const zahl = (roh?: string): number | null => {
   const n = Number(String(roh ?? '').replace(/['’\s]/g, '').replace(',', '.'));

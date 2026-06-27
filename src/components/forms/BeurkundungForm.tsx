@@ -23,6 +23,7 @@ import {
 } from '../../data/tarif/beurkundung-typen';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { chfGanz as chf } from '../../lib/vorlagen/datum';
 
 // ─── Allgemeiner Beurkundungskosten-Rechner (alle Geschäftsarten) ───────────
 // Reine Darstellung (§3): gerechnet wird in lib/beurkundung.ts über die amtlich
@@ -31,7 +32,6 @@ import { getStandardKanton } from '../../lib/einstellungen';
 // die einzelne Beurkundungsgebühr nach Geschäftswert + interkantonaler Vergleich.
 // §8: fehlt ein kantonaler Tarif noch (Recherche), wird das ehrlich ausgewiesen.
 
-const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
 const zahl = (roh: string): number | undefined => {
   if (roh.trim() === '') return undefined;
   const n = Number(roh);

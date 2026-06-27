@@ -18,12 +18,12 @@ import {
 } from '../../data/tarif/grundbuch-typen';
 import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { chfGanz as chf } from '../../lib/vorlagen/datum';
 
 // ─── Grundbuchgebühren je Eintragungsart (reine Darstellung, §3) ────────────
 // Gerechnet wird in lib/grundbuchgebuehren.ts; §8: fehlt ein kantonaler Tarif
 // noch (Recherche), wird das ehrlich ausgewiesen, nie ein Schätzwert.
 
-const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
 const zahl = (roh: string): number | undefined => {
   if (roh.trim() === '') return undefined;
   const n = Number(roh);

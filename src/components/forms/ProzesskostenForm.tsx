@@ -20,6 +20,7 @@ import {
 } from '../../lib/prozesskosten';
 import { KANTON_NAMEN } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { chfGanz as chf } from '../../lib/vorlagen/datum';
 
 // ─── Prozesskosten-Cockpit (Art. 95/96 ZPO) ─────────────────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/prozesskosten.ts über die
@@ -49,7 +50,6 @@ const zahl = (roh: string): number | undefined => {
   return Number.isFinite(n) ? n : undefined;
 };
 
-const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
 const spanneText = (s?: { vonChf: number; bisChf: number }): string =>
   !s ? '—' : s.vonChf === s.bisChf ? chf(s.vonChf) : `${chf(s.vonChf)} – ${chf(s.bisChf)}`;
 
