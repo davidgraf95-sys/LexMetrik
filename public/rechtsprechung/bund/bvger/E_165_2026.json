@@ -1,0 +1,112 @@
+{
+  "erzeugt": "2026-06-27",
+  "eintraege": [
+    {
+      "id": "bund/bvger/E_165_2026",
+      "gericht": "bvger",
+      "gerichtName": "Bundesverwaltungsgericht",
+      "gerichtstyp": "bundesverwaltungsgericht",
+      "kanton": "CH",
+      "abteilung": "Abteilung V (Asylrecht)",
+      "nummer": "E-165/2026",
+      "bgeReferenz": null,
+      "zitierung": "BVGer E-165/2026 vom 16. Juni 2026",
+      "datum": "2026-06-16",
+      "sprache": "fr",
+      "leitcharakter": "routine",
+      "sachgebiet": "oeffentlich",
+      "legalArea": "administrative",
+      "rubrum": {
+        "besetzung": "Grégory Sauder, juge unique, avec l'approbation de Yanick Felley, juge; Jean-Luc Bettin, greffier",
+        "parteien": "A._______, né le (...), Somalie, représenté par Cindy Blanchoud, Caritas Suisse, recourant, contre Secrétariat d'Etat aux migrations (SEM), Quellenweg 6, 3003 Berne, autorité inférieure",
+        "gegenstand": null,
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Asile (sans excécution du renvoi) (procédure accélérée)",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Le recours est rejeté, dans la mesure où il est recevable."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "La demande d'assistance judiciaire partielle est rejetée."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Les frais de procédure, d'un montant de 1'000 francs, sont mis à la charge du recourant. Ce montant doit être versé sur le compte du Tribunal dans les trente (30) jours dès l'expédition du présent arrêt."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Le présent arrêt est adressé à la mandataire du recourant, au SEM et à l'autorité cantonale. Le juge unique: Le greffier: Grégory Sauder Jean-Luc Bettin Expédition:"
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est rejeté, dans la mesure où il est recevable."
+            },
+            {
+              "marke": "2.",
+              "text": "La demande d'assistance judiciaire partielle est rejetée."
+            },
+            {
+              "marke": "3.",
+              "text": "Les frais de procédure, d'un montant de 1'000 francs, sont mis à la charge du recourant. Ce montant doit être versé sur le compte du Tribunal dans les trente (30) jours dès l'expédition du présent arrêt."
+            },
+            {
+              "marke": "4.",
+              "text": "Le présent arrêt est adressé à la mandataire du recourant, au SEM et à l'autorité cantonale. Le juge unique: Le greffier: Grégory Sauder Jean-Luc Bettin Expédition:"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est rejeté, dans la mesure où il est recevable.",
+        "La demande d'assistance judiciaire partielle est rejetée.",
+        "Les frais de procédure, d'un montant de 1'000 francs, sont mis à la charge du recourant. Ce montant doit être versé sur le compte du Tribunal dans les trente (30) jours dès l'expédition du présent arrêt.",
+        "Le présent arrêt est adressé à la mandataire du recourant, au SEM et à l'autorité cantonale.\nLe juge unique :"
+      ],
+      "zitierteNormen": [
+        "Art. 105 LASI",
+        "Art. 106 Abs. 1 LASI",
+        "Art. 108 Abs. 1 LASI",
+        "Art. 109 Abs. 3 LTF",
+        "Art. 111 LASI",
+        "Art. 29 LASI",
+        "Art. 3 Abs. 1 LASI",
+        "Art. 3 Abs. 2 LASI"
+      ],
+      "normKeys": [],
+      "zitierteEntscheide": [
+        "D-5447/2016",
+        "E-165/2026",
+        "E-2086/2022",
+        "E-2309/2018",
+        "E-2540/2019",
+        "E-3473/2020"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://bvger.weblaw.ch/cache?id=34f14002-f31e-4fe1-9d38-f70bf23fbbb4&guiLanguage=fr",
+      "abgerufen": "2026-06-27",
+      "fassungsToken": "de547e0d3741780ff599f0c05780dded5b0f471297a4d8288f0f281c7bdd1f0c",
+      "sha": "c5f5a9e46097ac762dbbbd30afe7c99f0f68d8fa5d8792b79a3dfb35e854a3ca"
+    }
+  ]
+}

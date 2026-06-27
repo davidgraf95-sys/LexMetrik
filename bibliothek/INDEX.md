@@ -95,6 +95,13 @@ Spider (`CH_BVGer`/`CH_BSTG`/bpatger), Geschäftsnummer-Regex, Sprachen (FR/IT z
 Regel-Synthese (Aufnahme→Manifest→Darstellung am BGer-Muster) + neueste Kandidaten. Steuert den
 späteren Bau (nach A2); KEIN Code. Abnahme David offen.
 
+**Eidg. Gerichte BVGer/BStGer/BPatGer — Aufnahme/Bau (Auftrag 9, Batch 3):** [rechtsprechung/eidg-gerichte-aufnahme-2026-06-27.md](rechtsprechung/eidg-gerichte-aufnahme-2026-06-27.md) —
+Umsetzung des Dossiers (27.6.2026). Befund: OCL führt alle drei als eigene `court`-Codes
+(`bvger`/`bstger`/`bpatger`) → kein entscheidsuche-Scraper nötig. Additiver Build
+(`--additiv --eidg=…`, kein Bestand-Drift), 15 Urteile (de 10/fr 3/it 2, erste IT im
+Korpus), alle `routine` (Leitentscheid-Welle offen), Instanz-Achse + B2-Golden +8
+Zellen. `verifiziert:false`, Abnahme David offen.
+
 ## Amtliche Ressourcen / Materialien
 
 **Materialien-Rubrik P0 (Auftrag 5):** [materialien/amtliche-ressourcen-2026-06-27.md](materialien/amtliche-ressourcen-2026-06-27.md) —

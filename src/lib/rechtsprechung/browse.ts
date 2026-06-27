@@ -60,6 +60,8 @@ export interface EntscheidFilterWerte {
   q?: string;
   sachgebiet?: Rechtsgebiet | null;
   gericht?: string | null;
+  /** Instanz-Achse (Batch 3): gerichtstyp — Bundesgericht/BVGer/BStGer/BPatGer/kantonal. */
+  gerichtstyp?: Gerichtstyp | null;
   kanton?: string | null;
   sprache?: string | null;
   nurLeitentscheide?: boolean;
@@ -200,6 +202,7 @@ export function filterEntscheide(liste: BrowseEntscheid[], f: EntscheidFilterWer
   return liste.filter((e) => {
     if (f.sachgebiet && e.sachgebiet !== f.sachgebiet) return false;
     if (f.gericht && e.gericht !== f.gericht) return false;
+    if (f.gerichtstyp && e.gerichtstyp !== f.gerichtstyp) return false;
     if (f.kanton && e.kanton !== f.kanton) return false;
     if (f.sprache && e.sprache !== f.sprache) return false;
     if (f.norm && !e.normKeys.includes(f.norm)) return false;
@@ -289,13 +292,14 @@ export function gruppiereNachLeit(liste: BrowseEntscheid[]): {
   };
 }
 
-/** Feste Instanz-Reihenfolge + Labels für die Übersichts-Gruppierung (A3-Regel 5). */
-const INSTANZ_ORDNUNG: { typ: Gerichtstyp; label: string }[] = [
-  { typ: 'bundesgericht', label: 'Bundesgericht' },
-  { typ: 'bundesverwaltungsgericht', label: 'Bundesverwaltungsgericht' },
-  { typ: 'bundesstrafgericht', label: 'Bundesstrafgericht' },
-  { typ: 'bundespatentgericht', label: 'Bundespatentgericht' },
-  { typ: 'kantonal', label: 'Kantonale Gerichte' },
+/** Feste Instanz-Reihenfolge + Labels (Übersichts-Gruppierung A3-Regel 5 UND
+ *  Instanz-Facette Batch 3). `kurz` = Chip-Label, `label` = volle a11y-Bezeichnung. */
+export const INSTANZ_ORDNUNG: { typ: Gerichtstyp; label: string; kurz: string }[] = [
+  { typ: 'bundesgericht', label: 'Bundesgericht', kurz: 'BGer' },
+  { typ: 'bundesverwaltungsgericht', label: 'Bundesverwaltungsgericht', kurz: 'BVGer' },
+  { typ: 'bundesstrafgericht', label: 'Bundesstrafgericht', kurz: 'BStGer' },
+  { typ: 'bundespatentgericht', label: 'Bundespatentgericht', kurz: 'BPatGer' },
+  { typ: 'kantonal', label: 'Kantonale Gerichte', kurz: 'Kantone' },
 ];
 
 /**

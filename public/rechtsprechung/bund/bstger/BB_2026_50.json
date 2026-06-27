@@ -1,0 +1,81 @@
+{
+  "erzeugt": "2026-06-27",
+  "eintraege": [
+    {
+      "id": "bund/bstger/BB_2026_50",
+      "gericht": "bstger",
+      "gerichtName": "Bundesstrafgericht",
+      "gerichtstyp": "bundesstrafgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "BB.2026.50",
+      "bgeReferenz": null,
+      "zitierung": "BStGer BB.2026.50 vom 18. Mai 2026",
+      "datum": "2026-05-18",
+      "sprache": "fr",
+      "leitcharakter": "routine",
+      "sachgebiet": "straf",
+      "legalArea": "criminal",
+      "rubrum": {
+        "besetzung": "Les juges pénaux fédéraux Patrick Robert-Nicoud, président, Daniel Kipfer Fasciati et Roy Garré, la greffière Joëlle Fontana",
+        "parteien": null,
+        "gegenstand": null,
+        "vorinstanz": null
+      },
+      "regeste": {
+        "text": "Actes de procédure de la Cour des affaires pénales (art. 20 al. 1 let. a en lien avec l'art. 393 al. 1 let. b CPP)",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est irrecevable."
+            },
+            {
+              "marke": "2.",
+              "text": "Les frais sont laissés à la charge de la Confédération."
+            },
+            {
+              "marke": "3.",
+              "text": "Aucune indemnité n’est versée. Bellinzone, le 18 mai 2026 Au nom de la Cour des plaintes du Tribunal pénal fédéral Le président: La greffière: Distribution - Ministère public de la Confédération - Tribunal pénal fédéral, Cour des affaires pénales - Mes Grégoire Mangeat et Fanny Margairaz - Mes Alec Reymond et Manon Pasquier - Mes Saverio Lembo, Andrew Garbarski et François Canonica - Mes David Bitton, Yves Klein et Lorenz Erni Indication des voies de recours Il n’existe pas de voie de droit ordinaire contre la présente décision."
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est irrecevable.",
+        "Les frais sont laissés à la charge de la Confédération.",
+        "Aucune indemnité n’est versée.\n\n\nBellinzone, le 18 mai 2026"
+      ],
+      "zitierteNormen": [
+        "Art. 260ter CP",
+        "Art. 305bis CP",
+        "Art. 339 Abs. 2 CPP",
+        "Art. 339 Abs. 3 CPP",
+        "Art. 390 Abs. 2 CPP",
+        "Art. 393 Abs. 1 CPP",
+        "Art. 393 CPP",
+        "Art. 65 Abs. 1 CPP"
+      ],
+      "normKeys": [],
+      "zitierteEntscheide": [
+        "BB.2026.50",
+        "BGE 140 IV 202",
+        "BGE 143 IV 175",
+        "SK.2023.42",
+        "SK.2024.63"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://bstger.weblaw.ch/api/getDocumentContent/3c94b447-3916-3424-b03c-2cca4553bb27",
+      "abgerufen": "2026-06-27",
+      "fassungsToken": "2f624c9a51483686bbdf29320c63923b1ce775a16bb4441f94977785a66675ed",
+      "sha": "b53a7923889e07532f12a297f07eb3441d557c6b59c8147ed4e5c7d4d5e6b891"
+    }
+  ]
+}
