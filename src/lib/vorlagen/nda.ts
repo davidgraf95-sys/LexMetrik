@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Geheimhaltungsvereinbarung (NDA) ───────────────────────────────────────
@@ -206,11 +206,7 @@ export function ndaZusammenstellen(a: NdaAntworten) {
     infoBeschriebSatz: a.infoBeschrieb.trim() ? ` Dazu gehören insbesondere: ${a.infoBeschrieb.trim()}.` : '',
     pflichtText,
     strafeFmt,
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
   return { ergebnis: assemble(NDA_SCHEMA, antworten) };
-}
-
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
 }

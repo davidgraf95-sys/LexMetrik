@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/arbeitsvertrag-untertypen.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Handelsreisendenvertrag (Art. 347–350a OR) — Sonderregime ──────────────
@@ -206,10 +206,6 @@ export const HR_SCHEMA: VorlageSchema = {
 
 // ── Zusammenstellen ─────────────────────────────────────────────────────────
 
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
-}
-
 export function hrZusammenstellen(a: HrAntworten) {
   const fixFmt = zahl(a.fixCHF) !== null ? fmtCHF(a.fixCHF) : '________';
   const provFmt = zahl(a.provisionProzent) !== null ? String(zahl(a.provisionProzent)) : '________';
@@ -244,7 +240,7 @@ export function hrZusammenstellen(a: HrAntworten) {
     ausschliesslichSatz: a.ausschliesslich
       ? ' Die Zuweisung erfolgt ausschliesslich; der Arbeitgeber bleibt befugt, mit Kunden im Gebiet selbst Geschäfte abzuschliessen (Art. 349 Abs. 1 OR).'
       : '',
-    beginnFmt: fmtIso(a.beginn),
+    beginnFmt: fmtIsoStrict(a.beginn),
     lohnText,
     lohnHatProvision,
     provisionBezugText,
@@ -254,7 +250,7 @@ export function hrZusammenstellen(a: HrAntworten) {
     saisonSatz: a.saisonschwankung
       ? ' Beträgt die Provision mindestens einen Fünftel des Lohnes und unterliegt sie erheblichen saisonalen Schwankungen, kann während der Saison nur auf das Ende des zweiten der Kündigung folgenden Monats gekündigt werden (Art. 350 OR).'
       : '',
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
 
   return { ergebnis: assemble(HR_SCHEMA, antworten) };

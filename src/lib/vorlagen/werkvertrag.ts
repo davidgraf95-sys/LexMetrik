@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Werkvertrag (Art. 363 ff. OR) ──────────────────────────────────────────
@@ -241,7 +241,7 @@ export function wvZusammenstellen(a: WvAntworten) {
     unternehmerBlock: [a.unternehmerName, a.unternehmerAdresse].filter((s) => s.trim()).join('\n'),
     werkArtWort: unbeweglich ? 'unbewegliches Werk' : 'bewegliches Werk',
     ablieferungSatz: a.ablieferung.trim()
-      ? ` Das Werk ist bis zum ${fmtIso(a.ablieferung)} abzuliefern.`
+      ? ` Das Werk ist bis zum ${fmtIsoStrict(a.ablieferung)} abzuliefern.`
       : '',
     verguetungText,
     anzahlungSatz: a.anzahlung
@@ -252,11 +252,7 @@ export function wvZusammenstellen(a: WvAntworten) {
       ? ' Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll.'
       : '',
     verjaehrungSatz,
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
   return { ergebnis: assemble(WV_SCHEMA, antworten) };
-}
-
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
 }

@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/arbeitsvertrag-untertypen.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Heimarbeitsvertrag (Art. 351–354 OR) — Sonderregime ────────────────────
@@ -183,10 +183,6 @@ export const HA_SCHEMA: VorlageSchema = {
 
 // ── Zusammenstellen ─────────────────────────────────────────────────────────
 
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
-}
-
 export function haZusammenstellen(a: HaAntworten) {
   const lohnBetrag = zahl(a.lohnAngabe) !== null ? `CHF ${fmtCHF(a.lohnAngabe)}` : (a.lohnAngabe.trim() || '________');
   const lohnText = `${lohnBetrag} ${a.lohnEinheit.trim() || 'pro Stück'}`;
@@ -214,7 +210,7 @@ export function haZusammenstellen(a: HaAntworten) {
     lohnText,
     lohnzahlungSatz,
     dauerText,
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
 
   return { ergebnis: assemble(HA_SCHEMA, antworten) };

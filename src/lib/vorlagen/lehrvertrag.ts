@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/arbeitsvertrag-untertypen.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtDatum, fmtCHF, zahl } from './datum';
+import { fmtDatum, fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Lehrvertrag (Art. 344–346a OR) — Sonderregime ──────────────────────────
@@ -238,10 +238,6 @@ export const LV_SCHEMA: VorlageSchema = {
 
 // ── Zusammenstellen ─────────────────────────────────────────────────────────
 
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
-}
-
 const BILDUNGSTYP_WORT: Record<LvBildungstyp, string> = {
   efz: 'eidgenössisches Fähigkeitszeugnis EFZ',
   eba: 'eidgenössisches Berufsattest EBA',
@@ -275,7 +271,7 @@ export function lvZusammenstellen(roh: LvAntworten) {
     gesetzlicheVertretungZeile: a.gesetzlicheVertretung.trim() || (minderjaehrig ? '________' : 'entfällt (volljährig)'),
     beruf: a.beruf.trim() || '________',
     bildungstypWort: BILDUNGSTYP_WORT[a.bildungstyp],
-    beginnFmt: fmtIso(a.beginn),
+    beginnFmt: fmtIsoStrict(a.beginn),
     dauerText,
     endeSatz: '',
     probezeitText,
@@ -286,7 +282,7 @@ export function lvZusammenstellen(roh: LvAntworten) {
     lohnLehrjahre: a.lohnLehrjahre.map((l) => ({ jahr: l.jahr, chfFmt: zahl(l.chf) !== null ? fmtCHF(l.chf) : '________' })),
     weitereLeistungenVorhanden: weitere.length > 0,
     weitereLeistungenListe: weitere.length > 0 ? '\n– ' + weitere.join('\n– ') : '',
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
 
   return { ergebnis: assemble(LV_SCHEMA, antworten) };

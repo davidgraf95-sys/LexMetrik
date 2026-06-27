@@ -17,6 +17,12 @@ export function fmtDatumLang(iso?: string): string {
 export const fmtDatum = (iso?: string): string =>
   (iso?.includes('-') ? iso.split('-').reverse().join('.') : iso || '________');
 
+/** STRENGES ISO-Datum (genau yyyy-MM-dd) → dd.MM.yyyy; sonst Ausfüll-Strich.
+ *  Bewusst strenger als fmtDatum (Regex statt includes; '________' statt Roh-ISO).
+ *  Zuvor 6× wortgleich in den Vertrags-Schemas (Entdoppelung, golden-bewiesen). */
+export const fmtIsoStrict = (iso: string): string =>
+  /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
+
 /** CHF-Betrag mit Tausender-Apostroph und zwei Dezimalen. */
 export function fmtCHF(roh: string): string {
   const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));

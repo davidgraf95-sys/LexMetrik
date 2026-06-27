@@ -1,7 +1,7 @@
 // Dossier: bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, zahl } from './datum';
+import { fmtCHF, zahl, fmtIsoStrict } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Auftrag / Dienstleistungsvertrag (Art. 394 ff. OR) ─────────────────────
@@ -245,19 +245,13 @@ export function afZusammenstellen(a: AfAntworten) {
     auftraggeberBlock: [a.auftraggeberName, a.auftraggeberAdresse].filter((s) => s.trim()).join('\n'),
     beauftragteBlock: [a.beauftragteName, a.beauftragteAdresse].filter((s) => s.trim()).join('\n'),
     mandatRahmen: MANDAT_RAHMEN[a.mandatstyp],
-    beginnSatz: a.beginn.trim() ? ` Der Auftrag beginnt am {{beginn}}.`.replace('{{beginn}}', fmtIso(a.beginn)) : '',
+    beginnSatz: a.beginn.trim() ? ` Der Auftrag beginnt am {{beginn}}.`.replace('{{beginn}}', fmtIsoStrict(a.beginn)) : '',
     vollmachtSatz: a.vollmachtErweitert
       ? ' Die Auftraggeberin erteilt der Beauftragten die hierfür erforderliche besondere Ermächtigung im Rahmen des Gegenstands dieses Auftrags.'
       : '',
     ausfuehrungSatz,
     verguetungText,
-    datumFmt: fmtIso(a.datum),
+    datumFmt: fmtIsoStrict(a.datum),
   };
   return { ergebnis: assemble(AF_SCHEMA, antworten) };
-}
-
-// Lokaler ISO→TT.MM.JJJJ-Helfer (die Engine formatiert {{datum}} selbst, hier
-// brauchen wir den Wert in zusammengesetzten Sätzen).
-function fmtIso(iso: string): string {
-  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
 }

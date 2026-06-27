@@ -104,7 +104,7 @@ export function VorlagenWizardRahmen({
               </button>
             )}
             <p className="text-xs text-ink-500">
-              {fussnote ?? 'Ihre Eingaben verlassen den Browser nicht (lokale Zwischenspeicherung).'}
+              {fussnote ?? 'Ihre Eingaben verlassen den Browser nicht, werden aber lokal auf diesem Gerät zwischengespeichert und bleiben nach dem Schliessen erhalten — auf geteilten oder fremden Rechnern bitte «Eingaben zurücksetzen».'}
             </p>
           </div>
         )}
@@ -394,7 +394,7 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, dire
           </p>
           <StilUmschalter stil={stil} />
         </div>
-        <div className="font-sans text-ink-900" style={{ ...VORSCHAU.papier, ...(kompakt ? { fontSize: '0.88rem', lineHeight: 1.55 } : { fontSize: '0.92rem', lineHeight: 1.6 }) }}>
+        <div className="font-sans text-ink-900" style={{ ...VORSCHAU.papier, ...(kompakt ? { fontSize: 'var(--vorschau-fs-kompakt)', lineHeight: 1.55 } : { fontSize: 'var(--vorschau-fs)', lineHeight: 1.6 }) }}>
           {/* Eingaben tragen ihren Titel im fetten Betreff – kein Dokumenttitel;
               Verfügung/Vertrag: zentrierter Titel MIT Haarlinie (wie PDF/DOCX) */}
           {ergebnis.dokument.format !== 'eingabe' && (

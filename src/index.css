@@ -90,6 +90,12 @@
     --ease:cubic-bezier(.2,.6,.2,1);
     /* Typografie */
     --tracking-overline:.12em;
+    /* Off-Skala-Schriftgrössen, die bewusst nicht aus der Typo-Skala stammen,
+       als Token geführt statt roh im Inline-Style (§13/B2): Stoppuhr-Anzeige
+       (Zeiterfassung) und Wizard-Vorschau-Papier. */
+    --timer-fs:clamp(1.8rem, 5vw, 2.4rem);
+    --vorschau-fs:.92rem;
+    --vorschau-fs-kompakt:.88rem;
     /* Display = Geist (Wunsch David 6.6.2026): die Serife Fraunces ist aus
        der UI entfernt; PDF-Berichte behalten ihre eingebetteten Schriften. */
     --font-display:'Geist Variable','Hanken Grotesk';
@@ -225,6 +231,10 @@
     font-size: .6875rem; line-height: 1.4; letter-spacing: var(--tracking-overline);
     text-transform: uppercase; color: var(--ink-600); /* ink-500→ink-600 (Auftrag David 25.6.2026): 11px-Overline auf well 4.48:1→6.65:1, AA überall */
   }
+  /* Gemischtschriftliche Overline (Mono-Label, aber nicht VERSAL) — ersetzt das
+     zuvor 3× kopierte `lc-overline normal-case` + Inline letterSpacing:0.04em.
+     Muss NACH .lc-overline stehen (gleiche Spezifität → Quellreihenfolge gewinnt). */
+  .lc-overline-soft { text-transform: none; letter-spacing: .04em; }
   /* Feinschrift (Copyright/Disclaimer-Zeilen) — eigene Rolle statt das
      lc-overline mit normal-case + Inline-letter-spacing zweckzuentfremden. */
   .lc-fineprint { font-family: var(--font-sans), system-ui, sans-serif; font-size: .6875rem; line-height: 1.5; letter-spacing: .01em; color: var(--ink-600); } /* ink-500→ink-600 (Auftrag David 25.6.2026): 11px-Feinschrift 4.85:1→7.2:1 */
