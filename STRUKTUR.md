@@ -22,6 +22,42 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — B3 Kontext-Panel: Norm ↔ Entscheid ↔ Material ↔ Werkzeug (Worktree `agent-a5f29b82045f2c063`, NICHT deployt)
+
+Isolierte Worktree-Session (§12), abgebrancht von main `6f62cdd5` (Lane G 6b +
+Lane R Batch 1–3 + Materialien). Gate vorher/nachher grün, `golden:vergleich`
+byte-gleich, `check:entscheide` OK (603 Entscheide, 12 Vorbestand-Warnungen).
+Reine Verknüpfungs-Darstellung über vorhandene `normKeys` (§3) — keine neue
+materielle Zuordnung, keine Rechtslogik.
+
+- **Rahmen zuerst (§10):** eine zentrale Auflöse-Schicht `src/lib/kontext.ts`
+  (`kontextSync` synchron für Normen/Materialien/Werkzeuge + `kontextEntscheide`
+  async über den Norm→Entscheid-Index) und EINE wiederverwendbare Komponente
+  `src/components/kontext/KontextPanel.tsx`. Jede Zuordnung lebt weiter an genau
+  einer Stelle (§5): Werkzeuge/Materialien in `normtext/werkzeuge.ts`, Entscheide
+  im build-time `rechtsprechung/norm-index.json`; kontext.ts projiziert sie nur.
+- **Selbst-Korpus ausgelassen:** Norm-Reader zeigt keine Normen-Gruppe,
+  Material-Reader keine Materialien-Gruppe, Entscheid-Reader keine Entscheid-
+  Gruppe → keine Selbstverweise.
+- **Drei Reader gleich eingebunden (§13 konsistent):** `GesetzLeser` (Norm —
+  ersetzt die zwei alten Top-`<details>`-Blöcke Werkzeuge+BGer durch das Panel am
+  Leseende, ergänzt Materialien; `rspr`-State + `rechtsprechungFuerErlass`-Import
+  entfernt, das Panel lädt selbst), `EntscheidLeser` (Panel nach dem Provenienz-
+  Footer), `MaterialLeser` (ersetzt die alte Verzahnungs-Sektion, ergänzt
+  Entscheide). Tokens-only, Lesespalte (`max-w-reading`), ruhiger Leerzustand,
+  WCAG-Kontrast hell+dunkel, mobil ohne Overflow (Playwright via Bash verifiziert).
+- **Bidirektionalität + Drift-Tor:** `src/tests/kontext.test.ts` — Selbst-Korpus-
+  Auslassung, keine toten Norm-Links, und Tor 4: jeder über `proNorm[K]`
+  erreichte Entscheid nennt `K` in seinen `normKeys` zurück (Norm↔Entscheid
+  konsistent). Im Gate (vitest).
+- **Performance (§6.4):** synchrone Gruppen pro Render aus kleinen Registern
+  (Key→Erlass-Map, kein O(n²)); Entscheide lazy, Ladezustand aus dem Ergebnis-Key
+  abgeleitet (kein synchrones setState im Effect, react-hooks-konform).
+- **Offen / `TODO(David)`:** fachliche Abnahme der Verknüpfungen steht aus
+  (Abnahme-Zeitsperre, §8 — nichts «geprüft» markiert); Materialien-`normKeys`
+  decken bisher v. a. Bundessteuer-Kreisschreiben ab (Korpus wächst); Entscheide
+  bleiben «maschinell, keine geprüfte Präjudizienliste».
+
 ## Session 27.6.2026 — Lane R Batch 3 / Auftrag 9: eidg. Gerichte BVGer · BStGer · BPatGer (Worktree `agent-ae3c294dc4634009d`, NICHT deployt)
 
 Isolierte Worktree-Session (§12), abgebrancht von main (Batch 1+2 + Materialien +

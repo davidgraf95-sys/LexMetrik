@@ -14,8 +14,7 @@ import { sachgruppe, topTitel, type KantonSystematik } from '../lib/normtext/sys
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { NormChip } from '../components/vorlagen/ui';
-import { werkzeugeFuer } from '../lib/normtext/werkzeuge';
-import { rechtsprechungFuerErlass, type EntscheidRef } from '../lib/rechtsprechung/norm-index';
+import { KontextPanel } from '../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
@@ -365,13 +364,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
   const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
-  const [rspr, setRspr] = useState<EntscheidRef[]>([]); // BGer-Entscheide zu diesem Erlass (Verzahnung)
-  useEffect(() => {
-    if (!erlass) return;  // kein synchrones setState im Effekt-Body (Default ist [])
-    let lebt = true;
-    rechtsprechungFuerErlass(erlass.key).then((r) => { if (lebt) setRspr(r); });
-    return () => { lebt = false; };
-  }, [erlass]);
+  // BGer-Entscheide/Materialien/Werkzeuge zu diesem Erlass: das einheitliche
+  // KontextPanel (B3) lädt + zeigt sie selbst (Single Source, §5) — am Leseende.
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
   // Mobiler Suche-&-Gliederung-Drawer (role=dialog): Esc-Schliessen, Fokus
   // setzen + fangen, Fokus-Rückgabe an den Auslöser über den geteilten Hook (§5).
@@ -746,30 +740,15 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
           </div>
         </header>
-        {(() => { const wz = werkzeugeFuer(erlass.key); return wz.length > 0 ? (
-          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Passende Werkzeuge <span className="text-ink-500">({wz.length})</span></summary>
-            <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
-              {wz.map((w) => <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400"><span className="text-ink-500 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}</Link>)}
-            </div>
-          </details>
-        ) : null; })()}
-        {rspr.length > 0 && (
-          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-500">({rspr.length})</span></summary>
-            <ul className="mt-2.5 flex flex-col gap-1.5">
-              {rspr.slice(0, 8).map((r) => (
-                <li key={r.key} className="text-body-s"><Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700"><span className="font-medium">{r.zitierung}</span>{r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}{r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}</Link></li>
-              ))}
-            </ul>
-          </details>
-        )}
         {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
             Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
             ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
         <iframe src={`/normtext/${erlass.pdfPfad}#view=FitH`} title={`${erlass.kuerzel} — amtliches PDF`}
           className="w-full rounded-lg border border-line bg-paper-sunken/30"
           style={{ height: 'min(82vh, 1100px)' }} />
+        {/* Einheitliches Kontext-Panel (B3): Entscheide/Materialien/Werkzeuge zu
+            diesem Erlass am Leseende (Single Source mit dem Volltext-Reader). */}
+        <KontextPanel typ="norm" normKeys={[erlass.key]} />
         <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
           <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
           <a href={`/normtext/${erlass.pdfPfad}`} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliches PDF in neuem Tab öffnen ↗</a>
@@ -983,51 +962,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </div>
       </header>
 
-      {/* Norm↔Werkzeug-Brücke (D1): passende Rechner/Vorlagen zu diesem Erlass.
-          #11: standardmässig eingeklappt — öffnet nur auf Wunsch (Auftrag David). */}
-      {(() => {
-        const wz = werkzeugeFuer(erlass.key);
-        return wz.length > 0 ? (
-          <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
-            <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
-              Passende Werkzeuge <span className="text-ink-500">({wz.length})</span>
-            </summary>
-            {/* Mobile: eine horizontal scrollbare Chip-Reihe (sonst stapeln sich
-                viele Werkzeuge sehr hoch); ab sm normaler Umbruch. */}
-            <div className="mt-2.5 flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
-              {wz.map((w) => (
-                <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
-                  <span className="text-ink-500 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
-                </Link>
-              ))}
-            </div>
-          </details>
-        ) : null;
-      })()}
-
-      {/* Verzahnung (Norm→Entscheid): Bundesgerichtsentscheide zu diesem Erlass.
-          Quelle = maschinell extrahierte Norm-Nennungen → keine geprüfte Präjudizienliste (§8).
-          #11: standardmässig eingeklappt — öffnet nur auf Wunsch. */}
-      {rspr.length > 0 && (
-        <details className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3 mt-3">
-          <summary className="lc-overline cursor-pointer select-none text-ink-600 hover:text-brass-700">
-            Bundesgerichtsentscheide zu diesem Erlass <span className="text-ink-500">({rspr.length})</span>
-          </summary>
-          <ul className="mt-2.5 flex flex-col gap-1.5">
-            {rspr.slice(0, 8).map((r) => (
-              <li key={r.key} className="text-body-s">
-                <Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700">
-                  <span className="font-medium">{r.zitierung}</span>
-                  {r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}
-                  {r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="text-micro text-ink-500 mt-2">Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.</p>
-        </details>
-      )}
-
       {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
           eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
           Sticky direkt unter dem 4rem-Header (der Reiter-Streifen entfiel; die
@@ -1134,6 +1068,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
               {sektionen.map((s) => renderSektion(s, true))}
             </div>
           )}
+
+          {/* Einheitliches Kontext-Panel (B3): Entscheide/Materialien/Werkzeuge zu
+              diesem Erlass am Leseende — Norm ↔ Entscheid ↔ Material ↔ Werkzeug an
+              einer Stelle (Burggraben). Lädt die Entscheide selbst (Single Source, §5). */}
+          <KontextPanel typ="norm" normKeys={[erlass.key]} />
 
           <nav className="mt-12 border-t border-line pt-5 flex justify-between gap-4 text-body-s" aria-label="Weitere Erlasse">
             {vorher ? <Link to={`/gesetze/${vorher.ebene}/${encodeURIComponent(vorher.key)}`} className="text-brass-700 hover:underline">‹ {vorher.kuerzel}</Link> : <span />}
