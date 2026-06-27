@@ -1,5 +1,5 @@
 import type { EntscheidFilterWerte, SortModus } from '../../lib/rechtsprechung/browse';
-import { normLabel, filterEntscheide } from '../../lib/rechtsprechung/browse';
+import { normLabel, filterEntscheide, INSTANZ_ORDNUNG } from '../../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
@@ -24,14 +24,15 @@ function einzigartig<T>(werte: T[]): T[] {
  *  sichtbar in der Ergebnis-Spalte statt im zugeklappten <details>. Reine Anzeige (§3). */
 function FacettenGruppe({ label, optionen }: {
   label: string;
-  optionen: { id: string; text: string; n: number; aktiv: boolean; waehle: () => void }[];
+  /** `voll` = ausgeschriebene a11y-/Tooltip-Bezeichnung, falls `text` eine Abkürzung ist. */
+  optionen: { id: string; text: string; voll?: string; n: number; aktiv: boolean; waehle: () => void }[];
 }) {
   return (
     <div role="group" aria-label={label} className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
       <span aria-hidden className="lc-overline shrink-0 text-ink-500">{label}</span>
       {optionen.map((o) => (
         <button key={o.id} type="button" aria-pressed={o.aktiv} onClick={o.waehle}
-          aria-label={`${label}: ${o.text} (${o.n})`}
+          aria-label={`${label}: ${o.voll ?? o.text} (${o.n})`} title={o.voll}
           className={`lc-chip ${o.aktiv ? 'border-brass-400 text-brass-700' : ''}`}>
           {/* ink-600 (nicht ink-500): 12px-Ziffer auf --well ≥4.5:1 (R4/WCAG 1.4.3,
               Werte nicht runden — ink-500 lag bei 4.47:1). Aktiv erbt brass-700. */}
@@ -96,6 +97,24 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
       })),
     ] : []),
   ].filter((o) => o.id === 'alle' || o.n > 0 || o.aktiv); // Null-Optionen aus (ausser aktiv)
+
+  // ── Instanz-Achse (Batch 3): seit BVGer/BStGer/BPatGer dazu sind, hat der
+  //    gerichtstyp >2 reale Werte → eigene Achse mit Mehrwert (vorher deckungs-
+  //    gleich mit Bund/Kanton). Feinere Auflösung als «Gemeinwesen»: zeigt die
+  //    konkreten eidg. Gerichte einzeln. Toggle + cross-gefilterte Zähler + Null-
+  //    Prune wie die anderen Achsen (R15). Chips als Abkürzung (BGer/BVGer/…),
+  //    volle Bezeichnung in aria-label/title (F2/F3). Reine Anzeige (§3).
+  const instBasis = filterEntscheide(bestand, { ...werte, gerichtstyp: null });
+  const vorhandeneInstanzen = INSTANZ_ORDNUNG.filter((i) => bestand.some((e) => !e.verweis && e.gerichtstyp === i.typ));
+  const hatMehrereInstanzen = vorhandeneInstanzen.length > 1;
+  const instanzOpt = [
+    { id: 'alle', text: 'Alle', n: zaehle(instBasis, () => true), aktiv: !werte.gerichtstyp, waehle: () => setze({ gerichtstyp: null }) },
+    ...vorhandeneInstanzen.map((i) => ({
+      id: i.typ, text: i.kurz, voll: i.label, n: zaehle(instBasis, (e) => e.gerichtstyp === i.typ),
+      aktiv: werte.gerichtstyp === i.typ,
+      waehle: () => (werte.gerichtstyp === i.typ ? setze({ gerichtstyp: null }) : setze({ gerichtstyp: i.typ })),
+    })),
+  ].filter((o) => o.id === 'alle' || o.n > 0 || o.aktiv);
 
   // ── Sprache-Achse (Auftrag 8): seit A2 gibt es echte FR-Entscheide → die Sprache
   //    aus dem vergrabenen <details>-Select in dieselbe Facetten-Leiste hochgezogen
@@ -163,6 +182,7 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
       {/* Facetten-Leiste — die primären Achsen sichtbar (Auftrag 4 «Gemeinwesen»,
           Auftrag 8 «Sprache»), statt im <details> vergraben. Trefferzahl je Chip (R15). */}
       {hatKantonal && gemeinwesenOpt.length > 1 && <FacettenGruppe label="Gemeinwesen" optionen={gemeinwesenOpt} />}
+      {hatMehrereInstanzen && instanzOpt.length > 1 && <FacettenGruppe label="Instanz" optionen={instanzOpt} />}
       {hatMehrsprachig && spracheOpt.length > 1 && <FacettenGruppe label="Sprache" optionen={spracheOpt} />}
 
       {/* Sekundärfilter — standardmässig zu (Inhalt steht oben, nicht der Filter). */}
