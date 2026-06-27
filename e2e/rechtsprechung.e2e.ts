@@ -21,16 +21,21 @@ test.describe('/rechtsprechung — Übersicht', () => {
     expect(fehler).toEqual([])
   })
 
-  test('trennt Bund und Kantone über das Ebene-Segment', async ({ page }) => {
+  test('trennt Bund und Kantone über die Gemeinwesen-Achse', async ({ page }) => {
     // Rechtsprechung-Redesign (Leitentscheide-first): die Trennung Bund/Kantone
-    // läuft jetzt über das Ebene-Segment (Alle · Bundesgericht · Kantone), nicht
-    // mehr über zwei feste «Bundesgericht»/«Kantonale Gerichte»-Abschnitte.
+    // läuft über die Gemeinwesen-Filter-Achse (Alle · Bund · Kantone · <Kantone>,
+    // EntscheidFilter.tsx), nicht mehr über zwei feste Abschnitte. (Locator 28.6.
+    // an die deployte Achse nachgezogen: Chip heisst «Bund», nicht «Bundesgericht».)
     await page.goto('/rechtsprechung')
-    // exact: true — sonst matcht «Kantone» auch «Kantone aufklappen» (Filter).
-    await expect(page.getByRole('button', { name: 'Bundesgericht', exact: true })).toBeVisible()
-    await expect(page.getByRole('button', { name: 'Kantone', exact: true })).toBeVisible()
+    // Die Facetten-Chips tragen einen a11y-aria-label «Gemeinwesen: <Text> (<n>)»
+    // (Batch 2, EntscheidFilter.tsx:35), der den Accessible Name bildet — darum
+    // Regex auf das Achsen-Label statt exaktem Chip-Text (sonst matcht der Name nie).
+    const bund = page.getByRole('button', { name: /^Gemeinwesen: Bund \(\d+\)$/ })
+    const kantone = page.getByRole('button', { name: /^Gemeinwesen: Kantone \(\d+\)$/ })
+    await expect(bund).toBeVisible()
+    await expect(kantone).toBeVisible()
     // Auf «Kantone» wechseln → die Liste zeigt weiterhin Entscheid-Links.
-    await page.getByRole('button', { name: 'Kantone', exact: true }).click()
+    await kantone.click()
     await expect(page.locator('a[href^="/rechtsprechung/"]').first()).toBeVisible()
   })
 
@@ -45,9 +50,13 @@ test.describe('/rechtsprechung — Übersicht', () => {
 })
 
 test.describe('Verzahnung im Gesetzes-Reader', () => {
-  test('BGG zeigt «Bundesgerichtsentscheide zu diesem Erlass»', async ({ page }) => {
+  test('BGG zeigt im Kontext-Panel die «Bundesgerichtsentscheide»-Gruppe', async ({ page }) => {
+    // Verzahnung läuft jetzt über das einheitliche B3-Kontext-Panel (Norm ↔
+    // Entscheid ↔ Material ↔ Werkzeug, KontextPanel.tsx) — die Entscheid-Gruppe
+    // trägt den Titel «Bundesgerichtsentscheide». (Locator 28.6. an das deployte
+    // B3-Panel nachgezogen; vorher stand-alone «… zu diesem Erlass».)
     await page.goto('/gesetze/bund/BGG')
-    await expect(page.getByText('Bundesgerichtsentscheide zu diesem Erlass', { exact: false })).toBeVisible()
+    await expect(page.getByText('Bundesgerichtsentscheide', { exact: false }).first()).toBeVisible()
     await page.screenshot({ path: 'e2e-shots/verzahnung-bgg.png', fullPage: false })
   })
 })
