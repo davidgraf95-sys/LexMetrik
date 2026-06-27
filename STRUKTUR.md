@@ -22,6 +22,42 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — Lane R Batch 3 / Auftrag 9: eidg. Gerichte BVGer · BStGer · BPatGer (Worktree `agent-ae3c294dc4634009d`, NICHT deployt)
+
+Isolierte Worktree-Session (§12), abgebrancht von main (Batch 1+2 + Materialien +
+A9-Dossier). Gate vorher/nachher grün, `golden:vergleich` byte-gleich, Bestand
+(272 BGE + 4 FR) byte-identisch (0 Snapshot-Dateien geändert).
+
+- **Befund:** OpenCaseLaw führt alle drei Gerichte als eigene `court`-Codes
+  (`bvger`/`bstger`/`bpatger`) — NICHT die entscheidsuche-Codes aus dem Dossier. →
+  kein eigener Scraper; der bestehende OCL-Adapter trägt sie über denselben
+  keyed-Lookup-Pfad wie Bund/Kanton.
+- **Pipeline additiv (kein Bestand-Drift, §6):** `normtext-entscheide.ts` +
+  `--additiv --eidg=bvger,bstger,bpatger --eidg-pro=5`. `ladeBestandSnapshots` lädt
+  den committeten Korpus byte-treu von der Platte und ergänzt nur die neuen Gerichte
+  (kein Live-Neuzug der 272 BGE). Je-Datei `erzeugt` aus `snap.abgerufen` hält den
+  Bestand byte-gleich; `enumeriereNeuesteAlle` (ohne Sprachfilter) holt die wahren
+  neuesten (FR/IT statt nur DE); proNorm deterministisch (key-Tiebreaker, §2).
+- **15 Urteile** (5 je Gericht), de 10 / fr 3 / it 2 (erste IT-Einträge im Korpus).
+  Alle `routine` (keine amtliche Sammlung aufgelöst → Invariante bgeReferenz⟺
+  leitentscheid gewahrt, kein «Leitentscheid»-Badge), `kuratierung:'maschinell'`,
+  `verifiziert:false`. OCL-Regeste → `regesteAmtlich:false` → Reader zeigt
+  «Zusammenfassung» (kein Regeste-Kasten, §8). Norm→Entscheid-Index auf
+  `gerichtstyp==='bundesgericht'` geschärft (neue Gerichte NICHT unter
+  «Bundesgerichtsentscheide», Bestand identisch).
+- **Darstellung:** Voll-Urteil-Struktur wie BGer (Kopf/Sachverhalt/Erwägungen/
+  Dispositiv), FR/IT-Bodies mit Kopf + Gliederung (A2). **Instanz-Achse** als eigene
+  Facette aktiviert (`gerichtstyp`: BGer/BVGer/BStGer/BPatGer/Kantone, cross-gefiltert,
+  Null-Prune R15, Abk.-Chips + volle a11y-Bezeichnung). Übersicht gruppiert via
+  `gruppiereNachInstanz`. B2-Golden +8 (Gericht×Sprache)-Zellen.
+- **Verdrahtung:** Prerender 342 Detailseiten (+15, 0 übersprungen), Sitemap +15,
+  Universal-Suche/SEO automatisch übers Register. Visuell hell/dunkel/mobil geprüft
+  (Playwright via Bash) — keine Console-Fehler, neutrale Identität bestätigt.
+- **Doku:** `bibliothek/rechtsprechung/eidg-gerichte-aufnahme-2026-06-27.md` (+ INDEX).
+- **Offen / TODO(David):** Leitentscheid-Welle je Gericht (BVGE/TPF/BPatGer-Rubrik,
+  Dossier §A–C); Sachgebiet-Feinschliff BStGer RR/CR (maschinell 'oeffentlich');
+  fachliche Abnahme. **Commits, KEIN Push/Deploy** (§9, Abnahme-Zeitsperre).
+
 ## Session 27.6.2026 — Nacht-Session «jetzt los»: Materialien-Rubrik (Auftrag 5) + Gerichts-Dossier (Auftrag 9) (Worktree `nacht-materialien-2026-06-27`, NICHT deployt)
 
 Parallele, isolierte Nacht-Session (HANDOFF-NACHT-MATERIALIEN.md, §12). Beide
