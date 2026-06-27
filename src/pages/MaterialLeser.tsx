@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ladeMaterial } from '../lib/materialien/browse';
-import { werkzeugeFuerEntscheid } from '../lib/normtext/werkzeuge';
+import { KontextPanel } from '../components/kontext/KontextPanel';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import type { BrowseMaterial } from '../lib/materialien/typen';
 
@@ -61,7 +61,6 @@ export function MaterialLeser() {
   }
 
   const m = material;
-  const werkzeuge = werkzeugeFuerEntscheid(m.normKeys);
   const overline = m.nummer ? `${m.behoerdeKuerzel} · ${m.doktypLabel} ${m.nummer}` : `${m.behoerdeKuerzel} · ${m.doktypLabel}`;
 
   return (
@@ -103,38 +102,10 @@ export function MaterialLeser() {
         <p className="mt-2 text-xs text-ink-500 break-all max-w-reading">{m.quelleUrl}</p>
       </div>
 
-      {/* Verzahnung Norm ↔ Material ↔ Werkzeug (Burggraben). */}
-      {(m.normKeys.length > 0 || werkzeuge.length > 0) && (
-        <section className="space-y-4 border-t border-line pt-6">
-          {m.normKeys.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="font-sans font-semibold text-ink-900 text-body-l">Verknüpfte Erlasse</h2>
-              <div className="flex flex-wrap gap-2">
-                {m.normKeys.map((nk) => (
-                  <Link key={nk} to={`/gesetze/bund/${encodeURIComponent(nk)}`} className="lc-chip no-underline hover:border-brass-400">
-                    {nk}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-          {werkzeuge.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="font-sans font-semibold text-ink-900 text-body-l">Passende Werkzeuge</h2>
-              <p className="text-xs text-ink-500 max-w-reading">
-                Aus den verknüpften Normen abgeleitet (grobe Zuordnung, keine kuratierte Empfehlung).
-              </p>
-              <ul className="flex flex-wrap gap-2">
-                {werkzeuge.map((w) => (
-                  <li key={w.id}>
-                    <Link to={w.href} className="lc-chip no-underline hover:border-brass-400">{w.titel}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </section>
-      )}
+      {/* Einheitliches Kontext-Panel (B3): Norm ↔ Entscheid ↔ Werkzeug über die
+          normKeys des Materials (Burggraben — Behördenpraxis an die Norm/den
+          Entscheid gebunden). */}
+      <KontextPanel typ="material" normKeys={m.normKeys} />
 
       <div className="border-t border-line pt-6">
         <Link to="/materialien" className="lc-btn lc-btn-outline lc-btn-sm">← Alle Materialien</Link>

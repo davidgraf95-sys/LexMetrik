@@ -4,6 +4,7 @@ import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
 import { NormText } from '../components/NormText';
+import { KontextPanel } from '../components/kontext/KontextPanel';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
 import { kopfModell, type KopfLabelKey } from '../lib/rechtsprechung/kopf';
 import { normalisiereRegeste } from '../lib/rechtsprechung/register';
@@ -394,6 +395,11 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
         </p>
         <NormTextHinweis />
       </footer>
+
+      {/* Einheitliches Kontext-Panel (B3): vom Entscheid zu den angewandten
+          Normen, der Behördenpraxis (Materialien) und den passenden Werkzeugen —
+          über die angewandten normKeys des Entscheids. */}
+      <KontextPanel typ="entscheid" normKeys={snap.normKeys} />
 
       <nav className="border-t border-line pt-5 text-body-s" aria-label="Weitere Entscheide">
         <Link to="/rechtsprechung" className="text-ink-500 hover:text-brass-700">‹ Zur Übersicht</Link>
