@@ -9,7 +9,7 @@
 // nur die Unterrubriken der Behördeneingaben und die Anzeige-Helfer.
 // Vollständigkeit erzwingt src/tests/vorlagenKategorie.test.ts.
 
-import type { CalculatorCard, VorlageCard, EingabeRubrik, VertragRubrik, FormGate } from './startseiteConfig';
+import type { CalculatorCard, VorlageCard, EingabeRubrik, VertragRubrik } from './startseiteConfig';
 
 export interface EingabeRubrikDef {
   id: EingabeRubrik;
@@ -62,23 +62,3 @@ export const VERTRAG_RUBRIKEN: VertragRubrikDef[] = [
   { id: 'zusammenarbeit', titel: 'Zusammenarbeit & Geheimhaltung',
     lede: 'Kooperationen und der Schutz vertraulicher Informationen.' },
 ];
-
-// ─── Form-Gate-Zeile der Vorlagen-Karten (V1) ───────────────────────────────
-//
-// Drei feste Formulierungen + Mappen-Mischfall; Quelle ist der formGate-
-// Spiegel der Karte (SSoT = Schema-ausgabeArt, erzwungen durch
-// formGate.test.ts). EIN zusammengesetzter String je Karte (SSR-Regel).
-
-const FORMAT_LABEL = { pdf: 'PDF', docx: 'DOCX', xlsx: 'XLSX' } as const;
-
-export function formGateText(v: VorlageCard): string | undefined {
-  if (!v.formGate) return undefined;
-  const formate = (v.output ?? ['pdf']).map((f) => FORMAT_LABEL[f]).join('/');
-  const texte: Record<FormGate, string> = {
-    fertig: `druckfertig (${formate})`,
-    abschrift: 'Abschreibvorlage – von Hand zu errichten',
-    entwurf: 'Entwurf – öffentliche Beurkundung nötig',
-    gemischt: 'Mappe – teils druckfertig, teils Beurkundungs-Entwurf',
-  };
-  return texte[v.formGate];
-}

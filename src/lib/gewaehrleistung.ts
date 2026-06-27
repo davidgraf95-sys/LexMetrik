@@ -121,7 +121,7 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
         ? 'NEUES Recht (Teilrevision «Baumängel», in Kraft seit 1.1.2026).'
         : 'ALTES Recht (Vertrag vor dem 1.1.2026; Art. 1 SchlT ZGB) – auch die Rügefrist richtet sich nach altem Recht.'
     }${sia ? ' SIA-Norm 118 vereinbart (Vertragswerk; Fristen gemäss Art. 172/179/180 SIA 118).' : ''}`,
-    normen: neu ? [N('Art. 1 SchlT ZGB', 'Übergangsrecht')] : [N('Art. 1 SchlT ZGB', 'Übergangsrecht')],
+    normen: [N('Art. 1 SchlT ZGB', 'Übergangsrecht')],
   });
 
   // ── Rügefrist (Obliegenheit / Verwirkung) ──

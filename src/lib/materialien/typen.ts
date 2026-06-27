@@ -122,10 +122,3 @@ export interface MaterialManifest {
   erzeugt: string;
   materialien: BrowseMaterial[];
 }
-
-/** Hat das Material eine In-App-Lesesicht mit eigenem Inhalt (PDF/Volltext)?
- *  nur-live-link bekommt eine reine Metadaten-Detailseite (Live-Link), keine
- *  In-App-Inhaltswiedergabe. SSoT für Reader/Karten. */
-export function hatInAppInhalt(m: Pick<BrowseMaterial, 'status'>): boolean {
-  return m.status === 'pdf-embed' || m.status === 'volltext';
-}

@@ -86,7 +86,7 @@ export function ZefixSuche({ firma, uid, onUebernehmen }: {
       >
         {laedt ? 'Sucht …' : 'In Zefix nachschlagen (Firma oder UID)'}
       </button>
-      {fehler && <p className="text-body-s text-ink-600">{fehler}</p>}
+      {fehler && <p className="text-body-s text-warn-700">{fehler}</p>}
       {treffer && treffer.length === 0 && (
         <p className="text-body-s text-ink-600">Kein aktiver Eintrag gefunden — Schreibweise/UID prüfen oder von Hand eintragen.</p>
       )}

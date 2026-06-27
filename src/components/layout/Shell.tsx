@@ -50,7 +50,7 @@ function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: numbe
       tabIndex={0}
       onPointerDown={ziehen}
       onKeyDown={taste}
-      className="hidden lg:block shrink-0 sticky top-0 h-screen w-1.5 -ml-1.5 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus:bg-brass-400 focus:outline-none"
+      className="hidden lg:block shrink-0 sticky top-0 h-screen w-1.5 -ml-1.5 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus:bg-brass-400"
     />
   );
 }

@@ -20,7 +20,7 @@ import type { Kanton } from '../../types/legal';
 const SUCHE_URL = (q: string) =>
   `https://api3.geo.admin.ch/rest/services/api/SearchServer?searchText=${encodeURIComponent(q)}&type=locations&origins=address&limit=6`;
 const DETAIL_URL = (featureId: string) =>
-  `https://api3.geo.admin.ch/rest/services/ech/MapServer/ch.bfs.gebaeude_wohnungs_register/${featureId}`;
+  `https://api3.geo.admin.ch/rest/services/ech/MapServer/ch.bfs.gebaeude_wohnungs_register/${encodeURIComponent(featureId)}`;
 
 type Treffer = { label: string; featureId: string };
 

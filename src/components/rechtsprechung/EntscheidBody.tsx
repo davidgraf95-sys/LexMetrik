@@ -165,7 +165,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           {nummeriert.map((b, i) => (
             <li key={i} className="grid grid-cols-[1.7rem_minmax(0,1fr)] gap-x-2">
               <span className="num tabular-nums font-semibold text-ink-700">{b.marke}</span>
-              <p className="font-serif text-[length:var(--rsp-fs,1.05rem)] leading-[1.65] text-ink-800 whitespace-pre-line"><BodyText text={b.text} /></p>
+              <p className="font-serif text-[length:var(--rsp-fs,1.08rem)] leading-[1.65] text-ink-800 whitespace-pre-line"><BodyText text={b.text} /></p>
             </li>
           ))}
         </ol>
