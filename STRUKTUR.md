@@ -22,6 +22,39 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — Ultracode-Versimpelung/Verbesserung UI·CI·Logik·Sicherheit (BRANCH `verbesserung-ultracode-2026-06-27`, NICHT gemergt, NICHT deployt — wartet auf Davids Freigabe §9)
+
+Autonome «run till dry»-Session (ultracode). Mehrstufiger Multi-Agent-Workflow:
+Runde 1 Discovery über 4 Dimensionen (UI/CI-Design/Logik/Sicherheit), jeder Befund
+adversarial verifiziert + sicherheitsklassifiziert → 20 real bestätigte Befunde.
+Runde 2 adversariale Regressions-Prüfung des eigenen Diffs (3 Linsen: Splits /
+Dedup+Tokens / Logik-Check — **keine Regression**) + Completeness-Sweep → 4 weitere
+sichere Befunde. Runde 3 Abschluss-Critic → DRY. Jede Etappe gegen das §6-Gate
+(`npm run gate` voll: tsc · vitest · golden **byte-gleich** · lint · check).
+
+Umgesetzt (5 Commits `1a605f7b`→`a6c71267`, alle gate-grün):
+- **A11y/§13-F3/F4:** Shell-Ziehgriff-Fokus sichtbar (Outline statt nur Farbe);
+  ZefixSuche-Fehlerfarbe `text-warn-700`; Gemeinde-Input `aria-label`; PdfExport +
+  Wizard-Export-Buttons (PDF/DOCX) mit `laedt`/`disabled`/`aria-busy` (Mehrfachklick-Schutz).
+- **Design-Tokens:** `check:design-tokens` gehärtet (Default-Paletten-Farben,
+  Arbitrary-#/rgb/hsl, rohe Inline-fontSize); Tokens `--timer-fs`/`--vorschau-fs`,
+  `.lc-overline-soft` (5 Call-sites entzweckentfremdet); EntscheidBody-Fallback angeglichen.
+- **Entdopplung §6 Ziff.6:** `fmtIsoStrict` (6 Vertrags-Schemas), `chfGanz` (4 Formulare)
+  in `vorlagen/datum.ts` zentralisiert — §1-treu (semantisch abweichende CHF-Varianten NICHT zusammengeführt).
+- **Toter Code:** `formGateText`, `hatInAppInhalt`, `kantonsfremd`-Zweige entfernt.
+- **Sicherheit:** `encodeURIComponent` in geo.admin-Detail-URL; Wizard-localStorage-Fussnote
+  ehrlicher (§8, On-Device-Persistenz + Fremdgeräte-Hinweis).
+- **Datei-Splits §6 Ziff.6:** `GesetzLeser.tsx` 1132→8 Z. (gesetz-leser/), `VorlageAgGruendung.tsx`
+  1294→533 Z. (vorlage-ag-gruendung/) — verhaltensneutral, golden byte-gleich, Regressions-geprüft.
+
+OFFEN für David: (1) fachliche Abnahme + Merge/Deploy-Freigabe (§9). (2) **Geflaggt, NICHT
+umgesetzt (§1, braucht Fachabnahme):** `gewaehrleistung.ts` SIA-Werkvertrag bei beweglichem
+Objekt — Rechenwert 5 Jahre korrekt, aber zugehörige Normbemerkung sagt «2 Jahre» (Anzeige-
+Widerspruch; Fix ändert golden + verlangt SIA-Norm-Zitier-Entscheid). (3) `internerRechtsprechungLink`
+(bge.ts) ist tot, aber dokumentierte Fahrplan-8.5-Brücke → bewusst belassen.
+Hinweis §12: Commit `1a605f7b` zog versehentlich fremde Archiv-Moves (JETZT-MACHEN.md u.a.)
+mit (git commit ohne Pathspec bei vorab gestagtem Fremd-WIP); fremde Arbeit intakt, nur mitcommittet.
+
 ## Session 27.6.2026 — SEO/A11y Welle-1-Restlücken: og:image + CWV-Messung (gemergt main `4906e537`, DEPLOYT `dpl_HprP3VaYQ…`, prod verifiziert)
 
 Isolierte Worktree-Session (§12), abgebrancht von main `ca2e46e3`. Auftrag David:
