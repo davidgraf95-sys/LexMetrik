@@ -234,6 +234,12 @@ im Verfallsregister («Amtliche Muster-Suiten»).
 - `scripts/fedlex-cache.sh` — konsolidierte Filestore-HTMLs nach /tmp + Anker-Prüfung
 - `scripts/plz-generieren.ts` — amtliches PLZ-Register (swisstopo) + Gemeinde→Amt-Daten
 - `scripts/golden-outputs.ts` — Golden-Protokoll der Engines (53 Fälle)
+- `scripts/og-bild.ts` — Generator der Social-Card `public/og.png` (W1.10, `npm run og:bild`)
+- `scripts/messung-cwv.ts` — CWV-Messung am Indexierungs-Hebel (W1.11, `npm run messung:cwv`)
+
+## seo/ — Sichtbarkeit & Performance (Strang B, ohne David-Fachzeit)
+
+- [CWV-Baseline (W1.11)](seo/cwv-baseline.md) — LCP/Transfer/Requests der prerenderten Detailseiten; Befund: render-then-replace trägt die LCP auch bei OR/ZGB (~1.7/1.1 MB), W2.8-Splitting für LCP nicht dringlich
 
 ## Verwandtes im Repo (nicht hier dupliziert)
 

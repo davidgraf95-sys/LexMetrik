@@ -218,3 +218,34 @@ test('Rechtsprechung — Entscheid-Reader (dunkel)', async ({ page }, testInfo) 
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'rechtsprechung-leser')
 })
+
+// W1.8 (SEO/A11y-Fahrplan): Heading-Hierarchie. heading-order/page-has-heading-
+// one/empty-heading sind axe-BEST-PRACTICE-Regeln, die das Haupt-Tor oben
+// (withTags wcag2a/aa) NICHT fährt. Diagnose 27.6.2026: 0 Verstösse über alle
+// Rubriken → hier als Regressionsschutz festgenagelt. Eigener Lauf mit
+// withRules, damit das Haupt-axePruefen nicht das gesamte best-practice-Set
+// einzieht (das brächte viele neue, ungeprüfte Regel-IDs ins Tor).
+const HEADING_REGELN = ['heading-order', 'page-has-heading-one', 'empty-heading']
+const HEADING_ROUTEN: Array<[string, string]> = [
+  ['/', 'startseite'],
+  ['/rechner/tagerechner', 'tagerechner'],
+  ['/vorlagen/arbeitsvertrag', 'vorlage'],
+  ['/gesetze?ebene=kanton&kt=BS', 'gesetze-uebersicht'],
+  ['/gesetze/kanton/BS-640.100', 'gesetze-leser-BS'],
+  ['/gesetze/bund/GEBV_HREG', 'gesetze-leser-bund'],
+  ['/rechtsprechung', 'rechtsprechung-uebersicht'],
+  ['/rechtsprechung/bger_1B_278_2022', 'entscheid-leser'],
+  ['/international', 'international'],
+  ['/materialien', 'materialien'],
+]
+for (const [url, name] of HEADING_ROUTEN) {
+  test(`Heading-Hierarchie — ${name}`, async ({ page }) => {
+    await oeffnen(page, url)
+    await expect(page.locator('h1').first()).toBeVisible()
+    const res = await new AxeBuilder({ page }).withRules(HEADING_REGELN).analyze()
+    expect(
+      res.violations.map((v) => `${v.id}: ${v.nodes.length} Knoten, z. B. ${v.nodes[0]?.target.join(' ')}`),
+      `heading ${name}: keine heading-order/h1/empty-heading-Verstösse`,
+    ).toEqual([])
+  })
+}

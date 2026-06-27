@@ -22,6 +22,39 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 27.6.2026 — SEO/A11y Welle-1-Restlücken: og:image + CWV-Messung (Worktree `seo-a11y-welle1`, NICHT deployt)
+
+Isolierte Worktree-Session (§12), abgebrancht von main `ca2e46e3`. Auftrag David:
+`FAHRPLAN-SEO-A11Y-GOVERNANCE.md` Punkt 2 «run till dry». **Befund beim IST-Audit:
+Welle 1 + grosse Teile Welle 2 waren bereits gebaut** (W1.1 Detail-Prerender +
+Sitemap-Index = 1876 URLs, W1.2/W1.3 seo-detail, W1.5 Thin-Content, W1.6 Karten-
+Fokus, W1.7 axe-Tor 15, W1.9 Cache-Header, W2.2 Tabellen-`role`, W2.4 `lang`,
+W2.6 44px). Echte autonome Restlücken nur zwei — beide hier geschlossen:
+
+- **W1.10 og:image (war ganz offen):** statische Social-Card `public/og.png`
+  (1200×630, Marken-Tokens) + Generator `scripts/og-bild.ts` (`npm run og:bild`,
+  reproduzierbar statt Hand-Artefakt). `index.html` um `og:image`(+width/height/
+  type/alt), `twitter:image` und `twitter:card=summary_large_image` ergänzt — das
+  Prerender-Template reicht die Tags in ALLE 1876 Detailseiten durch (verifiziert
+  in `dist/gesetze/bund/OR.html`).
+- **W1.11 CWV-Messung (war offen):** `scripts/messung-cwv.ts` (`npm run messung:cwv`)
+  misst LCP/Transfer/Requests am Indexierungs-Hebel über `vite preview`. **Bewusst
+  KEIN harter Gate** (Timing umgebungsabhängig → §2-Determinismus); Mess-Infra
+  Strang B. Baseline in `bibliothek/seo/cwv-baseline.md`. **Befund:** schwerste
+  Seite OR (1.7 MB) LCP 616 ms lokal — render-then-replace trägt den ersten Paint
+  über das statische HTML, das grosse JSON belastet nur Transfer, nicht LCP →
+  **W2.8-Splitting für LCP nicht dringlich.**
+- **W1.8 Heading-Hierarchie (war offen):** Diagnose über 11 Rubriken = 0
+  Verstösse (`heading-order`/`page-has-heading-one`/`empty-heading` — axe-best-
+  practice-Regeln, die das wcag-Tag-Tor nicht fährt). Als Regressionsschutz in
+  `e2e/a11y.e2e.ts` festgenagelt (10 Tests, eigener `withRules`-Lauf, damit das
+  Haupt-`axePruefen` nicht das ganze best-practice-Set einzieht). 10/10 grün.
+
+Offen (brauchen David / ausserhalb autonom): W1.12 GSC-Property + Sitemap-Submit,
+W3.x (FAQ/Themen-Hubs/Keywords/Domain/Use-of-Color). Gate vorher + nachher grün
+(tsc · vitest · golden byte-gleich · lint · check). Kein Push/Deploy (§9 — Davids
+Ja ausstehend).
+
 ## Session 27.6.2026 — B3 Kontext-Panel: Norm ↔ Entscheid ↔ Material ↔ Werkzeug (Worktree `agent-a5f29b82045f2c063`, NICHT deployt)
 
 Isolierte Worktree-Session (§12), abgebrancht von main `6f62cdd5` (Lane G 6b +
