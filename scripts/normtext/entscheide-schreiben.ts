@@ -4,7 +4,7 @@
 // je Entscheid eine Datei + register.json (Manifest) + norm-index.json +
 // erfasste-keys.generated.ts (interne Verlinkung). Eine Stelle, kein Duplikat (§5).
 
-import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
@@ -30,7 +30,12 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     const { key, datei } = keyVon(snap);
     const ziel = join(PUB, datei);
     mkdirSync(join(ziel, '..'), { recursive: true });
-    const wrap: EntscheidSnapshotDatei = { erzeugt: datum, eintraege: [snap] };
+    // §7-Provenienz / additiver Build (Batch 3): jede Datei trägt das Abrufdatum
+    // IHRES Inhalts (snap.abgerufen), nicht das globale Build-Datum. So bleibt ein
+    // additiver Lauf (neue Gerichte ergänzen) für unveränderte Bestands-Snapshots
+    // byte-gleich (kein Drift der 272 BGE, §6), während neue Einträge ihr echtes
+    // Abrufdatum behalten. Für einen Vollbau (alle abgerufen==datum) verhaltensneutral.
+    const wrap: EntscheidSnapshotDatei = { erzeugt: snap.abgerufen || datum, eintraege: [snap] };
     writeFileSync(ziel, JSON.stringify(wrap, null, 2) + '\n', 'utf8');
 
     // regesteKurz aus dem GEGLÄTTETEN Text (normalisiereRegeste strippt u.a. die
@@ -61,12 +66,14 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
       });
     }
 
-    // C2-4: Der Norm→Entscheid-Index speist im UI die Liste «Bundesgerichts-
-    // entscheide zu diesem Erlass» (norm-index.ts). Darum NUR Bundes-Entscheide
-    // (kanton==='CH') aufnehmen — kantonale Entscheide würden sonst unter der
-    // BGer-Überschrift erscheinen (sie bleiben über die Rechtsprechungs-Rubrik
-    // auffindbar). Drift/Status: norm-index.json muss regeneriert werden + Abnahme David.
-    if (snap.kanton === 'CH') {
+    // C2-4 (präzisiert Batch 3): Der Norm→Entscheid-Index speist im UI die Liste
+    // «Bundesgerichtsentscheide zu diesem Erlass» (norm-index.ts → GesetzLeser).
+    // Darum NUR echte Bundesgerichts-Entscheide (gerichtstyp 'bundesgericht' =
+    // bge/bger). Die neuen eidg. Gerichte (BVGer/BStGer/BPatGer) sind zwar canton
+    // 'CH', aber NICHT das Bundesgericht → sie würden sonst fälschlich unter dieser
+    // Überschrift erscheinen (§8). Für den Bestand identisch (alle CH-Einträge sind
+    // bundesgericht). Kantonale/eidg. Entscheide bleiben über die Rubrik auffindbar.
+    if (snap.gerichtstyp === 'bundesgericht') {
       for (const nk of snap.normKeys) {
         (proNorm[nk] ??= []).push({
           key, zitierung: snap.zitierung, regesteKurz, datum: snap.datum,
@@ -77,12 +84,20 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   }
 
   for (const nk of Object.keys(proNorm)) {
+    // §2-Determinismus: `key` als TOTALER Tiebreaker — sonst hängt die Reihenfolge bei
+    // Gleichstand (gleicher leitcharakter + gleiches Datum) von der Build-Eingabe-
+    // reihenfolge ab (Vollbau [bge,bund,kanton] vs. additiver Lauf [Register-Reihen-
+    // folge] erzeugten sonst denselben Inhalt in anderer Folge). So ist die norm-index
+    // build-pfad-unabhängig stabil.
     proNorm[nk].sort((a, b) =>
       (a.leitcharakter === 'leitentscheid' ? 0 : 1) - (b.leitcharakter === 'leitentscheid' ? 0 : 1)
-      || (a.datum < b.datum ? 1 : -1));
+      || (a.datum < b.datum ? 1 : -1)
+      || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
     proNorm[nk] = proNorm[nk].slice(0, 12);
   }
 
+  // Stabil (V8 TimSort): bei Datums-Gleichstand bleibt die Eingangsreihenfolge —
+  // im additiven Lauf die committete Register-Folge, also kein Reorder des Bestands.
   manifest.sort((a, b) => (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0));
   const manifestObj: EntscheidManifest = { erzeugt: datum, entscheide: manifest };
   writeFileSync(join(PUB, 'register.json'), JSON.stringify(manifestObj, null, 2) + '\n', 'utf8');
@@ -101,4 +116,31 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   );
 
   return { anzahl: manifest.length, normBuckets: Object.keys(proNorm).length };
+}
+
+/**
+ * Bestehenden Korpus von der Platte laden (additiver Build, Batch 3): liest das
+ * committete register.json + jede zugehörige Snapshot-Datei (nicht-Verweis) IN
+ * REGISTER-REIHENFOLGE. Damit kann ein Lauf neue Gerichte ergänzen, ohne den
+ * Bestand über die Live-API neu zu ziehen — die 272 BGE + 4 FR bleiben byte-gleich
+ * (§2/§6, kein Drift). Verweis-Einträge werden NICHT geladen (kein File; sie werden
+ * in schreibeKorpus aus azaUrteil rekonstruiert). Die Reihenfolge wird bewahrt, damit
+ * schreibeKorpus den stabil sortierten Manifest unverändert reproduziert.
+ */
+export function ladeBestandSnapshots(root = process.cwd()): EntscheidSnapshot[] {
+  const PUB = join(root, 'public', 'rechtsprechung');
+  const regPfad = join(PUB, 'register.json');
+  if (!existsSync(regPfad)) return [];
+  const manifest = JSON.parse(readFileSync(regPfad, 'utf8')) as EntscheidManifest;
+  const out: EntscheidSnapshot[] = [];
+  const gesehen = new Set<string>();
+  for (const e of manifest.entscheide) {
+    if (e.verweis || !e.datei) continue;
+    const fp = join(PUB, e.datei);
+    if (!existsSync(fp)) continue;
+    const d = JSON.parse(readFileSync(fp, 'utf8')) as EntscheidSnapshotDatei;
+    const snap = d.eintraege?.[0];
+    if (snap && !gesehen.has(snap.id)) { gesehen.add(snap.id); out.push(snap); }
+  }
+  return out;
 }

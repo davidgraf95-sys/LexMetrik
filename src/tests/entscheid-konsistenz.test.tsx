@@ -87,6 +87,63 @@ const REFERENZEN: Referenzzelle[] = [
     sachverhaltMarken: ['A.', 'B.', 'C.'],
     sha: '277dc6ef8e60bc949c82ed3b0cad80b816742e238f2c4282ee3bb0f6f489e9bf',
   },
+
+  // ── Batch 3 (Lane R): die drei weiteren eidg. Gerichte je (Gericht × Sprache).
+  //    Diese Urteile sind nicht amtlich publiziert → leitcharakter 'routine', keine
+  //    amtliche Regeste (regesteAmtlich:false, im Reader als «Zusammenfassung»). Die
+  //    Zellen frieren die mehrsprachige Voll-Urteil-Darstellung (A2-Extraktion: Kopf-
+  //    Block, Sachverhalts-Gliederung, Sprach-Label aus dem Body) gegen Regression
+  //    ein — analog zu bge×de/fr. Werte aus dem generierten Snapshot (27.6.2026,
+  //    maschinell, verifiziert:false). Eine bewusste Aktualisierung ist eine
+  //    DEKLARIERTE fachliche Änderung (§6.3), kein stiller Test-Fix.
+  {
+    zelle: 'bvger×de', key: 'bund/bvger/F_3740_2026', sprache: 'de',
+    rubrumLabels: ['gegenstand', 'parteien', 'besetzung'],
+    sachverhaltMarken: ['A.', 'B.', 'C.'],
+    sha: '2c9447814d0d6b0b1f88ba4eef78b44b593bb573b6c2a55cdaf112987c399a5e',
+  },
+  {
+    zelle: 'bvger×fr', key: 'bund/bvger/E_165_2026', sprache: 'fr',
+    rubrumLabels: ['parteien', 'besetzung'],
+    sachverhaltMarken: [],
+    sha: 'c5f5a9e46097ac762dbbbd30afe7c99f0f68d8fa5d8792b79a3dfb35e854a3ca',
+  },
+  {
+    zelle: 'bvger×it', key: 'bund/bvger/F_4218_2026', sprache: 'it',
+    rubrumLabels: ['gegenstand', 'parteien', 'besetzung'],
+    sachverhaltMarken: ['A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.'],
+    sha: '1f1b344a9338618e537d3ce2e4a58bee8b94fa4b6baf1532de335350f3932a28',
+  },
+  {
+    zelle: 'bstger×de', key: 'bund/bstger/SK_2025_57', sprache: 'de',
+    rubrumLabels: ['parteien', 'besetzung'],
+    sachverhaltMarken: [],
+    sha: 'cc56b4aa928cec468f7b8c9ced8b90ebc0c68520d8416b75d65f77ab71abf410',
+  },
+  {
+    zelle: 'bstger×it', key: 'bund/bstger/RR_2026_46', sprache: 'it',
+    rubrumLabels: ['parteien', 'besetzung'],
+    sachverhaltMarken: ['A.', 'B.', 'C.', 'D.', 'E.', 'F.'],
+    sha: '54cf3cd6a0d8eebae1e988806df4379548fb76d7d410b4e536e26219581ab6c8',
+  },
+  {
+    zelle: 'bstger×fr', key: 'bund/bstger/BB_2026_50', sprache: 'fr',
+    rubrumLabels: ['besetzung'],
+    sachverhaltMarken: [],
+    sha: 'b53a7923889e07532f12a297f07eb3441d557c6b59c8147ed4e5c7d4d5e6b891',
+  },
+  {
+    zelle: 'bpatger×de', key: 'bund/bpatger/O2025_005', sprache: 'de',
+    rubrumLabels: ['gegenstand', 'besetzung'],
+    sachverhaltMarken: [],
+    sha: '512ad97f1275ed6ed7c758051e62d0ad3b8fe218d08c0da63072570566a7d30c',
+  },
+  {
+    zelle: 'bpatger×fr', key: 'bund/bpatger/O2024_007', sprache: 'fr',
+    rubrumLabels: [],
+    sachverhaltMarken: [],
+    sha: '3e2f3674ad36ba00ccedfab6d9d2b96f2a38c539bf20b546c49154fd214cd547',
+  },
 ];
 
 function ladeSnapshot(key: string): EntscheidSnapshot {

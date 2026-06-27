@@ -11,11 +11,12 @@
 //     --courts=zh_obergericht,be_verwaltungsgericht --kanton-pro=8
 //
 import {
-  holeEntscheidOCL, enumeriereNeueste, citedRefZuId, enumeriereBge, holeBgeLeitentscheid,
+  holeEntscheidOCL, enumeriereNeueste, enumeriereNeuesteAlle, citedRefZuId, enumeriereBge, holeBgeLeitentscheid,
 } from './normtext/adapter-entscheide';
-import { schreibeKorpus } from './normtext/entscheide-schreiben';
+import { schreibeKorpus, ladeBestandSnapshots } from './normtext/entscheide-schreiben';
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
+import type { Rechtsgebiet } from '../src/lib/normtext/register';
 
 /** Stuft einen BGE auf Auszug-only zurück (Body = Sammlungstext, kein azaUrteil/Volltext,
  *  Bandjahr-Platzhalterdatum). Für die Kollisions-Quarantäne (§8): unsichere aza-Zuordnung. */
@@ -41,6 +42,18 @@ const kantCourts = (arg('--courts') ?? '').split(',').map((s) => s.trim()).filte
 // Amtliche Leitentscheide (BGE): --bge-von=YYYY-MM-DD aktiviert den dritten Quell-Zweig.
 const bgeVon = arg('--bge-von');
 const bgeLimit = Number(arg('--bge-limit') ?? '300');
+// Batch 3 (Lane R): die drei weiteren eidg. Gerichte (BVGer/BStGer/BPatGer) als
+// eigener OCL-Quellzweig. --eidg=bvger,bstger,bpatger zieht je Gericht die N
+// neuesten Urteile. --additiv ergänzt sie zum committeten Bestand (von der Platte
+// geladen), OHNE die 272 BGE/Bund/Kanton über die Live-API neu zu ziehen (§6: kein
+// Bestand-Drift). Ohne --additiv würde der bestehende Korpus überschrieben.
+const eidgCourts = (arg('--eidg') ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+const eidgPro = Number(arg('--eidg-pro') ?? '5');
+const additiv = process.argv.includes('--additiv');
+// Court-spezifischer Sachgebiets-Hint (deterministisch, deklariert): Patentstreit =
+// Immaterialgüterrecht → privat (OCL legal_area der BPatGer-Fälle ist oft nur eine
+// Kosten-/Verfahrens-Notiz und mappt sonst auf den groben Default 'oeffentlich').
+const EIDG_SACHGEBIET: Record<string, Rechtsgebiet> = { bpatger: 'privat' };
 
 async function mapLimit<T, R>(items: T[], n: number, fn: (t: T, i: number) => Promise<R>): Promise<R[]> {
   const out: R[] = new Array(items.length);
@@ -133,11 +146,69 @@ async function bgeKorpus(): Promise<EntscheidSnapshot[]> {
   return ok;
 }
 
+/**
+ * Eidg. Gerichte (BVGer/BStGer/BPatGer): je Gericht die `eidgPro` NEUESTEN Urteile
+ * (Datum desc) über denselben OCL-Adapter wie Bund/Kanton. sprache:null — diese
+ * Gerichte publizieren stark FR/IT (A2 ist Voraussetzung). Kein BGE/Leitentscheid-
+ * Status (bgeReferenz bleibt null → leitcharakter 'routine', Invariante gewahrt);
+ * gerichtstyp/Anzeigename kommen aus dem Mapping. id-Pfad: bund/<court>/<docket>.
+ */
+async function eidgKorpus(): Promise<EntscheidSnapshot[]> {
+  const out: EntscheidSnapshot[] = [];
+  for (const court of eidgCourts) {
+    const ids = await enumeriereNeuesteAlle(court, eidgPro * 4);
+    if (!ids.length) { console.log(`[eidg] ${court}: 0 IDs (Listing nicht erreichbar)`); continue; }
+    const sachgebietHint = EIDG_SACHGEBIET[court] ?? null;
+    const snaps = await mapLimit(ids.slice(0, eidgPro * 4), 4, async (id) => {
+      const s = await holeEntscheidOCL(id, datum, { sprache: null, sachgebietHint });
+      process.stdout.write(s ? (s.sprache === 'de' ? '.' : '·') : 'x');
+      return s;
+    });
+    process.stdout.write('\n');
+    const ok = snaps.filter((s): s is EntscheidSnapshot => !!s);
+    // Die N neuesten (Datum desc; key als stabiler Tiebreaker, §2-Determinismus).
+    const gewaehlt = [...ok]
+      .sort((a, b) => (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
+      .slice(0, eidgPro);
+    out.push(...gewaehlt);
+    const spr = gewaehlt.reduce((m, s) => ((m[s.sprache] = (m[s.sprache] ?? 0) + 1), m), {} as Record<string, number>);
+    console.log(`[eidg] ${court}: ${ok.length} geholt → ${gewaehlt.length} gewählt (${Object.entries(spr).map(([k, v]) => `${k}:${v}`).join(' ')})`);
+  }
+  return out;
+}
+
 /** docket → dateisicheres Slug-Tail (identisch zu mappeEntscheidOCL, §5). */
 const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_');
 
 async function main() {
-  console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}`);
+  console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}${additiv ? ` · ADDITIV eidg [${eidgCourts.join(',') || '–'}] je ${eidgPro}` : ''}`);
+
+  // ── Additiver Lauf (Batch 3): Bestand von der Platte + neue eidg. Gerichte ──
+  // Zieht den committeten Korpus (272 BGE/Bund/Kanton) NICHT über die Live-API neu
+  // (§6: kein Drift), sondern lädt ihn byte-treu von der Platte und ergänzt nur die
+  // frisch geholten BVGer/BStGer/BPatGer-Urteile. Schreibt über denselben Writer (§5).
+  if (additiv) {
+    const basis = ladeBestandSnapshots();
+    console.log(`[additiv] Bestand geladen: ${basis.length} Snapshots (Verweise rekonstruiert der Writer).`);
+    const eidg = eidgCourts.length ? await eidgKorpus() : [];
+    // Schutz gegen stillen Bestand-Überschreib bei OCL-Ausfall: wurden eidg-Gerichte
+    // angefordert, aber NICHTS geholt, ist die Quelle vermutlich down → Korpus unberührt.
+    if (eidgCourts.length && eidg.length === 0) {
+      console.log('[additiv] 0 neue eidg. Entscheide (Quelle nicht erreichbar?) — Korpus unberührt.');
+      return;
+    }
+    const seen = new Set<string>();
+    const auswahl = [...basis, ...eidg].filter((s) => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
+    if (auswahl.length === 0) {
+      console.log('[additiv] 0 Snapshots — bestehender Korpus bleibt unberührt.');
+      return;
+    }
+    const res = schreibeKorpus(auswahl, datum);
+    const eidgN = eidg.length;
+    console.log(`[additiv] geschrieben: ${res.anzahl} Manifest-Einträge (Bestand ${basis.length} + neu ${eidgN} eidg.), ${res.normBuckets} Norm-Buckets.`);
+    return;
+  }
+
   const bge = bgeVon ? await bgeKorpus() : [];
   // Kollisions-Quarantäne (§8): griff dieselbe aza-id für ZWEI BGE, ist mindestens eine
   // Zuordnung falsch (OCL-Quirk/zitiertes Präjudiz) — beide auf Auszug zurückstufen, nie

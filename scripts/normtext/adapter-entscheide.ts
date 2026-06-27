@@ -476,6 +476,18 @@ export async function enumeriereNeueste(court: string, anzahl = 40): Promise<str
 }
 
 /**
+ * Wie enumeriereNeueste, aber OHNE Sprachfilter (alle Sprachen, neueste zuerst).
+ * Für die eidg. Gerichte BVGer/BStGer/BPatGer, die stark FR/IT publizieren — der
+ * de-Default von enumeriereNeueste hätte sonst die wahren «neuesten» Urteile (oft
+ * IT/FR) verworfen und nur die neuesten DEUTSCHEN geliefert (Batch-3-Befund).
+ */
+export async function enumeriereNeuesteAlle(court: string, anzahl = 40): Promise<string[]> {
+  const a = await listCompactIds(court, anzahl, '');
+  if (a.length) return a;
+  return atomFeedIds(court);
+}
+
+/**
  * Zitiertes Aktenzeichen → OCL decision_id (Citation-Graph-Enumeration; nutzt nur
  * keyed-Lookups, unabhängig von den launischen Listing-Endpoints). BGE/ATF-Refs
  * (anderes ID-Schema) → null (P0). '5A.33/2004' & '4A_444/2022' → 'bger_4A_444_2022'.
