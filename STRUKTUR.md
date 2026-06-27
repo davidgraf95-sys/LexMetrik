@@ -44,9 +44,13 @@ W2.6 44px). Echte autonome Restlücken nur zwei — beide hier geschlossen:
   Seite OR (1.7 MB) LCP 616 ms lokal — render-then-replace trägt den ersten Paint
   über das statische HTML, das grosse JSON belastet nur Transfer, nicht LCP →
   **W2.8-Splitting für LCP nicht dringlich.**
+- **W1.8 Heading-Hierarchie (war offen):** Diagnose über 11 Rubriken = 0
+  Verstösse (`heading-order`/`page-has-heading-one`/`empty-heading` — axe-best-
+  practice-Regeln, die das wcag-Tag-Tor nicht fährt). Als Regressionsschutz in
+  `e2e/a11y.e2e.ts` festgenagelt (10 Tests, eigener `withRules`-Lauf, damit das
+  Haupt-`axePruefen` nicht das ganze best-practice-Set einzieht). 10/10 grün.
 
 Offen (brauchen David / ausserhalb autonom): W1.12 GSC-Property + Sitemap-Submit,
-W1.8 voller axe-`heading-order`-Scan (best-practice-Regel, nicht im wcag-Tag-Tor),
 W3.x (FAQ/Themen-Hubs/Keywords/Domain/Use-of-Color). Gate vorher + nachher grün
 (tsc · vitest · golden byte-gleich · lint · check). Kein Push/Deploy (§9 — Davids
 Ja ausstehend).
