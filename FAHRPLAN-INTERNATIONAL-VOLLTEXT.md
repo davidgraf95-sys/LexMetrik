@@ -82,7 +82,9 @@ Kandidaten: weitere Haager Übk. (0.211.221.*, 0.211.231.*), Rechtshilfe Strafsa
 (0.103.1), Kinderrechtskonvention (0.107), CEDAW (0.108), Anti-Folter (0.105),
 weitere Bilaterale CH–EU. Pro Vertrag derselbe Pfad wie P1.
 
-## OFFEN P3 — `/gesetze`-Übersicht neu designen (inkl. International)
-`src/pages/Gesetze.tsx` so umbauen, dass Bund / Kantone / **International**
-gleichwertige, scanbare Einstiege sind (heute ist International eine separate
-Rubrik). Reine Darstellung (§3).
+## ERLEDIGT P3 — `/gesetze`-Übersicht neu designt (inkl. International) — Commit `0f9a9043`
+`src/pages/Gesetze.tsx` umgebaut: Bund / Kantone / **International** sind
+gleichwertige, scanbare Tab-Einstiege (`Ebene = 'bund' | 'kanton' | 'international'`,
+International-Erlasse `rechtsgebiet === 'international'` im eigenen Tab — Auftrag
+David 25.6.2026). Reine Darstellung (§3). *(Dieser Abschnitt war stale: oben Z.~29
+bereits als erledigt vermerkt; STAND nachgeführt 28.6.2026.)*
