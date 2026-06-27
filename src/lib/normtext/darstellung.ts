@@ -53,26 +53,6 @@ const ENUM_RUN = new RegExp(`^(${ENUM}(?:\\s*(?:und|bis|[–-])\\s*${ENUM})*)\\s
 // ist keine echte Sachüberschrift und darf NICHT als Heading erscheinen.
 const istLeererTitel = (t: string) => !t || /^[….]+$/.test(t.trim());
 
-export function randtitelTeile(marginalie: string[]): { ober: string[]; titel: string | null } {
-  const clean = marginalie
-    .map((s) => { const m = s.match(ENUM_RUN); return (m ? m[2] : s).trim(); })
-    .filter((t) => !istLeererTitel(t));
-  if (clean.length === 0) return { ober: [], titel: null };
-  return { ober: clean.slice(0, -1), titel: clean[clean.length - 1] };
-}
-
-// Wie randtitelTeile, aber jede Stufe einzeln mit ihrem Aufzähler erhalten —
-// für die schmale (Fedlex-artige) Ansicht, die die Randtitel als gestufte
-// Überschriften MIT Aufzähler («A. Anwendung des Rechts») über dem Artikel zeigt.
-export function randtitelEintraege(marginalie: string[]): { mark: string; titel: string }[] {
-  return marginalie
-    .map((s) => {
-      const m = s.match(ENUM_RUN);
-      return m ? { mark: m[1], titel: m[2].trim() } : { mark: '', titel: s.trim() };
-    })
-    .filter((e) => !istLeererTitel(e.titel));
-}
-
 // Den Marker (Aufzähler) einer Randtitel-Stufe vom Sachtitel trennen — für die
 // Leer-Prüfung (aufgehobene Stufe «c. …»). Reine Darstellung (§3).
 function randtitelSachtitel(stufe: string): string {

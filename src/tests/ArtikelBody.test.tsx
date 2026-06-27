@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege, absatzMarke } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, absatzMarke } from '../lib/normtext/darstellung';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
 // ArtikelBody ist die aus NormPopover extrahierte Render-Komponente. Die
@@ -235,37 +235,6 @@ describe('labelMitBereich (Halbgeviert für Bereichs-Artikel)', () => {
   });
   it('erhält den Paragraphen-Präfix (Kanton)', () => {
     expect(labelMitBereich('§ 1215', '12_15')).toBe('§ 12–15');
-  });
-});
-
-describe('randtitelTeile (Randtitel für die Meta-Spalte)', () => {
-  it('strippt Aufzähler, oberste Stufen → ober, unterste → titel', () => {
-    expect(randtitelTeile(['A. Abschluss des Vertrages', 'I. Übereinstimmende Willensäusserung', '1. Im Allgemeinen']))
-      .toEqual({ ober: ['Abschluss des Vertrages', 'Übereinstimmende Willensäusserung'], titel: 'Im Allgemeinen' });
-  });
-  it('einzelner Randtitel ist der titel (kein ober)', () => {
-    expect(randtitelTeile(['A. Anwendung des Rechts'])).toEqual({ ober: [], titel: 'Anwendung des Rechts' });
-  });
-  it('leere Marginalie → leer', () => {
-    expect(randtitelTeile([])).toEqual({ ober: [], titel: null });
-  });
-});
-
-describe('randtitelEintraege (schmale Ansicht — Aufzähler erhalten)', () => {
-  it('trennt Mark und Titel je Stufe', () => {
-    expect(randtitelEintraege(['A. Abschluss des Vertrages', '1. Im Allgemeinen']))
-      .toEqual([{ mark: 'A.', titel: 'Abschluss des Vertrages' }, { mark: '1.', titel: 'Im Allgemeinen' }]);
-  });
-  it('ohne Aufzähler bleibt mark leer', () => {
-    expect(randtitelEintraege(['Schlussbestimmung'])).toEqual([{ mark: '', titel: 'Schlussbestimmung' }]);
-  });
-  it('aufgehobener Randtitel («C. …») erscheint NICHT als Heading', () => {
-    expect(randtitelTeile(['C. …'])).toEqual({ ober: [], titel: null });
-    expect(randtitelEintraege(['C. …'])).toEqual([]);
-  });
-  it('kombinierter Aufzähler mit Auslassung («II. und III. …») wird verworfen', () => {
-    expect(randtitelTeile(['II. und III. …'])).toEqual({ ober: [], titel: null });
-    expect(randtitelEintraege(['II. und III. …'])).toEqual([]);
   });
 });
 
