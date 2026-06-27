@@ -22,7 +22,7 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 27.6.2026 — SEO/A11y Welle-1-Restlücken: og:image + CWV-Messung (Worktree `seo-a11y-welle1`, NICHT deployt)
+## Session 27.6.2026 — SEO/A11y Welle-1-Restlücken: og:image + CWV-Messung (gemergt main `4906e537`, DEPLOYT `dpl_HprP3VaYQ…`, prod verifiziert)
 
 Isolierte Worktree-Session (§12), abgebrancht von main `ca2e46e3`. Auftrag David:
 `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` Punkt 2 «run till dry». **Befund beim IST-Audit:
@@ -52,8 +52,10 @@ W2.6 44px). Echte autonome Restlücken nur zwei — beide hier geschlossen:
 
 Offen (brauchen David / ausserhalb autonom): W1.12 GSC-Property + Sitemap-Submit,
 W3.x (FAQ/Themen-Hubs/Keywords/Domain/Use-of-Color). Gate vorher + nachher grün
-(tsc · vitest · golden byte-gleich · lint · check). Kein Push/Deploy (§9 — Davids
-Ja ausstehend).
+(tsc · vitest · golden byte-gleich · lint · check). **Deployt 27.6. auf Davids Ja**
+(`dpl_HprP3VaYQ…`, prod verifiziert: og:image live, /gesetze/bund/OR ohne noindex,
+og.png HTTP 200, Sitemap-Index 4 Teile). **`origin/main` noch nicht gepusht** (35+
+Commits — Davids «push» ausstehend).
 
 ## Session 27.6.2026 — B3 Kontext-Panel: Norm ↔ Entscheid ↔ Material ↔ Werkzeug (Worktree `agent-a5f29b82045f2c063`, NICHT deployt)
 
