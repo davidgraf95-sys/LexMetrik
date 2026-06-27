@@ -22,6 +22,32 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 28.6.2026 — Aufräumung + Roadmap-Konsolidierung (BRANCH `roadmap-konsolidierung`, NICHT gemergt, NICHT deployt — wartet auf Davids §9/Integration)
+
+Auftrag David: «räum auf · tiefer · setze alle Befunde um · mach den Weiterbau
+sinnvoller · run till dry». Isolierter Worktree (§12), abgebrancht von `a1fdd1bd`.
+
+- **Doc/Memory-Aufräumung** (`a1fdd1bd`): 5 abgeschlossene Pläne → `archiv/`
+  (JETZT-MACHEN, HANDOFF-NACHT-MATERIALIEN, GESETZE-REVIEW [3 davon konvergent mit
+  der Parallel-Session], LEITENTSCHEID-BGE-VOLLTEXT, GESETZE-UX-9PUNKTE — beide
+  letzteren Code-verifiziert voll abgeschlossen); `archiv/README`-Index ergänzt;
+  3 verbrauchte Memory-Trigger («jetzt machen/weiter/los») gelöscht; stale STAND-
+  Blöcke gefixt (RECHTSSAMMLUNG «ungepusht»→gemergt+prod-live; INTERNATIONAL P3-
+  Selbstwiderspruch→erledigt `0f9a9043`).
+- **§12-Artefakt-Fix** (`5eb37f43`): Beim Doc-Commit ging die Lösch-Seite zweier
+  `git mv` verloren, als HEAD durch die Parallel-Session wechselte (Root+archiv-
+  Duplikat). Root-Duplikate entfernt. **HINWEIS: `main` (`a1fdd1bd`) trägt das
+  Duplikat noch, bis dieser Branch integriert wird.**
+- **Audit der Parallel-Aufräumung statt Redo** (Batch A–E waren schon erledigt):
+  ein test-abgeschirmtes totes Residuum gefunden + §6-verifiziert entfernt
+  (`72d174a0`, `randtitelTeile`/`randtitelEintraege`; tsc grün, golden 187 byte-
+  gleich, vitest 2682 grün).
+- **ROADMAP.md** (`d07b79cf`): 26 aktive Fahrpläne via ultracode (26 Extrakte +
+  Rahmen-Synthese) zu EINEM priorisierten Steuerungsblick konsolidiert. Sortier-
+  Hebel = Abnahme-Zeitsperre bis 1.12. ([OF] vor [D]). JETZT-Block P0 ohne Fachzeit.
+- **Offen:** Davids §9-Entscheid zur Integration/Push/Deploy — es bestehen mehrere
+  Stände (Parallel-Ultracode auf `main`/origin; diese Doc+Roadmap-Branch lokal).
+
 ## Session 27.6.2026 — Ultracode-Versimpelung/Verbesserung UI·CI·Logik·Sicherheit (BRANCH `verbesserung-ultracode-2026-06-27`, NICHT gemergt, NICHT deployt — wartet auf Davids Freigabe §9)
 
 Autonome «run till dry»-Session (ultracode). Mehrstufiger Multi-Agent-Workflow:
