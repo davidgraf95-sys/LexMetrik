@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build && vite-node scripts/prerender.ts",
     "prerender": "vite-node scripts/prerender.ts",
+    "og:bild": "vite-node scripts/og-bild.ts",
+    "messung:cwv": "vite-node scripts/messung-cwv.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
