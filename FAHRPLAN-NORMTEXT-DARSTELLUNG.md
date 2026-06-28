@@ -29,10 +29,23 @@
 | **G11** Sektions-Fussnotenmarker | ⏳ offen — Struktur-Regen trägt mit (struktur-run.ts randtitelFnIds erhalten) | — |
 | **M10** Fussnoten-Abstand (#9, Renderer) + G15 Hervorhebungen (Sidecar+Rich-Text) | ⏳ offen — #9 braucht visuellen Repro; G15 braucht Rich-Text-Render in fnTextMitLinks | — |
 
-**Resume-Hinweis:** nächster offener Schritt = M3·#6/G11, dann M4 (beide golden-neutral Renderer),
-danach die Extraktions-Hälfte M5–M9 (Reihenfolge: M6 §1 zuerst → M7/M8/M9 → **eine** `npm run normtext`-
-Regeneration + adversariale Golden-Neu-Segnung), dann M10, zuletzt M11/M12. Engine-Golden
-(`lexmetrik-golden.json`) muss über alles byte-gleich bleiben (§7).
+**Resume-Hinweis (Stand 29.6.2026):** B1-Kern fertig — M6/M7/M8/M9 + EINE Bund-Daten-Re-Segnung
+(`--nur=bund`) + M11/M12 (Resolver) sind gelandet+gegated, Engine-Golden über den ganzen Batch
+byte-gleich, **`npm run gate` (voll) grün**. **Nächste Session — 3 verbleibende, golden-neutrale
+B1-Cluster, die EINEN `npm run normtext:struktur`-Regen teilen:**
+1. **M5** Erlass-Kopf/Ingress/Präambel (tief, höchster Fundiertheits-Hebel): neue `extrahiereKopf(html)`
+   liest `<div id=preface>`/`<div id=preamble>` (Klassen erlassdatum/ingress/man-template-verb),
+   BV-Sonderfall G6, Fussnoten über `fnDefinitionen`; als **Sidecar** speichern (Index byte-gleich);
+   Render-Slot in BEIDEN Header-Pfaden `inhalt.tsx` (Volltext 663-690 + pdf-embed 444-485).
+2. **G11** Sektions-Fussnotenmarker: `struktur-run.ts:43-51` faltet Sektions-Fn heute in Artikel-
+   `fussnoten` (absatz=null) + verwirft `randtitelFnIds` → Assoziation erhalten, dann SektionKopf-Marker.
+3. **M10** #9 Fussnoten-Abstand (reiner Renderer, braucht visuellen Repro ZGB Art.56 vs 69a) +
+   G15 Hervorhebungen (clean() in `fussnoten-extrahiere.ts` <b>/<i> erhalten → Rich-Text in `fnTextMitLinks`).
+Danach **B2** (M13 Schlusstitel/Anhänge, eigener Re-Bless) · **B3** (#2/FR-IT).
+**FOLLOW-UP-BUG (separat):** `/tmp/bgerr.html` = kaputte Casemates-Shell → 69 alte BGERR-Einträge bei der
+Re-Segnung restauriert; BGerR-Filestore-URL in `fedlex-cache.sh` (Eintrag `bgerr|cc/2006/834|…|173.110.131`)
+korrigieren + nachfetchen, dann BGERR mit-regenerieren. Engine-Golden `lexmetrik-golden.json` muss
+über alles byte-gleich bleiben (§7); Sidecar-Anreicherungen (M5/G15) bleiben golden-neutral.
 
 ## Leitsatz (L0)
 
