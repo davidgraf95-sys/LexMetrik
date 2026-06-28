@@ -53,13 +53,23 @@ export function entferneFussnotenSups(html: string): string {
  * @returns     ArtikelText mit Absatz-Blöcken, oder null wenn Anker fehlt
  */
 export function extrahiereArtikel(html: string, token: string): ArtikelText | null {
+  // M9/G7: doppelte art_id. Ein Erlass kann ZWEI <article id="art_TOKEN"> mit
+  // identischem Token tragen (KKV art_126_z: «Anlagebeschränkungen» + «126z
+  // tredecies Wesentliche Mängel»; betmg/vwvg/pavo: aufgehobene Bereichs-Artikel
+  // «15a–15c»). alleArtikelTokens vergibt dem 2./3. Vorkommen einen Synthese-
+  // Suffix «__2»/«__3»; hier extrahieren wir dann das N-te Vorkommen des
+  // BASIS-Tokens. Ohne Suffix (Normalfall) = erstes Vorkommen, byte-gleich.
+  const suffix = token.match(/^(.*)__(\d+)$/);
+  const basisToken = suffix ? suffix[1] : token;
+  const nth = suffix ? Number(suffix[2]) : 1;
   // Escape des Tokens für die Regex (Unterstriche sind literal, kein Sonderzeichen)
-  const escapedToken = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedToken = basisToken.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const articleRe = new RegExp(
     `<article[^>]*\\sid="art_${escapedToken}"[^>]*>([\\s\\S]*?)</article>`,
-    'i',
+    'gi',
   );
-  const articleMatch = html.match(articleRe);
+  const treffer = [...html.matchAll(articleRe)];
+  const articleMatch = treffer[nth - 1];
   if (!articleMatch) return null;
 
   // Fussnoten-Apparat (<div class="footnotes">…</div>) und Artikel-Überschrift
@@ -449,21 +459,24 @@ function entferneTags(s: string): string {
  *
  * Matcht: id="art_<TOKEN>" wobei TOKEN mit einer Ziffer beginnt (strukturelle
  * Nicht-Artikel-Anker wie «art_SchlusstitelUebergang» werden ausgeschlossen).
- * Tokens werden dedupliziert (erster Vorkommen gewinnt), Reihenfolge wie im HTML.
+ *
+ * M9/G7: Ein wiederholtes Token wird NICHT mehr verworfen (sonst ginge der zweite
+ * Artikel stumm verloren, §8) — das N-te Vorkommen erhält einen Synthese-Suffix
+ * «__2»/«__3». extrahiereArtikel löst diesen Suffix wieder auf das N-te Vorkommen
+ * des Basis-Tokens auf. Reihenfolge wie im HTML.
  *
  * @param html - Volltext des Fedlex-Filestore-HTML
- * @returns Array der Token-Strings (ohne «art_»-Präfix), z.B. ['1','2','335_c']
+ * @returns Array der Token-Strings, z.B. ['1','2','335_c','126_z','126_z__2']
  */
 export function alleArtikelTokens(html: string): string[] {
   const re = /id="art_(\d[\w]*)"/g;
-  const seen = new Set<string>();
+  const anzahl = new Map<string, number>();
   const tokens: string[] = [];
   for (const m of html.matchAll(re)) {
-    const token = m[1];
-    if (!seen.has(token)) {
-      seen.add(token);
-      tokens.push(token);
-    }
+    const basis = m[1];
+    const n = (anzahl.get(basis) ?? 0) + 1;
+    anzahl.set(basis, n);
+    tokens.push(n === 1 ? basis : `${basis}__${n}`);
   }
   return tokens;
 }

@@ -1001,7 +1001,10 @@ async function main(): Promise<void> {
         quelle: gesetzKey,
         erlass,
         artikel: token,
-        artikelLabel: artikelLabel(token),
+        // M9/G7: Synthese-Suffix «__2» (doppelte art_id) NICHT ins Label ziehen —
+        // beide Artikel zeigen ihre echte Basis-Bezeichnung («Art. 126z»); der
+        // Inhalt unterscheidet sie. Anker/id behalten den Suffix (eindeutig).
+        artikelLabel: artikelLabel(token.replace(/__\d+$/, '')),
         // G23 (M8): Delegationsnorm-Grundlage «(Art. N ArG)», falls vorhanden.
         // Artikel-level wie titel → NICHT im Block-sha (golden-neutral).
         ...(extrakt.grundlage ? { grundlage: extrakt.grundlage } : {}),

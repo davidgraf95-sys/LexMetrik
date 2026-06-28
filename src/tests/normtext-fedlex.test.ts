@@ -226,6 +226,26 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  describe('M9 G7: doppelte art_id — zweiter Artikel bleibt erhalten (__2-Suffix)', () => {
+    // Reale Fedlex-Quirk (KKV): zwei <article id="art_126_z"> — der zweite (126z
+    // tredecies) trägt dasselbe Token. Bisher «erster gewinnt» → zweiter verloren.
+    const DOPPEL = `<article id="art_126_z"><a name="a126z"></a><h6 class="heading"><a href="#art_126_z"><b>Art. 126z</b></a></h6><div class="collapseable"><p class="absatz">Erster Artikel zum L-QIF.</p></div></article><article id="art_126_z"><a name="ta126z"></a><h6 class="heading"><a href="#art_126_z"><b>Art. 126z</b></a> tredecies</h6><div class="collapseable"><p class="absatz">Zweiter Artikel: Wesentliche Mängel.</p></div></article>`;
+
+    it('alleArtikelTokens vergibt dem zweiten Vorkommen __2', () => {
+      expect(alleArtikelTokens(DOPPEL)).toEqual(['126_z', '126_z__2']);
+    });
+
+    it('beide Artikel extrahieren distinkten Inhalt', () => {
+      expect(extrahiereArtikel(DOPPEL, '126_z')!.bloecke[0].text).toBe('Erster Artikel zum L-QIF.');
+      expect(extrahiereArtikel(DOPPEL, '126_z__2')!.bloecke[0].text).toBe('Zweiter Artikel: Wesentliche Mängel.');
+    });
+
+    it('einfaches Token (kein Suffix) = erstes/einziges Vorkommen, unverändert', () => {
+      const r = extrahiereArtikel(OR_ART_77, '77');
+      expect(r!.bloecke).toHaveLength(4);
+    });
+  });
+
   describe('M8 G23: Delegationsnorm-Verweis (man-template-referenz) wird erhalten', () => {
     // Reale Fedlex-Struktur (ArGV1 art_1): <p class="man-template-referenz">
     // (Art. 1 ArG)</p> direkt nach der Überschrift, vor Abs. 1 — bisher gedroppt.
@@ -346,10 +366,12 @@ describe('alleArtikelTokens', () => {
     expect(tokens).not.toContain('SchlusstitelUebergang');
   });
 
-  it('dedupliziert Tokens (nur erster Vorkommen)', () => {
+  it('M9/G7: doppeltes Token wird nicht verworfen, sondern __2-suffixiert', () => {
+    // Geändert mit M9 (§6 fachliche Änderung): das zweite Vorkommen eines Tokens
+    // ging zuvor stumm verloren («erster gewinnt») — jetzt als «__2» erhalten,
+    // damit der zweite Artikel (z.B. KKV 126z tredecies) nicht fehlt (§8).
     const tokens = alleArtikelTokens(HTML_MIT_DUPLIKATEN);
-    expect(tokens).toEqual(['1', '2']);
-    expect(tokens).toHaveLength(2);
+    expect(tokens).toEqual(['1', '1__2', '2']);
   });
 
   it('liefert leeres Array bei leerem HTML', () => {
