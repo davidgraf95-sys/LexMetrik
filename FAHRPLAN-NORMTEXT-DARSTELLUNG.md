@@ -22,10 +22,12 @@
 | **M8/G23** standalone man-template (Delegationsnorm `grundlage`) | ✅ fertig — 7135 Verweise erhalten (golden-neutral); **G21/G22 Bilder → B2** (Escape-Hatch: SSV-Pictogramme inline, brauchen M10/M14-Serialisierer) | `20a9b489` |
 | **M9/G7** doppelte art_id (`__2`-Suffix) | ✅ fertig — KKV 126z + BETMG/PAVO/VWVG zweiter Artikel erhalten | `e62d8680` |
 | — **Daten-Re-Segnung B1 (`--nur=bund`)** | ✅ erledigt — 24119 Bund-Snapshots; Engine-Golden byte-gleich, Drift+Vollständigkeit grün, adversarial verifiziert; **BGERR ausgenommen** (kaputter Casemates-Cache → 69 alte Einträge restauriert, FOLLOW-UP Filestore-URL) | `b61c088a` |
-| **M5** Erlass-Kopf/Ingress/Präambel (Sidecar) | ⏳ offen — golden-neutral, Struktur-Regen; tief | — |
-| **G11** Sektions-Fussnotenmarker | ⏳ offen — Struktur-Regen trägt mit | — |
-| **M10** Fussnoten-Abstand+Hervorhebung (Sidecar) | ⏳ offen | — |
-| **M11/M12** Resolver (intern/Selbstverweis stoppen) | ⏳ offen — zuletzt, Blast-Radius fedlex.ts | — |
+| **M11** Resolver A: SR-Verweis in Fussnoten → intern (#10) | ✅ fertig — 2857 eli/cc-Verweise; Reverse-Resolver aus Register, Stand-Marker; golden-neutral | `c07fe713` |
+| **M12** Resolver B: falsche Selbstverweise stoppen (#11) | ✅ fertig — reader-scoped (restMitIntern), 1110 falsche Self-Links unterdrückt, Über-Trigger-Check 0 Fehl-Supp.; NORM_IM_TEXT UNBERÜHRT → Engine-Golden byte-gleich | `c7d8aaba` |
+| — **Voll-Gate (`npm run gate`)** | ✅ GRÜN: tsc · vitest · Engine-Golden byte-gleich · lint · check (Drift+Vollständigkeit) | — |
+| **M5** Erlass-Kopf/Ingress/Präambel (Sidecar) | ⏳ offen — golden-neutral, Struktur-Regen; **tief**, neue extrahiereKopf + Render-Slots inhalt.tsx (frische Session) | — |
+| **G11** Sektions-Fussnotenmarker | ⏳ offen — Struktur-Regen trägt mit (struktur-run.ts randtitelFnIds erhalten) | — |
+| **M10** Fussnoten-Abstand (#9, Renderer) + G15 Hervorhebungen (Sidecar+Rich-Text) | ⏳ offen — #9 braucht visuellen Repro; G15 braucht Rich-Text-Render in fnTextMitLinks | — |
 
 **Resume-Hinweis:** nächster offener Schritt = M3·#6/G11, dann M4 (beide golden-neutral Renderer),
 danach die Extraktions-Hälfte M5–M9 (Reihenfolge: M6 §1 zuerst → M7/M8/M9 → **eine** `npm run normtext`-
