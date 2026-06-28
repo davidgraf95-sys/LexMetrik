@@ -110,7 +110,11 @@ export function HeaderSuche() {
         aria-autocomplete="list"
       />
       {zeigtPanel && (
-        <div className="absolute left-0 right-0 top-full mt-2 z-30">
+        // Im Header intern scrollbar (David 28.6.): die geöffnete Trefferfläche
+        // wächst sonst unbegrenzt aus dem Top-Streifen heraus. max-h + eigener
+        // Scroll + overscroll-contain (kein Durchscrollen auf die Seite). Nur der
+        // HEADER-Pfad ist gekappt; der Hero nutzt dieselbe SuchResultate ungekappt.
+        <div className="absolute left-0 right-0 top-full mt-2 z-30 max-h-[70vh] overflow-y-auto overscroll-contain rounded-lg">
           <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId}
             onNavigate={(href) => navigate(href)} />
         </div>
