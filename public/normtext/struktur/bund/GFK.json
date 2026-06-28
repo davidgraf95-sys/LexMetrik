@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.142.30",
+  "titel": "Abkommen über die Rechtsstellung der Flüchtlinge",
+  "praeambelTitel": "Präambel",
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "Der französische Originaltext findet sich unter der gleichen Nummer in der französischen Ausgabe dieser Sammlung.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "AS <b>1955</b> 441",
+    "links": [
+     {
+      "label": "AS <b>1955</b> 441",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1955/441_459_467"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "SR <b>0.120</b>",
+    "links": [
+     {
+      "label": "SR <b>0.120</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160/20150623"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -408,7 +446,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "[BS 11 786]. An den andern in diesem Art. erwähnten Abk. war die Schweiz nicht beteiligt.",
+     "text": "[BS <b>11</b> 786]. An den andern in diesem Art. erwähnten Abk. war die Schweiz nicht beteiligt.",
      "links": [],
      "absatz": null,
      "item": null

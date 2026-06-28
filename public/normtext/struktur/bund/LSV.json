@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "814.41",
+  "titel": "Lärmschutz-Verordnung",
+  "erlassdatum": "vom 15. Dezember 1986 (Stand am 1. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 5, 12 Absatz 2, 13 Absatz 1, 16 Absatz 2, 19, 21 Absatz 2, 23, 39 Absatz 1, 40 und 45 des Umweltschutzgesetzes vom 7. Oktober 1983 (Gesetz),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>814.01</b>",
+    "links": [
+     {
+      "label": "SR <b>814.01</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +47,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -26,10 +59,10 @@
     },
     {
      "nr": "3",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. April 2000, mit Wirkung seit 1. Mai 2000 (AS 2000 1388).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. April 2000, mit Wirkung seit 1. Mai 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -94,10 +127,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Aug. 2006, in Kraft seit 1. Nov. 2006 (AS 2006 3693).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Aug. 2006, in Kraft seit 1. Nov. 2006 (AS <b>2006 </b>3693).",
      "links": [
       {
-       "label": "AS 2006 3693",
+       "label": "AS <b>2006 </b>3693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/562"
       }
      ],
@@ -106,10 +139,10 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -135,10 +168,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 582).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023 </b>582).",
      "links": [
       {
-       "label": "AS 2023 582",
+       "label": "AS <b>2023 </b>582",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/582"
       }
      ],
@@ -160,10 +193,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS 1997 1588).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS <b>1997</b> 1588).",
      "links": [
       {
-       "label": "AS 1997 1588",
+       "label": "AS <b>1997</b> 1588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1588_1588_1588"
       }
      ],
@@ -172,10 +205,10 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 582).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023 </b>582).",
      "links": [
       {
-       "label": "AS 2023 582",
+       "label": "AS <b>2023 </b>582",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/582"
       }
      ],
@@ -197,10 +230,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -209,10 +242,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS 1997 1588).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS <b>1997</b> 1588).",
      "links": [
       {
-       "label": "AS 1997 1588",
+       "label": "AS <b>1997</b> 1588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1588_1588_1588"
       }
      ],
@@ -342,10 +375,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 725.116.2",
+     "text": "SR <b>725.116.2</b>",
      "links": [
       {
-       "label": "SR 725.116.2",
+       "label": "SR <b>725.116.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8462"
       }
      ],
@@ -354,10 +387,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -366,10 +399,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 742.144",
+     "text": "SR <b>742.144</b>",
      "links": [
       {
-       "label": "SR 742.144",
+       "label": "SR <b>742.144</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8764"
       }
      ],
@@ -378,10 +411,10 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -390,10 +423,10 @@
     },
     {
      "nr": "15",
-     "text": "AS 2006 3693",
+     "text": "AS <b>2006</b> 3693",
      "links": [
       {
-       "label": "AS 2006 3693",
+       "label": "AS <b>2006</b> 3693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/562"
       }
      ],
@@ -402,14 +435,14 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Aug. 2006 (AS 2006 3693). Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Aug. 2006 (AS <b>2006 </b>3693). Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2006 3693",
+       "label": "AS <b>2006 </b>3693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/562"
       },
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -448,10 +481,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Aufgehoben durch Ziff. I der V vom 1. Sept. 2004, mit Wirkung seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Aufgehoben durch Ziff. I der V vom 1. Sept. 2004, mit Wirkung seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -477,10 +510,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I 14 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 14 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -489,10 +522,10 @@
     },
     {
      "nr": "19",
-     "text": "Ausdruck gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 582). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023 </b>582). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2023 582",
+       "label": "AS <b>2023 </b>582",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/582"
       }
      ],
@@ -518,10 +551,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Febr. 2018, in Kraft seit 1. April 2018 (AS 2018 965).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Febr. 2018, in Kraft seit 1. April 2018 (AS <b>2018</b> 965).",
      "links": [
       {
-       "label": "AS 2018 965",
+       "label": "AS <b>2018</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/137"
       }
      ],
@@ -530,10 +563,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 725.116.2",
+     "text": "SR <b>725.116.2</b>",
      "links": [
       {
-       "label": "SR 725.116.2",
+       "label": "SR <b>725.116.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8462"
       }
      ],
@@ -542,10 +575,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -554,14 +587,14 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Febr. 2018 (AS 2018 965). Aufgehoben durch Ziff. I der V vom 12. Mai 2021, mit Wirkung seit 1. Juli 2021 (AS 2021 293).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Febr. 2018 (AS <b>2018</b> 965). Aufgehoben durch Ziff. I der V vom 12. Mai 2021, mit Wirkung seit 1. Juli 2021 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2018 965",
+       "label": "AS <b>2018</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/137"
       },
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -570,15 +603,16 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I 14 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 14 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Bundesbeiträge für Sanierungen und Schallschutzmassnahmen bei bestehenden Hauptstrassen und übrigen Strassen"
     }
    ]
   },
@@ -599,10 +633,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Mai 2021, mit Wirkung seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Mai 2021, mit Wirkung seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -611,10 +645,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -640,10 +674,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -652,10 +686,10 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -664,10 +698,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Febr. 2018, in Kraft seit 1. April 2018 (AS 2018 965).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Febr. 2018, in Kraft seit 1. April 2018 (AS <b>2018</b> 965).",
      "links": [
       {
-       "label": "AS 2018 965",
+       "label": "AS <b>2018</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/137"
       }
      ],
@@ -693,10 +727,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -705,10 +739,10 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS 2021 293).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Jan. 2025 (AS <b>2021</b> 293).",
      "links": [
       {
-       "label": "AS 2021 293",
+       "label": "AS <b>2021</b> 293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/293"
       }
      ],
@@ -764,10 +798,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
@@ -802,10 +836,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -825,10 +859,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Aufgehoben durch Ziff. I der V vom 25. Febr. 2026, mit Wirkung seit 1. April 2026 (AS 2026 114).",
+     "text": "Aufgehoben durch Ziff. I der V vom 25. Febr. 2026, mit Wirkung seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -850,10 +884,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS 1997 1588).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1997, in Kraft seit 1. Aug. 1997 (AS <b>1997</b> 1588).",
      "links": [
       {
-       "label": "AS 1997 1588",
+       "label": "AS <b>1997</b> 1588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1588_1588_1588"
       }
      ],
@@ -862,10 +896,10 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -874,10 +908,10 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -899,10 +933,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 12. April 2000, in Kraft seit 1. Mai 2000 (AS 2000 1388).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 12. April 2000, in Kraft seit 1. Mai 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -911,10 +945,10 @@
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -947,10 +981,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -987,10 +1021,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -999,10 +1033,10 @@
     },
     {
      "nr": "44",
-     "text": "Aufgehoben durch Art. 15 der V vom 4. Dez. 2015 über die Lärmsanierung der Eisenbahnen, mit Wirkung seit 1. Jan. 2016 (AS 2015 5691).",
+     "text": "Aufgehoben durch Art. 15 der V vom 4. Dez. 2015 über die Lärmsanierung der Eisenbahnen, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5691).",
      "links": [
       {
-       "label": "AS 2015 5691",
+       "label": "AS <b>2015</b> 5691",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/890"
       }
      ],
@@ -1011,15 +1045,16 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Ermittlung, Beurteilung und Kontrolle der Aussenlärmimmissionen ortsfester Anlagen"
     }
    ]
   },
@@ -1040,10 +1075,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -1052,10 +1087,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -1081,10 +1116,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167 4313).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167 4313).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       },
       {
@@ -1097,10 +1132,10 @@
     },
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 12. April 2000, in Kraft seit 1. Mai 2000 (AS 2000 1388).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. April 2000, in Kraft seit 1. Mai 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -1133,10 +1168,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Die Berichtigung vom 7. Mai 2019 betrifft nur den französischen Text (AS 2019 1337).",
+     "text": "Die Berichtigung vom 7. Mai 2019 betrifft nur den französischen Text (AS <b>2019</b> 1337).",
      "links": [
       {
-       "label": "AS 2019 1337",
+       "label": "AS <b>2019</b> 1337",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/259"
       }
      ],
@@ -1145,10 +1180,10 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -1189,10 +1224,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS 2026 114).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Febr. 2026, in Kraft seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -1233,10 +1268,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
       }
      ],
@@ -1262,10 +1297,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. IV 31 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Fassung gemäss Ziff. IV 31 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -1274,10 +1309,10 @@
     },
     {
      "nr": "56",
-     "text": "Aufgehoben durch Ziff. 1 der V vom 27. Juni 1995, mit Wirkung seit 1. Aug. 1995 (AS 1995 3694).",
+     "text": "Aufgehoben durch Ziff. 1 der V vom 27. Juni 1995, mit Wirkung seit 1. Aug. 1995 (AS <b>1995</b> 3694).",
      "links": [
       {
-       "label": "AS 1995 3694",
+       "label": "AS <b>1995</b> 3694",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3694_3694_3694"
       }
      ],
@@ -1303,10 +1338,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. II 14 der V vom 2. Febr. 2000 zum BG über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS 2000 703).",
+     "text": "Fassung gemäss Ziff. II 14 der V vom 2. Febr. 2000 zum BG über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -1315,10 +1350,10 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt gemäss Anhang 2 Ziff. 9 der V vom 21. Mai 2008 über Geoinformation, in Kraft seit 1. Juli 2008 (AS 2008 2809).",
+     "text": "Eingefügt gemäss Anhang 2 Ziff. 9 der V vom 21. Mai 2008 über Geoinformation, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2809).",
      "links": [
       {
-       "label": "AS 2008 2809",
+       "label": "AS <b>2008</b> 2809",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/389"
       }
      ],
@@ -1327,10 +1362,10 @@
     },
     {
      "nr": "59",
-     "text": "SR 742.101",
+     "text": "SR <b>742.101</b>",
      "links": [
       {
-       "label": "SR 742.101",
+       "label": "SR <b>742.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8719"
       }
      ],
@@ -1339,10 +1374,10 @@
     },
     {
      "nr": "60",
-     "text": "SR 748.0",
+     "text": "SR <b>748.0</b>",
      "links": [
       {
-       "label": "SR 748.0",
+       "label": "SR <b>748.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9033"
       }
      ],
@@ -1351,10 +1386,10 @@
     },
     {
      "nr": "61",
-     "text": "SR 734.0",
+     "text": "SR <b>734.0</b>",
      "links": [
       {
-       "label": "SR 734.0",
+       "label": "SR <b>734.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8570"
       }
      ],
@@ -1363,10 +1398,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 743.01",
+     "text": "SR <b>743.01</b>",
      "links": [
       {
-       "label": "SR 743.01",
+       "label": "SR <b>743.01</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8834"
       }
      ],
@@ -1375,10 +1410,10 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -1387,10 +1422,10 @@
     },
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -1416,10 +1451,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Anhang 2 Ziff. 9 der V vom 21. Mai 2008 über Geoinformation, in Kraft seit 1. Juli 2008 (AS 2008 2809).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 9 der V vom 21. Mai 2008 über Geoinformation, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2809).",
      "links": [
       {
-       "label": "AS 2008 2809",
+       "label": "AS <b>2008</b> 2809",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/389"
       }
      ],
@@ -1428,10 +1463,10 @@
     },
     {
      "nr": "67",
-     "text": "SR 510.620",
+     "text": "SR <b>510.620</b>",
      "links": [
       {
-       "label": "SR 510.620",
+       "label": "SR <b>510.620</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7339"
       }
      ],
@@ -1457,10 +1492,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Aug. 2006, in Kraft seit 1. Nov. 2006 (AS 2006 3693).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Aug. 2006, in Kraft seit 1. Nov. 2006 (AS <b>2006 </b>3693).",
      "links": [
       {
-       "label": "AS 2006 3693",
+       "label": "AS <b>2006 </b>3693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/562"
       }
      ],
@@ -1484,10 +1519,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Aufgehoben durch Ziff. I der V vom 30. Juni 2010, mit Wirkung seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Aufgehoben durch Ziff. I der V vom 30. Juni 2010, mit Wirkung seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -1511,10 +1546,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Aufgehoben durch Ziff. IV 31 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Aufgehoben durch Ziff. IV 31 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -1560,14 +1595,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Nov. 2014 (AS 2014 4501). Aufgehoben durch Ziff. I der V vom 25. Febr. 2026, mit Wirkung seit 1. April 2026 (AS 2026 114).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Nov. 2014 (AS <b>2014</b> 4501). Aufgehoben durch Ziff. I der V vom 25. Febr. 2026, mit Wirkung seit 1. April 2026 (AS <b>2026</b> 114).",
      "links": [
       {
-       "label": "AS 2014 4501",
+       "label": "AS <b>2014</b> 4501",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/751"
       },
       {
-       "label": "AS 2026 114",
+       "label": "AS <b>2026</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/114"
       }
      ],
@@ -1593,14 +1628,14 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 12. April 2000 (AS 2000 1388). Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS 2004 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. April 2000 (AS <b>2000 </b>1388). Fassung gemäss Ziff. I der V vom 1. Sept. 2004, in Kraft seit 1. Okt. 2004 (AS <b>2004</b> 4167).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       },
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       }
      ],
@@ -1626,10 +1661,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3223).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3223).",
      "links": [
       {
-       "label": "AS 2010 3223",
+       "label": "AS <b>2010</b> 3223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/433"
       }
      ],
@@ -1653,14 +1688,14 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004 (AS 2004 4167). Aufgehoben durch Ziff. I der V vom 21. Febr. 2018, mit Wirkung seit 1. April 2018 (AS 2018 965).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Sept. 2004 (AS <b>2004</b> 4167). Aufgehoben durch Ziff. I der V vom 21. Febr. 2018, mit Wirkung seit 1. April 2018 (AS <b>2018</b> 965).",
      "links": [
       {
-       "label": "AS 2004 4167",
+       "label": "AS <b>2004</b> 4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/623"
       },
       {
-       "label": "AS 2018 965",
+       "label": "AS <b>2018</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/137"
       }
      ],

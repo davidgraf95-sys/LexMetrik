@@ -1,5 +1,75 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.142.40",
+  "titel": "Übereinkommen über die Rechtsstellung der Staatenlosen",
+  "erlassdatum": "(Stand am 22. Mai 2026)",
+  "praeambelTitel": "Präambel",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Hohen Vertragsparteien,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass die Charta der Vereinten Nationen und die am 10. Dezember 1948 von der Generalversammlung angenommene allgemeine Erklärung der Menschenrechte den Grundsatz bestätigt haben, dass die Menschen ohne Unterschied die Menschenrechte und die Grundfreiheiten geniessen sollen,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass die Vereinten Nationen wiederholt ihr grosses Interesse für die Staatenlosen bekundet und sich bestrebt haben diesen in möglichst weitem Umfang die Ausübung der Menschenrechte und der Grundfreiheiten zu gewährleisten,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass nur diejenigen Staatenlosen, die gleichzeitig Flüchtlinge sind, durch das Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge erfasst werden und dass jenes Abkommen auf zahlreiche Staatenlose nicht anwendbar ist,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass es wünschenswert ist, die Stellung der Staatenlosen durch ein internationales Übereinkommen zu regeln und zu verbessern,"
+   },
+   {
+    "rolle": "verb",
+    "text": "haben folgendes vereinbart:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Abs. 1 des BB vom 27. April 1972 (AS <b>1972</b> 2317).",
+    "links": [
+     {
+      "label": "AS <b>1972</b> 2317",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1972/2317_2371_2147"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.120</b>",
+    "links": [
+     {
+      "label": "SR <b>0.120</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR<b> 0.142.30</b>",
+    "links": [
+     {
+      "label": "SR<b> 0.142.30</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/432"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [

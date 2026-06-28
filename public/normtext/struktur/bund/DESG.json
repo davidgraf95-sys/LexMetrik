@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "232.12",
+  "titel": "Bundesgesetz über den Schutz von Design",
+  "erlassdatum": "vom 5. Oktober 2001 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 122 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 16. Februar 2000,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 21. Juni 2013, in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 3631; BBl <b>2009</b> 8533).",
+    "links": [
+     {
+      "label": "AS <b>2015</b> 3631",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2015/609"
+     },
+     {
+      "label": "BBl <b>2009</b> 8533",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2009/1471"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>2000 </b>2729",
+    "links": [
+     {
+      "label": "BBl <b>2000 </b>2729",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2000/557"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -138,14 +199,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -289,14 +350,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BB vom 28. Sept. 2018 über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland, in Kraft seit 1. April 2019 (AS 2019 975; BBl 2017 5947).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BB vom 28. Sept. 2018 über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland, in Kraft seit 1. April 2019 (AS <b>2019</b> 975; BBl <b>2017</b> 5947).",
      "links": [
       {
-       "label": "AS 2019 975",
+       "label": "AS <b>2019</b> 975",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/177"
       },
       {
-       "label": "BBl 2017 5947",
+       "label": "BBl <b>2017</b> 5947",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1678"
       }
      ],
@@ -322,14 +383,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BB vom 28. Sept. 2018 über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland, in Kraft seit 1. April 2019 (AS 2019 975; BBl 2017 5947).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BB vom 28. Sept. 2018 über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland, in Kraft seit 1. April 2019 (AS <b>2019</b> 975; BBl <b>2017</b> 5947).",
      "links": [
       {
-       "label": "AS 2019 975",
+       "label": "AS <b>2019</b> 975",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/177"
       },
       {
-       "label": "BBl 2017 5947",
+       "label": "BBl <b>2017</b> 5947",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1678"
       }
      ],
@@ -338,14 +399,14 @@
     },
     {
      "nr": "7",
-     "text": "Ausdruck gemäss Anhang Ziff. 5 des BG vom 21. Juni 2013, in Kraft seit 1. Jan. 2017 (AS 2015 3631; BBl 2009 8533). Die Änd. wurde im ganzen Text berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 5 des BG vom 21. Juni 2013, in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 3631; BBl <b>2009</b> 8533). Die Änd. wurde im ganzen Text berücksichtigt.",
      "links": [
       {
-       "label": "AS 2015 3631",
+       "label": "AS <b>2015</b> 3631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/609"
       },
       {
-       "label": "BBl 2009 8533",
+       "label": "BBl <b>2009</b> 8533",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1471"
       }
      ],
@@ -371,10 +432,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 0.232.121.3",
+     "text": "SR <b>0.232.121.3</b>",
      "links": [
       {
-       "label": "SR 0.232.121.3",
+       "label": "SR <b>0.232.121.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1971/378_378_378"
       }
      ],
@@ -415,22 +476,22 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 0.232.01, 0.232.02, 0.232.03, 0.232.04",
+     "text": "SR <b>0.232.01</b>, <b>0.232.02</b>, <b>0.232.03</b>, <b>0.232.04</b>",
      "links": [
       {
-       "label": "SR 0.232.01",
+       "label": "SR <b>0.232.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/45/243_255_253"
       },
       {
-       "label": "0.232.02",
+       "label": "<b>0.232.02</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/55/1237_1277_1265"
       },
       {
-       "label": "0.232.03",
+       "label": "<b>0.232.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1963/123_119_127"
       },
       {
-       "label": "0.232.04",
+       "label": "<b>0.232.04</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1970/620_620_620"
       }
      ],
@@ -471,19 +532,20 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 19. Dez. 2003 über die elektronische Signatur, in Kraft seit 1. Jan. 2005 (AS 2004 5085; BBl 2001 5679).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 19. Dez. 2003 über die elektronische Signatur, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5085; BBl <b>2001</b> 5679).",
      "links": [
       {
-       "label": "AS 2004 5085",
+       "label": "AS <b>2004</b> 5085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/788"
       },
       {
-       "label": "BBl 2001 5679",
+       "label": "BBl <b>2001</b> 5679",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/889"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Eintragung und Schutzverlängerung; elektronischer Behördenverkehr"
     }
    ]
   },
@@ -564,10 +626,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "[BS 11 1039]. Siehe heute: das Abk. vom 28. Nov. 1960 (SR 0.232.121.2).",
+     "text": "[BS <b>11</b> 1039]. Siehe heute: das Abk. vom 28. Nov. 1960 (SR <b>0.232.121.2</b>).",
      "links": [
       {
-       "label": "SR 0.232.121.2",
+       "label": "SR <b>0.232.121.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/889_889_889"
       }
      ],
@@ -591,50 +653,50 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "[AS 1997 2173; 1999 2632; 2005 2323; 2006 4487; 2007 4477 Ziff. VI; 2008 1897; 2011 2251; 2013 1307; 2016 1049. AS 2016 4845 Art. 12]. Siehe heute: die Verordnung des IG vom 14. Juni 2016 über Gebühren (SR 232.148).",
+     "text": "[AS <b>1997 </b>2173; <b>1999 </b>2632; <b>2005 </b>2323; <b>2006 </b>4487; <b>2007 </b>4477 Ziff. VI; <b>2008 </b>1897; <b>2011 </b>2251; <b>2013 </b>1307; <b>2016 </b>1049. AS <b>2016</b> 4845 Art. 12]. Siehe heute: die Verordnung des IG vom 14. Juni 2016 über Gebühren (SR <b>232.148</b>).",
      "links": [
       {
-       "label": "AS 1997 2173",
+       "label": "AS <b>1997 </b>2173",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2173_2173_2173"
       },
       {
-       "label": "1999 2632",
+       "label": "<b>1999 </b>2632",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/414"
       },
       {
-       "label": "2005 2323",
+       "label": "<b>2005 </b>2323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/393"
       },
       {
-       "label": "2006 4487",
+       "label": "<b>2006 </b>4487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/692"
       },
       {
-       "label": "2007 4477",
+       "label": "<b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       },
       {
-       "label": "2008 1897",
+       "label": "<b>2008 </b>1897",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/278"
       },
       {
-       "label": "2011 2251",
+       "label": "<b>2011 </b>2251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/310"
       },
       {
-       "label": "2013 1307",
+       "label": "<b>2013 </b>1307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/299"
       },
       {
-       "label": "2016 1049",
+       "label": "<b>2016 </b>1049",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/197"
       },
       {
-       "label": "AS 2016 4845",
+       "label": "AS <b>2016</b> 4845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/777"
       },
       {
-       "label": "SR 232.148",
+       "label": "SR <b>232.148</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/777"
       }
      ],
@@ -658,14 +720,14 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -689,10 +751,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Aufgehoben durch Anhang Ziff. 22 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 22 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -700,7 +762,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -756,10 +818,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -785,10 +847,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 33 GVG – AS 1974 1051).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 33 GVG – AS <b>1974 </b>1051).",
      "links": [
       {
-       "label": "AS 1974 1051",
+       "label": "AS <b>1974 </b>1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1051_1051_1051"
       }
      ],
@@ -812,14 +874,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 11 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS 2010 1739; BBl 2006 7221).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 11 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       }
      ],
@@ -845,14 +907,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Zivilprozessordnung vom 19. Dez. 2008, in Kraft seit 1. Jan. 2011 (AS 2010 1739; BBl 2006 7221).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Zivilprozessordnung vom 19. Dez. 2008, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       }
      ],
@@ -893,14 +955,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -926,14 +988,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -942,14 +1004,14 @@
     },
     {
      "nr": "22",
-     "text": "Dritter Satz aufgehoben durch Ziff. I 7 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, mit Wirkung seit 1. Juli 2023 (AS 2023 259; BBl 2018 2827).",
+     "text": "Dritter Satz aufgehoben durch Ziff. I 7 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, mit Wirkung seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
      "links": [
       {
-       "label": "AS 2023 259",
+       "label": "AS <b>2023</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
@@ -958,14 +1020,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -991,10 +1053,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -1065,14 +1127,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1081,19 +1143,20 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Hilfeleistung beim Verbringen von Gegenständen ins Zollgebiet oder aus dem Zollgebiet"
     }
    ]
   },
@@ -1114,14 +1177,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1147,14 +1210,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1180,14 +1243,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1266,14 +1329,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 19. Dez. 2003 über die elektronische Signatur, in Kraft seit 1. Jan. 2005 (AS 2004 5085; BBl 2001 5679).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 19. Dez. 2003 über die elektronische Signatur, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5085; BBl <b>2001</b> 5679).",
      "links": [
       {
-       "label": "AS 2004 5085",
+       "label": "AS <b>2004</b> 5085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/788"
       },
       {
-       "label": "BBl 2001 5679",
+       "label": "BBl <b>2001</b> 5679",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/889"
       }
      ],
@@ -1299,14 +1362,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1332,14 +1395,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1348,10 +1411,10 @@
     },
     {
      "nr": "31",
-     "text": "Ausdruck gemäss Ziff. I 4 der V vom 12. Juni 2020 über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung, in Kraft seit 1. Jan. 2022 (AS 2020 2743). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 4 der V vom 12. Juni 2020 über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 2743). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2020 2743",
+       "label": "AS <b>2020</b> 2743",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/498"
       }
      ],
@@ -1377,14 +1440,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1410,14 +1473,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1426,14 +1489,14 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Fassung gemäss Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1442,14 +1505,14 @@
     },
     {
      "nr": "35",
-     "text": "Aufgehoben durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, mit Wirkung seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Aufgehoben durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, mit Wirkung seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1458,14 +1521,14 @@
     },
     {
      "nr": "36",
-     "text": "Aufgehoben durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, mit Wirkung seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Aufgehoben durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, mit Wirkung seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],
@@ -1491,14 +1554,14 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1524,14 +1587,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1557,14 +1620,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1590,14 +1653,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS 2008 2551; BBl 2006 1).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
      "links": [
       {
-       "label": "AS 2008 2551",
+       "label": "AS <b>2008</b> 2551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
       },
       {
-       "label": "BBl 2006 1",
+       "label": "BBl <b>2006</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
       }
      ],
@@ -1623,14 +1686,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 313; BBl 2023 1184).",
+     "text": "Eingefügt durch Ziff. I 5 des BG vom 22. Dez. 2023 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 313; BBl <b>2023</b> 1184).",
      "links": [
       {
-       "label": "AS 2025 313",
+       "label": "AS <b>2025</b> 313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/313"
       },
       {
-       "label": "BBl 2023 1184",
+       "label": "BBl <b>2023</b> 1184",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1184"
       }
      ],

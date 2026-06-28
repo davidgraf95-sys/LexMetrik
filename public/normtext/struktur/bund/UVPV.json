@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "814.011",
+  "titel": "Verordnung über die Umweltverträglichkeitsprüfung",
+  "erlassdatum": "vom 19. Oktober 1988 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 10a Absatz 3, 10c und 39 Absatz 1 des Umweltschutzgesetzes vom 7. Oktober 1983 (USG) sowie in Ausführung des Übereinkommens vom 25. Februar 1991 über die Umweltverträglichkeitsprüfung im grenzüberschreitenden Rahmen (Espoo-Konvention) und des Übereinkommens vom 25. Juni 1998 über den Zugang zu Informationen, die Öffentlichkeitsbeteiligung an Entscheidungsverfahren und den Zugang zu Gerichten in Umweltangelegenheiten (Aarhus-Konvention),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>814.01</b>",
+    "links": [
+     {
+      "label": "SR <b>814.01</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.814.06</b>",
+    "links": [
+     {
+      "label": "SR <b>0.814.06</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/610"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.814.07</b>",
+    "links": [
+     {
+      "label": "SR <b>0.814.07</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2014/235"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015 </b>2903).",
+    "links": [
+     {
+      "label": "AS <b>2015 </b>2903",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2015/545"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,10 +87,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -62,10 +131,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -106,10 +175,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Satz eingefügt durch Ziff. II 7 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS 2000 703).",
+     "text": "Satz eingefügt durch Ziff. II 7 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -146,10 +215,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -171,10 +240,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -196,10 +265,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -208,10 +277,10 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -233,10 +302,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -245,10 +314,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -257,10 +326,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -293,10 +362,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -305,15 +374,16 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Aufgaben der Umweltschutzfachstellen"
     }
    ]
   },
@@ -330,10 +400,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -342,10 +412,10 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -371,10 +441,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Satz eingefügt durch Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Satz eingefügt durch Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -383,10 +453,10 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -442,10 +512,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -454,10 +524,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -466,10 +536,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -525,10 +595,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -550,10 +620,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -562,10 +632,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 921.0",
+     "text": "SR <b>921.0</b>",
      "links": [
       {
-       "label": "SR 921.0",
+       "label": "SR <b>921.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1992/2521_2521_2521"
       }
      ],
@@ -574,10 +644,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 451",
+     "text": "SR <b>451</b>",
      "links": [
       {
-       "label": "SR 451",
+       "label": "SR <b>451</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1966/1637_1694_1679"
       }
      ],
@@ -586,10 +656,10 @@
     },
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -598,10 +668,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 923.0",
+     "text": "SR <b>923.0</b>",
      "links": [
       {
-       "label": "SR 923.0",
+       "label": "SR <b>923.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/2259_2259_2259"
       }
      ],
@@ -610,10 +680,10 @@
     },
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS 1995 4261).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Sept. 1995, in Kraft seit 1. Okt. 1995 (AS <b>1995</b> 4261).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       }
      ],
@@ -622,10 +692,10 @@
     },
     {
      "nr": "39",
-     "text": "SR 814.20",
+     "text": "SR <b>814.20</b>",
      "links": [
       {
-       "label": "SR 814.20",
+       "label": "SR <b>814.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1992/1860_1860_1860"
       }
      ],
@@ -647,10 +717,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I 12 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 12 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -659,10 +729,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 730.0",
+     "text": "SR <b>730.0</b>",
      "links": [
       {
-       "label": "SR 730.0",
+       "label": "SR <b>730.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/762"
       }
      ],
@@ -671,10 +741,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 702).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 702).",
      "links": [
       {
-       "label": "AS 2024 702",
+       "label": "AS <b>2024</b> 702",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/702"
       }
      ],
@@ -683,10 +753,10 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 702).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 702).",
      "links": [
       {
-       "label": "AS 2024 702",
+       "label": "AS <b>2024</b> 702",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/702"
       }
      ],
@@ -708,10 +778,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Die Änderung kann unter AS 1988 1931 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>1988</b> 1931 konsultiert werden.",
      "links": [
       {
-       "label": "AS 1988 1931",
+       "label": "AS <b>1988</b> 1931",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/1931_1931_1931"
       }
      ],
@@ -733,10 +803,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Anhang Ziffer II 2 der V vom 17. Aug. 2016, in Kraft seit 1. Okt. 2016 (AS 2016 3215).",
+     "text": "Fassung gemäss Anhang Ziffer II 2 der V vom 17. Aug. 2016, in Kraft seit 1. Okt. 2016 (AS <b>2016 </b>3215).",
      "links": [
       {
-       "label": "AS 2016 3215",
+       "label": "AS <b>2016 </b>3215",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/539"
       }
      ],
@@ -769,10 +839,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -794,10 +864,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -806,10 +876,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 9. Okt. 2013, in Kraft seit 1. Dez. 2013 (AS 2013 3509).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 9. Okt. 2013, in Kraft seit 1. Dez. 2013 (AS <b>2013</b> 3509).",
      "links": [
       {
-       "label": "AS 2013 3509",
+       "label": "AS <b>2013</b> 3509",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/653"
       }
      ],
@@ -829,14 +899,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V vom 5. Sept. 1995 (AS 1995 4261). Aufgehoben durch Ziff. I der V vom 19. Sept. 2008, mit Wirkung seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 5. Sept. 1995 (AS <b>1995</b> 4261). Aufgehoben durch Ziff. I der V vom 19. Sept. 2008, mit Wirkung seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 1995 4261",
+       "label": "AS <b>1995</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4261_4261_4261"
       },
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -862,10 +932,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
@@ -874,10 +944,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -901,15 +971,16 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: UVP im grenzüberschreitenden Rahmen"
     }
    ]
   },
@@ -926,10 +997,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS 2008 4621).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Sept. 2008, in Kraft seit 1. Dez. 2008 (AS <b>2008</b> 4621).",
      "links": [
       {
-       "label": "AS 2008 4621",
+       "label": "AS <b>2008</b> 4621",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/646"
       }
      ],

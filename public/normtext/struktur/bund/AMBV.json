@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "812.212.1",
+  "titel": "Verordnung über die Bewilligungen im Arzneimittelbereich",
+  "erlassdatum": "vom 14. November 2018 (Stand am 15. März 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Heilmittelgesetz vom 15. Dezember 2000 (HMG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>812.21</b>",
+    "links": [
+     {
+      "label": "SR <b>812.21</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +47,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "SR 810.211",
+     "text": "SR <b>810.211</b>",
      "links": [
       {
-       "label": "SR 810.211",
+       "label": "SR <b>810.211</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/280"
       }
      ],
@@ -39,7 +72,7 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Steht für: Good Manufacturing Practice",
+     "text": "Steht für: <i>Good Manufacturing Practice</i>",
      "links": [],
      "absatz": null,
      "item": "o"
@@ -198,10 +231,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 812.212.21",
+     "text": "SR <b>812.212.21</b>",
      "links": [
       {
-       "label": "SR 812.212.21",
+       "label": "SR <b>812.212.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/588"
       }
      ],
@@ -227,7 +260,7 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Steht für: Good Distribution Practice",
+     "text": "Steht für: <i>Good Distribution Practice</i>",
      "links": [],
      "absatz": "2",
      "item": "d"
@@ -266,10 +299,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
@@ -325,10 +358,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Berichtigung vom 28. Mai 2019 (AS 2019 1605).",
+     "text": "Berichtigung vom 28. Mai 2019 (AS <b>2019</b> 1605).",
      "links": [
       {
-       "label": "AS 2019 1605",
+       "label": "AS <b>2019</b> 1605",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/308"
       }
      ],
@@ -489,10 +522,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 812.212.21",
+     "text": "SR <b>812.212.21</b>",
      "links": [
       {
-       "label": "SR 812.212.21",
+       "label": "SR <b>812.212.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/588"
       }
      ],
@@ -548,10 +581,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 818.101.32",
+     "text": "SR <b>818.101.32</b>",
      "links": [
       {
-       "label": "SR 818.101.32",
+       "label": "SR <b>818.101.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/299"
       }
      ],
@@ -607,10 +640,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 818.101.32",
+     "text": "SR <b>818.101.32</b>",
      "links": [
       {
-       "label": "SR 818.101.32",
+       "label": "SR <b>818.101.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/299"
       }
      ],
@@ -692,10 +725,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -704,10 +737,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 24 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 24 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -804,10 +837,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 23. Nov. 2022, mit Wirkung seit 1. Jan. 2023 (AS 2022 723).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 23. Nov. 2022, mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 723).",
      "links": [
       {
-       "label": "AS 2022 723",
+       "label": "AS <b>2022</b> 723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
       }
      ],
@@ -829,10 +862,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 810.211",
+     "text": "SR <b>810.211</b>",
      "links": [
       {
-       "label": "SR 810.211",
+       "label": "SR <b>810.211</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/280"
       }
      ],
@@ -854,10 +887,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 812.212.27",
+     "text": "SR <b>812.212.27</b>",
      "links": [
       {
-       "label": "SR 812.212.27",
+       "label": "SR <b>812.212.27</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/592"
       }
      ],
@@ -866,10 +899,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. III 2 der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 349).",
+     "text": "Fassung gemäss Ziff. III 2 der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 349).",
      "links": [
       {
-       "label": "AS 2022 349",
+       "label": "AS <b>2022</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/349"
       }
      ],
@@ -944,10 +977,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 810.305",
+     "text": "SR <b>810.305</b>",
      "links": [
       {
-       "label": "SR 810.305",
+       "label": "SR <b>810.305</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2013/643"
       }
      ],
@@ -956,10 +989,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. III 2 der V vom 7. Juni 2024, in Kraft seit 1. Nov. 2024 (AS 2024 322).",
+     "text": "Fassung gemäss Ziff. III 2 der V vom 7. Juni 2024, in Kraft seit 1. Nov. 2024 (AS <b>2024</b> 322).",
      "links": [
       {
-       "label": "AS 2024 322",
+       "label": "AS <b>2024</b> 322",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/322"
       }
      ],
@@ -1146,10 +1179,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 98 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 98 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -1190,10 +1223,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 98 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 98 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -1289,10 +1322,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Febr. 2025, in Kraft seit 15. März 2025 (AS 2025 109).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Febr. 2025, in Kraft seit 15. März 2025 (AS <b>2025</b> 109).",
      "links": [
       {
-       "label": "AS 2025 109",
+       "label": "AS <b>2025</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/109"
       }
      ],

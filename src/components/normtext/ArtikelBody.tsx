@@ -311,7 +311,14 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
 }) {
   const { passusMarke, zielItemKey } = bestimmePassusZiel(bloecke, passus);
   // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
-  const verlinkt = (s: string) => (autolink ? <NormText text={s} intern={intern} /> : s);
+  // #9 (M10): verwaiste Leerzeichen VOR Punkt/Komma glätten — sie entstehen beim
+  // Strippen eines Inline-Fussnoten-Markers (Fedlex «…sinngemäss<sup>2</sup>.» →
+  // entferneTags ersetzt das Tag durch ' ' → «…sinngemäss .»). Reine Darstellung
+  // (§1: kein Wortlaut, nur ein Extraktions-Artefakt geglättet); kein Sprachkonflikt
+  // (weder DE noch FR/IT setzen ein Leerzeichen vor Punkt/Komma). NUR im Lese-Pfad
+  // (autolink) — der Popover-Pfad (autolink=false) bleibt zeichenidentisch (§6 golden).
+  const glaetteInterpunktion = (s: string) => s.replace(/ +([.,])/g, '$1');
+  const verlinkt = (s: string) => (autolink ? <NormText text={glaetteInterpunktion(s)} intern={intern} /> : s);
   const zk = zitierKontext;
 
   return (

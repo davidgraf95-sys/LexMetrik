@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "836.21",
+  "titel": "Verordnung über die Familienzulagen",
+  "erlassdatum": "vom 31. Oktober 2007 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 4 Absatz 3, 13 Absatz 4, 21b Absatz 1, 21e und 27 Absatz 1 des Familienzulagengesetzes vom 24. März 2006 (FamZG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>836.2</b>",
+    "links": [
+     {
+      "label": "SR <b>836.2</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2008/51"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Ziff. I der V vom 8. Sept. 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010 </b>4495).",
+    "links": [
+     {
+      "label": "AS <b>2010 </b>4495",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2010/637"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +59,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -26,10 +71,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -51,10 +96,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -63,10 +108,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -75,10 +120,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 834.11",
+     "text": "SR <b>834.11</b>",
      "links": [
       {
-       "label": "SR 834.11",
+       "label": "SR <b>834.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/187"
       }
      ],
@@ -100,10 +145,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -112,10 +157,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 211.221.36",
+     "text": "SR <b>211.221.36</b>",
      "links": [
       {
-       "label": "SR 211.221.36",
+       "label": "SR <b>211.221.36</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/505"
       }
      ],
@@ -137,10 +182,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 211.231",
+     "text": "SR <b>211.231</b>",
      "links": [
       {
-       "label": "SR 211.231",
+       "label": "SR <b>211.231</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/782"
       }
      ],
@@ -162,10 +207,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -198,10 +243,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -210,10 +255,10 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -222,10 +267,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -247,10 +292,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -259,10 +304,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -271,10 +316,10 @@
     },
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -296,15 +341,16 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Familienzulagenordnung für Erwerbstätige"
     }
    ]
   },
@@ -321,10 +367,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -333,10 +379,10 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4951).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -345,10 +391,10 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4951).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -357,10 +403,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -369,10 +415,10 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -381,10 +427,10 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -393,10 +439,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -405,10 +451,10 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -417,10 +463,10 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -429,10 +475,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -454,10 +500,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -466,10 +512,10 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -478,10 +524,10 @@
     },
     {
      "nr": "33",
-     "text": "Ausdruck gemäss Ziff. I Abs. 1 der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I Abs. 1 der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -490,10 +536,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -546,10 +592,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "SR 611.0",
+     "text": "SR <b>611.0</b>",
      "links": [
       {
-       "label": "SR 611.0",
+       "label": "SR <b>611.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/227"
       }
      ],
@@ -571,10 +617,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -583,10 +629,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -595,10 +641,10 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Okt. 2009, in Kraft seit 8. Nov. 2009 (AS 2009 5367).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Okt. 2009, in Kraft seit 8. Nov. 2009 (AS <b>2009</b> 5367).",
      "links": [
       {
-       "label": "AS 2009 5367",
+       "label": "AS <b>2009</b> 5367",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/639"
       }
      ],
@@ -607,10 +653,10 @@
     },
     {
      "nr": "39",
-     "text": "SR 142.31",
+     "text": "SR <b>142.31</b>",
      "links": [
       {
-       "label": "SR 142.31",
+       "label": "SR <b>142.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/358"
       }
      ],
@@ -632,10 +678,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "SR 642.11",
+     "text": "SR <b>642.11</b>",
      "links": [
       {
-       "label": "SR 642.11",
+       "label": "SR <b>642.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
       }
      ],
@@ -675,10 +721,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -687,10 +733,10 @@
     },
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -712,10 +758,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -770,10 +816,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -795,10 +841,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS 2011 4951).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Okt. 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>4951).",
      "links": [
       {
-       "label": "AS 2011 4951",
+       "label": "AS <b>2011 </b>4951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/719"
       }
      ],
@@ -820,10 +866,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -832,10 +878,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 834.11",
+     "text": "SR <b>834.11</b>",
      "links": [
       {
-       "label": "SR 834.11",
+       "label": "SR <b>834.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/187"
       }
      ],
@@ -844,10 +890,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -856,10 +902,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 834.1",
+     "text": "SR <b>834.1</b>",
      "links": [
       {
-       "label": "SR 834.1",
+       "label": "SR <b>834.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/1021_1046_1050"
       }
      ],
@@ -881,10 +927,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],
@@ -893,10 +939,10 @@
     },
     {
      "nr": "47",
-     "text": "Ausdruck gemäss Anhang Ziff. II 40 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 800). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. II 40 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 800). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2021 800",
+       "label": "AS <b>2021</b> 800",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
       }
      ],
@@ -905,15 +951,16 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I der V vom 8. Sept. 2010, in Kraft seit 15. Okt. 2010 (AS 2010 4495).",
+     "text": "Eingefügt durch Ziff. I der V vom 8. Sept. 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010 </b>4495).",
      "links": [
       {
-       "label": "AS 2010 4495",
+       "label": "AS <b>2010 </b>4495",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/637"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Familienzulagenregister"
     }
    ]
   },
@@ -930,10 +977,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -942,10 +989,10 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -954,10 +1001,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -1034,10 +1081,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 735).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 735).",
      "links": [
       {
-       "label": "AS 2023 735",
+       "label": "AS <b>2023</b> 735",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/735"
       }
      ],
@@ -1046,10 +1093,10 @@
     },
     {
      "nr": "52",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 735).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 735).",
      "links": [
       {
-       "label": "AS 2023 735",
+       "label": "AS <b>2023</b> 735",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/735"
       }
      ],
@@ -1058,10 +1105,10 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 121 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 121 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -1070,10 +1117,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 235.11",
+     "text": "SR <b>235.11</b>",
      "links": [
       {
-       "label": "SR 235.11",
+       "label": "SR <b>235.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
       }
      ],
@@ -1082,10 +1129,10 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 735).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 40 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 735).",
      "links": [
       {
-       "label": "AS 2023 735",
+       "label": "AS <b>2023</b> 735",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/735"
       }
      ],
@@ -1094,10 +1141,10 @@
     },
     {
      "nr": "56",
-     "text": "SR 128.1",
+     "text": "SR <b>128.1</b>",
      "links": [
       {
-       "label": "SR 128.1",
+       "label": "SR <b>128.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2023/735"
       }
      ],
@@ -1106,10 +1153,10 @@
     },
     {
      "nr": "57",
-     "text": "Aufgehoben durch Anhang Ziff. 32 der V vom 24. Febr. 2021, mit Wirkung seit 1. April 2021 (AS 2021 132).",
+     "text": "Aufgehoben durch Anhang Ziff. 32 der V vom 24. Febr. 2021, mit Wirkung seit 1. April 2021 (AS <b>2021</b> 132).",
      "links": [
       {
-       "label": "AS 2021 132",
+       "label": "AS <b>2021</b> 132",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/132"
       }
      ],
@@ -1142,10 +1189,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Anhang Ziff. 6 der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -1154,10 +1201,10 @@
     },
     {
      "nr": "59",
-     "text": "SR 834.1",
+     "text": "SR <b>834.1</b>",
      "links": [
       {
-       "label": "SR 834.1",
+       "label": "SR <b>834.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/1021_1046_1050"
       }
      ],
@@ -1179,10 +1226,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I der V vom 8. Sept. 2010, in Kraft seit 15. Okt. 2010 (AS 2010 4495).",
+     "text": "Eingefügt durch Ziff. I der V vom 8. Sept. 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010 </b>4495).",
      "links": [
       {
-       "label": "AS 2010 4495",
+       "label": "AS <b>2010 </b>4495",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/637"
       }
      ],
@@ -1204,10 +1251,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS 2020 2779).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Juni 2020, in Kraft seit 1. Aug. 2020 (AS <b>2020 </b>2779).",
      "links": [
       {
-       "label": "AS 2020 2779",
+       "label": "AS <b>2020 </b>2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/503"
       }
      ],

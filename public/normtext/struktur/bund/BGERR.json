@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "173.110.131",
+  "titel": "Reglement für das Bundesgericht",
+  "erlassdatum": "vom 20. November 2006 (Stand am 1. Februar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Bundesgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 13 und 15 Absatz 1 Buchstabe a des Bundesgerichtsgesetzes vom 17. Juni 2005 (BGG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>173.110</b>",
+    "links": [
+     {
+      "label": "SR <b>173.110</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -60,10 +93,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 17. März 2014, mit Wirkung seit 17. März 2014 (AS 2014 955).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 17. März 2014, mit Wirkung seit 17. März 2014 (AS <b>2014</b> 955).",
      "links": [
       {
-       "label": "AS 2014 955",
+       "label": "AS <b>2014</b> 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/211"
       }
      ],
@@ -93,10 +126,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS 2025 856).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS <b>2025</b> 856).",
      "links": [
       {
-       "label": "AS 2025 856",
+       "label": "AS <b>2025</b> 856",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/856"
       }
      ],
@@ -126,10 +159,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 171.10",
+     "text": "SR <b>171.10</b>",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
       }
      ],
@@ -235,10 +268,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -287,10 +320,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -299,10 +332,10 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -400,10 +433,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Botschaft des BR vom 8. Dez. 2006 zur V der BVers betreffend die Taggelder der nebenamtlichen Bundesrichter und Bundesrichterinnen sowie die Vergütung für amtliche Reisen der ordentlichen und nebenamtlichen Bundesrichter und Bundesrichterinnen (BBl 2007 187)",
+     "text": "Botschaft des BR vom 8. Dez. 2006 zur V der BVers betreffend die Taggelder der nebenamtlichen Bundesrichter und Bundesrichterinnen sowie die Vergütung für amtliche Reisen der ordentlichen und nebenamtlichen Bundesrichter und Bundesrichterinnen (BBl <b>2007 </b>187)",
      "links": [
       {
-       "label": "BBl 2007 187",
+       "label": "BBl <b>2007 </b>187",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/23"
       }
      ],
@@ -519,10 +552,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -567,10 +600,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -579,10 +612,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -591,10 +624,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -603,10 +636,10 @@
     },
     {
      "nr": "13",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 13. Juni 2022, mit Wirkung seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 13. Juni 2022, mit Wirkung seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -615,10 +648,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -627,10 +660,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 12. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4967).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 12. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4967).",
      "links": [
       {
-       "label": "AS 2020 4967",
+       "label": "AS <b>2020</b> 4967",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/883"
       }
      ],
@@ -639,10 +672,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -651,10 +684,10 @@
     },
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -663,10 +696,10 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS 2025 856).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS <b>2025</b> 856).",
      "links": [
       {
-       "label": "AS 2025 856",
+       "label": "AS <b>2025</b> 856",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/856"
       }
      ],
@@ -696,10 +729,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 6. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 327).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 6. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 327).",
      "links": [
       {
-       "label": "AS 2021 327",
+       "label": "AS <b>2021</b> 327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/327"
       }
      ],
@@ -748,10 +781,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Nov. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Nov. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -760,10 +793,10 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -772,10 +805,10 @@
     },
     {
      "nr": "23",
-     "text": "SR 101",
+     "text": "SR <b>101</b>",
      "links": [
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
       }
      ],
@@ -784,10 +817,10 @@
     },
     {
      "nr": "24",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -796,15 +829,16 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Die acht Abteilungen"
     }
    ]
   },
@@ -829,10 +863,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -841,10 +875,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 101",
+     "text": "SR<b> 101</b>",
      "links": [
       {
-       "label": "SR 101",
+       "label": "SR<b> 101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
       }
      ],
@@ -853,10 +887,10 @@
     },
     {
      "nr": "27",
-     "text": "SR 170.32",
+     "text": "SR <b>170.32</b>",
      "links": [
       {
-       "label": "SR 170.32",
+       "label": "SR <b>170.32</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4971"
       }
      ],
@@ -886,10 +920,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -898,10 +932,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -910,10 +944,10 @@
     },
     {
      "nr": "30",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10094"
       }
      ],
@@ -922,10 +956,10 @@
     },
     {
      "nr": "31",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -955,10 +989,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -967,10 +1001,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -979,10 +1013,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 101",
+     "text": "SR <b>101</b>",
      "links": [
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
       }
      ],
@@ -991,10 +1025,10 @@
     },
     {
      "nr": "35",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 27. April 2023, mit Wirkung seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -1003,10 +1037,10 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -1015,10 +1049,10 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS 2023 268).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 268).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       }
      ],
@@ -1055,10 +1089,10 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -1067,10 +1101,10 @@
     },
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -1079,10 +1113,10 @@
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -1119,10 +1153,10 @@
     },
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -1131,14 +1165,14 @@
     },
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770). Berichtigung vom 13. Febr. 2024 (AS 2024 66).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770). Berichtigung vom 13. Febr. 2024 (AS <b>2024</b> 66).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       },
       {
-       "label": "AS 2024 66",
+       "label": "AS <b>2024</b> 66",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/66"
       }
      ],
@@ -1168,10 +1202,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Ursprünglich: Art. 33. Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS 2025 856).",
+     "text": "Ursprünglich: Art. 33. Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS <b>2025</b> 856).",
      "links": [
       {
-       "label": "AS 2025 856",
+       "label": "AS <b>2025</b> 856",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/856"
       }
      ],
@@ -1201,10 +1235,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Nov. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Nov. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -1234,10 +1268,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "AS 2007 33",
+     "text": "AS <b>2007</b> 33",
      "links": [
       {
-       "label": "AS 2007 33",
+       "label": "AS <b>2007</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/11"
       }
      ],
@@ -1297,10 +1331,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS 2023 65).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 13. Juni 2022, in Kraft seit 1. Jan. 2023 (AS <b>2023</b> 65).",
      "links": [
       {
-       "label": "AS 2023 65",
+       "label": "AS <b>2023</b> 65",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/65"
       }
      ],
@@ -1328,10 +1362,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 9. Okt. 2023, mit Wirkung seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 9. Okt. 2023, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -1361,10 +1395,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 6415).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Nov. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 6415).",
      "links": [
       {
-       "label": "AS 2008 6415",
+       "label": "AS <b>2008</b> 6415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/863"
       }
      ],
@@ -1470,14 +1504,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Dez. 2010 (AS 2010 6387). Fassung gemäss Ziff. I der V des BGer vom 3. Juli 2012, in Kraft seit 3. Juli 2012 (AS 2012 3945).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Dez. 2010 (AS <b>2010</b> 6387). Fassung gemäss Ziff. I der V des BGer vom 3. Juli 2012, in Kraft seit 3. Juli 2012 (AS <b>2012 </b>3945).",
      "links": [
       {
-       "label": "AS 2010 6387",
+       "label": "AS <b>2010</b> 6387",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/895"
       },
       {
-       "label": "AS 2012 3945",
+       "label": "AS <b>2012 </b>3945",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/458"
       }
      ],
@@ -1486,10 +1520,10 @@
     },
     {
      "nr": "53",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 3. Juli 2012, in Kraft seit 3. Juli 2012 (AS 2012 3945).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 3. Juli 2012, in Kraft seit 3. Juli 2012 (AS <b>2012 </b>3945).",
      "links": [
       {
-       "label": "AS 2012 3945",
+       "label": "AS <b>2012 </b>3945",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/458"
       }
      ],
@@ -1505,10 +1539,10 @@
     },
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. Nov. 2017, in Kraft seit 1. Febr. 2018 (AS 2018 47).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. Nov. 2017, in Kraft seit 1. Febr. 2018 (AS <b>2018</b> 47).",
      "links": [
       {
-       "label": "AS 2018 47",
+       "label": "AS <b>2018</b> 47",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/19"
       }
      ],
@@ -1553,10 +1587,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "SR 172.220.114",
+     "text": "SR<b> 172.220.114</b>",
      "links": [
       {
-       "label": "SR 172.220.114",
+       "label": "SR<b> 172.220.114</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5385"
       }
      ],
@@ -1642,10 +1676,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 2461).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS <b>2013</b> 2461).",
      "links": [
       {
-       "label": "AS 2013 2461",
+       "label": "AS <b>2013</b> 2461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/516"
       }
      ],
@@ -1654,10 +1688,10 @@
     },
     {
      "nr": "58",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Juni 2013, mit Wirkung seit 1. Juli 2013 (AS 2013 2461).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 24. Juni 2013, mit Wirkung seit 1. Juli 2013 (AS <b>2013</b> 2461).",
      "links": [
       {
-       "label": "AS 2013 2461",
+       "label": "AS <b>2013</b> 2461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/516"
       }
      ],
@@ -1683,10 +1717,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 2461).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS <b>2013</b> 2461).",
      "links": [
       {
-       "label": "AS 2013 2461",
+       "label": "AS <b>2013</b> 2461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/516"
       }
      ],
@@ -1695,10 +1729,10 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 2461).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 24. Juni 2013, in Kraft seit 1. Juli 2013 (AS <b>2013</b> 2461).",
      "links": [
       {
-       "label": "AS 2013 2461",
+       "label": "AS <b>2013</b> 2461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/516"
       }
      ],
@@ -1707,10 +1741,10 @@
     },
     {
      "nr": "61",
-     "text": "SR 173.110.210.2",
+     "text": "SR <b>173.110.210.2</b>",
      "links": [
       {
-       "label": "SR 173.110.210.2",
+       "label": "SR <b>173.110.210.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5585"
       }
      ],
@@ -1719,10 +1753,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 152.21",
+     "text": "SR <b>152.21</b>",
      "links": [
       {
-       "label": "SR 152.21",
+       "label": "SR <b>152.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4935"
       }
      ],
@@ -1731,10 +1765,10 @@
     },
     {
      "nr": "63",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 der Publikationsgesetzes vom 18. Juni 2004 (AS 2004 4937) angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 der Publikationsgesetzes vom 18. Juni 2004 (AS <b>2004</b> 4937) angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -1743,10 +1777,10 @@
     },
     {
      "nr": "64",
-     "text": "SR 173.110.133",
+     "text": "SR <b>173.110.133</b>",
      "links": [
       {
-       "label": "SR 173.110.133",
+       "label": "SR <b>173.110.133</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5582"
       }
      ],
@@ -1755,10 +1789,10 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 26. Aug. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 799).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 26. Aug. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 799).",
      "links": [
       {
-       "label": "AS 2021 799",
+       "label": "AS <b>2021</b> 799",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/799"
       }
      ],
@@ -1767,10 +1801,10 @@
     },
     {
      "nr": "66",
-     "text": "SR 172.056.1",
+     "text": "SR <b>172.056.1</b>",
      "links": [
       {
-       "label": "SR 172.056.1",
+       "label": "SR <b>172.056.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5197"
       }
      ],
@@ -1796,10 +1830,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -1821,15 +1855,16 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Titel: Information und Datenschutz"
     }
    ]
   },
@@ -1912,17 +1947,17 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "SR 152.3",
+     "text": "SR<b>152.3</b>",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
      "nr": "70",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -1931,10 +1966,10 @@
     },
     {
      "nr": "71",
-     "text": "SR 152.31",
+     "text": "SR <b>152.31</b>",
      "links": [
       {
-       "label": "SR 152.31",
+       "label": "SR <b>152.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4938"
       }
      ],
@@ -1943,10 +1978,10 @@
     },
     {
      "nr": "72",
-     "text": "SR 173.110.210.2",
+     "text": "SR <b>173.110.210.2</b>",
      "links": [
       {
-       "label": "SR 173.110.210.2",
+       "label": "SR <b>173.110.210.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5585"
       }
      ],
@@ -1968,38 +2003,38 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "[AS 1979 46; 1991 378; 1993 3165; 1994 294; 2000 2191; 2001 3258 Art. 88 Ziff. 1; 2004 2343; 2005 483]",
+     "text": "[AS <b>1979</b> 46; <b>1991</b> 378; <b>1993</b> 3165; <b>1994</b> 294; <b>2000</b> 2191; <b>2001</b> 3258 Art. 88 Ziff. 1; <b>2004</b> 2343; <b>2005</b> 483]",
      "links": [
       {
-       "label": "AS 1979 46",
+       "label": "AS <b>1979</b> 46",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/46_46_46"
       },
       {
-       "label": "1991 378",
+       "label": "<b>1991</b> 378",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/378_378_378"
       },
       {
-       "label": "1993 3165",
+       "label": "<b>1993</b> 3165",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/3165_3165_3165"
       },
       {
-       "label": "1994 294",
+       "label": "<b>1994</b> 294",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/294_294_294"
       },
       {
-       "label": "2000 2191",
+       "label": "<b>2000</b> 2191",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/339"
       },
       {
-       "label": "2001 3258",
+       "label": "<b>2001</b> 3258",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/487"
       },
       {
-       "label": "2004 2343",
+       "label": "<b>2004</b> 2343",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/273"
       },
       {
-       "label": "2005 483",
+       "label": "<b>2005</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/57"
       }
      ],
@@ -2008,14 +2043,14 @@
     },
     {
      "nr": "77",
-     "text": "[AS 1999 3019; 2001 965, 3287 Art. 13]",
+     "text": "[AS <b>1999</b> 3019; <b>2001</b> 965, 3287 Art. 13]",
      "links": [
       {
-       "label": "AS 1999 3019",
+       "label": "AS <b>1999</b> 3019",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/462"
       },
       {
-       "label": "2001 965",
+       "label": "<b>2001</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/130"
       },
       {
@@ -2028,10 +2063,10 @@
     },
     {
      "nr": "78",
-     "text": "[AS 1993 1352]",
+     "text": "[AS <b>1993</b> 1352]",
      "links": [
       {
-       "label": "AS 1993 1352",
+       "label": "AS <b>1993</b> 1352",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/1352_1352_1352"
       }
      ],
@@ -2040,10 +2075,10 @@
     },
     {
      "nr": "79",
-     "text": "[AS 1993 1355]",
+     "text": "[AS <b>1993</b> 1355]",
      "links": [
       {
-       "label": "AS 1993 1355",
+       "label": "AS <b>1993</b> 1355",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/1355_1355_1355"
       }
      ],
@@ -2065,14 +2100,14 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023 (AS 2023 268). Aufgehoben durch Ziff. I der V des BGer vom 18. Nov. 2025, mit Wirkung seit 1. Febr. 2026 (AS 2025 856).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023 (AS <b>2023</b> 268). Aufgehoben durch Ziff. I der V des BGer vom 18. Nov. 2025, mit Wirkung seit 1. Febr. 2026 (AS <b>2025</b> 856).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       },
       {
-       "label": "AS 2025 856",
+       "label": "AS <b>2025</b> 856",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/856"
       }
      ],
@@ -2113,14 +2148,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023 (AS 2023 268). Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS 2025 856).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 27. April 2023 (AS <b>2023</b> 268). Fassung gemäss Ziff. I der V des BGer vom 18. Nov. 2025, in Kraft seit 1. Febr. 2026 (AS <b>2025</b> 856).",
      "links": [
       {
-       "label": "AS 2023 268",
+       "label": "AS <b>2023</b> 268",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/268"
       },
       {
-       "label": "AS 2025 856",
+       "label": "AS <b>2025</b> 856",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/856"
       }
      ],
@@ -2142,10 +2177,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 770).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 9. Okt. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 770).",
      "links": [
       {
-       "label": "AS 2023 770",
+       "label": "AS <b>2023</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/770"
       }
      ],
@@ -2154,10 +2189,10 @@
     },
     {
      "nr": "74",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
@@ -2166,10 +2201,10 @@
     },
     {
      "nr": "75",
-     "text": "SR 235.11",
+     "text": "SR <b>235.11</b>",
      "links": [
       {
-       "label": "SR 235.11",
+       "label": "SR <b>235.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
      ],

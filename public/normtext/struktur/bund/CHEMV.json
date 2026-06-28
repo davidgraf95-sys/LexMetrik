@@ -1,5 +1,98 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "813.11",
+  "titel": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen",
+  "erlassdatum": "vom 5. Juni 2015 (Stand am 24. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 19 Absätze 2 und 3 des Tierschutzgesetzes vom 16. Dezember 2005, auf das Chemikaliengesetz vom 15. Dezember 2000(ChemG), auf die Artikel 26 Absatz 3, 29, 30a–30d, 38 Absatz 3, 39 Absatz 1, 41 Absatz 3, 44 Absätze 2 und 3, 46 Absätze 2 und 3 und 48 Absatz 2 des Umweltschutzgesetzes vom 7. Oktober 1983(USG) und auf die Artikel 9 Absatz 2 Buchstabe c, 27 Absatz 2 und 48 Absatz 2 des Gewässerschutzgesetzes vom 24. Januar 1991, in Ausführung des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>455</b>",
+    "links": [
+     {
+      "label": "SR <b>455</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7197"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>813.1</b>",
+    "links": [
+     {
+      "label": "SR <b>813.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9395"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>814.01</b>",
+    "links": [
+     {
+      "label": "SR <b>814.01</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>814.20</b>",
+    "links": [
+     {
+      "label": "SR <b>814.20</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9477"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>946.51</b>",
+    "links": [
+     {
+      "label": "SR <b>946.51</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
+    "links": [
+     {
+      "label": "AS <b>2018</b> 801",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +107,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "SR 813.12",
+     "text": "SR <b>813.12</b>",
      "links": [
       {
-       "label": "SR 813.12",
+       "label": "SR <b>813.12</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9400"
       }
      ],
@@ -26,10 +119,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 916.161",
+     "text": "SR <b>916.161</b>",
      "links": [
       {
-       "label": "SR 916.161",
+       "label": "SR <b>916.161</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10643"
       }
      ],
@@ -38,10 +131,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 565).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 565).",
      "links": [
       {
-       "label": "AS 2025 565",
+       "label": "AS <b>2025</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
      ],
@@ -50,10 +143,10 @@
     },
     {
      "nr": "10",
-     "text": "SR 818.32",
+     "text": "SR <b>818.32</b>",
      "links": [
       {
-       "label": "SR 818.32",
+       "label": "SR <b>818.32</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9831"
       }
      ],
@@ -62,10 +155,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 818.321",
+     "text": "SR <b>818.321</b>",
      "links": [
       {
-       "label": "SR 818.321",
+       "label": "SR <b>818.321</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40239"
       }
      ],
@@ -74,10 +167,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS 2024 491).",
+     "text": "Eingefügt durch Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS <b>2024</b> 491).",
      "links": [
       {
-       "label": "AS 2024 491",
+       "label": "AS <b>2024</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/491"
       }
      ],
@@ -86,10 +179,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 817.02",
+     "text": "SR <b>817.02</b>",
      "links": [
       {
-       "label": "SR 817.02",
+       "label": "SR <b>817.02</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9647"
       }
      ],
@@ -98,14 +191,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801). Die Berichtigung vom 24. April 2026 betrifft nur den französischen Text (AS 2026 176).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801). Die Berichtigung vom 24. April 2026 betrifft nur den französischen Text (AS <b>2026</b> 176).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       },
       {
-       "label": "AS 2026 176",
+       "label": "AS <b>2026</b> 176",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/176"
       }
      ],
@@ -114,10 +207,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -126,10 +219,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -138,10 +231,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 817.0",
+     "text": "SR <b>817.0</b>",
      "links": [
       {
-       "label": "SR 817.0",
+       "label": "SR <b>817.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9645"
       }
      ],
@@ -150,10 +243,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
       }
      ],
@@ -162,10 +255,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 916.307",
+     "text": "SR <b>916.307</b>",
      "links": [
       {
-       "label": "SR 916.307",
+       "label": "SR <b>916.307</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10674"
       }
      ],
@@ -174,10 +267,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 514.54",
+     "text": "SR <b>514.54</b>",
      "links": [
       {
-       "label": "SR 514.54",
+       "label": "SR <b>514.54</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7530"
       }
      ],
@@ -186,10 +279,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. III 1 der V vom 22. März 2017, in Kraft seit 1. Mai 2017 (AS 2017 2593).",
+     "text": "Fassung gemäss Ziff. III 1 der V vom 22. März 2017, in Kraft seit 1. Mai 2017 (AS <b>2017 </b>2593).",
      "links": [
       {
-       "label": "AS 2017 2593",
+       "label": "AS <b>2017 </b>2593",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/247"
       }
      ],
@@ -198,10 +291,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 814.82",
+     "text": "SR <b>814.82</b>",
      "links": [
       {
-       "label": "SR 814.82",
+       "label": "SR <b>814.82</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9601"
       }
      ],
@@ -210,10 +303,10 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. III 1 der V vom 22. März 2017, in Kraft seit 1. Mai 2017 (AS 2017 2593).",
+     "text": "Eingefügt durch Ziff. III 1 der V vom 22. März 2017, in Kraft seit 1. Mai 2017 (AS <b>2017 </b>2593).",
      "links": [
       {
-       "label": "AS 2017 2593",
+       "label": "AS <b>2017 </b>2593",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/247"
       }
      ],
@@ -235,10 +328,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -247,14 +340,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801). Die Berichtigung vom 4. Okt. 2024 betrifft nur den französischen Text (AS 2024 536).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801). Die Berichtigung vom 4. Okt. 2024 betrifft nur den französischen Text (AS <b>2024</b> 536).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       },
       {
-       "label": "AS 2024 536",
+       "label": "AS <b>2024</b> 536",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/536"
       }
      ],
@@ -263,10 +356,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -282,10 +375,10 @@
     },
     {
      "nr": "28",
-     "text": "Die Berichtigung vom 5. Mai 2022 betrifft nur den französischen Text (AS 2022 273).",
+     "text": "Die Berichtigung vom 5. Mai 2022 betrifft nur den französischen Text (AS <b>2022</b> 273).",
      "links": [
       {
-       "label": "AS 2022 273",
+       "label": "AS <b>2022</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/273"
       }
      ],
@@ -294,10 +387,10 @@
     },
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -320,10 +413,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -332,10 +425,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -344,10 +437,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 451.61",
+     "text": "SR <b>451.61</b>",
      "links": [
       {
-       "label": "SR 451.61",
+       "label": "SR <b>451.61</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7181"
       }
      ],
@@ -356,10 +449,10 @@
     },
     {
      "nr": "35",
-     "text": "Eingefügt durch Anhang Ziff. 2 der Nagoya-Verordnung vom 11. Dez. 2015, in Kraft seit 1. Febr. 2016 (AS 2016 277).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der Nagoya-Verordnung vom 11. Dez. 2015, in Kraft seit 1. Febr. 2016 (AS <b>2016</b> 277).",
      "links": [
       {
-       "label": "AS 2016 277",
+       "label": "AS <b>2016</b> 277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/39"
       }
      ],
@@ -451,10 +544,10 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -540,10 +633,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "SR 817.0",
+     "text": "SR <b>817.0</b>",
      "links": [
       {
-       "label": "SR 817.0",
+       "label": "SR <b>817.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9645"
       }
      ],
@@ -580,10 +673,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Die Berichtigung vom 24. April 2023 betrifft nur den französischen und italienischen Text (AS 2023 193).",
+     "text": "Die Berichtigung vom 24. April 2023 betrifft nur den französischen und italienischen Text (AS <b>2023</b> 193).",
      "links": [
       {
-       "label": "AS 2023 193",
+       "label": "AS <b>2023</b> 193",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/193"
       }
      ],
@@ -599,10 +692,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -611,10 +704,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -623,10 +716,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -635,10 +728,10 @@
     },
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -680,10 +773,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "SR 817.0",
+     "text": "SR <b>817.0</b>",
      "links": [
       {
-       "label": "SR 817.0",
+       "label": "SR <b>817.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9645"
       }
      ],
@@ -699,10 +792,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -758,10 +851,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Aufgehoben durch Ziff. III 1 der V vom 22. März 2017, mit Wirkung seit 1. Mai 2017 (AS 2017 2593).",
+     "text": "Aufgehoben durch Ziff. III 1 der V vom 22. März 2017, mit Wirkung seit 1. Mai 2017 (AS <b>2017 </b>2593).",
      "links": [
       {
-       "label": "AS 2017 2593",
+       "label": "AS <b>2017 </b>2593",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/247"
       }
      ],
@@ -791,10 +884,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -810,10 +903,10 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -822,10 +915,10 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -834,10 +927,10 @@
     },
     {
      "nr": "61",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -975,10 +1068,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Berichtigung vom 4. Juni 2019 (AS 2019 1647).",
+     "text": "Berichtigung vom 4. Juni 2019 (AS <b>2019</b> 1647).",
      "links": [
       {
-       "label": "AS 2019 1647",
+       "label": "AS <b>2019</b> 1647",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/318"
       }
      ],
@@ -987,10 +1080,10 @@
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -999,10 +1092,10 @@
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS 2020 5125).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -1162,14 +1255,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220). Die Berichtigung vom 5. Mai 2022 betrifft nur den französischen Text (AS 2022 273).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220). Die Berichtigung vom 5. Mai 2022 betrifft nur den französischen Text (AS <b>2022</b> 273).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       },
       {
-       "label": "AS 2022 273",
+       "label": "AS <b>2022</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/273"
       }
      ],
@@ -1206,10 +1299,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. März 2022, mit Wirkung seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. März 2022, mit Wirkung seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1218,10 +1311,10 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1237,10 +1330,10 @@
     },
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1249,10 +1342,10 @@
     },
     {
      "nr": "81",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1282,10 +1375,10 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1294,10 +1387,10 @@
     },
     {
      "nr": "83",
-     "text": "Ausdruck gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1306,10 +1399,10 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1325,10 +1418,10 @@
     },
     {
      "nr": "86",
-     "text": "Aufgehoben durch Ziff. I der V vom 31. Jan. 2018, mit Wirkung seit 1. März 2018 (AS 2018 801).",
+     "text": "Aufgehoben durch Ziff. I der V vom 31. Jan. 2018, mit Wirkung seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1386,10 +1479,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1426,10 +1519,10 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1459,10 +1552,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1471,10 +1564,10 @@
     },
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1504,10 +1597,10 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1516,10 +1609,10 @@
     },
     {
      "nr": "94",
-     "text": "SR 272",
+     "text": "SR <b>272</b>",
      "links": [
       {
-       "label": "SR 272",
+       "label": "SR <b>272</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
       }
      ],
@@ -1549,10 +1642,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1730,10 +1823,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1766,10 +1859,10 @@
     },
     {
      "nr": "98",
-     "text": "SR 813.112.1",
+     "text": "SR <b>813.112.1</b>",
      "links": [
       {
-       "label": "SR 813.112.1",
+       "label": "SR <b>813.112.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9397"
       }
      ],
@@ -1840,10 +1933,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. März 2018 angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. März 2018 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -1869,10 +1962,10 @@
    "fussnoten": [
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1905,10 +1998,10 @@
     },
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -1917,14 +2010,14 @@
     },
     {
      "nr": "103",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS 2018 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5125).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS <b>2018</b> 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       },
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -1933,10 +2026,10 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -1945,10 +2038,10 @@
     },
     {
      "nr": "105",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -1974,10 +2067,10 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2018,10 +2111,10 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Mai 2022 angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Mai 2022 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -2047,10 +2140,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Mai 2022 angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Mai 2022 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -2076,10 +2169,10 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2088,10 +2181,10 @@
     },
     {
      "nr": "110",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -2100,10 +2193,10 @@
     },
     {
      "nr": "111",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -2112,10 +2205,10 @@
     },
     {
      "nr": "112",
-     "text": "Aufgehoben durch Anhang 5 Ziff. II 1 der V vom 1. Nov. 2023 über das Inverkehrbringen von Düngern, mit Wirkung seit 1. Jan. 2024 (AS 2023 711).",
+     "text": "Aufgehoben durch Anhang 5 Ziff. II 1 der V vom 1. Nov. 2023 über das Inverkehrbringen von Düngern, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 711).",
      "links": [
       {
-       "label": "AS 2023 711",
+       "label": "AS <b>2023</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
      ],
@@ -2124,10 +2217,10 @@
     },
     {
      "nr": "113",
-     "text": "SR 941.411",
+     "text": "SR <b>941.411</b>",
      "links": [
       {
-       "label": "SR 941.411",
+       "label": "SR <b>941.411</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11229"
       }
      ],
@@ -2136,10 +2229,10 @@
     },
     {
      "nr": "114",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS 2020 5125).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -2148,10 +2241,10 @@
     },
     {
      "nr": "115",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -2160,10 +2253,10 @@
     },
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2172,10 +2265,10 @@
     },
     {
      "nr": "117",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -2191,14 +2284,14 @@
     },
     {
      "nr": "119",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022 (AS 2022 220). Fassung gemäss Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 709).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022 (AS <b>2022</b> 220). Fassung gemäss Ziff. 1 der V vom 15. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 709).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       },
       {
-       "label": "AS 2023 709",
+       "label": "AS <b>2023</b> 709",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/709"
       }
      ],
@@ -2207,14 +2300,14 @@
     },
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS 2018 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS 2020 5125).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS <b>2018</b> 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       },
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -2432,10 +2525,10 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "SR 814.81",
+     "text": "SR <b>814.81</b>",
      "links": [
       {
-       "label": "SR 814.81",
+       "label": "SR <b>814.81</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
       }
      ],
@@ -2513,10 +2606,10 @@
     },
     {
      "nr": "126",
-     "text": "SR 814.81",
+     "text": "SR <b>814.81</b>",
      "links": [
       {
-       "label": "SR 814.81",
+       "label": "SR <b>814.81</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
       }
      ],
@@ -2553,10 +2646,10 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "SR 814.81",
+     "text": "SR <b>814.81</b>",
      "links": [
       {
-       "label": "SR 814.81",
+       "label": "SR <b>814.81</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
       }
      ],
@@ -2565,10 +2658,10 @@
     },
     {
      "nr": "128",
-     "text": "SR 813.12",
+     "text": "SR <b>813.12</b>",
      "links": [
       {
-       "label": "SR 813.12",
+       "label": "SR <b>813.12</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9400"
       }
      ],
@@ -2577,10 +2670,10 @@
     },
     {
      "nr": "129",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 565).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 565).",
      "links": [
       {
-       "label": "AS 2025 565",
+       "label": "AS <b>2025</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
      ],
@@ -2589,10 +2682,10 @@
     },
     {
      "nr": "130",
-     "text": "SR 916.161",
+     "text": "SR <b>916.161</b>",
      "links": [
       {
-       "label": "SR 916.161",
+       "label": "SR <b>916.161</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10643"
       }
      ],
@@ -2601,10 +2694,10 @@
     },
     {
      "nr": "131",
-     "text": "Eingefügt durch Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS 2023 711).",
+     "text": "Eingefügt durch Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 711).",
      "links": [
       {
-       "label": "AS 2023 711",
+       "label": "AS <b>2023</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
      ],
@@ -2613,10 +2706,10 @@
     },
     {
      "nr": "132",
-     "text": "SR 916.171",
+     "text": "SR <b>916.171</b>",
      "links": [
       {
-       "label": "SR 916.171",
+       "label": "SR <b>916.171</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10645"
       }
      ],
@@ -2625,10 +2718,10 @@
     },
     {
      "nr": "133",
-     "text": "Eingefügt durch Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS 2024 491).",
+     "text": "Eingefügt durch Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS <b>2024</b> 491).",
      "links": [
       {
-       "label": "AS 2024 491",
+       "label": "AS <b>2024</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/491"
       }
      ],
@@ -2637,10 +2730,10 @@
     },
     {
      "nr": "134",
-     "text": "Fassung gemäss Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS 2024 491).",
+     "text": "Fassung gemäss Anhang 4 Ziff. II 5 der Tabakprodukteverordnung vom 28. Aug. 2024, in Kraft seit 1. Okt. 2024 (AS <b>2024</b> 491).",
      "links": [
       {
-       "label": "AS 2024 491",
+       "label": "AS <b>2024</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/491"
       }
      ],
@@ -2662,10 +2755,10 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Mai 2022 angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Mai 2022 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -2674,10 +2767,10 @@
     },
     {
      "nr": "136",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2686,10 +2779,10 @@
     },
     {
      "nr": "137",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2711,10 +2804,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 565).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 565).",
      "links": [
       {
-       "label": "AS 2025 565",
+       "label": "AS <b>2025</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
      ],
@@ -2723,10 +2816,10 @@
     },
     {
      "nr": "139",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 565).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 565).",
      "links": [
       {
-       "label": "AS 2025 565",
+       "label": "AS <b>2025</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
      ],
@@ -2735,10 +2828,10 @@
     },
     {
      "nr": "140",
-     "text": "SR 916.171",
+     "text": "SR <b>916.171</b>",
      "links": [
       {
-       "label": "SR 916.171",
+       "label": "SR <b>916.171</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10645"
       }
      ],
@@ -2747,10 +2840,10 @@
     },
     {
      "nr": "141",
-     "text": "SR 916.307",
+     "text": "SR <b>916.307</b>",
      "links": [
       {
-       "label": "SR 916.307",
+       "label": "SR <b>916.307</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10674"
       }
      ],
@@ -2759,10 +2852,10 @@
     },
     {
      "nr": "142",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 565).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 2 der Pflanzenschutzmittelverordnung vom 20. Aug. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 565).",
      "links": [
       {
-       "label": "AS 2025 565",
+       "label": "AS <b>2025</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
      ],
@@ -2771,10 +2864,10 @@
     },
     {
      "nr": "143",
-     "text": "SR 916.161",
+     "text": "SR <b>916.161</b>",
      "links": [
       {
-       "label": "SR 916.161",
+       "label": "SR <b>916.161</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10643"
       }
      ],
@@ -2783,10 +2876,10 @@
     },
     {
      "nr": "144",
-     "text": "SR 817.042",
+     "text": "SR <b>817.042</b>",
      "links": [
       {
-       "label": "SR 817.042",
+       "label": "SR <b>817.042</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9709"
       }
      ],
@@ -2795,10 +2888,10 @@
     },
     {
      "nr": "145",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4976"
       }
      ],
@@ -2807,10 +2900,10 @@
     },
     {
      "nr": "146",
-     "text": "SR 814.81",
+     "text": "SR <b>814.81</b>",
      "links": [
       {
-       "label": "SR 814.81",
+       "label": "SR <b>814.81</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9592"
       }
      ],
@@ -2832,10 +2925,10 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS 2023 711).",
+     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 711).",
      "links": [
       {
-       "label": "AS 2023 711",
+       "label": "AS <b>2023</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
      ],
@@ -2876,10 +2969,10 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS 2020 5125).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -2945,10 +3038,10 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -2978,10 +3071,10 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -3054,10 +3147,10 @@
     },
     {
      "nr": "152",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS 2020 5125).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 15. Dez. 2020 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -3092,10 +3185,10 @@
     },
     {
      "nr": "156",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3140,10 +3233,10 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "SR 813.153.1",
+     "text": "SR <b>813.153.1</b>",
      "links": [
       {
-       "label": "SR 813.153.1",
+       "label": "SR <b>813.153.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9404"
       }
      ],
@@ -3169,10 +3262,10 @@
    "fussnoten": [
     {
      "nr": "159",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3181,15 +3274,16 @@
     },
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Kantone"
     }
    ]
   },
@@ -3210,10 +3304,10 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3237,10 +3331,10 @@
    "fussnoten": [
     {
      "nr": "161",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. März 2022, mit Wirkung seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. März 2022, mit Wirkung seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3266,10 +3360,10 @@
    "fussnoten": [
     {
      "nr": "162",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3295,18 +3389,18 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "[AS 2005 2721; 2007 821; 2009 401, 805, 1135; 2010 5223; 2011 5227; 2012 6103; 2013 201, 3041 Ziff. I 3; 2014 2073 Anhang 11 Ziff. 1, 3857]",
+     "text": "[AS <b>2005</b> 2721; <b>2007</b> 821; <b>2009</b> 401, 805, 1135; <b>2010</b> 5223; <b>2011</b> 5227; <b>2012</b> 6103; <b>2013</b> 201, 3041 Ziff. I 3; <b>2014</b> 2073 Anhang 11 Ziff. 1, 3857]",
      "links": [
       {
-       "label": "AS 2005 2721",
+       "label": "AS <b>2005</b> 2721",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/466"
       },
       {
-       "label": "2007 821",
+       "label": "<b>2007</b> 821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/152"
       },
       {
-       "label": "2009 401",
+       "label": "<b>2009</b> 401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/73"
       },
       {
@@ -3318,19 +3412,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/183"
       },
       {
-       "label": "2010 5223",
+       "label": "<b>2010</b> 5223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/750"
       },
       {
-       "label": "2011 5227",
+       "label": "<b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       },
       {
-       "label": "2012 6103",
+       "label": "<b>2012</b> 6103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/724"
       },
       {
-       "label": "2013 201",
+       "label": "<b>2013</b> 201",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/23"
       },
       {
@@ -3338,7 +3432,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/594"
       },
       {
-       "label": "2014 2073",
+       "label": "<b>2014</b> 2073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/357"
       },
       {
@@ -3381,18 +3475,18 @@
    "fussnoten": [
     {
      "nr": "165",
-     "text": "[AS 2005 2721; 2007 821; 2009 401, 805, 1135; 2010 5223; 2011 5227; 2012 6103; 2013 201, 3041 Ziff. I 3; 2014 2073 Anhang 11 Ziff. 1, 3857]",
+     "text": "[AS <b>2005</b> 2721; <b>2007</b> 821; <b>2009</b> 401, 805, 1135; <b>2010</b> 5223; <b>2011</b> 5227; <b>2012</b> 6103; <b>2013</b> 201, 3041 Ziff. I 3; <b>2014</b> 2073 Anhang 11 Ziff. 1, 3857]",
      "links": [
       {
-       "label": "AS 2005 2721",
+       "label": "AS <b>2005</b> 2721",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/466"
       },
       {
-       "label": "2007 821",
+       "label": "<b>2007</b> 821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/152"
       },
       {
-       "label": "2009 401",
+       "label": "<b>2009</b> 401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/73"
       },
       {
@@ -3404,19 +3498,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/183"
       },
       {
-       "label": "2010 5223",
+       "label": "<b>2010</b> 5223",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/750"
       },
       {
-       "label": "2011 5227",
+       "label": "<b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       },
       {
-       "label": "2012 6103",
+       "label": "<b>2012</b> 6103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/724"
       },
       {
-       "label": "2013 201",
+       "label": "<b>2013</b> 201",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/23"
       },
       {
@@ -3424,7 +3518,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/594"
       },
       {
-       "label": "2014 2073",
+       "label": "<b>2014</b> 2073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/357"
       },
       {
@@ -3444,10 +3538,10 @@
     },
     {
      "nr": "167",
-     "text": "SR 817.0",
+     "text": "SR <b>817.0</b>",
      "links": [
       {
-       "label": "SR 817.0",
+       "label": "SR <b>817.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9645"
       }
      ],
@@ -3490,14 +3584,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220). Die Berichtigung vom 24. April 2023 betrifft nur den französischen und den italienischen Text (AS 2023 193).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220). Die Berichtigung vom 24. April 2023 betrifft nur den französischen und den italienischen Text (AS <b>2023</b> 193).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       },
       {
-       "label": "AS 2023 193",
+       "label": "AS <b>2023</b> 193",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/193"
       }
      ],
@@ -3527,14 +3621,14 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS 2018 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5125).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018 (AS <b>2018</b> 801). Fassung gemäss Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       },
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -3567,10 +3661,10 @@
    "fussnoten": [
     {
      "nr": "163",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3596,10 +3690,10 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS 2018 801).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. Jan. 2018, in Kraft seit 1. März 2018 (AS <b>2018</b> 801).",
      "links": [
       {
-       "label": "AS 2018 801",
+       "label": "AS <b>2018</b> 801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/102"
       }
      ],
@@ -3608,10 +3702,10 @@
     },
     {
      "nr": "169",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 18. Nov. 2020, mit Wirkung seit 1. Jan. 2022 (AS 2020 5125).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 18. Nov. 2020, mit Wirkung seit 1. Jan. 2022 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -3637,10 +3731,10 @@
    "fussnoten": [
     {
      "nr": "170",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS 2020 5125).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5125).",
      "links": [
       {
-       "label": "AS 2020 5125",
+       "label": "AS <b>2020</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/891"
       }
      ],
@@ -3666,10 +3760,10 @@
    "fussnoten": [
     {
      "nr": "171",
-     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS 2022 220).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. März 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 220).",
      "links": [
       {
-       "label": "AS 2022 220",
+       "label": "AS <b>2022</b> 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/220"
       }
      ],
@@ -3678,10 +3772,10 @@
     },
     {
      "nr": "172",
-     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS 2023 711).",
+     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 711).",
      "links": [
       {
-       "label": "AS 2023 711",
+       "label": "AS <b>2023</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
      ],
@@ -3690,10 +3784,10 @@
     },
     {
      "nr": "173",
-     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS 2023 711).",
+     "text": "Fassung gemäss Anhang 5 Ziff. II 1 der V vom 15. Nov. 2023 über das Inverkehrbringen von Düngern, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 711).",
      "links": [
       {
-       "label": "AS 2023 711",
+       "label": "AS <b>2023</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
      ],

@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "281.35",
+  "titel": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs",
+  "erlassdatum": "vom 23. September 1996 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 16 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs (SchKG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>281.1</b>",
+    "links": [
+     {
+      "label": "SR <b>281.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -102,10 +135,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -127,10 +160,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -174,10 +207,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -186,10 +219,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. II 20 der V vom 1. Dez. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2779).",
+     "text": "Fassung gemäss Ziff. II 20 der V vom 1. Dez. 1997, in Kraft seit 1. Jan. 1998 (AS<b> 1997</b> 2779).",
      "links": [
       {
-       "label": "AS 1997 2779",
+       "label": "AS<b> 1997</b> 2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2779_2779_2779"
       }
      ],
@@ -198,10 +231,10 @@
     },
     {
      "nr": "10",
-     "text": "Aufgehoben durch Ziff. I der V vom 28. April 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Aufgehoben durch Ziff. I der V vom 28. April 2021, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -210,10 +243,10 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -222,10 +255,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -247,10 +280,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 172.220.111.31",
+     "text": "SR <b>172.220.111.31</b>",
      "links": [
       {
-       "label": "SR 172.220.111.31",
+       "label": "SR <b>172.220.111.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5350"
       }
      ],
@@ -259,10 +292,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -526,10 +559,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 211.413.1",
+     "text": "SR <b>211.413.1</b>",
      "links": [
       {
-       "label": "SR 211.413.1",
+       "label": "SR <b>211.413.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5775"
       }
      ],
@@ -584,10 +617,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -679,10 +712,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -691,10 +724,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 272",
+     "text": "SR <b>272</b>",
      "links": [
       {
-       "label": "SR 272",
+       "label": "SR <b>272</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
       }
      ],
@@ -825,10 +858,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "SR 272",
+     "text": "SR <b>272</b>",
      "links": [
       {
-       "label": "SR 272",
+       "label": "SR <b>272</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
       }
      ],
@@ -837,10 +870,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Fassung gemäss Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -849,10 +882,10 @@
     },
     {
      "nr": "33",
-     "text": "Art. 61 Abs. 2 Bst. b ist heute gegenstandslos. Stundungs-, Konkurs- und Nachlassverfahren über Banken sind seit 1. Juli 2004 in den Art. 33–37g des Bankengesetzes (SR 952.0) geregelt.",
+     "text": "Art. 61 Abs. 2 Bst. b ist heute gegenstandslos. Stundungs-, Konkurs- und Nachlassverfahren über Banken sind seit 1. Juli 2004 in den Art. 33–37g des Bankengesetzes (SR <b>952.0</b>) geregelt.",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11561"
       }
      ],
@@ -878,10 +911,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Aufgehoben durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, mit Wirkung seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Aufgehoben durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -901,34 +934,34 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "[AS 1971 1080; 1977 2164; 1983 784; 1987 757; 1989 2409; 1991 1312; 1994 202 358]",
+     "text": "[AS <b>1971 </b>1080; <b>1977 </b>2164; <b>1983 </b>784; <b>1987 </b>757; <b>1989 </b>2409; <b>1991 </b>1312; <b>1994 </b>202 358]",
      "links": [
       {
-       "label": "AS 1971 1080",
+       "label": "AS <b>1971 </b>1080",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081"
       },
       {
-       "label": "1977 2164",
+       "label": "<b>1977 </b>2164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1977/2164_2164_2164"
       },
       {
-       "label": "1983 784",
+       "label": "<b>1983 </b>784",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/784_784_784"
       },
       {
-       "label": "1987 757",
+       "label": "<b>1987 </b>757",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/757_757_757"
       },
       {
-       "label": "1989 2409",
+       "label": "<b>1989 </b>2409",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/2409_2409_2409"
       },
       {
-       "label": "1991 1312",
+       "label": "<b>1991 </b>1312",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/1312_1312_1312"
       },
       {
-       "label": "1994 202",
+       "label": "<b>1994 </b>202",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/202_202_202"
       },
       {
@@ -952,10 +985,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -977,10 +1010,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -989,10 +1022,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Jan. 2016, in Kraft seit 1. Febr. 2016 (AS 2016 275).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Jan. 2016, in Kraft seit 1. Febr. 2016 (AS <b>2016 </b>275).",
      "links": [
       {
-       "label": "AS 2016 275",
+       "label": "AS <b>2016 </b>275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/38"
       }
      ],
@@ -1014,10 +1047,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4585).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018 </b>4585).",
      "links": [
       {
-       "label": "AS 2018 4585",
+       "label": "AS <b>2018 </b>4585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/722"
       }
      ],
@@ -1039,14 +1072,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung (AS 2010 3053). Fassung gemäss Ziff. I der V vom 20. Jan. 2016, in Kraft seit 1. Febr. 2016 (AS 2016 275).",
+     "text": "Eingefügt durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung (AS <b>2010</b> 3053). Fassung gemäss Ziff. I der V vom 20. Jan. 2016, in Kraft seit 1. Febr. 2016 (AS <b>2016 </b>275).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       },
       {
-       "label": "AS 2016 275",
+       "label": "AS <b>2016 </b>275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/38"
       }
      ],
@@ -1055,10 +1088,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -1067,10 +1100,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 272.1",
+     "text": "SR <b>272.1</b>",
      "links": [
       {
-       "label": "SR 272.1",
+       "label": "SR <b>272.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6137"
       }
      ],
@@ -1079,17 +1112,17 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 630).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>202</b><b>5</b> 630).",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -1098,10 +1131,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -1110,10 +1143,10 @@
     },
     {
      "nr": "21",
-     "text": "Aufgehoben durch Ziff. I der V vom 28. April 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Aufgehoben durch Ziff. I der V vom 28. April 2021, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -1135,10 +1168,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],
@@ -1147,10 +1180,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 630).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 630).",
      "links": [
       {
-       "label": "AS 2025 630",
+       "label": "AS <b>2025</b> 630",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/630"
       }
      ],
@@ -1159,10 +1192,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 630).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 630).",
      "links": [
       {
-       "label": "AS 2025 630",
+       "label": "AS <b>2025</b> 630",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/630"
       }
      ],
@@ -1186,10 +1219,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Aufgehoben durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, mit Wirkung seit 1. Jan. 2011 (AS 2010 3053).",
+     "text": "Aufgehoben durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 3053).",
      "links": [
       {
-       "label": "AS 2010 3053",
+       "label": "AS <b>2010</b> 3053",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/410"
       }
      ],
@@ -1213,10 +1246,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Aufgehoben durch Anhang 1 Ziff. 3 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. 3 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015 </b>5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015 </b>5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -1238,10 +1271,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS 2021 259).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. April 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 259).",
      "links": [
       {
-       "label": "AS 2021 259",
+       "label": "AS <b>2021</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/259"
       }
      ],

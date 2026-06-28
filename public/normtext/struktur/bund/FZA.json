@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.142.112.681",
+  "titel": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit",
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "Art. 1 Abs. 1 Bst. g des BB vom 8. Okt. 1999 (AS <b>2002</b> 1527 <i>1528</i>)",
+    "links": [
+     {
+      "label": "AS <b>2002</b> 1527",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2002/242"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "Fassung gemäss Art. 2 Bst. a des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
+    "links": [
+     {
+      "label": "AS <b>2016</b> 5251",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
+     },
+     {
+      "label": "5233",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
+     },
+     {
+      "label": "BBl <b>2016</b> 2223",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -113,10 +151,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -124,7 +162,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -137,10 +175,10 @@
     },
     {
      "nr": "",
-     "text": "Verlängert bis zu diesem Datum durch die Notifikation vom 29. Mai 2007 (AS 2008 573).",
+     "text": "Verlängert bis zu diesem Datum durch die Notifikation vom 29. Mai 2007 (AS <b>2008 </b>573).",
      "links": [
       {
-       "label": "AS 2008 573",
+       "label": "AS <b>2008 </b>573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/129"
       }
      ],
@@ -149,10 +187,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS 2009 2421 2411, 2012 4479; BBl 2008 2135).",
+     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS <b>2009</b> 2421 2411, <b>2012</b> 4479; BBl <b>2008</b> 2135).",
      "links": [
       {
-       "label": "AS 2009 2421",
+       "label": "AS <b>2009</b> 2421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/297"
       },
       {
@@ -160,11 +198,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       },
       {
-       "label": "2012 4479",
+       "label": "<b>2012</b> 4479",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/523"
       },
       {
-       "label": "BBl 2008 2135",
+       "label": "BBl <b>2008</b> 2135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/472"
       }
      ],
@@ -173,14 +211,14 @@
     },
     {
      "nr": "",
-     "text": "Massnahmen verlängert bis zum 31. Mai 2014 durch Mitteilung der Schweiz vom 27. Mai 2011 (AS 2011 4127) und bis zum 31. Mai 2016 durch Mitteilung der Schweiz vom 28. Mai 2014 (AS 2014 1893).",
+     "text": "Massnahmen verlängert bis zum 31. Mai 2014 durch Mitteilung der Schweiz vom 27. Mai 2011 (AS <b>2011</b> 4127) und bis zum 31. Mai 2016 durch Mitteilung der Schweiz vom 28. Mai 2014 (AS <b>2014</b> 1893).",
      "links": [
       {
-       "label": "AS 2011 4127",
+       "label": "AS <b>2011</b> 4127",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/581"
       },
       {
-       "label": "AS 2014 1893",
+       "label": "AS <b>2014</b> 1893",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/340"
       }
      ],
@@ -189,10 +227,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223). Am 20. Dez. 2018 hat die Schweiz dem Gemischten Ausschuss Schweiz-EU mitgeteilt, dass sie die in Art. 10 Abs. 1c erwähnten Übergangsmassnahmen betreffend Staatsangehörige der Republik Kroatien bis zum 31. Dez. 2021 weiterhin anwenden wird (AS 2019 203).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223). Am 20. Dez. 2018 hat die Schweiz dem Gemischten Ausschuss Schweiz-EU mitgeteilt, dass sie die in Art. 10 Abs. 1<i>c</i> erwähnten Übergangsmassnahmen betreffend Staatsangehörige der Republik Kroatien bis zum 31. Dez. 2021 weiterhin anwenden wird (AS <b>2019</b> 203).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -200,11 +238,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       },
       {
-       "label": "AS 2019 203",
+       "label": "AS <b>2019</b> 203",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/30"
       }
      ],
@@ -227,10 +265,10 @@
     },
     {
      "nr": "",
-     "text": "Verlängert bis zu diesem Datum durch die Notifikation vom 29. Mai 2007 (AS 2008 573).",
+     "text": "Verlängert bis zu diesem Datum durch die Notifikation vom 29. Mai 2007 (AS <b>2008 </b>573).",
      "links": [
       {
-       "label": "AS 2008 573",
+       "label": "AS <b>2008 </b>573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/129"
       }
      ],
@@ -239,10 +277,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -250,7 +288,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -277,10 +315,10 @@
     },
     {
      "nr": "",
-     "text": "Massnahmen verlängert bis zum 31. Mai 2014 durch Mitteilung der Schweiz vom 27. Mai 2011 (AS 2011 4127).",
+     "text": "Massnahmen verlängert bis zum 31. Mai 2014 durch Mitteilung der Schweiz vom 27. Mai 2011 (AS <b>2011</b> 4127).",
      "links": [
       {
-       "label": "AS 2011 4127",
+       "label": "AS <b>2011</b> 4127",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/581"
       }
      ],
@@ -289,10 +327,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS 2009 2421 2411, 2012 4479; BBl 2008 2135).",
+     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS <b>2009</b> 2421 2411, <b>2012</b> 4479; BBl <b>2008</b> 2135).",
      "links": [
       {
-       "label": "AS 2009 2421",
+       "label": "AS <b>2009</b> 2421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/297"
       },
       {
@@ -300,11 +338,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       },
       {
-       "label": "2012 4479",
+       "label": "<b>2012</b> 4479",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/523"
       },
       {
-       "label": "BBl 2008 2135",
+       "label": "BBl <b>2008</b> 2135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/472"
       }
      ],
@@ -327,10 +365,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223). Am 20. Dez. 2018 hat die Schweiz dem Gemischten Ausschuss Schweiz-EU mitgeteilt, dass sie die in Art. 10 Abs. 2c erwähnten Übergangsmassnahmen betreffend Staatsangehörige der Republik Kroatien bis zum 31. Dez. 2021 weiterhin anwenden wird (AS 2019 203).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223). Am 20. Dez. 2018 hat die Schweiz dem Gemischten Ausschuss Schweiz-EU mitgeteilt, dass sie die in Art. 10 Abs. 2<i>c</i> erwähnten Übergangsmassnahmen betreffend Staatsangehörige der Republik Kroatien bis zum 31. Dez. 2021 weiterhin anwenden wird (AS <b>2019</b> 203).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -338,11 +376,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       },
       {
-       "label": "AS 2019 203",
+       "label": "AS <b>2019</b> 203",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/30"
       }
      ],
@@ -358,10 +396,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -369,7 +407,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -389,10 +427,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS 2009 2421 2411, 2012 4479; BBl 2008 2135).",
+     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS <b>2009</b> 2421 2411, <b>2012</b> 4479; BBl <b>2008</b> 2135).",
      "links": [
       {
-       "label": "AS 2009 2421",
+       "label": "AS <b>2009</b> 2421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/297"
       },
       {
@@ -400,11 +438,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       },
       {
-       "label": "2012 4479",
+       "label": "<b>2012</b> 4479",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/523"
       },
       {
-       "label": "BBl 2008 2135",
+       "label": "BBl <b>2008</b> 2135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/472"
       }
      ],
@@ -420,10 +458,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -431,7 +469,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       }
      ],
@@ -440,10 +478,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -451,7 +489,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       }
      ],
@@ -460,10 +498,10 @@
     },
     {
      "nr": "",
-     "text": "Verlängert bis zu diesem Datum durch Briefwechsel vom 29. Mai 2009 (AS 2009 3075).",
+     "text": "Verlängert bis zu diesem Datum durch Briefwechsel vom 29. Mai 2009 (AS <b>2009</b> 3075).",
      "links": [
       {
-       "label": "AS 2009 3075",
+       "label": "AS <b>2009</b> 3075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/378"
       }
      ],
@@ -472,10 +510,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -483,7 +521,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -496,10 +534,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -507,7 +545,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -520,10 +558,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS 2009 2421 2411, 2012 4479; BBl 2008 2135).",
+     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS <b>2009</b> 2421 2411, <b>2012</b> 4479; BBl <b>2008</b> 2135).",
      "links": [
       {
-       "label": "AS 2009 2421",
+       "label": "AS <b>2009</b> 2421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/297"
       },
       {
@@ -531,11 +569,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       },
       {
-       "label": "2012 4479",
+       "label": "<b>2012</b> 4479",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/523"
       },
       {
-       "label": "BBl 2008 2135",
+       "label": "BBl <b>2008</b> 2135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/472"
       }
      ],
@@ -544,10 +582,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -555,7 +593,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       }
      ],
@@ -564,10 +602,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -575,7 +613,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       }
      ],
@@ -584,10 +622,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS 2006 995 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 26. Okt. 2004 über die Ausdehnung des Frei­zügigkeitsabkommens auf die neuen EG-Mitgliedstaaten, von der BVers genehmigt am 17. Dez. 2004 und in Kraft seit 1. April 2006 (AS <b>2006</b> 995 979; BBl <b>2004 </b>5891 6565).",
      "links": [
       {
-       "label": "AS 2006 995",
+       "label": "AS <b>2006</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/179"
       },
       {
@@ -595,7 +633,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004 </b>5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -608,10 +646,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS 2009 2421 2411, 2012 4479; BBl 2008 2135).",
+     "text": "Eingefügt durch Art. 2 Ziff. 2 des Prot. vom 27. Mai 2008 (Aufnahme von Bulgarien und Rumänien infolge ihres Beitritts zur EU), von der BVers genehmigt am 13. Juni 2008 und in Kraft seit 1. Juni 2009 (AS <b>2009</b> 2421 2411, <b>2012</b> 4479; BBl <b>2008</b> 2135).",
      "links": [
       {
-       "label": "AS 2009 2421",
+       "label": "AS <b>2009</b> 2421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/297"
       },
       {
@@ -619,11 +657,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       },
       {
-       "label": "2012 4479",
+       "label": "<b>2012</b> 4479",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/523"
       },
       {
-       "label": "BBl 2008 2135",
+       "label": "BBl <b>2008</b> 2135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/472"
       }
      ],
@@ -632,10 +670,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS 2016 5251 5233; BBl 2016 2223).",
+     "text": "Eingefügt durch Art. 2 Bst. b des Prot. vom 4. März 2016 (Aufnahme der Republik Kroatien infolge ihres Beitritts zur EU), von der BVers genehmigt am 17. Juni 2016 und in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 5251 5233; BBl <b>2016</b> 2223).",
      "links": [
       {
-       "label": "AS 2016 5251",
+       "label": "AS <b>2016</b> 5251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/829"
       },
       {
@@ -643,7 +681,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/828"
       },
       {
-       "label": "BBl 2016 2223",
+       "label": "BBl <b>2016</b> 2223",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/467"
       }
      ],
@@ -819,10 +857,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 0.748.127.192.68",
+     "text": "SR <b>0.748.127.192.68</b>",
      "links": [
       {
-       "label": "SR 0.748.127.192.68",
+       "label": "SR <b>0.748.127.192.68</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/258/20200701"
       }
      ],
@@ -831,10 +869,10 @@
     },
     {
      "nr": "",
-     "text": "SR 0.740.72",
+     "text": "SR <b>0.740.72</b>",
      "links": [
       {
-       "label": "SR 0.740.72",
+       "label": "SR <b>0.740.72</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/257/20191213"
       }
      ],
@@ -843,10 +881,10 @@
     },
     {
      "nr": "",
-     "text": "SR 0.916.026.81",
+     "text": "SR <b>0.916.026.81</b>",
      "links": [
       {
-       "label": "SR 0.916.026.81",
+       "label": "SR <b>0.916.026.81</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/323/20180612"
       }
      ],
@@ -855,10 +893,10 @@
     },
     {
      "nr": "",
-     "text": "SR 0.946.526.81",
+     "text": "SR <b>0.946.526.81</b>",
      "links": [
       {
-       "label": "SR 0.946.526.81",
+       "label": "SR <b>0.946.526.81</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/276/20171222"
       }
      ],
@@ -867,10 +905,10 @@
     },
     {
      "nr": "",
-     "text": "SR 0.172.052.68",
+     "text": "SR <b>0.172.052.68</b>",
      "links": [
       {
-       "label": "SR 0.172.052.68",
+       "label": "SR <b>0.172.052.68</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/296/20111022"
       }
      ],
@@ -879,10 +917,10 @@
     },
     {
      "nr": "",
-     "text": "SR 0.420.513.1",
+     "text": "SR <b>0.420.513.1</b>",
      "links": [
       {
-       "label": "SR 0.420.513.1",
+       "label": "SR <b>0.420.513.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/438/20080228"
       }
      ],
@@ -891,10 +929,10 @@
     },
     {
      "nr": "",
-     "text": "Dieses Abk. ist für eine unbestimmte Zeit verlängert (siehe Art. 1 des BB vom 13. Juni 2008 – AS 2009 2411).",
+     "text": "Dieses Abk. ist für eine unbestimmte Zeit verlängert (siehe Art. 1 des BB vom 13. Juni 2008 – AS <b>2009</b> 2411).",
      "links": [
       {
-       "label": "AS 2009 2411",
+       "label": "AS <b>2009</b> 2411",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/296"
       }
      ],

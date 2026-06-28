@@ -1,5 +1,45 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "311.1",
+  "titel": "Bundesgesetz über das Jugendstrafrecht",
+  "erlassdatum": "vom 20. Juni 2003 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 123 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 21. September 1998,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "<i>BBl <b>1999 </b>1979</i>",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +54,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -26,18 +66,18 @@
     },
     {
      "nr": "4",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -46,14 +86,14 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS 2015 1623; BBl 2014 889 913).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1623; BBl <b>2014</b> 889 913).",
      "links": [
       {
-       "label": "AS 2015 1623",
+       "label": "AS <b>2015</b> 1623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/321"
       },
       {
-       "label": "BBl 2014 889",
+       "label": "BBl <b>2014</b> 889",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/136"
       },
       {
@@ -66,14 +106,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 (Unverjährbarkeit sexueller und pornografischer Straftaten an Kindern vor der Pubertät), in Kraft seit 1. Jan. 2013 (AS 2012 5951; BBl 2011 5977).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 (Unverjährbarkeit sexueller und pornografischer Straftaten an Kindern vor der Pubertät), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 5951; BBl <b>2011</b> 5977).",
      "links": [
       {
-       "label": "AS 2012 5951",
+       "label": "AS <b>2012</b> 5951",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/696"
       },
       {
-       "label": "BBl 2011 5977",
+       "label": "BBl <b>2011</b> 5977",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/883"
       }
      ],
@@ -82,10 +122,10 @@
     },
     {
      "nr": "7",
-     "text": "AS 2009 6103",
+     "text": "AS <b>2009</b> 6103",
      "links": [
       {
-       "label": "AS 2009 6103",
+       "label": "AS <b>2009</b> 6103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/748"
       }
      ],
@@ -94,18 +134,18 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -114,14 +154,14 @@
     },
     {
      "nr": "9",
-     "text": "Aufgehoben durch Anhang 1 Ziff. 4 des Strafregistergesetzes vom 17. Juni 2016, mit Wirkung seit 23. Jan. 2023 (AS 2022 600; BBl 2014 5713).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. 4 des Strafregistergesetzes vom 17. Juni 2016, mit Wirkung seit 23. Jan. 2023 (AS <b>2022</b> 600; BBl <b>2014</b> 5713).",
      "links": [
       {
-       "label": "AS 2022 600",
+       "label": "AS <b>2022</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/600"
       },
       {
-       "label": "BBl 2014 5713",
+       "label": "BBl <b>2014</b> 5713",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
@@ -154,10 +194,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -166,10 +206,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -178,18 +218,18 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS 2023 468, 2024 490; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "2024 490",
+       "label": "<b>2024</b> 490",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/490"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -211,10 +251,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -292,10 +332,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -321,10 +361,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -333,10 +373,10 @@
     },
     {
      "nr": "17",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -377,10 +417,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -406,10 +446,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -418,10 +458,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -430,18 +470,18 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -497,14 +537,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS 2016 1249; BBl 2012 4721).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
-       "label": "AS 2016 1249",
+       "label": "AS <b>2016</b> 1249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/249"
       },
       {
-       "label": "BBl 2012 4721",
+       "label": "BBl <b>2012</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
@@ -513,10 +553,10 @@
     },
     {
      "nr": "24",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: Kindesschutzmassnahmen.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzmassnahmen.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -525,10 +565,10 @@
     },
     {
      "nr": "25",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -537,14 +577,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS 2014 2055; BBl 2012 8819).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012</b> 8819).",
      "links": [
       {
-       "label": "AS 2014 2055",
+       "label": "AS <b>2014</b> 2055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
       },
       {
-       "label": "BBl 2012 8819",
+       "label": "BBl <b>2012</b> 8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
@@ -585,14 +625,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Änderung der Wiedergutmachungsregelung, in Kraft seit 1. Juli 2019 (AS 2019 1809; BBl 2018 3757 4925).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Änderung der Wiedergutmachungsregelung, in Kraft seit 1. Juli 2019 (AS <b>2019</b> 1809; BBl <b>2018</b> 3757 4925).",
      "links": [
       {
-       "label": "AS 2019 1809",
+       "label": "AS <b>2019</b> 1809",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/336"
       },
       {
-       "label": "BBl 2018 3757",
+       "label": "BBl <b>2018</b> 3757",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1409"
       },
       {
@@ -605,18 +645,18 @@
     },
     {
      "nr": "28",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -687,10 +727,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -731,10 +771,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -743,14 +783,14 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Jan. 2018 (AS 2016 1249; BBl 2012 4721).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
-       "label": "AS 2016 1249",
+       "label": "AS <b>2016</b> 1249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/249"
       },
       {
-       "label": "BBl 2012 4721",
+       "label": "BBl <b>2012</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
@@ -759,18 +799,18 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -796,10 +836,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -855,10 +895,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -940,14 +980,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -956,10 +996,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -968,18 +1008,18 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS 2024 27; BBl 2018 2827; 2022 687, 1011).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
-       "label": "AS 2024 27",
+       "label": "AS <b>2024</b> 27",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/27"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       },
       {
-       "label": "2022 687",
+       "label": "<b>2022</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/687"
       },
       {
@@ -992,18 +1032,18 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS 2024 27; BBl 2018 2827; 2022 687, 1011).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
-       "label": "AS 2024 27",
+       "label": "AS <b>2024</b> 27",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/27"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       },
       {
-       "label": "2022 687",
+       "label": "<b>2022</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/687"
       },
       {
@@ -1038,18 +1078,18 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS 2023 468, 2024 490; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "2024 490",
+       "label": "<b>2024</b> 490",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/490"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1058,23 +1098,24 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS 2023 468, 2024 490; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "2024 490",
+       "label": "<b>2024</b> 490",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/490"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Ergänzende Bestimmungen des Bundesrates"
     }
    ]
   },
@@ -1093,10 +1134,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Die Änderungen können unter AS 2006 3545 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2006</b> 3545 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2006 3545",
+       "label": "AS <b>2006</b> 3545",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/551"
       }
      ],
@@ -1122,10 +1163,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "AS 1971 777",
+     "text": "AS <b>1971</b> 777",
      "links": [
       {
-       "label": "AS 1971 777",
+       "label": "AS <b>1971</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/777_777_777"
       }
      ],
@@ -1134,10 +1175,10 @@
     },
     {
      "nr": "44",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS 2011 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       }
      ],
@@ -1163,10 +1204,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "AS 1971 777",
+     "text": "AS <b>1971</b> 777",
      "links": [
       {
-       "label": "AS 1971 777",
+       "label": "AS <b>1971</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/777_777_777"
       }
      ],
@@ -1175,10 +1216,10 @@
     },
     {
      "nr": "46",
-     "text": "AS 1971 777",
+     "text": "AS <b>1971</b> 777",
      "links": [
       {
-       "label": "AS 1971 777",
+       "label": "AS <b>1971</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/777_777_777"
       }
      ],
@@ -1204,10 +1245,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "AS 1971 777",
+     "text": "AS <b>1971</b> 777",
      "links": [
       {
-       "label": "AS 1971 777",
+       "label": "AS <b>1971</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/777_777_777"
       }
      ],
@@ -1246,10 +1287,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "AS 2006 3459",
+     "text": "AS <b>2006</b> 3459",
      "links": [
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -1258,10 +1299,10 @@
     },
     {
      "nr": "50",
-     "text": "AS 2006 3389",
+     "text": "AS <b>2006</b> 3389",
      "links": [
       {
-       "label": "AS 2006 3389",
+       "label": "AS <b>2006</b> 3389",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/538"
       }
      ],
@@ -1294,14 +1335,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS 2014 2055; BBl 2012 8819).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012</b> 8819).",
      "links": [
       {
-       "label": "AS 2014 2055",
+       "label": "AS <b>2014</b> 2055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
       },
       {
-       "label": "BBl 2012 8819",
+       "label": "BBl <b>2012</b> 8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
@@ -1321,18 +1362,18 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
@@ -1356,19 +1397,20 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS 2016 1249; BBl 2012 4721).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
-       "label": "AS 2016 1249",
+       "label": "AS <b>2016</b> 1249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/249"
       },
       {
-       "label": "BBl 2012 4721",
+       "label": "BBl <b>2012</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Übergangsbestimmung zur Änderung vom 19. Juni 2015"
     }
    ]
   },
@@ -1383,18 +1425,18 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS 2010 1573; BBl 2006 1085, 2008 3121).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
-       "label": "AS 2010 1573",
+       "label": "AS <b>2010</b> 1573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/226"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       },
       {
-       "label": "2008 3121",
+       "label": "<b>2008 </b>3121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],

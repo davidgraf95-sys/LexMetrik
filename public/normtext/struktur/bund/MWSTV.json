@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "641.201",
+  "titel": "Mehrwertsteuerverordnung",
+  "erlassdatum": "vom 27. November 2009 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Mehrwertsteuergesetz vom 12. Juni 2009 (MWSTG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>641.20</b>",
+    "links": [
+     {
+      "label": "SR <b>641.20</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2009/615"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -36,10 +69,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -48,10 +81,10 @@
     },
     {
      "nr": "3",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -60,10 +93,10 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -85,10 +118,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3839).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3839).",
      "links": [
       {
-       "label": "AS 2013 3839",
+       "label": "AS <b>2013</b> 3839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/704"
       }
      ],
@@ -157,10 +190,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -190,10 +223,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -223,10 +256,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 2 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 2 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -254,10 +287,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -304,10 +337,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -337,10 +370,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS 2010 2833).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS <b>2010</b> 2833).",
      "links": [
       {
-       "label": "AS 2010 2833",
+       "label": "AS <b>2010</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/371"
       }
      ],
@@ -349,10 +382,10 @@
     },
     {
      "nr": "17",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -361,10 +394,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 814.01",
+     "text": "SR <b>814.01</b>",
      "links": [
       {
-       "label": "SR 814.01",
+       "label": "SR <b>814.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122"
       }
      ],
@@ -413,10 +446,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Nov. 2014, mit Wirkung seit 1. Jan. 2015 (AS 2014 3847).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Nov. 2014, mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 3847).",
      "links": [
       {
-       "label": "AS 2014 3847",
+       "label": "AS <b>2014</b> 3847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/659"
       }
      ],
@@ -465,10 +498,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -498,10 +531,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -510,10 +543,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -543,10 +576,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -671,10 +704,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Die Berichtigung vom 12. Dez. 2017 betrifft nur den französischen Text (AS 2017 7263).",
+     "text": "Die Berichtigung vom 12. Dez. 2017 betrifft nur den französischen Text (AS <b>2017</b> 7263).",
      "links": [
       {
-       "label": "AS 2017 7263",
+       "label": "AS <b>2017</b> 7263",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/789"
       }
      ],
@@ -704,10 +737,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "SR 814.01",
+     "text": "SR <b>814.01</b>",
      "links": [
       {
-       "label": "SR 814.01",
+       "label": "SR <b>814.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122"
       }
      ],
@@ -756,10 +789,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -768,10 +801,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857"
       }
      ],
@@ -780,10 +813,10 @@
     },
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -851,10 +884,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -922,10 +955,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3839).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3839).",
      "links": [
       {
-       "label": "AS 2013 3839",
+       "label": "AS <b>2013</b> 3839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/704"
       }
      ],
@@ -934,10 +967,10 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -946,18 +979,18 @@
     },
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. II der V vom 18. Dez. 2020 (Sars-CoV-2-Schnelltests) (AS 2020 5801). Fassung gemäss Ziff. I der V vom 17. Dez. 2021, in Kraft vom 1. Jan. 2022 bis zum 31. Dez. 2022, verlängert bis zum 30. Juni 2024 (AS 2021 891; 2022 838).",
+     "text": "Eingefügt durch Ziff. II der V vom 18. Dez. 2020 (Sars-CoV-2-Schnelltests) (AS <b>2020</b> 5801). Fassung gemäss Ziff. I der V vom 17. Dez. 2021, in Kraft vom 1. Jan. 2022 bis zum 31. Dez. 2022, verlängert bis zum 30. Juni 2024 (AS <b>2021</b> 891; <b>2022</b> 838).",
      "links": [
       {
-       "label": "AS 2020 5801",
+       "label": "AS <b>2020</b> 5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/977"
       },
       {
-       "label": "AS 2021 891",
+       "label": "AS <b>2021</b> 891",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/891"
       },
       {
-       "label": "2022 838",
+       "label": "<b>2022</b> 838",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/838"
       }
      ],
@@ -966,14 +999,14 @@
     },
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. II der V vom 27. Jan. 2021 (AS 2021 53). Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. II der V vom 27. Jan. 2021 (AS <b>2021</b> 53). Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2021 53",
+       "label": "AS <b>2021</b> 53",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/53"
       },
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -982,10 +1015,10 @@
     },
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1015,10 +1048,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1046,10 +1079,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1079,10 +1112,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1091,10 +1124,10 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1124,10 +1157,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1155,10 +1188,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1243,10 +1276,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1276,10 +1309,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1288,10 +1321,10 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1300,10 +1333,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1352,10 +1385,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Die Berichtigung vom 12. Dez. 2017 betrifft nur den französischen Text (AS 2017 7263).",
+     "text": "Die Berichtigung vom 12. Dez. 2017 betrifft nur den französischen Text (AS <b>2017</b> 7263).",
      "links": [
       {
-       "label": "AS 2017 7263",
+       "label": "AS <b>2017</b> 7263",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/789"
       }
      ],
@@ -1404,10 +1437,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS 2010 2833).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS <b>2010</b> 2833).",
      "links": [
       {
-       "label": "AS 2010 2833",
+       "label": "AS <b>2010</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/371"
       }
      ],
@@ -1416,10 +1449,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -1428,10 +1461,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS 2019 911).",
+     "text": "Fassung gemäss Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS <b>2019</b> 911).",
      "links": [
       {
-       "label": "AS 2019 911",
+       "label": "AS <b>2019</b> 911",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/162"
       }
      ],
@@ -1440,10 +1473,10 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS 2019 911).",
+     "text": "Fassung gemäss Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS <b>2019</b> 911).",
      "links": [
       {
-       "label": "AS 2019 911",
+       "label": "AS <b>2019</b> 911",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/162"
       }
      ],
@@ -1452,10 +1485,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. III 1 der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 349).",
+     "text": "Fassung gemäss Ziff. III 1 der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 349).",
      "links": [
       {
-       "label": "AS 2022 349",
+       "label": "AS <b>2022</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/349"
       }
      ],
@@ -1464,10 +1497,10 @@
     },
     {
      "nr": "57",
-     "text": "SR 812.212.1",
+     "text": "SR <b>812.212.1</b>",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/786"
       }
      ],
@@ -1476,10 +1509,10 @@
     },
     {
      "nr": "58",
-     "text": "SR 812.212.27",
+     "text": "SR <b>812.212.27</b>",
      "links": [
       {
-       "label": "SR 812.212.27",
+       "label": "SR <b>812.212.27</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/592"
       }
      ],
@@ -1547,10 +1580,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1580,10 +1613,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Ausdruck gemäss Anhang Ziff. 1 der Lebensmittel- und Gebrauchsgegenständeverordnung vom 16. Dez. 2016, in Kraft seit 1. Mai 2017 (AS 2017 283). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 1 der Lebensmittel- und Gebrauchsgegenständeverordnung vom 16. Dez. 2016, in Kraft seit 1. Mai 2017 (AS <b>2017</b> 283). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2017 283",
+       "label": "AS <b>2017</b> 283",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/63"
       }
      ],
@@ -1719,10 +1752,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -1750,10 +1783,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1783,10 +1816,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "SR 632.10 Anhang",
+     "text": "SR <b>632.10</b> Anhang",
      "links": [
       {
-       "label": "SR 632.10",
+       "label": "SR <b>632.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1987/1871_1871_1871"
       }
      ],
@@ -1795,15 +1828,16 @@
     },
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Abzug fiktiver Vorsteuer"
     }
    ]
   },
@@ -1828,10 +1862,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Die Berichtigung vom 30. Jan. 2018 betrifft nur den italienischen Text (AS 2018 521).",
+     "text": "Die Berichtigung vom 30. Jan. 2018 betrifft nur den italienischen Text (AS <b>2018</b> 521).",
      "links": [
       {
-       "label": "AS 2018 521",
+       "label": "AS <b>2018</b> 521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/56"
       }
      ],
@@ -1840,10 +1874,10 @@
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1852,10 +1886,10 @@
     },
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -1864,10 +1898,10 @@
     },
     {
      "nr": "70",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -1876,10 +1910,10 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2114,10 +2148,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2173,10 +2207,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -2185,10 +2219,10 @@
     },
     {
      "nr": "76",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3143).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3143).",
      "links": [
       {
-       "label": "AS 2018 3143",
+       "label": "AS <b>2018</b> 3143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/499"
       }
      ],
@@ -2197,10 +2231,10 @@
     },
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2209,10 +2243,10 @@
     },
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2221,10 +2255,10 @@
     },
     {
      "nr": "79",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2254,10 +2288,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2287,10 +2321,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2339,10 +2373,10 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2372,10 +2406,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2405,10 +2439,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2438,10 +2472,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2469,10 +2503,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2502,10 +2536,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2533,10 +2567,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2566,10 +2600,10 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2597,10 +2631,10 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2630,10 +2664,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2663,10 +2697,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2696,10 +2730,10 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2727,10 +2761,10 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2760,10 +2794,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2793,10 +2827,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2845,10 +2879,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -2857,10 +2891,10 @@
     },
     {
      "nr": "98",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2869,10 +2903,10 @@
     },
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2881,10 +2915,10 @@
     },
     {
      "nr": "100",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -2914,10 +2948,10 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -2947,10 +2981,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3113,10 +3147,10 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3125,10 +3159,10 @@
     },
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3137,10 +3171,10 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3196,10 +3230,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (AS 2015 3989) auf den 1. Jan. 2022 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (AS <b>2015</b> 3989) auf den 1. Jan. 2022 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2015 3989",
+       "label": "AS <b>2015</b> 3989",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/670"
       }
      ],
@@ -3208,15 +3242,16 @@
     },
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Kapitel: Mehrheit von Leistungen und Befreiung von der Einfuhrsteuer"
     }
    ]
   },
@@ -3237,10 +3272,10 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3249,10 +3284,10 @@
     },
     {
      "nr": "113",
-     "text": "SR 631.01",
+     "text": "SR <b>631.01</b>",
      "links": [
       {
-       "label": "SR 631.01",
+       "label": "SR <b>631.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/250"
       }
      ],
@@ -3261,10 +3296,10 @@
     },
     {
      "nr": "114",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3305,10 +3340,10 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "SR 631.0",
+     "text": "SR <b>631.0</b>",
      "links": [
       {
-       "label": "SR 631.0",
+       "label": "SR <b>631.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/249"
       }
      ],
@@ -3317,10 +3352,10 @@
     },
     {
      "nr": "116",
-     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 18. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4917).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 18. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4917).",
      "links": [
       {
-       "label": "AS 2015 4917",
+       "label": "AS <b>2015</b> 4917",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/804"
       }
      ],
@@ -3376,10 +3411,10 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3388,10 +3423,10 @@
     },
     {
      "nr": "118",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3432,10 +3467,10 @@
    "fussnoten": [
     {
      "nr": "119",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3480,10 +3515,10 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3492,10 +3527,10 @@
     },
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 312).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 312).",
      "links": [
       {
-       "label": "AS 2023 312",
+       "label": "AS <b>2023</b> 312",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/312"
       }
      ],
@@ -3504,10 +3539,10 @@
     },
     {
      "nr": "124",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -3516,10 +3551,10 @@
     },
     {
      "nr": "125",
-     "text": "SR 221.431",
+     "text": "SR <b>221.431</b>",
      "links": [
       {
-       "label": "SR 221.431",
+       "label": "SR <b>221.431</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/216"
       }
      ],
@@ -3528,19 +3563,20 @@
     },
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS 2017 6307). Fassung gemäss Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 312).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS <b>2017</b> 6307). Fassung gemäss Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 312).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       },
       {
-       "label": "AS 2023 312",
+       "label": "AS <b>2023</b> 312",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/312"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Papierlose Belege, elektronische Verfahren"
     }
    ]
   },
@@ -3565,10 +3601,10 @@
    "fussnoten": [
     {
      "nr": "126",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025, Abs. 2 Bst. a, c, d und f treten am 1. Jan. 2027 in Kraft (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025, Abs. 2 Bst. a, c, d und f treten am 1. Jan. 2027 in Kraft (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3598,10 +3634,10 @@
    "fussnoten": [
     {
      "nr": "128",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -3631,10 +3667,10 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -3643,10 +3679,10 @@
     },
     {
      "nr": "130",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3655,10 +3691,10 @@
     },
     {
      "nr": "131",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -3739,10 +3775,10 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3751,15 +3787,16 @@
     },
     {
      "nr": "132",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Datenschutz"
     }
    ]
   },
@@ -3784,10 +3821,10 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3796,10 +3833,10 @@
     },
     {
      "nr": "135",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3808,10 +3845,10 @@
     },
     {
      "nr": "136",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3841,10 +3878,10 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3874,10 +3911,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3886,10 +3923,10 @@
     },
     {
      "nr": "139",
-     "text": "Ausdruck gemäss Anhang Ziff. II 24 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 800).",
+     "text": "Ausdruck gemäss Anhang Ziff. II 24 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 800).",
      "links": [
       {
-       "label": "AS 2021 800",
+       "label": "AS <b>2021</b> 800",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
       }
      ],
@@ -3898,10 +3935,10 @@
     },
     {
      "nr": "140",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -3931,10 +3968,10 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -3943,10 +3980,10 @@
     },
     {
      "nr": "142",
-     "text": "SR 431.01",
+     "text": "SR <b>431.01</b>",
      "links": [
       {
-       "label": "SR 431.01",
+       "label": "SR <b>431.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/2080_2080_2080"
       }
      ],
@@ -3955,10 +3992,10 @@
     },
     {
      "nr": "143",
-     "text": "SR 951.11",
+     "text": "SR <b>951.11</b>",
      "links": [
       {
-       "label": "SR 951.11",
+       "label": "SR <b>951.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/221"
       }
      ],
@@ -3967,10 +4004,10 @@
     },
     {
      "nr": "144",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 73 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 73 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -4000,10 +4037,10 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4033,10 +4070,10 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4045,10 +4082,10 @@
     },
     {
      "nr": "148",
-     "text": "SR 152.1",
+     "text": "SR <b>152.1</b>",
      "links": [
       {
-       "label": "SR 152.1",
+       "label": "SR <b>152.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/354"
       }
      ],
@@ -4078,10 +4115,10 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4109,10 +4146,10 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4142,10 +4179,10 @@
    "fussnoten": [
     {
      "nr": "152",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4154,15 +4191,16 @@
     },
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Sicherstellung der korrekten Steuerentrichtung"
     }
    ]
   },
@@ -4183,10 +4221,10 @@
    "fussnoten": [
     {
      "nr": "154",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
@@ -4223,10 +4261,10 @@
    "fussnoten": [
     {
      "nr": "155",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -4248,10 +4286,10 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4273,10 +4311,10 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "SR 641.611",
+     "text": "SR <b>641.611</b>",
      "links": [
       {
-       "label": "SR 641.611",
+       "label": "SR <b>641.611</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/3393_3393_3393"
       }
      ],
@@ -4285,10 +4323,10 @@
     },
     {
      "nr": "158",
-     "text": "SR 631.144.0",
+     "text": "SR <b>631.144.0</b>",
      "links": [
       {
-       "label": "SR 631.144.0",
+       "label": "SR <b>631.144.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1989/1781_1781_1781"
       }
      ],
@@ -4297,10 +4335,10 @@
     },
     {
      "nr": "159",
-     "text": "SR 631.145.0",
+     "text": "SR <b>631.145.0</b>",
      "links": [
       {
-       "label": "SR 631.145.0",
+       "label": "SR <b>631.145.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1985/1819_1819_1819"
       }
      ],
@@ -4333,10 +4371,10 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2018 angepasst",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2018 angepasst",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
       }
      ],
@@ -4369,10 +4407,10 @@
    "fussnoten": [
     {
      "nr": "161",
-     "text": "SR 0.191.01",
+     "text": "SR <b>0.191.01</b>",
      "links": [
       {
-       "label": "SR 0.191.01",
+       "label": "SR <b>0.191.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1964/435_431_431"
       }
      ],
@@ -4381,10 +4419,10 @@
     },
     {
      "nr": "162",
-     "text": "SR 0.191.02",
+     "text": "SR <b>0.191.02</b>",
      "links": [
       {
-       "label": "SR 0.191.02",
+       "label": "SR <b>0.191.02</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1968/887_927_843"
       }
      ],
@@ -4406,10 +4444,10 @@
    "fussnoten": [
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4431,10 +4469,10 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4443,10 +4481,10 @@
     },
     {
      "nr": "165",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4479,10 +4517,10 @@
    "fussnoten": [
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4491,10 +4529,10 @@
     },
     {
      "nr": "167",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4516,10 +4554,10 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3143).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3143).",
      "links": [
       {
-       "label": "AS 2018 3143",
+       "label": "AS <b>2018</b> 3143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/499"
       }
      ],
@@ -4541,10 +4579,10 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4577,10 +4615,10 @@
    "fussnoten": [
     {
      "nr": "171",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4739).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4739).",
      "links": [
       {
-       "label": "AS 2011 4739",
+       "label": "AS <b>2011</b> 4739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/671"
       }
      ],
@@ -4589,10 +4627,10 @@
     },
     {
      "nr": "172",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -4601,15 +4639,16 @@
     },
     {
      "nr": "170",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4739).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4739).",
      "links": [
       {
-       "label": "AS 2011 4739",
+       "label": "AS <b>2011</b> 4739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/671"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Titel: Mehrwertsteuer-Konsultativgremium"
     }
    ]
   },
@@ -4626,10 +4665,10 @@
    "fussnoten": [
     {
      "nr": "173",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4651,10 +4690,10 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4663,10 +4702,10 @@
     },
     {
      "nr": "175",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4688,10 +4727,10 @@
    "fussnoten": [
     {
      "nr": "176",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4713,10 +4752,10 @@
    "fussnoten": [
     {
      "nr": "177",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4738,10 +4777,10 @@
    "fussnoten": [
     {
      "nr": "178",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4772,22 +4811,22 @@
    "fussnoten": [
     {
      "nr": "180",
-     "text": "[AS 2000 1347; 2001 3294 Ziff. II 4; 2004 5387; 2006 2353, 4705 Ziff. II 45; 2007 1469 Anhang 4 Ziff. 24, 6657 Anhang Ziff. 9]",
+     "text": "[AS <b>2000</b> 1347; <b>2001</b> 3294 Ziff. II 4; <b>2004 </b>5387; <b>2006</b> 2353, 4705 Ziff. II 45; <b>2007</b> 1469 Anhang 4 Ziff. 24, 6657 Anhang Ziff. 9]",
      "links": [
       {
-       "label": "AS 2000 1347",
+       "label": "AS <b>2000</b> 1347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/213"
       },
       {
-       "label": "2001 3294",
+       "label": "<b>2001</b> 3294",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/490"
       },
       {
-       "label": "2004 5387",
+       "label": "<b>2004 </b>5387",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/820"
       },
       {
-       "label": "2006 2353",
+       "label": "<b>2006</b> 2353",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/360"
       },
       {
@@ -4795,7 +4834,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       },
       {
-       "label": "2007 1469",
+       "label": "<b>2007</b> 1469",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/250"
       },
       {
@@ -4840,10 +4879,10 @@
    "fussnoten": [
     {
      "nr": "181",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS 2010 2833).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Juni 2010, in Kraft seit 1. Jan. 2010 (AS <b>2010</b> 2833).",
      "links": [
       {
-       "label": "AS 2010 2833",
+       "label": "AS <b>2010</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/371"
       }
      ],
@@ -4852,10 +4891,10 @@
     },
     {
      "nr": "182",
-     "text": "[AS 2000 1300]",
+     "text": "[AS <b>2000</b> 1300]",
      "links": [
       {
-       "label": "AS 2000 1300",
+       "label": "AS <b>2000</b> 1300",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/212"
       }
      ],
@@ -4881,10 +4920,10 @@
    "fussnoten": [
     {
      "nr": "183",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3839).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Okt. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3839).",
      "links": [
       {
-       "label": "AS 2013 3839",
+       "label": "AS <b>2013</b> 3839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/704"
       }
      ],
@@ -4917,10 +4956,10 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -4942,10 +4981,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -4969,15 +5008,16 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Versandhandelsunternehmen anstelle der Plattform als einfuhrsteuerpflichtiger Person"
     }
    ]
   },
@@ -5000,14 +5040,14 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS 2017 6307). Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS <b>2017</b> 6307). Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       },
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5035,10 +5075,10 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -5068,10 +5108,10 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Eingefügt durch Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS 2019 911).",
+     "text": "Eingefügt durch Ziff. I der V vom 8. März 2019, in Kraft seit 1. April 2019 (AS <b>2019</b> 911).",
      "links": [
       {
-       "label": "AS 2019 911",
+       "label": "AS <b>2019</b> 911",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/162"
       }
      ],
@@ -5101,10 +5141,10 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5130,10 +5170,10 @@
    "fussnoten": [
     {
      "nr": "184",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -5159,10 +5199,10 @@
    "fussnoten": [
     {
      "nr": "185",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3143).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3143).",
      "links": [
       {
-       "label": "AS 2018 3143",
+       "label": "AS <b>2018</b> 3143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/499"
       }
      ],
@@ -5188,10 +5228,10 @@
    "fussnoten": [
     {
      "nr": "186",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 312).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 312).",
      "links": [
       {
-       "label": "AS 2023 312",
+       "label": "AS <b>2023</b> 312",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/312"
       }
      ],
@@ -5217,10 +5257,10 @@
    "fussnoten": [
     {
      "nr": "187",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5246,10 +5286,10 @@
    "fussnoten": [
     {
      "nr": "188",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5279,10 +5319,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5312,10 +5352,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -5324,10 +5364,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 101",
+     "text": "SR <b>101</b>",
      "links": [
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
       }
      ],
@@ -5357,10 +5397,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5390,15 +5430,16 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Margenbesteuerung"
     }
    ]
   },
@@ -5480,10 +5521,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5505,10 +5546,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3143).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Aug. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3143).",
      "links": [
       {
-       "label": "AS 2018 3143",
+       "label": "AS <b>2018</b> 3143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/499"
       }
      ],
@@ -5517,10 +5558,10 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5550,10 +5591,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -5583,10 +5624,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],
@@ -5608,10 +5649,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4739).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4739).",
      "links": [
       {
-       "label": "AS 2011 4739",
+       "label": "AS <b>2011</b> 4739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/671"
       }
      ],
@@ -5633,10 +5674,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4739).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4739).",
      "links": [
       {
-       "label": "AS 2011 4739",
+       "label": "AS <b>2011</b> 4739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/671"
       }
      ],
@@ -5666,15 +5707,16 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Jährliche Abrechnung"
     }
    ]
   },
@@ -5754,14 +5796,14 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS 2017 6307). Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS 2024 485).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2017 (AS <b>2017</b> 6307). Aufgehoben durch Ziff. I der V vom 21. Aug. 2024, mit Wirkung seit 1. Jan. 2025 (AS <b>2024</b> 485).",
      "links": [
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       },
       {
-       "label": "AS 2024 485",
+       "label": "AS <b>2024</b> 485",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/485"
       }
      ],
@@ -5791,14 +5833,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Nov. 2014 (AS 2014 3847). Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6307).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Nov. 2014 (AS <b>2014</b> 3847). Fassung gemäss Ziff. I der V vom 18. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6307).",
      "links": [
       {
-       "label": "AS 2014 3847",
+       "label": "AS <b>2014</b> 3847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/659"
       },
       {
-       "label": "AS 2017 6307",
+       "label": "AS <b>2017</b> 6307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/696"
       }
      ],

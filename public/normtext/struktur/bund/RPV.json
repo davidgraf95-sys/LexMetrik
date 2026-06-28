@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "700.1",
+  "titel": "Raumplanungsverordnung",
+  "erlassdatum": "vom 28. Juni 2000 (Stand am 20. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Raumplanungsgesetz vom 22. Juni 1979 (RPG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>700</b>",
+    "links": [
+     {
+      "label": "SR <b>700</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -47,10 +80,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -59,10 +92,10 @@
     },
     {
      "nr": "3",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. April 2014, mit Wirkung seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. April 2014, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -84,10 +117,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -131,10 +164,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -156,10 +189,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -168,10 +201,10 @@
     },
     {
      "nr": "8",
-     "text": "Ausdruck gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -193,10 +226,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -218,10 +251,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -230,10 +263,10 @@
     },
     {
      "nr": "11",
-     "text": "Ausdruck gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -356,10 +389,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. II 1 der V vom 24. Juni 2009, in Kraft seit 1. Sept. 2009 (AS 2009 3507).",
+     "text": "Fassung gemäss Ziff. II 1 der V vom 24. Juni 2009, in Kraft seit 1. Sept. 2009 (AS <b>2009</b> 3507).",
      "links": [
       {
-       "label": "AS 2009 3507",
+       "label": "AS <b>2009</b> 3507",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/429"
       }
      ],
@@ -400,10 +433,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. II 1 der V vom 24. Juni 2009, in Kraft seit 1. Sept. 2009 (AS 2009 3507).",
+     "text": "Eingefügt durch Ziff. II 1 der V vom 24. Juni 2009, in Kraft seit 1. Sept. 2009 (AS <b>2009</b> 3507).",
      "links": [
       {
-       "label": "AS 2009 3507",
+       "label": "AS <b>2009</b> 3507",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/429"
       }
      ],
@@ -496,10 +529,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -543,10 +576,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -555,10 +588,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -584,15 +617,16 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Erschliessung"
     }
    ]
   },
@@ -613,10 +647,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -640,15 +674,16 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Kleinsiedlungen ausserhalb der Bauzone"
     }
    ]
   },
@@ -669,15 +704,16 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Zonenkonformität in der Landwirtschaftszone"
     }
    ]
   },
@@ -698,10 +734,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. III der V vom 26. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4873).",
+     "text": "Fassung gemäss Ziff. III der V vom 26. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4873).",
      "links": [
       {
-       "label": "AS 2003 4873",
+       "label": "AS <b>2003</b> 4873",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/718"
       }
      ],
@@ -727,10 +763,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3641).",
+     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS <b>2007</b> 3641).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       }
      ],
@@ -756,10 +792,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3641).",
+     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS <b>2007</b> 3641).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       }
      ],
@@ -800,10 +836,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -812,10 +848,10 @@
     },
     {
      "nr": "58",
-     "text": "Aufgehoben durch Ziff. I der V vom 15. Okt. 2025, mit Wirkung seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Aufgehoben durch Ziff. I der V vom 15. Okt. 2025, mit Wirkung seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -824,10 +860,10 @@
     },
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -836,14 +872,14 @@
     },
     {
      "nr": "60",
-     "text": "Eingefügt durch Art. 7 der V vom 22. Aug. 2012 über Zweitwohnungen (AS 2012 4583). Fassung gemäss Art. 12 Ziff. 1 der Zweitwohnungsverordnung vom 4. Dez. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5669).",
+     "text": "Eingefügt durch Art. 7 der V vom 22. Aug. 2012 über Zweitwohnungen (AS <b>2012</b> 4583). Fassung gemäss Art. 12 Ziff. 1 der Zweitwohnungsverordnung vom 4. Dez. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5669).",
      "links": [
       {
-       "label": "AS 2012 4583",
+       "label": "AS <b>2012</b> 4583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/556"
       },
       {
-       "label": "AS 2015 5669",
+       "label": "AS <b>2015</b> 5669",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/887"
       }
      ],
@@ -852,14 +888,14 @@
     },
     {
      "nr": "61",
-     "text": "Eingefügt durch Art. 7 der V vom 22. Aug. 2012 über Zweitwohnungen (AS 2012 4583). Fassung gemäss Art. 12 Ziff. 1 der Zweitwohnungsverordnung vom 4. Dez. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5669).",
+     "text": "Eingefügt durch Art. 7 der V vom 22. Aug. 2012 über Zweitwohnungen (AS <b>2012</b> 4583). Fassung gemäss Art. 12 Ziff. 1 der Zweitwohnungsverordnung vom 4. Dez. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5669).",
      "links": [
       {
-       "label": "AS 2012 4583",
+       "label": "AS <b>2012</b> 4583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/556"
       },
       {
-       "label": "AS 2015 5669",
+       "label": "AS <b>2015</b> 5669",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/887"
       }
      ],
@@ -871,7 +907,8 @@
      "text": "Ursprünglich: 4. Abschn.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Abschnitt: Ausnahmen für Bauten und Anlagen ausserhalb der Bauzonen"
     }
    ]
   },
@@ -892,10 +929,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3641).",
+     "text": "Fassung gemäss Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS <b>2007</b> 3641).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       }
      ],
@@ -904,10 +941,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 211.412.11",
+     "text": "SR <b>211.412.11</b>",
      "links": [
       {
-       "label": "SR 211.412.11",
+       "label": "SR <b>211.412.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
       }
      ],
@@ -933,10 +970,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -962,10 +999,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -974,10 +1011,10 @@
     },
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -986,10 +1023,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -998,10 +1035,10 @@
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1010,10 +1047,10 @@
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -1022,10 +1059,10 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1034,18 +1071,18 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022 (AS 2022 357). Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659). Die Berichtigung vom 20. Mai 2026 betrifft nur den französischen Text (AS 2026 227).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022 (AS <b>2022</b> 357). Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659). Die Berichtigung vom 20. Mai 2026 betrifft nur den französischen Text (AS <b>2026</b> 227).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       },
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       },
       {
-       "label": "AS 2026 227",
+       "label": "AS <b>2026</b> 227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/227"
       }
      ],
@@ -1071,10 +1108,10 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -1083,10 +1120,10 @@
     },
     {
      "nr": "90",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -1113,7 +1150,8 @@
      "text": "Ursprünglich: 5. Abschn.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Abschnitt: Anmerkung im Grundbuch"
     }
    ]
   },
@@ -1137,7 +1175,8 @@
      "text": "Ursprünglich: 6. Abschn.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Abschnitt: Raumbeobachtung und Berichterstattung"
     }
    ]
   },
@@ -1158,10 +1197,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -1170,10 +1209,10 @@
     },
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. III der V vom 29. Okt. 2014, in Kraft seit 1. Jan. 2015 (AS 2014 3909).",
+     "text": "Eingefügt durch Ziff. III der V vom 29. Okt. 2014, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 3909).",
      "links": [
       {
-       "label": "AS 2014 3909",
+       "label": "AS <b>2014</b> 3909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/669"
       }
      ],
@@ -1199,10 +1238,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -1224,10 +1263,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Fassung gemäss Ziff. II 57 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "text": "Fassung gemäss Ziff. II 57 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
-       "label": "AS 2006 4705",
+       "label": "AS <b>2006</b> 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
      ],
@@ -1249,10 +1288,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "SR 211.412.110",
+     "text": "SR <b>211.412.110</b>",
      "links": [
       {
-       "label": "SR 211.412.110",
+       "label": "SR <b>211.412.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5758"
       }
      ],
@@ -1261,10 +1300,10 @@
     },
     {
      "nr": "100",
-     "text": "SR 211.412.11",
+     "text": "SR <b>211.412.11</b>",
      "links": [
       {
-       "label": "SR 211.412.11",
+       "label": "SR <b>211.412.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
       }
      ],
@@ -1286,14 +1325,14 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "[AS 1989 1985; 1996 1534]",
+     "text": "[AS <b>1989 </b>1985; <b>1996 </b>1534]",
      "links": [
       {
-       "label": "AS 1989 1985",
+       "label": "AS <b>1989 </b>1985",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/1985_1985_1985"
       },
       {
-       "label": "1996 1534",
+       "label": "<b>1996 </b>1534",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1534_1534_1534"
       }
      ],
@@ -1315,10 +1354,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Die Änderung kann unter AS 2000 2047 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2000</b> 2047 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2000 2047",
+       "label": "AS <b>2000</b> 2047",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/310"
       }
      ],
@@ -1340,10 +1379,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "AS 2000 2042",
+     "text": "AS <b>2000</b> 2042",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       }
      ],
@@ -1380,10 +1419,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1407,15 +1446,16 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Gesamtgrösse der Bauzonen im Kanton"
     }
    ]
   },
@@ -1436,10 +1476,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1448,10 +1488,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 357).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 357).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       }
      ],
@@ -1460,10 +1500,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 357).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 357).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       }
      ],
@@ -1472,10 +1512,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 357).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 357).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       }
      ],
@@ -1484,10 +1524,10 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 357).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 357).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       }
      ],
@@ -1513,10 +1553,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1542,10 +1582,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang Ziff. II 3 der V vom 29. Okt. 2014 über den Schutz der Kulturgüter bei bewaffneten Konflikten, bei Katastrophen und in Notlagen, in Kraft seit 1. Jan. 2015 (AS 2014 3555).",
+     "text": "Fassung gemäss Anhang Ziff. II 3 der V vom 29. Okt. 2014 über den Schutz der Kulturgüter bei bewaffneten Konflikten, bei Katastrophen und in Notlagen, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 3555).",
      "links": [
       {
-       "label": "AS 2014 3555",
+       "label": "AS <b>2014</b> 3555",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/616"
       }
      ],
@@ -1554,10 +1594,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 520.31",
+     "text": "SR <b>520.31</b>",
      "links": [
       {
-       "label": "SR 520.31",
+       "label": "SR <b>520.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7609"
       }
      ],
@@ -1573,10 +1613,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 451",
+     "text": "SR <b>451</b>",
      "links": [
       {
-       "label": "SR 451",
+       "label": "SR <b>451</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7166"
       }
      ],
@@ -1602,10 +1642,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1614,27 +1654,29 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Energieerzeugungs- und Infrastrukturanlagen"
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Energieerzeugungs- und Infrastrukturanlagen"
     }
    ]
   },
@@ -1655,10 +1697,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 357).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 357).",
      "links": [
       {
-       "label": "AS 2022 357",
+       "label": "AS <b>2022</b> 357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/357"
       }
      ],
@@ -1667,10 +1709,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1679,10 +1721,10 @@
     },
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1691,10 +1733,10 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1720,10 +1762,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1749,10 +1791,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1778,10 +1820,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1807,10 +1849,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1836,10 +1878,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1865,10 +1907,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3641).",
+     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS <b>2007</b> 3641).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       }
      ],
@@ -1877,10 +1919,10 @@
     },
     {
      "nr": "46",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -1889,10 +1931,10 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -1901,10 +1943,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -1930,10 +1972,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -1942,10 +1984,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 211.412.11",
+     "text": "SR <b>211.412.11</b>",
      "links": [
       {
-       "label": "SR 211.412.11",
+       "label": "SR <b>211.412.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
       }
      ],
@@ -1954,10 +1996,10 @@
     },
     {
      "nr": "51",
-     "text": "SR 455.1",
+     "text": "SR <b>455.1</b>",
      "links": [
       {
-       "label": "SR 455.1",
+       "label": "SR <b>455.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7198"
       }
      ],
@@ -1981,15 +2023,16 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Abschnitt: Vorrang der Landwirtschaft in der Landwirtschaftszone"
     }
    ]
   },
@@ -2010,10 +2053,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Juli 2003 (AS 2003 1489).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Juli 2003 (AS <b>2003</b> 1489).",
      "links": [
       {
-       "label": "AS 2003 1489",
+       "label": "AS <b>2003</b> 1489",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/236"
       }
      ],
@@ -2022,10 +2065,10 @@
     },
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -2034,10 +2077,10 @@
     },
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -2046,10 +2089,10 @@
     },
     {
      "nr": "75",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -2058,10 +2101,10 @@
     },
     {
      "nr": "76",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -2087,10 +2130,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3641).",
+     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007, in Kraft seit 1. Sept. 2007 (AS <b>2007</b> 3641).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       }
      ],
@@ -2099,10 +2142,10 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2111,10 +2154,10 @@
     },
     {
      "nr": "79",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -2123,10 +2166,10 @@
     },
     {
      "nr": "80",
-     "text": "Aufgehoben durch Ziff. I der V vom 15. Okt. 2025, mit Wirkung seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Aufgehoben durch Ziff. I der V vom 15. Okt. 2025, mit Wirkung seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -2135,10 +2178,10 @@
     },
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2147,10 +2190,10 @@
     },
     {
      "nr": "82",
-     "text": "SR 910.13",
+     "text": "SR <b>910.13</b>",
      "links": [
       {
-       "label": "SR 910.13",
+       "label": "SR <b>910.13</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10406"
       }
      ],
@@ -2159,10 +2202,10 @@
     },
     {
      "nr": "83",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2171,10 +2214,10 @@
     },
     {
      "nr": "84",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2183,10 +2226,10 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2195,10 +2238,10 @@
     },
     {
      "nr": "86",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -2207,10 +2250,10 @@
     },
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2234,14 +2277,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007 (AS 2007 3641). Aufgehoben durch Ziff. I der V vom 2. April 2014, mit Wirkung seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 4. Juli 2007 (AS <b>2007</b> 3641). Aufgehoben durch Ziff. I der V vom 2. April 2014, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2007 3641",
+       "label": "AS <b>2007</b> 3641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/453"
       },
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2267,10 +2310,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS 2012 5537).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5537).",
      "links": [
       {
-       "label": "AS 2012 5537",
+       "label": "AS <b>2012</b> 5537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/641"
       }
      ],
@@ -2279,10 +2322,10 @@
     },
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 659).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 659).",
      "links": [
       {
-       "label": "AS 2025 659",
+       "label": "AS <b>2025</b> 659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
@@ -2304,10 +2347,10 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],
@@ -2329,10 +2372,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS 2014 909).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. April 2014, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 909).",
      "links": [
       {
-       "label": "AS 2014 909",
+       "label": "AS <b>2014</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/199"
       }
      ],

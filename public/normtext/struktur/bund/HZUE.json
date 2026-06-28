@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.274.131",
+  "titel": "Übereinkommen über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen",
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Art. 1 Abs. 1 des BB vom 9. Juni 1994 (AS <b>1994</b> 2807)",
+    "links": [
+     {
+      "label": "AS <b>1994</b> 2807",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1994/2807_2807_2807"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -196,10 +214,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "[BS 12 277. AS 2009 7101]",
+     "text": "[BS <b>12</b> 277. AS <b>2009</b> 7101]",
      "links": [
       {
-       "label": "AS 2009 7101",
+       "label": "AS <b>2009</b> 7101",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/858"
       }
      ],
@@ -208,10 +226,10 @@
     },
     {
      "nr": "3",
-     "text": "SR 0.274.12",
+     "text": "SR <b>0.274.12</b>",
      "links": [
       {
-       "label": "SR 0.274.12",
+       "label": "SR <b>0.274.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1957/467_467_485"
       }
      ],

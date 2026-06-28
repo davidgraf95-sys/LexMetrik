@@ -1,5 +1,35 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "141.0",
+  "titel": "Bundesgesetz über das Schweizer Bürgerrecht",
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2011</b> 2825",
+    "links": [
+     {
+      "label": "BBl <b>2011</b> 2825",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2011/422"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -313,10 +343,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -593,10 +623,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -815,10 +845,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 3 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 3 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -827,10 +857,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 142.51",
+     "text": "SR <b>142.51</b>",
      "links": [
       {
-       "label": "SR 142.51",
+       "label": "SR <b>142.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/301"
       }
      ],
@@ -975,14 +1005,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2016 (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration), in Kraft seit 15. Febr. 2018 (AS 2018 531; BBl 2015 769 1327).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2016 (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration), in Kraft seit 15. Febr. 2018 (AS <b>2018 </b>531; BBl <b>2015</b> 769 1327).",
      "links": [
       {
-       "label": "AS 2018 531",
+       "label": "AS <b>2018 </b>531",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/61"
       },
       {
-       "label": "BBl 2015 769",
+       "label": "BBl <b>2015</b> 769",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/62"
       },
       {
@@ -1012,14 +1042,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2016 (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration), in Kraft seit 15. Febr. 2018 (AS 2018 531; BBl 2015 769 1327).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2016 (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration), in Kraft seit 15. Febr. 2018 (AS <b>2018 </b>531; BBl <b>2015</b> 769 1327).",
      "links": [
       {
-       "label": "AS 2018 531",
+       "label": "AS <b>2018 </b>531",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/61"
       },
       {
-       "label": "BBl 2015 769",
+       "label": "BBl <b>2015</b> 769",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/62"
       },
       {
@@ -1032,10 +1062,10 @@
     },
     {
      "nr": "9",
-     "text": "Berichtigung der Redaktionskommission der BVers vom 21. Juni 2019, veröffentlicht am 9. Juli 2019, betrifft nur den französischen und italienischen Text (AS 2019 2103).",
+     "text": "Berichtigung der Redaktionskommission der BVers vom 21. Juni 2019, veröffentlicht am 9. Juli 2019, betrifft nur den französischen und italienischen Text (AS <b>2019</b> 2103).",
      "links": [
       {
-       "label": "AS 2019 2103",
+       "label": "AS <b>2019</b> 2103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/387"
       }
      ],

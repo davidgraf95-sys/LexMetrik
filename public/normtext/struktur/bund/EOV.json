@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "834.11",
+  "titel": "Erwerbsersatzverordnung",
+  "erlassdatum": "vom 24. November 2004 (Stand am 1. Juni 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) und auf Artikel 34 Absatz 3 des Erwerbsersatzgesetzes vom 25. September 1952 (EOG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
+    "links": [
+     {
+      "label": "AS <b>2021</b> 289",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>830.1</b>",
+    "links": [
+     {
+      "label": "SR <b>830.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>834.1</b>",
+    "links": [
+     {
+      "label": "SR <b>834.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10262"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -48,10 +105,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -77,10 +134,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -89,10 +146,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -101,10 +158,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -113,10 +170,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -125,14 +182,14 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021 (AS 2021 289). Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021 (AS <b>2021</b> 289). Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       },
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -141,10 +198,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -153,10 +210,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 471).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 471).",
      "links": [
       {
-       "label": "AS 2024 471",
+       "label": "AS <b>2024</b> 471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/471"
       }
      ],
@@ -165,10 +222,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 471).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 471).",
      "links": [
       {
-       "label": "AS 2024 471",
+       "label": "AS <b>2024</b> 471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/471"
       }
      ],
@@ -177,10 +234,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -206,10 +263,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -250,10 +307,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -262,10 +319,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -274,10 +331,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -286,10 +343,10 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -298,10 +355,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -415,10 +472,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 836.1",
+     "text": "SR <b>836.1</b>",
      "links": [
       {
-       "label": "SR 836.1",
+       "label": "SR <b>836.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10273"
       }
      ],
@@ -444,10 +501,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -456,10 +513,10 @@
     },
     {
      "nr": "22",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -475,10 +532,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -487,10 +544,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -523,10 +580,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 9 der V vom 1. April 2026, in Kraft seit 1. Juni 2026 (AS 2026 174).",
+     "text": "Fassung gemäss Anhang Ziff. 9 der V vom 1. April 2026, in Kraft seit 1. Juni 2026 (AS <b>2026</b> 174).",
      "links": [
       {
-       "label": "AS 2026 174",
+       "label": "AS <b>2026</b> 174",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/174"
       }
      ],
@@ -552,10 +609,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -581,10 +638,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -610,10 +667,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -654,10 +711,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -666,10 +723,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -695,10 +752,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "SR 831.111",
+     "text": "SR <b>831.111</b>",
      "links": [
       {
-       "label": "SR 831.111",
+       "label": "SR <b>831.111</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10019"
       }
      ],
@@ -724,10 +781,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -736,15 +793,16 @@
     },
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Entschädigung bei Mutterschaft und Entschädigung des andern Elternteils"
     }
    ]
   },
@@ -765,10 +823,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -794,10 +852,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -806,10 +864,10 @@
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juli 2024 (AS 2024 153).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 153).",
      "links": [
       {
-       "label": "AS 2024 153",
+       "label": "AS <b>2024</b> 153",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/153"
       }
      ],
@@ -835,10 +893,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -847,10 +905,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -859,10 +917,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
@@ -902,10 +960,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -914,10 +972,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -943,10 +1001,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -955,10 +1013,10 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -967,10 +1025,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
@@ -1010,10 +1068,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1022,10 +1080,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10282"
       }
      ],
@@ -1034,10 +1092,10 @@
     },
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
@@ -1046,10 +1104,10 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1058,10 +1116,10 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1070,10 +1128,10 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1099,10 +1157,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1111,10 +1169,10 @@
     },
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1123,10 +1181,10 @@
     },
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1152,10 +1210,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1164,10 +1222,10 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1176,10 +1234,10 @@
     },
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1188,10 +1246,10 @@
     },
     {
      "nr": "66",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -1200,10 +1258,10 @@
     },
     {
      "nr": "67",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -1212,10 +1270,10 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -1224,10 +1282,10 @@
     },
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -1236,10 +1294,10 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1248,10 +1306,10 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1277,10 +1335,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1306,10 +1364,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1335,10 +1393,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1364,10 +1422,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1376,10 +1434,10 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -1388,10 +1446,10 @@
     },
     {
      "nr": "79",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -1400,10 +1458,10 @@
     },
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1412,10 +1470,10 @@
     },
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1437,10 +1495,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 471).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 471).",
      "links": [
       {
-       "label": "AS 2024 471",
+       "label": "AS <b>2024</b> 471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/471"
       }
      ],
@@ -1449,10 +1507,10 @@
     },
     {
      "nr": "100",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -1474,10 +1532,10 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "SR 836.1",
+     "text": "SR <b>836.1</b>",
      "links": [
       {
-       "label": "SR 836.1",
+       "label": "SR <b>836.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10273"
       }
      ],
@@ -1486,10 +1544,10 @@
     },
     {
      "nr": "102",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -1498,10 +1556,10 @@
     },
     {
      "nr": "103",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -1510,10 +1568,10 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang Ziff. 11 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 11 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -1535,10 +1593,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -1547,10 +1605,10 @@
     },
     {
      "nr": "106",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -1559,10 +1617,10 @@
     },
     {
      "nr": "107",
-     "text": "Fassung gemäss Anhang Ziff. 11 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 11 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -1595,10 +1653,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -1631,10 +1689,10 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Anhang Ziff. 7 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 750).",
+     "text": "Fassung gemäss Anhang Ziff. 7 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 750).",
      "links": [
       {
-       "label": "AS 2023 750",
+       "label": "AS <b>2023</b> 750",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/750"
       }
      ],
@@ -1643,10 +1701,10 @@
     },
     {
      "nr": "110",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10007"
       }
      ],
@@ -1668,10 +1726,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -1693,58 +1751,58 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "[AS 1959 2143; 1964 337; 1969 315; 1973 2153; 1976 63; 1981 1020 Art. 5; 1983 919 Art. 5; 1987 1397; 1992 1842; 1994 2177; 1996 2685 Anhang 3 Ziff. 9; 1999 1854; 2002 723 Anhang 2 Ziff. 8, 3350, 3942; 2003 5215 Ziff. II; 2004 4377]",
+     "text": "[AS <b>1959 </b>2143; <b>1964</b> 337; <b>1969</b> 315; <b>1973</b> 2153; <b>1976</b> 63; <b>1981</b> 1020 Art. 5; <b>1983</b> 919 Art. 5; <b>1987</b> 1397; <b>1992</b> 1842; <b>1994</b> 2177; <b>1996</b> 2685 Anhang 3 Ziff. 9; <b>1999</b> 1854; <b>2002</b> 723 Anhang 2 Ziff. 8, 3350, 3942; <b>2003</b> 5215 Ziff. II; <b>2004</b> 4377]",
      "links": [
       {
-       "label": "AS 1959 2143",
+       "label": "AS <b>1959 </b>2143",
        "url": "https://fedlex.data.admin.ch/eli/oc/1959/2143_2209_2240"
       },
       {
-       "label": "1964 337",
+       "label": "<b>1964</b> 337",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/337_329_332"
       },
       {
-       "label": "1969 315",
+       "label": "<b>1969</b> 315",
        "url": "https://fedlex.data.admin.ch/eli/oc/1969/315_323_324"
       },
       {
-       "label": "1973 2153",
+       "label": "<b>1973</b> 2153",
        "url": "https://fedlex.data.admin.ch/eli/oc/1973/2153_2153_2153"
       },
       {
-       "label": "1976 63",
+       "label": "<b>1976</b> 63",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/63_63_63"
       },
       {
-       "label": "1981 1020",
+       "label": "<b>1981</b> 1020",
        "url": "https://fedlex.data.admin.ch/eli/oc/1981/1020_1020_1020"
       },
       {
-       "label": "1983 919",
+       "label": "<b>1983</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/919_919_919"
       },
       {
-       "label": "1987 1397",
+       "label": "<b>1987</b> 1397",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/1397_1397_1397"
       },
       {
-       "label": "1992 1842",
+       "label": "<b>1992</b> 1842",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/1842_1842_1842"
       },
       {
-       "label": "1994 2177",
+       "label": "<b>1994</b> 2177",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/2177_2177_2177"
       },
       {
-       "label": "1996 2685",
+       "label": "<b>1996</b> 2685",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2685_2685_2685"
       },
       {
-       "label": "1999 1854",
+       "label": "<b>1999</b> 1854",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/305"
       },
       {
-       "label": "2002 723",
+       "label": "<b>2002</b> 723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/141"
       },
       {
@@ -1756,11 +1814,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/618"
       },
       {
-       "label": "2003 5215",
+       "label": "<b>2003</b> 5215",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/769"
       },
       {
-       "label": "2004 4377",
+       "label": "<b>2004</b> 4377",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/667"
       }
      ],
@@ -1769,10 +1827,10 @@
     },
     {
      "nr": "113",
-     "text": "[AS 1972 1750]",
+     "text": "[AS <b>1972 </b>1750]",
      "links": [
       {
-       "label": "AS 1972 1750",
+       "label": "AS <b>1972 </b>1750",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/1750_1774_1954"
       }
      ],
@@ -1794,10 +1852,10 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Die Änderungen können unter AS 2005 1251 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2005</b> 1251 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2005 1251",
+       "label": "AS <b>2005</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/187"
       }
      ],
@@ -1845,10 +1903,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
@@ -1874,15 +1932,16 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS 2024 719).",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Nov. 2024 (Digitalisierung in der Erwerbsersatzordnung: Einführungsphase des Informationssystems), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 719).",
      "links": [
       {
-       "label": "AS 2024 719",
+       "label": "AS <b>2024</b> 719",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/719"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Abschnitt: Informationssystem"
     }
    ]
   },
@@ -1963,10 +2022,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4697).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4697).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       }
      ],
@@ -1992,14 +2051,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020 (AS 2020 4697). Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2020 (AS <b>2020</b> 4697). Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2020 4697",
+       "label": "AS <b>2020</b> 4697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/845"
       },
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2008,10 +2067,10 @@
     },
     {
      "nr": "76",
-     "text": "Eingefügt durch Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juli 2024 (AS 2024 153).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 153).",
      "links": [
       {
-       "label": "AS 2024 153",
+       "label": "AS <b>2024</b> 153",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/153"
       }
      ],
@@ -2037,27 +2096,29 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 289).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 289).",
      "links": [
       {
-       "label": "AS 2021 289",
+       "label": "AS <b>2021</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/289"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Kapitel: Entschädigung für die Betreuung eines wegen Krankheit oder Unfall gesundheitlich schwer beeinträchtigten Kindes"
     },
     {
      "nr": "83",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Anspruch von Pflegeeltern, Stiefeltern sowie von der arbeitslosen oder arbeitsunfähigen Mutter oder dem arbeitslosen oder arbeitsunfähigen andern Elternteil"
     }
    ]
   },
@@ -2093,10 +2154,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2122,10 +2183,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2134,10 +2195,10 @@
     },
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2178,10 +2239,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2190,10 +2251,10 @@
     },
     {
      "nr": "88",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -2202,10 +2263,10 @@
     },
     {
      "nr": "89",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -2214,10 +2275,10 @@
     },
     {
      "nr": "90",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -2243,10 +2304,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -2272,10 +2333,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -2331,10 +2392,10 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
@@ -2343,10 +2404,10 @@
     },
     {
      "nr": "94",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -2372,15 +2433,16 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 497).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 497).",
      "links": [
       {
-       "label": "AS 2022 497",
+       "label": "AS <b>2022</b> 497",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/497"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2b. Kapitel: Adoptionsentschädigung"
     }
    ]
   },
@@ -2416,10 +2478,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS 2023 756).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023 (Taggelder für den hinterlassenen Elternteil), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 756).",
      "links": [
       {
-       "label": "AS 2023 756",
+       "label": "AS <b>2023</b> 756",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/756"
       }
      ],
@@ -2428,10 +2490,10 @@
     },
     {
      "nr": "97",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -2517,10 +2579,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],

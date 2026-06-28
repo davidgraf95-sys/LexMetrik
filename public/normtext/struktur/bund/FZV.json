@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "831.425",
+  "titel": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge",
+  "erlassdatum": "vom 3. Oktober 1994 (Stand am 1. März 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 26 Absatz 1 des Freizügigkeitsgesetzes vom 17. Dezember 1993 (FZG), Artikel 124a Absatz 3 des Zivilgesetzbuches (ZGB) und Artikel 99 des Versicherungsvertragsgesetzes vom 2. April 1908,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>831.42</b>",
+    "links": [
+     {
+      "label": "SR <b>831.42</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>210</b>",
+    "links": [
+     {
+      "label": "SR <b>210</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>221.229.1</b>",
+    "links": [
+     {
+      "label": "SR <b>221.229.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
+    "links": [
+     {
+      "label": "AS <b>2016</b> 2347",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +83,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Ausdruck gemäss Anhang Ziff. II 35 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 800). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. II 35 der V vom 17. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 800). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2021 800",
+       "label": "AS <b>2021</b> 800",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
       }
      ],
@@ -26,10 +95,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS 2006 4155).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4155).",
      "links": [
       {
-       "label": "AS 2006 4155",
+       "label": "AS <b>2006</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
       }
      ],
@@ -51,10 +120,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -109,10 +178,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -121,10 +190,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -133,10 +202,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -158,10 +227,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -170,10 +239,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -195,10 +264,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 26. Aug. 2020 über Änderungen in der beruflichen Vorsorge, in Kraft seit 1. Okt. 2020 (AS 2020 3755).",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 26. Aug. 2020 über Änderungen in der beruflichen Vorsorge, in Kraft seit 1. Okt. 2020 (AS <b>2020</b> 3755).",
      "links": [
       {
-       "label": "AS 2020 3755",
+       "label": "AS <b>2020</b> 3755",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/681"
       }
      ],
@@ -218,10 +287,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Aufgehoben durch Anhang Ziff. 3 der V vom 27. Okt. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Aufgehoben durch Anhang Ziff. 3 der V vom 27. Okt. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -243,10 +312,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -255,7 +324,7 @@
     },
     {
      "nr": "24",
-     "text": "Heute: nach Art. 19 und 19a.",
+     "text": "Heute: nach Art. 19 und <i>19</i><i>a</i>.",
      "links": [],
      "absatz": "3",
      "item": null
@@ -275,10 +344,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -300,10 +369,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. II der V vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3086).",
+     "text": "Fassung gemäss Ziff. II der V vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3086).",
      "links": [
       {
-       "label": "AS 2000 3086",
+       "label": "AS <b>2000</b> 3086",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/559"
       }
      ],
@@ -325,10 +394,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -337,10 +406,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -349,10 +418,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 4431).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4431).",
      "links": [
       {
-       "label": "AS 2010 4431",
+       "label": "AS <b>2010</b> 4431",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/623"
       }
      ],
@@ -361,10 +430,10 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 4431).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4431).",
      "links": [
       {
-       "label": "AS 2010 4431",
+       "label": "AS <b>2010</b> 4431",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/623"
       }
      ],
@@ -397,10 +466,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -409,10 +478,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS 2006 4155).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4155).",
      "links": [
       {
-       "label": "AS 2006 4155",
+       "label": "AS <b>2006</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
       }
      ],
@@ -421,10 +490,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -433,10 +502,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -458,10 +527,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1996 3450).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3450).",
      "links": [
       {
-       "label": "AS 1996 3450",
+       "label": "AS <b>1996</b> 3450",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3450_3450_3450"
       }
      ],
@@ -470,10 +539,10 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -482,10 +551,10 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -507,10 +576,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS 2006 4155).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4155).",
      "links": [
       {
-       "label": "AS 2006 4155",
+       "label": "AS <b>2006</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
       }
      ],
@@ -519,10 +588,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -531,10 +600,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -567,10 +636,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 4431).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4431).",
      "links": [
       {
-       "label": "AS 2010 4431",
+       "label": "AS <b>2010</b> 4431",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/623"
       }
      ],
@@ -579,10 +648,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -591,10 +660,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -603,10 +672,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 831.441.1",
+     "text": "SR <b>831.441.1</b>",
      "links": [
       {
-       "label": "SR 831.441.1",
+       "label": "SR <b>831.441.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/543_543_543"
       }
      ],
@@ -626,10 +695,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -651,10 +720,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "[AS 1986 2008]",
+     "text": "[AS <b>1986 </b>2008]",
      "links": [
       {
-       "label": "AS 1986 2008",
+       "label": "AS <b>1986 </b>2008",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/2008_2008_2008"
       }
      ],
@@ -676,10 +745,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Die Änderungen können unter AS 1994 2399 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>1994</b> 2399 konsultiert werden.",
      "links": [
       {
-       "label": "AS 1994 2399",
+       "label": "AS <b>1994</b> 2399",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
       }
      ],
@@ -699,10 +768,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -735,10 +804,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I 1 der V vom 26. Aug. 2020 über Änderungen in der beruflichen Vorsorge, in Kraft seit 1. Okt. 2020 (AS 2020 3755).",
+     "text": "Eingefügt durch Ziff. I 1 der V vom 26. Aug. 2020 über Änderungen in der beruflichen Vorsorge, in Kraft seit 1. Okt. 2020 (AS <b>2020</b> 3755).",
      "links": [
       {
-       "label": "AS 2020 3755",
+       "label": "AS <b>2020</b> 3755",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/681"
       }
      ],
@@ -760,10 +829,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 4431).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Sept. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4431).",
      "links": [
       {
-       "label": "AS 2010 4431",
+       "label": "AS <b>2010</b> 4431",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/623"
       }
      ],
@@ -772,10 +841,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 831.441.1",
+     "text": "SR <b>831.441.1</b>",
      "links": [
       {
-       "label": "SR 831.441.1",
+       "label": "SR <b>831.441.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/543_543_543"
       }
      ],
@@ -784,10 +853,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 31. Jan. 2024, in Kraft seit 1. März 2024 (AS 2024 73).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 31. Jan. 2024, in Kraft seit 1. März 2024 (AS <b>2024</b> 73).",
      "links": [
       {
-       "label": "AS 2024 73",
+       "label": "AS <b>2024</b> 73",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/73"
       }
      ],
@@ -796,10 +865,10 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 31. Jan. 2024, in Kraft seit 1. März 2024 (AS 2024 73).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 31. Jan. 2024, in Kraft seit 1. März 2024 (AS <b>2024</b> 73).",
      "links": [
       {
-       "label": "AS 2024 73",
+       "label": "AS <b>2024</b> 73",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/73"
       }
      ],
@@ -808,10 +877,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 6 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 6 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -820,10 +889,10 @@
     },
     {
      "nr": "51",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -845,17 +914,17 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Ursprünglich Art. 19a.",
+     "text": "Ursprünglich Art. 19<i>a</i>.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -864,10 +933,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -876,10 +945,10 @@
     },
     {
      "nr": "57",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -888,27 +957,29 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I der V vom 19. April 1999, in Kraft seit 1. Mai 1999 (AS 1999 1773).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. April 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1773).",
      "links": [
       {
-       "label": "AS 1999 1773",
+       "label": "AS <b>1999</b> 1773",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/285"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Zentralstelle 2. Säule"
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Zentralstelle 2. Säule"
     }
    ]
   },
@@ -925,10 +996,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) angepasst.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -937,10 +1008,10 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 10. und 22. Juni 2011, in Kraft seit 1. Jan. 2012 (AS 2011 3435).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 10. und 22. Juni 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3435).",
      "links": [
       {
-       "label": "AS 2011 3435",
+       "label": "AS <b>2011</b> 3435",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/461"
       }
      ],
@@ -962,10 +1033,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -974,10 +1045,10 @@
     },
     {
      "nr": "61",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -999,10 +1070,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -1035,10 +1106,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "SR 831.432.1",
+     "text": "SR <b>831.432.1</b>",
      "links": [
       {
-       "label": "SR 831.432.1",
+       "label": "SR <b>831.432.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/1662_1662_1662"
       }
      ],
@@ -1047,10 +1118,10 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
@@ -1072,10 +1143,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -1084,15 +1155,16 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS 2016 2347).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 10. Juni 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2347).",
      "links": [
       {
-       "label": "AS 2016 2347",
+       "label": "AS <b>2016</b> 2347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/381"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2b. Abschnitt: Scheidung und gerichtliche Auflösung der eingetragenen Partnerschaft"
     }
    ]
   },
@@ -1134,10 +1206,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 6 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -1170,10 +1242,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -1193,14 +1265,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I der V vom 19. April 1999 (AS 1999 1773). Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. April 1999 (AS <b>1999</b> 1773). Aufgehoben durch Ziff. IV 48 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 1999 1773",
+       "label": "AS <b>1999</b> 1773",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/285"
       },
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -1222,10 +1294,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. II der V vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3086).",
+     "text": "Eingefügt durch Ziff. II der V vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3086).",
      "links": [
       {
-       "label": "AS 2000 3086",
+       "label": "AS <b>2000</b> 3086",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/559"
       }
      ],
@@ -1234,10 +1306,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 831.441.1",
+     "text": "SR <b>831.441.1</b>",
      "links": [
       {
-       "label": "SR 831.441.1",
+       "label": "SR <b>831.441.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/543_543_543"
       }
      ],
@@ -1259,10 +1331,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Nov. 1999, in Kraft seit 1. Jan. 2000 (AS 1999 3604).",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Nov. 1999, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3604).",
      "links": [
       {
-       "label": "AS 1999 3604",
+       "label": "AS <b>1999</b> 3604",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/520"
       }
      ],
@@ -1271,10 +1343,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS 2006 4155).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4155).",
      "links": [
       {
-       "label": "AS 2006 4155",
+       "label": "AS <b>2006</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
       }
      ],
@@ -1283,10 +1355,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 831.441.1",
+     "text": "SR <b>831.441.1</b>",
      "links": [
       {
-       "label": "SR 831.441.1",
+       "label": "SR <b>831.441.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/543_543_543"
       }
      ],
@@ -1295,10 +1367,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -1307,10 +1379,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Fassung gemäss Anhang Ziff. 3 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -1319,10 +1391,10 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS 2006 4155).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 29. Sept. 2006 über die Umsetzung des Partnerschaftsgesetzes vom 18. Juni 2004 in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4155).",
      "links": [
       {
-       "label": "AS 2006 4155",
+       "label": "AS <b>2006</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/615"
       }
      ],

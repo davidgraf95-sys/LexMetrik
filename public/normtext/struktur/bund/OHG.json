@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "312.5",
+  "titel": "Bundesgesetz über die Hilfe an Opfer von Straftaten",
+  "erlassdatum": "vom 23. März 2007 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 123 und 124 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 9. November 2005,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2005</b> 7165",
+    "links": [
+     {
+      "label": "BBl <b>2005</b> 7165",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2005/1167"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,14 +70,14 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 (AS 2010 1881; BBl 2006 1085).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
-       "label": "AS 2010 1881",
+       "label": "AS <b>2010</b> 1881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
@@ -87,10 +132,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 831.30",
+     "text": "SR <b>831.30</b>",
      "links": [
       {
-       "label": "SR 831.30",
+       "label": "SR <b>831.30</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
       }
      ],
@@ -137,14 +182,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. II 8 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 8 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -200,10 +245,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -212,14 +257,14 @@
     },
     {
      "nr": "10",
-     "text": "Fassung zweiter und dritter Satz gemäss Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS 2010 1881; BBl 2006 1085).",
+     "text": "Fassung zweiter und dritter Satz gemäss Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
-       "label": "AS 2010 1881",
+       "label": "AS <b>2010</b> 1881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
@@ -228,14 +273,14 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS 2018 2947; BBl 2015 3431).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 2947; BBl <b>2015</b> 3431).",
      "links": [
       {
-       "label": "AS 2018 2947",
+       "label": "AS <b>2018</b> 2947",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/450"
       },
       {
-       "label": "BBl 2015 3431",
+       "label": "BBl <b>2015</b> 3431",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
@@ -261,14 +306,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 1 Ziff. 7 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 7 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -389,10 +434,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -425,10 +470,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024 über die Anpassung der Entschädigungs- und Genugtuungsbeträge des Opferhilfegesetzes an die Teuerung, in Kraft seit 1. Jan. 2025 (AS 2024 163).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024 über die Anpassung der Entschädigungs- und Genugtuungsbeträge des Opferhilfegesetzes an die Teuerung, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 163).",
      "links": [
       {
-       "label": "AS 2024 163",
+       "label": "AS <b>2024</b> 163",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/163"
       }
      ],
@@ -469,10 +514,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -498,10 +543,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024 über die Anpassung der Entschädigungs- und Genugtuungsbeträge des Opferhilfegesetzes an die Teuerung, in Kraft seit 1. Jan. 2025 (AS 2024 163).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. April 2024 über die Anpassung der Entschädigungs- und Genugtuungsbeträge des Opferhilfegesetzes an die Teuerung, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 163).",
      "links": [
       {
-       "label": "AS 2024 163",
+       "label": "AS <b>2024</b> 163",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/163"
       }
      ],
@@ -542,10 +587,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -554,10 +599,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 321.0",
+     "text": "SR <b>321.0</b>",
      "links": [
       {
-       "label": "SR 321.0",
+       "label": "SR <b>321.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/43/359_375_369"
       }
      ],
@@ -681,10 +726,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 831.30",
+     "text": "SR <b>831.30</b>",
      "links": [
       {
-       "label": "SR 831.30",
+       "label": "SR <b>831.30</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
       }
      ],
@@ -706,18 +751,18 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "[AS 1992 2465; 1997 2952 Ziff. III; 2002 2997; 2005 5685 Anhang Ziff. 20]",
+     "text": "[AS <b>1992</b> 2465; <b>1997</b> 2952 Ziff. III; <b>2002</b> 2997; <b>2005</b> 5685 Anhang Ziff. 20]",
      "links": [
       {
-       "label": "AS 1992 2465",
+       "label": "AS <b>1992</b> 2465",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
       },
       {
-       "label": "1997 2952",
+       "label": "<b>1997</b> 2952",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2952_2952_2952"
       },
       {
-       "label": "2005 5685",
+       "label": "<b>2005</b> 5685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/782"
       }
      ],
@@ -761,10 +806,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 831.30",
+     "text": "SR <b>831.30</b>",
      "links": [
       {
-       "label": "SR 831.30",
+       "label": "SR <b>831.30</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
       }
      ],
@@ -811,14 +856,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 (AS 2010 1881; BBl 2006 1085).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 10 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
-       "label": "AS 2010 1881",
+       "label": "AS <b>2010</b> 1881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
@@ -840,14 +885,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Anhang 1 Ziff. 7 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 7 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],

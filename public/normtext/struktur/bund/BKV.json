@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "642.118.1",
+  "titel": "Verordnung des EFD über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer",
+  "erlassdatum": "vom 10. Februar 1993 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Eidgenössische Finanzdepartement,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 26 des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer (DBG) sowie Artikel 1 Buchstabe a der Verordnung vom 18. Dezember 1991 über Kompetenzzuweisungen bei der direkten Bundessteuer an das Finanzdepartement,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 861).",
+    "links": [
+     {
+      "label": "AS <b>2015</b> 861",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2015/163"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>642.11</b>",
+    "links": [
+     {
+      "label": "SR <b>642.11</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8175"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>642.118</b>",
+    "links": [
+     {
+      "label": "SR <b>642.118</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8189"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -21,10 +78,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 861).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 861).",
      "links": [
       {
-       "label": "AS 2015 861",
+       "label": "AS <b>2015</b> 861",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/163"
       }
      ],
@@ -41,10 +98,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 861).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 861).",
      "links": [
       {
-       "label": "AS 2015 861",
+       "label": "AS <b>2015</b> 861",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/163"
       }
      ],
@@ -61,10 +118,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 861).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 861).",
      "links": [
       {
-       "label": "AS 2015 861",
+       "label": "AS <b>2015</b> 861",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/163"
       }
      ],
@@ -73,10 +130,10 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 16. Sept. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 573).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 16. Sept. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 573).",
      "links": [
       {
-       "label": "AS 2022 573",
+       "label": "AS <b>2022</b> 573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/573"
       }
      ],
@@ -93,10 +150,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4887).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4887).",
      "links": [
       {
-       "label": "AS 2006 4887",
+       "label": "AS <b>2006</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/761"
       }
      ],
@@ -105,10 +162,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4887).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4887).",
      "links": [
       {
-       "label": "AS 2006 4887",
+       "label": "AS <b>2006</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/761"
       }
      ],
@@ -117,10 +174,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4887).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4887).",
      "links": [
       {
-       "label": "AS 2006 4887",
+       "label": "AS <b>2006</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/761"
       }
      ],
@@ -137,10 +194,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 16. April 2014, seit in Kraft 1. Jan. 2016 (AS 2014 1109).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 16. April 2014, seit in Kraft 1. Jan. 2016 (AS <b>2014</b> 1109).",
      "links": [
       {
-       "label": "AS 2014 1109",
+       "label": "AS <b>2014</b> 1109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/241"
       }
      ],
@@ -155,10 +212,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Aufgehobn durch Ziff. I der V des EFD vom 16. April 2014, mit Wirkung seit 1. Jan. 2016 (AS 2014 1109).",
+     "text": "Aufgehobn durch Ziff. I der V des EFD vom 16. April 2014, mit Wirkung seit 1. Jan. 2016 (AS <b>2014</b> 1109).",
      "links": [
       {
-       "label": "AS 2014 1109",
+       "label": "AS <b>2014</b> 1109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/241"
       }
      ],
@@ -175,10 +232,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 861).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 6. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 861).",
      "links": [
       {
-       "label": "AS 2015 861",
+       "label": "AS <b>2015</b> 861",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/163"
       }
      ],
@@ -195,10 +252,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4887).",
+     "text": "Fassung gemäss Ziff. I der V des EFD vom 3. Nov. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4887).",
      "links": [
       {
-       "label": "AS 2006 4887",
+       "label": "AS <b>2006</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/761"
       }
      ],
@@ -215,10 +272,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "[AS 1992 1166]",
+     "text": "[AS <b>1992 </b>1166]",
      "links": [
       {
-       "label": "AS 1992 1166",
+       "label": "AS <b>1992 </b>1166",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/1166_1166_1166"
       }
      ],
@@ -235,10 +292,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 15. März 2021, in Kraft seit 1. Jan. 2022 (AS 2021 165).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 15. März 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 165).",
      "links": [
       {
-       "label": "AS 2021 165",
+       "label": "AS <b>2021</b> 165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/165"
       }
      ],

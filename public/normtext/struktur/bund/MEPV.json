@@ -1,5 +1,110 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "812.213",
+  "titel": "Medizinprodukteverordnung",
+  "erlassdatum": "vom 1. Juli 2020 (Stand am 1. November 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Heilmittelgesetz vom 15. Dezember 2000 (HMG), Artikel 21 Ziffer 2 des Elektrizitätsgesetzes vom 24. Juni 1902, Artikel 5 des Messgesetzes vom 17. Juni 2011, Artikel 4 Absatz 1 des Bundesgesetzes vom 12. Juni 2009 über die Produktesicherheit, Artikel 37 Absatz 1 des Strahlenschutzgesetzes vom 22. März 1991 sowie in Ausführung des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>812.21</b>",
+    "links": [
+     {
+      "label": "SR <b>812.21</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>734.0</b>",
+    "links": [
+     {
+      "label": "SR <b>734.0</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/19/259_252_257"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>941.20</b>",
+    "links": [
+     {
+      "label": "SR <b>941.20</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2012/734"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>930.11</b>",
+    "links": [
+     {
+      "label": "SR <b>930.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2010/347"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>814.50</b>",
+    "links": [
+     {
+      "label": "SR <b>814.50</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1994/1933_1933_1933"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR <b>946.51</b>",
+    "links": [
+     {
+      "label": "SR <b>946.51</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
+    "links": [
+     {
+      "label": "AS <b>2022</b> 291",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -33,10 +138,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -45,10 +150,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -74,10 +179,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -103,10 +208,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -122,10 +227,10 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -189,10 +294,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -201,10 +306,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 812.211",
+     "text": "SR <b>812.211</b>",
      "links": [
       {
-       "label": "SR 812.211",
+       "label": "SR <b>812.211</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/442"
       }
      ],
@@ -213,10 +318,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -225,10 +330,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -237,10 +342,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -266,10 +371,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -278,10 +383,10 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -290,10 +395,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -302,10 +407,10 @@
     },
     {
      "nr": "25",
-     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -331,10 +436,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "SR 819.14",
+     "text": "SR <b>819.14</b>",
      "links": [
       {
-       "label": "SR 819.14",
+       "label": "SR <b>819.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/263"
       }
      ],
@@ -461,10 +566,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -473,10 +578,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 810.306",
+     "text": "SR <b>810.306</b>",
      "links": [
       {
-       "label": "SR 810.306",
+       "label": "SR <b>810.306</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/553"
       }
      ],
@@ -485,10 +590,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -545,10 +650,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -564,15 +669,16 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Klassifizierung, Produktinformation und Produktidentifikation"
     }
    ]
   },
@@ -600,10 +706,10 @@
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -612,10 +718,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -655,10 +761,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -667,10 +773,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -679,10 +785,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -722,10 +828,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -734,10 +840,10 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -818,10 +924,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -830,10 +936,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -849,14 +955,14 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika (AS 2022 291). Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika (AS <b>2022</b> 291). Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       },
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -882,10 +988,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -942,10 +1048,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -992,10 +1098,10 @@
     },
     {
      "nr": "66",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1051,10 +1157,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1070,10 +1176,10 @@
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1124,10 +1230,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "SR 812.212.1",
+     "text": "SR <b>812.212.1</b>",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/786"
       }
      ],
@@ -1149,10 +1255,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "SR 810.21",
+     "text": "SR <b>810.21</b>",
      "links": [
       {
-       "label": "SR 810.21",
+       "label": "SR <b>810.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/279"
       }
      ],
@@ -1161,10 +1267,10 @@
     },
     {
      "nr": "74",
-     "text": "SR 810.211",
+     "text": "SR <b>810.211</b>",
      "links": [
       {
-       "label": "SR 810.211",
+       "label": "SR <b>810.211</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/280"
       }
      ],
@@ -1186,10 +1292,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "SR 812.212.1",
+     "text": "SR <b>812.212.1</b>",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/786"
       }
      ],
@@ -1198,10 +1304,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 810.21",
+     "text": "SR <b>810.21</b>",
      "links": [
       {
-       "label": "SR 810.21",
+       "label": "SR <b>810.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/279"
       }
      ],
@@ -1234,10 +1340,10 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -1414,10 +1520,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -1619,10 +1725,10 @@
     },
     {
      "nr": "91",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1631,10 +1737,10 @@
     },
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1724,10 +1830,10 @@
     },
     {
      "nr": "97",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -1736,15 +1842,16 @@
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Registrierung von Wirtschaftsakteuren"
     }
    ]
   },
@@ -1891,10 +1998,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1925,10 +2032,10 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -1937,10 +2044,10 @@
     },
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -1966,10 +2073,10 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -1995,10 +2102,10 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2031,10 +2138,10 @@
     },
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -2043,10 +2150,10 @@
     },
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -2055,10 +2162,10 @@
     },
     {
      "nr": "111",
-     "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -2106,10 +2213,10 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2131,10 +2238,10 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2143,10 +2250,10 @@
     },
     {
      "nr": "114",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2168,10 +2275,10 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "SR 941.210",
+     "text": "SR <b>941.210</b>",
      "links": [
       {
-       "label": "SR 941.210",
+       "label": "SR <b>941.210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/245"
       }
      ],
@@ -2242,10 +2349,10 @@
     },
     {
      "nr": "118",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2285,10 +2392,10 @@
     },
     {
      "nr": "122",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -2310,10 +2417,10 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2414,10 +2521,10 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "SR 235.11",
+     "text": "SR <b>235.11</b>",
      "links": [
       {
-       "label": "SR 235.11",
+       "label": "SR <b>235.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
       }
      ],
@@ -2426,10 +2533,10 @@
     },
     {
      "nr": "125",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -2438,10 +2545,10 @@
     },
     {
      "nr": "126",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -2482,10 +2589,10 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2595,10 +2702,10 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -2607,10 +2714,10 @@
     },
     {
      "nr": "130",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -2636,10 +2743,10 @@
    "fussnoten": [
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -2718,10 +2825,10 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2747,10 +2854,10 @@
    "fussnoten": [
     {
      "nr": "136",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -2807,22 +2914,22 @@
    "fussnoten": [
     {
      "nr": "139",
-     "text": "[AS 2001 3487; 2004 4037 Ziff. I 5, II Abs. 2; 2008 4377 Anhang 5 Ziff. 2; 2010 1215, 2749 Ziff. I 7; 2015 999; 2017 5935; 2019 999 Art. 28 Abs. 2; 2020 2975]",
+     "text": "[AS <b>2001</b> 3487;<b>2004 </b>4037 Ziff. I 5, II Abs. 2; <b>2008 </b>4377 Anhang 5 Ziff. 2; <b>2010 </b>1215, 2749 Ziff. I 7; <b>2015</b> 999; <b>2017</b> 5935; <b>2019</b> 999 Art. 28 Abs. 2; <b>2020</b> 2975]",
      "links": [
       {
-       "label": "AS 2001 3487",
+       "label": "AS <b>2001</b> 3487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/520"
       },
       {
-       "label": "2004 4037",
+       "label": "<b>2004 </b>4037",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/591"
       },
       {
-       "label": "2008 4377",
+       "label": "<b>2008 </b>4377",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/614"
       },
       {
-       "label": "2010 1215",
+       "label": "<b>2010 </b>1215",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/170"
       },
       {
@@ -2830,19 +2937,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/358"
       },
       {
-       "label": "2015 999",
+       "label": "<b>2015</b> 999",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/189"
       },
       {
-       "label": "2017 5935",
+       "label": "<b>2017</b> 5935",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/650"
       },
       {
-       "label": "2019 999",
+       "label": "<b>2019</b> 999",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/183"
       },
       {
-       "label": "2020 2975",
+       "label": "<b>2020</b> 2975",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/551"
       }
      ],
@@ -2851,10 +2958,10 @@
     },
     {
      "nr": "140",
-     "text": "[AS 2006 3679]",
+     "text": "[AS <b>2006</b> 3679]",
      "links": [
       {
-       "label": "AS 2006 3679",
+       "label": "AS <b>2006</b> 3679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/560"
       }
      ],
@@ -2880,10 +2987,10 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -2899,10 +3006,10 @@
     },
     {
      "nr": "143",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -2928,10 +3035,10 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3025,10 +3132,10 @@
    "fussnoten": [
     {
      "nr": "152",
-     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -3054,10 +3161,10 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3073,10 +3180,10 @@
     },
     {
      "nr": "155",
-     "text": "SR 810.306",
+     "text": "SR <b>810.306</b>",
      "links": [
       {
-       "label": "SR 810.306",
+       "label": "SR <b>810.306</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/553"
       }
      ],
@@ -3116,10 +3223,10 @@
     },
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3128,10 +3235,10 @@
     },
     {
      "nr": "159",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3140,10 +3247,10 @@
     },
     {
      "nr": "160",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3152,10 +3259,10 @@
     },
     {
      "nr": "161",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS 2023 576).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
-       "label": "AS 2023 576",
+       "label": "AS <b>2023</b> 576",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
       }
      ],
@@ -3164,10 +3271,10 @@
     },
     {
      "nr": "162",
-     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -3193,10 +3300,10 @@
    "fussnoten": [
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -3241,10 +3348,10 @@
    "fussnoten": [
     {
      "nr": "167",
-     "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -3270,10 +3377,10 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -3299,10 +3406,10 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS 2021 281).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       }
      ],
@@ -3328,10 +3435,10 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -3362,14 +3469,14 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021 (AS 2021 281). Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021 (AS <b>2021</b> 281). Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2021 281",
+       "label": "AS <b>2021</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
       },
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -3391,10 +3498,10 @@
    "fussnoten": [
     {
      "nr": "119",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],
@@ -3416,10 +3523,10 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS 2022 291).",
+     "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
-       "label": "AS 2022 291",
+       "label": "AS <b>2022</b> 291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/291"
       }
      ],

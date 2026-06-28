@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "935.61",
+  "titel": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte",
+  "erlassdatum": "vom 23. Juni 2000 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 95 der Bundesverfassung, in Ausführung des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit, nach Einsicht in die Botschaft des Bundesrates vom 28. April 1999,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.142.112.681</b>",
+    "links": [
+     {
+      "label": "SR <b>0.142.112.681</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1999</b> 6013",
+    "links": [
+     {
+      "label": "BBl <b>1999</b> 6013",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_6013_5331_4983"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +82,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 0.142.113.672",
+     "text": "SR <b>0.142.113.672</b>",
      "links": [
       {
-       "label": "SR 0.142.113.672",
+       "label": "SR <b>0.142.113.672</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1059"
       }
      ],
@@ -37,14 +94,14 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Anhang des BB vom 27. Sept. 2024 über die Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und über dessen Umsetzung, in Kraft seit 1. Juli 2025 (AS 2025 478; BBl 2024 460).",
+     "text": "Eingefügt durch Anhang des BB vom 27. Sept. 2024 über die Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und über dessen Umsetzung, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 478; BBl <b>2024</b> 460).",
      "links": [
       {
-       "label": "AS 2025 478",
+       "label": "AS <b>2025</b> 478",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/478"
       },
       {
-       "label": "BBl 2024 460",
+       "label": "BBl <b>2024</b> 460",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/460"
       }
      ],
@@ -53,10 +110,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 0.412.136.7",
+     "text": "SR <b>0.412.136.7</b>",
      "links": [
       {
-       "label": "SR 0.412.136.7",
+       "label": "SR <b>0.412.136.7</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2025/203"
       }
      ],
@@ -65,14 +122,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Abk. zwischen der Schweiz und dem Vereinigten Königreich über die Rechte der Bürgerinnen und Bürger infolge dessen Austritt aus der EU und des Wegfalls des Freizügigkeitsabkommens, in Kraft seit 1. März 2021 (AS 2021 85; BBl 2020 1029).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Abk. zwischen der Schweiz und dem Vereinigten Königreich über die Rechte der Bürgerinnen und Bürger infolge dessen Austritt aus der EU und des Wegfalls des Freizügigkeitsabkommens, in Kraft seit 1. März 2021 (AS <b>2021</b> 85; BBl <b>2020</b> 1029).",
      "links": [
       {
-       "label": "AS 2021 85",
+       "label": "AS <b>2021</b> 85",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/85"
       },
       {
-       "label": "BBl 2020 1029",
+       "label": "BBl <b>2020</b> 1029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/226"
       }
      ],
@@ -81,14 +138,14 @@
     },
     {
      "nr": "8",
-     "text": "Ausdruck beigefügt durch Ziff. I des BG vom 22. März 2002, in Kraft seit 1. Aug. 2002 (AS 2002 2134; BBl 2002 2637). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck beigefügt durch Ziff. I des BG vom 22. März 2002, in Kraft seit 1. Aug. 2002 (AS <b>2002</b> 2134; BBl <b>2002</b> 2637). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2002 2134",
+       "label": "AS <b>2002</b> 2134",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/318"
       },
       {
-       "label": "BBl 2002 2637",
+       "label": "BBl <b>2002</b> 2637",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/337"
       }
      ],
@@ -97,22 +154,22 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Abk. zwischen der Schweiz und dem Vereinigten Königreich über die Rechte der Bürgerinnen und Bürger infolge dessen Austritt aus der EU und des Wegfalls des Freizügigkeitsabkommens (AS 2021 85; BBl 2020 1029). Fassung gemäss Anhang des BB vom 27. Sept. 2024 über die Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und über dessen Umsetzung, in Kraft seit 1. Juli 2025 (AS 2025 478; BBl 2024 460).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Abk. zwischen der Schweiz und dem Vereinigten Königreich über die Rechte der Bürgerinnen und Bürger infolge dessen Austritt aus der EU und des Wegfalls des Freizügigkeitsabkommens (AS <b>2021</b> 85; BBl <b>2020</b> 1029). Fassung gemäss Anhang des BB vom 27. Sept. 2024 über die Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und über dessen Umsetzung, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 478; BBl <b>2024</b> 460).",
      "links": [
       {
-       "label": "AS 2021 85",
+       "label": "AS <b>2021</b> 85",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/85"
       },
       {
-       "label": "BBl 2020 1029",
+       "label": "BBl <b>2020</b> 1029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/226"
       },
       {
-       "label": "AS 2025 478",
+       "label": "AS <b>2025</b> 478",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/478"
       },
       {
-       "label": "BBl 2024 460",
+       "label": "BBl <b>2024</b> 460",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/460"
       }
      ],
@@ -178,14 +235,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4399; BBl 2005 6621).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4399; BBl <b>2005 </b>6621).",
      "links": [
       {
-       "label": "AS 2006 4399",
+       "label": "AS <b>2006</b> 4399",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/668"
       },
       {
-       "label": "BBl 2005 6621",
+       "label": "BBl <b>2005 </b>6621",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1029"
       }
      ],
@@ -207,14 +264,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang 1 Ziff. 13 des Strafregistergesetzes vom 17. Juni 2016, in Kraft seit 23. Jan. 2023 (AS 2022 600; BBl 2014 5713).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 13 des Strafregistergesetzes vom 17. Juni 2016, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 600; BBl <b>2014</b> 5713).",
      "links": [
       {
-       "label": "AS 2022 600",
+       "label": "AS <b>2022</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/600"
       },
       {
-       "label": "BBl 2014 5713",
+       "label": "BBl <b>2014</b> 5713",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
@@ -223,10 +280,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 330",
+     "text": "SR <b>330</b>",
      "links": [
       {
-       "label": "SR 330",
+       "label": "SR <b>330</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/600"
       }
      ],
@@ -281,14 +338,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4399; BBl 2005 6621).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4399; BBl <b>2005 </b>6621).",
      "links": [
       {
-       "label": "AS 2006 4399",
+       "label": "AS <b>2006</b> 4399",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/668"
       },
       {
-       "label": "BBl 2005 6621",
+       "label": "BBl <b>2005 </b>6621",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1029"
       }
      ],
@@ -332,14 +389,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4399; BBl 2005 6621).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4399; BBl <b>2005 </b>6621).",
      "links": [
       {
-       "label": "AS 2006 4399",
+       "label": "AS <b>2006</b> 4399",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/668"
       },
       {
-       "label": "BBl 2005 6621",
+       "label": "BBl <b>2005 </b>6621",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1029"
       }
      ],
@@ -568,10 +625,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Die Änderung kann unter AS 2002 863 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2002</b> 863 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2002 863",
+       "label": "AS <b>2002</b> 863",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/153"
       }
      ],
@@ -604,10 +661,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -616,10 +673,10 @@
     },
     {
      "nr": "20",
-     "text": "AS 2002 685. Dieses BG ist am 1. Juni 2002 in Kraft getreten.",
+     "text": "AS <b>2002</b> 685. Dieses BG ist am 1. Juni 2002 in Kraft getreten.",
      "links": [
       {
-       "label": "AS 2002 685",
+       "label": "AS <b>2002</b> 685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/139"
       }
      ],
@@ -628,14 +685,14 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2002, in Kraft seit 1. Aug. 2002 (AS 2002 2134; BBl 2002 2637).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2002, in Kraft seit 1. Aug. 2002 (AS <b>2002</b> 2134; BBl <b>2002</b> 2637).",
      "links": [
       {
-       "label": "AS 2002 2134",
+       "label": "AS <b>2002</b> 2134",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/318"
       },
       {
-       "label": "BBl 2002 2637",
+       "label": "BBl <b>2002</b> 2637",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/337"
       }
      ],
@@ -657,14 +714,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 18. Juni 2010 über die Unternehmens-Identifikationsnummer, in Kraft seit 1. Jan. 2011 (AS 2010 4989; BBl 2009 7855).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 18. Juni 2010 über die Unternehmens-Identifikationsnummer, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4989; BBl <b>2009</b> 7855).",
      "links": [
       {
-       "label": "AS 2010 4989",
+       "label": "AS <b>2010</b> 4989",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/705"
       },
       {
-       "label": "BBl 2009 7855",
+       "label": "BBl <b>2009</b> 7855",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1395"
       }
      ],
@@ -673,10 +730,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 431.03",
+     "text": "SR <b>431.03</b>",
      "links": [
       {
-       "label": "SR 431.03",
+       "label": "SR <b>431.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/705"
       }
      ],
@@ -696,19 +753,20 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 27. Sept. 2024 über den Abschluss internationaler Verträge über die Anerkennung von Berufsqualifikationen, in Kraft seit 1. Juli 2025 (AS 2025 477; BBl 2024 460).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 27. Sept. 2024 über den Abschluss internationaler Verträge über die Anerkennung von Berufsqualifikationen, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 477; BBl <b>2024</b> 460).",
      "links": [
       {
-       "label": "AS 2025 477",
+       "label": "AS <b>2025</b> 477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/477"
       },
       {
-       "label": "BBl 2024 460",
+       "label": "BBl <b>2024</b> 460",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/460"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7a. Abschnitt: Internationale Verträge"
     }
    ]
   }

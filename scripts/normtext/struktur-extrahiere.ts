@@ -21,9 +21,12 @@ export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;
   /** Marginalien-Kette (Randtitel) von aussen nach innen. */
   marginalie: string[];
-  /** Fussnoten-IDs, die an einer Überschrift/einem Randtitel über diesem Artikel
-   *  hängen (section-heading-footnote) — am ERSTEN Artikel unter der Überschrift. */
-  randtitelFnIds?: string[];
+  /** Fussnoten, die an einer Überschrift/einem Randtitel über diesem Artikel
+   *  hängen (section-heading-footnote) — am ERSTEN Artikel unter der Überschrift.
+   *  G11: die ASSOZIATION zur konkreten Überschrift (label + kind) bleibt erhalten,
+   *  damit der Marker am richtigen Sektions-/Randtitel-Kopf gesetzt werden kann
+   *  (statt anonym auf Artikelebene zu fallen). */
+  randtitelFn?: Array<{ fnId: string; label: string; kind: 'g' | 'm' }>;
 }
 
 const TAG = /<(\/?)(div|article|h[1-6])\b([^>]*)>/gi;
@@ -97,14 +100,21 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
           const id = attrs.match(ID);
           if (id) {
             // Section-heading-Fussnoten: am ERSTEN Artikel unter der Überschrift
-            // anhängen (Vorfahren mit noch nicht zugeordneten fnIds).
-            const rfn: string[] = [];
-            for (const c of context) { if (c.fnIds.length && !c.attached) { rfn.push(...c.fnIds); c.attached = true; } }
+            // anhängen (Vorfahren mit noch nicht zugeordneten fnIds). G11: jede
+            // fnId behält ihr Quell-Heading (label + kind), damit der Marker später
+            // am richtigen Kopf gesetzt werden kann.
+            const rfn: Array<{ fnId: string; label: string; kind: 'g' | 'm' }> = [];
+            for (const c of context) {
+              if (c.fnIds.length && !c.attached) {
+                for (const fnId of c.fnIds) rfn.push({ fnId, label: c.label, kind: c.kind });
+                c.attached = true;
+              }
+            }
             artId = id[1].slice(4);
             result[artId] = {
               gliederung: context.filter((c) => c.kind === 'g').map((c) => ({ ebene: c.ebene, label: c.label })),
               marginalie: context.filter((c) => c.kind === 'm').map((c) => c.label),
-              ...(rfn.length ? { randtitelFnIds: rfn } : {}),
+              ...(rfn.length ? { randtitelFn: rfn } : {}),
             };
           }
         }

@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "958.1",
+  "titel": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel",
+  "erlassdatum": "vom 19. Juni 2015 (Stand am 1. Februar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 95 und 98 Absätze 1 und 2 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 3. September 2014,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2014</b> 7483",
+    "links": [
+     {
+      "label": "BBl <b>2014</b> 7483",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +70,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -36,7 +81,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -45,10 +90,10 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -56,7 +101,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -65,10 +110,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -77,10 +122,10 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -88,7 +133,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -97,10 +142,10 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -108,7 +153,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -244,18 +289,18 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -285,10 +330,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -394,10 +439,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -427,10 +472,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -438,7 +483,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -563,10 +608,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -574,7 +619,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -604,10 +649,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 951.11",
+     "text": "SR <b>951.11</b>",
      "links": [
       {
-       "label": "SR 951.11",
+       "label": "SR <b>951.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/221"
       }
      ],
@@ -661,10 +706,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -672,7 +717,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -854,14 +899,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -870,18 +915,18 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -890,10 +935,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -902,10 +947,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -914,18 +959,18 @@
     },
     {
      "nr": "20",
-     "text": "Ausdruck gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -934,14 +979,14 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -950,14 +995,14 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -966,14 +1011,14 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -982,14 +1027,14 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1019,14 +1064,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2019 4417; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2019 4417",
+       "label": "AS <b>2019</b> 4417",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/758"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1042,10 +1087,10 @@
     },
     {
      "nr": "27",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -1054,10 +1099,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -1066,14 +1111,14 @@
     },
     {
      "nr": "29",
-     "text": "Eingefügt durch Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2019 4417; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2019 4417",
+       "label": "AS <b>2019</b> 4417",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/758"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1103,14 +1148,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2019 4417; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2019 4417",
+       "label": "AS <b>2019</b> 4417",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/758"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1119,10 +1164,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -1131,14 +1176,14 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2019 4417; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2019 4417",
+       "label": "AS <b>2019</b> 4417",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/758"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1244,14 +1289,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS 2023 731; BBl 2022 1673).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS <b>2023</b> 731; BBl <b>2022</b> 1673).",
      "links": [
       {
-       "label": "AS 2023 731",
+       "label": "AS <b>2023</b> 731",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/731"
       },
       {
-       "label": "BBl 2022 1673",
+       "label": "BBl <b>2022</b> 1673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1673"
       }
      ],
@@ -1300,10 +1345,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -1311,7 +1356,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -1981,10 +2026,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "SR 351.1",
+     "text": "SR <b>351.1</b>",
      "links": [
       {
-       "label": "SR 351.1",
+       "label": "SR <b>351.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/846_846_846"
       }
      ],
@@ -2091,10 +2136,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -2103,10 +2148,10 @@
     },
     {
      "nr": "42",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2115,10 +2160,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2174,10 +2219,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2203,10 +2248,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -2215,14 +2260,14 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2248,10 +2293,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -2259,7 +2304,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -2268,10 +2313,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -2279,7 +2324,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -2305,14 +2350,14 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2321,14 +2366,14 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2388,10 +2433,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -2400,18 +2445,18 @@
     },
     {
      "nr": "52",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2420,10 +2465,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -2432,10 +2477,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -2444,18 +2489,18 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2464,10 +2509,10 @@
     },
     {
      "nr": "56",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -2725,10 +2770,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2758,18 +2803,18 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2951,10 +2996,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2984,10 +3029,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -3118,10 +3163,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -3177,10 +3222,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -3236,10 +3281,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -3370,10 +3415,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -3414,10 +3459,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "SR 173.32",
+     "text": "SR <b>173.32</b>",
      "links": [
       {
-       "label": "SR 173.32",
+       "label": "SR <b>173.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/352"
       }
      ],
@@ -3443,10 +3488,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3454,7 +3499,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3463,10 +3508,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3474,7 +3519,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3500,10 +3545,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3511,7 +3556,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3552,10 +3597,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -3596,18 +3641,18 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 18 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -3723,10 +3768,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3734,7 +3779,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3743,10 +3788,10 @@
     },
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3754,7 +3799,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3763,10 +3808,10 @@
     },
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3774,7 +3819,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3783,10 +3828,10 @@
     },
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3794,7 +3839,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3820,10 +3865,10 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3831,7 +3876,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -4010,10 +4055,10 @@
     },
     {
      "nr": "80",
-     "text": "V vom 5. Juli 2017 (AS 2017 3713).",
+     "text": "V vom 5. Juli 2017 (AS <b>2017</b> 3713).",
      "links": [
       {
-       "label": "AS 2017 3713",
+       "label": "AS <b>2017</b> 3713",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/428"
       }
      ],
@@ -4039,18 +4084,18 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Febr. 2024 (AS 2024 33; BBl 2022 3127; 2023 723).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Febr. 2024 (AS <b>2024</b> 33; BBl <b>2022</b> 3127; <b>2023</b> 723).",
      "links": [
       {
-       "label": "AS 2024 33",
+       "label": "AS <b>2024</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/33"
       },
       {
-       "label": "BBl 2022 3127",
+       "label": "BBl <b>2022</b> 3127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/3127"
       },
       {
-       "label": "2023 723",
+       "label": "<b>2023</b> 723",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/723"
       }
      ],
@@ -4080,14 +4125,14 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS 2023 731; BBl 2022 1673).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS <b>2023</b> 731; BBl <b>2022 </b>1673).",
      "links": [
       {
-       "label": "AS 2023 731",
+       "label": "AS <b>2023</b> 731",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/731"
       },
       {
-       "label": "BBl 2022 1673",
+       "label": "BBl <b>2022 </b>1673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1673"
       }
      ],
@@ -4129,19 +4174,20 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS 2023 731; BBl 2022 1673).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz), in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2028 (AS <b>2023</b> 731; BBl <b>2022</b> 1673).",
      "links": [
       {
-       "label": "AS 2023 731",
+       "label": "AS <b>2023</b> 731",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/731"
       },
       {
-       "label": "BBl 2022 1673",
+       "label": "BBl <b>2022</b> 1673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1673"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz"
     }
    ]
   },
@@ -4200,10 +4246,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 10 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -4211,12 +4257,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Kapitel: DLT-Handelssysteme"
     }
    ]
   },
@@ -4252,10 +4299,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -4264,10 +4311,10 @@
     },
     {
      "nr": "38",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -4293,10 +4340,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],

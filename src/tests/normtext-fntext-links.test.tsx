@@ -45,3 +45,30 @@ describe('M11 fnTextMitLinks — SR-Verweis intern vs. Fedlex-Fallback', () => {
     expect(out).not.toContain('/gesetze/bund');
   });
 });
+
+describe('G15 fnTextMitLinks — Hervorhebungen (fett/kursiv) als Rich-Text', () => {
+  it('<b>/<i> im Text werden zu <strong>/<em>', () => {
+    const fn: Fussnote = {
+      nr: '1',
+      text: 'In Kraft seit 2004 (AS <b>2004</b> 2767; <i>BBl 2003 1</i>).',
+      links: [{ label: 'AS <b>2004</b> 2767', url: 'https://fedlex.data.admin.ch/eli/oc/2004/340' }],
+    };
+    const out = render(fn);
+    expect(out).toContain('<strong>2004</strong>'); // fett erhalten
+    expect(out).toContain('<em>BBl 2003 1</em>');    // kursiv erhalten
+    // Link trägt die Hervorhebung INNERHALB des Ankers
+    expect(out).toContain('href="https://fedlex.data.admin.ch/eli/oc/2004/340"');
+  });
+
+  it('SR-Erkennung (M11) greift trotz Fett im Label («SR <b>220</b>» → intern OR)', () => {
+    const fn: Fussnote = {
+      nr: '2',
+      text: 'Vgl. das OR (SR <b>220</b>).',
+      links: [{ label: 'SR <b>220</b>', url: 'https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101' }],
+    };
+    const out = render(fn);
+    expect(out).toContain('href="/gesetze/bund/OR"');     // intern verlinkt
+    expect(out).toContain('<strong>220</strong>');         // Fett im Link-Text erhalten
+    expect(out).not.toContain('target="_blank"');
+  });
+});

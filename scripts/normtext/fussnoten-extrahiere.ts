@@ -16,15 +16,29 @@
 import { findeDlEnde, findeDdEnde } from './extrahiere-fedlex';
 
 export interface FnLink { label: string; url: string }
-export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null; item?: string | null }
+export interface Fussnote {
+  nr: string; text: string; links: FnLink[];
+  absatz?: string | null; item?: string | null;
+  /** G11: geh\u00f6rt diese Fussnote zu einer \u00dcberschrift/einem Randtitel (section-
+   *  heading-footnote), tr\u00e4gt `sektion` dessen Label \u2192 Marker am Sektions-Kopf. */
+  sektion?: string;
+}
 
+// G15: Hervorhebungen (fett/kursiv) im Fussnotentext bleiben erhalten \u2014 Fedlex
+// setzt AS-/BBl-/SR-Nummern in <b> und Verweise teils in <i>. <b>/<i> werden auf
+// bare Tags normalisiert (Attribute weg) und behalten, alle anderen Tags fallen.
+// fnTextMitLinks (Lesesicht) rendert daraus Rich-Text; die Link-Label-Erkennung
+// und die SR-Erkennung (M11) strippen die Tags wieder, bleiben also robust.
 function clean(s: string): string {
   return s
     .replace(/<sup\b[\s\S]*?<\/sup>/gi, '')
-    .replace(/<[^>]+>/g, '')
+    .replace(/<(b|i)\b[^>]*>/gi, (_m, t: string) => `<${t.toLowerCase()}>`)
+    .replace(/<\/(b|i)\s*>/gi, (_m, t: string) => `</${t.toLowerCase()}>`)
+    .replace(/<(?!\/?[bi]>)[^>]*>/g, '')
     .replace(/&nbsp;|\u00a0/g, ' ')
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/\s+/g, ' ')
+    .replace(/<([bi])>\s*<\/\1>/gi, '') // leere Hervorhebungen (Fedlex-Artefakt)
     .trim();
 }
 

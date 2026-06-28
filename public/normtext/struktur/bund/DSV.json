@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "235.11",
+  "titel": "Verordnung über den Datenschutz",
+  "erlassdatum": "vom 31. August 2022 (Stand am 1. Dezember 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 8 Absatz 3, 10 Absatz 4, 12 Absatz 5, 16 Absatz 3, 25 Absatz 6, 28 Absatz 3, 33, 59 Absätze 2 und 3 des Datenschutzgesetzes vom 25. September 2020 (DSG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>235.1</b>",
+    "links": [
+     {
+      "label": "SR <b>235.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -63,10 +96,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -82,10 +115,10 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -94,10 +127,10 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -106,10 +139,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -178,10 +211,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -617,10 +650,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
       }
      ],
@@ -653,10 +686,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. II 7 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 746).",
+     "text": "Fassung gemäss Ziff. II 7 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 746).",
      "links": [
       {
-       "label": "AS 2023 746",
+       "label": "AS <b>2023</b> 746",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/746"
       }
      ],
@@ -665,10 +698,10 @@
     },
     {
      "nr": "11",
-     "text": "Aufgehoben durch Anhang Ziff. 2 der Cybersicherheitsverordnung vom 7. März 2025, mit Wirkung seit 1. April 2025 (AS 2025 169).",
+     "text": "Aufgehoben durch Anhang Ziff. 2 der Cybersicherheitsverordnung vom 7. März 2025, mit Wirkung seit 1. April 2025 (AS <b>2025</b> 169).",
      "links": [
       {
-       "label": "AS 2025 169",
+       "label": "AS <b>2025</b> 169",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/169"
       }
      ],
@@ -712,10 +745,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
       }
      ],
@@ -755,10 +788,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],
@@ -791,10 +824,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 694).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 694).",
      "links": [
       {
-       "label": "AS 2025 694",
+       "label": "AS <b>2025</b> 694",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/694"
       }
      ],

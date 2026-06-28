@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "232.141",
+  "titel": "Verordnung über die Erfindungspatente",
+  "erlassdatum": "vom 19. Oktober 1977 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 35b, 40d Absatz 5, 40e Absatz 5, 50a Absatz 4, 56 Absatz 3, 59c Absatz 4, 65, 140l und 141 des Patentgesetzes vom 25. Juni 1954 (PatG) und auf Artikel 13 des Bundesgesetzes vom 24. März 1995 über Statut und Aufgaben des Eidgenössischen Instituts für Geistiges Eigentum (IGEG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Abkürzung eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
+    "links": [
+     {
+      "label": "AS <b>1995</b> 5164",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>232.14</b>",
+    "links": [
+     {
+      "label": "SR <b>232.14</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1955/871_893_899"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>172.010.31</b>",
+    "links": [
+     {
+      "label": "SR <b>172.010.31</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1995/5050_5050_5050"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
+    "links": [
+     {
+      "label": "AS <b>2018</b> 3551",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,10 +87,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -30,10 +99,10 @@
     },
     {
      "nr": "7",
-     "text": "Ausdruck gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -42,10 +111,10 @@
     },
     {
      "nr": "8",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -54,14 +123,14 @@
     },
     {
      "nr": "9",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst (AS <b>2021</b> 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
       },
       {
-       "label": "AS 2021 589",
+       "label": "AS <b>2021</b> 589",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
       }
      ],
@@ -70,10 +139,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -82,15 +151,16 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Erstes Kapitel: Verkehr mit dem Eidgenössischen Institut für Geistiges Eigentum"
     }
    ]
   },
@@ -111,10 +181,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -140,10 +210,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -152,10 +222,10 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -181,10 +251,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -193,10 +263,10 @@
     },
     {
      "nr": "15",
-     "text": "Ausdruck gemäss V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -205,10 +275,10 @@
     },
     {
      "nr": "16",
-     "text": "Ausdruck gemäss V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -217,10 +287,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -229,10 +299,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -241,10 +311,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -270,10 +340,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -297,10 +367,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -324,10 +394,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Mai 2011, mit Wirkung seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Mai 2011, mit Wirkung seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -353,10 +423,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -365,10 +435,10 @@
     },
     {
      "nr": "28",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -377,10 +447,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -406,10 +476,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -418,10 +488,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -430,10 +500,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 232.148",
+     "text": "SR <b>232.148</b>",
      "links": [
       {
-       "label": "SR 232.148",
+       "label": "SR <b>232.148</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/777"
       }
      ],
@@ -442,10 +512,10 @@
     },
     {
      "nr": "34",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -454,10 +524,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -483,10 +553,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -512,10 +582,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -524,10 +594,10 @@
     },
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -553,10 +623,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -565,10 +635,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 232.148",
+     "text": "SR <b>232.148</b>",
      "links": [
       {
-       "label": "SR 232.148",
+       "label": "SR <b>232.148</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/777"
       }
      ],
@@ -594,10 +664,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -606,10 +676,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Mai. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 1305).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Mai. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 1305).",
      "links": [
       {
-       "label": "AS 2013 1305",
+       "label": "AS <b>2013</b> 1305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/298"
       }
      ],
@@ -618,10 +688,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -630,10 +700,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -659,10 +729,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -688,10 +758,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -700,10 +770,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -712,10 +782,10 @@
     },
     {
      "nr": "57",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS 1999 2629).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS <b>1999</b> 2629).",
      "links": [
       {
-       "label": "AS 1999 2629",
+       "label": "AS <b>1999</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/413"
       }
      ],
@@ -724,10 +794,10 @@
     },
     {
      "nr": "58",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -736,10 +806,10 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -748,10 +818,10 @@
     },
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -777,10 +847,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -806,10 +876,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -835,10 +905,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -847,10 +917,10 @@
     },
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -876,10 +946,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -888,10 +958,10 @@
     },
     {
      "nr": "66",
-     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -900,10 +970,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -912,10 +982,10 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -924,10 +994,10 @@
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -953,10 +1023,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -965,10 +1035,10 @@
     },
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -977,10 +1047,10 @@
     },
     {
      "nr": "72",
-     "text": "SR 941.202",
+     "text": "SR <b>941.202</b>",
      "links": [
       {
-       "label": "SR 941.202",
+       "label": "SR <b>941.202</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/3109_3109_3109"
       }
      ],
@@ -989,10 +1059,10 @@
     },
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. II der V vom 7. Dez. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 7193).",
+     "text": "Fassung gemäss Ziff. II der V vom 7. Dez. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 7193).",
      "links": [
       {
-       "label": "AS 2012 7193",
+       "label": "AS <b>2012</b> 7193",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/875"
       }
      ],
@@ -1001,10 +1071,10 @@
     },
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -1030,10 +1100,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1042,10 +1112,10 @@
     },
     {
      "nr": "76",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1054,10 +1124,10 @@
     },
     {
      "nr": "77",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1066,10 +1136,10 @@
     },
     {
      "nr": "78",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1078,10 +1148,10 @@
     },
     {
      "nr": "79",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1107,10 +1177,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1119,10 +1189,10 @@
     },
     {
      "nr": "81",
-     "text": "SR 0.232.141.1",
+     "text": "SR <b>0.232.141.1</b>",
      "links": [
       {
-       "label": "SR 0.232.141.1",
+       "label": "SR <b>0.232.141.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/900_900_900"
       }
      ],
@@ -1148,10 +1218,10 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1160,10 +1230,10 @@
     },
     {
      "nr": "83",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -1172,10 +1242,10 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1184,10 +1254,10 @@
     },
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1213,10 +1283,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1242,10 +1312,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1254,10 +1324,10 @@
     },
     {
      "nr": "88",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1266,10 +1336,10 @@
     },
     {
      "nr": "89",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1278,10 +1348,10 @@
     },
     {
      "nr": "90",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1307,10 +1377,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1336,10 +1406,10 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1348,10 +1418,10 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1360,10 +1430,10 @@
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1372,10 +1442,10 @@
     },
     {
      "nr": "96",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1384,10 +1454,10 @@
     },
     {
      "nr": "97",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -1413,10 +1483,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1442,10 +1512,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1454,10 +1524,10 @@
     },
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -1483,10 +1553,10 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -1510,10 +1580,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Aug. 1986, mit Wirkung seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1539,10 +1609,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -1551,10 +1621,10 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1580,10 +1650,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1592,10 +1662,10 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1604,10 +1674,10 @@
     },
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1616,10 +1686,10 @@
     },
     {
      "nr": "108",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -1649,10 +1719,10 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1682,10 +1752,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -1694,10 +1764,10 @@
     },
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -1706,10 +1776,10 @@
     },
     {
      "nr": "113",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -1718,10 +1788,10 @@
     },
     {
      "nr": "114",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -1751,10 +1821,10 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "SR 0.232.01/0.232.02/0.232.03/0.232.04",
+     "text": "SR <b>0.232.01</b><b>/0.232.02/0.232.03/0.232.04</b>",
      "links": [
       {
-       "label": "SR 0.232.01",
+       "label": "SR <b>0.232.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/45/243_255_253"
       }
      ],
@@ -1784,10 +1854,10 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -1817,10 +1887,10 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -1829,10 +1899,10 @@
     },
     {
      "nr": "118",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -1896,15 +1966,16 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Erstes Kapitel: Eingangs- und Formalprüfung"
     }
    ]
   },
@@ -1925,10 +1996,10 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -1954,10 +2025,10 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -1998,10 +2069,10 @@
    "fussnoten": [
     {
      "nr": "136",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Sept. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Sept. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2010,10 +2081,10 @@
     },
     {
      "nr": "137",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2054,10 +2125,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2087,10 +2158,10 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2099,15 +2170,16 @@
     },
     {
      "nr": "139",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweites Kapitel: Bericht über den Stand der Technik"
     }
    ]
   },
@@ -2132,10 +2204,10 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2165,10 +2237,10 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "SR 0.232.143.1",
+     "text": "SR <b>0.232.143.1</b>",
      "links": [
       {
-       "label": "SR 0.232.143.1",
+       "label": "SR <b>0.232.143.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1975/1814_1814_1814"
       }
      ],
@@ -2217,10 +2289,10 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2250,10 +2322,10 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2298,10 +2370,10 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -2310,15 +2382,16 @@
     },
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Drittes Kapitel: Veröffentlichung der Anmeldung"
     }
    ]
   },
@@ -2337,10 +2410,10 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2370,10 +2443,10 @@
    "fussnoten": [
     {
      "nr": "155",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2382,10 +2455,10 @@
     },
     {
      "nr": "156",
-     "text": "SR 0.232.142.21",
+     "text": "SR <b>0.232.142.21</b>",
      "links": [
       {
-       "label": "SR 0.232.142.21",
+       "label": "SR <b>0.232.142.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/850"
       }
      ],
@@ -2415,10 +2488,10 @@
    "fussnoten": [
     {
      "nr": "159",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1448).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Aug. 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1448).",
      "links": [
       {
-       "label": "AS 1986 1448",
+       "label": "AS <b>1986</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1448_1448_1448"
       }
      ],
@@ -2427,10 +2500,10 @@
     },
     {
      "nr": "160",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2439,10 +2512,10 @@
     },
     {
      "nr": "161",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -2451,14 +2524,14 @@
     },
     {
      "nr": "162",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016 (AS 2016 4837). Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016 (AS <b>2016</b> 4837). Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       },
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2488,10 +2561,10 @@
    "fussnoten": [
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2500,10 +2573,10 @@
     },
     {
      "nr": "164",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2512,10 +2585,10 @@
     },
     {
      "nr": "165",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2545,10 +2618,10 @@
    "fussnoten": [
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2578,10 +2651,10 @@
    "fussnoten": [
     {
      "nr": "167",
-     "text": "SR 0.232.143.1",
+     "text": "SR <b>0.232.143.1</b>",
      "links": [
       {
-       "label": "SR 0.232.143.1",
+       "label": "SR <b>0.232.143.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1975/1814_1814_1814"
       }
      ],
@@ -2590,10 +2663,10 @@
     },
     {
      "nr": "168",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2623,10 +2696,10 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2635,10 +2708,10 @@
     },
     {
      "nr": "170",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2666,10 +2739,10 @@
    "fussnoten": [
     {
      "nr": "171",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2699,10 +2772,10 @@
    "fussnoten": [
     {
      "nr": "172",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2726,10 +2799,10 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2738,15 +2811,16 @@
     },
     {
      "nr": "173",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Fünftes Kapitel: Vorbereitung der Patenterteilung"
     }
    ]
   },
@@ -2765,10 +2839,10 @@
    "fussnoten": [
     {
      "nr": "175",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS 1999 2629).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS <b>1999</b> 2629).",
      "links": [
       {
-       "label": "AS 1999 2629",
+       "label": "AS <b>1999</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/413"
       }
      ],
@@ -2794,10 +2868,10 @@
    "fussnoten": [
     {
      "nr": "176",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -2823,10 +2897,10 @@
    "fussnoten": [
     {
      "nr": "178",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -2835,10 +2909,10 @@
     },
     {
      "nr": "179",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -2847,15 +2921,16 @@
     },
     {
      "nr": "177",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Sechstes Kapitel: Einspruchsverfahren"
     }
    ]
   },
@@ -2876,10 +2951,10 @@
    "fussnoten": [
     {
      "nr": "180",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -2935,10 +3010,10 @@
    "fussnoten": [
     {
      "nr": "181",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -2947,10 +3022,10 @@
     },
     {
      "nr": "182",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -2959,10 +3034,10 @@
     },
     {
      "nr": "183",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -2971,10 +3046,10 @@
     },
     {
      "nr": "184",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Mai 2011, mit Wirkung seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Mai 2011, mit Wirkung seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -3013,10 +3088,10 @@
    "fussnoten": [
     {
      "nr": "185",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3132,10 +3207,10 @@
    "fussnoten": [
     {
      "nr": "186",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -3176,10 +3251,10 @@
    "fussnoten": [
     {
      "nr": "187",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -3205,10 +3280,10 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3217,14 +3292,14 @@
     },
     {
      "nr": "190",
-     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999 (AS 1999 1443). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999 (AS <b>1999</b> 1443). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       },
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -3233,15 +3308,16 @@
     },
     {
      "nr": "188",
-     "text": "Ursprünglich fünfter Tit. Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Ursprünglich fünfter Tit. Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Vierter Titel: Aktenheft, Patentregister und Veröffentlichungen des IGE"
     }
    ]
   },
@@ -3262,10 +3338,10 @@
    "fussnoten": [
     {
      "nr": "191",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3274,10 +3350,10 @@
     },
     {
      "nr": "192",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -3286,10 +3362,10 @@
     },
     {
      "nr": "193",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3298,10 +3374,10 @@
     },
     {
      "nr": "194",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -3310,10 +3386,10 @@
     },
     {
      "nr": "195",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3322,10 +3398,10 @@
     },
     {
      "nr": "196",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3334,10 +3410,10 @@
     },
     {
      "nr": "197",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3346,10 +3422,10 @@
     },
     {
      "nr": "198",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -3358,10 +3434,10 @@
     },
     {
      "nr": "199",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3385,10 +3461,10 @@
    "fussnoten": [
     {
      "nr": "200",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3414,10 +3490,10 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -3426,10 +3502,10 @@
     },
     {
      "nr": "202",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -3455,10 +3531,10 @@
    "fussnoten": [
     {
      "nr": "203",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3467,14 +3543,14 @@
     },
     {
      "nr": "204",
-     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999 (AS 1999 1443). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999 (AS <b>1999</b> 1443). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       },
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -3500,10 +3576,10 @@
    "fussnoten": [
     {
      "nr": "205",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3512,10 +3588,10 @@
     },
     {
      "nr": "206",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3524,10 +3600,10 @@
     },
     {
      "nr": "207",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3536,10 +3612,10 @@
     },
     {
      "nr": "208",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -3548,10 +3624,10 @@
     },
     {
      "nr": "209",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -3560,14 +3636,14 @@
     },
     {
      "nr": "210",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3576,10 +3652,10 @@
     },
     {
      "nr": "211",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3605,10 +3681,10 @@
    "fussnoten": [
     {
      "nr": "212",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -3617,10 +3693,10 @@
     },
     {
      "nr": "213",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3650,10 +3726,10 @@
    "fussnoten": [
     {
      "nr": "214",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3662,10 +3738,10 @@
     },
     {
      "nr": "215",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3674,10 +3750,10 @@
     },
     {
      "nr": "216",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -3707,10 +3783,10 @@
    "fussnoten": [
     {
      "nr": "217",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3797,10 +3873,10 @@
    "fussnoten": [
     {
      "nr": "219",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3849,10 +3925,10 @@
    "fussnoten": [
     {
      "nr": "220",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -3882,10 +3958,10 @@
    "fussnoten": [
     {
      "nr": "221",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3894,10 +3970,10 @@
     },
     {
      "nr": "222",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -3906,10 +3982,10 @@
     },
     {
      "nr": "223",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3918,10 +3994,10 @@
     },
     {
      "nr": "224",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3951,10 +4027,10 @@
    "fussnoten": [
     {
      "nr": "225",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -3963,10 +4039,10 @@
     },
     {
      "nr": "226",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -3975,10 +4051,10 @@
     },
     {
      "nr": "227",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -3987,14 +4063,14 @@
     },
     {
      "nr": "228",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4003,10 +4079,10 @@
     },
     {
      "nr": "229",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -4015,10 +4091,10 @@
     },
     {
      "nr": "230",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2006, mit Wirkung seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2006, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -4048,10 +4124,10 @@
    "fussnoten": [
     {
      "nr": "231",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4081,10 +4157,10 @@
    "fussnoten": [
     {
      "nr": "232",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2006, mit Wirkung seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2006, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -4110,10 +4186,10 @@
    "fussnoten": [
     {
      "nr": "235",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -4125,7 +4201,8 @@
      "text": "Ursprünglich sechster Tit.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Veröffentlichungen des IGE"
     }
    ]
   },
@@ -4146,10 +4223,10 @@
    "fussnoten": [
     {
      "nr": "236",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4173,10 +4250,10 @@
    "fussnoten": [
     {
      "nr": "239",
-     "text": "Fassung gemäss Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS 2008 3595).",
+     "text": "Fassung gemäss Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3595).",
      "links": [
       {
-       "label": "AS 2008 3595",
+       "label": "AS <b>2008</b> 3595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/466"
       }
      ],
@@ -4185,10 +4262,10 @@
     },
     {
      "nr": "240",
-     "text": "SR 232.161",
+     "text": "SR <b>232.161</b>",
      "links": [
       {
-       "label": "SR 232.161",
+       "label": "SR <b>232.161</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/466"
       }
      ],
@@ -4197,27 +4274,29 @@
     },
     {
      "nr": "237",
-     "text": "Ursprünglich vor Art. 111. Fassung gemäss Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS 2008 3595).",
+     "text": "Ursprünglich vor Art. 111. Fassung gemäss Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3595).",
      "links": [
       {
-       "label": "AS 2008 3595",
+       "label": "AS <b>2008</b> 3595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/466"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Fünfter Titel: Beschränkungen im Recht aus dem Patent"
     },
     {
      "nr": "238",
-     "text": "Eingefügt durch Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS 2008 3595).",
+     "text": "Eingefügt durch Art. 19 der Sortenschutzverordnung vom 25. Juni 2008, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3595).",
      "links": [
       {
-       "label": "AS 2008 3595",
+       "label": "AS <b>2008</b> 3595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/466"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Erstes Kapitel: Landwirteprivileg"
     }
    ]
   },
@@ -4238,15 +4317,16 @@
    "fussnoten": [
     {
      "nr": "241",
-     "text": "Ursprünglich fünfter Tit. Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Ursprünglich fünfter Tit. Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweites Kapitel: Zwangslizenzen für die Ausfuhr pharmazeutischer Produkte"
     }
    ]
   },
@@ -4263,10 +4343,10 @@
    "fussnoten": [
     {
      "nr": "243",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -4275,15 +4355,16 @@
     },
     {
      "nr": "242",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Sechster Titel: Hilfeleistung beim Verbringen von Waren ins Zollgebiet oder aus dem Zollgebiet"
     }
    ]
   },
@@ -4298,10 +4379,10 @@
    "fussnoten": [
     {
      "nr": "255",
-     "text": "Aufgehoben durch Ziff. I der V vom 25. Okt. 1995, mit Wirkung seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Aufgehoben durch Ziff. I der V vom 25. Okt. 1995, mit Wirkung seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -4334,34 +4415,34 @@
    "fussnoten": [
     {
      "nr": "256",
-     "text": "[AS 1977 1711, 1979 621 Art. 1, 1995 4187, 1996 793, 1997 1647 Art. 1, 2007 3673 Art. 1 3674 Art. 1]. Siehe heute: Europäisches Patentübereinkommen vom 29. Nov. 2000 (RS 0.232.142.2)",
+     "text": "[AS <b>1977</b> 1711, <b>1979</b> 621 Art. 1, <b>1995</b> 4187, <b>1996</b> 793, <b>1997</b> 1647 Art. 1, <b>2007</b> 3673 Art. 1 <i>3674 </i>Art. 1]. Siehe heute: Europäisches Patentübereinkommen vom 29. Nov. 2000 (RS <b>0.232.142.2</b>)",
      "links": [
       {
-       "label": "AS 1977 1711",
+       "label": "AS <b>1977</b> 1711",
        "url": "https://fedlex.data.admin.ch/eli/oc/1977/1711_1711_1711"
       },
       {
-       "label": "1979 621",
+       "label": "<b>1979</b> 621",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/621_621_621"
       },
       {
-       "label": "1995 4187",
+       "label": "<b>1995</b> 4187",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4187_4187_4187"
       },
       {
-       "label": "1996 793",
+       "label": "<b>1996</b> 793",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/793_793_793"
       },
       {
-       "label": "1997 1647",
+       "label": "<b>1997</b> 1647",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1647_1647_1647"
       },
       {
-       "label": "2007 3673",
+       "label": "<b>2007</b> 3673",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/460"
       },
       {
-       "label": "RS 0.232.142.2",
+       "label": "RS <b>0.232.142.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/849"
       }
      ],
@@ -4381,10 +4462,10 @@
    "fussnoten": [
     {
      "nr": "257",
-     "text": "Aufgehoben durch Ziff. I der V vom 14. März 2008, mit Wirkung seit 1. Mai 2008 (AS 2008 1659).",
+     "text": "Aufgehoben durch Ziff. I der V vom 14. März 2008, mit Wirkung seit 1. Mai 2008 (AS <b>2008</b> 1659).",
      "links": [
       {
-       "label": "AS 2008 1659",
+       "label": "AS <b>2008</b> 1659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/243"
       }
      ],
@@ -4406,10 +4487,10 @@
    "fussnoten": [
     {
      "nr": "258",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2007, in Kraft seit 13. Dez. 2007 (AS 2007 6085).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2007, in Kraft seit 13. Dez. 2007 (AS <b>2007 </b>6085).",
      "links": [
       {
-       "label": "AS 2007 6085",
+       "label": "AS <b>2007 </b>6085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/810"
       }
      ],
@@ -4418,10 +4499,10 @@
     },
     {
      "nr": "259",
-     "text": "Fassung gemäss Ziff. I del V vom 14. März 2008, in Kraft seit 1. Mai 2008 (AS 2008 1659).",
+     "text": "Fassung gemäss Ziff. I del V vom 14. März 2008, in Kraft seit 1. Mai 2008 (AS <b>2008</b> 1659).",
      "links": [
       {
-       "label": "AS 2008 1659",
+       "label": "AS <b>2008</b> 1659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/243"
       }
      ],
@@ -4443,10 +4524,10 @@
    "fussnoten": [
     {
      "nr": "261",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4455,10 +4536,10 @@
     },
     {
      "nr": "262",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -4467,10 +4548,10 @@
     },
     {
      "nr": "263",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -4494,10 +4575,10 @@
    "fussnoten": [
     {
      "nr": "265",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -4523,10 +4604,10 @@
    "fussnoten": [
     {
      "nr": "266",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -4552,10 +4633,10 @@
    "fussnoten": [
     {
      "nr": "267",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 1991, in Kraft seit 1. Juli 1992 (AS 1991 2565).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 1991, in Kraft seit 1. Juli 1992 (AS <b>1991</b> 2565).",
      "links": [
       {
-       "label": "AS 1991 2565",
+       "label": "AS <b>1991</b> 2565",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2565_2565_2565"
       }
      ],
@@ -4564,10 +4645,10 @@
     },
     {
      "nr": "268",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 2 der Designverordnung vom 8. März 2002, in Kraft seit 1. Juli 2002 (AS 2002 1122).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 2 der Designverordnung vom 8. März 2002, in Kraft seit 1. Juli 2002 (AS <b>2002</b> 1122).",
      "links": [
       {
-       "label": "AS 2002 1122",
+       "label": "AS <b>2002</b> 1122",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/183"
       }
      ],
@@ -4593,10 +4674,10 @@
    "fussnoten": [
     {
      "nr": "269",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4605,10 +4686,10 @@
     },
     {
      "nr": "270",
-     "text": "SR 0.232.141.11",
+     "text": "SR <b>0.232.141.11</b>",
      "links": [
       {
-       "label": "SR 0.232.141.11",
+       "label": "SR <b>0.232.141.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/942_941_941"
       }
      ],
@@ -4634,10 +4715,10 @@
    "fussnoten": [
     {
      "nr": "274",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4663,10 +4744,10 @@
    "fussnoten": [
     {
      "nr": "275",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4675,10 +4756,10 @@
     },
     {
      "nr": "276",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -4704,10 +4785,10 @@
    "fussnoten": [
     {
      "nr": "277",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -4716,10 +4797,10 @@
     },
     {
      "nr": "278",
-     "text": "SR 0.232.141.11",
+     "text": "SR <b>0.232.141.11</b>",
      "links": [
       {
-       "label": "SR 0.232.141.11",
+       "label": "SR <b>0.232.141.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/942_941_941"
       }
      ],
@@ -4741,10 +4822,10 @@
    "fussnoten": [
     {
      "nr": "285",
-     "text": "SR 0.232.141.1",
+     "text": "SR <b>0.232.141.1</b>",
      "links": [
       {
-       "label": "SR 0.232.141.1",
+       "label": "SR <b>0.232.141.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/900_900_900"
       }
      ],
@@ -4753,10 +4834,10 @@
     },
     {
      "nr": "286",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -4765,10 +4846,10 @@
     },
     {
      "nr": "287",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -4777,14 +4858,14 @@
     },
     {
      "nr": "288",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS <b>1995</b> 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4793,14 +4874,14 @@
     },
     {
      "nr": "289",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS <b>1995</b> 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4822,10 +4903,10 @@
    "fussnoten": [
     {
      "nr": "290",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -4849,10 +4930,10 @@
    "fussnoten": [
     {
      "nr": "337",
-     "text": "[AS 1959 1979, 2097; 1972 2449]",
+     "text": "[AS <b>1959</b> 1979, 2097; <b>1972</b> 2449]",
      "links": [
       {
-       "label": "AS 1959 1979",
+       "label": "AS <b>1959</b> 1979",
        "url": "https://fedlex.data.admin.ch/eli/oc/1959/1979_2041_2065"
       },
       {
@@ -4860,7 +4941,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1959/2097_2161_2190"
       },
       {
-       "label": "1972 2449",
+       "label": "<b>1972</b> 2449",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2449_2503_2279"
       }
      ],
@@ -4869,10 +4950,10 @@
     },
     {
      "nr": "338",
-     "text": "[AS 1959 728, 2097; 1972 2452]",
+     "text": "[AS <b>1959</b> 728, 2097; <b>1972</b> 2452]",
      "links": [
       {
-       "label": "AS 1959 728",
+       "label": "AS <b>1959</b> 728",
        "url": "https://fedlex.data.admin.ch/eli/oc/1959/728_758_739"
       },
       {
@@ -4880,7 +4961,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1959/2097_2161_2190"
       },
       {
-       "label": "1972 2452",
+       "label": "<b>1972</b> 2452",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2452_2505_2282"
       }
      ],
@@ -4889,15 +4970,16 @@
     },
     {
      "nr": "336",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Dreizehnter Titel: Schlussbestimmungen"
     }
    ]
   },
@@ -5006,10 +5088,10 @@
    "fussnoten": [
     {
      "nr": "339",
-     "text": "Der sechste Titel ist am 1. Juni 1978 in Kraft getreten (AS 1978 550).",
+     "text": "Der sechste Titel ist am 1. Juni 1978 in Kraft getreten (AS <b>1978</b> 550).",
      "links": [
       {
-       "label": "AS 1978 550",
+       "label": "AS <b>1978</b> 550",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/550_550_550"
       }
      ],
@@ -5039,10 +5121,10 @@
    "fussnoten": [
     {
      "nr": "233",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -5109,14 +5191,14 @@
    "fussnoten": [
     {
      "nr": "244",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5138,14 +5220,14 @@
    "fussnoten": [
     {
      "nr": "245",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5167,14 +5249,14 @@
    "fussnoten": [
     {
      "nr": "246",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5196,14 +5278,14 @@
    "fussnoten": [
     {
      "nr": "247",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5225,14 +5307,14 @@
    "fussnoten": [
     {
      "nr": "248",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5254,14 +5336,14 @@
    "fussnoten": [
     {
      "nr": "249",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS 2008 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008 (AS <b>2008</b> 2585). Fassung gemäss Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       },
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5283,10 +5365,10 @@
    "fussnoten": [
     {
      "nr": "250",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5308,10 +5390,10 @@
    "fussnoten": [
     {
      "nr": "251",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5333,10 +5415,10 @@
    "fussnoten": [
     {
      "nr": "252",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -5345,10 +5427,10 @@
     },
     {
      "nr": "253",
-     "text": "SR 631.035",
+     "text": "SR <b>631.035</b>",
      "links": [
       {
-       "label": "SR 631.035",
+       "label": "SR <b>631.035</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/255"
       }
      ],
@@ -5357,10 +5439,10 @@
     },
     {
      "nr": "254",
-     "text": "SR 232.148",
+     "text": "SR <b>232.148</b>",
      "links": [
       {
-       "label": "SR 232.148",
+       "label": "SR <b>232.148</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/777"
       }
      ],
@@ -5382,10 +5464,10 @@
    "fussnoten": [
     {
      "nr": "260",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
@@ -5407,14 +5489,14 @@
    "fussnoten": [
     {
      "nr": "264",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Fassung gemäss Ziff. I der V vom 1. Mai. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 1305).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Fassung gemäss Ziff. I der V vom 1. Mai. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 1305).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2013 1305",
+       "label": "AS <b>2013</b> 1305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/298"
       }
      ],
@@ -5438,10 +5520,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -5465,14 +5547,14 @@
    "fussnoten": [
     {
      "nr": "271",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 1991 (AS 1991 2565). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 1991 (AS <b>1991</b> 2565). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1991 2565",
+       "label": "AS <b>1991</b> 2565",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2565_2565_2565"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -5498,10 +5580,10 @@
    "fussnoten": [
     {
      "nr": "272",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -5510,10 +5592,10 @@
     },
     {
      "nr": "273",
-     "text": "SR 0.232.141.11",
+     "text": "SR <b>0.232.141.11</b>",
      "links": [
       {
-       "label": "SR 0.232.141.11",
+       "label": "SR <b>0.232.141.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/942_941_941"
       }
      ],
@@ -5539,10 +5621,10 @@
    "fussnoten": [
     {
      "nr": "281",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -5551,10 +5633,10 @@
     },
     {
      "nr": "282",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5563,27 +5645,29 @@
     },
     {
      "nr": "279",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Das IGE als ausgewähltes Amt"
     },
     {
      "nr": "280",
-     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Fassung gemäss Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Das IGE als ausgewähltes Amt"
     }
    ]
   },
@@ -5619,10 +5703,10 @@
    "fussnoten": [
     {
      "nr": "283",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 4483).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4483).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       }
      ],
@@ -5631,10 +5715,10 @@
     },
     {
      "nr": "284",
-     "text": "SR 0.232.141.11",
+     "text": "SR <b>0.232.141.11</b>",
      "links": [
       {
-       "label": "SR 0.232.141.11",
+       "label": "SR <b>0.232.141.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/942_941_941"
       }
      ],
@@ -5658,39 +5742,42 @@
    "fussnoten": [
     {
      "nr": "291",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS 1995 3660).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995, in Kraft seit 1. Sept. 1995 (AS <b>1995</b> 3660).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zehnter Titel: Ergänzende Schutzzertifikate für Arzneimittel"
     },
     {
      "nr": "292",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zehnter Titel: Ergänzende Schutzzertifikate für Arzneimittel"
     },
     {
      "nr": "293",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Erstes Kapitel: Geltungsbereich"
     }
    ]
   },
@@ -5711,10 +5798,10 @@
    "fussnoten": [
     {
      "nr": "295",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5730,15 +5817,16 @@
     },
     {
      "nr": "294",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweites Kapitel: Gesuch um Erteilung des Zertifikats oder um Verlängerung der Schutzdauer"
     }
    ]
   },
@@ -5759,10 +5847,10 @@
    "fussnoten": [
     {
      "nr": "297",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -5771,10 +5859,10 @@
     },
     {
      "nr": "298",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2247).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2247).",
      "links": [
       {
-       "label": "AS 2011 2247",
+       "label": "AS <b>2011</b> 2247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/309"
       }
      ],
@@ -5783,10 +5871,10 @@
     },
     {
      "nr": "299",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5795,10 +5883,10 @@
     },
     {
      "nr": "300",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5807,10 +5895,10 @@
     },
     {
      "nr": "301",
-     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -5826,10 +5914,10 @@
     },
     {
      "nr": "303",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5855,10 +5943,10 @@
    "fussnoten": [
     {
      "nr": "304",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5891,10 +5979,10 @@
    "fussnoten": [
     {
      "nr": "307",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5903,10 +5991,10 @@
     },
     {
      "nr": "308",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5915,15 +6003,16 @@
     },
     {
      "nr": "306",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Drittes Kapitel: Prüfung des Gesuchs um Erteilung des Zertifikats oder um Verlängerung der Schutzdauer"
     }
    ]
   },
@@ -5944,10 +6033,10 @@
    "fussnoten": [
     {
      "nr": "309",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -5978,15 +6067,16 @@
     },
     {
      "nr": "310",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Erteilung des Zertifikats und Verlängerung der Schutzdauer"
     }
    ]
   },
@@ -6005,15 +6095,16 @@
    "fussnoten": [
     {
      "nr": "312",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Fünftes Kapitel: Veröffentlichung"
     }
    ]
   },
@@ -6034,10 +6125,10 @@
    "fussnoten": [
     {
      "nr": "313",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6063,10 +6154,10 @@
    "fussnoten": [
     {
      "nr": "314",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6075,10 +6166,10 @@
     },
     {
      "nr": "315",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6087,10 +6178,10 @@
     },
     {
      "nr": "316",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6099,10 +6190,10 @@
     },
     {
      "nr": "317",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6111,10 +6202,10 @@
     },
     {
      "nr": "318",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6123,10 +6214,10 @@
     },
     {
      "nr": "319",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6135,10 +6226,10 @@
     },
     {
      "nr": "320",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6147,10 +6238,10 @@
     },
     {
      "nr": "321",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6159,10 +6250,10 @@
     },
     {
      "nr": "322",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6188,10 +6279,10 @@
    "fussnoten": [
     {
      "nr": "323",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -6200,10 +6291,10 @@
     },
     {
      "nr": "324",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6212,10 +6303,10 @@
     },
     {
      "nr": "325",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6224,10 +6315,10 @@
     },
     {
      "nr": "326",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6253,10 +6344,10 @@
    "fussnoten": [
     {
      "nr": "327",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6282,15 +6373,16 @@
    "fussnoten": [
     {
      "nr": "328",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Achtes Kapitel: Widerruf der Verlängerung der Schutzdauer des Zertifikats"
     }
    ]
   },
@@ -6399,15 +6491,16 @@
    "fussnoten": [
     {
      "nr": "329",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Elfter Titel: Pädiatrische ergänzende Schutzzertifikate für Arzneimittel"
     }
    ]
   },
@@ -6609,15 +6702,16 @@
    "fussnoten": [
     {
      "nr": "335",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zwölfter Titel: Ergänzende Schutzzertifikate für Pflanzenschutzmittel"
     }
    ]
   },
@@ -6651,10 +6745,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -6663,10 +6757,10 @@
     },
     {
      "nr": "42",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS 1999 2629).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Aug. 1999, mit Wirkung seit 1. Jan. 2000 (AS <b>1999</b> 2629).",
      "links": [
       {
-       "label": "AS 1999 2629",
+       "label": "AS <b>1999</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/413"
       }
      ],
@@ -6675,10 +6769,10 @@
     },
     {
      "nr": "43",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -6704,10 +6798,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -6733,10 +6827,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5164).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5164).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       }
      ],
@@ -6745,10 +6839,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -6774,14 +6868,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Fassung gemäss Ziff. I der V vom 3. Dez. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -6807,14 +6901,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -6838,14 +6932,14 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 5025).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Aufgehoben durch Ziff. I der V vom 3. Dez. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 5025).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2004 5025",
+       "label": "AS <b>2004</b> 5025",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/770"
       }
      ],
@@ -6871,10 +6965,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -6904,14 +6998,14 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS <b>1995</b> 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -6941,14 +7035,14 @@
    "fussnoten": [
     {
      "nr": "119",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -6972,10 +7066,10 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "SR 0.451.43",
+     "text": "SR <b>0.451.43</b>",
      "links": [
       {
-       "label": "SR 0.451.43",
+       "label": "SR <b>0.451.43</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1408_1408_1408"
       }
      ],
@@ -6984,10 +7078,10 @@
     },
     {
      "nr": "122",
-     "text": "SR 0.910.6",
+     "text": "SR <b>0.910.6</b>",
      "links": [
       {
-       "label": "SR 0.910.6",
+       "label": "SR <b>0.910.6</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/298"
       }
      ],
@@ -6996,15 +7090,16 @@
     },
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Sechstes Kapitel: Angaben über die Quelle genetischer Ressourcen und traditionellen Wissens"
     }
    ]
   },
@@ -7025,15 +7120,16 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Siebtes Kapitel: Hinterlegung von biologischem Material"
     }
    ]
   },
@@ -7054,10 +7150,10 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "SR 0.232.145.1",
+     "text": "SR <b>0.232.145.1</b>",
      "links": [
       {
-       "label": "SR 0.232.145.1",
+       "label": "SR <b>0.232.145.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1981/1262_1262_1262"
       }
      ],
@@ -7113,10 +7209,10 @@
    "fussnoten": [
     {
      "nr": "125",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7172,10 +7268,10 @@
    "fussnoten": [
     {
      "nr": "126",
-     "text": "SR 0.232.145.1",
+     "text": "SR <b>0.232.145.1</b>",
      "links": [
       {
-       "label": "SR 0.232.145.1",
+       "label": "SR <b>0.232.145.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1981/1262_1262_1262"
       }
      ],
@@ -7201,10 +7297,10 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "SR 0.232.145.1",
+     "text": "SR <b>0.232.145.1</b>",
      "links": [
       {
-       "label": "SR 0.232.145.1",
+       "label": "SR <b>0.232.145.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1981/1262_1262_1262"
       }
      ],
@@ -7213,10 +7309,10 @@
     },
     {
      "nr": "128",
-     "text": "SR 0.232.145.11",
+     "text": "SR <b>0.232.145.11</b>",
      "links": [
       {
-       "label": "SR 0.232.145.11",
+       "label": "SR <b>0.232.145.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1981/1275_1275_1275"
       }
      ],
@@ -7242,10 +7338,10 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7254,10 +7350,10 @@
     },
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7373,10 +7469,10 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7385,10 +7481,10 @@
     },
     {
      "nr": "135",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -7429,10 +7525,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS 1999 1443).",
+     "text": "Eingefügt durch Ziff. I der V vom 31. März 1999, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1443).",
      "links": [
       {
-       "label": "AS 1999 1443",
+       "label": "AS <b>1999</b> 1443",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/216"
       }
      ],
@@ -7458,10 +7554,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -7510,10 +7606,10 @@
    "fussnoten": [
     {
      "nr": "142",
-     "text": "SR 0.232.141.1",
+     "text": "SR <b>0.232.141.1</b>",
      "links": [
       {
-       "label": "SR 0.232.141.1",
+       "label": "SR <b>0.232.141.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/900_900_900"
       }
      ],
@@ -7626,10 +7722,10 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7638,10 +7734,10 @@
     },
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -7650,10 +7746,10 @@
     },
     {
      "nr": "150",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -7683,14 +7779,14 @@
    "fussnoten": [
     {
      "nr": "154",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS 1995 5164). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995 (AS <b>1995</b> 5164). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 5164",
+       "label": "AS <b>1995</b> 5164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5164_5164_5164"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -7702,14 +7798,16 @@
      "text": "Ursprünglich vor Art. 62.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Die Sachprüfung"
     },
     {
      "nr": "153",
      "text": "Ursprünglich vor Art. 62.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ]
   },
@@ -7734,14 +7832,14 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS <b>1995</b> 3660). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 1995 3660",
+       "label": "AS <b>1995</b> 3660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/3660_3660_3660"
       },
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],
@@ -7750,10 +7848,10 @@
     },
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3551).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3551).",
      "links": [
       {
-       "label": "AS 2018 3551",
+       "label": "AS <b>2018</b> 3551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/584"
       }
      ],
@@ -7777,10 +7875,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -7804,14 +7902,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006 (AS 2006 4483). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4837).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2006 (AS <b>2006</b> 4483). Fassung gemäss Ziff. I der V vom 2. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4837).",
      "links": [
       {
-       "label": "AS 2006 4483",
+       "label": "AS <b>2006</b> 4483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/691"
       },
       {
-       "label": "AS 2016 4837",
+       "label": "AS <b>2016</b> 4837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/776"
       }
      ],
@@ -7841,10 +7939,10 @@
    "fussnoten": [
     {
      "nr": "218",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2585).",
      "links": [
       {
-       "label": "AS 2008 2585",
+       "label": "AS <b>2008</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/367"
       }
      ],

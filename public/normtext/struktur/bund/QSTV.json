@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "642.118.2",
+  "titel": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer",
+  "erlassdatum": "vom 11. April 2018 (Stand am 10. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Eidgenössische Finanzdepartement (EFD),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 89 Absatz 2, 92 Absatz 5, 99a Absatz 3, 99b Absatz 2 und 161 Absatz 1 des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer (DBG) sowie auf Artikel 1 Buchstabe b der Verordnung vom 18. Dezember 1991 über Kompetenzzuweisungen bei der direkten Bundessteuer an das Finanzdepartement,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>642.11</b>",
+    "links": [
+     {
+      "label": "SR <b>642.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>642.118</b>",
+    "links": [
+     {
+      "label": "SR <b>642.118</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1992/468_468_468"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +59,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -26,10 +71,10 @@
     },
     {
      "nr": "4",
-     "text": "Aufgehoben durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Aufgehoben durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -38,10 +83,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 0.672.913.62",
+     "text": "SR <b>0.672.913.62</b>",
      "links": [
       {
-       "label": "SR 0.672.913.62",
+       "label": "SR <b>0.672.913.62</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1972/3075_3128_2910"
       }
      ],
@@ -50,10 +95,10 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -62,14 +107,14 @@
     },
     {
      "nr": "7",
-     "text": "SR 0.642.045.43; BBl 2021 1919",
+     "text": "SR <b>0.642.045.43</b>; BBl <b>2021</b> 1919",
      "links": [
       {
-       "label": "SR 0.642.045.43",
+       "label": "SR <b>0.642.045.43</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2023/410"
       },
       {
-       "label": "BBl 2021 1919",
+       "label": "BBl <b>2021</b> 1919",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1919"
       }
      ],
@@ -78,10 +123,10 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -90,10 +135,10 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -102,10 +147,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -114,10 +159,10 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -126,10 +171,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -173,10 +218,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -297,10 +342,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -322,10 +367,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 398).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 31. Okt. 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 398).",
      "links": [
       {
-       "label": "AS 2023 398",
+       "label": "AS <b>2023</b> 398",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/398"
       }
      ],
@@ -424,10 +469,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -460,34 +505,34 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "[AS 1993 3324; 1994 1788; 2001 1055; 2007 373 Anhang Ziff. 1; 2010 4481; 2011 4329; 2013 783]",
+     "text": "[AS <b>1993</b> 3324; <b>1994</b> 1788; <b>2001</b> 1055; <b>2007</b> 373 Anhang Ziff. 1; <b>2010</b> 4481; <b>2011</b> 4329; <b>2013</b> 783]",
      "links": [
       {
-       "label": "AS 1993 3324",
+       "label": "AS <b>1993</b> 3324",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/3324_3324_3324"
       },
       {
-       "label": "1994 1788",
+       "label": "<b>1994</b> 1788",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1788_1788_1788"
       },
       {
-       "label": "2001 1055",
+       "label": "<b>2001</b> 1055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/156"
       },
       {
-       "label": "2007 373",
+       "label": "<b>2007</b> 373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/72"
       },
       {
-       "label": "2010 4481",
+       "label": "<b>2010</b> 4481",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/633"
       },
       {
-       "label": "2011 4329",
+       "label": "<b>2011</b> 4329",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/590"
       },
       {
-       "label": "2013 783",
+       "label": "<b>2013</b> 783",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/156"
       }
      ],
@@ -509,10 +554,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Die Änderung kann unter AS 2018 1829 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2018</b> 1829 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2018 1829",
+       "label": "AS <b>2018</b> 1829",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/274"
       }
      ],
@@ -545,10 +590,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V des EFD vom 16. Okt. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 586).",
+     "text": "Eingefügt durch Ziff. I der V des EFD vom 16. Okt. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 586).",
      "links": [
       {
-       "label": "AS 2024 586",
+       "label": "AS <b>2024</b> 586",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/586"
       }
      ],
@@ -557,10 +602,10 @@
     },
     {
      "nr": "15",
-     "text": "Die Berichtigung vom 10. Jan. 2025 betrifft nur den französischen Text (AS 2025 8).",
+     "text": "Die Berichtigung vom 10. Jan. 2025 betrifft nur den französischen Text (AS <b>2025</b> 8).",
      "links": [
       {
-       "label": "AS 2025 8",
+       "label": "AS <b>2025</b> 8",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/8"
       }
      ],
@@ -569,7 +614,7 @@
     },
     {
      "nr": "16",
-     "text": "BBl 1983 II 535",
+     "text": "<i>BBl <b>1983</b> II 535</i>",
      "links": [],
      "absatz": null,
      "item": "g"

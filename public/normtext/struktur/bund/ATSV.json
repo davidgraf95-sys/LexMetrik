@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "830.11",
+  "titel": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts",
+  "erlassdatum": "vom 11. September 2002 (Stand am 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>830.1</b>",
+    "links": [
+     {
+      "label": "SR <b>830.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -16,10 +49,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -28,10 +61,10 @@
     },
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -40,10 +73,10 @@
     },
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -69,10 +102,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -81,10 +114,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -140,10 +173,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I 15 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 15 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -152,10 +185,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 831.30",
+     "text": "SR <b>831.30</b>",
      "links": [
       {
-       "label": "SR 831.30",
+       "label": "SR <b>831.30</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
       }
      ],
@@ -164,10 +197,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 3. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 706).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 3. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 706).",
      "links": [
       {
-       "label": "AS 2021 706",
+       "label": "AS <b>2021</b> 706",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/706"
       }
      ],
@@ -191,10 +224,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Aufgehoben durch Ziff. II 1 der V vom 28. Sept. 2007, mit Wirkung seit 1. Dez. 2007 (AS 2007 5155).",
+     "text": "Aufgehoben durch Ziff. II 1 der V vom 28. Sept. 2007, mit Wirkung seit 1. Dez. 2007 (AS <b>2007</b> 5155).",
      "links": [
       {
-       "label": "AS 2007 5155",
+       "label": "AS <b>2007</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/723"
       }
      ],
@@ -235,10 +268,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Fassung gemäss Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -264,10 +297,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Fassung gemäss Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -276,10 +309,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 172.041.0",
+     "text": "SR <b>172.041.0</b>",
      "links": [
       {
-       "label": "SR 172.041.0",
+       "label": "SR <b>172.041.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/760_780_777"
       }
      ],
@@ -288,10 +321,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 235.11",
+     "text": "SR <b>235.11</b>",
      "links": [
       {
-       "label": "SR 235.11",
+       "label": "SR <b>235.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
       }
      ],
@@ -300,10 +333,10 @@
     },
     {
      "nr": "36",
-     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 116 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 116 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -329,10 +362,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -341,10 +374,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 832.30",
+     "text": "SR <b>832.30</b>",
      "links": [
       {
-       "label": "SR 832.30",
+       "label": "SR <b>832.30</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/1968_1968_1968"
       }
      ],
@@ -407,10 +440,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -432,10 +465,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "SR 837.0",
+     "text": "SR<b> 837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR<b> 837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -457,10 +490,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -493,10 +526,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -505,15 +538,16 @@
     },
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Übrige Bestimmungen"
     }
    ]
   },
@@ -543,18 +577,18 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "[AS 2006 5305. AS 2008 2209 Art. 22]. Siehe heute: das R vom 21. Febr. 2008 (SR 173.320.2).",
+     "text": "[AS <b>2006</b> 5305. AS <b>2008</b> 2209 Art. 22]. Siehe heute: das R vom 21. Febr. 2008 (SR <b>173.320.2</b>).",
      "links": [
       {
-       "label": "AS 2006 5305",
+       "label": "AS <b>2006</b> 5305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/800"
       },
       {
-       "label": "AS 2008 2209",
+       "label": "AS <b>2008</b> 2209",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/321"
       },
       {
-       "label": "SR 173.320.2",
+       "label": "SR <b>173.320.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/321"
       }
      ],
@@ -563,15 +597,16 @@
     },
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. II der V vom 21. Febr. 2007, in Kraft seit 1. Mai 2007 (AS 2007 1075).",
+     "text": "Eingefügt durch Ziff. II der V vom 21. Febr. 2007, in Kraft seit 1. Mai 2007 (AS <b>2007</b> 1075).",
      "links": [
       {
-       "label": "AS 2007 1075",
+       "label": "AS <b>2007</b> 1075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/184"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Kosten einer unentgeltlichen Rechtsverbeiständung"
     }
    ]
   },
@@ -592,10 +627,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -604,18 +639,18 @@
     },
     {
      "nr": "50",
-     "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit, in der für die Schweiz gemäss Anhang II des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (SR 0.142.112.681) jeweils verbindlichen Fassung (eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR 0.831.109.268.1) sowie in der für die Schweiz gemäss Anlage 2 Anhang K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA) (SR 0.632.31) jeweils verbindlichen Fassung.",
+     "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit, in der für die Schweiz gemäss Anhang II des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (SR <b>0.142.112.681</b>) jeweils verbindlichen Fassung (eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR <b>0.831.109.268.1</b>) sowie in der für die Schweiz gemäss Anlage 2 Anhang K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA) (SR <b>0.632.31</b>) jeweils verbindlichen Fassung.",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       },
       {
-       "label": "SR 0.831.109.268.1",
+       "label": "SR <b>0.831.109.268.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/323"
       },
       {
-       "label": "SR 0.632.31",
+       "label": "SR <b>0.632.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
       }
      ],
@@ -624,15 +659,16 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Kapitel: Durchführung internationaler Sozialversicherungsabkommen"
     }
    ]
   },
@@ -653,10 +689,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -665,10 +701,10 @@
     },
     {
      "nr": "52",
-     "text": "SR 832.102",
+     "text": "SR <b>832.102</b>",
      "links": [
       {
-       "label": "SR 832.102",
+       "label": "SR <b>832.102</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867"
       }
      ],
@@ -677,10 +713,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
       }
      ],
@@ -689,10 +725,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -701,10 +737,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -713,10 +749,10 @@
     },
     {
      "nr": "56",
-     "text": "SR 832.20",
+     "text": "SR <b>832.20</b>",
      "links": [
       {
-       "label": "SR 832.20",
+       "label": "SR <b>832.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676"
       }
      ],
@@ -725,10 +761,10 @@
     },
     {
      "nr": "57",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -754,10 +790,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -766,10 +802,10 @@
     },
     {
      "nr": "59",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -778,10 +814,10 @@
     },
     {
      "nr": "60",
-     "text": "SR 836.2",
+     "text": "SR <b>836.2</b>",
      "links": [
       {
-       "label": "SR 836.2",
+       "label": "SR <b>836.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/51"
       }
      ],
@@ -790,10 +826,10 @@
     },
     {
      "nr": "61",
-     "text": "SR 836.1",
+     "text": "SR <b>836.1</b>",
      "links": [
       {
-       "label": "SR 836.1",
+       "label": "SR <b>836.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/823_843_839"
       }
      ],
@@ -802,10 +838,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -831,10 +867,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -843,10 +879,10 @@
     },
     {
      "nr": "64",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -855,10 +891,10 @@
     },
     {
      "nr": "65",
-     "text": "SR 832.102",
+     "text": "SR <b>832.102</b>",
      "links": [
       {
-       "label": "SR 832.102",
+       "label": "SR <b>832.102</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867"
       }
      ],
@@ -985,10 +1021,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Eingefügt gemäss Anhang Ziff. 2 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 750).",
+     "text": "Eingefügt gemäss Anhang Ziff. 2 der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 750).",
      "links": [
       {
-       "label": "AS 2023 750",
+       "label": "AS <b>2023</b> 750",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/750"
       }
      ],
@@ -1010,10 +1046,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Ursprünglich: Art. 18a. Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 5149).",
+     "text": "Ursprünglich: Art. 18<i>a</i>. Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5149).",
      "links": [
       {
-       "label": "AS 2020 5149",
+       "label": "AS <b>2020</b> 5149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/893"
       }
      ],
@@ -1022,10 +1058,10 @@
     },
     {
      "nr": "70",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -1047,10 +1083,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Ursprünglich: Art. 18a. Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Ursprünglich: Art. 18<i>a</i>. Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -1076,15 +1112,16 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Anforderungen an Spezialistinnen und Spezialisten, die Observationen durchführen"
     }
    ]
   },
@@ -1105,10 +1142,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 25 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 25 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -1117,10 +1154,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 330",
+     "text": "SR <b>330</b>",
      "links": [
       {
-       "label": "SR 330",
+       "label": "SR <b>330</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/600"
       }
      ],
@@ -1129,10 +1166,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -1188,10 +1225,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -1217,10 +1254,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -1261,15 +1298,16 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Durchführung der Observation"
     }
    ]
   },
@@ -1305,15 +1343,16 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 3. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 706).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 3. Nov. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 706).",
      "links": [
       {
-       "label": "AS 2021 706",
+       "label": "AS <b>2021</b> 706",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/706"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Gutachten"
     }
    ]
   },
@@ -1349,10 +1388,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
       }
      ],
@@ -1378,10 +1417,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 811.112.0",
+     "text": "SR <b>811.112.0</b>",
      "links": [
       {
-       "label": "SR 811.112.0",
+       "label": "SR <b>811.112.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/538"
       }
      ],
@@ -1390,10 +1429,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 811.11",
+     "text": "SR <b>811.11</b>",
      "links": [
       {
-       "label": "SR 811.11",
+       "label": "SR <b>811.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/537"
       }
      ],
@@ -1409,10 +1448,10 @@
     },
     {
      "nr": "23",
-     "text": "SR 832.102",
+     "text": "SR <b>832.102</b>",
      "links": [
       {
-       "label": "SR 832.102",
+       "label": "SR <b>832.102</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867"
       }
      ],
@@ -1498,10 +1537,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -1534,10 +1573,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. II der V vom 19. Sept. 2014, in Kraft seit 1. Jan. 2015 (AS 2014 3177).",
+     "text": "Fassung gemäss Ziff. II der V vom 19. Sept. 2014, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 3177).",
      "links": [
       {
-       "label": "AS 2014 3177",
+       "label": "AS <b>2014</b> 3177",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/537"
       }
      ],
@@ -1546,10 +1585,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 235.11",
+     "text": "SR <b>235.11</b>",
      "links": [
       {
-       "label": "SR 235.11",
+       "label": "SR <b>235.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
       }
      ],
@@ -1558,10 +1597,10 @@
     },
     {
      "nr": "30",
-     "text": "Fassung des dritten Satzes gemäss Anhang 2 Ziff. II 116 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung des dritten Satzes gemäss Anhang 2 Ziff. II 116 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -1570,10 +1609,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 935.61",
+     "text": "SR <b>935.61</b>",
      "links": [
       {
-       "label": "SR 935.61",
+       "label": "SR <b>935.61</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
@@ -1599,10 +1638,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -1628,10 +1667,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS 2019 2833).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Juni 2019, in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2833).",
      "links": [
       {
-       "label": "AS 2019 2833",
+       "label": "AS <b>2019</b> 2833",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/520"
       }
      ],
@@ -1657,10 +1696,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Ursprünglich Art. 9a. Eingefügt durch Ziff. II der V vom 19. Sept. 2014, in Kraft seit 1. Jan. 2015 (AS 2014 3177).",
+     "text": "Ursprünglich Art. 9<i>a</i>. Eingefügt durch Ziff. II der V vom 19. Sept. 2014, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 3177).",
      "links": [
       {
-       "label": "AS 2014 3177",
+       "label": "AS <b>2014</b> 3177",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/537"
       }
      ],

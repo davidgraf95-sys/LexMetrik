@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "814.01",
+  "titel": "Bundesgesetz über den Umweltschutz",
+  "erlassdatum": "vom 7. Oktober 1983 (Stand am 1. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 74 Absatz 1 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 31. Oktober 1979,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
+    "links": [
+     {
+      "label": "AS <b>2010</b> 3233",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
+     },
+     {
+      "label": "BBl <b>2009</b> 5435",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1979</b> III 749",
+    "links": [
+     {
+      "label": "BBl <b>1979</b> III 749",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1979/3_749_741_713"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,14 +79,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -66,14 +127,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -99,14 +160,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -115,14 +176,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -161,14 +222,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -194,14 +255,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -210,14 +271,14 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -226,14 +287,14 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -242,18 +303,18 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS 2004 4763; 2005 2293; BBl 2000 687).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -262,14 +323,14 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -278,14 +339,14 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -294,14 +355,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -310,14 +371,14 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -326,14 +387,14 @@
     },
     {
      "nr": "17",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -346,14 +407,14 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -362,22 +423,22 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS 1997 1155; BBl 1993 II 1445). Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445). Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       },
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -386,14 +447,14 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -402,14 +463,14 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang des BG vom 21. März 2014 (AS 2016 2661; BBl 2013 5737, 5783). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 376; BBl 2022 2651).",
+     "text": "Eingefügt durch Anhang des BG vom 21. März 2014 (AS <b>2016</b> 2661; BBl <b>2013</b> 5737, 5783). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 376; BBl <b>2022</b> 2651).",
      "links": [
       {
-       "label": "AS 2016 2661",
+       "label": "AS <b>2016</b> 2661",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/425"
       },
       {
-       "label": "BBl 2013 5737",
+       "label": "BBl <b>2013</b> 5737",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1036"
       },
       {
@@ -417,11 +478,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1038"
       },
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       }
      ],
@@ -430,14 +491,14 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 376; BBl 2022 2651).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 376; BBl <b>2022</b> 2651).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       }
      ],
@@ -476,14 +537,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Dez. 2006, mit Wirkung seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Dez. 2006, mit Wirkung seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -513,14 +574,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -529,14 +590,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -680,14 +741,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I 10 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Fassung gemäss Ziff. I 10 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -793,18 +854,18 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2026 (AS 2025 178; 2026 113; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2026 (AS <b>2025 </b>178; <b>2026 </b>113; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "2026 113",
+       "label": "<b>2026 </b>113",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/113"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -853,18 +914,18 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2026 (AS 2025 178; 2026 113; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2026 (AS <b>2025 </b>178; <b>2026 </b>113; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "2026 113",
+       "label": "<b>2026 </b>113",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/113"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -894,14 +955,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -927,14 +988,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -943,14 +1004,14 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -976,14 +1037,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -992,18 +1053,18 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS 2004 4763; 2005 2293 Art. 1; BBl 2000 687).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293 Art. 1; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -1029,14 +1090,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1081,19 +1142,20 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Ursprünglich 3. Kap. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Ursprünglich 3. Kap. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Abfälle"
     }
    ]
   },
@@ -1152,10 +1214,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "SR 814.20",
+     "text": "SR <b>814.20</b>",
      "links": [
       {
-       "label": "SR 814.20",
+       "label": "SR <b>814.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9477"
       }
      ],
@@ -1164,14 +1226,14 @@
     },
     {
      "nr": "81",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -1180,19 +1242,20 @@
     },
     {
      "nr": "79",
-     "text": "Ursprünglich 4. Kap. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Ursprünglich 4. Kap. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Belastungen des Bodens"
     }
    ]
   },
@@ -1213,14 +1276,14 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Ausdruck gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -1284,18 +1347,18 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; 2012 2389; BBl 2005 5351, 5391).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; <b>2012</b> 2389; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "2012 2389",
+       "label": "<b>2012</b> 2389",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/288"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1348,18 +1411,18 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Jan. 2005 (AS 2004 4763; 2005 2293 Art. 1; BBl 2000 687).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293 Art. 1; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -1368,18 +1431,18 @@
     },
     {
      "nr": "100",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS 2004 4763; 2005 2293 Art. 1; BBl 2000 687).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293 Art. 1; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -1388,18 +1451,18 @@
     },
     {
      "nr": "101",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS 2004 4763; 2005 2293 Art. 1; BBl 2000 687).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293 Art. 1; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -1408,14 +1471,14 @@
     },
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1424,14 +1487,14 @@
     },
     {
      "nr": "103",
-     "text": "Aufgehoben durch Art. 12 Ziff. 2 des Vernehmlassungsgesetzes vom 18. März 2005, mit Wirkung seit 1. Sept. 2005 (AS 2005 4099; BBl 2004 533).",
+     "text": "Aufgehoben durch Art. 12 Ziff. 2 des Vernehmlassungsgesetzes vom 18. März 2005, mit Wirkung seit 1. Sept. 2005 (AS <b>2005</b> 4099; BBl <b>2004</b> 533).",
      "links": [
       {
-       "label": "AS 2005 4099",
+       "label": "AS <b>2005</b> 4099",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/542"
       },
       {
-       "label": "BBl 2004 533",
+       "label": "BBl <b>2004</b> 533",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/127"
       }
      ],
@@ -1461,14 +1524,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 6. Okt. 1995 über die technischen Handelshemmnisse, in Kraft seit 1. Juli 1996 (AS 1996 1725; BBl 1995 II 521).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 6. Okt. 1995 über die technischen Handelshemmnisse, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 1725; BBl <b>1995</b> II 521).",
      "links": [
       {
-       "label": "AS 1996 1725",
+       "label": "AS <b>1996</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1725_1725_1725"
       },
       {
-       "label": "BBl 1995 II 521",
+       "label": "BBl <b>1995</b> II 521",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/2_521_489_393"
       }
      ],
@@ -1498,14 +1561,14 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -1518,10 +1581,10 @@
     },
     {
      "nr": "106",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -1530,10 +1593,10 @@
     },
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -1542,10 +1605,10 @@
     },
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -1582,14 +1645,14 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1619,14 +1682,14 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1656,14 +1719,14 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -1693,14 +1756,14 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1730,14 +1793,14 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1746,14 +1809,14 @@
     },
     {
      "nr": "119",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1783,14 +1846,14 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Aarhus-Konvention), in Kraft seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Aarhus-Konvention), in Kraft seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -1799,14 +1862,14 @@
     },
     {
      "nr": "121",
-     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Aarhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Aarhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -1815,18 +1878,18 @@
     },
     {
      "nr": "122",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS 2004 4763; 2005 2293 Art. 1; BBl 2000 687).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Chemikaliengesetzes vom 15. Dez. 2000, in Kraft seit 1. Aug. 2005 (AS <b>2004</b> 4763; <b>2005</b> 2293 Art. 1; BBl <b>2000</b> 687).",
      "links": [
       {
-       "label": "AS 2004 4763",
+       "label": "AS <b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "BBl 2000 687",
+       "label": "BBl <b>2000</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/195"
       }
      ],
@@ -1835,14 +1898,14 @@
     },
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -1887,14 +1950,14 @@
    "fussnoten": [
     {
      "nr": "125",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -1907,14 +1970,14 @@
     },
     {
      "nr": "126",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -1923,14 +1986,14 @@
     },
     {
      "nr": "127",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -1939,22 +2002,22 @@
     },
     {
      "nr": "128",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS 1997 1155; BBl 1993 II 1445). Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445). Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       },
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -1984,14 +2047,14 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Fassung gemäss Ziff. II 22 des BG vom 6. Okt. 2006 zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Fassung gemäss Ziff. II 22 des BG vom 6. Okt. 2006 zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -2000,10 +2063,10 @@
     },
     {
      "nr": "131",
-     "text": "SR 725.116.2",
+     "text": "SR <b>725.116.2</b>",
      "links": [
       {
-       "label": "SR 725.116.2",
+       "label": "SR <b>725.116.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8462"
       }
      ],
@@ -2042,14 +2105,14 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Aufgehoben durch Ziff. I 10 des BG vom 19. März 2021 über administrative Erleichterungen und eine Entlastung des Bundeshaushalts, mit Wirkung seit 1. Jan. 2022 (AS 2021 654; BBl 2020 6985).",
+     "text": "Aufgehoben durch Ziff. I 10 des BG vom 19. März 2021 über administrative Erleichterungen und eine Entlastung des Bundeshaushalts, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 654; BBl <b>2020</b> 6985).",
      "links": [
       {
-       "label": "AS 2021 654",
+       "label": "AS <b>2021</b> 654",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/654"
       },
       {
-       "label": "BBl 2020 6985",
+       "label": "BBl <b>2020</b> 6985",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1857"
       }
      ],
@@ -2075,14 +2138,14 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4061, 4062; BBl 2002 7911).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4061, <i>4062</i>; BBl <b>2002</b> 7911).",
      "links": [
       {
-       "label": "AS 2003 4061",
+       "label": "AS <b>2003 </b>4061",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/597"
       },
       {
-       "label": "BBl 2002 7911",
+       "label": "BBl <b>2002</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
       }
      ],
@@ -2091,14 +2154,14 @@
     },
     {
      "nr": "134",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2126,14 +2189,14 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Fassung gemäss Anhang Ziff. 91 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 91 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -2142,14 +2205,14 @@
     },
     {
      "nr": "139",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Dez. 2006, mit Wirkung seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Dez. 2006, mit Wirkung seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -2165,18 +2228,19 @@
      "text": "Ursprünglich: 1. Abschn.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Rechtspflege"
     },
     {
      "nr": "137",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -2185,7 +2249,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Abschnitt: Rechtspflege"
     }
    ]
   },
@@ -2210,14 +2275,14 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391). Die Bestimmung über die wirtschaftliche Tätigkeit in Abs. 1 Bst. b tritt am 1. Juli 2010 in Kraft (siehe Ziff. III Abs. 3 der genannten Änd.).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391). Die Bestimmung über die wirtschaftliche Tätigkeit in Abs. 1 Bst. b tritt am 1. Juli 2010 in Kraft (siehe Ziff. III Abs. 3 der genannten Änd.).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -2230,14 +2295,14 @@
     },
     {
      "nr": "140",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -2246,7 +2311,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Verbandsbeschwerde gegen Verfügungen über Anlagen"
     }
    ]
   },
@@ -2271,10 +2337,10 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 14 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -2283,10 +2349,10 @@
     },
     {
      "nr": "152",
-     "text": "Aufgehoben durch Anhang Ziff. 91 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 91 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -2294,7 +2360,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -2303,14 +2369,14 @@
     },
     {
      "nr": "150",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -2319,7 +2385,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Behörden- und Gemeindebeschwerde, Enteignung, Kosten von Sicherungs- und Behebungsmassnahmen"
     }
    ]
   },
@@ -2363,14 +2430,14 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -2379,10 +2446,10 @@
     },
     {
      "nr": "154",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
       }
      ],
@@ -2391,14 +2458,14 @@
     },
     {
      "nr": "155",
-     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4085; BBl 2018 4713).",
+     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4085; BBl <b>2018</b> 4713).",
      "links": [
       {
-       "label": "AS 2020 4085",
+       "label": "AS <b>2020</b> 4085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
       },
       {
-       "label": "BBl 2018 4713",
+       "label": "BBl <b>2018</b> 4713",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
       }
      ],
@@ -2407,14 +2474,14 @@
     },
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -2442,19 +2509,20 @@
    "fussnoten": [
     {
      "nr": "158",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Informations- und Dokumentationssysteme"
     }
    ]
   },
@@ -2471,14 +2539,14 @@
    "fussnoten": [
     {
      "nr": "173",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2487,14 +2555,14 @@
     },
     {
      "nr": "174",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -2503,14 +2571,14 @@
     },
     {
      "nr": "175",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2519,14 +2587,14 @@
     },
     {
      "nr": "176",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2535,14 +2603,14 @@
     },
     {
      "nr": "177",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2551,14 +2619,14 @@
     },
     {
      "nr": "178",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2567,14 +2635,14 @@
     },
     {
      "nr": "179",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2583,14 +2651,14 @@
     },
     {
      "nr": "180",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2599,14 +2667,14 @@
     },
     {
      "nr": "181",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2615,14 +2683,14 @@
     },
     {
      "nr": "182",
-     "text": "Aufgehoben durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Aufgehoben durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -2631,14 +2699,14 @@
     },
     {
      "nr": "183",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2647,14 +2715,14 @@
     },
     {
      "nr": "184",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -2663,14 +2731,14 @@
     },
     {
      "nr": "185",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS 2021 614; BBl 2019 1251).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 614; BBl <b>2019</b> 1251).",
      "links": [
       {
-       "label": "AS 2021 614",
+       "label": "AS <b>2021</b> 614",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/614"
       },
       {
-       "label": "BBl 2019 1251",
+       "label": "BBl <b>2019</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/275"
       }
      ],
@@ -2679,22 +2747,22 @@
     },
     {
      "nr": "186",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS 2024 376; BBl 2022 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS <b>2024</b> 376; BBl <b>2022</b> 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       },
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -2707,22 +2775,22 @@
     },
     {
      "nr": "187",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS 2024 376; BBl 2022 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS <b>2024</b> 376; BBl <b>2022</b> 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       },
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -2735,14 +2803,14 @@
     },
     {
      "nr": "188",
-     "text": "Eingefügt durch Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -2755,14 +2823,14 @@
     },
     {
      "nr": "189",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2771,14 +2839,14 @@
     },
     {
      "nr": "190",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -2787,22 +2855,22 @@
     },
     {
      "nr": "191",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS 2024 376; BBl 2022 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS <b>2024</b> 376; BBl <b>2022</b> 2651). Fassung gemäss Ziff. III des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       },
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -2818,7 +2886,8 @@
      "text": "Ursprünglich 4. Tit.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Titel: Strafbestimmungen"
     }
    ]
   },
@@ -2835,14 +2904,14 @@
    "fussnoten": [
     {
      "nr": "192",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -2851,14 +2920,14 @@
     },
     {
      "nr": "193",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2867,14 +2936,14 @@
     },
     {
      "nr": "194",
-     "text": "Fassung gemäss Ziff. III des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. III des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -2883,14 +2952,14 @@
     },
     {
      "nr": "195",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -2903,14 +2972,14 @@
     },
     {
      "nr": "196",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS 2021 614; BBl 2019 1251).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 614; BBl <b>2019</b> 1251).",
      "links": [
       {
-       "label": "AS 2021 614",
+       "label": "AS <b>2021</b> 614",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/614"
       },
       {
-       "label": "BBl 2019 1251",
+       "label": "BBl <b>2019</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/275"
       }
      ],
@@ -2926,14 +2995,14 @@
     },
     {
      "nr": "198",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -2955,10 +3024,10 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
@@ -2967,22 +3036,22 @@
     },
     {
      "nr": "202",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS 1997 1155; BBl 1993 II 1445). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 376; BBl 2022 2651).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 376; BBl <b>2022</b> 2651).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       },
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       }
      ],
@@ -3002,14 +3071,14 @@
    "fussnoten": [
     {
      "nr": "205",
-     "text": "Aufgehoben durch Ziff. II 32 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 32 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3021,7 +3090,8 @@
      "text": "Ursprünglich 5. Tit.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Titel: Schlussbestimmungen"
     }
    ]
   },
@@ -3049,14 +3119,14 @@
    "fussnoten": [
     {
      "nr": "206",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -3078,10 +3148,10 @@
    "fussnoten": [
     {
      "nr": "209",
-     "text": "Die Änderungen können unter AS 1984 1122 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>1984</b> 1122 konsultiert werden.",
      "links": [
       {
-       "label": "AS 1984 1122",
+       "label": "AS <b>1984</b> 1122",
        "url": "https://fedlex.data.admin.ch/eli/oc/1984/1122_1122_1122"
       }
      ],
@@ -3127,14 +3197,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -3143,7 +3213,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Umweltverträglichkeitsprüfung"
     }
    ]
   },
@@ -3164,14 +3235,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -3227,19 +3298,20 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), in Kraft seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Umweltinformationen"
     }
    ]
   },
@@ -3275,10 +3347,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
       }
      ],
@@ -3287,10 +3359,10 @@
     },
     {
      "nr": "30",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -3314,14 +3386,14 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -3330,7 +3402,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Schonung der natürlichen Ressourcen und Stärkung der Kreislaufwirtschaft"
     }
    ]
   },
@@ -3351,10 +3424,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "SR 814.91",
+     "text": "SR <b>814.91</b>",
      "links": [
       {
-       "label": "SR 814.91",
+       "label": "SR <b>814.91</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9621"
       }
      ],
@@ -3363,27 +3436,28 @@
     },
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS 1997 1155; BBl 1993 II 1445). Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445). Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       },
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Umgang mit Organismen"
     }
    ]
   },
@@ -3449,14 +3523,14 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435).",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -3465,10 +3539,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -3524,10 +3598,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "SR 814.91",
+     "text": "SR <b>814.91</b>",
      "links": [
       {
-       "label": "SR 814.91",
+       "label": "SR <b>814.91</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9621"
       }
      ],
@@ -3551,14 +3625,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS 2014 1021; BBl 2012 4323).",
+     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 27. Sept. 2013 (Arhus-Konvention), mit Wirkung seit 1. Juni 2014 (AS <b>2014</b> 1021; BBl <b>2012</b> 4323).",
      "links": [
       {
-       "label": "AS 2014 1021",
+       "label": "AS <b>2014</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/234"
       },
       {
-       "label": "BBl 2012 4323",
+       "label": "BBl <b>2012</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/596"
       }
      ],
@@ -3645,14 +3719,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -3705,14 +3779,14 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Aufgehoben durch Ziff. I 2 des BG vom 21. Dez. 2007 über die Aufhebung und Vereinfachung von Bewilligungsverfahren, mit Wirkung seit 1. Juni 2008 (AS 2008 2265; BBl 2007 315).",
+     "text": "Aufgehoben durch Ziff. I 2 des BG vom 21. Dez. 2007 über die Aufhebung und Vereinfachung von Bewilligungsverfahren, mit Wirkung seit 1. Juni 2008 (AS <b>2008</b> 2265; BBl <b>2007</b> 315).",
      "links": [
       {
-       "label": "AS 2008 2265",
+       "label": "AS <b>2008</b> 2265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/327"
       },
       {
-       "label": "BBl 2007 315",
+       "label": "BBl <b>2007</b> 315",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/50"
       }
      ],
@@ -3742,14 +3816,14 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Aufgehoben durch Ziff. I 2 des BG vom 21. Dez. 2007 über die Aufhebung und Vereinfachung von Bewilligungsverfahren, mit Wirkung seit 1. Juni 2008 (AS 2008 2265; BBl 2007 315).",
+     "text": "Aufgehoben durch Ziff. I 2 des BG vom 21. Dez. 2007 über die Aufhebung und Vereinfachung von Bewilligungsverfahren, mit Wirkung seit 1. Juni 2008 (AS <b>2008</b> 2265; BBl <b>2007</b> 315).",
      "links": [
       {
-       "label": "AS 2008 2265",
+       "label": "AS <b>2008</b> 2265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/327"
       },
       {
-       "label": "BBl 2007 315",
+       "label": "BBl <b>2007</b> 315",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/50"
       }
      ],
@@ -3817,14 +3891,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. II des BG vom 20. Juni 1997, in Kraft seit 1. Nov. 1997 (AS 1997 2243; BBl 1996 IV 1217).",
+     "text": "Fassung gemäss Ziff. II des BG vom 20. Juni 1997, in Kraft seit 1. Nov. 1997 (AS <b>1997</b> 2243; BBl <b>1996</b> IV 1217).",
      "links": [
       {
-       "label": "AS 1997 2243",
+       "label": "AS <b>1997</b> 2243",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2243_2243_2243"
       },
       {
-       "label": "BBl 1996 IV 1217",
+       "label": "BBl <b>1996</b> IV 1217",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1217_1213_1041"
       }
      ],
@@ -3873,14 +3947,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. II des BG vom 20. Juni 1997, in Kraft seit 1. Nov. 1997 (AS 1997 2243; BBl 1996 IV 1217).",
+     "text": "Eingefügt durch Ziff. II des BG vom 20. Juni 1997, in Kraft seit 1. Nov. 1997 (AS <b>1997</b> 2243; BBl <b>1996</b> IV 1217).",
      "links": [
       {
-       "label": "AS 1997 2243",
+       "label": "AS <b>1997</b> 2243",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2243_2243_2243"
       },
       {
-       "label": "BBl 1996 IV 1217",
+       "label": "BBl <b>1996</b> IV 1217",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1217_1213_1041"
       }
      ],
@@ -3910,21 +3984,21 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Ursprünglich Art. 32a.",
+     "text": "Ursprünglich Art. 32<i>a.</i>",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -3937,14 +4011,14 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -3957,14 +4031,14 @@
     },
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -3977,10 +4051,10 @@
     },
     {
      "nr": "57",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -3989,14 +4063,14 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4009,14 +4083,14 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4050,14 +4124,14 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4091,14 +4165,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4132,14 +4206,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4173,14 +4247,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4214,14 +4288,14 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4234,10 +4308,10 @@
     },
     {
      "nr": "64",
-     "text": "SR 641.20",
+     "text": "SR <b>641.20</b>",
      "links": [
       {
-       "label": "SR 641.20",
+       "label": "SR <b>641.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8079"
       }
      ],
@@ -4265,14 +4339,14 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Tritt zu einem späteren Zeitpunkt in Kraft (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Tritt zu einem späteren Zeitpunkt in Kraft (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4325,14 +4399,14 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Nov. 2006 (AS 2006 2677; BBl 2003 5008, 5043).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Nov. 2006 (AS <b>2006</b> 2677; BBl <b>2003 </b>5008, 5043).",
      "links": [
       {
-       "label": "AS 2006 2677",
+       "label": "AS <b>2006</b> 2677",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/410"
       },
       {
-       "label": "BBl 2003 5008",
+       "label": "BBl <b>2003 </b>5008",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/773"
       },
       {
@@ -4366,14 +4440,14 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4382,14 +4456,14 @@
     },
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4398,14 +4472,14 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4414,14 +4488,14 @@
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Nov. 2006 (AS 2006 2677; BBl 2003 5008, 5043).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Nov. 2006 (AS <b>2006</b> 2677; BBl <b>2003 </b>5008, 5043).",
      "links": [
       {
-       "label": "AS 2006 2677",
+       "label": "AS <b>2006</b> 2677",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/410"
       },
       {
-       "label": "BBl 2003 5008",
+       "label": "BBl <b>2003 </b>5008",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/773"
       },
       {
@@ -4430,7 +4504,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Sanierung belasteter Standorte"
     }
    ]
   },
@@ -4474,14 +4549,14 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Nov. 2013, Abs. 3 und 4 in Kraft seit 1. Juli 2014 (AS 2013 3241; BBl 2012 9391, 9403).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Nov. 2013, Abs. 3 und 4 in Kraft seit 1. Juli 2014 (AS <b>2013</b> 3241; BBl <b>2012</b> 9391, 9403).",
      "links": [
       {
-       "label": "AS 2013 3241",
+       "label": "AS <b>2013</b> 3241",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/618"
       },
       {
-       "label": "BBl 2012 9391",
+       "label": "BBl <b>2012</b> 9391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1726"
       },
       {
@@ -4515,14 +4590,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS 2015 865; BBl 2014 3673, 3685).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS <b>2015 </b>865; BBl <b>2014</b> 3673, 3685).",
      "links": [
       {
-       "label": "AS 2015 865",
+       "label": "AS <b>2015 </b>865",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/164"
       },
       {
-       "label": "BBl 2014 3673",
+       "label": "BBl <b>2014</b> 3673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/820"
       },
       {
@@ -4535,14 +4610,14 @@
     },
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS 2015 865; BBl 2014 3673, 3685).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS <b>2015 </b>865; BBl <b>2014</b> 3673, 3685).",
      "links": [
       {
-       "label": "AS 2015 865",
+       "label": "AS <b>2015 </b>865",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/164"
       },
       {
-       "label": "BBl 2014 3673",
+       "label": "BBl <b>2014</b> 3673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/820"
       },
       {
@@ -4555,14 +4630,14 @@
     },
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS 2015 865; BBl 2014 3673, 3685).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. April 2015 (AS <b>2015 </b>865; BBl <b>2014</b> 3673, 3685).",
      "links": [
       {
-       "label": "AS 2015 865",
+       "label": "AS <b>2015 </b>865",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/164"
       },
       {
-       "label": "BBl 2014 3673",
+       "label": "BBl <b>2014</b> 3673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/820"
       },
       {
@@ -4575,14 +4650,14 @@
     },
     {
      "nr": "76",
-     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4612,14 +4687,14 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4649,14 +4724,14 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4682,19 +4757,20 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Kapitel: Lenkungsabgaben"
     }
    ]
   },
@@ -4713,14 +4789,14 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4744,22 +4820,22 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003 (AS 2003 4215; BBl 2002 6464). Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003 (AS <b>2003 </b>4215; BBl <b>2002 </b>6464). Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2003 4215",
+       "label": "AS <b>2003 </b>4215",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/624"
       },
       {
-       "label": "BBl 2002 6464",
+       "label": "BBl <b>2002 </b>6464",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
       },
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4785,10 +4861,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "SR 631.0",
+     "text": "SR <b>631.0</b>",
      "links": [
       {
-       "label": "SR 631.0",
+       "label": "SR <b>631.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7812"
       }
      ],
@@ -4797,14 +4873,14 @@
     },
     {
      "nr": "87",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4813,14 +4889,14 @@
     },
     {
      "nr": "88",
-     "text": "Fassung gemäss Anhang 2 Ziff. 6 des Mineralölsteuergesetzes vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 3371; BBl 1995 III 137).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 6 des Mineralölsteuergesetzes vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3371; BBl <b>1995</b> III 137).",
      "links": [
       {
-       "label": "AS 1996 3371",
+       "label": "AS <b>1996</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3371_3371_3371"
       },
       {
-       "label": "BBl 1995 III 137",
+       "label": "BBl <b>1995</b> III 137",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/3_137_133_137"
       }
      ],
@@ -4829,22 +4905,22 @@
     },
     {
      "nr": "89",
-     "text": "Eingefügt durch Anhang 2 Ziff. 6 des Mineralölsteuergesetzes vom 21. Juni 1996 (AS 1996 3371; BBl 1995 III 137). Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Anhang 2 Ziff. 6 des Mineralölsteuergesetzes vom 21. Juni 1996 (AS <b>1996</b> 3371; BBl <b>1995</b> III 137). Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 1996 3371",
+       "label": "AS <b>1996</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3371_3371_3371"
       },
       {
-       "label": "BBl 1995 III 137",
+       "label": "BBl <b>1995</b> III 137",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/3_137_133_137"
       },
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -4872,14 +4948,14 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Eingefügt durch Anhang des BG vom 21. März 2014, in Kraft seit 1. Aug. 2016 (AS 2016 2661; BBl 2013 5737, 5783).",
+     "text": "Eingefügt durch Anhang des BG vom 21. März 2014, in Kraft seit 1. Aug. 2016 (AS <b>2016</b> 2661; BBl <b>2013</b> 5737, 5783).",
      "links": [
       {
-       "label": "AS 2016 2661",
+       "label": "AS <b>2016</b> 2661",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/425"
       },
       {
-       "label": "BBl 2013 5737",
+       "label": "BBl <b>2013</b> 5737",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1036"
       },
       {
@@ -4888,18 +4964,19 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Reduktion der durch Rohstoffe und Produkte verursachten Umweltbelastung"
     },
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4908,22 +4985,23 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Reduktion der durch Rohstoffe und Produkte verursachten Umweltbelastung"
     },
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I 3 und II des BG vom 20. Dez. 2019 über die Verlängerung der Befristung der Steuererleichterungen für Erdgas, Flüssiggas und biogene Treibstoffe und über die Änderung des Bundesgesetzes über die Reduktion der CO2-Emissionen (AS 2020 1269; 2022 262; BBl 2019 5679, 5813; 2021 2252, 2254). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 376; BBl 2022 2651).",
+     "text": "Eingefügt durch Ziff. I 3 und II des BG vom 20. Dez. 2019 über die Verlängerung der Befristung der Steuererleichterungen für Erdgas, Flüssiggas und biogene Treibstoffe und über die Änderung des Bundesgesetzes über die Reduktion der CO2-Emissionen (AS <b>2020</b> 1269; <b>2022</b> 262; BBl <b>2019</b> 5679, 5813; <b>2021</b> 2252, 2254). Fassung gemäss Anhang Ziff. 4 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 376; BBl <b>2022</b> 2651).",
      "links": [
       {
-       "label": "AS 2020 1269",
+       "label": "AS <b>2020</b> 1269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/243"
       },
       {
-       "label": "2022 262",
+       "label": "<b>2022</b> 262",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/262"
       },
       {
-       "label": "BBl 2019 5679",
+       "label": "BBl <b>2019</b> 5679",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2011"
       },
       {
@@ -4931,7 +5009,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2069"
       },
       {
-       "label": "2021 2252",
+       "label": "<b>2021</b> 2252",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2252"
       },
       {
@@ -4939,27 +5017,28 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2254"
       },
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Biogene Treib- und Brennstoffe"
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -4968,7 +5047,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Biogene Treib- und Brennstoffe"
     }
    ]
   },
@@ -4993,30 +5073,31 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS 2021 614; BBl 2019 1251).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 614; BBl <b>2019</b> 1251).",
      "links": [
       {
-       "label": "AS 2021 614",
+       "label": "AS <b>2021</b> 614",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/614"
       },
       {
-       "label": "BBl 2019 1251",
+       "label": "BBl <b>2019</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/275"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Anbau, Abbau und Herstellung von Holz und Holzerzeugnissen sowie von weiteren Rohstoffen und Produkten"
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5025,7 +5106,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Anbau, Abbau und Herstellung von Holz und Holzerzeugnissen sowie von weiteren Rohstoffen und Produkten"
     }
    ]
   },
@@ -5105,14 +5187,14 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5121,7 +5203,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Ressourcenschonende Gestaltung von Produkten und Verpackungen"
     }
    ]
   },
@@ -5144,14 +5227,14 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5160,7 +5243,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Ressourcenschonendes Bauen"
     }
    ]
   },
@@ -5183,14 +5267,14 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5203,19 +5287,20 @@
     },
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Zusammenarbeit mit der Wirtschaft"
     }
    ]
   },
@@ -5240,14 +5325,14 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -5277,14 +5362,14 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -5314,14 +5399,14 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5351,14 +5436,14 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -5390,19 +5475,20 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Elektronische Kommunikation in Verwaltungsverfahren"
     }
    ]
   },
@@ -5427,14 +5513,14 @@
    "fussnoten": [
     {
      "nr": "142",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5468,14 +5554,14 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5488,10 +5574,10 @@
     },
     {
      "nr": "144",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
       }
      ],
@@ -5521,14 +5607,14 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5541,10 +5627,10 @@
     },
     {
      "nr": "146",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -5574,14 +5660,14 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5615,14 +5701,14 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5654,14 +5740,14 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005</b> 5351, 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -5670,7 +5756,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Verbandsbeschwerde gegen Bewilligungen von Organismen"
     }
    ]
   },
@@ -5695,14 +5782,14 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "Ursprünglich: Art. 59. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Ursprünglich: Art. 59. Fassung gemäss Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -5724,14 +5811,14 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5740,14 +5827,14 @@
     },
     {
      "nr": "161",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5756,14 +5843,14 @@
     },
     {
      "nr": "162",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5772,10 +5859,10 @@
     },
     {
      "nr": "163",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -5784,14 +5871,14 @@
     },
     {
      "nr": "164",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5800,19 +5887,20 @@
     },
     {
      "nr": "159",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Titel: Haftpflicht"
     }
    ]
   },
@@ -5829,14 +5917,14 @@
    "fussnoten": [
     {
      "nr": "165",
-     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5845,14 +5933,14 @@
     },
     {
      "nr": "166",
-     "text": "Ausdruck gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS 2010 3233; BBl 2009 5435). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. II 1 des BG vom 19. März 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 3233; BBl <b>2009</b> 5435). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2010 3233",
+       "label": "AS <b>2010</b> 3233",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/434"
       },
       {
-       "label": "BBl 2009 5435",
+       "label": "BBl <b>2009</b> 5435",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/947"
       }
      ],
@@ -5861,10 +5949,10 @@
     },
     {
      "nr": "167",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -5886,14 +5974,14 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5915,14 +6003,14 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5931,10 +6019,10 @@
     },
     {
      "nr": "170",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -5956,14 +6044,14 @@
    "fussnoten": [
     {
      "nr": "171",
-     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -5985,22 +6073,22 @@
    "fussnoten": [
     {
      "nr": "199",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS 1997 1155; BBl 1993 II 1445). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Dez. 1995 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       },
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -6022,22 +6110,22 @@
    "fussnoten": [
     {
      "nr": "200",
-     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS 2024 376; BBl 2022 2651). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 15. März 2024 (AS <b>2024</b> 376; BBl <b>2022</b> 2651). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       },
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -6059,14 +6147,14 @@
    "fussnoten": [
     {
      "nr": "203",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -6088,14 +6176,14 @@
    "fussnoten": [
     {
      "nr": "207",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014 (AS 2015 865; BBl 2014 3673, 3685). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014 (AS <b>2015 </b>865; BBl <b>2014</b> 3673, 3685). Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2015 865",
+       "label": "AS <b>2015 </b>865",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/164"
       },
       {
-       "label": "BBl 2014 3673",
+       "label": "BBl <b>2014</b> 3673",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/820"
       },
       {
@@ -6103,11 +6191,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/822"
       },
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -6116,10 +6204,10 @@
     },
     {
      "nr": "208",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],

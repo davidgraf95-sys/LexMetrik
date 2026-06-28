@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.103.1",
+  "titel": "Internationaler Pakt über wirtschaftliche, soziale und kulturelle Rechte",
+  "erlassdatum": "(Stand am 28. November 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Vertragsstaaten dieses Paktes"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass nach den in der Charta der Vereinten Nationen verkündeten Grundsätzen die Anerkennung der allen Mitgliedern der menschlichen Gesellschaft innewohnenden Würde und der Gleichheit und Unveräusserlichkeit ihrer Rechte die Grundlage von Freiheit, Gerechtigkeit und Frieden in der Welt bildet,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass sich diese Rechte aus der dem Menschen innewohnenden Würde herleiten,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass nach der Allgemeinen Erklärung der Menschenrechte das Ideal vom freien Menschen, der frei von Furcht und Not lebt, nur verwirklicht werden kann, wenn Verhältnisse geschaffen werden, in denen jeder seine wirtschaftlichen, sozialen und kulturellen Rechte ebenso wie seine bürgerlichen und politischen Rechte geniessen kann,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass die Charta der Vereinten Nationen die Staaten verpflichtet, die allgemeine und wirksame Achtung der Rechte und Freiheiten des Menschen zu fördern,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "im Hinblick darauf, dass der einzelne gegenüber seinen Mitmenschen und der Gemeinschaft, der er angehört, Pflichten hat und gehalten ist, für die Förderung und Achtung der in diesem Pakt anerkannten Rechte einzutreten – vereinbaren folgende Artikel:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "AS <b>1993</b> 724",
+    "links": [
+     {
+      "label": "AS <b>1993</b> 724",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1993/724_724_724"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.120</b>",
+    "links": [
+     {
+      "label": "SR <b>0.120</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -75,10 +132,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 0.822.719.7",
+     "text": "SR<b> 0.822.719.7</b>",
      "links": [
       {
-       "label": "SR 0.822.719.7",
+       "label": "SR<b> 0.822.719.7</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1976/689_689_689"
       }
      ],
@@ -251,10 +308,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 0.193.501",
+     "text": "SR <b>0.193.501</b>",
      "links": [
       {
-       "label": "SR 0.193.501",
+       "label": "SR <b>0.193.501</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1948/1048_1037_1010"
       }
      ],

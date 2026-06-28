@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "822.115",
+  "titel": "Verordnung 5 zum Arbeitsgesetz",
+  "erlassdatum": "vom 28. September 2007 (Stand am 1. April 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 40 des Arbeitsgesetzes vom 13. März 1964 (ArG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>822.11</b>",
+    "links": [
+     {
+      "label": "SR <b>822.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1966/57_57_57"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -36,10 +69,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "SR 412.10",
+     "text": "SR <b>412.10</b>",
      "links": [
       {
-       "label": "SR 412.10",
+       "label": "SR <b>412.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
       }
      ],
@@ -61,10 +94,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS 2024 93).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -86,10 +119,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 446.1",
+     "text": "SR <b>446.1</b>",
      "links": [
       {
-       "label": "SR 446.1",
+       "label": "SR <b>446.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/698"
       }
      ],
@@ -98,10 +131,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS 2024 93).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -145,10 +178,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS 2024 93).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -157,10 +190,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 446.1",
+     "text": "SR <b>446.1</b>",
      "links": [
       {
-       "label": "SR 446.1",
+       "label": "SR <b>446.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/698"
       }
      ],
@@ -246,10 +279,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 822.112",
+     "text": "SR <b>822.112</b>",
      "links": [
       {
-       "label": "SR 822.112",
+       "label": "SR <b>822.112</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2000/244"
       }
      ],
@@ -322,10 +355,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Juni 2014, in Kraft seit 1. Aug. 2014 (AS 2014 2241).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Juni 2014, in Kraft seit 1. Aug. 2014 (AS <b>2014</b> 2241).",
      "links": [
       {
-       "label": "AS 2014 2241",
+       "label": "AS <b>2014</b> 2241",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/375"
       }
      ],
@@ -347,10 +380,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 822.111",
+     "text": "SR <b>822.111</b>",
      "links": [
       {
-       "label": "SR 822.111",
+       "label": "SR <b>822.111</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2000/243"
       }
      ],
@@ -359,10 +392,10 @@
     },
     {
      "nr": "16",
-     "text": "Die Änderung kann unter AS 2007 4959 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2007 </b>4959 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2007 4959",
+       "label": "AS <b>2007 </b>4959",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/692"
       }
      ],
@@ -393,14 +426,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Juni 2014 (AS 2014 2241). Aufgehoben durch Ziff. I der V vom 14. Febr. 2024, mit Wirkung seit 1. April 2024 (AS 2024 93).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Juni 2014 (AS <b>2014</b> 2241). Aufgehoben durch Ziff. I der V vom 14. Febr. 2024, mit Wirkung seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2014 2241",
+       "label": "AS <b>2014</b> 2241",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/375"
       },
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -422,10 +455,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS 2024 93).",
+     "text": "Eingefügt durch Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -434,10 +467,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 822.116",
+     "text": "SR <b>822.116</b>",
      "links": [
       {
-       "label": "SR 822.116",
+       "label": "SR <b>822.116</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/3121_3121_3121"
       }
      ],
@@ -446,10 +479,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 412.10",
+     "text": "SR <b>412.10</b>",
      "links": [
       {
-       "label": "SR 412.10",
+       "label": "SR <b>412.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
       }
      ],
@@ -471,10 +504,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS 2024 93).",
+     "text": "Eingefügt durch Ziff. I der V vom 14. Febr. 2024, in Kraft seit 1. April 2024 (AS <b>2024</b> 93).",
      "links": [
       {
-       "label": "AS 2024 93",
+       "label": "AS <b>2024</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/93"
       }
      ],
@@ -483,10 +516,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 412.10",
+     "text": "SR <b>412.10</b>",
      "links": [
       {
-       "label": "SR 412.10",
+       "label": "SR <b>412.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
       }
      ],

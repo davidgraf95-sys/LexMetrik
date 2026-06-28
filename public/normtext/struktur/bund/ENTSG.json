@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "823.20",
+  "titel": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne",
+  "erlassdatum": "vom 8. Oktober 1999 (Stand am 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 110 Absatz 1 Buchstaben a und b der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 23. Juni 1999,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
+    "links": [
+     {
+      "label": "AS <b>2012</b> 6703",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
+     },
+     {
+      "label": "BBl <b>2012</b> 3397",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1999</b> 6128",
+    "links": [
+     {
+      "label": "BBl <b>1999</b> 6128",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_6128_5440_5092"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -9,14 +70,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -25,10 +86,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -37,14 +98,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -53,14 +114,14 @@
     },
     {
      "nr": "7",
-     "text": "Letzter Satz eingefügt durch Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Letzter Satz eingefügt durch Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS <b>2012 </b>6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012 </b>6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -69,14 +130,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -93,10 +154,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -105,14 +166,14 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -121,14 +182,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Fassung gemäss Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -141,14 +202,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -161,14 +222,14 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -181,14 +242,14 @@
     },
     {
      "nr": "17",
-     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -201,18 +262,18 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Dez. 2018 (Verfahrensregelungen und Informationssysteme), in Kraft seit 1. April 2020 (AS 2019 1413, 2020 881; BBl 2018 1685).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Dez. 2018 (Verfahrensregelungen und Informationssysteme), in Kraft seit 1. April 2020 (AS <b>2019</b> 1413, <b>2020</b> 881; BBl <b>2018</b> 1685).",
      "links": [
       {
-       "label": "AS 2019 1413",
+       "label": "AS <b>2019</b> 1413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/278"
       },
       {
-       "label": "2020 881",
+       "label": "<b>2020</b> 881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/170"
       },
       {
-       "label": "BBl 2018 1685",
+       "label": "BBl <b>2018</b> 1685",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/673"
       }
      ],
@@ -221,18 +282,18 @@
     },
     {
      "nr": "19",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 3 des BG vom 14. Dez. 2018 (Verfahrensregelungen und Informationssysteme), in Kraft seit 1. April 2020 (AS 2019 1413, 2020 881; BBl 2018 1685).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 3 des BG vom 14. Dez. 2018 (Verfahrensregelungen und Informationssysteme), in Kraft seit 1. April 2020 (AS <b>2019</b> 1413, <b>2020</b> 881; BBl <b>2018</b> 1685).",
      "links": [
       {
-       "label": "AS 2019 1413",
+       "label": "AS <b>2019</b> 1413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/278"
       },
       {
-       "label": "2020 881",
+       "label": "<b>2020</b> 881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/170"
       },
       {
-       "label": "BBl 2018 1685",
+       "label": "BBl <b>2018</b> 1685",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/673"
       }
      ],
@@ -249,14 +310,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -279,14 +340,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS <b>2012 </b>6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012 </b>6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -295,14 +356,14 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -319,14 +380,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Fassung gemäss Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -339,14 +400,14 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Mai 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Mai 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -363,10 +424,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -375,14 +436,14 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -391,14 +452,14 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit (AS 2006 979; BBl 2004 5891 6565). Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565). Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -406,11 +467,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1105"
       },
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -427,14 +488,14 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 641; BBl 2022 3190).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 641; BBl <b>2022</b> 3190).",
      "links": [
       {
-       "label": "AS 2023 641",
+       "label": "AS <b>2023</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/641"
       },
       {
-       "label": "BBl 2022 3190",
+       "label": "BBl <b>2022</b> 3190",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/3190"
       }
      ],
@@ -443,10 +504,10 @@
     },
     {
      "nr": "32",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -455,14 +516,14 @@
     },
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 19. März 2010, in Kraft seit 1. April 2011 (AS 2011 1167; BBl 2008 7733).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 19. März 2010, in Kraft seit 1. April 2011 (AS <b>2011</b> 1167; BBl <b>2008</b> 7733).",
      "links": [
       {
-       "label": "AS 2011 1167",
+       "label": "AS <b>2011</b> 1167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/171"
       },
       {
-       "label": "BBl 2008 7733",
+       "label": "BBl <b>2008</b> 7733",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1319"
       }
      ],
@@ -479,14 +540,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -495,10 +556,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -507,14 +568,14 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -523,14 +584,14 @@
     },
     {
      "nr": "38",
-     "text": "Fassung durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 641; BBl 2022 3190).",
+     "text": "Fassung durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 641; BBl <b>2022</b> 3190).",
      "links": [
       {
-       "label": "AS 2023 641",
+       "label": "AS <b>2023</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/641"
       },
       {
-       "label": "BBl 2022 3190",
+       "label": "BBl <b>2022</b> 3190",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/3190"
       }
      ],
@@ -539,14 +600,14 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -561,10 +622,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Aufgehoben durch Anhang Ziff. 102 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 102 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -572,7 +633,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -595,10 +656,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -607,14 +668,14 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -623,22 +684,22 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit (AS 2012 6703; BBl 2012 3397). Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit (AS <b>2012</b> 6703; BBl <b>2012</b> 3397). Fassung gemäss Ziff. I des BG vom 30. Sept. 2016, in Kraft seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       },
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -647,14 +708,14 @@
     },
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -663,10 +724,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -675,14 +736,14 @@
     },
     {
      "nr": "46",
-     "text": "Aufgehoben durch Ziff. I des BG vom 30. Sept. 2016, mit Wirkung seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 30. Sept. 2016, mit Wirkung seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -691,14 +752,14 @@
     },
     {
      "nr": "47",
-     "text": "Aufgehoben durch Ziff. I des BG vom 30. Sept. 2016, mit Wirkung seit 1. April 2017 (AS 2017 2077; BBl 2015 5845).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 30. Sept. 2016, mit Wirkung seit 1. April 2017 (AS <b>2017</b> 2077; BBl <b>2015</b> 5845).",
      "links": [
       {
-       "label": "AS 2017 2077",
+       "label": "AS <b>2017</b> 2077",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/184"
       },
       {
-       "label": "BBl 2015 5845",
+       "label": "BBl <b>2015</b> 5845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/1362"
       }
      ],
@@ -721,14 +782,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -745,10 +806,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -772,14 +833,14 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012, in Kraft seit 15. Juli 2013 (AS <b>2012 </b>6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012 </b>6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -796,14 +857,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -812,10 +873,10 @@
     },
     {
      "nr": "10",
-     "text": "Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16. Sept. 2009 zur Festlegung der Modalitäten für die Durchführung der Verordnung (EG) Nr. 883/2004 über die Koordinierung der Systeme der sozialen Sicherheit, in der für die Schweiz gemäss Anhang II zum Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft andererseits über die Freizügigkeit (SR 0.142.112.681) jeweils verbindlichen Fassung.",
+     "text": "Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16. Sept. 2009 zur Festlegung der Modalitäten für die Durchführung der Verordnung (EG) Nr. 883/2004 über die Koordinierung der Systeme der sozialen Sicherheit, in der für die Schweiz gemäss Anhang II zum Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft andererseits über die Freizügigkeit (SR <b>0.142.112.681</b>) jeweils verbindlichen Fassung.",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -832,14 +893,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS 2012 6703; BBl 2012 3397).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Anpassung der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6703; BBl <b>2012</b> 3397).",
      "links": [
       {
-       "label": "AS 2012 6703",
+       "label": "AS <b>2012</b> 6703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/811"
       },
       {
-       "label": "BBl 2012 3397",
+       "label": "BBl <b>2012</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/446"
       }
      ],
@@ -856,14 +917,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS 2006 979; BBl 2004 5891 6565).",
+     "text": "Eingefügt durch Art. 2 Ziff. 5 des BB vom 17. Dez. 2004 über die Genehmigung und Umsetzung des Prot. über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit, in Kraft seit 1. April 2006 (AS <b>2006</b> 979; BBl <b>2004</b> 5891 6565).",
      "links": [
       {
-       "label": "AS 2006 979",
+       "label": "AS <b>2006</b> 979",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/178"
       },
       {
-       "label": "BBl 2004 5891",
+       "label": "BBl <b>2004</b> 5891",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1081"
       },
       {
@@ -876,10 +937,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -888,10 +949,10 @@
     },
     {
      "nr": "30",
-     "text": "Ausdruck gemäss Ziff. I 20 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS 2012 3655).",
+     "text": "Ausdruck gemäss Ziff. I 20 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 3655).",
      "links": [
       {
-       "label": "AS 2012 3655",
+       "label": "AS <b>2012</b> 3655",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       }
      ],
@@ -908,14 +969,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS 2023 641; BBl 2022 3190).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Juni 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 641; BBl <b>2022</b> 3190).",
      "links": [
       {
-       "label": "AS 2023 641",
+       "label": "AS <b>2023</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/641"
       },
       {
-       "label": "BBl 2022 3190",
+       "label": "BBl <b>2022</b> 3190",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/3190"
       }
      ],

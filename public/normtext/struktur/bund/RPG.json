@@ -1,5 +1,90 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "700",
+  "titel": "Bundesgesetz über die Raumplanung",
+  "erlassdatum": "vom 22. Juni 1979 (Stand am 1. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 22 und 34 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 27. Februar 1978,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 965",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
+     },
+     {
+      "label": "BBl <b>1994</b> III 1075",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "[AS <b>1969</b> 1249; <b>1972</b> 1481]. Den genannten Bestimmungen entsprechen heute die Art. 41, 75, 108 und 147 der BV vom 18. April 1999 (SR <b>101</b>).",
+    "links": [
+     {
+      "label": "AS <b>1969</b> 1249",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1969/1249_1265_1267"
+     },
+     {
+      "label": "<b>1972</b> 1481",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1972/1481_1509_1681"
+     },
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 965",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
+     },
+     {
+      "label": "BBl <b>1994</b> III 1075",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1978</b> I 1006",
+    "links": [
+     {
+      "label": "BBl <b>1978</b> I 1006",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1978/1_1006_1007_959"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,14 +99,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -30,14 +115,14 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -46,14 +131,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -62,14 +147,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -78,22 +163,22 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS 2017 6521; 2018 3171; BBl 2013 2397; 2016 2821).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 6521; <b>2018</b> 3171; BBl <b>2013</b> 2397; <b>2016</b> 2821).",
      "links": [
       {
-       "label": "AS 2017 6521",
+       "label": "AS <b>2017</b> 6521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/718"
       },
       {
-       "label": "2018 3171",
+       "label": "<b>2018</b> 3171",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/509"
       },
       {
-       "label": "BBl 2013 2397",
+       "label": "BBl <b>2013</b> 2397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/416"
       },
       {
-       "label": "2016 2821",
+       "label": "<b>2016</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/524"
       }
      ],
@@ -126,14 +211,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -142,14 +227,14 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -158,14 +243,14 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -174,14 +259,14 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -214,14 +299,14 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -230,22 +315,22 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012 (AS 2014 899; BBl 2010 1049). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012 (AS <b>2014</b> 899; BBl <b>2010</b> 1049). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       },
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -254,14 +339,14 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -270,14 +355,14 @@
     },
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -286,14 +371,14 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -302,14 +387,14 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -335,14 +420,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Aufgehoben durch Ziff. I des BG vom 15. Juni 2012, mit Wirkung seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 15. Juni 2012, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -351,14 +436,14 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -367,14 +452,14 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6839; BBl 2013 7561).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
-       "label": "AS 2017 6839",
+       "label": "AS <b>2017</b> 6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/762"
       },
       {
-       "label": "BBl 2013 7561",
+       "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
@@ -383,14 +468,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -399,14 +484,14 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -415,14 +500,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6839; BBl 2013 7561).",
+     "text": "Fassung gemäss Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
-       "label": "AS 2017 6839",
+       "label": "AS <b>2017</b> 6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/762"
       },
       {
-       "label": "BBl 2013 7561",
+       "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
@@ -431,14 +516,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6839; BBl 2013 7561).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
-       "label": "AS 2017 6839",
+       "label": "AS <b>2017</b> 6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/762"
       },
       {
-       "label": "BBl 2013 7561",
+       "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
@@ -447,14 +532,14 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6839; BBl 2013 7561).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
-       "label": "AS 2017 6839",
+       "label": "AS <b>2017</b> 6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/762"
       },
       {
-       "label": "BBl 2013 7561",
+       "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
@@ -463,14 +548,14 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -511,14 +596,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -527,10 +612,10 @@
     },
     {
      "nr": "30",
-     "text": "SR 730.0",
+     "text": "SR <b>730.0</b>",
      "links": [
       {
-       "label": "SR 730.0",
+       "label": "SR <b>730.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8495"
       }
      ],
@@ -539,14 +624,14 @@
     },
     {
      "nr": "31",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS 2026 99; BBl 2023 1602).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
-       "label": "AS 2026 99",
+       "label": "AS <b>2026</b> 99",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/99"
       },
       {
-       "label": "BBl 2023 1602",
+       "label": "BBl <b>2023</b> 1602",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1602"
       }
      ],
@@ -555,14 +640,14 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS 2026 99; BBl 2023 1602).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
-       "label": "AS 2026 99",
+       "label": "AS <b>2026</b> 99",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/99"
       },
       {
-       "label": "BBl 2023 1602",
+       "label": "BBl <b>2023</b> 1602",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1602"
       }
      ],
@@ -603,10 +688,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "SR 814.01",
+     "text": "SR <b>814.01</b>",
      "links": [
       {
-       "label": "SR 814.01",
+       "label": "SR <b>814.01</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
       }
      ],
@@ -615,10 +700,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 451",
+     "text": "SR <b>451</b>",
      "links": [
       {
-       "label": "SR 451",
+       "label": "SR <b>451</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7166"
       }
      ],
@@ -627,14 +712,14 @@
     },
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. II 2 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351, 5391)",
+     "text": "Fassung gemäss Ziff. II 2 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351, 5391)",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -732,14 +817,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -748,14 +833,14 @@
     },
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -785,14 +870,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -801,14 +886,14 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -817,10 +902,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 814.01",
+     "text": "SR <b>814.01</b>",
      "links": [
       {
-       "label": "SR 814.01",
+       "label": "SR <b>814.01</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
       }
      ],
@@ -829,14 +914,14 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -904,14 +989,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -920,14 +1005,14 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. April 1996 (AS 1996 965; BBl 1994 III 1075).",
+     "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. April 1996 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
-       "label": "AS 1996 965",
+       "label": "AS <b>1996</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
       },
       {
-       "label": "BBl 1994 III 1075",
+       "label": "BBl <b>1994</b> III 1075",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
       }
      ],
@@ -976,19 +1061,20 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Allgemeine Wirkungen"
     }
    ]
   },
@@ -1051,14 +1137,14 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -1067,14 +1153,14 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1083,14 +1169,14 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1099,19 +1185,20 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Ausnahmebewilligungen ausserhalb der Bauzonen"
     }
    ]
   },
@@ -1136,22 +1223,22 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995 (AS 1996 965; BBl 1994 III 1075). Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075). Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 1996 965",
+       "label": "AS <b>1996</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
       },
       {
-       "label": "BBl 1994 III 1075",
+       "label": "BBl <b>1994</b> III 1075",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
       },
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -1160,14 +1247,14 @@
     },
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -1176,14 +1263,14 @@
     },
     {
      "nr": "100",
-     "text": "Treten am 1. Juli 2026 in Kraft (AS 2025 640; BBl 2018 7443).",
+     "text": "Treten am 1. Juli 2026 in Kraft (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1192,14 +1279,14 @@
     },
     {
      "nr": "101",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1257,14 +1344,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Aufgehoben durch Ziff. I des BG vom 13. Dez. 2002, mit Wirkung seit 1. Juni 2003 (AS 2003 1021; BBl 2002 6965).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 13. Dez. 2002, mit Wirkung seit 1. Juni 2003 (AS <b>2003</b> 1021; BBl <b>2002</b> 6965).",
      "links": [
       {
-       "label": "AS 2003 1021",
+       "label": "AS <b>2003</b> 1021",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/181"
       },
       {
-       "label": "BBl 2002 6965",
+       "label": "BBl <b>2002</b> 6965",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1110"
       }
      ],
@@ -1339,10 +1426,10 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197, 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197, 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1350,7 +1437,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1359,14 +1446,14 @@
     },
     {
      "nr": "108",
-     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS 1996 965; BBl 1994 III 1075).",
+     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
-       "label": "AS 1996 965",
+       "label": "AS <b>1996</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
       },
       {
-       "label": "BBl 1994 III 1075",
+       "label": "BBl <b>1994</b> III 1075",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
       }
      ],
@@ -1388,10 +1475,10 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1399,7 +1486,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1408,21 +1495,21 @@
     },
     {
      "nr": "110",
-     "text": "Heute: Art. 24–24e.",
+     "text": "Heute: Art. 24–24<i>e</i>.",
      "links": [],
      "absatz": "2",
      "item": "c"
     },
     {
      "nr": "111",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -1431,10 +1518,10 @@
     },
     {
      "nr": "112",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3463, 3863; BBl 2012 2075).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463, 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
-       "label": "AS 2013 3463",
+       "label": "AS <b>2013</b> 3463",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/646"
       },
       {
@@ -1442,7 +1529,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/710"
       },
       {
-       "label": "BBl 2012 2075",
+       "label": "BBl <b>2012</b> 2075",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
@@ -1464,14 +1551,14 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -1480,14 +1567,14 @@
     },
     {
      "nr": "114",
-     "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -1496,14 +1583,14 @@
     },
     {
      "nr": "115",
-     "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -1512,14 +1599,14 @@
     },
     {
      "nr": "116",
-     "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -1541,14 +1628,14 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -1581,22 +1668,22 @@
    "fussnoten": [
     {
      "nr": "119",
-     "text": "AS 2011 2913; BBl 2007 5765. Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "AS <b>2011</b> 2913; BBl <b>2007</b> 5765. Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2011 2913",
+       "label": "AS <b>2011</b> 2913",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/377"
       },
       {
-       "label": "BBl 2007 5765",
+       "label": "BBl <b>2007</b> 5765",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/793"
       },
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -1646,14 +1733,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -1683,14 +1770,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -1699,26 +1786,26 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS 2007 3637; BBl 2005 7097). Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS 2024 679; 2025 636; BBl 2021 1666).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       },
       {
-       "label": "AS 2024 679",
+       "label": "AS <b>2024</b> 679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/679"
       },
       {
-       "label": "2025 636",
+       "label": "<b>2025</b> 636",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/636"
       },
       {
-       "label": "BBl 2021 1666",
+       "label": "BBl <b>2021</b> 1666",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1666"
       }
      ],
@@ -1727,14 +1814,14 @@
     },
     {
      "nr": "48",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1743,14 +1830,14 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -1780,14 +1867,14 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS 2014 905; BBl 2012 6589, 6607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
-       "label": "AS 2014 905",
+       "label": "AS <b>2014</b> 905",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/198"
       },
       {
-       "label": "BBl 2012 6589",
+       "label": "BBl <b>2012</b> 6589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/960"
       },
       {
@@ -1800,10 +1887,10 @@
     },
     {
      "nr": "51",
-     "text": "SR 211.412.11",
+     "text": "SR <b>211.412.11</b>",
      "links": [
       {
-       "label": "SR 211.412.11",
+       "label": "SR <b>211.412.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
       }
      ],
@@ -1833,14 +1920,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -1849,14 +1936,14 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -1865,14 +1952,14 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS 2014 905; BBl 2012 6589, 6607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
-       "label": "AS 2014 905",
+       "label": "AS <b>2014</b> 905",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/198"
       },
       {
-       "label": "BBl 2012 6589",
+       "label": "BBl <b>2012</b> 6589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/960"
       },
       {
@@ -1885,14 +1972,14 @@
     },
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -1922,22 +2009,22 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. II des BG vom 22. Juni 2007 (AS 2007 6095; BBl 2006 6337). Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. II des BG vom 22. Juni 2007 (AS <b>2007 </b>6095; BBl <b>2006</b> 6337). Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2007 6095",
+       "label": "AS <b>2007 </b>6095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/814"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       },
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -1946,14 +2033,14 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1962,18 +2049,18 @@
     },
     {
      "nr": "58",
-     "text": "Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS 2024 679; 2025 636; BBl 2021 1666).",
+     "text": "Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
-       "label": "AS 2024 679",
+       "label": "AS <b>2024</b> 679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/679"
       },
       {
-       "label": "2025 636",
+       "label": "<b>2025</b> 636",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/636"
       },
       {
-       "label": "BBl 2021 1666",
+       "label": "BBl <b>2021</b> 1666",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1666"
       }
      ],
@@ -1982,14 +2069,14 @@
     },
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -1998,18 +2085,18 @@
     },
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS 2024 679; 2025 636; BBl 2021 1666).",
+     "text": "Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
-       "label": "AS 2024 679",
+       "label": "AS <b>2024</b> 679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/679"
       },
       {
-       "label": "2025 636",
+       "label": "<b>2025</b> 636",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/636"
       },
       {
-       "label": "BBl 2021 1666",
+       "label": "BBl <b>2021</b> 1666",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1666"
       }
      ],
@@ -2039,14 +2126,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS 2026 99; BBl 2023 1602).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
-       "label": "AS 2026 99",
+       "label": "AS <b>2026</b> 99",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/99"
       },
       {
-       "label": "BBl 2023 1602",
+       "label": "BBl <b>2023</b> 1602",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1602"
       }
      ],
@@ -2076,14 +2163,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -2113,14 +2200,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -2129,10 +2216,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 211.412.11",
+     "text": "SR <b>211.412.11</b>",
      "links": [
       {
-       "label": "SR 211.412.11",
+       "label": "SR <b>211.412.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5757"
       }
      ],
@@ -2141,14 +2228,14 @@
     },
     {
      "nr": "77",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2157,14 +2244,14 @@
     },
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2173,14 +2260,14 @@
     },
     {
      "nr": "79",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2189,14 +2276,14 @@
     },
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2205,14 +2292,14 @@
     },
     {
      "nr": "81",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2242,14 +2329,14 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2279,14 +2366,14 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -2295,14 +2382,14 @@
     },
     {
      "nr": "83",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2311,14 +2398,14 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS 2012 5535; BBl 2011 7083, 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
-       "label": "AS 2012 5535",
+       "label": "AS <b>2012</b> 5535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/640"
       },
       {
-       "label": "BBl 2011 7083",
+       "label": "BBl <b>2011</b> 7083",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1125"
       },
       {
@@ -2331,14 +2418,14 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS 2012 5535; BBl 2011 7083, 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
-       "label": "AS 2012 5535",
+       "label": "AS <b>2012</b> 5535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/640"
       },
       {
-       "label": "BBl 2011 7083",
+       "label": "BBl <b>2011</b> 7083",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1125"
       },
       {
@@ -2351,14 +2438,14 @@
     },
     {
      "nr": "86",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS 2012 5535; BBl 2011 7083, 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
-       "label": "AS 2012 5535",
+       "label": "AS <b>2012</b> 5535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/640"
       },
       {
-       "label": "BBl 2011 7083",
+       "label": "BBl <b>2011</b> 7083",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1125"
       },
       {
@@ -2371,14 +2458,14 @@
     },
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS 2012 5535; BBl 2011 7083, 7097).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
-       "label": "AS 2012 5535",
+       "label": "AS <b>2012</b> 5535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/640"
       },
       {
-       "label": "BBl 2011 7083",
+       "label": "BBl <b>2011</b> 7083",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1125"
       },
       {
@@ -2412,14 +2499,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2449,14 +2536,14 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -2465,14 +2552,14 @@
     },
     {
      "nr": "90",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS 2014 905; BBl 2012 6589, 6607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
-       "label": "AS 2014 905",
+       "label": "AS <b>2014</b> 905",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/198"
       },
       {
-       "label": "BBl 2012 6589",
+       "label": "BBl <b>2012</b> 6589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/960"
       },
       {
@@ -2485,14 +2572,14 @@
     },
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2501,22 +2588,22 @@
     },
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS 2007 3637; BBl 2005 7097). Aufgehoben durch Ziff. I des BG vom 22. März 2013, mit Wirkung seit 1. Mai 2014 (AS 2014 905; BBl 2012 6589, 6607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Aufgehoben durch Ziff. I des BG vom 22. März 2013, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       },
       {
-       "label": "AS 2014 905",
+       "label": "AS <b>2014</b> 905",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/198"
       },
       {
-       "label": "BBl 2012 6589",
+       "label": "BBl <b>2012</b> 6589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/960"
       },
       {
@@ -2529,14 +2616,14 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2545,14 +2632,14 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS 2007 3637; BBl 2005 7097).",
+     "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       }
      ],
@@ -2561,14 +2648,14 @@
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2598,14 +2685,14 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS 2014 905; BBl 2012 6589, 6607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
-       "label": "AS 2014 905",
+       "label": "AS <b>2014</b> 905",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/198"
       },
       {
-       "label": "BBl 2012 6589",
+       "label": "BBl <b>2012</b> 6589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/960"
       },
       {
@@ -2618,14 +2705,14 @@
     },
     {
      "nr": "97",
-     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2655,18 +2742,18 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS 2024 679; 2025 636; BBl 2021 1666).",
+     "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
-       "label": "AS 2024 679",
+       "label": "AS <b>2024</b> 679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/679"
       },
       {
-       "label": "2025 636",
+       "label": "<b>2025</b> 636",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/636"
       },
       {
-       "label": "BBl 2021 1666",
+       "label": "BBl <b>2021</b> 1666",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1666"
       }
      ],
@@ -2696,14 +2783,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I und II des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I und II des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2733,18 +2820,18 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS 2024 679; 2025 636; BBl 2021 1666).",
+     "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
-       "label": "AS 2024 679",
+       "label": "AS <b>2024</b> 679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/679"
       },
       {
-       "label": "2025 636",
+       "label": "<b>2025</b> 636",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/636"
       },
       {
-       "label": "BBl 2021 1666",
+       "label": "BBl <b>2021</b> 1666",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1666"
       }
      ],
@@ -2753,10 +2840,10 @@
     },
     {
      "nr": "71",
-     "text": "SR 730.0",
+     "text": "SR <b>730.0</b>",
      "links": [
       {
-       "label": "SR 730.0",
+       "label": "SR <b>730.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8495"
       }
      ],
@@ -2786,14 +2873,14 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS 1996 965; BBl 1994 III 1075).",
+     "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
-       "label": "AS 1996 965",
+       "label": "AS <b>1996</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
       },
       {
-       "label": "BBl 1994 III 1075",
+       "label": "BBl <b>1994</b> III 1075",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
       }
      ],
@@ -2823,22 +2910,22 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS 2007 3637; BBl 2005 7097). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS 2025 640; BBl 2018 7443).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS 2007 3637",
+       "label": "AS<b> 2007</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/452"
       },
       {
-       "label": "BBl 2005 7097",
+       "label": "BBl <b>2005</b> 7097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1151"
       },
       {
-       "label": "AS 2025 640",
+       "label": "AS <b>2025</b> 640",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl 2018 7443",
+       "label": "BBl <b>2018</b> 7443",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
@@ -2860,22 +2947,22 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS 2017 6521; 2018 3171; BBl 2013 2397; 2016 2821).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 6521; <b>2018</b> 3171; BBl <b>2013</b> 2397; <b>2016</b> 2821).",
      "links": [
       {
-       "label": "AS 2017 6521",
+       "label": "AS <b>2017</b> 6521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/718"
       },
       {
-       "label": "2018 3171",
+       "label": "<b>2018</b> 3171",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/509"
       },
       {
-       "label": "BBl 2013 2397",
+       "label": "BBl <b>2013</b> 2397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/416"
       },
       {
-       "label": "2016 2821",
+       "label": "<b>2016</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/524"
       }
      ],
@@ -2897,14 +2984,14 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
@@ -2926,14 +3013,14 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -2959,14 +3046,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS 2014 899; BBl 2010 1049).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
-       "label": "AS 2014 899",
+       "label": "AS <b>2014</b> 899",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
       },
       {
-       "label": "BBl 2010 1049",
+       "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
       }
      ],
@@ -2975,22 +3062,22 @@
     },
     {
      "nr": "34",
-     "text": "Urspünglich Art. 8 Abs. 2 und 3. Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (AS 2011 2913; BBl 2007 5765). Aufgehoben durch Art. 24 Ziff. 2 des Zweitwohnungsgesetzes vom 20. März 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5657; BBl 2014 2287).",
+     "text": "Urspünglich Art. 8 Abs. 2 und 3. Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (AS <b>2011</b> 2913; BBl <b>2007</b> 5765). Aufgehoben durch Art. 24 Ziff. 2 des Zweitwohnungsgesetzes vom 20. März 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5657; BBl <b>2014</b> 2287).",
      "links": [
       {
-       "label": "AS 2011 2913",
+       "label": "AS <b>2011</b> 2913",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/377"
       },
       {
-       "label": "BBl 2007 5765",
+       "label": "BBl <b>2007</b> 5765",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/793"
       },
       {
-       "label": "AS 2015 5657",
+       "label": "AS <b>2015</b> 5657",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/886"
       },
       {
-       "label": "BBl 2014 2287",
+       "label": "BBl <b>2014</b> 2287",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/409"
       }
      ],
@@ -3016,14 +3103,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6839; BBl 2013 7561).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
-       "label": "AS 2017 6839",
+       "label": "AS <b>2017</b> 6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/762"
       },
       {
-       "label": "BBl 2013 7561",
+       "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],

@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "235.1",
+  "titel": "Bundesgesetz über den Datenschutz",
+  "erlassdatum": "vom 25. September 2020 (Stand am 7. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 95 Absatz 1, 97 Absatz 1, 122 Absatz 1 und 173 Absatz 2 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 15. September 2017,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2017</b> 6941",
+    "links": [
+     {
+      "label": "BBl <b>2017</b> 6941",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +70,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -50,10 +95,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -62,10 +107,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -330,10 +375,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -377,14 +422,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 29. Sept. 2023 (Einführung einer Meldepflicht für Cyberangriffe auf kritische Infrastrukturen), in Kraft seit 1. April 2025 (AS 2024 257; 2025 168, 173; BBl 2023 84).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 29. Sept. 2023 (Einführung einer Meldepflicht für Cyberangriffe auf kritische Infrastrukturen), in Kraft seit 1. April 2025 (AS <b>2024</b> 257; <b>2025</b> 168, 173; BBl <b>2023</b> 84).",
      "links": [
       {
-       "label": "AS 2024 257",
+       "label": "AS <b>2024</b> 257",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/257"
       },
       {
-       "label": "2025 168",
+       "label": "<b>2025</b> 168",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/168"
       },
       {
@@ -392,7 +437,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/173"
       },
       {
-       "label": "BBl 2023 84",
+       "label": "BBl <b>2023</b> 84",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/84"
       }
      ],
@@ -491,10 +536,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -549,10 +594,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/355"
       }
      ],
@@ -585,10 +630,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 152.1",
+     "text": "SR <b>152.1</b>",
      "links": [
       {
-       "label": "SR 152.1",
+       "label": "SR <b>152.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/354"
       }
      ],
@@ -632,10 +677,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -657,10 +702,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/355"
       }
      ],
@@ -686,10 +731,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 172.220.1",
+     "text": "SR <b>172.220.1</b>",
      "links": [
       {
-       "label": "SR 172.220.1",
+       "label": "SR <b>172.220.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/123"
       }
      ],
@@ -698,14 +743,14 @@
     },
     {
      "nr": "14",
-     "text": "Zweiter bis vierter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Zweiter bis vierter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -718,14 +763,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -755,14 +800,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Fassung Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -822,14 +867,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -874,10 +919,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -933,10 +978,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1022,10 +1067,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Die Berichtigung der RedK der BVers vom 2. Juli 2025, publiziert am 7. Juli 2025 betrifft nur den italienischen Text (AS 2025 444).",
+     "text": "Die Berichtigung der RedK der BVers vom 2. Juli 2025, publiziert am 7. Juli 2025 betrifft nur den italienischen Text (AS <b>2025</b> 444).",
      "links": [
       {
-       "label": "AS 2025 444",
+       "label": "AS <b>2025</b> 444",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/444"
       }
      ],
@@ -1051,10 +1096,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/355"
       }
      ],
@@ -1133,10 +1178,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -1222,10 +1267,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -1247,14 +1292,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -1315,14 +1360,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -1352,14 +1397,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {
@@ -1385,14 +1430,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS 2023 231; BBl 2022 345, 432).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022 (Arbeitsverhältnis der Leiterin oder des Leiters des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten), in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 231; BBl <b>2022</b> 345, 432).",
      "links": [
       {
-       "label": "AS 2023 231",
+       "label": "AS <b>2023</b> 231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/231"
       },
       {
-       "label": "BBl 2022 345",
+       "label": "BBl <b>2022</b> 345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/345"
       },
       {

@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.105",
+  "titel": "Übereinkommen gegen Folter und andere grausame, unmenschliche oder erniedrigende Behandlung oder Strafe",
+  "erlassdatum": "(Stand am 28. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Vertragsstaaten dieses Übereinkommens,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass nach den in der Charta der Vereinten Nationen verkündeten Grundsätzen die Anerkennung der Gleichheit und Unveräusserlichkeit der Rechte aller Mitglieder der menschlichen Gesellschaft die Grundlage von Freiheit, Gerechtigkeit und Frieden in der Welt bildet,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass sich diese Rechte aus der dem Menschen innewohnenden Würde herleiten,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass die Charta, insbesondere Artikel 55, die Staaten verpflichtet, die allgemeine Achtung und Verwirklichung der Menschenrechte und Grundfreiheiten zu fördern,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "im Hinblick auf Artikel 5 der Allgemeinen Erklärung der Menschenrechte und Artikel 7 des Internationalen Paktes über bürgerliche und politische Rechte, die beide vorsehen, dass niemand der Folter oder grausamer, unmenschlicher oder erniedrigender Behandlung oder Strafe unterworfen werden darf,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "im Hinblick auch auf die von der Generalversammlung am 9. Dezember 1975 angenommene Erklärung über den Schutz aller Personen vor Folter und anderer grausamer, unmenschlicher oder erniedrigender Behandlung oder Strafe,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in dem Wunsch, dem Kampf gegen Folter und andere grausame, unmenschliche oder erniedrigende Behandlung oder Strafe in der ganzen Welt grössere Wirksamkeit zu verleihen, sind wie folgt übereingekommen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Art. 1 Abs. 1 des BB vom 6. Okt. 1986 (AS <b>1987</b> 1306).",
+    "links": [
+     {
+      "label": "AS <b>1987</b> 1306",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1987/1306_1306_1306"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.120</b>",
+    "links": [
+     {
+      "label": "SR <b>0.120</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -255,10 +316,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "AS 2012 5901",
+     "text": "AS <b>2012</b> 5901",
      "links": [
       {
-       "label": "AS 2012 5901",
+       "label": "AS <b>2012</b> 5901",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/693"
       }
      ],

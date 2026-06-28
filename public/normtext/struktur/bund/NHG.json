@@ -1,5 +1,94 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "451",
+  "titel": "Bundesgesetz über den Natur- und Heimatschutz",
+  "erlassdatum": "vom 1. Juli 1966 (Stand am 1. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 78 Absatz 4 der Bundesverfassung, in Ausführung des Protokolls von Nagoya vom 29. Oktober 2010 über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile zum Übereinkommen über die biologische Vielfalt (Protokoll von Nagoya), nach Einsicht in die Botschaft des Bundesrates vom 12. November 1965,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 214",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
+     },
+     {
+      "label": "BBl <b>1991</b> III 1121",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.451.432</b>",
+    "links": [
+     {
+      "label": "SR <b>0.451.432</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2014/532"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1965</b> III 89",
+    "links": [
+     {
+      "label": "BBl <b>1965</b> III 89",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1965/3_89_93_77"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "Fassung gemäss Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
+    "links": [
+     {
+      "label": "AS <b>2014</b> 2629",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
+     },
+     {
+      "label": "BBl <b>2013</b> 3009",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [],
@@ -9,14 +98,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -25,14 +114,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Fassung gemäss Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -41,14 +130,14 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -57,14 +146,14 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -73,14 +162,14 @@
     },
     {
      "nr": "10",
-     "text": "Die Änd. gemäss BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017, betrifft nur den französischen und den italienischen Text (AS 2016 689; BBl 2013 3729).",
+     "text": "Die Änd. gemäss BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017, betrifft nur den französischen und den italienischen Text (AS <b>2016</b> 689; BBl <b>2013 </b>3729).",
      "links": [
       {
-       "label": "AS 2016 689",
+       "label": "AS <b>2016</b> 689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
       },
       {
-       "label": "BBl 2013 3729",
+       "label": "BBl <b>2013 </b>3729",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
@@ -98,14 +187,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "[AS 1962 749]. Heute: Art. 78 Abs. 2 der BV vom 18. April 1999 (SR 101).",
+     "text": "[AS <b>1962</b> 749]. Heute: Art. 78 Abs. 2 der BV vom 18. April 1999 (SR <b>101</b>).",
      "links": [
       {
-       "label": "AS 1962 749",
+       "label": "AS <b>1962</b> 749",
        "url": "https://fedlex.data.admin.ch/eli/oc/1962/749_783_803"
       },
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
       }
      ],
@@ -114,14 +203,14 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -130,14 +219,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang Ziff. 7 des Telekommunikationsunternehmungsgesetzes vom 30. April 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2480; BBl 1996 III 1306).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des Telekommunikationsunternehmungsgesetzes vom 30. April 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2480; BBl <b>1996</b> III 1306).",
      "links": [
       {
-       "label": "AS 1997 2480",
+       "label": "AS <b>1997</b> 2480",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2480_2480_2480"
       },
       {
-       "label": "BBl 1996 III 1306",
+       "label": "BBl <b>1996</b> III 1306",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_1306_1260_1201"
       }
      ],
@@ -146,10 +235,10 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfa‑ chung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfa‑ chung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -167,14 +256,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -183,18 +272,18 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren (AS 1999 3071; BBl 1998 2591). Aufgehoben durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), mit Wirkung seit 1. Sept. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>). Aufgehoben durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       },
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -203,15 +292,16 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Pflichten von Bund und Kantonen"
     }
    ]
   },
@@ -224,14 +314,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "[AS 1962 749]. Heute: Art. 78 Abs. 2 der BV vom 18. April 1999 (SR 101).",
+     "text": "[AS <b>1962</b> 749]. Heute: Art. 78 Abs. 2 der BV vom 18. April 1999 (SR <b>101</b>).",
      "links": [
       {
-       "label": "AS 1962 749",
+       "label": "AS <b>1962</b> 749",
        "url": "https://fedlex.data.admin.ch/eli/oc/1962/749_783_803"
       },
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
       }
      ],
@@ -249,14 +339,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -274,10 +364,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -295,10 +385,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -307,14 +397,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Fassung gemäss Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -323,14 +413,14 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. April 2020 (AS 2020 1217; BBl 2019 349 1335).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. April 2020 (AS <b>2020</b> 1217; BBl <b>2019</b> 349 1335).",
      "links": [
       {
-       "label": "AS 2020 1217",
+       "label": "AS <b>2020</b> 1217",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/229"
       },
       {
-       "label": "BBl 2019 349",
+       "label": "BBl <b>2019</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/20"
       },
       {
@@ -352,14 +442,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -377,14 +467,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -402,14 +492,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -427,10 +517,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 510.10",
+     "text": "SR <b>510.10</b>",
      "links": [
       {
-       "label": "SR 510.10",
+       "label": "SR <b>510.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/4093_4093_4093"
       }
      ],
@@ -439,14 +529,14 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 6 des Militärgesetzes vom 3. Febr. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 4093; BBl 1993 IV 1).",
+     "text": "Fassung gemäss Anhang Ziff. 6 des Militärgesetzes vom 3. Febr. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 4093; BBl <b>1993</b> IV 1).",
      "links": [
       {
-       "label": "AS 1995 4093",
+       "label": "AS <b>1995</b> 4093",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4093_4093_4093"
       },
       {
-       "label": "BBl 1993 IV 1",
+       "label": "BBl <b>1993</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/4_1_1_1"
       }
      ],
@@ -465,14 +555,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391). Die Bestimmung über die wirtschaftliche Tätigkeit in Abs. 1 Bst. b Ziff. 2 tritt am 1. Juli 2010 in Kraft.",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391). Die Bestimmung über die wirtschaftliche Tätigkeit in Abs. 1 Bst. b Ziff. 2 tritt am 1. Juli 2010 in Kraft.",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -485,14 +575,14 @@
     },
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. Aug. 2025 (AS 2025 429; BBl 2024 408, 788).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. Aug. 2025 (AS <b>2025</b> 429; BBl <b>2024</b> 408, 788).",
      "links": [
       {
-       "label": "AS 2025 429",
+       "label": "AS <b>2025</b> 429",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/429"
       },
       {
-       "label": "BBl 2024 408",
+       "label": "BBl <b>2024</b> 408",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/408"
       },
       {
@@ -514,14 +604,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -530,10 +620,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -551,14 +641,14 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -576,14 +666,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -592,10 +682,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723"
       }
      ],
@@ -613,14 +703,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -629,10 +719,10 @@
     },
     {
      "nr": "49",
-     "text": "Der Kreis der betroffenen Verwaltungseinheiten wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. November 2004 (AS 2004 4937) angepasst.",
+     "text": "Der Kreis der betroffenen Verwaltungseinheiten wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. November 2004 (AS <b>2004 </b>4937) angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -650,14 +740,14 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Fassung gemäss Anhang Ziff. 9 des Subventionsgesetzes vom 5. Okt. 1990, in Kraft seit 1. April 1991 (AS 1991 857; BBl 1987 I 369).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des Subventionsgesetzes vom 5. Okt. 1990, in Kraft seit 1. April 1991 (AS <b>1991</b> 857; BBl <b>1987</b> I 369).",
      "links": [
       {
-       "label": "AS 1991 857",
+       "label": "AS <b>1991</b> 857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
       },
       {
-       "label": "BBl 1987 I 369",
+       "label": "BBl <b>1987</b> I 369",
        "url": "https://fedlex.data.admin.ch/eli/fga/1987/1_369_369_297"
       }
      ],
@@ -675,14 +765,14 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Eingefügt durch Art. 66 Ziff. 1 des BG vom 7. Okt. 1983 über den Umweltschutz, in Kraft seit 1. Jan. 1985 (AS 1984 1122; BBl 1979 III 749).",
+     "text": "Eingefügt durch Art. 66 Ziff. 1 des BG vom 7. Okt. 1983 über den Umweltschutz, in Kraft seit 1. Jan. 1985 (AS <b>1984</b> 1122; BBl <b>1979</b> III 749).",
      "links": [
       {
-       "label": "AS 1984 1122",
+       "label": "AS <b>1984</b> 1122",
        "url": "https://fedlex.data.admin.ch/eli/oc/1984/1122_1122_1122"
       },
       {
-       "label": "BBl 1979 III 749",
+       "label": "BBl <b>1979</b> III 749",
        "url": "https://fedlex.data.admin.ch/eli/fga/1979/3_749_741_713"
       }
      ],
@@ -691,14 +781,14 @@
     },
     {
      "nr": "57",
-     "text": "Eingefügt durch Art. 66 Ziff. 1 des Umweltschutzgesetzes vom 7. Okt. 1983, in Kraft seit 1. Jan. 1985 (AS 1984 1122; BBl 1979 III 749).",
+     "text": "Eingefügt durch Art. 66 Ziff. 1 des Umweltschutzgesetzes vom 7. Okt. 1983, in Kraft seit 1. Jan. 1985 (AS <b>1984</b> 1122; BBl <b>1979</b> III 749).",
      "links": [
       {
-       "label": "AS 1984 1122",
+       "label": "AS <b>1984</b> 1122",
        "url": "https://fedlex.data.admin.ch/eli/oc/1984/1122_1122_1122"
       },
       {
-       "label": "BBl 1979 III 749",
+       "label": "BBl <b>1979</b> III 749",
        "url": "https://fedlex.data.admin.ch/eli/fga/1979/3_749_741_713"
       }
      ],
@@ -723,14 +813,14 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4803; BBl 2000 2391).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 2 des Gentechnikgesetzes vom 21. März 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
@@ -739,14 +829,14 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Juli 1997 (AS 1997 1152; BBl 1995 IV 629).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1152; BBl <b>1995</b> IV 629).",
      "links": [
       {
-       "label": "AS 1997 1152",
+       "label": "AS <b>1997</b> 1152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1152_1152_1152"
       },
       {
-       "label": "BBl 1995 IV 629",
+       "label": "BBl <b>1995</b> IV 629",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/4_629_621_589"
       }
      ],
@@ -764,14 +854,14 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Art. 66 Ziff. 1 des Umweltschutzgesetzes vom 7. Okt. 1983, in Kraft seit 1. Jan. 1985 (AS 1984 1122; BBl 1979 III 749).",
+     "text": "Fassung gemäss Art. 66 Ziff. 1 des Umweltschutzgesetzes vom 7. Okt. 1983, in Kraft seit 1. Jan. 1985 (AS <b>1984</b> 1122; BBl <b>1979</b> III 749).",
      "links": [
       {
-       "label": "AS 1984 1122",
+       "label": "AS <b>1984</b> 1122",
        "url": "https://fedlex.data.admin.ch/eli/oc/1984/1122_1122_1122"
       },
       {
-       "label": "BBl 1979 III 749",
+       "label": "BBl <b>1979</b> III 749",
        "url": "https://fedlex.data.admin.ch/eli/fga/1979/3_749_741_713"
       }
      ],
@@ -780,22 +870,22 @@
     },
     {
      "nr": "67",
-     "text": "Eingefügt durch Art. 75 Ziff. 2 des Gewässerschutzgesetzes vom 24. Jan. 1991 (AS 1992 1860; BBl 1987 II 1061). Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Eingefügt durch Art. 75 Ziff. 2 des Gewässerschutzgesetzes vom 24. Jan. 1991 (AS <b>1992</b> 1860; BBl <b>1987</b> II 1061). Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1992 1860",
+       "label": "AS <b>1992</b> 1860",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/1860_1860_1860"
       },
       {
-       "label": "BBl 1987 II 1061",
+       "label": "BBl <b>1987</b> II 1061",
        "url": "https://fedlex.data.admin.ch/eli/fga/1987/2_1061_1081_905"
       },
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -813,10 +903,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "SR 721.100",
+     "text": "SR <b>721.100</b>",
      "links": [
       {
-       "label": "SR 721.100",
+       "label": "SR <b>721.100</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/234_234_234"
       }
      ],
@@ -825,10 +915,10 @@
     },
     {
      "nr": "69",
-     "text": "SR 814.20",
+     "text": "SR <b>814.20</b>",
      "links": [
       {
-       "label": "SR 814.20",
+       "label": "SR <b>814.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1992/1860_1860_1860"
       }
      ],
@@ -837,14 +927,14 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 15. März 2024, in Kraft seit 1. Aug. 2025 (AS 2025 430; BBl 2023 858).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 15. März 2024, in Kraft seit 1. Aug. 2025 (AS <b>2025</b> 430; BBl <b>2023</b> 858).",
      "links": [
       {
-       "label": "AS 2025 430",
+       "label": "AS <b>2025</b> 430",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/430"
       },
       {
-       "label": "BBl 2023 858",
+       "label": "BBl <b>2023</b> 858",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/858"
       }
      ],
@@ -853,10 +943,10 @@
     },
     {
      "nr": "71",
-     "text": "Zweiter Satz aufgehoben durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, mit Wirkung seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Zweiter Satz aufgehoben durch Ziff. I 3 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, mit Wirkung seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
@@ -865,14 +955,14 @@
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Anhang Ziff. 6 des Militärgesetzes vom 3. Febr. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 4093; BBl 1993 IV 1).",
+     "text": "Fassung gemäss Anhang Ziff. 6 des Militärgesetzes vom 3. Febr. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 4093; BBl <b>1993</b> IV 1).",
      "links": [
       {
-       "label": "AS 1995 4093",
+       "label": "AS <b>1995</b> 4093",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/4093_4093_4093"
       },
       {
-       "label": "BBl 1993 IV 1",
+       "label": "BBl <b>1993</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/4_1_1_1"
       }
      ],
@@ -890,14 +980,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Fassung gemäss Art. 27 Ziff. 2 des Jagdgesetzes vom 20. Juni 1986, in Kraft seit 1. April 1988 (AS 1988 506; BBl 1983 II 1197).",
+     "text": "Fassung gemäss Art. 27 Ziff. 2 des Jagdgesetzes vom 20. Juni 1986, in Kraft seit 1. April 1988 (AS <b>1988</b> 506; BBl <b>1983</b> II 1197).",
      "links": [
       {
-       "label": "AS 1988 506",
+       "label": "AS <b>1988</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/506_506_506"
       },
       {
-       "label": "BBl 1983 II 1197",
+       "label": "BBl <b>1983</b> II 1197",
        "url": "https://fedlex.data.admin.ch/eli/fga/1983/2_1197_1229_1169"
       }
      ],
@@ -915,14 +1005,14 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -931,14 +1021,14 @@
     },
     {
      "nr": "85",
-     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR 311.0) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS 2006 3459; BBl 1999 1979).",
+     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       },
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -947,14 +1037,14 @@
     },
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -963,22 +1053,22 @@
     },
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS 1996 214; BBl 1991 III 1121). Fassung gemäss Art. 32 Ziff. 4 des Kulturgütertransfergesetzes vom 20. Juni 2003, in Kraft seit 1. Juni 2005 (AS 2005 1869; BBl 2002 535).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121). Fassung gemäss Art. 32 Ziff. 4 des Kulturgütertransfergesetzes vom 20. Juni 2003, in Kraft seit 1. Juni 2005 (AS <b>2005</b> 1869; BBl <b>2002</b> 535).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       },
       {
-       "label": "AS 2005 1869",
+       "label": "AS <b>2005</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/317"
       },
       {
-       "label": "BBl 2002 535",
+       "label": "BBl <b>2002</b> 535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/93"
       }
      ],
@@ -987,10 +1077,10 @@
     },
     {
      "nr": "88",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -999,10 +1089,10 @@
     },
     {
      "nr": "89",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -1011,22 +1101,22 @@
     },
     {
      "nr": "90",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996 (AS 1997 1152; BBl 1995 IV 629). Aufgehoben durch Anhang 1 Ziff. 1 des BG vom 16. März 2012 über den Verkehr mit Tieren und Pflanzen geschützter Arten, mit Wirkung seit 1. Okt. 2013 (AS 2013 3095; BBl 2011 6985).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996 (AS <b>1997</b> 1152; BBl <b>1995</b> IV 629). Aufgehoben durch Anhang 1 Ziff. 1 des BG vom 16. März 2012 über den Verkehr mit Tieren und Pflanzen geschützter Arten, mit Wirkung seit 1. Okt. 2013 (AS <b>2013</b> 3095; BBl <b>2011</b> 6985).",
      "links": [
       {
-       "label": "AS 1997 1152",
+       "label": "AS <b>1997</b> 1152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1152_1152_1152"
       },
       {
-       "label": "BBl 1995 IV 629",
+       "label": "BBl <b>1995</b> IV 629",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/4_629_621_589"
       },
       {
-       "label": "AS 2013 3095",
+       "label": "AS <b>2013</b> 3095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/600"
       },
       {
-       "label": "BBl 2011 6985",
+       "label": "BBl <b>2011</b> 6985",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1119"
       }
      ],
@@ -1035,14 +1125,14 @@
     },
     {
      "nr": "91",
-     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR 311.0) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS 2006 3459; BBl 1999 1979).",
+     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       },
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -1060,14 +1150,14 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -1076,19 +1166,20 @@
     },
     {
      "nr": "107",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Organisation"
     }
    ]
   },
@@ -1108,19 +1199,20 @@
     },
     {
      "nr": "117",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Inkrafttreten"
     }
    ]
   },
@@ -1134,22 +1226,22 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS 1996 214; BBl 1991 III 1121). Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121). Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       },
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1172,22 +1264,22 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS 1996 214; BBl 1991 III 1121). Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121). Fassung gemäss Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       },
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1210,14 +1302,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1230,10 +1322,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723"
       }
      ],
@@ -1252,14 +1344,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1272,10 +1364,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1294,14 +1386,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1324,14 +1416,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1353,14 +1445,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS 2007 2701; BBl 2005 5351 5391).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351 5391).",
      "links": [
       {
-       "label": "AS 2007 2701",
+       "label": "AS <b>2007</b> 2701",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/357"
       },
       {
-       "label": "BBl 2005 5351",
+       "label": "BBl <b>2005 </b>5351",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/841"
       },
       {
@@ -1382,14 +1474,14 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -1407,22 +1499,22 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Anhang Ziff. 9 des Subventionsgesetzes vom 5. Okt. 1990 (AS 1991 857; BBl 1987 I 369). Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestal-tung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des Subventionsgesetzes vom 5. Okt. 1990 (AS <b>1991</b> 857; BBl <b>1987</b> I 369). Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestal-tung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 1991 857",
+       "label": "AS <b>1991</b> 857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
       },
       {
-       "label": "BBl 1987 I 369",
+       "label": "BBl <b>1987</b> I 369",
        "url": "https://fedlex.data.admin.ch/eli/fga/1987/1_369_369_297"
       },
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1431,14 +1523,14 @@
     },
     {
      "nr": "51",
-     "text": "Ausdruck gemäss Anhang Ziff. 3 des BG vom 19. März 2021, in Kraft seit 1. Jan. 2022 (AS 2021 662; BBl 2020 349).",
+     "text": "Ausdruck gemäss Anhang Ziff. 3 des BG vom 19. März 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 662; BBl <b>2020</b> 349).",
      "links": [
       {
-       "label": "AS 2021 662",
+       "label": "AS <b>2021</b> 662",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/662"
       },
       {
-       "label": "BBl 2020 349",
+       "label": "BBl <b>2020</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/18"
       }
      ],
@@ -1447,10 +1539,10 @@
     },
     {
      "nr": "52",
-     "text": "SR 442.1",
+     "text": "SR <b>442.1</b>",
      "links": [
       {
-       "label": "SR 442.1",
+       "label": "SR <b>442.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/854"
       }
      ],
@@ -1459,14 +1551,14 @@
     },
     {
      "nr": "53",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Kulturförderungsgesetzes vom 11. Dez. 2009, in Kraft seit 1. Jan. 2012 (AS 2011 6127; BBl 2007 4819 4857).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Kulturförderungsgesetzes vom 11. Dez. 2009, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6127; BBl <b>2007</b> 4819 4857).",
      "links": [
       {
-       "label": "AS 2011 6127",
+       "label": "AS <b>2011</b> 6127",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/854"
       },
       {
-       "label": "BBl 2007 4819",
+       "label": "BBl <b>2007</b> 4819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/681"
       },
       {
@@ -1488,14 +1580,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -1513,14 +1605,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -1529,10 +1621,10 @@
     },
     {
      "nr": "59",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. November 2004 (AS 2004 4937) angepasst.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. November 2004 (AS <b>2004 </b>4937) angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -1550,14 +1642,14 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -1575,14 +1667,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -1591,10 +1683,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723"
       }
      ],
@@ -1612,22 +1704,22 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS 1988 254; BBl 1985 II 1445). Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445). Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl<b> 2005</b> 6029).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       },
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl<b> 2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1659,14 +1751,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Fassung gemäss Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl<b> 2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl<b> 2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1675,14 +1767,14 @@
     },
     {
      "nr": "76",
-     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1691,14 +1783,14 @@
     },
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1707,14 +1799,14 @@
     },
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Eingefügt durch Ziff. II 7 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS <b>2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1795,10 +1887,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "SR 454",
+     "text": "SR <b>454</b>",
      "links": [
       {
-       "label": "SR 454",
+       "label": "SR <b>454</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1981/236_236_236"
       }
      ],
@@ -1816,7 +1908,7 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Siehe auch: Art. 25d.",
+     "text": "Siehe auch: Art. 25<i>d</i>.",
      "links": [],
      "absatz": null,
      "item": null
@@ -1832,7 +1924,7 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Siehe auch: Art. 25d.",
+     "text": "Siehe auch: Art. 25<i>d</i>.",
      "links": [],
      "absatz": null,
      "item": null
@@ -1862,14 +1954,14 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -1878,14 +1970,14 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Juli 1997 (AS 1997 1152; BBl 1995 IV 629).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1152; BBl <b>1995</b> IV 629).",
      "links": [
       {
-       "label": "AS 1997 1152",
+       "label": "AS <b>1997</b> 1152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1152_1152_1152"
       },
       {
-       "label": "BBl 1995 IV 629",
+       "label": "BBl <b>1995</b> IV 629",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/4_629_621_589"
       }
      ],
@@ -1894,14 +1986,14 @@
     },
     {
      "nr": "94",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -1919,14 +2011,14 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -1935,10 +2027,10 @@
     },
     {
      "nr": "96",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -1956,22 +2048,22 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS 1988 254; BBl 1985 II 1445). Fassung gemäss Art. 334 des Strafgesetzbuches (SR 311.0) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS 2006 3459; BBl 1999 1979).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445). Fassung gemäss Art. 334 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       },
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       },
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -1980,10 +2072,10 @@
     },
     {
      "nr": "98",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -2001,14 +2093,14 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS 1988 254; BBl 1985 II 1445).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987, in Kraft seit 1. Febr. 1988 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       }
      ],
@@ -2017,22 +2109,22 @@
     },
     {
      "nr": "100",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996 (AS 1997 1152; BBl 1995 IV 629). Aufgehoben durch Anhang 1 Ziff. 1 des BG vom 16. März 2012 über den Verkehr mit Tieren und Pflanzen geschützter Arten, mit Wirkung seit 1. Okt. 2013 (AS 2013 3095; BBl 2011 6985).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996 (AS <b>1997</b> 1152; BBl <b>1995</b> IV 629). Aufgehoben durch Anhang 1 Ziff. 1 des BG vom 16. März 2012 über den Verkehr mit Tieren und Pflanzen geschützter Arten, mit Wirkung seit 1. Okt. 2013 (AS <b>2013</b> 3095; BBl <b>2011</b> 6985).",
      "links": [
       {
-       "label": "AS 1997 1152",
+       "label": "AS <b>1997</b> 1152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1152_1152_1152"
       },
       {
-       "label": "BBl 1995 IV 629",
+       "label": "BBl <b>1995</b> IV 629",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/4_629_621_589"
       },
       {
-       "label": "AS 2013 3095",
+       "label": "AS <b>2013</b> 3095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/600"
       },
       {
-       "label": "BBl 2011 6985",
+       "label": "BBl <b>2011</b> 6985",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1119"
       }
      ],
@@ -2050,22 +2142,22 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS 1988 254; BBl 1985 II 1445). Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 1987 (AS <b>1988</b> 254; BBl <b>1985</b> II 1445). Fassung gemäss Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1988 254",
+       "label": "AS <b>1988</b> 254",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/254_254_254"
       },
       {
-       "label": "BBl 1985 II 1445",
+       "label": "BBl <b>1985</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1445_1449_1261"
       },
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -2083,14 +2175,14 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -2108,14 +2200,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -2133,14 +2225,14 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014, Abs. 3 in Kraft seit 12. Okt. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 1. Sept. 2014, Abs. 3 in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -2149,10 +2241,10 @@
     },
     {
      "nr": "106",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -2170,14 +2262,14 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS 1997 1155; BBl 1993 II 1445).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 21. Dez. 1995, in Kraft seit 1. Juli 1997 (AS <b>1997</b> 1155; BBl <b>1993</b> II 1445).",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "BBl 1993 II 1445",
+       "label": "BBl <b>1993</b> II 1445",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_1445_1337_1213"
       }
      ],
@@ -2195,14 +2287,14 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Ursprünglich Art. 25a. Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS 1996 214; BBl 1991 III 1121).",
+     "text": "Ursprünglich Art. 25<i>a</i>. Eingefügt durch Ziff. I des BG vom 24. März 1995, in Kraft seit 1. Febr. 1996 (AS <b>1996</b> 214; BBl <b>1991</b> III 1121).",
      "links": [
       {
-       "label": "AS 1996 214",
+       "label": "AS <b>1996</b> 214",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/214_214_214"
       },
       {
-       "label": "BBl 1991 III 1121",
+       "label": "BBl <b>1991</b> III 1121",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1121_1137_897"
       }
      ],
@@ -2211,10 +2303,10 @@
     },
     {
      "nr": "112",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
@@ -2223,14 +2315,14 @@
     },
     {
      "nr": "113",
-     "text": "[AS 1988 352]. Der genannten Bestimmung entspricht heute Art. 78 Abs. 5 der BV vom 18. April 1999 (SR 101).",
+     "text": "[AS <b>1988</b> 352]. Der genannten Bestimmung entspricht heute Art. 78 Abs. 5 der BV vom 18. April 1999 (SR <b>101</b>).",
      "links": [
       {
-       "label": "AS 1988 352",
+       "label": "AS <b>1988</b> 352",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/352_352_352"
       },
       {
-       "label": "SR 101",
+       "label": "SR <b>101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
       }
      ],
@@ -2248,18 +2340,18 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Eingefügt durch Anhang Ziff. I des Gentechnikgesetzes vom 21. März 2003 (AS 2003 4803; BBl 2000 2391). Aufgehoben durch Anhang Ziff. 43 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Eingefügt durch Anhang Ziff. I des Gentechnikgesetzes vom 21. März 2003 (AS <b>2003</b> 4803; BBl <b>2000</b> 2391). Aufgehoben durch Anhang Ziff. 43 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2003 4803",
+       "label": "AS <b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "BBl 2000 2391",
+       "label": "BBl <b>2000</b> 2391",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       },
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -2267,7 +2359,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -2285,14 +2377,14 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS 2014 2629; BBl 2013 3009).",
+     "text": "Eingefügt durch Anhang des BB vom 21. März 2014 (Nagoya-Protokoll), in Kraft seit 12. Okt. 2014 (AS <b>2014</b> 2629; BBl <b>2013</b> 3009).",
      "links": [
       {
-       "label": "AS 2014 2629",
+       "label": "AS <b>2014</b> 2629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/467"
       },
       {
-       "label": "BBl 2013 3009",
+       "label": "BBl <b>2013</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/611"
       }
      ],
@@ -2310,14 +2402,14 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. Aug. 2025 (AS 2025 429; BBl 2024 408, 788).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. Aug. 2025 (AS <b>2025</b> 429; BBl <b>2024</b> 408, 788).",
      "links": [
       {
-       "label": "AS 2025 429",
+       "label": "AS <b>2025</b> 429",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/429"
       },
       {
-       "label": "BBl 2024 408",
+       "label": "BBl <b>2024</b> 408",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/408"
       },
       {

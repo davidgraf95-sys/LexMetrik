@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "272",
+  "titel": "Schweizerische Zivilprozessordnung",
+  "erlassdatum": "vom 19. Dezember 2008 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 122 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 28. Juni 2006,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2006</b> 7221",
+    "links": [
+     {
+      "label": "BBl <b>2006</b> 7221",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -33,10 +78,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -100,10 +145,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 241",
+     "text": "SR <b>241</b>",
      "links": [
       {
-       "label": "SR 241",
+       "label": "SR <b>241</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/223_223_223"
       }
      ],
@@ -112,22 +157,22 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Anhang 2 Ziff. 1, in Kraft seit 1. Jan. 2022 (AS 2010 1739; BBl 2006 7221; AS 2022 43; BBl 2007 5397).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 1, in Kraft seit 1. Jan. 2022 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2022</b> 43; BBl <b>2007</b> 5397).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2022 43",
+       "label": "AS <b>2022</b> 43",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/43"
       },
       {
-       "label": "BBl 2007 5397",
+       "label": "BBl <b>2007</b> 5397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/761"
       }
      ],
@@ -136,10 +181,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 732.44",
+     "text": "SR <b>732.44</b>",
      "links": [
       {
-       "label": "SR 732.44",
+       "label": "SR <b>732.44</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/43"
       }
      ],
@@ -148,14 +193,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -164,18 +209,18 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109; BBl 2017 399).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -184,10 +229,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -196,18 +241,18 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. II 4 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 4 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -216,10 +261,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -228,10 +273,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -240,10 +285,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -252,14 +297,14 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Anhang 3 Ziff. II 3 des Wappenschutzgesetzes vom 21. Juni 2013, in Kraft seit 1. Jan. 2017 (AS 2015 3679; BBl 2009 8533).",
+     "text": "Eingefügt durch Anhang 3 Ziff. II 3 des Wappenschutzgesetzes vom 21. Juni 2013, in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 3679; BBl <b>2009</b> 8533).",
      "links": [
       {
-       "label": "AS 2015 3679",
+       "label": "AS <b>2015</b> 3679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/613"
       },
       {
-       "label": "BBl 2009 8533",
+       "label": "BBl <b>2009</b> 8533",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1471"
       }
      ],
@@ -268,10 +313,10 @@
     },
     {
      "nr": "15",
-     "text": "SR 232.21",
+     "text": "SR <b>232.21</b>",
      "links": [
       {
-       "label": "SR 232.21",
+       "label": "SR <b>232.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/613"
       }
      ],
@@ -280,10 +325,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 232.22",
+     "text": "SR <b>232.22</b>",
      "links": [
       {
-       "label": "SR 232.22",
+       "label": "SR <b>232.22</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1954/1297_1327_1355"
       }
      ],
@@ -292,10 +337,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 232.23",
+     "text": "SR <b>232.23</b>",
      "links": [
       {
-       "label": "SR 232.23",
+       "label": "SR <b>232.23</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1962/455_461_475"
       }
      ],
@@ -325,14 +370,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -341,14 +386,14 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -357,14 +402,14 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -373,10 +418,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -385,10 +430,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -397,14 +442,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -413,14 +458,14 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -429,14 +474,14 @@
     },
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -466,10 +511,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -499,14 +544,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -563,14 +608,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -579,10 +624,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -823,14 +868,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -839,10 +884,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -876,10 +921,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -1187,10 +1232,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -1293,10 +1338,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "SR 741.01",
+     "text": "SR <b>741.01</b>",
      "links": [
       {
-       "label": "SR 741.01",
+       "label": "SR <b>741.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
       }
      ],
@@ -1353,14 +1398,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS 2020 957; BBl 2015 3617).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 957; BBl <b>2015</b> 3617).",
      "links": [
       {
-       "label": "AS 2020 957",
+       "label": "AS <b>2020</b> 957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/178"
       },
       {
-       "label": "BBl 2015 3617",
+       "label": "BBl <b>2015</b> 3617",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/956"
       }
      ],
@@ -1369,14 +1414,14 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS 2020 957; BBl 2015 3617).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 957; BBl <b>2015</b> 3617).",
      "links": [
       {
-       "label": "AS 2020 957",
+       "label": "AS <b>2020</b> 957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/178"
       },
       {
-       "label": "BBl 2015 3617",
+       "label": "BBl <b>2015</b> 3617",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/956"
       }
      ],
@@ -1408,14 +1453,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Aufgehoben durch Ziff. II 1 des BG vom 28. Sept. 2012, mit Wirkung seit 1. Mai 2013 (AS 2013 1103; BBl 2011 6873).",
+     "text": "Aufgehoben durch Ziff. II 1 des BG vom 28. Sept. 2012, mit Wirkung seit 1. Mai 2013 (AS <b>2013</b> 1103; BBl <b>2011</b> 6873).",
      "links": [
       {
-       "label": "AS 2013 1103",
+       "label": "AS <b>2013</b> 1103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/250"
       },
       {
-       "label": "BBl 2011 6873",
+       "label": "BBl <b>2011</b> 6873",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1111"
       }
      ],
@@ -1449,10 +1494,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 221.301",
+     "text": "SR <b>221.301</b>",
      "links": [
       {
-       "label": "SR 221.301",
+       "label": "SR <b>221.301</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
       }
      ],
@@ -1509,10 +1554,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1567,10 +1612,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1600,10 +1645,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1690,14 +1735,14 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -1727,14 +1772,14 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -1764,14 +1809,14 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -1964,14 +2009,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -1980,10 +2025,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2081,10 +2126,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "SR 935.61",
+     "text": "SR <b>935.61</b>",
      "links": [
       {
-       "label": "SR 935.61",
+       "label": "SR <b>935.61</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
@@ -2093,10 +2138,10 @@
     },
     {
      "nr": "49",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2126,22 +2171,22 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -2190,14 +2235,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2432,14 +2477,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2448,14 +2493,14 @@
     },
     {
      "nr": "53",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2489,14 +2534,14 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2554,14 +2599,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2647,14 +2692,14 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2725,14 +2770,14 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2781,14 +2826,14 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2797,10 +2842,10 @@
     },
     {
      "nr": "60",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2849,14 +2894,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -2886,14 +2931,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2902,10 +2947,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -3049,14 +3094,14 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -3086,14 +3131,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS 2020 957; BBl 2015 3617).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 957; BBl <b>2015</b> 3617).",
      "links": [
       {
-       "label": "AS 2020 957",
+       "label": "AS <b>2020</b> 957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/178"
       },
       {
-       "label": "BBl 2015 3617",
+       "label": "BBl <b>2015</b> 3617",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/956"
       }
      ],
@@ -3180,14 +3225,14 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -3196,14 +3241,14 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -3252,10 +3297,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -3264,10 +3309,10 @@
     },
     {
      "nr": "69",
-     "text": "SR 151.3",
+     "text": "SR <b>151.3</b>",
      "links": [
       {
-       "label": "SR 151.3",
+       "label": "SR <b>151.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/667"
       }
      ],
@@ -3276,10 +3321,10 @@
     },
     {
      "nr": "70",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -3288,10 +3333,10 @@
     },
     {
      "nr": "71",
-     "text": "SR 822.14",
+     "text": "SR <b>822.14</b>",
      "links": [
       {
-       "label": "SR 822.14",
+       "label": "SR <b>822.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/1037_1037_1037"
       }
      ],
@@ -3300,10 +3345,10 @@
     },
     {
      "nr": "72",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -3312,14 +3357,14 @@
     },
     {
      "nr": "73",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -3328,10 +3373,10 @@
     },
     {
      "nr": "74",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -3361,10 +3406,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -3373,10 +3418,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 151.3",
+     "text": "SR <b>151.3</b>",
      "links": [
       {
-       "label": "SR 151.3",
+       "label": "SR <b>151.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/667"
       }
      ],
@@ -3385,10 +3430,10 @@
     },
     {
      "nr": "77",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -3397,10 +3442,10 @@
     },
     {
      "nr": "78",
-     "text": "SR 822.14",
+     "text": "SR <b>822.14</b>",
      "links": [
       {
-       "label": "SR 822.14",
+       "label": "SR <b>822.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/1037_1037_1037"
       }
      ],
@@ -3409,10 +3454,10 @@
     },
     {
      "nr": "79",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -3421,14 +3466,14 @@
     },
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -3437,10 +3482,10 @@
     },
     {
      "nr": "81",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -3449,14 +3494,14 @@
     },
     {
      "nr": "82",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -3465,10 +3510,10 @@
     },
     {
      "nr": "83",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -3498,10 +3543,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -3510,14 +3555,14 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -3585,14 +3630,14 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -3814,14 +3859,14 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -3855,14 +3900,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -3871,10 +3916,10 @@
     },
     {
      "nr": "89",
-     "text": "SR 943.03",
+     "text": "SR <b>943.03</b>",
      "links": [
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -3954,14 +3999,14 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -4110,14 +4155,14 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -4126,10 +4171,10 @@
     },
     {
      "nr": "92",
-     "text": "SR 943.03",
+     "text": "SR <b>943.03</b>",
      "links": [
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -4209,14 +4254,14 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -4250,14 +4295,14 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -4266,14 +4311,14 @@
     },
     {
      "nr": "96",
-     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 5 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -4330,10 +4375,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4342,14 +4387,14 @@
     },
     {
      "nr": "98",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -4452,14 +4497,14 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -4683,14 +4728,14 @@
    "fussnoten": [
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS 2013 847; BBl 2011 8181).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS <b>2013</b> 847; BBl <b>2011</b> 8181).",
      "links": [
       {
-       "label": "AS 2013 847",
+       "label": "AS <b>2013</b> 847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/177"
       },
       {
-       "label": "BBl 2011 8181",
+       "label": "BBl <b>2011</b> 8181",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1435"
       }
      ],
@@ -4699,10 +4744,10 @@
     },
     {
      "nr": "101",
-     "text": "SR 935.62",
+     "text": "SR <b>935.62</b>",
      "links": [
       {
-       "label": "SR 935.62",
+       "label": "SR <b>935.62</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/312"
       }
      ],
@@ -4711,22 +4756,22 @@
     },
     {
      "nr": "102",
-     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -4806,10 +4851,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4866,22 +4911,22 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -4915,10 +4960,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4927,10 +4972,10 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Anhang 1 Ziff. 5 des Informationssicherheitsgesetzes vom 18. Dez. 2020, in Kraft seit 1. Jan. 2023 (AS 2022 232, 750; BBl 2017 2953).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 5 des Informationssicherheitsgesetzes vom 18. Dez. 2020, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 232, 750; BBl <b>2017</b> 2953).",
      "links": [
       {
-       "label": "AS 2022 232",
+       "label": "AS <b>2022</b> 232",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/232"
       },
       {
@@ -4938,7 +4983,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/750"
       },
       {
-       "label": "BBl 2017 2953",
+       "label": "BBl <b>2017</b> 2953",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/647"
       }
      ],
@@ -4947,14 +4992,14 @@
     },
     {
      "nr": "107",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -4988,10 +5033,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -5092,10 +5137,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -5221,14 +5266,14 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -5241,14 +5286,14 @@
     },
     {
      "nr": "113",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften) (AS 2013 851; BBl 2012 5707 5719). Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften) (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719). Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -5256,11 +5301,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/862"
       },
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5294,14 +5339,14 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5473,10 +5518,10 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -5556,14 +5601,14 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5572,14 +5617,14 @@
     },
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5703,10 +5748,10 @@
    "fussnoten": [
     {
      "nr": "119",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -5740,14 +5785,14 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5850,14 +5895,14 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -5866,10 +5911,10 @@
     },
     {
      "nr": "123",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -5878,22 +5923,22 @@
     },
     {
      "nr": "124",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt) (AS 2015 4299; BBl 2014 529). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt) (AS <b>2015</b> 4299; BBl <b>2014</b> 529). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       },
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5902,14 +5947,14 @@
     },
     {
      "nr": "125",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS 2016 3643; BBl 2014 8669).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 3643; BBl <b>2014</b> 8669).",
      "links": [
       {
-       "label": "AS 2016 3643",
+       "label": "AS <b>2016</b> 3643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/612"
       },
       {
-       "label": "BBl 2014 8669",
+       "label": "BBl <b>2014</b> 8669",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
       }
      ],
@@ -5918,10 +5963,10 @@
     },
     {
      "nr": "126",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -5930,14 +5975,14 @@
     },
     {
      "nr": "127",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5946,14 +5991,14 @@
     },
     {
      "nr": "128",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5962,14 +6007,14 @@
     },
     {
      "nr": "129",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -5999,10 +6044,10 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -6011,14 +6056,14 @@
     },
     {
      "nr": "131",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6048,10 +6093,10 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -6100,14 +6145,14 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6156,14 +6201,14 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6172,14 +6217,14 @@
     },
     {
      "nr": "135",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6188,14 +6233,14 @@
     },
     {
      "nr": "136",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6204,14 +6249,14 @@
     },
     {
      "nr": "137",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6260,14 +6305,14 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6335,14 +6380,14 @@
    "fussnoten": [
     {
      "nr": "139",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6372,14 +6417,14 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6388,10 +6433,10 @@
     },
     {
      "nr": "141",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -6400,14 +6445,14 @@
     },
     {
      "nr": "142",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6456,14 +6501,14 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6564,14 +6609,14 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -6694,14 +6739,14 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6807,14 +6852,14 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6823,14 +6868,14 @@
     },
     {
      "nr": "147",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6839,14 +6884,14 @@
     },
     {
      "nr": "148",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -6876,14 +6921,14 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS 2016 3643; BBl 2014 8669).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 3643; BBl <b>2014</b> 8669).",
      "links": [
       {
-       "label": "AS 2016 3643",
+       "label": "AS <b>2016</b> 3643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/612"
       },
       {
-       "label": "BBl 2014 8669",
+       "label": "BBl <b>2014</b> 8669",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
       }
      ],
@@ -7044,14 +7089,14 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7081,14 +7126,14 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7097,14 +7142,14 @@
     },
     {
      "nr": "152",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7113,10 +7158,10 @@
     },
     {
      "nr": "153",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
@@ -7165,19 +7210,20 @@
    "fussnoten": [
     {
      "nr": "154",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Kapitel: Beendigung des Verfahrens ohne Sachentscheid"
     }
    ]
   },
@@ -7202,14 +7248,14 @@
    "fussnoten": [
     {
      "nr": "155",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7235,14 +7281,14 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -7251,10 +7297,10 @@
     },
     {
      "nr": "157",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -7263,14 +7309,14 @@
     },
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -7279,10 +7325,10 @@
     },
     {
      "nr": "159",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -7291,14 +7337,14 @@
     },
     {
      "nr": "160",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -7307,10 +7353,10 @@
     },
     {
      "nr": "161",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -7319,10 +7365,10 @@
     },
     {
      "nr": "162",
-     "text": "SR 822.14",
+     "text": "SR <b>822.14</b>",
      "links": [
       {
-       "label": "SR 822.14",
+       "label": "SR <b>822.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/1037_1037_1037"
       }
      ],
@@ -7331,10 +7377,10 @@
     },
     {
      "nr": "163",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -7375,14 +7421,14 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "Zweiter und dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter und dritter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7391,14 +7437,14 @@
     },
     {
      "nr": "165",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7477,14 +7523,14 @@
    "fussnoten": [
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7493,22 +7539,22 @@
     },
     {
      "nr": "167",
-     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -7517,10 +7563,10 @@
     },
     {
      "nr": "168",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -7529,14 +7575,14 @@
     },
     {
      "nr": "169",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7545,22 +7591,22 @@
     },
     {
      "nr": "170",
-     "text": "Aufgehoben durch Anhang 2 Ziff. 3, mit Wirkung seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Aufgehoben durch Anhang 2 Ziff. 3, mit Wirkung seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -7569,14 +7615,14 @@
     },
     {
      "nr": "171",
-     "text": "Fassung gemäss Ziff. II 3 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS 2011 4637; BBl 2007 5283).",
+     "text": "Fassung gemäss Ziff. II 3 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
      "links": [
       {
-       "label": "AS 2011 4637",
+       "label": "AS <b>2011</b> 4637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
       },
       {
-       "label": "BBl 2007 5283",
+       "label": "BBl <b>2007</b> 5283",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
       }
      ],
@@ -7585,14 +7631,14 @@
     },
     {
      "nr": "172",
-     "text": "Fassung gemäss Ziff. II 3 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS 2011 4637; BBl 2007 5283).",
+     "text": "Fassung gemäss Ziff. II 3 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
      "links": [
       {
-       "label": "AS 2011 4637",
+       "label": "AS <b>2011</b> 4637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
       },
       {
-       "label": "BBl 2007 5283",
+       "label": "BBl <b>2007</b> 5283",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
       }
      ],
@@ -7622,14 +7668,14 @@
    "fussnoten": [
     {
      "nr": "173",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7638,10 +7684,10 @@
     },
     {
      "nr": "174",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -7650,10 +7696,10 @@
     },
     {
      "nr": "175",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -7662,14 +7708,14 @@
     },
     {
      "nr": "176",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS 2020 957; BBl 2015 3617).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 957; BBl <b>2015</b> 3617).",
      "links": [
       {
-       "label": "AS 2020 957",
+       "label": "AS <b>2020</b> 957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/178"
       },
       {
-       "label": "BBl 2015 3617",
+       "label": "BBl <b>2015</b> 3617",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/956"
       }
      ],
@@ -7678,14 +7724,14 @@
     },
     {
      "nr": "177",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7694,18 +7740,18 @@
     },
     {
      "nr": "178",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109; BBl 2017 399).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -7714,18 +7760,18 @@
     },
     {
      "nr": "179",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109; BBl 2017 399).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -7734,18 +7780,18 @@
     },
     {
      "nr": "180",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109; BBl 2017 399).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -7754,18 +7800,18 @@
     },
     {
      "nr": "181",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109; BBl 2017 399).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -7774,14 +7820,14 @@
     },
     {
      "nr": "182",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7790,14 +7836,14 @@
     },
     {
      "nr": "183",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS 2016 3643; BBl 2014 8669).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 3643; BBl <b>2014</b> 8669).",
      "links": [
       {
-       "label": "AS 2016 3643",
+       "label": "AS <b>2016</b> 3643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/612"
       },
       {
-       "label": "BBl 2014 8669",
+       "label": "BBl <b>2014</b> 8669",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
       }
      ],
@@ -7806,14 +7852,14 @@
     },
     {
      "nr": "184",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS 2020 957; BBl 2015 3617).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. März 2017 (Handelsregisterrecht), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 957; BBl <b>2015</b> 3617).",
      "links": [
       {
-       "label": "AS 2020 957",
+       "label": "AS <b>2020</b> 957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/178"
       },
       {
-       "label": "BBl 2015 3617",
+       "label": "BBl <b>2015</b> 3617",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/956"
       }
      ],
@@ -7822,14 +7868,14 @@
     },
     {
      "nr": "185",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS 2020 4005; 2022 109, 110; BBl 2017 399).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109, 110; BBl <b>2017</b> 399).",
      "links": [
       {
-       "label": "AS 2020 4005",
+       "label": "AS <b>2020</b> 4005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       },
       {
-       "label": "2022 109",
+       "label": "<b>2022</b> 109",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/109"
       },
       {
@@ -7837,7 +7883,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/110"
       },
       {
-       "label": "BBl 2017 399",
+       "label": "BBl <b>2017</b> 399",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
@@ -7846,14 +7892,14 @@
     },
     {
      "nr": "186",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7883,14 +7929,14 @@
    "fussnoten": [
     {
      "nr": "187",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -7899,10 +7945,10 @@
     },
     {
      "nr": "188",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -8220,14 +8266,14 @@
    "fussnoten": [
     {
      "nr": "193",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -8307,10 +8353,10 @@
    "fussnoten": [
     {
      "nr": "194",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -8319,10 +8365,10 @@
     },
     {
      "nr": "195",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -8331,10 +8377,10 @@
     },
     {
      "nr": "196",
-     "text": "SR 232.14",
+     "text": "SR <b>232.14</b>",
      "links": [
       {
-       "label": "SR 232.14",
+       "label": "SR <b>232.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1955/871_893_899"
       }
      ],
@@ -8366,10 +8412,10 @@
    "fussnoten": [
     {
      "nr": "197",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -8378,14 +8424,14 @@
     },
     {
      "nr": "198",
-     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS 2010 5601; BBl 2009 1777).",
+     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5601; BBl <b>2009</b> 1777).",
      "links": [
       {
-       "label": "AS 2010 5601",
+       "label": "AS <b>2010</b> 5601",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
       },
       {
-       "label": "BBl 2009 1777",
+       "label": "BBl <b>2009</b> 1777",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/402"
       }
      ],
@@ -8415,10 +8461,10 @@
    "fussnoten": [
     {
      "nr": "199",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -8628,14 +8674,14 @@
    "fussnoten": [
     {
      "nr": "200",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8644,14 +8690,14 @@
     },
     {
      "nr": "201",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8660,14 +8706,14 @@
     },
     {
      "nr": "202",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8676,14 +8722,14 @@
     },
     {
      "nr": "203",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8717,14 +8763,14 @@
    "fussnoten": [
     {
      "nr": "204",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8733,10 +8779,10 @@
     },
     {
      "nr": "205",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -8745,10 +8791,10 @@
     },
     {
      "nr": "206",
-     "text": "SR 831.42",
+     "text": "SR <b>831.42</b>",
      "links": [
       {
-       "label": "SR 831.42",
+       "label": "SR <b>831.42</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
       }
      ],
@@ -8757,14 +8803,14 @@
     },
     {
      "nr": "207",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8773,14 +8819,14 @@
     },
     {
      "nr": "208",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8789,14 +8835,14 @@
     },
     {
      "nr": "209",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8805,14 +8851,14 @@
     },
     {
      "nr": "210",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8869,14 +8915,14 @@
    "fussnoten": [
     {
      "nr": "211",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -8910,10 +8956,10 @@
    "fussnoten": [
     {
      "nr": "212",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -8922,14 +8968,14 @@
     },
     {
      "nr": "213",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
@@ -9009,10 +9055,10 @@
    "fussnoten": [
     {
      "nr": "214",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS 2010 281 1861; BBl 2008 1959 1975).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 281 1861; BBl <b>2008</b> 1959 1975).",
      "links": [
       {
-       "label": "AS 2010 281",
+       "label": "AS <b>2010</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/37"
       },
       {
@@ -9020,7 +9066,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/263"
       },
       {
-       "label": "BBl 2008 1959",
+       "label": "BBl <b>2008</b> 1959",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/445"
       },
       {
@@ -9033,10 +9079,10 @@
     },
     {
      "nr": "215",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -9070,10 +9116,10 @@
    "fussnoten": [
     {
      "nr": "216",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS 2010 281 1861; BBl 2008 1959 1975).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 281 1861; BBl <b>2008</b> 1959 1975).",
      "links": [
       {
-       "label": "AS 2010 281",
+       "label": "AS <b>2010</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/37"
       },
       {
@@ -9081,7 +9127,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/263"
       },
       {
-       "label": "BBl 2008 1959",
+       "label": "BBl <b>2008</b> 1959",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/445"
       },
       {
@@ -9094,14 +9140,14 @@
     },
     {
      "nr": "217",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9117,10 +9163,10 @@
     },
     {
      "nr": "219",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS 2010 281 1861; BBl 2008 1959 1975).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2009 (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 281 1861; BBl <b>2008</b> 1959 1975).",
      "links": [
       {
-       "label": "AS 2010 281",
+       "label": "AS <b>2010</b> 281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/37"
       },
       {
@@ -9128,7 +9174,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/263"
       },
       {
-       "label": "BBl 2008 1959",
+       "label": "BBl <b>2008</b> 1959",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/445"
       },
       {
@@ -9189,10 +9235,10 @@
    "fussnoten": [
     {
      "nr": "220",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -9226,14 +9272,14 @@
    "fussnoten": [
     {
      "nr": "221",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9330,14 +9376,14 @@
    "fussnoten": [
     {
      "nr": "222",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9405,14 +9451,14 @@
    "fussnoten": [
     {
      "nr": "223",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9442,14 +9488,14 @@
    "fussnoten": [
     {
      "nr": "224",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9458,22 +9504,22 @@
     },
     {
      "nr": "225",
-     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS 2010 1739; BBl 2006 7221; AS 2011 725; BBl 2006 7001).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 3, in Kraft seit 1. Jan. 2013 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006</b> 7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -9482,14 +9528,14 @@
     },
     {
      "nr": "226",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9498,14 +9544,14 @@
     },
     {
      "nr": "227",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9535,14 +9581,14 @@
    "fussnoten": [
     {
      "nr": "228",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9572,14 +9618,14 @@
    "fussnoten": [
     {
      "nr": "229",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9607,14 +9653,14 @@
    "fussnoten": [
     {
      "nr": "232",
-     "text": "Aufgehoben durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), mit Wirkung seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Aufgehoben durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), mit Wirkung seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -9623,10 +9669,10 @@
     },
     {
      "nr": "233",
-     "text": "SR 0.211.230.02",
+     "text": "SR <b>0.211.230.02</b>",
      "links": [
       {
-       "label": "SR 0.211.230.02",
+       "label": "SR <b>0.211.230.02</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/1694_1694_1694"
       }
      ],
@@ -9635,10 +9681,10 @@
     },
     {
      "nr": "234",
-     "text": "SR 0.211.230.01",
+     "text": "SR <b>0.211.230.01</b>",
      "links": [
       {
-       "label": "SR 0.211.230.01",
+       "label": "SR <b>0.211.230.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/1681_1681_1681"
       }
      ],
@@ -9647,10 +9693,10 @@
     },
     {
      "nr": "235",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -9659,10 +9705,10 @@
     },
     {
      "nr": "236",
-     "text": "SR 211.222.32",
+     "text": "SR <b>211.222.32</b>",
      "links": [
       {
-       "label": "SR 211.222.32",
+       "label": "SR <b>211.222.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/379"
       }
      ],
@@ -9671,19 +9717,20 @@
     },
     {
      "nr": "231",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Summarisches Verfahren: Geltungsbereich"
     }
    ]
   },
@@ -9708,19 +9755,20 @@
    "fussnoten": [
     {
      "nr": "237",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Unterhalts- und Vaterschaftsklage"
     }
    ]
   },
@@ -9745,22 +9793,22 @@
    "fussnoten": [
     {
      "nr": "238",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt) (AS 2015 4299; BBl 2014 529). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt) (AS <b>2015</b> 4299; BBl <b>2014</b> 529). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       },
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9790,14 +9838,14 @@
    "fussnoten": [
     {
      "nr": "239",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -9806,10 +9854,10 @@
     },
     {
      "nr": "240",
-     "text": "SR 211.231",
+     "text": "SR <b>211.231</b>",
      "links": [
       {
-       "label": "SR 211.231",
+       "label": "SR <b>211.231</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/782"
       }
      ],
@@ -9902,10 +9950,10 @@
    "fussnoten": [
     {
      "nr": "242",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -9914,14 +9962,14 @@
     },
     {
      "nr": "243",
-     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS 2010 5601; BBl 2009 1777).",
+     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5601; BBl <b>2009</b> 1777).",
      "links": [
       {
-       "label": "AS 2010 5601",
+       "label": "AS <b>2010</b> 5601",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
       },
       {
-       "label": "BBl 2009 1777",
+       "label": "BBl <b>2009</b> 1777",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/402"
       }
      ],
@@ -9930,14 +9978,14 @@
     },
     {
      "nr": "244",
-     "text": "Eingefügt durch Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS 2010 5601; BBl 2009 1777).",
+     "text": "Eingefügt durch Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5601; BBl <b>2009</b> 1777).",
      "links": [
       {
-       "label": "AS 2010 5601",
+       "label": "AS <b>2010</b> 5601",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
       },
       {
-       "label": "BBl 2009 1777",
+       "label": "BBl <b>2009</b> 1777",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/402"
       }
      ],
@@ -10040,14 +10088,14 @@
    "fussnoten": [
     {
      "nr": "245",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10081,14 +10129,14 @@
    "fussnoten": [
     {
      "nr": "246",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10097,14 +10145,14 @@
     },
     {
      "nr": "247",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10138,14 +10186,14 @@
    "fussnoten": [
     {
      "nr": "248",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10154,14 +10202,14 @@
     },
     {
      "nr": "249",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10170,14 +10218,14 @@
     },
     {
      "nr": "250",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10186,14 +10234,14 @@
     },
     {
      "nr": "251",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10250,14 +10298,14 @@
    "fussnoten": [
     {
      "nr": "252",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10266,14 +10314,14 @@
     },
     {
      "nr": "253",
-     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS 2016 3643; BBl 2014 8669).",
+     "text": "Fassung gemäss Ziff. II des BG vom 25. Sept. 2015 (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 3643; BBl <b>2014</b> 8669).",
      "links": [
       {
-       "label": "AS 2016 3643",
+       "label": "AS <b>2016</b> 3643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/612"
       },
       {
-       "label": "BBl 2014 8669",
+       "label": "BBl <b>2014</b> 8669",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
       }
      ],
@@ -10307,14 +10355,14 @@
    "fussnoten": [
     {
      "nr": "254",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10382,14 +10430,14 @@
    "fussnoten": [
     {
      "nr": "255",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10476,14 +10524,14 @@
    "fussnoten": [
     {
      "nr": "256",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10532,14 +10580,14 @@
    "fussnoten": [
     {
      "nr": "257",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10569,14 +10617,14 @@
    "fussnoten": [
     {
      "nr": "261",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10585,14 +10633,14 @@
     },
     {
      "nr": "262",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10601,14 +10649,14 @@
     },
     {
      "nr": "263",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10617,10 +10665,10 @@
     },
     {
      "nr": "264",
-     "text": "SR 0.101",
+     "text": "SR <b>0.101</b>",
      "links": [
       {
-       "label": "SR 0.101",
+       "label": "SR <b>0.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/2151_2151_2151"
       }
      ],
@@ -10629,14 +10677,14 @@
     },
     {
      "nr": "265",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS 2022 289; BBl 2021 300, 889).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 289; BBl <b>2021 </b>300, 889).",
      "links": [
       {
-       "label": "AS 2022 289",
+       "label": "AS <b>2022</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/289"
       },
       {
-       "label": "BBl 2021 300",
+       "label": "BBl <b>2021 </b>300",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/300"
       },
       {
@@ -10708,14 +10756,14 @@
    "fussnoten": [
     {
      "nr": "266",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10800,10 +10848,10 @@
    "fussnoten": [
     {
      "nr": "267",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -10812,10 +10860,10 @@
     },
     {
      "nr": "268",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -10845,14 +10893,14 @@
    "fussnoten": [
     {
      "nr": "269",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10861,14 +10909,14 @@
     },
     {
      "nr": "270",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -10955,14 +11003,14 @@
    "fussnoten": [
     {
      "nr": "271",
-     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS 2010 5601; BBl 2009 1777).",
+     "text": "Fassung gemäss Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5601; BBl <b>2009</b> 1777).",
      "links": [
       {
-       "label": "AS 2010 5601",
+       "label": "AS <b>2010</b> 5601",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
       },
       {
-       "label": "BBl 2009 1777",
+       "label": "BBl <b>2009</b> 1777",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/402"
       }
      ],
@@ -11030,10 +11078,10 @@
    "fussnoten": [
     {
      "nr": "272",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -11042,10 +11090,10 @@
     },
     {
      "nr": "273",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -11054,14 +11102,14 @@
     },
     {
      "nr": "274",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Jan. 2022 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Jan. 2022 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
@@ -11167,10 +11215,10 @@
    "fussnoten": [
     {
      "nr": "275",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -11179,10 +11227,10 @@
     },
     {
      "nr": "276",
-     "text": "SR 822.14",
+     "text": "SR <b>822.14</b>",
      "links": [
       {
-       "label": "SR 822.14",
+       "label": "SR <b>822.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/1037_1037_1037"
       }
      ],
@@ -11191,10 +11239,10 @@
     },
     {
      "nr": "277",
-     "text": "SR 823.11",
+     "text": "SR <b>823.11</b>",
      "links": [
       {
-       "label": "SR 823.11",
+       "label": "SR <b>823.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/392_392_392"
       }
      ],
@@ -11224,10 +11272,10 @@
    "fussnoten": [
     {
      "nr": "278",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -11310,10 +11358,10 @@
    "fussnoten": [
     {
      "nr": "279",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -11322,14 +11370,14 @@
     },
     {
      "nr": "280",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11385,14 +11433,14 @@
    "fussnoten": [
     {
      "nr": "281",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11401,14 +11449,14 @@
     },
     {
      "nr": "282",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -11434,19 +11482,20 @@
    "fussnoten": [
     {
      "nr": "283",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Titel: Schiedsvereinbarung und Schiedsklausel"
     }
    ]
   },
@@ -11467,14 +11516,14 @@
    "fussnoten": [
     {
      "nr": "284",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11620,14 +11669,14 @@
    "fussnoten": [
     {
      "nr": "285",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11668,14 +11717,14 @@
    "fussnoten": [
     {
      "nr": "286",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11684,14 +11733,14 @@
     },
     {
      "nr": "287",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11717,14 +11766,14 @@
    "fussnoten": [
     {
      "nr": "288",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -11733,14 +11782,14 @@
     },
     {
      "nr": "289",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11781,14 +11830,14 @@
    "fussnoten": [
     {
      "nr": "290",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), mit Wirkung seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -11814,14 +11863,14 @@
    "fussnoten": [
     {
      "nr": "291",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -11847,14 +11896,14 @@
    "fussnoten": [
     {
      "nr": "292",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12075,14 +12124,14 @@
    "fussnoten": [
     {
      "nr": "293",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -12112,10 +12161,10 @@
    "fussnoten": [
     {
      "nr": "294",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
@@ -12240,14 +12289,14 @@
    "fussnoten": [
     {
      "nr": "295",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -12277,14 +12326,14 @@
    "fussnoten": [
     {
      "nr": "296",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12293,14 +12342,14 @@
     },
     {
      "nr": "297",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -12309,10 +12358,10 @@
     },
     {
      "nr": "298",
-     "text": "SR 0.101",
+     "text": "SR <b>0.101</b>",
      "links": [
       {
-       "label": "SR 0.101",
+       "label": "SR <b>0.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/2151_2151_2151"
       }
      ],
@@ -12321,14 +12370,14 @@
     },
     {
      "nr": "299",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS 2022 289; BBl 2021 300, 889).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 289; BBl <b>2021 </b>300, 889).",
      "links": [
       {
-       "label": "AS 2022 289",
+       "label": "AS <b>2022</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/289"
       },
       {
-       "label": "BBl 2021 300",
+       "label": "BBl <b>2021 </b>300",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/300"
       },
       {
@@ -12415,14 +12464,14 @@
    "fussnoten": [
     {
      "nr": "300",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12431,14 +12480,14 @@
     },
     {
      "nr": "301",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12513,14 +12562,14 @@
    "fussnoten": [
     {
      "nr": "303",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -12529,7 +12578,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Übergangsbestimmungen vom 19. Dezember 2008"
     }
    ]
   },
@@ -12637,19 +12687,20 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Einsatz elektronischer Mittel zur Ton- und Bildübertragung"
     }
    ]
   },
@@ -12699,19 +12750,20 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Verweigerungsrecht betreffend die Tätigkeit eines unternehmensinternen Rechtsdienstes"
     }
    ]
   },
@@ -12740,14 +12792,14 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12781,14 +12833,14 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12818,14 +12870,14 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4179; BBl 2018 7163).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4179; BBl <b>2018</b> 7163).",
      "links": [
       {
-       "label": "AS 2020 4179",
+       "label": "AS <b>2020</b> 4179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/767"
       },
       {
-       "label": "BBl 2018 7163",
+       "label": "BBl <b>2018</b> 7163",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2548"
       }
      ],
@@ -12834,14 +12886,14 @@
     },
     {
      "nr": "190",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12850,10 +12902,10 @@
     },
     {
      "nr": "191",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -12862,14 +12914,14 @@
     },
     {
      "nr": "192",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -12899,14 +12951,14 @@
    "fussnoten": [
     {
      "nr": "230",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
@@ -12934,19 +12986,20 @@
    "fussnoten": [
     {
      "nr": "241",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Kinderbelange in Verfahren bei eingetragener Partnerschaft"
     }
    ]
   },
@@ -12971,14 +13024,14 @@
    "fussnoten": [
     {
      "nr": "258",
-     "text": "Eingefügt durch Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS 2010 5601; BBl 2009 1777).",
+     "text": "Eingefügt durch Art. 3 Ziff. 1 des BB vom 11. Dez. 2009 (Genehmigung und Umsetzung des Lugano-Übereink.), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5601; BBl <b>2009</b> 1777).",
      "links": [
       {
-       "label": "AS 2010 5601",
+       "label": "AS <b>2010</b> 5601",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
       },
       {
-       "label": "BBl 2009 1777",
+       "label": "BBl <b>2009</b> 1777",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/402"
       }
      ],
@@ -12987,10 +13040,10 @@
     },
     {
      "nr": "259",
-     "text": "SR 0.275.12",
+     "text": "SR <b>0.275.12</b>",
      "links": [
       {
-       "label": "SR 0.275.12",
+       "label": "SR <b>0.275.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/801"
       }
      ],
@@ -12999,10 +13052,10 @@
     },
     {
      "nr": "260",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -13036,22 +13089,22 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Anhang 2 Ziff. 1, in Kraft seit 1. Jan. 2022 (AS 2010 1739; BBl 2006 7221; AS 2022 43; BBl 2007 5397).",
+     "text": "Eingefügt durch Anhang 2 Ziff. 1, in Kraft seit 1. Jan. 2022 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221; AS <b>2022</b> 43; BBl <b>2007</b> 5397).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       },
       {
-       "label": "AS 2022 43",
+       "label": "AS <b>2022</b> 43",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/43"
       },
       {
-       "label": "BBl 2007 5397",
+       "label": "BBl <b>2007</b> 5397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/761"
       }
      ],
@@ -13077,14 +13130,14 @@
    "fussnoten": [
     {
      "nr": "302",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
@@ -13112,14 +13165,14 @@
    "fussnoten": [
     {
      "nr": "304",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -13128,7 +13181,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Übergangsbestimmung zur Änderung vom 28. September 2012"
     }
    ]
   },
@@ -13151,19 +13205,20 @@
    "fussnoten": [
     {
      "nr": "305",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS 2015 4299; BBl 2014 529).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
      "links": [
       {
-       "label": "AS 2015 4299",
+       "label": "AS <b>2015</b> 4299",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
       },
       {
-       "label": "BBl 2014 529",
+       "label": "BBl <b>2014</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Übergangsbestimmung zur Änderung vom 20. März 2015"
     }
    ]
   },
@@ -13186,19 +13241,20 @@
    "fussnoten": [
     {
      "nr": "306",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS 2016 2313; BBl 2013 4887).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
-       "label": "AS 2016 2313",
+       "label": "AS <b>2016</b> 2313",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
       },
       {
-       "label": "BBl 2013 4887",
+       "label": "BBl <b>2013</b> 4887",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Übergangsbestimmung zur Änderung vom 19. Juni 2015"
     }
    ]
   },
@@ -13221,19 +13277,20 @@
    "fussnoten": [
     {
      "nr": "307",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS 2019 2273; BBl 2017 7307).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
      "links": [
       {
-       "label": "AS 2019 2273",
+       "label": "AS <b>2019</b> 2273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
       },
       {
-       "label": "BBl 2017 7307",
+       "label": "BBl <b>2017</b> 7307",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Übergangsbestimmung zur Änderung vom 14. Dezember 2018"
     }
    ]
   },
@@ -13252,19 +13309,20 @@
    "fussnoten": [
     {
      "nr": "308",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 24 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Kapitel: Übergangsbestimmung zur Änderung vom 25. September 2020"
     }
    ]
   },
@@ -13287,19 +13345,20 @@
    "fussnoten": [
     {
      "nr": "309",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Übergangsbestimmung zur Änderung vom 17. März 2023"
     }
    ]
   },
@@ -13320,14 +13379,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS 2023 491; BBl 2020 2697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung), in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 491; BBl <b>2020</b> 2697).",
      "links": [
       {
-       "label": "AS 2023 491",
+       "label": "AS <b>2023</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       },
       {
-       "label": "BBl 2020 2697",
+       "label": "BBl <b>2020</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/653"
       }
      ],

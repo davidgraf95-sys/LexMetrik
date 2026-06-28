@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "961.01",
+  "titel": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen",
+  "erlassdatum": "vom 17. Dezember 2004 (Stand am 1. September 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 82 Absatz 1, 98 Absatz 3, 117 Absatz 1 und 122 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 9. Mai 2003,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2003</b> 3789",
+    "links": [
+     {
+      "label": "BBl <b>2003</b> 3789",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,14 +63,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -34,19 +79,20 @@
     },
     {
      "nr": "3",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ]
   },
@@ -67,14 +113,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -83,14 +129,14 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -99,14 +145,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -115,14 +161,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -131,14 +177,14 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I des BG vom 12. Dez. 2014, in Kraft seit 1. Juli 2015 (AS 2015 1539; BBl 2014 6271 6315).",
+     "text": "Eingefügt durch Ziff. I des BG vom 12. Dez. 2014, in Kraft seit 1. Juli 2015 (AS <b>2015</b> 1539; BBl <b>2014 </b>6271 6315).",
      "links": [
       {
-       "label": "AS 2015 1539",
+       "label": "AS <b>2015</b> 1539",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/305"
       },
       {
-       "label": "BBl 2014 6271",
+       "label": "BBl <b>2014 </b>6271",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1364"
       },
       {
@@ -151,14 +197,14 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -167,14 +213,14 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -183,14 +229,14 @@
     },
     {
      "nr": "12",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -199,14 +245,14 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -215,14 +261,14 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -248,10 +294,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Ausdruck gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829). Diese Änderung wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829). Diese Änderung wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -259,7 +305,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -285,14 +331,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -301,14 +347,14 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -334,14 +380,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -367,10 +413,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -378,7 +424,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -404,14 +450,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -452,14 +498,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -500,14 +546,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -548,10 +594,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "SR 741.01",
+     "text": "SR <b>741.01</b>",
      "links": [
       {
-       "label": "SR 741.01",
+       "label": "SR <b>741.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
       }
      ],
@@ -577,14 +623,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -610,14 +656,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -658,14 +704,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -721,14 +767,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -754,14 +800,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -785,10 +831,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -796,7 +842,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -805,10 +851,10 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -816,7 +862,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -857,14 +903,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -873,14 +919,14 @@
     },
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -889,14 +935,14 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -922,14 +968,14 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS 2012 6679; BBl 2008 1589).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6679; BBl <b>2008</b> 1589).",
      "links": [
       {
-       "label": "AS 2012 6679",
+       "label": "AS <b>2012</b> 6679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/810"
       },
       {
-       "label": "BBl 2008 1589",
+       "label": "BBl <b>2008</b> 1589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/416"
       }
      ],
@@ -938,14 +984,14 @@
     },
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -954,14 +1000,14 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -970,14 +1016,14 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1003,14 +1049,14 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS 2012 6679; BBl 2008 1589).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6679; BBl <b>2008</b> 1589).",
      "links": [
       {
-       "label": "AS 2012 6679",
+       "label": "AS <b>2012</b> 6679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/810"
       },
       {
-       "label": "BBl 2008 1589",
+       "label": "BBl <b>2008</b> 1589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/416"
       }
      ],
@@ -1019,10 +1065,10 @@
     },
     {
      "nr": "48",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1031,14 +1077,14 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1064,14 +1110,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1080,10 +1126,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1091,12 +1137,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Prüfung"
     }
    ]
   },
@@ -1117,14 +1164,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -1133,10 +1180,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -1145,10 +1192,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -1157,10 +1204,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1169,14 +1216,14 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1200,14 +1247,14 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -1248,14 +1295,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 5137; BBl 2012 1941).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5137; BBl <b>2012</b> 1941).",
      "links": [
       {
-       "label": "AS 2015 5137",
+       "label": "AS <b>2015</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/839"
       },
       {
-       "label": "BBl 2012 1941",
+       "label": "BBl <b>2012</b> 1941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/352"
       }
      ],
@@ -1311,10 +1358,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "SR 741.01",
+     "text": "SR <b>741.01</b>",
      "links": [
       {
-       "label": "SR 741.01",
+       "label": "SR <b>741.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
       }
      ],
@@ -1340,14 +1387,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1373,14 +1420,14 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1406,14 +1453,14 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1439,14 +1486,14 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS <b>2024</b> 424; BBl <b>2021</b> 1478).",
      "links": [
       {
-       "label": "AS 2024 424",
+       "label": "AS <b>2024</b> 424",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
       },
       {
-       "label": "BBl 2021 1478",
+       "label": "BBl <b>2021</b> 1478",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
       }
      ],
@@ -1483,19 +1530,20 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Versicherungsvermittlerinnen und -vermittler"
     }
    ]
   },
@@ -1512,10 +1560,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1524,10 +1572,10 @@
     },
     {
      "nr": "73",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -1597,14 +1645,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1613,10 +1661,10 @@
     },
     {
      "nr": "75",
-     "text": "SR 741.01",
+     "text": "SR <b>741.01</b>",
      "links": [
       {
-       "label": "SR 741.01",
+       "label": "SR <b>741.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
       }
      ],
@@ -1625,14 +1673,14 @@
     },
     {
      "nr": "76",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1641,14 +1689,14 @@
     },
     {
      "nr": "77",
-     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -1674,10 +1722,10 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1685,7 +1733,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1694,10 +1742,10 @@
     },
     {
      "nr": "79",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -1721,10 +1769,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1732,7 +1780,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1771,10 +1819,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1782,7 +1830,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1808,14 +1856,14 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1824,14 +1872,14 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1840,14 +1888,14 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1856,22 +1904,22 @@
     },
     {
      "nr": "86",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1880,22 +1928,22 @@
     },
     {
      "nr": "87",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1904,10 +1952,10 @@
     },
     {
      "nr": "88",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1916,14 +1964,14 @@
     },
     {
      "nr": "89",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1932,19 +1980,20 @@
     },
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Schutzmassnahmen, Massnahmen bei Insolvenzgefahr und Liquidation"
     }
    ]
   },
@@ -1965,14 +2014,14 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1998,14 +2047,14 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2014,19 +2063,20 @@
     },
     {
      "nr": "100",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2b. Abschnitt: Versicherungskonkurs"
     }
    ]
   },
@@ -2047,14 +2097,14 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -2063,10 +2113,10 @@
     },
     {
      "nr": "103",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2075,14 +2125,14 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2091,14 +2141,14 @@
     },
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2124,19 +2174,20 @@
    "fussnoten": [
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Zusätzliche Schutzmassnahmen für ausländische Versicherungsunternehmen"
     }
    ]
   },
@@ -2157,10 +2208,10 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2216,10 +2267,10 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2227,7 +2278,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2236,10 +2287,10 @@
     },
     {
      "nr": "134",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2340,14 +2391,14 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2388,14 +2439,14 @@
    "fussnoten": [
     {
      "nr": "136",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2421,14 +2472,14 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -2437,10 +2488,10 @@
     },
     {
      "nr": "138",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -2449,10 +2500,10 @@
     },
     {
      "nr": "139",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2478,14 +2529,14 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2494,10 +2545,10 @@
     },
     {
      "nr": "141",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2523,18 +2574,18 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2560,10 +2611,10 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2571,7 +2622,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2612,14 +2663,14 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2660,14 +2711,14 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2693,14 +2744,14 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -2709,10 +2760,10 @@
     },
     {
      "nr": "148",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -2721,10 +2772,10 @@
     },
     {
      "nr": "149",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2761,14 +2812,14 @@
    "fussnoten": [
     {
      "nr": "152",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2777,19 +2828,20 @@
     },
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Herausgabe von Dokumenten an die Versicherungsnehmerinnen und -nehmer und an die versicherten Personen"
     }
    ]
   },
@@ -2806,14 +2858,14 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2835,14 +2887,14 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2851,10 +2903,10 @@
     },
     {
      "nr": "157",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -2863,19 +2915,20 @@
     },
     {
      "nr": "155",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7a. Kapitel: Tarifverfügungen und Gerichte"
     }
    ]
   },
@@ -2892,14 +2945,14 @@
    "fussnoten": [
     {
      "nr": "158",
-     "text": "Aufgehoben gemäss Anhang 1 Ziff. II 31 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS 2010 1739; BBl 2006 7221).",
+     "text": "Aufgehoben gemäss Anhang 1 Ziff. II 31 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
-       "label": "AS 2010 1739",
+       "label": "AS <b>2010</b> 1739",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
       },
       {
-       "label": "BBl 2006 7221",
+       "label": "BBl <b>2006</b> 7221",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       }
      ],
@@ -2921,14 +2974,14 @@
    "fussnoten": [
     {
      "nr": "159",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -2937,14 +2990,14 @@
     },
     {
      "nr": "160",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS <b>2024</b> 424; BBl <b>2021</b> 1478).",
      "links": [
       {
-       "label": "AS 2024 424",
+       "label": "AS <b>2024</b> 424",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
       },
       {
-       "label": "BBl 2021 1478",
+       "label": "BBl <b>2021</b> 1478",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
       }
      ],
@@ -2953,14 +3006,14 @@
     },
     {
      "nr": "161",
-     "text": "Fassung gemäss Ziff. II des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "text": "Fassung gemäss Ziff. II des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS <b>2024</b> 424; BBl <b>2021</b> 1478).",
      "links": [
       {
-       "label": "AS 2024 424",
+       "label": "AS <b>2024</b> 424",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
       },
       {
-       "label": "BBl 2021 1478",
+       "label": "BBl <b>2021</b> 1478",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
       }
      ],
@@ -2982,14 +3035,14 @@
    "fussnoten": [
     {
      "nr": "162",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3011,10 +3064,10 @@
    "fussnoten": [
     {
      "nr": "163",
-     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -3022,7 +3075,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -3090,14 +3143,14 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3123,14 +3176,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3156,14 +3209,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3189,14 +3242,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3222,14 +3275,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3253,19 +3306,20 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Pflichten für von der Aufsicht ausgenommene Unternehmen und Personen"
     }
    ]
   },
@@ -3286,10 +3340,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "SR 221.229.1",
+     "text": "SR <b>221.229.1</b>",
      "links": [
       {
-       "label": "SR 221.229.1",
+       "label": "SR <b>221.229.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
       }
      ],
@@ -3298,19 +3352,20 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Abschnitt: Versicherungsunternehmen, die professionelle Versicherungsnehmer versichern, und konzerninterne Direkt- und Rückversicherung"
     }
    ]
   },
@@ -3346,10 +3401,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "SR 221.229.1",
+     "text": "SR <b>221.229.1</b>",
      "links": [
       {
-       "label": "SR 221.229.1",
+       "label": "SR <b>221.229.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
       }
      ],
@@ -3390,19 +3445,20 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5b. Abschnitt: Versicherungszweckgesellschaften"
     }
    ]
   },
@@ -3438,22 +3494,22 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014 (AS 2015 5137; BBl 2012 1941). Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS 2024 424; BBl 2021 1478).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des Krankenversicherungsaufsichtsgesetzes vom 26. Sept. 2014 (AS <b>2015</b> 5137; BBl <b>2012</b> 1941). Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2022 über die Regulierung der Versicherungsvermittlertätigkeit, in Kraft seit 1. Sept. 2024 (AS <b>2024</b> 424; BBl <b>2021</b> 1478).",
      "links": [
       {
-       "label": "AS 2015 5137",
+       "label": "AS <b>2015</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/839"
       },
       {
-       "label": "BBl 2012 1941",
+       "label": "BBl <b>2012</b> 1941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/352"
       },
       {
-       "label": "AS 2024 424",
+       "label": "AS <b>2024</b> 424",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/424"
       },
       {
-       "label": "BBl 2021 1478",
+       "label": "BBl <b>2021</b> 1478",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/1478"
       }
      ],
@@ -3479,19 +3535,20 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Abschnitt: Qualifizierte Lebensversicherungen"
     }
    ]
   },
@@ -3527,10 +3584,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -3698,14 +3755,14 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3714,10 +3771,10 @@
     },
     {
      "nr": "91",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3726,10 +3783,10 @@
     },
     {
      "nr": "92",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -3755,14 +3812,14 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -3788,19 +3845,20 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Sanierung"
     }
    ]
   },
@@ -3836,10 +3894,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "SR 221.301",
+     "text": "SR <b>221.301</b>",
      "links": [
       {
-       "label": "SR 221.301",
+       "label": "SR <b>221.301</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
       }
      ],
@@ -3865,10 +3923,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4014,10 +4072,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4026,10 +4084,10 @@
     },
     {
      "nr": "99",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -4055,22 +4113,22 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4079,10 +4137,10 @@
     },
     {
      "nr": "107",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4108,14 +4166,14 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4141,14 +4199,14 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4174,22 +4232,22 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4215,14 +4273,14 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4248,14 +4306,14 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -4264,10 +4322,10 @@
     },
     {
      "nr": "113",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4276,18 +4334,18 @@
     },
     {
      "nr": "114",
-     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 19 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -4296,14 +4354,14 @@
     },
     {
      "nr": "115",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4329,22 +4387,22 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4353,19 +4411,20 @@
     },
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2c. Abschnitt: Verfahren"
     }
    ]
   },
@@ -4386,22 +4445,22 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS <b>2015</b> 5339; BBl <b>2014</b> 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014</b> 7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4410,10 +4469,10 @@
     },
     {
      "nr": "119",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -4422,10 +4481,10 @@
     },
     {
      "nr": "120",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4451,14 +4510,14 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4467,10 +4526,10 @@
     },
     {
      "nr": "122",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -4496,14 +4555,14 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4529,14 +4588,14 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4545,10 +4604,10 @@
     },
     {
      "nr": "125",
-     "text": "SR 741.01",
+     "text": "SR <b>741.01</b>",
      "links": [
       {
-       "label": "SR 741.01",
+       "label": "SR <b>741.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/679_705_685"
       }
      ],
@@ -4574,14 +4633,14 @@
    "fussnoten": [
     {
      "nr": "126",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4590,10 +4649,10 @@
     },
     {
      "nr": "127",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4602,10 +4661,10 @@
     },
     {
      "nr": "128",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -4631,14 +4690,14 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4662,14 +4721,14 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4695,22 +4754,22 @@
    "fussnoten": [
     {
      "nr": "142",
-     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS <b>2015</b> 5339; BBl <b>2014</b> 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014</b> 7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4736,22 +4795,22 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS 2015 5339; BBl 2014 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Anhang Ziff. 15 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (AS <b>2015</b> 5339; BBl <b>2014</b> 7483). Fassung gemäss Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014</b> 7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       },
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4771,10 +4830,10 @@
    "fussnoten": [
     {
      "nr": "154",
-     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 18 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5207 5205; BBl <b>2006 </b>2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -4782,7 +4841,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006 </b>2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -4804,14 +4863,14 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4837,14 +4896,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4870,14 +4929,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -4903,14 +4962,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],

@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "412.10",
+  "titel": "Bundesgesetz über die Berufsbildung",
+  "erlassdatum": "vom 13. Dezember 2002 (Stand am 1. März 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 63 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 6. September 2000,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2000</b> 5686",
+    "links": [
+     {
+      "label": "BBl <b>2000</b> 5686",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2000/1232"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -36,22 +81,22 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS 2017 6521, 2018 3171; BBl 2013 2397, 2016 2821).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 6521, <b>2018</b> 3171; BBl <b>2013</b> 2397, <b>2016</b> 2821).",
      "links": [
       {
-       "label": "AS 2017 6521",
+       "label": "AS <b>2017</b> 6521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/718"
       },
       {
-       "label": "2018 3171",
+       "label": "<b>2018</b> 3171",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/509"
       },
       {
-       "label": "BBl 2013 2397",
+       "label": "BBl <b>2013</b> 2397",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/416"
       },
       {
-       "label": "2016 2821",
+       "label": "<b>2016</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/524"
       }
      ],
@@ -195,10 +240,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -224,10 +269,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 415.0",
+     "text": "SR <b>415.0</b>",
      "links": [
       {
-       "label": "SR 415.0",
+       "label": "SR <b>415.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/460"
       }
      ],
@@ -236,14 +281,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Art. 34 Ziff. 3 des Sportförderungsgesetzes vom 17. Juni 2011, in Kraft seit 1. Okt. 2012 (AS 2012 3953; BBl 2009 8189).",
+     "text": "Fassung gemäss Art. 34 Ziff. 3 des Sportförderungsgesetzes vom 17. Juni 2011, in Kraft seit 1. Okt. 2012 (AS <b>2012</b> 3953; BBl <b>2009</b> 8189).",
      "links": [
       {
-       "label": "AS 2012 3953",
+       "label": "AS <b>2012</b> 3953",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/460"
       },
       {
-       "label": "BBl 2009 8189",
+       "label": "BBl <b>2009</b> 8189",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1425"
       }
      ],
@@ -314,10 +359,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Ausdruck gemäss Ziff. I 8 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS 2012 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 8 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2012 3655",
+       "label": "AS <b>2012</b> 3655",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       }
      ],
@@ -326,22 +371,22 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Art. 21 Ziff. 2 des Publikationsgesetzes vom 18. Juni 2004 (AS 2004 4929; BBl 2003 7711). Aufgehoben durch Anhang Ziff. 4 des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Art. 21 Ziff. 2 des Publikationsgesetzes vom 18. Juni 2004 (AS <b>2004 </b>4929; BBl <b>2003 </b>7711). Aufgehoben durch Anhang Ziff. 4 des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013 </b>7057).",
      "links": [
       {
-       "label": "AS 2004 4929",
+       "label": "AS <b>2004 </b>4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/745"
       },
       {
-       "label": "BBl 2003 7711",
+       "label": "BBl <b>2003 </b>7711",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
       },
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013 </b>7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -471,10 +516,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 170.512",
+     "text": "SR <b>170.512</b>",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
       }
      ],
@@ -483,14 +528,14 @@
     },
     {
      "nr": "10",
-     "text": "Vierter Satz eingefügt durch Art. 21 Ziff. 2 des Publikationsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4929; BBl 2003 7711).",
+     "text": "Vierter Satz eingefügt durch Art. 21 Ziff. 2 des Publikationsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4929; BBl <b>2003 </b>7711).",
      "links": [
       {
-       "label": "AS 2004 4929",
+       "label": "AS <b>2004</b> 4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/745"
       },
       {
-       "label": "BBl 2003 7711",
+       "label": "BBl <b>2003 </b>7711",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
       }
      ],
@@ -512,10 +557,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Ausdruck gemäss Ziff. I 8 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS 2012 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 8 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2012 3655",
+       "label": "AS <b>2012</b> 3655",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       }
      ],
@@ -559,10 +604,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -678,14 +723,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Aufgehoben durch Anhang Ziff. II 2 des Hochschulförderungs- und -koordinationsgesetzes vom 30. Sept. 2011, mit Wirkung seit 1. Jan. 2015 (AS 2014 4103; BBl 2009 4561).",
+     "text": "Aufgehoben durch Anhang Ziff. II 2 des Hochschulförderungs- und -koordinationsgesetzes vom 30. Sept. 2011, mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4103; BBl <b>2009</b> 4561).",
      "links": [
       {
-       "label": "AS 2014 4103",
+       "label": "AS <b>2014</b> 4103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/691"
       },
       {
-       "label": "BBl 2009 4561",
+       "label": "BBl <b>2009</b> 4561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/812"
       }
      ],
@@ -815,14 +860,14 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, in Kraft seit 1. Aug. 2021 (AS 2021 414; BBl 2020 661).",
+     "text": "Fassung gemäss Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 414; BBl <b>2020</b> 661).",
      "links": [
       {
-       "label": "AS 2021 414",
+       "label": "AS <b>2021</b> 414",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/414"
       },
       {
-       "label": "BBl 2020 661",
+       "label": "BBl <b>2020</b> 661",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/67"
       }
      ],
@@ -831,10 +876,10 @@
     },
     {
      "nr": "15",
-     "text": "SR 412.106",
+     "text": "SR <b>412.106</b>",
      "links": [
       {
-       "label": "SR 412.106",
+       "label": "SR <b>412.106</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2021/414"
       }
      ],
@@ -878,10 +923,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -907,14 +952,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 5143; BBl 2016 3089).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5143; BBl <b>2016</b> 3089).",
      "links": [
       {
-       "label": "AS 2017 5143",
+       "label": "AS <b>2017</b> 5143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/564"
       },
       {
-       "label": "BBl 2016 3089",
+       "label": "BBl <b>2016</b> 3089",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/576"
       }
      ],
@@ -940,14 +985,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. II 4 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS 2007 5779; BBl 2005 6029).",
+     "text": "Fassung gemäss Ziff. II 4 des BG vom 6. Okt. 2006 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen (NFA), in Kraft seit 1. Jan. 2008 (AS<b> 2007</b> 5779; BBl <b>2005</b> 6029).",
      "links": [
       {
-       "label": "AS 2007 5779",
+       "label": "AS<b> 2007</b> 5779",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/787"
       },
       {
-       "label": "BBl 2005 6029",
+       "label": "BBl <b>2005</b> 6029",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
@@ -1048,14 +1093,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 5143; BBl 2016 3089).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5143; BBl <b>2016</b> 3089).",
      "links": [
       {
-       "label": "AS 2017 5143",
+       "label": "AS <b>2017</b> 5143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/564"
       },
       {
-       "label": "BBl 2016 3089",
+       "label": "BBl <b>2016</b> 3089",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/576"
       }
      ],
@@ -1064,14 +1109,14 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. März 2025 (AS 2025 75; BBl 2024 900).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. März 2025 (AS <b>2025</b> 75; BBl <b>2024</b> 900).",
      "links": [
       {
-       "label": "AS 2025 75",
+       "label": "AS <b>2025</b> 75",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/75"
       },
       {
-       "label": "BBl 2024 900",
+       "label": "BBl <b>2024</b> 900",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/900"
       }
      ],
@@ -1080,14 +1125,14 @@
     },
     {
      "nr": "25",
-     "text": "Eingefügt durch Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, in Kraft seit 1. Aug. 2021 (AS 2021 414; BBl 2020 661).",
+     "text": "Eingefügt durch Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 414; BBl <b>2020</b> 661).",
      "links": [
       {
-       "label": "AS 2021 414",
+       "label": "AS <b>2021</b> 414",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/414"
       },
       {
-       "label": "BBl 2020 661",
+       "label": "BBl <b>2020</b> 661",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/67"
       }
      ],
@@ -1096,14 +1141,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. März 2025 (AS 2025 75; BBl 2024 900).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2024, in Kraft seit 1. März 2025 (AS <b>2025</b> 75; BBl <b>2024</b> 900).",
      "links": [
       {
-       "label": "AS 2025 75",
+       "label": "AS <b>2025</b> 75",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/75"
       },
       {
-       "label": "BBl 2024 900",
+       "label": "BBl <b>2024</b> 900",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/900"
       }
      ],
@@ -1127,14 +1172,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS 2016 689; BBl 2013 3729).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 689; BBl <b>2013</b> 3729).",
      "links": [
       {
-       "label": "AS 2016 689",
+       "label": "AS <b>2016</b> 689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
       },
       {
-       "label": "BBl 2013 3729",
+       "label": "BBl <b>2013</b> 3729",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
@@ -1143,10 +1188,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 221.215.311",
+     "text": "SR <b>221.215.311</b>",
      "links": [
       {
-       "label": "SR 221.215.311",
+       "label": "SR <b>221.215.311</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1956/1543_1645_1658"
       }
      ],
@@ -1170,10 +1215,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 35 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 35 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1181,7 +1226,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1190,10 +1235,10 @@
     },
     {
      "nr": "30",
-     "text": "Aufgehoben durch Anhang Ziff. 35 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 35 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1201,7 +1246,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1242,10 +1287,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "SR 241",
+     "text": "SR <b>241</b>",
      "links": [
       {
-       "label": "SR 241",
+       "label": "SR <b>241</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/223_223_223"
       }
      ],
@@ -1316,14 +1361,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Satz eingefügt durch Ziff. II des BG vom 17. Dez. 2004, in Kraft seit 5. Okt. 2005 (AS 2005 4635; BBl 2004 145).",
+     "text": "Satz eingefügt durch Ziff. II des BG vom 17. Dez. 2004, in Kraft seit 5. Okt. 2005 (AS <b>2005</b> 4635; BBl <b>2004</b> 145).",
      "links": [
       {
-       "label": "AS 2005 4635",
+       "label": "AS <b>2005</b> 4635",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/607"
       },
       {
-       "label": "BBl 2004 145",
+       "label": "BBl <b>2004</b> 145",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/49"
       }
      ],
@@ -1349,14 +1394,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Art. 13 des BG vom 25. Sept. 2020 über die internationale Zusammenarbeit und Mobilität in der Bildung, in Kraft seit 1. April 2022 (AS 2022 164; BBl 2019 8327).",
+     "text": "Fassung gemäss Art. 13 des BG vom 25. Sept. 2020 über die internationale Zusammenarbeit und Mobilität in der Bildung, in Kraft seit 1. April 2022 (AS <b>2022</b> 164; BBl <b>2019</b> 8327).",
      "links": [
       {
-       "label": "AS 2022 164",
+       "label": "AS <b>2022</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/164"
       },
       {
-       "label": "BBl 2019 8327",
+       "label": "BBl <b>2019</b> 8327",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2840"
       }
      ],
@@ -1365,14 +1410,14 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Art. 13 des BG vom 25. Sept. 2020 über die internationale Zusammenarbeit und Mobilität in der Bildung, in Kraft seit 1. April 2022 (AS 2022 164; BBl 2019 8327).",
+     "text": "Fassung gemäss Art. 13 des BG vom 25. Sept. 2020 über die internationale Zusammenarbeit und Mobilität in der Bildung, in Kraft seit 1. April 2022 (AS <b>2022</b> 164; BBl <b>2019</b> 8327).",
      "links": [
       {
-       "label": "AS 2022 164",
+       "label": "AS <b>2022</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/164"
       },
       {
-       "label": "BBl 2019 8327",
+       "label": "BBl <b>2019</b> 8327",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2840"
       }
      ],
@@ -1434,22 +1479,22 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2010 (AS 2010 5003; BBl 2009 7207). Aufgehoben durch Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, mit Wirkung 1. Aug. 2021 (AS 2021 414; BBl 2020 661).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2010 (AS <b>2010</b> 5003; BBl <b>2009</b> 7207). Aufgehoben durch Art. 36 des EHB-Gesetzes vom 25. Sept. 2020, mit Wirkung 1. Aug. 2021 (AS <b>2021</b> 414; BBl <b>2020</b> 661).",
      "links": [
       {
-       "label": "AS 2010 5003",
+       "label": "AS <b>2010</b> 5003",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/708"
       },
       {
-       "label": "BBl 2009 7207",
+       "label": "BBl <b>2009</b> 7207",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1281"
       },
       {
-       "label": "AS 2021 414",
+       "label": "AS <b>2021</b> 414",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/414"
       },
       {
-       "label": "BBl 2020 661",
+       "label": "BBl <b>2020</b> 661",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/67"
       }
      ],
@@ -1475,14 +1520,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 5143; BBl 2016 3089).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5143; BBl <b>2016</b> 3089).",
      "links": [
       {
-       "label": "AS 2017 5143",
+       "label": "AS <b>2017</b> 5143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/564"
       },
       {
-       "label": "BBl 2016 3089",
+       "label": "BBl <b>2016</b> 3089",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/576"
       }
      ],
@@ -1508,14 +1553,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS 2017 5143; BBl 2016 3089).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5143; BBl <b>2016</b> 3089).",
      "links": [
       {
-       "label": "AS 2017 5143",
+       "label": "AS <b>2017</b> 5143",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/564"
       },
       {
-       "label": "BBl 2016 3089",
+       "label": "BBl <b>2016</b> 3089",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/576"
       }
      ],
@@ -1524,14 +1569,14 @@
     },
     {
      "nr": "22",
-     "text": "Aufgehoben durch Anhang Ziff. 8 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 (AS 2021 758; BBl 2019 7359).",
+     "text": "Aufgehoben durch Anhang Ziff. 8 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359).",
      "links": [
       {
-       "label": "AS 2021 758",
+       "label": "AS <b>2021</b> 758",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/758"
       },
       {
-       "label": "BBl 2019 7359",
+       "label": "BBl <b>2019 </b>7359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
@@ -1555,14 +1600,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. März 2025 (AS 2025 75; BBl 2024 900).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 27. Sept. 2024, mit Wirkung seit 1. März 2025 (AS <b>2025</b> 75; BBl <b>2024</b> 900).",
      "links": [
       {
-       "label": "AS 2025 75",
+       "label": "AS <b>2025</b> 75",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/75"
       },
       {
-       "label": "BBl 2024 900",
+       "label": "BBl <b>2024</b> 900",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/900"
       }
      ],
@@ -1584,14 +1629,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, in Kraft seit 1. Juli 2024 (AS 2024 212; BBl 2022 1498).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 212; BBl <b>2022</b> 1498).",
      "links": [
       {
-       "label": "AS 2024 212",
+       "label": "AS <b>2024</b> 212",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/212"
       },
       {
-       "label": "BBl 2022 1498",
+       "label": "BBl <b>2022</b> 1498",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1498"
       }
      ],

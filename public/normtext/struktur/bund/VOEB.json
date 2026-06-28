@@ -1,5 +1,23 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "172.056.11",
+  "titel": "Verordnung über das öffentliche Beschaffungswesen",
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>172.056.1</b>",
+    "links": [
+     {
+      "label": "SR <b>172.056.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2020/126"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -221,10 +239,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 172.056.15",
+     "text": "SR <b>172.056.15</b>",
      "links": [
       {
-       "label": "SR 172.056.15",
+       "label": "SR <b>172.056.15</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/695"
       }
      ],
@@ -233,10 +251,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 172.010.21",
+     "text": "SR <b>172.010.21</b>",
      "links": [
       {
-       "label": "SR 172.010.21",
+       "label": "SR <b>172.010.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/857"
       }
      ],
@@ -302,10 +320,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
       }
      ],
@@ -314,10 +332,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 21 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 21 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -372,10 +390,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "AS 2020 6493",
+     "text": "AS <b>2020</b> 6493",
      "links": [
       {
-       "label": "AS 2020 6493",
+       "label": "AS <b>2020</b> 6493",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1061"
       }
      ],
@@ -408,18 +426,18 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "[AS 1996 518; 1997 2779 Anhang Ziff. II 5; 2002 886, 1759; 2006 1667, 5613 Art. 30 Abs. 2 Ziff. 1; 2009 6149 Ziff. I und II; 2010 3175 Anhang 3 Ziff. 2; 2015 775; 2017 5161 Anhang 2 Ziff. II 3]",
+     "text": "[AS <b>1996</b> 518; <b>1997</b> 2779 Anhang Ziff. II 5; <b>2002</b> 886, 1759; <b>2006</b> 1667, 5613 Art. 30 Abs. 2 Ziff. 1; <b>2009</b> 6149 Ziff. I und II; <b>2010</b> 3175 Anhang 3 Ziff. 2; <b>2015</b> 775; <b>2017</b> 5161 Anhang 2 Ziff. II 3]",
      "links": [
       {
-       "label": "AS 1996 518",
+       "label": "AS <b>1996</b> 518",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/518_518_518"
       },
       {
-       "label": "1997 2779",
+       "label": "<b>1997</b> 2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2779_2779_2779"
       },
       {
-       "label": "2002 886",
+       "label": "<b>2002</b> 886",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/157"
       },
       {
@@ -427,7 +445,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/264"
       },
       {
-       "label": "2006 1667",
+       "label": "<b>2006</b> 1667",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/259"
       },
       {
@@ -435,15 +453,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/829"
       },
       {
-       "label": "2009 6149",
+       "label": "<b>2009</b> 6149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/752"
       },
       {
-       "label": "2015 775",
+       "label": "<b>2015</b> 775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/141"
       },
       {
-       "label": "2017 5161",
+       "label": "<b>2017</b> 5161",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/568"
       }
      ],
@@ -452,18 +470,18 @@
     },
     {
      "nr": "9",
-     "text": "[AS 2002 2663; 2006 4777; 2007 4519]",
+     "text": "[AS <b>2002</b> 2663; <b>2006</b> 4777; <b>2007</b> 4519]",
      "links": [
       {
-       "label": "AS 2002 2663",
+       "label": "AS <b>2002</b> 2663",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/369"
       },
       {
-       "label": "2006 4777",
+       "label": "<b>2006</b> 4777",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/728"
       },
       {
-       "label": "2007 4519",
+       "label": "<b>2007</b> 4519",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/634"
       }
      ],
@@ -472,10 +490,10 @@
     },
     {
      "nr": "10",
-     "text": "Die Änderung kann unter AS 2020 691 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2020</b> 691 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2020 691",
+       "label": "AS <b>2020</b> 691",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/127"
       }
      ],

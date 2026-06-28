@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "741.013",
+  "titel": "Verordnung über die Kontrolle des Strassenverkehrs",
+  "erlassdatum": "vom 28. März 2007 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 30 Absatz 4, 55 Absatz 7, 56 Absatz 1, 57 Absatz 3 Buchstabe b, 103 sowie 106 Absatz 1 des Strassenverkehrsgesetzes vom 19. Dezember 1958,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>741.01</b>",
+    "links": [
+     {
+      "label": "SR <b>741.01</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8613"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +58,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "SR 741.11",
+     "text": "SR <b>741.11</b>",
      "links": [
       {
-       "label": "SR 741.11",
+       "label": "SR <b>741.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8624"
       }
      ],
@@ -37,10 +70,10 @@
     },
     {
      "nr": "3",
-     "text": "SR 741.41",
+     "text": "SR <b>741.41</b>",
      "links": [
       {
-       "label": "SR 741.41",
+       "label": "SR <b>741.41</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8648"
       }
      ],
@@ -49,10 +82,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 741.51",
+     "text": "SR <b>741.51</b>",
      "links": [
       {
-       "label": "SR 741.51",
+       "label": "SR <b>741.51</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8668"
       }
      ],
@@ -61,10 +94,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 822.221",
+     "text": "SR <b>822.221</b>",
      "links": [
       {
-       "label": "SR 822.221",
+       "label": "SR <b>822.221</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9911"
       }
      ],
@@ -73,10 +106,10 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4929).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4929).",
      "links": [
       {
-       "label": "AS 2011 4929",
+       "label": "AS <b>2011</b> 4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/711"
       }
      ],
@@ -85,10 +118,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 822.222",
+     "text": "SR <b>822.222</b>",
      "links": [
       {
-       "label": "SR 822.222",
+       "label": "SR <b>822.222</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9912"
       }
      ],
@@ -110,10 +143,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 510.710",
+     "text": "SR <b>510.710</b>",
      "links": [
       {
-       "label": "SR 510.710",
+       "label": "SR <b>510.710</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7360"
       }
      ],
@@ -122,34 +155,34 @@
     },
     {
      "nr": "9",
-     "text": "[AS 1972 734; AS 1996 1075; 2006 3545 Art. 44 Ziff. 4; 2012 6291; 2013 4669. AS 2017 6559 Anhang Ziff. I]. Siehe heute: das Ordnungsbussengesetz vom 18. März 2016 (SR 314.1).",
+     "text": "[AS <b>1972</b> 734; AS <b>1996</b> 1075; <b>2006</b> 3545 Art. 44 Ziff. 4; <b>2012</b> 6291; <b>2013</b> 4669. AS <b>2017</b> 6559 Anhang Ziff. I]. Siehe heute: das Ordnungsbussengesetz vom 18. März 2016 (SR <b>314.1</b>).",
      "links": [
       {
-       "label": "AS 1972 734",
+       "label": "AS <b>1972</b> 734",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/734_742_666"
       },
       {
-       "label": "AS 1996 1075",
+       "label": "AS <b>1996</b> 1075",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1075_1075_1075"
       },
       {
-       "label": "2006 3545",
+       "label": "<b>2006</b> 3545",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/551"
       },
       {
-       "label": "2012 6291",
+       "label": "<b>2012</b> 6291",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/744"
       },
       {
-       "label": "2013 4669",
+       "label": "<b>2013</b> 4669",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/821"
       },
       {
-       "label": "AS 2017 6559",
+       "label": "AS <b>2017</b> 6559",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/725"
       },
       {
-       "label": "SR 314.1",
+       "label": "SR <b>314.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6238"
       }
      ],
@@ -171,10 +204,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -183,14 +216,14 @@
     },
     {
      "nr": "11",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst (AS <b>2021</b> 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4976"
       },
       {
-       "label": "AS 2021 589",
+       "label": "AS <b>2021</b> 589",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
       }
      ],
@@ -199,10 +232,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -211,10 +244,10 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -223,10 +256,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -235,10 +268,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -247,10 +280,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 314.1",
+     "text": "SR <b>314.1</b>",
      "links": [
       {
-       "label": "SR 314.1",
+       "label": "SR <b>314.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6238"
       }
      ],
@@ -259,10 +292,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -271,10 +304,10 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Eingefügt durch Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -283,10 +316,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 631.0",
+     "text": "SR <b>631.0</b>",
      "links": [
       {
-       "label": "SR 631.0",
+       "label": "SR <b>631.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7812"
       }
      ],
@@ -295,10 +328,10 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Eingefügt durch Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -320,10 +353,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "SR 740.1",
+     "text": "SR <b>740.1</b>",
      "links": [
       {
-       "label": "SR 740.1",
+       "label": "SR <b>740.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8603"
       }
      ],
@@ -332,10 +365,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 4671).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>4671).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       }
      ],
@@ -377,10 +410,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 2013, mit Wirkung seit 1. Jan. 2014 (AS 2013 4671).",
+     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 2013, mit Wirkung seit 1. Jan. 2014 (AS <b>2013 </b>4671).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       }
      ],
@@ -402,10 +435,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS 2011 2355).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 2355).",
      "links": [
       {
-       "label": "AS 2011 2355",
+       "label": "AS <b>2011</b> 2355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/334"
       }
      ],
@@ -414,10 +447,10 @@
     },
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS 2011 2355).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 2355).",
      "links": [
       {
-       "label": "AS 2011 2355",
+       "label": "AS <b>2011</b> 2355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/334"
       }
      ],
@@ -426,10 +459,10 @@
     },
     {
      "nr": "26",
-     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -438,10 +471,10 @@
     },
     {
      "nr": "27",
-     "text": "SR 941.210",
+     "text": "SR <b>941.210</b>",
      "links": [
       {
-       "label": "SR 941.210",
+       "label": "SR <b>941.210</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11180"
       }
      ],
@@ -450,10 +483,10 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS 2011 2355).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 2355).",
      "links": [
       {
-       "label": "AS 2011 2355",
+       "label": "AS <b>2011</b> 2355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/334"
       }
      ],
@@ -462,10 +495,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Dez. 2012 (Neue gesetzliche Grundlagen im Messwesen), in Kraft seit 1. Jan. 2013 (AS 2012 7065).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Dez. 2012 (Neue gesetzliche Grundlagen im Messwesen), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 7065).",
      "links": [
       {
-       "label": "AS 2012 7065",
+       "label": "AS <b>2012</b> 7065",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/857"
       }
      ],
@@ -474,14 +507,14 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011 (AS 2011 2355). Fassung gemäss Ziff. I 2 der V vom 7. Dez. 2012 (Neue gesetzliche Grundlagen im Messwesen), in Kraft seit 1. Jan. 2013 (AS 2012 7065).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. Mai 2011 (AS <b>2011</b> 2355). Fassung gemäss Ziff. I 2 der V vom 7. Dez. 2012 (Neue gesetzliche Grundlagen im Messwesen), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 7065).",
      "links": [
       {
-       "label": "AS 2011 2355",
+       "label": "AS <b>2011</b> 2355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/334"
       },
       {
-       "label": "AS 2012 7065",
+       "label": "AS <b>2012</b> 7065",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/857"
       }
      ],
@@ -507,10 +540,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -536,10 +569,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -548,10 +581,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 741.11",
+     "text": "SR <b>741.11</b>",
      "links": [
       {
-       "label": "SR 741.11",
+       "label": "SR <b>741.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8624"
       }
      ],
@@ -560,10 +593,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 941.210",
+     "text": "SR <b>941.210</b>",
      "links": [
       {
-       "label": "SR 941.210",
+       "label": "SR <b>941.210</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11180"
       }
      ],
@@ -589,10 +622,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -618,10 +651,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -630,10 +663,10 @@
     },
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -642,10 +675,10 @@
     },
     {
      "nr": "43",
-     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Ausdruck gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -701,10 +734,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "SR 741.11",
+     "text": "SR <b>741.11</b>",
      "links": [
       {
-       "label": "SR 741.11",
+       "label": "SR <b>741.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8624"
       }
      ],
@@ -713,10 +746,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -742,10 +775,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 4671).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>4671).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       }
      ],
@@ -801,10 +834,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4929).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4929).",
      "links": [
       {
-       "label": "AS 2011 4929",
+       "label": "AS <b>2011</b> 4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/711"
       }
      ],
@@ -813,10 +846,10 @@
     },
     {
      "nr": "48",
-     "text": "SR 822.221",
+     "text": "SR <b>822.221</b>",
      "links": [
       {
-       "label": "SR 822.221",
+       "label": "SR <b>822.221</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9911"
       }
      ],
@@ -825,10 +858,10 @@
     },
     {
      "nr": "49",
-     "text": "SR 822.222",
+     "text": "SR <b>822.222</b>",
      "links": [
       {
-       "label": "SR 822.222",
+       "label": "SR <b>822.222</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9912"
       }
      ],
@@ -854,10 +887,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Febr. 2019 (AS 2019 239).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Febr. 2019 (AS <b>2019</b> 239).",
      "links": [
       {
-       "label": "AS 2019 239",
+       "label": "AS <b>2019</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/40"
       }
      ],
@@ -866,10 +899,10 @@
     },
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Febr. 2019 (AS 2019 239).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Febr. 2019 (AS <b>2019</b> 239).",
      "links": [
       {
-       "label": "AS 2019 239",
+       "label": "AS <b>2019</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/40"
       }
      ],
@@ -895,10 +928,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "SR 822.221",
+     "text": "SR <b>822.221</b>",
      "links": [
       {
-       "label": "SR 822.221",
+       "label": "SR <b>822.221</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9911"
       }
      ],
@@ -907,10 +940,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 822.222",
+     "text": "SR <b>822.222</b>",
      "links": [
       {
-       "label": "SR 822.222",
+       "label": "SR <b>822.222</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9912"
       }
      ],
@@ -919,10 +952,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4929).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4929).",
      "links": [
       {
-       "label": "AS 2011 4929",
+       "label": "AS <b>2011</b> 4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/711"
       }
      ],
@@ -963,10 +996,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 741.41",
+     "text": "SR <b>741.41</b>",
      "links": [
       {
-       "label": "SR 741.41",
+       "label": "SR <b>741.41</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8648"
       }
      ],
@@ -999,10 +1032,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "SR 741.11",
+     "text": "SR <b>741.11</b>",
      "links": [
       {
-       "label": "SR 741.11",
+       "label": "SR <b>741.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8624"
       }
      ],
@@ -1011,10 +1044,10 @@
     },
     {
      "nr": "58",
-     "text": "SR 741.41",
+     "text": "SR <b>741.41</b>",
      "links": [
       {
-       "label": "SR 741.41",
+       "label": "SR <b>741.41</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8648"
       }
      ],
@@ -1040,10 +1073,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Richtlinie (EU) 2022/1999 des Europäischen Parlaments und des Rates vom 19. Oktober 2022 über einheitliche Verfahren für die Kontrolle von Gefahrguttransporten auf der Strasse (ABl. L 274, vom 24.10.2022, S. 1). Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 13. Nov. 2022 angepasst.",
+     "text": "Richtlinie (EU) 2022/1999 des Europäischen Parlaments und des Rates vom 19. Oktober 2022 über einheitliche Verfahren für die Kontrolle von Gefahrguttransporten auf der Strasse (ABl. L 274, vom 24.10.2022, S. 1). Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 13. Nov. 2022 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -1112,10 +1145,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1124,14 +1157,14 @@
     },
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 2013 (AS 2013 4671). Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 2013 (AS <b>2013 </b>4671). Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       },
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1140,10 +1173,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 741.11",
+     "text": "SR <b>741.11</b>",
      "links": [
       {
-       "label": "SR 741.11",
+       "label": "SR <b>741.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8624"
       }
      ],
@@ -1152,10 +1185,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 741.51",
+     "text": "SR <b>741.51</b>",
      "links": [
       {
-       "label": "SR 741.51",
+       "label": "SR <b>741.51</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8668"
       }
      ],
@@ -1181,10 +1214,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1210,10 +1243,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Die Änderungen der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 betreffen nur den französischen und italienischen Text (AS 2025 644).",
+     "text": "Die Änderungen der V vom 15. Okt. 2025, in Kraft seit 1. Jan. 2026 betreffen nur den französischen und italienischen Text (AS <b>2025</b> 644).",
      "links": [
       {
-       "label": "AS 2025 644",
+       "label": "AS <b>2025</b> 644",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/644"
       }
      ],
@@ -1239,10 +1272,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. April 2023 (AS 2022 406).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. April 2023 (AS <b>2022</b> 406).",
      "links": [
       {
-       "label": "AS 2022 406",
+       "label": "AS <b>2022</b> 406",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/406"
       }
      ],
@@ -1268,10 +1301,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "SR 741.31",
+     "text": "SR <b>741.31</b>",
      "links": [
       {
-       "label": "SR 741.31",
+       "label": "SR <b>741.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8645"
       }
      ],
@@ -1312,10 +1345,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "SR 314.1",
+     "text": "SR <b>314.1</b>",
      "links": [
       {
-       "label": "SR 314.1",
+       "label": "SR <b>314.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6238"
       }
      ],
@@ -1324,10 +1357,10 @@
     },
     {
      "nr": "69",
-     "text": "Fassung des zweiten Satzes gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 529).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang 3 Ziff. 1 der Ordnungsbussenverordnung vom 16. Jan. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 529).",
      "links": [
       {
-       "label": "AS 2019 529",
+       "label": "AS <b>2019</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/93"
       }
      ],
@@ -1442,10 +1475,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "SR 822.221",
+     "text": "SR <b>822.221</b>",
      "links": [
       {
-       "label": "SR 822.221",
+       "label": "SR <b>822.221</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9911"
       }
      ],
@@ -1484,10 +1517,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 4671).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>4671).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       }
      ],
@@ -1513,10 +1546,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 4671).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>4671).",
      "links": [
       {
-       "label": "AS 2013 4671",
+       "label": "AS <b>2013 </b>4671",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/822"
       }
      ],
@@ -1564,10 +1597,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "SR 822.221",
+     "text": "SR <b>822.221</b>",
      "links": [
       {
-       "label": "SR 822.221",
+       "label": "SR <b>822.221</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9911"
       }
      ],
@@ -1604,10 +1637,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1633,10 +1666,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1645,10 +1678,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 941.210",
+     "text": "SR <b>941.210</b>",
      "links": [
       {
-       "label": "SR 941.210",
+       "label": "SR <b>941.210</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11180"
       }
      ],
@@ -1674,10 +1707,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1703,10 +1736,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],
@@ -1726,14 +1759,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I 1 der V vom 4. Nov. 2009 (erste Phase der Bahnreform 2) (AS 2009 5959). Aufgehoben durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS 2015 2585).",
+     "text": "Eingefügt durch Ziff. I 1 der V vom 4. Nov. 2009 (erste Phase der Bahnreform 2) (AS <b>2009</b> 5959). Aufgehoben durch Ziff. I der V vom 1. Juli 2015, in Kraft seit 1. Okt. 2016 (AS <b>2015</b> 2585).",
      "links": [
       {
-       "label": "AS 2009 5959",
+       "label": "AS <b>2009</b> 5959",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/729"
       },
       {
-       "label": "AS 2015 2585",
+       "label": "AS <b>2015</b> 2585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/490"
       }
      ],

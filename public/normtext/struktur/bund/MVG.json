@@ -1,5 +1,75 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "833.1",
+  "titel": "Bundesgesetz über die Militärversicherung",
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR <b>171.10</b><b>)</b>.",
+    "links": [
+     {
+      "label": "SR <b>171.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "[BS <b>1</b> 3; AS <b>1959</b> 912]. Diesen Bestimmungen entsprechen die Art. 59 Abs. 5, 60 Abs. 1 und <i>2</i>, 61 Abs. 5, <i>68 </i>Abs. 3 und <i>117 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
+    "links": [
+     {
+      "label": "AS <b>1959</b> 912",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1959/912_942_933"
+     },
+     {
+      "label": "60",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1959/60_64_68"
+     },
+     {
+      "label": "61",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1959/61_65_69"
+     },
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
+    "links": [
+     {
+      "label": "AS <b>2003</b> 3837",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
+     },
+     {
+      "label": "BBl <b>2001</b> 3205",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1990</b> III 201",
+    "links": [
+     {
+      "label": "BBl <b>1990</b> III 201",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1990/3_201_189_185"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +82,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -24,23 +94,24 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Anwendbarkeit des ATSG"
     }
    ]
   },
@@ -61,14 +132,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -94,18 +165,18 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -114,10 +185,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 832.20",
+     "text": "SR <b>832.20</b>",
      "links": [
       {
-       "label": "SR 832.20",
+       "label": "SR <b>832.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676"
       }
      ],
@@ -126,18 +197,18 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -163,14 +234,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -179,14 +250,14 @@
     },
     {
      "nr": "29",
-     "text": "Fassung des Satzes gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Fassung des Satzes gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -195,14 +266,14 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -211,18 +282,18 @@
     },
     {
      "nr": "31",
-     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -293,14 +364,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -326,14 +397,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -342,14 +413,14 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -375,10 +446,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -387,18 +458,18 @@
     },
     {
      "nr": "36",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -424,18 +495,18 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -444,18 +515,18 @@
     },
     {
      "nr": "38",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -464,18 +535,18 @@
     },
     {
      "nr": "39",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -501,18 +572,18 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -521,10 +592,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -533,18 +604,18 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -553,18 +624,18 @@
     },
     {
      "nr": "43",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -573,14 +644,14 @@
     },
     {
      "nr": "44",
-     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -606,18 +677,18 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -626,10 +697,10 @@
     },
     {
      "nr": "46",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -655,14 +726,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -671,18 +742,18 @@
     },
     {
      "nr": "49",
-     "text": "Aufgehoben durch Ziff. II 2 des BG vom 19. Juni 2015, mit Wirkung seit 15. Nov. 2017 (AS 2016 1163, 2017 5629; BBl 2013 2317).",
+     "text": "Aufgehoben durch Ziff. II 2 des BG vom 19. Juni 2015, mit Wirkung seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
-       "label": "AS 2016 1163",
+       "label": "AS <b>2016</b> 1163",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/217"
       },
       {
-       "label": "2017 5629",
+       "label": "<b>2017</b> 5629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/607"
       },
       {
-       "label": "BBl 2013 2317",
+       "label": "BBl <b>2013</b> 2317",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
@@ -708,14 +779,14 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -724,14 +795,14 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -740,14 +811,14 @@
     },
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -756,14 +827,14 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -789,18 +860,18 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -809,10 +880,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -821,18 +892,18 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -841,18 +912,18 @@
     },
     {
      "nr": "57",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -893,10 +964,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -905,18 +976,18 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -957,18 +1028,18 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS 2016 4375; BBl 2008 5395, 2014 7911).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008</b> 5395, <b>2014</b> 7911).",
      "links": [
       {
-       "label": "AS 2016 4375",
+       "label": "AS <b>2016</b> 4375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/723"
       },
       {
-       "label": "BBl 2008 5395",
+       "label": "BBl <b>2008</b> 5395",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/981"
       },
       {
-       "label": "2014 7911",
+       "label": "<b>2014</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1712"
       }
      ],
@@ -977,10 +1048,10 @@
     },
     {
      "nr": "65",
-     "text": "SR 811.11",
+     "text": "SR <b>811.11</b>",
      "links": [
       {
-       "label": "SR 811.11",
+       "label": "SR <b>811.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/537"
       }
      ],
@@ -1051,18 +1122,18 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS 2016 4375; BBl 2008 5395, 2014 7911).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008</b> 5395, <b>2014</b> 7911).",
      "links": [
       {
-       "label": "AS 2016 4375",
+       "label": "AS <b>2016</b> 4375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/723"
       },
       {
-       "label": "BBl 2008 5395",
+       "label": "BBl <b>2008</b> 5395",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/981"
       },
       {
-       "label": "2014 7911",
+       "label": "<b>2014</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1712"
       }
      ],
@@ -1071,18 +1142,18 @@
     },
     {
      "nr": "68",
-     "text": "Fassung des dritten Satzes gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS 2016 4375; BBl 2008 5395, 2014 7911).",
+     "text": "Fassung des dritten Satzes gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008</b> 5395, <b>2014</b> 7911).",
      "links": [
       {
-       "label": "AS 2016 4375",
+       "label": "AS <b>2016</b> 4375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/723"
       },
       {
-       "label": "BBl 2008 5395",
+       "label": "BBl <b>2008</b> 5395",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/981"
       },
       {
-       "label": "2014 7911",
+       "label": "<b>2014</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1712"
       }
      ],
@@ -1091,18 +1162,18 @@
     },
     {
      "nr": "69",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS 2016 4375; BBl 2008 5395, 2014 7911).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008</b> 5395, <b>2014</b> 7911).",
      "links": [
       {
-       "label": "AS 2016 4375",
+       "label": "AS <b>2016</b> 4375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/723"
       },
       {
-       "label": "BBl 2008 5395",
+       "label": "BBl <b>2008</b> 5395",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/981"
       },
       {
-       "label": "2014 7911",
+       "label": "<b>2014</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1712"
       }
      ],
@@ -1111,10 +1182,10 @@
     },
     {
      "nr": "70",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -1123,18 +1194,18 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1a), in Kraft seit 1. Jan. 2023 (AS 2021 837; 2022 808; BBl 2019 6071).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1<i>a</i>), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 837; <b>2022</b> 808; BBl <b>2019 </b>6071).",
      "links": [
       {
-       "label": "AS 2021 837",
+       "label": "AS <b>2021</b> 837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/837"
       },
       {
-       "label": "2022 808",
+       "label": "<b>2022</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/808"
       },
       {
-       "label": "BBl 2019 6071",
+       "label": "BBl <b>2019 </b>6071",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2216"
       }
      ],
@@ -1143,18 +1214,18 @@
     },
     {
      "nr": "72",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1a), in Kraft seit 1. Jan. 2023 (AS 2021 837; 2022 808; BBl 2019 6071).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1<i>a</i>), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 837; <b>2022</b> 808; BBl <b>2019 </b>6071).",
      "links": [
       {
-       "label": "AS 2021 837",
+       "label": "AS <b>2021</b> 837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/837"
       },
       {
-       "label": "2022 808",
+       "label": "<b>2022</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/808"
       },
       {
-       "label": "BBl 2019 6071",
+       "label": "BBl <b>2019 </b>6071",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2216"
       }
      ],
@@ -1180,10 +1251,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
@@ -1192,10 +1263,10 @@
     },
     {
      "nr": "74",
-     "text": "Eingefügt durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Eingefügt durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1203,7 +1274,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1229,14 +1300,14 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -1245,10 +1316,10 @@
     },
     {
      "nr": "79",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1257,18 +1328,18 @@
     },
     {
      "nr": "80",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1277,18 +1348,18 @@
     },
     {
      "nr": "81",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1297,14 +1368,14 @@
     },
     {
      "nr": "82",
-     "text": "Die Änd. gemäss BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017, betrifft nur den französischen und den italienischen Text (AS 2016 689; BBl 2013 3729).",
+     "text": "Die Änd. gemäss BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017, betrifft nur den französischen und den italienischen Text (AS <b>2016</b> 689; BBl <b>2013 </b>3729).",
      "links": [
       {
-       "label": "AS 2016 689",
+       "label": "AS <b>2016</b> 689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
       },
       {
-       "label": "BBl 2013 3729",
+       "label": "BBl <b>2013 </b>3729",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
@@ -1330,10 +1401,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1342,18 +1413,18 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1362,14 +1433,14 @@
     },
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -1378,14 +1449,14 @@
     },
     {
      "nr": "86",
-     "text": "Eingefügt durch Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -1426,18 +1497,18 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1478,10 +1549,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1490,18 +1561,18 @@
     },
     {
      "nr": "89",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1510,18 +1581,18 @@
     },
     {
      "nr": "90",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1547,10 +1618,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -1651,10 +1722,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1663,18 +1734,18 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1683,14 +1754,14 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -1699,18 +1770,18 @@
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1719,18 +1790,18 @@
     },
     {
      "nr": "96",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1756,10 +1827,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -1768,14 +1839,14 @@
     },
     {
      "nr": "98",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS 2023 92; BBl 2019 6305).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
-       "label": "AS 2023 92",
+       "label": "AS <b>2023</b> 92",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/92"
       },
       {
-       "label": "BBl 2019 6305",
+       "label": "BBl <b>2019</b> 6305",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2267"
       }
      ],
@@ -1784,14 +1855,14 @@
     },
     {
      "nr": "99",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2011 (Verbesserung der Durchführung), in Kraft seit 1. Jan. 2012 (AS 2011 4745; BBl 2011 543).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2011 (Verbesserung der Durchführung), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4745; BBl <b>2011</b> 543).",
      "links": [
       {
-       "label": "AS 2011 4745",
+       "label": "AS <b>2011</b> 4745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/673"
       },
       {
-       "label": "BBl 2011 543",
+       "label": "BBl <b>2011</b> 543",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/61"
       }
      ],
@@ -1800,10 +1871,10 @@
     },
     {
      "nr": "100",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1812,18 +1883,18 @@
     },
     {
      "nr": "101",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -1864,10 +1935,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -1876,14 +1947,14 @@
     },
     {
      "nr": "103",
-     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS 2023 92; BBl 2019 6305).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
-       "label": "AS 2023 92",
+       "label": "AS <b>2023</b> 92",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/92"
       },
       {
-       "label": "BBl 2019 6305",
+       "label": "BBl <b>2019</b> 6305",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2267"
       }
      ],
@@ -1924,10 +1995,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -1936,14 +2007,14 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS 2023 92; BBl 2019 6305).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
-       "label": "AS 2023 92",
+       "label": "AS <b>2023</b> 92",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/92"
       },
       {
-       "label": "BBl 2019 6305",
+       "label": "BBl <b>2019</b> 6305",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2267"
       }
      ],
@@ -1952,10 +2023,10 @@
     },
     {
      "nr": "107",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -1964,18 +2035,18 @@
     },
     {
      "nr": "108",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2001,14 +2072,14 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -2034,14 +2105,14 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -2082,10 +2153,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -2094,14 +2165,14 @@
     },
     {
      "nr": "112",
-     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS 2023 92; BBl 2019 6305).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
-       "label": "AS 2023 92",
+       "label": "AS <b>2023</b> 92",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/92"
       },
       {
-       "label": "BBl 2019 6305",
+       "label": "BBl <b>2019</b> 6305",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2267"
       }
      ],
@@ -2277,14 +2348,14 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. II des BG vom 17. Dez. 1993, in Kraft seit 1. Juli 1994 (AS 1994 1390; BBl 1993 II 591).",
+     "text": "Fassung gemäss Ziff. II des BG vom 17. Dez. 1993, in Kraft seit 1. Juli 1994 (AS <b>1994</b> 1390; BBl <b>1993</b> II 591).",
      "links": [
       {
-       "label": "AS 1994 1390",
+       "label": "AS <b>1994</b> 1390",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1390_1390_1390"
       },
       {
-       "label": "BBl 1993 II 591",
+       "label": "BBl <b>1993</b> II 591",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_591_577_513"
       }
      ],
@@ -2310,14 +2381,14 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -2358,18 +2429,18 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2378,10 +2449,10 @@
     },
     {
      "nr": "116",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2390,18 +2461,18 @@
     },
     {
      "nr": "117",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2410,18 +2481,18 @@
     },
     {
      "nr": "118",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2430,14 +2501,14 @@
     },
     {
      "nr": "119",
-     "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 18. März 2011 (6. IV-Revision, erstes Massnahmenpaket), in Kraft seit 1. Jan. 2012 (AS 2011 5659; BBl 2010 1817).",
+     "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 18. März 2011 (6. IV-Revision, erstes Massnahmenpaket), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5659; BBl <b>2010</b> 1817).",
      "links": [
       {
-       "label": "AS 2011 5659",
+       "label": "AS <b>2011</b> 5659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/799"
       },
       {
-       "label": "BBl 2010 1817",
+       "label": "BBl <b>2010</b> 1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/340"
       }
      ],
@@ -2463,10 +2534,10 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2475,18 +2546,18 @@
     },
     {
      "nr": "121",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2512,18 +2583,18 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2532,10 +2603,10 @@
     },
     {
      "nr": "125",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2544,14 +2615,14 @@
     },
     {
      "nr": "126",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -2577,10 +2648,10 @@
    "fussnoten": [
     {
      "nr": "128",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2589,18 +2660,18 @@
     },
     {
      "nr": "129",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2626,18 +2697,18 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2646,14 +2717,14 @@
     },
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS 2017 6717; BBl 2016 1).",
+     "text": "Fassung gemäss Ziff. II des BG vom 30. Sept. 2016 (Anpassung von Bestimmungen mit internationalem Bezug), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6717; BBl <b>2016</b> 1).",
      "links": [
       {
-       "label": "AS 2017 6717",
+       "label": "AS <b>2017</b> 6717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/748"
       },
       {
-       "label": "BBl 2016 1",
+       "label": "BBl <b>2016</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1"
       }
      ],
@@ -2679,18 +2750,18 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2699,10 +2770,10 @@
     },
     {
      "nr": "134",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -2728,18 +2799,18 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2748,10 +2819,10 @@
     },
     {
      "nr": "136",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2777,18 +2848,18 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2797,10 +2868,10 @@
     },
     {
      "nr": "138",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -2826,10 +2897,10 @@
    "fussnoten": [
     {
      "nr": "139",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -2855,18 +2926,18 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -2875,10 +2946,10 @@
     },
     {
      "nr": "141",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -2922,14 +2993,14 @@
     },
     {
      "nr": "144",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS 2005 2881; BBl 2004 2851).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS <b>2005</b> 2881; BBl <b>2004 </b>2851).",
      "links": [
       {
-       "label": "AS 2005 2881",
+       "label": "AS <b>2005</b> 2881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/472"
       },
       {
-       "label": "BBl 2004 2851",
+       "label": "BBl <b>2004 </b>2851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/552"
       }
      ],
@@ -2938,22 +3009,22 @@
     },
     {
      "nr": "145",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer) (AS 2007 5259; BBl 2006 501). Aufgehoben durch Anhang Ziff. 33 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 (AS 2021 758; BBl 2019 7359).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer) (AS <b>2007</b> 5259; BBl <b>2006</b> 501). Aufgehoben durch Anhang Ziff. 33 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359).",
      "links": [
       {
-       "label": "AS 2007 5259",
+       "label": "AS <b>2007</b> 5259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/747"
       },
       {
-       "label": "BBl 2006 501",
+       "label": "BBl <b>2006</b> 501",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/52"
       },
       {
-       "label": "AS 2021 758",
+       "label": "AS <b>2021</b> 758",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/758"
       },
       {
-       "label": "BBl 2019 7359",
+       "label": "BBl <b>2019 </b>7359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
@@ -2962,23 +3033,24 @@
     },
     {
      "nr": "142",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Organisation, Verwaltung, Finanzierung und Haftung"
     }
    ]
   },
@@ -2995,14 +3067,14 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS 2005 2881; BBl 2004 2851).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS <b>2005</b> 2881; BBl <b>2004 </b>2851).",
      "links": [
       {
-       "label": "AS 2005 2881",
+       "label": "AS <b>2005</b> 2881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/472"
       },
       {
-       "label": "BBl 2004 2851",
+       "label": "BBl <b>2004 </b>2851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/552"
       }
      ],
@@ -3028,18 +3100,18 @@
    "fussnoten": [
     {
      "nr": "152",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3048,10 +3120,10 @@
     },
     {
      "nr": "153",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -3060,18 +3132,18 @@
     },
     {
      "nr": "154",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3080,43 +3152,45 @@
     },
     {
      "nr": "150",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Besondere Bestimmungen zum Verfahren und zur Rechtspflege"
     },
     {
      "nr": "151",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Besondere Meldepflichten"
     }
    ]
   },
@@ -3152,18 +3226,18 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3172,10 +3246,10 @@
     },
     {
      "nr": "158",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -3199,14 +3273,14 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Aufgehoben durch Anhang Ziff. 6 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), mit Wirkung seit 1. Jan. 2022 (AS 2021 705; BBl 2017 2535).",
+     "text": "Aufgehoben durch Anhang Ziff. 6 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
-       "label": "AS 2021 705",
+       "label": "AS <b>2021</b> 705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/705"
       },
       {
-       "label": "BBl 2017 2535",
+       "label": "BBl <b>2017</b> 2535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/544"
       }
      ],
@@ -3245,18 +3319,18 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3280,10 +3354,10 @@
    "fussnoten": [
     {
      "nr": "192",
-     "text": "Aufgehoben durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -3291,7 +3365,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -3300,19 +3374,20 @@
     },
     {
      "nr": "191",
-     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: …"
     }
    ]
   },
@@ -3331,14 +3406,14 @@
    "fussnoten": [
     {
      "nr": "193",
-     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Aufgehoben durch Anhang Ziff. 7 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -3362,18 +3437,18 @@
    "fussnoten": [
     {
      "nr": "194",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3397,10 +3472,10 @@
    "fussnoten": [
     {
      "nr": "195",
-     "text": "Aufgehoben durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 112 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -3408,7 +3483,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -3475,14 +3550,14 @@
    "fussnoten": [
     {
      "nr": "196",
-     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3508,10 +3583,10 @@
    "fussnoten": [
     {
      "nr": "197",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -3520,18 +3595,18 @@
     },
     {
      "nr": "198",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3540,14 +3615,14 @@
     },
     {
      "nr": "199",
-     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3601,14 +3676,14 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3634,14 +3709,14 @@
    "fussnoten": [
     {
      "nr": "202",
-     "text": "Fassung zweiter Satz gemäss Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Fassung zweiter Satz gemäss Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3687,22 +3762,22 @@
    "fussnoten": [
     {
      "nr": "200",
-     "text": "Eingefügt durch Ziff. II des BG vom 17. Dez. 1993 (AS 1994 1390; BBl 1993 II 591). Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Eingefügt durch Ziff. II des BG vom 17. Dez. 1993 (AS <b>1994</b> 1390; BBl <b>1993</b> II 591). Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 1994 1390",
+       "label": "AS <b>1994</b> 1390",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1390_1390_1390"
       },
       {
-       "label": "BBl 1993 II 591",
+       "label": "BBl <b>1993</b> II 591",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_591_577_513"
       },
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3726,14 +3801,14 @@
    "fussnoten": [
     {
      "nr": "203",
-     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 44 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -3757,18 +3832,18 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -3794,14 +3869,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5427; BBl 2005 759).",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 17. Juni 2005 über das Entlastungsprogramm 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5427; BBl <b>2005</b> 759).",
      "links": [
       {
-       "label": "AS 2005 5427",
+       "label": "AS <b>2005</b> 5427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/740"
       },
       {
-       "label": "BBl 2005 759",
+       "label": "BBl <b>2005</b> 759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/108"
       }
      ],
@@ -3810,10 +3885,10 @@
     },
     {
      "nr": "59",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -3822,18 +3897,18 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1a), in Kraft seit 1. Jan. 2023 (AS 2021 837; 2022 808; BBl 2019 6071).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1<i>a</i>), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 837; <b>2022</b> 808; BBl <b>2019 </b>6071).",
      "links": [
       {
-       "label": "AS 2021 837",
+       "label": "AS <b>2021</b> 837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/837"
       },
       {
-       "label": "2022 808",
+       "label": "<b>2022</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/808"
       },
       {
-       "label": "BBl 2019 6071",
+       "label": "BBl <b>2019 </b>6071",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2216"
       }
      ],
@@ -3842,10 +3917,10 @@
     },
     {
      "nr": "61",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -3878,14 +3953,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Fassung gemäss Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -3894,18 +3969,18 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -3914,18 +3989,18 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -3934,14 +4009,14 @@
     },
     {
      "nr": "12",
-     "text": "Aufgehoben durch Anhang Ziff. 4 des BG vom 3. Okt. 2008 über die militärischen Informationssysteme, mit Wirkung seit 1. Jan. 2010 (AS 2009 6617; BBl 2008 3213).",
+     "text": "Aufgehoben durch Anhang Ziff. 4 des BG vom 3. Okt. 2008 über die militärischen Informationssysteme, mit Wirkung seit 1. Jan. 2010 (AS <b>2009</b> 6617; BBl <b>2008</b> 3213).",
      "links": [
       {
-       "label": "AS 2009 6617",
+       "label": "AS <b>2009</b> 6617",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/823"
       },
       {
-       "label": "BBl 2008 3213",
+       "label": "BBl <b>2008</b> 3213",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/701"
       }
      ],
@@ -3950,18 +4025,18 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -3970,10 +4045,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 510.10",
+     "text": "SR <b>510.10</b>",
      "links": [
       {
-       "label": "SR 510.10",
+       "label": "SR <b>510.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/4093_4093_4093"
       }
      ],
@@ -3982,18 +4057,18 @@
     },
     {
      "nr": "15",
-     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 18. März 2016, mit Wirkung seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Aufgehoben durch Anhang Ziff. 9 des BG vom 18. März 2016, mit Wirkung seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -4002,14 +4077,14 @@
     },
     {
      "nr": "16",
-     "text": "Aufgehoben durch Ziff. II des BG vom 17. Dez. 1993, mit Wirkung seit 1. Juli 1994 (AS 1994 1390; BBl 1993 II 591).",
+     "text": "Aufgehoben durch Ziff. II des BG vom 17. Dez. 1993, mit Wirkung seit 1. Juli 1994 (AS <b>1994</b> 1390; BBl <b>1993</b> II 591).",
      "links": [
       {
-       "label": "AS 1994 1390",
+       "label": "AS <b>1994</b> 1390",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1390_1390_1390"
       },
       {
-       "label": "BBl 1993 II 591",
+       "label": "BBl <b>1993</b> II 591",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/2_591_577_513"
       }
      ],
@@ -4018,14 +4093,14 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Bevölkerungs- und Zivilschutzgesetzes vom 20. Dez. 2019, in Kraft seit 1. Jan. 2021 (AS 2020 4995; BBl 2019 8687).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Bevölkerungs- und Zivilschutzgesetzes vom 20. Dez. 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4995; BBl <b>2019 </b>8687).",
      "links": [
       {
-       "label": "AS 2020 4995",
+       "label": "AS <b>2020</b> 4995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/887"
       },
       {
-       "label": "BBl 2019 8687",
+       "label": "BBl <b>2019 </b>8687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2993"
       }
      ],
@@ -4034,10 +4109,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 520.1",
+     "text": "SR <b>520.1</b>",
      "links": [
       {
-       "label": "SR 520.1",
+       "label": "SR <b>520.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/887"
       }
      ],
@@ -4046,14 +4121,14 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -4062,22 +4137,22 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995 (AS 1996 1445; BBl 1994 III 1609). Fassung gemäss Ziff. II 3 des BG vom 25. Sept. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1883; BBl 2014 6741).",
+     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609). Fassung gemäss Ziff. II 3 des BG vom 25. Sept. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1883; BBl <b>2014</b> 6741).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       },
       {
-       "label": "AS 2016 1883",
+       "label": "AS <b>2016</b> 1883",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/330"
       },
       {
-       "label": "BBl 2014 6741",
+       "label": "BBl <b>2014</b> 6741",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1528"
       }
      ],
@@ -4086,10 +4161,10 @@
     },
     {
      "nr": "21",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
       }
      ],
@@ -4098,14 +4173,14 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS 1996 1445; BBl 1994 III 1609).",
+     "text": "Eingefügt durch Anhang Ziff. 11 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
-       "label": "AS 1996 1445",
+       "label": "AS <b>1996</b> 1445",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       },
       {
-       "label": "BBl 1994 III 1609",
+       "label": "BBl <b>1994</b> III 1609",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
@@ -4114,14 +4189,14 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -4133,7 +4208,8 @@
      "text": "Ursprünglich Erstes Kap.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel a: Voraussetzungen der Bundeshaftung"
     }
    ]
   },
@@ -4154,18 +4230,18 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS 2016 4375; BBl 2008 5395, 2014 7911).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008</b> 5395, <b>2014</b> 7911).",
      "links": [
       {
-       "label": "AS 2016 4375",
+       "label": "AS <b>2016</b> 4375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/723"
       },
       {
-       "label": "BBl 2008 5395",
+       "label": "BBl <b>2008</b> 5395",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/981"
       },
       {
-       "label": "2014 7911",
+       "label": "<b>2014</b> 7911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1712"
       }
      ],
@@ -4191,14 +4267,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Eingefügt durch Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -4207,10 +4283,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -4219,18 +4295,18 @@
     },
     {
      "nr": "77",
-     "text": "Ausdruck gemäss Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1a), in Kraft seit 1. Jan. 2023 (AS 2021 837; 2022 808; BBl 2019 6071). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. 1 des BG vom 18. Juni 2021 (Massnahmen zur Kostendämpfung – Paket 1<i>a</i>), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 837; <b>2022</b> 808; BBl <b>2019 </b>6071). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2021 837",
+       "label": "AS <b>2021</b> 837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/837"
       },
       {
-       "label": "2022 808",
+       "label": "<b>2022</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/808"
       },
       {
-       "label": "BBl 2019 6071",
+       "label": "BBl <b>2019 </b>6071",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2216"
       }
      ],
@@ -4254,18 +4330,18 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4287,19 +4363,20 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Eingefügt durch Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Eingefügt durch Ziff. I 13 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Kapitel: Prämien der beruflich Versicherten und der bei der freiwilligen Grundversicherung Versicherten"
     }
    ]
   },
@@ -4327,10 +4404,10 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -4365,18 +4442,18 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4400,18 +4477,18 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4433,18 +4510,18 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4453,10 +4530,10 @@
     },
     {
      "nr": "148",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -4465,14 +4542,14 @@
     },
     {
      "nr": "149",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS 2005 2881; BBl 2004 2851).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 18. März 2005 über die Übertragung der Führung der Militärversicherung an die SUVA, in Kraft seit 1. Juli 2005 (AS <b>2005</b> 2881; BBl <b>2004 </b>2851).",
      "links": [
       {
-       "label": "AS 2005 2881",
+       "label": "AS <b>2005</b> 2881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/472"
       },
       {
-       "label": "BBl 2004 2851",
+       "label": "BBl <b>2004 </b>2851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/552"
       }
      ],
@@ -4496,18 +4573,18 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4516,23 +4593,24 @@
     },
     {
      "nr": "155",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Besonderheiten des Verfahrens"
     }
    ]
   },
@@ -4551,18 +4629,18 @@
    "fussnoten": [
     {
      "nr": "159",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],
@@ -4588,14 +4666,14 @@
    "fussnoten": [
     {
      "nr": "161",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2765; BBl 2000 255).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2765; BBl <b>2000</b> 255).",
      "links": [
       {
-       "label": "AS 2000 2765",
+       "label": "AS <b>2000</b> 2765",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/465"
       },
       {
-       "label": "BBl 2000 255",
+       "label": "BBl <b>2000</b> 255",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/99"
       }
      ],
@@ -4604,14 +4682,14 @@
     },
     {
      "nr": "162",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 84 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 84 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -4620,14 +4698,14 @@
     },
     {
      "nr": "163",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS 2007 5259; BBl 2006 501).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
-       "label": "AS 2007 5259",
+       "label": "AS <b>2007</b> 5259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/747"
       },
       {
-       "label": "BBl 2006 501",
+       "label": "BBl <b>2006</b> 501",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/52"
       }
      ],
@@ -4636,14 +4714,14 @@
     },
     {
      "nr": "164",
-     "text": "Ausdruck gemäss Anhang Ziff. 33 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS 2021 758; BBl 2019 7359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. 33 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2021 758",
+       "label": "AS <b>2021</b> 758",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/758"
       },
       {
-       "label": "BBl 2019 7359",
+       "label": "BBl <b>2019 </b>7359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
@@ -4652,10 +4730,10 @@
     },
     {
      "nr": "165",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
       }
      ],
@@ -4664,14 +4742,14 @@
     },
     {
      "nr": "166",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 84 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 84 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -4695,22 +4773,22 @@
    "fussnoten": [
     {
      "nr": "167",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000 (AS 2000 2765; BBl 2000 255). Aufgehoben durch Ziff. I der V der BVers vom 21. Juni 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000 (AS <b>2000</b> 2765; BBl <b>2000</b> 255). Aufgehoben durch Ziff. I der V der BVers vom 21. Juni 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2000 2765",
+       "label": "AS <b>2000</b> 2765",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/465"
       },
       {
-       "label": "BBl 2000 255",
+       "label": "BBl <b>2000</b> 255",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/99"
       },
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -4736,14 +4814,14 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2765; BBl 2000 255).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2765; BBl <b>2000</b> 255).",
      "links": [
       {
-       "label": "AS 2000 2765",
+       "label": "AS <b>2000</b> 2765",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/465"
       },
       {
-       "label": "BBl 2000 255",
+       "label": "BBl <b>2000</b> 255",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/99"
       }
      ],
@@ -4752,10 +4830,10 @@
     },
     {
      "nr": "170",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
       }
      ],
@@ -4764,14 +4842,14 @@
     },
     {
      "nr": "171",
-     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS 2007 5259; BBl 2006 501).",
+     "text": "Fassung gemäss Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
-       "label": "AS 2007 5259",
+       "label": "AS <b>2007</b> 5259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/747"
       },
       {
-       "label": "BBl 2006 501",
+       "label": "BBl <b>2006</b> 501",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/52"
       }
      ],
@@ -4780,14 +4858,14 @@
     },
     {
      "nr": "172",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS 2007 5259; BBl 2006 501).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
-       "label": "AS 2007 5259",
+       "label": "AS <b>2007</b> 5259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/747"
       },
       {
-       "label": "BBl 2006 501",
+       "label": "BBl <b>2006</b> 501",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/52"
       }
      ],
@@ -4796,10 +4874,10 @@
     },
     {
      "nr": "173",
-     "text": "SR 661",
+     "text": "SR <b>661</b>",
      "links": [
       {
-       "label": "SR 661",
+       "label": "SR <b>661</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/2035_2097_2125"
       }
      ],
@@ -4808,10 +4886,10 @@
     },
     {
      "nr": "174",
-     "text": "SR 431.01",
+     "text": "SR <b>431.01</b>",
      "links": [
       {
-       "label": "SR 431.01",
+       "label": "SR <b>431.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/2080_2080_2080"
       }
      ],
@@ -4820,26 +4898,26 @@
     },
     {
      "nr": "175",
-     "text": "Eingefügt durch Anhang Ziff. 11 des BG vom 23. Dez. 2011 (AS 2012 3745; BBl 2007 5037, 2010 7841). Fassung gemäss Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. 11 des BG vom 23. Dez. 2011 (AS <b>2012</b> 3745; BBl <b>2007 </b>5037, <b>2010</b> 7841). Fassung gemäss Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2012 3745",
+       "label": "AS <b>2012</b> 3745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/428"
       },
       {
-       "label": "BBl 2007 5037",
+       "label": "BBl <b>2007 </b>5037",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/729"
       },
       {
-       "label": "2010 7841",
+       "label": "<b>2010</b> 7841",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1444"
       },
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -4848,10 +4926,10 @@
     },
     {
      "nr": "176",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
@@ -4860,10 +4938,10 @@
     },
     {
      "nr": "177",
-     "text": "SR 322.1",
+     "text": "SR <b>322.1</b>",
      "links": [
       {
-       "label": "SR 322.1",
+       "label": "SR <b>322.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1059_1059_1059"
       }
      ],
@@ -4872,10 +4950,10 @@
     },
     {
      "nr": "178",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -4884,14 +4962,14 @@
     },
     {
      "nr": "179",
-     "text": "Eingefügt durch Anhang Ziff. 30 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS 2011 725; BBl 2006 7001).",
+     "text": "Eingefügt durch Anhang Ziff. 30 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006 </b>7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -4900,10 +4978,10 @@
     },
     {
      "nr": "180",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -4912,26 +4990,26 @@
     },
     {
      "nr": "181",
-     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Dez. 2011 (AS 2012 3745; BBl 2007 5037, 2010 7841). Aufgehoben durch Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, mit Wirkung seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. 13 des BG vom 23. Dez. 2011 (AS <b>2012</b> 3745; BBl <b>2007 </b>5037, <b>2010</b> 7841). Aufgehoben durch Anhang Ziff. II 19 des Nachrichtendienstgesetzes vom 25. Sept. 2015, mit Wirkung seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2012 3745",
+       "label": "AS <b>2012</b> 3745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/428"
       },
       {
-       "label": "BBl 2007 5037",
+       "label": "BBl <b>2007 </b>5037",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/729"
       },
       {
-       "label": "2010 7841",
+       "label": "<b>2010</b> 7841",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1444"
       },
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -4940,14 +5018,14 @@
     },
     {
      "nr": "182",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -4956,14 +5034,14 @@
     },
     {
      "nr": "183",
-     "text": "Aufgehoben durch Ziff. I der V der BVers vom 21. Juni 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Aufgehoben durch Ziff. I der V der BVers vom 21. Juni 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -4972,10 +5050,10 @@
     },
     {
      "nr": "184",
-     "text": "SR 642.21",
+     "text": "SR <b>642.21</b>",
      "links": [
       {
-       "label": "SR 642.21",
+       "label": "SR <b>642.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1966/371_385_384"
       }
      ],
@@ -4984,14 +5062,14 @@
     },
     {
      "nr": "185",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -5000,14 +5078,14 @@
     },
     {
      "nr": "186",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -5016,14 +5094,14 @@
     },
     {
      "nr": "187",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -5032,14 +5110,14 @@
     },
     {
      "nr": "188",
-     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3453; BBl 2002 803).",
+     "text": "Fassung gemäss Ziff. I der V der BVers vom 21. Juni 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3453; BBl <b>2002</b> 803).",
      "links": [
       {
-       "label": "AS 2002 3453",
+       "label": "AS <b>2002</b> 3453",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/511"
       },
       {
-       "label": "BBl 2002 803",
+       "label": "BBl <b>2002</b> 803",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/114"
       }
      ],
@@ -5065,22 +5143,22 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000 (AS 2000 2765; BBl 2000 255). Fassung gemäss Anhang Ziff. 4 des BG vom 3. Okt. 2008 über die militärischen Informationssysteme, in Kraft seit 1. Jan. 2010 (AS 2009 6617; BBl 2008 3213).",
+     "text": "Eingefügt durch Ziff. I des BG vom 23. Juni 2000 (AS <b>2000</b> 2765; BBl <b>2000</b> 255). Fassung gemäss Anhang Ziff. 4 des BG vom 3. Okt. 2008 über die militärischen Informationssysteme, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 6617; BBl <b>2008</b> 3213).",
      "links": [
       {
-       "label": "AS 2000 2765",
+       "label": "AS <b>2000</b> 2765",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/465"
       },
       {
-       "label": "BBl 2000 255",
+       "label": "BBl <b>2000</b> 255",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/99"
       },
       {
-       "label": "AS 2009 6617",
+       "label": "AS <b>2009</b> 6617",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/823"
       },
       {
-       "label": "BBl 2008 3213",
+       "label": "BBl <b>2008</b> 3213",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/701"
       }
      ],
@@ -5104,18 +5182,18 @@
    "fussnoten": [
     {
      "nr": "190",
-     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS 2002 3371; BBl 1991 II 185 910, 1994 V 921, 1999 4523).",
+     "text": "Aufgehoben durch Anhang Ziff. 13 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
-       "label": "AS 2002 3371",
+       "label": "AS <b>2002</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/510"
       },
       {
-       "label": "BBl 1991 II 185",
+       "label": "BBl <b>1991</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
       },
       {
-       "label": "1994 V 921",
+       "label": "<b>1994</b> V 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
       }
      ],

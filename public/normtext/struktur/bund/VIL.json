@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "748.131.1",
+  "titel": "Verordnung über die Infrastruktur der Luftfahrt",
+  "erlassdatum": "vom 23. November 1994 (Stand am 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 3 Absatz 3, 6a, 8 Absätze 2 und 6, 12 Absätze 1 und 2, 36 Absatz 1, 38 Absatz 1, 40 Absatz 1, 41 Absätze 3 und 4, 41a, 42 Absätze 1, 1 und 2, 106 Absatz 2 sowie 111 des Luftfahrtgesetzes vom 21. Dezember 1948 (LFG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>748.0</b>",
+    "links": [
+     {
+      "label": "SR <b>748.0</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1950/471_491_479"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
+    "links": [
+     {
+      "label": "AS <b>2018</b> 3849",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +59,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Zu den Aussenlandungen siehe auch die Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (SR 748.132.3).",
+     "text": "Zu den Aussenlandungen siehe auch die Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (SR <b>748.132.3</b>).",
      "links": [
       {
-       "label": "SR 748.132.3",
+       "label": "SR <b>748.132.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2014/286"
       }
      ],
@@ -39,10 +84,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -51,10 +96,10 @@
     },
     {
      "nr": "5",
-     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -63,10 +108,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -75,10 +120,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
@@ -87,10 +132,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -99,10 +144,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -111,10 +156,10 @@
     },
     {
      "nr": "10",
-     "text": "SR 0.748.0",
+     "text": "SR <b>0.748.0</b>",
      "links": [
       {
-       "label": "SR 0.748.0",
+       "label": "SR <b>0.748.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
       }
      ],
@@ -123,10 +168,10 @@
     },
     {
      "nr": "11",
-     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -135,10 +180,10 @@
     },
     {
      "nr": "12",
-     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -160,10 +205,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -172,10 +217,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 0.748.0",
+     "text": "SR <b>0.748.0</b>",
      "links": [
       {
-       "label": "SR 0.748.0",
+       "label": "SR <b>0.748.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
       }
      ],
@@ -212,15 +257,16 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2010 (AS 2000 703).",
+     "text": "Fassung gemäss Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2010 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Betrieb und Bau"
     }
    ]
   },
@@ -302,10 +348,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -335,10 +381,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -354,10 +400,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -406,10 +452,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Ausdruck gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -418,10 +464,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -430,10 +476,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -520,10 +566,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -591,10 +637,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -681,10 +727,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -714,10 +760,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS 2002 1186).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 1186).",
      "links": [
       {
-       "label": "AS 2002 1186",
+       "label": "AS <b>2002</b> 1186",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/197"
       }
      ],
@@ -726,10 +772,10 @@
     },
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS 2002 1186).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 1186).",
      "links": [
       {
-       "label": "AS 2002 1186",
+       "label": "AS <b>2002</b> 1186",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/197"
       }
      ],
@@ -759,10 +805,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -771,10 +817,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 814.41",
+     "text": "SR <b>814.41</b>",
      "links": [
       {
-       "label": "SR 814.41",
+       "label": "SR <b>814.41</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1987/338_338_338"
       }
      ],
@@ -804,10 +850,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -816,10 +862,10 @@
     },
     {
      "nr": "45",
-     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -828,10 +874,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -840,14 +886,14 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS 2008 595). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       },
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -856,10 +902,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -908,10 +954,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -941,10 +987,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -953,10 +999,10 @@
     },
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -965,14 +1011,14 @@
     },
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS 2008 595). Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       },
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -981,10 +1027,10 @@
     },
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -993,10 +1039,10 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -1026,10 +1072,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -1038,10 +1084,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1067,10 +1113,10 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1079,10 +1125,10 @@
     },
     {
      "nr": "80",
-     "text": "Dritter Satz eingefügt durch Ziff. I der V vom 26. April 2023, in Kraft seit 1. Juni 2023 (AS 2023 207).",
+     "text": "Dritter Satz eingefügt durch Ziff. I der V vom 26. April 2023, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 207).",
      "links": [
       {
-       "label": "AS 2023 207",
+       "label": "AS <b>2023</b> 207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/207"
       }
      ],
@@ -1091,15 +1137,16 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Ziff. II 6 der V zum Bundesgesetz über die Koordination und Verein- fachung von Entscheidverfahren vom 2. Febr. 2000, in Kraft seit 1. März 2000 (AS 2000 703). Ursprünglich vor Art. 29.",
+     "text": "Fassung gemäss Ziff. II 6 der V zum Bundesgesetz über die Koordination und Verein- fachung von Entscheidverfahren vom 2. Febr. 2000, in Kraft seit 1. März 2000 (AS <b>2000</b> 703). Ursprünglich vor Art. 29.",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Zivile Nutzung von Militärflugplätzen"
     }
    ]
   },
@@ -1120,10 +1167,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -1210,10 +1257,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 1. Mai 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 1. Mai 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -1235,10 +1282,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -1247,10 +1294,10 @@
     },
     {
      "nr": "98",
-     "text": "SR 748.132.3",
+     "text": "SR <b>748.132.3</b>",
      "links": [
       {
-       "label": "SR 748.132.3",
+       "label": "SR <b>748.132.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2014/286"
       }
      ],
@@ -1272,10 +1319,10 @@
    "fussnoten": [
     {
      "nr": "100",
-     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -1284,10 +1331,10 @@
     },
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS 2000 703).",
+     "text": "Fassung gemäss Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -1296,10 +1343,10 @@
     },
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS 2015 4423). Siehe auch die ÜeB dieser Änd. am Schluss des Textes (Art. 74d).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS <b>2015</b> 4423). Siehe auch die ÜeB dieser Änd. am Schluss des Textes (Art. 74<i>d</i>).",
      "links": [
       {
-       "label": "AS 2015 4423",
+       "label": "AS <b>2015</b> 4423",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/733"
       }
      ],
@@ -1319,10 +1366,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -1344,10 +1391,10 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -1373,10 +1420,10 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1417,10 +1464,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1446,10 +1493,10 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1479,10 +1526,10 @@
    "fussnoten": [
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1512,10 +1559,10 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -1524,10 +1571,10 @@
     },
     {
      "nr": "119",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1557,10 +1604,10 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1586,10 +1633,10 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1598,15 +1645,16 @@
     },
     {
      "nr": "122",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Weitere Pflichten der Eigentümer der Luftfahrthindernisse"
     }
    ]
   },
@@ -1627,10 +1675,10 @@
    "fussnoten": [
     {
      "nr": "125",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1656,10 +1704,10 @@
    "fussnoten": [
     {
      "nr": "126",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1685,10 +1733,10 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1714,10 +1762,10 @@
    "fussnoten": [
     {
      "nr": "128",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1743,10 +1791,10 @@
    "fussnoten": [
     {
      "nr": "129",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1772,10 +1820,10 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1801,10 +1849,10 @@
    "fussnoten": [
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1826,10 +1874,10 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Die Änderung kann unter AS 1994 3050 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>1994</b> 3050 konsultiert werden.",
      "links": [
       {
-       "label": "AS 1994 3050",
+       "label": "AS <b>1994</b> 3050",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/3050_3050_3050"
       }
      ],
@@ -1870,14 +1918,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS 2008 595). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       },
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1886,10 +1934,10 @@
     },
     {
      "nr": "35",
-     "text": "Verordnung (EG) Nr. 216/2008 des Europäischen Parlaments und des Rates vom 20. Februar 2008 zur Festlegung gemeinsamer Vorschriften für die Zivilluftfahrt und zur Errichtung einer Europäischen Agentur für Flugsicherheit, zur Aufhebung der Richtlinie 91/670/EWG des Rates, der Verordnung (EG) Nr. 1592/2002 und der Richtlinie 2004/36/EG, in der für die Schweiz gemäss Anhang Ziff. 3 des Abkommens vom 21. Juni 1999 (SR 0.748.127.192.68) zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Luftverkehr (Luftverkehrsabkommen) jeweils verbindlichen Fassung.",
+     "text": "Verordnung (EG) Nr. 216/2008 des Europäischen Parlaments und des Rates vom 20. Februar 2008 zur Festlegung gemeinsamer Vorschriften für die Zivilluftfahrt und zur Errichtung einer Europäischen Agentur für Flugsicherheit, zur Aufhebung der Richtlinie 91/670/EWG des Rates, der Verordnung (EG) Nr. 1592/2002 und der Richtlinie 2004/36/EG, in der für die Schweiz gemäss Anhang Ziff. 3 des Abkommens vom 21. Juni 1999 (SR <b>0.748.127.192.68</b>) zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Luftverkehr (Luftverkehrsabkommen) jeweils verbindlichen Fassung.",
      "links": [
       {
-       "label": "SR 0.748.127.192.68",
+       "label": "SR <b>0.748.127.192.68</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/258"
       }
      ],
@@ -1926,10 +1974,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -1945,10 +1993,10 @@
     },
     {
      "nr": "39",
-     "text": "SR 0.748.0",
+     "text": "SR <b>0.748.0</b>",
      "links": [
       {
-       "label": "SR 0.748.0",
+       "label": "SR <b>0.748.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
       }
      ],
@@ -1978,10 +2026,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2018,10 +2066,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -2051,10 +2099,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -2084,17 +2132,17 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Ursprünglich: Art. 27a.",
+     "text": "Ursprünglich: Art. 27<i>a</i>.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "53",
-     "text": "SR 814.41",
+     "text": "SR <b>814.41</b>",
      "links": [
       {
-       "label": "SR 814.41",
+       "label": "SR <b>814.41</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1987/338_338_338"
       }
      ],
@@ -2103,10 +2151,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2115,10 +2163,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723"
       }
      ],
@@ -2127,10 +2175,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I 6 der V vom 19. Aug. 2020 über die Anpassung des Verordnungsrechts infolge der Änderung des Bundesgesetzes über die Enteignung, in Kraft seit 1. Jan. 2021 (AS 2020 3995).",
+     "text": "Fassung gemäss Ziff. I 6 der V vom 19. Aug. 2020 über die Anpassung des Verordnungsrechts infolge der Änderung des Bundesgesetzes über die Enteignung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 3995).",
      "links": [
       {
-       "label": "AS 2020 3995",
+       "label": "AS <b>2020</b> 3995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/744"
       }
      ],
@@ -2160,10 +2208,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2212,10 +2260,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Anhang Ziff. 16 der V vom 23. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 529).",
+     "text": "Eingefügt durch Anhang Ziff. 16 der V vom 23. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 529).",
      "links": [
       {
-       "label": "AS 2023 529",
+       "label": "AS <b>2023</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/529"
       }
      ],
@@ -2264,10 +2312,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2316,10 +2364,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Die Berichtigung vom 12. Mai 2021 betrifft nur den italienischen Text (AS 2021 269).",
+     "text": "Die Berichtigung vom 12. Mai 2021 betrifft nur den italienischen Text (AS <b>2021</b> 269).",
      "links": [
       {
-       "label": "AS 2021 269",
+       "label": "AS <b>2021</b> 269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/269"
       }
      ],
@@ -2387,10 +2435,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2399,10 +2447,10 @@
     },
     {
      "nr": "70",
-     "text": "Richtlinie 96/67/EG vom 15. Oktober 1996 über den Zugang zum Markt der Bodenabfertigungsdienste auf den Flughäfen der Gemeinschaft, in der für die Schweiz gemäss Ziff. 1 des Anhangs zum Luftverkehrsabkommen (SR 0.748.127.192.68) jeweils verbindlichen Fassung.",
+     "text": "Richtlinie 96/67/EG vom 15. Oktober 1996 über den Zugang zum Markt der Bodenabfertigungsdienste auf den Flughäfen der Gemeinschaft, in der für die Schweiz gemäss Ziff. 1 des Anhangs zum Luftverkehrsabkommen (SR <b>0.748.127.192.68</b>) jeweils verbindlichen Fassung.",
      "links": [
       {
-       "label": "SR 0.748.127.192.68",
+       "label": "SR <b>0.748.127.192.68</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/258"
       }
      ],
@@ -2411,15 +2459,16 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS 2002 1186).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 1186).",
      "links": [
       {
-       "label": "AS 2002 1186",
+       "label": "AS <b>2002</b> 1186",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/197"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Abschnitt: Bodenabfertigungsdienste"
     }
    ]
   },
@@ -2444,17 +2493,17 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Siehe Fussnote zur Art. 29a.",
+     "text": "Siehe Fussnote zur Art. 29<i>a.</i>",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2484,10 +2533,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2496,15 +2545,16 @@
     },
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Abschnitt: Flugplatzleiter oder Flugplatzleiterin"
     }
    ]
   },
@@ -2586,10 +2636,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "SR 748.01",
+     "text": "SR<b> 748.01</b>",
      "links": [
       {
-       "label": "SR 748.01",
+       "label": "SR<b> 748.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1973/1856_1856_1856"
       }
      ],
@@ -2598,10 +2648,10 @@
     },
     {
      "nr": "76",
-     "text": "Fassung gemäss Ziff. II der vom 16. Febr. 2022, in Kraft seit 1. Mai 2022 (AS 2022 230).",
+     "text": "Fassung gemäss Ziff. II der vom 16. Febr. 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 230).",
      "links": [
       {
-       "label": "AS 2022 230",
+       "label": "AS <b>2022</b> 230",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/230"
       }
      ],
@@ -2650,10 +2700,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "SR 748.112.11",
+     "text": "SR <b>748.112.11</b>",
      "links": [
       {
-       "label": "SR 748.112.11",
+       "label": "SR <b>748.112.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/720"
       }
      ],
@@ -2679,10 +2729,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2708,10 +2758,10 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2737,10 +2787,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2764,10 +2814,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Aufgehoben durch Art. 50 der V vom 25. April 2012 über die Flughafengebühren, mit Wirkung seit 1. Juni 2012 (AS 2012 2753).",
+     "text": "Aufgehoben durch Art. 50 der V vom 25. April 2012 über die Flughafengebühren, mit Wirkung seit 1. Juni 2012 (AS <b>2012</b> 2753).",
      "links": [
       {
-       "label": "AS 2012 2753",
+       "label": "AS <b>2012</b> 2753",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/328"
       }
      ],
@@ -2797,10 +2847,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000 , in Kraft seit 1. März 2000 (AS 2000 1388).",
+     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000 , in Kraft seit 1. März 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -2830,10 +2880,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS 2000 1388).",
+     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -2863,10 +2913,10 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS 2000 1388).",
+     "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -2903,10 +2953,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -2915,10 +2965,10 @@
     },
     {
      "nr": "92",
-     "text": "Eingefügt durch Ziff. I der V vom 22. April 2020, in Kraft vom 23. April 2020 bis zum 22. Okt. 2020 (AS 2020 1331).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. April 2020, in Kraft vom 23. April 2020 bis zum 22. Okt. 2020 (AS <b>2020</b> 1331).",
      "links": [
       {
-       "label": "AS 2020 1331",
+       "label": "AS <b>2020</b> 1331",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/251"
       }
      ],
@@ -2927,10 +2977,10 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -2939,10 +2989,10 @@
     },
     {
      "nr": "94",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -2964,14 +3014,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren (AS 2000 703). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren (AS <b>2000</b> 703). Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       },
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -2993,10 +3043,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS 2000 703).",
+     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -3005,10 +3055,10 @@
     },
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -3017,38 +3067,38 @@
     },
     {
      "nr": "19",
-     "text": "[AS 1989 2216, 1993 2749, 1995 5219, 1997 2779 Ziff. II 53, 2003 1195, 2005 2695 Ziff. II 5. AS 2007 5101 Art. 52]. Siehe heute: die V vom 28. Sept. 2007 (SR 748.112.11).",
+     "text": "[AS <b>1989 </b>2216, <b>1993</b> 2749, <b>1995</b> 5219, <b>1997</b> 2779 Ziff. II 53, <b>2003</b> 1195, <b>2005</b> 2695 Ziff. II 5. AS <b>2007</b> 5101 Art. 52]. Siehe heute: die V vom 28. Sept. 2007 (SR <b>748.112.11</b>).",
      "links": [
       {
-       "label": "AS 1989 2216",
+       "label": "AS <b>1989 </b>2216",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/2216_2216_2216"
       },
       {
-       "label": "1993 2749",
+       "label": "<b>1993</b> 2749",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/2749_2749_2749"
       },
       {
-       "label": "1995 5219",
+       "label": "<b>1995</b> 5219",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5219_5219_5219"
       },
       {
-       "label": "1997 2779",
+       "label": "<b>1997</b> 2779",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2779_2779_2779"
       },
       {
-       "label": "2003 1195",
+       "label": "<b>2003</b> 1195",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/206"
       },
       {
-       "label": "2005 2695",
+       "label": "<b>2005</b> 2695",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/464"
       },
       {
-       "label": "AS 2007 5101",
+       "label": "AS <b>2007</b> 5101",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/720"
       },
       {
-       "label": "SR 748.112.11",
+       "label": "SR <b>748.112.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/720"
       }
      ],
@@ -3076,10 +3126,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Aufgehoben durch Beilage Ziff. 2 der V vom 12. April 2000, mit Wirkung seit 1. Mai 2000 (AS 2000 1388).",
+     "text": "Aufgehoben durch Beilage Ziff. 2 der V vom 12. April 2000, mit Wirkung seit 1. Mai 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
-       "label": "AS 2000 1388",
+       "label": "AS <b>2000 </b>1388",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/218"
       }
      ],
@@ -3099,10 +3149,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Aufgehoben durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, mit Wirkung seit 1. März 2000 (AS 2000 703).",
+     "text": "Aufgehoben durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, mit Wirkung seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -3122,10 +3172,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -3145,10 +3195,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS 2014 1339).",
+     "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
-       "label": "AS 2014 1339",
+       "label": "AS <b>2014</b> 1339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/286"
       }
      ],
@@ -3174,27 +3224,29 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Ursprünglich vor Art. 59. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Ursprünglich vor Art. 59. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Titel: Luftfahrthindernisse und Sicherheitszonen"
     },
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Allgemeine Bestimmungen"
     }
    ]
   },
@@ -3215,10 +3267,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3244,10 +3296,10 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3271,10 +3323,10 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3302,14 +3354,14 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS 2008 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       },
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3318,27 +3370,29 @@
     },
     {
      "nr": "114",
-     "text": "Ursprünglich vor Art. 63. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Ursprünglich vor Art. 63. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Bewilligungs- und Meldepflichten"
     },
     {
      "nr": "115",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Bewilligungspflichtige Luftfahrthindernisse"
     }
    ]
   },
@@ -3363,15 +3417,16 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Registrierungspflichtige Luftfahrthindernisse"
     }
    ]
   },
@@ -3428,14 +3483,14 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS 2008 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       },
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3455,10 +3510,10 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3467,15 +3522,16 @@
     },
     {
      "nr": "132",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Titel: Strafbestimmung"
     }
    ]
   },
@@ -3492,10 +3548,10 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS 2000 703).",
+     "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
-       "label": "AS 2000 703",
+       "label": "AS <b>2000</b> 703",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
      ],
@@ -3517,10 +3573,10 @@
    "fussnoten": [
     {
      "nr": "136",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],
@@ -3529,10 +3585,10 @@
     },
     {
      "nr": "137",
-     "text": "SR 0.748.0",
+     "text": "SR <b>0.748.0</b>",
      "links": [
       {
-       "label": "SR 0.748.0",
+       "label": "SR <b>0.748.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
       }
      ],
@@ -3554,10 +3610,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS 2011 1139).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
-       "label": "AS 2011 1139",
+       "label": "AS <b>2011</b> 1139",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/166"
       }
      ],
@@ -3579,10 +3635,10 @@
    "fussnoten": [
     {
      "nr": "139",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS 2015 4423).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS <b>2015</b> 4423).",
      "links": [
       {
-       "label": "AS 2015 4423",
+       "label": "AS <b>2015</b> 4423",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/733"
       }
      ],
@@ -3604,10 +3660,10 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3849).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
-       "label": "AS 2018 3849",
+       "label": "AS <b>2018</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/611"
       }
      ],
@@ -3637,10 +3693,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS 2008 595).",
+     "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
-       "label": "AS 2008 595",
+       "label": "AS <b>2008</b> 595",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/135"
       }
      ],

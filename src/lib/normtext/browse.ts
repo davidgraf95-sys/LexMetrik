@@ -133,7 +133,13 @@ export function bandFuerToken(baender: Band[], token: string): number {
 
 // ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──
 export interface FnLink { label: string; url: string }
-export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null; item?: string | null }
+export interface Fussnote {
+  nr: string; text: string; links: FnLink[];
+  absatz?: string | null; item?: string | null;
+  /** G11: Label der Überschrift/des Randtitels, zu der/dem diese section-heading-
+   *  Fussnote gehört (Marker am Sektions-/Randtitel-Kopf statt auf Artikelebene). */
+  sektion?: string;
+}
 export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;
   marginalie: string[];
@@ -142,10 +148,24 @@ export interface ArtikelStruktur {
 }
 export type StrukturMap = Record<string, ArtikelStruktur>;
 
-const strukturCache = new Map<string, Promise<StrukturMap | null>>();
+/** M5: Erlass-Kopf (Vorspann VOR dem ersten Artikel) — SR-Nr, amtlicher Titel,
+ *  Erlassdatum, Ingress/Erlassformel bzw. materielle Präambel + Kopf-Fussnoten.
+ *  Spiegelt das Schema aus scripts/normtext/kopf-extrahiere.ts (Sidecar). */
+export interface KopfZeile { rolle: 'autor' | 'ingress' | 'praeambel' | 'verb'; text: string }
+export interface ErlassKopf {
+  srNummer?: string;
+  titel?: string;
+  erlassdatum?: string;
+  praeambelTitel?: string;
+  praeambel?: KopfZeile[];
+  fussnoten?: Fussnote[];
+}
 
-/** Lädt die Struktur-Sidecar (Gliederung+Marginalien je Artikel-Token), lazy/gecacht. */
-export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | null> {
+interface StrukturDoc { artikel?: StrukturMap; kopf?: ErlassKopf }
+const strukturCache = new Map<string, Promise<StrukturDoc | null>>();
+
+/** Lädt das Struktur-Sidecar-Dokument (Gliederung/Marginalien + Erlass-Kopf), lazy/gecacht. */
+function ladeStrukturDoc(ebene: string, key: string): Promise<StrukturDoc | null> {
   const url = `/normtext/struktur/${ebene}/${key}.json`;
   let p = strukturCache.get(url);
   if (!p) {
@@ -153,8 +173,7 @@ export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | 
       try {
         const res = await fetch(url);
         if (!res.ok) return null;
-        const d = (await res.json()) as { artikel?: StrukturMap };
-        return d.artikel ?? null;
+        return (await res.json()) as StrukturDoc;
       } catch {
         return null;
       }
@@ -162,6 +181,16 @@ export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | 
     strukturCache.set(url, p);
   }
   return p;
+}
+
+/** Lädt die Struktur-Sidecar (Gliederung+Marginalien je Artikel-Token), lazy/gecacht. */
+export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | null> {
+  return ladeStrukturDoc(ebene, key).then((d) => d?.artikel ?? null);
+}
+
+/** Lädt den Erlass-Kopf (M5) aus demselben Sidecar (geteilter Cache, ein Fetch). */
+export function ladeErlassKopf(ebene: string, key: string): Promise<ErlassKopf | null> {
+  return ladeStrukturDoc(ebene, key).then((d) => d?.kopf ?? null);
 }
 
 /** Ein Knoten der amtlichen Gliederung (Teil → Titel → Abschnitt …). */
@@ -175,6 +204,9 @@ export interface Sektion {
    *  promotet wurde — nicht aus der amtlichen Teil/Titel/Abschnitt-Gliederung
    *  (Auftrag 6b). Steuert die ruhigere, eingerückte Darstellung im Reader. */
   randtitel?: boolean;
+  /** G11: Fussnoten-Marker, die an DIESER Überschrift hängen (section-heading-
+   *  footnote) — `artikel`+`nr` zeigen aufs Fussnoten-Ziel im Trägerartikel. */
+  fussnoten?: Array<{ artikel: string; nr: string }>;
 }
 
 /**
@@ -203,6 +235,8 @@ export function baueGliederungsbaum(
     const st = struktur?.[e.artikel];
     const gliederung = st?.gliederung ?? [];
     const { ahnen } = randtitelKnoten(st?.marginalie ?? []);
+    // G11: section-heading-Fussnoten dieses (Träger-)Artikels je Überschrift-Label.
+    const sektFn = (st?.fussnoten ?? []).filter((f) => f.sektion && f.nr);
     // Promotete Randtitel-Knoten reihen sich direkt unter der tiefsten amtlichen
     // Gliederungsstufe ein. Ohne amtliche Gliederung beginnen sie bei 0 (dann
     // tragen sie selbst die Haupt-Hierarchie, z. B. kantonale Erlasse).
@@ -221,6 +255,12 @@ export function baueGliederungsbaum(
       if (!treffer || treffer.label !== stufe.label || treffer.ebene !== stufe.ebene) {
         treffer = { id: `sek-${nr++}`, ebene: stufe.ebene, label: stufe.label, kinder: [], artikel: [], randtitel: stufe.randtitel };
         ebeneListe.push(treffer);
+      }
+      // G11: Marker für section-heading-Fussnoten, deren Label diese Stufe trifft,
+      // an den Knoten heften (Träger = der aktuelle, erste Artikel darunter).
+      const treffFn = sektFn.filter((f) => f.sektion === stufe.label);
+      if (treffFn.length) {
+        treffer.fussnoten = [...(treffer.fussnoten ?? []), ...treffFn.map((f) => ({ artikel: e.artikel, nr: f.nr }))];
       }
       knoten = treffer;
       ebeneListe = treffer.kinder;
