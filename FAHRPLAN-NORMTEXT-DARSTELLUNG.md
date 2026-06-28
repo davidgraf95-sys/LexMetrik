@@ -5,6 +5,26 @@
 > (`AUDIT-FEDLEX-DARSTELLUNG-2026-06-28.md`). **Scope: Bund, DE.** Kein Deploy (bauen+gaten),
 > isolierter Worktree `feat/normtext-bund-de`. Regelwerk: `DESIGN-REGLEMENT-NORMTEXT.md`.
 
+## ▶ Bau-Fortschritt (Branch `feat/normtext-bund-de`, nicht deployt)
+
+| Cluster | Status | Commit |
+|---|---|---|
+| **M0** Doku (Regelwerk+Audit+Fahrplan) | ✅ fertig | `b656bc9d` |
+| **M1** UI-Bugs #7 Tabliste-Anchor + #8 Suche scrollbar | ✅ fertig, tsc+lint grün | `9b978070` |
+| **M2** Fliesstext-Einzug #5 | ✅ fertig, tsc+ArtikelBody-Test grün | `e9760570` |
+| **M3 · #4** TOC alle Randtitel (lückenlos A–E) | ✅ fertig, ZGB-Einleitung vite-node-verifiziert (A–E), 65 Tests grün | `657efb58` |
+| **M3 · #6** Gruppierungs-Striche einheitlich | ⏳ offen (gleiche Wurzel randtitelKnoten — prüfen ob jetzt schon konsistent) | — |
+| **M3 · G11** Sektions-Fussnotenmarker | ⏳ offen (randtitelFnIds → browse.ts + SektionKopf) | — |
+| **M4** Aufgehobene Artikel schlicht (#3/G16) | ⏳ offen (golden-neutral Renderer) | — |
+| **M5–M9** Extraktions-Cluster (Ingress/Verschachtelung/Tabellen/Bilder/dopp-ID) | ⏳ offen — **eine** Golden-Re-Segnung, §1-kritisch M6 (falsche Zitate) zuerst+adversarial | — |
+| **M10** Fussnoten-Abstand+Hervorhebung (Sidecar) | ⏳ offen | — |
+| **M11/M12** Resolver (intern/Selbstverweis stoppen) | ⏳ offen — zuletzt, Blast-Radius fedlex.ts | — |
+
+**Resume-Hinweis:** nächster offener Schritt = M3·#6/G11, dann M4 (beide golden-neutral Renderer),
+danach die Extraktions-Hälfte M5–M9 (Reihenfolge: M6 §1 zuerst → M7/M8/M9 → **eine** `npm run normtext`-
+Regeneration + adversariale Golden-Neu-Segnung), dann M10, zuletzt M11/M12. Engine-Golden
+(`lexmetrik-golden.json`) muss über alles byte-gleich bleiben (§7).
+
 ## Leitsatz (L0)
 
 L0 steuert die Tiefe: zuerst was die Norm fundierter/korrekter/vollstaendiger macht (Fedlex = Untergrenze), dann Nutzen-Vorsprung (interne Verlinkung, lueckenloser TOC, ruhige Aufgehoben-Darstellung), zuletzt Kosmetik. Vier Architektur-Saeulen aus den drei deckungsgleichen Strategien + fuenf Karten: (1) ZWEI Golden-Welten strikt trennen — golden/lexmetrik-golden.json (Engine, TABU, muss im GANZEN Batch byte-gleich bleiben = Beweis Rechtslogik unberuehrt; bricht er, ist man versehentlich in eine Engine gelaufen -> STOPP) vs. golden/normtext-snapshot.json (Daten-Index, wird bewusst regeneriert+adversarial neu gesegnet, self-consistent sha, kein externer Erwartungswert). (2) Sidecar-first: golden-NEUTRALE Anreicherungen (Ingress/Kopf, Fussnoten-Inhalt G15, spaeter Wort-Offsets G14) als Sidecar -> Snapshot-Index byte-gleich; nur echter Normtext-Zuwachs (Verschachtelungstiefe, Tabellen-Koepfe, Bilder, doppelte-ID) bricht den Daten-Index bewusst. (3) GENAU EINE Daten-Re-Segnung am B1-Ende: alle golden-brechenden Cluster (M6/M7/M8/M9) sind ein BEGRENZTER, in einem Durchgang adversarial ueberblickbarer Block, der bestehende Artikel MODIFIZIERT — disp/annex (M13, additiv, hunderte NEUE Eintraege, eigener Token-Namespace, Schema-Strahlung) trifft DISJUNKTE Daten und gehoert in einen eigenen B2-Re-Bless. (4) §1-Vorrang: G8 (falsche Zitate, M6) und der Resolver (#10/#11, M11/M12, plausibel-FALSCHE Links schlimmer als tote) bekommen die tiefste adversariale Sorgfalt und sind der eigentliche Grund fuer die EINE vorsichtige Re-Segnung. Empirische Auftragskorrektur (Resolver-Karte, or.html: 0/3724 Body-Hrefs): #11 ist KEIN Extraktor-Fix sondern Resolver-Bug (NORM_IM_TEXT matcht 'Artikel' nicht + tokenMap nur Self-Erlass); den im Auftrag skizzierten Block-links[]-Umbau NICHT bauen. Geteilte Wurzeln werden je EIN Cluster: randtitelKnoten (#4 TOC + #6 Striche + G11), parseFedlexTabelle (#12 + spaeter Annex-Tabellen G18), entferneTags/entferneFussnotenSups (Bilder + spaeter Wort-Offsets), istAufgehoben (#3 Accordion + Inline). Kein Deploy (bauen+gaten), isolierter Worktree feat/normtext-bund-de (existiert noch nicht -> erst anlegen, eigener npm ci).
