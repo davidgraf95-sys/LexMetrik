@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "812.121",
   "titel": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 118 und 123 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 9. April 1951,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

@@ -3,6 +3,24 @@
  "kopf": {
   "srNummer": "211.412.11",
   "titel": "Bundesgesetz über das bäuerliche Bodenrecht",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 22, 31 und 64 der Bundesverfassung,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsicht in die Botschaft des Bundesrates vom 19. Oktober 1988,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

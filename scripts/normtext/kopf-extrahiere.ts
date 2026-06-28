@@ -102,6 +102,21 @@ function kopfFussnoten(...abschnitte: string[]): (defs: Map<string, Fussnote>) =
   };
 }
 
+/** Rolle einer KLASSENLOSEN Präambel-Zeile heuristisch (CH-Recht + Staatsverträge):
+ *  - «gestützt auf …», «nach Einsicht …», «in Anwendung/Ausführung …» → Rechts-
+ *    grundlage (ingress);
+ *  - kurze, mit «:» schliessende Erlassformel mit Verb-Kern («beschliesst:»,
+ *    «verordnet:», «… sind wie folgt übereingekommen:») → verb;
+ *  - die erste Zeile («Der Bundesrat,» / «Die Vertragsstaaten …,») → autor;
+ *  - alles andere (materielle Präambel-Erwägungen) → praeambel.
+ *  Konservativ: im Zweifel praeambel — Inhalt geht nie verloren, nur das Schriftbild. */
+function rolleAusText(text: string, istErste: boolean): KopfRolle {
+  if (/^(gestützt auf|nach Einsicht|in Anwendung|in Ausführung|aufgrund|gestützt|nach Prüfung)\b/i.test(text)) return 'ingress';
+  if (/:\s*$/.test(text) && /\b(beschliess|verordne|verfügt|verfügen|erlässt|erlassen|vereinbar|übereingekommen|überein|geben sich|setzt? fest)\w*/i.test(text)) return 'verb';
+  if (istErste) return 'autor';
+  return 'praeambel';
+}
+
 /**
  * Liest den Erlass-Kopf (preface + preamble) aus dem Fedlex-Filestore-HTML.
  * Gibt null zurück, wenn weder Titel noch Präambel-Inhalt vorhanden sind (so
@@ -131,20 +146,26 @@ export function extrahiereKopf(html: string): ErlassKopf | null {
     const pt = koerper.match(/<h5\b[^>]*>([\s\S]*?)<\/h5>/i);
     if (pt) { const t = reinText(pt[1]); if (t) kopf.praeambelTitel = t; }
 
-    // Zeilen in DOKUMENTREIHENFOLGE: <p class="man-template-autor|ingress|
-    // man-template-verb|absatz">. «absatz» im Preamble = materieller Präambeltext
-    // (G6), nicht zu verwechseln mit Artikel-Absätzen (die liegen in <article>).
+    // Zeilen in DOKUMENTREIHENFOLGE. Fedlex setzt die Erlassformel teils mit
+    // Klassen (man-template-autor|ingress|man-template-verb|absatz), teils — vor
+    // allem ältere Erlasse (VRV/VStG/VwVG …) und Staatsverträge (UNO-Pakte, LugÜ …)
+    // — in KLASSENLOSEN <p>. Beide erfassen, sonst ginge der Ingress/die Präambel
+    // für ~1/4 der Erlasse still verloren (§2/§8). Bei klassenlosem <p> die Rolle
+    // heuristisch ableiten — eine Fehlklassierung ist nur kosmetisch (Inhalt bleibt,
+    // Default 'praeambel'); der Fussnoten-Block ist über den koerper-Cut bereits weg.
+    // «absatz» im Preamble = materieller Präambeltext (G6), nicht Artikel-Absatz.
     const zeilen: KopfZeile[] = [];
-    for (const pm of koerper.matchAll(/<p\b[^>]*\bclass="([^"]*)"[^>]*>([\s\S]*?)<\/p>/gi)) {
-      const klasse = pm[1];
+    for (const pm of koerper.matchAll(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi)) {
+      const klasse = pm[1].match(/\bclass="([^"]*)"/i)?.[1] ?? '';
       const text = reinText(pm[2]);
       if (!text) continue;
-      let rolle: KopfRolle | null = null;
+      let rolle: KopfRolle;
       if (/\bman-template-autor\b/.test(klasse)) rolle = 'autor';
       else if (/\bingress\b/.test(klasse)) rolle = 'ingress';
       else if (/\bman-template-verb\b/.test(klasse)) rolle = 'verb';
       else if (/\babsatz\b/.test(klasse)) rolle = 'praeambel';
-      if (rolle) zeilen.push({ rolle, text });
+      else rolle = rolleAusText(text, zeilen.length === 0);
+      zeilen.push({ rolle, text });
     }
     if (zeilen.length) kopf.praeambel = zeilen;
 

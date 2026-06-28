@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "955.033.0",
   "titel": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Eidgenössische Finanzmarktaufsicht (FINMA),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 17 des Geldwäschereigesetzes vom 10. Oktober 1997 (GwG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

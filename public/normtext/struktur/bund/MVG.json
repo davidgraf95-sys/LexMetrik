@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "833.1",
   "titel": "Bundesgesetz über die Militärversicherung",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 18 Absatz 2, 20, 22 Absatz 6 und 34 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 27. Juni 1990,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

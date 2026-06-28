@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "281.42",
   "titel": "Verordnung des Bundesgerichts über die Zwangs­verwertung von Grundstücken",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Schweizerische Bundesgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung von Artikel 15 des BG vom 11. April 1889 über Schuldbetreibung und Konkurs (SchKG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

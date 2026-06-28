@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "173.320.1",
   "titel": "Geschäftsreglement für das Bundesverwaltungsgericht",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Bundesverwaltungsgericht (BVGer),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 16 Absatz 1 Buchstabe a des Verwaltungsgerichtsgesetzes vom 17. Juni 2005 (VGG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

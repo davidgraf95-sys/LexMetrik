@@ -3,6 +3,24 @@
  "kopf": {
   "srNummer": "711",
   "titel": "Bundesgesetz über die Enteignung",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 60 Absatz 1, 74, 75, 76–78, 81–83, 87, 89 Absatz 2, 90–92, 102 und 108 der Bundesverfassung,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsicht in eine Botschaft des Bundesrates vom 21. Juni 1926,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

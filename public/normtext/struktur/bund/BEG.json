@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "957.1",
   "titel": "Bundesgesetz über Bucheffekten",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 98 Absatz 1 und 122 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 15. November 2006,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

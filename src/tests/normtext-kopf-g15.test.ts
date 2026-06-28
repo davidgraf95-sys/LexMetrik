@@ -47,6 +47,29 @@ describe('M5 · extrahiereKopf — Erlass-Kopf (preface/preamble)', () => {
   it('gibt null zurück, wenn weder Titel noch Präambel vorhanden sind', () => {
     expect(extrahiereKopf('<main><article id="art_1">x</article></main>')).toBeNull();
   });
+
+  // Ältere Erlasse (VRV/VStG/VwVG) + Staatsverträge setzen die Erlassformel in
+  // KLASSENLOSE <p> — ohne Heuristik ginge der ganze Ingress still verloren (§2/§8).
+  it('klassenlose Präambel: Rolle heuristisch (autor/ingress/verb), kein Inhalt verloren', () => {
+    const KLASSENLOS = `<div id="preface"><p class="srnummer">741.11</p><h1 class="erlasstitel">Verkehrsregelnverordnung</h1></div><div id="preamble"><div><p>Der Schweizerische Bundesrat,</p><p>gestützt auf die Artikel 2 und 103 des Strassenverkehrsgesetzes,</p><p>verordnet:</p><div class="footnotes"><p id="fn-x2">2 SR 741.01</p></div></div></div>`;
+    const k = extrahiereKopf(KLASSENLOS)!;
+    expect(k.praeambel!.map((z) => [z.rolle, z.text])).toEqual([
+      ['autor', 'Der Schweizerische Bundesrat,'],
+      ['ingress', 'gestützt auf die Artikel 2 und 103 des Strassenverkehrsgesetzes,'],
+      ['verb', 'verordnet:'],
+    ]);
+    // Der Fussnoten-<p> («2 SR 741.01») ist über den koerper-Cut ausgeschlossen.
+    expect(k.praeambel!.some((z) => z.text.includes('SR 741.01'))).toBe(false);
+  });
+
+  it('Staatsvertrag (klassenlos): erste Zeile autor, Erwägungen praeambel', () => {
+    const TREATY = `<div id="preface"><p class="srnummer">0.103.2</p><h1 class="erlasstitel">Pakt</h1></div><div id="preamble"><p>Die Vertragsstaaten dieses Paktes,</p><p>in der Erwägung, dass nach den Grundsätzen der Charta,</p><p>vereinbaren folgende Artikel:</p><div class="footnotes"><p id="fn-x">AS 1993 747</p></div></div>`;
+    const k = extrahiereKopf(TREATY)!;
+    const rollen = k.praeambel!.map((z) => z.rolle);
+    expect(rollen[0]).toBe('autor');
+    expect(rollen[1]).toBe('praeambel'); // «in der Erwägung …» ist KEIN CH-Ingress
+    expect(rollen[2]).toBe('verb');      // «vereinbaren … Artikel:»
+  });
 });
 
 describe('G15 · fnDefinitionen — Hervorhebungen (fett/kursiv) erhalten', () => {

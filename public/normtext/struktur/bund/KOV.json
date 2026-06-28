@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "281.32",
   "titel": "Verordnung über die Geschäftsführung der Konkursämter",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Schweizerische Bundesgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung von Artikel 15 des Schuldbetreibungs- und Konkursgesetzes (SchKG) ,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

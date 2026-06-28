@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "232.16",
   "titel": "Bundesgesetz über den Schutz von Pflanzenzüchtungen",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 64 und 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 15. Mai 1974,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "170.512",
   "titel": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 173 Absatz 2 der Bundesverfassung (BV), nach Einsicht in die Botschaft des Bundesrates vom 22. Oktober 2003,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

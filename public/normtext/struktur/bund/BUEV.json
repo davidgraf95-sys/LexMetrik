@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "141.01",
   "titel": "Verordnung über das Schweizer Bürgerrecht",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bürgerrechtsgesetz vom 20. Juni 2014 (BüG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",

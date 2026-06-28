@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "221.214.1",
   "titel": "Bundesgesetz über den Konsumkredit",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 97 und 122 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 14. Dezember 1998,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

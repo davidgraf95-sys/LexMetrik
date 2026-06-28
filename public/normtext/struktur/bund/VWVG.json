@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "172.021",
   "titel": "Bundesgesetz über das Verwaltungsverfahren",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 103 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 24. September 1965,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

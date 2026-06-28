@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "221.301",
   "titel": "Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 122 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 13. Juni 2000,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "1",

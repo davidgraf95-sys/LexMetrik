@@ -289,9 +289,12 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, fussnotenAuf }
   const titelFont = s.randtitel ? 'font-serif font-semibold text-ink-800' : 'font-display font-semibold text-ink-900';
   // G11: section-heading-Fussnoten-Marker. FnRef ist selbst ein <button> und darf
   // NICHT im Toggle-<button> liegen (verschachtelte Buttons) → der Marker sitzt als
-  // Geschwister NEBEN dem Toggle in derselben Titelzeile. Nur bei eingeschaltetem
-  // Fussnoten-Schalter (dann existiert auch das Popover-Ziel im offenen Trägerartikel).
-  const sekFn = fussnotenAuf && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
+  // Geschwister NEBEN dem Toggle in derselben Titelzeile. Nur zeigen, wenn der
+  // Fussnoten-Schalter AN ist UND die Sektion OFFEN ist: das Popover-Ziel
+  // (#fn-<artikel>-<nr>) lebt im {auf && …}-Block des Trägerartikels und ist bei
+  // eingeklappter Sektion ungemountet → sonst toter Bedienpfad (§13 F4, analog zum
+  // artOffen-Gate der Artikel-Marker).
+  const sekFn = offen && fussnotenAuf && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
   return (
     <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
       {pre && (

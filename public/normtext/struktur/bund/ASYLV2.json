@@ -3,6 +3,20 @@
  "kopf": {
   "srNummer": "142.312",
   "titel": "Asylverordnung 2 über Finanzierungsfragen",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 119 des Asylgesetzes vom 26. Juni 1998 (AsylG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
   "fussnoten": [
    {
     "nr": "",
