@@ -209,3 +209,89 @@ export function berechneStreitwert(input: StreitwertInput): StreitwertErgebnis {
     kostenBasisCHF: kosten,
   };
 }
+
+// ─── Grenzwert-Abgleich (ROADMAP Schritt 3 #2) ──────────────────────────────
+//
+// Ordnet den massgeblichen VERFAHRENS-Streitwert den ZWEI streng getrennten
+// Regimes zu (Funktions-Katalog-Auflage «ZPO-Streitwert ≠ BGG-Schwelle»):
+//   • ZPO-Verfahrensart — Art. 243 Abs. 1 ZPO: vereinfacht bis CHF 30 000.
+//   • BGG-Beschwerde in Zivilsachen — Art. 74 Abs. 1 BGG: CHF 15 000
+//     (arbeits-/mietrechtlich, lit. a) bzw. CHF 30 000 (übrige, lit. b).
+// Beide Schwellen am gepinnten Fedlex-Snapshot verifiziert (28.6.2026). Rein
+// deterministisch; nicht-rechenbare Tore (Art. 243 II, Art. 74 II, kantonale
+// sachliche Zuständigkeit, BGG-Streitwert nach Art. 51–53) als «selbst prüfen»
+// geflaggt (§8). Schwellen sind datierte Parameter → Verfallsregister-Kandidat.
+
+export const ZPO_VEREINFACHT_GRENZE_CHF = 30_000; // Art. 243 Abs. 1 ZPO
+export const BGG_STREITWERT_UEBRIGE_CHF = 30_000; // Art. 74 Abs. 1 lit. b BGG
+export const BGG_STREITWERT_MIETE_ARBEIT_CHF = 15_000; // Art. 74 Abs. 1 lit. a BGG
+
+/** Für die BGG-Schwelle relevante Gebiets-Gabelung (Art. 74 Abs. 1 lit. a/b). */
+export type StreitwertGebiet = 'miete_arbeit' | 'uebrige';
+
+export type Grenzwert = {
+  regime: 'zpo-verfahrensart' | 'bgg-beschwerde-zivil';
+  titel: string;
+  schwelleCHF: number;
+  /** true = Schwelle im günstigen Sinn erreicht; null = nicht bezifferbar (Ermessen). */
+  erfuellt: boolean | null;
+  aussage: string;
+  norm: Normverweis;
+  /** Nicht-rechenbare Tore — ehrlich als selbst zu prüfen ausgewiesen (§8). */
+  selbstPruefen: string[];
+};
+
+/**
+ * Grenzwert-Abgleich für den Verfahrens-Streitwert. `gebiet` betrifft NUR die
+ * BGG-Schwelle (Art. 74 I lit. a/b); die ZPO-Verfahrensgrenze (Art. 243 I) ist
+ * gebietsunabhängig 30 000. `null` (Ermessen) ⇒ keine Schwellen-Aussage.
+ */
+export function streitwertGrenzwerte(
+  streitwertVerfahrenCHF: number | null,
+  gebiet: StreitwertGebiet,
+): Grenzwert[] {
+  const ermessen = streitwertVerfahrenCHF === null;
+  const sw = streitwertVerfahrenCHF;
+
+  const zpoErfuellt = ermessen ? null : sw! <= ZPO_VEREINFACHT_GRENZE_CHF;
+  const zpo: Grenzwert = {
+    regime: 'zpo-verfahrensart',
+    titel: 'Verfahrensart (ZPO)',
+    schwelleCHF: ZPO_VEREINFACHT_GRENZE_CHF,
+    erfuellt: zpoErfuellt,
+    aussage: ermessen
+      ? 'Streitwert nicht bezifferbar – die Verfahrensart bestimmt das Gericht (Art. 91 Abs. 2 ZPO).'
+      : zpoErfuellt
+        ? `Streitwert bis ${chf(ZPO_VEREINFACHT_GRENZE_CHF)} → vereinfachtes Verfahren (Art. 243 Abs. 1 ZPO).`
+        : `Streitwert über ${chf(ZPO_VEREINFACHT_GRENZE_CHF)} → ordentliches Verfahren.`,
+    norm: N('Art. 243 ZPO', 'Vereinfachtes Verfahren bis CHF 30 000'),
+    selbstPruefen: [
+      'Art. 243 Abs. 2 ZPO: bestimmte Streitigkeiten (Gleichstellung, Gewaltschutz Art. 28b ZGB, mietrechtlicher Kündigungs-/Missbrauchsschutz u. a.) gelten OHNE Rücksicht auf den Streitwert als vereinfacht.',
+      'Die sachliche Zuständigkeit (Einzelgericht/Kollegium, Handelsgericht) richtet sich nach kantonalem Recht – nicht bundesrechtlich vorgegeben.',
+    ],
+  };
+
+  const bggSchwelle = gebiet === 'miete_arbeit' ? BGG_STREITWERT_MIETE_ARBEIT_CHF : BGG_STREITWERT_UEBRIGE_CHF;
+  const bggLit = gebiet === 'miete_arbeit' ? 'lit. a' : 'lit. b';
+  const bggErfuellt = ermessen ? null : sw! >= bggSchwelle;
+  const bgg: Grenzwert = {
+    regime: 'bgg-beschwerde-zivil',
+    titel: 'Beschwerde in Zivilsachen (BGG)',
+    schwelleCHF: bggSchwelle,
+    erfuellt: bggErfuellt,
+    aussage: ermessen
+      ? 'Streitwert nicht bezifferbar – die Streitwertgrenze fürs Bundesgericht im Einzelfall bestimmen.'
+      : bggErfuellt
+        ? `Streitwert ${chf(sw!)} ≥ ${chf(bggSchwelle)} → Streitwertgrenze erreicht (Art. 74 Abs. 1 ${bggLit} BGG).`
+        : `Streitwert ${chf(sw!)} unter ${chf(bggSchwelle)} → Streitwertgrenze NICHT erreicht (Art. 74 Abs. 1 ${bggLit} BGG).`,
+    norm: N('Art. 74 BGG', 'Streitwertgrenze Beschwerde in Zivilsachen'),
+    selbstPruefen: [
+      'Der fürs Bundesgericht massgebliche Streitwert bestimmt sich EIGENSTÄNDIG nach Art. 51–53 BGG und kann vom ZPO-Streitwert abweichen.',
+      ...(bggErfuellt === false
+        ? ['Trotz Unterschreitens ist die Beschwerde zulässig bei einer Rechtsfrage von grundsätzlicher Bedeutung (Art. 74 Abs. 2 lit. a BGG) u. a.; sonst bleibt die subsidiäre Verfassungsbeschwerde (Art. 113 ff. BGG).']
+        : []),
+    ],
+  };
+
+  return [zpo, bgg];
+}

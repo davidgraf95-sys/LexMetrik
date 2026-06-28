@@ -10,7 +10,7 @@ import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, type PermalinkSpec } from '../../lib/permalink';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
-import { berechneStreitwert, type Begehren, type BegehrenTyp, type WiederkehrDauer, type StreitwertErgebnis } from '../../lib/streitwert';
+import { berechneStreitwert, streitwertGrenzwerte, type Begehren, type BegehrenTyp, type WiederkehrDauer, type StreitwertErgebnis, type StreitwertGebiet } from '../../lib/streitwert';
 
 // ─── Streitwert-Form (Art. 91–94a ZPO) — Quick-Win B.9 ──────────────────────
 // Reine Darstellung (§3): Begehren-Editor + Weichen; gerechnet wird in
@@ -83,6 +83,8 @@ export function StreitwertForm() {
   const [wkSchliesstAus, setWkSchliesstAus] = useState<boolean>((ausLink.wkSchliesstAus as boolean) ?? false);
   const [teilklage, setTeilklage] = useState<boolean>((ausLink.teilklage as boolean) ?? false);
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // Gebiets-Gabelung NUR für die BGG-Streitwertgrenze (Art. 74 I lit. a/b).
+  const [gebiet, setGebiet] = useState<StreitwertGebiet>('uebrige');
 
   const setFeld = (i: number, patch: Partial<BegehrenRoh>) =>
     setBegehren((alt) => alt.map((b, j) => (j === i ? { ...b, ...patch } : b)));
@@ -240,6 +242,40 @@ export function StreitwertForm() {
       {ergebnis && (
         <ErgebnisBlock>
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />
+
+          {/* Grenzwert-Abgleich (#2): ZPO-Verfahrensart ≠ BGG-Beschwerde-Schwelle,
+              strikt getrennt. Die Gebiets-Gabelung betrifft NUR die BGG-Grenze. */}
+          <section className="space-y-3 border-t border-line pt-4">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <p className="lc-overline">Grenzwert-Abgleich</p>
+              <div className="flex items-center gap-2 text-xs">
+                <span className="text-ink-500">Gebiet (für BGG):</span>
+                {([['uebrige', 'übrige'], ['miete_arbeit', 'Miete/Arbeit']] as const).map(([code, label]) => (
+                  <button
+                    key={code}
+                    type="button"
+                    aria-pressed={gebiet === code}
+                    onClick={() => setGebiet(code)}
+                    className={`rounded-sm border px-2 py-0.5 transition-colors ${gebiet === code ? 'border-brass-500 bg-brass-100/60 text-ink-900' : 'border-line text-ink-600 hover:bg-brass-100/30'}`}
+                  >{label}</button>
+                ))}
+              </div>
+            </div>
+            {streitwertGrenzwerte(ergebnis.streitwertVerfahrenCHF, gebiet).map((g) => (
+              <div key={g.regime} className="lc-tile space-y-1">
+                <p className="text-body-s font-medium text-ink-900">{g.titel}</p>
+                <p className="text-body-s text-ink-700 leading-relaxed">{g.aussage}</p>
+                {g.selbstPruefen.length > 0 && (
+                  <ul className="mt-1 space-y-0.5 text-xs text-ink-500 leading-relaxed">
+                    {g.selbstPruefen.map((s, i) => (
+                      <li key={i}>· selbst prüfen: {s}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+
           <BegruendungSlot ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">

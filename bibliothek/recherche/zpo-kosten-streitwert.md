@@ -535,3 +535,25 @@ speisen; dann die kleinen Weichen-Rechner (5, 6); zuletzt der daten- und
 verifikationsintensive kantonale Kostenblock (2) mit dem davon abhängigen
 Vorschussrechner (4). So entsteht in jeder Stufe ein abgeschlossener, testbarer
 Mehrwert, ohne auf offene Verifikationen zu warten (§6/§8).
+
+---
+
+## Nachtrag 28.6.2026 — Grenzwert-Abgleich (ROADMAP Schritt 3 #2)
+
+`streitwertGrenzwerte(streitwertVerfahrenCHF, gebiet)` in `src/lib/streitwert.ts`.
+Zwei **streng getrennte** Regimes (Funktions-Katalog-Auflage «ZPO ≠ BGG»):
+
+| Regime | Schwelle | Norm | am Snapshot verifiziert 28.6.2026 |
+|---|---|---|---|
+| ZPO-Verfahrensart (vereinfacht ≤) | CHF 30 000 | Art. 243 Abs. 1 ZPO | `public/normtext/bund/ZPO.json` |
+| BGG-Beschwerde Zivilsachen (≥) — übrige | CHF 30 000 | Art. 74 Abs. 1 lit. b BGG | `public/normtext/bund/BGG.json` |
+| BGG-Beschwerde Zivilsachen (≥) — Miete/Arbeit | CHF 15 000 | Art. 74 Abs. 1 lit. a BGG | dito |
+
+**Nicht-rechenbar → «selbst prüfen» (§8):** Art. 243 Abs. 2 ZPO (streitwert-unabhängige
+Sondergebiete), kantonale sachliche Zuständigkeit (Einzel-/Kollegialgericht/HG), Art. 74 Abs. 2
+BGG (Rechtsfrage grundsätzlicher Bedeutung u. a.) + subsidiäre Verfassungsbeschwerde Art. 113 BGG,
+und dass der BGG-Streitwert EIGENSTÄNDIG nach Art. 51–53 BGG bestimmt wird (≠ ZPO-Streitwert).
+
+**Pflegebedarf:** Schwellen 30 000 / 15 000 sind datierte Parameter (Konstanten
+`ZPO_VEREINFACHT_GRENZE_CHF` / `BGG_STREITWERT_*` in `streitwert.ts`) → bei ZPO-/BGG-Revision prüfen.
+**Abnahme-Status:** Erstrecherche, zweifach gegen Snapshot geprüft; Davids Abnahme offen.

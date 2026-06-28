@@ -131,7 +131,11 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 - [ ] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* — die
   «guten Rechner» als erste Klingen, alle §2/amtlich:
   - **Fristen-Cockpit** (Vorwärts/Rückwärts/Stillstand) über `fristenspiegel/` + `icsExport`.
-  - **Streitwert + Grenzwert-Abgleich** (`streitwert.ts`; Regime-Trennung ZPO≠BGG strikt).
+  - **Streitwert + Grenzwert-Abgleich** ✅ 28.6.2026 (gegated, nicht deployt): `streitwertGrenzwerte()`
+    in `streitwert.ts` ordnet den Verfahrens-Streitwert STRIKT getrennt der ZPO-Verfahrensart
+    (Art. 243 I, 30k) und der BGG-Beschwerde-Schwelle (Art. 74 I, 30k/15k Miete-Arbeit) zu; nicht-
+    rechenbare Tore (243 II / 74 II / kant. Zuständigkeit / Art. 51–53 BGG) als «selbst prüfen» (§8).
+    Schwellen am Snapshot verifiziert (§7). In `StreitwertForm` mit Gebiets-Toggle; Test + visuell.
   - **Zuständigkeits-/Verfahrensnavigator** (`zustaendigkeit/straf/schkg`; Adress-Ausbau in 6).
   - **Rechtsmittel-/Eintretensprüfung** (neue dünne `rechtsmittel.ts`, delegiert an
     `bgerRechtsweg.ts`; nicht-rechenbare Tore als «selbst prüfen» flaggen).
