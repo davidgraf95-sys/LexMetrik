@@ -29,11 +29,10 @@ describe('einstiegMatrix — Konsistenz', () => {
     expect(tatsaechlich).toEqual(erwartet);
   });
 
-  it('anzahl je Gebiet = Summe der Zellen-Karten', () => {
+  it('anzahl je Gebiet = Summe der gelisteten Zellen-Karten (Badge ≙ Liste, §8)', () => {
     for (const g of matrix) {
       const summe = g.zellen.reduce((n, z) => n + z.karten.length, 0);
-      // anzahl zählt ALLE Karten des Gebiets; Zellen nur jene mit Aufgabe.
-      expect(summe, g.gebiet).toBeLessThanOrEqual(g.anzahl);
+      expect(summe, g.gebiet).toBe(g.anzahl);
       expect(summe, g.gebiet).toBeGreaterThan(0);
     }
   });

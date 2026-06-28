@@ -48,13 +48,12 @@ export function einstiegMatrix(): EinstiegGebiet[] {
       const karten = imGebiet.filter((k) => kategorieFuer(k) === kat.id);
       if (karten.length > 0) zellen.push({ kategorie: kat.id, titel: KAT_TITEL[kat.id], karten });
     }
-    out.push({
-      gebiet: sektion.name,
-      id: sektion.id,
-      lede: sektion.lede,
-      anzahl: imGebiet.length,
-      zellen,
-    });
+    // `anzahl` = tatsächlich gelistete (= summe der Zellen), NICHT imGebiet.length:
+    // eine verfügbare Karte ohne Aufgabe (kategorieFuer===null) würde das Badge
+    // sonst höher zeigen als die Liste enthält (stille Scheinpräzision, §8).
+    const anzahl = zellen.reduce((n, z) => n + z.karten.length, 0);
+    if (anzahl === 0) continue; // alle Karten des Gebiets ohne Aufgabe → nichts zu zeigen
+    out.push({ gebiet: sektion.name, id: sektion.id, lede: sektion.lede, anzahl, zellen });
   }
   return out;
 }

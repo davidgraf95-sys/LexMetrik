@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { einstiegMatrix } from '../lib/einstieg';
 
@@ -9,7 +10,8 @@ import { einstiegMatrix } from '../lib/einstieg';
 // scannbar bleibt (DESIGN-REGLEMENT: nüchtern, Dichte als bewusster Hebel).
 
 export function ZweiachsigerEinstieg() {
-  const matrix = einstiegMatrix();
+  // ALLE_KARTEN ist modul-statisch → einmal projizieren statt pro Render.
+  const matrix = useMemo(() => einstiegMatrix(), []);
   return (
     <section className="space-y-3">
       <div className="space-y-1">

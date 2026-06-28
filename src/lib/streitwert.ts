@@ -260,7 +260,7 @@ export function streitwertGrenzwerte(
     schwelleCHF: ZPO_VEREINFACHT_GRENZE_CHF,
     erfuellt: zpoErfuellt,
     aussage: ermessen
-      ? 'Streitwert nicht bezifferbar – die Verfahrensart bestimmt das Gericht (Art. 91 Abs. 2 ZPO).'
+      ? 'Streitwert nicht bezifferbar – das Gericht setzt ihn fest (Art. 91 Abs. 2 ZPO); danach steht die Verfahrensart fest.'
       : zpoErfuellt
         ? `Streitwert bis ${chf(ZPO_VEREINFACHT_GRENZE_CHF)} → vereinfachtes Verfahren (Art. 243 Abs. 1 ZPO).`
         : `Streitwert über ${chf(ZPO_VEREINFACHT_GRENZE_CHF)} → ordentliches Verfahren.`,
