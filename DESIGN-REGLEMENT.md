@@ -11,6 +11,7 @@ Reglementen. Die hängen darunter und konkretisieren es für ihren Bereich:
 - `DESIGN-REGLEMENT-RECHNER.md` — Aufbau jeder Rechner-/Engine-UI
 - `DESIGN-REGLEMENT-RECHTSPRECHUNG.md` — Schriftbild der Entscheid-Anzeige
 - `DESIGN-REGLEMENT-VORLAGEN.md` — Schriftbild der Dokument-Outputs
+- `DESIGN-REGLEMENT-NORMTEXT.md` — Gesetzesdarstellung (≥ Fedlex-Fundiertheit)
 
 Bei Konflikt gewinnt das speziellere Reglement *innerhalb seiner Domäne*; alles
 andere folgt diesem Dach. Neue Domänen-Reglemente verweisen zurück hierher.
