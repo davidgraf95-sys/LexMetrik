@@ -23,7 +23,19 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 28.6.2026 — ROADMAP Schritt 2 «Norm↔Werkzeug-Brücke» (Index-Teil, gegated, NICHT deployt)
+## Session 28.6.2026 — §9-DEPLOY des Batches (S0 + Welle 1·1 + Schritt 2) → PROD live
+
+David-Ja «deploy». Volles deploy-check-Ritual: Tore grün (tsc·vitest·golden·lint·check ·
+build 57 Routen · **e2e 86 passed**); **Bug-Check** = 2 unabhängige Opus-Agents über das Delta
+`359d52b2..HEAD` (Code-Lupe + 219 empirische vite-node-Repros) → **keine HOCH/MITTEL-Befunde**,
+3 NIEDRIG (2 kommentar-only gefixt: §13-Dash-Rest + VORLAUF-Spiegelung markiert; 1 theoretisch
+belassen). Push `→origin/main` + Worktree-Deploy aus sauberem HEAD.
+**DEPLOYT: `dpl_AdTukcPUe22svYRfe73pRkStWTKR` (READY), commit `b7273ae0`, lexmetrik.vercel.app.**
+Nachkontrolle: 9 Kernrouten HTTP 200 (inkl. neuer `/gesetze`-Hinweis + `/methodik`-Verfallsfläche);
+Asset-Hash live=lokal (`index-BNn6dsfH.js`); `/methodik` trägt live den S0-Abschnitt. Worktree
+entfernt.
+
+## Session 28.6.2026 — ROADMAP Schritt 2 «Norm↔Werkzeug-Brücke» (Index-Teil, gegated → mit Batch deployt b7273ae0)
 
 Nach Welle 1·1 den nächsten ROADMAP-Schritt genommen. Befund (Explore-Agent): die Brücke
 **existierte schon** — `kontext.ts`/`werkzeugeFuerEntscheid` löst Norm→Werkzeug auf, `KontextPanel`
@@ -40,7 +52,7 @@ zeigt sie in allen 3 Readern. Gebaut wurde die **Härtung + Sichtbarkeit**:
 - **Der zweiachsige Startseiten-Einstieg (Rechtsgebiet × Aufgabe) gehört zu Schritt 5** (Welle 2),
   nutzt denselben Index — bewusst NICHT hier. `npm run gate` grün. Kein Deploy.
 
-## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz: **alle [OF]-Teile (Phasen 0–5) gebaut + gegated, NICHT deployt**
+## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz: **alle [OF]-Teile (Phasen 0–5) gebaut + gegated → mit Batch deployt `b7273ae0`**
 
 Nach S0 den nächsten ROADMAP-Schritt (Welle 1·1) bis an die David-Entscheid-Grenze abgearbeitet
 (autonom, Bug-Check je Schritt, ein Pathspec-Commit je Phase, kein Deploy). Reihenfolge nach
@@ -72,7 +84,7 @@ B4-2 (#1), B4-1 (Zuständigkeits-Teil-Slots — prosa-Tauglichkeit prüfen), B5-
 erst mit Rollout), B0-2-Rest `allg/zust/rm` (UI-gewickelt). 4 David-Entscheide mit
 konservativem Default-und-Flag im FAHRPLAN dokumentiert. `npm run gate` durchgehend grün.
 
-## Session 28.6.2026 — ROADMAP S0 «Verfallsregister sichtbar» (gebaut + gegated, NICHT deployt)
+## Session 28.6.2026 — ROADMAP S0 «Verfallsregister sichtbar» (gebaut + gegated → mit Batch deployt `b7273ae0`)
 
 Obersten offenen ROADMAP-Schritt genommen: **S0** (fristgetrieben, FRIST 30.6.). Mechanische
 Erfassung lief bereits (`check:verfall` fängt den am 30.6. ablaufenden SG-GKV-Tarif + GR-HV/BE-EAV
