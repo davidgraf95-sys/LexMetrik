@@ -22,6 +22,24 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 28.6.2026 — Bugfix Startseiten-News-Ticker (BGE-Doppel); Homebase/Webseiten-Handlungsplan in Arbeit
+
+Auftrag David: Startseite zur «Homebase / Schweizer Taschenmesser für Juristen»
+überarbeiten — **Überblickstool** (gute Rechner + Materialien + Gesetze/Recht-
+sprechung-Übersicht), modular; **kein** Termin-/Fristenplaner. Erweitert auf einen
+Handlungsplan für die **gesamte Webseite** (in Arbeit, noch NICHT als FAHRPLAN
+abgelegt). Vorarbeit: zwei ultracode-Recherche-Workflows (modulare Architektur +
+Funktions-/Überblicks-Katalog, read-only).
+
+Im Zuge der Recherche **ein echter bestehender Bug** gefunden, verifiziert, gefixt
+und deployt: **`NewsHeader.tsx`** zog die neuesten BGer-Entscheide ohne
+`!e.verweis`-Filter — Volltext-Verweis-Stubs (Redirect auf `zielKey`, z. B.
+`bge_152_V_52__voll`) erschienen als eigene Karten und **doppelten** echte BGE im
+Ticker. Hauptansicht (`Rechtsprechung.tsx`) filtert sie durchgängig `!e.verweis`;
+der Ticker zieht jetzt gleich. §3-reine Anzeige-Korrektur, `npm run gate` grün
+(golden byte-gleich). Weitere Recherche-Befunde (Verjährungs-/Referenzwert-Board,
+hartkodierte Zahlen/`TOP_ERLASSE`) betreffen noch nicht gebaute Funktionen → separat.
+
 ## Session 28.6.2026 — Aufräumung + Roadmap-Konsolidierung + §9-Deploy (auf `main` `a58ee276`, DEPLOYT `dpl_AXWbUpKqycDEZWXKNpa1e3aqcx75`, prod verifiziert lexmetrik.vercel.app)
 
 Auftrag David: «räum auf · tiefer · setze alle Befunde um · mach den Weiterbau

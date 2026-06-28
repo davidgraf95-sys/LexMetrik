@@ -43,7 +43,11 @@ export function NewsHeader() {
       .then(async (m) => {
         const manifest = await m.ladeEntscheidManifest();
         if (!lebt) return;
-        const bund = (manifest?.entscheide ?? []).filter((e) => e.gerichtstyp === 'bundesgericht');
+        // `!e.verweis`: Volltext-Verweise sind Redirect-Stubs auf einen echten
+        // Eintrag (EntscheidLeser leitet auf `zielKey` um) — die Hauptansicht
+        // (Rechtsprechung.tsx) zählt/listet sie durchgängig als `!e.verweis`.
+        // Ohne diesen Filter doppelte der Ticker dieselbe BGE als eigene Karte.
+        const bund = (manifest?.entscheide ?? []).filter((e) => e.gerichtstyp === 'bundesgericht' && !e.verweis);
         setNews(m.nachDatum(bund).slice(0, MAX)); // neueste zuerst
       })
       .catch(() => { if (lebt) setNews([]); });
