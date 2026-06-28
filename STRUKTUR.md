@@ -23,6 +23,22 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — ROADMAP Schritt 3 abgearbeitet (#2 neu gebaut, #3/#4 bestanden, #1 zurückgestellt; NICHT deployt)
+
+Nach dem Deploy Schritt 3 «Alltags-Rechner als Cockpits» durchgegangen. Befund: der Grossteil war
+in diesem reifen Repo **schon gebaut** — sauber statt Make-Work:
+- **#2 Streitwert + Grenzwert-Abgleich — NEU gebaut** (`streitwertGrenzwerte()` in `streitwert.ts`):
+  ordnet den Verfahrens-Streitwert STRIKT getrennt der ZPO-Verfahrensart (Art. 243 I, 30k) und der
+  BGG-Beschwerde-Schwelle (Art. 74 I, 30k/15k Miete-Arbeit) zu; nicht-rechenbare Tore als «selbst
+  prüfen» (§8); Schwellen am Snapshot verifiziert (§7); `StreitwertForm` mit Gebiets-Toggle; 9 Tests
+  + §11-Dossier-Nachtrag; golden byte-gleich; visuell bestätigt.
+- **#3 Zuständigkeitsnavigator** — bestand vollständig (Zivil/SchKG/Straf, 6 Test-Dateien) → nichts gebaut.
+- **#4 Rechtsmittel-/Eintretensprüfung** — Logik bestand (`bestimmeRechtsmittel` + `berechneBgerRechtsweg`,
+  im Navigator integriert); separate `rechtsmittel.ts` wäre §5-Duplikat → **bewusst nicht gebaut**.
+- **#1 Fristen-Cockpit** — **zurückgestellt:** kollidiert mit S-5c (10.6.: eigenständiger Fristenspiegel
+  bewusst aufgelöst). David will den Einstieg nicht wiederbeleben.
+`npm run gate` grün. Kein Deploy (sammelt fürs nächste Fenster).
+
 ## Session 28.6.2026 — §9-DEPLOY des Batches (S0 + Welle 1·1 + Schritt 2) → PROD live
 
 David-Ja «deploy». Volles deploy-check-Ritual: Tore grün (tsc·vitest·golden·lint·check ·

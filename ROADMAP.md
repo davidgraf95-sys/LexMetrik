@@ -128,18 +128,26 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   schon; **neu** dezenter «N passende Werkzeuge»-Hinweis auf der Erlass-Karte (`/gesetze`, Task
   4.3). SSoT = Katalog (§5). **Der zweiachsige Startseiten-Einstieg (Rechtsgebiet × Aufgabe) ist
   Schritt 5** (Welle 2) und nutzt denselben Index — kein zweiter Pfad.
-- [ ] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* — die
-  «guten Rechner» als erste Klingen, alle §2/amtlich:
+- [x] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* —
+  **abgearbeitet 28.6.2026:** #2 neu gebaut (Grenzwert-Abgleich); #3 + #4 bestanden bereits
+  (kein §5-Duplikat gebaut); #1 zurückgestellt (S-5c-Konflikt, Davids Entscheid offen):
   - **Fristen-Cockpit** (Vorwärts/Rückwärts/Stillstand) über `fristenspiegel/` + `icsExport`.
+    ⚠️ **Zurückgestellt:** kollidiert mit S-5c (10.6.: eigenständiger Fristenspiegel bewusst
+    aufgelöst, Ereignisse in Fach-Rechnern). David möchte den eigenständigen Einstieg NICHT
+    wieder einführen → nicht gebaut.
   - **Streitwert + Grenzwert-Abgleich** ✅ 28.6.2026 (gegated, nicht deployt): `streitwertGrenzwerte()`
     in `streitwert.ts` ordnet den Verfahrens-Streitwert STRIKT getrennt der ZPO-Verfahrensart
     (Art. 243 I, 30k) und der BGG-Beschwerde-Schwelle (Art. 74 I, 30k/15k Miete-Arbeit) zu; nicht-
     rechenbare Tore (243 II / 74 II / kant. Zuständigkeit / Art. 51–53 BGG) als «selbst prüfen» (§8).
     Schwellen am Snapshot verifiziert (§7). In `StreitwertForm` mit Gebiets-Toggle; Test + visuell.
-  - **Zuständigkeits-/Verfahrensnavigator** (`zustaendigkeit/straf/schkg`; Adress-Ausbau in 6).
-  - **Rechtsmittel-/Eintretensprüfung** (neue dünne `rechtsmittel.ts`, delegiert an
-    `bgerRechtsweg.ts`; nicht-rechenbare Tore als «selbst prüfen» flaggen).
-  *Nächster Schritt:* Fristen-Cockpit (Reader-Schicht, 3 Modi) — höchster Alltags-Hebel.
+  - **Zuständigkeits-/Verfahrensnavigator** (`zustaendigkeit/straf/schkg`) — ✅ bestand bereits
+    vollständig: Rechtsweg-Switcher Zivil/SchKG/Straf, je Weg voller Flow + Hero + Permalink + PDF,
+    6 Test-Dateien (inkl. `*Bericht`-Adapter), e2e. Verwaltung bewusst `aktiv:false` (nicht im Scope,
+    bräuchte Verifikation). Adress-Ausbau = Schritt 6.
+  - **Rechtsmittel-/Eintretensprüfung** — ✅ Logik bestand bereits: kantonal `bestimmeRechtsmittel()`
+    (Berufung/Beschwerde, Fristen, Art. 314 Familienrecht, Stillstand) + BGG `berechneBgerRechtsweg()`,
+    integriert in der Rechtsmittel-Gabelung des Navigators. Eine separate `rechtsmittel.ts` wäre
+    §5-Duplikat → bewusst NICHT gebaut.
 - [ ] **4 · Prozesskosten-Cockpit Restbau** *(PROZESSKOSTEN-COCKPIT, Hauptmoat, 26×)*. Risiko-Modus
   fertigstellen; Festsetzung/Dispositiv → Welle 2.
   *Nächster Schritt:* I4 `kriterien`-Feld + I9-Rest **[OF]**; **I2 ⟵ Recherche `wbqdyap3x`**
