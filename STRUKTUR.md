@@ -20,16 +20,25 @@ wird in jeder Session und jedem Subagenten gelesen — Karten abgeschlossener
 Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 `archiv/STRUKTUR-SESSIONKARTEN.md` (neue Blöcke oben anhängen); hier bleibt
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
-`HANDLUNGSPLAN.md`).
+`ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
+in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 28.6.2026 — Bugfix Startseiten-News-Ticker (BGE-Doppel); Homebase/Webseiten-Handlungsplan in Arbeit
+## Session 28.6.2026 — Konsolidierter Webseiten-Handlungsplan (`ROADMAP.md`) + Bugfix Startseiten-News-Ticker (BGE-Doppel)
 
-Auftrag David: Startseite zur «Homebase / Schweizer Taschenmesser für Juristen»
-überarbeiten — **Überblickstool** (gute Rechner + Materialien + Gesetze/Recht-
-sprechung-Übersicht), modular; **kein** Termin-/Fristenplaner. Erweitert auf einen
-Handlungsplan für die **gesamte Webseite** (in Arbeit, noch NICHT als FAHRPLAN
-abgelegt). Vorarbeit: zwei ultracode-Recherche-Workflows (modulare Architektur +
-Funktions-/Überblicks-Katalog, read-only).
+Auftrag David: LexMetrik als **«Schweizer Taschenmesser für Juristen»** — Webseite
+und **Anlaufpunkt für ALLE Juristen** (Kanzlei/Gericht/Inhouse/Studierende), um
+Gesetze/Rechtsprechung zu konsultieren + deterministische Werkzeuge; **nur amtliche,
+urheberrechtlich freie Quellen** (Art. 5 URG, keine Kommentare); Dossier/Mandat
+GEPARKT; Werkzeuge strikt zustandslos. **Ergebnis: `ROADMAP.md` ist jetzt DER eine
+Handlungsplan** — konsolidiert alle 26 `FAHRPLAN-*.md` + Strategie-Doks; das frühere
+`HANDLUNGSPLAN.md` ist eingefaltet und nach `archiv/` verschoben (Verweis in dieser
+Datei umgebogen). Aufbau: Ausführungs-Protokoll · Produktvision (4 Klingen
+Konsultieren/Rechnen/Verzahnen/Finden) · Leitprinzipien (amtliche Quellen zuoberst) ·
+nummerierte, abhakbare Bau-Reihenfolge S0+Wellen 1–13 (autonom durch künftige Sessions
+abarbeitbar) · Funktions-Katalog mit Aufbau+§-Auflagen (18 Werkzeuge) · Geparkt/Abnahme-
+Warteschlange · Pflege & Termine. Vorarbeit: mehrere ultracode-Workflows (modulare
+Architektur · Überblicks-/Funktions-Ideation · Plan-Straffen · Personas+Studierende,
+amtliche Quellen), alle read-only. Nur Doku — kein Code.
 
 Im Zuge der Recherche **ein echter bestehender Bug** gefunden, verifiziert, gefixt
 und deployt: **`NewsHeader.tsx`** zog die neuesten BGer-Entscheide ohne

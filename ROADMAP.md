@@ -1,161 +1,289 @@
-# LexMetrik — Konsolidierte Roadmap (EIN Steuerungsblick)
+# LexMetrik — Handlungsplan (DER eine Steuerungsplan)
 
-> **Stand 28.6.2026.** Konsolidiert die 26 aktiven `FAHRPLAN-*.md` zu **einem**
-> priorisierten Blick. Erstellt aus einer Klassifizierung aller Pläne (ultracode,
-> 26 Einzel-Extrakte + Strategie-Rahmen-Synthese).
->
-> **Verhältnis zu den anderen Steuerungsdokumenten:** Jeder Einzel-Fahrplan bleibt
-> die verbindliche **Detailquelle**; diese Roadmap entscheidet nur **Reihenfolge** +
-> **bau-jetzt vs. später**. `KATALOG-ROADMAP.md` = feinkörnige G1-Praxis-Abdeckungs­karte
-> (pro Rechtsfrage). `HANDLUNGSPLAN.md` = Tagesgeschäft + offene Abnahmen. `STRUKTUR.md`
-> = Ist-Zustand/Session-Karten. Diese Datei = die Klammer darüber.
-
-## Ausgangslage (28.6.2026 — „vom jetzigen Punkt aus")
-- **Doc-Aufräumung erledigt:** 5 abgeschlossene Pläne nach `archiv/`
-  (JETZT-MACHEN, HANDOFF-NACHT-MATERIALIEN, GESETZE-REVIEW, LEITENTSCHEID-BGE-VOLLTEXT,
-  GESETZE-UX-9PUNKTE); verbrauchte Memory-Trigger gelöscht; stale STAND-Blöcke korrigiert.
-- **Tiefe Code-Aufräumung erledigt** (Parallel-Ultracode-Session, `main` `e175d589`,
-  Batch A–E: toter Code, Design-Token-Härtung, Entdopplung, §6.6-Datei-Splits) —
-  **wartet auf Davids Deploy-Freigabe (§9).** Ein test-abgeschirmtes Residuum
-  (`randtitelTeile`/`randtitelEintraege`) wurde danach §6-verifiziert entfernt.
-- **Es bleiben 26 aktive Fahrpläne** — diese Roadmap priorisiert sie.
-
-## Nordstern
-Jede CH-Kanzlei nutzt LexMetrik im Alltag für die **ermessensfreie, deterministische**
-Rechtsarbeit (Fristen · Beträge/Quoten · Zuständigkeit · Form-Vorlagen) und **vertraut**
-den Ergebnissen. «Berechnung statt KI», jede Norm artikelgenau auf Fedlex verlinkt
-(PROJEKTBESCHRIEB §1, STRATEGIE §5). Burggraben = nicht der Code, sondern Datenassets
-(26-Kantone-Schichten) + Verifikations-Prozess + fachkundige Abnahme.
-
-## Schlüssel-Constraint: Abnahme-Zeitsperre bis 1.12.2026
-David hat bis **1.12.2026** (Anwaltsprüfung) **keine Fachzeit** für Detail-Abnahme;
-erste Kanzleigespräche (G1) ab Feb 2027. **Leitsatz: bis 1.12. nur Arbeit, die
-(a) keine Davids-Fachzeit braucht und (b) die spätere Abnahme-Welle billiger macht.**
-Kein `verified`/`geprüft` ohne David (§7/§8).
-
-→ **DER Sortier-Hebel dieser Roadmap:** `[OF]` ohne Fachzeit baubar zieht nach vorne;
-`[D]` braucht David → geparkt + in der Abnahme-Warteschlange aufgereiht (nicht gedrängt,
-s. `FAHRPLAN-LERNPHASE-2026.md`). Plattform-Regel: **Bau-Rate ≤ Abnahme-Rate**.
-Harte Regel: **nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen.
+> **Stand 28.6.2026.** Die **einzige Steuerungsquelle**: sie entscheidet **Reihenfolge** +
+> **bau-jetzt vs. geparkt** und ist so geordnet, dass eine **künftige Session sie autonom
+> Schritt für Schritt abarbeiten** kann. Sie faltet das frühere `HANDLUNGSPLAN.md` ein
+> (→ `archiv/`). Das *Wie* je Strang steht in der jeweiligen `FAHRPLAN-*.md` (Detailquelle),
+> der **Ist-Zustand/Deploy** in `STRUKTUR.md`, die G1-Praxis-Abdeckung in `KATALOG-ROADMAP.md`.
 
 ---
 
-## ⚡ JETZT (P0 — ohne Fachzeit, sofort baubar)
+## ▶ Ausführungs-Protokoll (für jede künftige Bau-Session)
 
-| # | Schritt | Strang | Warum jetzt | Nächster Schritt |
-|---|---------|--------|-------------|------------------|
-| 0 | **Verfallsregister mechanisch — FRIST 30.6.2026** | Fundament/Lernphase B | Terminierter Verfall in Tagen (SG GKV läuft 30.6. ab); weitere 1.11./31.12. | `check:verfall` prüfen, dass SG-GKV-Verfall erfasst + sichtbar ist; restliche datierten Verfälle aufnehmen |
-| 1 | **Status-Marker-Audit (Lernphase Strang A)** | Fundament/Lernphase | Einziger Haftungs-/Trust-Hebel solo machbar; ~130 Karten brauchen ehrlichen Status | Auditieren, ob JEDE Karte/Engine sichtbaren Status (verified/entwurf/geplant) + Stand trägt; Lücken in `startseiteConfigTypen.ts`/`startseiteKarten.ts` schliessen |
-| 2 | **Kantonale-Entscheide P0-Pilot-Reparatur** | Rechtsprechung | Live + nachweislich «sehr falsch» (SG-Regeste fehletikettiert, tote Normverweise) = sichtbare §8-Verletzung | `regesteAmtlich` korrigieren, kant. Norm-Resolver ergänzen, `152_I_105` re-fetchen |
-| 3 | **Tarif-Tabellen Klasse D (Tausendertrenner)** | Gesetze/Normtext | Klein, hoher Sichtwert, deckt SG sofort; David-Befund «praktisch unlesbar» | `gruppiereTausender` in `ArtikelBody.tsx`/TarifTabelle (Render, **nicht** Snapshot, §7) |
-| 4 | **BS-Vorbild C3: globale Kopf-Suche über Gesetze** | Gesetze/Normtext | Anwältin tippt Gesetzesnamen heute → nichts; reine Index-/Darstellungsschicht | HeaderSuche über `ladeBrowseManifest` indexieren, Deeplinks `/gesetze/<ebene>/<key>` |
-| 5 | **Fall-Rückgrat Phase 0 (`fallId.ts` + `fallSpeicher.ts`)** | Fundament | Grösster Workflow-Hebel, 0 % gebaut, komplett ohne Fachzeit (Persistenz) | `fallId.ts` (`crypto.randomUUID`) + `fallSpeicher.ts` (Typen + localStorage), Unit-Tests Roundtrip/korrupt |
-
-> **Reihung:** 0 ist fristgetrieben (30.6.), 1+2 sind Trust/Haftung (Strang A = «zuerst»),
-> 3+4 kleine Sicht-Gewinne, 5 der grösste neue Praxis-Hebel.
-> **Worktree-Pflicht (§12):** SEO/A11y, Vorlagen/Verträge und FUNDAMENT-UMBAU je eigener
-> Worktree (Datei-Kollision, s. Abhängigkeiten). Aktuell läuft zudem eine Parallel-Session
-> auf `main` → vor Code-Arbeit `git log` prüfen.
+1. **Nimm den obersten offenen Schritt** der «Geordneten Abarbeitung», dessen Abhängigkeiten
+   erfüllt sind (`[OF]` zuerst; `[D]`/blockierte überspringen).
+2. **Halte die Leitprinzipien** (Zeitsperre/`[OF]` · amtliche Quellen · nie zwei 26×-Assets
+   parallel · Worktree-Isolation · golden-gegated · Deploy nur auf Davids Ja).
+3. **Bau in eigenem Worktree**, wenn der Schritt eine Kollisionsdatei berührt (§12).
+4. **Gate vor Abschluss:** `npm run gate` grün; verhaltensändernd ⇒ Golden byte-gleich.
+5. **Markiere erledigt** (Häkchen + Datum hier), zieh die Session-Karte in `STRUKTUR.md` nach,
+   → nächster Schritt. **Push/Deploy nicht selbst** — sammeln fürs Batch-Deploy-Fenster.
 
 ---
 
-## Themen-Stränge mit Prioritäten
+## So sieht das Taschenmesser aus (Produktvision)
 
-Legende: **[OF]** ohne Fachzeit baubar (bis 1.12. bevorzugt) · **[D]** braucht David
-(parken/aufreihen) · *%* = grobe Selbsteinschätzung der Extrakte (nicht nachgemessen).
+**LexMetrik ist der Anlaufpunkt für alle Arten von Juristen** — Kanzlei, Gericht, Inhouse,
+Studierende — um **das Schweizer Recht zu konsultieren und damit zu arbeiten.** Ein vielseitiges
+Werkzeug, zu dem man zuerst greift; **alles auf amtlichen Quellen** (Fedlex, amtliche
+Entscheid-Sammlungen, amtliche Tarife/Materialien — Art. 5 URG, urheberrechtlich frei),
+**deterministisch gerechnet statt KI-geschätzt.**
 
-### 1. Fundament / Plattform / Steuerung
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P0** | LERNPHASE-2026 *(Steuer-Direktive)* | 35 | [OF] | Strang A Status-Marker · B Verifik.-Infra/Verfallsregister · C Fristen-Warteschlange |
-| **P1** | FALL-RUECKGRAT | 0 | [OF] | Phase 0 Schema → Phase 1 «Meine Fristen» (grösster Praxis-Hebel) |
-| **P1** | GRUNDLAGEN *(G1–G4)* | 50 | gemischt | [OF] G3.4 kant. Stammdaten, G4.1/4.2 · [D] G2-Abnahme blockiert |
-| **P2** | FUNDAMENT-UMBAU | 0 | teils [OF] | Phase 0 Doku-Hygiene = no-code; **nicht parallel zu VORLAGEN-AUSBAU** (§12) |
-| **P2** | UX-PUNKTELISTE | 85 | [OF] | C5 Erlass-Ingress, D-Rest, Batch F (= Kantonale Entscheide) |
+Die «Klingen» (= die Informationsarchitektur):
 
-### 2. Gesetze / Normtext
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P1** | GESETZE-IMPORT-3TIER | 60 | [OF] | Phase 2: Kanton-für-Kanton durch stehende Pipeline (operativ via BS-Vorbild) |
-| **P1** | BS-VORBILDKANTON | 70 | [OF] | C3 Kopf-Suche · interne §-Verlinkung · SR-Label · N5 Volltext · D1 Versionsgeschichte |
-| **P1** | TARIF-TABELLEN-STUFE2 | 30 | [OF] | Klasse D (jetzt) → Mehrspalten-Datenmodell → Klasse A (NW)/B (ZH/ZG/TG) |
-| **P2** | GESETZESTEXT-POPUP | 90 | teils | wenige PDF-only-Kantone/Token-Lücken; **Doku-Kopf nachführen** |
-| **P2** | RECHTSSAMMLUNG | 85 | [OF] | P4 D1 Norm↔Werkzeug-Brücke (Alleinstellungsmerkmal) |
-| **P3** | INTERNATIONAL-VOLLTEXT | 90 | [OF] | nur optionaler P2-Rest (weitere SR 0.*); P3-Redesign **erledigt** (`0f9a9043`); EMRK/NYÜ strukturell unmöglich → §8/pdf-embed |
+- **Konsultieren.** Gesetze (Volltext + amtliche Systematik, **mehrsprachig DE/FR/IT zum
+  Vergleich**) · Rechtsprechung (BGE/BGer-Korpus, amtliche Regesten) · amtliche Materialien
+  (Botschaften/BBl) · **Gesetzgebung/Rechtsetzung** (was kommt: Vernehmlassung/Parlament/AS-BBl).
+- **Rechnen.** Die deterministischen Klingen: Fristen · Streitwert · Prozesskosten · Verzug/
+  Forderung · Zuständigkeit/Rechtsweg · Verjährung · Beurkundung · Gründungen — jeder Wert mit
+  Norm + Link + Stand.
+- **Verzahnen (der Burggraben).** **Norm → Werkzeug → Schriftsatz** und zurück: vom Artikel in
+  den passenden Rechner/Entscheid, vom Rechen-Ergebnis in den kopierfertigen Begründungs-Absatz.
+- **Finden (der Griff).** Eine Auffindbarkeits-Schicht: zweiachsiger Einstieg (Rechtsgebiet ×
+  Aufgabe) + globale Suche → die richtige Klinge in einem Klick.
 
-### 3. Rechtsprechung
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P1** | KANTONALE-ENTSCHEIDE | 10 | gemischt | **P0-Pilot-Reparatur (jetzt, OF)** → P1 Adapter (blockiert: Lizenz/Limits/CORS) → [D] P4 Kuratierung |
-| **P1** | ENTSCHEIDSUCHE-AUSBAU | 10 | [OF] | reiner Plan; P1 Filter/Paginierung erst nach §4-Verifikation (CORS/Limits/Lizenz) |
-| **P2** | RECHTSPRECHUNG *(Dach)* | 85 | gemischt | [OF] Korpus-Breite via Generator · [D] Präjudiz-Kuratierung; **deployt** (Doku-Kopf war veraltet) |
-| **P3** | BGE-DARSTELLUNG-EINHEITLICH | 85 | teils | faktisch erfüllt + deployt 27.6.; Rest B4/B5 → ENTSCHEIDSUCHE-AUSBAU → **archiv-Kandidat** |
-| **P3** | BGER-RECHTSWEG | 95 | [D] | Code fertig + deployt; nur §7-Abnahme (Eheschutz-Weiche, WARUM-Texte) → Abnahme-Welle |
-
-### 4. Vorlagen / Verträge
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P1** | VORLAGEN-AUSBAU | 45 | [OF] | V8 Musterklagen (Bauhandwerkerpfand zuerst); V4 mit VERTRAGS-VARIANTEN abgleichen |
-| **P1** | VERTRAGS-VARIANTEN | 30 | [OF] | P3 neue Basistypen (Kauf/Schenkung/Pacht/Darlehen/Bürgschaft); **ungepusht** |
-| **P1** | GMBH-GRUENDUNG | 60 | [OF] | G2 qualifizierte Gründung (777c II) aus AG-Maske portieren; **live** (Doku-Kopf war «PAUSIERT») |
-| **P1** | BEGRUENDUNGS-ABSATZ | 5 | teils [OF] | Phase 0 Golden/Linter (OF) → 4 David-Entscheide offen (B4-2 Kosten-Rechner) |
-
-### 5. Rechner / Tarife (Hauptmoat)
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P1** | PROZESSKOSTEN-COCKPIT *(Hauptmoat)* | 80 | [OF] | I2 Schlichtungs-/Reduktionsfaktoren (wartet Recherche `wbqdyap3x`), I4, I9 |
-| **P1** | PRODUKTAUSBAU-BURGGRABEN *(Dach)* | 60 | gemischt | [OF] P2 Fall-Kontext-Rückgrat (0 %) · P3 Zustellfiktions-Engine; Hauptmoat steht |
-
-### 6. Notariat / Beurkundung
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P2** | BEURKUNDUNGS-AUSBAU | 90 | [D] | gebaut + gegated; nur Abnahme + SZ-Ceil-Näherung als Verifik.-Task; Deploy-Status §9 bestätigen |
-| **P2** | NOTARIAT-GRUNDBUCH | 85 | [OF] | NG-4 Zweitpass `recherche`→`doppelt` über 98 Einträge; `geprüft` gesperrt bis 1.12. |
-| **P2** | LUECKEN-SCHLIESSEN | 85 | [OF] | L7 Konfidenz (hoch/mittel/tief) in UI durchreichen; L8 `geprüft` blockiert |
-
-### 7. SEO / A11y / Governance
-| Prio | Plan | % | | Kern offen |
-|------|------|---|---|-----------|
-| **P1** | SEO-A11Y-GOVERNANCE | tw. | [OF] | Welle 1 grossteils gebaut (27.6.); Rest-Wellen. **Hoher autonomer Sicht-Hebel**, aber hohes Kollisionsrisiko → Worktree-Isolation zuerst |
+Universell, nicht in Personas-Schubladen: dieselben Klingen dienen allen; einzig die Verpackung
+(Einstiege, Erklär-/Übungs-Layer) variiert. **Geparkt:** Dossier-/Mandatsverwaltung — alle
+Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz von Falldaten).
 
 ---
 
-## Abhängigkeiten & Konflikte (was blockt was)
+## Leitprinzipien (gelten immer)
 
-**Worktree-Pflicht §12 (gleiche Dateien, nie zeitgleich):**
-- **FUNDAMENT-UMBAU ⟂ VORLAGEN-AUSBAU ⟂ VERTRAGS-VARIANTEN** — kollidieren an
-  `App.tsx`/`startseiteConfig.ts`/`vorlagenRegistry`.
-- **SEO-A11Y** — kollidiert an `register.json`/`seo.ts`/`prerender.ts`/`vercel.json`.
+1. **Amtliche Quellen, urheberrechtlich frei.** Inhalte ruhen **nur** auf amtlichen Werken
+   (Art. 5 URG): Fedlex/kantonale amtliche Sammlungen, amtlich publizierte Entscheide + Regesten,
+   amtliche Tarife/Verzeichnisse/Formulare, Botschaften/BBl. **Keine Kommentare/geschützte
+   Sekundärliteratur.** Funktion, die das bräuchte ⇒ verwerfen oder auf amtliches Surrogat bauen.
+2. **Mehrwert-Test (§0).** Nur bauen/behalten, was echten Mehrwert über generische Werkzeuge
+   liefert (sonst streichen + in `KATALOG-ROADMAP.md` begründen).
+3. **Zeitsperre bis 1.12.2026.** Nur Arbeit, die (a) **keine Davids-Fachzeit** braucht `[OF]`
+   und (b) die spätere Abnahme-Welle billiger macht. Kein `verified`/`geprüft` ohne David
+   (§7/§8). `[D]` = geparkt, in der Abnahme-Warteschlange (nicht drängen). G1-Gespräche ab Feb 2027.
+4. **Nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen. Die fünf 26×-Assets:
+   Prozesskosten-Cockpit · Notariat-Grundbuch · Beurkundungs-Ausbau · Gesetze-Import-3Tier ·
+   Kantonale-Entscheide. *Ein P0-Bugfix an einem Asset ist kein Daten-Bulklauf und **öffnet den
+   26×-Slot nicht**.*
+5. **Worktree-Isolation (§12)** bei Datei-Kollision: FUNDAMENT-UMBAU ⟂ VORLAGEN-AUSBAU ⟂
+   VERTRAGS-VARIANTEN ⟂ Startseiten-Rahmen (`App.tsx`/`startseiteConfig.ts`/`vorlagenRegistry`);
+   SEO-A11Y (`register.json`/`seo.ts`/`prerender.ts`/`vercel.json`).
+6. **Push/Deploy nur auf Davids frisches Ja (§9);** jeder verhaltensändernde Schritt golden-gegated
+   (§6). **§1 (Logik vor allem) / §5 (eine Quelle)** sind Invarianten über allen Wellen.
+   **Zustandslosigkeit** (kein Dossier-Creep) ist Querschnittsregel.
 
-**26×-Datenasset-Regel (nie zwei gleichzeitig offen):** Prozesskosten-Cockpit ·
-Notariat-Grundbuch · Beurkundungs-Ausbau · Gesetze-Import-3Tier · Kantonale-Entscheide.
+**Verifikations-Blockaden (einmal definiert, danach nur referenziert):**
+- **§4 — Lizenz/CORS für Live-Rechtsprechung** (CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits
+  unbestätigt) → Rechts-/Lizenzbeurteilung = **`[D]`**. Solange offen: ENTSCHEIDSUCHE-P1 &
+  KANTONALE-P1-Adapter **geparkt**. Nicht-§4-blockierte Korpus-/Übersichtsarbeit ist ausgenommen.
+- **Prozesskosten I2** ⟵ Recherche `wbqdyap3x` (Schlichtungs-/Reduktionsfaktoren).
 
-**Vor Bau zu klären (Verifikations-Blockaden):**
-- ENTSCHEIDSUCHE-AUSBAU & KANTONALE-ENTSCHEIDE P1-Adapter ⟵ §4: CORS / Rate-Limits /
-  Lizenz (CC-BY-SA vs. Art. 5 URG) unbestätigt.
-- PROZESSKOSTEN I2 ⟵ Recherche `wbqdyap3x`.
+---
 
-**Abnahme-Zeitsperre blockiert (parken, nicht drängen):** BGER-RECHTSWEG §7 ·
-BEURKUNDUNGS-AUSBAU · alle `geprüft`-Stufen (L8, NG, Popup-Snapshots, Grundlagen G2).
-→ Abnahme-Warteschlange nach Haftungsrisiko: Welle 1 Fristen → 2 Form-Gate-Vorlagen → 3 Beträge.
+## Querschnitt-Band (läuft begleitend — kein Reihenfolge-Slot)
 
-**Infrastruktur-Fundamente (liefern an viele):** GESETZESTEXT-POPUP (Snapshot-/Drift-System)
-→ trägt RECHTSSAMMLUNG, RECHTSPRECHUNG-Verzahnung, GESETZE-IMPORT. LERNPHASE Strang A/B
-→ Querschnitt für alle Status-/Verifik.-Teile.
+- **Status-Marker-Audit + Verifikations-Infrastruktur** *(LERNPHASE A/B, `[OF]`)*. Jede Karte/Engine
+  trägt sichtbaren ehrlichen Status (`verified`/`entwurf`/`geplant`) + Stand; Golden-Abdeckung &
+  Norm-Anker-Prüfung automatisieren. **Stärkste zeitsperre-konforme Arbeit** — macht die
+  Dez-Abnahme billig; dauerhaft begleitend.
+- **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
+  (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
+  eigener Worktree.**
 
 ---
 
-## Ehrlichkeits-/Unschärfe-Vermerke
-- **% «fertig»** = Selbsteinschätzung der Plan-Extrakte, nicht unabhängig nachgemessen.
-- **G1–G4-Zuordnung** in vielen Einzelplänen nicht explizit etikettiert → Strang-Zuordnung abgeleitet.
-- **Archiv-Kandidaten** (inhaltlich weitgehend erfüllt, vor Verschieben Code-Stand prüfen):
-  BGE-DARSTELLUNG-EINHEITLICH (Rest an ENTSCHEIDSUCHE-AUSBAU); INTERNATIONAL-VOLLTEXT-Restbatch
-  ggf. nur als Lückenfüller.
-- **Doku-Köpfe schon korrigiert/verifiziert:** GMBH (live), RECHTSPRECHUNG (deployt),
-  BGER-RECHTSWEG (deployt), INTERNATIONAL P3 (erledigt). Noch nachzuführen: GESETZESTEXT-POPUP,
-  LUECKEN-SCHLIESSEN, NOTARIAT-GRUNDBUCH.
-- **Deploy-Status §9 offen:** Beurkundungs-Ausbau (live ja/nein), Vertrags-Varianten (ungepusht).
+## ⚡ S0 — fristgetrieben (FRIST 30.6.2026)
+
+**Verfallsregister mechanisch.** `check:verfall` muss den am 30.6. ablaufenden SG-GKV-Tarif +
+die weiteren datierten Verfälle (s. «Pflege & Termine») erfassen und auf einer benannten UI-Fläche
+sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; bis 30.6. realistisch
+**gebaut + gegated**, Live erst im Batch-Deploy-Fenster.
 
 ---
-*Erzeugt 28.6.2026 aus ultracode-Klassifizierung der 26 aktiven Fahrpläne. Detailquellen:
-die jeweilige `FAHRPLAN-*.md`. Diese Datei ersetzt keine, sie ordnet sie.*
+
+## Die geordnete Abarbeitung (DAS ist der Plan)
+
+> Reihenfolge nach Praxis-Hebel × Machbarkeit ohne Fachzeit × Abhängigkeiten. Alles `[OF]`, sofern
+> nicht vermerkt. Details + Bau-Auflagen je Werkzeug: «Funktions-Katalog» unten + jeweilige `FAHRPLAN-*.md`.
+
+### Welle 1 — Kern: Norm → Werkzeug → Schriftsatz + die Alltags-Klingen
+
+- [ ] **1 · Begründungs-Absatz** *(BEGRUENDUNGS-ABSATZ, ~5 %)*. Aus dem Rechen-Ergebnis ein
+  **kopierfertiger, normgestützter Absatz** (UI **und** PDF), jeder Wert mit Norm+Link+Stand
+  (schliesst die Rückrichtung *Werkzeug→Norm*). **Erst EIN Flaggschiff-Vertikalschnitt komplett**
+  (Prozesskosten): Ergebnis → Absatz → PDF-Block → Kopier-Hook; dann Rollout.
+  *Nächster Schritt:* PDF-Block (`pdfModel.ts`) + Kopier-Hook am Prozesskosten-Rechner; die 4
+  David-Entscheide als **Default-und-Flag** setzen. §8-Rahmung «keine Rechtsberatung».
+- [ ] **2 · Norm↔Werkzeug-Brücke** *(RECHTSSAMMLUNG P4/D1, 0 %)*. Vom Artikel in Rechner/Vorlage/
+  Entscheid — das Alleinstellungsmerkmal. **Ein Index** (`werkzeugeFuerNorm`, erlass-granular
+  ehrlich), der **zugleich den zweiachsigen Startseiten-Einstieg trägt** (kein zweiter Pfad, §5).
+  *Nächster Schritt:* Index-Schema definieren + an `KontextPanel`/`kontext.ts` andocken.
+- [ ] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* — die
+  «guten Rechner» als erste Klingen, alle §2/amtlich:
+  - **Fristen-Cockpit** (Vorwärts/Rückwärts/Stillstand) über `fristenspiegel/` + `icsExport`.
+  - **Streitwert + Grenzwert-Abgleich** (`streitwert.ts`; Regime-Trennung ZPO≠BGG strikt).
+  - **Zuständigkeits-/Verfahrensnavigator** (`zustaendigkeit/straf/schkg`; Adress-Ausbau in 6).
+  - **Rechtsmittel-/Eintretensprüfung** (neue dünne `rechtsmittel.ts`, delegiert an
+    `bgerRechtsweg.ts`; nicht-rechenbare Tore als «selbst prüfen» flaggen).
+  *Nächster Schritt:* Fristen-Cockpit (Reader-Schicht, 3 Modi) — höchster Alltags-Hebel.
+- [ ] **4 · Prozesskosten-Cockpit Restbau** *(PROZESSKOSTEN-COCKPIT, Hauptmoat, 26×)*. Risiko-Modus
+  fertigstellen; Festsetzung/Dispositiv → Welle 2.
+  *Nächster Schritt:* I4 `kriterien`-Feld + I9-Rest **[OF]**; **I2 ⟵ Recherche `wbqdyap3x`**
+  (Blockade). **Park-Entscheid:** bewusst bei «I4/I9 fertig, I2 blockiert» parken = **26×-Slot
+  freigeben** (Voraussetzung für Welle 3 · Schritt 11).
+
+### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
+
+- [ ] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
+  (Rechtsgebiet × Aufgabe)** auf dem `werkzeugeFuerNorm`-Index + **globale Suche** (über
+  `register.json`/`ladeBrowseManifest`, vereint BS-C3 + RECHTSSAMMLUNG-facettiert +
+  GESETZESTEXT-POPUP — **ein** Such-Workstream, §5) + **Startseiten-Modul-Rahmen**
+  (Registry+Binder+Layout = FUNDAMENT-UMBAU Phase 0, eigener Worktree, Visualdiff als Tor).
+  *Nächster Schritt:* Such-Workstream + zweiachsiger Einstieg.
+- [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
+  - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
+    Fassungen gleich verbindlich). Heute nur `de` befüllt. *Aufbau:* Generator je Erlass 3
+    Sprachfassungen aus Fedlex → `…<lang>.json`; Synopse-UI im Gesetzleser (Spalten + Diff).
+  - **Recherche Norm → amtlicher Entscheid** (`norm-index.ts`, deterministisch, kein LLM-Ranking;
+    Regeste nur amtlich oder eigene maschinelle, «maschinell»-Marker behalten).
+  - **Gerichts-/Behörden-Adressregister** (Lese-/Index-Schicht über bestehende Stores, kein
+    Duplikat; Abnahme-Status + Verfallsregister je Eintrag).
+  - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
+    + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
+    (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
+- [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
+  (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
+  (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
+  Zitierer BGE/BGer + Rubrum-Vorlage Art. 112 BGG/238 ZPO; reiner User-Input-Builder).
+- [ ] **8 · Schriften-Baukasten** *(VORLAGEN, Worktree)* — Berufung/BGG-Beschwerde/Sistierung/
+  Beweisverzeichnis über `vorlagen/engine.ts`; Zulässigkeit nur Hinweis, Status «entwurf».
+- [ ] **9 · Aufräum-Item** *(UX-PUNKTELISTE ⚫ überholt)*. Deliverable = Mapping-Tabelle
+  **alt-Punkt → Code-Pfad → Status**, *bevor* Restpunkte C2/C5 angefasst werden.
+
+### Welle 3 — Tiefe / Breite (opportunistisch)
+
+- [ ] **10 · Neue Rechner-Klingen** *(`[OF]`, §2/§7)*: **Zustellfiktions-Engine** (deterministisch,
+  fristrelevant) · **Gesellschaftsrechtliche Schwellen-Module** (OR 727/671/653s, harte Zahlen) ·
+  **Schutzrechts-Gebühren IGE** · **Normfassungs-/Geltungsstand-Prüfer** (intertemporal).
+- [ ] **11 · Gesetzgebungs-/Rechtsetzungs-Tracking** *(neu, amtlich)*. Übersicht «was kommt»:
+  Vernehmlassungen (admin.ch), Parlamentsgeschäfte (parlament.ch), in AS/BBl publiziert aber noch
+  nicht in Kraft (Fedlex), künftige Fassungen — Drift gegen die geltende Fassung. Andockpunkt
+  `fedlex.ts`/Drift-System.
+- [ ] **12 · Kantonaler Breitenimport** *(GESETZE-IMPORT-3TIER Phase 2, 26×)*. **Erst öffnen, wenn
+  der Prozesskosten-26×-Slot frei ist** (Schritt 4). BS-Pilot; Kantonale-Entscheide-Import hart
+  **nachgelagert**, nie gleichzeitig.
+- [ ] **13 · Vorlagen-Breite** *(VORLAGEN V5/V6/V8, GMBH G2, VERTRAGS-VARIANTEN P3; Worktree)*.
+  Tiefe vor Stückzahl. GmbH qualifizierte Gründung (777c II) · Musterklagen (Bauhandwerkerpfand) ·
+  Basistypen (Kauf/Fahrniskauf Art. 184 ff. dispositiv, Schenkung/Pacht/Darlehen/Bürgschaft).
+
+### Studierende-Layer (querliegend, `[OF]`, billig)
+
+Kaum eigene Engines — **Erklär-/Übungs-Schichten** auf amtlicher Substanz (§3, Darstellungsschicht):
+ausklappbarer **Rechenweg/«Warum»** an den Rechnern (Begründungs-Baustein), der **Mehrsprach-Vergleich**
+(Schritt 6) als Auslegungsübung, **amtliche Zitierhilfe** (aus Schritt 7), der **Norm↔Entscheid↔
+Rechner-Lernpfad** (Schritt 2/6). Einbau jeweils im Mutter-Schritt, nicht als eigener Strang.
+
+---
+
+## 🚀 Batch-Deploy-Fenster (eigenes Item)
+
+Vor **einem** Deploy-Ja stauen sich: Beurkundungs-Ausbau (Deploy-Status offen), Vertrags-Varianten
+(ungepusht), S0, Welle-1-Ergebnisse. → Ein benanntes Fenster, alles golden-gegated, Push/Deploy
+**nur auf Davids frisches Ja** (§9), aus sauberem HEAD-Worktree (§12).
+
+---
+
+## Geparkt (bis ≥1.12.2026 / Nutzerfeedback / Markt)
+
+- **Dossier / Fall-Rückgrat** *(FALL-RUECKGRAT, G3.3, PRODUKTAUSBAU Säule A)* — Mandats-/Dossier­
+  verwaltung & «Meine Fristen». Vorerst draussen; alle Werkzeuge bleiben stateless.
+- **Markt-Themen** — Hosting (Infomaniak), Domain `lexmetrik.ch`, Zahlung (Payrexx/Datatrans/TWINT),
+  Login/Pro.
+- **Live-Rechtsprechung** — §4-blockiert (s. Verifikations-Blockaden).
+- **Abnahme-Warteschlange** (Haftungsrang: 1 Fristen → 2 Form-Gate-Vorlagen → 3 Beträge; aufgereiht,
+  nicht gedrängt): BGER-RECHTSWEG (§7) · BEURKUNDUNGS-AUSBAU · NOTARIAT/LUECKEN (`geprüft`) ·
+  GESETZESTEXT-POPUP-Snapshots · GRUNDLAGEN G2/B.
+- **Offene David-Grundsatzfragen** (gebündelt mitführen): Dienstjahr-Stichtag Kündigungsfrist ·
+  Sperrtage-Konvention · 3 Export-Antworten · GebV-SchKG-Promille-Rundung (0.01 vs. amtlich 0.05).
+
+---
+
+## Pflege & Termine  *(Quelle: `bibliothek/register/parameter-verfall.md`)*
+
+- **30.6.2026** — SG-GKV (= S0). · **Anfang Sept.** — Referenzzins (quartalsweise). · **1.11.2026**
+  — BE-Formularpflicht. · **Vor SchKG-Abnahme** — GebV-SchKG-Revision AS 2025 630 vs. Staffel 1.1.2022.
+  · **Vor Mietvertrags-Abnahme** — VMWG Art. 19a am Original. · **Feiertage** je Kanton vor «geprüft»
+  (BJ-Liste Stand 2011).
+
+---
+
+## Funktions-Katalog (Aufbau + Auflagen je Werkzeug)
+
+Quellen durchgehend amtlich (Fedlex / amtliche Sammlungen / amtliche Entscheide+Regesten / amtliche
+Tarife+Verzeichnisse — Art. 5 URG). Alle Werkzeuge **stateless**. «grenzwertig» = amtlich nutzbar mit
+harter Auflage.
+
+| Werkzeug | Welle | neu/vorh. | §2 | Quelle amtl. | Aufw. |
+|---|---|---|---|---|---|
+| Fristen-Cockpit (Vorw./Rückw./Stillstand) | 1 | Verpackung | ja | ja | M |
+| Streitwert + Grenzwert-Abgleich | 1 | Ausbau | ja | ja | S |
+| Zuständigkeits-/Verfahrensnavigator | 1 | Ausbau | ja | ja | S |
+| Rechtsmittel-/Eintretensprüfung | 1 | neu | teils | ja | M |
+| Prozesskosten-Cockpit (Risiko/Festsetz./Dispositiv) | 1/2 | Verpackung | ja | ja | L |
+| Norm→amtlicher Entscheid (Recherche) | 1/2 | Ausbau | ja | grenzwertig | M |
+| Mehrsprach-Vergleich DE/FR/IT | 2 | neu | ja | ja | L |
+| Verjährungs-/Gewährleistungs-Board | 2 | Ausbau | ja | ja | M |
+| Verzugs-/Forderungs-/Inkasso-Strecke | 2 | Verpackung | teils | ja | M |
+| Gerichts-/Behörden-Adressregister | 2 | Verpackung | ja | ja | M |
+| Gerichts-Baustein-Set (Rubrum + Zitierer) | 2 | Verpackung | ja | grenzwertig | M |
+| Schriften-/Eingaben-Baukasten | 2 | Ausbau | teils | ja | L |
+| Gesetzgebungs-/Rechtsetzungs-Tracking | 3 | neu | teils | ja | M |
+| Zustellfiktions-Engine | 3 | neu | ja | ja | M |
+| Gesellschafts-/Schwellen-Module | 3 | neu | teils | ja | L |
+| B2B-/Basis-Vertragsbaukasten | 3 | Ausbau | ja | grenzwertig | L |
+| Schutzrechts-Gebühren (IGE) | 3 | neu | ja | ja | M |
+| Normfassungs-/Geltungsstand-Prüfer | 3 | neu | teils | ja | L |
+
+**Kern-Auflagen (§1/§2/§8-kritisch):**
+- **Fristen-Cockpit:** Vorwärts nur mit *bestehenden* Auslösern bündeln (jede neue Ereignis→Frist-
+  Abbildung ist verifikationspflichtiger Rechtsregel-Code → bricht `[OF]`); stateless.
+- **Streitwert:** ZPO-Streitwert ≠ BGG-Schwelle (Art. 51–53 vs. 74 BGG); `kostenBasisCHF` nur ins
+  Kosten-Cockpit, `streitwertVerfahrenCHF` nur in Zuständigkeit/Rechtsmittel; Ermessen → `null`, nie 0.
+- **Rechtsmittelprüfung:** BGG-Schicht an `berechneBgerRechtsweg()` **delegieren**, nicht neu codieren;
+  nicht-rechenbare Tore (Art. 74 II lit. a, Art.-83-Katalog) als «selbst prüfen», keine Scheinpräzision.
+- **Prozesskosten:** Dispositiv bei Ermessenstarif nur Spanne+Kriterien; bei `quote=null` keinen Saldo
+  erzwingen; §8-Disclaimer auch im Gericht-Modus; MwSt nur auf Schalter.
+- **Recherche/Gerichts-Set (grenzwertig):** nur amtliche Regeste **oder** eigene maschinelle (Marker
+  «maschinell»); kein fremdverfasster Drittleitsatz; `statutes[]` = «genannt/zitiert», nicht «einschlägig».
+- **Adressregister:** Lese-Schicht, kein Datenduplikat; Zuständigkeits-Schluss bleibt im Navigator;
+  «noch nicht erfasst» statt raten; Stand + Verfallsregister.
+- **Verzug/Inkasso:** Reverse-Reader nur strukturierte Eingabe (kein Freitext/LLM); Mahnung ruft Engine,
+  rechnet 5 % nicht nach (§5).
+- **B2B-Vertrag (grenzwertig):** vorhandene Schemas (NDA/Auftrag/Zession) nicht neu bauen (§5); nicht-
+  dispositive Klauseln nur an konkrete Norm verankert oder mit §8-Offenlegung weglassen — kein
+  Kommentar-/Verlagswortlaut.
+- **Schwellen-Module:** OR 727 I = 2 von 3 Schwellen in **zwei** Folgejahren; DSG kennt keine 72h-Frist
+  («so rasch als möglich») → kein numerischer Wert, nur Zitat + §8.
+
+---
+
+## Strang-Detailpunkte & Hygiene  *(steuern nicht — Heimat = jeweilige `FAHRPLAN-*.md`/`STRUKTUR.md`)*
+
+- **Offene Detailpunkte:** GRUNDLAGEN G3.4 kant. Stammdaten · BS C3/§-Verlinkung/N5/D3 · POPUP
+  PDF-only-Kantone/Token-Lücken · LUECKEN L7 Konfidenz-UI/L8 · NOTARIAT NG-4 Zweitpass · TARIF Klasse C
+  SG-Füllpunkte/ZH-PDF-Residuen.
+- **Infrastruktur-Fundament:** GESETZESTEXT-POPUP (Snapshot/Drift) trägt RECHTSSAMMLUNG/Rechtsprechungs-
+  Verzahnung/GESETZE-IMPORT → vor aufsetzenden Strängen mitdenken.
+- **Archiv-Kandidaten** (Code-Stand prüfen): BGE-DARSTELLUNG-EINHEITLICH · INTERNATIONAL-VOLLTEXT-Rest.
+  RECHTSPRECHUNG-Dach/TARIF-STUFE2/BGER-RECHTSWEG deployt → nur Abnahme.
+- **Stale Doku-Köpfe** (in der jeweiligen `FAHRPLAN-*.md` korrigieren): POPUP «27»→218 · VERTRAGS-
+  VARIANTEN «1000» · LUECKEN · NOTARIAT-GRUNDBUCH.
+- **Klein-Backlog** (Issue-Ebene): Direktklage Art. 8 ZPO < 100k plausibilisieren · stabile Keys in
+  7 Listen-Editoren · Datepicker-Pfeiltasten · Markenschriften in Vorlagen-PDFs · Detailseiten-Titel an
+  Katalog-Titel (§13) · CHF-Formatter `chf(n,dez)` als SSoT (nur mit Golden) · Norm-Chip-Kopien auf
+  geteilten NormLink · Gründungs-Rahmen GmbH/AG teilen · 4× `MONATE`-Array → eine lib-Konstante.
+
+---
+*Konsolidiert 28.6.2026 aus den 26 `FAHRPLAN-*.md` + Strategie-Dokumenten + dem früheren
+`HANDLUNGSPLAN.md` (→ `archiv/`) + ultracode-Funktions-Ideation (alle Juristen, amtliche Quellen).
+Detailquellen = die jeweilige `FAHRPLAN-*.md`; Ist-Zustand/Deploy = `STRUKTUR.md`; G1-Abdeckung =
+`KATALOG-ROADMAP.md`. Diese Datei ordnet sie und ist der eine Plan, der Schritt für Schritt
+abgearbeitet wird.*
