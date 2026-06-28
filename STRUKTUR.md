@@ -23,28 +23,37 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz **Phase 0** (Baseline + Bugfix, NICHT deployt)
+## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz: **alle [OF]-Teile (Phasen 0–5) gebaut + gegated, NICHT deployt**
 
-Nach S0 den nächsten ROADMAP-Schritt genommen (Welle 1 · Schritt 1, Begründungs-Absatz).
-Die Feature-Infrastruktur (`begruendungsAbsatz()`, 16 verdrahtete Forms) existiert seit 7.6.;
-der FAHRPLAN war aber noch ganz unbebaut (0 `absatz:`-Goldens). Gebaut: **Phase 0** (Beweis-
-Grundlage, verhaltensneutral, `[OF]` — keine David-Fachzeit, keiner der 4 David-Entscheide
-nötig).
+Nach S0 den nächsten ROADMAP-Schritt (Welle 1·1) bis an die David-Entscheid-Grenze abgearbeitet
+(autonom, Bug-Check je Schritt, ein Pathspec-Commit je Phase, kein Deploy). Reihenfolge nach
+`FAHRPLAN-BEGRUENDUNGS-ABSATZ.md`. **8 Commits** (`f8a3dc24`-Folge … `6843e441`).
 
-- **B0-2 Golden-Erst-Baseline:** 10 `absatz:<id>`-Snapshots der ECHTEN `begruendungsAbsatz()`-
-  Ausgabe in `golden-outputs.ts` (zpo/schkg mit byte-exaktem `fristbeginnZusatz`-Ausdruck; übrige
-  als Roh-Engine-Ergebnis). `golden:vergleich`: nur 10 neue Keys, **0 geändert/entfernt** (git-
-  Diff bestätigt: bestehende 187 Fälle byte-gleich).
-- **B0-3 Linter-Test** `begruendungLinter.test.ts` (30 Assertions): `pruefeFormulierung()` = 0
-  Verstösse + nicht-leerer Normen-Satz + Schlusspunkt-Wächter.
-- **Bug-Check je Schritt (Auftrag David):** zwei echte Funde behoben — (1) `zust`/`rm` liefern
-  kein rohes `Berechnungsergebnis` (UI-gewickelt) → in den B0-2-Rest verschoben; (2) **doppelter
-  Schlusspunkt «… u. a..»** in `normenSatz()` (`src/lib/begruendung.ts`), sichtbar im kopierten
-  Absatz **aller 16 Forms** → §13/F6-Fix (golden-neutral, da vorher kein Snapshot; Linter sichert
-  gegen Rückfall).
-- `npm run gate` grün (tsc · vitest · golden byte-gleich · lint · check). **Kein Push/Deploy.**
-  Offen: Phasen 1–5 + B0-2-Rest (allg/zust/rm UI-gewickelt; streitwert/teuerung/gebvKosten/
-  erbFristen Engines noch nicht in `golden-outputs.ts`); 4 David-Entscheide bleiben für Phase 3/4.
+- **Phase 0** — Golden-Erst-Baseline (`absatz:<id>`, §5-faithful: zpo/schkg byte-exakter
+  `zusatz`-Ausdruck, übrige Roh-Ergebnis) + Linter `begruendungLinter.test.ts`.
+- **Phase 1 (B1-1)** — benanntes Engine-Feld `fristbeginnNorm` (Zpo/SchkgErgebnis) statt
+  Magic-Index `normverweise[0]/[1]`; `ZpoErgebnis`/`SchkgErgebnis`, Forms ziehen das Feld;
+  Engine-Wächter `fristbeginnNorm.test.ts`. Golden-Re-Baseline 18 Fälle; `absatz:zpo/schkg`
+  blieben byte-gleich = Beweis der Index-Gleichheit.
+- **Phase 2** — `BegruendungSlot` (eine Aufrufstelle/Form) + `useKopieren`-Hook +
+  `BEGRUENDUNG_VORBEHALT`-Konstante (§5); **alle 16 Forms migriert** (verhaltensneutral, golden
+  byte-gleich, visuell auf `/rechner/zpo-fristen` bestätigt); Render-Test.
+- **Phase 3 (B3-1)** — `PdfDocConfig.begruendung` + «Für die Rechtsschrift»-PDF-Block (Vorbehalt
+  aus der Konstante, VOR Disclaimer); **Default AUS** → PDFs byte-identisch; Test.
+- **Phase 4 (B4-0)** — Prozesskosten- + Notariat/Grundbuch-Seite in den Smoke.
+- **Phase 5 (B5-1)** — Linter-Goldlist deckt **14 Engines**.
+- **B0-2-Rest** — 4 weitere Engines (streitwert/teuerung/gebvKosten/erbFristen) nachgezogen.
+
+**Bug-Check-Funde (alle behoben, je Schritt):** (1) doppelter Schlusspunkt «… u. a..» in
+`normenSatz()` — sichtbar in allen 16 Forms (§13/F6); (2) `zust`/`rm` UI-gewickelt (kein rohes
+`Berechnungsergebnis`) → korrekt deferred; (3) `begruendungsAbsatz('')` gab ein blosses «.» →
+Leer-Schranke; (4) `erbFristen.ts` durchgängig Geviertstrich «—» statt Halbgeviert «–» (§13,
+vom neuen Linter aufgedeckt, von `konventionen.test` nie erfasst) → global korrigiert.
+
+**Offen — alles decision-gated (warten auf David):** PDF-Rollout B3-2/3 (#3), Kosten-Rechner
+B4-2 (#1), B4-1 (Zuständigkeits-Teil-Slots — prosa-Tauglichkeit prüfen), B5-2 (UI↔PDF-Wächter,
+erst mit Rollout), B0-2-Rest `allg/zust/rm` (UI-gewickelt). 4 David-Entscheide mit
+konservativem Default-und-Flag im FAHRPLAN dokumentiert. `npm run gate` durchgehend grün.
 
 ## Session 28.6.2026 — ROADMAP S0 «Verfallsregister sichtbar» (gebaut + gegated, NICHT deployt)
 
