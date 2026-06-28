@@ -23,6 +23,25 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 — Normtext-Darstellung Bund/DE: B1 komplett (Worktree-Merge) · Deploy
+
+Auftrag David: Gesetzesdarstellung Bund/DE auf Fedlex-Niveau (Worktree `feat/normtext-bund-de`,
+`FAHRPLAN-NORMTEXT-DARSTELLUNG.md`). Diese Session schloss B1 ab und brachte es nach main + Prod.
+- **BGERR-Follow-up:** die 28.6.-«Casemates-Shell» war ein TRANSIENTER Filestore-Fehler (URL via
+  SPARQL als korrekt bestätigt); BGerR durch den neuen Extraktor mit-regeneriert (69 Einträge, 3
+  M6-Tiefe-shas). Nur BGERR.json + golden/normtext-snapshot.json.
+- **M5 Erlass-Kopf (§2-Floor):** neue `extrahiereKopf` liest preface/preamble (SR-Nr, Titel,
+  Erlassdatum, Ingress/Erlassformel bzw. materielle BV-Präambel G6, Kopf-Fussnoten) → **Sidecar**
+  im Struktur-Doc (Snapshot-Index byte-gleich), `ErlassKopfBlock` in beiden Header-Pfaden. 218/218
+  Erlasse mit Kopf, 161 mit Ingress. Bisher zu 100 % verworfen.
+- **G11 Sektions-Fussnotenmarker** (Marker am Sektions-/Randtitel-Kopf), **G15 Hervorhebungen**
+  (fett/kursiv im Fussnotentext als Rich-Text, SR-Resolver-robust), **#9** Apparat-Abstand uniform
+  + render-seitige Interpunktions-Glättung (verwaiste Spaces vor `.,`).
+- **Golden-Disziplin:** Engine `lexmetrik-golden.json` über den GANZEN B1-Batch byte-gleich;
+  Daten-Index nur bewusst (BGERR + die frühere `--nur=bund`-Re-Segnung). Sidecar-Cluster golden-neutral.
+- **Verifikation:** `npm run gate` (voll) grün (+8 neue Tests); 2 adversariale Opus-Reviews; Playwright
+  Hell/Dunkel/Mobil (ZGB/BV/OR). **B2 offen** (M13 Schlusstitel/Anhänge, M14 wortgenaue Fussnoten G14).
+
 ## Session 28.6.2026 — Abschluss: Aufräumen · ROADMAP · finaler Bug-Check (sauber) · Session-Ende
 
 Auftrag David zum Schluss: aufräumen, Handlungsplan aktualisieren, finaler Bug-Check über alle

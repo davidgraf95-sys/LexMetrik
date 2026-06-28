@@ -25,27 +25,23 @@
 | **M11** Resolver A: SR-Verweis in Fussnoten → intern (#10) | ✅ fertig — 2857 eli/cc-Verweise; Reverse-Resolver aus Register, Stand-Marker; golden-neutral | `c07fe713` |
 | **M12** Resolver B: falsche Selbstverweise stoppen (#11) | ✅ fertig — reader-scoped (restMitIntern), 1110 falsche Self-Links unterdrückt, Über-Trigger-Check 0 Fehl-Supp.; NORM_IM_TEXT UNBERÜHRT → Engine-Golden byte-gleich | `c7d8aaba` |
 | — **Voll-Gate (`npm run gate`)** | ✅ GRÜN: tsc · vitest · Engine-Golden byte-gleich · lint · check (Drift+Vollständigkeit) | — |
-| **M5** Erlass-Kopf/Ingress/Präambel (Sidecar) | ⏳ offen — golden-neutral, Struktur-Regen; **tief**, neue extrahiereKopf + Render-Slots inhalt.tsx (frische Session) | — |
-| **G11** Sektions-Fussnotenmarker | ⏳ offen — Struktur-Regen trägt mit (struktur-run.ts randtitelFnIds erhalten) | — |
-| **M10** Fussnoten-Abstand (#9, Renderer) + G15 Hervorhebungen (Sidecar+Rich-Text) | ⏳ offen — #9 braucht visuellen Repro; G15 braucht Rich-Text-Render in fnTextMitLinks | — |
+| — **BGERR-Follow-up** | ✅ erledigt (29.6.) — URL war korrekt (SPARQL bestätigt), 28.6.-Casemates-Shell war TRANSIENT; BGerR mit-regeneriert (69 Einträge, 3 M6-Tiefe-shas Art.29/30/34); nur BGERR.json+golden; Engine-Golden byte-gleich | `4e236412` |
+| **M5** Erlass-Kopf/Ingress/Präambel (Sidecar) | ✅ fertig — neue extrahiereKopf (preface/preamble, BV-Präambel G6), Sidecar im Struktur-Doc (Index byte-gleich), ErlassKopfBlock in BEIDEN Header-Pfaden; 218/218 Kopf, 161 Ingress; Playwright-verifiziert | `1c6753ae` |
+| **G11** Sektions-Fussnotenmarker | ✅ fertig — randtitelFn behält {fnId,label,kind}; Marker am SektionKopf (Ahn) + Randtitel/blatt-Zeile; FnRef außerhalb Toggle-Button | `1c6753ae` |
+| **M10** Fussnoten-Abstand (#9) + G15 Hervorhebungen | ✅ fertig — #9 Apparat-Abstand verifiziert uniform (12/8/1px); render-seitig Orphan-Space vor `.,` geglättet (nur Lese-Pfad, Popover byte-gleich); G15 clean() behält <b>/<i> → Rich-Text in fnTextMitLinks | `1c6753ae` |
+| — **Voll-Gate nach B1-Cluster 2** | ✅ `npm run gate` (voll) GRÜN: tsc · vitest (+8 neue Tests) · Engine-Golden byte-gleich · lint · check | — |
 
-**Resume-Hinweis (Stand 29.6.2026):** B1-Kern fertig — M6/M7/M8/M9 + EINE Bund-Daten-Re-Segnung
-(`--nur=bund`) + M11/M12 (Resolver) sind gelandet+gegated, Engine-Golden über den ganzen Batch
-byte-gleich, **`npm run gate` (voll) grün**. **Nächste Session — 3 verbleibende, golden-neutrale
-B1-Cluster, die EINEN `npm run normtext:struktur`-Regen teilen:**
-1. **M5** Erlass-Kopf/Ingress/Präambel (tief, höchster Fundiertheits-Hebel): neue `extrahiereKopf(html)`
-   liest `<div id=preface>`/`<div id=preamble>` (Klassen erlassdatum/ingress/man-template-verb),
-   BV-Sonderfall G6, Fussnoten über `fnDefinitionen`; als **Sidecar** speichern (Index byte-gleich);
-   Render-Slot in BEIDEN Header-Pfaden `inhalt.tsx` (Volltext 663-690 + pdf-embed 444-485).
-2. **G11** Sektions-Fussnotenmarker: `struktur-run.ts:43-51` faltet Sektions-Fn heute in Artikel-
-   `fussnoten` (absatz=null) + verwirft `randtitelFnIds` → Assoziation erhalten, dann SektionKopf-Marker.
-3. **M10** #9 Fussnoten-Abstand (reiner Renderer, braucht visuellen Repro ZGB Art.56 vs 69a) +
-   G15 Hervorhebungen (clean() in `fussnoten-extrahiere.ts` <b>/<i> erhalten → Rich-Text in `fnTextMitLinks`).
-Danach **B2** (M13 Schlusstitel/Anhänge, eigener Re-Bless) · **B3** (#2/FR-IT).
-**FOLLOW-UP-BUG (separat):** `/tmp/bgerr.html` = kaputte Casemates-Shell → 69 alte BGERR-Einträge bei der
-Re-Segnung restauriert; BGerR-Filestore-URL in `fedlex-cache.sh` (Eintrag `bgerr|cc/2006/834|…|173.110.131`)
-korrigieren + nachfetchen, dann BGERR mit-regenerieren. Engine-Golden `lexmetrik-golden.json` muss
-über alles byte-gleich bleiben (§7); Sidecar-Anreicherungen (M5/G15) bleiben golden-neutral.
+**Resume-Hinweis (Stand 29.6.2026, B1 KOMPLETT):** Das ganze B1 (M0–M12 + BGERR-Follow-up +
+M5/G11/M10/G15/#9) ist gelandet+gegated. Engine-Golden `lexmetrik-golden.json` über den GANZEN
+Batch byte-gleich; golden/normtext-snapshot.json nur durch BGERR (HEAD-Commit `4e236412`) bewusst
+neu gesegnet, die Sidecar-Cluster (M5/G11/G15) golden-neutral. **`npm run gate` (voll) grün.**
+Adversarial reviewt (2 Opus-Agenten) + Playwright-Sichtprüfung (ZGB/BV/OR, Hell/Dunkel/Mobil).
+**Nächste Arbeit = B2:** M13 Schlusstitel/UeB/Anhänge (eigener additiver Re-Bless, disp_/annex_-
+Token-Namespace, Token-Kollisions-Falle disp_u1/art_1) + M14 wortgenaue Fussnoten (G14, Sidecar
+Wort-Offsets, baut auf dem tag-bewussten clean() aus G15 auf). Danach **B3** (#2 Versionierung, FR/IT).
+**Bekannter Rest aus B1 (für B2/G14):** der Inline-Marker-Strip in `entferneTags` (`<tag>`→' ')
+hinterlässt ~800 verwaiste Spaces vor Satzzeichen im Snapshot-Wortlaut; B1 glättet sie render-seitig
+(`glaetteInterpunktion`, nur Lese-Pfad), der saubere Extraktions-Fix gehört in den G14-Re-Bless.
 
 ## Leitsatz (L0)
 
