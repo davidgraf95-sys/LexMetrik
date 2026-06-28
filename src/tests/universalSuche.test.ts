@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, sucheAlles,
+  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, artikelGruppe, sucheAlles, type SuchTreffer,
 } from '../lib/universalSuche';
 import type { PresetIndexEintrag } from '../lib/presetIndex';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
@@ -98,13 +98,41 @@ describe('universalSuche: Rechtsprechung-Gruppe', () => {
   });
 });
 
+describe('universalSuche: Artikel-Volltext-Gruppe', () => {
+  const treffer: SuchTreffer[] = Array.from({ length: 9 }, (_, i) => ({
+    id: `art:ZPO:${i}`, label: `Art. ${i} ZPO`, untertitel: '… Text …',
+    marke: { text: 'Gesetzestext', ton: 'soft' as const }, href: `/gesetze/bund/ZPO#art-${i}`,
+  }));
+  it('null → Platzhalter (lädt), keine Treffer', () => {
+    const g = artikelGruppe(null);
+    expect(g.id).toBe('artikel');
+    expect(g.laedt).toBe(true);
+    expect(g.treffer).toEqual([]);
+  });
+  it('kappt auf KAPPUNG, gesamt zählt alle', () => {
+    const g = artikelGruppe(treffer, 6);
+    expect(g.treffer.length).toBe(6);
+    expect(g.gesamt).toBe(9);
+    expect(g.laedt).toBeUndefined();
+  });
+  it('sucheAlles fügt die Artikel-Gruppe in fester Reihenfolge ein (nach Gesetze, vor Rechtsprechung)', () => {
+    const g = sucheAlles('x', { presets: [], gesetze: [], artikel: treffer, entscheide: [], materialien: [] });
+    const ids = g.map((x) => x.id);
+    expect(ids).toContain('artikel');
+    if (ids.includes('gesetz') && ids.includes('entscheid')) {
+      expect(ids.indexOf('artikel')).toBeGreaterThan(ids.indexOf('gesetz'));
+      expect(ids.indexOf('artikel')).toBeLessThan(ids.indexOf('entscheid'));
+    }
+  });
+});
+
 describe('universalSuche: Aggregation', () => {
   it('leere Suche → keine Gruppen', () => {
-    expect(sucheAlles('', { presets: null, gesetze: null, entscheide: null, materialien: null })).toEqual([]);
+    expect(sucheAlles('', { presets: null, gesetze: null, artikel: null, entscheide: null, materialien: null })).toEqual([]);
   });
 
   it('lässt geladene leere Gruppen weg, behält ladende als Platzhalter', () => {
-    const g = sucheAlles('zzzznogibtsnicht', { presets: [], gesetze: [], entscheide: null, materialien: [] });
+    const g = sucheAlles('zzzznogibtsnicht', { presets: [], gesetze: [], artikel: [], entscheide: null, materialien: [] });
     // Katalog/Preset/Gesetz/Material geladen+leer → raus; Entscheid lädt noch → bleibt.
     expect(g.map((x) => x.id)).toEqual(['entscheid']);
     expect(g[0].laedt).toBe(true);

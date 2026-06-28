@@ -21,7 +21,7 @@ import type { PresetIndexEintrag } from './presetIndex';
 import type { BrowseMaterial } from './materialien/typen';
 import { filtere as filtereMaterialien, vergleicheGlobal } from './materialien/browse';
 
-export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'entscheid' | 'material';
+export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'artikel' | 'entscheid' | 'material';
 
 export interface SuchTreffer {
   id: string;
@@ -135,9 +135,18 @@ export function materialGruppe(liste: BrowseMaterial[] | null, q: string, kappun
 
 // ── Aggregation ──────────────────────────────────────────────────────────────
 
+/** Gesetzestext-/Artikel-Volltext-Gruppe. `treffer === null` ⇒ Index noch nicht
+ *  geladen (Platzhalter); sonst die bereits via FlexSearch gefundenen Treffer. */
+export function artikelGruppe(treffer: SuchTreffer[] | null, kappung = KAPPUNG): SuchGruppe {
+  if (treffer === null) return { id: 'artikel', titel: 'Gesetzestext', treffer: [], gesamt: 0, laedt: true };
+  return { id: 'artikel', titel: 'Gesetzestext', treffer: treffer.slice(0, kappung), gesamt: treffer.length };
+}
+
 export interface SuchDaten {
   presets: PresetIndexEintrag[] | null;
   gesetze: BrowseErlass[] | null;
+  /** Bereits gefundene Artikel-Volltext-Treffer (lazy FlexSearch); null = lädt. */
+  artikel: SuchTreffer[] | null;
   entscheide: BrowseEntscheid[] | null;
   materialien: BrowseMaterial[] | null;
 }
@@ -150,6 +159,7 @@ export function sucheAlles(q: string, daten: SuchDaten, kappung = KAPPUNG): Such
     katalogGruppe(q, kappung),
     presetGruppe(daten.presets, kappung),
     gesetzGruppe(daten.gesetze, q, kappung),
+    artikelGruppe(daten.artikel, kappung),
     entscheidGruppe(daten.entscheide, q, kappung),
     materialGruppe(daten.materialien, q, kappung),
   ];

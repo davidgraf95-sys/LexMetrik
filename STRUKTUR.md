@@ -23,6 +23,24 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — ROADMAP Schritt 5: globale Artikel-Volltextsuche (FlexSearch), NICHT deployt
+
+David «FlexSearch ja». Volltextsuche über **24'183 Bund-Artikel** (`bloecke`-Text), integriert in
+**die** bestehende Suche (§5, ein Such-Workstream): neue Gruppe «Gesetzestext» in
+`universalSuche.ts` (`artikelGruppe`) + `useUniversalSuche` lädt sie lazy wie die Presets.
+- **Index:** `scripts/such-index-generieren.ts` → `public/such-index/artikel-bund.json` (15 MB roh /
+  3.9 MB gz); **gitignored** + im `build` (`gen:suchindex`) frisch generiert (kein Git-Bloat,
+  Drift strukturell unmöglich da Build immer neu baut). `check:suchindex` für manuelle Prüfung.
+- **Lazy/Bundle (Task 4.4):** `src/lib/suche/artikelVolltext.ts` importiert FlexSearch + Index
+  dynamisch → eigene Chunks (`flexsearch` 17 kB gz, `artikelVolltext` 0.86 kB gz), **nicht** im
+  Haupt-Bundle; Daten = Laufzeit-Fetch. Index-Bau client-seitig ~2 s einmalig auf erste Suche.
+- **Qualität (ehrlich §8):** Zitat-/Term-Suche stark («243 ZPO»→Art. 243 ZPO zuerst; Notwehr→
+  Art. 16 StGB; Sperrfrist→Art. 336c OR). Deklinations-Phrasen («vereinfachtes Verfahren») unscharf
+  — Term-, keine semantische Suche. Snippet um den Treffer + Sprung `/gesetze/bund/<k>#art-<n>`.
+- Encoder `Charset.LatinBalance` + lowercase + `suggest`. Test (`artikelGruppe` + Reihenfolge),
+  visuell im Browser bestätigt. `npm run gate` grün, golden byte-gleich. **Offen:** Kanton-Artikel
+  in den Index; FUNDAMENT-UMBAU-Startseiten-Rahmen. Kein Deploy.
+
 ## Session 28.6.2026 — §9-DEPLOY #2: Streitwert-Grenzwert + zweiachsiger Einstieg → PROD live
 
 David-Ja «deploy». Volles Ritual: Tore grün (gate · build 57 Routen · e2e 86); **2 Opus-Bug-Check-

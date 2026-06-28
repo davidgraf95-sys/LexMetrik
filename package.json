@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && vite-node scripts/prerender.ts",
+    "build": "npm run gen:suchindex && tsc -b && vite build && vite-node scripts/prerender.ts",
+    "gen:suchindex": "vite-node scripts/such-index-generieren.ts",
+    "check:suchindex": "vite-node scripts/such-index-generieren.ts -- --check",
     "prerender": "vite-node scripts/prerender.ts",
     "og:bild": "vite-node scripts/og-bild.ts",
     "messung:cwv": "vite-node scripts/messung-cwv.ts",
@@ -59,6 +61,7 @@
     "date-fns": "^4.4.0",
     "docx": "^9.7.1",
     "fflate": "^0.8.3",
+    "flexsearch": "^0.8.212",
     "jspdf": "^4.2.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
