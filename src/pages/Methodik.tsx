@@ -1,6 +1,7 @@
 // Seite «Methodik» – vertiefte Fassung; die Kurzfassung («So rechnet LexMetrik»)
 // auf der Startseite bleibt davon unberührt.
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { VerfallUebersicht } from '../components/VerfallUebersicht';
 
 const ABSCHNITTE: { titel: string; text: string }[] = [
   {
@@ -70,6 +71,8 @@ export function Methodik() {
             <p className="text-body-s text-ink-600 leading-relaxed">{a.text}</p>
           </section>
         ))}
+
+        <VerfallUebersicht />
 
         <section className="lc-notice">
           <p className="lc-overline mb-1">Grenzen</p>

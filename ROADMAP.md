@@ -90,12 +90,21 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 
 ---
 
-## ⚡ S0 — fristgetrieben (FRIST 30.6.2026)
+## ⚡ S0 — fristgetrieben (FRIST 30.6.2026) — ✅ gebaut + gegated 28.6.2026 (Live offen, Batch-Fenster)
 
 **Verfallsregister mechanisch.** `check:verfall` muss den am 30.6. ablaufenden SG-GKV-Tarif +
 die weiteren datierten Verfälle (s. «Pflege & Termine») erfassen und auf einer benannten UI-Fläche
 sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; bis 30.6. realistisch
 **gebaut + gegated**, Live erst im Batch-Deploy-Fenster.
+
+> **Erledigt 28.6.2026 (gebaut + gegated, nicht deployt):** Parse-Grammatik in eine geteilte
+> Quelle gezogen (`scripts/verfall-parse.ts`, §5) — `check:verfall` (Tor) und neuer Generator
+> `gen:verfall` teilen sie. Generator schreibt `src/data/verfallTermine.generated.ts` aus dem
+> Register; Drift-Tor `check:verfall-ui` in der `check`-Kette. Benannte UI-Fläche: Abschnitt
+> **«Aktualität & Pflege der Parameter»** auf `/methodik` (`src/components/VerfallUebersicht.tsx`)
+> listet die 15 datierten Parameter mit nächstem Prüftermin; Tagesbezug (verfallen / bald fällig /
+> aktuell) client-seitig (prerender-/hydration-sicher). SG-GKV 30.6. erscheint als «bald fällig»,
+> ab 1.7. «verfallen». `npm run gate` grün, Golden byte-gleich. Kein Push/Deploy (Batch-Fenster).
 
 ---
 
