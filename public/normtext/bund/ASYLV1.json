@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/ASYLV1/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "92e7f46183f13edebba8ab99cfe3401a1fad14b237f66c64668cb3531b650f82"
     },
@@ -61,7 +61,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c195d80e25a2a3ec55328a503deb20c700567e0b69991d1db144e5c02dbfaac6"
     },
@@ -106,7 +106,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b6a0f11e8f3253f6a8688cafcc2894beb72358c2fcf95bf80bf84ecde906d12"
     },
@@ -125,7 +125,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b7f514931faefdf9d9ae12f2785d67122fb997064967c0bdf0457813b654a280"
     },
@@ -136,6 +136,7 @@
       "erlass": "AsylV 1",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 6 a Abs. 2 Bst. a und Abs. 3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -166,7 +167,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f29965e6c2390b287fd048f8829ef631ce8cfd75cfad62658b19e91f97e33adc"
     },
@@ -177,6 +178,7 @@
       "erlass": "AsylV 1",
       "artikel": "2_a",
       "artikelLabel": "Art. 2a",
+      "grundlage": "(Art. 8 Abs. 1 Bst. a und b AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -185,7 +187,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f98fed281d366034d9ecb799e9163aee01ae06ee7545d9472404d2e983612771"
     },
@@ -196,6 +198,7 @@
       "erlass": "AsylV 1",
       "artikel": "2_b",
       "artikelLabel": "Art. 2b",
+      "grundlage": "(Art. 10 Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -242,7 +245,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c8beca4df3659d83b57c08eb2ee2063c09039677a6a9241373cde0200bc9cef8"
     },
@@ -253,6 +256,7 @@
       "erlass": "AsylV 1",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 13 Abs. 1 und 2 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -265,7 +269,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5d4c819946b3c4a5e4125f98c8e59bbcca745531c52e77b7c499a4cf24163089"
     },
@@ -276,6 +280,7 @@
       "erlass": "AsylV 1",
       "artikel": "3_a",
       "artikelLabel": "Art. 3a",
+      "grundlage": "(Art. 12 a Abs. 3 und 13 Abs. 1 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -284,7 +289,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_3_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c4fe097a1a57ae14f6e3418b486e639b5b09cb74a02da3e40ad4725f86db7cf7"
     },
@@ -295,6 +300,7 @@
       "erlass": "AsylV 1",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 16 Abs. 1 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -303,7 +309,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bdd50492175e769a21c075800e4f5171171fab44a7c41d93beae0b9fe2eaab8b"
     },
@@ -314,6 +320,7 @@
       "erlass": "AsylV 1",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 17 Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -322,7 +329,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5d923ae00e2d360cd3b4d094440a4d0bcd4118a52a0439bcb799949e16991d23"
     },
@@ -333,6 +340,7 @@
       "erlass": "AsylV 1",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 17 Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -341,7 +349,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0c935d501480c3bd34fdb46e8815ec459feb9ac3f9e5d8eefc515c964d8e2551"
     },
@@ -352,6 +360,7 @@
       "erlass": "AsylV 1",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 17 Abs. 2, 3 und 6 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -406,7 +415,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d4726c9a2857120ae0fb6c59731b66693054ea5359a3891605f6d34a6255c33e"
     },
@@ -425,7 +434,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -436,6 +445,7 @@
       "erlass": "AsylV 1",
       "artikel": "7_b",
       "artikelLabel": "Art. 7b",
+      "grundlage": "(Art. 17 a AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -444,7 +454,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "371ecb5a1c04d3ffb2f51e44a7a5fbe87c8b7186b10e08185d517752a11168be"
     },
@@ -455,6 +465,7 @@
       "erlass": "AsylV 1",
       "artikel": "7_c",
       "artikelLabel": "Art. 7c",
+      "grundlage": "(Art. 111 d Abs. 4 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -475,7 +486,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9a7379f7361cb72de60c3d6acb0e813d4b14f546d818f70700cc83a8ce25ea5d"
     },
@@ -486,6 +497,7 @@
       "erlass": "AsylV 1",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 19 Abs. 1 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -520,7 +532,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cf758992d2461f2138955e1f09f62fa882acad458df21fd59c8d21adca73fcb9"
     },
@@ -539,7 +551,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_9_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -558,7 +570,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -569,6 +581,7 @@
       "erlass": "AsylV 1",
       "artikel": "11_a",
       "artikelLabel": "Art. 11a",
+      "grundlage": "(Art. 21–23 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -595,7 +608,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_11_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c8fecdded93030de428ecf8647aa2f8fc2f1ba3d8ac3a3ddc2baad93bbeb2bd1"
     },
@@ -606,6 +619,7 @@
       "erlass": "AsylV 1",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 22 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -622,7 +636,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a4401055c2d397c0fb94539ae6a481e3645ca1f28912b492dba7974b02821bd4"
     },
@@ -633,6 +647,7 @@
       "erlass": "AsylV 1",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 24, 24 a , 24 d AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -641,7 +656,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d6daaddf0303c78f69faf1c22b10d0aa708cfba8dbcecdd3264a1636e037e5c4"
     },
@@ -652,6 +667,7 @@
       "erlass": "AsylV 1",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 24, 24 a , 24 d AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -664,7 +680,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cabfe5b9b46b81436cef81ced0e99902f1e9fb7abad23e6725ea2413ebf73e68"
     },
@@ -675,6 +691,7 @@
       "erlass": "AsylV 1",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 24 a AsylG; Art. 74 Abs. 1 bis und 2 AIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -705,7 +722,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "609d75891065cd98cbade66179a7090a1101756be71b9bb2648401f860de24af"
     },
@@ -716,6 +733,7 @@
       "erlass": "AsylV 1",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 24 b Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -724,7 +742,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "fe7013c1052d52815fb92b105e19c20cd10e84d5f805a59baf3ffedbf53a849f"
     },
@@ -743,7 +761,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -762,7 +780,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16_b_16_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -773,6 +791,7 @@
       "erlass": "AsylV 1",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 102 e bis AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -805,7 +824,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cf714be0c870e44b4b10c8bb61cdbece067d10dc23f60ccfbe0280de8d3df56c"
     },
@@ -824,7 +843,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -835,6 +854,7 @@
       "erlass": "AsylV 1",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 26 Abs. 2 und 3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -847,7 +867,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ccd83226a98e31493ccdd0fbbb4770976245dfbf1060858f56f4dbfd93d6ee36"
     },
@@ -866,7 +886,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -877,6 +897,7 @@
       "erlass": "AsylV 1",
       "artikel": "20_a",
       "artikelLabel": "Art. 20a",
+      "grundlage": "(Art. 8 Abs. 1 Bst. f und 26 a AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -889,7 +910,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7586c0be2307b2e39243f1f3b28398e78fceb30282eb4f7d843db4e0a0c1f6cb"
     },
@@ -900,6 +921,7 @@
       "erlass": "AsylV 1",
       "artikel": "20_b",
       "artikelLabel": "Art. 20b",
+      "grundlage": "(Art. 26 b und 31 a Abs. 1 Bst. b AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -912,7 +934,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "54e83314a9210ac03fb94219ca6f27d402d7124eaa8100252b3791b761982234"
     },
@@ -923,6 +945,7 @@
       "erlass": "AsylV 1",
       "artikel": "20_c",
       "artikelLabel": "Art. 20c",
+      "grundlage": "(Art. 26 c AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -965,7 +988,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "61d8f2844bc031306b5b63f3deb55f6f93b19f533d1457328743e4bb11f3edcc"
     },
@@ -976,6 +999,7 @@
       "erlass": "AsylV 1",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 27 Abs. 1–3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1040,7 +1064,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e69062ead512a4e4db90673591e95ff5bf86298c4137f01961450f689d2d6878"
     },
@@ -1051,6 +1075,7 @@
       "erlass": "AsylV 1",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 27 Abs. 3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1063,7 +1088,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5333040774ff951970669a016c24d97c756b3878e4642a1f6a26e0958668de83"
     },
@@ -1074,6 +1099,7 @@
       "erlass": "AsylV 1",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 22 Abs. 6, 27 Abs. 2 und 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1082,7 +1108,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8a846ae09ac284bdd9e38474d24f6a759fcf585b074abff67d7eadb0ea3caa41"
     },
@@ -1101,7 +1127,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_23_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1112,6 +1138,7 @@
       "erlass": "AsylV 1",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 27 Abs. 3 und 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1120,7 +1147,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e8c7d4f4af3f99aa5762586bdd29f56f0dea15f80138f79d23c90e8be29e6037"
     },
@@ -1139,7 +1166,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_25_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1150,6 +1177,7 @@
       "erlass": "AsylV 1",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 31 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1166,7 +1194,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b60efe987ce10450377db12fc79d5b3f0dc281a5c6440f44096fa61fe93c881f"
     },
@@ -1177,6 +1205,7 @@
       "erlass": "AsylV 1",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 31 a AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1185,7 +1214,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f4e9c24057796f2abf7cc89a370d9149188c921ab593ad8d1c51eb8a4396afad"
     },
@@ -1204,7 +1233,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1215,6 +1244,7 @@
       "erlass": "AsylV 1",
       "artikel": "28_b",
       "artikelLabel": "Art. 28b",
+      "grundlage": "(Art. 29 a AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1223,7 +1253,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3cb7ae450151ea4a75b8d0a49f558665e51ea4d79c542de4296df4890217e136"
     },
@@ -1242,7 +1272,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1253,6 +1283,7 @@
       "erlass": "AsylV 1",
       "artikel": "29_a",
       "artikelLabel": "Art. 29a",
+      "grundlage": "(Art. 31 a Absatz 1 Bst. b AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1273,7 +1304,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "173dda76cba300a93d69ee7af99fd27f92b7b40e9f904e33cf1463856c1a21fd"
     },
@@ -1284,6 +1315,7 @@
       "erlass": "AsylV 1",
       "artikel": "29_b",
       "artikelLabel": "Art. 29b",
+      "grundlage": "(Art. 35 a AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1296,7 +1328,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "55b6686d81186bbc9f70576799e51d12360f7a13b8ca7e5893a6babf037991f4"
     },
@@ -1307,6 +1339,7 @@
       "erlass": "AsylV 1",
       "artikel": "29_c",
       "artikelLabel": "Art. 29c",
+      "grundlage": "(Art. 31 a Abs. 1 Bst. f und Art. 31 b AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1329,7 +1362,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1230054b015d2073413a10087e578716372b953264893a94506bfbffe73b86cc"
     },
@@ -1356,7 +1389,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8406e4d7bdcf0cf17c41cde0422c2f0c2d532a88bf9c33c7f629c3b11749b79d"
     },
@@ -1375,7 +1408,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1386,6 +1419,7 @@
       "erlass": "AsylV 1",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 44 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1416,7 +1450,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "52e975dd384a8022c21d01401b78bf7d47f4320f06bf78f397ea261b87a06d81"
     },
@@ -1435,7 +1469,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1446,6 +1480,7 @@
       "erlass": "AsylV 1",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 45 Abs. 1 Bst. f und 46 Abs. 1 bis AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1470,7 +1505,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "79636daedefa7024d233f2a96de69b998df0bb26843f8bd8e8f3e71fe271a00f"
     },
@@ -1481,6 +1516,7 @@
       "erlass": "AsylV 1",
       "artikel": "34_a",
       "artikelLabel": "Art. 34a",
+      "grundlage": "(Art. 45 Abs. 1 Bst. f und 46 Abs. 1 bis AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1489,7 +1525,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "543beb819c568ab8a23d5d28cb8f7b7cb5d3defeba7c3c6b77c5c0b0e9eba66a"
     },
@@ -1508,7 +1544,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b30f4ed1af2f37dec78d196b0b855ffe110954e8c77d84a091d6fb7ec230340"
     },
@@ -1519,6 +1555,7 @@
       "erlass": "AsylV 1",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 47 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1527,7 +1564,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "807a9698adc8e1f42c95485172c7cf7f8ff77b0d5e77f468b3b93e3304411e01"
     },
@@ -1538,6 +1575,7 @@
       "erlass": "AsylV 1",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 50 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1550,7 +1588,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "86dc19626e0497612022dc8178788b1fd4e2d561151f73b22b781347d814d59f"
     },
@@ -1561,6 +1599,7 @@
       "erlass": "AsylV 1",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 17 Abs. 2 und Art. 51 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1569,7 +1608,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b5a7c6d6df756781daa34348f2fe439b0727ba0bbb872be4ba87ad17ba1d237"
     },
@@ -1588,7 +1627,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1607,7 +1646,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1626,7 +1665,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1637,6 +1676,7 @@
       "erlass": "AsylV 1",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 60 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1649,7 +1689,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0eb5f2150980ac10ecece3a21d065b88d6482024d6afa4c411e4ebd36797ba5d"
     },
@@ -1668,7 +1708,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1691,7 +1731,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f95b6ab3e36f3c5684399bcc472d0f48a2a8885d36111af355ac5ffee5233153"
     },
@@ -1710,7 +1750,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a9640ddd5b09b633b7c09e749c022f8194ef4072d7545acee1400c27892389cc"
     },
@@ -1721,6 +1761,7 @@
       "erlass": "AsylV 1",
       "artikel": "45",
       "artikelLabel": "Art. 45",
+      "grundlage": "(Art. 74 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1737,7 +1778,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "39a6d631a500f94f36aa905156d651b635589fbdf33605e5dca4f78f21a839a3"
     },
@@ -1748,6 +1789,7 @@
       "erlass": "AsylV 1",
       "artikel": "46",
       "artikelLabel": "Art. 46",
+      "grundlage": "(Art. 74 Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1764,7 +1806,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ecf4171112cfaff1bbe9436d93d8a09bba208e1543c166ccd7d48ccbe428df2a"
     },
@@ -1775,6 +1817,7 @@
       "erlass": "AsylV 1",
       "artikel": "47",
       "artikelLabel": "Art. 47",
+      "grundlage": "(Art. 76 Abs. 1 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1783,7 +1826,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "23c24345c9f17e5d31b83a59502c9cb86b9c00a15f9261092453fc92365876dc"
     },
@@ -1794,6 +1837,7 @@
       "erlass": "AsylV 1",
       "artikel": "48",
       "artikelLabel": "Art. 48",
+      "grundlage": "(Art. 76 Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1802,7 +1846,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "867213fb7b4098bdfda2adf5e194523f1ebee0099c4ab12a328564d745df3567"
     },
@@ -1813,6 +1857,7 @@
       "erlass": "AsylV 1",
       "artikel": "49",
       "artikelLabel": "Art. 49",
+      "grundlage": "(Art. 76 Abs. 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1821,7 +1866,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3361dc84095f37cbc8e0a7a835fbd07c170334cd95fd2ac685eedbaad6f36630"
     },
@@ -1832,6 +1877,7 @@
       "erlass": "AsylV 1",
       "artikel": "50",
       "artikelLabel": "Art. 50",
+      "grundlage": "(Art. 76 Abs. 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1840,7 +1886,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7f7c3a4644dc955317d7cd02d865879c19f9fedb75060afeefda27d3f27d971c"
     },
@@ -1851,6 +1897,7 @@
       "erlass": "AsylV 1",
       "artikel": "51",
       "artikelLabel": "Art. 51",
+      "grundlage": "(Art. 78 Abs. 1 Bst. c AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1859,7 +1906,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "29ac031c8d724de7f951fc9f4056d0c0b58818c6b8cabb5036a538304b59ca27"
     },
@@ -1870,6 +1917,7 @@
       "erlass": "AsylV 1",
       "artikel": "52",
       "artikelLabel": "Art. 52",
+      "grundlage": "(Art. 78 Abs. 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1878,7 +1926,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e07e72e3f4ac5ae03cdabbada1e91a191d8e9c02ccf0b7fc6017600303620787"
     },
@@ -1889,6 +1937,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_a",
       "artikelLabel": "Art. 52a",
+      "grundlage": "(Art. 102 f– 102 l AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1905,7 +1954,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "728e280735af5dc15c0c6eb9a44a13f05fccbba5bd8ddd9841c5ed688526fdc8"
     },
@@ -1916,6 +1965,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_a_bis",
       "artikelLabel": "Art. 52abis",
+      "grundlage": "(Art. 102 g Abs. 3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1932,7 +1982,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_a_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ac191944809fa87f6ce4ed63f74269d05a8bc71450dfa855617e73bf7279657c"
     },
@@ -1943,6 +1993,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_b",
       "artikelLabel": "Art. 52b",
+      "grundlage": "(Art. 22 Abs. 3 bis AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1985,7 +2036,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ad21f1b12844af30d1a2869b1904c76358c6b5555d2d740c650f75fbddf89493"
     },
@@ -1996,6 +2047,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_b_bis",
       "artikelLabel": "Art. 52bbis",
+      "grundlage": "(Art. 102 k Abs. 1 Bst. g AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2008,7 +2060,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_b_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "33b946f6516ef5697df73e154603b842302a7b50491d4cef2336f954192f9877"
     },
@@ -2019,6 +2071,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_c",
       "artikelLabel": "Art. 52c",
+      "grundlage": "(Art. 22 Abs. 3 bis und 102 j Abs. 2 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2031,7 +2084,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b1b71c90837d2ac17dfcdeebbe0db7fd042f52c7b415579efe57858070640eff"
     },
@@ -2042,6 +2095,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_d",
       "artikelLabel": "Art. 52d",
+      "grundlage": "(Art. 22 Abs. 3 bis , 102 j Abs. 3 und 102 k Abs. 1 Bst. c AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2054,7 +2108,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1f7f899a3e97813e65f3f7a9c8c802e7cf32d39433836d589d67db105e5d2c58"
     },
@@ -2065,6 +2119,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_e",
       "artikelLabel": "Art. 52e",
+      "grundlage": "(Art. 22 Abs. 3 bis , 102 h Abs. 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2073,7 +2128,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b5a5ae19f6b49df34bec21eb209e35d94f8f150b54b37e366871c628aa09b15e"
     },
@@ -2084,6 +2139,7 @@
       "erlass": "AsylV 1",
       "artikel": "52_f",
       "artikelLabel": "Art. 52f",
+      "grundlage": "(Art. 102 l Abs. 1, 1 bis und 3 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2122,7 +2178,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cc38eae45cd28c8f3da1e333d707cae65c3ffe51eb64cdca5ceac8fd64a38d62"
     },
@@ -2155,7 +2211,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6e81da67e3be958bf8c043b89958f331c3bf06132a2e9ef60a894db5952dabc1"
     },
@@ -2174,7 +2230,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3383408821d5d8f24ef43faa585343e30f52694f988f98778273731e658e7ee4"
     },
@@ -2197,7 +2253,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4cad970b62763f10aff35ad3d4b85e3c4ebb471e3bebdc57e10086f3f7f7abe1"
     },
@@ -2242,7 +2298,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f69257491a5e86c49ee7ab581141e43eee3739b0f78c9470f170ce33b776ae62"
     },
@@ -2261,7 +2317,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ce43c60592263eb7ec1b02d96eeffb7f599d34214c65415045ce71019c3944fb"
     },
@@ -2272,6 +2328,7 @@
       "erlass": "AsylV 1",
       "artikel": "53",
       "artikelLabel": "Art. 53",
+      "grundlage": "(Art. 102 m Abs. 3 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2298,7 +2355,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4fb448fba9726564cafe9844d278d8730f5d7acbfdbe5b5ee51ac49ba54b54a2"
     },
@@ -2317,7 +2374,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0a92af9d8eb6a7d297fb295e93a96a249051a4cbb270bb6bb59994829360347c"
     },
@@ -2424,7 +2481,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3fce3f39ffe2a3fa4d86368ef233b11a70c42303fff004594d0bd3e5dc0e7e48"
     },
@@ -2443,7 +2500,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "49ec5e4b8a500b13e0433f12589ea579ead0bd73490f74566f97d97bd2104469"
     },
@@ -2462,7 +2519,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cc769f12d010b74b91c808015782db47ce5f38824f51151f50f17a391e0237dd"
     },
@@ -2481,7 +2538,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "739e165edb0426fa97e142c9eb7fa10375a2a602dcbe25b8d00a060ac70e9b4c"
     },
@@ -2500,7 +2557,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cc582b79709d0baa1e04c1eb8209d8820d9d1b34cac8e778ca7155e0163eafcf"
     },
@@ -2531,7 +2588,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8a3d8d17d8e2be31340ce0a942ceb37de12b6b370d371a4f4097cabe6637866f"
     }

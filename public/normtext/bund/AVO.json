@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/AVO/art_1",
@@ -48,7 +48,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "98790db0453a9633152a4c8da68dbcf82654cd077de2a6ffcc64e6d11b4b5ad9"
     },
@@ -59,6 +59,7 @@
       "erlass": "AVO",
       "artikel": "1_a",
       "artikelLabel": "Art. 1a",
+      "grundlage": "(Art. 2 a Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -67,7 +68,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c0b36e64b02d008429a679c58e78f1df5bf564cdcc5114fd6f4a2aa008121379"
     },
@@ -78,6 +79,7 @@
       "erlass": "AVO",
       "artikel": "1_b",
       "artikelLabel": "Art. 1b",
+      "grundlage": "(Art. 1 Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -108,7 +110,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5fa9f1f619d488f9fb6b954011cb72daf938dca34d597128c009a1c7b83d1494"
     },
@@ -119,6 +121,7 @@
       "erlass": "AVO",
       "artikel": "1_c",
       "artikelLabel": "Art. 1c",
+      "grundlage": "(Art. 2 Abs. 5 Bst. b und 14 Abs. 1 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -161,7 +164,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a359db3f75620247a2374b3b49917654b6d1c5576b3d18284a6f614237def918"
     },
@@ -172,6 +175,7 @@
       "erlass": "AVO",
       "artikel": "1_d",
       "artikelLabel": "Art. 1d",
+      "grundlage": "(Art. 35 Abs. 4 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -194,7 +198,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "31a5a1c319a97b3ae71211799f03bc48f124cf64fe18a5c3919db4a8ffed3375"
     },
@@ -205,6 +209,7 @@
       "erlass": "AVO",
       "artikel": "1_e",
       "artikelLabel": "Art. 1e",
+      "grundlage": "(Art. 2 Abs. 5 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -223,7 +228,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9dcd50d54ea269ae006e81236af36c265aa82c40cd1ce9a46922e6a6c7913d78"
     },
@@ -234,6 +239,7 @@
       "erlass": "AVO",
       "artikel": "1_f",
       "artikelLabel": "Art. 1f",
+      "grundlage": "(Art. 2 Abs. 5 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -268,7 +274,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fdaaf0d32ff3dfa3c7fe8da2be9c6cde37c23ac3e36a6812e7ab975c81c021f4"
     },
@@ -279,6 +285,7 @@
       "erlass": "AVO",
       "artikel": "1_g",
       "artikelLabel": "Art. 1g",
+      "grundlage": "(Art. 2 Abs. 5 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -303,7 +310,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b674239c2cd89223248e9be08e88487d34c1afd9c86f98b8bc3deb54dea7235f"
     },
@@ -314,6 +321,7 @@
       "erlass": "AVO",
       "artikel": "1_h",
       "artikelLabel": "Art. 1h",
+      "grundlage": "(Art. 2 Abs. 2 Bst. f und Abs. 4 Bst. c VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -340,7 +348,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_1_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ee6abff4ecfebd1591a44e8008e9b32bdcad8b8f507af96b151459526c642c90"
     },
@@ -359,7 +367,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -370,6 +378,7 @@
       "erlass": "AVO",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 3 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -414,7 +423,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a9971c602542fd86ac0f3392b0d2d6afb32b1d68e9d52eac0a7d421acd83c301"
     },
@@ -445,7 +454,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "f9015f5e5bf961913d6c05abb891a5789cd002a1cc8a4fbcbbf80e64ded85fe1"
     },
@@ -456,6 +465,7 @@
       "erlass": "AVO",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 5 Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -464,7 +474,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "10a3c416c354aa795df820573f93cc285b5934f4acc1d22c8f97d58689f68922"
     },
@@ -483,7 +493,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_5_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "30813ec054e2ad895796929534542ec3664a08b04297c7122db0ebfe7164562f"
     },
@@ -494,6 +504,7 @@
       "erlass": "AVO",
       "artikel": "5_b",
       "artikelLabel": "Art. 5b",
+      "grundlage": "(Art. 11 Abs. 1 Bst. a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -538,7 +549,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_5_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a0ba2f18e69c5dc6f6f8b75936f4d7288a86f7105ee73b05898ad4f4b2880f10"
     },
@@ -549,6 +560,7 @@
       "erlass": "AVO",
       "artikel": "5_c",
       "artikelLabel": "Art. 5c",
+      "grundlage": "(Art. 11 Abs. 1 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -575,7 +587,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_5_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "af60b6e7fa9f6a976c0f4e2c9458868af560311d7df5302a5869ba9d13b20ea7"
     },
@@ -598,7 +610,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ea08a5c70a1e1067e3510a9720dd5bbefb7ea441d121a49678c1045f3e1df572"
     },
@@ -635,7 +647,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6c2bffb6d9c4a3535ad6174f637528d05b6af0020350d28f11940bcd5b98f6b1"
     },
@@ -664,7 +676,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "98aad5900b412ca594736fcfd3df4d5eec62c6b848d5f4f8328b1ba553e90a95"
     },
@@ -693,7 +705,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a02775ca28e6101db5900d1a446c122c5fb2fcdf40dd7ff45b2646dce2cf7d9a"
     },
@@ -712,7 +724,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "36e2a379ac5aed71198eac726f679a4522977e295b23413904176f8229e5c245"
     },
@@ -739,7 +751,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cc02940519699fabf8c44051a785f6d967e1bf5a7447a322aea1d6660144c59c"
     },
@@ -766,7 +778,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b96721f799065852b83adf0c6295db747dbefd1323489c6514b628cbc8928f8f"
     },
@@ -793,7 +805,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "77414d224ee32ce5cc8ae181568014360b90658a4dda5c25bc45932f33430a2d"
     },
@@ -816,7 +828,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c8ebb1f771e32c92ceada0be84a0fac78af0f749d2515653a3a711a8a8b8b16e"
     },
@@ -827,6 +839,7 @@
       "erlass": "AVO",
       "artikel": "14_a",
       "artikelLabel": "Art. 14a",
+      "grundlage": "(Art. 14 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -843,7 +856,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_14_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "56256589e95e36bb44e937684cc421f15d670484565bb2c34679f1a1022b9985"
     },
@@ -854,6 +867,7 @@
       "erlass": "AVO",
       "artikel": "14_b",
       "artikelLabel": "Art. 14b",
+      "grundlage": "(Art. 14 a VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -872,7 +886,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_14_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5b5637c14cbbd9b82fd70a284ab95e72cb9eb2cc59d108f329576e2efe955a0a"
     },
@@ -883,6 +897,7 @@
       "erlass": "AVO",
       "artikel": "14_c",
       "artikelLabel": "Art. 14c",
+      "grundlage": "(Art. 14 a Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -917,7 +932,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_14_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "98ea581d9cb89b86e8790d6db8816a867eafcc4fc986c5728d9ce31c6dd9baf8"
     },
@@ -936,7 +951,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -963,7 +978,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6af43fbfcae0f5cf68613e883fed142960794f27fdc9d19fd80e32476380ad65"
     },
@@ -1030,7 +1045,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "10236ff95af399a48279f244e805e5269cb0fb5d1e2a26d5fedd83f719a84aac"
     },
@@ -1053,7 +1068,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a82410e276b0bd9701a98188a556fd4ccc971be1728ccf360a3e29a843e89a22"
     },
@@ -1076,7 +1091,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "eedf09fcab32f710ed3add0b47d1fc137d23821f9a86478920f4321b9e66ed23"
     },
@@ -1087,6 +1102,7 @@
       "erlass": "AVO",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 2 Abs. 4 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1107,7 +1123,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a3e75dee960c3cb70b37c129e8c9673980a80ab7d78639949bef8c57364c41d2"
     },
@@ -1118,6 +1134,7 @@
       "erlass": "AVO",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 9 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1126,7 +1143,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "2469f5f24dd4e9c4af4df09ddf6f25196a1af5c08da5c0607957b4aa7dae191a"
     },
@@ -1137,6 +1154,7 @@
       "erlass": "AVO",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 9 und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1149,7 +1167,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c578fe4e5ca27cbb74db0fda5158ca0ab732a1d7c1eacdecd43e4866c76fc3d4"
     },
@@ -1168,7 +1186,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_22_a_22_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -1179,6 +1197,7 @@
       "erlass": "AVO",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 9 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1187,7 +1206,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5bbb644fc37680533a233f070e24ce82fbd7b7d86793056e65b618e6d842d1c9"
     },
@@ -1198,6 +1217,7 @@
       "erlass": "AVO",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 9 a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1210,7 +1230,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9d9ced5a1623e4fa7d73da835e2e8344de04f9ebf10e33368b262e4d18daa82a"
     },
@@ -1221,6 +1241,7 @@
       "erlass": "AVO",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 9 a VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1229,7 +1250,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "edafafe7b47e0e8b0e74b99cb795bc8f14abdf3191f219e592148812b5961bf9"
     },
@@ -1240,6 +1261,7 @@
       "erlass": "AVO",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 9 a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1266,7 +1288,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "39cc040908bd719783c84beede465a23b088e381ae57c8ad5b0c79236ff19cf7"
     },
@@ -1277,6 +1299,7 @@
       "erlass": "AVO",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 9 a VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1285,7 +1308,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cfc6e06991d81afe8923bc6049b9d4f52cc5b6edd07147a805dccae71ec91309"
     },
@@ -1296,6 +1319,7 @@
       "erlass": "AVO",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1318,7 +1342,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8eccf5b7082e6879721f88a2137a705cc36cd1ab29c0e95b63f0a11618e84cb3"
     },
@@ -1329,6 +1353,7 @@
       "erlass": "AVO",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1341,7 +1366,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e9ab0281eda80a0b56a8f5da45e9b120ca52d608921042acd5d36792d7238a15"
     },
@@ -1352,6 +1377,7 @@
       "erlass": "AVO",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 9 a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1372,7 +1398,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4499960e819a562f59b3fcd050804eb70743c0c9e06033210aa847416d4742a7"
     },
@@ -1383,6 +1409,7 @@
       "erlass": "AVO",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1407,7 +1434,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4383592d4706aad37932964d9e9582579514ffa7ede88cca9322b0d2c10151e6"
     },
@@ -1418,6 +1445,7 @@
       "erlass": "AVO",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1480,7 +1508,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "571c34514ef65e2a894f325fc1e342ce18a84de51169e8452c14602724272ae4"
     },
@@ -1491,6 +1519,7 @@
       "erlass": "AVO",
       "artikel": "33",
       "artikelLabel": "Art. 33",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1499,7 +1528,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "67e5452584e5c0660d85f23a003ab12d0096455f5e125e41450eedd17633f41c"
     },
@@ -1510,6 +1539,7 @@
       "erlass": "AVO",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1562,7 +1592,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a3cf864dc5cfa3159476cd9240ec3e7d7778e106eafb8ef254d00d7d99559042"
     },
@@ -1573,6 +1603,7 @@
       "erlass": "AVO",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1599,7 +1630,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4eefceb46d613907b40d5911ca7e1d338e04ae8e449b2f534bdcb4fb748c97a4"
     },
@@ -1610,6 +1641,7 @@
       "erlass": "AVO",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1618,7 +1650,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6fb7319e65fa4f33ded6ed98552627b07e7e3e04489457e2a8eb3e9477664e1a"
     },
@@ -1629,6 +1661,7 @@
       "erlass": "AVO",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 9 b und 51 a Abs. 4 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1648,19 +1681,23 @@
             },
             {
               "marke": "1",
-              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 2: dass das Versicherungsunternehmen bei vertraglich definierten Trigger -Ereignissen mindestens aber sowohl bei Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten als auch bei Insolvenzgefahr, verpflichtet ist, die Zahlung der Kapitalforderung und fälliger Schuldzinsen aufzuschieben; zusätzlich ist im Vertrag sicherzustellen, dass die Voraussetzungen nach Artikel 51 a Absatz 4 VAG erfüllt sind;"
+              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 2: dass das Versicherungsunternehmen bei vertraglich definierten Trigger -Ereignissen mindestens aber sowohl bei Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten als auch bei Insolvenzgefahr, verpflichtet ist, die Zahlung der Kapitalforderung und fälliger Schuldzinsen aufzuschieben; zusätzlich ist im Vertrag sicherzustellen, dass die Voraussetzungen nach Artikel 51 a Absatz 4 VAG erfüllt sind;",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 1 zusätzlich zu Ziffer 1: dass sie bei vertraglich definierten Trigger -Ereignissen, mindestens aber sowohl bei Unterschreiten der Schwelle von 80 Prozent des SST-Quotienten, im Zeitpunkt drohender Überschuldung, als auch bei Entzug der Bewilligung durch vollständige Forderungsreduktion wegfallen oder in statutarisches Eigenkapital gewandelt werden; für die Feststellung der drohenden Überschuldung werden die risikoabsorbierenden Kapitalinstrumente als Fremdkapital berücksichtigt;"
+              "text": "bei risikoabsorbierenden Kapitalinstrumenten in Tier 1 zusätzlich zu Ziffer 1: dass sie bei vertraglich definierten Trigger -Ereignissen, mindestens aber sowohl bei Unterschreiten der Schwelle von 80 Prozent des SST-Quotienten, im Zeitpunkt drohender Überschuldung, als auch bei Entzug der Bewilligung durch vollständige Forderungsreduktion wegfallen oder in statutarisches Eigenkapital gewandelt werden; für die Feststellung der drohenden Überschuldung werden die risikoabsorbierenden Kapitalinstrumente als Fremdkapital berücksichtigt;",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "dass die FINMA den Eintritt eines auslösenden Ereignisses nach Ziffer 1 oder Ziffer 2 mit einer Mitteilung an das Versicherungsunternehmen endgültig feststellen kann;"
+              "text": "dass die FINMA den Eintritt eines auslösenden Ereignisses nach Ziffer 1 oder Ziffer 2 mit einer Mitteilung an das Versicherungsunternehmen endgültig feststellen kann;",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "dass sich die Gläubigerinnen und Gläubiger mit der Feststellung nach Ziffer 3 sowie mit allfälligen von der FINMA angeordneten Massnahmen bei Insolvenzgefahr einverstanden erklären."
+              "text": "dass sich die Gläubigerinnen und Gläubiger mit der Feststellung nach Ziffer 3 sowie mit allfälligen von der FINMA angeordneten Massnahmen bei Insolvenzgefahr einverstanden erklären.",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -1672,11 +1709,13 @@
             },
             {
               "marke": "1",
-              "text": "die Rückzahlung nicht zum Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten oder zu einer Insolvenzgefahr führt; oder"
+              "text": "die Rückzahlung nicht zum Unterschreiten der Schwelle von 100 Prozent des SST-Quotienten oder zu einer Insolvenzgefahr führt; oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "das Instrument durch ein gleich- oder höherwertiges Instrument abgelöst wird."
+              "text": "das Instrument durch ein gleich- oder höherwertiges Instrument abgelöst wird.",
+              "tiefe": 1
             }
           ]
         },
@@ -1735,9 +1774,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "da5da36a48f74cdd458592d6c5c61b99ceb22aa4608dae29602dd92a01191a17"
+      "sha": "d19b348d6216580199e0f7cc719390b1c904bd047d3abaef3a7dc82e51016378"
     },
     {
       "id": "bund/AVO/art_38",
@@ -1746,6 +1785,7 @@
       "erlass": "AVO",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1758,7 +1798,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c9d8ac9d5f42b6e4f72102bcc60e3395476cc2cda92e316a110a41a0c619c615"
     },
@@ -1769,6 +1809,7 @@
       "erlass": "AVO",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1781,7 +1822,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e1b720695c8b0375e0761b087470b8520fc938725b6f6f5711e260c361d2ce55"
     },
@@ -1792,6 +1833,7 @@
       "erlass": "AVO",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1842,7 +1884,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "f61c56ac6a953883beb9f38eb2685bd6fe99c0fc60156f3b440b501bed1c20c2"
     },
@@ -1853,6 +1895,7 @@
       "erlass": "AVO",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1883,7 +1926,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4b3b0ad679862de382926295a39d6d1c1c21fa5caa66de91409e690e1b893bdf"
     },
@@ -1894,6 +1937,7 @@
       "erlass": "AVO",
       "artikel": "42",
       "artikelLabel": "Art. 42",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1909,11 +1953,13 @@
             },
             {
               "marke": "1",
-              "text": "zu einer relativen Änderung des SST-Quotienten um mindestens 10 Prozent, oder"
+              "text": "zu einer relativen Änderung des SST-Quotienten um mindestens 10 Prozent, oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "zu einer Über- oder Unterschreitung einer Interventionsschwelle führt; oder"
+              "text": "zu einer Über- oder Unterschreitung einer Interventionsschwelle führt; oder",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -1924,9 +1970,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "fda4409c47d6c6971073caf8a36d8c9d226e0e9a60361279a347d7aa5495df07"
+      "sha": "bc54ad5b8341e83bbd80d71589c3c589ef832e17a9bdeb1a7402f31615a811b9"
     },
     {
       "id": "bund/AVO/art_43",
@@ -1935,6 +1981,7 @@
       "erlass": "AVO",
       "artikel": "43",
       "artikelLabel": "Art. 43",
+      "grundlage": "(Art. 9 a und 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1967,7 +2014,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "53d18819be970218327c2267389a8f85c4d6992e1a04ad87175d89477f9ade3d"
     },
@@ -1978,6 +2025,7 @@
       "erlass": "AVO",
       "artikel": "44",
       "artikelLabel": "Art. 44",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1990,7 +2038,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6df6a244f3151636e273644428752044877262a285879eed86200def9a2ab51e"
     },
@@ -2001,6 +2049,7 @@
       "erlass": "AVO",
       "artikel": "45",
       "artikelLabel": "Art. 45",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2039,7 +2088,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7e96b8d476e19682fd7dd1e70d071b57abc7de39580d8b49180d3baa449f713c"
     },
@@ -2050,6 +2099,7 @@
       "erlass": "AVO",
       "artikel": "46",
       "artikelLabel": "Art. 46",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2072,7 +2122,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "0bf0a14f137dd22eb125e28dadc65830f4942998f3c7c388e2f70ebaa088de00"
     },
@@ -2083,6 +2133,7 @@
       "erlass": "AVO",
       "artikel": "47",
       "artikelLabel": "Art. 47",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2099,7 +2150,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e7a3e36c6145334120433883b1a4fa4976b230ad6c9acc7f0f5ce411b9cb1cc0"
     },
@@ -2110,6 +2161,7 @@
       "erlass": "AVO",
       "artikel": "48",
       "artikelLabel": "Art. 48",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2130,7 +2182,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d4f9dccfe568783b1a0385106dd70baf8645303f50de32feaef8f01fff5c2c9e"
     },
@@ -2141,6 +2193,7 @@
       "erlass": "AVO",
       "artikel": "49",
       "artikelLabel": "Art. 49",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2153,7 +2206,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "036df8ddd05911310d80d929d4448b7feed2a50a062bcf124634e9aeb7b4de8c"
     },
@@ -2164,6 +2217,7 @@
       "erlass": "AVO",
       "artikel": "50",
       "artikelLabel": "Art. 50",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2188,7 +2242,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "19cd878472715df30a4c6994606ffa30826a2b9c2bc92c252f1996f73ff91cd1"
     },
@@ -2199,6 +2253,7 @@
       "erlass": "AVO",
       "artikel": "50_a",
       "artikelLabel": "Art. 50a",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2211,7 +2266,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_50_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "0c0ec7c814e16b08dda3623aa8f36b32b56072e03dea687d0ead9ffb8af2a2e9"
     },
@@ -2230,7 +2285,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_50_b_50_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -2241,6 +2296,7 @@
       "erlass": "AVO",
       "artikel": "51",
       "artikelLabel": "Art. 51",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2267,7 +2323,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cc73288e956cb8d7ec4fabe83010d95163294f656e5c35f453ac16a81ebc6437"
     },
@@ -2278,6 +2334,7 @@
       "erlass": "AVO",
       "artikel": "52",
       "artikelLabel": "Art. 52",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2302,7 +2359,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "69c3805a5b643f085a0113dccccb17a59439234991fd93d16389669e5c5f9974"
     },
@@ -2313,6 +2370,7 @@
       "erlass": "AVO",
       "artikel": "53",
       "artikelLabel": "Art. 53",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2351,7 +2409,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "74ac50c5c6bf2c5ea3509bd07b1c1988a90c15bef4422e5eba180d7733fbb626"
     },
@@ -2362,6 +2420,7 @@
       "erlass": "AVO",
       "artikel": "53_a",
       "artikelLabel": "Art. 53a",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2380,7 +2439,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_53_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "63b0231a594839c5e744d228b835628b943b9ddfd1cf5ecc5b08c1d394e26273"
     },
@@ -2391,6 +2450,7 @@
       "erlass": "AVO",
       "artikel": "53_b",
       "artikelLabel": "Art. 53b",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2413,7 +2473,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_53_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c3bb502802ae5b4d27c9457933fa5bdda4c68c8233d8f16ea0b0f07159dbd162"
     },
@@ -2444,7 +2504,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "14f302fb1ba1e66f464877e7d185471f71da43ad0e3c1dfeffd82936be8ca419"
     },
@@ -2477,7 +2537,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "024091f9a7a99d68404b2329e37d59d6f6c9b9ee3644711bd5ec339de446e9fc"
     },
@@ -2528,7 +2588,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "148b045462f4ea6899d3d34bd0a66306beb3b14bb44d7afc96a13d08c7f4f9f4"
     },
@@ -2551,7 +2611,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cf28dd0ffdad86968b6d4a9ab8aff60287ed45ab79ed7e11099c9d29ef115c01"
     },
@@ -2574,7 +2634,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "3b23f03723ad213cd01d1849fa68986a451ebb26e85e8f64d6edc75f5e04f9d7"
     },
@@ -2593,7 +2653,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "56b144acd5ddb9a17ba84b1aad7323840cfc72f9e19fee73ff1a35022ef8b907"
     },
@@ -2612,7 +2672,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_60_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2623,6 +2683,7 @@
       "erlass": "AVO",
       "artikel": "62",
       "artikelLabel": "Art. 62",
+      "grundlage": "(Art. 16 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2639,7 +2700,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6217eaab600db8a25c8a851cdd920a5fd0a7c1e154b354d2b38aef72a9c2e32b"
     },
@@ -2658,7 +2719,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1554e463e3b3aaed2d72d63d72cf80f8692fe61d9bc2eed0565b2b1e10e8bb2b"
     },
@@ -2677,7 +2738,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2700,7 +2761,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9403f5a85792c5283e65a8887f27561f2383dd0b1f9ad1276c21dd839ea5394a"
     },
@@ -2719,7 +2780,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_66_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2760,7 +2821,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "37dce7156fc83251fe38b9e1fb3f8d44f29203ac0b916aac6a27388e82c9b364"
     },
@@ -2817,7 +2878,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b73b81172bf9d5d2ddf753cce484e4c10c5918f19c9fe350cac57736e1e8dd7f"
     },
@@ -2847,15 +2908,18 @@
             },
             {
               "marke": "1",
-              "text": "in einer der Art und Laufzeit der Versicherungsverpflichtungen des Unternehmens angemessenen Weise;"
+              "text": "in einer der Art und Laufzeit der Versicherungsverpflichtungen des Unternehmens angemessenen Weise;",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "im besten Interesse der Versicherungsnehmer und Anspruchsberechtigten; und"
+              "text": "im besten Interesse der Versicherungsnehmer und Anspruchsberechtigten; und",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "unter Berücksichtigung der strategischen Ziele."
+              "text": "unter Berücksichtigung der strategischen Ziele.",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -2900,9 +2964,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_69_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "330c888bce644537f68b3a308d481395e57cb9c7dccb92dc0042f3fe3ecf94a7"
+      "sha": "9e906bcfd9b4ba3cbe3bafb90eccfcb31dc0a703b0e127c5e7d7c5995c6df430"
     },
     {
       "id": "bund/AVO/art_70",
@@ -2929,7 +2993,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9c91204c54ae2be1d5cd761b6d6785f2d3ee08bc59c7f06f725cc4422e790335"
     },
@@ -2952,7 +3016,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7a367052c88c45d4de33b83bae8bed547e63b8c10ecf8af04d3753bea38f73ab"
     },
@@ -2975,7 +3039,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6840c628044e1b28c65085bd8ef58f0df11595c9d3499a0ae751f26a2beaf2be"
     },
@@ -2994,7 +3058,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "31a0df2ff75f3e3cb3cc784a19421c6377dd102d0aa0fd06b4ae0b8dc8c7f586"
     },
@@ -3017,7 +3081,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_74",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c6efc1c116a8a5a26a7c7a78ebbec45559f9e3514b3c1dd9d463e8a2b99e1576"
     },
@@ -3050,7 +3114,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_75",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "395c36f1032afa5a3f3de8961e2a9082501fb4d152eef3f5863058cd9d187fdb"
     },
@@ -3061,6 +3125,7 @@
       "erlass": "AVO",
       "artikel": "76",
       "artikelLabel": "Art. 76",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3073,7 +3138,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "26fa4f775f0331943f320148143def9970ceb0dc5bd52c6846118a508dffbe2d"
     },
@@ -3084,6 +3149,7 @@
       "erlass": "AVO",
       "artikel": "76_a",
       "artikelLabel": "Art. 76a",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3100,7 +3166,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_76_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "be171c0f32731082dee552b1cc9de47c4f946312962b14c4b97f477aa09efd69"
     },
@@ -3151,7 +3217,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d6a675ebdd1c635e28ad7775c57a433daef20d8166e801a1135273c4c3c54ec8"
     },
@@ -3192,7 +3258,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_78",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6987019cc86ba70e079310acfbd9bc8c37c7d2bf8aa1ccda974a68303e11146b"
     },
@@ -3203,6 +3269,7 @@
       "erlass": "AVO",
       "artikel": "79",
       "artikelLabel": "Art. 79",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3238,15 +3305,18 @@
             },
             {
               "marke": "1",
-              "text": "sie jederzeit veräussert werden können,"
+              "text": "sie jederzeit veräussert werden können,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die kollektive Kapitalanlage direkt oder indirekt nur in Anlagen gemäss Buchstaben a–e investiert, und"
+              "text": "die kollektive Kapitalanlage direkt oder indirekt nur in Anlagen gemäss Buchstaben a–e investiert, und",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die Fondsleitung oder ihre Verwaltungsgesellschaft einer angemessenen inländischen oder ausländischen Regulierung und Aufsicht untersteht."
+              "text": "die Fondsleitung oder ihre Verwaltungsgesellschaft einer angemessenen inländischen oder ausländischen Regulierung und Aufsicht untersteht.",
+              "tiefe": 1
             }
           ]
         },
@@ -3261,9 +3331,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "041a58aa81c29a0848fe9b908d5d5d119859fb4677662c171cb7632e08849206"
+      "sha": "f74a12044f355664958693f18b73f9d629eaca064fdaa56feb58905e5791c89b"
     },
     {
       "id": "bund/AVO/art_80",
@@ -3280,7 +3350,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3291,6 +3361,7 @@
       "erlass": "AVO",
       "artikel": "81",
       "artikelLabel": "Art. 81",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3299,7 +3370,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1561efbbeec043c78e8625aae90d763c0e413b79ad378bdb0c35780dd566260e"
     },
@@ -3318,7 +3389,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3329,6 +3400,7 @@
       "erlass": "AVO",
       "artikel": "83",
       "artikelLabel": "Art. 83",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3367,7 +3439,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "44b3925b71a426caec1ff78dda8dd85bd14f25443b869c670a294172fc466562"
     },
@@ -3378,6 +3450,7 @@
       "erlass": "AVO",
       "artikel": "84",
       "artikelLabel": "Art. 84",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3394,7 +3467,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "57ab60d1261b5c0ecac5d8a2a9e7f597c645ff45b9c64a399ce14a3086d09731"
     },
@@ -3420,19 +3493,23 @@
             },
             {
               "marke": "1",
-              "text": "vorhanden sind,"
+              "text": "vorhanden sind,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "vorschriftsgemäss zugewiesen und verwahrt werden,"
+              "text": "vorschriftsgemäss zugewiesen und verwahrt werden,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "mindestens dem Sollbetrag entsprechen,"
+              "text": "mindestens dem Sollbetrag entsprechen,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "den aufsichtsrechtlichen Anlagevorschriften genügen."
+              "text": "den aufsichtsrechtlichen Anlagevorschriften genügen.",
+              "tiefe": 1
             }
           ]
         },
@@ -3451,9 +3528,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "dd4dbfa8d704b3e489652f060f6a0c6f1b778c4f47f1c8b5a76f57d3758aa96a"
+      "sha": "aafaead4d858935ff75c2bd1199feff654a23290a9ef629cbbb0dade2092a076"
     },
     {
       "id": "bund/AVO/art_86",
@@ -3482,7 +3559,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "77396c0a1a0b7db6348cbf558ebe28f4a6a04125654d432a2fbbcc4929f87283"
     },
@@ -3493,6 +3570,7 @@
       "erlass": "AVO",
       "artikel": "87",
       "artikelLabel": "Art. 87",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3523,7 +3601,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d2d30dde454fde3f3fa86609749eb054559ca05ddc67eea988c3d5458e473b10"
     },
@@ -3550,7 +3628,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "124fbc1d1078de083ff762d734d9aa9d7a4255cb5311a32ee8bdcbd4d6a00f08"
     },
@@ -3569,7 +3647,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_88_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "997b3f57f875b57abf3b1ea5b5dcc2edb9827b3ae65d90a799c9595ea1af5942"
     },
@@ -3592,7 +3670,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8bf29c7da716a389a4328bddb3480f9a01f18e3966f07c6beb0b860e84afa2ef"
     },
@@ -3603,6 +3681,7 @@
       "erlass": "AVO",
       "artikel": "90",
       "artikelLabel": "Art. 90",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3615,7 +3694,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "227c9022dd306ce6a528553a7fcf6c44d5f1f1e8d44a8b14693282f9b849e183"
     },
@@ -3626,6 +3705,7 @@
       "erlass": "AVO",
       "artikel": "91",
       "artikelLabel": "Art. 91",
+      "grundlage": "(17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3642,7 +3722,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5f3cfec4100405f23110f569e29052b04d26ebf05def487e5719e9fa7e0362d2"
     },
@@ -3653,6 +3733,7 @@
       "erlass": "AVO",
       "artikel": "91_a",
       "artikelLabel": "Art. 91a",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3661,7 +3742,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_91_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "824824c70df8065096383353df68acc06b61c574dd3b358e9994177a109d8d65"
     },
@@ -3672,6 +3753,7 @@
       "erlass": "AVO",
       "artikel": "91_b",
       "artikelLabel": "Art. 91b",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3688,7 +3770,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_91_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ce37ca1f0cba128751be7a9532b0f6b9a7bf41566c89c8259ba0eb95c3a6cdff"
     },
@@ -3699,6 +3781,7 @@
       "erlass": "AVO",
       "artikel": "92",
       "artikelLabel": "Art. 92",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3711,7 +3794,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ff1017749b8757d37e8f89e84e951fab503c77e855112713268f4a48f9f9d795"
     },
@@ -3722,6 +3805,7 @@
       "erlass": "AVO",
       "artikel": "93",
       "artikelLabel": "Art. 93",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3756,7 +3840,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d4907ae1b419f33c3aed914c72454203a81d50ef973217c58e3763a99e007671"
     },
@@ -3775,7 +3859,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_93_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "aea39a8292ed83f837ad2b16bc5b7879a13240dfb1880f7077d057d125639752"
     },
@@ -3794,7 +3878,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8b425acf26c1aed3b11ff38a14e18b77e85d5dd3ed3166b0cbddf3c9aee71e88"
     },
@@ -3805,6 +3889,7 @@
       "erlass": "AVO",
       "artikel": "95",
       "artikelLabel": "Art. 95",
+      "grundlage": "(Art. 17 und 20 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3821,7 +3906,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "19bf08cc48688bb374205badbefa5d9aa5b604bfb5a1a05f228ec7bfbb5154f9"
     },
@@ -3832,6 +3917,7 @@
       "erlass": "AVO",
       "artikel": "96",
       "artikelLabel": "Art. 96",
+      "grundlage": "(Art. 22 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3888,7 +3974,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "69def278afbf6f6fea13e956746277c5ec7f4af121783ed6d3ba64acb69ed2de"
     },
@@ -3899,6 +3985,7 @@
       "erlass": "AVO",
       "artikel": "96_a",
       "artikelLabel": "Art. 96a",
+      "grundlage": "(Art. 22 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3945,7 +4032,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_96_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7da3a28fa2e05e24a587dad81632f6ff6309bc0eca478151bae12a304789f266"
     },
@@ -3956,6 +4043,7 @@
       "erlass": "AVO",
       "artikel": "97",
       "artikelLabel": "Art. 97",
+      "grundlage": "(Art. 22 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3994,7 +4082,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cf86a14093621464902a56ed67a1060b874bfadc205c1a3949e32a9d7a34d0a7"
     },
@@ -4005,6 +4093,7 @@
       "erlass": "AVO",
       "artikel": "98",
       "artikelLabel": "Art. 98",
+      "grundlage": "(Art. 22 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4025,7 +4114,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "266e8850e519c182987ec9bb006d68fa27061951c61b2739896068acf7f01d52"
     },
@@ -4036,6 +4125,7 @@
       "erlass": "AVO",
       "artikel": "98_a",
       "artikelLabel": "Art. 98a",
+      "grundlage": "(Art. 22 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4066,7 +4156,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1057b23fc531046a9986c04de807eb53d35d7f268e288a1f822004e7fa59397a"
     },
@@ -4077,6 +4167,7 @@
       "erlass": "AVO",
       "artikel": "98_b",
       "artikelLabel": "Art. 98b",
+      "grundlage": "(Art. 22 a VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4085,7 +4176,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6ad1042835654fea44789e449f9225f95cd22813e5fcb4881c31d5c6b48ecc41"
     },
@@ -4096,6 +4187,7 @@
       "erlass": "AVO",
       "artikel": "98_c",
       "artikelLabel": "Art. 98c",
+      "grundlage": "(Art. 22 a VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4118,7 +4210,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "aadadf919128df5eade04f4c7c3d65912f13ce986c6beddf6db86e90fc4233ca"
     },
@@ -4129,6 +4221,7 @@
       "erlass": "AVO",
       "artikel": "98_d",
       "artikelLabel": "Art. 98d",
+      "grundlage": "(Art. 22 a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4163,7 +4256,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "760f41ec554765ad551b95006dff8a2313c2a202810cf8725f3250e252c3275b"
     },
@@ -4174,6 +4267,7 @@
       "erlass": "AVO",
       "artikel": "98_e",
       "artikelLabel": "Art. 98e",
+      "grundlage": "(Art. 22 a VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4186,7 +4280,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_98_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7fbcb289db8b3c52da9f86a1cc32eb4924c5878be8ba9a3d3b3992b98a7788b6"
     },
@@ -4213,7 +4307,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "3c83e747787a04ff91bad3746d8849093da9fd58468ba56febcab67d5943f731"
     },
@@ -4224,6 +4318,7 @@
       "erlass": "AVO",
       "artikel": "100",
       "artikelLabel": "Art. 100",
+      "grundlage": "(Art. 9 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4254,7 +4349,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6f8eec6b74e937fa99e4b0a84d48d3a511b1238264780d45469628448b6e7b23"
     },
@@ -4273,7 +4368,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_101_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4284,6 +4379,7 @@
       "erlass": "AVO",
       "artikel": "109",
       "artikelLabel": "Art. 109",
+      "grundlage": "(Art. 25 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4314,7 +4410,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ed4537ee009affbacda6fbbcb06abaf3e61f25effa0950bf14418e6624d4f7b6"
     },
@@ -4325,6 +4421,7 @@
       "erlass": "AVO",
       "artikel": "110",
       "artikelLabel": "Art. 110",
+      "grundlage": "(Art. 26 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4367,7 +4464,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "bc5f0217598aac12557cb4924bd8476a3de25028bfd550e106418a577c7309a4"
     },
@@ -4394,7 +4491,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a6d79bbad54052b36877b9dacd00d55a4f5d9d5d66160c1bf7eb2f5e6c46c346"
     },
@@ -4405,6 +4502,7 @@
       "erlass": "AVO",
       "artikel": "111_a",
       "artikelLabel": "Art. 111a",
+      "grundlage": "(Art. 25 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4470,15 +4568,18 @@
             },
             {
               "marke": "1",
-              "text": "Die gebuchten Brutto-Prämien im Gesamtgeschäft betragen weniger als 10 Millionen Franken."
+              "text": "Die gebuchten Brutto-Prämien im Gesamtgeschäft betragen weniger als 10 Millionen Franken.",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Die versicherungstechnischen Brutto-Rückstellungen im Gesamtgeschäft betragen weniger als 50 Millionen Franken."
+              "text": "Die versicherungstechnischen Brutto-Rückstellungen im Gesamtgeschäft betragen weniger als 50 Millionen Franken.",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Das Versicherungsunternehmen verfügt über einen kleinen Kreis von Versicherten."
+              "text": "Das Versicherungsunternehmen verfügt über einen kleinen Kreis von Versicherten.",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -4493,9 +4594,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "83b3e0fadf63303ee7b0de641555f6c223abf5be21ae21f4e56fcac27d534ca8"
+      "sha": "c44163ddaff2c1087bb995e135319acd1ed6e6e5979dd86c11afa59a92f6f8ad"
     },
     {
       "id": "bund/AVO/art_111_b",
@@ -4526,7 +4627,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "0702aefd968df7fcf74a30ec10151b59e12d84706ade525269d1f74e51f5c9e0"
     },
@@ -4537,6 +4638,7 @@
       "erlass": "AVO",
       "artikel": "111_c",
       "artikelLabel": "Art. 111c",
+      "grundlage": "(Art. 30 a und 30 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4549,7 +4651,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "26e32db7930793b494b6c7de09d0fd87bb67e9419529422646b25b0ad18f4b68"
     },
@@ -4560,6 +4662,7 @@
       "erlass": "AVO",
       "artikel": "111_d",
       "artikelLabel": "Art. 111d",
+      "grundlage": "(Art. 30 e Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4572,7 +4675,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "070b07d6c28e5a312839dcbfd86683c3498a02b44cc94ebc20be0bcc170e824a"
     },
@@ -4583,6 +4686,7 @@
       "erlass": "AVO",
       "artikel": "111_e",
       "artikelLabel": "Art. 111e",
+      "grundlage": "(Art. 30 e und 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4599,7 +4703,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a5afa2fd96995dd29e67889c8ffa172133bc59360709ac1fa25066ad92c93e2d"
     },
@@ -4610,6 +4714,7 @@
       "erlass": "AVO",
       "artikel": "111_f",
       "artikelLabel": "Art. 111f",
+      "grundlage": "(Art. 30 e VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4626,7 +4731,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "830fe3b85609e51c152eb0c5bfd89558d74d9c92cb8d1129df85cbcfa1bd9cbd"
     },
@@ -4637,6 +4742,7 @@
       "erlass": "AVO",
       "artikel": "111_g",
       "artikelLabel": "Art. 111g",
+      "grundlage": "(Art. 30 e VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4671,7 +4777,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5fff49ef3c97420140ad91949b22a8b9a0b2ff25bc57b5c24d5d216402f43ecc"
     },
@@ -4682,6 +4788,7 @@
       "erlass": "AVO",
       "artikel": "111_h",
       "artikelLabel": "Art. 111h",
+      "grundlage": "(Art. 30 e VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4694,7 +4801,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e6d5030d4dd4e6ca84cf88f37b91d50581179733e2dd08f6d63148a92e12fbb0"
     },
@@ -4705,6 +4812,7 @@
       "erlass": "AVO",
       "artikel": "111_i",
       "artikelLabel": "Art. 111i",
+      "grundlage": "(Art. 26 Abs. 3 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4713,7 +4821,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7fcaa0ea41e64bd40ac959ba1f8b667f662d922582066d5308f60c9c57ca31af"
     },
@@ -4724,6 +4832,7 @@
       "erlass": "AVO",
       "artikel": "111_j",
       "artikelLabel": "Art. 111j",
+      "grundlage": "(Art. 30 e Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4732,7 +4841,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c3b05426e768c4609837108b987cc1218df521d22995e55b21240888245263e3"
     },
@@ -4743,6 +4852,7 @@
       "erlass": "AVO",
       "artikel": "111_k",
       "artikelLabel": "Art. 111k",
+      "grundlage": "(Art. 30 e und 30 f VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4751,7 +4861,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cbea7b03ba03332adca8f17526f6ca7f0748fb1946c6dfb629d191203cf4456f"
     },
@@ -4762,6 +4872,7 @@
       "erlass": "AVO",
       "artikel": "111_l",
       "artikelLabel": "Art. 111l",
+      "grundlage": "(Art. 30 e Abs. 3 Buchstabe b und d VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4774,7 +4885,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "148d8131f5c844f7fd684ae8696bd28091225c97b328f6e8b2042403d5690d4c"
     },
@@ -4785,6 +4896,7 @@
       "erlass": "AVO",
       "artikel": "111_m",
       "artikelLabel": "Art. 111m",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4831,7 +4943,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a91a4bb9dac682d32e8d9f176a4ee5408e9af2931cc3a2511adc7528270ffeaf"
     },
@@ -4842,6 +4954,7 @@
       "erlass": "AVO",
       "artikel": "111_n",
       "artikelLabel": "Art. 111n",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4872,7 +4985,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_n",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "3939d21a623247ca4ee02cc06c4346d4e0018af12528dc701432a73e22f9af73"
     },
@@ -4883,6 +4996,7 @@
       "erlass": "AVO",
       "artikel": "111_o",
       "artikelLabel": "Art. 111o",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4903,7 +5017,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_o",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "07e23c609d97b40e3bcc1327130ccd53ad5b809e59a7ce7169e1113a1896d4a3"
     },
@@ -4914,6 +5028,7 @@
       "erlass": "AVO",
       "artikel": "111_p",
       "artikelLabel": "Art. 111p",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4940,7 +5055,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_p",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8bdfdd783e1a0df0d0bd5ccfe86c4549a896c2a718ac512b97cb26a96aaf59dd"
     },
@@ -4951,6 +5066,7 @@
       "erlass": "AVO",
       "artikel": "111_q",
       "artikelLabel": "Art. 111q",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4963,7 +5079,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_q",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5a59f0ae50d9f9891db0e67675df1558f9bc3969d291dfed81e0b2de89ca5bd8"
     },
@@ -4974,6 +5090,7 @@
       "erlass": "AVO",
       "artikel": "111_r",
       "artikelLabel": "Art. 111r",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4986,7 +5103,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_r",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e5bb54f14f9c73a10da67dc748c9efba10b52639a1838a4f1524a724a83e3212"
     },
@@ -4997,6 +5114,7 @@
       "erlass": "AVO",
       "artikel": "111_s",
       "artikelLabel": "Art. 111s",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5009,7 +5127,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_s",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "225ca2cc30b4eb9bace4c480c235d7301d997db6650b8d5ffb153a4449f06ae8"
     },
@@ -5020,6 +5138,7 @@
       "erlass": "AVO",
       "artikel": "111_t",
       "artikelLabel": "Art. 111t",
+      "grundlage": "(Art. 26 Abs. 3 und Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5036,7 +5155,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_t",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a2950292a17bc6377d8abf4dd69b4a391ff6965c3d5c5e1fd394f2b824b427e2"
     },
@@ -5047,6 +5166,7 @@
       "erlass": "AVO",
       "artikel": "111_u",
       "artikelLabel": "Art. 111u",
+      "grundlage": "(Art. 30 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5067,7 +5187,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_111_u",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "99b043a64775312f32e6e18315eea97ec5be643888d872413844b4a01e1eb716"
     },
@@ -5086,7 +5206,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_112_116",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5123,7 +5243,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_117",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "752ec2f59039898fa7b12c052d030a3f364173a5a9f8ac1fde12f3fe1bd2023e"
     },
@@ -5146,7 +5266,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_118",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d4ff55febfb86cd956cb61ebb5778f23fc8e8000bafe9683aceca81f9f6dd7d6"
     },
@@ -5165,7 +5285,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_119",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "976875a77480df87da7d49a4def32bc6fd8357426cd2e726448ba2162c5f9468"
     },
@@ -5176,6 +5296,7 @@
       "erlass": "AVO",
       "artikel": "119_a",
       "artikelLabel": "Art. 119a",
+      "grundlage": "(Art. 80 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5188,7 +5309,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_119_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b3cc6b6b0175adf4d4ec8836c87984cdaa052a60f0ffd149e9e5d99318761d56"
     },
@@ -5199,6 +5320,7 @@
       "erlass": "AVO",
       "artikel": "120",
       "artikelLabel": "Art. 120",
+      "grundlage": "(Art. 38 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5211,7 +5333,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_120",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1e7e6db63fa197c79797e5931d5259d4012b0c48a3468af33cb8ef5d06247bf6"
     },
@@ -5222,6 +5344,7 @@
       "erlass": "AVO",
       "artikel": "121",
       "artikelLabel": "Art. 121",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5276,7 +5399,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_121",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "addf1b64393604406ed9760ae55898b6bb76258f4570bfc824c48df67a07fce4"
     },
@@ -5287,6 +5410,7 @@
       "erlass": "AVO",
       "artikel": "121_a",
       "artikelLabel": "Art. 121a",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5295,7 +5419,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_121_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7ebc9b43cf03289db6e5bcd7e01ae6fc6e20c7dcc05e71bf750fb61b2978bff6"
     },
@@ -5306,6 +5430,7 @@
       "erlass": "AVO",
       "artikel": "121_b",
       "artikelLabel": "Art. 121b",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5318,7 +5443,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_121_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8c8bb5dcb3a42fe791da11314619e0f18844e54f75250e043e51ed5aad2b50b7"
     },
@@ -5329,6 +5454,7 @@
       "erlass": "AVO",
       "artikel": "121_c",
       "artikelLabel": "Art. 121c",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5337,7 +5463,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_121_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5d297fbc45142370fbc1ca4fdaabde8e34fca07ebf8cb00c43d45a4a2546b614"
     },
@@ -5348,6 +5474,7 @@
       "erlass": "AVO",
       "artikel": "122",
       "artikelLabel": "Art. 122",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5360,7 +5487,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_122",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "291b5a501955fd50b970f9697df4d9824511d2eecf9017bc378dee706c2bf458"
     },
@@ -5371,6 +5498,7 @@
       "erlass": "AVO",
       "artikel": "123",
       "artikelLabel": "Art. 123",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5391,7 +5519,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_123",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "203b4a6b422cfefbfc46702e068025c08f8f6b9b1654f3e362ce4c94a24d3122"
     },
@@ -5424,7 +5552,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_124",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5b80af9a26457fe1b93eb4913bfcb27ea00b5a46e4029dd46e59c2d54440f89f"
     },
@@ -5443,7 +5571,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_125",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6db466300824e3b747967381638f6b2015b1a7f9b6dae9195f530f27f8a50ac9"
     },
@@ -5462,7 +5590,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_125_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9c919dca1d55acb93cf453803ec40171dc2e5899ded3f1d8df3abe6d5f0735cc"
     },
@@ -5507,7 +5635,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_126",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cbc1754beb6514ccb1a9acf7f208563437de9b3d28cc68c4edae49be98f3a2e7"
     },
@@ -5518,6 +5646,7 @@
       "erlass": "AVO",
       "artikel": "127",
       "artikelLabel": "Art. 127",
+      "grundlage": "(Art. 36 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5564,7 +5693,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_127",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "98e27b53fc4091dfce407cedc9b3b3ab192908cac79eb7fdb532245e9d0b53b5"
     },
@@ -5583,7 +5712,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_128",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cd9a5b4e07babb3b3ccfa1c97e5ff1c19d781e0bd9bc818dcdc43979756a01aa"
     },
@@ -5606,7 +5735,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "be36bde04ea46aee69b01a6e8e4f124ab82a02316805154edf29542b97b10b88"
     },
@@ -5617,6 +5746,7 @@
       "erlass": "AVO",
       "artikel": "129_a",
       "artikelLabel": "Art. 129a",
+      "grundlage": "(Art. 31 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5649,7 +5779,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cf06f263d617c54cd2a5e47bd77d3304845d55a65c0b0a0ad6dd779d05837934"
     },
@@ -5660,6 +5790,7 @@
       "erlass": "AVO",
       "artikel": "129_b",
       "artikelLabel": "Art. 129b",
+      "grundlage": "(Art. 31 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5695,23 +5826,28 @@
             },
             {
               "marke": "1",
-              "text": "der Bruttorendite,"
+              "text": "der Bruttorendite,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der Renditereduktion in Prozent für alle Kosten ausser den Risikokosten,"
+              "text": "der Renditereduktion in Prozent für alle Kosten ausser den Risikokosten,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "der Nettorendite als Differenz aus Bruttorendite und Renditereduktion,"
+              "text": "der Nettorendite als Differenz aus Bruttorendite und Renditereduktion,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "den Risikokosten nominal,"
+              "text": "den Risikokosten nominal,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "allfälligen separat ausgewiesenen Prämien für Zusatzversicherungen zur qualifizierten Lebensversicherung."
+              "text": "allfälligen separat ausgewiesenen Prämien für Zusatzversicherungen zur qualifizierten Lebensversicherung.",
+              "tiefe": 1
             }
           ]
         },
@@ -5752,9 +5888,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "9dfec13f1d23d7578a60f286a35487a3feeb135f68b2b8e59a334d970ffdff88"
+      "sha": "7056e72acadf944801a2855418e9ca53b6a70bc933f159fdc526dfaf5443934f"
     },
     {
       "id": "bund/AVO/art_129_c",
@@ -5763,6 +5899,7 @@
       "erlass": "AVO",
       "artikel": "129_c",
       "artikelLabel": "Art. 129c",
+      "grundlage": "(Art. 39 h Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5775,7 +5912,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b0c95e8ac5646ce42b00f039b89baea536b315c6e432046ad59211fa624bb6c8"
     },
@@ -5786,6 +5923,7 @@
       "erlass": "AVO",
       "artikel": "129_d",
       "artikelLabel": "Art. 129d",
+      "grundlage": "(Art. 39 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5812,7 +5950,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ccf3f599f3c8a8fd8dc596e7b78ad63314defaf876b9f6fcaedd5a4adf3511d6"
     },
@@ -5823,6 +5961,7 @@
       "erlass": "AVO",
       "artikel": "129_e",
       "artikelLabel": "Art. 129e",
+      "grundlage": "(Art. 39 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5839,7 +5978,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7baf55cba4271abd3a7000c3106c8954a33ff347cebe69ce804db2bf11e07310"
     },
@@ -5850,6 +5989,7 @@
       "erlass": "AVO",
       "artikel": "129_f",
       "artikelLabel": "Art. 129f",
+      "grundlage": "(Art. 39 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5876,7 +6016,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9f088ed14cebb92ff044649127ee9b5db5dac91d532b630f62e2061b197e99e0"
     },
@@ -5887,6 +6027,7 @@
       "erlass": "AVO",
       "artikel": "129_g",
       "artikelLabel": "Art. 129g",
+      "grundlage": "(Art. 39 b Abs. 3 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5899,7 +6040,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c2d9126214a19b17622c5c0d8dcd36e1e02d5a84a48efc816c86574103a347f8"
     },
@@ -5910,6 +6051,7 @@
       "erlass": "AVO",
       "artikel": "129_h",
       "artikelLabel": "Art. 129h",
+      "grundlage": "(Art. 39 b Abs. 4 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5918,7 +6060,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a66fa71f714afac80a45f283207a033954ea3b487a0b372ce464138ffbd68b1e"
     },
@@ -5929,6 +6071,7 @@
       "erlass": "AVO",
       "artikel": "129_i",
       "artikelLabel": "Art. 129i",
+      "grundlage": "(Art. 39 c Abs. 2 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5951,7 +6094,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1dfbbbed994776bc4bb54fe3d0227df3f26a96b0e4a90a909b0c01cd43cdf54f"
     },
@@ -5962,6 +6105,7 @@
       "erlass": "AVO",
       "artikel": "129_j",
       "artikelLabel": "Art. 129j",
+      "grundlage": "(Art. 39 c Abs. 2 Bst. d VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5974,7 +6118,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c12ce1b1bf870f072e6b8ad3f148250235b85f08cb1ebffc2a50754c69c786ab"
     },
@@ -5985,6 +6129,7 @@
       "erlass": "AVO",
       "artikel": "129_k",
       "artikelLabel": "Art. 129k",
+      "grundlage": "(Art. 39 e VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5993,7 +6138,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "59d4459881e613fd2b3df5c8368cf8c271df6b0821ccf40f164c33c8bbfba48c"
     },
@@ -6004,6 +6149,7 @@
       "erlass": "AVO",
       "artikel": "129_l",
       "artikelLabel": "Art. 129l",
+      "grundlage": "(Art. 39 b Abs. 2 und Art. 39 f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6016,7 +6162,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "40ac74c6398edeb0bc19ecbee2d2819eeeae9afa5728ce0ccda5bca0ecc7cfc3"
     },
@@ -6027,6 +6173,7 @@
       "erlass": "AVO",
       "artikel": "129_m",
       "artikelLabel": "Art. 129m",
+      "grundlage": "(Art. 39 j VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6053,7 +6200,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8105cf81ef08a524839814e8fdbee8e4012573dc73ac782fc8e4c5a4eb77cc93"
     },
@@ -6064,6 +6211,7 @@
       "erlass": "AVO",
       "artikel": "129_n",
       "artikelLabel": "Art. 129n",
+      "grundlage": "(Art. 39 k VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6072,7 +6220,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_n",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6df60f65a71b003b3ab7f17991f296b277c8bbfe4c02533968575de51dd08a4a"
     },
@@ -6083,6 +6231,7 @@
       "erlass": "AVO",
       "artikel": "129_o",
       "artikelLabel": "Art. 129o",
+      "grundlage": "(Art. 39 k VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6091,7 +6240,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_o",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "885068cd1809ccf9aea92aea5fa372973c8d62a2fac3e4660a77c755c6c22b89"
     },
@@ -6102,6 +6251,7 @@
       "erlass": "AVO",
       "artikel": "129_p",
       "artikelLabel": "Art. 129p",
+      "grundlage": "(Art. 39 i VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6132,7 +6282,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_129_p",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e62492d2003d7750b7ff848c1aa2c760e24be918cf04a57a9e13bd75731b87c5"
     },
@@ -6177,7 +6327,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_130",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d89dc3d1aaf44e17d722fbe7547aff3a7ae83bd5aa78670e272cad69e3cf5648"
     },
@@ -6200,7 +6350,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_131",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "f03902ad2b049bc375ff85e316da3fb3e2de437edff73a497e745b902646226d"
     },
@@ -6231,7 +6381,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_132",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9366c566fe89db43c2ee019ed1040ea206b5b9b77558894f2f36c3b4b201d95b"
     },
@@ -6250,7 +6400,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_133",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c79f3abb7a36509214202d7fd4aa5f9e6e391d06c75b0b1e1b826cb520c26ca5"
     },
@@ -6291,7 +6441,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_134",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "69b2c97cfaf6a5b9e45c871b8efdca1f7547dd14e60f21e3b85a6718a15499b6"
     },
@@ -6314,7 +6464,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_135",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8ce293979104abfd42dcc43ada63219f9ed66b7e61118446b83955862efabb7d"
     },
@@ -6349,7 +6499,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_136",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b23b79c1085f4aa65fd8629649c22db86fde8c47223468624e06698a4eb4a69d"
     },
@@ -6376,7 +6526,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_137",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e8909337dd9624c1d3b07392a4340c19577e760ffc1f657cf65c6a445f03ef03"
     },
@@ -6403,7 +6553,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_138",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "33ad62733757f3ded5218b1d7dfa2ca8334140529bbdad9eb6393e6616f5da3b"
     },
@@ -6426,7 +6576,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_139",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "2bdf8c8665af03075ca8640b9d73589e435cf052ad3558d10e559548cb57ab6e"
     },
@@ -6459,7 +6609,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_140",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "78d71e5267f4f1b8f53b0e6764377afb9460ee2b65efd490daa166eb61d8847e"
     },
@@ -6482,7 +6632,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_141",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5e9c7268dbc9e132ac79ad5acd67f73aa205232b5fb5557130ccedcfbd86045b"
     },
@@ -6505,7 +6655,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_142",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "f3ef7750d6b1dc77bee805642bb764a7091330f953985909caf1fffe59eb0df5"
     },
@@ -6516,6 +6666,7 @@
       "erlass": "AVO",
       "artikel": "143",
       "artikelLabel": "Art. 143",
+      "grundlage": "(Art. 37 Abs. 2 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6556,7 +6707,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_143",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "487a1b70803b30a9acd963d8f9bc6f565fa1e4bbf7417f079ef14ba32a73273d"
     },
@@ -6597,7 +6748,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_144",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "602db098dcc17b90b547b3ad0b20516aaa3e4b1f204d47a0095322b023907ab2"
     },
@@ -6624,7 +6775,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_145",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4cd5c72e1e5e131e7345463adfea399d5c16d9804145268027e9e52de6c40659"
     },
@@ -6659,7 +6810,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_146",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "605a9c34faa2e87ee0fa354b948c195e9d6767167fe027b5618767e2a79a82ba"
     },
@@ -6670,6 +6821,7 @@
       "erlass": "AVO",
       "artikel": "147",
       "artikelLabel": "Art. 147",
+      "grundlage": "(Art. 37 Abs. 3 Bst. c VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6700,7 +6852,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_147",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1e4d311d52dd13d52b0e3a2e2479702aad84194e2324703fdcd8705b485e3cdd"
     },
@@ -6723,7 +6875,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_148",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "501614836d41376c717d03b63e7db415f2e9f0482baea7d267d698455712df12"
     },
@@ -6745,35 +6897,43 @@
             },
             {
               "marke": "1",
-              "text": "das Langlebigkeitsrisiko,"
+              "text": "das Langlebigkeitsrisiko,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "künftige Deckungslücken bei Rentenumwandlung,"
+              "text": "künftige Deckungslücken bei Rentenumwandlung,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "gemeldete, aber noch nicht erledigte Versicherungsfälle einschliesslich Deckungskapitalverstärkungen für Invaliden- und Hinterbliebenenrenten,"
+              "text": "gemeldete, aber noch nicht erledigte Versicherungsfälle einschliesslich Deckungskapitalverstärkungen für Invaliden- und Hinterbliebenenrenten,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "eingetretene, aber noch nicht gemeldete Versicherungsfälle,"
+              "text": "eingetretene, aber noch nicht gemeldete Versicherungsfälle,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Schadenschwankungen,"
+              "text": "Schadenschwankungen,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Wertschwankungen der Kapitalanlagen,"
+              "text": "Wertschwankungen der Kapitalanlagen,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Zinsgarantien,"
+              "text": "Zinsgarantien,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "Tarifumstellungen und -sanierungen;"
+              "text": "Tarifumstellungen und -sanierungen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -6796,9 +6956,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_149",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "522266e2b1d8fdada6cff334ebdf8b4005778e1ecef3990474890936c46875b2"
+      "sha": "e3e3a90184c813d1f582124c5554e4b74c3d69bbe21959adcc04fafc226f2815"
     },
     {
       "id": "bund/AVO/art_150",
@@ -6833,7 +6993,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_150",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7dd642714cf252b38c7ed96e42d90f5ca81eaed36fb72568e8344d86d2a5d2d2"
     },
@@ -6856,7 +7016,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_151",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "2c9eb6f8723a864dfcf1455f51b874390a3eb2598cd04de3b56b8cab49ca383e"
     },
@@ -6883,7 +7043,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_152",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c31d621559e1597937da425f57ddcb44ad1084fb690ab3f2c73010f30f1fcc67"
     },
@@ -6910,7 +7070,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_153",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "bd6488f974f46eb59b8670cba220b3195c8136d322f418e910d12e740d6497d3"
     },
@@ -6929,7 +7089,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_154",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6940,6 +7100,7 @@
       "erlass": "AVO",
       "artikel": "154_a",
       "artikelLabel": "Art. 154a",
+      "grundlage": "(Art. 31 Abs. 1, 38 und Art. 46 Abs. 1 Bst. f und g VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6956,7 +7117,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_154_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5a20ed40395195425f8d4bd882eca39e7e657814326d9ff0753ef87992e06adf"
     },
@@ -6967,6 +7128,7 @@
       "erlass": "AVO",
       "artikel": "155",
       "artikelLabel": "Art. 155",
+      "grundlage": "(Art. 16 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7019,7 +7181,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_155",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "aaa7c53812d4ec28117244fa7933ca4cf9cbf8e163a18d7605e0905e0346f7d0"
     },
@@ -7046,7 +7208,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_156",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c7900422d758af6672fbc28deaa98f9c846bb0dbfb80ee5c13b31a865b69cd19"
     },
@@ -7065,7 +7227,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_157",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "28a5d0ffe7bb30144c3964e18daa037f5875eda93475d7eea5409a49768a4cf1"
     },
@@ -7084,7 +7246,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_158",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "dff6e5494656717e99b55fe8bb306d4233b7647e0466cadba1d079cc8a179436"
     },
@@ -7103,7 +7265,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_159",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "79507cd08928fc91ba252a694144e8b900bc305516447bc14ffff810105b3119"
     },
@@ -7122,7 +7284,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_160",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "9df3b4195ce820439fe8069326c8b5e12538cecb2d24722588c9422755b11a36"
     },
@@ -7187,7 +7349,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_160_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4e59f659bbec727e5493222cb19b352436c6bfecd8fe35cd8fba4ee3da18097b"
     },
@@ -7206,7 +7368,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_161",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "947e3606cbad09a8b10cde7169659165cf378568ab5b3e72848d814a6bdaaa46"
     },
@@ -7235,7 +7397,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_162",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1dd9120f2dc1b2a2df5a9d97be85d31875c5237f8002bed8f5c94a1ed5f8c5e8"
     },
@@ -7254,7 +7416,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_163",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "411c6da88851c07485bdc33a3db8a0e1e2135bd5c494d141a220f5657186a137"
     },
@@ -7285,7 +7447,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_164",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fb732f68a8696b189e068fd2f088b6ad41e31f80dee1521190c86b14ee8fa255"
     },
@@ -7326,7 +7488,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_165",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5231ed52c52561880cdf26ca7ba51565b20f1b88a694648b6bb3de109ae43696"
     },
@@ -7353,7 +7515,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_166",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "0e7e9cc29e0f0d0e6adf6c00eaf8a7d07cc9745361a6739b191ca4818eefdb27"
     },
@@ -7390,7 +7552,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_167",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1687133f0ba8b9b25b9d7d0bdcfc9fc1ae6a29f1f706fdc05307a7cfc168233d"
     },
@@ -7409,7 +7571,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_168",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "28ec7979864f1608014aa7e60196bd1fb10f349ee3d30f53b0c9cf4e2bb9978e"
     },
@@ -7440,7 +7602,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_169",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c79613df990ee33cfb563ddfa785f82ac80843472d7b747d81c586be980086a4"
     },
@@ -7459,7 +7621,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_170",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "513a77f0a8daa75f3b4cbe92dac833dd873d52f6073abd3d1979fa304635798e"
     },
@@ -7482,7 +7644,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_171",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "559421fc839337596a16f30feee2471b84c2288a34e2fa89f56bd0b326d5bac2"
     },
@@ -7535,7 +7697,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_172",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fab4b9991f5865e50fb1e4bd0cb27e210d0869c7113c359007f8149c3c4a1296"
     },
@@ -7584,7 +7746,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_173",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "143f5e2307f384a7ac43009699135e190f5e6a573434c7bb34c6970f9c65bb3b"
     },
@@ -7613,7 +7775,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_174",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "be2d4c5d2dc11889e14d67c3b6d467101600515b21b8b8b91415fc92c3e4a5e9"
     },
@@ -7647,11 +7809,13 @@
             },
             {
               "marke": "1",
-              "text": "die ausschliesslich Wohn- und Landwirtschaftszwecken dienen: 10 Prozent der Entschädigung, mindestens aber 1000 Franken und höchstens 10 000 Franken,"
+              "text": "die ausschliesslich Wohn- und Landwirtschaftszwecken dienen: 10 Prozent der Entschädigung, mindestens aber 1000 Franken und höchstens 10 000 Franken,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die allen übrigen Zwecken dienen: 10 Prozent der Entschädigung, mindestens aber 2500 Franken und höchstens 50 000 Franken."
+              "text": "die allen übrigen Zwecken dienen: 10 Prozent der Entschädigung, mindestens aber 2500 Franken und höchstens 50 000 Franken.",
+              "tiefe": 1
             }
           ]
         },
@@ -7662,9 +7826,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_175",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "06dffff1060453557d6033a98826ce4f0941a28d436e4fc15941138b3e0a374a"
+      "sha": "a189aa5ed099f02142e3a8e3553469fc9fcb69fef25e965373b6c4d0cb4e74b4"
     },
     {
       "id": "bund/AVO/art_176",
@@ -7697,7 +7861,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_176",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "8abe654f33676c161f161c33a0deee2565f367ebebc263d5f1f5c8383318515a"
     },
@@ -7720,7 +7884,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_177",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e44a09ef9b87a33103b12ad911b564d1953725a32525e1301ead9aa69e7bb6d8"
     },
@@ -7743,7 +7907,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_178",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "fdf8e8f4bbd987ea155c1447c145348d2f499ac8ed1b3895b91b130e7ae5e147"
     },
@@ -7770,7 +7934,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_179",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "46e071c0b2d2dce16550e54504e070c194c4488b86a5ad1df9fbf2d9ceb7086a"
     },
@@ -7797,7 +7961,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_180",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e331c7139c2b3607d35b14652ce2c89ffc52d8a1a7f21068a8303faf61bc6a1e"
     },
@@ -7824,7 +7988,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_181",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a1a6890565f5a4367fa913ac80cbee6cf6ab246d8e056522f3a44acf7c4c9141"
     },
@@ -7843,7 +8007,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_181_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "3feabe1939475f1e37517681da19167ac25594a6b0643d9b97999ab38724e221"
     },
@@ -7854,6 +8018,7 @@
       "erlass": "AVO",
       "artikel": "182",
       "artikelLabel": "Art. 182",
+      "grundlage": "(Art. 42 Abs. 4 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -7862,7 +8027,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a5119bd7d918d9428ccaf37c73dd93a6fea7275511fce6b3fc32551f591f16a5"
     },
@@ -7873,6 +8038,7 @@
       "erlass": "AVO",
       "artikel": "182_a",
       "artikelLabel": "Art. 182a",
+      "grundlage": "(Art. 40 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7909,7 +8075,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "162dd45bb575f3a7a13b81a94465ed267d207159b308859d5541001fa5b4ad52"
     },
@@ -7920,6 +8086,7 @@
       "erlass": "AVO",
       "artikel": "182_b",
       "artikelLabel": "Art. 182b",
+      "grundlage": "(Art. 40 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -7928,7 +8095,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "46e61eccaf489c0d3d19fbcc42f90ed2464506a65057725f2abe4c129df32b32"
     },
@@ -7939,6 +8106,7 @@
       "erlass": "AVO",
       "artikel": "182_c",
       "artikelLabel": "Art. 182c",
+      "grundlage": "(Art. 14 a , 44 Abs. 1 Bst. b, 45 a Abs. 3 und 45 b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7950,11 +8118,13 @@
             },
             {
               "marke": "1",
-              "text": "mit einem Versicherungsunternehmen Zusammenarbeitsvereinbarungen oder andere Vereinbarungen eingegangen sind, die ihre Freiheit, auch für andere Versicherungsunternehmen tätig zu werden, beeinträchtigen;"
+              "text": "mit einem Versicherungsunternehmen Zusammenarbeitsvereinbarungen oder andere Vereinbarungen eingegangen sind, die ihre Freiheit, auch für andere Versicherungsunternehmen tätig zu werden, beeinträchtigen;",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "am Gesellschaftskapital eines Versicherungsunternehmens direkt oder indirekt mit mehr als 10 Prozent beteiligt sind."
+              "text": "am Gesellschaftskapital eines Versicherungsunternehmens direkt oder indirekt mit mehr als 10 Prozent beteiligt sind.",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -7962,11 +8132,13 @@
             },
             {
               "marke": "1",
-              "text": "eine leitende Funktion in einem Versicherungsunternehmen innehaben; oder"
+              "text": "eine leitende Funktion in einem Versicherungsunternehmen innehaben; oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "auf andere Weise auf den Geschäftsgang eines Versicherungsunternehmens Einfluss nehmen können."
+              "text": "auf andere Weise auf den Geschäftsgang eines Versicherungsunternehmens Einfluss nehmen können.",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -7978,11 +8150,13 @@
             },
             {
               "marke": "1",
-              "text": "bei einer ungebundenen Versicherungsvermittlerin eine leitende Funktion innehaben; oder"
+              "text": "bei einer ungebundenen Versicherungsvermittlerin eine leitende Funktion innehaben; oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "auf andere Weise auf den Geschäftsgang einer ungebundenen Versicherungsvermittlerin Einfluss nehmen können."
+              "text": "auf andere Weise auf den Geschäftsgang einer ungebundenen Versicherungsvermittlerin Einfluss nehmen können.",
+              "tiefe": 1
             }
           ]
         },
@@ -7993,9 +8167,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "ac41aa174ffa310133dff484fc15b871c89be751011c57b1c5c027db0a1bbe94"
+      "sha": "75ed8dd52692496575abcf58b06b4793fd12aa64f56d0fc3b600c6ffe7b6e773"
     },
     {
       "id": "bund/AVO/art_182_d",
@@ -8004,6 +8178,7 @@
       "erlass": "AVO",
       "artikel": "182_d",
       "artikelLabel": "Art. 182d",
+      "grundlage": "(Art. 42 Abs. 1 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8042,7 +8217,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_182_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "54fc64c7e19e21283bb413734fa35960d9d1c80e46bc8273baa6bc292a1529b8"
     },
@@ -8053,6 +8228,7 @@
       "erlass": "AVO",
       "artikel": "183",
       "artikelLabel": "Art. 183",
+      "grundlage": "(Art. 42 Abs. 1 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8075,7 +8251,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_183",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "2d374c68eb099b2383f80451d1658908eda8bd37661a62d0c7b0d3b745a144fd"
     },
@@ -8086,6 +8262,7 @@
       "erlass": "AVO",
       "artikel": "184",
       "artikelLabel": "Art. 184",
+      "grundlage": "(Art. 41 Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8102,7 +8279,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_184",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "1b76cd2820696182b209ae316c87b4ce56a2d909e1edbf7313cbeef654fa4541"
     },
@@ -8113,6 +8290,7 @@
       "erlass": "AVO",
       "artikel": "185",
       "artikelLabel": "Art. 185",
+      "grundlage": "(Art. 41 Abs. 1 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8133,7 +8311,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_185",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "d60f1b90b8b9ccc2c854c4fdf0334aac19691d7191f019f89060574d9525ba00"
     },
@@ -8144,6 +8322,7 @@
       "erlass": "AVO",
       "artikel": "186",
       "artikelLabel": "Art. 186",
+      "grundlage": "(Art. 41 Abs. 2 Bst. a und 5 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8174,7 +8353,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_186",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "186933f802097b7d0c15d49e32d9008a9540f39aac7f60b5585baabca51f8f3e"
     },
@@ -8185,6 +8364,7 @@
       "erlass": "AVO",
       "artikel": "187",
       "artikelLabel": "Art. 187",
+      "grundlage": "(Art. 41 Abs. 2 Bst. b und 46 Abs. 1 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8207,7 +8387,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_187",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cf55455969b4f51a41c58d7bce2f5438700db3c824ea88c1506401105c95f1f5"
     },
@@ -8218,6 +8398,7 @@
       "erlass": "AVO",
       "artikel": "188",
       "artikelLabel": "Art. 188",
+      "grundlage": "(Art. 41 Abs. 2 Bst. b und 46 Abs. 1 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8256,7 +8437,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_188",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "bd1de26c487450b538d92df68af3da1b8870e65545513d4a950357f5e7e7ff64"
     },
@@ -8267,6 +8448,7 @@
       "erlass": "AVO",
       "artikel": "189",
       "artikelLabel": "Art. 189",
+      "grundlage": "(Art. 41 Abs. 2 Bst. d, Abs. 4 und 46 Abs. 1 Bst. b VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8323,7 +8505,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_189",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "97f83dbf16653d11a2e7b82d21f73f99fe1abadf73b2e41817d0d2785ae9684f"
     },
@@ -8334,6 +8516,7 @@
       "erlass": "AVO",
       "artikel": "190",
       "artikelLabel": "Art. 190",
+      "grundlage": "(Art. 43 Abs. 1 und 3 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8349,15 +8532,18 @@
             },
             {
               "marke": "1",
-              "text": "Kundengewinnung,"
+              "text": "Kundengewinnung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Kundenberatung,"
+              "text": "Kundenberatung,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Kundenbetreuung;"
+              "text": "Kundenbetreuung;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -8369,15 +8555,18 @@
             },
             {
               "marke": "1",
-              "text": "Sach-, Personen- und Vermögensversicherungen,"
+              "text": "Sach-, Personen- und Vermögensversicherungen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Rechtsgrundlagen und regulatorische Vorgaben,"
+              "text": "Rechtsgrundlagen und regulatorische Vorgaben,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Produktekenntnisse."
+              "text": "Produktekenntnisse.",
+              "tiefe": 1
             }
           ]
         },
@@ -8388,9 +8577,9 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "0906334ef3281e3fa76e0dd69b790266d5724728db4f118b910706d50af48251"
+      "sha": "7680ecdcbf68424138d53e5e76079657db58cb40c6e4c60577cbcd598e441f17"
     },
     {
       "id": "bund/AVO/art_190_a",
@@ -8399,6 +8588,7 @@
       "erlass": "AVO",
       "artikel": "190_a",
       "artikelLabel": "Art. 190a",
+      "grundlage": "(Art. 41 Abs. 2 Bst. c und 43 Abs. 2 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8419,7 +8609,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "401603db1640f8630ff3beb171b14395d0aa06a5529869f66ba05b15753cd90b"
     },
@@ -8430,6 +8620,7 @@
       "erlass": "AVO",
       "artikel": "190_b",
       "artikelLabel": "Art. 190b",
+      "grundlage": "(Art. 41 und 46 Abs. 1 Bst. b und f VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8464,7 +8655,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "48128f8f5afdca5145c71ce7915975f0b6528874136ea689b3aa1055c64c9f59"
     },
@@ -8475,6 +8666,7 @@
       "erlass": "AVO",
       "artikel": "190_c",
       "artikelLabel": "Art. 190c",
+      "grundlage": "(Art. 45 Abs. 1 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8483,7 +8675,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5ca911725db2f8ad24be4c25d39e61ce66a89e0892b33b06f082f15c87d0bddd"
     },
@@ -8506,7 +8698,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "3623ce52e852091eeef31a19def79a90a89ab5dd9465488634fd50605caadf51"
     },
@@ -8525,7 +8717,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5ad323661f7477b734d516c0d69a9a0babfb588302c08797a6bdd228700ae9df"
     },
@@ -8544,7 +8736,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_190_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7b37b7e86b422bd53c53309e1a10c2b908be74bbc5753fbd1d6e02c585d964b8"
     },
@@ -8575,7 +8767,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_191",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c2485dd88a62ad47e414e120464d5a5738ff53575ea488c840119ee4de06f96e"
     },
@@ -8602,7 +8794,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_192",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "02db145dfa1515f26a3d301561602f88941624b6261db121a05f8dd636a92951"
     },
@@ -8655,7 +8847,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_193",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "841a094e1c577840bf9149f7492c0db2b36ee64f886e5eeb80106416d9462f69"
     },
@@ -8682,7 +8874,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_194",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "e7c4cf3f7405aeca691171c37a16ed4d9fe45e6a36d45867ee1b83d02606314a"
     },
@@ -8693,6 +8885,7 @@
       "erlass": "AVO",
       "artikel": "195",
       "artikelLabel": "Art. 195",
+      "grundlage": "(Art. 14 und 24 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8709,7 +8902,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_195",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "45712bd812217d769216fb95be52a72fc258ac11c8eb2ae744d0bf86084f9009"
     },
@@ -8732,7 +8925,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_196",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "df4b0e5a524c1c5d2e9b15d0415961e51972d6fd9dd147a88aad50272f5b4b2a"
     },
@@ -8751,7 +8944,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -8762,6 +8955,7 @@
       "erlass": "AVO",
       "artikel": "197_a",
       "artikelLabel": "Art. 197a",
+      "grundlage": "(Art. 67 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8777,28 +8971,32 @@
             },
             {
               "marke": "1",
-              "text": "die Grösse,"
+              "text": "die Grösse,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die Komplexität,"
+              "text": "die Komplexität,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die Verbundenheit,"
+              "text": "die Verbundenheit,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "das Risikoprofil."
+              "text": "das Risikoprofil.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
-      "sha": "b0c8e5d2b6d7fe4073930aae602d363bec899bd7966a37d97a6f828632ec91e3"
+      "sha": "8f9804b48e0753b950f882920dc745db0edd79b0863d74c7ce0a2c4da6928d6c"
     },
     {
       "id": "bund/AVO/art_197_b",
@@ -8807,6 +9005,7 @@
       "erlass": "AVO",
       "artikel": "197_b",
       "artikelLabel": "Art. 197b",
+      "grundlage": "(Art. 67 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8815,7 +9014,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c26c6be12c00cab25a21610fb6637a6ddd76acd61747659693c03d219eb12083"
     },
@@ -8826,6 +9025,7 @@
       "erlass": "AVO",
       "artikel": "197_c",
       "artikelLabel": "Art. 197c",
+      "grundlage": "(Art. 67 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8838,7 +9038,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "0ec7bca033192f321ef2a5e112e485d5ccd19066e04bf2b81df440f984d7d923"
     },
@@ -8849,6 +9049,7 @@
       "erlass": "AVO",
       "artikel": "197_d",
       "artikelLabel": "Art. 197d",
+      "grundlage": "(Art. 67 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8857,7 +9058,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "df92a74a68260621bac7f636652778f84911868895b7018c2418bfae2bbd9ee4"
     },
@@ -8868,6 +9069,7 @@
       "erlass": "AVO",
       "artikel": "197_e",
       "artikelLabel": "Art. 197e",
+      "grundlage": "(Art. 67 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -8876,7 +9078,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_197_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "2d7d1dba7bf5c362012a34f1d7e40677198b26fd48d029313d7e23676ea10a2c"
     },
@@ -8887,6 +9089,7 @@
       "erlass": "AVO",
       "artikel": "198",
       "artikelLabel": "Art. 198",
+      "grundlage": "(Art. 69 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8903,7 +9106,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_198",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "c64f5dc5aa41dabd15a21fc0596cbee5c9628fbb8873806b49ee0972b080d52d"
     },
@@ -8914,6 +9117,7 @@
       "erlass": "AVO",
       "artikel": "198_a",
       "artikelLabel": "Art. 198a",
+      "grundlage": "(Art. 69 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8940,7 +9144,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_198_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4e2b47a5eff73e995dffb80552cf19d8f10ef8d4d5ff7c1046bcad37205cc0ae"
     },
@@ -8951,6 +9155,7 @@
       "erlass": "AVO",
       "artikel": "198_b",
       "artikelLabel": "Art. 198b",
+      "grundlage": "(Art. 69 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -8975,7 +9180,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_198_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ed93e07ff4ef38d4a1aa658eb735891313d6064ff6f6302bdb8ea4fff121789c"
     },
@@ -8986,6 +9191,7 @@
       "erlass": "AVO",
       "artikel": "198_c",
       "artikelLabel": "Art. 198c",
+      "grundlage": "(Art. 69 VAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -9004,7 +9210,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_198_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "a26da8ee8018408e5081152d9fed73909dd915c6fd0fb96842d824c5be4403d8"
     },
@@ -9015,6 +9221,7 @@
       "erlass": "AVO",
       "artikel": "198_d",
       "artikelLabel": "Art. 198d",
+      "grundlage": "(Art. 69 VAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -9057,7 +9264,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_198_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "cf1ca743a5d5b27d1f49a65a10420a9dd4dc169c3ce3ea50d8b81da7c02e9de1"
     },
@@ -9076,7 +9283,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_199_202",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9099,7 +9306,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_203",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "213d9849a740e6599cf1c8d87c7a2ff1020e203c26eae96eeac35f83d1241567"
     },
@@ -9118,7 +9325,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_203_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "550ac63967bcef6d52fa5dbfbdccf15dde23ca75e9d941520381f5ed871ee488"
     },
@@ -9137,7 +9344,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_203_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9156,7 +9363,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_204",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7e4854be9e25280e6d168f0f2a61567a89acc7deced807d627917164f97ed8e5"
     },
@@ -9179,7 +9386,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_205",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "6a5c3b33a16609ee256bbdc8f16f7ed98ab9779f47e69cabe2550f00f8a883d3"
     },
@@ -9198,7 +9405,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_206",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9217,7 +9424,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_206_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9236,7 +9443,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_207_208",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9255,7 +9462,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_209_214",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9274,7 +9481,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_215",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9339,7 +9546,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_216",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "48084ef7ef83860086f90604fec4cecd1ea77796c2b8b7ef480d30d447f6208d"
     },
@@ -9358,7 +9565,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_216_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -9385,7 +9592,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_216_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "7612f99c6312ba29ecb036d9fada6ed58caea489da1c804ae57b0f1e9cf4a657"
     },
@@ -9446,7 +9653,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_216_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "56440aaa2fb3036c93587f245f996f3feb365f50fdf0bfe3dc49b24478adcdff"
     },
@@ -9465,7 +9672,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_216_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "4a91221325013c4a818094e5905099ae2c581487cf7ff577e8fac60021be0be7"
     },
@@ -9530,7 +9737,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_217",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "5e9a66b9895bb0676ad7470b0cb8a15bc35aa33bde8b32dea161d3558710d08c"
     },
@@ -9549,7 +9756,7 @@
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#art_218",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260226",
       "sha": "ec0894259b4b2c2a45607f10431fc1930611786228bc52109fdd74b931e85d3c"
     }

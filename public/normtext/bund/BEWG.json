@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/BEWG/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "4db8b189f3f94327de19f216cd5d18e09edbd8750162442600b0375357250b00"
     },
@@ -57,7 +57,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "b9b7c072c148a21006ec0df7b738343a0a4b50790c57d3ee6c3c03f0e17bf463"
     },
@@ -80,7 +80,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "f3d84d5c0ca8208035925cea5cf82e20bfdf3a67433d1bf540ecf53a395a2561"
     },
@@ -137,7 +137,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "864b19ae0cba20d295cf4c7c4b9eb4623591afeb0eaf16fff7f36467694dc79b"
     },
@@ -159,11 +159,13 @@
             },
             {
               "marke": "1",
-              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
+              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 2 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden;"
+              "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 2 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden;",
+              "tiefe": 1
             },
             {
               "marke": "abis",
@@ -190,9 +192,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
-      "sha": "273fffd1ebedb0a5c165a84fcaddeca51bf21dca104c8622aa9e0c079c13ab25"
+      "sha": "17e0c5b3f3ca39f248e57e3c499678263f0744a4fd2d791444669c2f898285da"
     },
     {
       "id": "bund/BEWG/art_6",
@@ -271,7 +273,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "71965c12699acf0be7dcdf44ff8d855da7fc4bdad39739fe4435a6e465edf1e2"
     },
@@ -329,20 +331,22 @@
             },
             {
               "marke": "1",
-              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,"
+              "text": "Staatsangehörige der Mitgliedstaaten der Europäischen Union oder der Europäischen Freihandelsassoziation,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 3 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden."
+              "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 3 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
-      "sha": "832e60e809e3d152ae63165e7eb885743206f6b4eeb46a00a4fa4475e0026b88"
+      "sha": "68838f926e3b20fb94b2fc05d7636e3338b8320b87144984604188fb41df8e81"
     },
     {
       "id": "bund/BEWG/art_7_a",
@@ -359,7 +363,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_7_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "6a92fd9a810022017cde320da0db29ea4380192fe5ac4af0de7ed185d9da4514"
     },
@@ -404,7 +408,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "a43f57ebe98833ed849f81833a9547214659a970400f00404b2c6a42d8de450a"
     },
@@ -463,7 +467,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "9132c48feee42e944bc0caa12611cb72ff80a9c867ee216dbb04cd9786a0da94"
     },
@@ -496,7 +500,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "11d02c2feca91342b87404cf8c55e5cffc55596469dc9fe1eafb6f287f467f62"
     },
@@ -527,7 +531,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "cc851dcd1df2e17c61086938c2c2c5461a04dedcb58bcf8c108cc0b7fd2fb107"
     },
@@ -572,7 +576,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "76363aaca0a0e44adec9b2b1838a5f19e923fc70d7fdf97bfb5b4b058b7f1cdd"
     },
@@ -617,7 +621,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "c370045dc57c90101510cf17f829b005638d3df2e1a201dfbaf7f93aeeffbd20"
     },
@@ -652,7 +656,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "28ef18143257127569298111088f733c799736187ea205ab389ec09434c3156e"
     },
@@ -693,7 +697,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "1942b39fdcd32385a4105913b9d05567c9dab7d25868776345293347b4d17c2f"
     },
@@ -734,7 +738,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "37a39edd8225f984c561260e7eedfb9a82e0acf927c951148b8c7c12ec23cdd1"
     },
@@ -761,7 +765,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "7bc774d89504f18eef95db519541be6403ba5053e148aac21f43d19bdacd8116"
     },
@@ -792,7 +796,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "2f60a2e7ae3c51f3c777d8c8dbd76ed4973d1390f8047f0033c7c24ce7471ac2"
     },
@@ -841,7 +845,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "0c549eed17f29187f4133428141a8ed72dc03277c1a7783ad54ab9510ba3dff3"
     },
@@ -886,7 +890,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "ba2b0e2798b0506521f1950e0c71c882b1a502a653bf3b421c2330b1b937f7d6"
     },
@@ -909,7 +913,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "a8146eb21959f00f80cb712d27c5b9fb54fa697217faed89cea172b3264c9c1c"
     },
@@ -940,7 +944,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "021a1eb8a5b32898ccfcaceb3fa4ed95009c7625c219f5ee652b7bad7194fd3d"
     },
@@ -963,7 +967,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "1a9fa584849eb87e946e4b0a15469783f5fc1b6c3060e94aaef2502a606ffb5c"
     },
@@ -990,7 +994,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "946236f1921fde9f1044db167ebc953bca6238d38b3ebf74dbe589c1e23d0901"
     },
@@ -1017,7 +1021,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "20a6b3cf23516302988a3ef70ac08f8adbadc66f5d8c74c7a12aeaf54000f5a1"
     },
@@ -1080,7 +1084,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "588ec2a7deebdad60f9cd9426a66ec02e1c8892caa8e908c2f5e8de25d145df4"
     },
@@ -1139,7 +1143,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "638c8f0ce3431000a06d638d61c5900fcdde4782802fd31480f8baddbf7bbd19"
     },
@@ -1170,7 +1174,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "0fbb1ca042422e4848d04199c7aa464b609d95012909518d9ff4aecd3bdbba1c"
     },
@@ -1193,7 +1197,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "7632169c564a686806b4a8dbb76d6fca85e8d4e2a89553af6b68efbacab665b1"
     },
@@ -1224,7 +1228,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "7d9232c8c1d4e96160548c7663a11ba877ac68188ce4a7b292d149281127ff45"
     },
@@ -1243,7 +1247,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "087acc00d25b0a9ed7c85887eb1c7598bb76b495bf546b23885132ba2d88a37f"
     },
@@ -1280,7 +1284,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "25518a940fccfb7379f0101e177100465920d4298f7f00381d8501c56507a376"
     },
@@ -1303,7 +1307,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "029a9f2e59f35afab55a038b10931886779ac58e48259c73ba2325bcef0f686a"
     },
@@ -1322,7 +1326,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "bc9de5abb05e991bac013076fa09dead28f723724f7bcc0cd710e74236c43175"
     },
@@ -1349,7 +1353,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "51ca0370f1982841e923f9ca64d97abea008f45ce1155ba709a9a544453fa641"
     },
@@ -1376,7 +1380,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "7dda5e64de358be5c3ce663fa9d6a7b1a0aacd4dc6fc4bfeeb5f4e51734d4755"
     },
@@ -1399,7 +1403,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "d33a31b5d788afa1bdeba76dfc7e33de4ddbf0bb3d5cc109b470ef8b75414119"
     },
@@ -1418,7 +1422,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "27057e0205b6a78794c25fbb4a484579d3c0ecb02fb74f6882916981bf9fe45b"
     },
@@ -1437,7 +1441,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "3adcad2471907d1217b334ae3d18bf21f570eda3629a171a6f3092236ebf3953"
     },
@@ -1460,7 +1464,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230701",
       "sha": "cd45e96210a292fb7f36ae8bba1a9f5e37668160dd2a3489ade65ebf06dda9d7"
     }

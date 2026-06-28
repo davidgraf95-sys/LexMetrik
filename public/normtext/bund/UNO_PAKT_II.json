@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/UNO_PAKT_II/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "caec541936d1ef449862fef04f3f1f08b9a012625e108432a4e66b031e8979fa"
     },
@@ -49,7 +49,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "a36fccb2938aff71245b7d1fa3a17bf7997425098a31de1cee2e8af5d3fc8e4a"
     },
@@ -68,7 +68,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "57fb5e088f052b0018b2bed547725241ff619be51ea222f6391483975214847c"
     },
@@ -87,7 +87,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "f20e82a0be4422c174863a0d49706d3c6579fb010e9bfd1386a73a8d3c2d303f"
     },
@@ -106,7 +106,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "d0a2be37dd4f38f79149c03bfe74c6d5ad319a4c85c60443e1d08ca45c301d4c"
     },
@@ -125,7 +125,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "860c1403bb90a171989870a9b5d288b7445708e112b6d97e4cf92a99d2c84827"
     },
@@ -144,7 +144,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "2629eb4655a68882db143f1c0cf506dd431906364ab9d37d44eb71d86fbee750"
     },
@@ -174,28 +174,32 @@
             },
             {
               "marke": "i",
-              "text": "jede nicht unter Buchstabe b genannte Arbeit oder Dienstleistung, die normalerweise von einer Person verlangt wird, der auf Grund einer rechtmässigen Gerichtsentscheidung die Freiheit entzogen oder die aus einem solchen Freiheitsentzug bedingt entlassen worden ist;"
+              "text": "jede nicht unter Buchstabe b genannte Arbeit oder Dienstleistung, die normalerweise von einer Person verlangt wird, der auf Grund einer rechtmässigen Gerichtsentscheidung die Freiheit entzogen oder die aus einem solchen Freiheitsentzug bedingt entlassen worden ist;",
+              "tiefe": 1
             },
             {
               "marke": "i",
-              "text": "jede Dienstleistung militärischer Art sowie in Staaten, in denen die Wehrdienstverweigerung aus Gewissensgründen anerkannt wird, jede für Wehrdienstverweigerer gesetzlich vorgeschriebene nationale Dienst­­leistung;"
+              "text": "jede Dienstleistung militärischer Art sowie in Staaten, in denen die Wehrdienstverweigerung aus Gewissensgründen anerkannt wird, jede für Wehrdienstverweigerer gesetzlich vorgeschriebene nationale Dienst­­leistung;",
+              "tiefe": 1
             },
             {
               "marke": "i",
-              "text": "jede Dienstleistung im Falle von Notständen oder Katastrophen, die das Leben oder das Wohl der Gemeinschaft bedrohen;"
+              "text": "jede Dienstleistung im Falle von Notständen oder Katastrophen, die das Leben oder das Wohl der Gemeinschaft bedrohen;",
+              "tiefe": 1
             },
             {
               "marke": "i",
-              "text": "jede Arbeit oder Dienstleistung, die zu den normalen Bürgerpflichten gehört."
+              "text": "jede Arbeit oder Dienstleistung, die zu den normalen Bürgerpflichten gehört.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
-      "sha": "1f71caa04560b15dcd1deccfe27d907c78793d67dd5b287596f698f20537e271"
+      "sha": "a0c7a5bd7cd6a41dab6cf6c237e94f46dbe9433182ef9a53dcb28b5304a7348d"
     },
     {
       "id": "bund/UNO_PAKT_II/art_9",
@@ -212,7 +216,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "a6deb8b0f80134e5c2f9209d627f47c53780e95f5cca76ac86e4fe892e584117"
     },
@@ -241,7 +245,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "cf68c82c3588e05c8c457e7511f4c39ae92b4f5d3f93e74473ff748573361533"
     },
@@ -260,7 +264,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "19d02524adaf27b4b29d7a70d293ab050f5c35a1bfb0918668fea18778026dc6"
     },
@@ -279,7 +283,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "290fd46ef3ffc8df089dcf912e6528c0c417c22ce0b87b9447121e8f338c0e13"
     },
@@ -298,7 +302,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "c324d2d3251d162f7de9eb2c0e39155fc4d698eda175eb82339ff15fc6b9e94a"
     },
@@ -347,7 +351,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "26bf782e677cd6fd056d41b9041829b0506adca555fad7e0913b0adebd1293eb"
     },
@@ -366,7 +370,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "9a87b9216cc72d1ec53e8963979b20c3293a26d7b7e6aa0e5eb10dac0934de99"
     },
@@ -385,7 +389,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "af23e83fc4c88f96b6427b77e6b9705fa2ac6f658f80fa3dedfdee5ca42f5022"
     },
@@ -404,7 +408,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "c6b59d2ef6916fef666dbf9c3c256b9346e058d5c750d04989474e2d92a5aba5"
     },
@@ -423,7 +427,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "2d5fce9c7c72b5f1ddfe78cba60ad8e9e50e748ded4bd5903b4c7bdb19613cd1"
     },
@@ -452,7 +456,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "3f73305388b843cc326b3a7d860d16f41bd6de57cc1955e4ea718a545324203d"
     },
@@ -471,7 +475,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "52201ec30506ebe6d0421c4443a3f447881a68567e67b35943923279a7dc14a1"
     },
@@ -490,7 +494,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "5c55d236a64738defb687733795141b5a27deaa39e39ade8e4fe651efab7b010"
     },
@@ -509,7 +513,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "be5684af045fdf9eb874f1c547fe7f16e096ac6a87b865423cbca5159d58f2bf"
     },
@@ -528,7 +532,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "f6482124ac29fb38b98cda64ad292e49abada5a7af863766bc2c49982a15a79f"
     },
@@ -547,7 +551,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "75818568afc6c014ffa558d0487f3a88e3651a4c81fbd7547da00da61395aa64"
     },
@@ -580,7 +584,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "c042578a250a74cd9a75313eb8805219c6ee87edc35c432de7f208abc2af6e4b"
     },
@@ -599,7 +603,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "b9dafd6a3bd1d7a7b125c4695cfdd698ece140714d9baa3d8150957e27d80dfc"
     },
@@ -618,7 +622,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "a848f906d7b307c1aa677ba7f4d53ff62b5d3ce6e59c06f9be5a6a2a0496c938"
     },
@@ -637,7 +641,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "77142b4e8bb5ffce6f26d2cbef0e54148571cb19c6e56ca7afbd42181bdaf621"
     },
@@ -656,7 +660,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "b99e483ba5ccb831f956d862dd2e1e9ea00919ba2501575966f80782e30420ff"
     },
@@ -675,7 +679,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "f5e78d6fe64fa64b8a05ee634dcef958cf8dbaed584454cde3d921be3a510e61"
     },
@@ -694,7 +698,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "379979022d3e2289065762370a9bf7224ca5e83f7305573b136ec641bd776c0e"
     },
@@ -713,7 +717,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "d4d4de7a34196f0083bd69c04bdfd22e2bfc56764d280f2459dcd7a4f9da363c"
     },
@@ -732,7 +736,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "9bc46d0414e583296373592c6dca7de5ed865a09f869f88b8c27dd877c11530e"
     },
@@ -751,7 +755,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "5500d43d2beee7230a70cdc66c066204e471457c887db92b53663a4d110e575a"
     },
@@ -770,7 +774,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "79dd2175b4ee0f4061e77b181deace86ea1a74a20b46e61f0e1f231157070231"
     },
@@ -789,7 +793,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "22733d953556d0aa0f4aa9cf08fc1631d8550990958ccf6781849d08da8f5091"
     },
@@ -808,7 +812,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "72fe8ac50dcb5526bb7a02ec5d828c1f3fb8bb7ae508da12c2092cd42dd5534a"
     },
@@ -827,7 +831,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "b5b643c63bfb3d84f2317c256bcf94b2fa1fd6c33d0b4c7ae1743e670db9ac9b"
     },
@@ -856,7 +860,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "db461693c38b75a63f48e12557d98e4ee4b39aaf7160a8e3a0109614b56ad7e6"
     },
@@ -885,7 +889,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "25f5bb8265a3df1431d7b833aa947b349b3bf6733ca0b1f09279ac2c43312d76"
     },
@@ -935,20 +939,22 @@
             },
             {
               "marke": "i",
-              "text": "Wenn eine Regelung im Sinne von Buchstabe e zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts und der erzielten Regelung;"
+              "text": "Wenn eine Regelung im Sinne von Buchstabe e zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts und der erzielten Regelung;",
+              "tiefe": 1
             },
             {
               "marke": "i",
-              "text": "wenn eine Regelung im Sinne von Buchstabe e nicht zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts; die schriftlichen Stellungnahmen und das Protokoll über die mündlichen Stellungnahmen der beteiligten Vertragsparteien sind dem Bericht beizufügen."
+              "text": "wenn eine Regelung im Sinne von Buchstabe e nicht zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts; die schriftlichen Stellungnahmen und das Protokoll über die mündlichen Stellungnahmen der beteiligten Vertragsparteien sind dem Bericht beizufügen.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
-      "sha": "405266612c9f7953bfbfaf8a5e6ed9960b79d55511009075c37c3fd6f6731a98"
+      "sha": "16eeb78b4c3db488981089e14afb9d1e89e2c9b011d86977fc210693e1f4dcac"
     },
     {
       "id": "bund/UNO_PAKT_II/art_42",
@@ -997,7 +1003,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "cb560dc5b410fef92a05beb9d3fbe862c7d6bbb06e799ed6f1aa9cfb9fb5ddcd"
     },
@@ -1016,7 +1022,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "ce353be5855182fc76c50cec6aec961b2d59759426e8af1d7acf7fde0ee8f1a9"
     },
@@ -1035,7 +1041,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "3db3a77c22aea46c065f234d434c88b4fc0f4efe4b838528594972c1944c41a9"
     },
@@ -1054,7 +1060,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "3a49ade683b48ba590d647c1bf96c0b52323a65c8587b5cff07090ae28869d48"
     },
@@ -1073,7 +1079,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "79d5186fc606532a7c0092c4bfbca7f6622a520990ea82646f5f5fcaa33a12ef"
     },
@@ -1092,7 +1098,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "97aab7b911e27dee39a6316f5d09909734c5cdb35c984548bfbad5a1208d87b4"
     },
@@ -1111,7 +1117,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "fd94e09b0341049612f81d710148ef2fbed3265aa7374777a1d13a8a7a9d8071"
     },
@@ -1130,7 +1136,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "3098d4522dc2e58541b615535f4597f5e4f924d32c8d3c1ab94e933704ff0852"
     },
@@ -1149,7 +1155,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "5d4cb8fae4f328243b64befbd721c1bbe016ca2d719f99abbbcfb11f12773230"
     },
@@ -1168,7 +1174,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "6319f0fc70e30c10ea605b6fac00713f5f9c7c0aa39b94d777b244f3d8afa3df"
     },
@@ -1197,7 +1203,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "18a30c787b4aeb056b07fd064e79f7b3a5bca2613a90c5d16c0ecd670ccc6707"
     },
@@ -1216,7 +1222,7 @@
       ],
       "stand": "2022-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/750_750_750/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20220509",
       "sha": "2b858104767a243530897b39b4a3cfd1a638ef8a4f3948c5649780a0db9a7348"
     }

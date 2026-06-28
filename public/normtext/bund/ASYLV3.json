@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/ASYLV3/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "a96936fbcb7e7a285026ef7e1b3c2968991f31cd23f4abb71b28e7adfa520afe"
     },
@@ -31,6 +31,7 @@
       "erlass": "AsylV 3",
       "artikel": "1_a",
       "artikelLabel": "Art. 1a",
+      "grundlage": "(Art. 96 und 99 a –102 AsylG; Art. 2 BGIAA )",
       "bloecke": [
         {
           "absatz": null,
@@ -89,7 +90,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "9726de518a8987f29ab9f7d40a6db0bc15f83806338f65880e7c4df9c0447994"
     },
@@ -134,7 +135,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "d832cd56b4588755eeef2e0b3f0525e4dde0a64534f3737e0afe38dd3e84e3be"
     },
@@ -157,7 +158,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "a2284eb27eb47ff6c8ae8ecacf219e8bd4aaf3dd781dc619d270a13f75862ce1"
     },
@@ -176,7 +177,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -211,7 +212,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "9fa8f54669f3b40e1aa5956843a30a20a77989747a25a36688dbb6bdceb724a5"
     },
@@ -234,7 +235,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "404b035b0b2ec86e0e1f62803323835be86ac3476e4889bf1a755de05e0b4585"
     },
@@ -257,7 +258,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "c9fec986bf68dde48df49a064a8f2aa4ddcf8b7f5e800a0997b39100e60d3812"
     },
@@ -276,7 +277,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -287,6 +288,7 @@
       "erlass": "AsylV 3",
       "artikel": "1_i",
       "artikelLabel": "Art. 1i",
+      "grundlage": "(Art. 99 a Abs. 3, 99b, 99 c und 99 d Abs. 1 AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -303,7 +305,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "00d7fb8e4164dc29a66661ee5f5d9df0e59ae720d62772840ee57c89bad5642e"
     },
@@ -333,31 +335,38 @@
             },
             {
               "marke": "1",
-              "text": "Dolmetscherin oder Dolmetscher,"
+              "text": "Dolmetscherin oder Dolmetscher,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Protokollführerin oder Protokollführer,"
+              "text": "Protokollführerin oder Protokollführer,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Herkunftsspezialistin oder Herkunftsspezialist,"
+              "text": "Herkunftsspezialistin oder Herkunftsspezialist,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Expertin oder Experte LINGUA,"
+              "text": "Expertin oder Experte LINGUA,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Interviewerin oder Interviewer LINGUA,"
+              "text": "Interviewerin oder Interviewer LINGUA,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Bewerterin oder Bewerter von Dolmetschleistungen,"
+              "text": "Bewerterin oder Bewerter von Dolmetschleistungen,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Befragerin oder Befrager im Anhörungspool."
+              "text": "Befragerin oder Befrager im Anhörungspool.",
+              "tiefe": 1
             }
           ]
         },
@@ -446,9 +455,9 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
-      "sha": "e59e065398d7ff32ebd89dc3f9e3efcb7fa10572034b5095177f789f8510e959"
+      "sha": "3b5f4735f253c931ce309cd1a2b0d74c88a3e8d7fab7f3016bbaca44ea2351ac"
     },
     {
       "id": "bund/ASYLV3/art_1_k",
@@ -481,7 +490,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "a44542cd4a2ab38fe4ab1ccfda714b799ced8483603737a0e44d97ed53f8ba67"
     },
@@ -492,6 +501,7 @@
       "erlass": "AsylV 3",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 97 Abs. 1 und 2 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -500,7 +510,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "faaf79d8ce6ebafeac1aa41b5ff7f6d2fd7cef9e96d82bf9cae3e96292644259"
     },
@@ -511,6 +521,7 @@
       "erlass": "AsylV 3",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 97 Abs. 3 Bst. b)",
       "bloecke": [
         {
           "absatz": null,
@@ -519,7 +530,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "5bfe98ed4475f2855705902674f2ddfcccf82b9b532bb48552b38f14487ceaec"
     },
@@ -530,6 +541,7 @@
       "erlass": "AsylV 3",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 98 a AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -538,7 +550,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "dfb386e5bf36f34265acecf112bd3630232fba6fb78b77014eee63342fa907bb"
     },
@@ -549,6 +561,7 @@
       "erlass": "AsylV 3",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 98 b AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -571,7 +584,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "3f6cc5eb0b1112291baa3e1671df8b29c3c359843bd267cfce96c395b11eaca9"
     },
@@ -582,6 +595,7 @@
       "erlass": "AsylV 3",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 99 AsylG und Art. 13 Abs. 2 BGIAA )",
       "bloecke": [
         {
           "absatz": "1",
@@ -614,7 +628,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "81391143d85968ec49d128c81403ee36d048d39719eff87c69c4323fa7377155"
     },
@@ -625,6 +639,7 @@
       "erlass": "AsylV 3",
       "artikel": "6_a",
       "artikelLabel": "Art. 6a",
+      "grundlage": "(Art. 102 c Abs. 3 und 4 AsylG)",
       "bloecke": [
         {
           "absatz": null,
@@ -633,7 +648,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "c352431d11fdc48f84598aaf84c2f2bcc7b6ccbdcf35a353cb04f5cf43bafb6c"
     },
@@ -670,7 +685,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "bdd44f63ac747d7e5630e2c9552e57ca4bc1b59e596535a1886c66ffa4a97e32"
     },
@@ -689,7 +704,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_7_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -712,7 +727,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "0c5e6606e3f638bfb502d9a9307367d47b38bdf242a6b3a0fb102f0518eb9418"
     },
@@ -735,7 +750,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "2336154d992f1e2bdbf6d56b50d5a444d66265522327bf71702f6cb432c7f03d"
     },
@@ -746,6 +761,7 @@
       "erlass": "AsylV 3",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 102 a ter AsylG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -780,7 +796,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "fd064565a2956b8cad953f7034e04a63b01edc1a2f8bada1407bc040991fe174"
     },
@@ -823,7 +839,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "2c302a813b9cdc0c46002e1bd9dbc73a9182409dac1fb58ba759b39ed5c05dd5"
     },
@@ -842,7 +858,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "3e41740fab6d99b4519f508a1d8596407780b2bf59c87f4ecce258ef0e97b102"
     },
@@ -865,7 +881,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "9f57049daa131deecabfb4109d700cd6ea397b9c3ad2fd335793129efc42da83"
     },
@@ -898,7 +914,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "dc7b0146fc1167e7e98e9070396cd3369312904572d3f03d76fc51124ed56051"
     },
@@ -917,7 +933,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "d19cb1e96202249506b9cbe7abf20ac6f8e637d6d5e8a63e4cf52a90848e6400"
     },
@@ -940,7 +956,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "f7880a3300365207dc94b72cba45c697f80354acbdf3fa9d1750baa74cb4ccfc"
     },
@@ -959,7 +975,7 @@
       ],
       "stand": "2024-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20240601",
       "sha": "d87fdab272de6acd082d49c6120f109556485adb44a1e19d3c243eaa8b33576a"
     }

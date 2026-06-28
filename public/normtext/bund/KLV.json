@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/KLV/art_1",
@@ -34,7 +34,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "379fbbf5564b7c9ffe8e248a787e8e362a0cdba45f72376f3e6f3534813aab88"
     },
@@ -87,7 +87,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "243ade447a00ba27a2ce8d679904b1426b7e57b659101f4bd1304f2d1ab1994b"
     },
@@ -106,7 +106,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "1c727a53899c221be760c713f2ed8aeded8ea25ceb84030bfe52d2b544ebd844"
     },
@@ -125,7 +125,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_3_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -170,7 +170,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_3_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "5d50a97b44f76450f6b506f507528c381b509dd3395bca6b25be622538842bae"
     },
@@ -201,7 +201,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_3_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "c845eeb98bb833bfe4a2061f467b03ac113b1fc2c138454aaa348f602980d294"
     },
@@ -220,7 +220,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_3_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -246,23 +246,28 @@
             },
             {
               "marke": "1",
-              "text": "01.01.10 (antipyretische Analgetica), 01.12 (Myotonolytica: nur per os verabreichte),"
+              "text": "01.01.10 (antipyretische Analgetica), 01.12 (Myotonolytica: nur per os verabreichte),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "04.99 (Gastroenterologica, Varia: nur Mittel zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut),"
+              "text": "04.99 (Gastroenterologica, Varia: nur Mittel zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "07.02.10 (Mineralia), 07.02.20 (kombinierte Mineralien), 07.02.30 (einfache Vitamine), 07.02.40 (kombinierte Vitamine), 07.02.50 (andere Kombinationen"
+              "text": "07.02.10 (Mineralia), 07.02.20 (kombinierte Mineralien), 07.02.30 (einfache Vitamine), 07.02.40 (kombinierte Vitamine), 07.02.50 (andere Kombinationen",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "07.10.10 (einfache entzündungshemmende Mittel), 07.10.20 (kombinierte entzündungshemmende Mittel ohne Corticosteroide: nur Kombinationen von entzündungshemmenden Mitteln und Mitteln zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut), 07.10.40 (kutane Mittel: nur solche mit entzündungshemmenden Wirkstoffen),"
+              "text": "07.10.10 (einfache entzündungshemmende Mittel), 07.10.20 (kombinierte entzündungshemmende Mittel ohne Corticosteroide: nur Kombinationen von entzündungshemmenden Mitteln und Mitteln zur Hemmung der Magensäuresekretion oder zum Schutz der Magenschleimhaut), 07.10.40 (kutane Mittel: nur solche mit entzündungshemmenden Wirkstoffen),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "57.10.10 (Komplementärmedizin: einfache entzündungshemmende Mittel);"
+              "text": "57.10.10 (Komplementärmedizin: einfache entzündungshemmende Mittel);",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -270,27 +275,33 @@
             },
             {
               "marke": "1",
-              "text": "Produkte der Gruppe 05. Bandagen,"
+              "text": "Produkte der Gruppe 05. Bandagen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Produkte der Gruppe 09.02 Geräte für die trans- und perkutane elektrische neuromuskuläre Modulation,"
+              "text": "Produkte der Gruppe 09.02 Geräte für die trans- und perkutane elektrische neuromuskuläre Modulation,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Produkte der Gruppe 16. Kälte- und/oder Wärmetherapie-Mittel,"
+              "text": "Produkte der Gruppe 16. Kälte- und/oder Wärmetherapie-Mittel,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Produkte der Gruppe 22. Fertigorthesen,"
+              "text": "Produkte der Gruppe 22. Fertigorthesen,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Produkte der Gruppe 23. Massorthesen,"
+              "text": "Produkte der Gruppe 23. Massorthesen,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Produkte der Gruppe 35. Verbandmaterial;"
+              "text": "Produkte der Gruppe 35. Verbandmaterial;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -298,23 +309,28 @@
             },
             {
               "marke": "1",
-              "text": "Röntgen des Skelettes,"
+              "text": "Röntgen des Skelettes,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Computertomographie (CT) der Wirbelsäule und Extremitäten,"
+              "text": "Computertomographie (CT) der Wirbelsäule und Extremitäten,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Magnetische Kernresonanz (MRI) des Achsenskelettes und der peripheren Gelenke,"
+              "text": "Magnetische Kernresonanz (MRI) des Achsenskelettes und der peripheren Gelenke,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Diagnostischer Ultraschall,"
+              "text": "Diagnostischer Ultraschall,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Drei-Phasen-Skelettszintigraphie;"
+              "text": "Drei-Phasen-Skelettszintigraphie;",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -325,9 +341,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "19658118f852c8d5668cbc772ce1ccfc151ded8ca8a4a632778b76bc6d9e9350"
+      "sha": "c793015922678d8171e2a9273e39ae62e382970d66eec9b12bd9bae3978afb8a"
     },
     {
       "id": "bund/KLV/art_4_a",
@@ -366,7 +382,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_4_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "abe74449a7dae3e6a2161a0e06f251eab599782a48e266cbee4088040396749f"
     },
@@ -407,7 +423,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_4_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "4b9bdef378bd14c6564b94dc83a9d27b3f4f4bdee3f5252f38c380cd58507678"
     },
@@ -433,43 +449,53 @@
             },
             {
               "marke": "1",
-              "text": "aktive und passive Bewegungstherapie,"
+              "text": "aktive und passive Bewegungstherapie,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "manuelle Therapie,"
+              "text": "manuelle Therapie,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "detonisierende Physiotherapie,"
+              "text": "detonisierende Physiotherapie,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Atemphysiotherapie (inkl. Aerosolinhalationen),"
+              "text": "Atemphysiotherapie (inkl. Aerosolinhalationen),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "medizinische Trainingstherapie,"
+              "text": "medizinische Trainingstherapie,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "lymphologische Physiotherapie,"
+              "text": "lymphologische Physiotherapie,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Bewegungstherapie im Wasser,"
+              "text": "Bewegungstherapie im Wasser,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "Hippotherapie bei multipler Sklerose, Cerebralparese und Trisomie 21,"
+              "text": "Hippotherapie bei multipler Sklerose, Cerebralparese und Trisomie 21,",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "Herz-Kreislauf-Physiotherapie,"
+              "text": "Herz-Kreislauf-Physiotherapie,",
+              "tiefe": 1
             },
             {
               "marke": "[tab]",
-              "text": "10. Beckenboden - Physiotherapie;"
+              "text": "10. Beckenboden - Physiotherapie;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -477,27 +503,33 @@
             },
             {
               "marke": "1",
-              "text": "Wärme- und Kältetherapie,"
+              "text": "Wärme- und Kältetherapie,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Elektrotherapie,"
+              "text": "Elektrotherapie,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Lichttherapie (Ultraviolett, Infrarot, Rotlicht)"
+              "text": "Lichttherapie (Ultraviolett, Infrarot, Rotlicht)",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Ultraschall,"
+              "text": "Ultraschall,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Hydrotherapie,"
+              "text": "Hydrotherapie,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Muskel- und Bindegewebsmassage."
+              "text": "Muskel- und Bindegewebsmassage.",
+              "tiefe": 1
             }
           ]
         },
@@ -528,9 +560,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "2fd6bc57b580db7f80d8545527992be50b2e5ec97ab30df0d89ce1a3fc1bda7a"
+      "sha": "c0d779c9ccfb87221d143ed1b445f38fb26a1f478d3c9d2b9f31136176d341bb"
     },
     {
       "id": "bund/KLV/art_6",
@@ -573,7 +605,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "29f9cc694223354cbb926b13e94da20554e918bf3eb7112b436598dc5b94623f"
     },
@@ -613,15 +645,18 @@
             },
             {
               "marke": "1",
-              "text": "Ermittlung des Pflegebedarfs und des Umfelds des Patienten oder der Patientin und Planung der notwendigen Massnahmen,"
+              "text": "Ermittlung des Pflegebedarfs und des Umfelds des Patienten oder der Patientin und Planung der notwendigen Massnahmen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Beratung des Patienten oder der Patientin sowie gegebenenfalls der nichtberuflich an der Krankenpflege Mitwirkenden bei der Durchführung der Krankenpflege, insbesondere im Umgang mit Krankheitssymptomen, bei der Einnahme von Medikamenten oder beim Gebrauch medizinischer Geräte, und Vornahme der notwendigen Kontrollen,"
+              "text": "Beratung des Patienten oder der Patientin sowie gegebenenfalls der nichtberuflich an der Krankenpflege Mitwirkenden bei der Durchführung der Krankenpflege, insbesondere im Umgang mit Krankheitssymptomen, bei der Einnahme von Medikamenten oder beim Gebrauch medizinischer Geräte, und Vornahme der notwendigen Kontrollen,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Koordination der Massnahmen sowie Vorkehrungen im Hinblick auf Komplikationen in komplexen und instabilen Pflegesituationen durch spezialisierte Pflegefachpersonen;"
+              "text": "Koordination der Massnahmen sowie Vorkehrungen im Hinblick auf Komplikationen in komplexen und instabilen Pflegesituationen durch spezialisierte Pflegefachpersonen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -629,59 +664,73 @@
             },
             {
               "marke": "1",
-              "text": "Messung der Vitalzeichen (Puls, Blutdruck, Temperatur, Atem, Gewicht),"
+              "text": "Messung der Vitalzeichen (Puls, Blutdruck, Temperatur, Atem, Gewicht),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "einfache Bestimmung des Zuckers in Blut und Urin,"
+              "text": "einfache Bestimmung des Zuckers in Blut und Urin,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Entnahme von Untersuchungsmaterial zu Laborzwecken,"
+              "text": "Entnahme von Untersuchungsmaterial zu Laborzwecken,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Massnahmen zur Atemtherapie (wie O 2 -Verabreichung, Inhalation, einfache Atemübungen, Absaugen),"
+              "text": "Massnahmen zur Atemtherapie (wie O 2 -Verabreichung, Inhalation, einfache Atemübungen, Absaugen),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Einführen von Sonden oder Kathetern und die damit verbundenen pflegerischen Massnahmen,"
+              "text": "Einführen von Sonden oder Kathetern und die damit verbundenen pflegerischen Massnahmen,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Massnahmen bei Hämo- oder Peritonealdialyse,"
+              "text": "Massnahmen bei Hämo- oder Peritonealdialyse,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Vorbereitung und Verabreichung von Medikamenten sowie Dokumentation der damit verbundenen Tätigkeiten,"
+              "text": "Vorbereitung und Verabreichung von Medikamenten sowie Dokumentation der damit verbundenen Tätigkeiten,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "enterale oder parenterale Verabreichung von Nährlösungen,"
+              "text": "enterale oder parenterale Verabreichung von Nährlösungen,",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "Massnahmen zur Überwachung von Infusionen, Transfusionen und Geräten, die der Behandlung oder der Kontrolle und Erhaltung von vitalen Funktionen dienen,"
+              "text": "Massnahmen zur Überwachung von Infusionen, Transfusionen und Geräten, die der Behandlung oder der Kontrolle und Erhaltung von vitalen Funktionen dienen,",
+              "tiefe": 1
             },
             {
               "marke": "10",
-              "text": "Spülen, Reinigen und Versorgen von Wunden (inkl. Dekubitus- und Ulcus-cruris-Pflege) und von Körperhöhlen (inkl. Stoma- und Tracheostomiepflege) sowie Fusspflege bei Diabetikern,"
+              "text": "Spülen, Reinigen und Versorgen von Wunden (inkl. Dekubitus- und Ulcus-cruris-Pflege) und von Körperhöhlen (inkl. Stoma- und Tracheostomiepflege) sowie Fusspflege bei Diabetikern,",
+              "tiefe": 1
             },
             {
               "marke": "11",
-              "text": "pflegerische Massnahmen bei Störungen der Blasen- oder Darmentleerung, inkl. Rehabilitationsgymnastik bei Inkontinenz,"
+              "text": "pflegerische Massnahmen bei Störungen der Blasen- oder Darmentleerung, inkl. Rehabilitationsgymnastik bei Inkontinenz,",
+              "tiefe": 1
             },
             {
               "marke": "12",
-              "text": "Hilfe bei Medizinal-Teil- oder ‑Vollbädern; Anwendung von Wickeln, Packungen und Fangopackungen,"
+              "text": "Hilfe bei Medizinal-Teil- oder ‑Vollbädern; Anwendung von Wickeln, Packungen und Fangopackungen,",
+              "tiefe": 1
             },
             {
               "marke": "13",
-              "text": "pflegerische Massnahmen zur Umsetzung der ärztlichen Therapie im Alltag, wie Einüben von Bewältigungsstrategien und Anleitung im Umgang mit Aggression, Angst, Wahnvorstellungen,"
+              "text": "pflegerische Massnahmen zur Umsetzung der ärztlichen Therapie im Alltag, wie Einüben von Bewältigungsstrategien und Anleitung im Umgang mit Aggression, Angst, Wahnvorstellungen,",
+              "tiefe": 1
             },
             {
               "marke": "14",
-              "text": "Unterstützung für psychisch kranke Personen in Krisensituationen, insbesondere zur Vermeidung von akuter Selbst- oder Fremdgefährdung;"
+              "text": "Unterstützung für psychisch kranke Personen in Krisensituationen, insbesondere zur Vermeidung von akuter Selbst- oder Fremdgefährdung;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -689,11 +738,13 @@
             },
             {
               "marke": "1",
-              "text": "Allgemeine Grundpflege bei Patienten oder Patientinnen, welche die Tätigkeiten nicht selber ausführen können, wie Beine einbinden, Kompressionsstrümpfe anlegen; Betten, Lagern; Bewegungsübungen, Mobilisieren; Dekubitusprophylaxe, Massnahmen zur Verhütung oder Behebung von behandlungsbedingten Schädigungen der Haut; Hilfe bei der Mund- und Körperpflege, beim An- und Auskleiden, beim Essen und Trinken,"
+              "text": "Allgemeine Grundpflege bei Patienten oder Patientinnen, welche die Tätigkeiten nicht selber ausführen können, wie Beine einbinden, Kompressionsstrümpfe anlegen; Betten, Lagern; Bewegungsübungen, Mobilisieren; Dekubitusprophylaxe, Massnahmen zur Verhütung oder Behebung von behandlungsbedingten Schädigungen der Haut; Hilfe bei der Mund- und Körperpflege, beim An- und Auskleiden, beim Essen und Trinken,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Massnahmen zur Überwachung und Unterstützung psychisch kranker Personen in der grundlegenden Alltagsbewältigung, wie: Erarbeitung und Einübung einer angepassten Tagesstruktur, zielgerichtetes Training zur Gestaltung und Förderung sozialer Kontakte, Unterstützung beim Einsatz von Orientierungshilfen und Sicherheitsmassnahmen."
+              "text": "Massnahmen zur Überwachung und Unterstützung psychisch kranker Personen in der grundlegenden Alltagsbewältigung, wie: Erarbeitung und Einübung einer angepassten Tagesstruktur, zielgerichtetes Training zur Gestaltung und Förderung sozialer Kontakte, Unterstützung beim Einsatz von Orientierungshilfen und Sicherheitsmassnahmen.",
+              "tiefe": 1
             }
           ]
         },
@@ -726,9 +777,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "6bf25203ea2d413a138a9f23ccc92f2f6600f4caf3b2779c4f1807d053a9dc49"
+      "sha": "6dd8e11468bab4c90197e2f014dec2dea4e9ffb59ccf5c899f166b3e88b1c885"
     },
     {
       "id": "bund/KLV/art_7_a",
@@ -821,7 +872,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_7_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "0c2ba7bb26f8aca6074c5f3b43bdc9dca7fa51d4fe98e8c66da7f6bbbb85430a"
     },
@@ -844,7 +895,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_7_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "958fe7e741f310caa06a0d58a8df93170393089e104d72dcc452b8d074554ed4"
     },
@@ -885,7 +936,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "73e070f368e20a182e5337683453a80d37e82b296270595973c8be2842deed31"
     },
@@ -936,7 +987,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_8_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "f222545e978eec0e8e0d0b2a80a1d91b0e8224b84a5670954494401ec0bccc74"
     },
@@ -976,11 +1027,13 @@
             },
             {
               "marke": "1",
-              "text": "wissenschaftlich anerkannt ist,"
+              "text": "wissenschaftlich anerkannt ist,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "geeignet ist, eine Abgrenzung der Leistungen nach Artikel 7 Absatz 2 von anderen Leistungen vorzunehmen;"
+              "text": "geeignet ist, eine Abgrenzung der Leistungen nach Artikel 7 Absatz 2 von anderen Leistungen vorzunehmen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -995,9 +1048,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_8_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "f154c8ab01d0e4e7d5bd23104364b39ac295e69f282e15d607340841bbb4b925"
+      "sha": "9e5e1b9172bcc840c88ac88dd53b7c384ce5ea4a359c97326d3dc01ff36fef2c"
     },
     {
       "id": "bund/KLV/art_8_c",
@@ -1014,7 +1067,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_8_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "fc6826d3c7f2f00bb8f7b8ae700ad43f03d53fc13fabac43e844b19db420520d"
     },
@@ -1037,7 +1090,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "f3c3cb42a5813031a059f103f441f0f30287fca7190be650d1daa058c695b959"
     },
@@ -1056,7 +1109,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_9_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1117,7 +1170,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_9_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "05a7ec1cb38cc9a890fb2a20e9883d29ffa3ad53df638eb723d90f2cb22fae99"
     },
@@ -1158,7 +1211,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_9_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "37a851d2261449d541d10af78f896e37bbc353fcaf1255bdea39288babcfd4e7"
     },
@@ -1187,7 +1240,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "3ee248616e402fbabf6bb35765b63ee069a09ef7a09325c53ef3df46d7d92034"
     },
@@ -1222,7 +1275,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "93d2c8d986a8c138a8431a2abbf9e77bdfabda8018e77cb8a522db5139806551"
     },
@@ -1245,7 +1298,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_11_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "91417cc9b9ad3d7d5773d2aa23d99bb39c954f8b94530cfa753fc7aa9ecc1613"
     },
@@ -1290,7 +1343,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_11_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "5f12c1a7f769a93ac9bc8632cd740e21542b55337e7c278cbfa4b705982eeea5"
     },
@@ -1312,15 +1365,18 @@
             },
             {
               "marke": "1",
-              "text": "Polyneuropathie, mit oder ohne peripher arterielle Verschlusskrankheit (PAVK),"
+              "text": "Polyneuropathie, mit oder ohne peripher arterielle Verschlusskrankheit (PAVK),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "früheres diabetisches Ulcus,"
+              "text": "früheres diabetisches Ulcus,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "erfolgte diabetesbedingte Amputation, unabhängig vom Vorliegen einer Neuro- oder Angiopathie; und"
+              "text": "erfolgte diabetesbedingte Amputation, unabhängig vom Vorliegen einer Neuro- oder Angiopathie; und",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -1328,19 +1384,23 @@
             },
             {
               "marke": "1",
-              "text": "Fuss-, Haut-, und Nagelkontrolle,"
+              "text": "Fuss-, Haut-, und Nagelkontrolle,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "protektive Massnahmen, namentlich atraumatisches Entfernen von Hornhaut und atraumatische Nagelpflege,"
+              "text": "protektive Massnahmen, namentlich atraumatisches Entfernen von Hornhaut und atraumatische Nagelpflege,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Instruktion und Beratung der Patienten und Patientinnen zu Fuss-, Nagel- und Hautpflege und zur Wahl der Schuhe und von orthopädischen Hilfsmitteln,"
+              "text": "Instruktion und Beratung der Patienten und Patientinnen zu Fuss-, Nagel- und Hautpflege und zur Wahl der Schuhe und von orthopädischen Hilfsmitteln,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Prüfung der Passform der Schuhe."
+              "text": "Prüfung der Passform der Schuhe.",
+              "tiefe": 1
             }
           ]
         },
@@ -1354,11 +1414,13 @@
             },
             {
               "marke": "1",
-              "text": "ohne PAVK: vier Sitzungen,"
+              "text": "ohne PAVK: vier Sitzungen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "mit PAVK: sechs Sitzungen;"
+              "text": "mit PAVK: sechs Sitzungen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -1373,9 +1435,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_11_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "c74e57ba6b33de0144f24e094c5ec4651d2541cdb772888416f7d5b537ea6068"
+      "sha": "0da094efb7493334e33be15bcfb483c615f5657137c29cf6e0e8237e007cb517"
     },
     {
       "id": "bund/KLV/art_12",
@@ -1414,7 +1476,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "c315403553b91b5470b1a8a1a829b8cce30d90ed1dad80ac9fdd8bb92202873a"
     },
@@ -1545,7 +1607,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "86c8267e7c9dc0476d3cf795b79dbc7b0cc9d41df0e217c2073348f691fcbb09"
     },
@@ -1612,7 +1674,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "2a7df4ef17899dd46ad0bb6a9de21f5d603dfddac6711fb14fb9c9bdbd6a3ddd"
     },
@@ -1647,7 +1709,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "f538154b45597baa9fa18ac7c7c54ec16fb5c02c4ff26093f1e8e9dc7cddac3d"
     },
@@ -1710,7 +1772,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "cbf80b227e8558a8da453f2849e45698128c6df8219aa2a7b95f6c743974a936"
     },
@@ -1757,7 +1819,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "43b2b42a0a58cb9cfdb8fcb28ab88411fcb67cf7f0fecb86ba772e3246301e9a"
     },
@@ -1836,7 +1898,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "a8f6f396f589195c2978af163f67649afadc33eb4cbed6437272350035044983"
     },
@@ -1865,7 +1927,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "810d9a95e0486ec43dd988d9ae81330a2610688ef068d67ae3524b107295f368"
     },
@@ -1888,7 +1950,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "d406531e807409cb72d12c27679233f73a037ab4d54d4eb9ed847c02681b19c7"
     },
@@ -1910,11 +1972,13 @@
             },
             {
               "marke": "1",
-              "text": "In der normalen Schwangerschaft kann die Hebamme oder die Organisation der Hebammen sieben Kontrolluntersuchungen durchführen; sie weist die Versicherte darauf hin, dass ersten Trimenon eine ärztliche Untersuchung angezeigt ist."
+              "text": "In der normalen Schwangerschaft kann die Hebamme oder die Organisation der Hebammen sieben Kontrolluntersuchungen durchführen; sie weist die Versicherte darauf hin, dass ersten Trimenon eine ärztliche Untersuchung angezeigt ist.",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Bei einer Risikoschwangerschaft ohne manifeste Pathologie arbeitet die Hebamme oder die Organisation der Hebammen mit dem Arzt oder mit der Ärztin zusammen; bei einer Risikoschwangerschaft mit manifester Pathologie erbringt sie ihre Leistungen auf ärztliche Anordnung."
+              "text": "Bei einer Risikoschwangerschaft ohne manifeste Pathologie arbeitet die Hebamme oder die Organisation der Hebammen mit dem Arzt oder mit der Ärztin zusammen; bei einer Risikoschwangerschaft mit manifester Pathologie erbringt sie ihre Leistungen auf ärztliche Anordnung.",
+              "tiefe": 1
             },
             {
               "marke": "abis",
@@ -1922,11 +1986,13 @@
             },
             {
               "marke": "1",
-              "text": "Nach der Fehlgeburt oder dem Schwangerschaftsabbruch kann die Hebamme oder die Organisation höchstens 10 Hausbesuche durchführen."
+              "text": "Nach der Fehlgeburt oder dem Schwangerschaftsabbruch kann die Hebamme oder die Organisation höchstens 10 Hausbesuche durchführen.",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Für zusätzliche Hausbesuche ist eine ärztliche Anordnung erforderlich."
+              "text": "Für zusätzliche Hausbesuche ist eine ärztliche Anordnung erforderlich.",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -1938,15 +2004,18 @@
             },
             {
               "marke": "1",
-              "text": "In den 56 Tagen nach der Geburt kann die Hebamme oder die Organisation der Hebammen nach Frühgeburt, Mehrlingsgeburt, bei Erstgebärenden und nach einer Sectio höchstens 16 Hausbesuche durchführen; in allen übrigen Fällen kann die Hebamme höchstens 10 Hausbesuche durchführen."
+              "text": "In den 56 Tagen nach der Geburt kann die Hebamme oder die Organisation der Hebammen nach Frühgeburt, Mehrlingsgeburt, bei Erstgebärenden und nach einer Sectio höchstens 16 Hausbesuche durchführen; in allen übrigen Fällen kann die Hebamme höchstens 10 Hausbesuche durchführen.",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "In den ersten 10 Tagen nach der Geburt kann die Hebamme oder die Organisation der Hebammen zusätzlich zu den Hausbesuchen nach Ziffer 1 höchstens 5 weitere Zweitbesuche am gleichen Tag durchführen."
+              "text": "In den ersten 10 Tagen nach der Geburt kann die Hebamme oder die Organisation der Hebammen zusätzlich zu den Hausbesuchen nach Ziffer 1 höchstens 5 weitere Zweitbesuche am gleichen Tag durchführen.",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Für Hausbesuche, die in den 56 Tagen nach der Geburt zusätzlich zu den Hausbesuchen nach den Ziffern 1 und 2 oder die nach den 56 Tagen nach der Geburt durchgeführt werden sollen, ist eine ärztliche Anordnung erforderlich."
+              "text": "Für Hausbesuche, die in den 56 Tagen nach der Geburt zusätzlich zu den Hausbesuchen nach den Ziffern 1 und 2 oder die nach den 56 Tagen nach der Geburt durchgeführt werden sollen, ist eine ärztliche Anordnung erforderlich.",
+              "tiefe": 1
             }
           ]
         },
@@ -1961,9 +2030,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "20203ed2242a90994d9ed7210c824160f623cf88a4c4806b7c2aeabd1e7d7473"
+      "sha": "d0f0b2508c26a5e2d1c3a988d0de352e32f0616c447866d2b26454defd7b1e1b"
     },
     {
       "id": "bund/KLV/art_17",
@@ -1983,11 +2052,13 @@
             },
             {
               "marke": "1",
-              "text": "Idiopathisches internes Zahngranulom,"
+              "text": "Idiopathisches internes Zahngranulom,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Verlagerung und Überzahl von Zähnen und Zahnkeimen mit Krankheitswert (z. B. Abszess, Zyste);"
+              "text": "Verlagerung und Überzahl von Zähnen und Zahnkeimen mit Krankheitswert (z. B. Abszess, Zyste);",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -1995,15 +2066,18 @@
             },
             {
               "marke": "1",
-              "text": "Präpubertäre Parodontitis,"
+              "text": "Präpubertäre Parodontitis,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Juvenile, progressive Parodontitis,"
+              "text": "Juvenile, progressive Parodontitis,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Irreversible Nebenwirkungen von Medikamenten;"
+              "text": "Irreversible Nebenwirkungen von Medikamenten;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -2011,23 +2085,28 @@
             },
             {
               "marke": "1",
-              "text": "Gutartige Tumore im Kiefer- und Schleimhautbereich und tumorähnliche Veränderungen,"
+              "text": "Gutartige Tumore im Kiefer- und Schleimhautbereich und tumorähnliche Veränderungen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Maligne Tumore im Gesichts‑, Kiefer- und Halsbereich,"
+              "text": "Maligne Tumore im Gesichts‑, Kiefer- und Halsbereich,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Osteopathien der Kiefer,"
+              "text": "Osteopathien der Kiefer,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Zysten (ohne Zusammenhang mit Zahnelementen),"
+              "text": "Zysten (ohne Zusammenhang mit Zahnelementen),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Osteomyelitis der Kiefer;"
+              "text": "Osteomyelitis der Kiefer;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -2035,15 +2114,18 @@
             },
             {
               "marke": "1",
-              "text": "Kiefergelenksarthrose,"
+              "text": "Kiefergelenksarthrose,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Ankylose,"
+              "text": "Ankylose,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Kondylus- und Diskusluxation;"
+              "text": "Kondylus- und Diskusluxation;",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -2051,11 +2133,13 @@
             },
             {
               "marke": "1",
-              "text": "In die Kieferhöhle dislozierter Zahn oder Zahnteil,"
+              "text": "In die Kieferhöhle dislozierter Zahn oder Zahnteil,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Mund-Antrumfistel;"
+              "text": "Mund-Antrumfistel;",
+              "tiefe": 1
             },
             {
               "marke": "f",
@@ -2063,24 +2147,27 @@
             },
             {
               "marke": "1",
-              "text": "Schlafapnoesyndrom,"
+              "text": "Schlafapnoesyndrom,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Schwere Störungen des Schluckens,"
+              "text": "Schwere Störungen des Schluckens,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Schwere Schädel-Gesichts-Asymmetrien."
+              "text": "Schwere Schädel-Gesichts-Asymmetrien.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "a095d97c4932a9b8cf5875d7ac717421e59e295b3f6cd1557d34926fa51d3347"
+      "sha": "2b7725832c5e0633a7d9818fc432715155039387d328ca8d1d10bfd5f6a321ff"
     },
     {
       "id": "bund/KLV/art_18",
@@ -2100,23 +2187,28 @@
             },
             {
               "marke": "1",
-              "text": "Neutropenie, Agranulozytose,"
+              "text": "Neutropenie, Agranulozytose,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Schwere aplastische Anämie,"
+              "text": "Schwere aplastische Anämie,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Leukämien,"
+              "text": "Leukämien,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Myelodysplastische Syndrome (MDS),"
+              "text": "Myelodysplastische Syndrome (MDS),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Hämorraghische Diathesen;"
+              "text": "Hämorraghische Diathesen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -2124,19 +2216,23 @@
             },
             {
               "marke": "1",
-              "text": "Akromegalie,"
+              "text": "Akromegalie,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Hyperparathyreoidismus,"
+              "text": "Hyperparathyreoidismus,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Idiopathischer Hypoparathyreoidismus,"
+              "text": "Idiopathischer Hypoparathyreoidismus,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Hypophosphatasie (genetisch bedingte Vitamin D-resistente Rachitis);"
+              "text": "Hypophosphatasie (genetisch bedingte Vitamin D-resistente Rachitis);",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -2144,31 +2240,38 @@
             },
             {
               "marke": "1",
-              "text": "Chronische Polyarthritis mit Kieferbeteiligung,"
+              "text": "Chronische Polyarthritis mit Kieferbeteiligung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Morbus Bechterew mit Kieferbeteiligung,"
+              "text": "Morbus Bechterew mit Kieferbeteiligung,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Arthritis psoriatica mit Kieferbeteiligung,"
+              "text": "Arthritis psoriatica mit Kieferbeteiligung,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Papillon-Lefèvre-Syndrom,"
+              "text": "Papillon-Lefèvre-Syndrom,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Sklerodermie,"
+              "text": "Sklerodermie,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "AIDS,"
+              "text": "AIDS,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Schwere psychische Erkrankungen mit konsekutiver schwerer Beeinträchtigung der Kaufunktion;"
+              "text": "Schwere psychische Erkrankungen mit konsekutiver schwerer Beeinträchtigung der Kaufunktion;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -2187,9 +2290,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "127d664027dbcf9b37368d733297fa2bc3ff1dfee6744cd5dd2b1534aea3f263"
+      "sha": "55597a461995504909ed12e2303407635aba7eb369d92fdee0f79e53fedc9976"
     },
     {
       "id": "bund/KLV/art_19",
@@ -2228,7 +2331,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "8d0faa436cad68044908d6684a66a5877a3a481f518f8561279c8bab35dd9c80"
     },
@@ -2340,11 +2443,13 @@
             },
             {
               "marke": "–",
-              "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenrelation mit einem Winkel ANB von mindestens 9 Grad (beziehungsweise von mindestens 7 Grad bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad) ergibt;"
+              "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenrelation mit einem Winkel ANB von mindestens 9 Grad (beziehungsweise von mindestens 7 Grad bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad) ergibt;",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "bei den bleibenden Zähnen, exklusive Weisheitszähne, eine buccale Nonokklusion von mindestens drei Antagonistenpaaren im Seitenzahnbereich pro Kieferhälfte vorliegt;"
+              "text": "bei den bleibenden Zähnen, exklusive Weisheitszähne, eine buccale Nonokklusion von mindestens drei Antagonistenpaaren im Seitenzahnbereich pro Kieferhälfte vorliegt;",
+              "tiefe": 1
             },
             {
               "marke": "21",
@@ -2356,11 +2461,13 @@
             },
             {
               "marke": "–",
-              "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenregulation mit einem Winkel ANB von mindestens –1 Grad ergibt und sich mindestens zwei Antagonistenpaare der zweiten Dentition in frontaler Kopf- oder Kreuzbissrelation befinden oder"
+              "text": "die kephalometrische Beurteilung eine Diskrepanz der sagittalen Kieferbasenregulation mit einem Winkel ANB von mindestens –1 Grad ergibt und sich mindestens zwei Antagonistenpaare der zweiten Dentition in frontaler Kopf- oder Kreuzbissrelation befinden oder",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "eine Diskrepanz von +1 Grad und weniger bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad und mehr respektive von 15 Grad und weniger vorliegt;"
+              "text": "eine Diskrepanz von +1 Grad und weniger bei Kombination mit einem Kieferbasenwinkel von mindestens 37 Grad und mehr respektive von 15 Grad und weniger vorliegt;",
+              "tiefe": 1
             },
             {
               "marke": "23",
@@ -2495,9 +2602,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_19_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "918675e9f79970f2f596d674d9caeb4f89ef3fd032dc7279660d2eb0cb92092f"
+      "sha": "fc55b27831cb6be5fd21e1af793d835da4c790626607e5b00a9380d808535c31"
     },
     {
       "id": "bund/KLV/art_19_b",
@@ -2524,7 +2631,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_19_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "842f1f12fb0aa7128a1d6dec6c8dcc0d4fa80dfe169d6e596b00525d517dc985"
     },
@@ -2557,7 +2664,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "7bdd50928f21031eb6ea3aa2a13bd7bc625682810bf278bf221db8cc400a920e"
     },
@@ -2584,7 +2691,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_20_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b8874ec4a6e8e7505ceecb5aee2c5a295714b925f6fa0dc53d21d18135f9dc93"
     },
@@ -2603,7 +2710,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "0511e84e88b2bcf0c5c233ae3a606d398456a0b5c2e0fe0e6677011d1ca840e7"
     },
@@ -2622,7 +2729,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "7abbe9d0b90a35a39e5bd8525e1b01cbcb46f4bd43bd75cb76e90a48a516893e"
     },
@@ -2641,7 +2748,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "e766deb19eca2d3c1984e71f337e0eed57f881a6eff14b11635a2b5306ab5f49"
     },
@@ -2690,7 +2797,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "3f98a4523e3ff1eff6c8ab3e76f1741d6c93667a3dc827e1ca9054fd12c094cf"
     },
@@ -2709,7 +2816,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "92578edc53671d29d28a9de6d531225a2e1d4a72eb786f145ed7ee59300ca1f7"
     },
@@ -2732,7 +2839,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "42931357b985bbd4eb39bfa878c2a9d9b86c83a89d52dc3a7fbf04036022c28a"
     },
@@ -2751,7 +2858,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "6118d5d02cc5f437d502040ab0ce39dbd2d2d91ad7f508eab7e49778f820f8d3"
     },
@@ -2778,7 +2885,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "13f66b4ad81b264f8802ad26b18028d574457f0ef0a07af252ac444aef821768"
     },
@@ -2801,7 +2908,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "d3edd6dfa8103529bc244b329f6104aa78f0d12d82095322895eef10ed8582b8"
     },
@@ -2834,7 +2941,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "5acdac89a7d190990175eea118f999104285436dd016d51c087caed08145db97"
     },
@@ -2895,7 +3002,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_30_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "37c78bf573a92342ab5dd36d606e19e1888b220fe9a92a4c8f4f3bd3da61d4c0"
     },
@@ -2958,7 +3065,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "7164f3b822c0f743108f60e7a454054762cac9178c5dc82f00f74735e4d07923"
     },
@@ -2981,7 +3088,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_31_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "1929b5a0961074a3b03c9d106d4f6c7749a3eb6b53bc55083224ae7764b33cb2"
     },
@@ -3000,7 +3107,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_31_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b2e3df9e8415f7ca30c04b00d4aaff3779452d25fecff1e78dea174e993c72ac"
     },
@@ -3019,7 +3126,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_31_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "6f569ae8debe9372d8520a8580dc182af678f41af688200bb496bc5add357a72"
     },
@@ -3102,7 +3209,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_31_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "7e114096189f6745184f1f3747e2ee066d66daee8676ca9aecda17e9604e92ba"
     },
@@ -3121,7 +3228,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "ff3e852fdff624ca379bc5cfb3d477d41ce847b8b2b815d33c370130982126b8"
     },
@@ -3144,7 +3251,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "7e2e51bd533961ff4b4bcd090704409d4651d83f737cd104fdf2891013ebd01b"
     },
@@ -3163,7 +3270,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3182,7 +3289,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "39415bc8b82706faf7101ee6e70e34aa91af9e6c47bf32ac67c64af676d975bd"
     },
@@ -3209,7 +3316,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_a_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "ed88d2a3fbe80c1e94bbcf6f709105459156079414ca0c541b3c11ce32e9f4cc"
     },
@@ -3231,11 +3338,13 @@
             },
             {
               "marke": "1",
-              "text": "bei patentgeschützten Originalpräparaten: 6,5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen,"
+              "text": "bei patentgeschützten Originalpräparaten: 6,5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "bei nicht mehr patentgeschützten Originalpräparaten: 5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen;"
+              "text": "bei nicht mehr patentgeschützten Originalpräparaten: 5 Prozent des Apothekeneinstandspreises, höchstens jedoch 224 dänische Kronen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -3290,9 +3399,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "0a94ff875c7872db7b5d6df25da4c8146231f4ca1ed09981ce24b28ebfb00262"
+      "sha": "aee7ea17a491f713ccf1094fde512c768b3eafdb68d4443997dcd89d37058d43"
     },
     {
       "id": "bund/KLV/art_34_c",
@@ -3313,7 +3422,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "0b4f594105e1fc77a3c825c07a658f4481c473ab048b75d22de0ce26b0e2393f"
     },
@@ -3339,31 +3448,38 @@
             },
             {
               "marke": "1",
-              "text": "Gastroenterologika (04),"
+              "text": "Gastroenterologika (04),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Stoffwechsel (07),"
+              "text": "Stoffwechsel (07),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Antidota (15),"
+              "text": "Antidota (15),",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Kationenaustauscher (16),"
+              "text": "Kationenaustauscher (16),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "…"
+              "text": "…",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Gastroenterologika Komplementärmedizin (54),"
+              "text": "Gastroenterologika Komplementärmedizin (54),",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Stoffwechsel Komplementärmedizin (57);"
+              "text": "Stoffwechsel Komplementärmedizin (57);",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -3371,43 +3487,53 @@
             },
             {
               "marke": "1",
-              "text": "Nervensystem (01),"
+              "text": "Nervensystem (01),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Nieren und Wasserhaushalt (05),"
+              "text": "Nieren und Wasserhaushalt (05),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Blut (06),"
+              "text": "Blut (06),",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Dermatologika (10),"
+              "text": "Dermatologika (10),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Odontostomatologika (13),"
+              "text": "Odontostomatologika (13),",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Diagnostika (14),"
+              "text": "Diagnostika (14),",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Nervensystem Komplementärmedizin (51),"
+              "text": "Nervensystem Komplementärmedizin (51),",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "Nieren und Wasserhaushalt Komplementärmedizin (55),"
+              "text": "Nieren und Wasserhaushalt Komplementärmedizin (55),",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "Blut Komplementärmedizin (56),"
+              "text": "Blut Komplementärmedizin (56),",
+              "tiefe": 1
             },
             {
               "marke": "10",
-              "text": "Dermatologika Komplementärmedizin (60);"
+              "text": "Dermatologika Komplementärmedizin (60);",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -3415,55 +3541,68 @@
             },
             {
               "marke": "1",
-              "text": "Herz und Kreislauf (02),"
+              "text": "Herz und Kreislauf (02),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Lunge und Atmung (03),"
+              "text": "Lunge und Atmung (03),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Infektionskrankheiten (08),"
+              "text": "Infektionskrankheiten (08),",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Gynaecologika (09),"
+              "text": "Gynaecologika (09),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Ophthalmologika (11),"
+              "text": "Ophthalmologika (11),",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Oto-Rhinolaryngologika (12),"
+              "text": "Oto-Rhinolaryngologika (12),",
+              "tiefe": 1
             },
             {
               "marke": "6a",
-              "text": "Weitere Arzneimittel Komplementärmedizin (20),"
+              "text": "Weitere Arzneimittel Komplementärmedizin (20),",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Herz und Kreislauf Komplementärmedizin (52),"
+              "text": "Herz und Kreislauf Komplementärmedizin (52),",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "Lunge und Atmung Komplementärmedizin (53),"
+              "text": "Lunge und Atmung Komplementärmedizin (53),",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "Infektionskrankheiten Komplementärmedizin (58),"
+              "text": "Infektionskrankheiten Komplementärmedizin (58),",
+              "tiefe": 1
             },
             {
               "marke": "10",
-              "text": "Gynaecologika Komplementärmedizin (59),"
+              "text": "Gynaecologika Komplementärmedizin (59),",
+              "tiefe": 1
             },
             {
               "marke": "11",
-              "text": "Ophthalmologika Komplementärmedizin (61),"
+              "text": "Ophthalmologika Komplementärmedizin (61),",
+              "tiefe": 1
             },
             {
               "marke": "12",
-              "text": "Oto-Rhinolaryngologika Komplementärmedizin (62)."
+              "text": "Oto-Rhinolaryngologika Komplementärmedizin (62).",
+              "tiefe": 1
             }
           ]
         },
@@ -3488,9 +3627,9 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "495cfa6bce7f89bf6347fc110b59ea215c566d258a139cf0dae9d2be0311032d"
+      "sha": "652be8dbb4dc6e55fd4afce651bea41540f86c11c4207b50831bf6898947b15f"
     },
     {
       "id": "bund/KLV/art_34_e",
@@ -3529,7 +3668,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b8c4c0885efb569c85e8d1f2ee20fb0cdb902ba3c80a4969e4e826d81f240271"
     },
@@ -3556,7 +3695,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "a0bf7df6ba4f7bb0d01519464383b46f7d2ff798c783191d90b150993417aa78"
     },
@@ -3575,7 +3714,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3598,7 +3737,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_34_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "bddaff123dd4521d6873afe022dd51cb706f3073fb8a428578b7d473d0faf0f7"
     },
@@ -3617,7 +3756,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "da666e90afeb2c632aeb9c43b3a2485a91dfdc107557ca64da4d26d3f46e0031"
     },
@@ -3636,7 +3775,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_35_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3655,7 +3794,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_35_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3674,7 +3813,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_35_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3701,7 +3840,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "e002c045e172261035b7beb0579bfe80a105215b89db05ac7e1ef7d0f33c9515"
     },
@@ -3720,7 +3859,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "23ad72ea1a85f38b21fb66b1fc5c3a483c72e656a7fdf1a56b718d5a1bd6c778"
     },
@@ -3739,7 +3878,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "9b9fa84ce64b33df71c87c5ce995b968c5ff81e673abdd78b6f9ff517f70db5f"
     },
@@ -3780,7 +3919,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "a2018e185811b904ce978b86de231e528ad0d36acc3944e33442f4e366c9dcc3"
     },
@@ -3799,7 +3938,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3822,7 +3961,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "3b941c924bf5d6bee7ea692b282c5408b7cc348e3cc6de3f042d2b018d9cbfb4"
     },
@@ -3907,7 +4046,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_37_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "a839c7f2d6818953e06f9af9e8367231d8bec27710b3518e46b760d5f332f3a4"
     },
@@ -3970,7 +4109,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "d37a1967619719de13bce6aaecd95deee390d1937ba9a1fd2b020bfe796e9c3a"
     },
@@ -4031,7 +4170,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "9cdbee24fc204a199b5abf96b3099b82e2551ca692d8dde8d84d4c9cd7395fc6"
     },
@@ -4098,7 +4237,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "f1aceacf9bfd8c445576f4d0cf9d2e8e9ca504e995d8eff7262ca2c2924cbd99"
     },
@@ -4117,7 +4256,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "851039b63583f37c60d25732c1a0b27c2e01a371fbeb2de7028c32b1687fcb5c"
     },
@@ -4194,7 +4333,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "8ee0fb0d571831f179918f2533dc80a74c6335208303cbcd47b8b756ab9cb918"
     },
@@ -4249,7 +4388,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "998671b260b6c22b3614b508e43b31f3480e60a31c2699e292770092c89982bb"
     },
@@ -4268,7 +4407,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "819462e8e9f37a1467d7b474d49bb873c43340ec311f8d506d878dbeebb99bbd"
     },
@@ -4287,7 +4426,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_38_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "6b4bed503d631e916b567c0c1700f44a729a53f2aef3d95b12c08fd6b91dfa87"
     },
@@ -4306,7 +4445,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4325,7 +4464,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4344,7 +4483,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4397,7 +4536,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "a6e5a7b809aa1dd7e1d87f61991edfe08911a5f4b561d17ffba926f51bd2954c"
     },
@@ -4440,7 +4579,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "efadfde6ce7944826457c5adafc349a9bd698180ee10b4568413942707027ef5"
     },
@@ -4501,7 +4640,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "6e252af9b26970cb187e25a6ed641c07b8e852fef7726013780129b3becb32cd"
     },
@@ -4520,7 +4659,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4547,7 +4686,7 @@
       ],
       "stand": "2026-05-11",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
       "sha": "e22ca6820ded060e64a5ee8aa38ad23772330ad495846ba9fea3dd99ede42157"
     }

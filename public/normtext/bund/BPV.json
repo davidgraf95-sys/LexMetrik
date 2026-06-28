@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/BPV/art_1",
@@ -8,6 +8,7 @@
       "erlass": "BPV",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "grundlage": "(Art. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -80,7 +81,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4e47b0e93549145330120614faebaa7ec2bcf4f1b5472d1f4b34dd2bf05c3139"
     },
@@ -91,6 +92,7 @@
       "erlass": "BPV",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -153,7 +155,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8f74c2507d3f9f0410b351fcbc9a2159123e0791143428643f9f3be8e791534a"
     },
@@ -172,7 +174,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_2_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "328b4fadfc1d1945c500eda5370fb642b739e8dc7aadd13ce0bd87b9257146a5"
     },
@@ -195,7 +197,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1b2d9e4c534ea05ba27535b541c4bb1cb6e572fcc465aff6ad67836a9933d988"
     },
@@ -206,6 +208,7 @@
       "erlass": "BPV",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 4 Abs. 2 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -259,11 +262,13 @@
             },
             {
               "marke": "1",
-              "text": "Kostenanteil unter 50 000 Franken: innerhalb von zwei Jahren,"
+              "text": "Kostenanteil unter 50 000 Franken: innerhalb von zwei Jahren,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Kostenanteil ab 50 000 Franken: innerhalb von vier Jahren."
+              "text": "Kostenanteil ab 50 000 Franken: innerhalb von vier Jahren.",
+              "tiefe": 1
             }
           ]
         },
@@ -278,9 +283,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "3d4c3bae75b435ceb5d302c77a4396e575f20299b3ee3e65e8e8cf55afcad177"
+      "sha": "27eff0bcfae7f295b7527a256846e7309591a9441302e7e958d9919fb2a2a6f3"
     },
     {
       "id": "bund/BPV/art_5",
@@ -289,6 +294,7 @@
       "erlass": "BPV",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 4 Abs. 2 Bst. c BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -331,7 +337,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1725117fd47fbe84c0a0c177780989f2d409803f9f3e00bb289897dcebeb39f3"
     },
@@ -342,6 +348,7 @@
       "erlass": "BPV",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 4 Abs. 2 Bst. d BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -358,7 +365,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "284c79bfbd61d7f162888741bc36db9aada73198281bcddb810696b84b7501e9"
     },
@@ -377,7 +384,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ce9f0a2f5f0343228dd38c824d12c58a3e631b03439bb8df4b58a1518f376550"
     },
@@ -388,6 +395,7 @@
       "erlass": "BPV",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 4 Abs. 2 Bst. f BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -400,7 +408,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ff5dd9f6337678a8652f13b264f3c16da8a16b4ddfc7254116fa64d28f76f196"
     },
@@ -411,6 +419,7 @@
       "erlass": "BPV",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 4 Abs. 2 Bst. g BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -429,7 +438,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e1a84ed1a6aa23a9dbde07109d3b4cfb562e8ac7768f702d534cbaa508cdd6a1"
     },
@@ -440,6 +449,7 @@
       "erlass": "BPV",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 4 Abs. 2 Bst. h und 32 Bst. d BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -448,7 +458,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a49daabebc065c5d77b6a3dc882ce448980a565005194373678d2839b9c3a2e2"
     },
@@ -459,6 +469,7 @@
       "erlass": "BPV",
       "artikel": "10_a",
       "artikelLabel": "Art. 10a",
+      "grundlage": "(Art. 32 Bst. d BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -471,7 +482,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_10_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "602cbc5d03a99e8568d6023dfa0bee38df883c0884d215c70e826a9633d0ebe3"
     },
@@ -482,6 +493,7 @@
       "erlass": "BPV",
       "artikel": "10_b",
       "artikelLabel": "Art. 10b",
+      "grundlage": "(Art. 32 Bst. d BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -536,7 +548,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_10_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f532eb6f23f78b51d19723a032561cb3ee4763912ee84d04c3ae8f9e2a922a8c"
     },
@@ -547,6 +559,7 @@
       "erlass": "BPV",
       "artikel": "10_c",
       "artikelLabel": "Art. 10c",
+      "grundlage": "(Art. 32 Bst. d BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -563,7 +576,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_10_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3faf1a4ffcc4d0b2ab0a7dd5f1f0af7fffff5cfcb3589894f0c6f2c1031bd76e"
     },
@@ -574,6 +587,7 @@
       "erlass": "BPV",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 4 Abs. 2 Bst. g BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -586,7 +600,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "45a21e853e914dcc4ec02a06298926fd550768012bb7846f4882bb5d2567ab34"
     },
@@ -597,6 +611,7 @@
       "erlass": "BPV",
       "artikel": "11_a",
       "artikelLabel": "Art. 11a",
+      "grundlage": "(Art. 4 Abs. 2 Bst. g, 21 Abs. 1 Bst. d und 27 d Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -609,7 +624,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_11_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "55b67b2f1fa7a06c54245beae0bf342aa404759b5863d854a511de6434799afc"
     },
@@ -620,6 +635,7 @@
       "erlass": "BPV",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 4 Abs. 2 Bst. i BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -628,7 +644,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "951bd72c2c5caac29e27581936ec4f65b66e49e9c87bb95141218c0c153a2050"
     },
@@ -639,6 +655,7 @@
       "erlass": "BPV",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 4 Abs. 2 Bst. j BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -651,7 +668,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7094e7d93a2943193f2c30b367c8fccda7d906938e61748c45e8606a37a6c0ca"
     },
@@ -662,6 +679,7 @@
       "erlass": "BPV",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 4 Abs. 2 Bst. k BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -682,7 +700,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dd6e04dd0df932eb196d8e03e79c4fa13daf12329b0798072a05ce1d297ab14a"
     },
@@ -693,6 +711,7 @@
       "erlass": "BPV",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 4 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -717,7 +736,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7341caf35e6698a2b784bf2f2a76d13aa90e3e1d953731984fb092e0a8ea22ce"
     },
@@ -728,6 +747,7 @@
       "erlass": "BPV",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 4 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -754,7 +774,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2a2ded8bd2f4fe61b59224f0b4f12148f4378668a5a1cf88c8aa56ce7a70e9e1"
     },
@@ -773,7 +793,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -784,6 +804,7 @@
       "erlass": "BPV",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -874,7 +895,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f019279b684bd485827299a1af9c25db395f8f9682bb8c802ea13f8262c6502b"
     },
@@ -915,7 +936,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_18_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c3b8d8923e797e9fe41e2e6089f7907a3d011cf299fbd2d0605ba9307e7dcb79"
     },
@@ -926,6 +947,7 @@
       "erlass": "BPV",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 5 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -952,7 +974,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4e5057b79fc0127e8810f262e6b97b3daf6cf53fa91b5bccf8ed4ce7d3c53d91"
     },
@@ -985,7 +1007,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2ea3dc03dd966d54ffcdf1b98ea929cc138ff8972344319893fe9a1db898c91c"
     },
@@ -996,6 +1018,7 @@
       "erlass": "BPV",
       "artikel": "20_a",
       "artikelLabel": "Art. 20a",
+      "grundlage": "(Art. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1024,7 +1047,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_20_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "757b704666d3103e31435283dcdb29cb011db5e015891aa9fa5edd68cd4fd52e"
     },
@@ -1035,6 +1058,7 @@
       "erlass": "BPV",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1077,7 +1101,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c7919957254bf205179729234506ad5c4db3131fc6728246de7ee6f8af8e063d"
     },
@@ -1088,6 +1112,7 @@
       "erlass": "BPV",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 7 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1134,7 +1159,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0d22e3ce45a8347ca703134b2bbfad1611c3e33b00f55b3ebc610b4452975f9c"
     },
@@ -1145,6 +1170,7 @@
       "erlass": "BPV",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 8 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1187,7 +1213,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b62c517df174faeef5ae3f978ff19be91cb6260001c2fe3d13c556d20c573fd1"
     },
@@ -1198,6 +1224,7 @@
       "erlass": "BPV",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 8 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1214,7 +1241,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9c669556af6374461d258df8c5d0ba245c422ac521504904162f9583b384362c"
     },
@@ -1225,6 +1252,7 @@
       "erlass": "BPV",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 8 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1299,7 +1327,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8fab7efe95f1eba01b67dc92b614673fd406691e10accb9ff06f5e77f137a29d"
     },
@@ -1310,6 +1338,7 @@
       "erlass": "BPV",
       "artikel": "25_a",
       "artikelLabel": "Art. 25a",
+      "grundlage": "(Art. 4 Abs. 2 Bst. j BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1340,7 +1369,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_25_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "da48c3513ba4d3aaef2c20452644f6ebdbf1508dd2b709de59234a4c2ea29511"
     },
@@ -1351,6 +1380,7 @@
       "erlass": "BPV",
       "artikel": "25_b",
       "artikelLabel": "Art. 25b",
+      "grundlage": "(Art. 4 Abs. 2 Bst. j BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1375,7 +1405,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_25_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ebf8a77f183aaf09afdd6930d9887d53fdd48aeac3d9ab7aa904b0bf940484ab"
     },
@@ -1386,6 +1416,7 @@
       "erlass": "BPV",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 10 Abs. 3 Bst. f BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1428,7 +1459,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c871a6b9434082ba1d8493e79f60989ee08f16e573c99353cfbc9910fd3f6015"
     },
@@ -1439,6 +1470,7 @@
       "erlass": "BPV",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 8 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1489,7 +1521,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7f38b2abd96994e9e9ee68a75463c143ebaee0fdd7bb18898ed8a7e1bca15682"
     },
@@ -1500,6 +1532,7 @@
       "erlass": "BPV",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 9 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1508,7 +1541,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "44559969a30c9eac152353cc727f8170f9026e93340f6ab0ee9c6038889f487d"
     },
@@ -1519,6 +1552,7 @@
       "erlass": "BPV",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 10 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1539,7 +1573,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "16faed857163e52226fd61527899783a85b3d17bb4749f94439d079652848c6c"
     },
@@ -1550,6 +1584,7 @@
       "erlass": "BPV",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 8 Abs. 1 und 13 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1562,7 +1597,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cb68c6c13564b6d9985d09ef3c4b5130c843d8a28e79360f757db2d4b83f2bc3"
     },
@@ -1573,6 +1608,7 @@
       "erlass": "BPV",
       "artikel": "30_a",
       "artikelLabel": "Art. 30a",
+      "grundlage": "(Art. 12 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1617,7 +1653,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_30_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bd4587e063ac4df27e1e62c725033658c2968e63c9770ddead2b9c6908bcd6e2"
     },
@@ -1628,6 +1664,7 @@
       "erlass": "BPV",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 19 Abs. 1 und 2 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1654,7 +1691,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b0aec91d48e81724550850ab40046d384895e2da5e7fee0f456f50042be5c086"
     },
@@ -1665,6 +1702,7 @@
       "erlass": "BPV",
       "artikel": "31_a",
       "artikelLabel": "Art. 31a",
+      "grundlage": "(Art. 19 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1673,7 +1711,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_31_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "31edf8e6b14cbd3888aa5de0403247033661eebf51e0381c6df38ec7dafe36db"
     },
@@ -1684,6 +1722,7 @@
       "erlass": "BPV",
       "artikel": "31_b",
       "artikelLabel": "Art. 31b",
+      "grundlage": "(Art. 10 Abs. 3 und 12 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1708,7 +1747,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_31_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "be33b9d9b999b546fd446175aab09e620131a8e8ebe753dac5d32e86ee08e944"
     },
@@ -1719,6 +1758,7 @@
       "erlass": "BPV",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 10 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1753,7 +1793,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ca7df2cc7bb6ffdc3df1901c27da6871b82a70b31fd99b65c2a9991c6be5d145"
     },
@@ -1772,7 +1812,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_33_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1791,7 +1831,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_34_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1802,6 +1842,7 @@
       "erlass": "BPV",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 10 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1818,7 +1859,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a97797a749f960ab58e82bd4b08b9c1e99e3c4d9855f0bd3d8a69ef65277978a"
     },
@@ -1829,6 +1870,7 @@
       "erlass": "BPV",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2001,7 +2043,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b1f83c27ae81d716ff612165f7d984ea0d49f802c00395a7833120df57d803fc"
     },
@@ -2012,6 +2054,7 @@
       "erlass": "BPV",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2024,7 +2067,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0514708a3d54e89071d9f6a906936cbfd04490d41339a8936dfe1e1ac97bb895"
     },
@@ -2035,6 +2078,7 @@
       "erlass": "BPV",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2047,7 +2091,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f30a8a92a1df7b303b8b7186d99a3666cab92ecaccb04cdeeee147b579dc373a"
     },
@@ -2058,6 +2102,7 @@
       "erlass": "BPV",
       "artikel": "38_a",
       "artikelLabel": "Art. 38a",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2080,7 +2125,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_38_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "044c2b42fa0cac9d8104506a37eee08fa855c3ca51ad55b60ca0028175da8586"
     },
@@ -2091,6 +2136,7 @@
       "erlass": "BPV",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2137,7 +2183,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7705ac097f20c07346daf2dd72bdaa467178cc4c83f371ddd2188515a9929e85"
     },
@@ -2148,6 +2194,7 @@
       "erlass": "BPV",
       "artikel": "39_a",
       "artikelLabel": "Art. 39a",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2178,7 +2225,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_39_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "42b0738d3ac64b101b05c4a9833b4093a59bc6a0f688db74da4ef0591f7d638f"
     },
@@ -2189,6 +2236,7 @@
       "erlass": "BPV",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2197,7 +2245,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e033ca9ff2c60a581830cffde34ce8072b379c4680d2406f63191f00667a2a0b"
     },
@@ -2208,6 +2256,7 @@
       "erlass": "BPV",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2216,7 +2265,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "920cbca5cac20b67c2dd35adf87699fb6dc557cfb237a06c7d37b9e1f1dfdb8c"
     },
@@ -2227,6 +2276,7 @@
       "erlass": "BPV",
       "artikel": "42",
       "artikelLabel": "Art. 42",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2235,7 +2285,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c776cff06664ba5acefe9abba5b75038e973da19fb9fae0ee72077cdc02625d4"
     },
@@ -2246,6 +2296,7 @@
       "erlass": "BPV",
       "artikel": "43",
       "artikelLabel": "Art. 43",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2258,7 +2309,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "10fccd52cca92e2f2fd0e268f36a7d693d622b7d2a1b29fa5f2b45f63348fda1"
     },
@@ -2269,6 +2320,7 @@
       "erlass": "BPV",
       "artikel": "44",
       "artikelLabel": "Art. 44",
+      "grundlage": "(Art. 16 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2331,7 +2383,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "850f2c6f6535ba397faf107e230dcb6ba8bfb0e15e1a4eea016652fb94e186b2"
     },
@@ -2342,6 +2394,7 @@
       "erlass": "BPV",
       "artikel": "44_a",
       "artikelLabel": "Art. 44a",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2376,7 +2429,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_44_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "10a5e8bb6b3e1e9af885b9685e684f875855d9217d5d8da4dcc20955ba5718cb"
     },
@@ -2387,6 +2440,7 @@
       "erlass": "BPV",
       "artikel": "45",
       "artikelLabel": "Art. 45",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2413,7 +2467,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "687587b6f9809c1da6a9816b7a8ba43136c80705ed4f3bc2a964ea82c6ed5036"
     },
@@ -2424,6 +2478,7 @@
       "erlass": "BPV",
       "artikel": "46",
       "artikelLabel": "Art. 46",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2436,7 +2491,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9d6b44df97c2e847d1441ffa2b75084892a2c03691059c84e03d2892ec43274b"
     },
@@ -2455,7 +2510,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2466,6 +2521,7 @@
       "erlass": "BPV",
       "artikel": "48",
       "artikelLabel": "Art. 48",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2478,7 +2534,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "060d6495c9bc7ed6bc5e2da53557755049b8358d7221ecb71e605168b88a3367"
     },
@@ -2489,6 +2545,7 @@
       "erlass": "BPV",
       "artikel": "49",
       "artikelLabel": "Art. 49",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2501,7 +2558,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7636619ba12b5061ef9f386e386ff57cd06c5373253cdcc40193bf0bcbe63a85"
     },
@@ -2512,6 +2569,7 @@
       "erlass": "BPV",
       "artikel": "49_a",
       "artikelLabel": "Art. 49a",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2520,7 +2578,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_49_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ff1c1b99e22bd5d76bd561c513c0c0015d5ffe9329a70b034bb6c9d82da31b66"
     },
@@ -2531,6 +2589,7 @@
       "erlass": "BPV",
       "artikel": "49_b",
       "artikelLabel": "Art. 49b",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2543,7 +2602,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_49_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e964aa591d6b427175557e6c1464da039a716e3dbfd2770ffeb6daff337076d6"
     },
@@ -2554,6 +2613,7 @@
       "erlass": "BPV",
       "artikel": "50",
       "artikelLabel": "Art. 50",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2566,7 +2626,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b39b4bea031bd051ac95e5be1ad7c810560870aae326f2f59291d26b01c5dd27"
     },
@@ -2585,7 +2645,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e19e78644b28b20c0abaafb1f11d5e59611bbef46338d54fff0eda0cfab8c2c1"
     },
@@ -2648,7 +2708,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_51_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ade479fb6a4fc85a747ef93fcd5279a69b47199a81cc372877634365cf6fd1f8"
     },
@@ -2667,7 +2727,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_51_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2678,6 +2738,7 @@
       "erlass": "BPV",
       "artikel": "52",
       "artikelLabel": "Art. 52",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2722,7 +2783,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4db38ab6f5b826e36aabfe28de9039363d22b7118c7207dfa6ed73a9c788ff66"
     },
@@ -2759,7 +2820,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_52_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "73bce810e75c1a74103d40c7100844880304bf7d35ca839ce8ff5b216f870f23"
     },
@@ -2792,7 +2853,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_52_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d2eef2225013bf0bb52e67efb45814400c45f90c338b6125e432662a5c20f3a3"
     },
@@ -2803,6 +2864,7 @@
       "erlass": "BPV",
       "artikel": "53",
       "artikelLabel": "Art. 53",
+      "grundlage": "(Art. 15 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2825,7 +2887,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9922083d9e9ea3a8ddceaab6515c4c7081a7d7f41f4ce0704a440393551413ad"
     },
@@ -2844,7 +2906,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_54_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2855,6 +2917,7 @@
       "erlass": "BPV",
       "artikel": "56",
       "artikelLabel": "Art. 56",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2883,7 +2946,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "90e8877a9c8af2bb7185645bba4cd669ab369604edc7a47e3ce2c65ab8c8f486"
     },
@@ -2894,6 +2957,7 @@
       "erlass": "BPV",
       "artikel": "56_a",
       "artikelLabel": "Art. 56a",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2922,7 +2986,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_56_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "721dc618264c33b2d7b707ff5c3a47effa3ccfabe363634fde88c5199a5b0041"
     },
@@ -2933,6 +2997,7 @@
       "erlass": "BPV",
       "artikel": "56_b",
       "artikelLabel": "Art. 56b",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2945,7 +3010,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_56_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9687f43b50155b0c93ac6f4add1a7f47ac7e3a551e65ac2bdc51c23ceaea6e20"
     },
@@ -2956,6 +3021,7 @@
       "erlass": "BPV",
       "artikel": "56_c",
       "artikelLabel": "Art. 56c",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2964,7 +3030,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_56_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "055cd29286903083af1e1b5a329c3cb3ed273b64a41bbc02fda9f5aa89ce2950"
     },
@@ -2975,6 +3041,7 @@
       "erlass": "BPV",
       "artikel": "57",
       "artikelLabel": "Art. 57",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2995,7 +3062,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9e31cf16dd97083f3e9e1da1fe749daed4ca4ee1e20ff107463bcdc167c6bcb7"
     },
@@ -3006,6 +3073,7 @@
       "erlass": "BPV",
       "artikel": "58",
       "artikelLabel": "Art. 58",
+      "grundlage": "(Art. 29 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3018,7 +3086,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cf658096784ca6a2d86403e6d7a273f270989a087c57572d98ef9f10b6132980"
     },
@@ -3029,6 +3097,7 @@
       "erlass": "BPV",
       "artikel": "59",
       "artikelLabel": "Art. 59",
+      "grundlage": "(Art. 29 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3053,7 +3122,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "084a84d5d0b7bef6275c093667d98592c4cd1f7b05924b2160bc28f7cbb04339"
     },
@@ -3064,6 +3133,7 @@
       "erlass": "BPV",
       "artikel": "60",
       "artikelLabel": "Art. 60",
+      "grundlage": "(Art. 29 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3088,7 +3158,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bc4ea8a64a0cb8d495a66622f39a321bd1f7de95d3cd6bc6a8d48a93d9790291"
     },
@@ -3123,7 +3193,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_60_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "fbfa4fec8573c9f002953380fa9db7ca18565904b31b7507527b3861d1c93f65"
     },
@@ -3134,6 +3204,7 @@
       "erlass": "BPV",
       "artikel": "60_b",
       "artikelLabel": "Art. 60b",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3158,7 +3229,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_60_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "baf42d028a57a3929eb187e94cdd1032e9e0bf97d1dc88eb4fabb14407537f72"
     },
@@ -3169,6 +3240,7 @@
       "erlass": "BPV",
       "artikel": "60_c",
       "artikelLabel": "Art. 60c",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3207,7 +3279,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_60_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8cb4362701639fc8e9d0b39acbeb72b046073e86b475ed48816101bdacfa95cf"
     },
@@ -3218,6 +3290,7 @@
       "erlass": "BPV",
       "artikel": "61",
       "artikelLabel": "Art. 61",
+      "grundlage": "(Art. 17 a Abs. 4 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3234,7 +3307,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "35405458cd037001c66c67c7acb5c146ddaeaf747d5907bf3aacbd3dd7221526"
     },
@@ -3245,6 +3318,7 @@
       "erlass": "BPV",
       "artikel": "62",
       "artikelLabel": "Art. 62",
+      "grundlage": "(Art. 29 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3257,7 +3331,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "acad8571bcd2c2c50ede53ee0e2c1806b1f16adc9d9759d5f8fcf2cd6f766e09"
     },
@@ -3268,6 +3342,7 @@
       "erlass": "BPV",
       "artikel": "63",
       "artikelLabel": "Art. 63",
+      "grundlage": "(Art. 29 Abs. 1 und 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3294,7 +3369,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "63dd7b7abc89c0a4cd19f014fad0d3d1ee69bc6f8dcc8928e049f35fcf472e29"
     },
@@ -3305,6 +3380,7 @@
       "erlass": "BPV",
       "artikel": "64",
       "artikelLabel": "Art. 64",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3329,7 +3405,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "db9a73ca7461553f2ff53a5072f7976435c0a031802f17a74e8df6ce6c99b4b6"
     },
@@ -3340,6 +3416,7 @@
       "erlass": "BPV",
       "artikel": "64_a",
       "artikelLabel": "Art. 64a",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3360,7 +3437,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_64_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "231efd3a10c59c62c3ba6398291d5debb6620c39444af9d0f5ece9945146a1e4"
     },
@@ -3371,6 +3448,7 @@
       "erlass": "BPV",
       "artikel": "64_a_bis",
       "artikelLabel": "Art. 64abis",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3395,7 +3473,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_64_a_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "47deb39c7ce4212110e737d29e0250354bb24685b76086c49e7d6fe3c440a098"
     },
@@ -3406,6 +3484,7 @@
       "erlass": "BPV",
       "artikel": "64_b",
       "artikelLabel": "Art. 64b",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3448,7 +3527,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_64_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dbef29eed8a61b1600bd2828dc64506c4233cdee44430c83d5514b8c365998e6"
     },
@@ -3459,6 +3538,7 @@
       "erlass": "BPV",
       "artikel": "65",
       "artikelLabel": "Art. 65",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3505,7 +3585,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1a17d9d67ac17d108c5c565636cee1840a1c9a5757c065d735a974c122190ae8"
     },
@@ -3516,6 +3596,7 @@
       "erlass": "BPV",
       "artikel": "66",
       "artikelLabel": "Art. 66",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3536,7 +3617,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "844d9bd30d2ecf4c2859918d7c620fcdb270cf9580e01889aa4404879a77c5f5"
     },
@@ -3547,6 +3628,7 @@
       "erlass": "BPV",
       "artikel": "67",
       "artikelLabel": "Art. 67",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3585,7 +3667,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "856c01ef8effddc4bb74c2779c454c980258a7ab83d81e597a3d9659f4f23171"
     },
@@ -3596,6 +3678,7 @@
       "erlass": "BPV",
       "artikel": "67_a",
       "artikelLabel": "Art. 67a",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3622,7 +3705,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_67_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f2d1f39aed897c2d9ee754705d4ec0defe97158021e5c42c63d6262127ea8982"
     },
@@ -3633,6 +3716,7 @@
       "erlass": "BPV",
       "artikel": "68",
       "artikelLabel": "Art. 68",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3649,7 +3733,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "640387081b9fc08cfe686011aade0684d82168b0067a7cefafbe4630931d806c"
     },
@@ -3660,6 +3744,7 @@
       "erlass": "BPV",
       "artikel": "69",
       "artikelLabel": "Art. 69",
+      "grundlage": "(Art. 18 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3680,7 +3765,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "409a64d2ee117d983a90766745a58904755c9b81be5c7e347b99c34a7086c45b"
     },
@@ -3691,6 +3776,7 @@
       "erlass": "BPV",
       "artikel": "70",
       "artikelLabel": "Art. 70",
+      "grundlage": "(Art. 18 Abs. 1 und 21 Abs. 1 Bst. c BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3725,7 +3811,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "47e7614069aa76d456c35f89668a88b19dd8df33f7452c43b0dd12859a0fe368"
     },
@@ -3736,6 +3822,7 @@
       "erlass": "BPV",
       "artikel": "71",
       "artikelLabel": "Art. 71",
+      "grundlage": "(Art. 18 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3758,7 +3845,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "47cca92298290cc07ebf12bab49728bdc1c41d1ad90cd3f65ceafbe5edb50496"
     },
@@ -3769,6 +3856,7 @@
       "erlass": "BPV",
       "artikel": "72",
       "artikelLabel": "Art. 72",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3807,7 +3895,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f78cd6028f485160a89c0d46a2a541da0d87853b99cb6d1c510377e336332d75"
     },
@@ -3818,6 +3906,7 @@
       "erlass": "BPV",
       "artikel": "73",
       "artikelLabel": "Art. 73",
+      "grundlage": "(Art. 32 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3856,7 +3945,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9af5ce054a19172274f82cce1e07df2a519beb6f9ca65c350a6909c475f6a26b"
     },
@@ -3867,6 +3956,7 @@
       "erlass": "BPV",
       "artikel": "74",
       "artikelLabel": "Art. 74",
+      "grundlage": "(Art. 32 Bst. c BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3879,7 +3969,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_74",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d205102398212c6e3df2bb1b1bd38c8d375437f40fa006380482a4e17bbeae77"
     },
@@ -3890,6 +3980,7 @@
       "erlass": "BPV",
       "artikel": "75",
       "artikelLabel": "Art. 75",
+      "grundlage": "(Art. 32 Bst. e BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3920,7 +4011,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cc6d6c35efd707d864976541b8085d9f20f29361231a1e3a521c16ca86e78a88"
     },
@@ -3931,6 +4022,7 @@
       "erlass": "BPV",
       "artikel": "75_a",
       "artikelLabel": "Art. 75a",
+      "grundlage": "(Art. 4 Abs. 2 Bst. i und 31 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3943,7 +4035,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2b5144d7e9e1f2d413fa54931b38f4d4c260d82f1839b46d169a2abcda291ad5"
     },
@@ -3954,6 +4046,7 @@
       "erlass": "BPV",
       "artikel": "75_b",
       "artikelLabel": "Art. 75b",
+      "grundlage": "(Art. 4 Abs. 2 Bst. i und 31 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3973,11 +4066,13 @@
             },
             {
               "marke": "1",
-              "text": "in einer Betreuungsstätte oder einem Tageselternverein, die ein teil- oder vollzeitliches Betreuungsangebot für Kinder im Vorschulalter anbieten, oder"
+              "text": "in einer Betreuungsstätte oder einem Tageselternverein, die ein teil- oder vollzeitliches Betreuungsangebot für Kinder im Vorschulalter anbieten, oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "durch Privatpersonen, mit denen ein der Sozialversicherungspflicht unterstelltes Vertragsverhältnis besteht; und"
+              "text": "durch Privatpersonen, mit denen ein der Sozialversicherungspflicht unterstelltes Vertragsverhältnis besteht; und",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -3988,9 +4083,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "cc4a40208cf222adbd437c406b21b10a133d29d9c3973ae27a163ee810201961"
+      "sha": "11f905b08407015252fa84b335f2a1efca31a7ee5024d1c548feec9928199a58"
     },
     {
       "id": "bund/BPV/art_75_c",
@@ -3999,6 +4094,7 @@
       "erlass": "BPV",
       "artikel": "75_c",
       "artikelLabel": "Art. 75c",
+      "grundlage": "(Art. 4 Abs. 2 Bst. i und 31 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4029,7 +4125,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7657385e440fc33b095f19578b113597935c00f323ddbdaba02e3200c8acd954"
     },
@@ -4040,6 +4136,7 @@
       "erlass": "BPV",
       "artikel": "75_d",
       "artikelLabel": "Art. 75d",
+      "grundlage": "(Art. 4 Abs. 2 Bst. i und 31 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4078,7 +4175,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_75_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9446bd6ec98f321f233cc7b1c88b5279104f6a64291761df6e0c9b9c67896289"
     },
@@ -4089,6 +4186,7 @@
       "erlass": "BPV",
       "artikel": "76",
       "artikelLabel": "Art. 76",
+      "grundlage": "(Art. 32 Bst. a und g BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4097,7 +4195,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c676ccf9467a201394b14032db9b9622d5ff94cbf21f0d053ceb0ecd64652e55"
     },
@@ -4108,6 +4206,7 @@
       "erlass": "BPV",
       "artikel": "77",
       "artikelLabel": "Art. 77",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4134,7 +4233,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "26b93bc4f4d36435a5dffcdc63fe4d3c681f7d1a9f09c976308cbe8d4fb32d05"
     },
@@ -4145,6 +4244,7 @@
       "erlass": "BPV",
       "artikel": "78",
       "artikelLabel": "Art. 78",
+      "grundlage": "(Art. 19 Abs. 3, 4 und 6 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4267,7 +4367,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_78",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ab94aae873b290c109cd01be010e0b2ebb925940453235c62f90a5e5e72b29ea"
     },
@@ -4278,6 +4378,7 @@
       "erlass": "BPV",
       "artikel": "78_a",
       "artikelLabel": "Art. 78a",
+      "grundlage": "(Art. 19 Abs. 3, 4 und 6 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4294,7 +4395,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_78_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3c270cacd9ff450730f8d2ae34b1a942c2154f248d1a4911aecea5776bc4f621"
     },
@@ -4305,6 +4406,7 @@
       "erlass": "BPV",
       "artikel": "79",
       "artikelLabel": "Art. 79",
+      "grundlage": "(Art. 19 Abs. 5 und 6 Bst. a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4341,7 +4443,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c2625a0dd2f6618065f5e2ca8eb78a1afa72a3684d99c70cde1fc3240dc045ef"
     },
@@ -4364,7 +4466,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5a6f85552530856a77eca269c1ab8411f2a0d7501768fae2c3c7263524579782"
     },
@@ -4375,6 +4477,7 @@
       "erlass": "BPV",
       "artikel": "81",
       "artikelLabel": "Art. 81",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4387,7 +4490,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "40bf26c0a5d35b7fdcfee0206eb18b80f5e7c7ff5355e13325b165e9d1dba43b"
     },
@@ -4398,6 +4501,7 @@
       "erlass": "BPV",
       "artikel": "82",
       "artikelLabel": "Art. 82",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4442,7 +4546,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2d9bf28bbfe8a51e1254b0e10e4074def0b392fd6f2dc9cc899d5e118f4a4549"
     },
@@ -4453,6 +4557,7 @@
       "erlass": "BPV",
       "artikel": "83",
       "artikelLabel": "Art. 83",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4469,7 +4574,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "715fa4345628b881457d476ccc4dc4d21054679d76575054331148accc90468b"
     },
@@ -4480,6 +4585,7 @@
       "erlass": "BPV",
       "artikel": "84",
       "artikelLabel": "Art. 84",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4492,7 +4598,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "077bd6a90036644dd6fcd67f6a906499fb7b2d1cd7c1e1161d225a8d2f31a9ee"
     },
@@ -4503,6 +4609,7 @@
       "erlass": "BPV",
       "artikel": "85",
       "artikelLabel": "Art. 85",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4511,7 +4618,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "78129fad6be30026c2ce5865dd2145ca11d0780ea3325c1f8b51259c73fe163f"
     },
@@ -4522,6 +4629,7 @@
       "erlass": "BPV",
       "artikel": "86",
       "artikelLabel": "Art. 86",
+      "grundlage": "(Art. 29 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4534,7 +4642,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "631ac5f40bba2e7a315e9781e2797abd8f0fdb603fd645f43ea46885b24c449c"
     },
@@ -4545,6 +4653,7 @@
       "erlass": "BPV",
       "artikel": "87",
       "artikelLabel": "Art. 87",
+      "grundlage": "(Art. 18 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4557,7 +4666,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f7cfa7ce7b7d6b1188b193ee43e8c25a2c7dd55463aa9e296126f41c5c649056"
     },
@@ -4568,6 +4677,7 @@
       "erlass": "BPV",
       "artikel": "88",
       "artikelLabel": "Art. 88",
+      "grundlage": "(Art. 17 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4612,7 +4722,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3b646c9affa20c4abb294c85415b508b74333b2a5b60e2d021cd8243b85d4636"
     },
@@ -4623,6 +4733,7 @@
       "erlass": "BPV",
       "artikel": "88_a",
       "artikelLabel": "Art. 88a",
+      "grundlage": "(Art. 32 g Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4643,7 +4754,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7ba2bf13b053aec70d535d17a36e59fdd194cdc383cded05c88e2552e46a6365"
     },
@@ -4654,6 +4765,7 @@
       "erlass": "BPV",
       "artikel": "88_b",
       "artikelLabel": "Art. 88b",
+      "grundlage": "(Art. 32 g Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4662,7 +4774,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "68b6a1225e9b69543f80bc44d4e1e8ad8301079d650b61b461a81db965378dea"
     },
@@ -4673,6 +4785,7 @@
       "erlass": "BPV",
       "artikel": "88_c",
       "artikelLabel": "Art. 88c",
+      "grundlage": "(Art. 32 Bst. a BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4681,7 +4794,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dee81f9b6c4a00a15c6a09b3a72fd952806e737a60583f4029abd7f10ee39af8"
     },
@@ -4692,6 +4805,7 @@
       "erlass": "BPV",
       "artikel": "88_d",
       "artikelLabel": "Art. 88d",
+      "grundlage": "(Art. 17 a und 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4712,7 +4826,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "103402941a214b56caf846dc190e92e8f4e524fc0169e9e2154ef8f0b996ea42"
     },
@@ -4739,7 +4853,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_d_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f7c495d3a3ce38ba8adf777e85ffb91d3ea0899cc18d9c31a70c36e5132a31c"
     },
@@ -4758,7 +4872,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_d_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a130b3363968ac69c7a3233f7119bcfef8279ee838d244ead74aa22b13f68d29"
     },
@@ -4777,7 +4891,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4788,6 +4902,7 @@
       "erlass": "BPV",
       "artikel": "88_f",
       "artikelLabel": "Art. 88f",
+      "grundlage": "(Art. 32 k BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4876,7 +4991,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "479bfa626213dd8734577500f7c16b7d7d5fb7c17f7d2f2748c681700c2aa169"
     },
@@ -4895,7 +5010,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_g_88_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4914,7 +5029,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4933,7 +5048,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_88_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4944,6 +5059,7 @@
       "erlass": "BPV",
       "artikel": "89",
       "artikelLabel": "Art. 89",
+      "grundlage": "(Art. 21 Abs. 1 Bst. a und 24 Abs. 2 Bst. a BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4952,7 +5068,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c47c39192dd728e870e313620993e8a36403b49a7341baabf89a322eca313fb0"
     },
@@ -4963,6 +5079,7 @@
       "erlass": "BPV",
       "artikel": "90",
       "artikelLabel": "Art. 90",
+      "grundlage": "(Art. 21 Abs. 1 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4975,7 +5092,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b9e36e203a0be8ae624990114450367251229db71d1b54fb15baa5d7dfaec293"
     },
@@ -4986,6 +5103,7 @@
       "erlass": "BPV",
       "artikel": "91",
       "artikelLabel": "Art. 91",
+      "grundlage": "(Art. 23 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5034,7 +5152,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "50bda4f2aeaff983bd3aa0bd3aa732a3360116d4a54444fc1f8b2a45d85b2531"
     },
@@ -5045,6 +5163,7 @@
       "erlass": "BPV",
       "artikel": "92",
       "artikelLabel": "Art. 92",
+      "grundlage": "(Art. 21 Abs. 2 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5061,7 +5180,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d78cad7baa52cc7464db77170f74e7f99944a4fdb450d742fb3674a053473010"
     },
@@ -5072,6 +5191,7 @@
       "erlass": "BPV",
       "artikel": "93",
       "artikelLabel": "Art. 93",
+      "grundlage": "(Art. 21 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5087,11 +5207,13 @@
             },
             {
               "marke": "1",
-              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
+              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder"
+              "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -5110,9 +5232,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "6c8810bf505456d78baf719992fa9f2f63b4959726ba88f4e7a251e3acb71fd1"
+      "sha": "eae3ab2fb29130c7c6f9fbc14a3260be6ee998e2ebf7d1281390b12b96fce348"
     },
     {
       "id": "bund/BPV/art_93_a",
@@ -5121,6 +5243,7 @@
       "erlass": "BPV",
       "artikel": "93_a",
       "artikelLabel": "Art. 93a",
+      "grundlage": "(Art. 21 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5136,11 +5259,13 @@
             },
             {
               "marke": "1",
-              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,"
+              "text": "einer effektiven oder potenziellen Anbieterin oder einem effektiven oder potenziellen Anbieter,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder"
+              "text": "einer Person, die an einem Entscheidprozess beteiligt oder davon betroffen ist; oder",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -5155,9 +5280,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_93_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "9cd0b256fa9654f004310120777d3f409a5a852fed4d0a2c2933bb61725c9a1a"
+      "sha": "1ce592aeab1ce8a49f76dc18bd245498fbb4bf80e573d3328256aec5440eadad"
     },
     {
       "id": "bund/BPV/art_94",
@@ -5166,6 +5291,7 @@
       "erlass": "BPV",
       "artikel": "94",
       "artikelLabel": "Art. 94",
+      "grundlage": "(Art. 22 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5186,7 +5312,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "89c6cb0d078170bbd71f08b5b5811f60665d2b76ab604d8215e9fce5aa8cb967"
     },
@@ -5197,6 +5323,7 @@
       "erlass": "BPV",
       "artikel": "94_a",
       "artikelLabel": "Art. 94a",
+      "grundlage": "(Art. 20 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5227,7 +5354,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bf098ce722a1e98bb3aaf5ec9d5e5452a48bc899ea6810f941a6b208aee3ffcd"
     },
@@ -5276,7 +5403,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5356963914eb4c5d08367491cb77bb5a353c0418b83bca9899256d6a248024f4"
     },
@@ -5287,6 +5414,7 @@
       "erlass": "BPV",
       "artikel": "94_c",
       "artikelLabel": "Art. 94c",
+      "grundlage": "(Art. 20 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5321,7 +5449,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f90f3f8498211f59878cbf0a27096945d5e629b96f187d04f6970befcacd7776"
     },
@@ -5332,6 +5460,7 @@
       "erlass": "BPV",
       "artikel": "94_d",
       "artikelLabel": "Art. 94d",
+      "grundlage": "(Art. 20 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5344,7 +5473,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e00fff6b1028d2b6889bce1f1c3c8a6da4f2719374b9b4147390781e1f361f0e"
     },
@@ -5355,6 +5484,7 @@
       "erlass": "BPV",
       "artikel": "94_e",
       "artikelLabel": "Art. 94e",
+      "grundlage": "(Art. 20 a BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5367,7 +5497,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e9bd0551b636d69de054e0fc56be26b744f70019092346df119c118579b29f7e"
     },
@@ -5378,6 +5508,7 @@
       "erlass": "BPV",
       "artikel": "94_f",
       "artikelLabel": "Art. 94f",
+      "grundlage": "(Art. 20 b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5390,7 +5521,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_94_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "669aff4c48f0b8cc89c61016d51e6505df2923029d2919fdbe63f78139ac4f75"
     },
@@ -5401,6 +5532,7 @@
       "erlass": "BPV",
       "artikel": "95",
       "artikelLabel": "Art. 95",
+      "grundlage": "(Art. 24 Abs. 2 Bst. b BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5431,7 +5563,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "629f6a8a3bbb7f0d8c64173850c370a31d2fa9c8a7ab37b873f0464b19aaae62"
     },
@@ -5442,6 +5574,7 @@
       "erlass": "BPV",
       "artikel": "96",
       "artikelLabel": "Art. 96",
+      "grundlage": "(Art. 24 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5472,7 +5605,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "86613aa6bc3de3d8512f3474980653f4b03ea30cdca1a9a58f1c13aa11828799"
     },
@@ -5491,7 +5624,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5502,6 +5635,7 @@
       "erlass": "BPV",
       "artikel": "98",
       "artikelLabel": "Art. 98",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5522,7 +5656,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "71d7fe0955260556f18e393ca8f799b6b1052cdf42c7fc9336dda0beb9d63420"
     },
@@ -5533,6 +5667,7 @@
       "erlass": "BPV",
       "artikel": "99",
       "artikelLabel": "Art. 99",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5581,7 +5716,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8803c72619e079413ce844576ced32a4b2fb4526cf30d26529c3b15df5a66097"
     },
@@ -5592,6 +5727,7 @@
       "erlass": "BPV",
       "artikel": "100",
       "artikelLabel": "Art. 100",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5604,7 +5740,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0d77d3c09b019159ca448fc88560f20115679c076ec505c57e1ec705d5ee291b"
     },
@@ -5615,6 +5751,7 @@
       "erlass": "BPV",
       "artikel": "101",
       "artikelLabel": "Art. 101",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5623,7 +5760,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_101",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c22c4aaf0c5b6ceb78f6d49d3f5e7647323e19b0ee0c1cd4f5c4926fa807445f"
     },
@@ -5634,6 +5771,7 @@
       "erlass": "BPV",
       "artikel": "102",
       "artikelLabel": "Art. 102",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5646,7 +5784,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_102",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b9407c0a20a9783f61c70c6899d4f514225cc46c5bd51b9df59ce1849a7beff0"
     },
@@ -5657,6 +5795,7 @@
       "erlass": "BPV",
       "artikel": "103",
       "artikelLabel": "Art. 103",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5683,7 +5822,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_103",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "16b544086cd2398c8f2e67a3b3e0ce522344270255de8756efa61ded7f983dda"
     },
@@ -5694,6 +5833,7 @@
       "erlass": "BPV",
       "artikel": "103_a",
       "artikelLabel": "Art. 103a",
+      "grundlage": "(Art. 25 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5714,7 +5854,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_103_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e4173eb4a28289d9d93e29ef8c4f801d68c697756bf9dcb1b5a3fe82b29f8015"
     },
@@ -5725,6 +5865,7 @@
       "erlass": "BPV",
       "artikel": "104",
       "artikelLabel": "Art. 104",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5741,7 +5882,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dca6465f783428598956872b940fc52da241dccdb68850836357b440d2aceb77"
     },
@@ -5752,6 +5893,7 @@
       "erlass": "BPV",
       "artikel": "104_a",
       "artikelLabel": "Art. 104a",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5782,7 +5924,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "97866ee8feb07b21c0b0f311833e204a248614a4c0356c06a5df62e52ded4a2b"
     },
@@ -5793,6 +5935,7 @@
       "erlass": "BPV",
       "artikel": "104_b",
       "artikelLabel": "Art. 104b",
+      "grundlage": "(Art. 33 Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5805,7 +5948,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "52a6b91081c49daa0e745b23b681adddd3472558825b9023a321e60f5c2380ee"
     },
@@ -5816,6 +5959,7 @@
       "erlass": "BPV",
       "artikel": "104_c",
       "artikelLabel": "Art. 104c",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5828,7 +5972,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ccf826906702e02fa4c3c2e952ddc172d677429a54ca07cb743e4451b57f05ad"
     },
@@ -5839,6 +5983,7 @@
       "erlass": "BPV",
       "artikel": "104_d",
       "artikelLabel": "Art. 104d",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5855,7 +6000,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "00a2bfd969cd91dba62317c502d59e379a6093c3c05aacce9d435a212881ebc1"
     },
@@ -5866,6 +6011,7 @@
       "erlass": "BPV",
       "artikel": "104_e",
       "artikelLabel": "Art. 104e",
+      "grundlage": "(Art. 10 Abs. 3 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5882,7 +6028,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e807cf06e6990974db3d2afd78800f2cebb3b5c62bfada7d3957929e9924b43a"
     },
@@ -5901,7 +6047,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_104_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5912,6 +6058,7 @@
       "erlass": "BPV",
       "artikel": "105",
       "artikelLabel": "Art. 105",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5960,7 +6107,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_105",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "30a9e2c4b810a808e72efb1832079ffc77be7a26deaa4cb603b559f4e613f93e"
     },
@@ -5971,6 +6118,7 @@
       "erlass": "BPV",
       "artikel": "105_a",
       "artikelLabel": "Art. 105a",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6027,7 +6175,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_105_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b63d300c5e8b62e80e7a9241c4253b6e7a60d09dd85fb0f597e31faeb1613a39"
     },
@@ -6038,6 +6186,7 @@
       "erlass": "BPV",
       "artikel": "105_b",
       "artikelLabel": "Art. 105b",
+      "grundlage": "(Art. 31 Abs. 5 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6072,7 +6221,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_105_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "da61369bffcc7a76c44901a6465aa7c181b8b805768c8063079f51cdc059b5d7"
     },
@@ -6107,7 +6256,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_105_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "93d96fd04be44fe0309e6b155782820a9c75921ac4c70e3b7911534f61cdaa27"
     },
@@ -6118,6 +6267,7 @@
       "erlass": "BPV",
       "artikel": "105_d",
       "artikelLabel": "Art. 105d",
+      "grundlage": "(Art. 31 Abs. 4 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6138,7 +6288,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_105_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ce35c3e465a3ccb61d2c0556748f7266b52e52d1a2d703c699ba79f7bcf80c92"
     },
@@ -6149,6 +6299,7 @@
       "erlass": "BPV",
       "artikel": "106",
       "artikelLabel": "Art. 106",
+      "grundlage": "(Art. 19 Abs. 4 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6189,7 +6340,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_106",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ee1662fed1e820161136844a0a84888a1ea7b780cb5875e4b123ba8c68e7a2cb"
     },
@@ -6212,7 +6363,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_106_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "60e40418fa6b647d2045fa124ef1233ae0af3ee3d15fd3b5248444f42bc182e4"
     },
@@ -6223,6 +6374,7 @@
       "erlass": "BPV",
       "artikel": "107",
       "artikelLabel": "Art. 107",
+      "grundlage": "(Art. 33 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6247,7 +6399,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_107",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e4b50afa82c1d98dcd67027adb2bd5c8c91db60dfa250d07e57fe3769cfd69a9"
     },
@@ -6258,6 +6410,7 @@
       "erlass": "BPV",
       "artikel": "108",
       "artikelLabel": "Art. 108",
+      "grundlage": "(Art. 33 Abs. 4 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6282,7 +6435,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0b0c362d14760d923775f2091342e46a09604d7b4e5c4074f529eb26580c9644"
     },
@@ -6293,6 +6446,7 @@
       "erlass": "BPV",
       "artikel": "109",
       "artikelLabel": "Art. 109",
+      "grundlage": "(Art. 33 Abs. 4 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6323,7 +6477,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f6913edb373de506d6ab1fddce9cfd88998a9ba4a4d037be29068744d14adf5a"
     },
@@ -6342,7 +6496,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6361,7 +6515,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6380,7 +6534,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_112",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6391,6 +6545,7 @@
       "erlass": "BPV",
       "artikel": "113",
       "artikelLabel": "Art. 113",
+      "grundlage": "(Art. 34 BPG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6399,7 +6554,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_113",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "16caf47b5ac07b8902c69cf031912b9756314ab7b42637dfde2f7cad43306103"
     },
@@ -6410,6 +6565,7 @@
       "erlass": "BPV",
       "artikel": "114",
       "artikelLabel": "Art. 114",
+      "grundlage": "(Art. 37 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6520,7 +6676,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_114",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5b0146165954fcc9768ee7e3d4c1086067e4d302c66a068aee1c3ae795b97d73"
     },
@@ -6531,6 +6687,7 @@
       "erlass": "BPV",
       "artikel": "115",
       "artikelLabel": "Art. 115",
+      "grundlage": "(Art. 37 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6639,7 +6796,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_115",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6134be40e56b6eb9896d43aa7747732938bffb8b7849b48b15ea019fd34d89a5"
     },
@@ -6650,6 +6807,7 @@
       "erlass": "BPV",
       "artikel": "116",
       "artikelLabel": "Art. 116",
+      "grundlage": "(Art. 37 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6665,35 +6823,43 @@
             },
             {
               "marke": "1",
-              "text": "Artikel 5: Kaderförderung und Managemententwicklung,"
+              "text": "Artikel 5: Kaderförderung und Managemententwicklung,",
+              "tiefe": 1
             },
             {
               "marke": "[tab]",
-              "text": "1 bis . Artikel 10 b Absätze 1, 2 Buchstabe d, 3 und 8: Gesundheitsschutz und Arbeitszeiten bei Einsätzen im Rahmen von festen Dienstplänen,"
+              "text": "1 bis . Artikel 10 b Absätze 1, 2 Buchstabe d, 3 und 8: Gesundheitsschutz und Arbeitszeiten bei Einsätzen im Rahmen von festen Dienstplänen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Artikel 24: Arbeitsort und Mobilität,"
+              "text": "Artikel 24: Arbeitsort und Mobilität,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Artikel 64: Arbeitszeit,"
+              "text": "Artikel 64: Arbeitszeit,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Artikel 65: Mehrarbeit und Überzeit,"
+              "text": "Artikel 65: Mehrarbeit und Überzeit,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Artikel 69: Bewaffnung,"
+              "text": "Artikel 69: Bewaffnung,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Artikel 72: Spesen,"
+              "text": "Artikel 72: Spesen,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Artikel 102: Strafrechtliche Verantwortlichkeit;"
+              "text": "Artikel 102: Strafrechtliche Verantwortlichkeit;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -6701,19 +6867,23 @@
             },
             {
               "marke": "1",
-              "text": "Artikel 24: Arbeitsort und Mobilität,"
+              "text": "Artikel 24: Arbeitsort und Mobilität,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Artikel 64: Arbeitszeit,"
+              "text": "Artikel 64: Arbeitszeit,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Artikel 65: Mehrarbeit und Überzeit,"
+              "text": "Artikel 65: Mehrarbeit und Überzeit,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Artikel 72: Spesen."
+              "text": "Artikel 72: Spesen.",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -6724,9 +6894,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "594211468e82d5f1164f754d255a3a4bf5dcf3a42c6066132335def5e011e0ae"
+      "sha": "9031a6aeee40f922bfcba137e2f9caa55aed32ef79d857951a7f9bac393bc751"
     },
     {
       "id": "bund/BPV/art_116_a",
@@ -6743,7 +6913,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6762,7 +6932,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6773,6 +6943,7 @@
       "erlass": "BPV",
       "artikel": "116_c",
       "artikelLabel": "Art. 116c",
+      "grundlage": "(Art. 41 a Abs. 1 BPG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6807,7 +6978,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "30d2d62cacc442b8cdc0af317c7ec824a7394bc7db8105353d30130c7945571f"
     },
@@ -6826,7 +6997,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6853,7 +7024,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d2274427af95b7ec5f4fad662747ca772e508291f747429ec4b7fef2fe44446f"
     },
@@ -6880,7 +7051,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bb6198ac1621fc4ff25ecb5f8b145717d1aff2f790defee7574a7421625184b7"
     },
@@ -6903,7 +7074,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "80d77c8506355ee69c968ba03ed0281ec5bf8dbe4baea2f0871d7058d9ab5412"
     },
@@ -6922,7 +7093,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "feca468c4df44b95990645bdbe42f6302be86e1105af4b0c449a2eb9acf142d3"
     },
@@ -6941,7 +7112,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6960,7 +7131,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4de259b1878634225e2b3c210eb607b287e7a9bf0765705bcaa8508df2804bcd"
     },
@@ -6979,7 +7150,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1da83b3da5955618850fe0b7950badda8136a034194532432f7d2de9536cc1f1"
     },
@@ -7010,7 +7181,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "393502fe910505da4b9caa361df7ae845ad7ba99ead05ae3d0b38cdf1efa3ae3"
     },
@@ -7041,7 +7212,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_116_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9e661863fef1d92b0708401bdac03a8b1d81af038e2a8edcfc07739f919fbbfc"
     },
@@ -7060,7 +7231,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_117",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "608126feac941a3af35de09fac0c4effd1fed628452c86617b0f68dcecc54957"
     }

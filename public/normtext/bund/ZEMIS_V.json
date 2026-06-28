@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/ZEMIS_V/art_1",
@@ -8,6 +8,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "grundlage": "(Art. 1 BGIAA)",
       "bloecke": [
         {
           "absatz": null,
@@ -38,7 +39,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "d19e527d88e2de07f84fac79a1bb3a523ab5adb60a86e474b9a1a926a4fc4dc6"
     },
@@ -60,31 +61,38 @@
             },
             {
               "marke": "1",
-              "text": "Ausländer- und Integrationsgesetz vom 16. Dezember 2005 (AIG),"
+              "text": "Ausländer- und Integrationsgesetz vom 16. Dezember 2005 (AIG),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Bürgerrechtsgesetz vom 20. Juni 2014 (BüG),"
+              "text": "Bürgerrechtsgesetz vom 20. Juni 2014 (BüG),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen EU),"
+              "text": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen EU),",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Abkommen vom 21. Juni 2001 zur Änderung des EFTA-Übereinkommens (Freizügigkeitsabkommen EFTA),"
+              "text": "Abkommen vom 21. Juni 2001 zur Änderung des EFTA-Übereinkommens (Freizügigkeitsabkommen EFTA),",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "die Schengen- und Dublin-Assoziierungsabkommen; diese Abkommen sind in Anhang 4 aufgeführt,"
+              "text": "die Schengen- und Dublin-Assoziierungsabkommen; diese Abkommen sind in Anhang 4 aufgeführt,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Abkommen vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens,"
+              "text": "Abkommen vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Artikel 66 a und 66 a bis Schweizerisches Strafgesetzbuch (StGB) sowie Artikel 49 a und 49 a bis Militärstrafgesetz vom 13. Juni 1927 (MStG);"
+              "text": "Artikel 66 a und 66 a bis Schweizerisches Strafgesetzbuch (StGB) sowie Artikel 49 a und 49 a bis Militärstrafgesetz vom 13. Juni 1927 (MStG);",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -92,19 +100,23 @@
             },
             {
               "marke": "1",
-              "text": "Asylgesetz vom 26. Juni 1998 (AsylG),"
+              "text": "Asylgesetz vom 26. Juni 1998 (AsylG),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge,"
+              "text": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen,"
+              "text": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "die Dublin-Assoziierungsabkommen;"
+              "text": "die Dublin-Assoziierungsabkommen;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -123,9 +135,9 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
-      "sha": "c0b94af880abb5adb6fd6e9b2bb4b9e3609dac42517c57f69286dc36cd2a30d2"
+      "sha": "b7871801de41fedf0b2d2b4a2cf5884835114c0d52ed8b73cbc74748faa9d47d"
     },
     {
       "id": "bund/ZEMIS_V/art_3",
@@ -182,7 +194,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "1c3058ed48542d39946570b1658ab23cb004b268556d4c2a33dede9d44738ffc"
     },
@@ -193,6 +205,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 4 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -237,7 +250,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "d5b69c8602d7280b54df3ff80cddb0ff559cb7ef0c5f0c5429871eda8ae6940a"
     },
@@ -248,6 +261,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 7 Abs. 1 und 4 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -326,7 +340,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "08102b7692470a8c29b5c767cfb6c73ef70366553d07aca64002833fa8d42303"
     },
@@ -337,6 +351,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 7 Abs. 1 und 2 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -363,7 +378,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "8ee0de77678722914fa4046878af2a73defe3f44550530d0e0b027c0323c09fc"
     },
@@ -382,7 +397,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_6_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -393,6 +408,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 7 Abs. 1 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -423,7 +439,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "5241124f9fd3ee275ca64ffaf5cf8468dfc9cbd4a1d9f1b614647d3e07cf82f7"
     },
@@ -434,6 +450,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 8 BGIAA)",
       "bloecke": [
         {
           "absatz": null,
@@ -442,7 +459,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "37dd12324fbbe3ec49a8bd4c6d5296af9e45dd89bdfd45345632c36dc79a517a"
     },
@@ -453,6 +470,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 9 Abs. 1 BGIAA)",
       "bloecke": [
         {
           "absatz": null,
@@ -472,43 +490,53 @@
             },
             {
               "marke": "1",
-              "text": "Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem Bundesgesetz vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit (BWIS) sowie zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG,"
+              "text": "Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem Bundesgesetz vom 21. März 1997 über Massnahmen zur Wahrung der inneren Sicherheit (BWIS) sowie zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,"
+              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale, dem SIRENE-Büro: ausschliesslich zur Personenidentifikation in den Bereichen des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit dem europäischen Polizeiamt (Europol), sowie zur Prüfung von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz,"
+              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale, dem SIRENE-Büro: ausschliesslich zur Personenidentifikation in den Bereichen des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit dem europäischen Polizeiamt (Europol), sowie zur Prüfung von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:"
+              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,"
+              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,"
+              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,",
+              "tiefe": 2
             },
             {
               "marke": "5",
-              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,"
+              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 102 Absatz 1 AIG,"
+              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 102 Absatz 1 AIG,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,"
+              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "der für die Erfüllung der Aufgaben nach dem Vorläuferstoffgesetz vom 25. September 2020 (VSG) zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;"
+              "text": "der für die Erfüllung der Aufgaben nach dem Vorläuferstoffgesetz vom 25. September 2020 (VSG) zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -516,11 +544,13 @@
             },
             {
               "marke": "1",
-              "text": "der Abteilung Internationale Rechtshilfe im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,"
+              "text": "der Abteilung Internationale Rechtshilfe im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem Bundesgesetz vom 21. Dezember 2007 über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen (BG-KKE) sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;"
+              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem Bundesgesetz vom 21. Dezember 2007 über internationale Kindesentführung und die Haager Übereinkommen zum Schutz von Kindern und Erwachsenen (BG-KKE) sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -568,15 +598,18 @@
             },
             {
               "marke": "1",
-              "text": "zur Personenidentifikation für das frühzeitige Erkennen und Verhindern von Bedrohungen für die innere oder äussere Sicherheit nach Artikel 6 Absatz 1 Buchstabe a des Nachrichtendienstgesetzes vom 25. September 2015 (NDG),"
+              "text": "zur Personenidentifikation für das frühzeitige Erkennen und Verhindern von Bedrohungen für die innere oder äussere Sicherheit nach Artikel 6 Absatz 1 Buchstabe a des Nachrichtendienstgesetzes vom 25. September 2015 (NDG),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "zur Erfüllung seiner Aufgaben bei Überprüfungen im Zusammenhang mit der Gefährdung der inneren oder äusseren Sicherheit nach dem BüG, dem AIG und dem AsylG,"
+              "text": "zur Erfüllung seiner Aufgaben bei Überprüfungen im Zusammenhang mit der Gefährdung der inneren oder äusseren Sicherheit nach dem BüG, dem AIG und dem AsylG,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG;"
+              "text": "zur Prüfung von Entfernungs- und Fernhaltemassnahmen nach dem AIG;",
+              "tiefe": 1
             },
             {
               "marke": "o",
@@ -584,11 +617,13 @@
             },
             {
               "marke": "1",
-              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,"
+              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;"
+              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;",
+              "tiefe": 1
             },
             {
               "marke": "p",
@@ -596,11 +631,13 @@
             },
             {
               "marke": "1",
-              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),"
+              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;"
+              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;",
+              "tiefe": 1
             },
             {
               "marke": "q",
@@ -612,11 +649,13 @@
             },
             {
               "marke": "1",
-              "text": "als zuständige Behörde für Amtshilfe nach Artikel 76 Absatz 2 der Verordnung (EG) Nr. 883/2004,"
+              "text": "als zuständige Behörde für Amtshilfe nach Artikel 76 Absatz 2 der Verordnung (EG) Nr. 883/2004,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "als Verbindungsstelle bei der Durchführung der Amtshilfe im Bereich der Familienleistungen nach den Artikeln 67–69 der Verordnung (EG) Nr. 883/2004;"
+              "text": "als Verbindungsstelle bei der Durchführung der Amtshilfe im Bereich der Familienleistungen nach den Artikeln 67–69 der Verordnung (EG) Nr. 883/2004;",
+              "tiefe": 1
             },
             {
               "marke": "s",
@@ -631,9 +670,9 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
-      "sha": "cb9720c2651e753a186e033d4da3d5a32df789fd5ea1e5941d25f024ea89630f"
+      "sha": "13838c40a60fac5ec3ed6dea92df1639f34690024d5cd3b484e87e775caf6edd"
     },
     {
       "id": "bund/ZEMIS_V/art_10",
@@ -642,6 +681,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 9 Abs. 2 BGIAA)",
       "bloecke": [
         {
           "absatz": null,
@@ -657,43 +697,53 @@
             },
             {
               "marke": "1",
-              "text": "dem Rechtsdienst: ausschliesslich zum Erlass von Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem BWIS,"
+              "text": "dem Rechtsdienst: ausschliesslich zum Erlass von Verfügungen von Fernhaltemassnahmen zur Wahrung der inneren und äusseren Sicherheit der Schweiz nach dem BWIS,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,"
+              "text": "der für das RIPOL zuständigen Dienststelle: ausschliesslich zur Personenidentifikation im Zusammenhang mit der Kontrolle der RIPOL-Erfassungen nach der RIPOL-Verordnung vom 26. Oktober 2016,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale und dem SIRENE-Büro: ausschliesslich zur Personenidentifikation im Zusammenhang mit Aufgaben im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit Europol,"
+              "text": "den Dienststellen, welche für den Interpol-Schriftverkehr zuständig sind, der Abteilung Einsatzzentrale und dem SIRENE-Büro: ausschliesslich zur Personenidentifikation im Zusammenhang mit Aufgaben im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches, namentlich im Rahmen der Zusammenarbeit mit Europol,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:"
+              "text": "den zuständigen Dienststellen der Bundeskriminalpolizei: ausschliesslich:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,"
+              "text": "zur Personenidentifikation im Zusammenhang mit der Amtshilfe, bei sicherheits- und gerichtspolizeilichen Ermittlungen und im Bereich des interkantonalen und internationalen polizeilichen Nachrichtenaustausches,",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,"
+              "text": "zur Prüfung der Eignung einer Person für ein Zeugenschutzprogramm und zur Durchführung von Gefährdungsanalysen,",
+              "tiefe": 2
             },
             {
               "marke": "5",
-              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,"
+              "text": "dem Dienst Ausweisschriften und Nachforschungen nach vermissten Personen: ausschliesslich für Nachforschungen im Zusammenhang mit dem Aufenthalt von Personen,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 99 AsylG,"
+              "text": "der für die Führung des AFIS zuständigen Dienststelle: ausschliesslich zur Personenidentifikation nach Artikel 99 AsylG,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,"
+              "text": "dem zuständigen Dienst bei der Meldestelle Geldwäscherei: ausschliesslich zur Identifikation von Personen und zur Feststellung ihres Aufenthaltsstatus im Zusammenhang mit der gesetzlichen Aufgabe der Meldestelle im Kampf gegen Geldwäscherei, organisiertes Verbrechen und Terrorismusfinanzierung nach Artikel 23 des Geldwäschereigesetzes vom 10. Oktober 1997,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "der für die Erfüllung der Aufgaben nach dem VSG zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;"
+              "text": "der für die Erfüllung der Aufgaben nach dem VSG zuständigen Dienststelle: ausschliesslich zur Personenidentifikation bei der Bearbeitung von Gesuchen um Erwerbs- und Ausnahmebewilligungen, der Überprüfung dieser Bewilligungen und der Bearbeitung von Verdachtsmeldungen;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -701,11 +751,13 @@
             },
             {
               "marke": "1",
-              "text": "der Abteilung Internationale Rechtshilfe des Bundesamtes für Justiz: im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,"
+              "text": "der Abteilung Internationale Rechtshilfe des Bundesamtes für Justiz: im Zusammenhang mit Verfahren der Internationalen Rechtshilfe nach dem Bundesgesetz vom 20. März 1981 über internationale Rechtshilfe in Strafsachen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem BG-KKE sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;"
+              "text": "dem Direktionsbereich Privatrecht im Zusammenhang mit Verfahren nach dem BG-KKE sowie im Zusammenhang mit internationalen Alimenteninkassoverfahren;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -745,11 +797,13 @@
             },
             {
               "marke": "1",
-              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,"
+              "text": "bei der Erhebung der Mehrwertsteuer auf den im Inland von steuerpflichtigen Personen gegen Entgelt erbrachten Leistungen (Inlandsteuer) und auf dem Bezug von Leistungen von Unternehmen mit Sitz im Ausland durch Empfängerinnen und Empfänger im Inland (Bezugsteuer) und bei der Durchführung der Verrechnungssteuer,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;"
+              "text": "bei der Durchführung von Strafverfahren sowie von Amts- und Rechtshilfeverfahren;",
+              "tiefe": 1
             },
             {
               "marke": "m",
@@ -757,11 +811,13 @@
             },
             {
               "marke": "1",
-              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),"
+              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;"
+              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;",
+              "tiefe": 1
             },
             {
               "marke": "n",
@@ -788,9 +844,9 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
-      "sha": "b7dbe8ed1fd29dd7da619116d05c2b9117c0c152304aeb3c94b2d61930fd3e9c"
+      "sha": "cb8e38ec9882d1e9152c126458a63addb83c8e2953a0a02f1cb6f62f181144f0"
     },
     {
       "id": "bund/ZEMIS_V/art_11",
@@ -799,6 +855,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 11 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -837,7 +894,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "9a5c6fc7bb80ce7505a67b99d40f56fce01e21e7d21191a2b320d9ef634f45c4"
     },
@@ -848,6 +905,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 10 BGIAA)",
       "bloecke": [
         {
           "absatz": null,
@@ -856,7 +914,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b00254c636cc0fffd725614d7384881d89813ab805a9bbc7e8a0932ca4498b12"
     },
@@ -867,6 +925,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 13 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -905,7 +964,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b421a4f491e3abb0b0fe1c05afb47c79e30a2cdc093530fd5cfc5433b4761806"
     },
@@ -942,7 +1001,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "24c050d82a50f4e8e143bf12cd27b33de45b2c56d4333dfdf775e98981300549"
     },
@@ -953,6 +1012,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 14 und 15 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -965,7 +1025,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b4583deb29cf86ddc2d685ebb494166e6349a0f89e5dda578429495c8ed5fc80"
     },
@@ -984,7 +1044,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_15_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -995,6 +1055,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 5 Abs. 2 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1007,7 +1068,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "039afc8544a124e315fd627f84536d9520fcb31901a44604f254ba893372b9a9"
     },
@@ -1018,6 +1079,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 5 Abs. 1 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1040,7 +1102,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "7959de11919a7d8cbb85c40ed8f1114c833ea90fade385728ea753afee3cca0d"
     },
@@ -1051,6 +1113,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 17 Bst. c und d BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1109,7 +1172,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "7b1841c46e49bbe9fac794b823c250180f0fe2c46d9abff08de5f7696e811cbe"
     },
@@ -1120,6 +1183,7 @@
       "erlass": "ZEMIS-V",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 6 BGIAA)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1136,7 +1200,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "c2e7b9ca02a7bab90713d394d615b92c1563657e7c05c943de8faafde8b81558"
     },
@@ -1189,7 +1253,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "3fe8f049ae331ecba9797bd8f0ca77815a3b371276dc8db6f1affbed5105aeaf"
     },
@@ -1212,7 +1276,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b9f36a9381c8a9d795a066f8d5713aa458e7664cde5eece5a31e26158448170f"
     },
@@ -1253,7 +1317,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "f25e440bada14546307e48216fc797a8baae5809a906a9f6c630da899af322be"
     },
@@ -1272,7 +1336,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "742c44c196c0c468171cfafbb06cb8ae9e3df405cab19a9168f0dd83b4ea2aa3"
     },
@@ -1291,7 +1355,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "7f76e32eb608c84e2c9d7aed3dc57441570c825de1f8298ea5f62815acb556d0"
     },
@@ -1310,7 +1374,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1347,7 +1411,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_25_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "cf4ad7610a3235b5c80a19cf1ef459e6a4d10bd304eed65b6dfdfc2c5d2864a6"
     },
@@ -1392,7 +1456,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260612",
       "sha": "1cfaab359c903b65459e8bfe4927876d709c641223b9bcd5b06390afe65dfc69"
     }

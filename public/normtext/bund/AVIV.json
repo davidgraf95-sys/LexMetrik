@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/AVIV/art_1",
@@ -8,6 +8,7 @@
       "erlass": "AVIV",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "grundlage": "(Art. 55 Abs. 1 bis ATSG; Art. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -20,7 +21,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f6d0d30a029910382c78b19d7011de7277d90113c45d7fb915386759eb2845f"
     },
@@ -31,6 +32,7 @@
       "erlass": "AVIV",
       "artikel": "1_a",
       "artikelLabel": "Art. 1a",
+      "grundlage": "(Art. 1 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -53,7 +55,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b53fd613af2c747cdb318e806ae7b87bb88733604e40bdfdc1d4d4a43ce0acb7"
     },
@@ -64,6 +66,7 @@
       "erlass": "AVIV",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -72,7 +75,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b425ecfdbd60a5a8e3a8f84c5e66c65b59bfc1193fee5bb426864a17f94c4548"
     },
@@ -83,6 +86,7 @@
       "erlass": "AVIV",
       "artikel": "2_a",
       "artikelLabel": "Art. 2a",
+      "grundlage": "(Art. 6 und 92 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -91,7 +95,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_2_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "09bb4e2fa1d1afc36364cfc839b9402397315e0a122fe5c091af6ab39ea45908"
     },
@@ -102,6 +106,7 @@
       "erlass": "AVIV",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 8 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -114,7 +119,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f5db6b17a83474c549af874697e75ded2cc419f0fbb40d95eb1cfae8329b0563"
     },
@@ -125,6 +130,7 @@
       "erlass": "AVIV",
       "artikel": "3_a",
       "artikelLabel": "Art. 3a",
+      "grundlage": "(Art. 9 a Abs. 1 und 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -141,7 +147,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_3_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f6042bfcbcbf4088b55171bfe00413104bf2e7432a2b5ba5c5255dc06c2436ea"
     },
@@ -152,6 +158,7 @@
       "erlass": "AVIV",
       "artikel": "3_b",
       "artikelLabel": "Art. 3b",
+      "grundlage": "(Art. 9 b AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -180,7 +187,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_3_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7bafdfa79fd86fbb6a904426f9241f6100ef35b6a81b9a4ff13f2f0888b5b850"
     },
@@ -191,6 +198,7 @@
       "erlass": "AVIV",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 11 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -203,7 +211,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "92cba884a2b1a06394877e7322b5a48e0c3c1abb809ebf27270c82cc9a59d6f1"
     },
@@ -214,6 +222,7 @@
       "erlass": "AVIV",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 11 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -222,7 +231,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "29ddee34f8e7b3859259ad134fef90579e1b1c033c98f70fc5ad3c305611e633"
     },
@@ -233,6 +242,7 @@
       "erlass": "AVIV",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 14 Abs. 1 und 18 Abs. 2 und 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -287,7 +297,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "44a28c98e4187e092dc450135460ba42ffa53349dc5b5ab04fb372a8343b6d0f"
     },
@@ -298,6 +308,7 @@
       "erlass": "AVIV",
       "artikel": "6_a",
       "artikelLabel": "Art. 6a",
+      "grundlage": "(Art. 18 Abs. 1 und 1 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -314,7 +325,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_6_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d7938879a5173f4d1a04aeb8e529ffe67eb1e4c7759ebd68c0d1da3aba52b7c0"
     },
@@ -325,6 +336,7 @@
       "erlass": "AVIV",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 18 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -343,7 +355,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "057fd39745e54a3c87048989e65141bfc49edd722f5fa2b96208358ea7f9e747"
     },
@@ -354,6 +366,7 @@
       "erlass": "AVIV",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 18 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -392,7 +405,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "786d19c18a438e658eef0bc14270431f58e448ece5cb410f0242727c1121cddb"
     },
@@ -403,6 +416,7 @@
       "erlass": "AVIV",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 11 Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -425,7 +439,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6b9588c30a2dd44e5b41544022c88a32032c2297f5d3b0cfee4de088a9ecad15"
     },
@@ -436,6 +450,7 @@
       "erlass": "AVIV",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 11 Abs. 5 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -452,7 +467,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b17bea5a4e025e6458809d4b415f8902e738d7519c2962ec8d014833e9ba3ce"
     },
@@ -463,6 +478,7 @@
       "erlass": "AVIV",
       "artikel": "10_a",
       "artikelLabel": "Art. 10a",
+      "grundlage": "(Art. 11 a AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -471,7 +487,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8733525dfcdeb6dc321fb6a220666a8ca2bc4b9e0a98db7a0f832e1ab3bb2769"
     },
@@ -482,6 +498,7 @@
       "erlass": "AVIV",
       "artikel": "10_b",
       "artikelLabel": "Art. 10b",
+      "grundlage": "(Art. 11 a Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -490,7 +507,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ba0fff72f885eaa6e2e8ebde9e4b5e3d95e20f6923ea47c974b19308900c374d"
     },
@@ -501,6 +518,7 @@
       "erlass": "AVIV",
       "artikel": "10_c",
       "artikelLabel": "Art. 10c",
+      "grundlage": "(Art. 11 a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -513,7 +531,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3530ed98eb94ad0f752a4de3723c78407fc892871aa596a225457e4988f9a4ec"
     },
@@ -524,6 +542,7 @@
       "erlass": "AVIV",
       "artikel": "10_d",
       "artikelLabel": "Art. 10d",
+      "grundlage": "(Art. 11 a und 13 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -536,7 +555,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "522a4cb88b2879fef30f93d141dbc6fcb1391e2509f9c80e8bf41b4f7cfeaec7"
     },
@@ -547,6 +566,7 @@
       "erlass": "AVIV",
       "artikel": "10_e",
       "artikelLabel": "Art. 10e",
+      "grundlage": "(Art. 11 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -555,7 +575,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "19ca63bd547e2aaf2789696167ca37c47a32df0e945875466eb52c784a58610e"
     },
@@ -566,6 +586,7 @@
       "erlass": "AVIV",
       "artikel": "10_f",
       "artikelLabel": "Art. 10f",
+      "grundlage": "(Art. 11 a Abs. 2 und 13 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -574,7 +595,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "aa5805b32bbb236cce96c320225d9f39caca97e40b818f688266ab308f332398"
     },
@@ -585,6 +606,7 @@
       "erlass": "AVIV",
       "artikel": "10_g",
       "artikelLabel": "Art. 10g",
+      "grundlage": "(Art. 11 a Abs. 2 und Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -593,7 +615,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "71ccfb7965f59fc4e9889e9cfb38213718d651a1646a8b770bb80f68f2bbd965"
     },
@@ -604,6 +626,7 @@
       "erlass": "AVIV",
       "artikel": "10_h",
       "artikelLabel": "Art. 10h",
+      "grundlage": "(Art. 11 Abs. 3 und 11 a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -616,7 +639,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_10_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "99da190640d549adfaee4f9c6447dfed5cb8b0ff2ebedd4cfba72edb12e59103"
     },
@@ -627,6 +650,7 @@
       "erlass": "AVIV",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 13 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -651,7 +675,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c70a157798dee6391d74e8ae917d30e0bd9760dd752bfa72f368ca9d0bfdf99c"
     },
@@ -670,7 +694,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_11_a_11_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -689,7 +713,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -700,6 +724,7 @@
       "erlass": "AVIV",
       "artikel": "12_a",
       "artikelLabel": "Art. 12a",
+      "grundlage": "(Art. 13 Abs. 4 und 5 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -708,7 +733,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_12_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e844031edf1b74f34ed5d285ba739994482181091ae79a6d51304ba5f1c5e0bd"
     },
@@ -719,6 +744,7 @@
       "erlass": "AVIV",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 14 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -753,7 +779,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e63ab7354caea401878e09a4b712dea26e619970b0d3585733fb0c8d02a68da2"
     },
@@ -764,6 +790,7 @@
       "erlass": "AVIV",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 15 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -780,7 +807,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "151ab63e6c9e4653358e049b48d43b676ee9adbe6e22abece78178d90ffd6ee8"
     },
@@ -791,6 +818,7 @@
       "erlass": "AVIV",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 32 Abs. 2 ATSG, Art. 15 Abs. 2 und 96 b AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -807,7 +835,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2c71b8dfc810d451d87eaef350a53b0bcef717a7c9138d63fa83be7ab97ed760"
     },
@@ -826,7 +854,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -837,6 +865,7 @@
       "erlass": "AVIV",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 16 Abs. 2 Bst. i AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -859,7 +888,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "367f7e6cf4c57495b198833aea39f214bcc72f9793feda53ad02eaeb86c4976c"
     },
@@ -870,6 +899,7 @@
       "erlass": "AVIV",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art 17 Abs. 2 und 2 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -894,7 +924,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "690f645a5afb41be9e8a5415adbe0e15b1c78adb53910c216619ecf5d99dae37"
     },
@@ -905,6 +935,7 @@
       "erlass": "AVIV",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 29 ATSG; Art. 10 Abs. 3 und 17 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -921,7 +952,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "161d987bc248cb1d8e5154596ac597757e9633ab0e3bc3bc8f9b1550f859bda5"
     },
@@ -940,7 +971,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_19_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -951,6 +982,7 @@
       "erlass": "AVIV",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 17 Abs. 2 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -963,7 +995,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0b2412fcefb6f5e2b26e69018b7d3a0880df1406ad75aae283298dfaac8adc36"
     },
@@ -974,6 +1006,7 @@
       "erlass": "AVIV",
       "artikel": "20_a",
       "artikelLabel": "Art. 20a",
+      "grundlage": "(Art. 17 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -990,7 +1023,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_20_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7d391f12ee1344f5d3e488baf70a99e6ad388347e13477815af9991129c71f0a"
     },
@@ -1001,6 +1034,7 @@
       "erlass": "AVIV",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 17 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1017,7 +1051,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9d7ec2ac891df66db751998ff126798f245b1ca4f1802d16a784cc2d3d7c8791"
     },
@@ -1028,6 +1062,7 @@
       "erlass": "AVIV",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 27 ATSG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1044,7 +1079,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ea315c6cdd3325b6b6c4e4057e0b3f0e8ea371443d8da3a10b27e9ccdb7203d7"
     },
@@ -1055,6 +1090,7 @@
       "erlass": "AVIV",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 17 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1089,7 +1125,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e72ebb66d7a3f492446de0b39545daab2689d88cc12c51aa2e3c96bdff168c1a"
     },
@@ -1100,6 +1136,7 @@
       "erlass": "AVIV",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 49 ATSG; Art. 11 und 15 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1112,7 +1149,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bcd4ced5a6263bfe1bc62346e7cdcfa6f19beb51bc40d6302f11f589fb508553"
     },
@@ -1123,6 +1160,7 @@
       "erlass": "AVIV",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 15 Abs. 1 und 17 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1153,7 +1191,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ac3327fa25f24af56f4d64bd679b1b1575cd3992def40b77dde6255ac6173f5d"
     },
@@ -1172,7 +1210,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_25_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1183,6 +1221,7 @@
       "erlass": "AVIV",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 40 und 43 ATSG, 17 Abs. 1 und 30 Abs. 1 Bst. c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1199,7 +1238,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "79003468ff761979425da32ba31d030d9a0c5555464e1925ae47159450486c5e"
     },
@@ -1210,6 +1249,7 @@
       "erlass": "AVIV",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 17 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1238,7 +1278,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e9fbd1368fdd6ca99ebcbd9580ba810a4e6c214caa10fa2deaac4cfedfc062af"
     },
@@ -1249,6 +1289,7 @@
       "erlass": "AVIV",
       "artikel": "27_a",
       "artikelLabel": "Art. 27a",
+      "grundlage": "(Art. 18 a AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1257,7 +1298,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_27_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3d090d31355ec3aee00492ba7e24e2a7e955610014aceaa57c62fa6755f9cd0f"
     },
@@ -1276,7 +1317,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_27_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1287,6 +1328,7 @@
       "erlass": "AVIV",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 20 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1303,7 +1345,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ccfa01703fe523be22ec497441ec9fb47a6f785e4a30ce7d6c87ae47fe8ec8c9"
     },
@@ -1314,6 +1356,7 @@
       "erlass": "AVIV",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 40 ATSG; Art. 20 Abs. 1 und 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1366,7 +1409,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "77b420c08c2081173cb902260b230660e799c4d4660115cf4358aa79fdcc843a"
     },
@@ -1377,6 +1420,7 @@
       "erlass": "AVIV",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 19 ATSG, Art. 20 und 96 b AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1393,7 +1437,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3edaff771717464d97b05806c1f15ebca7505f7af1a6aa58d8da39473d208ef9"
     },
@@ -1404,6 +1448,7 @@
       "erlass": "AVIV",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 19 ATSG, 20 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1412,7 +1457,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f0ac349cceed6cef5d55c07177b88d681cbde5c30ac653577c67fecbd14b1bc"
     },
@@ -1431,7 +1476,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "860085190784611cc7159c752b2e9374134a8bd20944d4ce59798540ee951e40"
     },
@@ -1442,6 +1487,7 @@
       "erlass": "AVIV",
       "artikel": "33",
       "artikelLabel": "Art. 33",
+      "grundlage": "(Art. 22 Abs. 2 und 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1484,7 +1530,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2dcdb5acbc14c783bda1354227bc474708ab35d224ad44288696e54a87a13c73"
     },
@@ -1495,6 +1541,7 @@
       "erlass": "AVIV",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 22 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1507,7 +1554,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b5743fb2fe84a389d37fa3a158ef30d43919b05c83341d4e10ff6390bf3fe864"
     },
@@ -1518,6 +1565,7 @@
       "erlass": "AVIV",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 32 ATSG , 22 a Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1538,7 +1586,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "12988cc1c1f51f4af36ae19145fef427a77eb87fb8bce34ea7cc28523f0b9567"
     },
@@ -1549,6 +1597,7 @@
       "erlass": "AVIV",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 22 a Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1561,7 +1610,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0b0759bf0d373e9ece2e2cbe0ff7f6881c1bb81ef758ad0fe020b3cd4c6bc490"
     },
@@ -1572,6 +1621,7 @@
       "erlass": "AVIV",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1614,7 +1664,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c5d69c4fb1d767bb59026433e2262c6d7d41d01dd13199afa816ebb7816a4601"
     },
@@ -1625,6 +1675,7 @@
       "erlass": "AVIV",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 23 Abs. 3 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1637,7 +1688,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "295de51ea772e688f3bc2b37dc143c5dbf5a0b495554acc72592a898c0060af6"
     },
@@ -1648,6 +1699,7 @@
       "erlass": "AVIV",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1656,7 +1708,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "34ad06aae1bb4e62e40b10e4cb5cd2d306df00b7d4cbfb5cc7badc9215944186"
     },
@@ -1667,6 +1719,7 @@
       "erlass": "AVIV",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1675,7 +1728,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "db2d5f2d26961c008d77d1f14fe0a69ea4b79d873b40e8e9544b3bd0fbd90f49"
     },
@@ -1686,6 +1739,7 @@
       "erlass": "AVIV",
       "artikel": "40_a",
       "artikelLabel": "Art. 40a",
+      "grundlage": "(Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1694,7 +1748,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_40_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "513981540b9e2ca20bbc480dba0e22e5ebc017a110a48d6268b847b169d7f769"
     },
@@ -1705,6 +1759,7 @@
       "erlass": "AVIV",
       "artikel": "40_b",
       "artikelLabel": "Art. 40b",
+      "grundlage": "(Art. 23 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1713,7 +1768,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_40_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3d26ec4a7d831064ba236c9be7f37cb881f4bd422a7f78628a7746abaed73520"
     },
@@ -1724,6 +1779,7 @@
       "erlass": "AVIV",
       "artikel": "40_c",
       "artikelLabel": "Art. 40c",
+      "grundlage": "(Art. 14 Abs. 1 und 23 Abs. 2 bis AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1732,7 +1788,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_40_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d463758101da379b77aa76aecb5877a8ad51b2d3b6dacdc40b48d4256ce07373"
     },
@@ -1743,6 +1799,7 @@
       "erlass": "AVIV",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 23 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1795,7 +1852,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a2abd6297fc361fcccaae8df630e5c982678552235b779ae301c31eacef51ecf"
     },
@@ -1806,6 +1863,7 @@
       "erlass": "AVIV",
       "artikel": "41_a",
       "artikelLabel": "Art. 41a",
+      "grundlage": "(Art. 16 Abs. 2 Bst. i und 24 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1840,7 +1898,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_41_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "abee8796cb643938272bc3d211258314598bdc67ba06a14c56aa2574ba8bd07f"
     },
@@ -1851,6 +1909,7 @@
       "erlass": "AVIV",
       "artikel": "41_b",
       "artikelLabel": "Art. 41b",
+      "grundlage": "(Art. 27 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1867,7 +1926,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_41_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "688e42efcb64ae049efcd3185e5d68a4d7ca148edd5047a74ee911d477c3d992"
     },
@@ -1886,7 +1945,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_41_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1897,6 +1956,7 @@
       "erlass": "AVIV",
       "artikel": "42",
       "artikelLabel": "Art. 42",
+      "grundlage": "(Art. 28 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1909,7 +1969,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "af29682ee0bb133e27d822eacca60ec6188bfd4037e1c3b7da58e6c8252a6a5c"
     },
@@ -1928,7 +1988,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1939,6 +1999,7 @@
       "erlass": "AVIV",
       "artikel": "44",
       "artikelLabel": "Art. 44",
+      "grundlage": "(Art. 30 Abs. 1 Bst. a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1969,7 +2030,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dcf475e01a732bbe5ea5afca60c4112d01dc30641958656913aad2876981d85d"
     },
@@ -1980,6 +2041,7 @@
       "erlass": "AVIV",
       "artikel": "45",
       "artikelLabel": "Art. 45",
+      "grundlage": "(Art. 30 Abs. 3 und 3 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2038,7 +2100,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0ee5efdd57941bb85f6c9f856b4ace8ff305811add27075665dc10524474fe32"
     },
@@ -2049,6 +2111,7 @@
       "erlass": "AVIV",
       "artikel": "46",
       "artikelLabel": "Art. 46",
+      "grundlage": "(Art. 31 Abs. 1 und 35 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2073,7 +2136,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bfb1bba19be87598647b9021f55e3e6ab4ddf56dc0e6dae578b285a1f1145170"
     },
@@ -2092,7 +2155,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_46_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2103,6 +2166,7 @@
       "erlass": "AVIV",
       "artikel": "46_b",
       "artikelLabel": "Art. 46b",
+      "grundlage": "(Art. 31 Abs. 3 Bst. a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2115,7 +2179,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_46_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f9598a20e6c47273dfb1ae39df08d77d432e0b802f1bf3747719ba95360e69cb"
     },
@@ -2126,6 +2190,7 @@
       "erlass": "AVIV",
       "artikel": "47",
       "artikelLabel": "Art. 47",
+      "grundlage": "(Art. 31 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2156,7 +2221,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "17cf700b1bb5e9a6020cd1733f96569dec6e1a3a91f97b8e2b0c36663643976c"
     },
@@ -2167,6 +2232,7 @@
       "erlass": "AVIV",
       "artikel": "48",
       "artikelLabel": "Art. 48",
+      "grundlage": "(Art. 32 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2179,7 +2245,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1760d93fd88f8a015b20ffb023fc9ad87c25edb2e09f1731e99264a22ab8ca9a"
     },
@@ -2190,6 +2256,7 @@
       "erlass": "AVIV",
       "artikel": "48_a",
       "artikelLabel": "Art. 48a",
+      "grundlage": "(Art. 32 Abs. 1 Bst. b AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2206,7 +2273,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_48_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6715b85b87bb3526498cdde29d75c4959473cfe707baea3f4d5a3add3c81ad50"
     },
@@ -2217,6 +2284,7 @@
       "erlass": "AVIV",
       "artikel": "48_b",
       "artikelLabel": "Art. 48b",
+      "grundlage": "(Art. 31 Abs. 1 bis und 83 Abs. 1 Bst. s AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2229,7 +2297,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_48_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "15054bb70246c4c1078e857dce391e8254b906716c20eb50d31d4eed8c84ed6b"
     },
@@ -2240,6 +2308,7 @@
       "erlass": "AVIV",
       "artikel": "49",
       "artikelLabel": "Art. 49",
+      "grundlage": "(Art. 32 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2248,7 +2317,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7727fc87162fbf6a3f7b5c4c90d6b78e28d561b75b49229c06132551f92e1964"
     },
@@ -2259,6 +2328,7 @@
       "erlass": "AVIV",
       "artikel": "50",
       "artikelLabel": "Art. 50",
+      "grundlage": "(Art. 32 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2275,7 +2345,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d35298064bd99c51a9c25593cf689e666b59b10b5e54d16fefb1775777614d49"
     },
@@ -2286,6 +2356,7 @@
       "erlass": "AVIV",
       "artikel": "51",
       "artikelLabel": "Art. 51",
+      "grundlage": "(Art. 32 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2328,7 +2399,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "428b4b017fe3de0eedf1dadc9e6422e518a5cacaefa5f94b91fa055862ee051f"
     },
@@ -2339,6 +2410,7 @@
       "erlass": "AVIV",
       "artikel": "51_a",
       "artikelLabel": "Art. 51a",
+      "grundlage": "(Art. 32 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2367,7 +2439,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_51_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d761098412d11231176323ce4a509cc89f4bf38d239dba23a27e71eb6f93d4f9"
     },
@@ -2378,6 +2450,7 @@
       "erlass": "AVIV",
       "artikel": "52",
       "artikelLabel": "Art. 52",
+      "grundlage": "(Art. 32 Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2400,7 +2473,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bbc2d96efd2a0973fcf3ed11bdf45590df31adb65ff9d84a3d14f50fff040886"
     },
@@ -2411,6 +2484,7 @@
       "erlass": "AVIV",
       "artikel": "53",
       "artikelLabel": "Art. 53",
+      "grundlage": "(Art. 32 Abs. 5 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2423,7 +2497,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1331412e1875f4ebc2b347ad9f3bae3ba65695d38f114a7659758150c5c6c367"
     },
@@ -2434,6 +2508,7 @@
       "erlass": "AVIV",
       "artikel": "53_a",
       "artikelLabel": "Art. 53a",
+      "grundlage": "(Art. 32 Abs. 6 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2446,7 +2521,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_53_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "df3cd5913a9eb96cf5d658d86442ef3468360752ee95ea47b813049a57258fc6"
     },
@@ -2457,6 +2532,7 @@
       "erlass": "AVIV",
       "artikel": "54",
       "artikelLabel": "Art. 54",
+      "grundlage": "(Art. 33 Abs. 1 Bst. c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2479,7 +2555,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "14f8040a3459c9d88ce028ff2fbb744e2ad09191cf99e36e34dab4309b6f5b2d"
     },
@@ -2490,6 +2566,7 @@
       "erlass": "AVIV",
       "artikel": "54_a",
       "artikelLabel": "Art. 54a",
+      "grundlage": "(Art. 33 Abs. 1 Bst. b und 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2498,7 +2575,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_54_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "50986527ec265b4e2ec81fceb1edca520fedd166f1a8e4af2aae8e3b8c0b0d9b"
     },
@@ -2509,6 +2586,7 @@
       "erlass": "AVIV",
       "artikel": "55",
       "artikelLabel": "Art. 55",
+      "grundlage": "(Art. 34 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2517,7 +2595,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a3a9437880f59ad6ac9fe9d79dd9524323f8c3fb39763ca4e03ae05d6fe82081"
     },
@@ -2528,6 +2606,7 @@
       "erlass": "AVIV",
       "artikel": "56",
       "artikelLabel": "Art. 56",
+      "grundlage": "(Art. 34 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2540,7 +2619,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c6805d85fe8166d1ff48ae9bf842046e2274befc66e8244de80cf5de0dd5ff5d"
     },
@@ -2551,6 +2630,7 @@
       "erlass": "AVIV",
       "artikel": "57",
       "artikelLabel": "Art. 57",
+      "grundlage": "(Art. 34 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2559,7 +2639,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6bd6b8ed6282b2aa163f464c95498c7ea0549f9f8559a860421002273c1342c5"
     },
@@ -2570,6 +2650,7 @@
       "erlass": "AVIV",
       "artikel": "57_a",
       "artikelLabel": "Art. 57a",
+      "grundlage": "(Art. 35 Abs. 1 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2582,7 +2663,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_57_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1fdd1ae5c7d6cdc71f41dbd1f22441a335cad7094b37b83282cbe559ef836d0c"
     },
@@ -2593,6 +2674,7 @@
       "erlass": "AVIV",
       "artikel": "57_b",
       "artikelLabel": "Art. 57b",
+      "grundlage": "(Art. 35 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2601,7 +2683,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_57_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8c7d060496b84802b1d350b9b38b47756925fdacb5b0e3e38ff3e81edce85eab"
     },
@@ -2612,6 +2694,7 @@
       "erlass": "AVIV",
       "artikel": "58",
       "artikelLabel": "Art. 58",
+      "grundlage": "(Art. 36 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2636,7 +2719,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b16c1bf8c890d24cec065c35b2621273f7446591c63bcc46d25d0d4194d8d5a9"
     },
@@ -2647,6 +2730,7 @@
       "erlass": "AVIV",
       "artikel": "59",
       "artikelLabel": "Art. 59",
+      "grundlage": "(Art 36 Abs. 2, 3 und 5 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2677,7 +2761,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4a1c61387c65edd9ab53d60c8e6a3be9a4dca30111b8a273a09e25da57b54a58"
     },
@@ -2688,6 +2772,7 @@
       "erlass": "AVIV",
       "artikel": "60",
       "artikelLabel": "Art. 60",
+      "grundlage": "(Art. 36 Abs. 2 Bst. c und 38 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2722,7 +2807,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3097b3ebb8205d16866c61f17a2c6374145f6756ddb59b5f78095ebc4d9a7768"
     },
@@ -2733,6 +2818,7 @@
       "erlass": "AVIV",
       "artikel": "61",
       "artikelLabel": "Art. 61",
+      "grundlage": "(Art. 38 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2741,7 +2827,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3ccc135a3713a6a936bd294bb5d4ef2bc278620feb535a4f5ce50444f343e02e"
     },
@@ -2752,6 +2838,7 @@
       "erlass": "AVIV",
       "artikel": "61_a",
       "artikelLabel": "Art. 61a",
+      "grundlage": "(Art. 39 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2760,7 +2847,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_61_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2f8006552630b25fe12ad13cfa4701e2f675acc6ce4fa5a02adb11f66941542a"
     },
@@ -2779,7 +2866,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2790,6 +2877,7 @@
       "erlass": "AVIV",
       "artikel": "63",
       "artikelLabel": "Art. 63",
+      "grundlage": "(Art. 41 Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2798,7 +2886,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e4b6ec79f5ebce407300b9d72d7e5c66c5c60509cbb9f407435e993068413461"
     },
@@ -2817,7 +2905,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2828,6 +2916,7 @@
       "erlass": "AVIV",
       "artikel": "65",
       "artikelLabel": "Art. 65",
+      "grundlage": "(Art. 42 Abs. 1 und 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2882,7 +2971,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bfd35cc65750bd8be48fef8d93bc0a0d95af8707d3e2ee69969dd86da5203d9e"
     },
@@ -2893,6 +2982,7 @@
       "erlass": "AVIV",
       "artikel": "66",
       "artikelLabel": "Art. 66",
+      "grundlage": "(Art. 43 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2905,7 +2995,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "93e91ab2f61059e56f749f4415850004a11f114baf5a7b39dcd83878bc6de37a"
     },
@@ -2916,6 +3006,7 @@
       "erlass": "AVIV",
       "artikel": "66_a",
       "artikelLabel": "Art. 66a",
+      "grundlage": "(Art. 42 Abs. 1 und 44 a Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2940,7 +3031,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_66_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "096b7b6b52e50b6754fbe2a3d1b098d4a92ef7ba607847b1ac39c1ba7099c97a"
     },
@@ -2951,6 +3042,7 @@
       "erlass": "AVIV",
       "artikel": "67",
       "artikelLabel": "Art. 67",
+      "grundlage": "(Art. 43 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2959,7 +3051,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7727fc87162fbf6a3f7b5c4c90d6b78e28d561b75b49229c06132551f92e1964"
     },
@@ -2970,6 +3062,7 @@
       "erlass": "AVIV",
       "artikel": "67_a",
       "artikelLabel": "Art. 67a",
+      "grundlage": "(Art. 43 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2992,7 +3085,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_67_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e7a92bae3b4a21d09f51f861bbca7895e1a26ebe379eb6fc7de9100109555ad7"
     },
@@ -3003,6 +3096,7 @@
       "erlass": "AVIV",
       "artikel": "68",
       "artikelLabel": "Art. 68",
+      "grundlage": "(Art. 43 Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3015,7 +3109,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c9e62a5b981f2713eec0245a1e95f7ae504e180f7131c75d019b5e6b25393f11"
     },
@@ -3026,6 +3120,7 @@
       "erlass": "AVIV",
       "artikel": "69",
       "artikelLabel": "Art. 69",
+      "grundlage": "(Art. 45 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3042,7 +3137,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1803b81e3cd5c3d7c993578afeb915d4d1dbc90268c00a8368f7b48903bdc6e7"
     },
@@ -3053,6 +3148,7 @@
       "erlass": "AVIV",
       "artikel": "70",
       "artikelLabel": "Art. 70",
+      "grundlage": "(Art. 47 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3061,7 +3157,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3ccc135a3713a6a936bd294bb5d4ef2bc278620feb535a4f5ce50444f343e02e"
     },
@@ -3072,6 +3168,7 @@
       "erlass": "AVIV",
       "artikel": "71",
       "artikelLabel": "Art. 71",
+      "grundlage": "(Art. 47 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3080,7 +3177,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "09a21f6d53c98f3b98d91267d914dcae66bb6af366fd17508fb60bf1623261aa"
     },
@@ -3091,6 +3188,7 @@
       "erlass": "AVIV",
       "artikel": "71_a",
       "artikelLabel": "Art. 71a",
+      "grundlage": "(Art. 48 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3099,7 +3197,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_71_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7002457007fbd1dce7c8413b0529a33bc4617ed770b8d0ce847b15dcdf6d33af"
     },
@@ -3118,7 +3216,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3129,6 +3227,7 @@
       "erlass": "AVIV",
       "artikel": "73",
       "artikelLabel": "Art. 73",
+      "grundlage": "(Art. 51 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3137,7 +3236,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "050b466868365462be060376c8b54b94279bfbe9b4d1f8a76bfd7d7c7cc21311"
     },
@@ -3148,6 +3247,7 @@
       "erlass": "AVIV",
       "artikel": "74",
       "artikelLabel": "Art. 74",
+      "grundlage": "(Art. 51 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3156,7 +3256,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_74",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "558fc2951463b43202393898a1b2dd86f019f73516717c3fd754b9b0644c434f"
     },
@@ -3175,7 +3275,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_75",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3186,6 +3286,7 @@
       "erlass": "AVIV",
       "artikel": "75_a",
       "artikelLabel": "Art. 75a",
+      "grundlage": "(Art. 52 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3204,7 +3305,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_75_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a218394dac45f9d0788ebbf83b9816d686389bb6e807f020ccec57f8a3ef6534"
     },
@@ -3215,6 +3316,7 @@
       "erlass": "AVIV",
       "artikel": "76",
       "artikelLabel": "Art. 76",
+      "grundlage": "(Art. 52 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3253,7 +3355,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c6762f49f6b907308a54c25cc01ce9eb452df1b31353bcc20b6235fb982a2c3f"
     },
@@ -3264,6 +3366,7 @@
       "erlass": "AVIV",
       "artikel": "77",
       "artikelLabel": "Art. 77",
+      "grundlage": "(Art. 53 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3306,7 +3409,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5c17f994418570ba30980182eaadf274ebb5439a4c3f0aaca192e0c0dbfa939b"
     },
@@ -3317,6 +3420,7 @@
       "erlass": "AVIV",
       "artikel": "78",
       "artikelLabel": "Art. 78",
+      "grundlage": "(Art. 53 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3325,7 +3429,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_78",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a2ec78884e5ed50be005d474fa0970f5f9fec3859c44aa538c02a0208edc2db5"
     },
@@ -3336,6 +3440,7 @@
       "erlass": "AVIV",
       "artikel": "79",
       "artikelLabel": "Art. 79",
+      "grundlage": "(Art. 54 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3344,7 +3449,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b9d08dfaa2193c7eceb2d4d105763bac3ac42e8d0ca9d102ddc1ff96977a848f"
     },
@@ -3355,6 +3460,7 @@
       "erlass": "AVIV",
       "artikel": "80",
       "artikelLabel": "Art. 80",
+      "grundlage": "(Art. 54 Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3367,7 +3473,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f1977007b1d4b6f82aebcd1fb9376134b63bc3b66d291925420ae6ed96677e1c"
     },
@@ -3378,6 +3484,7 @@
       "erlass": "AVIV",
       "artikel": "81",
       "artikelLabel": "Art. 81",
+      "grundlage": "(Art. 60 und 64 a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3394,7 +3501,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "140b5f55505237b63ef92009ddd8c89697376b6fb0071c75c43589efe890c9f5"
     },
@@ -3405,6 +3512,7 @@
       "erlass": "AVIV",
       "artikel": "81_a",
       "artikelLabel": "Art. 81a",
+      "grundlage": "(Art. 59 a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3421,7 +3529,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "73ec4156ee7d86505329024282e83bc90ca1c435903fbccde2a7da3714a88f90"
     },
@@ -3432,6 +3540,7 @@
       "erlass": "AVIV",
       "artikel": "81_b",
       "artikelLabel": "Art. 81b",
+      "grundlage": "(Art. 59 b Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3440,7 +3549,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "87602818d37af5f89eaab3048460b9487245ab676a8cb1f6517f682f233fa19d"
     },
@@ -3459,7 +3568,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3470,6 +3579,7 @@
       "erlass": "AVIV",
       "artikel": "81_d",
       "artikelLabel": "Art. 81d",
+      "grundlage": "(Art. 59 c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3486,7 +3596,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f92484187c7a9affe6e22ce7d14da1b4963c5a7412fd31bc15e8151f34ec53df"
     },
@@ -3497,6 +3607,7 @@
       "erlass": "AVIV",
       "artikel": "81_e",
       "artikelLabel": "Art. 81e",
+      "grundlage": "(Art. 59 c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3521,7 +3632,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_81_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "849d9d92cffc07f3a9330a49c6bc0ca8509f39ab08a2165b2b3f76cfd12f98a0"
     },
@@ -3532,6 +3643,7 @@
       "erlass": "AVIV",
       "artikel": "82",
       "artikelLabel": "Art. 82",
+      "grundlage": "(Art. 59 d Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3540,7 +3652,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c21ea77438b6669ae797586b4c5dd698e651ff94a5ca6ff5da4b0ad3b2521ff7"
     },
@@ -3551,6 +3663,7 @@
       "erlass": "AVIV",
       "artikel": "83",
       "artikelLabel": "Art. 83",
+      "grundlage": "(Art. 60 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3559,7 +3672,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1a537f98f3d2a45c904a3ad559dd8b1079e5e5c7069cc4d12bdb3457979affbc"
     },
@@ -3570,6 +3683,7 @@
       "erlass": "AVIV",
       "artikel": "84",
       "artikelLabel": "Art. 84",
+      "grundlage": "(Art. 59–71 d , 75 a , 75 b , 83 Abs. 1 und 110 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3578,7 +3692,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cfcbba972ea0d77562fc1b8ea98a8adb4a0dd4817e2308f8fab67de77e5b380c"
     },
@@ -3589,6 +3703,7 @@
       "erlass": "AVIV",
       "artikel": "85",
       "artikelLabel": "Art. 85",
+      "grundlage": "(Art. 59 c bis Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3619,7 +3734,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dc79b2c8e86f3a6aa8a4484a094ed7cd10c622ecc5a84167ed594760460dba72"
     },
@@ -3630,6 +3745,7 @@
       "erlass": "AVIV",
       "artikel": "85_a",
       "artikelLabel": "Art. 85a",
+      "grundlage": "(Art. 59 c bis Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3638,7 +3754,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_85_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1a367d9a0b0f0515183d70bc7c469e6b51b1e9f55ff6f7ae7c1ed9ccf411bde4"
     },
@@ -3649,6 +3765,7 @@
       "erlass": "AVIV",
       "artikel": "86",
       "artikelLabel": "Art. 86",
+      "grundlage": "(Art. 59 c bis Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3665,7 +3782,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "284586e4290e7b7e9d2eafcdde38f3c1eae42070c9a7882676e77b22a2fc4723"
     },
@@ -3676,6 +3793,7 @@
       "erlass": "AVIV",
       "artikel": "87",
       "artikelLabel": "Art. 87",
+      "grundlage": "(Art. 59 c bis AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3684,7 +3802,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ea1e1c0cfbd83ab89787362abfcca68bd4eb51d6aa10b24a2fd43341a53894ae"
     },
@@ -3695,6 +3813,7 @@
       "erlass": "AVIV",
       "artikel": "88",
       "artikelLabel": "Art. 88",
+      "grundlage": "(Art. 59 c bis Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3733,7 +3852,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ae12fcd48ec214111f4f2032e615106761d5577ecacd318b07d1f1cae713ee60"
     },
@@ -3752,7 +3871,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3763,6 +3882,7 @@
       "erlass": "AVIV",
       "artikel": "90",
       "artikelLabel": "Art. 90",
+      "grundlage": "(Art. 65 und 66 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3813,7 +3933,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f734ae8687af821862a62055a13ee81efcf850a3a4d6eb5726ca8c3cfa4ecd88"
     },
@@ -3824,6 +3944,7 @@
       "erlass": "AVIV",
       "artikel": "90_a",
       "artikelLabel": "Art. 90a",
+      "grundlage": "(Art. 66 a und 66 c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3860,7 +3981,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_90_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d8a78bd4514cf76d0dada34bc9c02c3f8436a88515cac4dd7064b3db939adfc3"
     },
@@ -3871,6 +3992,7 @@
       "erlass": "AVIV",
       "artikel": "91",
       "artikelLabel": "Art. 91",
+      "grundlage": "(Art. 68 Abs. 1 Bst. a AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3889,7 +4011,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "08a8b78698191c60923c8c51b686f0b55b40e8bca41953c1fe7250577671fddc"
     },
@@ -3900,6 +4022,7 @@
       "erlass": "AVIV",
       "artikel": "92",
       "artikelLabel": "Art. 92",
+      "grundlage": "(Art. 69 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3908,7 +4031,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d0686360149b8b096f833666fd2a41c0e029d134b78564caef921f0e7403ac8b"
     },
@@ -3919,6 +4042,7 @@
       "erlass": "AVIV",
       "artikel": "93",
       "artikelLabel": "Art. 93",
+      "grundlage": "(Art. 70 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3931,7 +4055,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b9fd74fb55269265e96ad06b601a9ab121718d2cf09a16c19eca8b9efcab612d"
     },
@@ -3942,6 +4066,7 @@
       "erlass": "AVIV",
       "artikel": "94",
       "artikelLabel": "Art. 94",
+      "grundlage": "(Art. 68 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3960,7 +4085,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7ee687cbd02d164832b33f6afcc8f9c44a43ec53b72a79e9937334ea136d7afe"
     },
@@ -3971,6 +4096,7 @@
       "erlass": "AVIV",
       "artikel": "95",
       "artikelLabel": "Art. 95",
+      "grundlage": "(Art. 19 ATSG, 59 c Abs. 1 und 68 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3995,7 +4121,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a39b03a6a99be86562cb68eac7b3850c392bffb1746eeef29bb9785a63f29694"
     },
@@ -4006,6 +4132,7 @@
       "erlass": "AVIV",
       "artikel": "95_a",
       "artikelLabel": "Art. 95a",
+      "grundlage": "(Art. 71 a Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4014,7 +4141,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ba4b3b96f66a6e40d540fea066d46290b5d8e518ab07f19bf9fa89d5d7017a51"
     },
@@ -4025,6 +4152,7 @@
       "erlass": "AVIV",
       "artikel": "95_b",
       "artikelLabel": "Art. 95b",
+      "grundlage": "(Art. 71 b Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4044,15 +4172,18 @@
             },
             {
               "marke": "1",
-              "text": "ein Konzept zur selbständigen Geschäftstätigkeit mit Angaben zum vorgesehenen Angebot an Produkten oder Dienstleistungen sowie zum vorgesehenen Absatzmarkt und Kundenkreis,"
+              "text": "ein Konzept zur selbständigen Geschäftstätigkeit mit Angaben zum vorgesehenen Angebot an Produkten oder Dienstleistungen sowie zum vorgesehenen Absatzmarkt und Kundenkreis,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "über die Kosten und die Finanzierung des Projekts,"
+              "text": "über die Kosten und die Finanzierung des Projekts,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "den Stand des Projekts."
+              "text": "den Stand des Projekts.",
+              "tiefe": 1
             }
           ]
         },
@@ -4071,9 +4202,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "da99e5ffdc560ddf0a708243a02d8d745872d7440361bdc6c534912fb1f787ea"
+      "sha": "5de61adef936d65d403b2ac3f582016e591c5212bf5e9dec84a675f654997a66"
     },
     {
       "id": "bund/AVIV/art_95_c",
@@ -4082,6 +4213,7 @@
       "erlass": "AVIV",
       "artikel": "95_c",
       "artikelLabel": "Art. 95c",
+      "grundlage": "(Art. 71 b Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4102,7 +4234,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a6fa6ef713935b230f223c5a74bf88db417d350dd9e0237033ba4e830e7670f1"
     },
@@ -4113,6 +4245,7 @@
       "erlass": "AVIV",
       "artikel": "95_d",
       "artikelLabel": "Art. 95d",
+      "grundlage": "(Art. 71 b Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4133,7 +4266,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6612a73fd57ad5ee2a30586be5016259cf7ee859d20178e0aea652ed9cde60f6"
     },
@@ -4144,6 +4277,7 @@
       "erlass": "AVIV",
       "artikel": "95_e",
       "artikelLabel": "Art. 95e",
+      "grundlage": "(Art. 71 d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4160,7 +4294,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_95_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b5a82c8546581f0833b0a26c76220ae4b11e144be57c7edda42d5abba3b3185"
     },
@@ -4179,7 +4313,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4198,7 +4332,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_96_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4209,6 +4343,7 @@
       "erlass": "AVIV",
       "artikel": "97",
       "artikelLabel": "Art. 97",
+      "grundlage": "(Art. 59 c bis Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4259,7 +4394,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1a87043da309dd749563fd0d4b5e0abfd6290b2eae8d5fb074830888c6afdda0"
     },
@@ -4270,6 +4405,7 @@
       "erlass": "AVIV",
       "artikel": "97_a",
       "artikelLabel": "Art. 97a",
+      "grundlage": "(Art. 64 b Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4278,7 +4414,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_97_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6b85831976282270d26e6a1cd5e2279bf68be385c82240e25e3b94b41eadfff0"
     },
@@ -4289,6 +4425,7 @@
       "erlass": "AVIV",
       "artikel": "97_b",
       "artikelLabel": "Art. 97b",
+      "grundlage": "(Art. 59 c bis Abs. 2, 59 d , 64 a Abs. 1 Bst. c und 5 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4297,7 +4434,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_97_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "109ae4da039609af4caf57b5a79e24d8ef6b7913c340b1fad781561fed9619b4"
     },
@@ -4308,6 +4445,7 @@
       "erlass": "AVIV",
       "artikel": "98",
       "artikelLabel": "Art. 98",
+      "grundlage": "(Art. 64 a Abs. 1 Bst. b AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4316,7 +4454,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "add5700958c64540df555c95cb5e9f5d00b6c16c80862c3cbe714aaff124495f"
     },
@@ -4327,6 +4465,7 @@
       "erlass": "AVIV",
       "artikel": "98_a",
       "artikelLabel": "Art. 98a",
+      "grundlage": "(Art. 59 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4335,7 +4474,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_98_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2962266421365fc497e019d4da5420cb08ea150f553b5337b9844101201c3d55"
     },
@@ -4354,7 +4493,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_98_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4373,7 +4512,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4392,7 +4531,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_99_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4403,6 +4542,7 @@
       "erlass": "AVIV",
       "artikel": "100",
       "artikelLabel": "Art. 100",
+      "grundlage": "(Art. 73 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4441,7 +4581,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5910178e4daf89a541d8ab9f511d10453445f79d05297bf3f6d8bd1c7097218f"
     },
@@ -4460,7 +4600,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_101_102",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4479,7 +4619,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_102_a_102_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4498,7 +4638,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_102_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4509,6 +4649,7 @@
       "erlass": "AVIV",
       "artikel": "103",
       "artikelLabel": "Art. 103",
+      "grundlage": "(Art. 79 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4517,7 +4658,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_103",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b6390ca13e283c92bc0339dd8d0ed83be59638e347d19b6a9e194524f1dcbb37"
     },
@@ -4528,6 +4669,7 @@
       "erlass": "AVIV",
       "artikel": "104",
       "artikelLabel": "Art. 104",
+      "grundlage": "(Art. 81 Abs. 1 Bst. c AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4536,7 +4678,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_104",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d3f2e1eb59935eb2fc8448740725a68b76b669af096836b4b3f89f9ca801e234"
     },
@@ -4547,6 +4689,7 @@
       "erlass": "AVIV",
       "artikel": "105",
       "artikelLabel": "Art. 105",
+      "grundlage": "(Art. 81 Abs. 1 Bst. d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4559,7 +4702,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_105",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1c5f2ee07f602fe4dd4caf6604bf0884ed1c50c184d0bc2fb5bb8be9dd6d9dbc"
     },
@@ -4578,7 +4721,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_106",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4589,6 +4732,7 @@
       "erlass": "AVIV",
       "artikel": "107",
       "artikelLabel": "Art. 107",
+      "grundlage": "(Art. 81 Abs. 1 Bst. c AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4597,7 +4741,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_107",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7c68f5e671940db7ad172fe77e3c44768ab9c2fbd6949caf8526d68d619cbc7c"
     },
@@ -4608,6 +4752,7 @@
       "erlass": "AVIV",
       "artikel": "108",
       "artikelLabel": "Art. 108",
+      "grundlage": "(Art. 81 Abs. 1 Bst. e AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4620,7 +4765,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8c57d43379df743ef6c53511bd0cbe4ee2e5d7e4b58ede01e515c1a127414c90"
     },
@@ -4631,6 +4776,7 @@
       "erlass": "AVIV",
       "artikel": "109",
       "artikelLabel": "Art. 109",
+      "grundlage": "(Art. 83 und 92 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4665,7 +4811,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c543c7d8403fac79ec83f991f7aa3653aa12c0f979a8840b0e4323ca17c20b89"
     },
@@ -4676,6 +4822,7 @@
       "erlass": "AVIV",
       "artikel": "109_a",
       "artikelLabel": "Art. 109a",
+      "grundlage": "(Art. 83 Abs. 1 Bst. c AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4688,7 +4835,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_109_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f0474641fcf344e8a13cf2f821a0cf65f7b6b08f8f29241faafd9af18a368a1b"
     },
@@ -4699,6 +4846,7 @@
       "erlass": "AVIV",
       "artikel": "109_b",
       "artikelLabel": "Art. 109b",
+      "grundlage": "(Art. 83 Abs. 1 bis AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4707,7 +4855,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_109_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f3cb5129dc9995a67ef06e21fa74ec57f778e5daebc0206504d8b3ee69a7426d"
     },
@@ -4718,6 +4866,7 @@
       "erlass": "AVIV",
       "artikel": "110",
       "artikelLabel": "Art. 110",
+      "grundlage": "(Art. 28 und 46 ATSG, Art. 83 Abs. 1 Bst. d und 83 a Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4738,7 +4887,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f6ca519fd4c73b8bb3c09be4c54ecfce501a28cd15cd4485b79f58eb60086367"
     },
@@ -4749,6 +4898,7 @@
       "erlass": "AVIV",
       "artikel": "111",
       "artikelLabel": "Art. 111",
+      "grundlage": "(Art. 83 Abs. 1 Bst. d, 83 a Abs. 3 und 95 Abs. 2 und 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4761,7 +4911,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "787c63cd71d092c415a7d083978bb47a4b2f644644ff7cb34cfc7d08cc6040db"
     },
@@ -4772,6 +4922,7 @@
       "erlass": "AVIV",
       "artikel": "111_a",
       "artikelLabel": "Art. 111a",
+      "grundlage": "(Art. 88 Abs. 2 bis AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4784,7 +4935,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_111_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a4bb7f4dcb42d8d4b2626d75952184b8e0dc3b140978edab5cbecf9935499ba7"
     },
@@ -4795,6 +4946,7 @@
       "erlass": "AVIV",
       "artikel": "111_b",
       "artikelLabel": "Art. 111b",
+      "grundlage": "(Art. 88 Abs. 2 ter AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4803,7 +4955,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_111_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1a78a1dbd22ae2b49353ef3eca91e32ca37d21a1b7aac0be54ec1a1136e33218"
     },
@@ -4814,6 +4966,7 @@
       "erlass": "AVIV",
       "artikel": "112",
       "artikelLabel": "Art. 112",
+      "grundlage": "(Art. 83 Abs. 1 Bst. d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4830,7 +4983,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_112",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f2a3303d02dc58a86314a12d0ecf0351ccd889ea4c4aca158c473a085727d94b"
     },
@@ -4841,6 +4994,7 @@
       "erlass": "AVIV",
       "artikel": "113",
       "artikelLabel": "Art. 113",
+      "grundlage": "(Art. 83 Abs. 1 Bst. d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4857,7 +5011,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_113",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e436e76f00b1f0bf363c31a24b22e616983b82ed8afa8ef04c1ff251ece522e1"
     },
@@ -4868,6 +5022,7 @@
       "erlass": "AVIV",
       "artikel": "114",
       "artikelLabel": "Art. 114",
+      "grundlage": "(Art. 82, 83 Abs. 1 Bst. f und 85 g AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4884,7 +5039,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_114",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e584bfcd42aa922b0ba9d8155672e74c8c0491f8aed9577d512cd31cf57d0a77"
     },
@@ -4895,6 +5050,7 @@
       "erlass": "AVIV",
       "artikel": "114_a",
       "artikelLabel": "Art. 114a",
+      "grundlage": "(Art. 82 Abs. 5, 83 und 85 g Abs. 5 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4903,7 +5059,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_114_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b66f454ba4c91e042cf4ea62e40d37eca8ee38964942d4bcd3363ec4c32e127d"
     },
@@ -4914,6 +5070,7 @@
       "erlass": "AVIV",
       "artikel": "115",
       "artikelLabel": "Art. 115",
+      "grundlage": "(Art. 82, 83 Abs. 1 Bst. f und 85 g AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4934,7 +5091,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_115",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b6ad969e48573adebd86a321fdecb89d99333fc42d2a949805e3f2e464cb8480"
     },
@@ -4953,7 +5110,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_115_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4b73bd044e84185859c5354975d08c99bfaa8657cf5db91e9e099d3bfbc3b4a7"
     },
@@ -4964,6 +5121,7 @@
       "erlass": "AVIV",
       "artikel": "116",
       "artikelLabel": "Art. 116",
+      "grundlage": "(Art. 83 Abs. 1 Bst. d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4976,7 +5134,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_116",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "eb47a9e11d9364dad827d6fa4c46b557721eaa86c3a09490193ba3ec46918224"
     },
@@ -4987,6 +5145,7 @@
       "erlass": "AVIV",
       "artikel": "117",
       "artikelLabel": "Art. 117",
+      "grundlage": "(Art. 83 Abs. 1 Bst. g AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4995,7 +5154,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_117",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6175ee4b087507a96ea9321e475dc4546f2580af47374a488fbe5eb983a77af7"
     },
@@ -5006,6 +5165,7 @@
       "erlass": "AVIV",
       "artikel": "117_a",
       "artikelLabel": "Art. 117a",
+      "grundlage": "(Art. 92 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5014,7 +5174,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_117_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7275284ad18d160e4e269600fbedfcd7b3b26366723aa53403aed0c90edf3171"
     },
@@ -5025,6 +5185,7 @@
       "erlass": "AVIV",
       "artikel": "118",
       "artikelLabel": "Art. 118",
+      "grundlage": "(Art. 84 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5037,7 +5198,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_118",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8841569a45bca6feb64346cec533829df53994f5df647ddd08a20d349dbc428a"
     },
@@ -5048,6 +5209,7 @@
       "erlass": "AVIV",
       "artikel": "119",
       "artikelLabel": "Art. 119",
+      "grundlage": "(Art. 85 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5090,7 +5252,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d057ba0a57a8eaa94f59c0a682fdddb1467987d23c402c8231c70449504c8dc5"
     },
@@ -5101,6 +5263,7 @@
       "erlass": "AVIV",
       "artikel": "119_a",
       "artikelLabel": "Art. 119a",
+      "grundlage": "(Art. 85 b , 85 c und 85 e AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5139,7 +5302,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b43578f2aa735ec44020cb9b8bb5caa06c9e75ed000fac14a7b5d5ac322a8838"
     },
@@ -5150,6 +5313,7 @@
       "erlass": "AVIV",
       "artikel": "119_b",
       "artikelLabel": "Art. 119b",
+      "grundlage": "(Art. 85 b Abs. 4 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5166,7 +5330,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bda3a2fc040e04b549e889f54ab8859c67505f7997ca16b7c36fd400d9809b95"
     },
@@ -5177,6 +5341,7 @@
       "erlass": "AVIV",
       "artikel": "119_c",
       "artikelLabel": "Art. 119c",
+      "grundlage": "(Art. 85 d und 113 Abs. 2 Bst. d AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5193,7 +5358,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dbb1e9cf64679cd85da6ccc48c2736ae278c0758eea34bc0521a52828b821a76"
     },
@@ -5204,6 +5369,7 @@
       "erlass": "AVIV",
       "artikel": "119_c_bis",
       "artikelLabel": "Art. 119cbis",
+      "grundlage": "(Art. 85 Abs. 1 Bst. a und 85 b Abs. 2 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5234,7 +5400,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119_c_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ff74e5b31b6353850fc4113684516f554735083a6eb2e30fc8e8a2a5f6767338"
     },
@@ -5245,6 +5411,7 @@
       "erlass": "AVIV",
       "artikel": "119_d",
       "artikelLabel": "Art. 119d",
+      "grundlage": "(Art. 85 f und 92 Abs. 7 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5271,7 +5438,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_119_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "88c35e4fec358c7a8d01960e11060de05a92eeae53b671f55d296bd550835855"
     },
@@ -5282,6 +5449,7 @@
       "erlass": "AVIV",
       "artikel": "120",
       "artikelLabel": "Art. 120",
+      "grundlage": "(Art. 87 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5294,7 +5462,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_120",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "18fcce5af411b7a988b13613c5b7074786bb65ab30e4eeac612b321137314c14"
     },
@@ -5305,6 +5473,7 @@
       "erlass": "AVIV",
       "artikel": "120_a",
       "artikelLabel": "Art. 120a",
+      "grundlage": "(Art. 94 a AVIG, Art. 68 septies IVG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5347,7 +5516,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_120_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b914eea3e35072682d882013af1cb551e5117567cc3a5e8941f74c3f6823a6fe"
     },
@@ -5366,7 +5535,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_121",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5377,6 +5546,7 @@
       "erlass": "AVIV",
       "artikel": "121_a",
       "artikelLabel": "Art. 121a",
+      "grundlage": "(Art. 89 AVIG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5385,7 +5555,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_121_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b21fa48460c57020e91b66868a6c8e11318ff02887fdab555a1e8f81f490123a"
     },
@@ -5396,6 +5566,7 @@
       "erlass": "AVIV",
       "artikel": "121_b",
       "artikelLabel": "Art. 121b",
+      "grundlage": "(Art. 89 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5408,7 +5579,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_121_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "99c060bdd2fca72da056c345a444a606521dbd7a6ed42e2d794cfaebfba3b142"
     },
@@ -5419,6 +5590,7 @@
       "erlass": "AVIV",
       "artikel": "122",
       "artikelLabel": "Art. 122",
+      "grundlage": "(Art. 92 Abs. 1 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5439,7 +5611,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_122",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "42926ee98af59fc72c5e50540f337808840eaed32aeeb8274fb05aea64cd9608"
     },
@@ -5450,6 +5622,7 @@
       "erlass": "AVIV",
       "artikel": "122_a",
       "artikelLabel": "Art. 122a",
+      "grundlage": "(Art. 92 Abs. 7 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5490,7 +5663,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_122_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "45ec455677e410a3993ea1c7d799225615041b66617cc12ea2208c91a4a8603e"
     },
@@ -5501,6 +5674,7 @@
       "erlass": "AVIV",
       "artikel": "122_b",
       "artikelLabel": "Art. 122b",
+      "grundlage": "(Art. 92 Abs. 6 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5551,7 +5725,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_122_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "556368dee92d211e56c66dbefc564867c420af10c89887baf6bab09f366f19bd"
     },
@@ -5562,6 +5736,7 @@
       "erlass": "AVIV",
       "artikel": "122_c",
       "artikelLabel": "Art. 122c",
+      "grundlage": "(Art. 92 Abs. 7 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5612,7 +5787,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_122_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a89694f14fa1dadddcff1e94e93ee49753a2b3d847cac308b566f7d37c49c626"
     },
@@ -5631,7 +5806,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_123",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5642,6 +5817,7 @@
       "erlass": "AVIV",
       "artikel": "124",
       "artikelLabel": "Art. 124",
+      "grundlage": "(Art. 94 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5664,7 +5840,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_124",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "eb1741da07208039521205a4e02a1b8181472ba63196dd313b8bddafca35cef5"
     },
@@ -5683,7 +5859,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_124_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5694,6 +5870,7 @@
       "erlass": "AVIV",
       "artikel": "125",
       "artikelLabel": "Art. 125",
+      "grundlage": "(Art. 46 ATSG; Art. 96 c Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5710,7 +5887,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_125",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "41b0c53d2c61eac3515ffac9ca02aca69c36729c1792ceda412eeafd8b2bd805"
     },
@@ -5721,6 +5898,7 @@
       "erlass": "AVIV",
       "artikel": "126",
       "artikelLabel": "Art. 126",
+      "grundlage": "(Art. 96 b , 96 c und 97 a AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5781,7 +5959,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_126",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4782cca2aa4f31d967c5c1548ae6a361b2a8cbed628049297fc59501fcaf79d6"
     },
@@ -5792,6 +5970,7 @@
       "erlass": "AVIV",
       "artikel": "126_a",
       "artikelLabel": "Art. 126a",
+      "grundlage": "(Art. 97 a Abs. 6 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5808,7 +5987,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_126_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c10252e22e783d139235ea8c1c33f4dec74a754721c8b536dbe74c77615b9b9b"
     },
@@ -5827,7 +6006,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_127",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5838,6 +6017,7 @@
       "erlass": "AVIV",
       "artikel": "128",
       "artikelLabel": "Art. 128",
+      "grundlage": "(Art. 100 Abs. 3 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5850,7 +6030,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_128",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a73548bfbed9f4c8e146e706f9a04f53e41e4d688e5ae6324246dc612acb7d7f"
     },
@@ -5861,6 +6041,7 @@
       "erlass": "AVIV",
       "artikel": "128_a",
       "artikelLabel": "Art. 128a",
+      "grundlage": "(Art. 34 ATSG, 102 AVIG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5911,7 +6092,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_128_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "05c99aafe18e572310e024da667e7e9d18f1c792e97779027dfc0431b12e9f15"
     },
@@ -5930,7 +6111,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_129",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5949,7 +6130,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_129_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1df1a9ec158662f2d9305cb8ae3ebae7a68451ba319d41673fe332f57e818e23"
     },
@@ -5968,7 +6149,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_130",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "59eece4b09f5ba4dd6f216a14df1258312ff86892a2d4cf45ff8faf52d9399c4"
     },
@@ -5987,7 +6168,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_131",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6006,7 +6187,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_131_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6029,7 +6210,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de#art_132",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e1adbce7c8f15c28ca2dff038f5778a56e979a8c1dd23cf0f6e88f363fab5f51"
     }

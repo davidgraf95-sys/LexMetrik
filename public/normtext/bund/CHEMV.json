@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/CHEMV/art_1",
@@ -65,15 +65,18 @@
             },
             {
               "marke": "1",
-              "text": "Lebensmittel nach Artikel 4 des Lebensmittelgesetzes vom 20. Juni 2014 (LMG),"
+              "text": "Lebensmittel nach Artikel 4 des Lebensmittelgesetzes vom 20. Juni 2014 (LMG),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Arzneimittel nach Artikel 4 Absatz 1 Buchstabe a und Medizinprodukte nach Artikel 4 Absatz 1 Buchstabe b des Heilmittelgesetzes vom 15. Dezember 2000,"
+              "text": "Arzneimittel nach Artikel 4 Absatz 1 Buchstabe a und Medizinprodukte nach Artikel 4 Absatz 1 Buchstabe b des Heilmittelgesetzes vom 15. Dezember 2000,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Futtermittel im Sinne von Artikel 3 Absatz 1 der Futtermittel-Verordnung vom 26. Oktober 2011;"
+              "text": "Futtermittel im Sinne von Artikel 3 Absatz 1 der Futtermittel-Verordnung vom 26. Oktober 2011;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -96,9 +99,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "53e435718f3755faf6199b1662a24d7d5c1912c1287ddc5ae22fec88f705986f"
+      "sha": "34571138cdef3578f9246dc59f9d7787012f478a84901c95ce6dd1b51646d8d3"
     },
     {
       "id": "bund/CHEMV/art_2",
@@ -122,35 +125,43 @@
             },
             {
               "marke": "1",
-              "text": "jede natürliche oder juristische Person mit Wohnsitz, Geschäftssitz oder Zweigniederlassung in der Schweiz , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt,"
+              "text": "jede natürliche oder juristische Person mit Wohnsitz, Geschäftssitz oder Zweigniederlassung in der Schweiz , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt:"
+              "text": "als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "unter eigenem Namen ohne Angabe des Namens der ursprünglichen Herstellerin"
+              "text": "unter eigenem Namen ohne Angabe des Namens der ursprünglichen Herstellerin",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "unter eigenem Handelsnamen"
+              "text": "unter eigenem Handelsnamen",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "in einer anderen als von der ursprünglichen Herstellerin vorgesehenen Verpackung"
+              "text": "in einer anderen als von der ursprünglichen Herstellerin vorgesehenen Verpackung",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "für einen anderen Verwendungszweck oder"
+              "text": "für einen anderen Verwendungszweck oder",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "an einem Ort, in dessen Amtssprache die Kennzeichnung nach Artikel 10 Absatz 3 Buchstabe b durch die ursprüngliche Herstellerin nicht erfolgt ist,"
+              "text": "an einem Ort, in dessen Amtssprache die Kennzeichnung nach Artikel 10 Absatz 3 Buchstabe b durch die ursprüngliche Herstellerin nicht erfolgt ist,",
+              "tiefe": 2
             },
             {
               "marke": "3",
-              "text": "als alleinige Herstellerin gilt eine Person, die einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen lässt und in der Schweiz Wohnsitz, Geschäftssitz oder Zweigniederlassung hat; hat sie weder Wohnsitz noch Geschäftssitz oder Zweigniederlassung in der Schweiz, so ist der Dritte alleinige Herstellerin."
+              "text": "als alleinige Herstellerin gilt eine Person, die einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen lässt und in der Schweiz Wohnsitz, Geschäftssitz oder Zweigniederlassung hat; hat sie weder Wohnsitz noch Geschäftssitz oder Zweigniederlassung in der Schweiz, so ist der Dritte alleinige Herstellerin.",
+              "tiefe": 1
             }
           ]
         },
@@ -164,19 +175,23 @@
             },
             {
               "marke": "1",
-              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie zu Erwerbszwecken zu verwenden,"
+              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie zu Erwerbszwecken zu verwenden,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "als berufliche Verwenderin gilt auch:"
+              "text": "als berufliche Verwenderin gilt auch:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer Ausbildung oder zu Forschungszwecken zu verwenden"
+              "text": "jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer Ausbildung oder zu Forschungszwecken zu verwenden",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "jede juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer gemeinnützigen Tätigkeit zu verwenden;"
+              "text": "jede juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht, um sie im Rahmen einer gemeinnützigen Tätigkeit zu verwenden;",
+              "tiefe": 2
             },
             {
               "marke": "b",
@@ -200,11 +215,13 @@
             },
             {
               "marke": "[tab]",
-              "text": "1. in höheren Mengen in Verkehr gebracht werden, als sie im Europäischen Wirtschaftsraum (EWR) registriert sind, oder"
+              "text": "1. in höheren Mengen in Verkehr gebracht werden, als sie im Europäischen Wirtschaftsraum (EWR) registriert sind, oder",
+              "tiefe": 1
             },
             {
               "marke": "[tab]",
-              "text": "2. ausschliesslich als Zwischenprodukte registriert sind, soweit sie keine Monomere sind;"
+              "text": "2. ausschliesslich als Zwischenprodukte registriert sind, soweit sie keine Monomere sind;",
+              "tiefe": 1
             },
             {
               "marke": "g",
@@ -212,11 +229,13 @@
             },
             {
               "marke": "1",
-              "text": "eine einfache Gewichtsmehrheit von Molekülen mit mindestens drei Monomereinheiten, die zumindest mit einer weiteren Monomereinheit oder einem sonstigen Reaktanden eine kovalente Bindung eingegangen sind, und"
+              "text": "eine einfache Gewichtsmehrheit von Molekülen mit mindestens drei Monomereinheiten, die zumindest mit einer weiteren Monomereinheit oder einem sonstigen Reaktanden eine kovalente Bindung eingegangen sind, und",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "weniger als eine einfache Gewichtsmehrheit von Molekülen mit demselben Molekulargewicht; diese Moleküle liegen innerhalb eines bestimmten Molekulargewichtsbereichs, wobei die Unterschiede beim Molekulargewicht im Wesentlichen auf die Unterschiede in der Zahl der Monomereinheiten zurückzuführen sind;"
+              "text": "weniger als eine einfache Gewichtsmehrheit von Molekülen mit demselben Molekulargewicht; diese Moleküle liegen innerhalb eines bestimmten Molekulargewichtsbereichs, wobei die Unterschiede beim Molekulargewicht im Wesentlichen auf die Unterschiede in der Zahl der Monomereinheiten zurückzuführen sind;",
+              "tiefe": 1
             },
             {
               "marke": "h",
@@ -287,9 +306,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "f8bf6ebd1bc7eddffa0c247c2f8665d7cbeed073378cda230ab8b66803c744e5"
+      "sha": "852bb9cae3f7beaef6a081433d1786735a194bef7f6264e3140929bc0b8c2a0a"
     },
     {
       "id": "bund/CHEMV/art_3",
@@ -306,7 +325,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "63de6b7bda4c73187fdba0366a04553b41ffb21c06fcb963674d8bcd2f99eb32"
     },
@@ -329,7 +348,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "1e45dd3b5638f29bb5dac73fcbbfcb878ae2c8d74aa4cb98db8f35e379e44bbd"
     },
@@ -364,7 +383,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "e81dba190ff1ce8a417bb837d5949af7e4f8bdc55f504764b2f0efc60ce8b97e"
     },
@@ -405,7 +424,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "078428d0d5d74c6bd36b08e0bdbaa044f5c6df8218c7367c0ed90db3ff8a9158"
     },
@@ -424,7 +443,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "fb3fff14b3dea9e9806d5c85f92fd296415ec2c6a292c0307e4bae6f471a266d"
     },
@@ -443,7 +462,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "cd63b5489009771b8d925f3e714cd193d3644915a6d391bff8b072cb962b22a1"
     },
@@ -462,7 +481,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "edea32d1cc386fa9b819fb56a55bf2baf914ceccc3dc82fe0eade2e643975f50"
     },
@@ -539,7 +558,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "84e32a80303dcafe57866f909a024c39f2c95b4b3cc19cdd7793e4f3f42224b8"
     },
@@ -558,7 +577,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_10_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b64681860065b86c9f302bba16b68d6913e90579d04c35ec5e2cee14f0eef72c"
     },
@@ -581,7 +600,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "f85333b926b57956c51f6d7f1c0e378276dabf1efa6ab2ec7913a7a8ed538fbe"
     },
@@ -622,7 +641,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "3168c1f72f19e6d6e851a7f5f122c2732fa64722f03a9a6cd9a79fe65d6ff9f0"
     },
@@ -641,7 +660,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -732,7 +751,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "69a88991b2c366ae180c6cea0eaab0158f9c4b2d8d871b85c6a9ad923c761fc4"
     },
@@ -762,15 +781,18 @@
             },
             {
               "marke": "1",
-              "text": "die chemische Bezeichnung,"
+              "text": "die chemische Bezeichnung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die vom Chemical Abstract Service festgelegte Nummer (CAS-Nr.),"
+              "text": "die vom Chemical Abstract Service festgelegte Nummer (CAS-Nr.),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die EG-Nr.;"
+              "text": "die EG-Nr.;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -817,9 +839,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "b113d43e9940282abd7de90080680500acb23302a8e923a0d907baf7d1330009"
+      "sha": "b1f2a35e827421f866904d923526a2d06f338f8b2d4ffeb4d380bd1af4f8113a"
     },
     {
       "id": "bund/CHEMV/art_15_a",
@@ -862,7 +884,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_15_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "c6398ca5c877444b70d76eddd6206f1b75477a4f414f411b82c5f8827f7fe0a6"
     },
@@ -903,7 +925,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a024973e2a3b96b14c66ec76f4442eecfa44a108a41f4cc03f758fe29e401d61"
     },
@@ -922,7 +944,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "ed721db88d9df46c866c0e2b6ffe726bc8e36e7c7e941dbc2ca811eda2097d07"
     },
@@ -941,7 +963,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "81d837971ad87fde80da08344954559c53588674673862395913a7dae5d6d9ea"
     },
@@ -975,28 +997,32 @@
             },
             {
               "marke": "1",
-              "text": "einen gesundheitsgefährdenden oder umweltgefährlichen Stoff in einer Einzelkonzentration von ≥ 1,0 Gewichtsprozent (nicht gasförmige Zubereitungen) beziehungsweise von ≥ 0,2 Volumenprozent (gasförmige Zubereitungen),"
+              "text": "einen gesundheitsgefährdenden oder umweltgefährlichen Stoff in einer Einzelkonzentration von ≥ 1,0 Gewichtsprozent (nicht gasförmige Zubereitungen) beziehungsweise von ≥ 0,2 Volumenprozent (gasförmige Zubereitungen),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "einen karzinogenen Stoff der Kategorie 2, einen reproduktionstoxischen Stoff der Kategorie 1A, 1B oder 2, ein Hautallergen der Kategorie 1, ein Inhalationsallergen der Kategorie 1, einen Stoff, der Wirkungen auf oder über die Laktation hat, oder einen PBT- oder vPvB-Stoff in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,"
+              "text": "einen karzinogenen Stoff der Kategorie 2, einen reproduktionstoxischen Stoff der Kategorie 1A, 1B oder 2, ein Hautallergen der Kategorie 1, ein Inhalationsallergen der Kategorie 1, einen Stoff, der Wirkungen auf oder über die Laktation hat, oder einen PBT- oder vPvB-Stoff in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "einen Stoff nach Anhang 3 in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,"
+              "text": "einen Stoff nach Anhang 3 in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "einen Stoff, für den ein Grenzwert für die Exposition am Arbeitsplatz in der Richtlinie 2000/39/EG, 2006/15/EG, 2009/161/EU, (EU) 2017/164 oder (EU) 2019/1831 festgelegt ist."
+              "text": "einen Stoff, für den ein Grenzwert für die Exposition am Arbeitsplatz in der Richtlinie 2000/39/EG, 2006/15/EG, 2009/161/EU, (EU) 2017/164 oder (EU) 2019/1831 festgelegt ist.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "539a7b8c55f7d4342ca7bccb385f3a88e68693965cea8cb1c717bb0212d07856"
+      "sha": "1792a9be5519f163027dcf09071d76bded754e8abdb267374c8d6d57237c01aa"
     },
     {
       "id": "bund/CHEMV/art_20",
@@ -1021,7 +1047,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "4d45bdea22403a88992d262580b1b3d90cd9ab4ea7c6579ee5fd0d8145a60ef9"
     },
@@ -1072,7 +1098,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "2de91590af2711d0f871e299d2edaf05a12a45210f5efff4db62cacd4a522a4f"
     },
@@ -1099,7 +1125,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "ea2c32cf1a6ca8b78e799e458104e5de4408aa76fb205d2d3e2baac96d878aea"
     },
@@ -1118,7 +1144,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "53dc367297b517237bf98f84c6629a1a3defa0e064d2c82db2b8b74ee753f574"
     },
@@ -1159,7 +1185,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "1be351b298214bc8f9ca6a1f6b56a330e78d1203e05e7d1b5939861f0b950c5d"
     },
@@ -1178,7 +1204,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "d5810d119e41cc3eba1707be1d71d6e660aa2bd3332b1c2a339feb0dc6dd6efa"
     },
@@ -1212,15 +1238,18 @@
             },
             {
               "marke": "1",
-              "text": "ausschliesslich zu Zwecken der produkt- und verfahrensorientierten Forschung und Entwicklung,"
+              "text": "ausschliesslich zu Zwecken der produkt- und verfahrensorientierten Forschung und Entwicklung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "höchstens in der für den genannten Zweck erforderlichen Menge, und"
+              "text": "höchstens in der für den genannten Zweck erforderlichen Menge, und",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "höchstens während fünf Jahren; auf begründeten Antrag kann die Anmeldestelle im Einvernehmen mit den Beurteilungsstellen diese Frist um weitere fünf oder zehn Jahre verlängern;"
+              "text": "höchstens während fünf Jahren; auf begründeten Antrag kann die Anmeldestelle im Einvernehmen mit den Beurteilungsstellen diese Frist um weitere fünf oder zehn Jahre verlängern;",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -1244,11 +1273,13 @@
             },
             {
               "marke": "1",
-              "text": "es sich um denselben Stoff handelt,"
+              "text": "es sich um denselben Stoff handelt,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "ihr für den exportierten Stoff ein Sicherheitsdatenblatt nach Artikel 20 übermittelt wurde, falls dies nach Artikel 19 erforderlich ist;"
+              "text": "ihr für den exportierten Stoff ein Sicherheitsdatenblatt nach Artikel 20 übermittelt wurde, falls dies nach Artikel 19 erforderlich ist;",
+              "tiefe": 1
             },
             {
               "marke": "j",
@@ -1267,9 +1298,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "703c68903d69990616273919a09debb16defdc0c94a4533523e5177a9cc2bb73"
+      "sha": "b84faf687fc45c5b9eaf85347027ea55a396a20e6d80583a7a334ff7e30b2c8f"
     },
     {
       "id": "bund/CHEMV/art_27",
@@ -1297,39 +1328,48 @@
             },
             {
               "marke": "1",
-              "text": "Identität der Anmelderin,"
+              "text": "Identität der Anmelderin,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Identität des Stoffs,"
+              "text": "Identität des Stoffs,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Informationen zu Herstellung und Verwendung,"
+              "text": "Informationen zu Herstellung und Verwendung,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Einstufung und Kennzeichnung,"
+              "text": "Einstufung und Kennzeichnung,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Leitlinien für die sichere Verwendung,"
+              "text": "Leitlinien für die sichere Verwendung,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Beurteilung der Exposition,"
+              "text": "Beurteilung der Exposition,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "qualifizierte Prüfungszusammenfassungen und weitere Daten zu den physikalisch-chemischen Eigenschaften,"
+              "text": "qualifizierte Prüfungszusammenfassungen und weitere Daten zu den physikalisch-chemischen Eigenschaften,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die gesundheitsgefährdenden Eigenschaften,"
+              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die gesundheitsgefährdenden Eigenschaften,",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die umweltgefährlichen Eigenschaften;"
+              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die umweltgefährlichen Eigenschaften;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -1370,9 +1410,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "9494f36d655f19db713c34f1077ee939f9859171e4e2b6cee10467e494fc1e18"
+      "sha": "02c06a736da7c4a33fa42ee1bcb24c987d86da14a2e5c9b75f8d1238760bd0ab"
     },
     {
       "id": "bund/CHEMV/art_28",
@@ -1408,20 +1448,22 @@
             },
             {
               "marke": "1",
-              "text": "eine Beurteilung der Exposition, bei der alle identifizierten Verwendungen zu berücksichtigen sind,"
+              "text": "eine Beurteilung der Exposition, bei der alle identifizierten Verwendungen zu berücksichtigen sind,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "eine Beschreibung der Risiken, bei der alle identifizierten Verwendungen zu berücksichtigen sind."
+              "text": "eine Beschreibung der Risiken, bei der alle identifizierten Verwendungen zu berücksichtigen sind.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "96b981c512caf4b6e5d7fa0c13de52dac8394f9c860b9845f67ffc43dd80f972"
+      "sha": "510e522040615c0a75d81a2c59d33891b2ee31c833f7a1b1de28016187baa696"
     },
     {
       "id": "bund/CHEMV/art_29",
@@ -1470,7 +1512,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "2eb2edf6f169ef3d67155d7e18db5da5461a6f6ffb5c905fbee91cb530a4383d"
     },
@@ -1493,7 +1535,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "4d05684fee1eb11bbe5ca90005d6294a2890007d747864ca04d8a3bc1a26e299"
     },
@@ -1544,7 +1586,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "c989507ec90f109597acd05ff344115eda4bbbe7c4662530dd5238ff9ced5153"
     },
@@ -1585,7 +1627,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "d3d61a3e2971b2050744cb85c7108d33aa3661b80b8fe0d18828ff828c76aa4a"
     },
@@ -1614,7 +1656,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "89f6efc91489fe4430daa46bca217315858b37da4f749bed215149c73ed9839d"
     },
@@ -1633,7 +1675,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "36245de559282e5de4845dd7565fc92422f4ed0d57f77aec95386a3137a1c80e"
     },
@@ -1694,7 +1736,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "be62279070ade5fe97a25370b03dd0d0d1cd109e41cecc474621fc9fe096ad1b"
     },
@@ -1717,7 +1759,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "4bb4ce843034925f8ceb469da32709eafa3fcbb4738be664f7966b7e98f18264"
     },
@@ -1758,7 +1800,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "8a9fc92aa15a3f6568bec2db8ed9270152259e5e81deea5b5d8017629bcb77d4"
     },
@@ -1789,7 +1831,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "6cbd4b9466cfad2d15c650aee439d2716f3d79fd644861f90c9558c783421f79"
     },
@@ -1812,7 +1854,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "78b8aea0fdfd5ea4bffd4103372589bfcaa9719d35a9bef02af6663e18efb873"
     },
@@ -1841,7 +1883,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "856b64324f67ffa64e5206b0e6f8d9f5715ea8a5e8f0b974b8f50b59f4a24790"
     },
@@ -1870,7 +1912,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b3ee5265d7cbf89a23bc5eefa5be28153dbaf9926ede635c6fa77623e69a20e2"
     },
@@ -1897,7 +1939,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "0d88673e3feafd5440d58920fcf891a015ca022611351ebfa7d59900875f87a2"
     },
@@ -1956,7 +1998,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b41d76162f762ac61dfeaf1566acedf51686a2818b154d7a42b94270735733e9"
     },
@@ -1997,7 +2039,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "e3ad0f3072b1fbdc386df6d1459be6f68a2c38614cec03c7628c53cf589048f5"
     },
@@ -2020,7 +2062,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "9f90c4f4fa831a9e3da977baf048c13eaf9322a6060ba7a2b7f57ecaaf4efd22"
     },
@@ -2081,7 +2123,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "d565197e8f45b7a4f012c2dccbe1e37b5618a7cef1bc2c6b2ae9334229f8780d"
     },
@@ -2130,7 +2172,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b2996a3b28f62154af4a1488189ed7f20f95cdaf4287880990045df9f25337de"
     },
@@ -2163,7 +2205,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "114e3e8675599d96a09bc590f0926520e90096e721c68ed8fda57f58466ff87a"
     },
@@ -2193,47 +2235,58 @@
             },
             {
               "marke": "1",
-              "text": "die chemische Bezeichnung nach Artikel 18 Absatz 2 Buchstaben a–d der EU-CLP-Verordnung,"
+              "text": "die chemische Bezeichnung nach Artikel 18 Absatz 2 Buchstaben a–d der EU-CLP-Verordnung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die CAS-Nr.,"
+              "text": "die CAS-Nr.,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die EG-Nr.,"
+              "text": "die EG-Nr.,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "die Einstufung und die Kennzeichnung,"
+              "text": "die Einstufung und die Kennzeichnung,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "die Verwendungszwecke,"
+              "text": "die Verwendungszwecke,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "bei umweltgefährlichen Stoffen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,"
+              "text": "bei umweltgefährlichen Stoffen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "bei Nanomaterialien:"
+              "text": "bei Nanomaterialien:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "die Zusammensetzung, die Teilchenform und die mittlere Korngrösse sowie, soweit vorhanden, die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung, und"
+              "text": "die Zusammensetzung, die Teilchenform und die mittlere Korngrösse sowie, soweit vorhanden, die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung, und",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "die voraussichtlich jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Kilogramm, 1–10 Kilogramm, 10–100 Kilogramm, 100–1000 Kilogramm, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,"
+              "text": "die voraussichtlich jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Kilogramm, 1–10 Kilogramm, 10–100 Kilogramm, 100–1000 Kilogramm, 1–10 Tonnen, 10–100 Tonnen, mehr als 100 Tonnen,",
+              "tiefe": 2
             },
             {
               "marke": "8",
-              "text": "Hinweis, ob der Stoff als PBT oder als vPvB gilt,"
+              "text": "Hinweis, ob der Stoff als PBT oder als vPvB gilt,",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "den im EWR vorhandenen Stoffsicherheitsbericht, sofern er von der Herstellerin mit zumutbarem Aufwand beschafft werden kann;"
+              "text": "den im EWR vorhandenen Stoffsicherheitsbericht, sofern er von der Herstellerin mit zumutbarem Aufwand beschafft werden kann;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -2241,35 +2294,43 @@
             },
             {
               "marke": "1",
-              "text": "den Handelsnamen,"
+              "text": "den Handelsnamen,",
+              "tiefe": 1
             },
             {
               "marke": "1a",
-              "text": "den UFI,"
+              "text": "den UFI,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die Angaben zu den Bestandteilen nach den Bestimmungen über das Sicherheitsdatenblatt,"
+              "text": "die Angaben zu den Bestandteilen nach den Bestimmungen über das Sicherheitsdatenblatt,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die Einstufung und die Kennzeichnung,"
+              "text": "die Einstufung und die Kennzeichnung,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "die Verwendungszwecke,"
+              "text": "die Verwendungszwecke,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "den Aggregatszustand,"
+              "text": "den Aggregatszustand,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "bei umweltgefährlichen Zubereitungen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10– 100 Tonnen, mehr als 100 Tonnen,"
+              "text": "bei umweltgefährlichen Zubereitungen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10– 100 Tonnen, mehr als 100 Tonnen,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "bei Zubereitungen, die Nanomaterialien enthalten: die folgenden Daten, soweit sie im Sicherheitsdatenblatt aufgeführt sind: die Zusammensetzung der Nanomaterialien, deren Teilchenform und mittlere Korngrösse sowie die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung."
+              "text": "bei Zubereitungen, die Nanomaterialien enthalten: die folgenden Daten, soweit sie im Sicherheitsdatenblatt aufgeführt sind: die Zusammensetzung der Nanomaterialien, deren Teilchenform und mittlere Korngrösse sowie die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung.",
+              "tiefe": 1
             }
           ]
         },
@@ -2283,11 +2344,13 @@
             },
             {
               "marke": "1",
-              "text": "bei Parfümen: insgesamt 5 Gewichtsprozent,"
+              "text": "bei Parfümen: insgesamt 5 Gewichtsprozent,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "bei Farbmitteln: insgesamt 25 Gewichtsprozent;"
+              "text": "bei Farbmitteln: insgesamt 25 Gewichtsprozent;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -2298,9 +2361,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "1205549333760ee1a4c036b5ab931c6026d9d95c108d79e43b4b7276c70b312e"
+      "sha": "6613dc3bf47b2769493c7e4a4ab1895fa73ba05c41e9602fc9170623c5f16668"
     },
     {
       "id": "bund/CHEMV/art_50",
@@ -2317,7 +2380,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "3e16d057409b0e2e23b11c8c411208c402c5b654301b6c57c5b9a3a1c191ea82"
     },
@@ -2346,7 +2409,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "d747c1797c4895bc16a0fee5e460a3686107263512e98ade62457503e190ec0f"
     },
@@ -2369,7 +2432,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "579f1af9cbaf5007f9ffc9c9e2351506c0cb9cc5f65558330b903ce8d7140252"
     },
@@ -2388,7 +2451,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "4e00060a4e3f4066c091f63e5d08f50d827a19347754efabb57aee94031495e0"
     },
@@ -2410,15 +2473,18 @@
             },
             {
               "marke": "1",
-              "text": "nicht an Dritte abgegeben werden,"
+              "text": "nicht an Dritte abgegeben werden,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "den Herstellungsstandort nicht verlassen, oder"
+              "text": "den Herstellungsstandort nicht verlassen, oder",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "in Mengen unter 100 kg pro Jahr in Verkehr gebracht werden;"
+              "text": "in Mengen unter 100 kg pro Jahr in Verkehr gebracht werden;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -2450,11 +2516,13 @@
             },
             {
               "marke": "1",
-              "text": "der Handelsname, die Zusammensetzung, der UFI und der Verwendungszweck unverändert sind, und"
+              "text": "der Handelsname, die Zusammensetzung, der UFI und der Verwendungszweck unverändert sind, und",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der Name der ursprünglichen Herstellerin zusätzlich angegeben wird;"
+              "text": "der Name der ursprünglichen Herstellerin zusätzlich angegeben wird;",
+              "tiefe": 1
             },
             {
               "marke": "h",
@@ -2482,11 +2550,13 @@
             },
             {
               "marke": "1",
-              "text": "die Anforderungen von Artikel 25 Absatz 8 der EU-CLP-Verordnung eingehalten werden, oder"
+              "text": "die Anforderungen von Artikel 25 Absatz 8 der EU-CLP-Verordnung eingehalten werden, oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die möglichen gesundheitsgefährlichen Farbmittel in der Konzentration, in der sie maximal zugemischt werden, in der Meldung der Basisfarbe angegeben sind; in diesem Fall ist das Produkt mit dem UFI der Basisfarbe zu kennzeichnen;"
+              "text": "die möglichen gesundheitsgefährlichen Farbmittel in der Konzentration, in der sie maximal zugemischt werden, in der Meldung der Basisfarbe angegeben sind; in diesem Fall ist das Produkt mit dem UFI der Basisfarbe zu kennzeichnen;",
+              "tiefe": 1
             },
             {
               "marke": "m",
@@ -2511,9 +2581,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "476df779b716b772aaebed287b31011bec5f7e7548e392816cdee8707649757e"
+      "sha": "8ec27e8e7aa651cb21bdaec2f334943246e695fb2c9afc344729f6dd9253dab0"
     },
     {
       "id": "bund/CHEMV/art_55",
@@ -2534,7 +2604,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "97951d1a220731ad53263e03c3ff9c5ff9d175fa3d67d24bef8c00cb1892411b"
     },
@@ -2575,7 +2645,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a1c1dce3440112cd6426befc3a4130db03e35a51d8f8dfd3b94e19a8717cf174"
     },
@@ -2632,7 +2702,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "9b2cc80e462a1092d3044889db9cceee25e373a13dc0d113f4ce03cb6ad71567"
     },
@@ -2651,7 +2721,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "ada75257f657642aec98316aab653195012b3bf31f7fa7bb1e1855d0c910ee11"
     },
@@ -2678,7 +2748,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a53ad6b896e90d97fa75cd9e60fcd6ae28cbc7aad0b6159fb084f4e6b92501cd"
     },
@@ -2713,7 +2783,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "525afc3254775159f150ea6bb465c95352abc5c2a5f158926db7e8aaba1241b1"
     },
@@ -2756,7 +2826,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a33e0c54f8f2aee5500fb7314aeb21109a34fcc6e72e88eb69d9c4ff9583f88d"
     },
@@ -2783,7 +2853,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "580c2b58543a184153b4a124b95210f3272ce05468017f5a927e1e7f15ccd46e"
     },
@@ -2806,7 +2876,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "8b404dc8768659f2584f642d3bc8c0c421902b9b71f09e7723813104e5117a4a"
     },
@@ -2837,7 +2907,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b557141e9e8ec5f3d55bad90f3179440bc1631ee5fa927bb0cc861a8f836b16b"
     },
@@ -2868,7 +2938,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a6079e16d478bc9bdff5c88601675b6c6fb1045b34ce6f77173d7135bb26a158"
     },
@@ -2919,7 +2989,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "d9cb0f02ae2565df81aa14e35163656a09f9ec8f8ad04cae98c6520c482d8e2a"
     },
@@ -2968,7 +3038,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "f4ea4362347fa70aa3e1dfb0753eca4e7d470a0a557f8009a8e51d6a1ae645e5"
     },
@@ -2987,7 +3057,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "6e02081a05274842bd76711e06ced1aebb7a6a15c91338a2355e9026eb7d7eaa"
     },
@@ -3010,7 +3080,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "9c570385adfc5242a8c573923a737d574c208c41353de9dcc3c3f15a10017e88"
     },
@@ -3033,7 +3103,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "f3161e28390ae03c872b228d3ee005850a7a7cad86df5a367718a178546458a8"
     },
@@ -3076,7 +3146,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "bc6ec2eedef5939694bd31730e79f6dadfa7fa956279decb06f3dfda9a3422b3"
     },
@@ -3135,7 +3205,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "3daa3980ec7df8b6317c3a142d53e4bbdb74b002cbb9375cc82d319a3bd431cf"
     },
@@ -3230,7 +3300,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a373bae1be9ff243804a4741edde5f51f6838fa5c39a7bdd7f053d49b83efeeb"
     },
@@ -3252,11 +3322,13 @@
             },
             {
               "marke": "1",
-              "text": "die Düngerverordnung vom 1. November 2023,"
+              "text": "die Düngerverordnung vom 1. November 2023,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die Futtermittel-Verordnung vom 26. Oktober 2011;"
+              "text": "die Futtermittel-Verordnung vom 26. Oktober 2011;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -3264,11 +3336,13 @@
             },
             {
               "marke": "1",
-              "text": "die Pflanzenschutzmittelverordnung vom 20. August 2025,"
+              "text": "die Pflanzenschutzmittelverordnung vom 20. August 2025,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die Verordnung vom 27. Mai 2020 über den Vollzug der Lebensmittelgesetzgebung;"
+              "text": "die Verordnung vom 27. Mai 2020 über den Vollzug der Lebensmittelgesetzgebung;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -3295,9 +3369,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_74",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "e44e71bff5e1ca655f4891182d05186d98b7774012df1572469e1b12d3cace03"
+      "sha": "a575b7bf0ffadc275b0b78e92857ba6df8ef2be48c8e6ec8129560311e5ea0e1"
     },
     {
       "id": "bund/CHEMV/art_75",
@@ -3351,15 +3425,18 @@
             },
             {
               "marke": "1",
-              "text": "von einer Strafverfolgungsbehörde verlangt wird;"
+              "text": "von einer Strafverfolgungsbehörde verlangt wird;",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der Beantwortung medizinischer Anfragen, insbesondere in Notfällen, dient; oder"
+              "text": "der Beantwortung medizinischer Anfragen, insbesondere in Notfällen, dient; oder",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die Abwehr einer unmittelbar drohenden Gefahr für das Leben oder die Gesundheit des Menschen oder für die Umwelt zum Ziel hat."
+              "text": "die Abwehr einer unmittelbar drohenden Gefahr für das Leben oder die Gesundheit des Menschen oder für die Umwelt zum Ziel hat.",
+              "tiefe": 1
             }
           ]
         },
@@ -3370,9 +3447,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_75",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "3321b284aa0ee55929f9b7bbb856b419ebab9512fce2f31fd94ac162266faa20"
+      "sha": "afec4bb82086a6ca11ea9e93ac9a09f265417231cb918300275a43854fac6587"
     },
     {
       "id": "bund/CHEMV/art_76",
@@ -3403,7 +3480,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "7ae06f03c4edd72398e5c1cad9bea44503ba3e1d8ec180708273be710bd1be86"
     },
@@ -3470,7 +3547,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "42491218e8cf114915934ea58ba09d65320161c3cc01d42f5aa8fc659a881e0c"
     },
@@ -3503,7 +3580,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_78",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "86c6116be5d52bae45263517ceeacef9ac7108dce56b6641363a95ed5f3aad8e"
     },
@@ -3526,7 +3603,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "f51d9dc317cea4354f72b6cbae6005474990818a9c8e84720e509691ae90754e"
     },
@@ -3585,7 +3662,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "068217ecf47d5f54907c930bb3cd41b75099cb604ccaddad7952c993658742c6"
     },
@@ -3668,7 +3745,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a935c0c8b2423c59d5294564a461175b03c3501e120cae114a9892d811875059"
     },
@@ -3687,7 +3764,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "bbedf2def2b87ab88d491c87b4a9c2b789bb1ae918fa8ad558c651d9e9168524"
     },
@@ -3714,7 +3791,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "1f85a5f3f9aaaa73086b54d46e55c2a8b47f0af193f1b5a2fc95dab0040fdd8e"
     },
@@ -3736,15 +3813,18 @@
             },
             {
               "marke": "1",
-              "text": "Es bezeichnet die massgebende Fassung der Anhänge der EU-CLP-Verordnung."
+              "text": "Es bezeichnet die massgebende Fassung der Anhänge der EU-CLP-Verordnung.",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Es berücksichtigt die Änderungen der Testrichtlinien für Chemikalien der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) und bezeichnet die massgebende Fassung der Verordnung (EG) Nr. 440/2008 und des Handbuchs der UNO über Prüfungen und Kriterien zur Bestimmung physikalischer Gefahren (UN Manual of Tests and Criteria)."
+              "text": "Es berücksichtigt die Änderungen der Testrichtlinien für Chemikalien der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) und bezeichnet die massgebende Fassung der Verordnung (EG) Nr. 440/2008 und des Handbuchs der UNO über Prüfungen und Kriterien zur Bestimmung physikalischer Gefahren (UN Manual of Tests and Criteria).",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Es bezeichnet die massgebende Fassung des Anhangs II der EU-REACH-Verordnung."
+              "text": "Es bezeichnet die massgebende Fassung des Anhangs II der EU-REACH-Verordnung.",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -3763,9 +3843,9 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
-      "sha": "ed41cb34c28073a21434106d8322e9f2cf5a42a086a559579a844cd92ed7946f"
+      "sha": "9cfa8a77abc27e4f1e1bea154ff90dfa0800812ad20b1e675543930ea1d4f203"
     },
     {
       "id": "bund/CHEMV/art_85",
@@ -3804,7 +3884,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "931d2e86116048ff46276f5826964f7e25ac49a996b7426ef3a8cc7b89c97f7e"
     },
@@ -3823,7 +3903,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "9b114f8f9276c1231de8e8ac69f9f4d269e0b26f4e0fe4b1802ad9110b82d05e"
     },
@@ -3872,7 +3952,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "c05d733f691ac556ceefc84c707bf9e15040567f55d0322b36d83eececebf282"
     },
@@ -3903,7 +3983,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "5a51f816c2ec14ac94604608d31f89f37c8d58e8e3448f12e8ed1b3a45f4dfe8"
     },
@@ -3922,7 +4002,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3945,7 +4025,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "1970ffb1d28b17d17ff66963a487a44771ad9f51b6f4dcc0ecff809ca74823d0"
     },
@@ -3964,7 +4044,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_90_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "6b03c88adb16f7536a9e80ddbed538111469673c3269a4f012ba277222e63859"
     },
@@ -3983,7 +4063,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "af0b2147d58f460e301db6ac821f029a7bbf6fb98097f8bab70beed271f62a42"
     },
@@ -4002,7 +4082,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "4981d26b098440031b057831c9c3d8af713ef4b2b99521643fc5b4b7125f39ab"
     },
@@ -4047,7 +4127,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b0280b03f94103b950edaede98b6144fd34c022c10d5cbc893b5c71553a16b53"
     },
@@ -4070,7 +4150,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "eebeb3007f7be93f9124d11075bc004b3a45aa655d6574277af309107dec98a2"
     },
@@ -4099,7 +4179,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "a7ef64d1e51a5503cd79d962c7c2a43d349da9b4cd9bee7369e105537e35e22d"
     },
@@ -4140,7 +4220,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "b6b1b137c1b440f829ad705ecbd60e541d604f0bd259b1210daf2068a0f3a27d"
     },
@@ -4159,7 +4239,7 @@
       ],
       "stand": "2026-04-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260424",
       "sha": "6ffd59c9d9fca71fd560a3738001d7c3cf33f85a609e653aa1cf6bf1ff33df9f"
     }

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/CHEMRRV/art_1",
@@ -58,7 +58,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a828e125cbd36ca5d245772d88a879879a5c23656466b6845c32cc2cb7b7b279"
     },
@@ -87,7 +87,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7725c1224b1383df6ce203880bbce21f6a239c697a5a3895b2e81983ef94b05c"
     },
@@ -110,7 +110,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "46cee4208947487a672282ce37fc880c4f7531c99b8b5714253c26de96b65663"
     },
@@ -147,7 +147,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_3_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1d5a27e13622802841199b04c9c457f1a9fa1b65712ef7c83590dfca0e5fef5d"
     },
@@ -190,7 +190,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "78a22eecbe3b4a273303361600255031477e25673ab1375de94e6cdf61a64dda"
     },
@@ -209,7 +209,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_4_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "dedaced68c12d461293729e3a395c2a1a16e1c5ffdd88ee8da1164666778725e"
     },
@@ -250,7 +250,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b401665bff4b28b2a41fd7fd9882095268873d702178a5365c1566da7780ece1"
     },
@@ -269,7 +269,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "08b68477a4d2a8ea73506c0f6c6513b418bbde87aae2f2f22590bffd01cc0f05"
     },
@@ -291,19 +291,23 @@
             },
             {
               "marke": "1",
-              "text": "Pflanzenschutzmitteln,"
+              "text": "Pflanzenschutzmitteln,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Schädlingsbekämpfungsmitteln im Auftrag Dritter,"
+              "text": "Schädlingsbekämpfungsmitteln im Auftrag Dritter,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Mitteln zur Desinfektion des Badewassers in Gemeinschaftsbädern,"
+              "text": "Mitteln zur Desinfektion des Badewassers in Gemeinschaftsbädern,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Holzschutzmitteln;"
+              "text": "Holzschutzmitteln;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -311,11 +315,13 @@
             },
             {
               "marke": "1",
-              "text": "Herstellen, Installieren, Warten oder Entsorgen von Geräten oder Anlagen, die der Kühlung, Klimatisierung oder Wärmegewinnung dienen,"
+              "text": "Herstellen, Installieren, Warten oder Entsorgen von Geräten oder Anlagen, die der Kühlung, Klimatisierung oder Wärmegewinnung dienen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Entsorgen von Kältemitteln."
+              "text": "Entsorgen von Kältemitteln.",
+              "tiefe": 1
             }
           ]
         },
@@ -330,9 +336,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "2278382b3893e47f9169640c5517be4d6ac66d3b5fe3735c3fe26c6d2f5072bd"
+      "sha": "dfe1027ee1c94049ac8359dfa98b8b32ddef04fbe751c1a301245b0f30efe108"
     },
     {
       "id": "bund/CHEMRRV/art_8",
@@ -401,7 +407,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a0693aab739209ea20a71c2a848033e20805f8833b627cf17cbf5eb115a5535c"
     },
@@ -432,7 +438,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_8_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cd04d458c70d3fc011a73c85f7b6685990b83c029a2709b8b0023fb99b597972"
     },
@@ -459,7 +465,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4b8a1586994d2d3bda9f980a411f655538ccf7a125dd0293702b6229a7421317"
     },
@@ -486,7 +492,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a74382728946b8446e7047d6cde89fd54444d132787ba69d038e1385aa06c661"
     },
@@ -519,7 +525,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4d90dca734054c8ab3ab4c42dcd2bbc8839be7bfe3ecfb12168055e5e7ec8089"
     },
@@ -582,7 +588,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "da1abc50d3345e85a4e95fbb089dba27e764e19ef01e270d75430b77591e7946"
     },
@@ -627,7 +633,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_12_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2c243495b82d7a8e300b003e07f74de2ac33655ccbeb034be5f222a1c8271662"
     },
@@ -646,7 +652,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "48c6192ac97fcaf769766ee4bfd6f6336208ab6912b220fbca7f13adba378e98"
     },
@@ -683,7 +689,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "49955861952803a0cb81ae64bf7a46e5d11c495870872f00184c1c5b3f5a14d2"
     },
@@ -706,7 +712,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "45801e15e249ab88ddec70b4aa86cdb7231d3e2004c84d18bf64fe59adf8e227"
     },
@@ -733,7 +739,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4cb11be0a93a0baa346d7d9e4472fdbad9083ccb9e2d3940240424d691e9b4ba"
     },
@@ -756,7 +762,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a207f05c71c2676e11d28f601ac5a847b332477c22bf7614f278066e237442a4"
     },
@@ -783,7 +789,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3072708cfd50a15c127b7c92757e7358a60d810704a8f7600a2e606373cafcb9"
     },
@@ -802,7 +808,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "82158548bf7cb645e1aede0aca95e423b3eea06f4f261a766ce96636ebf34414"
     },
@@ -835,7 +841,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a74f6e6561fd2a84db2ad1c305ba3637f78481617ee62b4102713f8812e7e182"
     },
@@ -854,7 +860,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3716cc75c02631ddd8a45223e75c5a53622c368cbff93107e26d6ed35c14dda7"
     },
@@ -873,7 +879,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9b114f8f9276c1231de8e8ac69f9f4d269e0b26f4e0fe4b1802ad9110b82d05e"
     },
@@ -900,7 +906,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b76e203d97f5139538c8280419ea77247ab0e50d5a7912919e816b547952a54a"
     },
@@ -931,7 +937,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_23_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "18c69c9e76a271bb7c067455318ad38051a703b24977e9e5174357eaf3187be5"
     },
@@ -950,7 +956,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8e8b81aa597fc5aca3a8ab46cf64cc6b03532e3a681c421cf4f2b377d4728282"
     }
