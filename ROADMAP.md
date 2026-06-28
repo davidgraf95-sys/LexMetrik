@@ -113,6 +113,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 > Reihenfolge nach Praxis-Hebel × Machbarkeit ohne Fachzeit × Abhängigkeiten. Alles `[OF]`, sofern
 > nicht vermerkt. Details + Bau-Auflagen je Werkzeug: «Funktions-Katalog» unten + jeweilige `FAHRPLAN-*.md`.
 
+> **■ Fortschritt 28.6.2026 (eine grosse Session, 3 Prod-Deploys):**
+> - **S0** Verfallsregister-UI ✅ **LIVE**
+> - **Welle 1 · 1** Begründungs-Absatz (alle [OF]-Teile, Phasen 0–5; PDF-Block AUS = Davids Entscheid) ✅ **LIVE**
+> - **Welle 1 · 2** Norm↔Werkzeug-Brücke (Index gehärtet + Erlass-Karten-Hinweis) ✅ **LIVE**
+> - **Welle 1 · 3** Alltags-Cockpits: #2 Streitwert-Grenzwert ✅ **LIVE**; #3/#4 bestanden bereits; #1 Fristen-Cockpit zurückgestellt (S-5c)
+> - **Welle 1 · 4** Prozesskosten-Moat: zu ~90 % FERTIG; offen nur **I2** (Recherche `wbqdyap3x` blockiert) + **I4** (per-Kanton, mit I2)
+> - **Welle 2 · 5** Auffindbarkeit: zweiachsiger Einstieg ✅ **LIVE** · globale Artikel-Volltextsuche (FlexSearch, 24'183 Bund-Artikel) ✅ **LIVE**; offen: Kanton in den Index + FUNDAMENT-UMBAU-Rahmen
+> - **Deploys:** `b7273ae0` (S0+Welle1·1+W2-Index) · `88895088` (Streitwert+Einstieg) · `aebd72fb` (Volltextsuche, inkl. HOCH-Bug-Fix tote Links).
+> - **Nächster offener [OF]-Block:** Welle 2 · 6 (Konsultieren) — Mehrsprach DE/FR/IT braucht aber einen Fedlex-Netz-Generator (nicht autonom); kleinere autonome Reste: Kanton-Artikel in den Suchindex, Rechtsprechung-P0 (SG-Regeste, §4-sensibel).
+
 ### Welle 1 — Kern: Norm → Werkzeug → Schriftsatz + die Alltags-Klingen
 
 - [ ] **1 · Begründungs-Absatz** *(BEGRUENDUNGS-ABSATZ, ~5 %)*. Aus dem Rechen-Ergebnis ein
