@@ -1,6 +1,7 @@
 {
  "zpo:tage10:ZH": {
   "ergebnis": "Fristende (dies ad quem): 05.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -117,6 +118,7 @@
  },
  "zpo:monat1:ZH": {
   "ergebnis": "Fristende (dies ad quem): 26.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -229,6 +231,7 @@
  },
  "zpo:tage10:BS": {
   "ergebnis": "Fristende (dies ad quem): 05.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -345,6 +348,7 @@
  },
  "zpo:monat1:BS": {
   "ergebnis": "Fristende (dies ad quem): 26.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -457,6 +461,7 @@
  },
  "zpo:tage10:GE": {
   "ergebnis": "Fristende (dies ad quem): 05.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -573,6 +578,7 @@
  },
  "zpo:monat1:GE": {
   "ergebnis": "Fristende (dies ad quem): 26.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -685,6 +691,7 @@
  },
  "zpo:tage10:TI": {
   "ergebnis": "Fristende (dies ad quem): 05.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -801,6 +808,7 @@
  },
  "zpo:monat1:TI": {
   "ergebnis": "Fristende (dies ad quem): 26.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -913,6 +921,7 @@
  },
  "zpo:tage10:VS": {
   "ergebnis": "Fristende (dies ad quem): 05.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1029,6 +1038,7 @@
  },
  "zpo:monat1:VS": {
   "ergebnis": "Fristende (dies ad quem): 26.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1141,6 +1151,7 @@
  },
  "zpo:sommer30": {
   "ergebnis": "Fristende (dies ad quem): 01.09.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1257,6 +1268,7 @@
  },
  "zpo:summarisch": {
   "ergebnis": "Fristende (dies ad quem): 13.07.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1384,6 +1396,7 @@
  },
  "zpo:hinweisFehlt": {
   "ergebnis": "Fristende (dies ad quem): 13.07.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1521,6 +1534,7 @@
  },
  "zpo:mindermeinung": {
   "ergebnis": "Fristende (dies ad quem): 27.02.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 142 Abs. 2 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1634,6 +1648,7 @@
  },
  "schkg:rv10": {
   "ergebnis": "Letzter zulässiger Tag (Verwirkung): 15.04.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1741,6 +1756,7 @@
  },
  "schkg:ostern": {
   "ergebnis": "Letzter zulässiger Tag (Verwirkung): 15.04.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1848,6 +1864,7 @@
  },
  "schkg:weihnachten": {
   "ergebnis": "Letzter zulässiger Tag (Verwirkung): 07.01.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {
@@ -1955,6 +1972,7 @@
  },
  "schkg:zpoStillstand": {
   "ergebnis": "Fristende: 24.08.2026, 24.00 Uhr.",
+  "fristbeginnNorm": "Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO",
   "status": "ok",
   "rechenweg": [
    {

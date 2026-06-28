@@ -576,11 +576,11 @@ agGolden('urkunden-optionen-nachtrag', {
 // Datei importiert).
 f('absatz:zpo:tage10:ZH', () => {
   const r = berechneFrist({ ereignis: '2025-12-10', einheit: 'tage', laenge: 10, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich' });
-  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, r.normverweise[0].artikel));
+  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, r.fristbeginnNorm));
 });
 f('absatz:schkg:rv10', () => {
   const r = berechneSchkgFrist({ ereignis: '2026-03-20', einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', kanton: 'ZH' });
-  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, `Art. 31 SchKG i.V.m. ${r.normverweise[1].artikel}`));
+  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, r.fristbeginnNorm));
 });
 f('absatz:kuendigung:sperr:krank', () => begruendungsAbsatz(berechneSperrfristen({ vertragsbeginn: '2020-01-01', zugangKuendigung: '2025-04-20', kuendigendePartei: 'arbeitgeber', probezeitMonate: 1, kuendigungsterminMonatsende: true, sperrereignisse: [{ typ: 'krankheit_unfall', von: '2025-05-01', bis: '2025-05-20' }] })));
 f('absatz:miet:ordentlich', () => begruendungsAbsatz(berechneMietkuendigung({ kuendigungsart: 'ordentlich', objekt: 'wohnung', zugang: '2026-02-10', kanton: 'ZH', partei: 'mieter' })));

@@ -52,4 +52,7 @@ export type ZpoErgebnis = Berechnungsergebnis & {
   diesAQuoISO: string;
   diesAdQuemISO: string;
   stillstandAktiv: boolean;
+  // Benannte Fristbeginn-Norm (statt fragilem normverweise[0], FAHRPLAN-
+  // BEGRUENDUNGS-ABSATZ B1-1): die Norm, auf der der Fristbeginn beruht.
+  fristbeginnNorm: string;
 };

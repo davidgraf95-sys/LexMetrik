@@ -126,7 +126,21 @@ danach `golden:vergleich` grün; bestehende Keys unverändert.
 Konvention/Typografie, **nicht** Rechtsschrift-Eignung. *Beweis:* neuer grüner
 Test; bestehende unverändert.
 
-## Phase 1 — Generator-Konsolidierung (deterministisch, Logik in `lib`)
+## Phase 1 — Generator-Konsolidierung (deterministisch, Logik in `lib`) — ✅ B1-1 erledigt 28.6.2026
+
+> **Erledigt 28.6.2026 (B1-1, gebaut + gegated, nicht deployt):** Benanntes Feld
+> `fristbeginnNorm` an `ZpoErgebnis` + `SchkgErgebnis` (Engines `zpoFristen`/`schkgFristen`),
+> semantisch gesetzt (Art. 142 Abs. 1/2 ZPO bzw. «Art. 31 SchKG i.V.m. …»), nicht über
+> `normverweise[0]/[1]`. `ZpoFristenForm`/`SchkgFristenForm` ziehen das Feld (Magic-Index
+> raus, Kritik-5/«Deploy-Bug-#5-Klasse» geschlossen). Engine-Wächter
+> `src/tests/fristbeginnNorm.test.ts` (bricht bei Reihenfolge-Änderung; prüft zugleich
+> Gleichheit mit dem alten Index). Golden re-baseline (18 `zpo:*`/`schkg:*`-Fälle, Feld
+> ergänzt); die `absatz:zpo`/`absatz:schkg`-Snapshots blieben **byte-gleich** = Beweis, dass
+> das Feld exakt den alten Ausdruck reproduziert. **Offen B1-Rest:** `AllgemeineFristForm`
+> wickelt das Ergebnis UI-seitig (eigenes `normverweise[0]`) → wird im Phase-2-Slot mit
+> behandelt.
+
+## Phase 1 — Original-Schritte
 
 **B1-1 Fristbeginn-Norm als benanntes Engine-Feld** (statt Magic-Index, Kritik-5):
 z. B. `ergebnis.fristbeginnNorm`. Falls das den Engine-Output ändert → **eigener

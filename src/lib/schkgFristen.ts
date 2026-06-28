@@ -225,9 +225,13 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
     'Reine prozessuale Fristberechnung; der konkrete Sachverhalt ist im Einzelfall zu prüfen.',
   );
 
+  // Fristbeginn-Norm explizit benannt (B1-1): Art. 31 SchKG verweist auf die
+  // ZPO-Fristberechnung — nicht über normverweise[1] erschlossen.
+  const fristbeginnZpoNorm = input.einheit === 'tage' ? N_142_1 : N_142_2;
+  const fristbeginnNorm = `Art. 31 SchKG i.V.m. ${fristbeginnZpoNorm.artikel}`;
   const normverweise: Normverweis[] = [
     N_31,
-    input.einheit === 'tage' ? N_142_1 : N_142_2,
+    fristbeginnZpoNorm,
     N_142_3,
   ];
   if (modus === 'schkg_betreibungsferien') normverweise.push(N_56_1, N_63);
@@ -257,6 +261,7 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
 
   return {
     ergebnis: datumLabel + '.',
+    fristbeginnNorm,
     status: 'ok',
     rechenweg,
     annahmen,

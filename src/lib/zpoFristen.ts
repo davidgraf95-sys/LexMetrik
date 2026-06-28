@@ -250,8 +250,11 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
     'Ablauf jeweils um 24.00 Uhr des letzten Tages (dies ad quem).',
   );
 
+  // Fristbeginn-Norm explizit benannt (B1-1): Art. 142 Abs. 1 (Tage) bzw.
+  // Abs. 2 (Monate/Jahre) ZPO — nicht über normverweise[0] erschlossen.
+  const fristbeginnNormVerweis = input.einheit === 'tage' ? N_142_1 : N_142_2;
   const normverweise: Normverweis[] = [
-    input.einheit === 'tage' ? N_142_1 : N_142_2,
+    fristbeginnNormVerweis,
     N_142_3,
     N_145_1,
     N_143,
@@ -261,6 +264,7 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
 
   return {
     ergebnis: `Fristende (dies ad quem): ${fmt(diesAdQuem)}, 24.00 Uhr.` + (erstrecktBis ? ` Nach Erstreckung: ${fmt(parseISO(erstrecktBis))}.` : ''),
+    fristbeginnNorm: fristbeginnNormVerweis.artikel,
     status: 'ok',
     rechenweg,
     annahmen,

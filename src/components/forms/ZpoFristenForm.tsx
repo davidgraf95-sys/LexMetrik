@@ -344,7 +344,7 @@ export function ZpoFristenForm() {
               Abs. 1, Wochen-/Monats-/Jahresfrist → Abs. 2 (normverweise[0]).
               Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert «Abs. 1» und
               widersprach bei Monatsfristen dem eigenen Normen-Satz. */}
-          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.normverweise[0].artikel))} />
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.fristbeginnNorm))} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

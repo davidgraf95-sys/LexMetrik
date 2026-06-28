@@ -59,4 +59,7 @@ export type SchkgErgebnis = Berechnungsergebnis & {
   diesAdQuemISO: string;
   modusAktiv: SchkgModus;           // tatsächlich angewandtes Regime (nach Override)
   ruhenAnzeige: boolean;            // für die Kalender-Visualisierung (nur bei Ruhen)
+  // Benannte Fristbeginn-Norm (statt fragilem normverweise[1], FAHRPLAN-
+  // BEGRUENDUNGS-ABSATZ B1-1): «Art. 31 SchKG i.V.m. …».
+  fristbeginnNorm: string;
 };
