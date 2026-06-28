@@ -17,7 +17,7 @@ export interface ArtikelText {
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
      *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis). */
     mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
@@ -219,13 +219,24 @@ export function findeDlEnde(html: string, startIdx: number): number {
  *         bei verschachteltem <dl> nur der Einleitungstext VOR der Unterliste.
  *
  * AUSGABE-MODELL (flach, abwärtskompatibel): Unterpunkte werden als weitere
- * Items NACH ihrem Eltern-Item in DOKUMENTREIHENFOLGE angehängt. Die Lesesicht
- * (ArtikelBody) rekonstruiert die Verschachtelung aus den Marken-Typen
- * (lit a/b/c = Stufe 0; Ziff 1/2/3 NACH einem lit = Stufe 1) — dasselbe
- * Datenmodell, das schon flache lit/Ziff/Strich-Listen zweistufig rendert.
+ * Items NACH ihrem Eltern-Item in DOKUMENTREIHENFOLGE angehängt. Jedes Item
+ * trägt eine EXPLIZITE `tiefe` (0 = direkte Liste des Absatzes, +1 je
+ * verschachtelter <dl>). Damit muss die Lesesicht (ArtikelBody) die
+ * Verschachtelung NICHT mehr aus den Marken-Typen RATEN — das Raten erzeugte
+ * falsche Zitate, wenn Fedlex die übliche Reihenfolge umkehrt (Ziff. → lit.
+ * statt lit. → Ziff.): die geratene Stufe entnestete die lit. fälschlich auf
+ * Absatzebene und die Fundstelle wurde falsch (§1-Bug G8, M6 28.6.2026).
+ *
+ * `tiefe` wird NUR emittiert, wenn > 0 (verschachtelt). Top-Level-Items
+ * (tiefe 0) bleiben byte-gleich zum bisherigen Modell {marke,text} → keine
+ * unnötige Snapshot-Re-Segnung für nicht verschachtelte Erlasse; nur Artikel
+ * MIT echter Verschachtelung brechen den Daten-Index (bewusst, §7).
  */
-function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: string }> {
-  const items: Array<{ marke: string; text: string }> = [];
+function parseDefinitionsListe(
+  dlInner: string,
+  tiefe = 0,
+): Array<{ marke: string; text: string; tiefe?: number }> {
+  const items: Array<{ marke: string; text: string; tiefe?: number }> = [];
   // Iterativer Scan über die direkten <dt>…<dd>-Paare DIESER Ebene. Ein <dd>
   // kann eine verschachtelte <dl> enthalten; deren Ende wird balanciert bestimmt
   // (findeDlEnde), damit das <dd>-Ende nicht am inneren </dl> falsch erkannt wird.
@@ -283,15 +294,17 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
     // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
     // wie bisher nur bei Text (leere Items werden verworfen).
     if (marke && (text || subDlIdx >= 0)) {
-      items.push({ marke, text });
+      // tiefe NUR setzen, wenn verschachtelt (>0) → Top-Level byte-gleich (§7).
+      items.push(tiefe > 0 ? { marke, text, tiefe } : { marke, text });
     }
 
-    // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item).
+    // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item),
+    // eine Stufe tiefer — die Stufe wird explizit geführt, nicht geraten.
     if (subDlIdx >= 0) {
       const subEnde = findeDlEnde(ddRoh, subDlIdx);
       const subOpenLen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i)![0].length;
       const subInner = ddRoh.slice(subDlIdx + subOpenLen, subEnde - '</dl>'.length);
-      for (const sub of parseDefinitionsListe(subInner)) items.push(sub);
+      for (const sub of parseDefinitionsListe(subInner, tiefe + 1)) items.push(sub);
     }
   }
   return items;

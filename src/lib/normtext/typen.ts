@@ -25,11 +25,16 @@ export interface NormSnapshot {
    * - items (optional): lit./Ziff.-Aufzählungspunkte des Absatzes. marke ist
    *   die nackte Marke ('a','b','17','5a','20a') ohne Punkt/Klammer; text der
    *   Punkttext. Fehlt items, hat der Absatz keine Aufzählung (rückwärtskompat.).
+   *   tiefe (optional): explizite Verschachtelungsstufe (0 = direkte Liste des
+   *   Absatzes, weggelassen; 1+ = in eine Eltern-lit/Ziff. verschachtelt). Die
+   *   Lesesicht zitiert damit korrekt, ohne die Stufe aus dem Markentyp zu raten
+   *   (§1, M6). Fehlt tiefe, ist das Item auf Stufe 0 (oder Kanton-Daten ohne
+   *   Stufeninfo → Lesesicht-Heuristik).
    */
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */

@@ -410,20 +410,29 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 identisches Markup/Styling, nur die Marke unterscheidet sich
                 (Daten). Das zitierte Item wird stark hervorgehoben. */}
             {b.items != null && b.items.length > 0 && (() => {
-              // Verschachtelungsstufe je Item rekonstruieren (Snapshot ist flach,
-              // Fedlex verschachtelt Abs.→Bst.→Ziff.→Gedankenstrich): Bst (a,b,c)
+              // Verschachtelungsstufe je Item bestimmen. PRIMÄR aus der EXPLIZITEN
+              // `tiefe` des Snapshots (M6, §1): liefert Fedlex die Stufe mit, wird
+              // sie NICHT mehr aus dem Markentyp geraten — das Raten erzeugte
+              // falsche Zitate, wenn die Reihenfolge umgekehrt ist (Ziff. → lit.
+              // statt lit. → Ziff.). FALLBACK-Heuristik nur für Daten OHNE tiefe
+              // (Kanton-Snapshots, noch nicht re-segnete Bund-Erlasse): Bst (a,b,c)
               // = Stufe 0; Ziff (1,2,3) NACH einem Bst = Stufe 1, sonst 0;
               // Gedankenstrich = eine Stufe tiefer als das vorausgehende Item.
+              const hatTiefe = b.items!.some((it) => typeof it.tiefe === 'number');
               const typ = (m: string) => /^[–—-]$/.test(m.trim()) ? 'strich' : /^\d/.test(m.trim()) ? 'ziff' : 'lit';
               const stufen: number[] = [];
-              let sahLit = false, letzteNichtStrich = 0;
-              for (const it of b.items!) {
-                const t = typ(it.marke);
-                let lv: number;
-                if (t === 'strich') lv = letzteNichtStrich + 1;
-                else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
-                else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
-                stufen.push(lv);
+              if (hatTiefe) {
+                for (const it of b.items!) stufen.push(it.tiefe ?? 0);
+              } else {
+                let sahLit = false, letzteNichtStrich = 0;
+                for (const it of b.items!) {
+                  const t = typ(it.marke);
+                  let lv: number;
+                  if (t === 'strich') lv = letzteNichtStrich + 1;
+                  else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
+                  else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
+                  stufen.push(lv);
+                }
               }
               return (
               <ul className={`mt-1.5 space-y-1 ${zk ? 'pl-8' : 'pl-1'}`}>

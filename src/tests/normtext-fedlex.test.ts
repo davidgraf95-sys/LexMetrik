@@ -167,6 +167,40 @@ describe('extrahiereArtikel', () => {
       expect(b.items![1].text).toMatch(/^aus achtenswerten Beweggründen/);
       expect(b.items![5].text).toMatch(/^der Täter durch das Verhalten/);
     });
+
+    it('M6: explizite tiefe — lit. a/b…e = Stufe 0 (kein Schlüssel), Unterpunkte 1–4 = Stufe 1', () => {
+      const b = extrahiereArtikel(MSTG_ART_42, '42')!.bloecke[0];
+      // Top-Level-lit. tragen KEIN tiefe-Feld (byte-gleich zum Alt-Modell, §7).
+      expect(b.items![0].tiefe).toBeUndefined(); // a
+      expect(b.items!.filter((i) => /^[a-z]$/.test(i.marke)).every((i) => i.tiefe === undefined)).toBe(true);
+      // Verschachtelte Ziff. 1–4 tragen tiefe = 1.
+      expect(b.items!.filter((i) => /^\d$/.test(i.marke)).map((i) => i.tiefe)).toEqual([1, 1, 1, 1]);
+    });
+  });
+
+  describe('M6 §1-KRITISCH: invertierte Verschachtelung Ziff. → lit. (BankG Art. 16, real)', () => {
+    // Reale Fedlex-Struktur BankG art_16: Ziff. 1, 1bis (mit verschachtelten
+    // lit. a/b), 2, 3. Die FRÜHERE Render-Heuristik (Stufe aus Markentyp raten)
+    // entnestete lit. a/b fälschlich auf Stufe 0 UND schob die folgenden Ziff. 2/3
+    // fälschlich auf Stufe 1 (weil sie nach dem ersten Buchstaben «sahLit» annahm)
+    // → falsche Fundstellen für >=4 Items. Die explizite tiefe behebt das (§1).
+    const BANKG_ART_16 = `<article id="art_16"><a name="a16"></a><h6 class="heading" role="heading"><span class="display-icon"></span><span class="external-link-icon"></span><a href="#art_16"><b>Art. 16</b></a><sup><a href="#fn-d6e2283" id="fnbck-d6e2283">83</a></sup></h6><div class="collapseable"><p>Als Depotwerte im Sinne von Artikel 37<i>d</i> des Gesetzes gelten:<sup><a href="#fn-d6e2304" id="fnbck-d6e2304">84</a></sup></p><dl><dt>1. </dt><dd>bewegliche Sachen und Effekten der Depotkunden;</dd><dt>1<sup>bis</sup>.<sup><a href="#fn-d6e2327" id="fnbck-d6e2327">85</a></sup><sup> </sup></dt><dd><sup></sup>kryptobasierte Vermögenswerte, wenn sich die Bank verpflichtet hat, diese für den Depotkunden jederzeit bereitzuhalten, und diese:<dl><dt>a. </dt><dd>dem Depotkunden individuell zugeordnet sind, oder</dd><dt>b. </dt><dd>einer Gemeinschaft zugeordnet sind und ersichtlich ist, welcher Anteil am Gemeinschaftsvermögen dem Depotkunden zusteht;</dd></dl></dd><dt>2. </dt><dd>bewegliche Sachen, Effekten und Forderungen, welche die Bank für Rechnung der Depotkunden fiduziarisch innehat;</dd><dt>3. </dt><dd>frei verfügbare Lieferansprüche der Bank gegenüber Dritten aus Kassageschäften, abgelaufenen Termingeschäften, Deckungsgeschäften oder Emissionen für Rechnung der Depotkunden.</dd></dl></div></article>`;
+
+    it('Marken in Dokumentreihenfolge: 1, 1bis, a, b, 2, 3', () => {
+      const b = extrahiereArtikel(BANKG_ART_16, '16')!.bloecke[0];
+      expect(b.items!.map((i) => i.marke)).toEqual(['1', '1bis', 'a', 'b', '2', '3']);
+    });
+
+    it('tiefe korrekt: 1/1bis/2/3 = Stufe 0; lit. a/b unter 1bis = Stufe 1', () => {
+      const items = extrahiereArtikel(BANKG_ART_16, '16')!.bloecke[0].items!;
+      const byMarke = Object.fromEntries(items.map((i) => [i.marke, i.tiefe]));
+      expect(byMarke['1']).toBeUndefined();
+      expect(byMarke['1bis']).toBeUndefined();
+      expect(byMarke['2']).toBeUndefined(); // NICHT fälschlich Stufe 1
+      expect(byMarke['3']).toBeUndefined();
+      expect(byMarke['a']).toBe(1);
+      expect(byMarke['b']).toBe(1);
+    });
   });
 
   describe('<dt>-eingebetteter Text + leeres <dd> (Fedlex-Sonderform, ZPO art_250 Ziff. 15)', () => {
