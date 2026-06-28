@@ -71,9 +71,9 @@ describe('baueGliederungsbaum — Randtitel-Promotion (6b)', () => {
     return null;
   };
 
-  it('promotet geteilte Ahnen-Stufen zu Knoten; das Blatt bleibt am Artikel', () => {
-    // art1: …/A. X (blatt «1. a») → liegt direkt in «A. X»
-    // art2: …/A. X/2. b (blatt «i. p») → «2. b» ist Kind von «A. X»
+  it('promotet ALLE Aufzähler-Stufen zu Knoten (auch Blatt-Gruppierungen, M3 28.6.)', () => {
+    // art1: …/A. X/1. a → art1 liegt unter «1. a» (Aufzähler-Blatt = eigener Knoten)
+    // art2: …/A. X/2. b/i. p → art2 liegt unter «i. p»
     const { sektionen, ohneGliederung } = baueGliederungsbaum(
       arts('1', '2'),
       struktur({
@@ -86,14 +86,16 @@ describe('baueGliederungsbaum — Randtitel-Promotion (6b)', () => {
     expect(T.label).toBe('T'); expect(T.ebene).toBe(0); expect(T.randtitel).toBeFalsy();
     const AX = finde(sektionen, 'A. X')!;
     expect(AX.ebene).toBe(1); expect(AX.randtitel).toBe(true);
-    // «A. X» trägt Art. 1 DIREKT und die Untergruppe «2. b».
-    expect(AX.artikel.map((e) => e.artikel)).toEqual(['1']);
+    // «A. X» trägt KEINEN Artikel direkt mehr — alle liegen unter ihren Aufzähler-Knoten.
+    expect(AX.artikel.map((e) => e.artikel)).toEqual([]);
+    const a1 = finde(sektionen, '1. a')!;
+    expect(a1.ebene).toBe(2); expect(a1.randtitel).toBe(true);
+    expect(a1.artikel.map((e) => e.artikel)).toEqual(['1']);
     const B = finde(sektionen, '2. b')!;
     expect(B.ebene).toBe(2); expect(B.randtitel).toBe(true);
-    expect(B.artikel.map((e) => e.artikel)).toEqual(['2']);
-    // «1. a» / «i. p» (Blätter) sind KEINE Knoten.
-    expect(finde(sektionen, '1. a')).toBeNull();
-    expect(finde(sektionen, 'i. p')).toBeNull();
+    expect(B.artikel.map((e) => e.artikel)).toEqual([]);
+    const ip = finde(sektionen, 'i. p')!;
+    expect(ip.ebene).toBe(3); expect(ip.artikel.map((e) => e.artikel)).toEqual(['2']);
   });
 
   it('Einzel-Randtitel (Sachüberschrift ohne Ahnen) wird KEIN Knoten', () => {
@@ -116,15 +118,18 @@ describe('baueGliederungsbaum — Randtitel-Promotion (6b)', () => {
     expect(finde(sektionen, 'c. …')).toBeNull();
   });
 
-  it('ohne amtliche Gliederung promotet die Randtitel-Ahnen ab Ebene 0', () => {
+  it('ohne amtliche Gliederung promotet ALLE Randtitel-Stufen ab Ebene 0', () => {
     const { sektionen, ohneGliederung } = baueGliederungsbaum(
       arts('5'),
       struktur({ 5: { gliederung: [], marginalie: ['A. K', 'I. u'] } }),
     );
-    expect(ohneGliederung).toHaveLength(0); // landet NICHT mehr flach, sondern unter «A. K»
+    expect(ohneGliederung).toHaveLength(0); // landet NICHT mehr flach, sondern unter «A. K» → «I. u»
     const AK = finde(sektionen, 'A. K')!;
     expect(AK.ebene).toBe(0); expect(AK.randtitel).toBe(true);
-    expect(AK.artikel.map((e) => e.artikel)).toEqual(['5']);
+    expect(AK.artikel.map((e) => e.artikel)).toEqual([]); // art5 liegt unter «I. u»
+    const Iu = finde(sektionen, 'I. u')!;
+    expect(Iu.ebene).toBe(1); expect(Iu.randtitel).toBe(true);
+    expect(Iu.artikel.map((e) => e.artikel)).toEqual(['5']);
   });
 
   it('weder Gliederung noch Ahnen → ohneGliederung (flach)', () => {
