@@ -56,6 +56,11 @@ EINTRAEGE=(
   # 7.6.2026 im Dossier behoerden/rechtsmittel-spruchkoerper-kantone.md §3 —
   # ELI cc/2006/834, Konsolidierung 1.2.2026, Filestore NUR ohne -N-Suffix;
   # seit 1.2.2026 ZWEI strafrechtliche Abteilungen Art. 35/35a, AS 2025 856).
+  # 29.6.2026: URL bestätigt korrekt (SPARQL = kanonische HTML-Manifestation,
+  # 117 kB, 69 art_-Anker, SR 173.110.131, art_35_a vorhanden). Die 9-kB-
+  # «Casemates»-SPA-Shell der B1-Re-Segnung (28.6.) war ein TRANSIENTER
+  # Filestore-Fehler, KEIN URL-Problem — frischer Fetch liefert echtes HTML;
+  # BGERR am 29.6. mit-regeneriert (drei M6-Tiefe-shas Art. 29/30/34).
   "bgerr|cc/2006/834|20260201|0|art_33,art_34,art_35,art_35_a,art_36|173.110.131"
   # VVG: gepinnt 6.6.2026 (html-2!, 200 kB; Kündigungs-Maske 3 — 35a/b/c
   # + Zwingend-Kataloge 97/98 am Wortlaut verifiziert).
