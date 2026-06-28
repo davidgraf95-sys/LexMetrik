@@ -156,12 +156,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 
 ### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
 
-- [ ] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
-  (Rechtsgebiet × Aufgabe)** auf dem `werkzeugeFuerNorm`-Index + **globale Suche** (über
-  `register.json`/`ladeBrowseManifest`, vereint BS-C3 + RECHTSSAMMLUNG-facettiert +
-  GESETZESTEXT-POPUP — **ein** Such-Workstream, §5) + **Startseiten-Modul-Rahmen**
-  (Registry+Binder+Layout = FUNDAMENT-UMBAU Phase 0, eigener Worktree, Visualdiff als Tor).
-  *Nächster Schritt:* Such-Workstream + zweiachsiger Einstieg.
+- [~] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
+  (Rechtsgebiet × Aufgabe)** ✅ **28.6.2026 (gegated, nicht deployt):** `einstiegMatrix()`
+  (`src/lib/einstieg.ts`) projiziert den Katalog (§5) auf Rechtsgebiet × Aufgabe; Komponente
+  `ZweiachsigerEinstieg` als zweite Achse auf `/rechner` (aufklappbare Gebiets-Kacheln, Werkzeuge
+  nach Aufgabe gruppiert, nur verfügbar §8). Konsistenz-Tor `einstieg.test.ts` (kein still
+  verschwundenes Werkzeug). Visuell bestätigt. **Offen:** **globale Suche** (über
+  `register.json`/`ladeBrowseManifest` — FlexSearch-Abhängigkeit = Davids Entscheid) +
+  **Startseiten-Modul-Rahmen** (FUNDAMENT-UMBAU Phase 0, eigener Worktree, Visualdiff-Tor).
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
     Fassungen gleich verbindlich). Heute nur `de` befüllt. *Aufbau:* Generator je Erlass 3

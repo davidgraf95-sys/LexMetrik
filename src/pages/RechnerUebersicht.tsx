@@ -5,6 +5,7 @@ import { kartenDerKategorie } from '../lib/katalogKategorie';
 import { KatalogHinweis } from '../components/KatalogHinweis';
 import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { ZweiachsigerEinstieg } from '../components/ZweiachsigerEinstieg';
 
 // ─── Rechner-Übersicht (/rechner) — UI-Welle, Ersatz für /recherche ─────────
 //
@@ -21,8 +22,10 @@ export function RechnerUebersicht() {
       <SeitenKopf
         overline="Rechner & Werkzeuge"
         titel="Rechner"
-        intro="Zuständigkeiten, Fristen und Gebühren – nach Aufgabe gegliedert. Wählen Sie ein Werkzeug, oder suchen Sie oben im Feld (Kürzel «/»)."
+        intro="Zwei Wege hinein: nach Rechtsgebiet (aufklappbar) oder nach Aufgabe (Zuständigkeiten · Fristen · Gebühren). Oder oben im Feld suchen (Kürzel «/»)."
       />
+
+      <ZweiachsigerEinstieg />
 
       {RECHNER_KATEGORIEN.map((kat) => (
         <KategorieSektion key={kat.id} kat={kat} karten={kartenDerKategorie(KATALOG_KARTEN, kat.id)} />

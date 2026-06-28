@@ -89,7 +89,12 @@ describe('Rechner-Übersicht /rechner (UI-Welle: Ersatz fürs Katalog-Deckblatt,
     expect(html).toContain('Materielle Fristen');
     expect(html).toContain('href="/rechner/verjaehrung"');
     expect(html).toContain('Art. 336c OR');
-    expect(html.indexOf('Fristenrechner')).toBeLessThan(html.indexOf('Gewährleistung'));
+    // Ordnung INNERHALB des Fristen-Registers (Haupteinstieg Tagerechner vor
+    // der materiellen Gewährleistungs-Frist). Ab dem Register-Anker schneiden,
+    // da der neue «Einstieg nach Rechtsgebiet» (ROADMAP Schritt 5) oberhalb
+    // dieselben Werkzeuge listet (deklarierte Struktur-Erweiterung, §6.3).
+    const fristenAbschnitt = html.slice(html.indexOf('id="register-titel-fristen"'));
+    expect(fristenAbschnitt.indexOf('Fristenrechner')).toBeLessThan(fristenAbschnitt.indexOf('Gewährleistung'));
     // Fristenspiegel aufgelöst; keine gleichrangige Mischliste
     expect(html).not.toContain('Fristenspiegel');
     expect(html).not.toContain('Weitere Werkzeuge');

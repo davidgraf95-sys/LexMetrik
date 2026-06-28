@@ -23,6 +23,20 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — ROADMAP Welle 2 · Schritt 5: zweiachsiger Einstieg (Rechtsgebiet × Aufgabe), NICHT deployt
+
+Auffindbarkeits-Schicht, [OF]-Kern: **`einstiegMatrix()`** (`src/lib/einstieg.ts`) projiziert
+den Katalog (§5, EINE Quelle — kein zweiter Pfad) auf **Rechtsgebiet × Aufgabe**; nur verfügbare
+Karten (§8). Komponente **`ZweiachsigerEinstieg`** als ZWEITE Achse oben auf `/rechner` (bisher nur
+nach Aufgabe gegliedert): aufklappbare Gebiets-Kacheln (12), je Gebiet die Werkzeuge nach Aufgabe
+(Zuständigkeiten/Fristen/Gebühren/Vorlagen) als Direktlinks. Konsistenz-Tor `einstieg.test.ts`
+(7 Fälle: kein verwaistes Gebiet, kein still verschwundenes Werkzeug, keine Dubletten/toten Links).
+Visuell (1000 px) bestätigt. **Bug-Check:** Gate fing einen positionsbasierten `katalog.test`-Bruch
+(neue Sektion oberhalb) → faithful auf den Fristen-Register-Abschnitt eingegrenzt (Intent erhalten,
+§6.3-deklariert). `npm run gate` grün, golden byte-gleich. **Offen (Schritt 5-Rest):** globale Suche
+(FlexSearch = Davids Entscheid) + Startseiten-Modul-Rahmen (FUNDAMENT-UMBAU, Worktree/Visualdiff).
+Kein Deploy.
+
 ## Session 28.6.2026 — ROADMAP Schritt 3 abgearbeitet (#2 neu gebaut, #3/#4 bestanden, #1 zurückgestellt; NICHT deployt)
 
 Nach dem Deploy Schritt 3 «Alltags-Rechner als Cockpits» durchgegangen. Befund: der Grossteil war
