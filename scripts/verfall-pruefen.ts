@@ -28,6 +28,8 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { iso, sammleTermine } from './verfall-parse.ts';
 
+// Bei Änderung die Anzeige-Schwelle in src/components/VerfallUebersicht.tsx
+// gleich halten (bewusste Spiegelung, Anzeige ≠ Rechtsregel).
 const VORLAUF_TAGE = 45;
 
 const REGISTER = resolve(

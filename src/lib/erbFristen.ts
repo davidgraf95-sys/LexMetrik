@@ -20,7 +20,7 @@ import { berechneAllgemeineFrist, type AllgFristResult } from './allgemeineFrist
 // Fristbeginn-Konvention (Annahme, offengelegt): Auch die Klage-/
 // Verjährungsfristen (521/533/600/601) werden nach der Art.-77-analogen
 // Logik des allgemeinen Fristenrechners berechnet (gleichbezeichneter Tag);
-// die h.L. behandelt sie als Verwirkungs- bzw. verjährungsähnliche Fristen —
+// die h.L. behandelt sie als Verwirkungs- bzw. verjährungsähnliche Fristen –
 // [zu verifizieren], Differenz maximal 1 Tag, Annahme wird ausgegeben.
 
 export type ErbFristKey =

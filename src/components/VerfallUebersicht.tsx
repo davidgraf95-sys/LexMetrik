@@ -11,7 +11,10 @@ import {
   VERFALL_MANUELL_ANZAHL,
 } from '../data/verfallTermine.generated';
 
-const VORLAUF_TAGE = 45; // gleicher Vorlauf wie das Deploy-Tor check:verfall
+// Anzeige-Schwelle «bald fällig» — bewusst gespiegelt zu scripts/verfall-pruefen.ts
+// (Deploy-Tor check:verfall). Reine Darstellung, KEINE Rechtsregel → kein §5-Bruch;
+// bei Änderung beide Seiten gleich halten.
+const VORLAUF_TAGE = 45;
 
 type Status = 'verfallen' | 'faellig' | 'aktuell';
 
