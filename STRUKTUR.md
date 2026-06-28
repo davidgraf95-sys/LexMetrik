@@ -23,6 +23,24 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — Abschluss: Aufräumen · ROADMAP · finaler Bug-Check (sauber) · Session-Ende
+
+Auftrag David zum Schluss: aufräumen, Handlungsplan aktualisieren, finaler Bug-Check über alle
+Änderungen, dann Session schliessen.
+- **Aufräumen:** sauber — keine Debug-Reste im App-Code (nur CLI-`console.log`), keine ungenutzten
+  Exports, Tree clean, Index gitignored. Session war gegated-as-you-go.
+- **ROADMAP:** Fortschrittsblock 28.6. gesetzt (S0 + Welle 1·1–3 + Welle 2·5 erledigt/live; 3 Deploys).
+- **Finaler Bug-Check** (2 Opus-Agents über `359d52b2..HEAD`, 22 Commits): **keine Session-Bugs**
+  (101/101 Tests grün; alle §1-Zahlen empirisch gegen Snapshots; B1-1 wert-identisch; Determinismus
+  sauber; Integration konsistent). **Live-Prod grün** (10/10 Routen, Such-Index 24'183 Artikel,
+  HOCH-Fix StGB→STGB verifiziert, 15/15 vormals-kaputte Routen 200). **1 NIEDRIG vorbestehend**
+  (ZPO-Monatsfrist-Begründungssatz zitiert Abs. 2 für den Beginn — Engine-BGer-Konvention, kein
+  Regress) → in `FAHRPLAN-BEGRUENDUNGS-ABSATZ.md` für Davids Abnahme geflaggt.
+- **Stand:** S0 + Welle 1·1–3 + Welle 2·5 LIVE; Prozesskosten-Moat (W1·4) ~90 % (I2 research-blockiert,
+  I4 per-Kanton). Offene Entscheide: PDF-Absatz=AUS (entschieden) · FlexSearch=ja (entschieden) ·
+  Kanton in Suchindex (offen) · Rechtsprechung-P0 SG-Regeste (§4-sensibel) · Mehrsprach DE/FR/IT
+  (braucht Netz-Generator). Tree sauber, alles gepusht.
+
 ## Session 28.6.2026 — §9-DEPLOY #3: globale Volltextsuche → PROD live (HOCH-Bug im Bug-Check gefangen)
 
 David «bug check und deploy». **Der Bug-Check fing einen HOCH-Bug** (2 Opus-Agents über das Suche-

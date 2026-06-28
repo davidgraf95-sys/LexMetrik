@@ -296,6 +296,17 @@ Rechner pro Rechtsgebiet (Feedback erscheint, Absatz nicht leer).
 4. **SchKG-Zitierstil «Art. 31 SchKG i.V.m. …»:** → **Default: übernommen** (im benannten
    Feld `fristbeginnNorm`, B1-1). Unverändert lassbar oder später umformulieren.
 
+## Offene Abnahme-/Doktrin-Punkte (Bug-Check-Befund 28.6., NIEDRIG, vorbestehend)
+
+- **Monats-/Jahresfrist-Begründungssatz (zpoFristen):** Der kopierfertige Satz lautet bei
+  Monats-/Jahresfristen «Der Fristenlauf begann am <Ereignistag> (Art. 142 Abs. 2 ZPO)». Art. 142
+  **Abs. 1** regelt den Fristbeginn (Folgetag), **Abs. 2** das Frist*ende* (gleichbezeichneter Tag)
+  → die Zitierung von Abs. 2 für den «Beginn» (und das Datum = Ereignistag statt Folgetag) ist
+  **doktrinär lose**. Es ist die **dokumentierte BGer-Konvention der Engine** (vorbestehend; der
+  B1-1-Refactor ist wert-identisch, kein Regress) und das Frist*ende* ist korrekt. **Davids
+  Entscheid:** Satz so lassen, oder für Monats-/Jahresfristen schärfen (z. B. «… nach dem
+  gleichbezeichneten Tag (Art. 142 Abs. 2 ZPO) berechnet» statt «begann am …»). Kein Handlungsdruck.
+
 ## Risiken (Kurz)
 
 - §6: per-Engine-Zusatz nicht byte-genau reproduziert → ungewollter Golden-Diff
