@@ -23,6 +23,50 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz **Phase 0** (Baseline + Bugfix, NICHT deployt)
+
+Nach S0 den nächsten ROADMAP-Schritt genommen (Welle 1 · Schritt 1, Begründungs-Absatz).
+Die Feature-Infrastruktur (`begruendungsAbsatz()`, 16 verdrahtete Forms) existiert seit 7.6.;
+der FAHRPLAN war aber noch ganz unbebaut (0 `absatz:`-Goldens). Gebaut: **Phase 0** (Beweis-
+Grundlage, verhaltensneutral, `[OF]` — keine David-Fachzeit, keiner der 4 David-Entscheide
+nötig).
+
+- **B0-2 Golden-Erst-Baseline:** 10 `absatz:<id>`-Snapshots der ECHTEN `begruendungsAbsatz()`-
+  Ausgabe in `golden-outputs.ts` (zpo/schkg mit byte-exaktem `fristbeginnZusatz`-Ausdruck; übrige
+  als Roh-Engine-Ergebnis). `golden:vergleich`: nur 10 neue Keys, **0 geändert/entfernt** (git-
+  Diff bestätigt: bestehende 187 Fälle byte-gleich).
+- **B0-3 Linter-Test** `begruendungLinter.test.ts` (30 Assertions): `pruefeFormulierung()` = 0
+  Verstösse + nicht-leerer Normen-Satz + Schlusspunkt-Wächter.
+- **Bug-Check je Schritt (Auftrag David):** zwei echte Funde behoben — (1) `zust`/`rm` liefern
+  kein rohes `Berechnungsergebnis` (UI-gewickelt) → in den B0-2-Rest verschoben; (2) **doppelter
+  Schlusspunkt «… u. a..»** in `normenSatz()` (`src/lib/begruendung.ts`), sichtbar im kopierten
+  Absatz **aller 16 Forms** → §13/F6-Fix (golden-neutral, da vorher kein Snapshot; Linter sichert
+  gegen Rückfall).
+- `npm run gate` grün (tsc · vitest · golden byte-gleich · lint · check). **Kein Push/Deploy.**
+  Offen: Phasen 1–5 + B0-2-Rest (allg/zust/rm UI-gewickelt; streitwert/teuerung/gebvKosten/
+  erbFristen Engines noch nicht in `golden-outputs.ts`); 4 David-Entscheide bleiben für Phase 3/4.
+
+## Session 28.6.2026 — ROADMAP S0 «Verfallsregister sichtbar» (gebaut + gegated, NICHT deployt)
+
+Obersten offenen ROADMAP-Schritt genommen: **S0** (fristgetrieben, FRIST 30.6.). Mechanische
+Erfassung lief bereits (`check:verfall` fängt den am 30.6. ablaufenden SG-GKV-Tarif + GR-HV/BE-EAV
+31.12. + Referenzzins Sept. + BE-Formularpflicht 1.11.). Offen war die **benannte UI-Fläche**.
+
+- **Geteilte Parse-Quelle (§5):** Datums-Grammatik aus `scripts/verfall-pruefen.ts` in
+  `scripts/verfall-parse.ts` extrahiert (verhaltensneutral — `check:verfall`-Ausgabe byte-gleich;
+  Freitext-Label-Kürzung auf 70 wanderte in die CLI, der Parser hält das volle Label für die UI).
+  Unit-Test `src/tests/verfallParse.test.ts` (11 Fälle).
+- **Generator + Drift-Tor:** `gen:verfall` (`scripts/verfall-generieren.ts`) schreibt
+  `src/data/verfallTermine.generated.ts` aus dem Register; `check:verfall-ui` (in der `check`-Kette)
+  schlägt bei Drift fehl. Register bleibt SSoT.
+- **Benannte UI-Fläche:** Abschnitt **«Aktualität & Pflege der Parameter»** auf `/methodik`
+  (`src/components/VerfallUebersicht.tsx`) — 15 datierte Parameter, nächster Prüftermin, Stand/
+  Rhythmus, Status-Badge (verfallen/bald fällig/aktuell) **client-seitig** berechnet (prerender-
+  /hydration-sicher; `/methodik` ist prerendert). §13-tokenisiert (lc-tile/lc-chip/lc-badge-*),
+  mobil 360 px geprüft (Playwright). Keine neue Route (kein SEO-A11Y-Kollisionsset).
+- `npm run gate` grün (tsc · vitest · golden byte-gleich · lint · check). **Kein Push/Deploy** —
+  S0 sammelt fürs Batch-Deploy-Fenster (§9; ROADMAP-Protokoll Ziff. 5).
+
 ## Session 28.6.2026 — Konsolidierter Webseiten-Handlungsplan (`ROADMAP.md`) + Bugfix Startseiten-News-Ticker (BGE-Doppel)
 
 Auftrag David: LexMetrik als **«Schweizer Taschenmesser für Juristen»** — Webseite

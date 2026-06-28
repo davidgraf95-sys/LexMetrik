@@ -1,10 +1,20 @@
 # FAHRPLAN — «Begründung für die Rechtsschrift»-Absatz (Marken-Feature)
 
-**Stand:** 16.6.2026 · **Status:** Entwurf, ungepusht, NICHT committet (§9/§12) ·
-**Herkunft:** Ultra-Workflow (Bestandsleser durch den realen Code → Design →
-3 adversariale Linsen: CLAUDE.md-Treue · Solo-Machbarkeit · Praxistauglichkeit).
-Kritik-Befunde sind je Schritt eingearbeitet — sie haben mehrere falsche
-Bestandsannahmen des Erst-Entwurfs korrigiert (s. u.).
+**Stand:** 28.6.2026 · **Status:** **Phase 0 in Arbeit** (B0-1 verifiziert, B0-2/B0-3
+gebaut + gegated 28.6., nicht deployt); Phasen 1–5 offen · **Herkunft:** Ultra-Workflow
+(Bestandsleser durch den realen Code → Design → 3 adversariale Linsen: CLAUDE.md-Treue ·
+Solo-Machbarkeit · Praxistauglichkeit). Kritik-Befunde sind je Schritt eingearbeitet — sie
+haben mehrere falsche Bestandsannahmen des Erst-Entwurfs korrigiert (s. u.).
+
+> **B0-1-Verifikation 28.6.2026 (§7):** Ist-Stand bestätigt — `src/lib/begruendung.ts`
+> existiert (`begruendungsAbsatz`, `MAX_NORMEN=6`, **`fristbeginnZusatz` bereits vorhanden**
+> aus dem Code-Review 7.6.). **16 Forms verdrahtet**, davon genau **3 mit `zusatz`**:
+> `ZpoFristenForm` (`fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.normverweise[0].artikel)`),
+> `AllgemeineFristForm` (`…resultat.fristbeginnISO, normverweise[0]?.artikel`),
+> `SchkgFristenForm` (`…e.diesAQuoISO, 'Art. 31 SchKG i.V.m. ' + e.normverweise[1].artikel`).
+> **`pruefeFormulierung`/`FLOSKELN` existieren in `src/lib/konventionen.ts`** (B0-3 nutzt sie,
+> kein Neubau). **0 `absatz:`-Goldens** → B0-2 ist echte Erst-Baseline. `BegruendungSlot`
+> (Phase 2) und `fristbeginnNorm`-Feld (B1-1) existieren noch nicht.
 
 > **Nordstern:** Aus jedem **geeigneten** Rechen-Ergebnis entsteht EIN
 > kopierfertiger, normgestützter, konventionskonformer Absatz, den ein Anwalt in
@@ -77,7 +87,26 @@ Aufrufstelle liefert. Vorbehalts-Text aus EINER lib-Konstante (§5).
 
 ---
 
-## Phase 0 — Bestandsklärung & Beweis-Grundlage (verhaltensneutral)
+## Phase 0 — Bestandsklärung & Beweis-Grundlage (verhaltensneutral) — ✅ erledigt 28.6.2026
+
+> **Erledigt 28.6.2026 (gebaut + gegated, nicht deployt):**
+> - **B0-1** verifiziert (s. Kopf-Block).
+> - **B0-2** Erst-Baseline: **10** `absatz:<id>`-Goldens in `golden-outputs.ts` über die
+>   ECHTE `begruendungsAbsatz()`-Ausgabe (zpo+schkg mit byte-exaktem `zusatz`-Ausdruck;
+>   kuendigung/sperr, miet, verj, gewaehr, verzug, lohn, erbteilung, bger als Roh-Ergebnis).
+>   `golden:vergleich`: nur 10 neue Keys, **0 geändert/entfernt** (bestehende 187 byte-gleich).
+> - **B0-3** `src/tests/begruendungLinter.test.ts` (30 Assertions): `pruefeFormulierung()` = 0
+>   Verstösse + nicht-leerer Normen-Satz + Schlusspunkt-Wächter.
+> - **Bug-Check-Funde (behoben):** (1) `zust`/`rm` geben **kein** rohes
+>   `Berechnungsergebnis` (`.ergebnis` fehlt) → die Form wickelt UI-seitig → in den
+>   B0-2-Rest verschoben (faithful erst über Phase-2-`BegruendungSlot`). (2) **Doppelter
+>   Schlusspunkt** «… u. a..» in `normenSatz()` (`begruendung.ts`) — sichtbar im kopierten
+>   Absatz aller 16 Forms — als deklarierter §13/F6-Fix behoben (golden-neutral, da vorher
+>   kein Snapshot bestand); Linter-Wächter sichert gegen Rückfall.
+> - **B0-2-Rest (offen):** `allg`/`zust`/`rm` (UI-gewickelt) + streitwert/teuerung/
+>   gebvKosten/erbFristen (Engines noch nicht in `golden-outputs.ts` importiert).
+
+## Phase 0 — Bestandsklärung & Beweis-Grundlage (Original-Schritte)
 
 **B0-1 Bestand dokumentieren** (nur Lesen): die 16 verdrahteten + 7 offenen Forms
 **und** `grep '*Bericht(' src/lib` (die existierenden Adapter!) als verbindliche

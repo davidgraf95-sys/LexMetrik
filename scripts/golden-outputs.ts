@@ -49,6 +49,7 @@ import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbe
 import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 import { berechneBggVwvgFrist } from '../src/lib/bggVwvgFristen';
+import { begruendungsAbsatz, fristbeginnZusatz } from '../src/lib/begruendung';
 
 const faelle: Record<string, unknown> = {};
 const f = (id: string, fn: () => unknown) => {
@@ -561,6 +562,34 @@ agGolden('urkunden-optionen-nachtrag', {
   nachtragAktiv: true, nachtragGruendungsdatum: '2026-06-01',
   nachtragStatutenArtikel: '3', nachtragStatutenAbsatz: '1', nachtragStatutenText: 'Neuer Wortlaut.',
 });
+
+// ── Begründungs-Absatz (FAHRPLAN-BEGRUENDUNGS-ABSATZ B0-2) ──────────────────
+// Erst-Baseline (kollisionsfreier Präfix `absatz:`) der ECHTEN
+// begruendungsAbsatz()-Ausgabe — eingefroren VOR jedem Generator-Umbau (Phase 1+),
+// damit dieser §6-verhaltensneutral bewiesen werden kann. Nur Engines, deren Form
+// das ROHE Engine-Ergebnis an begruendungsAbsatz() gibt; die `zusatz`-Forms
+// werden mit ihrem byte-exakten Inline-Ausdruck reproduziert. Bewusst NICHT hier
+// (B0-2-Rest, B0-1-Bugcheck 28.6.): `allg` UND `zust`/`rm` (die Form wickelt das
+// Engine-Ergebnis UI-seitig in ein Berechnungsergebnis — der rohe Engine-Output
+// hat kein `.ergebnis`-Feld; faithful erst über den Phase-2-`BegruendungSlot`)
+// sowie streitwert/teuerung/gebvKosten/erbFristen (Engines noch nicht in dieser
+// Datei importiert).
+f('absatz:zpo:tage10:ZH', () => {
+  const r = berechneFrist({ ereignis: '2025-12-10', einheit: 'tage', laenge: 10, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich' });
+  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, r.normverweise[0].artikel));
+});
+f('absatz:schkg:rv10', () => {
+  const r = berechneSchkgFrist({ ereignis: '2026-03-20', einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', kanton: 'ZH' });
+  return begruendungsAbsatz(r, fristbeginnZusatz(r.diesAQuoISO, `Art. 31 SchKG i.V.m. ${r.normverweise[1].artikel}`));
+});
+f('absatz:kuendigung:sperr:krank', () => begruendungsAbsatz(berechneSperrfristen({ vertragsbeginn: '2020-01-01', zugangKuendigung: '2025-04-20', kuendigendePartei: 'arbeitgeber', probezeitMonate: 1, kuendigungsterminMonatsende: true, sperrereignisse: [{ typ: 'krankheit_unfall', von: '2025-05-01', bis: '2025-05-20' }] })));
+f('absatz:miet:ordentlich', () => begruendungsAbsatz(berechneMietkuendigung({ kuendigungsart: 'ordentlich', objekt: 'wohnung', zugang: '2026-02-10', kanton: 'ZH', partei: 'mieter' })));
+f('absatz:verj:or127', () => begruendungsAbsatz(berechneVerjaehrung({ regime: 'ordentlich', beginnRelativ: '2020-03-15', stichtag: '2026-06-05', kanton: 'ZH' })));
+f('absatz:gewaehr:neu', () => begruendungsAbsatz(berechneGewaehrleistung({ vertragstyp: 'fahrniskauf', vertragsdatum: '2026-02-01', objekt: 'beweglich', uebergabe: '2026-03-01', mangelTyp: 'versteckt', entdeckung: '2026-04-01', kanton: 'ZH', stichtag: '2026-06-05' })));
+f('absatz:verzug:einfach', () => begruendungsAbsatz(berechneVerzugszins({ kapital: 10000, verzugsbeginn: '2025-01-15', stichtag: '2026-02-20' })));
+f('absatz:lohn:bs', () => begruendungsAbsatz(berechneLohnfortzahlung({ vertragsbeginn: '2020-01-01', verhinderungBeginn: '2026-02-01', verhinderungEnde: '2026-04-15', arbeitsunfaehigkeitProzent: 100, kanton: 'BS', ktgGleichwertigVorhanden: false })));
+f('absatz:erb:ehegatte2kinder', () => begruendungsAbsatz(berechneErbteilung({ todesdatum: '2026-03-01', zivilstand: 'verheiratet', kinderLebend: 2 } as never)));
+f('absatz:bger:zivil:50k', () => begruendungsAbsatz(berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 50_000 })));
 
 // ── Schreiben oder Vergleichen ──────────────────────────────────────────────
 // Bug-Check 10.6.2026 (NIEDRIG): fileURLToPath statt .pathname — Letzteres

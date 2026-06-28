@@ -21,7 +21,9 @@ function normenSatz(normverweise: Normverweis[]): string {
   if (artikel.length === 0) return '';
   const gezeigt = artikel.slice(0, MAX_NORMEN);
   const rest = artikel.length - gezeigt.length;
-  return ` Massgebend sind ${gezeigt.join(', ')}${rest > 0 ? ' u. a.' : ''}.`;
+  // «u. a.» trägt schon den abschliessenden Punkt (sonst doppelter Punkt
+  // «u. a..» im kopierten Rechtsschrift-Absatz, §13/F6).
+  return ` Massgebend sind ${gezeigt.join(', ')}${rest > 0 ? ' u. a.' : '.'}`;
 }
 
 /**
