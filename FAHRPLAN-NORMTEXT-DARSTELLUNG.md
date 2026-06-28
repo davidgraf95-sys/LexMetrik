@@ -13,10 +13,11 @@
 | **M1** UI-Bugs #7 Tabliste-Anchor + #8 Suche scrollbar | ✅ fertig, tsc+lint grün | `9b978070` |
 | **M2** Fliesstext-Einzug #5 | ✅ fertig, tsc+ArtikelBody-Test grün | `e9760570` |
 | **M3 · #4** TOC alle Randtitel (lückenlos A–E) | ✅ fertig, ZGB-Einleitung vite-node-verifiziert (A–E), 65 Tests grün | `657efb58` |
-| **M3 · #6** Gruppierungs-Striche einheitlich | ⏳ offen (gleiche Wurzel randtitelKnoten — prüfen ob jetzt schon konsistent) | — |
-| **M3 · G11** Sektions-Fussnotenmarker | ⏳ offen (randtitelFnIds → browse.ts + SektionKopf) | — |
-| **M4** Aufgehobene Artikel schlicht (#3/G16) | ⏳ offen (golden-neutral Renderer) | — |
-| **M5–M9** Extraktions-Cluster (Ingress/Verschachtelung/Tabellen/Bilder/dopp-ID) | ⏳ offen — **eine** Golden-Re-Segnung, §1-kritisch M6 (falsche Zitate) zuerst+adversarial | — |
+| **M3 · #6** Gruppierungs-Striche einheitlich | ✅ erledigt **via #4** — alle Aufzähler-Gruppierungen sind jetzt Sektionen → `border-l`-Strich konsistent; kein Extra-Code | (in `657efb58`) |
+| **M3 · G11** Sektions-Fussnotenmarker | ↪ **in Extraktions-Hälfte verschoben** — `struktur-run.ts:43-51` faltet Sektions-Fn in Artikel-`fussnoten` (absatz=null) + verwirft `randtitelFnIds` → im Sidecar nicht mehr unterscheidbar; braucht Struktur-Regen (Sektions-Assoziation erhalten), dann SektionKopf-Marker | — |
+| **M4** Aufgehobene Artikel schlicht (#3/G16) | ✅ fertig — schlichte Zeile + amtliche Aufhebungsnotiz inline (aus Sidecar-Fussnote); kein Accordion | `d77d5dd1` |
+| — **Renderer-Charge M0–M4 gegated** | ✅ `npm run gate:schnell` GRÜN: tsc + volle vitest-Suite + **golden:vergleich byte-gleich** (Engine unberührt) | — |
+| **M5–M9 + G11** Extraktions-Cluster (Ingress/Verschachtelung/Tabellen/Bilder/dopp-ID/Sektions-Fn) | ⏳ offen — **eine** Golden-Re-Segnung, §1-kritisch M6 (falsche Zitate) zuerst+adversarial; Struktur-Regen trägt G11 mit | — |
 | **M10** Fussnoten-Abstand+Hervorhebung (Sidecar) | ⏳ offen | — |
 | **M11/M12** Resolver (intern/Selbstverweis stoppen) | ⏳ offen — zuletzt, Blast-Radius fedlex.ts | — |
 
