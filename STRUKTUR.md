@@ -23,7 +23,17 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 28.6.2026 — ROADMAP Welle 2 · Schritt 5: zweiachsiger Einstieg (Rechtsgebiet × Aufgabe), NICHT deployt
+## Session 28.6.2026 — §9-DEPLOY #2: Streitwert-Grenzwert + zweiachsiger Einstieg → PROD live
+
+David-Ja «deploy». Volles Ritual: Tore grün (gate · build 57 Routen · e2e 86); **2 Opus-Bug-Check-
+Agents** über `b7273ae0..HEAD` (Code-Lupe + 110 empirische Checks) → **keine HOCH/MITTEL**, 3 NIEDRIG
+gefixt (Art. 91 II ZPO-Wording: setzt Streitwert, nicht Verfahrensart · `einstieg.anzahl` aus
+gelisteten Zellen = Badge≙Liste §8 · `einstiegMatrix` memoisiert). Push + Worktree-Deploy.
+**DEPLOYT: `dpl_5Mj2fTkmfxZKywVCpQELyRsBNJZf` (READY), commit `88895088`, lexmetrik.vercel.app.**
+Nachkontrolle: 7 Routen 200; `/rechner` trägt live «Einstieg nach Rechtsgebiet»; Asset-Hash
+live = frischer HEAD-Build (`index-CeyJ216u.js`). Worktree entfernt.
+
+## Session 28.6.2026 — ROADMAP Welle 2 · Schritt 5: zweiachsiger Einstieg (Rechtsgebiet × Aufgabe) → mit Batch deployt `88895088`
 
 Auffindbarkeits-Schicht, [OF]-Kern: **`einstiegMatrix()`** (`src/lib/einstieg.ts`) projiziert
 den Katalog (§5, EINE Quelle — kein zweiter Pfad) auf **Rechtsgebiet × Aufgabe**; nur verfügbare
