@@ -290,8 +290,9 @@ Rechner pro Rechtsgebiet (Feedback erscheint, Absatz nicht leer).
    Kein neuer Kosten-Prosa-Text ohne Davids Ja.
 2. **`MAX_NORMEN=6`/«u. a.»:** → **Default: Kappung beibehalten, «u. a.» bleibt das sichtbare
    Kappungs-Signal.** (Unverändert; pro-Engine-Konfiguration erst auf Bedarf.)
-3. **PDF-Absatz:** → **Default: AUS.** Kapazität gebaut (B3-1), aber keine Form setzt
-   `pdfConfig.begruendung` — PDFs unverändert. Rollout erst auf Davids «an».
+3. **PDF-Absatz:** → **ENTSCHIEDEN 28.6.2026 (David): AUS — «Ansatz in UI reicht».** Der
+   Absatz bleibt bewusst nur in der UI (Copy). Kapazität (B3-1) bleibt als ungenutzter,
+   sauber abgeschalteter Schalter im Code; **kein** Rollout, **kein** B5-2-Wächter nötig.
 4. **SchKG-Zitierstil «Art. 31 SchKG i.V.m. …»:** → **Default: übernommen** (im benannten
    Feld `fristbeginnNorm`, B1-1). Unverändert lassbar oder später umformulieren.
 
