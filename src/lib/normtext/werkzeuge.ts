@@ -12,7 +12,11 @@ import { ALLE_KARTEN, istVerfuegbar } from '../startseiteConfig';
 import { ERLASS_REGISTER } from './register';
 import { MATERIAL_REGISTER, behoerdeVon, DOKTYP_LABEL } from '../materialien/register';
 
-const ERLASS_WERKZEUGE: Readonly<Record<string, string[]>> = {
+// Exportiert für das Konsistenz-Tor (werkzeuge.test.ts): jede Karten-ID muss auf
+// eine existierende Katalog-Karte zeigen — sonst verschluckt `werkzeugeFuerNorm`
+// einen Tippfehler still (§8: kein toter Link, aber auch kein heimlich fehlendes
+// Werkzeug).
+export const ERLASS_WERKZEUGE: Readonly<Record<string, string[]>> = {
   OR: ['kuendigung-sperrfristen', 'lohnfortzahlung', 'ferienanspruch', 'dreizehnter-monatslohn', 'ueberstunden-zuschlag', 'verjaehrung', 'verzugszins', 'schadenszins', 'gewaehrleistung', 'mietrecht', 'mietzinsanpassung', 'arbeitsvertrag', 'mietvertrag-wohnen', 'auftrag', 'werkvertrag', 'mahnung'],
   ZGB: ['erbrecht-fristen', 'erbteilung', 'erb-ausgleichung', 'gueterrecht-vorschlag', 'vorsorgeausgleich', 'eigenhaendiges-testament', 'oeffentliches-testament', 'vorsorgeauftrag', 'patientenverfuegung'],
   ZPO: ['prozesskosten', 'zustaendigkeit', 'zpo-fristen', 'streitwert', 'kostenvorschuss', 'parteientschaedigung-sicherheit', 'schlichtungsgesuch', 'klage-vereinfacht', 'klage-ordentlich'],
@@ -35,8 +39,12 @@ const ERLASS_WERKZEUGE: Readonly<Record<string, string[]>> = {
 
 export interface Werkzeug { id: string; titel: string; href: string; modus: 'rechner' | 'vorlage' }
 
-/** Verfügbare Werkzeuge (Rechner/Vorlagen) zu einem Erlass-Key, in Reihenfolge. */
-export function werkzeugeFuer(key: string): Werkzeug[] {
+/**
+ * Norm↔Werkzeug-Index (ROADMAP Schritt 2): verfügbare Werkzeuge (Rechner/
+ * Vorlagen) zu einem Erlass-Key, in deklarierter Reihenfolge. Erlass-granular
+ * und ehrlich — nicht verfügbare/geplante Karten werden ausgeblendet (§8).
+ */
+export function werkzeugeFuerNorm(key: string): Werkzeug[] {
   const ids = ERLASS_WERKZEUGE[key];
   if (!ids) return [];
   const out: Werkzeug[] = [];
@@ -56,7 +64,7 @@ export function werkzeugeFuerEntscheid(normKeys: string[]): Werkzeug[] {
   const seen = new Set<string>();
   const out: Werkzeug[] = [];
   for (const k of normKeys) {
-    for (const w of werkzeugeFuer(k)) {
+    for (const w of werkzeugeFuerNorm(k)) {
       if (!seen.has(w.id)) { seen.add(w.id); out.push(w); }
     }
   }
@@ -76,7 +84,7 @@ export function massgebendeErlasse(modus: 'rechner' | 'vorlage'): MassgebenderEr
   const out: MassgebenderErlass[] = [];
   for (const e of ERLASS_REGISTER) {
     if (e.status !== 'snapshot') continue;
-    if (!werkzeugeFuer(e.key).some((w) => w.modus === modus)) continue;
+    if (!werkzeugeFuerNorm(e.key).some((w) => w.modus === modus)) continue;
     out.push({ key: e.key, kuerzel: e.kuerzel, titel: e.titel, pfad: `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}` });
   }
   return out;

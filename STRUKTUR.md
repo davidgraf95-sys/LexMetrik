@@ -23,6 +23,23 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 28.6.2026 — ROADMAP Schritt 2 «Norm↔Werkzeug-Brücke» (Index-Teil, gegated, NICHT deployt)
+
+Nach Welle 1·1 den nächsten ROADMAP-Schritt genommen. Befund (Explore-Agent): die Brücke
+**existierte schon** — `kontext.ts`/`werkzeugeFuerEntscheid` löst Norm→Werkzeug auf, `KontextPanel`
+zeigt sie in allen 3 Readern. Gebaut wurde die **Härtung + Sichtbarkeit**:
+- `werkzeugeFuer` → **`werkzeugeFuerNorm`** umbenannt (ROADMAP-Name; erlass-granular, 17 Erlasse),
+  `ERLASS_WERKZEUGE`-Map exportiert.
+- **Konsistenz-Tor** `src/tests/werkzeuge.test.ts` (6 Fälle): jede Karten-ID existiert im Katalog
+  (sonst verschluckt `werkzeugeFuerNorm` einen Tippfehler still → heimlich fehlendes Werkzeug, §8),
+  kein verwaister Erlass-Key, keine Duplikate, Symmetrie zu `massgebendeErlasse`. **Bug-Check:
+  Daten sauber** (kein toter Verweis) — das Tor schützt künftig.
+- **Erlass-Karte** (`ErlassKarte.tsx`, `/gesetze`): dezenter brass-Hinweis «N passende Werkzeuge»
+  in der Meta-Zeile (Task 4.3 «auf der Erlass-Karte»); Singular/Plural korrekt, fehlt sauber bei
+  nicht abgedeckten Erlassen; visuell (1000 px) bestätigt. SSoT = Katalog (§5).
+- **Der zweiachsige Startseiten-Einstieg (Rechtsgebiet × Aufgabe) gehört zu Schritt 5** (Welle 2),
+  nutzt denselben Index — bewusst NICHT hier. `npm run gate` grün. Kein Deploy.
+
 ## Session 28.6.2026 — ROADMAP Welle 1·1 Begründungs-Absatz: **alle [OF]-Teile (Phasen 0–5) gebaut + gegated, NICHT deployt**
 
 Nach S0 den nächsten ROADMAP-Schritt (Welle 1·1) bis an die David-Entscheid-Grenze abgearbeitet

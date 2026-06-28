@@ -121,10 +121,13 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (Prozesskosten): Ergebnis → Absatz → PDF-Block → Kopier-Hook; dann Rollout.
   *Nächster Schritt:* PDF-Block (`pdfModel.ts`) + Kopier-Hook am Prozesskosten-Rechner; die 4
   David-Entscheide als **Default-und-Flag** setzen. §8-Rahmung «keine Rechtsberatung».
-- [ ] **2 · Norm↔Werkzeug-Brücke** *(RECHTSSAMMLUNG P4/D1, 0 %)*. Vom Artikel in Rechner/Vorlage/
-  Entscheid — das Alleinstellungsmerkmal. **Ein Index** (`werkzeugeFuerNorm`, erlass-granular
-  ehrlich), der **zugleich den zweiachsigen Startseiten-Einstieg trägt** (kein zweiter Pfad, §5).
-  *Nächster Schritt:* Index-Schema definieren + an `KontextPanel`/`kontext.ts` andocken.
+- [x] **2 · Norm↔Werkzeug-Brücke** *(RECHTSSAMMLUNG P4/D1)* — **Index-Teil erledigt 28.6.2026
+  (gegated, nicht deployt).** `werkzeugeFuerNorm` (erlass-granular, 17 Erlasse) benannt + Map
+  `ERLASS_WERKZEUGE` exportiert + Konsistenz-Tor `werkzeuge.test.ts` (kein stiller Tippfehler →
+  heimlich fehlendes Werkzeug, §8). Anzeige im Reader (KontextPanel «Passende Werkzeuge») bestand
+  schon; **neu** dezenter «N passende Werkzeuge»-Hinweis auf der Erlass-Karte (`/gesetze`, Task
+  4.3). SSoT = Katalog (§5). **Der zweiachsige Startseiten-Einstieg (Rechtsgebiet × Aufgabe) ist
+  Schritt 5** (Welle 2) und nutzt denselben Index — kein zweiter Pfad.
 - [ ] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* — die
   «guten Rechner» als erste Klingen, alle §2/amtlich:
   - **Fristen-Cockpit** (Vorwärts/Rückwärts/Stillstand) über `fristenspiegel/` + `icsExport`.

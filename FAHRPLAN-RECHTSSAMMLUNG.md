@@ -424,11 +424,14 @@ Alleinstellung Norm↔Rechner (D1).
 - [ ] **Task 4.2 — Such-UI auf `/gesetze`.** Facetten **Bund/Kanton × Rechtsgebiet**
       (Multi-Select, «Alle/Aufheben») + Volltext-Treffer mit Snippet + Sprung zum
       Artikel im Reader. Nüchtern/kanzleihaft; leeres Feld zeigt keinen Fehler.
-- [ ] **Task 4.3 — Norm↔Werkzeug-Brücke (D1, einzigartig).** Im Reader-Artikel und
-      auf der Erlass-Karte: «Passende Rechner/Vorlagen» aus dem Katalog ableiten
-      (`startseiteConfig`-Karten, deren verifizierte `norms`/`normenReferenzen` den
-      Artikel/Erlass nennen). Umkehrung des bestehenden Norm-Pills-Bezugs — eine
-      Verknüpfung, die **kein** Wettbewerber hat. SSoT bleibt der Katalog (§5).
+- [x] **Task 4.3 — Norm↔Werkzeug-Brücke (D1, einzigartig).** ✅ **28.6.2026** (gegated):
+      Reader-Anzeige bestand bereits (KontextPanel «Passende Werkzeuge», alle 3 Reader, via
+      `kontext.ts`/`werkzeugeFuerEntscheid`). **Neu:** Index sauber benannt `werkzeugeFuerNorm`
+      (erlass-granular, 17 Erlasse, `ERLASS_WERKZEUGE` exportiert), **Konsistenz-Tor**
+      `werkzeuge.test.ts` (jede Karten-ID existiert → kein still verschluckter Tippfehler, §8),
+      und ein dezenter «N passende Werkzeuge»-Hinweis **auf der Erlass-Karte** (`ErlassKarte.tsx`,
+      `/gesetze`). SSoT bleibt der Katalog (§5; `ERLASS_WERKZEUGE` ist die EINE Maschinen-Quelle,
+      die Karten-`norms[]` sind separate Anzeige-Pills).
 - [ ] **Task 4.4 — Verifikation.** `gate` + Playwright (Suche mit Facetten, Treffer-
       Sprung, Norm→Rechner-Link). Bundle-Disziplin prüfen (Index nicht im Haupt-
       Bundle). Deploy auf frisches Ja.

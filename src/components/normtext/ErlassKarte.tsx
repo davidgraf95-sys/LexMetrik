@@ -2,6 +2,7 @@ import type { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { istLesbar, type BrowseErlass } from '../../lib/normtext/browse-typen';
 import { useErlassOeffnen, istErlassOffen } from '../../lib/useErlassOeffnen';
+import { werkzeugeFuerNorm } from '../../lib/normtext/werkzeuge';
 
 // Klick-Handler für eine Erlass-Verlinkung (Punkt G): der <Link> trägt weiter den
 // nackten Basispfad (SEO/Mittelklick/Cmd-Klick/Copy-Link). Nur der EINFACHE
@@ -34,6 +35,11 @@ function StandChip({ stand }: { stand: string }) {
 }
 
 function KarteInhalt({ e }: { e: BrowseErlass }) {
+  // Norm↔Werkzeug-Brücke (ROADMAP Schritt 2, Task 4.3): dezenter Hinweis, dass
+  // dieser Erlass passende Rechner/Vorlagen trägt (das Alleinstellungsmerkmal,
+  // §8: nur verfügbare Werkzeuge gezählt). Die Karte verlinkt in den Reader, wo
+  // das Kontext-Panel sie ausklappt — hier nur das Signal, kein zweiter Link.
+  const werkzeugAnzahl = werkzeugeFuerNorm(e.key).length;
   return (
     <>
       <div className="flex items-baseline justify-between gap-3">
@@ -51,6 +57,11 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
             ? <span className="text-ink-500">amtliches PDF</span>
             : <span className="text-ink-500">nur Live-Link</span>}
         <StandChip stand={e.stand} />
+        {werkzeugAnzahl > 0 && (
+          <span className="text-brass-700">
+            <span className="num">{werkzeugAnzahl}</span> {werkzeugAnzahl === 1 ? 'passendes Werkzeug' : 'passende Werkzeuge'}
+          </span>
+        )}
       </div>
     </>
   );
