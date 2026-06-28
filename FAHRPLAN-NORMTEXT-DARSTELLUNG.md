@@ -17,7 +17,13 @@
 | **M3 · G11** Sektions-Fussnotenmarker | ↪ **in Extraktions-Hälfte verschoben** — `struktur-run.ts:43-51` faltet Sektions-Fn in Artikel-`fussnoten` (absatz=null) + verwirft `randtitelFnIds` → im Sidecar nicht mehr unterscheidbar; braucht Struktur-Regen (Sektions-Assoziation erhalten), dann SektionKopf-Marker | — |
 | **M4** Aufgehobene Artikel schlicht (#3/G16) | ✅ fertig — schlichte Zeile + amtliche Aufhebungsnotiz inline (aus Sidecar-Fussnote); kein Accordion | `d77d5dd1` |
 | — **Renderer-Charge M0–M4 gegated** | ✅ `npm run gate:schnell` GRÜN: tsc + volle vitest-Suite + **golden:vergleich byte-gleich** (Engine unberührt) | — |
-| **M5–M9 + G11** Extraktions-Cluster (Ingress/Verschachtelung/Tabellen/Bilder/dopp-ID/Sektions-Fn) | ⏳ offen — **eine** Golden-Re-Segnung, §1-kritisch M6 (falsche Zitate) zuerst+adversarial; Struktur-Regen trägt G11 mit | — |
+| **M6 · §1** Verschachtelungstiefe explizit (falsche Zitate) | ✅ fertig — `tiefe`-Feld; 68 Blöcke/38 Erlasse/344 Items korrigiert (BankG 16, OR 727/959a, MWSTG 21/23); adversarial verifiziert | `d15fe425` |
+| **M7** Tabellen kpf-als-td-Kopf + colspan-Padding (#12/G19/G20) | ✅ fertig — surgisch nur kpf-Stil; `<th>`-Tarife byte-gleich; GebV SchKG art_30 6/6 | `5b253bc0` |
+| **M8/G23** standalone man-template (Delegationsnorm `grundlage`) | ✅ fertig — 7135 Verweise erhalten (golden-neutral); **G21/G22 Bilder → B2** (Escape-Hatch: SSV-Pictogramme inline, brauchen M10/M14-Serialisierer) | `20a9b489` |
+| **M9/G7** doppelte art_id (`__2`-Suffix) | ✅ fertig — KKV 126z + BETMG/PAVO/VWVG zweiter Artikel erhalten | `e62d8680` |
+| — **Daten-Re-Segnung B1 (`--nur=bund`)** | ✅ erledigt — 24119 Bund-Snapshots; Engine-Golden byte-gleich, Drift+Vollständigkeit grün, adversarial verifiziert; **BGERR ausgenommen** (kaputter Casemates-Cache → 69 alte Einträge restauriert, FOLLOW-UP Filestore-URL) | `b61c088a` |
+| **M5** Erlass-Kopf/Ingress/Präambel (Sidecar) | ⏳ offen — golden-neutral, Struktur-Regen; tief | — |
+| **G11** Sektions-Fussnotenmarker | ⏳ offen — Struktur-Regen trägt mit | — |
 | **M10** Fussnoten-Abstand+Hervorhebung (Sidecar) | ⏳ offen | — |
 | **M11/M12** Resolver (intern/Selbstverweis stoppen) | ⏳ offen — zuletzt, Blast-Radius fedlex.ts | — |
 
