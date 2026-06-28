@@ -351,11 +351,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 statt es überlaufen zu lassen — wie bereits beim Item-Text (S13).
                 Nur in der Lesesicht (zk); das Popover (kein zk) bleibt byte-gleich. */}
             {/* Hängeeinzug: nummerierter Absatz → voller Hang (-indent-9), die
-                Messing-Marke sitzt in der Rinne (x=0). Absatzloser Artikel → KLEINER
-                Hang (-indent-4): erste Zeile beginnt dort, wo bei nummerierten der
-                Text anfängt (nicht ganz in der Rinne), Folgezeilen leicht eingerückt
-                (Auftrag David 25.6.2026: «erste Zeile reicht sonst zu weit zurück»). */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
+                Messing-Marke sitzt in der Rinne (x=0), der Prosatext beginnt bei
+                pl-9 (Prosa-Kante). Absatzloser Artikel → KEIN Hang ([text-indent:0]):
+                erste UND Folgezeile beginnen ebenfalls bei pl-9 — identische linke
+                Textkante wie bei nummerierten Absätzen (Auftrag David 28.6.2026: der
+                Einzug sprang sonst zwischen Artikeln mit/ohne Absatznummer). */}
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
