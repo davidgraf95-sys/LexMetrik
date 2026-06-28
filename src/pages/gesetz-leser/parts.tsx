@@ -166,6 +166,12 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
               </span>
             )}
           </div>
+          {/* G23 (M8): Delegationsnorm-Grundlage «(Art. N ArG)» — Fedlex zeigt sie
+              dezent unter der Überschrift; amtlicher Inhalt (§2), bisher verworfen.
+              Immer sichtbar (auch eingeklappt), wie der Randtitel. */}
+          {e.grundlage && (
+            <div className="mt-0.5 text-xs italic leading-snug text-ink-500">{e.grundlage}</div>
+          )}
         </div>
         {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
             overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der

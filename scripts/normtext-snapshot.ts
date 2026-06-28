@@ -1002,6 +1002,9 @@ async function main(): Promise<void> {
         erlass,
         artikel: token,
         artikelLabel: artikelLabel(token),
+        // G23 (M8): Delegationsnorm-Grundlage «(Art. N ArG)», falls vorhanden.
+        // Artikel-level wie titel → NICHT im Block-sha (golden-neutral).
+        ...(extrakt.grundlage ? { grundlage: extrakt.grundlage } : {}),
         bloecke: extrakt.bloecke,
         stand,
         quelleUrl: `https://www.fedlex.admin.ch/eli/${eli}/de#${ankerVoll}`,

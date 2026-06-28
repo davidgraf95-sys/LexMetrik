@@ -226,6 +226,25 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  describe('M8 G23: Delegationsnorm-Verweis (man-template-referenz) wird erhalten', () => {
+    // Reale Fedlex-Struktur (ArGV1 art_1): <p class="man-template-referenz">
+    // (Art. 1 ArG)</p> direkt nach der Überschrift, vor Abs. 1 — bisher gedroppt.
+    const ARGV1_ART_1 = `<article id="art_1"><a name="a1"></a><h6 class="heading " role="heading"><span class="display-icon"></span><a href="#art_1"><b>Art. 1</b> Arbeitnehmer</a></h6><div class="collapseable"><p class="man-template-referenz"> (Art. 1 ArG)</p><p class="absatz "><sup>1</sup>&nbsp;Arbeitnehmer ist jede Person, die in einem Betrieb beschäftigt wird.</p></div></article>`;
+
+    it('grundlage = «(Art. 1 ArG)»; bleibt nicht im Absatztext', () => {
+      const r = extrahiereArtikel(ARGV1_ART_1, '1')!;
+      expect(r.grundlage).toBe('(Art. 1 ArG)');
+      expect(r.bloecke[0].absatz).toBe('1');
+      expect(r.bloecke[0].text).toMatch(/^Arbeitnehmer ist jede Person/);
+      expect(r.bloecke.map((b) => b.text).join(' ')).not.toContain('ArG)'); // nicht geleakt
+    });
+
+    it('Artikel ohne Verweis → grundlage undefined (nichts fabriziert, §7)', () => {
+      const r = extrahiereArtikel(HTML_ZPO, '96')!;
+      expect(r.grundlage).toBeUndefined();
+    });
+  });
+
   describe('M7 Regression: <th>-Tabelle bleibt unverändert (colspan dort konsistent)', () => {
     // <th>-Tabellen tragen colspan auf Kopf UND Daten (BVG-Stil) → durch
     // konsistentes Ignorieren korrekt ausgerichtet. Der kpf-Pfad darf NICHT

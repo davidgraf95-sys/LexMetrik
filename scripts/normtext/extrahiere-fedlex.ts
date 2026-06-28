@@ -14,6 +14,11 @@
  */
 
 export interface ArtikelText {
+  /** G23 (M8): Delegationsnorm-Verweis «(Art. N ArG)» aus
+   *  <p class="man-template-referenz"> — die Trägergesetz-Grundlage, auf der eine
+   *  Verordnungsbestimmung beruht. Steht in Fedlex direkt unter der Überschrift;
+   *  wurde bisher von keiner Block-Alternative erfasst und stumm verworfen. */
+  grundlage?: string;
   bloecke: Array<{
     absatz: string | null;
     text: string;
@@ -62,9 +67,20 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   // entfernt — sonst leckt der Fallback-Pfad (unnummerierte plain-<p>-Artikel wie
   // BETMG/VStrR) den Fussnotentext + Marker in den Normtext (Bug-Check 23.6.2026).
   // Der Haupt-Loop matcht diese Elemente ohnehin nicht; nur der Fallback profitiert.
-  const inner = articleMatch[1]
+  const innerRoh = articleMatch[1]
     .replace(/<div\s+class="footnotes">[\s\S]*$/i, '') // Apparat steht am Artikelende
     .replace(/<h6\b[^>]*>[\s\S]*?<\/h6>/gi, '');
+
+  // G23 (M8): Delegationsnorm-Verweis <p class="man-template-referenz">(Art. N ArG)</p>
+  // direkt nach der Überschrift — bisher von keiner Block-Alternative erfasst und
+  // stumm verloren (~7100 Verordnungs-Bestimmungen). Als artikel-level `grundlage`
+  // erhalten (amtlicher Inhalt, §2/§8) und aus dem Body entfernen, damit er nicht
+  // in den Fallback-Text leakt. Die Marke trägt vereinzelt einen Fussnoten-<sup>.
+  const refRe = /<p\b[^>]*\bclass="[^"]*\bman-template-referenz\b[^"]*"[^>]*>([\s\S]*?)<\/p>/i;
+  const refMatch = innerRoh.match(refRe);
+  const grundlage = refMatch ? entferneTags(entferneFussnotenSups(refMatch[1])) || undefined : undefined;
+  const inner = innerRoh.replace(new RegExp(refRe.source, 'gi'), '');
+  const mitGrundlage = grundlage ? { grundlage } : {};
 
   // <p>-Absätze UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE durchlaufen
   // (Geschwister im collapseable-div). Vier Alternativen:
@@ -167,17 +183,17 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   // mitten im Satz) auf eines reduzieren.
   if (bloecke.length === 0) {
     const text = entferneTags(entferneFussnotenSups(inner)).replace(/^\s*Art\.\s*\S+\s*/, '').replace(/\s{2,}/g, ' ').replace(/\s+([.,;:])/g, '$1').trim();
-    if (text) return { bloecke: [{ absatz: null, text }] };
+    if (text) return { ...mitGrundlage, bloecke: [{ absatz: null, text }] };
     // Leerer Artikel-Körper (Fedlex rendert aufgehobene, aber noch nummerierte
     // Artikel als blosse Überschrift mit leerem <div class="collapseable">, z.B.
     // SVG art_107): faithful als «aufgehoben»-Block darstellen (Konvention «…»,
     // NormPopover zeigt «aufgehoben»). So bleibt der Artikel in der
     // Vollständigkeit erfasst statt stumm zu fehlen (§8 Ehrlichkeit, kein
     // Aufweichen des Vollständigkeitstests).
-    return { bloecke: [{ absatz: null, text: '…' }] };
+    return { ...mitGrundlage, bloecke: [{ absatz: null, text: '…' }] };
   }
 
-  return { bloecke };
+  return { ...mitGrundlage, bloecke };
 }
 
 /**

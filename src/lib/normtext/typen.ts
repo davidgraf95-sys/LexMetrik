@@ -20,6 +20,14 @@ export interface NormSnapshot {
    */
   titel?: string;
   /**
+   * G23 (M8) — Delegationsnorm-Verweis «(Art. N ArG)» aus Fedlex
+   * (<p class="man-template-referenz">): das Trägergesetz-Fundament einer
+   * Verordnungsbestimmung. Artikel-level Metadatum wie titel (NICHT im Block-sha,
+   * golden-neutral); fehlt, wenn die Quelle keinen Verweis trägt (§7: nichts
+   * fabrizieren). Wird in der Lesesicht als dezente Grundlagen-Zeile angezeigt.
+   */
+  grundlage?: string;
+  /**
    * Absatz-/Marginalie-Blöcke in Reihenfolge; absatz: '1','2','a','bis' …
    * - text: Einleitungstext des Absatzes OHNE die Listenpunkte.
    * - items (optional): lit./Ziff.-Aufzählungspunkte des Absatzes. marke ist
