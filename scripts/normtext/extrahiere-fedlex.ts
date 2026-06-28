@@ -332,29 +332,88 @@ export function findeDdEnde(html: string, startIdx: number): number {
   return html.length;
 }
 
+/** Tag-/Fussnoten-bereinigter Inhalt einer Tabellen-Zelle. */
+function zellText(c: string): string {
+  return entferneTags(c.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, ''));
+}
+
+/**
+ * Zerlegt die Zellen einer <tr> (Tag `td` oder `th`) zu einem Spalten-Array und
+ * EXPANDIERT colspan: eine Zelle mit colspan=N belegt N Spalten — der Text steht
+ * in der ersten, die übrigen (N-1) sind leer. So bleibt die Spaltenzahl von Kopf
+ * und Daten konsistent, wenn NUR der Kopf gruppierte (colspan-)Zellen hat
+ * (GebV SchKG art_30: Kopf 2 colspan-Zellen über 6 Datenspalten). Minimal — kein
+ * Zell-Merge/rowspan (David-Entscheid 28.6.: «minimal colspan→Kopf-Padding»).
+ */
+function zeileMitColspan(rowHtml: string, tag: 'td' | 'th'): string[] {
+  const zellen: string[] = [];
+  const re = new RegExp(`<${tag}\\b([^>]*)>([\\s\\S]*?)</${tag}>`, 'gi');
+  for (const c of rowHtml.matchAll(re)) {
+    const span = Number(c[1].match(/\bcolspan=["']?(\d+)/i)?.[1] ?? '1') || 1;
+    zellen.push(zellText(c[2]));
+    for (let k = 1; k < span; k++) zellen.push('');
+  }
+  return zellen;
+}
+
 /**
  * Zerlegt eine Fedlex-<table> in einen mehrspaltig-Block {kopf, zeilen}.
- * <th>-Zellen der ersten Zeile bilden den Kopf; <td>-Zeilen die Daten. Jede
- * Zelle wird tag-bereinigt (Fussnoten-<sup> getilgt). Leere Zeilen entfallen.
- * Reale Struktur (IVG art_28b): <tr><th><p>…</p></th>…</tr><tr><td><p>…</p></td>…</tr>.
+ *
+ * ZWEI Markup-Varianten:
+ *  (A) <th>-Tabellen (IVG art_28b, AHVV/BVG-Tarife): erste/letzte <th>-Zeile =
+ *      Kopf, <td>-Zeilen = Daten — colspan wird (wie bisher) IGNORIERT, weil dort
+ *      Kopf UND Daten dieselben colspan tragen und so konsistent ausgerichtet
+ *      sind (Audit «colspan widerlegt» trifft für <th>-Tabellen zu). UNVERÄNDERT
+ *      → byte-gleich.
+ *  (B) kpf-als-<td>-Tabellen (GebV SchKG art_30): KEIN <th>, der Kopf steht als
+ *      <td><p class="man-template-tab-kpf">…</p></td> — bisher als Datenzeile
+ *      verkannt (G20) und ohne colspan-Expansion gegen die Daten verschoben.
+ *      Hier: Kopf-Zeilen erkennen, colspan KONSISTENT (Kopf + Daten dieser
+ *      Tabelle) expandieren, mehrere Kopfzeilen spaltenweise zusammenführen
+ *      (G19: obere Kopfzeile ging sonst verloren).
+ * Reale Struktur: <tr><td colspan="4"><p class="man-template-tab-kpf">…</p></td>…</tr>.
  */
 function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: string[][] } {
-  let kopf: string[] = [];
+  const hatTh = /<th\b/i.test(tableInner);
+  const istKpfStil = !hatTh && /man-template-tab-kpf/i.test(tableInner);
+
+  if (!istKpfStil) {
+    // ── Variante (A) + plain-<td>: bestehender Pfad, byte-gleich ──────────────
+    let kopf: string[] = [];
+    const zeilen: string[][] = [];
+    for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+      const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) => zellText(c[1]));
+      if (ths.length > 0) {
+        if (ths.some((x) => x !== '')) kopf = ths;
+        continue;
+      }
+      const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) => zellText(c[1]));
+      if (tds.some((x) => x !== '')) zeilen.push(tds);
+    }
+    return kopf.length > 0 ? { kopf, zeilen } : { zeilen };
+  }
+
+  // ── Variante (B): kpf-als-<td> — Kopf-Erkennung + colspan-Padding (G19/G20) ──
+  const kopfZeilen: string[][] = [];
   const zeilen: string[][] = [];
   for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) =>
-      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
-    );
-    if (ths.length > 0) {
-      if (ths.some((x) => x !== '')) kopf = ths;
-      continue;
-    }
-    const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
-      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
-    );
-    if (tds.some((x) => x !== '')) zeilen.push(tds);
+    const zellenRoh = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)];
+    // Kopfzeile: jede nicht-leere Zelle trägt die tab-kpf-Klasse (keine Datenzelle).
+    const istKopf =
+      zellenRoh.some((c) => /man-template-tab-kpf/i.test(c[1])) &&
+      zellenRoh.every((c) => /man-template-tab-kpf/i.test(c[1]) || zellText(c[1]) === '');
+    const zellen = zeileMitColspan(r[1], 'td');
+    if (istKopf) kopfZeilen.push(zellen);
+    else if (zellen.some((x) => x !== '')) zeilen.push(zellen);
   }
-  return kopf.length > 0 ? { kopf, zeilen } : { zeilen };
+  // Mehrere Kopfzeilen spaltenweise zusammenführen (G19): je Spalte die nicht-
+  // leeren Texte der Kopfzeilen mit ' ' verbinden — nichts geht verloren (§8).
+  const breite = Math.max(0, ...kopfZeilen.map((z) => z.length));
+  const kopf: string[] = [];
+  for (let c = 0; c < breite; c++) {
+    kopf.push(kopfZeilen.map((z) => z[c] ?? '').filter(Boolean).join(' '));
+  }
+  return kopf.some((x) => x !== '') ? { kopf, zeilen } : { zeilen };
 }
 
 /**
