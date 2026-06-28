@@ -217,7 +217,17 @@ Quelle wie UI**. **Fachlicher** Golden-Diff (PDF zeigt jetzt Absatz) → je Form
 (kein Sammel-Update; §12 Pathspec). Vor B3-1 feststellen, **wo** die
 PDF-`modelText`-Ausgabe heute fixiert ist (golden vs. `pdf.test`-Inline).
 
-## Phase 4 — Rollout auf die 7 offenen Rechner (Verdrahtung, kein Neubau)
+## Phase 4 — Rollout auf die 7 offenen Rechner (Verdrahtung, kein Neubau) — ◐ B4-0 erledigt 28.6.2026
+
+> **Erledigt 28.6.2026 (B4-0 Smoke-Abdeckung):** `RechnerProzesskosten` +
+> `RechnerNotariatGrundbuch` (trägt Beurkundungs- + Grundbucheintrag-Tabs) in
+> `scripts/smoke-render.tsx` ergänzt — rendern fehlerfrei. `RechnerTagerechner`
+> (EinfacheFrist) war bereits abgedeckt.
+> **Offen (decision-gated):** B4-1 (SchkgZust/StrafZust/GrundbuchEintrag an den Slot — adds
+> UI-Absatz; prüfen, ob das `*Bericht()`-Ergebnis prosa-tauglich ist) · **B4-2 Kosten-Rechner =
+> David-Entscheid #1** (Default: ausnehmen) · B4-3 EinfacheFrist (gemischte Engines, klären).
+
+## Phase 4 — Original-Schritte
 
 **B4-0 Smoke-Abdeckung herstellen:** Beurkundung/NotariatGrundbuch/Prozesskosten/
 EinfacheFrist/GrundbuchEintrag zur Seitenliste in `smoke-render.tsx` hinzufügen

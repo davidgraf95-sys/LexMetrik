@@ -40,6 +40,11 @@ import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
 import { RechnerStreitwert } from '../src/pages/RechnerStreitwert';
 import { RechnerGebvKosten } from '../src/pages/RechnerGebvKosten';
+// B4-0 (FAHRPLAN-BEGRUENDUNGS-ABSATZ): Prozesskosten- + Notariat/Grundbuch-
+// Seite (Letztere trägt Beurkundungs- und Grundbucheintrag-Tabs) waren nie im
+// Smoke — Initialzustand muss fehlerfrei rendern.
+import { RechnerProzesskosten } from '../src/pages/RechnerProzesskosten';
+import { RechnerNotariatGrundbuch } from '../src/pages/RechnerNotariatGrundbuch';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
@@ -77,6 +82,8 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerZustaendigkeit', RechnerZustaendigkeit],
   ['RechnerStreitwert', RechnerStreitwert],
   ['RechnerGebvKosten', RechnerGebvKosten],
+  ['RechnerProzesskosten', RechnerProzesskosten],
+  ['RechnerNotariatGrundbuch', RechnerNotariatGrundbuch],
 ];
 
 let fehler = 0;
