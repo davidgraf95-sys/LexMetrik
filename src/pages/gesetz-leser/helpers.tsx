@@ -1,6 +1,18 @@
 import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import type { Sektion, Fussnote } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
+import { ERLASS_REGISTER } from '../../lib/normtext/register';
+
+// M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
+// aus dem Register (keine Handtabelle, §3/§5 eine Quelle). Nur Bund-Erlasse, die
+// wir tatsächlich im Volltext/PDF-embed haben — sonst bleibt der Fedlex-Link der
+// ehrliche Fallback (§8). Einmal modulweit aufgebaut (statisch).
+const SR_INTERN: ReadonlyMap<string, { key: string; ebene: 'bund' | 'kanton' }> = new Map(
+  ERLASS_REGISTER
+    .filter((e) => e.ebene === 'bund' && e.sr && (e.status === 'snapshot' || e.status === 'pdf-embed'))
+    .map((e) => [e.sr as string, { key: e.key, ebene: e.ebene }]),
+);
 
 export function formatiereDatum(iso: string): string {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -36,9 +48,32 @@ export function fnTextMitLinks(fn: Fussnote): ReactNode {
   if (!fn.links.length) return fn.text;
   const map = new Map(fn.links.map((l) => [l.label, l.url]));
   const re = new RegExp(`(${[...map.keys()].sort((a, b) => b.length - a.length).map(escRe).join('|')})`, 'g');
-  return fn.text.split(re).map((t, i) => map.has(t)
-    ? <a key={i} href={map.get(t)} target="_blank" rel="noopener noreferrer" className="text-brass-700/90 hover:text-brass-700 hover:underline">{t}</a>
-    : t);
+  return fn.text.split(re).map((t, i) => {
+    const url = map.get(t);
+    if (url === undefined) return t;
+    // M11 (§5): SR-Verweis «SR 220» auf einen Erlass, den wir im Volltext haben,
+    // verlinkt INTERN auf den LexMetrik-Leser statt immer nach Fedlex — man bleibt
+    // im Werkzeug. Die SR-Nummer steht im Label; nur exakte Treffer (Bund,
+    // snapshot/pdf-embed). Sonst Fedlex-Link als ehrlicher Fallback (§8).
+    const srTreffer = t.match(/^SR\s+([\d.]+)$/);
+    const intern = srTreffer ? SR_INTERN.get(srTreffer[1]) : undefined;
+    if (intern) {
+      // Stand-Transparenz (§5/§8, David-Entscheid 28.6.): der intern gezeigte
+      // Stand kann vom zitierten abweichen (bis Versionierung) → den zitierten
+      // Fedlex-Konsolidierungsstand im title offenlegen, nicht stillschweigend
+      // gleichsetzen. Konsolidierung steht als YYYYMMDD im Fedlex-Link.
+      const standM = url.match(/\/(\d{4})(\d{2})(\d{2})(?:\/|$)/);
+      const titel = standM
+        ? `Intern öffnen · zitierter Fedlex-Stand ${standM[3]}.${standM[2]}.${standM[1]}`
+        : 'Intern öffnen';
+      return (
+        <Link key={i} to={`/gesetze/${intern.ebene}/${encodeURIComponent(intern.key)}`}
+          title={titel}
+          className="text-brass-700/90 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2">{t}</Link>
+      );
+    }
+    return <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="text-brass-700/90 hover:text-brass-700 hover:underline">{t}</a>;
+  });
 }
 
 // Randtitel-Stufe einheitlich formatieren (Auftrag 6a, David 26.6.2026 «un-
