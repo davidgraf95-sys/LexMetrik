@@ -9,8 +9,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { KSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
@@ -267,7 +266,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
           <ErgebnisAnzeige titel="Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={gesamt} />
           <KuendigungTimeline e={gesamt} />
           {gesamt.sperrtage && gesamt.sperrtage.length > 0 && <SperrtageZaehler sperrtage={gesamt.sperrtage} />}
-          <BegruendungAbsatz text={begruendungsAbsatz(gesamt)} />
+          <BegruendungSlot ergebnis={gesamt} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

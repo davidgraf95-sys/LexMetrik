@@ -13,8 +13,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
+import { fristbeginnZusatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { ZPO_LINK_SPEC, type ZpoLink } from '../../lib/rechnerPermalinks';
@@ -344,7 +344,7 @@ export function ZpoFristenForm() {
               Abs. 1, Wochen-/Monats-/Jahresfrist → Abs. 2 (normverweise[0]).
               Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert «Abs. 1» und
               widersprach bei Monatsfristen dem eigenen Normen-Satz. */}
-          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.fristbeginnNorm))} />
+          <BegruendungSlot ergebnis={ergebnis} zusatz={fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.fristbeginnNorm)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

@@ -17,8 +17,8 @@ import { FristenKalender } from '../FristenKalender';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
+import { fristbeginnZusatz } from '../../lib/begruendung';
 import { IcsExportButton } from '../IcsExportButton';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -305,7 +305,7 @@ export function AllgemeineFristForm() {
               {/* Fristbeginn-Baustein wie ZPO/SchKG (Code-Review #5, 7.6.2026):
                   Norm aus der Engine (Art. 77 OR), bei Rückwärtsfrist ohne
                   Beginn entfällt der Satz ersatzlos. */}
-              <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.resultat.fristbeginnISO, ergebnis.normverweise[0]?.artikel))} />
+              <BegruendungSlot ergebnis={ergebnis} zusatz={fristbeginnZusatz(ergebnis.resultat.fristbeginnISO, ergebnis.normverweise[0]?.artikel)} />
               <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
               <div className="flex flex-wrap items-center gap-3">
                 <PdfExportButton config={pdfConfig} />

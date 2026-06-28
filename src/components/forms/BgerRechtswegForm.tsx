@@ -10,8 +10,7 @@ import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { IcsExportButton } from '../IcsExportButton';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { BGER_LINK_SPEC } from '../../lib/rechnerPermalinks';
@@ -256,7 +255,7 @@ export function BgerRechtswegForm() {
               : <EckdatenKachel label="Abteilung" wert={ergebnis.abteilung ? ergebnis.abteilung.split(' (')[0] : 'nach Geschäftsverteilung'} />}
           </div>
           <ErgebnisAnzeige titel="Weiterzug ans Bundesgericht (BGG)" ergebnis={ergebnis} />
-          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
+          <BegruendungSlot ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             {pdfConfig && <PdfExportButton config={pdfConfig} />}

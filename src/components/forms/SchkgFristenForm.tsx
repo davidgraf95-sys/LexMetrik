@@ -15,8 +15,8 @@ import { DatumsFeld } from '../DatumsFeld';
 import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
+import { fristbeginnZusatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { SCHKG_LINK_SPEC, type SchkgLink } from '../../lib/rechnerPermalinks';
@@ -353,7 +353,7 @@ export function SchkgFristenForm() {
                 {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
                     frist). Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert. */}
-                <BegruendungAbsatz text={begruendungsAbsatz(e, fristbeginnZusatz(e.diesAQuoISO, e.fristbeginnNorm))} />
+                <BegruendungSlot ergebnis={e} zusatz={fristbeginnZusatz(e.diesAQuoISO, e.fristbeginnNorm)} />
                 <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
                   aktenzeichen={aktenzeichen}
                   query={schkgQuery}

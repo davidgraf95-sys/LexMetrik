@@ -6,8 +6,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { BetragsFeld } from '../BetragsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, type PermalinkSpec } from '../../lib/permalink';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
@@ -241,7 +240,7 @@ export function StreitwertForm() {
       {ergebnis && (
         <ErgebnisBlock>
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />
-          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
+          <BegruendungSlot ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

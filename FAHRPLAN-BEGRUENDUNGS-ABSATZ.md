@@ -155,7 +155,22 @@ die `lib`-Helfer umstellen. **Primäres Tor: B0-2-Golden byte-gleich** (nicht
 `check:smoke`, das den Pfad gar nicht ausführt). Reine Beträge-/Datums-Forms
 bleiben unverändert.
 
-## Phase 2 — Ein geteilter UI+PDF-Slot-Baustein (§10-Rahmen VOR Rollout)
+## Phase 2 — Ein geteilter UI+PDF-Slot-Baustein (§10-Rahmen VOR Rollout) — ✅ erledigt 28.6.2026
+
+> **Erledigt 28.6.2026 (gebaut + gegated, nicht deployt):**
+> - **B2-1** `useKopieren(text)`-Hook (`src/components/useKopieren.ts`) — Copy-Mechanik aus
+>   `BegruendungAbsatz` extrahiert (Promise-Rejection-sicher). `BEGRUENDUNG_VORBEHALT` als
+>   lib-Konstante (§5, für die PDF-Wiederverwendung in Phase 3).
+> - **B2-0** `BegruendungSlot({ ergebnis, zusatz })` (`src/components/BegruendungSlot.tsx`) —
+>   **eine** Aufrufstelle pro Form, ruft `begruendungsAbsatz()`, rendert `BegruendungAbsatz`.
+> - **Rollout** aller **16 Forms** auf den Slot migriert (verhaltensneutral: `golden:vergleich`
+>   byte-gleich; `gate` grün; visuell auf `/rechner/zpo-fristen` bestätigt). `BegruendungAbsatz`
+>   wird damit nur noch vom Slot konsumiert.
+> - **B2-2** Render-Test `src/tests/begruendungSlot.test.tsx`. **Bug-Check-Fund (behoben):**
+>   `begruendungsAbsatz('')` lieferte ein blosses «.»; jetzt → leerer String → Slot rendert null
+>   (Richtung Kritik-6; verhaltensneutral, da reale Engines stets Ergebnistext liefern).
+
+## Phase 2 — Original-Schritte
 
 **B2-0 `BegruendungSlot`** (neu, Kritik-Solo §10): rendert (a) den Absatz in der
 UI **und** liefert (b) denselben String als Rückgabe für `pdfConfig.begruendung`

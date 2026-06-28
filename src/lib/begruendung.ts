@@ -10,6 +10,14 @@ import type { Berechnungsergebnis, Normverweis } from '../types/legal';
 
 const MAX_NORMEN = 6;
 
+/**
+ * §8-Vorbehalt zum kopierfertigen Absatz — EINE Quelle (§5), damit UI und
+ * (ab Phase 3) der PDF-Block denselben sichtbaren Hinweis tragen. Ohne ihn
+ * wirkte der gedruckte Absatz fälschlich geprüft.
+ */
+export const BEGRUENDUNG_VORBEHALT =
+  'Formuliert aus dem Rechenergebnis — vor Verwendung im Schriftsatz fachlich prüfen.';
+
 function normenSatz(normverweise: Normverweis[]): string {
   const gesehen = new Set<string>();
   const artikel: string[] = [];
@@ -45,7 +53,12 @@ export function fristbeginnZusatz(beginnISO: string | null | undefined, normLabe
  * Zusatz wird aus Engine-FELDERN formuliert, nie neu gerechnet).
  */
 export function begruendungsAbsatz(e: Berechnungsergebnis, zusatz?: string): string {
-  const teile = [e.ergebnis.trim()];
+  // Kein Ergebnistext → kein Absatz (statt eines blossen «.»); der Baustein
+  // rendert dann null. Reale Engines liefern stets einen Ergebnissatz; diese
+  // Schranke wirkt nur bei leerem/Negativ-Platzhalter (Richtung Kritik-6).
+  const kern = e.ergebnis.trim();
+  if (!kern) return '';
+  const teile = [kern];
   if (zusatz?.trim()) teile.push(zusatz.trim());
   let text = teile.join(' ');
   if (!/[.!?]$/.test(text)) text += '.';

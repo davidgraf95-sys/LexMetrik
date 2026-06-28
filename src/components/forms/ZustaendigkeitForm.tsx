@@ -9,8 +9,7 @@ import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren } from '../../lib/permalink';
 import { ZUST_LINK_SPEC, type Instanz } from './zustaendigkeitLinkSpecs';
@@ -1061,7 +1060,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
             )}
 
             <ErgebnisAnzeige titel="Zuständigkeit nach ZPO" ergebnis={ergebnis} />
-            {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+            {ergebnis && <BegruendungSlot ergebnis={ergebnis} />}
             <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
             <div className="flex flex-wrap items-center gap-3">
               <PdfExportButton config={pdfConfig} />

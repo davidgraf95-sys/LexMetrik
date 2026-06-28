@@ -10,8 +10,7 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
-import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
@@ -124,7 +123,7 @@ export function ErbFristenForm() {
               sub={ergebnis.resultat.verschoben ? ergebnis.resultat.verschiebeGruende.join(' · ') : 'Fristende ist Werktag bzw. Verschiebung aus'} />
           </div>
           <ErgebnisAnzeige titel={`Erb-Frist: ${preset.label}`} ergebnis={ergebnis} />
-          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
+          <BegruendungSlot ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
