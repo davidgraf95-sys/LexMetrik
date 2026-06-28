@@ -60,6 +60,17 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
   const out: React.ReactNode[] = [];
   let last = 0;
   for (const m of s.matchAll(ART_INTERN)) {
+    // M12 (§1/§6): Folgt dem bare «Art./Artikel N» ein Gesetzes-KÜRZEL (≥2 Gross-
+    // buchstaben, z.B. «Artikel 64 BGG», «Art. 5 VwVG»), ist es ein Verweis auf
+    // ein ANDERES Gesetz (in Verordnungen meist das Trägergesetz) — NICHT auf
+    // diesen Erlass. Der interne Self-Sprunglink wäre dann falsch (empirisch
+    // BGerR: «Artikel N BGG» zeigte auf BGerR art_N statt BGG). NORM_IM_TEXT
+    // erfasst die ausgeschriebene «Artikel»-Form (noch) nicht; bis das verifizierte
+    // Trägergesetz-Routing als eigene Datenaufgabe steht, wird der falsche Self-
+    // Link UNTERDRÜCKT (lieber kein Link als ein plausibel-falscher, §1/§6,
+    // David-Entscheid 28.6.). «Absatz/Buchstabe/Ziffer» (EIN Grossbuchstabe)
+    // bleiben unberührt → echte Self-Verweise («Artikel 6 Absatz 2») weiter verlinkt.
+    if (/^\s+(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/.test(s.slice(m.index + m[0].length))) continue;
     const token = intern.tokenMap.get(normRef(m[1]));
     if (!token) continue; // kein Artikel dieses Erlasses → als Text belassen
     const start = m.index;
