@@ -223,9 +223,15 @@ PDF-`modelText`-Ausgabe heute fixiert ist (golden vs. `pdf.test`-Inline).
 > `RechnerNotariatGrundbuch` (trägt Beurkundungs- + Grundbucheintrag-Tabs) in
 > `scripts/smoke-render.tsx` ergänzt — rendern fehlerfrei. `RechnerTagerechner`
 > (EinfacheFrist) war bereits abgedeckt.
-> **Offen (decision-gated):** B4-1 (SchkgZust/StrafZust/GrundbuchEintrag an den Slot — adds
-> UI-Absatz; prüfen, ob das `*Bericht()`-Ergebnis prosa-tauglich ist) · **B4-2 Kosten-Rechner =
-> David-Entscheid #1** (Default: ausnehmen) · B4-3 EinfacheFrist (gemischte Engines, klären).
+> **B4-1-Prüfung 28.6. (§8-Befund, NICHT verdrahtet):** `schkgZustaendigkeitBericht.ergebnis`
+> ist ein **telegrafisches «·»-Fragment** (`"Betreibungsamt Zürich · Betreibungsbegehren"`),
+> kein Rechtsschrift-Satz — ein Absatz darüber wäre irreführend (§8; genau die B5-1-«kein
+> «·»-Fragment»-Heuristik). `strafZustaendigkeitBericht.ergebnis` = `forum.text` (satz-näher,
+> aber inhaltsabhängig). → **B4-1 braucht zuerst einen eigenen prosa-tauglichen Ergebnissatz im
+> jeweiligen `lib` (Rechtsfrage-/Review-nah, NICHT clean `[OF]`)**, darum bewusst nicht
+> autonom verdrahtet. Behandlung wie der Kosten-Entscheid #1.
+> **Weiter offen (decision-gated):** **B4-2 Kosten-Rechner = David-Entscheid #1** (Default:
+> ausnehmen) · B4-3 EinfacheFrist (gemischte Engines, klären).
 
 ## Phase 4 — Original-Schritte
 
