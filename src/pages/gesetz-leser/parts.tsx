@@ -94,6 +94,13 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
   };
+  // Aufhebungsnotiz (G16/#3, David 28.6.2026): die amtliche «Aufgehoben durch …
+  // (AS …)»-Notiz eines voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote
+  // im Snapshot (absatz/item = null). Sie wird SCHLICHT inline gezeigt statt doppelt
+  // gated (eingeklappt + hinter dem Fussnoten-Schalter). Wortlaut nie erfunden (§1).
+  const aufhebungNotiz: Fussnote[] = ganzAufgehoben
+    ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
+    : [];
   return (
     <article id={`art-${e.artikel}`}
       className="nt-art-cv group relative z-0 nt-anker border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
@@ -124,10 +131,15 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
           {/* Artikelnummer-Zeile: «Art. N» als Anker; Zitat/Link rechtsbündig INLINE
               (ml-auto) statt als eigene Zeile darunter — schliesst den Abstand zum
               ersten Absatz (Auftrag David 26.6.2026, P8). */}
-          <div className="flex items-baseline gap-2">
-            <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
-              aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
-              className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+            {/* Aufgehobener Artikel: kein Klapp-Chevron (nichts zu entfalten —
+                der Wortlaut ist «…»); ein w-4-Platzhalter hält die «Art. N» bündig
+                zu den übrigen Artikeln. */}
+            {ganzAufgehoben
+              ? <span className="shrink-0 w-4" aria-hidden />
+              : <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
+                  aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+                  className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>}
             {imTreffer && onSpringe ? (
               <button type="button" onClick={() => onSpringe(e.artikel)}
                 title="Im Volltext zu diesem Artikel springen"
@@ -142,6 +154,15 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
               <span className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
                 <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
                 <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+              </span>
+            )}
+            {/* Amtliche Aufhebungsnotiz inline (eigene Zeile, dezent eingerückt) —
+                schliesst die §5-Lücke «nacktes aufgehoben/…» gegenüber Fedlex. */}
+            {ganzAufgehoben && aufhebungNotiz.length > 0 && (
+              <span className="basis-full pl-6 text-xs leading-snug text-ink-500">
+                {aufhebungNotiz.map((fn, i) => (
+                  <span key={i}>{i > 0 && '; '}{fnTextMitLinks(fn)}</span>
+                ))}
               </span>
             )}
           </div>
