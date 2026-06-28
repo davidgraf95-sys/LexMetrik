@@ -23,7 +23,20 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 28.6.2026 — ROADMAP Schritt 5: globale Artikel-Volltextsuche (FlexSearch), NICHT deployt
+## Session 28.6.2026 — §9-DEPLOY #3: globale Volltextsuche → PROD live (HOCH-Bug im Bug-Check gefangen)
+
+David «bug check und deploy». **Der Bug-Check fing einen HOCH-Bug** (2 Opus-Agents über das Suche-
+Delta): der Treffer-href baute auf dem internen `erlass`-Kürzel («StGB») statt dem /gesetze-Routen-
+Key (Dateiname-Stamm «STGB») → **71/218 Erlasse tote Links** (StGB/StPO/SchKG/VwVG …). **Fix:**
+Generator `k` = Dateiname-Stamm (Routen-Key), `ku` = Kürzel (Anzeige); href nutzt k, Label nutzt ku;
+beide volltext-indexiert. **Dead-Link-Tor** `src/tests/suchIndex.test.ts` (jeder Index-Key ein echter
+Bund-Routen-Key). NIEDRIG: Limit 25→40. Tore grün (gate · build mit `gen:suchindex` · e2e 86);
+StGB-Link end-to-end bestätigt (`/gesetze/bund/STGB`). Push + Worktree-Deploy.
+**DEPLOYT: `dpl_EP7XZEdQt247YZzDbXQv2Ct8fsJv` (READY), commit `aebd72fb`, lexmetrik.vercel.app.**
+Nachkontrolle: Routen 200 inkl. `/gesetze/bund/STGB`; **Such-Index in Prod HTTP 200, 24'183 Artikel,
+StGB k=STGB** (Vercel-Build generierte den Index); Asset-Hash live=HEAD. Worktree entfernt.
+
+## Session 28.6.2026 — ROADMAP Schritt 5: globale Artikel-Volltextsuche (FlexSearch) → mit Batch deployt `aebd72fb`
 
 David «FlexSearch ja». Volltextsuche über **24'183 Bund-Artikel** (`bloecke`-Text), integriert in
 **die** bestehende Suche (§5, ein Such-Workstream): neue Gruppe «Gesetzestext» in
