@@ -31,20 +31,24 @@ function artikelText(bloecke: Block[]): string {
   return teile.join(' ').replace(/\s+/g, ' ').trim();
 }
 
-// Kompaktes Schema (kurze Keys → kleinere Datei): k=erlass-key, a=artikel,
-// l=label, t=text. ebene ist immer 'bund'.
-interface IndexEintrag { k: string; a: string; l: string; t: string }
+// Kompaktes Schema (kurze Keys → kleinere Datei): k=ROUTEN-Key (Dateiname-Stamm
+// = ERLASS_REGISTER.key, für /gesetze/bund/<k>), ku=Anzeige-Kürzel (z. B. «StGB»),
+// a=artikel, l=label, t=text. ebene ist immer 'bund'.
+// WICHTIG (§8): k MUSS der Dateiname-Stamm sein, NICHT das interne `erlass`-Feld —
+// 71/218 Erlasse haben Kürzel ≠ Dateiname (StGB/STGB, AdoV/ADOV …); sonst tote Links.
+interface IndexEintrag { k: string; ku: string; a: string; l: string; t: string }
 
 export function baueBundIndex(): { erzeugt: string; ebene: 'bund'; eintraege: IndexEintrag[] } {
   const eintraege: IndexEintrag[] = [];
   for (const datei of readdirSync(BUND).filter((f) => f.endsWith('.json')).sort()) {
+    const key = datei.replace(/\.json$/, ''); // = Routen-Key (ERLASS_REGISTER.key)
     let snap: { eintraege?: Eintrag[] };
     try { snap = JSON.parse(readFileSync(resolve(BUND, datei), 'utf8')); } catch { continue; }
     for (const e of snap.eintraege ?? []) {
       if (!e.bloecke || e.bloecke.length === 0) continue;
       const t = artikelText(e.bloecke);
       if (!t) continue;
-      eintraege.push({ k: e.erlass, a: e.artikel, l: e.artikelLabel, t });
+      eintraege.push({ k: key, ku: e.erlass, a: e.artikel, l: e.artikelLabel, t });
     }
   }
   // Stabile Reihenfolge (erlass, dann Datei-Reihenfolge der Artikel bleibt erhalten).
@@ -55,24 +59,28 @@ function serialisiere(): string {
   return JSON.stringify(baueBundIndex());
 }
 
-const istCheck = process.argv.includes('--check');
-const neu = serialisiere();
-
-if (istCheck) {
-  let alt = '';
-  try { alt = readFileSync(ZIEL, 'utf8'); } catch {
-    console.error('check:suchindex: ' + ZIEL + ' fehlt — `npm run gen:suchindex` ausführen.');
-    process.exit(1);
+// CLI-Logik NICHT unter vitest ausführen — der Test importiert baueBundIndex
+// und darf den Index nicht als Seiteneffekt schreiben. (vite-node setzt VITEST
+// nicht → gen:suchindex/check:suchindex laufen normal.)
+if (!process.env.VITEST) {
+  const istCheck = process.argv.includes('--check');
+  const neu = serialisiere();
+  if (istCheck) {
+    let alt = '';
+    try { alt = readFileSync(ZIEL, 'utf8'); } catch {
+      console.error('check:suchindex: ' + ZIEL + ' fehlt — `npm run gen:suchindex` ausführen.');
+      process.exit(1);
+    }
+    if (alt !== neu) {
+      console.error('check:suchindex: public/such-index/artikel-bund.json ist VERALTET gegenüber den Snapshots — `npm run gen:suchindex` ausführen und committen.');
+      process.exit(1);
+    }
+    const n = JSON.parse(neu).eintraege.length;
+    console.log(`check:suchindex: Index synchron mit den Snapshots (${n} Artikel).`);
+  } else {
+    mkdirSync(dirname(ZIEL), { recursive: true });
+    writeFileSync(ZIEL, neu, 'utf8');
+    const n = JSON.parse(neu).eintraege.length;
+    console.log(`gen:suchindex: ${n} Bund-Artikel → public/such-index/artikel-bund.json`);
   }
-  if (alt !== neu) {
-    console.error('check:suchindex: public/such-index/artikel-bund.json ist VERALTET gegenüber den Snapshots — `npm run gen:suchindex` ausführen und committen.');
-    process.exit(1);
-  }
-  const n = JSON.parse(neu).eintraege.length;
-  console.log(`check:suchindex: Index synchron mit den Snapshots (${n} Artikel).`);
-} else {
-  mkdirSync(dirname(ZIEL), { recursive: true });
-  writeFileSync(ZIEL, neu, 'utf8');
-  const n = JSON.parse(neu).eintraege.length;
-  console.log(`gen:suchindex: ${n} Bund-Artikel → public/such-index/artikel-bund.json`);
 }

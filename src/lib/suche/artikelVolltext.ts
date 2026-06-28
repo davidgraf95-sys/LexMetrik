@@ -8,7 +8,7 @@ import type { SuchTreffer } from '../universalSuche';
 // Term-/Zitat-Suche (z. B. «243 ZPO», «Notwehr»), KEINE semantische Suche —
 // deklinationsabhängige Phrasen treffen unscharf (§8, ehrlich kommuniziert).
 
-interface IndexEintrag { k: string; a: string; l: string; t: string }
+interface IndexEintrag { k: string; ku: string; a: string; l: string; t: string }
 
 let suchFn: ((q: string, limit?: number) => SuchTreffer[]) | null = null;
 let ladePromise: Promise<(q: string, limit?: number) => SuchTreffer[]> | null = null;
@@ -49,18 +49,20 @@ async function baue(): Promise<(q: string, limit?: number) => SuchTreffer[]> {
   });
   eintraege.forEach((e, i) => idx.add({
     id: i,
-    t: (e.l + ' ' + e.k + ' ' + e.t).toLowerCase(),
-    l: (e.l + ' ' + e.k).toLowerCase(),
+    // Kürzel UND Routen-Key mitindexieren (z. B. «StGB» und «STGB», «ArGV 1»/«ARGV_1»).
+    t: (e.l + ' ' + e.ku + ' ' + e.k + ' ' + e.t).toLowerCase(),
+    l: (e.l + ' ' + e.ku + ' ' + e.k).toLowerCase(),
   }));
 
-  suchFn = (q: string, limit = 25): SuchTreffer[] => {
+  suchFn = (q: string, limit = 40): SuchTreffer[] => {
     const roh = idx.search(q.toLowerCase(), { limit, suggest: true });
     const ids = [...new Set(roh.flatMap((r) => r.result))].slice(0, limit);
     return ids.map((i) => {
       const e = eintraege[i as number];
       return {
         id: `art:${e.k}:${e.a}`,
-        label: `${e.l} ${e.k}`,
+        // Label: Anzeige-Kürzel (e.ku, «StGB»); href: ROUTEN-Key (e.k, «STGB»).
+        label: `${e.l} ${e.ku}`,
         untertitel: snippet(e.t, q),
         marke: { text: 'Gesetzestext', ton: 'soft' as const },
         href: `/gesetze/bund/${encodeURIComponent(e.k)}#art-${e.a}`,

@@ -49,7 +49,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
     () => sucheAlles(q, {
       presets: presetSucheFn ? presetSucheFn(q, 999) : null,
       gesetze,
-      artikel: artikelSucheFn ? artikelSucheFn(q, 25) : null,
+      artikel: artikelSucheFn ? artikelSucheFn(q, 40) : null,
       entscheide,
       materialien,
     }),
