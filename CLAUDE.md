@@ -4,6 +4,14 @@
 hier ändert sich selten; es hält fest, *wie* gearbeitet wird — nicht *was*
 gerade gebaut ist.
 
+**Was als Nächstes zu bauen ist: `ROADMAP.md`** (DER eine Handlungsplan, 28.6.2026).
+Eine Bau-Session liest oben das **Ausführungs-Protokoll** und nimmt den **obersten
+offenen Schritt** der Bau-Reihenfolge (S0 + Wellen 1–13), dessen Abhängigkeiten
+erfüllt sind. Leitbild: «Schweizer Taschenmesser für Juristen» — Anlaufpunkt für
+alle Juristen, **nur amtliche/urheberrechtsfreie Quellen** (Art. 5 URG, keine
+Kommentare), Dossier geparkt, Werkzeuge zustandslos. Detail je Schritt in der
+jeweiligen `FAHRPLAN-*.md`.
+
 **STRUKTUR.md aktuell halten (Pflicht, Auftrag David 22.6.2026).** Wer in einer
 Session substanzielle Arbeit auf `main` landet (Feature/Fix/Refactor, ein PR),
 zieht in derselben Session oben eine ehrliche Session-Karte in `STRUKTUR.md`
