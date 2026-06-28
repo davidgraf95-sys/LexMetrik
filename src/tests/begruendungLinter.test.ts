@@ -22,6 +22,10 @@ import { berechneVerzugszins } from '../lib/verzugszins';
 import { berechneLohnfortzahlung } from '../lib/lohnfortzahlung';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { berechneBgerRechtsweg } from '../lib/bgerRechtsweg';
+import { berechneStreitwert } from '../lib/streitwert';
+import { berechneTeuerung } from '../lib/teuerung';
+import { berechneBetreibungskosten } from '../lib/gebvKosten';
+import { berechneErbFrist } from '../lib/erbFristen';
 
 const FAELLE: { id: string; absatz: () => string }[] = [
   {
@@ -46,6 +50,10 @@ const FAELLE: { id: string; absatz: () => string }[] = [
   { id: 'lohn:bs', absatz: () => begruendungsAbsatz(berechneLohnfortzahlung({ vertragsbeginn: '2020-01-01', verhinderungBeginn: '2026-02-01', verhinderungEnde: '2026-04-15', arbeitsunfaehigkeitProzent: 100, kanton: 'BS', ktgGleichwertigVorhanden: false })) },
   { id: 'erb:ehegatte2kinder', absatz: () => begruendungsAbsatz(berechneErbteilung({ todesdatum: '2026-03-01', zivilstand: 'verheiratet', kinderLebend: 2 } as never)) },
   { id: 'bger:zivil:50k', absatz: () => begruendungsAbsatz(berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 50_000 })) },
+  { id: 'streitwert:einmalig50k', absatz: () => begruendungsAbsatz(berechneStreitwert({ begehren: [{ typ: 'einmalig', betragCHF: 50_000 }] })) },
+  { id: 'teuerung:indexmiete', absatz: () => begruendungsAbsatz(berechneTeuerung({ modus: 'indexmiete', betrag: 2500, vonMonat: '2007-10', bisMonat: '2012-03' })) },
+  { id: 'gebv:zb5000', absatz: () => begruendungsAbsatz(berechneBetreibungskosten({ forderungCHF: 5_000, zahlungsbefehl: { zustellversuche: 2, weitereAusfertigungen: 1 } })) },
+  { id: 'erbfrist:ausschlagung', absatz: () => begruendungsAbsatz(berechneErbFrist({ key: 'ausschlagung_gesetzlich', trigger: '2026-03-10' })) },
 ];
 
 describe('Begründungs-Absatz — Goldlist (Konvention/Typografie)', () => {

@@ -103,8 +103,12 @@ Aufrufstelle liefert. Vorbehalts-Text aus EINER lib-Konstante (§5).
 >   Schlusspunkt** «… u. a..» in `normenSatz()` (`begruendung.ts`) — sichtbar im kopierten
 >   Absatz aller 16 Forms — als deklarierter §13/F6-Fix behoben (golden-neutral, da vorher
 >   kein Snapshot bestand); Linter-Wächter sichert gegen Rückfall.
-> - **B0-2-Rest (offen):** `allg`/`zust`/`rm` (UI-gewickelt) + streitwert/teuerung/
->   gebvKosten/erbFristen (Engines noch nicht in `golden-outputs.ts` importiert).
+> - **B0-2-Rest:** streitwert/teuerung/gebvKosten/erbFristen **nachgezogen 28.6.** (4 weitere
+>   `absatz:`-Goldens + Linter-Fälle). **Offen nur noch** `allg`/`zust`/`rm` (UI-gewickelt →
+>   faithful erst über den Slot-Pfad). **Bug-Check-Fund (behoben):** der erweiterte Linter
+>   deckte auf, dass `erbFristen.ts` durchgängig Geviertstriche «—» statt Halbgeviert «–»
+>   führte (§13, sichtbar in UI/PDF, von `konventionen.test` nie erfasst) → global korrigiert
+>   (erbFristen-Ausgabe geändert, deklarierter §13-Fix).
 
 ## Phase 0 — Bestandsklärung & Beweis-Grundlage (Original-Schritte)
 
@@ -237,7 +241,15 @@ der Absatz irreführend unvollständig.
 `EinfacheFristForm` mischt mehrere Engines ohne einheitliches Bericht-Resultat →
 klären, welcher Ergebnistyp den Absatz speist, sonst bewusst ausnehmen (§8).
 
-## Phase 5 — Qualitätssicherung & Vollständigkeits-Gate
+## Phase 5 — Qualitätssicherung & Vollständigkeits-Gate — ◐ B5-1 erledigt 28.6.2026
+
+> **Erledigt 28.6.2026 (B5-1 Goldlist):** `src/tests/begruendungLinter.test.ts` deckt jetzt
+> **14 Engines** mit gültigem, prosa-fähigem Ergebnis ab (0 Konventionsverstösse + nicht-leerer
+> Normen-Satz + Schlusspunkt-Wächter). Negativ-/Validierungs-Ergebnisse rendern `null` (Slot,
+> Kritik-6). **Offen:** B5-2 UI↔PDF-Konsistenz-Wächter — sinnvoll erst **mit** dem PDF-Rollout
+> (David-Entscheid #3); solange der Default AUS ist, gäbe es nichts zu vergleichen.
+
+## Phase 5 — Original-Schritte
 
 **B5-1 Goldlist** über ALLE Engines mit **gültigem, prosa-fähigem** Ergebnis: je
 repräsentativer Eingabe `begruendungsAbsatz()` → 0 Konventionsverstöße +

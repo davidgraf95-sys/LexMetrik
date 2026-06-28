@@ -50,6 +50,10 @@ import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzges
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 import { berechneBggVwvgFrist } from '../src/lib/bggVwvgFristen';
 import { begruendungsAbsatz, fristbeginnZusatz } from '../src/lib/begruendung';
+import { berechneStreitwert } from '../src/lib/streitwert';
+import { berechneTeuerung } from '../src/lib/teuerung';
+import { berechneBetreibungskosten } from '../src/lib/gebvKosten';
+import { berechneErbFrist } from '../src/lib/erbFristen';
 
 const faelle: Record<string, unknown> = {};
 const f = (id: string, fn: () => unknown) => {
@@ -590,6 +594,11 @@ f('absatz:verzug:einfach', () => begruendungsAbsatz(berechneVerzugszins({ kapita
 f('absatz:lohn:bs', () => begruendungsAbsatz(berechneLohnfortzahlung({ vertragsbeginn: '2020-01-01', verhinderungBeginn: '2026-02-01', verhinderungEnde: '2026-04-15', arbeitsunfaehigkeitProzent: 100, kanton: 'BS', ktgGleichwertigVorhanden: false })));
 f('absatz:erb:ehegatte2kinder', () => begruendungsAbsatz(berechneErbteilung({ todesdatum: '2026-03-01', zivilstand: 'verheiratet', kinderLebend: 2 } as never)));
 f('absatz:bger:zivil:50k', () => begruendungsAbsatz(berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 50_000 })));
+// B0-2-Rest (28.6.): bislang nicht importierte Roh-Ergebnis-Engines.
+f('absatz:streitwert:einmalig50k', () => begruendungsAbsatz(berechneStreitwert({ begehren: [{ typ: 'einmalig', betragCHF: 50_000 }] })));
+f('absatz:teuerung:indexmiete', () => begruendungsAbsatz(berechneTeuerung({ modus: 'indexmiete', betrag: 2500, vonMonat: '2007-10', bisMonat: '2012-03' })));
+f('absatz:gebv:zb5000', () => begruendungsAbsatz(berechneBetreibungskosten({ forderungCHF: 5_000, zahlungsbefehl: { zustellversuche: 2, weitereAusfertigungen: 1 } })));
+f('absatz:erbfrist:ausschlagung', () => begruendungsAbsatz(berechneErbFrist({ key: 'ausschlagung_gesetzlich', trigger: '2026-03-10' })));
 
 // ── Schreiben oder Vergleichen ──────────────────────────────────────────────
 // Bug-Check 10.6.2026 (NIEDRIG): fileURLToPath statt .pathname — Letzteres

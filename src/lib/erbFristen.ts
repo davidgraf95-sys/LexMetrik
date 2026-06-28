@@ -2,12 +2,12 @@
 import type { Berechnungsergebnis, Kanton, Normverweis } from '../types/legal';
 import { berechneAllgemeineFrist, type AllgFristResult } from './allgemeineFrist';
 
-// ─── Erb-Fristen-Rechner (Art. 521/533/567 ff. ZGB) — dünne Engine ──────────
+// ─── Erb-Fristen-Rechner (Art. 521/533/567 ff. ZGB) – dünne Engine ──────────
 //
 // Grundlage: bibliothek/recherche/erbrecht-ausbau.md (Rechner 2) +
 // bibliothek/normen/erbrecht-regelwerk.md. Alle Wortlaute am Fedlex-Cache
 // /tmp/zgb.html (Stand 20260101) verifiziert (6.6.2026): 521, 533, 566–569,
-// 580, 587, 600, 601. Muster: allgemeineFrist.ts — deklarativer Frist-Katalog,
+// 580, 587, 600, 601. Muster: allgemeineFrist.ts – deklarativer Frist-Katalog,
 // Nutzer wählt Tatbestand + gibt das Trigger-Datum ein; KEINE Stillstände
 // (materielles Erbrecht kennt keine Gerichtsferien), Arithmetik über die
 // geteilten Bausteine (Art.-77-analog: Ereignistag zählt nicht, Monats-/
@@ -15,7 +15,7 @@ import { berechneAllgemeineFrist, type AllgFristResult } from './allgemeineFrist
 //
 // §2: rein und deterministisch. Die QUALIFIKATION des Triggers («Kenntnis»,
 // gesetzlicher vs. eingesetzter Erbe, Bösgläubigkeit) ist Rechtsfrage und
-// bleibt Auswahl/Eingabe des Nutzers — nie Heuristik (§8: Warnungen).
+// bleibt Auswahl/Eingabe des Nutzers – nie Heuristik (§8: Warnungen).
 //
 // Fristbeginn-Konvention (Annahme, offengelegt): Auch die Klage-/
 // Verjährungsfristen (521/533/600/601) werden nach der Art.-77-analogen
@@ -48,23 +48,23 @@ export interface ErbFristPreset {
   label: string;
   laenge: number;
   einheit: 'monate' | 'jahre';
-  /** Auslösendes Ereignis (dies a quo) — exakte gesetzliche Umschreibung. */
+  /** Auslösendes Ereignis (dies a quo) – exakte gesetzliche Umschreibung. */
   trigger: string;
   norm: string;
   hinweis?: string;
 }
 
-// Katalog — jede Zeile gegen den ZGB-Wortlaut geprüft (6.6.2026).
+// Katalog – jede Zeile gegen den ZGB-Wortlaut geprüft (6.6.2026).
 export const ERB_FRISTEN: readonly ErbFristPreset[] = [
   // ── Erbgang: Ausschlagung & Inventar ──
   { key: 'ausschlagung_gesetzlich', gruppe: 'erbgang',
-    label: 'Ausschlagung — gesetzliche Erbin/gesetzlicher Erbe (3 Monate)',
+    label: 'Ausschlagung – gesetzliche Erbin/gesetzlicher Erbe (3 Monate)',
     laenge: 3, einheit: 'monate',
     trigger: 'Kenntnis vom Tod des Erblassers (sofern nicht nachweisbar erst später Kenntnis vom Erbfall)',
     norm: 'Art. 567 Abs. 2 ZGB',
     hinweis: 'Die Ausschlagung ist bei der zuständigen Behörde mündlich oder schriftlich zu erklären (Art. 570 ZGB); sie muss unbedingt und vorbehaltlos sein.' },
   { key: 'ausschlagung_eingesetzt', gruppe: 'erbgang',
-    label: 'Ausschlagung — eingesetzte Erbin/eingesetzter Erbe (3 Monate)',
+    label: 'Ausschlagung – eingesetzte Erbin/eingesetzter Erbe (3 Monate)',
     laenge: 3, einheit: 'monate',
     trigger: 'Zugang der amtlichen Mitteilung von der Verfügung des Erblassers',
     norm: 'Art. 567 Abs. 2 ZGB' },
@@ -88,12 +88,12 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
     hinweis: 'Schweigen gilt als Annahme unter öffentlichem Inventar (Art. 588 Abs. 2 ZGB); die Behörde kann die Frist erstrecken (Art. 587 Abs. 2 ZGB).' },
   // ── Klagefristen: 1/10/30-Muster ──
   { key: 'ungueltigkeit_relativ', gruppe: 'klage',
-    label: 'Ungültigkeitsklage — relative Frist (1 Jahr)',
+    label: 'Ungültigkeitsklage – relative Frist (1 Jahr)',
     laenge: 1, einheit: 'jahre',
     trigger: 'Kenntnis von der Verfügung UND vom Ungültigkeitsgrund',
     norm: 'Art. 521 Abs. 1 ZGB' },
   { key: 'ungueltigkeit_absolut', gruppe: 'klage',
-    label: 'Ungültigkeitsklage — absolute Frist (10 Jahre)',
+    label: 'Ungültigkeitsklage – absolute Frist (10 Jahre)',
     laenge: 10, einheit: 'jahre',
     trigger: 'Eröffnung der Verfügung',
     norm: 'Art. 521 Abs. 1 ZGB' },
@@ -102,29 +102,29 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
     laenge: 30, einheit: 'jahre',
     trigger: 'Eröffnung der Verfügung',
     norm: 'Art. 521 Abs. 2 ZGB',
-    hinweis: 'NUR bei Verfügungsunfähigkeit des Erblassers oder Rechtswidrigkeit/Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1 und 3 ZGB) — NICHT beim Formmangel (Ziff. 2).' },
+    hinweis: 'NUR bei Verfügungsunfähigkeit des Erblassers oder Rechtswidrigkeit/Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1 und 3 ZGB) – NICHT beim Formmangel (Ziff. 2).' },
   { key: 'herabsetzung_relativ', gruppe: 'klage',
-    label: 'Herabsetzungsklage — relative Frist (1 Jahr)',
+    label: 'Herabsetzungsklage – relative Frist (1 Jahr)',
     laenge: 1, einheit: 'jahre',
     trigger: 'Kenntnis der Erben von der Verletzung ihrer (Pflichtteils-)Rechte',
     norm: 'Art. 533 Abs. 1 ZGB' },
   { key: 'herabsetzung_absolut_verfuegung', gruppe: 'klage',
-    label: 'Herabsetzungsklage — absolute Frist bei letztwilliger Verfügung (10 Jahre)',
+    label: 'Herabsetzungsklage – absolute Frist bei letztwilliger Verfügung (10 Jahre)',
     laenge: 10, einheit: 'jahre',
     trigger: 'Eröffnung der letztwilligen Verfügung',
     norm: 'Art. 533 Abs. 1 ZGB' },
   { key: 'herabsetzung_absolut_lebzeitig', gruppe: 'klage',
-    label: 'Herabsetzungsklage — absolute Frist bei lebzeitiger Zuwendung (10 Jahre)',
+    label: 'Herabsetzungsklage – absolute Frist bei lebzeitiger Zuwendung (10 Jahre)',
     laenge: 10, einheit: 'jahre',
     trigger: 'Tod des Erblassers',
     norm: 'Art. 533 Abs. 1 ZGB' },
   { key: 'erbschaftsklage_relativ', gruppe: 'klage',
-    label: 'Erbschaftsklage — relative Frist (1 Jahr)',
+    label: 'Erbschaftsklage – relative Frist (1 Jahr)',
     laenge: 1, einheit: 'jahre',
     trigger: 'Kenntnis vom Besitz der beklagten Partei und vom eigenen besseren Recht',
     norm: 'Art. 600 Abs. 1 ZGB' },
   { key: 'erbschaftsklage_absolut', gruppe: 'klage',
-    label: 'Erbschaftsklage — absolute Frist (10 Jahre)',
+    label: 'Erbschaftsklage – absolute Frist (10 Jahre)',
     laenge: 10, einheit: 'jahre',
     trigger: 'Tod des Erblassers bzw. Eröffnung der letztwilligen Verfügung',
     norm: 'Art. 600 Abs. 1 ZGB' },
@@ -133,7 +133,7 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
     laenge: 30, einheit: 'jahre',
     trigger: 'Tod des Erblassers bzw. Eröffnung der letztwilligen Verfügung',
     norm: 'Art. 600 Abs. 2 ZGB',
-    hinweis: 'Gegenüber bösgläubigen Beklagten beträgt die Frist STETS 30 Jahre — anders als bei Art. 521 Abs. 2 ohne Beschränkung auf bestimmte Gründe.' },
+    hinweis: 'Gegenüber bösgläubigen Beklagten beträgt die Frist STETS 30 Jahre – anders als bei Art. 521 Abs. 2 ohne Beschränkung auf bestimmte Gründe.' },
   { key: 'vermaechtnisklage', gruppe: 'klage',
     label: 'Vermächtnisklage (10 Jahre)',
     laenge: 10, einheit: 'jahre',
@@ -143,7 +143,7 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
 
 export interface ErbFristInput {
   key: ErbFristKey;
-  /** Trigger-Datum (yyyy-MM-dd) — Qualifikation gemäss Katalog-Trigger. */
+  /** Trigger-Datum (yyyy-MM-dd) – Qualifikation gemäss Katalog-Trigger. */
   trigger: string;
   /** Fristende auf Sa/So/Feiertag → nächster Werktag (Art. 78 OR analog). */
   werktagsVerschiebung?: boolean;
@@ -161,7 +161,7 @@ export function berechneErbFrist(
   if (!preset) throw new Error(`Unbekannter Erb-Frist-Tatbestand: ${input.key}`);
 
   // Arithmetik über den geteilten allgemeinen Fristenrechner (Art.-77-analog;
-  // gleichbezeichneter Tag, Monatsende-Klemmung) — §10: Rahmen wiederverwenden.
+  // gleichbezeichneter Tag, Monatsende-Klemmung) – §10: Rahmen wiederverwenden.
   const basis = berechneAllgemeineFrist({
     start: input.trigger,
     laenge: preset.laenge,
@@ -172,20 +172,20 @@ export function berechneErbFrist(
   });
 
   const annahmen: string[] = [
-    'Fristberechnung Art.-77-OR-analog: Der Trigger-Tag zählt nicht mit; Monats-/Jahresfristen enden am gleichbezeichneten Tag (Monatsende-Klemmung). Für die Klagefristen (Art. 521/533/600/601 ZGB) ist diese Konvention h.L.-konform, aber nicht höchstrichterlich fixiert — im Grenzfall (±1 Tag) anwaltlich prüfen.',
-    'Die Qualifikation des Trigger-Ereignisses (massgebliche «Kenntnis», Stellung als gesetzliche/eingesetzte Erbin, Bösgläubigkeit) ist Rechtsfrage und Eingabe-Verantwortung — der Rechner prüft sie nicht.',
+    'Fristberechnung Art.-77-OR-analog: Der Trigger-Tag zählt nicht mit; Monats-/Jahresfristen enden am gleichbezeichneten Tag (Monatsende-Klemmung). Für die Klagefristen (Art. 521/533/600/601 ZGB) ist diese Konvention h.L.-konform, aber nicht höchstrichterlich fixiert – im Grenzfall (±1 Tag) anwaltlich prüfen.',
+    'Die Qualifikation des Trigger-Ereignisses (massgebliche «Kenntnis», Stellung als gesetzliche/eingesetzte Erbin, Bösgläubigkeit) ist Rechtsfrage und Eingabe-Verantwortung – der Rechner prüft sie nicht.',
   ];
   const warnungen: string[] = [];
 
   if (preset.gruppe === 'erbgang') {
     warnungen.push(
-      'Ausschlagung und Inventar-Begehren sind bei der ZUSTÄNDIGEN KANTONALEN BEHÖRDE anzubringen (Art. 570/580 ZGB) — kantonal unterschiedlich organisiert (Erbschaftsamt, Bezirksgericht, Gemeinde).',
-      'Ist die Zahlungsunfähigkeit des Erblassers im Todeszeitpunkt amtlich festgestellt oder offenkundig, wird die Ausschlagung VERMUTET (Art. 566 Abs. 2 ZGB) — dann ist unter Umständen keine aktive Erklärung nötig.',
+      'Ausschlagung und Inventar-Begehren sind bei der ZUSTÄNDIGEN KANTONALEN BEHÖRDE anzubringen (Art. 570/580 ZGB) – kantonal unterschiedlich organisiert (Erbschaftsamt, Bezirksgericht, Gemeinde).',
+      'Ist die Zahlungsunfähigkeit des Erblassers im Todeszeitpunkt amtlich festgestellt oder offenkundig, wird die Ausschlagung VERMUTET (Art. 566 Abs. 2 ZGB) – dann ist unter Umständen keine aktive Erklärung nötig.',
       'Die Behörde kann die Frist aus wichtigen Gründen verlängern oder eine neue Frist ansetzen (Art. 576 ZGB). Vorbehalt: Verwirkung der Ausschlagungsbefugnis bei Einmischung in die Erbschaft (Art. 571 Abs. 2 ZGB).',
     );
   } else {
     warnungen.push(
-      'EINREDEWEISE kann die Ungültigkeit bzw. der Herabsetzungsanspruch JEDERZEIT geltend gemacht werden (Art. 521 Abs. 3 / 533 Abs. 3 ZGB) — die Frist betrifft nur die KLAGE.',
+      'EINREDEWEISE kann die Ungültigkeit bzw. der Herabsetzungsanspruch JEDERZEIT geltend gemacht werden (Art. 521 Abs. 3 / 533 Abs. 3 ZGB) – die Frist betrifft nur die KLAGE.',
     );
     if (preset.key.startsWith('ungueltigkeit')) {
       warnungen.push('Die 30-Jahres-Frist gegen Bösgläubige gilt NUR bei Verfügungsunfähigkeit, Rechtswidrigkeit oder Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1/3 ZGB), nicht beim Formmangel.');
@@ -207,13 +207,13 @@ export function berechneErbFrist(
     },
     ...basis.schritte.map((s) => ({
       beschreibung: s.label,
-      zwischenergebnis: `${s.datum} (${s.wochentag})${s.grund ? ' — ' + s.grund : ''}`,
+      zwischenergebnis: `${s.datum} (${s.wochentag})${s.grund ? ' – ' + s.grund : ''}`,
       normen: [] as Normverweis[],
     })),
   ];
 
   return {
-    ergebnis: `Fristende: ${basis.endDatum} (${basis.endWochentag}) — ${preset.label}.`,
+    ergebnis: `Fristende: ${basis.endDatum} (${basis.endWochentag}) – ${preset.label}.`,
     status: 'ok',
     rechenweg,
     annahmen,
