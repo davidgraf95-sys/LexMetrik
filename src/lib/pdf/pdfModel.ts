@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import type { Berechnungsergebnis, BerechnungsStatus, Normverweis } from '../../types/legal';
 import { pdfText } from './winansi';
 import { normLink } from './normLinks';
+import { BEGRUENDUNG_VORBEHALT } from '../begruendung';
 
 // ─── Zentrale PDF-Schicht: Konfiguration & Dokumentmodell ─────────────────
 //
@@ -39,6 +40,10 @@ export type PdfDocConfig = {
   citations?: Normverweis[];          // NUR die tatsächlich einschlägigen Normen;
                                       // fehlt das Feld: Union der Section-Normverweise
   notes?: string[];                   // zusätzliche rechnerspezifische Hinweise
+  /** Optionaler kopierfertiger «Für die Rechtsschrift»-Absatz (EINE Quelle wie
+   *  die UI: lib/begruendung.ts via BegruendungSlot). Fehlt das Feld, ist das
+   *  Modell byte-identisch zum bisherigen PDF (FAHRPLAN-BEGRUENDUNGS-ABSATZ B3-1). */
+  begruendung?: string;
   disclaimer: string;                 // domänenspezifischer Disclaimer-Text
 };
 
@@ -175,6 +180,17 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
   // Zusätzliche Hinweise des Rechners
   if (cfg.notes && cfg.notes.length > 0) {
     blocks.push({ art: 'hinweisbox', titel: 'Hinweise', eintraege: cfg.notes.map(t), ton: 'normal' });
+    blocks.push({ art: 'trenner' });
+  }
+
+  // «Für die Rechtsschrift»-Absatz (B3-1) — VOR dem Disclaimer, mit eigenem,
+  // sichtbarem Vorbehalt aus der geteilten lib-Konstante (§5/§8). Dieselbe
+  // Quelle wie die UI (BegruendungSlot); fehlt das Feld, bleibt das Modell
+  // byte-identisch.
+  if (cfg.begruendung?.trim()) {
+    blocks.push({ art: 'h2', text: 'Für die Rechtsschrift' });
+    blocks.push({ art: 'absatz', text: t(cfg.begruendung.trim()), ton: 'normal' });
+    blocks.push({ art: 'absatz', text: t(BEGRUENDUNG_VORBEHALT), ton: 'dezent' });
     blocks.push({ art: 'trenner' });
   }
 

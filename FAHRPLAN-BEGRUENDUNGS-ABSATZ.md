@@ -183,7 +183,22 @@ auslagern (try/catch, «Kopiert ✓» erst nach Erfolg). **B2-2** Render-Test:
 leerer/Negativ-Text → `null`; gültiger Text → Absatz + Button. *Beweis:* additive
 UI-Tests; kein Golden betroffen.
 
-## Phase 3 — Absatz im PDF-Bericht (kritischer Befund schließen)
+## Phase 3 — Absatz im PDF-Bericht (kritischer Befund schließen) — ◐ B3-1 erledigt 28.6.2026 (Rollout = David-Entscheid #3)
+
+> **Erledigt 28.6.2026 (B3-1, Kapazität, gebaut + gegated, nicht deployt):**
+> `PdfDocConfig.begruendung?: string` + `buildPdfModel` rendert einen Block **«Für die
+> Rechtsschrift»** (Absatz + sichtbarer Vorbehalt aus `BEGRUENDUNG_VORBEHALT`, §5/§8) **VOR
+> dem Disclaimer**. Fehlt das Feld → Modell **byte-identisch** (53 `pdf.test`-Snapshots
+> unverändert). Test `src/tests/pdfBegruendung.test.ts`.
+>
+> **Default-und-Flag (ROADMAP):** Die Kapazität ist die Flagge; der **Default ist AUS** —
+> noch setzt KEINE Form `pdfConfig.begruendung`, die PDFs bleiben unverändert. Der **Rollout
+> B3-2/B3-3 ist David-Entscheid #3** (PDF-Block an vs. Copy-nur-in-UI) und laut FAHRPLAN je
+> Form ein eigener review-/committebarer Snapshot — daher **bewusst gated**, nicht im Stapel
+> gesetzt. Sobald David #3 = «an» bestätigt: pro Form `begruendung` = derselbe String wie der
+> `BegruendungSlot` (eine Quelle), Snapshot je Form.
+
+## Phase 3 — Original-Schritte
 
 **B3-1 `PdfDocConfig.begruendung?`** + `buildPdfModel`: neuer Block («Für die
 Rechtsschrift») **inkl. eigenem, sichtbarem Vorbehalt** (Entwurf + «u. a.»-Kappung
@@ -238,17 +253,19 @@ Rechner pro Rechtsgebiet (Feedback erscheint, Absatz nicht leer).
 
 ---
 
-## Offene David-Entscheide
+## Offene David-Entscheide — Default-und-Flag gesetzt 28.6.2026 (warten auf Davids Bestätigung)
 
 1. **Kosten-Rechner (B4-2):** Eigener «Kosten-Begründungs»-Text **oder** vom
-   Rechtsschrift-Absatz ausnehmen? (Bestimmt Phase 4 maßgeblich.)
-2. **`MAX_NORMEN=6`/«u. a.»:** Kappung beibehalten oder pro Engine konfigurierbar?
-   Bei vielen Normen (Zuständigkeit) kann eine tragende Norm aus dem Absatz fallen
-   — Default: Kappung im Absatz selbst kenntlich machen (nicht nur «u. a.»).
-3. **PDF-Absatz:** als «Für die Rechtsschrift»-Block ins PDF (mit Vorbehalt) —
-   oder bewusst nur Copy in der UI lassen (PDF bleibt reine Berechnungs-Doku)?
-4. **SchKG-Zitierstil:** «Art. 31 SchKG i.V.m. …» so in den lib-Helfer übernehmen
-   oder neu formulieren?
+   Rechtsschrift-Absatz ausnehmen? → **Default: Status quo unverändert.** Nicht-verdrahtete
+   Kosten-Rechner (Prozesskosten/Beurkundung/Notariat) bekommen **keinen** Rechtsschrift-Absatz
+   (konservative Option b); der bereits bestehende UI-Absatz von `GebvKosten` bleibt wie gehabt.
+   Kein neuer Kosten-Prosa-Text ohne Davids Ja.
+2. **`MAX_NORMEN=6`/«u. a.»:** → **Default: Kappung beibehalten, «u. a.» bleibt das sichtbare
+   Kappungs-Signal.** (Unverändert; pro-Engine-Konfiguration erst auf Bedarf.)
+3. **PDF-Absatz:** → **Default: AUS.** Kapazität gebaut (B3-1), aber keine Form setzt
+   `pdfConfig.begruendung` — PDFs unverändert. Rollout erst auf Davids «an».
+4. **SchKG-Zitierstil «Art. 31 SchKG i.V.m. …»:** → **Default: übernommen** (im benannten
+   Feld `fristbeginnNorm`, B1-1). Unverändert lassbar oder später umformulieren.
 
 ## Risiken (Kurz)
 
