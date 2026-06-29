@@ -135,7 +135,7 @@ export function KombinierteAnsicht() {
       </div>
 
       <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
-        <div className={pk('sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4', 'sm:col-span-3 grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
+        <div className={pk('sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4', '@xl/pane:col-span-3 grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <div className="space-y-1">
             <label className="block text-body-s font-medium text-ink-700">Vertragsbeginn</label>
             <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />

@@ -807,7 +807,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           eng macht/abschneidet. */}
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-          style={{ top: imPane ? '4rem' : 'calc(4rem + 2.25rem)' }}>
+          style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}>
           {istXl ? (
             <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && (
