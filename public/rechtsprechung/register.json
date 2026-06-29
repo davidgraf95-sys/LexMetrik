@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-27",
+  "erzeugt": "2026-06-29",
   "entscheide": [
     {
       "key": "gr_gerichte_ZR12024196",
@@ -8162,61 +8162,6 @@
       }
     },
     {
-      "key": "bge_151_II_475",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 II 475",
-      "bgeReferenz": "151 II 475",
-      "datum": "2024-11-26",
-      "zitierung": "BGE 151 II 475",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und Kompetenz…",
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "BV",
-        "OR",
-        "BGG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_II_475.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-475%3Ade&lang=de&zoom==&type=show_document",
-      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e"
-    },
-    {
-      "key": "bge_151_II_475__voll",
-      "gericht": "bger",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "2C_64/2023",
-      "bgeReferenz": null,
-      "datum": "2024-11-26",
-      "zitierung": "BGer 2C_64/2023",
-      "leitcharakter": "routine",
-      "regesteVorhanden": false,
-      "regesteKurz": null,
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": null,
-      "quelle": "opencaselaw",
-      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=26.11.2024_2C_64/2023",
-      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e",
-      "verweis": {
-        "zielKey": "bge_151_II_475",
-        "ansicht": "voll",
-        "bgeReferenz": "151 II 475"
-      }
-    },
-    {
       "key": "bge_151_V_79",
       "gericht": "bge",
       "gerichtName": "Bundesgericht",
@@ -16324,6 +16269,31 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=32&from_date=12.10.2007&to_date=31.10.2007&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=317&azaclir=aza&highlight_docid=aza%3A%2F%2F17-10-2007-2C_128-2007&number_of_ranks=407",
       "fassungsToken": "0c8d6fba48e266bee07e714ca3edd82e1e2ffcbee7392c876646af4ef5b6b35d"
+    },
+    {
+      "key": "bge_151_II_475",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 II 475",
+      "bgeReferenz": "151 II 475",
+      "datum": "1999-06-21",
+      "zitierung": "BGE 151 II 475",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und Kompetenz…",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_II_475.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-475%3Ade&lang=de&zoom==&type=show_document",
+      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e"
     }
   ]
 }

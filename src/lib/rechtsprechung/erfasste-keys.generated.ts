@@ -327,7 +327,6 @@ export const ERFASST: ReadonlySet<string> = new Set([
   "bge_151_II_466__voll",
   "bge_151_II_46__voll",
   "bge_151_II_475",
-  "bge_151_II_475__voll",
   "bge_151_II_494",
   "bge_151_II_494__voll",
   "bge_151_II_533",

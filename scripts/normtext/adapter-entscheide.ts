@@ -77,6 +77,24 @@ export async function holeErwaegung(id: string, e: string): Promise<OclErwaegung
 }
 
 /**
+ * OCL-/structure-Excerpts sind bei >5000 Z. hart gekappt (Ellipsis-Marker …, HTTP 422
+ * bei höherem Limit). Volle Erwägungstexte je Knoten nachladen, wo das Excerpt am Limit
+ * kratzt ODER bereits gekappt erscheint. Mutiert `str` in place. Gilt für Urteils-Body
+ * (holeEntscheidOCL) UND BGE-Sammlungs-Auszug (holeBgeLeitentscheid) — sonst bricht der
+ * Text still mitten im Wort ab (W2·6-BGE).
+ */
+async function fuelleGekappteErwaegungen(id: string, str: OclStructure | null): Promise<void> {
+  if (!str?.erwaegungen_paragraphs?.length) return;
+  const heikel = str.erwaegungen_paragraphs.filter(
+    (p) => p.e_number && ((p.text_chars ?? 0) >= 4900 || /(?<!\()…\s*$/u.test(String(p.text ?? ''))),
+  );
+  for (const p of heikel) {
+    const voll = await holeErwaegung(id, p.e_number!);
+    if (voll?.text) p.text = voll.text;
+  }
+}
+
+/**
  * Vollen Sachverhalt aus full_text zwischen „Sachverhalt:" und „Erwägungen:" schneiden
  * (OCL kappt sachverhalt_excerpt hart bei ~1000 Z.). vollstaendig=false ⇒ nur Excerpt.
  */
@@ -429,14 +447,7 @@ export async function holeEntscheidOCL(
   if (wantSprache && sprache !== wantSprache) return null;
   // paragraph_excerpt_chars: OCL-Maximum ist 5000 (höher → HTTP 422 → kein Strukturtext).
   const str = await jget<OclStructure>(`${API}/structure/${decisionId}?paragraph_excerpt_chars=5000`);
-  // Volle Erwägungstexte nachladen, wo das Excerpt am 5000-Limit kratzt (selten, 0–1/Entscheid).
-  if (str?.erwaegungen_paragraphs?.length) {
-    const heikel = str.erwaegungen_paragraphs.filter((p) => (p.text_chars ?? 0) >= 4900 && p.e_number);
-    for (const p of heikel) {
-      const voll = await holeErwaegung(decisionId, p.e_number!);
-      if (voll?.text) p.text = voll.text;
-    }
-  }
+  await fuelleGekappteErwaegungen(decisionId, str);
   return mappeEntscheidOCL(det, str, abgerufen, opts);
 }
 
@@ -563,7 +574,19 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
   const det = await jget<OclDecision>(`${API}/decisions/${encodeURIComponent(bgeId)}?fields=full`);
   if (!det || !det.decision_id || det.court !== 'bge') return null;
   if ((det.language ?? 'de') !== 'de') return null;
+  // Exakt-Id-Guard (§8): die OCL-Keyed-Lookup /decisions/{id} matcht bei kurzen
+  // Seiten-Ids PRÄFIXUNSCHARF (z. B. 151_V_1 → 151_V_194, 151_V_30 → 151_V_306).
+  // Nur die exakt passende Entscheidung übernehmen — lieber kein Eintrag als ein falscher.
+  // OCL liefert decision_id inkonsistent (z. B. `bge_BGE_150_III_223`, `bge_152 III 51`):
+  // Kern (Band/Teil/Seite) normalisieren — `bge`-Token + Separatoren strippen. So matcht die
+  // richtige Entscheidung trotz Formatdrift, eine präfixunscharfe Fehlzuordnung (151_V_1 →
+  // 151_V_194) bleibt aber abgewiesen.
+  const idNorm = (s: string) => s.toLowerCase().replace(/bge/g, '').replace(/[_\s.-]/g, '');
+  if (idNorm(String(det.decision_id)) !== idNorm(bgeId)) return null;
   const str = await jget<OclStructure>(`${API}/structure/${encodeURIComponent(bgeId)}?paragraph_excerpt_chars=5000`);
+  // W2·6-BGE: gekappte Sammlungs-Auszug-Erwägungen voll nachladen (wie der Urteils-Body),
+  // sonst bricht auszugAbschnitte still mitten im Wort ab (U+2026, 30 BGE betroffen).
+  await fuelleGekappteErwaegungen(bgeId, str);
 
   const azaAz = azaAusBgeKopf(det.full_text);
   const azaKey = azaAz ? citedRefZuId(azaAz) : null;

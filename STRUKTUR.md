@@ -23,6 +23,24 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 — W2·6-BGE: BGE-Auszug-Kappung gefixt (32/34) + Prod-Deploy
+
+Auftrag David: `W2·6-BGE` fixen. BGE-Leitentscheide schnitten ihren amtlichen Sammlungs-Auszug
+(bzw. Volltext) bei >5000 Z. **still mitten im Wort** ab (OCL-`/structure`-Excerpt-Cap, nicht voll
+nachgeladen). Risiko-Pfad (Extraktion) → §14-DoD inkl. adversariale Gegenprüfung.
+- **Fix** (`scripts/normtext/adapter-entscheide.ts`): geteilter Helfer `fuelleGekappteErwaegungen`
+  lädt gekappte Erwägungen (`holeErwaegung`) in BEIDEN Pfaden voll nach; **Exakt-Id-Guard**
+  (`idNorm` strippt `bge`-Präfix/Separatoren) gegen die präfixunscharfe OCL-Keyed-Lookup.
+- **Regenerierung** ohne Vollbau: neuer Flag `npm run entscheide -- --additiv --bge-refresh` (zieht
+  nur aktuell gekappte BGE neu, by-id-Überschreib; Bund/Kanton/eidg unberührt, §7 kein Hand-Edit).
+- **Schutz-Tor** `check:entscheide`: Block-Ende auf U+2026 (`(?<!\()…\s*$`, ausser amtl. «(…)») →
+  FEHLER. **Zwei adversariale Gegenprüfungen** (Opus, amtliche Quelle): die 1. fand einen Regex-
+  Blindfleck (verlangte Buchstabe vor U+2026 → 5 Kappungen rutschten durch); Regex geweitet, 5
+  nachgezogen; die 2. bestätigte die 5 (amtlich wortgetreu, richtige Entscheidung) + Endzustand.
+- **Ergebnis: 32 BGE regeneriert + voll.** **2 Reste** (`151_V_1` 3 Blöcke inkl. E.8.2, `151_V_30`)
+  = echte OCL-id-Kollision (`151_V_1`→`151_V_194`) → WARN-Quarantäne (`BGE_KAPPUNG_QUARANTAENE`),
+  in ROADMAP W2·6-BGE gequeued. gate/golden byte-gleich, 86 e2e, check:entscheide grün.
+
 ## Session 29.6.2026 — Governance: §14 Aufnahme/Einordnung + Querschnitt-Gegenprüfung strukturiert
 
 Auftrag David: den weiteren Aufbau so **dokumentieren**, dass künftige Sessions ihn autonom

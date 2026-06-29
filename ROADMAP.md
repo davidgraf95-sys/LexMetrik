@@ -239,28 +239,29 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
-    - **P0-Fix BGE-Auszug abgeschnitten** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*. Diagnose
-      29.6.2026 (verifiziert): Die Default-«Auszug»-Ansicht der BGE-Leitentscheide
-      (`EntscheidLeser.tsx` öffnet Leitentscheide in der Auszug-Ansicht und rendert
-      `auszugAbschnitte`) schneidet Erwägungen **still mitten im Wort** ab (U+2026-Marker).
-      **Datenfehler, nicht CSS:** Der amtliche Sammlungs-Auszug wird über die OCL-`/structure`
-      mit `paragraph_excerpt_chars=5000` geholt (`holeBgeLeitentscheid`,
-      `scripts/normtext/adapter-entscheide.ts`, ~Z. 566) und — anders als der Urteils-Body —
-      NICHT voll nachgeladen. **30 BGE betroffen** (Auszug bricht ab, gemessen 29.6.2026);
-      zusätzlich 2 BGE auch im Volltext gekappt (`151_V_30`, `151_V_100`). Der Volltext
-      `abschnitte` ist sonst unversehrt (voll-Umschalter greift). Beleg:
-      `public/rechtsprechung/bund/bge/152_III_137.json` (E.4.1-Auszug bricht bei «…ko» ab).
-      *Fix:* Im Auszug-Pfad dieselbe Voll-Nachlade-Schleife fahren, die `holeEntscheidOCL`
-      (~Z. 432–439, `holeErwaegung`) für den Urteils-Body bereits nutzt — der OCL-Cap (Max
-      5000 Z., höher → HTTP 422) lässt sich NICHT anheben, je gekapptem Erwägungs-Absatz muss
-      der Volltext nachgeladen werden. Dann die betroffenen BGE über den §7-Generator neu
-      erzeugen (`npm run entscheide -- --datum=$(date +%F) --bge-von=<Stichtag> --additiv`,
-      `scripts/normtext-entscheide.ts`) — **KEIN Hand-Edit** (§7/§8). *Schutz-Tor (Wiederkehr
-      verhindern):* `check:entscheide` (`scripts/normtext/check-entscheide.ts`, bereits in der
-      `check`-Kette) um eine Prüfung erweitern, die Auszug- **und** Volltext-Blöcke flaggt,
-      deren Text auf U+2026 / mitten im Wort endet (harter Verstoss → exit 1). Abnahme:
-      `npm run gate` grün, Golden byte-gleich (Gesetze unberührt), `check:entscheide` grün;
-      Deploy nur mit Davids Ja (§9). **Öffnet keinen 26×-Slot.**
+    - [~] **BGE-Auszug abgeschnitten — 32/34 gefixt** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*.
+      29.6.2026 GEFIXT + verifiziert (gate/golden byte-gleich, zwei adversariale Gegenprüfungen
+      gegen amtliche Quelle; die 1. fand einen Schutz-Tor-Blindfleck — Regex verlangte einen
+      Buchstaben vor U+2026 und übersah 5 auf Space/Punkt/Ziffer endende Kappungen → Regex auf
+      `(?<!\()…\s*$` geweitet, 5 nachgezogen, 2. Pass bestätigt). Die Default-«Auszug»-Ansicht der BGE-Leitentscheide schnitt Erwägungen
+      >5000 Z. **still mitten im Wort** ab (U+2026): `holeBgeLeitentscheid` lud — anders als der
+      Urteils-Body — den OCL-`/structure`-Auszug nicht voll nach (Datenfehler, nicht CSS).
+      **Fix** (`scripts/normtext/adapter-entscheide.ts`): geteilter Helfer `fuelleGekappteErwaegungen`
+      lädt gekappte Erwägungen (`holeErwaegung`) in BEIDEN Pfaden voll nach (Trigger: `text_chars
+      ≥4900` ODER Ellipsis-Ende); **Exakt-Id-Guard** gegen die präfixunscharfe OCL-Keyed-Lookup.
+      **Regenerierung** ohne Vollbau via neuem Flag `npm run entscheide -- --additiv --bge-refresh`
+      (zieht nur die aktuell gekappten BGE neu, by-id-Überschreib; Bund/Kanton/eidg unberührt,
+      §7 kein Hand-Edit). **Schutz-Tor** in `check:entscheide`: Block, der auf U+2026 endet
+      (`(?<!\()…\s*$` — ausser amtl. «(…)»), ist ein gekapptes Excerpt → FEHLER/exit 1; deckt
+      `abschnitte` + `auszugAbschnitte`. **Ergebnis:** 32 BGE regeneriert + voll, gate/golden
+      byte-gleich. **Öffnet keinen 26×-Slot.**
+      - [ ] **Rest: 2 BGE OCL-id-Kollision** — `bge_151_V_1`, `bge_151_V_30` sind über den OCL-
+        Keyed-Lookup `/decisions/{id}` nicht sauber re-fetchbar (kurze Seiten-Id matcht präfix-
+        unscharf: `151_V_1`→`151_V_194`, `151_V_30`→`151_V_306`; in der Enumeration ab 2024 nicht
+        enthalten). Bewusst NICHT hand-editiert (§7); im Schutz-Tor als **WARN-Quarantäne**
+        (`BGE_KAPPUNG_QUARANTAENE` in `check-entscheide.ts`) geführt statt gate-blockierend (live
+        unverändert, keine Regression). Schliessen = echte OCL-Id-Auflösung (Such-/Listen-Endpoint
+        mit Exakt-Match) finden, re-fetchen, Quarantäne-Set entfernen.
 - [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
   (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
   (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher

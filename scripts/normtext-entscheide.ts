@@ -50,6 +50,10 @@ const bgeLimit = Number(arg('--bge-limit') ?? '300');
 const eidgCourts = (arg('--eidg') ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const eidgPro = Number(arg('--eidg-pro') ?? '5');
 const additiv = process.argv.includes('--additiv');
+// --bge-refresh (nur additiv): zieht genau die BESTEHENDEN BGE neu, deren Auszug/Volltext
+// aktuell mitten im Wort (U+2026) gekappt ist (W2·6-BGE), und überschreibt sie by id —
+// kein Vollbau, Bund/Kanton/eidg bleiben unberührt. Selbstheilend nach Adapter-Härtung.
+const bgeRefresh = process.argv.includes('--bge-refresh');
 // Court-spezifischer Sachgebiets-Hint (deterministisch, deklariert): Patentstreit =
 // Immaterialgüterrecht → privat (OCL legal_area der BPatGer-Fälle ist oft nur eine
 // Kosten-/Verfahrens-Notiz und mappt sonst auf den groben Default 'oeffentlich').
@@ -188,8 +192,36 @@ async function main() {
   // (§6: kein Drift), sondern lädt ihn byte-treu von der Platte und ergänzt nur die
   // frisch geholten BVGer/BStGer/BPatGer-Urteile. Schreibt über denselben Writer (§5).
   if (additiv) {
-    const basis = ladeBestandSnapshots();
+    let basis = ladeBestandSnapshots();
     console.log(`[additiv] Bestand geladen: ${basis.length} Snapshots (Verweise rekonstruiert der Writer).`);
+    if (bgeRefresh) {
+      const gekappt = (s: EntscheidSnapshot) =>
+        [...(s.abschnitte ?? []), ...(s.auszugAbschnitte ?? [])]
+          .some((a) => a.bloecke.some((b) => /(?<!\()…\s*$/u.test(b.text)));
+      const zu = basis.filter((s) => s.gericht === 'bge' && gekappt(s));
+      console.log(`[bge-refresh] ${zu.length} gekappte BGE → frisch nachladen (W2·6-BGE)`);
+      const frisch = (await mapLimit(zu, 4, async (s) => {
+        const neu = await holeBgeLeitentscheid(s.id.replace(/^bund\/bge\//, ''), datum);
+        process.stdout.write(neu ? '.' : 'x');
+        return neu;
+      })).filter((s): s is EntscheidSnapshot => !!s);
+      process.stdout.write('\n');
+      // Leer-Guard (§6): nie den Bestand durch einen fehlgeschlagenen OCL-Lauf entwerten.
+      if (zu.length && frisch.length === 0) {
+        console.log('[bge-refresh] 0 geholt (Quelle nicht erreichbar?) — Korpus unberührt.');
+        return;
+      }
+      const byId = new Map(frisch.map((s) => [s.id, s]));
+      basis = basis.map((s) => byId.get(s.id) ?? s);
+      // Kollisions-Quarantäne über den GANZEN BGE-Satz nach dem Ersetzen (§8, wie im Vollbau).
+      const alleBge = basis.filter((s) => s.gericht === 'bge');
+      const azaN: Record<string, number> = {};
+      for (const s of alleBge) if (s.azaUrteil) azaN[s.azaUrteil.key] = (azaN[s.azaUrteil.key] ?? 0) + 1;
+      let quar = 0;
+      for (const s of alleBge) if (s.azaUrteil && azaN[s.azaUrteil.key] > 1) { aufAuszugZurueck(s); quar++; }
+      if (quar) console.log(`[bge-refresh] Kollisions-Quarantäne: ${quar} auf Auszug zurückgestuft.`);
+      console.log(`[bge-refresh] ${frisch.length}/${zu.length} BGE ersetzt.`);
+    }
     const eidg = eidgCourts.length ? await eidgKorpus() : [];
     // Schutz gegen stillen Bestand-Überschreib bei OCL-Ausfall: wurden eidg-Gerichte
     // angefordert, aber NICHTS geholt, ist die Quelle vermutlich down → Korpus unberührt.

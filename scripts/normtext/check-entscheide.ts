@@ -28,6 +28,12 @@ const AHV = /\b756\.\d{4}\.\d{4}\.\d{2}\b/;   // CH-Sozialversicherungsnummer (d
 const fehler: string[] = [];
 const warn: string[] = [];
 
+// W2·6-BGE-Rest: BGE, deren Sammlungs-Auszug über den OCL-Keyed-Lookup nicht sauber
+// re-fetchbar ist (Präfix-Id-Kollision: 151_V_1→151_V_194, 151_V_30→151_V_306). Bekannt,
+// als WARN geführt (nicht gate-blockierend), gequeued in ROADMAP «W2·6-BGE». Beim Schliessen
+// dieses Rests (echte OCL-Id-Auflösung) hier wieder entfernen.
+const BGE_KAPPUNG_QUARANTAENE = new Set(['bge_151_V_1', 'bge_151_V_30']);
+
 function dirGroesseMB(dir: string): number {
   let total = 0;
   const stack = [dir];
@@ -110,6 +116,22 @@ function main() {
     // Vollständigkeits-/Plausibilitäts-Warnungen (P4, nicht-blockierend).
     const sv = snap.abschnitte.find((a) => a.typ === 'sachverhalt');
     if (sv && sv.vollstaendig === false) warn.push(`${e.key}: Sachverhalt nur Auszug (full_text-Schnitt fehlgeschlagen?)`);
+    // W2·6-BGE Schutz-Tor: ein Block, der auf U+2026 (…) endet, ist ein gekapptes OCL-Excerpt
+    // (Abbruch am 5000-Boundary, egal ob davor Buchstabe/Space/Punkt/Ziffer steht). Einzige
+    // Ausnahme: das amtliche «(…)»-Auslassungszeichen (Lookbehind `(?<!\()`). Hart blockierend
+    // (§8: kein still unvollständiger Entscheidtext).
+    for (const [feld, abs] of [['abschnitte', snap.abschnitte], ['auszugAbschnitte', snap.auszugAbschnitte ?? []]] as const) {
+      for (const a of abs) for (const b of a.bloecke) {
+        if (/(?<!\()…\s*$/u.test(b.text)) {
+          const msg = `${e.key}: ${feld} bricht mitten im Wort ab (U+2026, gekapptes Excerpt): «…${b.text.trimEnd().slice(-40)}»`;
+          // Quarantäne (W2·6-BGE-Rest): bge_151_V_1/151_V_30 sind über den OCL-Keyed-
+          // Lookup nicht sauber re-fetchbar (Präfix-Id-Kollision, ROADMAP W2·6-BGE) →
+          // bekannt, als WARN geführt statt gate-blockierend. NEUE Kappungen bleiben FEHLER.
+          if (BGE_KAPPUNG_QUARANTAENE.has(e.key)) warn.push(`${msg} [bekannt: OCL-id-Kollision, gequeued]`);
+          else fehler.push(msg);
+        }
+      }
+    }
     for (const a of snap.abschnitte) for (const b of a.bloecke) {
       if (a.typ === 'dispositiv' && b.text.length > 4000) warn.push(`${e.key}: Dispositiv-Block ${b.text.length} Z. (>4000 — Korruption?)`);
     }
