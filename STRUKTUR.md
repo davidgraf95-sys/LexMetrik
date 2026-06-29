@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 6) — Pane-Kopf-Ausrichtung + Technik A (Form-Grids container-responsiv) · auf main (PR #52)
+
+- **Pane-Kopf links bündig:** PaneKopf-Breadcrumb (Identitätsblock pl-0 + gap-1) fluchtet
+  jetzt mit dem Inhalts-Gutter (☰-Knopf/Artikeltext) statt vom ⠿-Griff weggeschoben.
+- **Technik A (ultracode, 36 Dateien):** mehrspaltige Viewport-Grids in Formularen/Vorlagen/
+  Katalogen via `usePaneKlasse` auf `@container/pane` → schmales Pane = weniger Spalten,
+  breites = volle Spaltenzahl; ausserhalb Panes byte-gleich. 38 Migrations-/Verifikations-
+  Agenten (2 bewusst übersprungen). Verifiziert: gleiches Formular Pane~620px→2 Spalten,
+  ~1180px→4 Spalten. gate grün (golden byte-gleich), 86 e2e grün.
+- **PR #52 → main gemergt** (08c5e011): bündelt die ganze Split-View-Session (A–D, E, F, alle
+  Bug-Checks, Pane-Fix, Technik A). **Prod-Deploy von main noch offen** (wartet auf Davids Ja).
+
 ## Session 29.6.2026 (Forts. 5) — E container-responsive Panes + F PaneKopf=InhaltsKopf · Prod-Deploy
 
 Branch `feat/split-view-strang-a`, von Branch-HEAD auf Prod (PR #52 offen für main).
