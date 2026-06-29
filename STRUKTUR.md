@@ -40,6 +40,8 @@ nachgeladen). Risiko-Pfad (Extraktion) → §14-DoD inkl. adversariale Gegenprü
 - **Ergebnis: 32 BGE regeneriert + voll.** **2 Reste** (`151_V_1` 3 Blöcke inkl. E.8.2, `151_V_30`)
   = echte OCL-id-Kollision (`151_V_1`→`151_V_194`) → WARN-Quarantäne (`BGE_KAPPUNG_QUARANTAENE`),
   in ROADMAP W2·6-BGE gequeued. gate/golden byte-gleich, 86 e2e, check:entscheide grün.
+  → **deployt `62fb12ed`, live** `lexmetrik.vercel.app` (E.4.1 von 152 III 137 = 8592 Z. statt
+  4991; Asset-Hash live=lokal — Fix ist Daten, nicht Bundle; Kernrouten + BGE-Seite 200).
 
 ## Session 29.6.2026 — Governance: §14 Aufnahme/Einordnung + Querschnitt-Gegenprüfung strukturiert
 
