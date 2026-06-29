@@ -38,8 +38,16 @@ Danach Auftrag «weitermachen im plan / run till dry» → B-2.5 → B-4 → B-5
 - **B-2 «Rechner daneben»** (`ec4bb1d8`, SICHERE Scope, Davids Entscheid): KontextPanel-Werkzeuge
   bekommen ⧉ → Rechner als Sekundär-Pane neben dem Gesetz (Verzahnung Norm→Werkzeug, smoke-bestätigt).
   `PaneSteuerung`-Kontext, Fokus-Rückgabe. 86 e2e grün.
-- **OFFEN: B-2.5** (gesetz-leser pane-fähig: window/DOM-Globals entkoppeln) BEVOR Gesetz im
-  Sekundär-Pane erlaubt wird; dann B-4 Mobil-Faltung, B-5 Layout-Permalink. Detail `FAHRPLAN-SPLIT-VIEW.md`.
+- **B-2.5** (`9170ee59`): gesetz-leser pane-fähig (window/DOM-Globals via Modulhelfer paneRoot/findeArt
+  entkoppelt; Sekundär unterdrückt URL/Titel/Reiter); ⧉ «daneben» auch für Erlasse; EntscheidLeser-
+  Lesemodus per Portal. Zwei Gesetze nebeneinander verifiziert.
+- **B-4** (`3587d1fd`): Mobil-Faltung — Snap-Wischen unter lg, `h-dvh`. **B-5** (`860d914b`): teilbarer
+  `?p=`-Permalink (Round-trip verifiziert).
+- **2. ultracode-Bugcheck (B-2.5/B-4/B-5, 13 bestätigt)** fing einen **Re-Render-Loop-BLOCKER** vor
+  Deploy: React-Compiler ist NICHT aktiv → instabile in-Komponente-Helfer churnten Effekte/Observer
+  im Default-Leser. Fix `c9a8cca9` (Modul-Ebene-Helfer) + Honesty-Fixes (Clipboard, ?p=, title).
+- **Split-View KOMPLETT** (A→B-5; B-3-Rest = Scroll-Positions-Wiederherstellung pro Pane + Tastatur-
+  Pane-Wechsel, offen). B-2.5/B-4/B-5 Deploy ausstehend (Davids Ja). Detail `FAHRPLAN-SPLIT-VIEW.md`.
 
 ## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
 

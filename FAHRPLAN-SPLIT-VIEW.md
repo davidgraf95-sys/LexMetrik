@@ -1,9 +1,10 @@
 # FAHRPLAN — Multi-Pane / Split-View (+ Breiten-Umschalter)
 
-> **Stand 29.6.2026 · A + B-0 + B-0b + B-1 + B-2 FERTIG (Branch `feat/split-view-strang-a`).**
-> A/B-0/B-0b auf **Prod** (Commit `d20f2337`); B-1 (`e3795776`) + B-2 (`ec4bb1d8`) committet,
-> noch nicht deployt. **Nächstes = B-2.5** (gesetz-leser pane-fähig, dann Gesetz-im-Sekundär-Pane
-> freigeben) → B-4 Mobil → B-5. Detail-„Wie" zum ROADMAP-Strang
+> **Stand 29.6.2026 · KOMPLETT: A + B-0 + B-0b + B-1 + B-2 + B-2.5 + B-4 + B-5 (Branch
+> `feat/split-view-strang-a`).** A/B-0/B-0b + B-1/B-2 auf **Prod** (`bec0ecb7`); B-2.5/B-4/B-5
+> committet (`c9a8cca9`), Deploy ausstehend. Zwei ultracode-Bugchecks (B-1; B-2.5/B-4/B-5) —
+> letzterer fing einen Re-Render-Loop-BLOCKER (React-Compiler NICHT aktiv) vor dem Deploy.
+> Detail-„Wie" zum ROADMAP-Strang
 > *„Multi-Pane / Split-View"*. Steuerung (Reihenfolge/Park) bleibt in `ROADMAP.md`;
 > Ist-Zustand/Deploy in `STRUKTUR.md`. Auftrag David 29.6.2026: zwei oder drei
 > „Engines" nebeneinander **wie im Browser** — Gesetz | Rechner | Begründungs-Absatz.
@@ -123,8 +124,19 @@ Jede Phase: Default = heutiges 1-Pane-Verhalten ⇒ Golden grün.
   4. „Nächste Instanz"/`merkeTab`/`aktualisiereTabArtikel` aus `basisPfad` statt `window.location`.
   Danach: B-2-Opener auch für Gesetze/Entscheide freigeben + EntscheidLeser-Lesemodus per Portal
   aus dem `@container/pane` lösen (sonst nicht mehr vollflächig).
-- **B-3 Scroll & Fokus pro Pane** *(teilweise in B-2.5 vorgezogen)*: `ScrollWiederherstellung`/
-  `ScrollZuHash` von window auf Pane-Container; A11y (jedes Pane `<section aria-label>`, Tastatur-Wechsel).
+- **B-2.5** *(✅ FERTIG, Commit `9170ee59` + Bugcheck-Fix `c9a8cca9`)*: gesetz-leser pane-fähig —
+  DOM-Queries/Scroll/Observer auf Pane-Wurzel gescopt (Modulhelfer `paneRoot`/`findeArt`),
+  sekundäres Pane unterdrückt window.history/location/title/Reiter; ⧉ «daneben» auch für
+  «Angewandte Erlasse» (Gesetz neben Entscheid/Material); EntscheidLeser-Lesemodus per Portal.
+  Verifiziert: zwei Gesetze nebeneinander, kein URL-Korrupt, kein Re-Render-Loop.
+- **B-3 Scroll & Fokus pro Pane** *(grösstenteils in B-2.5 erledigt; Rest offen)*: pro-Pane-Scroll
+  + Spy laufen; OFFEN: Scroll-POSITIONS-Wiederherstellung (`ScrollWiederherstellung`/`ScrollZuHash`
+  in App.tsx weiterhin window-basiert, im Multipane-Primär ohne Wirkung) + Tastatur-Pane-Wechsel.
+- **B-4 Mobil-Faltung** *(✅ FERTIG, Commit `3587d1fd`)*: Multipane responsiv — ab lg nebeneinander,
+  darunter horizontales Snap-Wischen (je Pane volle Breite); Opener bleibt lg-only. Spalte `h-dvh`.
+- **B-5 Layout teilen** *(✅ FERTIG, Commit `860d914b` + Fix `c9a8cca9`)*: `?p=pfad||pfad` seedet
+  den Pane-Satz (gewinnt über localStorage, wird nach Seed gestrippt); «teilen»-Knopf kopiert den
+  Permalink. Round-trip verifiziert.
 - **B-4 Mobil-Faltung**: < `lg` → 1 Pane + Reiter-Umschaltung (kein 3-Spalten-Quetschen);
   bestehende Schubladen-Logik nutzen.
 - **B-5 (optional) Layout teilen**: aktueller Pane-Satz → `?p=…`-Permalink (B3→B2-Brücke);
