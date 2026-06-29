@@ -1,13 +1,22 @@
 # FAHRPLAN — Multi-Pane / Split-View (+ Breiten-Umschalter)
 
-> **Stand 29.6.2026 · PLAN, noch kein Code.** Detail-„Wie" zum ROADMAP-Strang
+> **Stand 29.6.2026 · Strang A FERTIG + B-0 FERTIG (Branch `feat/split-view-strang-a`,
+> nicht deployt — Batch-Fenster).** Detail-„Wie" zum ROADMAP-Strang
 > *„Multi-Pane / Split-View"*. Steuerung (Reihenfolge/Park) bleibt in `ROADMAP.md`;
 > Ist-Zustand/Deploy in `STRUKTUR.md`. Auftrag David 29.6.2026: zwei oder drei
 > „Engines" nebeneinander **wie im Browser** — Gesetz | Rechner | Begründungs-Absatz.
 >
-> **Wartet auf Davids „go" vor jeder Code-Zeile.** Bau in **eigenem Worktree**
-> (`Shell.tsx`/`Topbar.tsx`/`App.tsx`/`tailwind.config.js` = §12-Kollisionsdateien) —
-> **nicht** parallel zu einer Session auf denselben Dateien.
+> **Erledigt (gegated, golden byte-gleich, 57 Routen prerendern):**
+> - **Strang A** — Inhaltsbreite-Umschalter `[Kompakt|Breit]` (Commit `fc5dbb3c`);
+>   ultracode-6-Linsen-Review, 4 Befunde behoben (toter `/70`-Alpha-Fill, a11y-Label,
+>   localStorage-try/catch, expliziter Setter).
+> - **B-0** — `<Routes>` nach `src/RouteSwitch.tsx` ausgelagert (Commit `2ed15aa7`),
+>   verhaltensneutral; Runtime-Smoke (/, /rechner, /gesetze, /pro→/, NotFound) sauber.
+>
+> **Nächstes = B-0b (Container-Query-Fundament) — wartet auf zwei Entscheide Davids**
+> (unten „Offene Entscheide"). B-0b ist der Hauptaufwand → eigene fokussierte Session.
+> Bau weiter in **eigenem Worktree** (`Shell.tsx`/`Topbar.tsx`/`App.tsx`/
+> `tailwind.config.js` = §12-Kollisionsdateien), nie parallel auf denselben Dateien.
 
 ---
 
@@ -58,7 +67,7 @@ Strikt zustandslos: Panes speichern **nur Pfade**, nie Formular-/Falldaten
 
 ---
 
-## STRANG A — Inhaltsbreite-Umschalter „kompakt / breit"  *(klein, `[OF]`)*
+## STRANG A — Inhaltsbreite-Umschalter „kompakt / breit"  *(✅ FERTIG, Commit `fc5dbb3c`)*
 
 1. **`src/components/layout/useInhaltsbreite.ts`** (Vorlage `useSeitenleiste`): Zustand
    `'kompakt'|'breit'`, localStorage `lexmetrik-inhaltsbreite`, typeof-window-Guard,
@@ -75,9 +84,10 @@ Strikt zustandslos: Panes speichern **nur Pfade**, nie Formular-/Falldaten
 
 Jede Phase: Default = heutiges 1-Pane-Verhalten ⇒ Golden grün.
 
-- **B-0 `RouteSwitch`-Extraktion** *(verhaltensneutral)*: `<Routes>…</Routes>` aus `App.tsx`
-  in eigenes `<RouteSwitch />` ziehen. App.tsx nutzt es weiter → Golden byte-gleich beweisen.
-  Risikoarmes Fundament.
+- **B-0 `RouteSwitch`-Extraktion** *(✅ FERTIG, Commit `2ed15aa7`)*: `<Routes>…</Routes>` aus
+  `App.tsx` in `src/RouteSwitch.tsx` gezogen; App.tsx rendert `<RouteSwitch />` an gleicher
+  Stelle. Verhaltensneutral bewiesen (golden byte-gleich, 57 Routen prerendern, Runtime-Smoke
+  sauber). Risikoarmes Fundament gelegt.
 - **B-0b Container-Query-Fundament** (siehe Kernbefund): Plugin **oder** `index.css`-Basis +
   **CQ-1**-Migration der pane-fähigen Layouts. **Der Hauptaufwand.**
 - **B-1 Pane-Container in `Shell.tsx`**: `usePaneLayout` (sichtbare Pane-Pfade; Vorlage
@@ -115,6 +125,13 @@ A → B-0 → B-0b → B-1 → B-2 → B-3 → B-4 → (B-5 optional). Eigener W
 jede Phase `npm run gate` grün + Default Golden byte-gleich; visuell breit/2-/3-Pane + mobil.
 
 ## Offene Entscheide vor Bau-Beginn
-- B-0b: Container-Query-Tiefe **CQ-1** (empf.) / CQ-2 / CQ-3?
-- B-0b: `@tailwindcss/container-queries`-Plugin **oder** handgeschriebene `@container`-Regeln?
-- A: Breit-Wert `max-w-screen-2xl` (empf.) vs. voll fluid?
+- ✅ **A: Breit-Wert** — `max-w-screen-2xl` (1536px) gewählt + umgesetzt (Strang A).
+- **B-0b: Container-Query-Tiefe** — CQ-1 (empf.) / CQ-2 / CQ-3? *(offen — Davids Entscheid)*
+- **B-0b: `@tailwindcss/container-queries`-Plugin oder handgeschriebene `@container`-Regeln?**
+  *(offen — Davids Entscheid)*
+
+> **Bekanntes Merkmal aus dem Review (kein Bug):** Der A-Umschalter erscheint ab `lg`,
+> wirkt sich aber erst aus, wenn die verfügbare Inhaltsbreite 1120px übersteigt (abhängig
+> von der ziehbaren Sidebar). In einem schmalen Band (Laptop + offene Sidebar) ist „Breit"
+> sichtbar, aber ohne Effekt. Inhärent bei einem max-width-Umschalter; ein sauberer
+> statischer Breakpoint existiert wegen der ziehbaren Sidebar nicht. Belassen bei `lg`.
