@@ -55,15 +55,17 @@ export function PaneKopf({ icon, label, stand, breadcrumb, artikel, rolle, onSch
         )}
         {icon && <span className="shrink-0">{icon}</span>}
         {breadcrumb && breadcrumb.length > 0 ? (
-          // Breadcrumb (Parität zur Einzelansicht) + laufender Artikel + Stand.
-          <nav aria-label="Brotkrümel" className="flex min-w-0 items-center gap-1 text-body-s">
+          // Breadcrumb (Parität zur Einzelansicht) — reine Anzeige (keine Navigation
+          // im Pane), daher KEIN <nav>-Landmark (sonst gleichnamige Landmark-Flut bei
+          // mehreren Panes). Plus laufender Artikel + Stand (rechts angehängt).
+          <span className="flex min-w-0 items-center gap-1 text-body-s">
             {breadcrumb.map((b, i) => (
               <span key={`${i}-${b.label}`} className="inline-flex min-w-0 items-center gap-1">
                 {i > 0 && <span aria-hidden className="shrink-0 text-ink-300">›</span>}
                 <span className={`truncate ${i === breadcrumb.length - 1 ? 'font-medium text-ink-800' : 'text-ink-500'}`}>{b.label}</span>
               </span>
             ))}
-          </nav>
+          </span>
         ) : (
           <span className="truncate text-body-s font-medium text-ink-800">{label}</span>
         )}

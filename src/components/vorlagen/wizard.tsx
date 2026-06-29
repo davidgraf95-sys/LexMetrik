@@ -123,7 +123,7 @@ export function VorlagenWizardRahmen({
 
       {/* Zweispaltig: Formular links, klebende Vorschau rechts;
           mobil einspaltig mit einklappbarer Vorschau */}
-      <div className={`grid grid-cols-1 gap-6 items-start ${pk('md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-8', '@3xl/pane:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] @3xl/pane:gap-8')}`}>
+      <div className={`grid grid-cols-1 ${pk('md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]', '@3xl/pane:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]')} gap-6 ${pk('md:gap-8', '@3xl/pane:gap-8')} items-start`}>
         <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
           onInput={merkeEingabe} onChange={merkeEingabe}>
           {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-

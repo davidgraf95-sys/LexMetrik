@@ -122,9 +122,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (!imPane || !wurzel?.current || typeof ResizeObserver === 'undefined') return;
     const el = wurzel.current;
     const ro = new ResizeObserver((eintraege) => {
-      for (const e of eintraege) setIstBreit(e.contentRect.width >= PANE_BREIT_PX);
+      // border-box (inkl. Scrollbar) → die Scrollbarbreite verschiebt den
+      // Schwellenvergleich nicht (kein Flackern an der 1024px-Grenze).
+      for (const e of eintraege) {
+        const w = e.borderBoxSize?.[0]?.inlineSize ?? e.contentRect.width;
+        setIstBreit(w >= PANE_BREIT_PX);
+      }
     });
-    ro.observe(el);
+    ro.observe(el, { box: 'border-box' });
     return () => ro.disconnect();
   }, [imPane, wurzel]);
   const istXl = imPane ? istBreit : istXlVp;
@@ -494,7 +499,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // feld des TOC-Containers gelaufen ist (sonst kein unnötiger Sprung).
   useEffect(() => {
     if (typeof document === 'undefined') return;
-    const cont = document.querySelector('[data-toc]') as HTMLElement | null;
+    // Pane-gescopt: sonst trifft der globale Query ein FREMDES Pane (zwei breite
+    // Gesetz-Panes haben je ein [data-toc]) → falsches Pane scrollt (E-Regression).
+    const wurzelEl = paneRoot(imPane, wurzel);
+    const cont = (wurzelEl ?? document).querySelector('[data-toc]') as HTMLElement | null;
     if (!cont) return;
     const aktive = cont.querySelectorAll('[data-toc-aktiv]');
     const el = aktive[aktive.length - 1] as HTMLElement | undefined;
@@ -504,7 +512,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (er.top < cr.top + 8 || er.bottom > cr.bottom - 8) {
       cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
     }
-  }, [aktivIds, tocBaum]);
+  }, [aktivIds, tocBaum, imPane, wurzel]);
 
   const sucheTrim = suche.trim().toLowerCase();
   const treffer = useMemo(
@@ -541,15 +549,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const titelRedundantP = titelOhneSuffixP.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
     return (
       <div className="space-y-5">
-        {imPane && (
-          <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-            <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-            <span className="mx-1.5 text-ink-300">›</span>
-            {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-            <span className="mx-1.5 text-ink-300">›</span>
-            <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-          </div>
-        )}
+        {/* Breadcrumb trägt der Kopf (Inhalts-Kopf bzw. PaneKopf) — kein Inline-Dup. */}
         <header className="space-y-2.5 border-b border-line pb-5">
           <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
           <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
@@ -751,18 +751,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
 
   return (
     <div className="space-y-5">
-      {/* Breadcrumb: in der Einzelansicht trägt sie der Inhalts-Kopf (oben, sticky);
-          hier nur noch IM Pane (Split-View hat keinen Inhalts-Kopf). */}
-      {imPane && (
-        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-          <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-          <span className="mx-1.5 text-ink-300">›</span>
-          {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-          <span className="mx-1.5 text-ink-300">›</span>
-          <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-        </div>
-      )}
-
+      {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
+          → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane). */}
       <header className="space-y-2.5 border-b border-line pb-5">
         <p className="lc-overline">{erlass.rechtsgebiet === 'international'
           ? (overlineGebiet ?? 'Staatsvertrag')
@@ -882,7 +872,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         {istXl && sektionen.length > 0 && (
           <aside
             style={imPane
-              ? { top: '0.5rem', maxHeight: 'calc(100% - 1rem)' }
+              // Im Pane: an die SICHTBARE Pane-Höhe binden (Topbar 4rem + PaneKopf
+              // 2.25rem ab), nicht an die indefinite Grid-Zeile (calc(100%) löste
+              // gegen content-Höhe → kein interner Scroll, sticky brach).
+              ? { top: '0.5rem', maxHeight: 'calc(100dvh - 4rem - 2.25rem - 1rem)' }
               : { top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
             className={`mb-0 sticky flex-col ${tocOffen ? 'flex' : 'hidden'}`}>
             {zweiSpalten && (
