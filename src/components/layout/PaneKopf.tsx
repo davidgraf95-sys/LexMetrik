@@ -14,6 +14,11 @@ export interface PaneKopfProps {
   label: string;
   /** In-Kraft-/Konsolidierungs-Stand, nur wenn auflösbar (§8 — kein erfundener Stand). */
   stand?: string | null;
+  /** F: Breadcrumb «Gesetze › Bund › OR» statt blossem Label (Parität zur Einzelansicht);
+   *  im Pane reine Anzeige (keine Navigation — der Pane-Navigator liegt nicht hier). */
+  breadcrumb?: { label: string; to?: string }[];
+  /** F: aktuell gelesener Artikel (Gesetz, live), z. B. «Art. 7 OR». */
+  artikel?: string | null;
   rolle: 'primaer' | 'sekundaer';
   onSchliessen: () => void;
   /** Sekundär: dieses Pane zum Hauptfenster (URL) machen. */
@@ -33,7 +38,7 @@ export interface PaneKopfProps {
 
 const knopf = 'inline-flex h-7 w-7 items-center justify-center rounded-md text-ink-500 hover:text-brass-700 hover:bg-brass-100/40 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink-500 transition-colors';
 
-export function PaneKopf({ icon, label, stand, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
+export function PaneKopf({ icon, label, stand, breadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   return (
     <div className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-700' : ''}`}>
       {/* Links: Identität (Icon · Label · Stand). */}
@@ -49,7 +54,20 @@ export function PaneKopf({ icon, label, stand, rolle, onSchliessen, onHauptfenst
           >⠿</span>
         )}
         {icon && <span className="shrink-0">{icon}</span>}
-        <span className="truncate text-body-s font-medium text-ink-800">{label}</span>
+        {breadcrumb && breadcrumb.length > 0 ? (
+          // Breadcrumb (Parität zur Einzelansicht) + laufender Artikel + Stand.
+          <nav aria-label="Brotkrümel" className="flex min-w-0 items-center gap-1 text-body-s">
+            {breadcrumb.map((b, i) => (
+              <span key={`${i}-${b.label}`} className="inline-flex min-w-0 items-center gap-1">
+                {i > 0 && <span aria-hidden className="shrink-0 text-ink-300">›</span>}
+                <span className={`truncate ${i === breadcrumb.length - 1 ? 'font-medium text-ink-800' : 'text-ink-500'}`}>{b.label}</span>
+              </span>
+            ))}
+          </nav>
+        ) : (
+          <span className="truncate text-body-s font-medium text-ink-800">{label}</span>
+        )}
+        {artikel && <span className="num shrink-0 text-micro font-medium text-ink-700">· {artikel}</span>}
         {stand && <span className="num shrink-0 text-micro text-ink-500">· Stand {stand}</span>}
         {rolle === 'primaer' && <span className="sr-only">(aktuelle Adresse)</span>}
       </div>

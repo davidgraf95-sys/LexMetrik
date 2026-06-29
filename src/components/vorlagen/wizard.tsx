@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FehlerBox, NormChip, NormLink, Stepper } from './ui';
 import { NormText } from '../NormText';
 import { useLocale, fedlexLokalisiert } from '../locale';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
 import { AUSGABE_LABEL, MUSTER, rolleLabel, type AusgabeStil } from '../../lib/vorlagen/formatvorlagen';
@@ -54,6 +55,10 @@ export function VorlagenWizardRahmen({
   // weiterhin deaktiviert (weiterAus oben), nur die MELDUNG wird zurückgehalten.
   const [beruehrt, setBeruehrt] = useState(false);
   const merkeEingabe = () => { if (!beruehrt) setBeruehrt(true); };
+  // Split-View E: Formular‖Vorschau-Split nach PANE-Breite (md→@3xl/pane), damit
+  // der Wizard in einem schmalen Pane nicht zweispaltig gequetscht wird. Ausserhalb
+  // eines Panes byte-gleich (Viewport-md:).
+  const pk = usePaneKlasse();
 
   // Mobile Live-Vorschau (Redesign E6): sie ist das Kernversprechen, war aber
   // auf dem Telefon in allen Eingabe-Schritten zugeklappt. Jetzt steuerbar +
@@ -75,7 +80,7 @@ export function VorlagenWizardRahmen({
     // pb-20 mobil (Auftrag David 25.6.2026): der schwebende «Vorschau ↓»-FAB
     // (fixed bottom-4 right-4) deckte sonst die letzten Felder / den Weiter-
     // Knopf zu — die Boden-Polsterung lässt sie frei darüber scrollen.
-    <div className="space-y-6 pb-20 md:pb-0">
+    <div className={`space-y-6 pb-20 ${pk('md:pb-0', '@3xl/pane:pb-0')}`}>
       {/* Kopf */}
       <div className="space-y-3">
         <Link to={zurueckHref} className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
@@ -118,7 +123,7 @@ export function VorlagenWizardRahmen({
 
       {/* Zweispaltig: Formular links, klebende Vorschau rechts;
           mobil einspaltig mit einklappbarer Vorschau */}
-      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-8 items-start">
+      <div className={`grid grid-cols-1 gap-6 items-start ${pk('md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-8', '@3xl/pane:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] @3xl/pane:gap-8')}`}>
         <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
           onInput={merkeEingabe} onChange={merkeEingabe}>
           {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-
@@ -155,7 +160,7 @@ export function VorlagenWizardRahmen({
 
         {/* Vorschau – mobil einklappbar, Desktop klebend; identischer Inhalt
             zweimal platziert (kein Remount, wie bisheriger Funktionsaufruf) */}
-        <details id="wizard-vorschau" className="md:hidden bg-surface border border-line rounded-xl scroll-mt-24"
+        <details id="wizard-vorschau" className={`${pk('md:hidden', '@3xl/pane:hidden')} bg-surface border border-line rounded-xl scroll-mt-24`}
           open={vorschauOffen} onToggle={(e) => setVorschauOffen((e.currentTarget as HTMLDetailsElement).open)}>
           <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
             <span>Vorschau & Bausteinprotokoll</span>
@@ -163,7 +168,7 @@ export function VorlagenWizardRahmen({
           </summary>
           <div className="px-4 pb-4">{vorschau}</div>
         </details>
-        <div className="hidden md:block md:sticky md:top-28">
+        <div className={pk('hidden md:block md:sticky md:top-28', 'hidden @3xl/pane:block @3xl/pane:sticky @3xl/pane:top-28')}>
           {vorschau}
         </div>
       </div>
@@ -172,7 +177,7 @@ export function VorlagenWizardRahmen({
           kommt raus») soll auch beim Tippen erreichbar sein, nicht erst im
           letzten Schritt. */}
       <button type="button" onClick={zurVorschau}
-        className="md:hidden fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface">
+        className={`${pk('md:hidden', '@3xl/pane:hidden')} fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface`}>
         Vorschau ↓
       </button>
     </div>

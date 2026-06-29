@@ -108,12 +108,26 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     mq.addEventListener('change', upd);
     return () => mq.removeEventListener('change', upd);
   }, []);
-  // Split-View B-1: In einem (schmalen) Pane IMMER einspaltig + Gliederung als
-  // Drawer — eine feste 16rem-TOC-Spalte würde ein Pane zu stark beschneiden.
-  // istXl steuert genau diese 2-Spalten-Logik; im Pane also fest false. Ausserhalb
-  // eines Panes byte-gleich zum Viewport-Verhalten (Default/Prerender).
   const { imPane, rolle, wurzel, overlayWurzel } = usePaneKontext();
-  const istXl = imPane ? false : istXlVp;
+  // Split-View E (Container-responsiv): ein Pane wählt sein Layout nach SEINER
+  // Breite, nicht nach dem Viewport. `istXl` (treibt 2-Spalten-Gliederung + Drawer-
+  // vs-Sidebar) kommt im Pane aus einem ResizeObserver auf der Pane-Wurzel (Schwelle
+  // PANE_BREIT_PX), sonst unverändert aus matchMedia (1280px) → Nicht-Pane byte-gleich.
+  // Reines @container-CSS reicht hier NICHT: istXl steuert bedingtes Rendering
+  // (Vollbar/Kompaktknopf, Existenz des Drawers), das CSS nicht schalten kann.
+  const PANE_BREIT_PX = 1024;
+  const [istBreit, setIstBreit] = useState(false);
+  useEffect(() => {
+    // Kein Reset bei !imPane nötig: istXl ignoriert istBreit dann ohnehin.
+    if (!imPane || !wurzel?.current || typeof ResizeObserver === 'undefined') return;
+    const el = wurzel.current;
+    const ro = new ResizeObserver((eintraege) => {
+      for (const e of eintraege) setIstBreit(e.contentRect.width >= PANE_BREIT_PX);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [imPane, wurzel]);
+  const istXl = imPane ? istBreit : istXlVp;
   // A3: aktuell gelesener Artikel (live) für den Einzelansicht-Kopf. Nur in der
   // Einzelansicht (!imPane) gepflegt; im Split-View trägt der PaneKopf den Titel.
   const meldeInhaltsKopf = useMeldeInhaltsKopf();
@@ -172,11 +186,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
   }, [erlass, istSekundaer]);
 
-  // A/A2/A3: Einzelansicht-Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel ·
-  // Stand · aktueller Artikel). Nur in der Einzelansicht (!imPane); im Split-View
-  // trägt der PaneKopf den Titel. Live-Artikel kommt aus dem IntersectionObserver.
+  // A/A2/A3/F: Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel · Stand · aktueller
+  // Artikel). Wird vom NÄCHSTEN Provider gefangen: Einzelansicht → Inhalts-Kopf
+  // (Shell); Split-View → der jeweilige PaneKopf (SekundaerPane bzw. primär Shell).
+  // Live-Artikel kommt aus dem IntersectionObserver.
   useEffect(() => {
-    if (imPane || !erlass) return;
+    if (!erlass) return;
     const ebeneLabel = erlass.rechtsgebiet === 'international'
       ? 'International'
       : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`;
@@ -188,9 +203,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     meldeInhaltsKopf({
       breadcrumb: [{ label: 'Gesetze', to: '/gesetze' }, { label: ebeneLabel, to: ebeneTo }, { label: erlass.kuerzel }],
       stand: erlass.stand ? formatiereDatum(erlass.stand) : null,
-      artikel: aktArtikel,
+      // Hinter dem laufenden Artikel die Gesetzesabkürzung (z. B. «Art. 7 OR»).
+      artikel: aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null,
     });
-  }, [imPane, erlass, aktArtikel, meldeInhaltsKopf]);
+  }, [erlass, aktArtikel, meldeInhaltsKopf]);
   // Beim Verlassen den Kopf räumen (Shell setzt bei Routenwechsel ohnehin zurück).
   useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
@@ -414,8 +430,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       const token = aktiverArtikel(rects, mitte);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
-      // A3: aktuellen Artikel an den Einzelansicht-Kopf melden (nur dort sichtbar).
-      if (!imPane) setAktArtikel(`Art. ${token.replace(/_/g, '')}`);
+      // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf).
+      setAktArtikel(`Art. ${token.replace(/_/g, '')}`);
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
@@ -856,15 +872,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         return ziel ? createPortal(drawer, ziel) : drawer;
       })()}
 
-      <div className={!imPane && sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
-        {/* xl-Spalte (nur ab 1280px): Suche + Gliederungsbaum, sticky. Unter xl
-            wird die Gliederung NICHT inline hier gerendert (sie scrollte sonst weg),
-            sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
-        {/* Im Pane (B-1): keine feste TOC-Spalte — einspaltig + Drawer. */}
-        {!imPane && sektionen.length > 0 && (
+      {/* 2-Spalten-Gliederung: ab `istXl` — im Pane container-breitenabhängig
+          (ResizeObserver), sonst viewport-xl. istXl treibt die Klassen direkt
+          (kein xl:-Prefix), damit ein BREITES Pane denselben Aufbau wie der
+          Einzelbildschirm bekommt. */}
+      <div className={istXl && sektionen.length > 0 && tocOffen ? 'grid grid-cols-[16rem_minmax(0,1fr)] gap-8' : ''}>
+        {/* TOC-Spalte (Suche + Gliederungsbaum, sticky). Nur wenn istXl; darunter
+            Overlay-Drawer (oben) über den sticky ☰-Knopf. Im schmalen Pane: Drawer. */}
+        {istXl && sektionen.length > 0 && (
           <aside
-            style={{ top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
-            className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
+            style={imPane
+              ? { top: '0.5rem', maxHeight: 'calc(100% - 1rem)' }
+              : { top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
+            className={`mb-0 sticky flex-col ${tocOffen ? 'flex' : 'hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
                 <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
@@ -876,7 +896,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               <p className="lc-overline">Gliederung</p>
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-500 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
-            <div data-toc className="xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+            <div data-toc className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
               {tocBaumEl}
             </div>
           </aside>
@@ -886,7 +906,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             Im 2-Spalten-Fall greift die Begrenzung erst ab xl über das Grid; darunter
             (lg–xl, geteilter Bildschirm) bleibt der Text zentriert + auf eine
             komfortable Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
-        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? 'mx-auto w-full max-w-[52rem] xl:mx-0 xl:max-w-none' : 'mx-auto w-full max-w-[56rem]'}`}>
+        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-[52rem]') : 'mx-auto w-full max-w-[56rem]'}`}>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>

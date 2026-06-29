@@ -4,6 +4,7 @@ import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
 import { PaneKopf } from './PaneKopf';
+import { InhaltsKopfMeldeProvider, type KopfDaten } from './InhaltsKopfKontext';
 
 // ─── Sekundäres Split-View-Pane («Browser-Fenster»-Modell) ──────────────────
 //
@@ -62,6 +63,9 @@ export function SekundaerPane(props: SekundaerPaneProps) {
     kannLinks, kannRechts, ziehbar, style, onNavigiert, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
   const wurzel = useRef<HTMLElement>(null);
   const overlayWurzel = useRef<HTMLDivElement>(null);
+  // F: Kopfdaten DIESES Panes (Breadcrumb + laufender Artikel), die der Inhalt
+  // (Gesetz-Leser) über den nächsten Melde-Provider meldet → in den PaneKopf.
+  const [kopf, setKopf] = useState<KopfDaten | null>(null);
   // Pane-eigene History + Navigator.
   const elternNav = useContext(UNSAFE_NavigationContext);
   const [hist, setHist] = useState<{ stack: string[]; idx: number }>({ stack: [pfad], idx: 0 });
@@ -97,7 +101,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
         className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-700' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf
-          label={label} stand={stand} rolle="sekundaer"
+          label={label} stand={stand} breadcrumb={kopf?.breadcrumb} artikel={kopf?.artikel} rolle="sekundaer"
           onSchliessen={onSchliessen} onHauptfenster={onHauptfenster} onTeilen={onTeilen}
           onLinks={onLinks} onRechts={onRechts} kannLinks={kannLinks} kannRechts={kannRechts}
           ziehbar={ziehbar} onDragStart={onDragStart} onDragEnd={onDragEnd}
@@ -107,11 +111,13 @@ export function SekundaerPane(props: SekundaerPaneProps) {
             className="@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass-600 focus-visible:-outline-offset-2">
             <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-6">
               <UNSAFE_NavigationContext.Provider value={navKontext}>
-                <ErrorBoundary>
-                  <Suspense fallback={<Laden />}>
-                    <RouteSwitch location={loc} />
-                  </Suspense>
-                </ErrorBoundary>
+                <InhaltsKopfMeldeProvider value={setKopf}>
+                  <ErrorBoundary>
+                    <Suspense fallback={<Laden />}>
+                      <RouteSwitch location={loc} />
+                    </Suspense>
+                  </ErrorBoundary>
+                </InhaltsKopfMeldeProvider>
               </UNSAFE_NavigationContext.Provider>
             </div>
           </section>
