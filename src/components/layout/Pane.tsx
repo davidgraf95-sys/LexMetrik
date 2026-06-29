@@ -44,7 +44,7 @@ export function SekundaerPane({ pfad, label, onSchliessen }: {
       <section
         ref={wurzel}
         aria-label={label}
-        className="@container/pane relative flex-1 min-w-0 overflow-y-auto overscroll-contain border-l border-line focus:outline-none"
+        className="@container/pane relative flex-1 min-w-0 overflow-y-auto overscroll-contain border-l border-line focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start"
       >
         {/* Schliessen-Knopf: sticky oben rechts, damit das Pane jederzeit
             wieder geschlossen werden kann (kein Sackgassen-Zustand). */}

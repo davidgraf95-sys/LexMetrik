@@ -92,7 +92,10 @@ export function Shell({ children }: { children: ReactNode }) {
     mq.addEventListener('change', upd);
     return () => mq.removeEventListener('change', upd);
   }, []);
-  const multipane = istLg && pane.sekundaer.length > 0;
+  // Multipane sobald ein sekundäres Pane existiert. Responsiv: ab lg nebeneinander,
+  // darunter (B-4) horizontales Swipe-/Snap-Falten (1 Pane sichtbar, wischen). Der
+  // Default (keine Panes) bleibt der byte-gleiche 1-Pane-Pfad (Prerender hat nie Panes).
+  const multipane = pane.sekundaer.length > 0;
   // B-2: «daneben öffnen» nur ab lg + solange Kapazität frei ist.
   const paneSteuerung = { oeffneDaneben: pane.oeffneDaneben, kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER };
   // Fokus nach dem Schliessen eines Panes zurück in den Hauptinhalt (A11y).
@@ -175,10 +178,10 @@ export function Shell({ children }: { children: ReactNode }) {
             // ── Multipane (B-1): primäres Pane (BrowserRouter, treibt URL/Titel/
             //    Reiter) links + sekundäre location-fixierte Panes (<Routes location>)
             //    rechts. Jedes Pane scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
-            <div className="flex-1 flex min-h-0">
+            <div className="flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory">
               <PaneProvider value={{ imPane: true, rolle: 'primaer', wurzel: primaerWurzel }}>
                 <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
-                  className="@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none">
+                  className="@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start">
                   <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12">{children}</div>
                 </main>
               </PaneProvider>
