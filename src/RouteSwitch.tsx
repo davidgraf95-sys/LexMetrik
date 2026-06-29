@@ -69,11 +69,17 @@ function AltRouteRedirect() {
 
 /**
  * Die EINE Routendefinition der App. Rendert pfadabhängig die passende Seite.
- * Muss in einem Router-Kontext (BrowserRouter/MemoryRouter) stehen.
+ * Muss in einem Router-Kontext (BrowserRouter) stehen.
+ *
+ * `location` (Split-View B-1): Wird ein Pfad übergeben, rendert dieser Schalter
+ * die Seite für DIESE Location statt für die aktuelle URL — react-routers
+ * unterstützte Mehrfach-Sicht-Primitive (`<Routes location>`). So zeigt ein
+ * sekundäres Pane einen ZWEITEN Erlass/Rechner im SELBEN BrowserRouter, OHNE
+ * einen zweiten Router zu verschachteln (verboten in react-router v7).
  */
-export function RouteSwitch() {
+export function RouteSwitch({ location }: { location?: string }) {
   return (
-    <Routes>
+    <Routes location={location}>
       <Route path="/" element={<Startseite />} />
       {/* Rubrik-Übersichten (UI-Welle): Rechner + Vorlagen je eigene Seite. */}
       <Route path="/rechner" element={<RechnerUebersicht />} />

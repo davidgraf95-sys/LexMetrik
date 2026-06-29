@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
+import { usePaneKontext } from '../../components/layout/PaneKontext';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
@@ -80,14 +81,20 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Code «tocOffen» fälschlich als 2-Spalten-aktiv → unter xl verschwand der
   // Gliederungs-Zugang beim Scrollen (Auftrag David: «bei geteiltem Bildschirm
   // jederzeit ausklappbar, analog Seitenleiste»). SSR-Default false = mobil-Layout.
-  const [istXl, setIstXl] = useState(false);
+  const [istXlVp, setIstXlVp] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1280px)');
-    const upd = () => setIstXl(mq.matches);
+    const upd = () => setIstXlVp(mq.matches);
     upd();
     mq.addEventListener('change', upd);
     return () => mq.removeEventListener('change', upd);
   }, []);
+  // Split-View B-1: In einem (schmalen) Pane IMMER einspaltig + Gliederung als
+  // Drawer — eine feste 16rem-TOC-Spalte würde ein Pane zu stark beschneiden.
+  // istXl steuert genau diese 2-Spalten-Logik; im Pane also fest false. Ausserhalb
+  // eines Panes byte-gleich zum Viewport-Verhalten (Default/Prerender).
+  const { imPane } = usePaneKontext();
+  const istXl = imPane ? false : istXlVp;
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
@@ -744,9 +751,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           schliesst den Drawer (springeZuSektion). */}
       {!istXl && tocAuf && (
         <>
-          <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
+          <div className={`fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`} onClick={() => setTocAuf(false)} aria-hidden />
           <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
-            className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain"
+            className={`fixed inset-x-0 z-50 ${imPane ? '' : 'xl:hidden'} bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain`}
             style={{ top: '4rem' }}>
             <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
               <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
@@ -758,11 +765,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         </>
       )}
 
-      <div className={sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
+      <div className={!imPane && sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
         {/* xl-Spalte (nur ab 1280px): Suche + Gliederungsbaum, sticky. Unter xl
             wird die Gliederung NICHT inline hier gerendert (sie scrollte sonst weg),
             sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
-        {sektionen.length > 0 && (
+        {/* Im Pane (B-1): keine feste TOC-Spalte — einspaltig + Drawer. */}
+        {!imPane && sektionen.length > 0 && (
           <aside
             style={{ top: 'calc(4rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 1.5rem)' }}
             className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>

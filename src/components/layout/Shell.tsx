@@ -7,6 +7,9 @@ import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
 import { useInhaltsbreite } from './useInhaltsbreite';
+import { usePaneLayout } from './usePaneLayout';
+import { SekundaerPane } from './Pane';
+import { PaneProvider } from './PaneKontext';
 import { useDialogFokus } from './useDialogFokus';
 
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
@@ -77,6 +80,19 @@ export function Shell({ children }: { children: ReactNode }) {
   // damit der Hinweisstreifen mit dem Inhalt fluchtet.
   const inhaltsbreiteKlasse = inhaltsbreite.breit ? 'max-w-screen-2xl' : 'max-w-content';
 
+  // Split-View (B-1): sekundäre Panes nur ab lg nebeneinander; mobil + Prerender
+  // = 1 Pane (istLg startet false → SSR/Default byte-gleich, B-4-Faltung gratis).
+  const pane = usePaneLayout();
+  const [istLg, setIstLg] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const upd = () => setIstLg(mq.matches);
+    upd();
+    mq.addEventListener('change', upd);
+    return () => mq.removeEventListener('change', upd);
+  }, []);
+  const multipane = istLg && pane.sekundaer.length > 0;
+
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
   const [letzterPfad, setLetzterPfad] = useState(pathname);
@@ -112,8 +128,9 @@ export function Shell({ children }: { children: ReactNode }) {
           </>
         )}
 
-        {/* Rechte Spalte: Top-Streifen + Inhalt + Footer. */}
-        <div className="flex-1 min-w-0 flex flex-col min-h-screen">
+        {/* Rechte Spalte: Top-Streifen + Inhalt + Footer. Im Multipane-Modus
+            höhenbegrenzt (h-screen), damit die Panes je eigen scrollen. */}
+        <div className={`flex-1 min-w-0 flex flex-col ${multipane ? 'h-screen' : 'min-h-screen'}`}>
           <Topbar
             onMenu={() => setSchubladeOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
@@ -137,11 +154,30 @@ export function Shell({ children }: { children: ReactNode }) {
             </div>
           )}
 
-          <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
-            <div className={`${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
-          </main>
+          {!multipane ? (
+            <>
+              <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
+                <div className={`${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
+              </main>
 
-          <Footer />
+              <Footer />
+            </>
+          ) : (
+            // ── Multipane (B-1): primäres Pane (BrowserRouter, treibt URL/Titel/
+            //    Reiter) links + sekundäre MemoryRouter-Panes rechts. Jedes Pane
+            //    scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
+            <div className="flex-1 flex min-h-0">
+              <PaneProvider value={{ imPane: true, rolle: 'primaer' }}>
+                <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
+                  className="@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none">
+                  <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12">{children}</div>
+                </main>
+              </PaneProvider>
+              {pane.sekundaer.map((pfad, i) => (
+                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`} onSchliessen={() => pane.schliesse(i)} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

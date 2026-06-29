@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 import { EntscheidKarte } from '../components/rechtsprechung/EntscheidKarte';
 import { EntscheidZeile } from '../components/rechtsprechung/EntscheidZeile';
 import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
@@ -60,6 +61,9 @@ function Sektion({ titel, liste, dichte, onNorm }: {
 }
 
 export function Rechtsprechung() {
+  // Split-View B-1: im Pane reagiert das 2-Spalten-Layout auf die PANE-Breite
+  // (@3xl/pane) statt auf den Viewport; ausserhalb byte-gleich (lg:).
+  const pk = usePaneKlasse();
   const [alle, setAlle] = useState<BrowseEntscheid[] | null>(null);
   const [fehler, setFehler] = useState(false);
   const [params, setParams] = useSearchParams();
@@ -160,7 +164,7 @@ export function Rechtsprechung() {
       )}
 
       {alle && alle.length > 0 && (
-        <div className="lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6">
+        <div className={pk('lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6', '@3xl/pane:grid @3xl/pane:grid-cols-[14rem_minmax(0,1fr)] @3xl/pane:gap-6')}>
           {/* Links: Sachgebiets-Rail (Mobil oben als Chip-Band). */}
           <div className="mb-4 lg:mb-0">
             <SachgebietKacheln
