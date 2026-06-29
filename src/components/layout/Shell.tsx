@@ -213,6 +213,10 @@ export function Shell({ children }: { children: ReactNode }) {
   // Live-Location je Pane (gekeyt am STABILEN Seed-pfad, der auch der React-Key ist
   // → kein Remount). Titel/teilen/promote/Dedup nutzen den aktuell gezeigten Pfad.
   const [liveLocs, setLiveLocs] = useState<Record<string, string>>({});
+  // Stabile Melde-Funktion (useCallback) → der onNavigiert-Effekt im SekundaerPane
+  // feuert nur bei echtem Location-Wechsel, nicht bei jedem Shell-Render.
+  const meldeLive = useCallback((seed: string, p: string) =>
+    setLiveLocs((m) => (m[seed] === p ? m : { ...m, [seed]: p })), []);
   const livePfad = (i: number) => liveLocs[pane.sekundaer[i]] ?? pane.sekundaer[i];
   const liveSek = pane.sekundaer.map((s) => liveLocs[s] ?? s);
   const titelVon = (pfad: string) => {
@@ -388,7 +392,7 @@ export function Shell({ children }: { children: ReactNode }) {
                     onPointerDown={ziehGutter(i)} onKeyDown={gutterTaste(i)}
                     className="hidden lg:block shrink-0 w-1.5 -mx-0.5 z-10 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus-visible:bg-brass-400 focus-visible:outline-none" />
                   <SekundaerPane pfad={pfad} {...titelVon(livePfad(i))} style={wachstum(i + 1)}
-                    onNavigiert={(p) => setLiveLocs((m) => (m[pfad] === p ? m : { ...m, [pfad]: p }))}
+                    onNavigiert={meldeLive}
                     onSchliessen={() => schliesseUndFokus(i)}
                     onHauptfenster={() => zumHauptfenster(i)}
                     onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
