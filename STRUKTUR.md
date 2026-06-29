@@ -26,7 +26,8 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 ## Session 29.6.2026 (Forts.) — Split-View B-1 + B-2 (ultracode, NICHT deployt)
 
 Fortsetzung gleicher Branch `feat/split-view-strang-a`. Auftrag David: B-1 + B-2 mit ultracode,
-fundierter Bug-Check nach B-1. **Committet, noch nicht deployt** (Prod hält A/B-0/B-0b, `d20f2337`).
+fundierter Bug-Check nach B-1. **Auf Prod deployt (`bec0ecb7`, dpl_5m8am2Mj, lexmetrik.vercel.app).**
+Danach Auftrag «weitermachen im plan / run till dry» → B-2.5 → B-4 → B-5 autonom.
 - **B-1 Pane-Container** (`e3795776`): ultracode-Architektur-Design (3 Vorschläge→bewertet→
   synthetisiert) löste 2 harte Fragen (container-vs-viewport, Scroll-Treue). Default 1 Pane
   byte-gleich; Multipane ab lg. Sekundär-Pane via `<RouteSwitch location>` (NICHT MemoryRouter —
