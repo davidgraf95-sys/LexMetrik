@@ -801,7 +801,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           <>
             <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
               onClick={() => setTocAuf(false)} aria-hidden />
-            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
+            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
               className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-full' : `fixed inset-x-0 z-50 max-h-[80vh] ${imPane ? '' : 'xl:hidden'}`} bg-paper-raised border-b border-line shadow-lg overflow-y-auto overscroll-contain`}
               style={inPane ? undefined : { top: '4rem' }}>
               <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">

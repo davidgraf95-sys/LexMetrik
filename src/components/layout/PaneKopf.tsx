@@ -7,8 +7,7 @@ import type { DragEvent, ReactNode } from 'react';
 // liegt (Icon · Label · Stand) und trägt die Pane-Steuerung rechts:
 // ⠿ Ziehgriff · ◂/▸ Umsortieren (Tastatur/Touch) · [zum Hauptfenster] · [teilen] · ✕.
 // Reine Darstellung (§3); Tokens-only (§13). Sitzt AUSSERHALB des Scroll-
-// Containers (echte Leiste, kein sticky-Hack) und meldet ihre Höhe als CSS-Var
-// `--pane-kopf-h` für die Overlay-Positionierung der Pane-Drawer.
+// Containers (echte Leiste, kein sticky-Hack).
 
 export interface PaneKopfProps {
   icon?: ReactNode;
@@ -36,10 +35,10 @@ const knopf = 'inline-flex h-7 w-7 items-center justify-center rounded-md text-i
 
 export function PaneKopf({ icon, label, stand, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   return (
-    <div className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-400' : ''}`}>
+    <div className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-700' : ''}`}>
       {/* Links: Identität (Icon · Label · Stand). */}
       <div className="flex min-w-0 items-center gap-1.5 pl-1">
-        {ziehbar ? (
+        {ziehbar && (
           <span
             draggable
             onDragStart={onDragStart}
@@ -48,7 +47,7 @@ export function PaneKopf({ icon, label, stand, rolle, onSchliessen, onHauptfenst
             title="Zum Verschieben ziehen"
             className="shrink-0 cursor-grab active:cursor-grabbing select-none px-0.5 text-ink-400 hover:text-brass-600"
           >⠿</span>
-        ) : <span aria-hidden className="shrink-0 px-0.5 text-ink-300">⠿</span>}
+        )}
         {icon && <span className="shrink-0">{icon}</span>}
         <span className="truncate text-body-s font-medium text-ink-800">{label}</span>
         {stand && <span className="num shrink-0 text-micro text-ink-500">· Stand {stand}</span>}
@@ -78,7 +77,7 @@ export function PaneKopf({ icon, label, stand, rolle, onSchliessen, onHauptfenst
         )}
         <button type="button" className={`${knopf} hover:text-danger-700`} onClick={onSchliessen}
           aria-label={rolle === 'primaer' ? 'Hauptfenster schliessen' : `«${label}» schliessen`}
-          title={rolle === 'primaer' ? 'Schliessen (zur Startseite)' : 'Schliessen'}>
+          title={rolle === 'primaer' ? 'Hauptfenster schliessen' : 'Schliessen'}>
           <span aria-hidden className="text-body-s leading-none">✕</span>
         </button>
       </div>

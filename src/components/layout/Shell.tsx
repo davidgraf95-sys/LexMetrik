@@ -129,6 +129,8 @@ export function Shell({ children }: { children: ReactNode }) {
     if (!multipane) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'F6') return;
+      // Offenen modalen Dialog nicht verlassen (Fokus-Falle respektieren).
+      if (document.querySelector('[role="dialog"][aria-modal="true"]')) return;
       const panes = Array.from(document.querySelectorAll<HTMLElement>('[data-pane]'));
       if (panes.length < 2) return;
       e.preventDefault();
@@ -154,16 +156,21 @@ export function Shell({ children }: { children: ReactNode }) {
     })();
     return () => { lebt = false; };
   }, [multipane]);
+  // Live-Location je Pane (gekeyt am STABILEN Seed-pfad, der auch der React-Key ist
+  // → kein Remount). Titel/teilen/promote/Dedup nutzen den aktuell gezeigten Pfad.
+  const [liveLocs, setLiveLocs] = useState<Record<string, string>>({});
+  const livePfad = (i: number) => liveLocs[pane.sekundaer[i]] ?? pane.sekundaer[i];
+  const liveSek = pane.sekundaer.map((s) => liveLocs[s] ?? s);
   const titelVon = (pfad: string) => {
     const stand = erlassVonPfad(pfad, manifeste)?.stand ?? null;
     const m = stand && /^(\d{4})-(\d{2})-(\d{2})/.exec(stand);
     return { label: verlaufLabel(pfad, manifeste), stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand };
   };
 
-  // Dedup gegen ALLE offenen Panes (Primär-URL inkl.) — nie ein bereits gezeigtes doppeln.
+  // Dedup gegen ALLE offenen Panes (Primär-URL inkl., Sekundäre live) — kein Doppel.
   const istOffen = (pfad: string) => {
     const n = tabSchluessel(pfad);
-    return tabSchluessel(pathname + search) === n || pane.sekundaer.some((x) => tabSchluessel(x) === n);
+    return tabSchluessel(pathname + search) === n || liveSek.some((x) => tabSchluessel(x) === n);
   };
   // B-2: «daneben öffnen» nur ab lg + Kapazität; kein Doppel.
   const paneSteuerung = {
@@ -178,14 +185,14 @@ export function Shell({ children }: { children: ReactNode }) {
   };
   // Sekundär → Hauptfenster: dieses Pane wird die URL, das alte Hauptfenster rutscht an seinen Platz.
   const zumHauptfenster = (i: number) => {
-    const altPrimaer = pathname + search;
-    const ziel = pane.sekundaer[i];
+    const altPrimaer = pathname + search + (typeof window !== 'undefined' ? window.location.hash : '');
+    const ziel = livePfad(i);
     pane.ersetze(i, altPrimaer);
     navigate(ziel);
   };
-  // Hauptfenster ✕: erstes Sekundär zum Hauptfenster befördern (sonst zur Startseite).
+  // Hauptfenster ✕: erstes Sekundär (live) zum Hauptfenster befördern (sonst zur Startseite).
   const schliesseHaupt = () => {
-    if (pane.sekundaer.length > 0) { const z = pane.sekundaer[0]; pane.schliesse(0); navigate(z); }
+    if (pane.sekundaer.length > 0) { const z = livePfad(0); pane.schliesse(0); navigate(z); }
     else navigate('/');
   };
   // Drag-Drop-Umsortierung der SEKUNDÄREN Panes (Index im sekundaer-Array).
@@ -285,7 +292,7 @@ export function Shell({ children }: { children: ReactNode }) {
                     <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
                       data-pane={multipane ? 'primaer' : undefined}
                       className={multipane
-                        ? '@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus:outline-none'
+                        ? '@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass-600 focus-visible:-outline-offset-2'
                         : 'flex-1 w-full focus:outline-none'}>
                       <div className={multipane
                         ? 'mx-auto w-full max-w-content px-5 sm:px-6 py-6'
@@ -297,10 +304,11 @@ export function Shell({ children }: { children: ReactNode }) {
               </div>
               {/* Sekundäre Panes (<Routes location> + eigener Navigator + PaneKopf). */}
               {multipane && pane.sekundaer.map((pfad, i) => (
-                <SekundaerPane key={pfad} pfad={pfad} {...titelVon(pfad)}
+                <SekundaerPane key={pfad} pfad={pfad} {...titelVon(livePfad(i))}
+                  onNavigiert={(p) => setLiveLocs((m) => (m[pfad] === p ? m : { ...m, [pfad]: p }))}
                   onSchliessen={() => schliesseUndFokus(i)}
                   onHauptfenster={() => zumHauptfenster(i)}
-                  onTeilen={() => { void navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer)); }}
+                  onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
                   onLinks={() => pane.verschiebe(i, i - 1)} onRechts={() => pane.verschiebe(i, i + 1)}
                   kannLinks={i > 0} kannRechts={i < pane.sekundaer.length - 1}
                   ziehbar={pane.sekundaer.length > 1} {...dndGriff(i)} {...dndSpalte(i)} />

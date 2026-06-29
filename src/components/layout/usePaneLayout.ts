@@ -134,7 +134,9 @@ export function usePaneLayout(): PaneLayout {
   }, []);
 
   const ersetze = useCallback((i: number, pfad: string) => {
-    setSekundaer((s) => (i < 0 || i >= s.length ? s : s.map((x, idx) => (idx === i ? normPfad(pfad) : x))));
+    // Vollen Pfad (inkl. #hash/?preset) speichern wie oeffneDaneben — sonst verlöre
+    // das beförderte Hauptfenster sein Unter-Tab/Anker. Dedup läuft über normPfad.
+    setSekundaer((s) => (i < 0 || i >= s.length ? s : s.map((x, idx) => (idx === i ? pfad : x))));
   }, []);
 
   return { sekundaer, oeffneDaneben, schliesse, verschiebe, ersetze };

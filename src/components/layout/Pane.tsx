@@ -1,4 +1,4 @@
-import { Suspense, useContext, useMemo, useRef, useState, type DragEvent } from 'react';
+import { Suspense, useContext, useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
@@ -44,6 +44,8 @@ export interface SekundaerPaneProps {
   kannLinks?: boolean;
   kannRechts?: boolean;
   ziehbar?: boolean;
+  /** Meldet die LIVE-Location des Panes nach In-Pane-Navigation (für Titel/teilen/promote). */
+  onNavigiert?: (pfad: string) => void;
   /** Drag-Drop: Griff (Kopf) + Spalte (Drop-Ziel). */
   onDragStart?: (e: DragEvent) => void;
   onDragEnd?: (e: DragEvent) => void;
@@ -55,13 +57,17 @@ export interface SekundaerPaneProps {
 
 export function SekundaerPane(props: SekundaerPaneProps) {
   const { pfad, label, stand, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts,
-    kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
+    kannLinks, kannRechts, ziehbar, onNavigiert, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
   const wurzel = useRef<HTMLElement>(null);
   const overlayWurzel = useRef<HTMLDivElement>(null);
   // Pane-eigene History + Navigator.
   const elternNav = useContext(UNSAFE_NavigationContext);
   const [hist, setHist] = useState<{ stack: string[]; idx: number }>({ stack: [pfad], idx: 0 });
   const loc = hist.stack[hist.idx];
+  // Live-Location nach oben melden (Titelleiste/teilen/promote/Dedup nutzen den
+  // AKTUELL gezeigten Pfad, nicht den Anfangs-pfad). Der Pane-Key bleibt der
+  // Seed-pfad → kein Remount bei In-Pane-Navigation.
+  useEffect(() => { onNavigiert?.(loc); }, [loc, onNavigiert]);
   const navKontext = useMemo(() => ({
     ...elternNav,
     static: false,
@@ -85,7 +91,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
       <div
         onDragOver={onDragOver}
         onDrop={onDrop}
-        className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-500' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
+        className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-700' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf
           label={label} stand={stand} rolle="sekundaer"
@@ -95,7 +101,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
         />
         <div className="relative flex-1 min-h-0">
           <section ref={wurzel} aria-label={label} tabIndex={-1} data-pane="sekundaer"
-            className="@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus:outline-none">
+            className="@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass-600 focus-visible:-outline-offset-2">
             <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-6">
               <UNSAFE_NavigationContext.Provider value={navKontext}>
                 <ErrorBoundary>
