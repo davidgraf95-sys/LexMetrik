@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "944.3",
+  "titel": "Bundesgesetz über Pauschalreisen",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 31 und 64 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 24. Februar 1993,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "BBl <b>1993 </b>I 805",
+    "links": [
+     {
+      "label": "BBl <b>1993 </b>I 805",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -161,7 +205,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Die Berichtigung der RedK der BVers vom 20. Aug. 2021 betrifft nur den italienischen Text (AS 2021 496).",
+     "text": "Die Berichtigung der RedK der BVers vom 20. Aug. 2021 betrifft nur den italienischen Text (<i>AS <b>2021</b> 496</i>).",
      "links": [],
      "absatz": null,
      "item": null

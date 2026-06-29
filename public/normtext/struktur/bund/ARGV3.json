@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "822.113",
+  "titel": "Verordnung 3 zum Arbeitsgesetz (ArGV 3)",
+  "erlassdatum": "vom 18. August 1993 (Stand am 1. September 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 6 Absatz 4 und 40 des Arbeitsgesetzes vom 13. März 1964 (nachstehend «Gesetz»),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
+    "links": [
+     {
+      "label": "AS <b>2015</b> 1079",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>822.11</b>",
+    "links": [
+     {
+      "label": "SR <b>822.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1966/57_57_57"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +59,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Ausdruck gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079). Die Anpassung wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079). Die Anpassung wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -26,10 +71,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 832.20",
+     "text": "SR <b>832.20</b>",
      "links": [
       {
-       "label": "SR 832.20",
+       "label": "SR <b>832.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676"
       }
      ],
@@ -51,10 +96,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -63,10 +108,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -88,10 +133,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -100,10 +145,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -125,10 +170,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -150,10 +195,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -162,10 +207,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -187,10 +232,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -212,10 +257,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Eingefügt durch Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -224,10 +269,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 832.20",
+     "text": "SR <b>832.20</b>",
      "links": [
       {
-       "label": "SR 832.20",
+       "label": "SR <b>832.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676"
       }
      ],
@@ -236,10 +281,10 @@
     },
     {
      "nr": "15",
-     "text": "Aufgehoben durch Ziff. I der V vom 1. April 2015, mit Wirkung seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Aufgehoben durch Ziff. I der V vom 1. April 2015, mit Wirkung seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -261,10 +306,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -297,10 +342,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -386,10 +431,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -398,10 +443,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -410,15 +455,16 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Beleuchtung, Raumklima, Lärm und Vibrationen"
     }
    ]
   },
@@ -454,10 +500,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -496,10 +542,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Aufgehoben gemäss Art. 8 der V vom 28. Okt. 2009 zum Schutz vor Passivrauchen, mit Wirkung seit 1. Mai 2010 (AS 2009 6289).",
+     "text": "Aufgehoben gemäss Art. 8 der V vom 28. Okt. 2009 zum Schutz vor Passivrauchen, mit Wirkung seit 1. Mai 2010 (AS <b>2009</b> 6289).",
      "links": [
       {
-       "label": "AS 2009 6289",
+       "label": "AS <b>2009</b> 6289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/767"
       }
      ],
@@ -555,10 +601,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -567,10 +613,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -596,10 +642,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -638,10 +684,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -680,10 +726,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -842,15 +888,16 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Abschnitt: Instandhaltung und Reinigung"
     }
    ]
   },
@@ -867,10 +914,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Ausdruck gemäss Art. 22 Abs. 1 Ziff. 9 der V vom 17. Nov. 1999, in Kraft seit 1. Juli 1999 (AS 2000 187).",
+     "text": "Ausdruck gemäss Art. 22 Abs. 1 Ziff. 9 der V vom 17. Nov. 1999, in Kraft seit 1. Juli 1999 (AS <b>2000</b> 187).",
      "links": [
       {
-       "label": "AS 2000 187",
+       "label": "AS <b>2000</b> 187",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/34"
       }
      ],
@@ -892,10 +939,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS 2015 1079).",
+     "text": "Fassung gemäss Ziff. I der V vom 1. April 2015, in Kraft seit 1. Okt. 2015 (AS <b>2015</b> 1079).",
      "links": [
       {
-       "label": "AS 2015 1079",
+       "label": "AS <b>2015</b> 1079",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/214"
       }
      ],
@@ -915,10 +962,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Aufgehoben durch Ziff. IV 39 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS 2007 4477).",
+     "text": "Aufgehoben durch Ziff. IV 39 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
-       "label": "AS 2007 4477",
+       "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
@@ -940,14 +987,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "[AS 1969 561; 1983 1968 Art. 107 Bst. a]",
+     "text": "[AS <b>1969 </b>561; <b>1983</b> 1968 Art. 107 Bst. a]",
      "links": [
       {
-       "label": "AS 1969 561",
+       "label": "AS <b>1969 </b>561",
        "url": "https://fedlex.data.admin.ch/eli/oc/1969/561_569_567"
       },
       {
-       "label": "1983 1968",
+       "label": "<b>1983</b> 1968",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/1968_1968_1968"
       }
      ],
@@ -971,10 +1018,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "SR 813.1",
+     "text": "SR<b> 813.1</b>",
      "links": [
       {
-       "label": "SR 813.1",
+       "label": "SR<b> 813.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/724"
       }
      ],
@@ -983,10 +1030,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 822.111",
+     "text": "SR <b>822.111</b>",
      "links": [
       {
-       "label": "SR 822.111",
+       "label": "SR <b>822.111</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2000/243"
       }
      ],
@@ -995,15 +1042,16 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. II der V vom 19. Juni 2024, in Kraft seit 1. Sept. 2024 (AS 2024 316).",
+     "text": "Eingefügt durch Ziff. II der V vom 19. Juni 2024, in Kraft seit 1. Sept. 2024 (AS <b>2024</b> 316).",
      "links": [
       {
-       "label": "AS 2024 316",
+       "label": "AS <b>2024</b> 316",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/316"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Abschnitt: Sorgfältiger Umgang mit Chemikalien"
     }
    ]
   }

@@ -1,5 +1,42 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.274.132",
+  "titel": "Übereinkommen über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen",
+  "erlassdatum": "(Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Unterzeichnerstaaten dieses Übereinkommens"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in dem Wunsch, die Übermittlung und Erledigung von Rechtshilfeersuchen zu erleichtern sowie die Angleichung der verschiedenen dabei angewandten Verfahrensweisen zu fördern,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Absicht, die gegenseitige gerichtliche Zusammenarbeit in Zivil- oder Handelssachen wirksamer zu gestalten,"
+   },
+   {
+    "rolle": "verb",
+    "text": "haben beschlossen, zu diesem Zweck ein Übereinkommen zu schliessen, und haben die folgenden Bestimmungen vereinbart:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Art. 2 Abs. 1 des BB vom 9. Juni 1994 (AS <b>1994</b> 2807)",
+    "links": [
+     {
+      "label": "AS <b>1994</b> 2807",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1994/2807_2807_2807"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -264,10 +301,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "[BS 12 277. AS 2009 7101]",
+     "text": "[BS <b>12</b> 277. AS <b>2009</b> 7101]",
      "links": [
       {
-       "label": "AS 2009 7101",
+       "label": "AS <b>2009</b> 7101",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/858"
       }
      ],
@@ -276,10 +313,10 @@
     },
     {
      "nr": "3",
-     "text": "SR 0.274.12",
+     "text": "SR <b>0.274.12</b>",
      "links": [
       {
-       "label": "SR 0.274.12",
+       "label": "SR <b>0.274.12</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1199"
       }
      ],
@@ -380,10 +417,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 0.193.501",
+     "text": "SR <b>0.193.501</b>",
      "links": [
       {
-       "label": "SR 0.193.501",
+       "label": "SR <b>0.193.501</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
       }
      ],

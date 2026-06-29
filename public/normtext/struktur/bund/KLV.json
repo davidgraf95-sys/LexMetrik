@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "832.112.31",
+  "titel": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung",
+  "erlassdatum": "vom 29. September 1995 (Stand am 11. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Eidgenössische Departement des Innern (EDI),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 33, 36 Absatz 1, 54 Absätze 2–4, 59a, 62, 65 Absatz 3, 65b Absatz 3, 65f Absatz 5, 65g Absatz 3, 70a, 75, 77 Absatz 4 und 104a der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Okt. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3670).",
+    "links": [
+     {
+      "label": "AS <b>2002</b> 3670",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2002/562"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>832.102</b>",
+    "links": [
+     {
+      "label": "SR <b>832.102</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10135"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
+    "links": [
+     {
+      "label": "AS <b>2015</b> 1359",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -20,10 +77,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 529).",
      "links": [
       {
-       "label": "AS 2020 529",
+       "label": "AS <b>2020</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
       }
      ],
@@ -44,15 +101,16 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Ärztliche, chiropraktische und pharmazeutische Leistungen"
     }
    ]
   },
@@ -77,10 +135,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -110,10 +168,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -141,10 +199,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -153,10 +211,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 5283).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 5283).",
      "links": [
       {
-       "label": "AS 2003 5283",
+       "label": "AS <b>2003</b> 5283",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/775"
       }
      ],
@@ -165,10 +223,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -177,10 +235,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang 6 Ziff. II 5 der Arzneimittelverordnung vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3577).",
+     "text": "Fassung gemäss Anhang 6 Ziff. II 5 der Arzneimittelverordnung vom 21. Sept. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3577).",
      "links": [
       {
-       "label": "AS 2018 3577",
+       "label": "AS <b>2018</b> 3577",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/588"
       }
      ],
@@ -189,10 +247,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS <b>2019</b> 1931).",
      "links": [
       {
-       "label": "AS 2019 1931",
+       "label": "AS <b>2019</b> 1931",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
       }
      ],
@@ -201,10 +259,10 @@
     },
     {
      "nr": "22",
-     "text": "Berichtigung vom 16. Dez. 2025 (AS 2025 845).",
+     "text": "Berichtigung vom 16. Dez. 2025 (AS <b>2025</b> 845).",
      "links": [
       {
-       "label": "AS 2025 845",
+       "label": "AS <b>2025</b> 845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/845"
       }
      ],
@@ -213,10 +271,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS <b>2019</b> 1931).",
      "links": [
       {
-       "label": "AS 2019 1931",
+       "label": "AS <b>2019</b> 1931",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
       }
      ],
@@ -225,10 +283,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 840).",
      "links": [
       {
-       "label": "AS 2022 840",
+       "label": "AS <b>2022</b> 840",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
       }
      ],
@@ -237,10 +295,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -249,14 +307,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juli 2000 (AS 2000 2546). Fassung gemäss Ziff. I der V des EDI vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS 2013 1925).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juli 2000 (AS <b>2000</b> 2546). Fassung gemäss Ziff. I der V des EDI vom 10. Juni 2013, in Kraft seit 1. Juli 2013 (AS <b>2013 </b>1925).",
      "links": [
       {
-       "label": "AS 2000 2546",
+       "label": "AS <b>2000</b> 2546",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/406"
       },
       {
-       "label": "AS 2013 1925",
+       "label": "AS <b>2013 </b>1925",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/414"
       }
      ],
@@ -265,10 +323,10 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -300,10 +358,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -312,10 +370,10 @@
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 885).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 885).",
      "links": [
       {
-       "label": "AS 2021 885",
+       "label": "AS <b>2021</b> 885",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/885"
       }
      ],
@@ -324,10 +382,10 @@
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Okt. 2009, in Kraft seit 1. Jan. 2010 (AS 2009 6083).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Okt. 2009, in Kraft seit 1. Jan. 2010 (AS <b>2009 </b>6083).",
      "links": [
       {
-       "label": "AS 2009 6083",
+       "label": "AS <b>2009 </b>6083",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/744"
       }
      ],
@@ -336,10 +394,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -348,10 +406,10 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -360,10 +418,10 @@
     },
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -372,10 +430,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -384,14 +442,14 @@
     },
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS 2002 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS <b>2002</b> 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2002 4253",
+       "label": "AS <b>2002</b> 4253",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/692"
       },
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -400,10 +458,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
@@ -412,14 +470,14 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS 2008 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS <b>2008</b> 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2008 6493",
+       "label": "AS <b>2008</b> 6493",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/885"
       },
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -447,10 +505,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -459,10 +517,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS <b>1997</b> 564).",
      "links": [
       {
-       "label": "AS 1997 564",
+       "label": "AS <b>1997</b> 564",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
       }
      ],
@@ -471,10 +529,10 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -483,14 +541,14 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS 2002 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Eingefügt durch Ziff. I des EDI vom 9. Dez. 2002 (AS <b>2002</b> 4253). Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2002 4253",
+       "label": "AS <b>2002</b> 4253",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/692"
       },
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -499,10 +557,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
@@ -511,14 +569,14 @@
     },
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS 2008 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Dez. 2008 (AS <b>2008</b> 6493). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2008 6493",
+       "label": "AS <b>2008</b> 6493",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/885"
       },
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -548,10 +606,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -560,10 +618,10 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -572,10 +630,10 @@
     },
     {
      "nr": "58",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -584,10 +642,10 @@
     },
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -600,10 +658,10 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS<b> 2006</b> 5769).",
      "links": [
       {
-       "label": "AS 2006 5769",
+       "label": "AS<b> 2006</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
       }
      ],
@@ -612,10 +670,10 @@
     },
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6487).",
      "links": [
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       }
      ],
@@ -624,10 +682,10 @@
     },
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -636,10 +694,10 @@
     },
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6487).",
      "links": [
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       }
      ],
@@ -648,10 +706,10 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6487).",
      "links": [
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       }
      ],
@@ -660,10 +718,10 @@
     },
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS<b> 2006</b> 5769).",
      "links": [
       {
-       "label": "AS 2006 5769",
+       "label": "AS<b> 2006</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
       }
      ],
@@ -672,10 +730,10 @@
     },
     {
      "nr": "66",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS<b> 2006</b> 5769).",
      "links": [
       {
-       "label": "AS 2006 5769",
+       "label": "AS<b> 2006</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
       }
      ],
@@ -684,10 +742,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS 2006 5769).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Dez. 2006, in Kraft seit 1. Jan. 2007 (AS<b> 2006</b> 5769).",
      "links": [
       {
-       "label": "AS 2006 5769",
+       "label": "AS<b> 2006</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
       }
      ],
@@ -696,14 +754,14 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006 (AS 2006 5769). Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Dez. 2006 (AS<b> 2006</b> 5769). Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6487).",
      "links": [
       {
-       "label": "AS 2006 5769",
+       "label": "AS<b> 2006</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/856"
       },
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       }
      ],
@@ -712,10 +770,10 @@
     },
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -728,14 +786,14 @@
     },
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS 1997 2039). Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS <b>1997</b> 2039). Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 1997 2039",
+       "label": "AS <b>1997</b> 2039",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2039_2039_2039"
       },
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -748,10 +806,10 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -760,10 +818,10 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -772,7 +830,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Krankenpflege ambulant oder im Pflegeheim"
     }
    ]
   },
@@ -797,10 +856,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -809,10 +868,10 @@
     },
     {
      "nr": "78",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -821,10 +880,10 @@
     },
     {
      "nr": "79",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -833,10 +892,10 @@
     },
     {
      "nr": "80",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -866,10 +925,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -903,10 +962,10 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. April 2020 (AS 2020 519).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. April 2020 (AS <b>2020</b> 519).",
      "links": [
       {
-       "label": "AS 2020 519",
+       "label": "AS <b>2020</b> 519",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/98"
       }
      ],
@@ -915,10 +974,10 @@
     },
     {
      "nr": "102",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -948,10 +1007,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS 2016 2537).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS <b>2016</b> 2537).",
      "links": [
       {
-       "label": "AS 2016 2537",
+       "label": "AS <b>2016</b> 2537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/396"
       }
      ],
@@ -960,10 +1019,10 @@
     },
     {
      "nr": "104",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -989,10 +1048,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>6839).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       }
      ],
@@ -1001,10 +1060,10 @@
     },
     {
      "nr": "112",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1030,10 +1089,10 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1042,10 +1101,10 @@
     },
     {
      "nr": "157",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 885).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 885).",
      "links": [
       {
-       "label": "AS 2021 885",
+       "label": "AS <b>2021</b> 885",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/885"
       }
      ],
@@ -1078,10 +1137,10 @@
     },
     {
      "nr": "160",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -1090,10 +1149,10 @@
     },
     {
      "nr": "161",
-     "text": "SR 810.12",
+     "text": "SR <b>810.12</b>",
      "links": [
       {
-       "label": "SR 810.12",
+       "label": "SR <b>810.12</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9232"
       }
      ],
@@ -1114,10 +1173,10 @@
     },
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -1150,10 +1209,10 @@
     },
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6327).",
      "links": [
       {
-       "label": "AS 2020 6327",
+       "label": "AS <b>2020</b> 6327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
       }
      ],
@@ -1179,10 +1238,10 @@
    "fussnoten": [
     {
      "nr": "167",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
@@ -1208,10 +1267,10 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1220,10 +1279,10 @@
     },
     {
      "nr": "169",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
@@ -1249,10 +1308,10 @@
    "fussnoten": [
     {
      "nr": "170",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
@@ -1261,10 +1320,10 @@
     },
     {
      "nr": "171",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -1273,10 +1332,10 @@
     },
     {
      "nr": "172",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS 2019 1931).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Juni 2019, in Kraft seit 1. Juli 2019 (AS <b>2019</b> 1931).",
      "links": [
       {
-       "label": "AS 2019 1931",
+       "label": "AS <b>2019</b> 1931",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/355"
       }
      ],
@@ -1302,10 +1361,10 @@
    "fussnoten": [
     {
      "nr": "173",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1331,10 +1390,10 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -1343,10 +1402,10 @@
     },
     {
      "nr": "175",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1355,10 +1414,10 @@
     },
     {
      "nr": "176",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -1367,10 +1426,10 @@
     },
     {
      "nr": "177",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 9. Juli 1998, mit Wirkung seit 1. Jan. 1999 (AS 1998 2923).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 9. Juli 1998, mit Wirkung seit 1. Jan. 1999 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -1379,14 +1438,14 @@
     },
     {
      "nr": "178",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 7151).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS <b>2002</b> 3013). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 7151).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       },
       {
-       "label": "AS 2017 7151",
+       "label": "AS <b>2017</b> 7151",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/773"
       }
      ],
@@ -1412,10 +1471,10 @@
    "fussnoten": [
     {
      "nr": "179",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2923).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -1424,10 +1483,10 @@
     },
     {
      "nr": "180",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -1436,10 +1495,10 @@
     },
     {
      "nr": "181",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1448,10 +1507,10 @@
     },
     {
      "nr": "182",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -1477,10 +1536,10 @@
    "fussnoten": [
     {
      "nr": "191",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS<b> 2021</b> 347).",
      "links": [
       {
-       "label": "AS 2021 347",
+       "label": "AS<b> 2021</b> 347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
       }
      ],
@@ -1489,10 +1548,10 @@
     },
     {
      "nr": "192",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1518,10 +1577,10 @@
    "fussnoten": [
     {
      "nr": "198",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Jan. 2008 (AS 2007 3581).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Jan. 2008 (AS<b> 2007</b> 3581).",
      "links": [
       {
-       "label": "AS 2007 3581",
+       "label": "AS<b> 2007</b> 3581",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/440"
       }
      ],
@@ -1577,10 +1636,10 @@
    "fussnoten": [
     {
      "nr": "199",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS<b> 2021</b> 347).",
      "links": [
       {
-       "label": "AS 2021 347",
+       "label": "AS<b> 2021</b> 347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
       }
      ],
@@ -1589,10 +1648,10 @@
     },
     {
      "nr": "200",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1665,10 +1724,10 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1677,10 +1736,10 @@
     },
     {
      "nr": "202",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 10. Juli 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2546).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 10. Juli 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2546).",
      "links": [
       {
-       "label": "AS 2000 2546",
+       "label": "AS <b>2000</b> 2546",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/406"
       }
      ],
@@ -1701,10 +1760,10 @@
     },
     {
      "nr": "204",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 529).",
      "links": [
       {
-       "label": "AS 2020 529",
+       "label": "AS <b>2020</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
       }
      ],
@@ -1713,10 +1772,10 @@
     },
     {
      "nr": "205",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS<b> 2021</b> 347).",
      "links": [
       {
-       "label": "AS 2021 347",
+       "label": "AS<b> 2021</b> 347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
       }
      ],
@@ -1744,10 +1803,10 @@
    "fussnoten": [
     {
      "nr": "206",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS 1996 1232).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS <b>1996</b> 1232).",
      "links": [
       {
-       "label": "AS 1996 1232",
+       "label": "AS <b>1996</b> 1232",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
       }
      ],
@@ -1756,10 +1815,10 @@
     },
     {
      "nr": "207",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1780,10 +1839,10 @@
     },
     {
      "nr": "209",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 529).",
      "links": [
       {
-       "label": "AS 2020 529",
+       "label": "AS <b>2020</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
       }
      ],
@@ -1813,10 +1872,10 @@
    "fussnoten": [
     {
      "nr": "210",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
@@ -1825,10 +1884,10 @@
     },
     {
      "nr": "211",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
@@ -1837,10 +1896,10 @@
     },
     {
      "nr": "212",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS <b>2002</b> 3013).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       }
      ],
@@ -1849,10 +1908,10 @@
     },
     {
      "nr": "213",
-     "text": "Aufgehoben durch Ziff. II 2 der V des EDI vom 26. Okt. 2001, mit Wirkung seit 1. Jan. 2002 (AS 2001 3397).",
+     "text": "Aufgehoben durch Ziff. II 2 der V des EDI vom 26. Okt. 2001, mit Wirkung seit 1. Jan. 2002 (AS <b>2001</b> 3397).",
      "links": [
       {
-       "label": "AS 2001 3397",
+       "label": "AS <b>2001</b> 3397",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/514"
       }
      ],
@@ -1882,10 +1941,10 @@
    "fussnoten": [
     {
      "nr": "221",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -1894,10 +1953,10 @@
     },
     {
      "nr": "222",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -1906,10 +1965,10 @@
     },
     {
      "nr": "223",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -1918,10 +1977,10 @@
     },
     {
      "nr": "224",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -1930,10 +1989,10 @@
     },
     {
      "nr": "225",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -1942,10 +2001,10 @@
     },
     {
      "nr": "226",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -1954,10 +2013,10 @@
     },
     {
      "nr": "227",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
       }
      ],
@@ -1987,10 +2046,10 @@
    "fussnoten": [
     {
      "nr": "234",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS <b>2002</b> 3013).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       }
      ],
@@ -2020,10 +2079,10 @@
    "fussnoten": [
     {
      "nr": "235",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
@@ -2032,10 +2091,10 @@
     },
     {
      "nr": "236",
-     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013).",
+     "text": "Fassung gemäss Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS <b>2002</b> 3013).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       }
      ],
@@ -2063,10 +2122,10 @@
    "fussnoten": [
     {
      "nr": "237",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -2096,10 +2155,10 @@
    "fussnoten": [
     {
      "nr": "260",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2024, verlängert bis zum 31. Dez. 2025 und bis zum 31. Dez. 2026 (AS 2023 571, 807 Ziff. IV Abs. 5; AS 2024 788 Ziff. III Abs. 2; 2025 851 Ziff. III Abs. 3).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft vom 1. Jan. 2024 bis zum 31. Dez. 2024, verlängert bis zum 31. Dez. 2025 und bis zum 31. Dez. 2026 (AS <b>2023</b> 571, 807 Ziff. IV Abs. 5; AS <b>2024</b> 788 Ziff. III Abs. 2; <b>2025 </b>851 Ziff. III Abs. 3).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       },
       {
@@ -2107,11 +2166,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       },
       {
-       "label": "AS 2024 788",
+       "label": "AS <b>2024</b> 788",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/788"
       },
       {
-       "label": "2025 851",
+       "label": "<b>2025 </b>851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
       }
      ],
@@ -2141,10 +2200,10 @@
    "fussnoten": [
     {
      "nr": "264",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS <b>2006</b> 1757).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       }
      ],
@@ -2153,10 +2212,10 @@
     },
     {
      "nr": "265",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -2165,10 +2224,10 @@
     },
     {
      "nr": "266",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2013, in Kraft seit 1. Juni 2013 (AS 2013 1357).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Mai 2013, in Kraft seit 1. Juni 2013 (AS <b>2013</b> 1357).",
      "links": [
       {
-       "label": "AS 2013 1357",
+       "label": "AS <b>2013</b> 1357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/319"
       }
      ],
@@ -2198,10 +2257,10 @@
    "fussnoten": [
     {
      "nr": "267",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -2231,14 +2290,14 @@
    "fussnoten": [
     {
      "nr": "276",
-     "text": "Ursprünglich: Art. 35a. Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS 2000 3088). Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Juli 2024 (AS 2023 773). Siehe auch die UeB am Schluss des Textes.",
+     "text": "Ursprünglich: Art. 35<i>a</i>. Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS <b>2000</b> 3088). Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Juli 2024 (AS <b>2023</b> 773). Siehe auch die UeB am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       },
       {
-       "label": "AS 2023 773",
+       "label": "AS <b>2023</b> 773",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
       }
      ],
@@ -2262,10 +2321,10 @@
    "fussnoten": [
     {
      "nr": "282",
-     "text": "Aufgehoben durch Ziff. I der V vom 2. Juli 2002, mit Wirkung seit 1. Juli 2002 (AS 2002 3013).",
+     "text": "Aufgehoben durch Ziff. I der V vom 2. Juli 2002, mit Wirkung seit 1. Juli 2002 (AS <b>2002</b> 3013).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       }
      ],
@@ -2289,10 +2348,10 @@
    "fussnoten": [
     {
      "nr": "283",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 23. Juni 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 23. Juni 2021, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -2316,10 +2375,10 @@
    "fussnoten": [
     {
      "nr": "284",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. Juni 1999, mit Wirkung seit 1. Jan. 2000 (AS 1999 2517).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. Juni 1999, mit Wirkung seit 1. Jan. 2000 (AS <b>1999</b> 2517).",
      "links": [
       {
-       "label": "AS 1999 2517",
+       "label": "AS <b>1999</b> 2517",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/399"
       }
      ],
@@ -2345,10 +2404,10 @@
    "fussnoten": [
     {
      "nr": "285",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025 </b>851).",
      "links": [
       {
-       "label": "AS 2025 851",
+       "label": "AS <b>2025 </b>851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
       }
      ],
@@ -2369,10 +2428,10 @@
     },
     {
      "nr": "287",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025 </b>851).",
      "links": [
       {
-       "label": "AS 2025 851",
+       "label": "AS <b>2025 </b>851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
       }
      ],
@@ -2381,10 +2440,10 @@
     },
     {
      "nr": "288",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -2393,10 +2452,10 @@
     },
     {
      "nr": "289",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
@@ -2405,10 +2464,10 @@
     },
     {
      "nr": "290",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. April 2007, mit Wirkung seit 1. April 2007 (AS 2007 1367).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. April 2007, mit Wirkung seit 1. April 2007 (AS <b>2007 </b>1367).",
      "links": [
       {
-       "label": "AS 2007 1367",
+       "label": "AS <b>2007 </b>1367",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/227"
       }
      ],
@@ -2434,10 +2493,10 @@
    "fussnoten": [
     {
      "nr": "291",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4933).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
@@ -2446,10 +2505,10 @@
     },
     {
      "nr": "292",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -2458,10 +2517,10 @@
     },
     {
      "nr": "293",
-     "text": "SR 810.12",
+     "text": "SR <b>810.12</b>",
      "links": [
       {
-       "label": "SR 810.12",
+       "label": "SR <b>810.12</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9232"
       }
      ],
@@ -2470,10 +2529,10 @@
     },
     {
      "nr": "294",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -2495,22 +2554,22 @@
    "fussnoten": [
     {
      "nr": "295",
-     "text": "[AS 1965 127; 1970 949; 1971 1714; 1986 1487 Ziff. II]",
+     "text": "[AS <b>1965</b> 127; <b>1970</b> 949; <b>1971</b> 1714; <b>1986</b> 1487 Ziff. II]",
      "links": [
       {
-       "label": "AS 1965 127",
+       "label": "AS <b>1965</b> 127",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/127_131_131"
       },
       {
-       "label": "1970 949",
+       "label": "<b>1970</b> 949",
        "url": "https://fedlex.data.admin.ch/eli/oc/1970/949_949_949"
       },
       {
-       "label": "1971 1714",
+       "label": "<b>1971</b> 1714",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/1714_1719_1719"
       },
       {
-       "label": "1986 1487",
+       "label": "<b>1986</b> 1487",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
       }
      ],
@@ -2519,22 +2578,22 @@
     },
     {
      "nr": "296",
-     "text": "[AS 1965 425; 1968 1012; 1974 688; 1986 891]",
+     "text": "[AS <b>1965</b> 425; <b>1968</b> 1012; <b>1974 </b>688; <b>1986</b> 891]",
      "links": [
       {
-       "label": "AS 1965 425",
+       "label": "AS <b>1965</b> 425",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/425_429_423"
       },
       {
-       "label": "1968 1012",
+       "label": "<b>1968</b> 1012",
        "url": "https://fedlex.data.admin.ch/eli/oc/1968/1012_1052_968"
       },
       {
-       "label": "1974 688",
+       "label": "<b>1974 </b>688",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/688_688_688"
       },
       {
-       "label": "1986 891",
+       "label": "<b>1986</b> 891",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/891_891_891"
       }
      ],
@@ -2543,14 +2602,14 @@
     },
     {
      "nr": "297",
-     "text": "[AS 1965 613; 1986 1487 Ziff. II]",
+     "text": "[AS <b>1965</b> 613; <b>1986</b> 1487 Ziff. II]",
      "links": [
       {
-       "label": "AS 1965 613",
+       "label": "AS <b>1965</b> 613",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/613_619_612"
       },
       {
-       "label": "1986 1487",
+       "label": "<b>1986</b> 1487",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
       }
      ],
@@ -2559,18 +2618,18 @@
     },
     {
      "nr": "298",
-     "text": "[AS 1965 1199; 1986 1487 Ziff. II; 1988 973]",
+     "text": "[AS <b>1965</b> 1199; <b>1986</b> 1487 Ziff. II; <b>1988</b> 973]",
      "links": [
       {
-       "label": "AS 1965 1199",
+       "label": "AS <b>1965</b> 1199",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/1199_1211_1201"
       },
       {
-       "label": "1986 1487",
+       "label": "<b>1986</b> 1487",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
       },
       {
-       "label": "1988 973",
+       "label": "<b>1988</b> 973",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/973_973_973"
       }
      ],
@@ -2579,34 +2638,34 @@
     },
     {
      "nr": "299",
-     "text": "[AS 1965 1201; 1968 798; 1971 1262; 1986 1487 Ziff. II; 1988 2012; 1993 349; 1995 890]",
+     "text": "[AS <b>1965</b> 1201; <b>1968</b> 798; <b>1971</b> 1262; <b>1986</b> 1487 Ziff. II; <b>1988</b> 2012; <b>1993 </b>349; <b>1995 </b>890]",
      "links": [
       {
-       "label": "AS 1965 1201",
+       "label": "AS <b>1965</b> 1201",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/1201_1213_1202"
       },
       {
-       "label": "1968 798",
+       "label": "<b>1968</b> 798",
        "url": "https://fedlex.data.admin.ch/eli/oc/1968/798_838_754"
       },
       {
-       "label": "1971 1262",
+       "label": "<b>1971</b> 1262",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/1262_1258_1258"
       },
       {
-       "label": "1986 1487",
+       "label": "<b>1986</b> 1487",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
       },
       {
-       "label": "1988 2012",
+       "label": "<b>1988</b> 2012",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/2012_2012_2012"
       },
       {
-       "label": "1993 349",
+       "label": "<b>1993 </b>349",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/349_349_349"
       },
       {
-       "label": "1995 890",
+       "label": "<b>1995 </b>890",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/890_890_890"
       }
      ],
@@ -2615,10 +2674,10 @@
     },
     {
      "nr": "300",
-     "text": "[AS 1986 87]",
+     "text": "[AS <b>1986</b> 87]",
      "links": [
       {
-       "label": "AS 1986 87",
+       "label": "AS <b>1986</b> 87",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/87_87_87"
       }
      ],
@@ -2627,14 +2686,14 @@
     },
     {
      "nr": "301",
-     "text": "[AS 1991 519; 1995 891]",
+     "text": "[AS <b>1991</b> 519; <b>1995</b> 891]",
      "links": [
       {
-       "label": "AS 1991 519",
+       "label": "AS <b>1991</b> 519",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/519_519_519"
       },
       {
-       "label": "1995 891",
+       "label": "<b>1995</b> 891",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/891_891_891"
       }
      ],
@@ -2643,14 +2702,14 @@
     },
     {
      "nr": "302",
-     "text": "[AS 1968 1496; 1986 1487]",
+     "text": "[AS <b>1968</b> 1496; <b>1986</b> 1487]",
      "links": [
       {
-       "label": "AS 1968 1496",
+       "label": "AS <b>1968</b> 1496",
        "url": "https://fedlex.data.admin.ch/eli/oc/1968/1496_1543_1463"
       },
       {
-       "label": "1986 1487",
+       "label": "<b>1986</b> 1487",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1487_1487_1487"
       }
      ],
@@ -2659,18 +2718,18 @@
     },
     {
      "nr": "303",
-     "text": "[AS 1990 127; 1991 959; 1994 765]",
+     "text": "[AS <b>1990</b> 127; <b>1991</b> 959; <b>1994</b> 765]",
      "links": [
       {
-       "label": "AS 1990 127",
+       "label": "AS <b>1990</b> 127",
        "url": "https://fedlex.data.admin.ch/eli/oc/1990/127_127_127"
       },
       {
-       "label": "1991 959",
+       "label": "<b>1991</b> 959",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/959_959_959"
       },
       {
-       "label": "1994 765",
+       "label": "<b>1994</b> 765",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/765_765_765"
       }
      ],
@@ -2679,14 +2738,14 @@
     },
     {
      "nr": "304",
-     "text": "[AS 1989 374; 1995 750, 3688]",
+     "text": "[AS <b>1989</b> 374; <b>1995</b> 750, 3688]",
      "links": [
       {
-       "label": "AS 1989 374",
+       "label": "AS <b>1989</b> 374",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/374_374_374"
       },
       {
-       "label": "1995 750",
+       "label": "<b>1995</b> 750",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/750_750_750"
       },
       {
@@ -2710,10 +2769,10 @@
    "fussnoten": [
     {
      "nr": "305",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 27. Nov. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 27. Nov. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
@@ -2735,10 +2794,10 @@
    "fussnoten": [
     {
      "nr": "306",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS 1996 1232).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 26. Febr. 1996, in Kraft seit 1. Juni 1996 (AS <b>1996</b> 1232).",
      "links": [
       {
-       "label": "AS 1996 1232",
+       "label": "AS <b>1996</b> 1232",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
       }
      ],
@@ -2747,10 +2806,10 @@
     },
     {
      "nr": "307",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 15. Jan. 1996, mit Wirkung seit 1. Mai 1996 (AS 1996 909).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 15. Jan. 1996, mit Wirkung seit 1. Mai 1996 (AS <b>1996</b> 909).",
      "links": [
       {
-       "label": "AS 1996 909",
+       "label": "AS <b>1996</b> 909",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/909_909_909"
       }
      ],
@@ -2759,10 +2818,10 @@
     },
     {
      "nr": "308",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 26. Febr. 1996, mit Wirkung seit 1. Juni 1996 (AS 1996 1232).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 26. Febr. 1996, mit Wirkung seit 1. Juni 1996 (AS <b>1996</b> 1232).",
      "links": [
       {
-       "label": "AS 1996 1232",
+       "label": "AS <b>1996</b> 1232",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1232_1232_1232"
       }
      ],
@@ -2790,10 +2849,10 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -2802,15 +2861,16 @@
     },
     {
      "nr": "105",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Juli 2017 (AS 2016 4933).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Dez. 2016, in Kraft seit 1. Juli 2017 (AS <b>2016</b> 4933).",
      "links": [
       {
-       "label": "AS 2016 4933",
+       "label": "AS <b>2016</b> 4933",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/793"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Neuropsychologie"
     }
    ]
   },
@@ -2833,10 +2893,10 @@
    "fussnoten": [
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 840).",
      "links": [
       {
-       "label": "AS 2022 840",
+       "label": "AS <b>2022</b> 840",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
       }
      ],
@@ -2845,10 +2905,10 @@
     },
     {
      "nr": "109",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 840).",
      "links": [
       {
-       "label": "AS 2022 840",
+       "label": "AS <b>2022</b> 840",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
       }
      ],
@@ -2857,19 +2917,20 @@
     },
     {
      "nr": "107",
-     "text": "Eingefügt durch Ziff. I der V vom 19. März 2021 (AS 2021 189). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Juli 2022 (AS 2021 440). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 19. März 2021 (AS <b>2021</b> 189). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Juli 2022 (AS <b>2021</b> 440). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2021 189",
+       "label": "AS <b>2021</b> 189",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/189"
       },
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Abschnitt: Psychologische Psychotherapie"
     }
    ]
   },
@@ -2892,19 +2953,20 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. Mai 2021 (AS 2021 324). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. Mai 2021 (AS <b>2021</b> 324). Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 324",
+       "label": "AS <b>2021</b> 324",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/324"
       },
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Abschnitt: Podologie"
     }
    ]
   },
@@ -2925,14 +2987,14 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS 2007 6839). Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 851).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS <b>2007 </b>6839). Fassung gemäss Ziff. I der V des EDI vom 2. Dez. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025 </b>851).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       },
       {
-       "label": "AS 2025 851",
+       "label": "AS <b>2025 </b>851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/851"
       }
      ],
@@ -2953,10 +3015,10 @@
     },
     {
      "nr": "115",
-     "text": "Berichtigung vom 11. Mai 2026 (AS 2026 209).",
+     "text": "Berichtigung vom 11. Mai 2026 (AS <b>2026</b> 209).",
      "links": [
       {
-       "label": "AS 2026 209",
+       "label": "AS <b>2026</b> 209",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/209"
       }
      ],
@@ -2982,14 +3044,14 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS 2007 6839). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 840).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007 (AS <b>2007 </b>6839). Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 840).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       },
       {
-       "label": "AS 2022 840",
+       "label": "AS <b>2022</b> 840",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/840"
       }
      ],
@@ -2998,14 +3060,14 @@
     },
     {
      "nr": "117",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS 2009 2821). Fassung gemäss Ziff. I der V des EDI vom 20. Nov. 2014, in Kraft seit 1. Jan. 2015 (AS 2014 4393).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS <b>2009</b> 2821). Fassung gemäss Ziff. I der V des EDI vom 20. Nov. 2014, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4393).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       },
       {
-       "label": "AS 2014 4393",
+       "label": "AS <b>2014</b> 4393",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/724"
       }
      ],
@@ -3026,14 +3088,14 @@
     },
     {
      "nr": "119",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS 2009 2821). Fassung gemäss Ziff. I der V des EDI vom 31. Mai 2011, in Kraft seit 1. Juli 2011 (AS 2011 2669).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Juni 2009 (AS <b>2009</b> 2821). Fassung gemäss Ziff. I der V des EDI vom 31. Mai 2011, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2669).",
      "links": [
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       },
       {
-       "label": "AS 2011 2669",
+       "label": "AS <b>2011</b> 2669",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/370"
       }
      ],
@@ -3054,14 +3116,14 @@
     },
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011 (AS 2011 6487). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 5. Dez. 2011 (AS <b>2011</b> 6487). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 419).",
      "links": [
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       },
       {
-       "label": "AS 2025 419",
+       "label": "AS <b>2025</b> 419",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
       }
      ],
@@ -3082,10 +3144,10 @@
     },
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 392).",
      "links": [
       {
-       "label": "AS 2021 392",
+       "label": "AS <b>2021</b> 392",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
       }
      ],
@@ -3094,14 +3156,14 @@
     },
     {
      "nr": "124",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022 (AS 2022 369). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022 (AS <b>2022</b> 369). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 419).",
      "links": [
       {
-       "label": "AS 2022 369",
+       "label": "AS <b>2022</b> 369",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
       },
       {
-       "label": "AS 2025 419",
+       "label": "AS <b>2025</b> 419",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
       }
      ],
@@ -3170,10 +3232,10 @@
     },
     {
      "nr": "130",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 369).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 369).",
      "links": [
       {
-       "label": "AS 2022 369",
+       "label": "AS <b>2022</b> 369",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
       }
      ],
@@ -3194,14 +3256,14 @@
     },
     {
      "nr": "132",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. Nov. 2023 (AS 2023 807). Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS 2024 303).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. Nov. 2023 (AS <b>2023</b> 807). Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 303).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       },
       {
-       "label": "AS 2024 303",
+       "label": "AS <b>2024</b> 303",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/303"
       }
      ],
@@ -3239,10 +3301,10 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>6839).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       }
      ],
@@ -3251,10 +3313,10 @@
     },
     {
      "nr": "135",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 25. Nov. 2016, in Kraft seit 1. Jan. 2017 (AS 2016 4639).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 25. Nov. 2016, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4639).",
      "links": [
       {
-       "label": "AS 2016 4639",
+       "label": "AS <b>2016</b> 4639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/750"
       }
      ],
@@ -3292,10 +3354,10 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>6839).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       }
      ],
@@ -3304,10 +3366,10 @@
     },
     {
      "nr": "138",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Jan. 2019, in Kraft seit 1. März 2019 (AS 2019 439).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Jan. 2019, in Kraft seit 1. März 2019 (AS <b>2019</b> 439).",
      "links": [
       {
-       "label": "AS 2019 439",
+       "label": "AS <b>2019</b> 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/78"
       }
      ],
@@ -3328,10 +3390,10 @@
     },
     {
      "nr": "140",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -3340,10 +3402,10 @@
     },
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 7151).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 28. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 7151).",
      "links": [
       {
-       "label": "AS 2017 7151",
+       "label": "AS <b>2017</b> 7151",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/773"
       }
      ],
@@ -3352,10 +3414,10 @@
     },
     {
      "nr": "142",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6327).",
      "links": [
       {
-       "label": "AS 2020 6327",
+       "label": "AS <b>2020</b> 6327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
       }
      ],
@@ -3412,10 +3474,10 @@
     },
     {
      "nr": "147",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 6487).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 5. Dez. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 6487).",
      "links": [
       {
-       "label": "AS 2011 6487",
+       "label": "AS <b>2011</b> 6487",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/899"
       }
      ],
@@ -3424,10 +3486,10 @@
     },
     {
      "nr": "148",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS 2016 2537).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 20. Juni 2016, in Kraft seit 1. Aug. 2016 (AS <b>2016</b> 2537).",
      "links": [
       {
-       "label": "AS 2016 2537",
+       "label": "AS <b>2016</b> 2537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/396"
       }
      ],
@@ -3436,10 +3498,10 @@
     },
     {
      "nr": "149",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 17. Juni 2015, in Kraft seit 15. Juli 2015 (AS 2015 2197).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 17. Juni 2015, in Kraft seit 15. Juli 2015 (AS <b>2015</b> 2197).",
      "links": [
       {
-       "label": "AS 2015 2197",
+       "label": "AS <b>2015</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/406"
       }
      ],
@@ -3465,10 +3527,10 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 6839).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Nov. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>6839).",
      "links": [
       {
-       "label": "AS 2007 6839",
+       "label": "AS <b>2007 </b>6839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/882"
       }
      ],
@@ -3477,10 +3539,10 @@
     },
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS 2024 303).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 17. Juni 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 303).",
      "links": [
       {
-       "label": "AS 2024 303",
+       "label": "AS <b>2024</b> 303",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/303"
       }
      ],
@@ -3489,10 +3551,10 @@
     },
     {
      "nr": "152",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6327).",
      "links": [
       {
-       "label": "AS 2020 6327",
+       "label": "AS <b>2020</b> 6327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
       }
      ],
@@ -3501,10 +3563,10 @@
     },
     {
      "nr": "153",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5125).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 27. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5125).",
      "links": [
       {
-       "label": "AS 2015 5125",
+       "label": "AS <b>2015</b> 5125",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/837"
       }
      ],
@@ -3513,10 +3575,10 @@
     },
     {
      "nr": "154",
-     "text": "SR 832.102.4",
+     "text": "SR <b>832.102.4</b>",
      "links": [
       {
-       "label": "SR 832.102.4",
+       "label": "SR <b>832.102.4</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10139"
       }
      ],
@@ -3525,14 +3587,14 @@
     },
     {
      "nr": "155",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juni 2013 (AS 2013 1925). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS 2025 419).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 10. Juni 2013 (AS <b>2013 </b>1925). Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 419).",
      "links": [
       {
-       "label": "AS 2013 1925",
+       "label": "AS <b>2013 </b>1925",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/414"
       },
       {
-       "label": "AS 2025 419",
+       "label": "AS <b>2025</b> 419",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/419"
       }
      ],
@@ -3558,10 +3620,10 @@
    "fussnoten": [
     {
      "nr": "183",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS <b>1997</b> 564).",
      "links": [
       {
-       "label": "AS 1997 564",
+       "label": "AS <b>1997</b> 564",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
       }
      ],
@@ -3570,10 +3632,10 @@
     },
     {
      "nr": "184",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juli 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2697).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juli 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2697).",
      "links": [
       {
-       "label": "AS 1997 2697",
+       "label": "AS <b>1997</b> 2697",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2697_2697_2697"
       }
      ],
@@ -3582,10 +3644,10 @@
     },
     {
      "nr": "185",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -3594,10 +3656,10 @@
     },
     {
      "nr": "186",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS 1998 2923).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -3606,10 +3668,10 @@
     },
     {
      "nr": "187",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS 1998 2923).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 1998, in Kraft seit 1. Jan. 1998 (AS <b>1998</b> 2923).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       }
      ],
@@ -3618,10 +3680,10 @@
     },
     {
      "nr": "188",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS 2001 2150).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 2150).",
      "links": [
       {
-       "label": "AS 2001 2150",
+       "label": "AS <b>2001</b> 2150",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/315"
       }
      ],
@@ -3630,14 +3692,14 @@
     },
     {
      "nr": "189",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Juli 1998 (AS 1998 2923). Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS 2001 2150).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Juli 1998 (AS <b>1998</b> 2923). Fassung gemäss Ziff. I der V des EDI vom 9. Juli 2001, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 2150).",
      "links": [
       {
-       "label": "AS 1998 2923",
+       "label": "AS <b>1998</b> 2923",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2923_2923_2923"
       },
       {
-       "label": "AS 2001 2150",
+       "label": "AS <b>2001</b> 2150",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/315"
       }
      ],
@@ -3663,10 +3725,10 @@
    "fussnoten": [
     {
      "nr": "190",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Mai 2020, in Kraft seit 1. Juli 2020 (AS 2020 2539).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Mai 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 2539).",
      "links": [
       {
-       "label": "AS 2020 2539",
+       "label": "AS <b>2020</b> 2539",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/464"
       }
      ],
@@ -3692,10 +3754,10 @@
    "fussnoten": [
     {
      "nr": "193",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Aug. 2007 (AS 2007 3581).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 28. Juni 2007, in Kraft seit 1. Aug. 2007 (AS<b> 2007</b> 3581).",
      "links": [
       {
-       "label": "AS 2007 3581",
+       "label": "AS<b> 2007</b> 3581",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/440"
       }
      ],
@@ -3704,10 +3766,10 @@
     },
     {
      "nr": "194",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS 2021 347).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 4. Juni 2021, in Kraft seit 1. Okt. 2021 (AS<b> 2021</b> 347).",
      "links": [
       {
-       "label": "AS 2021 347",
+       "label": "AS<b> 2021</b> 347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
       }
      ],
@@ -3716,10 +3778,10 @@
     },
     {
      "nr": "195",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. Juni 2021, mit Wirkung seit 1. Okt. 2021 (AS 2021 347).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 4. Juni 2021, mit Wirkung seit 1. Okt. 2021 (AS<b> 2021</b> 347).",
      "links": [
       {
-       "label": "AS 2021 347",
+       "label": "AS<b> 2021</b> 347",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/347"
       }
      ],
@@ -3740,10 +3802,10 @@
     },
     {
      "nr": "197",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 529).",
      "links": [
       {
-       "label": "AS 2020 529",
+       "label": "AS <b>2020</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
       }
      ],
@@ -3773,10 +3835,10 @@
    "fussnoten": [
     {
      "nr": "214",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS 2002 3013). Siehe auch die UeB Änd. 21.3.2012 am Schluss dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002, in Kraft seit 1. Juli 2002 (AS <b>2002</b> 3013). Siehe auch die UeB Änd. 21.3.2012 am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       }
      ],
@@ -3785,10 +3847,10 @@
     },
     {
      "nr": "215",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -3797,14 +3859,14 @@
     },
     {
      "nr": "216",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017 (AS 2017 633). Fassung gemäss Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 369).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Febr. 2017 (AS <b>2017</b> 633). Fassung gemäss Ziff. I der V des EDI vom 2. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 369).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       },
       {
-       "label": "AS 2022 369",
+       "label": "AS <b>2022</b> 369",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/369"
       }
      ],
@@ -3813,10 +3875,10 @@
     },
     {
      "nr": "217",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS <b>2006</b> 1757).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       }
      ],
@@ -3825,10 +3887,10 @@
     },
     {
      "nr": "218",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -3837,10 +3899,10 @@
     },
     {
      "nr": "219",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -3849,10 +3911,10 @@
     },
     {
      "nr": "220",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 8. Mai 2013, mit Wirkung seit 1. Juni 2013 (AS 2013 1357).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 8. Mai 2013, mit Wirkung seit 1. Juni 2013 (AS <b>2013</b> 1357).",
      "links": [
       {
-       "label": "AS 2013 1357",
+       "label": "AS <b>2013</b> 1357",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/319"
       }
      ],
@@ -3882,14 +3944,14 @@
    "fussnoten": [
     {
      "nr": "228",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS <b>2002</b> 3013). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       },
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -3898,14 +3960,14 @@
     },
     {
      "nr": "229",
-     "text": "SR 812.212.21. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "SR <b>812.212.21</b>. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 812.212.21",
+       "label": "SR <b>812.212.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9362"
       },
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -3935,10 +3997,10 @@
    "fussnoten": [
     {
      "nr": "230",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -3968,10 +4030,10 @@
    "fussnoten": [
     {
      "nr": "231",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4001,10 +4063,10 @@
    "fussnoten": [
     {
      "nr": "232",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4013,10 +4075,10 @@
     },
     {
      "nr": "233",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
       }
      ],
@@ -4046,14 +4108,14 @@
    "fussnoten": [
     {
      "nr": "238",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015 (AS 2015 4189). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015 (AS <b>2015</b> 4189). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2015 4189",
+       "label": "AS <b>2015</b> 4189",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/700"
       },
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4083,14 +4145,14 @@
    "fussnoten": [
     {
      "nr": "239",
-     "text": "Ursprünglich: Art. 34a. Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Ursprünglich: Art. 34<i>a</i>. Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS <b>2015</b> 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       },
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4120,14 +4182,14 @@
    "fussnoten": [
     {
      "nr": "240",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS <b>2015</b> 1359). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       },
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4143,10 +4205,10 @@
     },
     {
      "nr": "242",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -4155,10 +4217,10 @@
     },
     {
      "nr": "243",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -4188,10 +4250,10 @@
    "fussnoten": [
     {
      "nr": "244",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4200,10 +4262,10 @@
     },
     {
      "nr": "245",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4233,10 +4295,10 @@
    "fussnoten": [
     {
      "nr": "246",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB Änd. 29.4.2015, Änd. 1.2.2017 und Änd. 22.9.2023 am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359). Siehe auch die UeB Änd. 29.4.2015, Änd. 1.2.2017 und Änd. 22.9.2023 am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4245,10 +4307,10 @@
     },
     {
      "nr": "247",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4257,10 +4319,10 @@
     },
     {
      "nr": "248",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4269,10 +4331,10 @@
     },
     {
      "nr": "249",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 392).",
      "links": [
       {
-       "label": "AS 2021 392",
+       "label": "AS <b>2021</b> 392",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
       }
      ],
@@ -4281,10 +4343,10 @@
     },
     {
      "nr": "250",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015, in Kraft seit 15. Nov. 2015 (AS 2015 4189). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 21. Okt. 2015, in Kraft seit 15. Nov. 2015 (AS <b>2015</b> 4189). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2015 4189",
+       "label": "AS <b>2015</b> 4189",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/700"
       }
      ],
@@ -4293,10 +4355,10 @@
     },
     {
      "nr": "251",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4305,10 +4367,10 @@
     },
     {
      "nr": "252",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571). Siehe auch die UeB Änd. 22.9.2023 am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571). Siehe auch die UeB Änd. 22.9.2023 am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4338,10 +4400,10 @@
    "fussnoten": [
     {
      "nr": "253",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB der Änd. 29.4.15 und 1.2.2017 am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359). Siehe auch die UeB der Änd. 29.4.15 und 1.2.2017 am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4350,10 +4412,10 @@
     },
     {
      "nr": "254",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS 2017 633).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 1. Febr. 2017, mit Wirkung seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4383,14 +4445,14 @@
    "fussnoten": [
     {
      "nr": "255",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS <b>2015</b> 1359). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       },
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4399,10 +4461,10 @@
     },
     {
      "nr": "256",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4430,14 +4492,14 @@
    "fussnoten": [
     {
      "nr": "257",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS 2015 1359). Aufgehoben durch Ziff. I der V des EDI vom 22. Sept. 2023, mit Wirkung seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015 (AS <b>2015</b> 1359). Aufgehoben durch Ziff. I der V des EDI vom 22. Sept. 2023, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       },
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4467,10 +4529,10 @@
    "fussnoten": [
     {
      "nr": "258",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4479,10 +4541,10 @@
     },
     {
      "nr": "259",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4510,14 +4572,14 @@
    "fussnoten": [
     {
      "nr": "261",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS 2000 3088). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000 (AS <b>2000</b> 3088). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       },
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4545,14 +4607,14 @@
    "fussnoten": [
     {
      "nr": "262",
-     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS 2002 3013). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V vom 2. Juli 2002 (AS <b>2002</b> 3013). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2002 3013",
+       "label": "AS <b>2002</b> 3013",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/436"
       },
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4580,14 +4642,14 @@
    "fussnoten": [
     {
      "nr": "263",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 30. Juni 2010 (AS 2010 3249). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 30. Juni 2010 (AS <b>2010</b> 3249). Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2010 3249",
+       "label": "AS <b>2010</b> 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/436"
       },
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4617,14 +4679,14 @@
    "fussnoten": [
     {
      "nr": "268",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS <b>2006</b> 1757). Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       },
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4654,14 +4716,14 @@
    "fussnoten": [
     {
      "nr": "269",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS <b>2006</b> 1757). Fassung gemäss Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       },
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4670,10 +4732,10 @@
     },
     {
      "nr": "270",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4701,14 +4763,14 @@
    "fussnoten": [
     {
      "nr": "271",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS 2006 1757). Aufgehoben durch Ziff. I der V des EDI vom 24. Sept. 2007, mit Wirkung seit 1. Okt. 2007 (AS 2007 4443 4633).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006 (AS <b>2006</b> 1757). Aufgehoben durch Ziff. I der V des EDI vom 24. Sept. 2007, mit Wirkung seit 1. Okt. 2007 (AS<b> 2007</b> 4443 4633).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       },
       {
-       "label": "AS 2007 4443",
+       "label": "AS<b> 2007</b> 4443",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/618"
       },
       {
@@ -4742,10 +4804,10 @@
    "fussnoten": [
     {
      "nr": "272",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS 2006 1757).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 26. April 2006, in Kraft seit 10. Mai 2006 (AS <b>2006</b> 1757).",
      "links": [
       {
-       "label": "AS 2006 1757",
+       "label": "AS <b>2006</b> 1757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/271"
       }
      ],
@@ -4754,10 +4816,10 @@
     },
     {
      "nr": "273",
-     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Aufgehoben durch Ziff. I der V des EDI vom 29. April 2015, mit Wirkung seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4787,10 +4849,10 @@
    "fussnoten": [
     {
      "nr": "274",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS 2015 1359).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 29. April 2015, in Kraft seit 1. Juni 2015 (AS <b>2015</b> 1359).",
      "links": [
       {
-       "label": "AS 2015 1359",
+       "label": "AS <b>2015</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/281"
       }
      ],
@@ -4799,10 +4861,10 @@
     },
     {
      "nr": "275",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS 2017 633).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 1. Febr. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 633).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       }
      ],
@@ -4830,14 +4892,14 @@
    "fussnoten": [
     {
      "nr": "278",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Feb. 2017 (AS 2017 633). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 1. Feb. 2017 (AS <b>2017</b> 633). Fassung gemäss Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2017 633",
+       "label": "AS <b>2017</b> 633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/108"
       },
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
@@ -4846,10 +4908,10 @@
     },
     {
      "nr": "279",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 773).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 773).",
      "links": [
       {
-       "label": "AS 2023 773",
+       "label": "AS <b>2023</b> 773",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
       }
      ],
@@ -4858,19 +4920,20 @@
     },
     {
      "nr": "277",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Nov. 2005 (AS 2006 23). Fassung gemäss Ziff. I der V des EDI vom 2. Febr. 2011, in Kraft seit 1. März 2011 (AS 2011 657).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 9. Nov. 2005 (AS <b>2006</b> 23). Fassung gemäss Ziff. I der V des EDI vom 2. Febr. 2011, in Kraft seit 1. März 2011 (AS <b>2011</b> 657).",
      "links": [
       {
-       "label": "AS 2006 23",
+       "label": "AS <b>2006</b> 23",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/10"
       },
       {
-       "label": "AS 2011 657",
+       "label": "AS <b>2011</b> 657",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/105"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Selbstbehalt bei Arzneimitteln"
     }
    ]
   },
@@ -4895,15 +4958,16 @@
    "fussnoten": [
     {
      "nr": "280",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 571).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 571).",
      "links": [
       {
-       "label": "AS 2023 571",
+       "label": "AS <b>2023</b> 571",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/571"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Vergütung von Arzneimitteln im Einzelfall"
     }
    ]
   },
@@ -4985,10 +5049,10 @@
    "fussnoten": [
     {
      "nr": "281",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 773).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Dez. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 773).",
      "links": [
       {
-       "label": "AS 2023 773",
+       "label": "AS <b>2023</b> 773",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/773"
       }
      ],
@@ -5035,14 +5099,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS <b>2006</b> 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2006 2957",
+       "label": "AS <b>2006</b> 2957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
       },
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -5072,14 +5136,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS <b>2006</b> 2957). Fassung gemäss Ziff. I der V des EDI vom 5. Juni 2009, in Kraft seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2006 2957",
+       "label": "AS <b>2006</b> 2957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
       },
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -5088,10 +5152,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -5119,18 +5183,18 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Fassung gemäss Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 2361). Die Berichtigung vom 24. Juli 2018 betrifft nur den französischen Text (AS 2018 2837).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS <b>2006</b> 2957). Fassung gemäss Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 2361). Die Berichtigung vom 24. Juli 2018 betrifft nur den französischen Text (AS <b>2018</b> 2837).",
      "links": [
       {
-       "label": "AS 2006 2957",
+       "label": "AS <b>2006</b> 2957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
       },
       {
-       "label": "AS 2018 2361",
+       "label": "AS <b>2018</b> 2361",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/339"
       },
       {
-       "label": "AS 2018 2837",
+       "label": "AS <b>2018</b> 2837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/432"
       }
      ],
@@ -5151,10 +5215,10 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS 2020 529).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Febr. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 529).",
      "links": [
       {
-       "label": "AS 2020 529",
+       "label": "AS <b>2020</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/99"
       }
      ],
@@ -5163,15 +5227,16 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Juli 2018 (AS 2018 2361).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 7. Juni 2018, in Kraft seit 1. Juli 2018 (AS <b>2018</b> 2361).",
      "links": [
       {
-       "label": "AS 2018 2361",
+       "label": "AS <b>2018</b> 2361",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/339"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Einschränkung der Kostenübernahme bei bestimmten elektiven Eingriffen"
     }
    ]
   },
@@ -5194,14 +5259,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS 2006 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS 2009 2821).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 2006 (AS <b>2006</b> 2957). Aufgehoben durch Ziff. I der V des EDI vom 5. Juni 2009, mit Wirkung seit 1. Juli 2009 (AS <b>2009</b> 2821).",
      "links": [
       {
-       "label": "AS 2006 2957",
+       "label": "AS <b>2006</b> 2957",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/452"
       },
       {
-       "label": "AS 2009 2821",
+       "label": "AS <b>2009</b> 2821",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/370"
       }
      ],
@@ -5229,10 +5294,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -5241,15 +5306,16 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 3088).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 27. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 3088).",
      "links": [
       {
-       "label": "AS 2000 3088",
+       "label": "AS <b>2000</b> 3088",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/560"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Pharmazeutische Leistungen"
     }
    ]
   },
@@ -5272,10 +5338,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6327).",
      "links": [
       {
-       "label": "AS 2020 6327",
+       "label": "AS <b>2020</b> 6327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
       }
      ],
@@ -5308,10 +5374,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6327).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6327).",
      "links": [
       {
-       "label": "AS 2020 6327",
+       "label": "AS <b>2020</b> 6327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1033"
       }
      ],
@@ -5332,10 +5398,10 @@
     },
     {
      "nr": "36",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS 2021 392).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 8. Juni 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 392).",
      "links": [
       {
-       "label": "AS 2021 392",
+       "label": "AS <b>2021</b> 392",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/392"
       }
      ],
@@ -5368,15 +5434,16 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Juni 2017, in Kraft seit 1. Aug. 2017 (AS 2017 3689).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 16. Juni 2017, in Kraft seit 1. Aug. 2017 (AS <b>2017</b> 3689).",
      "links": [
       {
-       "label": "AS 2017 3689",
+       "label": "AS <b>2017</b> 3689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/421"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Ärztliche komplementärmedizinische Leistungen"
     }
    ]
   },
@@ -5401,10 +5468,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -5417,10 +5484,10 @@
     },
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -5429,10 +5496,10 @@
     },
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -5462,10 +5529,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 24. Juni 2009, in Kraft seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -5478,10 +5545,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -5511,14 +5578,14 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS 1997 2039). Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 3. Juli 1997 (AS <b>1997</b> 2039). Fassung gemäss Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 1997 2039",
+       "label": "AS <b>1997</b> 2039",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2039_2039_2039"
       },
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -5527,10 +5594,10 @@
     },
     {
      "nr": "82",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -5539,10 +5606,10 @@
     },
     {
      "nr": "83",
-     "text": "SR 832.10",
+     "text": "SR<b> 832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR<b> 832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -5551,10 +5618,10 @@
     },
     {
      "nr": "84",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 221).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 221).",
      "links": [
       {
-       "label": "AS 2024 221",
+       "label": "AS <b>2024</b> 221",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/221"
       }
      ],
@@ -5584,10 +5651,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -5617,10 +5684,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS 2019 2145).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 2. Juli 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2145).",
      "links": [
       {
-       "label": "AS 2019 2145",
+       "label": "AS <b>2019</b> 2145",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/398"
       }
      ],
@@ -5629,10 +5696,10 @@
     },
     {
      "nr": "87",
-     "text": "SR 832.10",
+     "text": "SR<b> 832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR<b> 832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -5660,14 +5727,14 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Sept. 1997 (AS 1997 2436). Aufgehoben durch Ziff. I der V des EDI vom 24. Juni 2009, mit Wirkung seit 1. Jan. 2011 (AS 2009 3527, 6849 Ziff. I).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Sept. 1997 (AS <b>1997</b> 2436). Aufgehoben durch Ziff. I der V des EDI vom 24. Juni 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2009</b> 3527, 6849 Ziff. I).",
      "links": [
       {
-       "label": "AS 1997 2436",
+       "label": "AS <b>1997</b> 2436",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2436_2436_2436"
       },
       {
-       "label": "AS 2009 3527",
+       "label": "AS <b>2009</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/435"
       },
       {
@@ -5699,17 +5766,17 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Ursprünglich Art. 9a.",
+     "text": "Ursprünglich Art. 9<i>a</i>.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS 2021 440).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 23. Juni 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 440).",
      "links": [
       {
-       "label": "AS 2021 440",
+       "label": "AS <b>2021</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/440"
       }
      ],
@@ -5718,10 +5785,10 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS <b>1999</b> 528).",
      "links": [
       {
-       "label": "AS 1999 528",
+       "label": "AS <b>1999</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
       }
      ],
@@ -5730,10 +5797,10 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 807).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 29. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 807).",
      "links": [
       {
-       "label": "AS 2023 807",
+       "label": "AS <b>2023</b> 807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/807"
       }
      ],
@@ -5742,10 +5809,10 @@
     },
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Dez. 2013, in Kraft seit 1. Jan. 2014 (AS 2013 5329).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 6. Dez. 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 5329).",
      "links": [
       {
-       "label": "AS 2013 5329",
+       "label": "AS <b>2013</b> 5329",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/850"
       }
      ],
@@ -5754,10 +5821,10 @@
     },
     {
      "nr": "96",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS <b>1999</b> 528).",
      "links": [
       {
-       "label": "AS 1999 528",
+       "label": "AS <b>1999</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
       }
      ],
@@ -5766,10 +5833,10 @@
     },
     {
      "nr": "97",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -5778,15 +5845,16 @@
     },
     {
      "nr": "90",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS 1997 564).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 13. Dez. 1996, in Kraft seit 1. Jan. 1997 (AS <b>1997</b> 564).",
      "links": [
       {
-       "label": "AS 1997 564",
+       "label": "AS <b>1997</b> 564",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/564_564_564"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Abschnitt: Ernährungsberatung"
     }
    ]
   },
@@ -5809,10 +5877,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 5401).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 30. Nov. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004 </b>5401).",
      "links": [
       {
-       "label": "AS 2004 5401",
+       "label": "AS <b>2004 </b>5401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/827"
       }
      ],
@@ -5821,10 +5889,10 @@
     },
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1251).",
+     "text": "Fassung gemäss Ziff. I der V des EDI vom 16. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1251).",
      "links": [
       {
-       "label": "AS 2014 1251",
+       "label": "AS <b>2014</b> 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/269"
       }
      ],
@@ -5833,15 +5901,16 @@
     },
     {
      "nr": "98",
-     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS 1999 528).",
+     "text": "Eingefügt durch Ziff. I der V des EDI vom 18. Nov. 1998, in Kraft seit 1. Jan. 1999 (AS <b>1999</b> 528).",
      "links": [
       {
-       "label": "AS 1999 528",
+       "label": "AS <b>1999</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/65"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3b. Abschnitt: Diabetesberatung"
     }
    ]
   }

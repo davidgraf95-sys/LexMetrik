@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/ZENTV/art_1",
@@ -42,7 +42,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "10b1487d83a53751636d50069d4ecb199a578b53fefa67da07ecc632c0194030"
     },
@@ -69,7 +69,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "bf74abe8c8779791ba64e97775e1a704879d497a44dc3e3efbf9d7e235e8677b"
     },
@@ -114,7 +114,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "483364077efddc276d99f5ea83bd607b577d79ffe480ca20664a6830ecabaa6b"
     },
@@ -136,39 +136,48 @@
             },
             {
               "marke": "1",
-              "text": "Foto,"
+              "text": "Foto,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Namen und Vornamen,"
+              "text": "Namen und Vornamen,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Geschlecht,"
+              "text": "Geschlecht,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Geburtsort,"
+              "text": "Geburtsort,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Geburtsdatum,"
+              "text": "Geburtsdatum,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Heimatorte,"
+              "text": "Heimatorte,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "Staatsangehörigkeiten,"
+              "text": "Staatsangehörigkeiten,",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "Körpergrösse,"
+              "text": "Körpergrösse,",
+              "tiefe": 1
             },
             {
               "marke": "9",
-              "text": "Unterschrift;"
+              "text": "Unterschrift;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -176,19 +185,23 @@
             },
             {
               "marke": "1",
-              "text": "Kategorie,"
+              "text": "Kategorie,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Nummer,"
+              "text": "Nummer,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Ausstellungsdatum,"
+              "text": "Ausstellungsdatum,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Gültigkeitsdauer;"
+              "text": "Gültigkeitsdauer;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -211,9 +224,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_3_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
-      "sha": "1750aeb10463b147e6bc7a34b4fa1d529ce3a376366194dd0d09ca34e6d78419"
+      "sha": "460d137f45744ca30b066bf448c6c23f2422401f4987e6b71d299d1d193d15f5"
     },
     {
       "id": "bund/ZENTV/art_4",
@@ -298,7 +311,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "83e605260dce8e71e52e3e18856c8236db543f8b4a48d1790390c4cbee48b337"
     },
@@ -335,7 +348,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "c2ce3471369f3052d5f7400ecc9e8af61b8ff88bf3e0097f212e6ac413cdcfcb"
     },
@@ -472,7 +485,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "d89f2e43d7f9c283b1ceb349c49ee605e9ffb4ec2f2d6d3f1826c448f791ab9a"
     },
@@ -503,7 +516,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "7342026514ea07be158390e7014117d6aad846dc031a57090af629d5b927b363"
     },
@@ -564,7 +577,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "3893251495fa1b167108cb4a755ee11f8e423be1c76f75841854f43d665447b9"
     },
@@ -609,7 +622,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "e2967baf33aac37f9fb835af49c9469b42239a8c117a9047172c05f7666bafa0"
     },
@@ -632,7 +645,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "88ea64289a3d86c9b452b98b53023fa0dd0d0d1ee1cdef043be6d9a889847ccf"
     },
@@ -655,7 +668,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_10_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "fa4f64a6d3e3be275d4cbe6535ff407ad331be957c703aac8872aae6e9170dbe"
     },
@@ -674,7 +687,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "aa9d7e35a081962189f2fc57077120927a78c8670374ae27a2bb17f0f4c02982"
     },
@@ -693,7 +706,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/29/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20230901",
       "sha": "608126feac941a3af35de09fac0c4effd1fed628452c86617b0f68dcecc54957"
     }

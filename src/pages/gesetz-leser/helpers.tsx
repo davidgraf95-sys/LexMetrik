@@ -1,6 +1,18 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import type { Sektion, Fussnote } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
+import { ERLASS_REGISTER } from '../../lib/normtext/register';
+
+// M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
+// aus dem Register (keine Handtabelle, §3/§5 eine Quelle). Nur Bund-Erlasse, die
+// wir tatsächlich im Volltext/PDF-embed haben — sonst bleibt der Fedlex-Link der
+// ehrliche Fallback (§8). Einmal modulweit aufgebaut (statisch).
+const SR_INTERN: ReadonlyMap<string, { key: string; ebene: 'bund' | 'kanton' }> = new Map(
+  ERLASS_REGISTER
+    .filter((e) => e.ebene === 'bund' && e.sr && (e.status === 'snapshot' || e.status === 'pdf-embed'))
+    .map((e) => [e.sr as string, { key: e.key, ebene: e.ebene }]),
+);
 
 export function formatiereDatum(iso: string): string {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -29,16 +41,66 @@ export function pfadZu(sektionen: Sektion[], treffer: (s: Sektion) => boolean): 
   return null;
 }
 
+// G15: Hervorhebungen (fett/kursiv) im Fussnotentext als Rich-Text rendern. Der
+// Extraktor (fussnoten-extrahiere.clean) behält bare <b>/<i>; hier werden sie in
+// <strong>/<em> übersetzt (rekursiv für die seltene Verschachtelung <i>…<b>…</b>…</i>).
+export function richText(s: string, keyBase: string): ReactNode {
+  if (!s.includes('<')) return s;
+  const out: ReactNode[] = [];
+  const re = /<(b|i)>([\s\S]*?)<\/\1>/gi;
+  let last = 0;
+  let k = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(s)) !== null) {
+    if (m.index > last) out.push(s.slice(last, m.index));
+    const kinder = richText(m[2], `${keyBase}-${k}`);
+    out.push(m[1].toLowerCase() === 'b'
+      ? <strong key={`${keyBase}-b${k}`}>{kinder}</strong>
+      : <em key={`${keyBase}-i${k}`}>{kinder}</em>);
+    last = re.lastIndex;
+    k++;
+  }
+  if (last < s.length) out.push(s.slice(last));
+  return out.length === 1 ? out[0] : out;
+}
+
 // Fussnoten-Text mit klickbaren AS/BBl-Verweisen (die Label-Vorkommen werden
-// durch Anker ersetzt). Reine Darstellung.
+// durch Anker ersetzt) und erhaltenen Hervorhebungen (G15). Reine Darstellung.
 export function escRe(s: string): string { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 export function fnTextMitLinks(fn: Fussnote): ReactNode {
-  if (!fn.links.length) return fn.text;
+  if (!fn.links.length) return richText(fn.text, 'fn');
   const map = new Map(fn.links.map((l) => [l.label, l.url]));
   const re = new RegExp(`(${[...map.keys()].sort((a, b) => b.length - a.length).map(escRe).join('|')})`, 'g');
-  return fn.text.split(re).map((t, i) => map.has(t)
-    ? <a key={i} href={map.get(t)} target="_blank" rel="noopener noreferrer" className="text-brass-700/90 hover:text-brass-700 hover:underline">{t}</a>
-    : t);
+  return fn.text.split(re).map((t, i) => {
+    const url = map.get(t);
+    if (url === undefined) return <Fragment key={i}>{richText(t, `fn${i}`)}</Fragment>;
+    // SR-Erkennung (M11) auf dem TAG-FREIEN Label — Hervorhebungen («SR <b>220</b>»)
+    // dürfen den Treffer nicht verhindern.
+    const plano = t.replace(/<[^>]+>/g, '');
+    const kinder = richText(t, `fn${i}`);
+    // M11 (§5): SR-Verweis «SR 220» auf einen Erlass, den wir im Volltext haben,
+    // verlinkt INTERN auf den LexMetrik-Leser statt immer nach Fedlex — man bleibt
+    // im Werkzeug. Die SR-Nummer steht im Label; nur exakte Treffer (Bund,
+    // snapshot/pdf-embed). Sonst Fedlex-Link als ehrlicher Fallback (§8).
+    const srTreffer = plano.match(/^SR\s+([\d.]+)$/);
+    const intern = srTreffer ? SR_INTERN.get(srTreffer[1]) : undefined;
+    if (intern) {
+      // Stand-Transparenz (§5/§8, David-Entscheid 28.6.): der intern gezeigte
+      // Stand kann vom zitierten abweichen (bis Versionierung) → den zitierten
+      // Fedlex-Konsolidierungsstand im title offenlegen, nicht stillschweigend
+      // gleichsetzen. Konsolidierung steht als YYYYMMDD im Fedlex-Link.
+      const standM = url.match(/\/(\d{4})(\d{2})(\d{2})(?:\/|$)/);
+      const titel = standM
+        ? `Intern öffnen · zitierter Fedlex-Stand ${standM[3]}.${standM[2]}.${standM[1]}`
+        : 'Intern öffnen';
+      return (
+        <Link key={i} to={`/gesetze/${intern.ebene}/${encodeURIComponent(intern.key)}`}
+          title={titel}
+          className="text-brass-700/90 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2">{kinder}</Link>
+      );
+    }
+    return <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="text-brass-700/90 hover:text-brass-700 hover:underline">{kinder}</a>;
+  });
 }
 
 // Randtitel-Stufe einheitlich formatieren (Auftrag 6a, David 26.6.2026 «un-

@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "312.1",
+  "titel": "Schweizerische Jugendstrafprozessordnung",
+  "erlassdatum": "vom 20. März 2009 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 123 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 21. Dezember 2005 und in den Zusatzbericht des Bundesrates vom 22. August 2007,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2006</b> 1085",
+    "links": [
+     {
+      "label": "BBl <b>2006</b> 1085",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>2008 </b>3121",
+    "links": [
+     {
+      "label": "BBl <b>2008 </b>3121",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,18 +71,18 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS 2023 468, 2024 490; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "2024 490",
+       "label": "<b>2024</b> 490",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/490"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -34,10 +91,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -70,10 +127,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -106,10 +163,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -118,10 +175,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -143,10 +200,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -201,14 +258,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Zweiter Satz eingefügt durch Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Zweiter Satz eingefügt durch Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -217,14 +274,14 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -233,14 +290,14 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -249,10 +306,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -329,10 +386,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -354,10 +411,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -443,10 +500,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -502,10 +559,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -527,10 +584,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -539,14 +596,14 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS 2014 2055; BBl 2012 8819).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012 </b>8819).",
      "links": [
       {
-       "label": "AS 2014 2055",
+       "label": "AS <b>2014</b> 2055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
       },
       {
-       "label": "BBl 2012 8819",
+       "label": "BBl <b>2012 </b>8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
@@ -555,10 +612,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -580,10 +637,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -616,10 +673,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 311.1",
+     "text": "SR <b>311.1</b>",
      "links": [
       {
-       "label": "SR 311.1",
+       "label": "SR <b>311.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/551"
       }
      ],
@@ -645,10 +702,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -687,14 +744,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -703,14 +760,14 @@
     },
     {
      "nr": "25",
-     "text": "Eingefügt durch Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 6 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019 </b>6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019 </b>6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -719,10 +776,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -817,10 +874,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -842,10 +899,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -911,10 +968,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
@@ -1024,10 +1081,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],

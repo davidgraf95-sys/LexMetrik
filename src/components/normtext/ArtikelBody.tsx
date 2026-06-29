@@ -311,7 +311,14 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
 }) {
   const { passusMarke, zielItemKey } = bestimmePassusZiel(bloecke, passus);
   // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
-  const verlinkt = (s: string) => (autolink ? <NormText text={s} intern={intern} /> : s);
+  // #9 (M10): verwaiste Leerzeichen VOR Punkt/Komma glätten — sie entstehen beim
+  // Strippen eines Inline-Fussnoten-Markers (Fedlex «…sinngemäss<sup>2</sup>.» →
+  // entferneTags ersetzt das Tag durch ' ' → «…sinngemäss .»). Reine Darstellung
+  // (§1: kein Wortlaut, nur ein Extraktions-Artefakt geglättet); kein Sprachkonflikt
+  // (weder DE noch FR/IT setzen ein Leerzeichen vor Punkt/Komma). NUR im Lese-Pfad
+  // (autolink) — der Popover-Pfad (autolink=false) bleibt zeichenidentisch (§6 golden).
+  const glaetteInterpunktion = (s: string) => s.replace(/ +([.,])/g, '$1');
+  const verlinkt = (s: string) => (autolink ? <NormText text={glaetteInterpunktion(s)} intern={intern} /> : s);
   const zk = zitierKontext;
 
   return (
@@ -351,11 +358,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 statt es überlaufen zu lassen — wie bereits beim Item-Text (S13).
                 Nur in der Lesesicht (zk); das Popover (kein zk) bleibt byte-gleich. */}
             {/* Hängeeinzug: nummerierter Absatz → voller Hang (-indent-9), die
-                Messing-Marke sitzt in der Rinne (x=0). Absatzloser Artikel → KLEINER
-                Hang (-indent-4): erste Zeile beginnt dort, wo bei nummerierten der
-                Text anfängt (nicht ganz in der Rinne), Folgezeilen leicht eingerückt
-                (Auftrag David 25.6.2026: «erste Zeile reicht sonst zu weit zurück»). */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '-indent-4'}` : undefined}>
+                Messing-Marke sitzt in der Rinne (x=0), der Prosatext beginnt bei
+                pl-9 (Prosa-Kante). Absatzloser Artikel → KEIN Hang ([text-indent:0]):
+                erste UND Folgezeile beginnen ebenfalls bei pl-9 — identische linke
+                Textkante wie bei nummerierten Absätzen (Auftrag David 28.6.2026: der
+                Einzug sprang sonst zwischen Artikeln mit/ohne Absatznummer). */}
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
@@ -409,20 +417,29 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 identisches Markup/Styling, nur die Marke unterscheidet sich
                 (Daten). Das zitierte Item wird stark hervorgehoben. */}
             {b.items != null && b.items.length > 0 && (() => {
-              // Verschachtelungsstufe je Item rekonstruieren (Snapshot ist flach,
-              // Fedlex verschachtelt Abs.→Bst.→Ziff.→Gedankenstrich): Bst (a,b,c)
+              // Verschachtelungsstufe je Item bestimmen. PRIMÄR aus der EXPLIZITEN
+              // `tiefe` des Snapshots (M6, §1): liefert Fedlex die Stufe mit, wird
+              // sie NICHT mehr aus dem Markentyp geraten — das Raten erzeugte
+              // falsche Zitate, wenn die Reihenfolge umgekehrt ist (Ziff. → lit.
+              // statt lit. → Ziff.). FALLBACK-Heuristik nur für Daten OHNE tiefe
+              // (Kanton-Snapshots, noch nicht re-segnete Bund-Erlasse): Bst (a,b,c)
               // = Stufe 0; Ziff (1,2,3) NACH einem Bst = Stufe 1, sonst 0;
               // Gedankenstrich = eine Stufe tiefer als das vorausgehende Item.
+              const hatTiefe = b.items!.some((it) => typeof it.tiefe === 'number');
               const typ = (m: string) => /^[–—-]$/.test(m.trim()) ? 'strich' : /^\d/.test(m.trim()) ? 'ziff' : 'lit';
               const stufen: number[] = [];
-              let sahLit = false, letzteNichtStrich = 0;
-              for (const it of b.items!) {
-                const t = typ(it.marke);
-                let lv: number;
-                if (t === 'strich') lv = letzteNichtStrich + 1;
-                else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
-                else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
-                stufen.push(lv);
+              if (hatTiefe) {
+                for (const it of b.items!) stufen.push(it.tiefe ?? 0);
+              } else {
+                let sahLit = false, letzteNichtStrich = 0;
+                for (const it of b.items!) {
+                  const t = typ(it.marke);
+                  let lv: number;
+                  if (t === 'strich') lv = letzteNichtStrich + 1;
+                  else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
+                  else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
+                  stufen.push(lv);
+                }
               }
               return (
               <ul className={`mt-1.5 space-y-1 ${zk ? 'pl-8' : 'pl-1'}`}>

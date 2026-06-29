@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "312.0",
+  "titel": "Schweizerische Strafprozessordnung",
+  "erlassdatum": "vom 5. Oktober 2007 (Stand am 1. April 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 123 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 21. Dezember 2005,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2006</b> 1085",
+    "links": [
+     {
+      "label": "BBl <b>2006</b> 1085",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -123,10 +168,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -334,14 +379,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -350,10 +395,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -440,10 +485,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -452,14 +497,14 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -468,14 +513,14 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des Ordnungsbussengesetzes vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2017 6559; BBl 2015 959).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des Ordnungsbussengesetzes vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6559; BBl <b>2015</b> 959).",
      "links": [
       {
-       "label": "AS 2017 6559",
+       "label": "AS <b>2017</b> 6559",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/725"
       },
       {
-       "label": "BBl 2015 959",
+       "label": "BBl <b>2015</b> 959",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/96"
       }
      ],
@@ -484,14 +529,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 2010 über die Änderung von Bundesgesetzen zur Umsetzung des Römer Statuts des Internationalen Strafgerichtshofs, in Kraft seit 1. Jan. 2011 (AS 2010 4963; BBl 2008 3863).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 18. Juni 2010 über die Änderung von Bundesgesetzen zur Umsetzung des Römer Statuts des Internationalen Strafgerichtshofs, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4963; BBl <b>2008</b> 3863).",
      "links": [
       {
-       "label": "AS 2010 4963",
+       "label": "AS <b>2010</b> 4963",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/704"
       },
       {
-       "label": "BBl 2008 3863",
+       "label": "BBl <b>2008</b> 3863",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
@@ -500,14 +545,14 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I 12 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS 2023 259; BBl 2018 2827).",
+     "text": "Fassung gemäss Ziff. I 12 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
      "links": [
       {
-       "label": "AS 2023 259",
+       "label": "AS <b>2023</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
@@ -537,14 +582,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS 2021 360; BBl 2018 6427).",
+     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 360; BBl <b>2018</b> 6427).",
      "links": [
       {
-       "label": "AS 2021 360",
+       "label": "AS <b>2021</b> 360",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/360"
       },
       {
-       "label": "BBl 2018 6427",
+       "label": "BBl <b>2018</b> 6427",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
@@ -553,10 +598,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -565,14 +610,14 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS 2021 360; BBl 2018 6427).",
+     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 360; BBl <b>2018</b> 6427).",
      "links": [
       {
-       "label": "AS 2021 360",
+       "label": "AS <b>2021</b> 360",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/360"
       },
       {
-       "label": "BBl 2018 6427",
+       "label": "BBl <b>2018</b> 6427",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
@@ -792,10 +837,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -825,10 +870,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -837,14 +882,14 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I 12 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS 2023 259; BBl 2018 2827).",
+     "text": "Fassung gemäss Ziff. I 12 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
      "links": [
       {
-       "label": "AS 2023 259",
+       "label": "AS <b>2023</b> 259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
@@ -931,14 +976,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1025,10 +1070,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Die Berichtigung der RedK der BVers vom 10. Nov. 2014, veröffentlicht am 25. Nov. 2014 betrifft nur den französischen Text (AS 2014 4071).",
+     "text": "Die Berichtigung der RedK der BVers vom 10. Nov. 2014, veröffentlicht am 25. Nov. 2014 betrifft nur den französischen Text (AS <b>2014</b> 4071).",
      "links": [
       {
-       "label": "AS 2014 4071",
+       "label": "AS <b>2014</b> 4071",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/684"
       }
      ],
@@ -1254,14 +1299,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1332,14 +1377,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1348,18 +1393,18 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. II 3 des BG vom 17. März 2017 (Schaffung einer Berufungskammer am Bundesstrafgericht), in Kraft seit 1. Jan. 2019 (AS 2017 5769; BBl 2013 7109, 2016 6199).",
+     "text": "Fassung gemäss Ziff. II 3 des BG vom 17. März 2017 (Schaffung einer Berufungskammer am Bundesstrafgericht), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 5769; BBl <b>2013</b> 7109, <b>2016</b> 6199).",
      "links": [
       {
-       "label": "AS 2017 5769",
+       "label": "AS <b>2017</b> 5769",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/624"
       },
       {
-       "label": "BBl 2013 7109",
+       "label": "BBl <b>2013</b> 7109",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1333"
       },
       {
-       "label": "2016 6199",
+       "label": "<b>2016</b> 6199",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1190"
       }
      ],
@@ -1400,15 +1445,16 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "7. Kapitel: Verfahrensleitung"
     }
    ]
   },
@@ -1626,10 +1672,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1678,14 +1724,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS 2018 2947; BBl 2015 3431).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 2947; BBl <b>2015</b> 3431).",
      "links": [
       {
-       "label": "AS 2018 2947",
+       "label": "AS <b>2018</b> 2947",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/450"
       },
       {
-       "label": "BBl 2015 3431",
+       "label": "BBl <b>2015</b> 3431",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
@@ -1694,14 +1740,14 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS 2018 2947; BBl 2015 3431).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 2947; BBl <b>2015</b> 3431).",
      "links": [
       {
-       "label": "AS 2018 2947",
+       "label": "AS <b>2018</b> 2947",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/450"
       },
       {
-       "label": "BBl 2015 3431",
+       "label": "BBl <b>2015</b> 3431",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
@@ -1710,26 +1756,26 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 25. Sept. 2015 über Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen (AS 2016 1831; BBl 2014 303). Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS 2016 4277, 2017 2297; BBl 2014 6955).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 25. Sept. 2015 über Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen (AS <b>2016</b> 1831; BBl <b>2014</b> 303). Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 4277, <b>2017</b> 2297; BBl <b>2014</b> 6955).",
      "links": [
       {
-       "label": "AS 2016 1831",
+       "label": "AS <b>2016</b> 1831",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/326"
       },
       {
-       "label": "BBl 2014 303",
+       "label": "BBl <b>2014</b> 303",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/67"
       },
       {
-       "label": "AS 2016 4277",
+       "label": "AS <b>2016</b> 4277",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/714"
       },
       {
-       "label": "2017 2297",
+       "label": "<b>2017</b> 2297",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/215"
       },
       {
-       "label": "BBl 2014 6955",
+       "label": "BBl <b>2014</b> 6955",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1566"
       }
      ],
@@ -1797,14 +1843,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1813,14 +1859,14 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719). Aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719). Aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -1828,11 +1874,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/862"
       },
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1841,14 +1887,14 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -1901,14 +1947,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung des ersten und zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung des ersten und zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1957,14 +2003,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -1973,10 +2019,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -2063,14 +2109,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -2079,10 +2125,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 943.03",
+     "text": "SR <b>943.03</b>",
      "links": [
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -2169,14 +2215,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -2206,14 +2252,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -2319,14 +2365,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -2335,10 +2381,10 @@
     },
     {
      "nr": "42",
-     "text": "SR 120",
+     "text": "SR <b>120</b>",
      "links": [
       {
-       "label": "SR 120",
+       "label": "SR <b>120</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/1546_1546_1546"
       }
      ],
@@ -2347,14 +2393,14 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -2363,10 +2409,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
@@ -2375,10 +2421,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 361",
+     "text": "SR <b>361</b>",
      "links": [
       {
-       "label": "SR 361",
+       "label": "SR <b>361</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/698"
       }
      ],
@@ -2387,10 +2433,10 @@
     },
     {
      "nr": "46",
-     "text": "SR 360",
+     "text": "SR <b>360</b>",
      "links": [
       {
-       "label": "SR 360",
+       "label": "SR <b>360</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/875_875_875"
       }
      ],
@@ -2399,14 +2445,14 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Anhang 2 Ziff. I 1 Bst. a des BG vom 13. Juni 2008 über die polizeilichen Informationssysteme, in Kraft seit 1. Jan. 2011 (AS 2008 4989; BBl 2006 5061).",
+     "text": "Fassung gemäss Anhang 2 Ziff. I 1 Bst. a des BG vom 13. Juni 2008 über die polizeilichen Informationssysteme, in Kraft seit 1. Jan. 2011 (AS <b>2008</b> 4989; BBl <b>2006</b> 5061).",
      "links": [
       {
-       "label": "AS 2008 4989",
+       "label": "AS <b>2008</b> 4989",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/698"
       },
       {
-       "label": "BBl 2006 5061",
+       "label": "BBl <b>2006</b> 5061",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/611"
       }
      ],
@@ -2455,14 +2501,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. II 3 des BG vom 28. Sept. 2018 über die Umsetzung der Richtlinie (EU) 2016/680 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, in Kraft seit 1. März 2019 (AS 2019 625; BBl 2017 6941).",
+     "text": "Fassung gemäss Ziff. II 3 des BG vom 28. Sept. 2018 über die Umsetzung der Richtlinie (EU) 2016/680 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, in Kraft seit 1. März 2019 (AS <b>2019</b> 625; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2019 625",
+       "label": "AS <b>2019</b> 625",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/111"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2492,10 +2538,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "SR 360",
+     "text": "SR <b>360</b>",
      "links": [
       {
-       "label": "SR 360",
+       "label": "SR <b>360</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/875_875_875"
       }
      ],
@@ -2504,10 +2550,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 361",
+     "text": "SR <b>361</b>",
      "links": [
       {
-       "label": "SR 361",
+       "label": "SR <b>361</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/698"
       }
      ],
@@ -2516,14 +2562,14 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Anhang 2 Ziff. I 1 Bst. a des BG vom 13. Juni 2008 über die polizeilichen Informationssysteme, in Kraft seit 1. Jan. 2011 (AS 2008 4989; BBl 2006 5061).",
+     "text": "Fassung gemäss Anhang 2 Ziff. I 1 Bst. a des BG vom 13. Juni 2008 über die polizeilichen Informationssysteme, in Kraft seit 1. Jan. 2011 (AS <b>2008</b> 4989; BBl <b>2006</b> 5061).",
      "links": [
       {
-       "label": "AS 2008 4989",
+       "label": "AS <b>2008</b> 4989",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/698"
       },
       {
-       "label": "BBl 2006 5061",
+       "label": "BBl <b>2006</b> 5061",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/611"
       }
      ],
@@ -2743,10 +2789,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "SR 943.03",
+     "text": "SR <b>943.03</b>",
      "links": [
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -2755,14 +2801,14 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS 2016 4651; BBl 2014 1001).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
      "links": [
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "BBl 2014 1001",
+       "label": "BBl <b>2014</b> 1001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
       }
      ],
@@ -2888,14 +2934,14 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -2982,10 +3028,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -3034,14 +3080,14 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3090,14 +3136,14 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3127,14 +3173,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3143,14 +3189,14 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3178,10 +3224,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "SR 935.61",
+     "text": "SR <b>935.61</b>",
      "links": [
       {
-       "label": "SR 935.61",
+       "label": "SR <b>935.61</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
@@ -3249,14 +3295,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS 2016 2329; BBl 2013 5975).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS <b>2016</b> 2329; BBl <b>2013</b> 5975).",
      "links": [
       {
-       "label": "AS 2016 2329",
+       "label": "AS <b>2016</b> 2329",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/380"
       },
       {
-       "label": "BBl 2013 5975",
+       "label": "BBl <b>2013</b> 5975",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
@@ -3286,14 +3332,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3302,14 +3348,14 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3339,14 +3385,14 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Jan. 2018 (AS 2016 1249; BBl 2012 4721).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
-       "label": "AS 2016 1249",
+       "label": "AS <b>2016</b> 1249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/249"
       },
       {
-       "label": "BBl 2012 4721",
+       "label": "BBl <b>2012</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
@@ -3376,14 +3422,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3392,14 +3438,14 @@
     },
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3448,14 +3494,14 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3464,14 +3510,14 @@
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3480,14 +3526,14 @@
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3517,14 +3563,14 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3533,14 +3579,14 @@
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3549,14 +3595,14 @@
     },
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3565,19 +3611,20 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Unentgeltliche Rechtspflege für die Privatklägerschaft und das Opfer"
     }
    ]
   },
@@ -3621,14 +3668,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3696,14 +3743,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3885,14 +3932,14 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "Zweiter Satz aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Zweiter Satz aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3979,14 +4026,14 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -3995,14 +4042,14 @@
     },
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -4202,10 +4249,10 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4273,14 +4320,14 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS 2018 2947; BBl 2015 3431).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 15. Dez. 2017 (Kindesschutz), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 2947; BBl <b>2015</b> 3431).",
      "links": [
       {
-       "label": "AS 2018 2947",
+       "label": "AS <b>2018</b> 2947",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/450"
       },
       {
-       "label": "BBl 2015 3431",
+       "label": "BBl <b>2015</b> 3431",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
@@ -4289,10 +4336,10 @@
     },
     {
      "nr": "81",
-     "text": "Art. 4–11 der V vom 19. Okt. 1977 über die Aufnahme von Kindern zur Pflege und zur Adoption (SR 211.222.338).",
+     "text": "Art. 4–11 der V vom 19. Okt. 1977 über die Aufnahme von Kindern zur Pflege und zur Adoption (SR <b>211.222.338</b>).",
      "links": [
       {
-       "label": "SR 211.222.338",
+       "label": "SR <b>211.222.338</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1977/1931_1931_1931"
       }
      ],
@@ -4301,14 +4348,14 @@
     },
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. III des BG vom 30. Sept. 2011, in Kraft seit 1. Juli 2012 (AS 2012 2575; BBl 2010 5651 5677).",
+     "text": "Fassung gemäss Ziff. III des BG vom 30. Sept. 2011, in Kraft seit 1. Juli 2012 (AS <b>2012</b> 2575; BBl <b>2010</b> 5651 5677).",
      "links": [
       {
-       "label": "AS 2012 2575",
+       "label": "AS <b>2012</b> 2575",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/310"
       },
       {
-       "label": "BBl 2010 5651",
+       "label": "BBl <b>2010</b> 5651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/992"
       },
       {
@@ -4321,10 +4368,10 @@
     },
     {
      "nr": "83",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4373,10 +4420,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4385,10 +4432,10 @@
     },
     {
      "nr": "85",
-     "text": "Fassung gemäss Anhang 1 Ziff. 8 des Informationssicherheitsgesetzes vom 18. Dez. 2020, in Kraft seit 1. Jan. 2023 (AS 2022 232, 750; BBl 2017 2953).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 8 des Informationssicherheitsgesetzes vom 18. Dez. 2020, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 232, 750; BBl <b>2017</b> 2953).",
      "links": [
       {
-       "label": "AS 2022 232",
+       "label": "AS <b>2022</b> 232",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/232"
       },
       {
@@ -4396,7 +4443,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/750"
       },
       {
-       "label": "BBl 2017 2953",
+       "label": "BBl <b>2017</b> 2953",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/647"
       }
      ],
@@ -4405,14 +4452,14 @@
     },
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -4442,14 +4489,14 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, in Kraft seit 1. Juli 2024 (AS 2024 212; BBl 2022 1498).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 212; BBl <b>2022</b> 1498).",
      "links": [
       {
-       "label": "AS 2024 212",
+       "label": "AS <b>2024</b> 212",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/212"
       },
       {
-       "label": "BBl 2022 1498",
+       "label": "BBl <b>2022</b> 1498",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1498"
       }
      ],
@@ -4458,10 +4505,10 @@
     },
     {
      "nr": "88",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4470,10 +4517,10 @@
     },
     {
      "nr": "89",
-     "text": "SR 935.61",
+     "text": "SR <b>935.61</b>",
      "links": [
       {
-       "label": "SR 935.61",
+       "label": "SR <b>935.61</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
@@ -4503,10 +4550,10 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4515,14 +4562,14 @@
     },
     {
      "nr": "91",
-     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS 2021 360; BBl 2018 6427).",
+     "text": "Fassung gemäss Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 360; BBl <b>2018</b> 6427).",
      "links": [
       {
-       "label": "AS 2021 360",
+       "label": "AS <b>2021</b> 360",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/360"
       },
       {
-       "label": "BBl 2018 6427",
+       "label": "BBl <b>2018</b> 6427",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
@@ -4531,14 +4578,14 @@
     },
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -4547,10 +4594,10 @@
     },
     {
      "nr": "93",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -4580,10 +4627,10 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4592,10 +4639,10 @@
     },
     {
      "nr": "95",
-     "text": "SR 210. Dieser Art. ist heute aufgehoben.",
+     "text": "SR <b>210</b>. Dieser Art. ist heute aufgehoben.",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -4604,10 +4651,10 @@
     },
     {
      "nr": "96",
-     "text": "SR 857.5",
+     "text": "SR <b>857.5</b>",
      "links": [
       {
-       "label": "SR 857.5",
+       "label": "SR <b>857.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/2003_2003_2003"
       }
      ],
@@ -4616,14 +4663,14 @@
     },
     {
      "nr": "97",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -4632,10 +4679,10 @@
     },
     {
      "nr": "98",
-     "text": "SR 312.5",
+     "text": "SR <b>312.5</b>",
      "links": [
       {
-       "label": "SR 312.5",
+       "label": "SR <b>312.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/232"
       }
      ],
@@ -4644,14 +4691,14 @@
     },
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -4660,10 +4707,10 @@
     },
     {
      "nr": "100",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -4672,22 +4719,22 @@
     },
     {
      "nr": "101",
-     "text": "Eingefügt durch Anhang Ziff. 2 des Gesundheitsberufegesetzes vom 30. Sept. 2016 (AS 2020 57; BBl 2015 8715). Aufgehoben durch Anhang Ziff. 1 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, mit Wirkung seit 1. Juli 2024 (AS 2024 212; BBl 2022 1498).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des Gesundheitsberufegesetzes vom 30. Sept. 2016 (AS <b>2020</b> 57; BBl <b>2015</b> 8715). Aufgehoben durch Anhang Ziff. 1 des BG vom 16. Dez. 2022 über die Förderung der Ausbildung im Bereich der Pflege, mit Wirkung seit 1. Juli 2024 (AS <b>2024</b> 212; BBl <b>2022</b> 1498).",
      "links": [
       {
-       "label": "AS 2020 57",
+       "label": "AS <b>2020</b> 57",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/16"
       },
       {
-       "label": "BBl 2015 8715",
+       "label": "BBl <b>2015</b> 8715",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2104"
       },
       {
-       "label": "AS 2024 212",
+       "label": "AS <b>2024</b> 212",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/212"
       },
       {
-       "label": "BBl 2022 1498",
+       "label": "BBl <b>2022</b> 1498",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1498"
       }
      ],
@@ -4755,10 +4802,10 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4786,10 +4833,10 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4905,10 +4952,10 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -4949,14 +4996,14 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -4965,14 +5012,14 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5383,14 +5430,14 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5399,14 +5446,14 @@
     },
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5493,14 +5540,14 @@
    "fussnoten": [
     {
      "nr": "109",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS 2014 2055; BBl 2012 8819).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012 </b>8819).",
      "links": [
       {
-       "label": "AS 2014 2055",
+       "label": "AS <b>2014</b> 2055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
       },
       {
-       "label": "BBl 2012 8819",
+       "label": "BBl <b>2012 </b>8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
@@ -5625,14 +5672,14 @@
    "fussnoten": [
     {
      "nr": "110",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS 2016 2329; BBl 2013 5975).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS <b>2016</b> 2329; BBl <b>2013</b> 5975).",
      "links": [
       {
-       "label": "AS 2016 2329",
+       "label": "AS <b>2016</b> 2329",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/380"
       },
       {
-       "label": "BBl 2013 5975",
+       "label": "BBl <b>2013</b> 5975",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
@@ -5662,14 +5709,14 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5678,14 +5725,14 @@
     },
     {
      "nr": "112",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5694,14 +5741,14 @@
     },
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5731,14 +5778,14 @@
    "fussnoten": [
     {
      "nr": "114",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5806,14 +5853,14 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -5938,10 +5985,10 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -5950,14 +5997,14 @@
     },
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6063,14 +6110,14 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6079,14 +6126,14 @@
     },
     {
      "nr": "119",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6173,10 +6220,10 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -6339,14 +6386,14 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6414,10 +6461,10 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -6426,14 +6473,14 @@
     },
     {
      "nr": "124",
-     "text": "Fassung gemäss Ziff. III des BG vom 30. Sept. 2011, in Kraft seit 1. Juli 2012 (AS 2012 2575; BBl 2010 5651 5677).",
+     "text": "Fassung gemäss Ziff. III des BG vom 30. Sept. 2011, in Kraft seit 1. Juli 2012 (AS <b>2012</b> 2575; BBl <b>2010</b> 5651 5677).",
      "links": [
       {
-       "label": "AS 2012 2575",
+       "label": "AS <b>2012</b> 2575",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/310"
       },
       {
-       "label": "BBl 2010 5651",
+       "label": "BBl <b>2010</b> 5651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/992"
       },
       {
@@ -6524,14 +6571,14 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6540,14 +6587,14 @@
     },
     {
      "nr": "128",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6556,10 +6603,10 @@
     },
     {
      "nr": "129",
-     "text": "SR 363",
+     "text": "SR <b>363</b>",
      "links": [
       {
-       "label": "SR 363",
+       "label": "SR <b>363</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/811"
       }
      ],
@@ -6568,14 +6615,14 @@
     },
     {
      "nr": "130",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -6584,19 +6631,20 @@
     },
     {
      "nr": "126",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: DNA-Profil"
     }
    ]
   },
@@ -6621,14 +6669,14 @@
    "fussnoten": [
     {
      "nr": "131",
-     "text": "Fassung gemäss Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -6658,14 +6706,14 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6714,10 +6762,10 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "SR 363",
+     "text": "SR <b>363</b>",
      "links": [
       {
-       "label": "SR 363",
+       "label": "SR <b>363</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/811"
       }
      ],
@@ -6758,14 +6806,14 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Anhang 1 Ziff. 5 des Strafregistergesetzes vom 17. Juni 2016, in Kraft seit 23. Jan. 2023 (AS 2022 600; BBl 2014 5713).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 5 des Strafregistergesetzes vom 17. Juni 2016, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 600; BBl <b>2014</b> 5713).",
      "links": [
       {
-       "label": "AS 2022 600",
+       "label": "AS <b>2022</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/600"
       },
       {
-       "label": "BBl 2014 5713",
+       "label": "BBl <b>2014</b> 5713",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
@@ -6774,10 +6822,10 @@
     },
     {
      "nr": "142",
-     "text": "SR 363",
+     "text": "SR <b>363</b>",
      "links": [
       {
-       "label": "SR 363",
+       "label": "SR <b>363</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/811"
       }
      ],
@@ -6786,14 +6834,14 @@
     },
     {
      "nr": "143",
-     "text": "Fassung gemäss Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -6834,14 +6882,14 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6850,10 +6898,10 @@
     },
     {
      "nr": "145",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -6879,14 +6927,14 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I 6 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS 2013 847; BBl 2011 8181).",
+     "text": "Fassung gemäss Ziff. I 6 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS <b>2013</b> 847; BBl <b>2011</b> 8181).",
      "links": [
       {
-       "label": "AS 2013 847",
+       "label": "AS <b>2013</b> 847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/177"
       },
       {
-       "label": "BBl 2011 8181",
+       "label": "BBl <b>2011</b> 8181",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1435"
       }
      ],
@@ -6895,14 +6943,14 @@
     },
     {
      "nr": "147",
-     "text": "Eingefügt durch Ziff. I 6 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS 2013 847; BBl 2011 8181).",
+     "text": "Eingefügt durch Ziff. I 6 des BG vom 28. Sept. 2012 über die Anpassung von verfahrensrechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS <b>2013</b> 847; BBl <b>2011</b> 8181).",
      "links": [
       {
-       "label": "AS 2013 847",
+       "label": "AS <b>2013</b> 847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/177"
       },
       {
-       "label": "BBl 2011 8181",
+       "label": "BBl <b>2011</b> 8181",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1435"
       }
      ],
@@ -6911,10 +6959,10 @@
     },
     {
      "nr": "148",
-     "text": "SR 935.61",
+     "text": "SR <b>935.61</b>",
      "links": [
       {
-       "label": "SR 935.61",
+       "label": "SR <b>935.61</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
@@ -6923,14 +6971,14 @@
     },
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -6956,10 +7004,10 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -6985,14 +7033,14 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -7001,10 +7049,10 @@
     },
     {
      "nr": "152",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -7045,10 +7093,10 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -7078,18 +7126,18 @@
    "fussnoten": [
     {
      "nr": "154",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS 2024 27; BBl 2018 2827; 2022 687, 1011).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
-       "label": "AS 2024 27",
+       "label": "AS <b>2024</b> 27",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/27"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       },
       {
-       "label": "2022 687",
+       "label": "<b>2022</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/687"
       },
       {
@@ -7102,10 +7150,10 @@
     },
     {
      "nr": "155",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -7114,14 +7162,14 @@
     },
     {
      "nr": "156",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -7130,10 +7178,10 @@
     },
     {
      "nr": "157",
-     "text": "Der Titel wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Der Titel wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
       }
      ],
@@ -7142,10 +7190,10 @@
     },
     {
      "nr": "158",
-     "text": "SR 142.20",
+     "text": "SR <b>142.20</b>",
      "links": [
       {
-       "label": "SR 142.20",
+       "label": "SR <b>142.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
       }
      ],
@@ -7154,10 +7202,10 @@
     },
     {
      "nr": "159",
-     "text": "SR 211.221.31",
+     "text": "SR <b>211.221.31</b>",
      "links": [
       {
-       "label": "SR 211.221.31",
+       "label": "SR <b>211.221.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/639"
       }
      ],
@@ -7166,14 +7214,14 @@
     },
     {
      "nr": "160",
-     "text": "Fassung gemäss Ziff. II des BG vom 16. März 2012, in Kraft seit 1. Febr. 2013 (AS 2013 295; BBl 2011 5905).",
+     "text": "Fassung gemäss Ziff. II des BG vom 16. März 2012, in Kraft seit 1. Febr. 2013 (AS <b>2013</b> 295; BBl <b>2011 </b>5905).",
      "links": [
       {
-       "label": "AS 2013 295",
+       "label": "AS <b>2013</b> 295",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/48"
       },
       {
-       "label": "BBl 2011 5905",
+       "label": "BBl <b>2011 </b>5905",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/879"
       }
      ],
@@ -7182,10 +7230,10 @@
     },
     {
      "nr": "161",
-     "text": "SR 514.51",
+     "text": "SR <b>514.51</b>",
      "links": [
       {
-       "label": "SR 514.51",
+       "label": "SR <b>514.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/794_794_794"
       }
      ],
@@ -7194,10 +7242,10 @@
     },
     {
      "nr": "162",
-     "text": "SR 732.1",
+     "text": "SR <b>732.1</b>",
      "links": [
       {
-       "label": "SR 732.1",
+       "label": "SR <b>732.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/723"
       }
      ],
@@ -7206,14 +7254,14 @@
     },
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -7222,10 +7270,10 @@
     },
     {
      "nr": "164",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -7234,14 +7282,14 @@
     },
     {
      "nr": "165",
-     "text": "Fassung gemäss Ziff. II des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS 2025 178; BBl 2023 239).",
+     "text": "Fassung gemäss Ziff. II des BG vom 27. Sept. 2024, in Kraft seit 1. April 2025 (AS <b>2025 </b>178; BBl <b>2023</b> 239).",
      "links": [
       {
-       "label": "AS 2025 178",
+       "label": "AS <b>2025 </b>178",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/178"
       },
       {
-       "label": "BBl 2023 239",
+       "label": "BBl <b>2023</b> 239",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/239"
       }
      ],
@@ -7250,10 +7298,10 @@
     },
     {
      "nr": "166",
-     "text": "SR 814.01",
+     "text": "SR <b>814.01</b>",
      "links": [
       {
-       "label": "SR 814.01",
+       "label": "SR <b>814.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122"
       }
      ],
@@ -7262,10 +7310,10 @@
     },
     {
      "nr": "167",
-     "text": "SR 946.202",
+     "text": "SR <b>946.202</b>",
      "links": [
       {
-       "label": "SR 946.202",
+       "label": "SR <b>946.202</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/1697_1697_1697"
       }
      ],
@@ -7274,22 +7322,22 @@
     },
     {
      "nr": "168",
-     "text": "Eingefügt durch Art. 34 Ziff. 2 des Sportförderungsgesetzes vom 17. Juni 2011 (AS 2012 3953; BBl 2009 8189). Fassung gemäss Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS 2018 5103; BBl 2015 8387).",
+     "text": "Eingefügt durch Art. 34 Ziff. 2 des Sportförderungsgesetzes vom 17. Juni 2011 (AS <b>2012</b> 3953; BBl <b>2009</b> 8189). Fassung gemäss Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
-       "label": "AS 2012 3953",
+       "label": "AS <b>2012</b> 3953",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/460"
       },
       {
-       "label": "BBl 2009 8189",
+       "label": "BBl <b>2009</b> 8189",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1425"
       },
       {
-       "label": "AS 2018 5103",
+       "label": "AS <b>2018</b> 5103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/795"
       },
       {
-       "label": "BBl 2015 8387",
+       "label": "BBl <b>2015</b> 8387",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
@@ -7298,10 +7346,10 @@
     },
     {
      "nr": "169",
-     "text": "SR 415.0",
+     "text": "SR <b>415.0</b>",
      "links": [
       {
-       "label": "SR 415.0",
+       "label": "SR <b>415.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/460"
       }
      ],
@@ -7310,22 +7358,22 @@
     },
     {
      "nr": "170",
-     "text": "Eingefügt durch Ziff. II 4 des BG vom 28. Sept. 2012 (AS 2013 1103; BBl 2011 6873). Fassung gemäss Anhang Ziff. 4 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Ziff. II 4 des BG vom 28. Sept. 2012 (AS <b>2013</b> 1103; BBl <b>2011</b> 6873). Fassung gemäss Anhang Ziff. 4 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014</b> 7483).",
      "links": [
       {
-       "label": "AS 2013 1103",
+       "label": "AS <b>2013</b> 1103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/250"
       },
       {
-       "label": "BBl 2011 6873",
+       "label": "BBl <b>2011</b> 6873",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1111"
       },
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014</b> 7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -7334,10 +7382,10 @@
     },
     {
      "nr": "171",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -7346,14 +7394,14 @@
     },
     {
      "nr": "172",
-     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7362,10 +7410,10 @@
     },
     {
      "nr": "173",
-     "text": "SR 514.54",
+     "text": "SR <b>514.54</b>",
      "links": [
       {
-       "label": "SR 514.54",
+       "label": "SR <b>514.54</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/2535_2535_2535"
       }
      ],
@@ -7374,14 +7422,14 @@
     },
     {
      "nr": "174",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 29. Sept. 2017 (Medicrime-Konvention), in Kraft seit 1. Jan. 2019 (AS 2018 4771; BBl 2017 3135).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 29. Sept. 2017 (Medicrime-Konvention), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4771; BBl <b>2017</b> 3135).",
      "links": [
       {
-       "label": "AS 2018 4771",
+       "label": "AS <b>2018</b> 4771",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/765"
       },
       {
-       "label": "BBl 2017 3135",
+       "label": "BBl <b>2017</b> 3135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/649"
       }
      ],
@@ -7390,10 +7438,10 @@
     },
     {
      "nr": "175",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -7402,14 +7450,14 @@
     },
     {
      "nr": "176",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS 2018 5103; BBl 2015 8387).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
-       "label": "AS 2018 5103",
+       "label": "AS <b>2018</b> 5103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/795"
       },
       {
-       "label": "BBl 2015 8387",
+       "label": "BBl <b>2015</b> 8387",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
@@ -7418,10 +7466,10 @@
     },
     {
      "nr": "177",
-     "text": "SR 935.51",
+     "text": "SR <b>935.51</b>",
      "links": [
       {
-       "label": "SR 935.51",
+       "label": "SR <b>935.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/795"
       }
      ],
@@ -7430,14 +7478,14 @@
     },
     {
      "nr": "178",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS 2021 360; BBl 2018 6427).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 360; BBl <b>2018</b> 6427).",
      "links": [
       {
-       "label": "AS 2021 360",
+       "label": "AS <b>2021</b> 360",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/360"
       },
       {
-       "label": "BBl 2018 6427",
+       "label": "BBl <b>2018</b> 6427",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
@@ -7446,10 +7494,10 @@
     },
     {
      "nr": "179",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
@@ -7458,10 +7506,10 @@
     },
     {
      "nr": "180",
-     "text": "SR 322.1",
+     "text": "SR <b>322.1</b>",
      "links": [
       {
-       "label": "SR 322.1",
+       "label": "SR <b>322.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1059_1059_1059"
       }
      ],
@@ -7491,14 +7539,14 @@
    "fussnoten": [
     {
      "nr": "184",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7507,14 +7555,14 @@
     },
     {
      "nr": "185",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7544,14 +7592,14 @@
    "fussnoten": [
     {
      "nr": "186",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7581,14 +7629,14 @@
    "fussnoten": [
     {
      "nr": "187",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7597,14 +7645,14 @@
     },
     {
      "nr": "188",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7634,14 +7682,14 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7650,14 +7698,14 @@
     },
     {
      "nr": "190",
-     "text": "Fassung gemäss Anhang 2 Ziff. 2 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 2 Ziff. 2 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -7666,10 +7714,10 @@
     },
     {
      "nr": "191",
-     "text": "SR 780.1",
+     "text": "SR <b>780.1</b>",
      "links": [
       {
-       "label": "SR 780.1",
+       "label": "SR <b>780.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/31"
       }
      ],
@@ -7678,14 +7726,14 @@
     },
     {
      "nr": "192",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -7715,10 +7763,10 @@
    "fussnoten": [
     {
      "nr": "193",
-     "text": "SR 780.1",
+     "text": "SR <b>780.1</b>",
      "links": [
       {
-       "label": "SR 780.1",
+       "label": "SR <b>780.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/31"
       }
      ],
@@ -7727,14 +7775,14 @@
     },
     {
      "nr": "194",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7743,14 +7791,14 @@
     },
     {
      "nr": "195",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7837,10 +7885,10 @@
    "fussnoten": [
     {
      "nr": "196",
-     "text": "SR 780.1",
+     "text": "SR <b>780.1</b>",
      "links": [
       {
-       "label": "SR 780.1",
+       "label": "SR <b>780.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/31"
       }
      ],
@@ -7849,22 +7897,22 @@
     },
     {
      "nr": "197",
-     "text": "Eingefügt durch Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS 2010 3267; BBl 2008 8125). Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125). Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       },
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -7873,14 +7921,14 @@
     },
     {
      "nr": "198",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -7910,14 +7958,14 @@
    "fussnoten": [
     {
      "nr": "199",
-     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Fassung gemäss Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -8061,18 +8109,18 @@
    "fussnoten": [
     {
      "nr": "202",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS 2024 27; BBl 2018 2827; 2022 687, 1011).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
-       "label": "AS 2024 27",
+       "label": "AS <b>2024</b> 27",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/27"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       },
       {
-       "label": "2022 687",
+       "label": "<b>2022</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/687"
       },
       {
@@ -8085,10 +8133,10 @@
     },
     {
      "nr": "203",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -8097,14 +8145,14 @@
     },
     {
      "nr": "204",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -8113,10 +8161,10 @@
     },
     {
      "nr": "205",
-     "text": "SR 142.20",
+     "text": "SR <b>142.20</b>",
      "links": [
       {
-       "label": "SR 142.20",
+       "label": "SR <b>142.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
       }
      ],
@@ -8125,10 +8173,10 @@
     },
     {
      "nr": "206",
-     "text": "SR 211.221.31",
+     "text": "SR <b>211.221.31</b>",
      "links": [
       {
-       "label": "SR 211.221.31",
+       "label": "SR <b>211.221.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/639"
       }
      ],
@@ -8137,14 +8185,14 @@
     },
     {
      "nr": "207",
-     "text": "Fassung gemäss Ziff. II des BG vom 16. März 2012, in Kraft seit 1. Febr. 2013 (AS 2013 295; BBl 2011 5905).",
+     "text": "Fassung gemäss Ziff. II des BG vom 16. März 2012, in Kraft seit 1. Febr. 2013 (AS <b>2013</b> 295; BBl <b>2011 </b>5905).",
      "links": [
       {
-       "label": "AS 2013 295",
+       "label": "AS <b>2013</b> 295",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/48"
       },
       {
-       "label": "BBl 2011 5905",
+       "label": "BBl <b>2011 </b>5905",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/879"
       }
      ],
@@ -8153,10 +8201,10 @@
     },
     {
      "nr": "208",
-     "text": "SR 514.51",
+     "text": "SR <b>514.51</b>",
      "links": [
       {
-       "label": "SR 514.51",
+       "label": "SR <b>514.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/794_794_794"
       }
      ],
@@ -8165,10 +8213,10 @@
     },
     {
      "nr": "209",
-     "text": "SR 732.1",
+     "text": "SR <b>732.1</b>",
      "links": [
       {
-       "label": "SR 732.1",
+       "label": "SR <b>732.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/723"
       }
      ],
@@ -8177,14 +8225,14 @@
     },
     {
      "nr": "210",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -8193,10 +8241,10 @@
     },
     {
      "nr": "211",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -8205,10 +8253,10 @@
     },
     {
      "nr": "212",
-     "text": "SR 946.202",
+     "text": "SR <b>946.202</b>",
      "links": [
       {
-       "label": "SR 946.202",
+       "label": "SR <b>946.202</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/1697_1697_1697"
       }
      ],
@@ -8217,22 +8265,22 @@
     },
     {
      "nr": "213",
-     "text": "Eingefügt durch Art. 34 Ziff. 2 des Sportförderungsgesetzes vom 17. Juni 2011 (AS 2012 3953; BBl 2009 8189). Fassung gemäss Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS 2018 5103; BBl 2015 8387).",
+     "text": "Eingefügt durch Art. 34 Ziff. 2 des Sportförderungsgesetzes vom 17. Juni 2011 (AS <b>2012</b> 3953; BBl <b>2009</b> 8189). Fassung gemäss Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
-       "label": "AS 2012 3953",
+       "label": "AS <b>2012</b> 3953",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/460"
       },
       {
-       "label": "BBl 2009 8189",
+       "label": "BBl <b>2009</b> 8189",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1425"
       },
       {
-       "label": "AS 2018 5103",
+       "label": "AS <b>2018</b> 5103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/795"
       },
       {
-       "label": "BBl 2015 8387",
+       "label": "BBl <b>2015</b> 8387",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
@@ -8241,10 +8289,10 @@
     },
     {
      "nr": "214",
-     "text": "SR 415.0",
+     "text": "SR <b>415.0</b>",
      "links": [
       {
-       "label": "SR 415.0",
+       "label": "SR <b>415.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/460"
       }
      ],
@@ -8253,14 +8301,14 @@
     },
     {
      "nr": "215",
-     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -8269,10 +8317,10 @@
     },
     {
      "nr": "216",
-     "text": "SR 514.54",
+     "text": "SR <b>514.54</b>",
      "links": [
       {
-       "label": "SR 514.54",
+       "label": "SR <b>514.54</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/2535_2535_2535"
       }
      ],
@@ -8281,14 +8329,14 @@
     },
     {
      "nr": "217",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 29. Sept. 2017 (Medicrime-Konvention), in Kraft seit 1. Jan. 2019 (AS 2018 4771; BBl 2017 3135).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 29. Sept. 2017 (Medicrime-Konvention), in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4771; BBl <b>2017</b> 3135).",
      "links": [
       {
-       "label": "AS 2018 4771",
+       "label": "AS <b>2018</b> 4771",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/765"
       },
       {
-       "label": "BBl 2017 3135",
+       "label": "BBl <b>2017</b> 3135",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/649"
       }
      ],
@@ -8297,10 +8345,10 @@
     },
     {
      "nr": "218",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -8309,14 +8357,14 @@
     },
     {
      "nr": "219",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS 2018 5103; BBl 2015 8387).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
-       "label": "AS 2018 5103",
+       "label": "AS <b>2018</b> 5103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/795"
       },
       {
-       "label": "BBl 2015 8387",
+       "label": "BBl <b>2015</b> 8387",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
@@ -8325,10 +8373,10 @@
     },
     {
      "nr": "220",
-     "text": "SR 935.51",
+     "text": "SR <b>935.51</b>",
      "links": [
       {
-       "label": "SR 935.51",
+       "label": "SR <b>935.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/795"
       }
      ],
@@ -8337,14 +8385,14 @@
     },
     {
      "nr": "221",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS 2021 360; BBl 2018 6427).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des BB vom 25. Sept. 2020 über die Genehmigung und die Umsetzung des Übereinkommens des Europarats zur Verhütung des Terrorismus mit dem dazugehörigen Zusatzprotokoll sowie über die Verstärkung des strafrechtlichen Instrumentariums gegen Terrorismus und organisierte Kriminalität, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 360; BBl <b>2018</b> 6427).",
      "links": [
       {
-       "label": "AS 2021 360",
+       "label": "AS <b>2021</b> 360",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/360"
       },
       {
-       "label": "BBl 2018 6427",
+       "label": "BBl <b>2018</b> 6427",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
@@ -8353,10 +8401,10 @@
     },
     {
      "nr": "222",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
@@ -8365,10 +8413,10 @@
     },
     {
      "nr": "223",
-     "text": "SR 322.1",
+     "text": "SR <b>322.1</b>",
      "links": [
       {
-       "label": "SR 322.1",
+       "label": "SR <b>322.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1059_1059_1059"
       }
      ],
@@ -8417,14 +8465,14 @@
    "fussnoten": [
     {
      "nr": "224",
-     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS 2013 1051; BBl 2012 5591 5609).",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS <b>2013 </b>1051; BBl <b>2012 </b>5591 5609).",
      "links": [
       {
-       "label": "AS 2013 1051",
+       "label": "AS <b>2013 </b>1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/230"
       },
       {
-       "label": "BBl 2012 5591",
+       "label": "BBl <b>2012 </b>5591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/833"
       },
       {
@@ -8437,14 +8485,14 @@
     },
     {
      "nr": "225",
-     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS 2013 1051; BBl 2012 5591 5609).",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS <b>2013 </b>1051; BBl <b>2012 </b>5591 5609).",
      "links": [
       {
-       "label": "AS 2013 1051",
+       "label": "AS <b>2013 </b>1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/230"
       },
       {
-       "label": "BBl 2012 5591",
+       "label": "BBl <b>2012 </b>5591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/833"
       },
       {
@@ -8573,14 +8621,14 @@
    "fussnoten": [
     {
      "nr": "226",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -8589,10 +8637,10 @@
     },
     {
      "nr": "227",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -8601,10 +8649,10 @@
     },
     {
      "nr": "228",
-     "text": "SR 812.121",
+     "text": "SR <b>812.121</b>",
      "links": [
       {
-       "label": "SR 812.121",
+       "label": "SR <b>812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
       }
      ],
@@ -8736,14 +8784,14 @@
    "fussnoten": [
     {
      "nr": "230",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -8814,14 +8862,14 @@
    "fussnoten": [
     {
      "nr": "232",
-     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -8830,14 +8878,14 @@
     },
     {
      "nr": "233",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS 2015 1623; BBl 2014 889 913).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1623; BBl <b>2014</b> 889 913).",
      "links": [
       {
-       "label": "AS 2015 1623",
+       "label": "AS <b>2015</b> 1623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/321"
       },
       {
-       "label": "BBl 2014 889",
+       "label": "BBl <b>2014</b> 889",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/136"
       },
       {
@@ -8850,14 +8898,14 @@
     },
     {
      "nr": "234",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS 2015 1623; BBl 2014 889 913).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1623; BBl <b>2014</b> 889 913).",
      "links": [
       {
-       "label": "AS 2015 1623",
+       "label": "AS <b>2015</b> 1623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/321"
       },
       {
-       "label": "BBl 2014 889",
+       "label": "BBl <b>2014</b> 889",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/136"
       },
       {
@@ -8870,14 +8918,14 @@
     },
     {
      "nr": "235",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS 2015 1623; BBl 2014 889 913).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 26. Sept. 2014 über das Informationsrecht des Opfers, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1623; BBl <b>2014</b> 889 913).",
      "links": [
       {
-       "label": "AS 2015 1623",
+       "label": "AS <b>2015</b> 1623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/321"
       },
       {
-       "label": "BBl 2014 889",
+       "label": "BBl <b>2014</b> 889",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/136"
       },
       {
@@ -9091,10 +9139,10 @@
    "fussnoten": [
     {
      "nr": "236",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -9143,14 +9191,14 @@
    "fussnoten": [
     {
      "nr": "237",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9159,14 +9207,14 @@
     },
     {
      "nr": "238",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9253,14 +9301,14 @@
    "fussnoten": [
     {
      "nr": "239",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9426,14 +9474,14 @@
    "fussnoten": [
     {
      "nr": "240",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9641,14 +9689,14 @@
    "fussnoten": [
     {
      "nr": "241",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9657,14 +9705,14 @@
     },
     {
      "nr": "242",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9751,10 +9799,10 @@
    "fussnoten": [
     {
      "nr": "243",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -9879,14 +9927,14 @@
    "fussnoten": [
     {
      "nr": "244",
-     "text": "Aufgehoben durch Anhang Ziff. 3 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), mit Wirkung seit 1. Jan. 2018 (AS 2016 1249; BBl 2012 4721).",
+     "text": "Aufgehoben durch Anhang Ziff. 3 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), mit Wirkung seit 1. Jan. 2018 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
-       "label": "AS 2016 1249",
+       "label": "AS <b>2016</b> 1249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/249"
       },
       {
-       "label": "BBl 2012 4721",
+       "label": "BBl <b>2012</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
@@ -9895,10 +9943,10 @@
     },
     {
      "nr": "245",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -9907,14 +9955,14 @@
     },
     {
      "nr": "246",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS 2016 2329; BBl 2013 5975).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS <b>2016</b> 2329; BBl <b>2013</b> 5975).",
      "links": [
       {
-       "label": "AS 2016 2329",
+       "label": "AS <b>2016</b> 2329",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/380"
       },
       {
-       "label": "BBl 2013 5975",
+       "label": "BBl <b>2013</b> 5975",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
@@ -9944,14 +9992,14 @@
    "fussnoten": [
     {
      "nr": "248",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -9960,14 +10008,14 @@
     },
     {
      "nr": "249",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -9997,14 +10045,14 @@
    "fussnoten": [
     {
      "nr": "250",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10013,14 +10061,14 @@
     },
     {
      "nr": "251",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10191,14 +10239,14 @@
    "fussnoten": [
     {
      "nr": "252",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10224,14 +10272,14 @@
    "fussnoten": [
     {
      "nr": "255",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10375,10 +10423,10 @@
    "fussnoten": [
     {
      "nr": "256",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -10408,10 +10456,10 @@
    "fussnoten": [
     {
      "nr": "257",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -10441,10 +10489,10 @@
    "fussnoten": [
     {
      "nr": "258",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -10453,14 +10501,14 @@
     },
     {
      "nr": "259",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS 2014 2055; BBl 2012 8819).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012 </b>8819).",
      "links": [
       {
-       "label": "AS 2014 2055",
+       "label": "AS <b>2014</b> 2055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/355"
       },
       {
-       "label": "BBl 2012 8819",
+       "label": "BBl <b>2012 </b>8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
@@ -10528,14 +10576,14 @@
    "fussnoten": [
     {
      "nr": "260",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10544,14 +10592,14 @@
     },
     {
      "nr": "261",
-     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10626,14 +10674,14 @@
    "fussnoten": [
     {
      "nr": "262",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. Juni 2022, mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10659,10 +10707,10 @@
    "fussnoten": [
     {
      "nr": "264",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -10763,14 +10811,14 @@
    "fussnoten": [
     {
      "nr": "265",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10779,14 +10827,14 @@
     },
     {
      "nr": "266",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10872,18 +10920,18 @@
    "fussnoten": [
     {
      "nr": "267",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS 2024 27; BBl 2018 2827; 2022 687, 1011).",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
-       "label": "AS 2024 27",
+       "label": "AS <b>2024</b> 27",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/27"
       },
       {
-       "label": "BBl 2018 2827",
+       "label": "BBl <b>2018</b> 2827",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       },
       {
-       "label": "2022 687",
+       "label": "<b>2022</b> 687",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/687"
       },
       {
@@ -10958,14 +11006,14 @@
    "fussnoten": [
     {
      "nr": "268",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -10995,14 +11043,14 @@
    "fussnoten": [
     {
      "nr": "269",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11165,10 +11213,10 @@
    "fussnoten": [
     {
      "nr": "270",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -11217,14 +11265,14 @@
    "fussnoten": [
     {
      "nr": "271",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11269,10 +11317,10 @@
    "fussnoten": [
     {
      "nr": "272",
-     "text": "SR 0.101",
+     "text": "SR <b>0.101</b>",
      "links": [
       {
-       "label": "SR 0.101",
+       "label": "SR <b>0.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/2151_2151_2151"
       }
      ],
@@ -11281,14 +11329,14 @@
     },
     {
      "nr": "273",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS 2022 289; BBl 2021 300, 889).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 1. Okt. 2021, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 289; BBl <b>2021 </b>300, 889).",
      "links": [
       {
-       "label": "AS 2022 289",
+       "label": "AS <b>2022</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/289"
       },
       {
-       "label": "BBl 2021 300",
+       "label": "BBl <b>2021 </b>300",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/300"
       },
       {
@@ -11498,14 +11546,14 @@
    "fussnoten": [
     {
      "nr": "274",
-     "text": "Aufgehoben durch Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, mit Wirkung seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Aufgehoben durch Anhang Ziff. II 7 des Strafbehördenorganisationsgesetzes vom 19. März 2010, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -11610,14 +11658,14 @@
    "fussnoten": [
     {
      "nr": "275",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11626,14 +11674,14 @@
     },
     {
      "nr": "276",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11682,14 +11730,14 @@
    "fussnoten": [
     {
      "nr": "277",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11840,10 +11888,10 @@
    "fussnoten": [
     {
      "nr": "278",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -11869,14 +11917,14 @@
    "fussnoten": [
     {
      "nr": "279",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11885,14 +11933,14 @@
     },
     {
      "nr": "280",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11901,14 +11949,14 @@
     },
     {
      "nr": "281",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -11949,10 +11997,10 @@
    "fussnoten": [
     {
      "nr": "282",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -11978,10 +12026,10 @@
    "fussnoten": [
     {
      "nr": "283",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -12262,14 +12310,14 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12299,14 +12347,14 @@
    "fussnoten": [
     {
      "nr": "125",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12336,14 +12384,14 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -12352,10 +12400,10 @@
     },
     {
      "nr": "134",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -12364,10 +12412,10 @@
     },
     {
      "nr": "135",
-     "text": "SR 363",
+     "text": "SR <b>363</b>",
      "links": [
       {
-       "label": "SR 363",
+       "label": "SR <b>363</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/811"
       }
      ],
@@ -12397,14 +12445,14 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
@@ -12413,10 +12461,10 @@
     },
     {
      "nr": "138",
-     "text": "SR 363",
+     "text": "SR <b>363</b>",
      "links": [
       {
-       "label": "SR 363",
+       "label": "SR <b>363</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/811"
       }
      ],
@@ -12425,10 +12473,10 @@
     },
     {
      "nr": "139",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -12437,19 +12485,20 @@
     },
     {
      "nr": "136",
-     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS 2023 309; BBl 2021 44).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 2 des BG vom 17. Dez. 2021, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 309; BBl <b>2021</b> 44).",
      "links": [
       {
-       "label": "AS 2023 309",
+       "label": "AS <b>2023</b> 309",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/309"
       },
       {
-       "label": "BBl 2021 44",
+       "label": "BBl <b>2021</b> 44",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Phänotypisierung"
     }
    ]
   },
@@ -12474,14 +12523,14 @@
    "fussnoten": [
     {
      "nr": "181",
-     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -12511,14 +12560,14 @@
    "fussnoten": [
     {
      "nr": "183",
-     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -12548,14 +12597,14 @@
    "fussnoten": [
     {
      "nr": "182",
-     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS 2018 117; BBl 2013 2683).",
+     "text": "Eingefügt durch Anhang Ziff. II 1 des BG vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs, in Kraft seit 1. März 2018 (AS <b>2018</b> 117; BBl <b>2013</b> 2683).",
      "links": [
       {
-       "label": "AS 2018 117",
+       "label": "AS <b>2018</b> 117",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/31"
       },
       {
-       "label": "BBl 2013 2683",
+       "label": "BBl <b>2013</b> 2683",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/512"
       }
      ],
@@ -12585,14 +12634,14 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS 2013 1051; BBl 2012 5591 5609).",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS <b>2013 </b>1051; BBl <b>2012 </b>5591 5609).",
      "links": [
       {
-       "label": "AS 2013 1051",
+       "label": "AS <b>2013 </b>1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/230"
       },
       {
-       "label": "BBl 2012 5591",
+       "label": "BBl <b>2012 </b>5591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/833"
       },
       {
@@ -12608,7 +12657,8 @@
      "text": "Ursprünglich vor Art. 286.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Verdeckte Ermittlung"
     }
    ]
   },
@@ -12633,14 +12683,14 @@
    "fussnoten": [
     {
      "nr": "229",
-     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS 2013 1051; BBl 2012 5591 5609).",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Dez. 2012 über die verdeckte Ermittlung und Fahndung, in Kraft seit 1. Mai 2013 (AS <b>2013 </b>1051; BBl <b>2012 </b>5591 5609).",
      "links": [
       {
-       "label": "AS 2013 1051",
+       "label": "AS <b>2013 </b>1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/230"
       },
       {
-       "label": "BBl 2012 5591",
+       "label": "BBl <b>2012 </b>5591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/833"
       },
       {
@@ -12649,7 +12699,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Abschnitt: Verdeckte Fahndung"
     }
    ]
   },
@@ -12727,14 +12778,14 @@
    "fussnoten": [
     {
      "nr": "231",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12764,14 +12815,14 @@
    "fussnoten": [
     {
      "nr": "247",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12797,14 +12848,14 @@
    "fussnoten": [
     {
      "nr": "253",
-     "text": "Eingefügt durch Ziff. I des BG vom 25. Sept. 2020 (Sicherheitshaft im selbstständigen nachträglichen Verfahren), in Kraft seit 1. März 2021 (AS 2021 75; BBl 2019 6697)",
+     "text": "Eingefügt durch Ziff. I des BG vom 25. Sept. 2020 (Sicherheitshaft im selbstständigen nachträglichen Verfahren), in Kraft seit 1. März 2021 (AS <b>2021</b> 75; BBl <b>2019</b> 6697)",
      "links": [
       {
-       "label": "AS 2021 75",
+       "label": "AS <b>2021</b> 75",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/75"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12830,14 +12881,14 @@
    "fussnoten": [
     {
      "nr": "254",
-     "text": "Eingefügt durch Ziff. I des BG vom 25. Sept. 2020 (Sicherheitshaft im selbstständigen nachträglichen Verfahren), in Kraft seit 1. März 2021 (AS 2021 75; BBl 2019 6697)",
+     "text": "Eingefügt durch Ziff. I des BG vom 25. Sept. 2020 (Sicherheitshaft im selbstständigen nachträglichen Verfahren), in Kraft seit 1. März 2021 (AS <b>2021</b> 75; BBl <b>2019</b> 6697)",
      "links": [
       {
-       "label": "AS 2021 75",
+       "label": "AS <b>2021</b> 75",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/75"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12863,14 +12914,14 @@
    "fussnoten": [
     {
      "nr": "263",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697)",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697)",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12898,14 +12949,14 @@
    "fussnoten": [
     {
      "nr": "284",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS 2013 851; BBl 2012 5707 5719).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012 (Protokollierungsvorschriften), in Kraft seit 1. Mai 2013 (AS <b>2013</b> 851; BBl <b>2012</b> 5707 5719).",
      "links": [
       {
-       "label": "AS 2013 851",
+       "label": "AS <b>2013</b> 851",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/178"
       },
       {
-       "label": "BBl 2012 5707",
+       "label": "BBl <b>2012</b> 5707",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/860"
       },
       {
@@ -12914,7 +12965,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Übergangsbestimmung zur Änderung vom 28. September 2012"
     }
    ]
   },
@@ -12935,14 +12987,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -12972,14 +13024,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -13009,14 +13061,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. II 3 des BG vom 28. Sept. 2018 über die Umsetzung der Richtlinie (EU) 2016/680 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, in Kraft seit 1. März 2019 (AS 2019 625; BBl 2017 6941).",
+     "text": "Eingefügt durch Ziff. II 3 des BG vom 28. Sept. 2018 über die Umsetzung der Richtlinie (EU) 2016/680 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung, in Kraft seit 1. März 2019 (AS <b>2019</b> 625; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2019 625",
+       "label": "AS <b>2019</b> 625",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/111"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],

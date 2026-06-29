@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "173.32",
+  "titel": "Bundesgesetz über das Bundesverwaltungsgericht",
+  "erlassdatum": "vom 17. Juni 2005 (Stand am 12. Juni 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 191a der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 28. Februar 2001,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2001</b> 4202",
+    "links": [
+     {
+      "label": "BBl <b>2001</b> 4202",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -63,10 +108,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Art. 2 der V vom 1. März 2006 über die Inkraftsetzung des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes sowie über die vollständige Inkraftsetzung des Bundesgesetzes über den Sitz des Bundesstrafgerichts und des Bundesverwaltungsgerichts, in Kraft seit 1. Jan. 2007 (AS 2006 1069).",
+     "text": "Fassung gemäss Art. 2 der V vom 1. März 2006 über die Inkraftsetzung des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes sowie über die vollständige Inkraftsetzung des Bundesgesetzes über den Sitz des Bundesstrafgerichts und des Bundesverwaltungsgerichts, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 1069).",
      "links": [
       {
-       "label": "AS 2006 1069",
+       "label": "AS <b>2006</b> 1069",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       }
      ],
@@ -75,14 +120,14 @@
     },
     {
      "nr": "4",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -168,14 +213,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 16. März 2012 (Änderung des Höchstalters für Richter und Richterinnen), in Kraft seit 1. Dez. 2012 (AS 2012 5647; BBl 2011 8995 9013).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 16. März 2012 (Änderung des Höchstalters für Richter und Richterinnen), in Kraft seit 1. Dez. 2012 (AS <b>2012</b> 5647; BBl <b>2011</b> 8995 9013).",
      "links": [
       {
-       "label": "AS 2012 5647",
+       "label": "AS <b>2012</b> 5647",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/657"
       },
       {
-       "label": "BBl 2011 8995",
+       "label": "BBl <b>2011</b> 8995",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1551"
       },
       {
@@ -233,14 +278,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Aufgehoben durch Anhang Ziff. 4 des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345 7385).",
+     "text": "Aufgehoben durch Anhang Ziff. 4 des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -345,14 +390,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS 2016 689; BBl 2013 3729).",
+     "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 689; BBl <b>2013</b> 3729).",
      "links": [
       {
-       "label": "AS 2016 689",
+       "label": "AS <b>2016</b> 689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
       },
       {
-       "label": "BBl 2013 3729",
+       "label": "BBl <b>2013</b> 3729",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
@@ -438,14 +483,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BB vom 16. Dez. 2022 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnungen (EU) 2021/1150 und 2021/1152 zur Festlegung der Bedingungen für den Zugang zu anderen EU Informationssystemen für die Zwecke des Europäischen Reiseinformations- und ‑genehmigungssystems (ETIAS), in Kraft seit 15. Juni 2025 (AS 2025 349; BBl 2022 1449).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BB vom 16. Dez. 2022 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnungen (EU) 2021/1150 und 2021/1152 zur Festlegung der Bedingungen für den Zugang zu anderen EU Informationssystemen für die Zwecke des Europäischen Reiseinformations- und ‑genehmigungssystems (ETIAS), in Kraft seit 15. Juni 2025 (AS <b>2025</b> 349; BBl <b>2022</b> 1449).",
      "links": [
       {
-       "label": "AS 2025 349",
+       "label": "AS <b>2025</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/349"
       },
       {
-       "label": "BBl 2022 1449",
+       "label": "BBl <b>2022</b> 1449",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1449"
       }
      ],
@@ -454,10 +499,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 142.31",
+     "text": "SR <b>142.31</b>",
      "links": [
       {
-       "label": "SR 142.31",
+       "label": "SR <b>142.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
      ],
@@ -466,14 +511,14 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Anhang 1 Ziff. 3 des BB vom 26. Sept. 2025 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) 2024/1351 über das Asyl- und Migrationsmanagement und der Verordnung (EU) 2024/1359 über die Bewältigung von Krisensituationen und Situationen höherer Gewalt im Bereich Migration und Asyl, in Kraft seit 12. Juni 2026 (AS 2026 229; BBl 2025 1478).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 3 des BB vom 26. Sept. 2025 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) 2024/1351 über das Asyl- und Migrationsmanagement und der Verordnung (EU) 2024/1359 über die Bewältigung von Krisensituationen und Situationen höherer Gewalt im Bereich Migration und Asyl, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 229; BBl <b>2025</b> 1478).",
      "links": [
       {
-       "label": "AS 2026 229",
+       "label": "AS <b>2026</b> 229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/229"
       },
       {
-       "label": "BBl 2025 1478",
+       "label": "BBl <b>2025</b> 1478",
        "url": "https://fedlex.data.admin.ch/eli/fga/2025/1478"
       }
      ],
@@ -482,10 +527,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 142.20",
+     "text": "SR <b>142.20</b>",
      "links": [
       {
-       "label": "SR 142.20",
+       "label": "SR <b>142.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
@@ -494,10 +539,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
@@ -506,14 +551,14 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BB vom 16. Dez. 2022 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnungen (EU) 2021/1150 und 2021/1152 zur Festlegung der Bedingungen für den Zugang zu anderen EU Informationssystemen für die Zwecke des Europäischen Reiseinformations- und ‑genehmigungssystems (ETIAS), in Kraft seit 15. Juni 2025 (AS 2025 349; BBl 2022 1449).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BB vom 16. Dez. 2022 über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnungen (EU) 2021/1150 und 2021/1152 zur Festlegung der Bedingungen für den Zugang zu anderen EU Informationssystemen für die Zwecke des Europäischen Reiseinformations- und ‑genehmigungssystems (ETIAS), in Kraft seit 15. Juni 2025 (AS <b>2025</b> 349; BBl <b>2022</b> 1449).",
      "links": [
       {
-       "label": "AS 2025 349",
+       "label": "AS <b>2025</b> 349",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/349"
       },
       {
-       "label": "BBl 2022 1449",
+       "label": "BBl <b>2022</b> 1449",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1449"
       }
      ],
@@ -522,10 +567,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 142.20",
+     "text": "SR <b>142.20</b>",
      "links": [
       {
-       "label": "SR 142.20",
+       "label": "SR <b>142.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
@@ -534,14 +579,14 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Fassung gemäss Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -627,14 +672,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4085; BBl 2018 4713).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4085; BBl <b>2018</b> 4713).",
      "links": [
       {
-       "label": "AS 2020 4085",
+       "label": "AS <b>2020</b> 4085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/748"
       },
       {
-       "label": "BBl 2018 4713",
+       "label": "BBl <b>2018</b> 4713",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1660"
       }
      ],
@@ -675,10 +720,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4937"
       }
      ],
@@ -687,10 +732,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 711",
+     "text": "SR <b>711</b>",
      "links": [
       {
-       "label": "SR 711",
+       "label": "SR <b>711</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
       }
      ],
@@ -716,10 +761,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -728,19 +773,20 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Febr. 2008 (AS 2008 5207; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Febr. 2008 (AS <b>2008</b> 5207; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Beschwerde"
     }
    ]
   },
@@ -761,14 +807,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Aufgehoben durch Anhang Ziff. 1 des Hochschulförderungs- und -koordinationsgesetzes vom 30. Sept. 2011, mit Wirkung seit 1. Jan. 2015 (AS 2014 4103; BBl 2009 4561).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 des Hochschulförderungs- und -koordinationsgesetzes vom 30. Sept. 2011, mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4103; BBl <b>2009</b> 4561).",
      "links": [
       {
-       "label": "AS 2014 4103",
+       "label": "AS <b>2014</b> 4103",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/691"
       },
       {
-       "label": "BBl 2009 4561",
+       "label": "BBl <b>2009</b> 4561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/812"
       }
      ],
@@ -777,18 +823,18 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I 3 des BG vom 16. März 2012 über den zweiten Schritt der Bahnreform 2, in Kraft seit 1. Juli 2013 (AS 2012 5619, 2013 1603; BBl 2011 911)",
+     "text": "Fassung gemäss Ziff. I 3 des BG vom 16. März 2012 über den zweiten Schritt der Bahnreform 2, in Kraft seit 1. Juli 2013 (AS <b>2012</b> 5619, <b>2013</b> 1603; BBl <b>2011</b> 911)",
      "links": [
       {
-       "label": "AS 2012 5619",
+       "label": "AS <b>2012</b> 5619",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/656"
       },
       {
-       "label": "2013 1603",
+       "label": "<b>2013</b> 1603",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/375"
       },
       {
-       "label": "BBl 2011 911",
+       "label": "BBl <b>2011</b> 911",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/131"
       }
      ],
@@ -797,14 +843,14 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2014, in Kraft seit 1. Juli 2016 (AS 2016 2131; BBl 2013 4975).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2014, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 2131; BBl <b>2013</b> 4975).",
      "links": [
       {
-       "label": "AS 2016 2131",
+       "label": "AS <b>2016</b> 2131",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/345"
       },
       {
-       "label": "BBl 2013 4975",
+       "label": "BBl <b>2013</b> 4975",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/944"
       }
      ],
@@ -813,14 +859,14 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2020, in Kraft seit 1. März 2021 (AS 2021 68; BBl 2020 3681).",
+     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2020, in Kraft seit 1. März 2021 (AS <b>2021</b> 68; BBl <b>2020</b> 3681).",
      "links": [
       {
-       "label": "AS 2021 68",
+       "label": "AS <b>2021</b> 68",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/68"
       },
       {
-       "label": "BBl 2020 3681",
+       "label": "BBl <b>2020</b> 3681",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/866"
       }
      ],
@@ -846,14 +892,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Febr. 2008 (AS 2008 5207; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Febr. 2008 (AS <b>2008</b> 5207; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -862,10 +908,10 @@
     },
     {
      "nr": "30",
-     "text": "SR 951.11",
+     "text": "SR <b>951.11</b>",
      "links": [
       {
-       "label": "SR 951.11",
+       "label": "SR <b>951.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11504"
       }
      ],
@@ -874,10 +920,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
@@ -886,22 +932,22 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen (AS 2011 275; BBl 2010 3309). Fassung gemäss Art. 31 Abs. 2 Ziff. 1 des BG vom 18. Dez. 2015 über die Sperrung und die Rückerstattung unrechtmässig erworbener Vermögenswerte ausländischer politisch exponierter Personen, in Kraft seit 1. Juli 2016 (AS 2016 1803; BBl 2014 5265).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen (AS <b>2011</b> 275; BBl <b>2010</b> 3309). Fassung gemäss Art. 31 Abs. 2 Ziff. 1 des BG vom 18. Dez. 2015 über die Sperrung und die Rückerstattung unrechtmässig erworbener Vermögenswerte ausländischer politisch exponierter Personen, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1803; BBl <b>2014</b> 5265).",
      "links": [
       {
-       "label": "AS 2011 275",
+       "label": "AS <b>2011</b> 275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/38"
       },
       {
-       "label": "BBl 2010 3309",
+       "label": "BBl <b>2010</b> 3309",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/596"
       },
       {
-       "label": "AS 2016 1803",
+       "label": "AS <b>2016</b> 1803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/322"
       },
       {
-       "label": "BBl 2014 5265",
+       "label": "BBl <b>2014</b> 5265",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1134"
       }
      ],
@@ -910,10 +956,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 196.1",
+     "text": "SR <b>196.1</b>",
      "links": [
       {
-       "label": "SR 196.1",
+       "label": "SR <b>196.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5693"
       }
      ],
@@ -922,26 +968,26 @@
     },
     {
      "nr": "34",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 23. Dez. 2011 (AS 2012 3745; BBl 2007 5037, 2010 7841). Fassung gemäss Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 23. Dez. 2011 (AS <b>2012</b> 3745; BBl <b>2007</b> 5037, <b>2010</b> 7841). Fassung gemäss Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2012 3745",
+       "label": "AS <b>2012</b> 3745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/428"
       },
       {
-       "label": "BBl 2007 5037",
+       "label": "BBl <b>2007</b> 5037",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/729"
       },
       {
-       "label": "2010 7841",
+       "label": "<b>2010</b> 7841",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1444"
       },
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -950,10 +996,10 @@
     },
     {
      "nr": "35",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
@@ -962,14 +1008,14 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
@@ -978,14 +1024,14 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Art. 3 des BG vom 20. Dez. 2024 über das Verbot der Hamas sowie verwandter Organisationen, in Kraft seit 15. Mai 2025 (AS 2025 269; BBl 2024 2250).",
+     "text": "Eingefügt durch Art. 3 des BG vom 20. Dez. 2024 über das Verbot der Hamas sowie verwandter Organisationen, in Kraft seit 15. Mai 2025 (AS <b>2025</b> 269; BBl <b>2024</b> 2250).",
      "links": [
       {
-       "label": "AS 2025 269",
+       "label": "AS <b>2025</b> 269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/269"
       },
       {
-       "label": "BBl 2024 2250",
+       "label": "BBl <b>2024</b> 2250",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/2250"
       }
      ],
@@ -994,10 +1040,10 @@
     },
     {
      "nr": "38",
-     "text": "SR 122.1",
+     "text": "SR <b>122.1</b>",
      "links": [
       {
-       "label": "SR 122.1",
+       "label": "SR <b>122.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40277"
       }
      ],
@@ -1006,14 +1052,14 @@
     },
     {
      "nr": "39",
-     "text": "Eingefügt durch Art. 26 Ziff. 2 des BG vom 17. Juni 2011 über das Eidgenössische Institut für Metrologie, in Kraft seit 1. Jan. 2013 (AS 2011 6515; BBl 2010 8013).",
+     "text": "Eingefügt durch Art. 26 Ziff. 2 des BG vom 17. Juni 2011 über das Eidgenössische Institut für Metrologie, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 6515; BBl <b>2010</b> 8013).",
      "links": [
       {
-       "label": "AS 2011 6515",
+       "label": "AS <b>2011</b> 6515",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/902"
       },
       {
-       "label": "BBl 2010 8013",
+       "label": "BBl <b>2010</b> 8013",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1470"
       }
      ],
@@ -1022,10 +1068,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 941.27",
+     "text": "SR <b>941.27</b>",
      "links": [
       {
-       "label": "SR 941.27",
+       "label": "SR <b>941.27</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11204"
       }
      ],
@@ -1034,14 +1080,14 @@
     },
     {
      "nr": "41",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -1050,10 +1096,10 @@
     },
     {
      "nr": "42",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5919"
       }
      ],
@@ -1062,18 +1108,18 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2019 (AS 2017 2745, 2018 3575; BBl 2013 1).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 2745, <b>2018</b> 3575; BBl <b>2013</b> 1).",
      "links": [
       {
-       "label": "AS 2017 2745",
+       "label": "AS <b>2017</b> 2745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/280"
       },
       {
-       "label": "2018 3575",
+       "label": "<b>2018</b> 3575",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/587"
       },
       {
-       "label": "BBl 2013 1",
+       "label": "BBl <b>2013</b> 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1"
       }
      ],
@@ -1082,10 +1128,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
       }
      ],
@@ -1094,14 +1140,14 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Ausgleichsfondsgesetzes vom 16. Juni 2017, in Kraft seit 1. Jan. 2019 (AS 2017 7563; BBl 2016 311).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Ausgleichsfondsgesetzes vom 16. Juni 2017, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 7563; BBl <b>2016</b> 311).",
      "links": [
       {
-       "label": "AS 2017 7563",
+       "label": "AS <b>2017</b> 7563",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/820"
       },
       {
-       "label": "BBl 2016 311",
+       "label": "BBl <b>2016</b> 311",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/68"
       }
      ],
@@ -1110,10 +1156,10 @@
     },
     {
      "nr": "46",
-     "text": "SR 830.2",
+     "text": "SR <b>830.2</b>",
      "links": [
       {
-       "label": "SR 830.2",
+       "label": "SR <b>830.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9996"
       }
      ],
@@ -1122,14 +1168,14 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Art. 23 Abs. 2 des BG vom 28. Sept. 2018 über das Schweizerische Institut für Rechtsvergleichung, in Kraft seit 1. Jan. 2020 (AS 2019 3199; BBl 2018 913).",
+     "text": "Eingefügt durch Art. 23 Abs. 2 des BG vom 28. Sept. 2018 über das Schweizerische Institut für Rechtsvergleichung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 3199; BBl <b>2018 </b>913).",
      "links": [
       {
-       "label": "AS 2019 3199",
+       "label": "AS <b>2019</b> 3199",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/586"
       },
       {
-       "label": "BBl 2018 913",
+       "label": "BBl <b>2018 </b>913",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/336"
       }
      ],
@@ -1138,10 +1184,10 @@
     },
     {
      "nr": "48",
-     "text": "SR 425.1",
+     "text": "SR <b>425.1</b>",
      "links": [
       {
-       "label": "SR 425.1",
+       "label": "SR <b>425.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6906"
       }
      ],
@@ -1150,14 +1196,14 @@
     },
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2018 über die Organisation der Bahninfrastruktur, in Kraft seit 1. Juli 2020 (AS 2020 1889; BBl 2016 8661).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2018 über die Organisation der Bahninfrastruktur, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 1889; BBl <b>2016</b> 8661).",
      "links": [
       {
-       "label": "AS 2020 1889",
+       "label": "AS <b>2020</b> 1889",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/393"
       },
       {
-       "label": "BBl 2016 8661",
+       "label": "BBl <b>2016</b> 8661",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2093"
       }
      ],
@@ -1166,10 +1212,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 742.101",
+     "text": "SR <b>742.101</b>",
      "links": [
       {
-       "label": "SR 742.101",
+       "label": "SR <b>742.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8719"
       }
      ],
@@ -1178,18 +1224,18 @@
     },
     {
      "nr": "51",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 20. März 2009 über das Bundespatentgericht, in Kraft seit 1. Jan. 2012 (AS 2010 513, 2011 2241; BBl 2008 455).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 20. März 2009 über das Bundespatentgericht, in Kraft seit 1. Jan. 2012 (AS <b>2010</b> 513, <b>2011</b> 2241; BBl <b>2008</b> 455).",
      "links": [
       {
-       "label": "AS 2010 513",
+       "label": "AS <b>2010</b> 513",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/72"
       },
       {
-       "label": "2011 2241",
+       "label": "<b>2011</b> 2241",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/306"
       },
       {
-       "label": "BBl 2008 455",
+       "label": "BBl <b>2008</b> 455",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/145"
       }
      ],
@@ -1198,22 +1244,22 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS 2010 3267; BBl 2008 8125). Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 1. Nov. 2015 (AS 2015 3847; BBl 2015 2211 2235).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125). Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 1. Nov. 2015 (AS <b>2015</b> 3847; BBl <b>2015</b> 2211 2235).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       },
       {
-       "label": "AS 2015 3847",
+       "label": "AS <b>2015</b> 3847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/651"
       },
       {
-       "label": "BBl 2015 2211",
+       "label": "BBl <b>2015</b> 2211",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/421"
       },
       {
@@ -1226,14 +1272,14 @@
     },
     {
      "nr": "53",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -1242,14 +1288,14 @@
     },
     {
      "nr": "54",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008</b> 8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008</b> 8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -1273,14 +1319,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Aufgehoben durch Ziff. II des BG vom 21. Dez. 2007 (Spitalfinanzierung), mit Wirkung seit 1. Jan. 2009 (AS 2008 2049; BBl 2004 5551).",
+     "text": "Aufgehoben durch Ziff. II des BG vom 21. Dez. 2007 (Spitalfinanzierung), mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 2049; BBl <b>2004</b> 5551).",
      "links": [
       {
-       "label": "AS 2008 2049",
+       "label": "AS <b>2008</b> 2049",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/291"
       },
       {
-       "label": "BBl 2004 5551",
+       "label": "BBl <b>2004</b> 5551",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1024"
       }
      ],
@@ -1306,14 +1352,14 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 15 des Datenschutzgesetzes vom 25. Sept. 2020, mit Wirkung seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 15 des Datenschutzgesetzes vom 25. Sept. 2020, mit Wirkung seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1322,22 +1368,22 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen (AS 2011 275; BBl 2010 3309). Fassung gemäss Art. 31 Abs. 2 Ziff. 1 des BG vom 18. Dez. 2015 über die Sperrung und die Rückerstattung unrechtmässig erworbener Vermögenswerte ausländischer politisch exponierter Personen, in Kraft seit 1. Juli 2016 (AS 2016 1803; BBl 2014 5265).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen (AS <b>2011</b> 275; BBl <b>2010</b> 3309). Fassung gemäss Art. 31 Abs. 2 Ziff. 1 des BG vom 18. Dez. 2015 über die Sperrung und die Rückerstattung unrechtmässig erworbener Vermögenswerte ausländischer politisch exponierter Personen, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1803; BBl <b>2014</b> 5265).",
      "links": [
       {
-       "label": "AS 2011 275",
+       "label": "AS <b>2011</b> 275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/38"
       },
       {
-       "label": "BBl 2010 3309",
+       "label": "BBl <b>2010</b> 3309",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/596"
       },
       {
-       "label": "AS 2016 1803",
+       "label": "AS <b>2016</b> 1803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/322"
       },
       {
-       "label": "BBl 2014 5265",
+       "label": "BBl <b>2014</b> 5265",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1134"
       }
      ],
@@ -1346,10 +1392,10 @@
     },
     {
      "nr": "59",
-     "text": "SR 196.1",
+     "text": "SR <b>196.1</b>",
      "links": [
       {
-       "label": "SR 196.1",
+       "label": "SR <b>196.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5693"
       }
      ],
@@ -1358,19 +1404,20 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Klage"
     }
    ]
   },
@@ -1406,10 +1453,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -1435,10 +1482,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
@@ -1479,10 +1526,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "SR 0.101",
+     "text": "SR <b>0.101</b>",
      "links": [
       {
-       "label": "SR 0.101",
+       "label": "SR <b>0.101</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3"
       }
      ],
@@ -1558,10 +1605,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "SR 273",
+     "text": "SR <b>273</b>",
      "links": [
       {
-       "label": "SR 273",
+       "label": "SR <b>273</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
@@ -1570,10 +1617,10 @@
     },
     {
      "nr": "68",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -1582,14 +1629,14 @@
     },
     {
      "nr": "69",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen, in Kraft seit 1. Febr. 2011 (AS 2011 275; BBl 2010 3309).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 1. Okt. 2010 über die Rückerstattung unrechtmässig erworbener Vermögenswerte politisch exponierter Personen, in Kraft seit 1. Febr. 2011 (AS <b>2011</b> 275; BBl <b>2010</b> 3309).",
      "links": [
       {
-       "label": "AS 2011 275",
+       "label": "AS <b>2011</b> 275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/38"
       },
       {
-       "label": "BBl 2010 3309",
+       "label": "BBl <b>2010</b> 3309",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/596"
       }
      ],
@@ -1615,10 +1662,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
@@ -1659,10 +1706,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -1686,10 +1733,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
@@ -1722,10 +1769,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "SR 631.0. Die hiernach aufgeführte Änd. ist eingefügt im genannten BG.",
+     "text": "SR <b>631.0</b>. Die hiernach aufgeführte Änd. ist eingefügt im genannten BG.",
      "links": [
       {
-       "label": "SR 631.0",
+       "label": "SR <b>631.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7812"
       }
      ],
@@ -1734,10 +1781,10 @@
     },
     {
      "nr": "74",
-     "text": "Die Änderungen können unter AS 2006 2197 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2006</b> 2197 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       }
      ],
@@ -1759,10 +1806,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "SR 362",
+     "text": "SR <b>362</b>",
      "links": [
       {
-       "label": "SR 362",
+       "label": "SR <b>362</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6313"
       }
      ],
@@ -1771,10 +1818,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 642.11. Die hiernach aufgeführte Änd. ist eingefügt im genannten Erlass.",
+     "text": "SR <b>642.11</b>. Die hiernach aufgeführte Änd. ist eingefügt im genannten Erlass.",
      "links": [
       {
-       "label": "SR 642.11",
+       "label": "SR <b>642.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8175"
       }
      ],
@@ -1783,10 +1830,10 @@
     },
     {
      "nr": "77",
-     "text": "Die Änderungen können unter AS 2006 2197 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2006</b> 2197 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       }
      ],
@@ -1808,10 +1855,10 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "SR 961.01. Die hiernach aufgeführte Änd. ist eingefügt im genannten Erlass.",
+     "text": "SR <b>961.01</b>. Die hiernach aufgeführte Änd. ist eingefügt im genannten Erlass.",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11633"
       }
      ],
@@ -1820,10 +1867,10 @@
     },
     {
      "nr": "79",
-     "text": "Die Änderungen können unter AS 2006 2197 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2006</b> 2197 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       }
      ],
@@ -1856,10 +1903,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Art. 1 Bst. b der V vom 1. März 2006 (AS 2006 1069).",
+     "text": "Art. 1 Bst. b der V vom 1. März 2006 (AS <b>2006</b> 1069).",
      "links": [
       {
-       "label": "AS 2006 1069",
+       "label": "AS <b>2006</b> 1069",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       }
      ],
@@ -1885,14 +1932,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 23. Juni 2006 über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4213; BBl 2006 3067).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 23. Juni 2006 über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4213; BBl <b>2006</b> 3067).",
      "links": [
       {
-       "label": "AS 2006 4213",
+       "label": "AS <b>2006</b> 4213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/634"
       },
       {
-       "label": "BBl 2006 3067",
+       "label": "BBl <b>2006</b> 3067",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/334"
       }
      ],
@@ -1901,10 +1948,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
@@ -1930,14 +1977,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur), in Kraft seit 1. April 2012 (AS 2012 941; BBl 2009 8513).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur), in Kraft seit 1. April 2012 (AS <b>2012</b> 941; BBl <b>2009</b> 8513).",
      "links": [
       {
-       "label": "AS 2012 941",
+       "label": "AS <b>2012</b> 941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/159"
       },
       {
-       "label": "BBl 2009 8513",
+       "label": "BBl <b>2009</b> 8513",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1469"
       }
      ],
@@ -1946,10 +1993,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -1973,19 +2020,20 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207; BBl 2006 2829).",
+     "text": "Eingefügt durch Anhang Ziff. 4 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Meinungsverschiedenheiten in der innerstaatlichen Amts- und Rechtshilfe"
     }
    ]
   },
@@ -2004,10 +2052,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
@@ -2016,19 +2064,20 @@
     },
     {
      "nr": "61",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS 2017 4095; BBl 2014 2105).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
-       "label": "AS 2017 4095",
+       "label": "AS <b>2017</b> 4095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/494"
       },
       {
-       "label": "BBl 2014 2105",
+       "label": "BBl <b>2014</b> 2105",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Genehmigung von Beschaffungsmassnahmen des Nachrichtendienstes"
     }
    ]
   }

@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "642.211",
+  "titel": "Verordnung über die Verrechnungssteuer",
+  "erlassdatum": "vom 19. Dezember 1966 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 73 Absatz 1 des Verrechnungssteuergesetzes vom 13. Oktober 1965 (VStG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 3471).",
+    "links": [
+     {
+      "label": "AS <b>2009</b> 3471",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>642.21</b>",
+    "links": [
+     {
+      "label": "SR <b>642.21</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1966/371_385_384"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307).",
+    "links": [
+     {
+      "label": "AS <b>2022</b> 307",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,10 +75,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS 2022 307).",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307).",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -30,10 +87,10 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. II 46 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "text": "Eingefügt durch Ziff. II 46 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
-       "label": "AS 2006 4705",
+       "label": "AS <b>2006</b> 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
      ],
@@ -60,10 +117,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Ausdruck gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS 2022 307). Diese Änd. wurde im ganzen Text berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307). Diese Änd. wurde im ganzen Text berücksichtigt.",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -72,10 +129,10 @@
     },
     {
      "nr": "7",
-     "text": "Ausdruck gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS 2022 307). Diese Änd. wurde im ganzen Text berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307). Diese Änd. wurde im ganzen Text berücksichtigt.",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -150,10 +207,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -213,10 +270,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -244,10 +301,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 611.01",
+     "text": "SR <b>611.01</b>",
      "links": [
       {
-       "label": "SR 611.01",
+       "label": "SR <b>611.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/228"
       }
      ],
@@ -256,10 +313,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -268,10 +325,10 @@
     },
     {
      "nr": "12",
-     "text": "Aufgehoben durch Anhang 3 Ziff. 14 der V vom 3. Febr. 1993 über Organisation und Verfahren eidgenössischer Rekurs- und Schiedskommissionen, mit Wirkung seit 1. Jan. 1994 (AS 1993 879).",
+     "text": "Aufgehoben durch Anhang 3 Ziff. 14 der V vom 3. Febr. 1993 über Organisation und Verfahren eidgenössischer Rekurs- und Schiedskommissionen, mit Wirkung seit 1. Jan. 1994 (AS <b>1993</b> 879).",
      "links": [
       {
-       "label": "AS 1993 879",
+       "label": "AS <b>1993</b> 879",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/879_879_879"
       }
      ],
@@ -298,10 +355,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "SR 221.411",
+     "text": "SR <b>221.411</b>",
      "links": [
       {
-       "label": "SR 221.411",
+       "label": "SR <b>221.411</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/686"
       }
      ],
@@ -310,10 +367,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -339,10 +396,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -388,10 +445,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Nov. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2994). Siehe die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Nov. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 2994). Siehe die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -442,10 +499,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS 2009 3471).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 3471).",
      "links": [
       {
-       "label": "AS 2009 3471",
+       "label": "AS <b>2009</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
       }
      ],
@@ -475,10 +532,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. II der V vom 15. Febr. 2012, in Kraft seit 1. März 2012 (AS 2012 791).",
+     "text": "Fassung gemäss Ziff. II der V vom 15. Febr. 2012, in Kraft seit 1. März 2012 (AS <b>2012</b> 791).",
      "links": [
       {
-       "label": "AS 2012 791",
+       "label": "AS <b>2012</b> 791",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/119"
       }
      ],
@@ -529,10 +586,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -541,10 +598,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. II der V vom 15. Febr. 2012, in Kraft seit 1. März 2012 (AS 2012 791).",
+     "text": "Fassung gemäss Ziff. II der V vom 15. Febr. 2012, in Kraft seit 1. März 2012 (AS <b>2012</b> 791).",
      "links": [
       {
-       "label": "AS 2012 791",
+       "label": "AS <b>2012</b> 791",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/119"
       }
      ],
@@ -574,10 +631,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -586,10 +643,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -598,10 +655,10 @@
     },
     {
      "nr": "27",
-     "text": "Aufgehoben durch Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, mit Wirkung seit 1. Jan. 2023 (AS 2022 307).",
+     "text": "Aufgehoben durch Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 307).",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -610,15 +667,16 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "B. Steuer auf dem Ertrag von Aktien, Stammanteilen an Gesellschaften mit beschränkter Haftung, Genossenschaftsanteilen, Beteiligungsscheinen von Genossenschaftsbanken und Genussscheinen"
     }
    ]
   },
@@ -645,10 +703,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 642.11",
+     "text": "SR <b>642.11</b>",
      "links": [
       {
-       "label": "SR 642.11",
+       "label": "SR <b>642.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
       }
      ],
@@ -657,10 +715,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 642.14",
+     "text": "SR <b>642.14</b>",
      "links": [
       {
-       "label": "SR 642.14",
+       "label": "SR <b>642.14</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/1256_1256_1256"
       }
      ],
@@ -669,10 +727,10 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -681,10 +739,10 @@
     },
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -716,10 +774,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -728,10 +786,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -762,10 +820,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -774,10 +832,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -786,10 +844,10 @@
     },
     {
      "nr": "36",
-     "text": "Aufgehoben durch Ziff. I 2 der V vom 15. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Aufgehoben durch Ziff. I 2 der V vom 15. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -840,15 +898,16 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Gesuch; Bewilligung"
     }
    ]
   },
@@ -874,15 +933,16 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Meldung; nachträgliche Einforderung der Steuer"
     }
    ]
   },
@@ -927,10 +987,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -939,10 +999,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -951,10 +1011,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -963,15 +1023,16 @@
     },
     {
      "nr": "43",
-     "text": "Ausdruck gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5073). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008 </b>5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "C. Steuer auf dem Ertrag von Anteilen an kollektiven Kapitalanlagen"
     }
    ]
   },
@@ -1017,10 +1078,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Aufgehoben durch Ziff. I 2 der V vom 15. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Aufgehoben durch Ziff. I 2 der V vom 15. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1029,15 +1090,16 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Fondsleitung und Depotbank"
     }
    ]
   },
@@ -1062,10 +1124,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1074,10 +1136,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1086,10 +1148,10 @@
     },
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1098,10 +1160,10 @@
     },
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1132,10 +1194,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1144,10 +1206,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1156,10 +1218,10 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1190,10 +1252,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang 1 Ziff. 9 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 9 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -1224,10 +1286,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1236,15 +1298,16 @@
     },
     {
      "nr": "57",
-     "text": "Ausdruck gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "IV. Nichterhebung der Steuer gegen Domizilerklärung"
     }
    ]
   },
@@ -1291,10 +1354,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1303,10 +1366,10 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -1315,10 +1378,10 @@
     },
     {
      "nr": "61",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1327,10 +1390,10 @@
     },
     {
      "nr": "62",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -1339,10 +1402,10 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4633).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 5 der Finanzinstitutsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4633).",
      "links": [
       {
-       "label": "AS 2019 4633",
+       "label": "AS <b>2019</b> 4633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/763"
       }
      ],
@@ -1351,10 +1414,10 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1363,10 +1426,10 @@
     },
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1375,10 +1438,10 @@
     },
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1387,10 +1450,10 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1399,10 +1462,10 @@
     },
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1434,10 +1497,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -1485,10 +1548,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -1497,10 +1560,10 @@
     },
     {
      "nr": "75",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -1509,10 +1572,10 @@
     },
     {
      "nr": "76",
-     "text": "Aufgehoben durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Aufgehoben durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -1521,15 +1584,16 @@
     },
     {
      "nr": "73",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "a. Geldgewinne"
     }
    ]
   },
@@ -1730,10 +1794,10 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Aufgehoben durch Ziff. I der V vom 3. Febr. 2021, mit Wirkung seit 1. Jan. 2022 (AS 2021 77).",
+     "text": "Aufgehoben durch Ziff. I der V vom 3. Febr. 2021, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 77).",
      "links": [
       {
-       "label": "AS 2021 77",
+       "label": "AS <b>2021</b> 77",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
       }
      ],
@@ -1776,10 +1840,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS 2009 3471).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 3471).",
      "links": [
       {
-       "label": "AS 2009 3471",
+       "label": "AS <b>2009</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
       }
      ],
@@ -1788,10 +1852,10 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS 2009 3471).",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Juni 2009, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 3471).",
      "links": [
       {
-       "label": "AS 2009 3471",
+       "label": "AS <b>2009</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/427"
       }
      ],
@@ -1818,10 +1882,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -1830,10 +1894,10 @@
     },
     {
      "nr": "86",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -1860,10 +1924,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1890,10 +1954,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -1921,10 +1985,10 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS 2023 305).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Sept. 2023 (AS <b>2023</b> 305).",
      "links": [
       {
-       "label": "AS 2023 305",
+       "label": "AS <b>2023</b> 305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
       }
      ],
@@ -1933,10 +1997,10 @@
     },
     {
      "nr": "90",
-     "text": "Ausdruck gemäss Ziff. I der V vom 3. Febr. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 77).",
+     "text": "Ausdruck gemäss Ziff. I der V vom 3. Febr. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 77).",
      "links": [
       {
-       "label": "AS 2021 77",
+       "label": "AS <b>2021</b> 77",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
       }
      ],
@@ -1964,10 +2028,10 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Febr. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 77).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Febr. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 77).",
      "links": [
       {
-       "label": "AS 2021 77",
+       "label": "AS <b>2021</b> 77",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/77"
       }
      ],
@@ -1994,10 +2058,10 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2006,15 +2070,16 @@
     },
     {
      "nr": "92",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Mehrheit von Anspruchsberechtigten (Investment- Klub, Geldspiele, Lotterien und Geschicklichkeitsspiele zur Verkaufsförderung, Versicherungsleistung)"
     }
    ]
   },
@@ -2098,10 +2163,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Nov. 2000, mit Wirkung seit 1.Jan. 2001 (AS 2000 2994).",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Nov. 2000, mit Wirkung seit 1.Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -2110,15 +2175,16 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Voraussetzungen und Verfahren"
     }
    ]
   },
@@ -2140,10 +2206,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Fassung gemäss Ziff. II 46 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "text": "Fassung gemäss Ziff. II 46 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
-       "label": "AS 2006 4705",
+       "label": "AS <b>2006</b> 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
      ],
@@ -2186,10 +2252,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2216,10 +2282,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Aufgehoben durch Anhang Ziff. 4 der V vom 14. Aug. 2013 über die zeitliche Bemessung der direkten Bundessteuer, mit Wirkung seit 1. Jan. 2014 (AS 2013 2773).",
+     "text": "Aufgehoben durch Anhang Ziff. 4 der V vom 14. Aug. 2013 über die zeitliche Bemessung der direkten Bundessteuer, mit Wirkung seit 1. Jan. 2014 (AS <b>2013</b> 2773).",
      "links": [
       {
-       "label": "AS 2013 2773",
+       "label": "AS <b>2013</b> 2773",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/569"
       }
      ],
@@ -2241,31 +2307,31 @@
    "fussnoten": [
     {
      "nr": "100",
-     "text": "BS 6 338]",
+     "text": "BS <b>6</b> 338]",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
      "nr": "101",
-     "text": "[BS 6 341]",
+     "text": "[BS <b>6</b> 341]",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
      "nr": "102",
-     "text": "[BS 6 343]",
+     "text": "[BS <b>6</b> 343]",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
      "nr": "103",
-     "text": "[AS 1951 1274]",
+     "text": "[AS <b>1951</b> 1274]",
      "links": [
       {
-       "label": "AS 1951 1274",
+       "label": "AS <b>1951</b> 1274",
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1274_1282_1314"
       }
      ],
@@ -2274,7 +2340,7 @@
     },
     {
      "nr": "104",
-     "text": "[BS 6 348]",
+     "text": "[BS <b>6</b> 348]",
      "links": [],
      "absatz": "2",
      "item": null
@@ -2303,10 +2369,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 18. Juni 2010, in Kraft seit 1. Aug. 2010 (AS 2010 2963).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 18. Juni 2010, in Kraft seit 1. Aug. 2010 (AS <b>2010</b> 2963).",
      "links": [
       {
-       "label": "AS 2010 2963",
+       "label": "AS <b>2010</b> 2963",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/394"
       }
      ],
@@ -2315,10 +2381,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2017, in Kraft seit 1. April 2017 (AS 2017 775).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2017, in Kraft seit 1. April 2017 (AS <b>2017</b> 775).",
      "links": [
       {
-       "label": "AS 2017 775",
+       "label": "AS <b>2017</b> 775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/148"
       }
      ],
@@ -2327,10 +2393,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2017, in Kraft seit 1. April 2017 (AS 2017 775).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2017, in Kraft seit 1. April 2017 (AS <b>2017</b> 775).",
      "links": [
       {
-       "label": "AS 2017 775",
+       "label": "AS <b>2017</b> 775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/148"
       }
      ],
@@ -2361,10 +2427,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994). Siehe dazu die SchlB am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994). Siehe dazu die SchlB am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -2395,10 +2461,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],
@@ -2407,10 +2473,10 @@
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS 2022 307). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -2419,10 +2485,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS 2022 307). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 4. Mai 2022 über das Meldeverfahren im Konzern bei der Verrechnungssteuer, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 307). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2022 307",
+       "label": "AS <b>2022</b> 307",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/307"
       }
      ],
@@ -2452,10 +2518,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5073).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 15. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5073).",
      "links": [
       {
-       "label": "AS 2008 5073",
+       "label": "AS <b>2008</b> 5073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/703"
       }
      ],
@@ -2481,10 +2547,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Aufgehoben durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Aufgehoben durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2493,15 +2559,16 @@
     },
     {
      "nr": "71",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Fassung gemäss Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Dritter Abschnitt: Steuer auf Gewinnen aus Geldspielen sowie Lotterien und Geschicklichkeitsspielen zur Verkaufsförderung (Art. 6 VStG)"
     }
    ]
   },
@@ -2524,10 +2591,10 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2555,10 +2622,10 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2586,10 +2653,10 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
      "links": [
       {
-       "label": "AS 2018 5155",
+       "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
       }
      ],
@@ -2616,10 +2683,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2994).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2994).",
      "links": [
       {
-       "label": "AS 2000 2994",
+       "label": "AS <b>2000</b> 2994",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/542"
       }
      ],

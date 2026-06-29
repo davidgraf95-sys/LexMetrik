@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "818.101",
+  "titel": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen",
+  "erlassdatum": "vom 28. September 2012 (Stand am 1. August 2025)",
+  "praeambel": [
+   {
+    "rolle": "ingress",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 40 Absatz 2, 118 Absatz 2 Buchstabe b, 119 Absatz 2 und 120 Absatz 2 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 3. Dezember 2010,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2011</b> 311",
+    "links": [
+     {
+      "label": "BBl <b>2011</b> 311",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2011/43"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -203,10 +248,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -260,14 +305,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Anhang Ziff. 6 des BG vom 29. Sept. 2023, in Kraft seit 1. Aug. 2025 (AS 2025 421; BBl 2023 721).",
+     "text": "Eingefügt durch Anhang Ziff. 6 des BG vom 29. Sept. 2023, in Kraft seit 1. Aug. 2025 (AS <b>2025</b> 421; BBl <b>2023</b> 721).",
      "links": [
       {
-       "label": "AS 2025 421",
+       "label": "AS <b>2025</b> 421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/421"
       },
       {
-       "label": "BBl 2023 721",
+       "label": "BBl <b>2023</b> 721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/721"
       }
      ],
@@ -338,10 +383,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 0.818.103",
+     "text": "SR <b>0.818.103</b>",
      "links": [
       {
-       "label": "SR 0.818.103",
+       "label": "SR <b>0.818.103</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/343"
       }
      ],
@@ -442,14 +487,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Anhang Ziff. 34 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS 2016 689; BBl 2013 3729).",
+     "text": "Fassung gemäss Anhang Ziff. 34 des BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 689; BBl <b>2013</b> 3729).",
      "links": [
       {
-       "label": "AS 2016 689",
+       "label": "AS <b>2016</b> 689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/132"
       },
       {
-       "label": "BBl 2013 3729",
+       "label": "BBl <b>2013</b> 3729",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
@@ -653,10 +698,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "SR 0.818.103",
+     "text": "SR <b>0.818.103</b>",
      "links": [
       {
-       "label": "SR 0.818.103",
+       "label": "SR <b>0.818.103</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/343"
       }
      ],
@@ -697,18 +742,18 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "[AS 1983 931; 1992 288 Anhang Ziff. 24; 1995 1018, 1794; 1996 3371 Anhang 2 Ziff. 1; 2001 1439; 2006 2197 Anhang Ziff. 48; 2010 1881 Anhang 1 Ziff. II 18; 2012 3655 Ziff. I 15. AS 2017 3097 Anhang 2 Ziff. I]. Siehe heute: das Landesversorgungsgesetz vom 17. Juni 2016 (SR 531).",
+     "text": "[AS <b>1983</b> 931; <b>1992</b> 288 Anhang Ziff. 24; <b>1995</b> 1018, 1794; <b>1996</b> 3371 Anhang 2 Ziff. 1; <b>2001</b> 1439; <b>2006</b> 2197 Anhang Ziff. 48; <b>2010</b> 1881 Anhang 1 Ziff. II 18; <b>2012</b> 3655 Ziff. I 15. AS <b>2017</b> 3097 Anhang 2 Ziff. I]. Siehe heute: das Landesversorgungsgesetz vom 17. Juni 2016 (SR <b>531</b>).",
      "links": [
       {
-       "label": "AS 1983 931",
+       "label": "AS <b>1983</b> 931",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/931_931_931"
       },
       {
-       "label": "1992 288",
+       "label": "<b>1992</b> 288",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       },
       {
-       "label": "1995 1018",
+       "label": "<b>1995</b> 1018",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1018_1018_1018"
       },
       {
@@ -716,31 +761,31 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1794_1794_1794"
       },
       {
-       "label": "1996 3371",
+       "label": "<b>1996</b> 3371",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3371_3371_3371"
       },
       {
-       "label": "2001 1439",
+       "label": "<b>2001</b> 1439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/205"
       },
       {
-       "label": "2006 2197",
+       "label": "<b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "2010 1881",
+       "label": "<b>2010</b> 1881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       },
       {
-       "label": "2012 3655",
+       "label": "<b>2012</b> 3655",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       },
       {
-       "label": "AS 2017 3097",
+       "label": "AS <b>2017</b> 3097",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/308"
       },
       {
-       "label": "SR 531",
+       "label": "SR <b>531</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/308"
       }
      ],
@@ -979,10 +1024,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -991,14 +1036,14 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1039,10 +1084,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -1051,14 +1096,14 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1067,14 +1112,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1083,14 +1128,14 @@
     },
     {
      "nr": "15",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, mit Wirkung seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, mit Wirkung seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1099,14 +1144,14 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 75 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1160,10 +1205,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1280,10 +1325,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
       }
      ],
@@ -1292,10 +1337,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 832.20",
+     "text": "SR <b>832.20</b>",
      "links": [
       {
-       "label": "SR 832.20",
+       "label": "SR <b>832.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676"
       }
      ],
@@ -1304,10 +1349,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 833.1",
+     "text": "SR <b>833.1</b>",
      "links": [
       {
-       "label": "SR 833.1",
+       "label": "SR <b>833.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/3043_3043_3043"
       }
      ],
@@ -1419,10 +1464,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS 2020 2191, 2727; 2021 878 Ziff. III 3; BBl 2020 4461; 2021 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS 2022 817; BBl 2022 1549).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS <b>2020</b> 2191, 2727; <b>2021</b> 878 Ziff. III 3; BBl <b>2020</b> 4461; <b>2021</b> 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS <b>2022</b> 817; BBl <b>2022</b> 1549).",
      "links": [
       {
-       "label": "AS 2020 2191",
+       "label": "AS <b>2020</b> 2191",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/437"
       },
       {
@@ -1430,23 +1475,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/492"
       },
       {
-       "label": "2021 878",
+       "label": "<b>2021</b> 878",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/878"
       },
       {
-       "label": "BBl 2020 4461",
+       "label": "BBl <b>2020</b> 4461",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
       },
       {
-       "label": "2021 2515",
+       "label": "<b>2021</b> 2515",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2515"
       },
       {
-       "label": "AS 2022 817",
+       "label": "AS <b>2022</b> 817",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/817"
       },
       {
-       "label": "BBl 2022 1549",
+       "label": "BBl <b>2022</b> 1549",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1549"
       }
      ],
@@ -1455,10 +1500,10 @@
     },
     {
      "nr": "23",
-     "text": "SR 0.818.103",
+     "text": "SR <b>0.818.103</b>",
      "links": [
       {
-       "label": "SR 0.818.103",
+       "label": "SR <b>0.818.103</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/343"
       }
      ],
@@ -1495,10 +1540,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1520,10 +1565,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS 2020 2191, 2727; 2021 878 Ziff. III 3; BBl 2020 4461; 2021 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS 2022 817; BBl 2022 1549).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS <b>2020</b> 2191, 2727; <b>2021</b> 878 Ziff. III 3; BBl <b>2020</b> 4461; <b>2021</b> 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS <b>2022</b> 817; BBl <b>2022</b> 1549).",
      "links": [
       {
-       "label": "AS 2020 2191",
+       "label": "AS <b>2020</b> 2191",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/437"
       },
       {
@@ -1531,23 +1576,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/492"
       },
       {
-       "label": "2021 878",
+       "label": "<b>2021</b> 878",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/878"
       },
       {
-       "label": "BBl 2020 4461",
+       "label": "BBl <b>2020</b> 4461",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
       },
       {
-       "label": "2021 2515",
+       "label": "<b>2021</b> 2515",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2515"
       },
       {
-       "label": "AS 2022 817",
+       "label": "AS <b>2022</b> 817",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/817"
       },
       {
-       "label": "BBl 2022 1549",
+       "label": "BBl <b>2022</b> 1549",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1549"
       }
      ],
@@ -1569,10 +1614,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -1594,46 +1639,46 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "[AS 1974 1071; 1985 1992 Ziff. I 2; 1991 362 Ziff. II 405; 1997 1155 Anhang Ziff. 5; 2000 1891 Ziff. III 2; 2001 2790 Anhang Ziff. 6; 2003 4803 Anhang Ziff. 7; 2004 4763 Anhang Ziff. II 3; 2005 2293; 2006 2197 Anhang Ziff. 95 4137; 2008 3437 Ziff. II 34; 2012 7281]",
+     "text": "[AS <b>1974</b> 1071; <b>1985</b> 1992 Ziff. I 2; <b>1991</b> 362 Ziff. II 405; <b>1997</b> 1155 Anhang Ziff. 5; <b>2000</b> 1891 Ziff. III 2; <b>2001</b> 2790 Anhang Ziff. 6; <b>2003</b> 4803 Anhang Ziff. 7; <b>2004</b> 4763 Anhang Ziff. II 3; <b>2005</b> 2293; <b>2006</b> 2197 Anhang Ziff. 95 4137; <b>2008</b> 3437 Ziff. II 34; <b>2012</b> 7281]",
      "links": [
       {
-       "label": "AS 1974 1071",
+       "label": "AS <b>1974</b> 1071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1071_1071_1071"
       },
       {
-       "label": "1985 1992",
+       "label": "<b>1985</b> 1992",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/1992_1992_1992"
       },
       {
-       "label": "1991 362",
+       "label": "<b>1991</b> 362",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
       },
       {
-       "label": "1997 1155",
+       "label": "<b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "2000 1891",
+       "label": "<b>2000</b> 1891",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/293"
       },
       {
-       "label": "2001 2790",
+       "label": "<b>2001</b> 2790",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/422"
       },
       {
-       "label": "2003 4803",
+       "label": "<b>2003</b> 4803",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/705"
       },
       {
-       "label": "2004 4763",
+       "label": "<b>2004</b> 4763",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/724"
       },
       {
-       "label": "2005 2293",
+       "label": "<b>2005</b> 2293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/388"
       },
       {
-       "label": "2006 2197",
+       "label": "<b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1641,11 +1686,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/608"
       },
       {
-       "label": "2008 3437",
+       "label": "<b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "2012 7281",
+       "label": "<b>2012</b> 7281",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/890"
       }
      ],
@@ -1654,26 +1699,26 @@
     },
     {
      "nr": "28",
-     "text": "[BS 4 363; AS 1964 965 Ziff. IV Bst. a; 1974 1071 Art. 37; 1985 1992 Ziff. I 3; 1991 362 Ziff. II 406; 2006 2197 Anhang Ziff. 96]",
+     "text": "[BS <b>4</b> 363; AS <b>1964</b> 965 Ziff. IV Bst. a; <b>1974</b> 1071 Art. 37; <b>1985</b> 1992 Ziff. I 3; <b>1991</b> 362 Ziff. II 406; <b>2006</b> 2197 Anhang Ziff. 96]",
      "links": [
       {
-       "label": "AS 1964 965",
+       "label": "AS <b>1964</b> 965",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/965_961_981"
       },
       {
-       "label": "1974 1071",
+       "label": "<b>1974</b> 1071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1071_1071_1071"
       },
       {
-       "label": "1985 1992",
+       "label": "<b>1985</b> 1992",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/1992_1992_1992"
       },
       {
-       "label": "1991 362",
+       "label": "<b>1991</b> 362",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
       },
       {
-       "label": "2006 2197",
+       "label": "<b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       }
      ],
@@ -1695,10 +1740,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Die Änderungen können unter AS 2015 1435 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2015</b> 1435 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2015 1435",
+       "label": "AS <b>2015</b> 1435",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/297"
       }
      ],
@@ -1720,14 +1765,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "AS 1997 1155; 2001 2790",
+     "text": "AS <b>1997</b> 1155; <b>2001</b> 2790",
      "links": [
       {
-       "label": "AS 1997 1155",
+       "label": "AS <b>1997</b> 1155",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1155_1155_1155"
       },
       {
-       "label": "2001 2790",
+       "label": "<b>2001</b> 2790",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/422"
       }
      ],
@@ -1771,10 +1816,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS 2020 2191, 2727; 2021 878 Ziff. III 3; BBl 2020 4461; 2021 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS 2022 817; BBl 2022 1549).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS <b>2020</b> 2191, 2727; <b>2021</b> 878 Ziff. III 3; BBl <b>2020</b> 4461; <b>2021</b> 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS <b>2022</b> 817; BBl <b>2022</b> 1549).",
      "links": [
       {
-       "label": "AS 2020 2191",
+       "label": "AS <b>2020</b> 2191",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/437"
       },
       {
@@ -1782,23 +1827,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/492"
       },
       {
-       "label": "2021 878",
+       "label": "<b>2021</b> 878",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/878"
       },
       {
-       "label": "BBl 2020 4461",
+       "label": "BBl <b>2020</b> 4461",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
       },
       {
-       "label": "2021 2515",
+       "label": "<b>2021</b> 2515",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2515"
       },
       {
-       "label": "AS 2022 817",
+       "label": "AS <b>2022</b> 817",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/817"
       },
       {
-       "label": "BBl 2022 1549",
+       "label": "BBl <b>2022</b> 1549",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1549"
       }
      ],
@@ -1822,10 +1867,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS 2020 2191, 2727; 2021 878 Ziff. III 3; BBl 2020 4461; 2021 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS 2022 817; BBl 2022 1549).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2020 (AS <b>2020</b> 2191, 2727; <b>2021</b> 878 Ziff. III 3; BBl <b>2020</b> 4461; <b>2021</b> 2515). Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2022, in Kraft vom 1. Jan. 2023 bis zum 30. Juni 2024 (AS <b>2022</b> 817; BBl <b>2022</b> 1549).",
      "links": [
       {
-       "label": "AS 2020 2191",
+       "label": "AS <b>2020</b> 2191",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/437"
       },
       {
@@ -1833,23 +1878,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/492"
       },
       {
-       "label": "2021 878",
+       "label": "<b>2021</b> 878",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/878"
       },
       {
-       "label": "BBl 2020 4461",
+       "label": "BBl <b>2020</b> 4461",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1024"
       },
       {
-       "label": "2021 2515",
+       "label": "<b>2021</b> 2515",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2515"
       },
       {
-       "label": "AS 2022 817",
+       "label": "AS <b>2022</b> 817",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/817"
       },
       {
-       "label": "BBl 2022 1549",
+       "label": "BBl <b>2022</b> 1549",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1549"
       }
      ],

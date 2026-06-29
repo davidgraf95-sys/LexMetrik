@@ -1,5 +1,73 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "943.02",
+  "titel": "Bundesgesetz über den Binnenmarkt",
+  "erlassdatum": "vom 6. Oktober 1995 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 94 und 95 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 23. November 1994,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Abs. 1 und Abs. 2 Satz 2 dieser Bestimmung entsprechen den Art. 31 Abs. 2 und <i>33 </i>Abs. 2 aBV vom 29. Mai 1874 [BS <b>1</b> 3].",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
+    "links": [
+     {
+      "label": "AS <b>2006</b> 2363",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
+     },
+     {
+      "label": "BBl <b>2005 </b>465",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1995 </b>I 1213",
+    "links": [
+     {
+      "label": "BBl <b>1995 </b>I 1213",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_1213_1193_1025"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,14 +80,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -41,14 +109,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -57,14 +125,14 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -73,14 +141,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -89,14 +157,14 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -105,14 +173,14 @@
     },
     {
      "nr": "10",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 5 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 376; BBl 2022 2651).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 5 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 376; BBl <b>2022</b> 2651).",
      "links": [
       {
-       "label": "AS 2024 376",
+       "label": "AS <b>2024</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/376"
       },
       {
-       "label": "BBl 2022 2651",
+       "label": "BBl <b>2022</b> 2651",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/2651"
       }
      ],
@@ -134,14 +202,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -163,14 +231,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Aufgehoben durch Ziff. I des BG vom 16. Dez. 2005, mit Wirkung seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 16. Dez. 2005, mit Wirkung seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -179,10 +247,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -191,14 +259,14 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -220,10 +288,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "BBl 2017 2175",
+     "text": "BBl <b>2017</b> 2175",
      "links": [
       {
-       "label": "BBl 2017 2175",
+       "label": "BBl <b>2017</b> 2175",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/421"
       }
      ],
@@ -232,10 +300,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 0.632.231.422",
+     "text": "SR <b>0.632.231.422</b>",
      "links": [
       {
-       "label": "SR 0.632.231.422",
+       "label": "SR <b>0.632.231.422</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/609_609_609"
       }
      ],
@@ -244,14 +312,14 @@
     },
     {
      "nr": "17",
-     "text": "Dritter Satz eingefügt durch Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS 2020 641; BBl 2017 1851).",
+     "text": "Dritter Satz eingefügt durch Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 641; BBl <b>2017</b> 1851).",
      "links": [
       {
-       "label": "AS 2020 641",
+       "label": "AS <b>2020</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
       },
       {
-       "label": "BBl 2017 1851",
+       "label": "BBl <b>2017</b> 1851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
       }
      ],
@@ -282,14 +350,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Aufgehoben durch Ziff. I des BG vom 16. Dez. 2005, mit Wirkung seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 16. Dez. 2005, mit Wirkung seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -311,14 +379,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -340,14 +408,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS 2020 641; BBl 2017 1851).",
+     "text": "Fassung gemäss Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 641; BBl <b>2017</b> 1851).",
      "links": [
       {
-       "label": "AS 2020 641",
+       "label": "AS <b>2020</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
       },
       {
-       "label": "BBl 2017 1851",
+       "label": "BBl <b>2017</b> 1851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
       }
      ],
@@ -356,14 +424,14 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS 2020 641; BBl 2017 1851).",
+     "text": "Fassung gemäss Anhang 7 Ziff. II 7 des BG vom 21. Juni 2019 über das öffentliche Beschaffungswesen, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 641; BBl <b>2017</b> 1851).",
      "links": [
       {
-       "label": "AS 2020 641",
+       "label": "AS <b>2020</b> 641",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/126"
       },
       {
-       "label": "BBl 2017 1851",
+       "label": "BBl <b>2017</b> 1851",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
       }
      ],
@@ -372,14 +440,14 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -388,10 +456,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Anhang Ziff. 138 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 138 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -399,7 +467,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -463,14 +531,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -492,14 +560,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -521,14 +589,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -550,14 +618,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS 2006 2363 2366; BBl 2005 465).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 2005, in Kraft seit 1. Juli 2006 (AS <b>2006</b> 2363 <i>2366</i>; BBl <b>2005 </b>465).",
      "links": [
       {
-       "label": "AS 2006 2363",
+       "label": "AS <b>2006</b> 2363",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/364"
       },
       {
-       "label": "BBl 2005 465",
+       "label": "BBl <b>2005 </b>465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/54"
       }
      ],
@@ -566,14 +634,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR 311.0) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS 2006 3459; BBl 1999 1979).",
+     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       },
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -582,10 +650,10 @@
     },
     {
      "nr": "24",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],

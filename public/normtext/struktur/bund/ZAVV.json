@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "364.3",
+  "titel": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 14, 16, 17 Absatz 1, 26 und 29 des Zwangsanwendungs­gesetzes vom 20. März 2008 und auf Artikel 92 Absatz 4 Buchstabe b des Militärgesetzes vom 3. Februar 1995,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>364</b>",
+    "links": [
+     {
+      "label": "SR <b>364</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2008/759"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>510.10</b>",
+    "links": [
+     {
+      "label": "SR <b>510.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1995/4093_4093_4093"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. II 1 der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 791).",
+    "links": [
+     {
+      "label": "AS <b>2022</b> 791",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2022/791"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -115,10 +171,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 514.541",
+     "text": "SR <b>514.541</b>",
      "links": [
       {
-       "label": "SR 514.541",
+       "label": "SR <b>514.541</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/767"
       }
      ],
@@ -414,10 +470,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2015 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) auf den 1. Jan. 2015 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -426,10 +482,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 142.281",
+     "text": "SR <b>142.281</b>",
      "links": [
       {
-       "label": "SR 142.281",
+       "label": "SR <b>142.281</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
       }
      ],
@@ -438,10 +494,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I 14 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS 2017 563).",
+     "text": "Fassung gemäss Ziff. I 14 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS <b>2017</b> 563).",
      "links": [
       {
-       "label": "AS 2017 563",
+       "label": "AS <b>2017</b> 563",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
       }
      ],
@@ -556,10 +612,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Art. 14 Abs. 2 der V vom 24. Juni 2015 über den Einsatz von Sicherheitsunternehmen, in Kraft seit 1. Sept. 2015 (AS 2015 2333).",
+     "text": "Fassung gemäss Art. 14 Abs. 2 der V vom 24. Juni 2015 über den Einsatz von Sicherheitsunternehmen, in Kraft seit 1. Sept. 2015 (AS <b>2015 </b>2333).",
      "links": [
       {
-       "label": "AS 2015 2333",
+       "label": "AS <b>2015 </b>2333",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/435"
       }
      ],
@@ -568,10 +624,10 @@
     },
     {
      "nr": "10",
-     "text": "SR 124",
+     "text": "SR <b>124</b>",
      "links": [
       {
-       "label": "SR 124",
+       "label": "SR <b>124</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/435"
       }
      ],
@@ -580,10 +636,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Art. 14 Abs. 2 der V vom 24. Juni 2015 über den Einsatz von Sicherheitsunternehmen, in Kraft seit 1. Sept. 2015 (AS 2015 2333).",
+     "text": "Fassung gemäss Art. 14 Abs. 2 der V vom 24. Juni 2015 über den Einsatz von Sicherheitsunternehmen, in Kraft seit 1. Sept. 2015 (AS <b>2015 </b>2333).",
      "links": [
       {
-       "label": "AS 2015 2333",
+       "label": "AS <b>2015 </b>2333",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/435"
       }
      ],
@@ -653,10 +709,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. II 1 der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 791).",
+     "text": "Eingefügt durch Ziff. II 1 der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 791).",
      "links": [
       {
-       "label": "AS 2022 791",
+       "label": "AS <b>2022</b> 791",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/791"
       }
      ],

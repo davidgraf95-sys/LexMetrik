@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "812.121.1",
+  "titel": "Verordnung über die Betäubungsmittelkontrolle",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 3 Absätze 1 und 2, 18f Absätze 3 und 4 und 30 Absätze 1 und 2 des Betäubungsmittelgesetzes vom 3. Oktober 1951 (BetmG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>812.121</b>",
+    "links": [
+     {
+      "label": "SR <b>812.121</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1952/241_241_245"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
+    "links": [
+     {
+      "label": "AS <b>2022</b> 386",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -48,10 +92,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 0.812.121.03",
+     "text": "SR <b>0.812.121.03</b>",
      "links": [
       {
-       "label": "SR 0.812.121.03",
+       "label": "SR <b>0.812.121.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/76"
       }
      ],
@@ -77,10 +121,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "AS 2011 3715",
+     "text": "AS <b>2011</b> 3715",
      "links": [
       {
-       "label": "AS 2011 3715",
+       "label": "AS <b>2011</b> 3715",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/520"
       }
      ],
@@ -106,10 +150,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -118,10 +162,10 @@
     },
     {
      "nr": "6",
-     "text": "Ausdruck gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -130,10 +174,10 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -232,10 +276,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -244,15 +288,16 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Kapitel: Betriebsbewilligungen"
     }
    ]
   },
@@ -273,10 +318,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -285,10 +330,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -297,10 +342,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 812.121.6",
+     "text": "SR <b>812.121.6</b>",
      "links": [
       {
-       "label": "SR 812.121.6",
+       "label": "SR <b>812.121.6</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/364"
       }
      ],
@@ -326,10 +371,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -353,10 +398,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Juni 2022, mit Wirkung seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Juni 2022, mit Wirkung seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -380,10 +425,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -392,10 +437,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 23 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 23 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -421,10 +466,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -433,10 +478,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -445,10 +490,10 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -474,10 +519,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -503,10 +548,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -515,10 +560,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -544,10 +589,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -573,10 +618,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -585,10 +630,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -629,10 +674,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -641,10 +686,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -685,10 +730,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -697,10 +742,10 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -709,10 +754,10 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -721,10 +766,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -810,10 +855,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -942,14 +987,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst (AS <b>2021</b> 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
       },
       {
-       "label": "AS 2021 589",
+       "label": "AS <b>2021</b> 589",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
       }
      ],
@@ -1020,10 +1065,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1079,10 +1124,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1168,10 +1213,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "SR 812.21",
+     "text": "SR <b>812.21</b>",
      "links": [
       {
-       "label": "SR 812.21",
+       "label": "SR <b>812.21</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
@@ -1212,10 +1257,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1302,10 +1347,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1331,10 +1376,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1375,10 +1420,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1479,10 +1524,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "SR 0.812.121",
+     "text": "SR <b>0.812.121</b>",
      "links": [
       {
-       "label": "SR 0.812.121",
+       "label": "SR <b>0.812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/48"
       }
      ],
@@ -1491,10 +1536,10 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1595,10 +1640,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "SR 0.812.121",
+     "text": "SR <b>0.812.121</b>",
      "links": [
       {
-       "label": "SR 0.812.121",
+       "label": "SR <b>0.812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/48"
       }
      ],
@@ -1607,10 +1652,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1666,10 +1711,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1740,10 +1785,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "SR 0.812.121",
+     "text": "SR <b>0.812.121</b>",
      "links": [
       {
-       "label": "SR 0.812.121",
+       "label": "SR <b>0.812.121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/48"
       }
      ],
@@ -1752,10 +1797,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 0.120",
+     "text": "SR <b>0.120</b>",
      "links": [
       {
-       "label": "SR 0.120",
+       "label": "SR <b>0.120</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/160"
       }
      ],
@@ -1779,10 +1824,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "SR 812.214.5",
+     "text": "SR <b>812.214.5</b>",
      "links": [
       {
-       "label": "SR 812.214.5",
+       "label": "SR <b>812.214.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/593"
       }
      ],
@@ -1791,10 +1836,10 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -1803,10 +1848,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 812.121.6",
+     "text": "SR <b>812.121.6</b>",
      "links": [
       {
-       "label": "SR 812.121.6",
+       "label": "SR <b>812.121.6</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/364"
       }
      ],
@@ -1872,10 +1917,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 311.0",
+     "text": "SR<b> 311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR<b> 311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1897,26 +1942,26 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "[AS 1996 1679; 2001 3133; 2004 4037 Ziff. I 1; 2007 1469 Anhang 4 Ziff. 38; 2008 5577, 5583]",
+     "text": "[AS <b>1996</b> 1679; <b>2001</b> 3133; <b>2004</b> 4037 Ziff. I 1; <b>2007 </b>1469 Anhang 4 Ziff. 38; <b>2008 </b>5577,5583]",
      "links": [
       {
-       "label": "AS 1996 1679",
+       "label": "AS <b>1996</b> 1679",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1679_1679_1679"
       },
       {
-       "label": "2001 3133",
+       "label": "<b>2001</b> 3133",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/470"
       },
       {
-       "label": "2004 4037",
+       "label": "<b>2004</b> 4037",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/591"
       },
       {
-       "label": "2007 1469",
+       "label": "<b>2007 </b>1469",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/250"
       },
       {
-       "label": "2008 5577",
+       "label": "<b>2008 </b>5577",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/772"
       },
       {
@@ -1929,22 +1974,22 @@
     },
     {
      "nr": "57",
-     "text": "[AS 1997 273; 2001 3146; 2005 4961; 2010 4099, 5375]",
+     "text": "[AS <b>1997 </b>273; <b>2001</b> 3146; <b>2005</b> 4961; <b>2010</b> 4099, 5375]",
      "links": [
       {
-       "label": "AS 1997 273",
+       "label": "AS <b>1997 </b>273",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/273_273_273"
       },
       {
-       "label": "2001 3146",
+       "label": "<b>2001</b> 3146",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/471"
       },
       {
-       "label": "2005 4961",
+       "label": "<b>2005</b> 4961",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/678"
       },
       {
-       "label": "2010 4099",
+       "label": "<b>2010</b> 4099",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/599"
       },
       {
@@ -1957,18 +2002,18 @@
     },
     {
      "nr": "58",
-     "text": "[AS 1996 1705; 2001 3152; 2007 1469 Anhang 4 Ziff. 39]",
+     "text": "[AS <b>1996</b> 1705; <b>2001 </b>3152; <b>2007 </b>1469 Anhang 4 Ziff. 39]",
      "links": [
       {
-       "label": "AS 1996 1705",
+       "label": "AS <b>1996</b> 1705",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1705_1705_1705"
       },
       {
-       "label": "2001 3152",
+       "label": "<b>2001 </b>3152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/473"
       },
       {
-       "label": "2007 1469",
+       "label": "<b>2007 </b>1469",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/250"
       }
      ],
@@ -1977,14 +2022,14 @@
     },
     {
      "nr": "59",
-     "text": "[AS 1997 211; 2001 3159, 3160; 2005 4839; 2010 1293]",
+     "text": "[AS <b>1997 </b>211; <b>2001</b> 3159, 3160; <b>2005</b> 4839; <b>2010</b> 1293]",
      "links": [
       {
-       "label": "AS 1997 211",
+       "label": "AS <b>1997 </b>211",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/211_211_211"
       },
       {
-       "label": "2001 3159",
+       "label": "<b>2001</b> 3159",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/474"
       },
       {
@@ -1992,11 +2037,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/475"
       },
       {
-       "label": "2005 4839",
+       "label": "<b>2005</b> 4839",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/653"
       },
       {
-       "label": "2010 1293",
+       "label": "<b>2010</b> 1293",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/186"
       }
      ],
@@ -2005,17 +2050,17 @@
     },
     {
      "nr": "60",
-     "text": "[BS 5 320]",
+     "text": "[BS <b>5</b> 320]",
      "links": [],
      "absatz": null,
      "item": "5"
     },
     {
      "nr": "61",
-     "text": "[AS 1963 599]",
+     "text": "[AS <b>1963 </b>599]",
      "links": [
       {
-       "label": "AS 1963 599",
+       "label": "AS <b>1963 </b>599",
        "url": "https://fedlex.data.admin.ch/eli/oc/1963/599_603_619"
       }
      ],
@@ -2024,10 +2069,10 @@
     },
     {
      "nr": "62",
-     "text": "[AS 1953 1309]",
+     "text": "[AS <b>1953 </b>1309]",
      "links": [
       {
-       "label": "AS 1953 1309",
+       "label": "AS <b>1953 </b>1309",
        "url": "https://fedlex.data.admin.ch/eli/oc/1953/1309_1338_1382"
       }
      ],
@@ -2049,10 +2094,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Die Änderungen können unter AS 2011 2561 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2011</b> 2561 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2011 2561",
+       "label": "AS <b>2011</b> 2561",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/362"
       }
      ],
@@ -2096,15 +2141,16 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Kapitel: Einzelanbaubewilligung"
     }
    ]
   },
@@ -2191,15 +2237,16 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Informationssystem über ärztliche Behandlungen mit Betäubungsmitteln des Wirkungstyps Cannabis"
     }
    ]
   },
@@ -2295,10 +2342,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
@@ -2324,15 +2371,16 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Datenbearbeitung"
     }
    ]
   },
@@ -2364,10 +2412,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS 2022 386).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Juni 2022, in Kraft seit 1. Aug. 2022 (AS <b>2022</b> 386).",
      "links": [
       {
-       "label": "AS 2022 386",
+       "label": "AS <b>2022</b> 386",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/386"
       }
      ],

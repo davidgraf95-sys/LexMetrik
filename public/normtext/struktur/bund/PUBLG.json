@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "170.512",
+  "titel": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 173 Absatz 2 der Bundesverfassung (BV), nach Einsicht in die Botschaft des Bundesrates vom 22. Oktober 2003,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2003</b> 7711",
+    "links": [
+     {
+      "label": "BBl <b>2003</b> 7711",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,14 +58,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -30,14 +74,14 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -46,14 +90,14 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -62,19 +106,20 @@
     },
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Allgemeine Bestimmungen"
     }
    ]
   },
@@ -102,14 +147,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -118,14 +163,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -147,14 +192,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -163,14 +208,14 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -192,18 +237,18 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Abs. 1 Einleitungssatz in Kraft seit 1. Juli 2022 (AS 2015 3977; 2021 693; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Abs. 1 Einleitungssatz in Kraft seit 1. Juli 2022 (AS <b>2015</b> 3977; <b>2021</b> 693; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2021 693",
+       "label": "<b>2021</b> 693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/693"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -225,14 +270,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -254,14 +299,14 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -292,14 +337,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -321,14 +366,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -337,10 +382,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 171.10",
+     "text": "SR <b>171.10</b>",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -349,14 +394,14 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 15. Juni 2018 (Verschiedene Änderungen des Parlamentsrechts), in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797 6865).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 15. Juni 2018 (Verschiedene Änderungen des Parlamentsrechts), in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -369,14 +414,14 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -398,14 +443,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -427,10 +472,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "SR 171.10",
+     "text": "SR <b>171.10</b>",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -450,14 +495,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -466,14 +511,14 @@
     },
     {
      "nr": "23",
-     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -482,14 +527,14 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -498,14 +543,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -527,14 +572,14 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015 </b>3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015 </b>3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -543,18 +588,18 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Juli 2022 (AS 2015 3977; 2021 693; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Juli 2022 (AS <b>2015</b> 3977; <b>2021</b> 693; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2021 693",
+       "label": "<b>2021</b> 693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/693"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -563,14 +608,14 @@
     },
     {
      "nr": "31",
-     "text": "SR 172.061 und 172.061.1",
+     "text": "SR <b>172.061</b> und <b>172.061.1</b>",
      "links": [
       {
-       "label": "SR 172.061",
+       "label": "SR <b>172.061</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/542"
       },
       {
-       "label": "172.061.1",
+       "label": "<b>172.061.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/543"
       }
      ],
@@ -579,18 +624,18 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. III des BG vom 26. Sept. 2014, in Kraft seit 1. April 2016 (AS 2015 3977, 2016 925; BBl 2013 7057 8875).",
+     "text": "Eingefügt durch Ziff. III des BG vom 26. Sept. 2014, in Kraft seit 1. April 2016 (AS <b>2015</b> 3977, <b>2016</b> 925; BBl <b>2013</b> 7057 8875).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2016 925",
+       "label": "<b>2016</b> 925",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/161"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       },
       {
@@ -603,10 +648,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 441.1",
+     "text": "SR <b>441.1</b>",
      "links": [
       {
-       "label": "SR 441.1",
+       "label": "SR <b>441.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/821"
       }
      ],
@@ -615,14 +660,14 @@
     },
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -631,14 +676,14 @@
     },
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -660,14 +705,14 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -689,14 +734,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -716,14 +761,14 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 26. Sept. 2014, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -745,14 +790,14 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -774,14 +819,14 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -803,10 +848,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "[AS 1987 600]",
+     "text": "[AS <b>1987 </b>600]",
      "links": [
       {
-       "label": "AS 1987 600",
+       "label": "AS <b>1987 </b>600",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
       }
      ],
@@ -828,10 +873,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Die Änd. können unter AS 2004 4929 konsultiert werden.",
+     "text": "Die Änd. können unter AS <b>2004</b> 4929 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2004 4929",
+       "label": "AS <b>2004</b> 4929",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/745"
       }
      ],
@@ -871,18 +916,18 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. III des BG vom 26. Sept. 2014, in Kraft seit 1. April 2016 (AS 2015 3977; 2016 925; BBl 2013 7057 8875).",
+     "text": "Fassung gemäss Ziff. III des BG vom 26. Sept. 2014, in Kraft seit 1. April 2016 (AS <b>2015 </b>3977; <b>2016 </b>925; BBl <b>2013</b> 7057 8875).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015 </b>3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2016 925",
+       "label": "<b>2016 </b>925",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/161"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       },
       {
@@ -895,10 +940,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 172.061",
+     "text": "SR <b>172.061</b>",
      "links": [
       {
-       "label": "SR 172.061",
+       "label": "SR <b>172.061</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/542"
       }
      ],
@@ -907,23 +952,24 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Art. 13a Abs. 1 Bst. a in Kraft seit 1. Juli 2022 (AS 2015 3977; 2021 693; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Art. 13<i>a</i> Abs. 1 Bst. a in Kraft seit 1. Juli 2022 (AS <b>2015</b> 3977; <b>2021</b> 693; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2021 693",
+       "label": "<b>2021</b> 693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/693"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Weitere auf der Publikationsplattform veröffentlichte Texte"
     }
    ]
   },
@@ -940,14 +986,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -969,14 +1015,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -998,14 +1044,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -1014,10 +1060,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
       }
      ],
@@ -1026,10 +1072,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 11 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 11 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -1051,14 +1097,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -1080,14 +1126,14 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS 2015 3977; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 3977; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
@@ -1109,18 +1155,18 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Abs. 2 in Kraft seit 1. Juli 2022 (AS 2015 3977; 2021 693; BBl 2013 7057).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Sept. 2014, in Kraft seit 1. Jan. 2016, Abs. 2 in Kraft seit 1. Juli 2022 (AS <b>2015</b> 3977; <b>2021</b> 693; BBl <b>2013</b> 7057).",
      "links": [
       {
-       "label": "AS 2015 3977",
+       "label": "AS <b>2015</b> 3977",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/669"
       },
       {
-       "label": "2021 693",
+       "label": "<b>2021</b> 693",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/693"
       },
       {
-       "label": "BBl 2013 7057",
+       "label": "BBl <b>2013</b> 7057",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],

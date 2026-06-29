@@ -1,5 +1,118 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "836.2",
+  "titel": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen",
+  "erlassdatum": "vom 24. März 2006 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 116 Absätze 1, 2 und 4 der Bundesverfassung, nach Einsicht in den Bericht der Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 20. November 1998 und in den Zusatzbericht vom 8. September 2004 sowie in die Stellungnahmen des Bundesrates vom 28. Juni 2000 und vom 10. November 2004,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
+    "links": [
+     {
+      "label": "AS <b>2020</b> 2775",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
+     },
+     {
+      "label": "BBl <b>2019</b> 1019",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
+    "links": [
+     {
+      "label": "AS <b>2020</b> 2775",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
+     },
+     {
+      "label": "BBl <b>2019</b> 1019",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1999</b> III 3220",
+    "links": [
+     {
+      "label": "BBl <b>1999</b> III 3220",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_3220__"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "BBl <b>2004 </b>6887",
+    "links": [
+     {
+      "label": "BBl <b>2004 </b>6887",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2004/1201"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "BBl <b>2000</b> 4784",
+    "links": [
+     {
+      "label": "BBl <b>2000</b> 4784",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2000/988"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "BBl <b>2004 </b>6941",
+    "links": [
+     {
+      "label": "BBl <b>2004 </b>6941",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2004/1203"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +125,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -24,14 +137,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -40,14 +153,14 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS 2020 2775; BBl 2019 1019).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
      "links": [
       {
-       "label": "AS 2020 2775",
+       "label": "AS <b>2020</b> 2775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
       },
       {
-       "label": "BBl 2019 1019",
+       "label": "BBl <b>2019</b> 1019",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
       }
      ],
@@ -80,10 +193,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -92,14 +205,14 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS 2020 2775; BBl 2019 1019).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
      "links": [
       {
-       "label": "AS 2020 2775",
+       "label": "AS <b>2020</b> 2775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
       },
       {
-       "label": "BBl 2019 1019",
+       "label": "BBl <b>2019</b> 1019",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
       }
      ],
@@ -108,10 +221,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
@@ -120,14 +233,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung des vierten Satzes gemäss Anhang Ziff. 4 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Fassung des vierten Satzes gemäss Anhang Ziff. 4 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -149,10 +262,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
@@ -174,10 +287,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Betrag gemäss Art. 1 Abs. 1 der V vom 28. Aug. 2024 über die Anpassung der Familienzulagen an die Preisentwicklung, in Kraft seit 1. Jan. 2025 (AS 2024 493).",
+     "text": "Betrag gemäss Art. 1 Abs. 1 der V vom 28. Aug. 2024 über die Anpassung der Familienzulagen an die Preisentwicklung, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 493).",
      "links": [
       {
-       "label": "AS 2024 493",
+       "label": "AS <b>2024</b> 493",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/493"
       }
      ],
@@ -186,10 +299,10 @@
     },
     {
      "nr": "17",
-     "text": "Betrag gemäss Art. 1 Abs. 2 der V vom 28. Aug. 2024 über die Anpassung der Familienzulagen an die Preisentwicklung, in Kraft seit 1. Jan. 2025 (AS 2024 493).",
+     "text": "Betrag gemäss Art. 1 Abs. 2 der V vom 28. Aug. 2024 über die Anpassung der Familienzulagen an die Preisentwicklung, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 493).",
      "links": [
       {
-       "label": "AS 2024 493",
+       "label": "AS <b>2024</b> 493",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/493"
       }
      ],
@@ -222,10 +335,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -233,7 +346,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -246,10 +359,10 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -257,7 +370,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -294,10 +407,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -334,10 +447,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -346,10 +459,10 @@
     },
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -357,7 +470,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -370,10 +483,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -381,7 +494,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -390,7 +503,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Erwerbstätige in nichtlandwirtschaftlichen Berufen"
     }
    ]
   },
@@ -411,10 +525,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -422,7 +536,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -435,10 +549,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -446,7 +560,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -476,10 +590,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -487,7 +601,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -500,10 +614,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -511,7 +625,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -571,10 +685,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -582,7 +696,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -595,10 +709,10 @@
     },
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -606,7 +720,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -636,14 +750,14 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2026 (AS 2025 770; BBl 2023 1469).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 770; BBl <b>2023</b> 1469).",
      "links": [
       {
-       "label": "AS 2025 770",
+       "label": "AS <b>2025</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/770"
       },
       {
-       "label": "BBl 2023 1469",
+       "label": "BBl <b>2023</b> 1469",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1469"
       }
      ],
@@ -667,10 +781,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "SR 836.1",
+     "text": "SR <b>836.1</b>",
      "links": [
       {
-       "label": "SR 836.1",
+       "label": "SR <b>836.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10273"
       }
      ],
@@ -696,10 +810,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS 2011 3973, 4949; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Jan. 2013 (AS <b>2011 </b>3973, 4949; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
@@ -707,7 +821,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/718"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -720,10 +834,10 @@
     },
     {
      "nr": "33",
-     "text": "SR 834.1",
+     "text": "SR <b>834.1</b>",
      "links": [
       {
-       "label": "SR 834.1",
+       "label": "SR <b>834.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10262"
       }
      ],
@@ -732,14 +846,14 @@
     },
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS 2020 2775; BBl 2019 1019).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
      "links": [
       {
-       "label": "AS 2020 2775",
+       "label": "AS <b>2020</b> 2775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
       },
       {
-       "label": "BBl 2019 1019",
+       "label": "BBl <b>2019</b> 1019",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
       }
      ],
@@ -765,10 +879,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -805,10 +919,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -830,10 +944,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -853,14 +967,14 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -869,10 +983,10 @@
     },
     {
      "nr": "49",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
@@ -881,10 +995,10 @@
     },
     {
      "nr": "50",
-     "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit, ABl. L 166 vom 30.4.2004, S. 1; eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR 0.831.109.268.1.",
+     "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit, ABl. L 166 vom 30.4.2004, S. 1; eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR <b>0.831.109.268.1</b>.",
      "links": [
       {
-       "label": "SR 0.831.109.268.1",
+       "label": "SR <b>0.831.109.268.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3724"
       }
      ],
@@ -893,10 +1007,10 @@
     },
     {
      "nr": "51",
-     "text": "Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16. September 2009 zur Festlegung der Modalitäten für die Durchführung der Verordnung (EG) Nr. 883/2004 über die Koordinierung der Systeme der sozialen Sicherheit (mit Anhängen); eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR 0.831.109.268.11.",
+     "text": "Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16. September 2009 zur Festlegung der Modalitäten für die Durchführung der Verordnung (EG) Nr. 883/2004 über die Koordinierung der Systeme der sozialen Sicherheit (mit Anhängen); eine unverbindliche, konsolidierte Fassung dieser Verordnung ist veröffentlicht in SR<b> 0.831.109.268.11</b>.",
      "links": [
       {
-       "label": "SR 0.831.109.268.11",
+       "label": "SR<b> 0.831.109.268.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3725"
       }
      ],
@@ -919,10 +1033,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 0.632.31",
+     "text": "SR <b>0.632.31</b>",
      "links": [
       {
-       "label": "SR 0.632.31",
+       "label": "SR <b>0.632.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
@@ -944,10 +1058,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -956,14 +1070,14 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -972,10 +1086,10 @@
     },
     {
      "nr": "57",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -984,14 +1098,14 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -1000,14 +1114,14 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 17. März 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5521; BBl 2016 157).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 17. März 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5521; BBl <b>2016</b> 157).",
      "links": [
       {
-       "label": "AS 2017 5521",
+       "label": "AS <b>2017</b> 5521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/595"
       },
       {
-       "label": "BBl 2016 157",
+       "label": "BBl <b>2016</b> 157",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/44"
       }
      ],
@@ -1016,14 +1130,14 @@
     },
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 17. März 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5521; BBl 2016 157).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 17. März 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5521; BBl <b>2016</b> 157).",
      "links": [
       {
-       "label": "AS 2017 5521",
+       "label": "AS <b>2017</b> 5521",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/595"
       },
       {
-       "label": "BBl 2016 157",
+       "label": "BBl <b>2016</b> 157",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/44"
       }
      ],
@@ -1032,14 +1146,14 @@
     },
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS 2010 4491; BBl 2009 6101).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010</b> 4491; BBl <b>2009</b> 6101).",
      "links": [
       {
-       "label": "AS 2010 4491",
+       "label": "AS <b>2010</b> 4491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/636"
       },
       {
-       "label": "BBl 2009 6101",
+       "label": "BBl <b>2009</b> 6101",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1101"
       }
      ],
@@ -1048,22 +1162,22 @@
     },
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010 (AS 2010 4491; BBl 2009 6101). Fassung gemäss Anhang Ziff. 35 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS 2021 758; BBl 2019 7359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010 (AS <b>2010</b> 4491; BBl <b>2009</b> 6101). Fassung gemäss Anhang Ziff. 35 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359).",
      "links": [
       {
-       "label": "AS 2010 4491",
+       "label": "AS <b>2010</b> 4491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/636"
       },
       {
-       "label": "BBl 2009 6101",
+       "label": "BBl <b>2009</b> 6101",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1101"
       },
       {
-       "label": "AS 2021 758",
+       "label": "AS <b>2021</b> 758",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/758"
       },
       {
-       "label": "BBl 2019 7359",
+       "label": "BBl <b>2019 </b>7359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
@@ -1096,10 +1210,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "SR 830.1",
+     "text": "SR <b>830.1</b>",
      "links": [
       {
-       "label": "SR 830.1",
+       "label": "SR <b>830.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
@@ -1108,14 +1222,14 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS 2020 2775; BBl 2019 1019).",
+     "text": "Fassung gemäss Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
      "links": [
       {
-       "label": "AS 2020 2775",
+       "label": "AS <b>2020</b> 2775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
       },
       {
-       "label": "BBl 2019 1019",
+       "label": "BBl <b>2019</b> 1019",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
       }
      ],
@@ -1124,10 +1238,10 @@
     },
     {
      "nr": "65",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
@@ -1136,14 +1250,14 @@
     },
     {
      "nr": "66",
-     "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -1196,14 +1310,14 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS 2024 681; BBl 2023 2245).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 681; BBl <b>2023</b> 2245).",
      "links": [
       {
-       "label": "AS 2024 681",
+       "label": "AS <b>2024</b> 681",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/681"
       },
       {
-       "label": "BBl 2023 2245",
+       "label": "BBl <b>2023</b> 2245",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2245"
       }
      ],
@@ -1212,19 +1326,20 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS 2010 4491; BBl 2009 6101).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010</b> 4491; BBl <b>2009</b> 6101).",
      "links": [
       {
-       "label": "AS 2010 4491",
+       "label": "AS <b>2010</b> 4491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/636"
       },
       {
-       "label": "BBl 2009 6101",
+       "label": "BBl <b>2009</b> 6101",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1101"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Kapitel: Familienzulagenregister"
     }
    ]
   },
@@ -1241,14 +1356,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Ausdruck gemäss Anhang Ziff. 35 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS 2021 758; BBl 2019 7359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. 35 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2021 758",
+       "label": "AS <b>2021</b> 758",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/758"
       },
       {
-       "label": "BBl 2019 7359",
+       "label": "BBl <b>2019 </b>7359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
@@ -1270,10 +1385,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10282"
       }
      ],
@@ -1282,10 +1397,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 836.1",
+     "text": "SR <b>836.1</b>",
      "links": [
       {
-       "label": "SR 836.1",
+       "label": "SR <b>836.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10273"
       }
      ],
@@ -1294,10 +1409,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
@@ -1341,14 +1456,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS 2024 681; BBl 2023 2245).",
+     "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 681; BBl <b>2023</b> 2245).",
      "links": [
       {
-       "label": "AS 2024 681",
+       "label": "AS <b>2024</b> 681",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/681"
       },
       {
-       "label": "BBl 2023 2245",
+       "label": "BBl <b>2023</b> 2245",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2245"
       }
      ],
@@ -1357,10 +1472,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1382,19 +1497,20 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS 2020 2775; BBl 2019 1019).",
+     "text": "Eingefügt durch Ziff. I des BG vom 27. Sept. 2019, in Kraft seit 1. Aug. 2020 (AS <b>2020</b> 2775; BBl <b>2019</b> 1019).",
      "links": [
       {
-       "label": "AS 2020 2775",
+       "label": "AS <b>2020</b> 2775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/502"
       },
       {
-       "label": "BBl 2019 1019",
+       "label": "BBl <b>2019</b> 1019",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/171"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3b. Kapitel: Finanzhilfen an Familienorganisationen"
     }
    ]
   },
@@ -1433,14 +1549,14 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS 2024 681; BBl 2023 2245).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 14. Juni 2024 (Digitalisierung in der Erwerbsersatzordnung), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 681; BBl <b>2023</b> 2245).",
      "links": [
       {
-       "label": "AS 2024 681",
+       "label": "AS <b>2024</b> 681",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/681"
       },
       {
-       "label": "BBl 2023 2245",
+       "label": "BBl <b>2023</b> 2245",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2245"
       }
      ],
@@ -1462,14 +1578,14 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS 2010 4491; BBl 2009 6101).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2010, in Kraft seit 15. Okt. 2010 (AS <b>2010</b> 4491; BBl <b>2009</b> 6101).",
      "links": [
       {
-       "label": "AS 2010 4491",
+       "label": "AS <b>2010</b> 4491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/636"
       },
       {
-       "label": "BBl 2009 6101",
+       "label": "BBl <b>2009</b> 6101",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1101"
       }
      ],
@@ -1491,14 +1607,14 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Sept. 2011 (AS 2011 3973; BBl 2009 5991, 6009).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011, in Kraft seit 1. Sept. 2011 (AS <b>2011 </b>3973; BBl <b>2009</b> 5991, 6009).",
      "links": [
       {
-       "label": "AS 2011 3973",
+       "label": "AS <b>2011 </b>3973",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/567"
       },
       {
-       "label": "BBl 2009 5991",
+       "label": "BBl <b>2009</b> 5991",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1081"
       },
       {
@@ -1524,14 +1640,14 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2026 (AS 2025 770; BBl 2023 1469).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. März 2024, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 770; BBl <b>2023</b> 1469).",
      "links": [
       {
-       "label": "AS 2025 770",
+       "label": "AS <b>2025</b> 770",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/770"
       },
       {
-       "label": "BBl 2023 1469",
+       "label": "BBl <b>2023</b> 1469",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1469"
       }
      ],

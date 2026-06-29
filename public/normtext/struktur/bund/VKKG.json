@@ -1,5 +1,56 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "221.214.11",
+  "titel": "Verordnung zum Konsumkreditgesetz",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 14, 23 Absatz 3 und 40 Absatz 3 des Bundesgesetzes vom 23. März 2001 über den Konsumkredit (KKG) und auf die Artikel 8 Absätze 1 und 4 sowie 47 Absatz 2 des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "SR <b>221.214.1</b>",
+    "links": [
+     {
+      "label": "SR <b>221.214.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/593/20200101"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "SR <b>172.010</b>",
+    "links": [
+     {
+      "label": "SR <b>172.010</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20191202"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,7 +63,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 319).",
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -32,10 +83,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS 2006 95).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS <b>2006</b> 95).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
@@ -57,10 +108,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -104,10 +155,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS 2006 95).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS <b>2006</b> 95).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
@@ -116,10 +167,10 @@
     },
     {
      "nr": "",
-     "text": "SR 412.10",
+     "text": "SR <b>412.10</b>",
      "links": [
       {
-       "label": "SR 412.10",
+       "label": "SR <b>412.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/674/20190101"
       }
      ],
@@ -141,10 +192,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS 2006 95).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS <b>2006</b> 95).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
@@ -188,10 +239,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "[AS 1975 711]",
+     "text": "[AS <b>1975</b> 711]",
      "links": [
       {
-       "label": "AS 1975 711",
+       "label": "AS <b>1975</b> 711",
        "url": "https://fedlex.data.admin.ch/eli/oc/1975/711_711_711"
       }
      ],
@@ -224,7 +275,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (AS 2021 319).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -244,14 +295,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005 (AS 2006 95). Fassung gemäss Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005 (AS <b>2006</b> 95). Fassung gemäss Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       },
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -273,10 +324,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS 2006 95).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS <b>2006</b> 95).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
@@ -298,10 +349,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS 2006 95).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. März 2006 (AS <b>2006</b> 95).",
      "links": [
       {
-       "label": "AS 2006 95",
+       "label": "AS <b>2006</b> 95",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
@@ -323,10 +374,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 11. Dez. 2015, in Kraft seit 1. Juli 2016 (AS 2016 273).",
+     "text": "Eingefügt durch Ziff. I der V vom 11. Dez. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 273).",
      "links": [
       {
-       "label": "AS 2016 273",
+       "label": "AS <b>2016</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/37"
       }
      ],
@@ -348,10 +399,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. II 2 der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],

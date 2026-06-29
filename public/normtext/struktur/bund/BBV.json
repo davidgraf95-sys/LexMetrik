@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "412.101",
+  "titel": "Verordnung über die Berufsbildung",
+  "erlassdatum": "vom 19. November 2003 (Stand am 1. März 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 65 Absatz 1 des Berufsbildungsgesetzes vom 13. Dezember 2002 (BBG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>412.10</b>",
+    "links": [
+     {
+      "label": "SR <b>412.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +58,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -177,10 +210,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Eingefügt durch Ziff. I 6.3 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS 2011 5227).",
+     "text": "Eingefügt durch Ziff. I 6.3 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5227).",
      "links": [
       {
-       "label": "AS 2011 5227",
+       "label": "AS <b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
      ],
@@ -189,10 +222,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -201,10 +234,10 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I 6.3 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS 2011 5227).",
+     "text": "Eingefügt durch Ziff. I 6.3 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5227).",
      "links": [
       {
-       "label": "AS 2011 5227",
+       "label": "AS <b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
      ],
@@ -213,10 +246,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 822.11",
+     "text": "SR <b>822.11</b>",
      "links": [
       {
-       "label": "SR 822.11",
+       "label": "SR <b>822.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1966/57_57_57"
       }
      ],
@@ -225,10 +258,10 @@
     },
     {
      "nr": "7",
-     "text": "Aufgehoben durch Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, mit Wirkung seit 1. Okt. 2012 (AS 2012 3967).",
+     "text": "Aufgehoben durch Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, mit Wirkung seit 1. Okt. 2012 (AS <b>2012</b> 3967).",
      "links": [
       {
-       "label": "AS 2012 3967",
+       "label": "AS <b>2012</b> 3967",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/461"
       }
      ],
@@ -237,10 +270,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 814.501",
+     "text": "SR <b>814.501</b>",
      "links": [
       {
-       "label": "SR 814.501",
+       "label": "SR <b>814.501</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/502"
       }
      ],
@@ -249,14 +282,14 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. II 1 der V vom 24. Okt. 2007 (AS 2007 5651). Fassung gemäss Anhang 11 Ziff. 1 der Strahlenschutzverordnung vom 26. April 2017, in Kraft seit 1. Jan. 2018 (AS 2017 4261).",
+     "text": "Eingefügt durch Ziff. II 1 der V vom 24. Okt. 2007 (AS <b>2007</b> 5651). Fassung gemäss Anhang 11 Ziff. 1 der Strahlenschutzverordnung vom 26. April 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 4261).",
      "links": [
       {
-       "label": "AS 2007 5651",
+       "label": "AS <b>2007</b> 5651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/778"
       },
       {
-       "label": "AS 2017 4261",
+       "label": "AS <b>2017</b> 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/502"
       }
      ],
@@ -413,10 +446,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Art. 35 Abs. 2 der Berufsmaturitätsverordnung vom 24. Juni 2009, in Kraft seit 1. Aug. 2009 (AS 2009 3447).",
+     "text": "Fassung gemäss Art. 35 Abs. 2 der Berufsmaturitätsverordnung vom 24. Juni 2009, in Kraft seit 1. Aug. 2009 (AS <b>2009</b> 3447).",
      "links": [
       {
-       "label": "AS 2009 3447",
+       "label": "AS <b>2009</b> 3447",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/423"
       }
      ],
@@ -425,10 +458,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 412.103.1",
+     "text": "SR <b>412.103.1</b>",
      "links": [
       {
-       "label": "SR 412.103.1",
+       "label": "SR <b>412.103.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/423"
       }
      ],
@@ -505,10 +538,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -528,10 +561,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 837.0",
+     "text": "SR <b>837.0</b>",
      "links": [
       {
-       "label": "SR 837.0",
+       "label": "SR <b>837.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184"
       }
      ],
@@ -619,10 +652,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -655,10 +688,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -679,10 +712,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -691,10 +724,10 @@
     },
     {
      "nr": "19",
-     "text": "Satz aufgehoben durch Anhang Ziff. 2 der Gebührenverordnung SBFI vom 16. Juni 2006, mit Wirkung seit 1. Aug. 2006 (AS 2006 2639).",
+     "text": "Satz aufgehoben durch Anhang Ziff. 2 der Gebührenverordnung SBFI vom 16. Juni 2006, mit Wirkung seit 1. Aug. 2006 (AS <b>2006</b> 2639).",
      "links": [
       {
-       "label": "AS 2006 2639",
+       "label": "AS <b>2006</b> 2639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/404"
       }
      ],
@@ -821,10 +854,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, in Kraft seit 1. Okt. 2012 (AS 2012 3967).",
+     "text": "Fassung gemäss Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, in Kraft seit 1. Okt. 2012 (AS <b>2012</b> 3967).",
      "links": [
       {
-       "label": "AS 2012 3967",
+       "label": "AS <b>2012</b> 3967",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/461"
       }
      ],
@@ -1012,10 +1045,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -1024,10 +1057,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -1051,10 +1084,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Aufgehoben durch Ziff. I 1 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 1 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1080,10 +1113,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -1092,15 +1125,16 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Beiträge für Projekte zur Entwicklung der Berufsbildung und zur Qualitätsentwicklung sowie für besondere Leistungen im öffentlichen Interesse"
     }
    ]
   },
@@ -1121,14 +1155,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Sept. 2015 (AS 2015 3807). Aufgehoben durch Art. 36 der V vom 23. Febr. 2022 über die internationale Zusammenarbeit und Mobilität in der Bildung, mit Wirkung seit 1. April 2022 (AS 2022 165).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Sept. 2015 (AS <b>2015 </b>3807). Aufgehoben durch Art. 36 der V vom 23. Febr. 2022 über die internationale Zusammenarbeit und Mobilität in der Bildung, mit Wirkung seit 1. April 2022 (AS <b>2022</b> 165).",
      "links": [
       {
-       "label": "AS 2015 3807",
+       "label": "AS <b>2015 </b>3807",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/637"
       },
       {
-       "label": "AS 2022 165",
+       "label": "AS <b>2022</b> 165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/165"
       }
      ],
@@ -1154,10 +1188,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 6473).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6473).",
      "links": [
       {
-       "label": "AS 2012 6473",
+       "label": "AS <b>2012</b> 6473",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/773"
       }
      ],
@@ -1166,15 +1200,16 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Beiträge für die Durchführung eidgenössischer Berufsprüfungen und eidgenössischer höherer Fachprüfungen sowie für Bildungsgänge höherer Fachschulen"
     }
    ]
   },
@@ -1193,10 +1228,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Aufgehoben durch Ziff. I der V vom 15. Sept. 2017, mit Wirkung seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Aufgehoben durch Ziff. I der V vom 15. Sept. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
@@ -1205,10 +1240,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2025, in Kraft seit 1. März 2025 (AS 2025 82).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2025, in Kraft seit 1. März 2025 (AS <b>2025</b> 82).",
      "links": [
       {
-       "label": "AS 2025 82",
+       "label": "AS <b>2025</b> 82",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/82"
       }
      ],
@@ -1217,10 +1252,10 @@
     },
     {
      "nr": "34",
-     "text": "Aufgehoben durch Ziff. I der V vom 29. Jan. 2025, mit Wirkung seit 1. März 2025 (AS 2025 82).",
+     "text": "Aufgehoben durch Ziff. I der V vom 29. Jan. 2025, mit Wirkung seit 1. März 2025 (AS <b>2025</b> 82).",
      "links": [
       {
-       "label": "AS 2025 82",
+       "label": "AS <b>2025</b> 82",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/82"
       }
      ],
@@ -1259,10 +1294,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 6005).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 6005).",
      "links": [
       {
-       "label": "AS 2010 6005",
+       "label": "AS <b>2010</b> 6005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/864"
       }
      ],
@@ -1271,10 +1306,10 @@
     },
     {
      "nr": "43",
-     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2010, mit Wirkung seit 1. Jan. 2011 (AS 2010 6005).",
+     "text": "Aufgehoben durch Ziff. I der V vom 3. Dez. 2010, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 6005).",
      "links": [
       {
-       "label": "AS 2010 6005",
+       "label": "AS <b>2010</b> 6005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/864"
       }
      ],
@@ -1283,15 +1318,16 @@
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Abschnitt: Berufsbildungsfonds"
     }
    ]
   },
@@ -1308,10 +1344,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS 2014 4137).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4137).",
      "links": [
       {
-       "label": "AS 2014 4137",
+       "label": "AS <b>2014</b> 4137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/692"
       }
      ],
@@ -1320,15 +1356,16 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS 2014 4137).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4137).",
      "links": [
       {
-       "label": "AS 2014 4137",
+       "label": "AS <b>2014</b> 4137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/692"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "9. Kapitel: Anerkennung ausländischer Abschlüsse"
     }
    ]
   },
@@ -1343,10 +1380,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Aufgehoben durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, mit Wirkung seit 1. Jan. 2015 (AS 2014 4137).",
+     "text": "Aufgehoben durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, mit Wirkung seit 1. Jan. 2015 (AS <b>2014</b> 4137).",
      "links": [
       {
-       "label": "AS 2014 4137",
+       "label": "AS <b>2014</b> 4137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/692"
       }
      ],
@@ -1372,10 +1409,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -1384,10 +1421,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 0.632.31",
+     "text": "SR <b>0.632.31</b>",
      "links": [
       {
-       "label": "SR 0.632.31",
+       "label": "SR <b>0.632.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
       }
      ],
@@ -1428,10 +1465,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Die Berichtigung vom 8. Febr. 2021 betrifft nur den französischen Text (AS 2021 74).",
+     "text": "Die Berichtigung vom 8. Febr. 2021 betrifft nur den französischen Text (AS <b>2021</b> 74).",
      "links": [
       {
-       "label": "AS 2021 74",
+       "label": "AS <b>2021</b> 74",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/74"
       }
      ],
@@ -1455,26 +1492,26 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "[AS 1979 1687; 1985 660 Ziff. I 21; 1987 600 Art. 17 Ziff. 3; 1991 857 Anhang Ziff. 4; 1992 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; 1996 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; 1998 1822 Art. 2; 1999 2374 Ziff. I 2; 2003 187 Anhang Ziff. II 2. AS 2003 4557 Anhang Ziff. I 1]",
+     "text": "[AS <b>1979</b> 1687; <b>1985</b> 660 Ziff. I 21; <b>1987</b> 600 Art. 17 Ziff. 3; <b>1991</b> 857 Anhang Ziff. 4; <b>1992</b> 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; <b>1996</b> 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; <b>1998</b> 1822 Art. 2; <b>1999</b> 2374 Ziff. I 2; <b>2003</b> 187 Anhang Ziff. II 2. AS <b>2003</b> 4557 Anhang Ziff. I 1]",
      "links": [
       {
-       "label": "AS 1979 1687",
+       "label": "AS <b>1979</b> 1687",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/1687_1687_1687"
       },
       {
-       "label": "1985 660",
+       "label": "<b>1985</b> 660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
       },
       {
-       "label": "1987 600",
+       "label": "<b>1987</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
       },
       {
-       "label": "1991 857",
+       "label": "<b>1991</b> 857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
       },
       {
-       "label": "1992 288",
+       "label": "<b>1992</b> 288",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       },
       {
@@ -1482,11 +1519,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
       },
       {
-       "label": "1996 2588",
+       "label": "<b>1996</b> 2588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2588_2588_2588"
       },
       {
-       "label": "AS 2003 4557",
+       "label": "AS <b>2003</b> 4557",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/674"
       }
      ],
@@ -1527,26 +1564,26 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "[AS 1979 1687; 1985 660 Ziff. I 21; 1987 600 Art. 17 Ziff. 3; 1991 857 Anhang Ziff. 4; 1992 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; 1996 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; 1998 1822 Art. 2; 1999 2374 Ziff. I 2; 2003 187 Anhang Ziff. II 2. AS 2003 4557 Anhang Ziff. I 1]",
+     "text": "[AS <b>1979</b> 1687; <b>1985</b> 660 Ziff. I 21; <b>1987</b> 600 Art. 17 Ziff. 3; <b>1991</b> 857 Anhang Ziff. 4; <b>1992</b> 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; <b>1996</b> 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; <b>1998</b> 1822 Art. 2; <b>1999</b> 2374 Ziff. I 2; <b>2003</b> 187 Anhang Ziff. II 2. AS <b>2003</b> 4557 Anhang Ziff. I 1]",
      "links": [
       {
-       "label": "AS 1979 1687",
+       "label": "AS <b>1979</b> 1687",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/1687_1687_1687"
       },
       {
-       "label": "1985 660",
+       "label": "<b>1985</b> 660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
       },
       {
-       "label": "1987 600",
+       "label": "<b>1987</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
       },
       {
-       "label": "1991 857",
+       "label": "<b>1991</b> 857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
       },
       {
-       "label": "1992 288",
+       "label": "<b>1992</b> 288",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       },
       {
@@ -1554,11 +1591,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
       },
       {
-       "label": "1996 2588",
+       "label": "<b>1996</b> 2588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2588_2588_2588"
       },
       {
-       "label": "AS 2003 4557",
+       "label": "AS <b>2003</b> 4557",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/674"
       }
      ],
@@ -1567,10 +1604,10 @@
     },
     {
      "nr": "63",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS 2019 155).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS <b>2019</b> 155).",
      "links": [
       {
-       "label": "AS 2019 155",
+       "label": "AS <b>2019</b> 155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/23"
       }
      ],
@@ -1596,26 +1633,26 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "[AS 1979 1687; 1985 660 Ziff. I 21; 1987 600 Art. 17 Ziff. 3; 1991 857 Anhang Ziff. 4; 1992 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; 1996 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; 1998 1822 Art. 2; 1999 2374 Ziff. I 2; 2003 187 Anhang Ziff. II 2. AS 2003 4557 Anhang Ziff. I 1]",
+     "text": "[AS <b>1979</b> 1687; <b>1985</b> 660 Ziff. I 21; <b>1987</b> 600 Art. 17 Ziff. 3; <b>1991</b> 857 Anhang Ziff. 4; <b>1992</b> 288 Anhang Ziff. 17, 2521 Art. 55 Ziff. 1; <b>1996</b> 2588 Art. 25 Abs. 2 und Anhang Ziff. 1; <b>1998</b> 1822 Art. 2; <b>1999</b> 2374 Ziff. I 2; <b>2003</b> 187 Anhang Ziff. II 2. AS <b>2003</b> 4557 Anhang Ziff. I 1]",
      "links": [
       {
-       "label": "AS 1979 1687",
+       "label": "AS <b>1979</b> 1687",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/1687_1687_1687"
       },
       {
-       "label": "1985 660",
+       "label": "<b>1985</b> 660",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/660_660_660"
       },
       {
-       "label": "1987 600",
+       "label": "<b>1987</b> 600",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
       },
       {
-       "label": "1991 857",
+       "label": "<b>1991</b> 857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
       },
       {
-       "label": "1992 288",
+       "label": "<b>1992</b> 288",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       },
       {
@@ -1623,11 +1660,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
       },
       {
-       "label": "1996 2588",
+       "label": "<b>1996</b> 2588",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2588_2588_2588"
       },
       {
-       "label": "AS 2003 4557",
+       "label": "AS <b>2003</b> 4557",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/674"
       }
      ],
@@ -1636,10 +1673,10 @@
     },
     {
      "nr": "66",
-     "text": "SR 910.1",
+     "text": "SR <b>910.1</b>",
      "links": [
       {
-       "label": "SR 910.1",
+       "label": "SR <b>910.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/3033_3033_3033"
       }
      ],
@@ -1648,10 +1685,10 @@
     },
     {
      "nr": "67",
-     "text": "SR 921.0",
+     "text": "SR <b>921.0</b>",
      "links": [
       {
-       "label": "SR 921.0",
+       "label": "SR <b>921.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1992/2521_2521_2521"
       }
      ],
@@ -1660,10 +1697,10 @@
     },
     {
      "nr": "68",
-     "text": "[AS 1992 1973. AS 2003 4557 Anhang I 2]",
+     "text": "[AS <b>1992</b> 1973. AS <b>2</b><b>0</b><b>03</b> 4557 Anhang I 2]",
      "links": [
       {
-       "label": "AS 1992 1973",
+       "label": "AS <b>1992</b> 1973",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/1973_1973_1973"
       }
      ],
@@ -1711,14 +1748,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017 (AS 2017 5147). Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS 2019 155).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017 (AS <b>2017</b> 5147). Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS <b>2019</b> 155).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       },
       {
-       "label": "AS 2019 155",
+       "label": "AS <b>2019</b> 155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/23"
       }
      ],
@@ -1742,10 +1779,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS 2019 155).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V vom 14. Dez. 2018, mit Wirkung seit 1. Febr. 2019 (AS <b>2019</b> 155).",
      "links": [
       {
-       "label": "AS 2019 155",
+       "label": "AS <b>2019</b> 155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/23"
       }
      ],
@@ -1771,10 +1808,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 14. Nov. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 6473).",
+     "text": "Eingefügt durch Ziff. I der V vom 14. Nov. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6473).",
      "links": [
       {
-       "label": "AS 2012 6473",
+       "label": "AS <b>2012</b> 6473",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/773"
       }
      ],
@@ -1800,15 +1837,16 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Abschnitt: Beiträge an Absolventinnen und Absolventen von vorbereitenden Kursen"
     }
    ]
   },
@@ -1874,10 +1912,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857"
       }
      ],
@@ -1932,10 +1970,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "SR 170.512",
+     "text": "SR <b>170.512</b>",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
       }
      ],
@@ -2018,10 +2056,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 6005).",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 6005).",
      "links": [
       {
-       "label": "AS 2010 6005",
+       "label": "AS <b>2010</b> 6005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/864"
       }
      ],
@@ -2030,10 +2068,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2059,10 +2097,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS 2010 6005). Die bisherigen Abs. 5–7 von Art. 68 wurden zu Abs. 1–3 dieses Artikels.",
+     "text": "Eingefügt durch Ziff. I der V vom 3. Dez. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 6005). Die bisherigen Abs. 5–7 von Art. 68 wurden zu Abs. 1–3 dieses Artikels.",
      "links": [
       {
-       "label": "AS 2010 6005",
+       "label": "AS <b>2010</b> 6005",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/864"
       }
      ],
@@ -2071,10 +2109,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2096,10 +2134,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS 2014 4137).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4137).",
      "links": [
       {
-       "label": "AS 2014 4137",
+       "label": "AS <b>2014</b> 4137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/692"
       }
      ],
@@ -2121,10 +2159,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS 2014 4137).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 12. Nov. 2014 zum Hochschulförderungs- und -koordinationsgesetz, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4137).",
      "links": [
       {
-       "label": "AS 2014 4137",
+       "label": "AS <b>2014</b> 4137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/692"
       }
      ],
@@ -2144,14 +2182,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Ursprünglich: Art. 69a. Eingefügt durch Ziff. II der V vom 14. Sept. 2005 (AS 2005 4645). Aufgehoben durch Anhang Ziff. 2 der V vom 21. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS 2016 5113).",
+     "text": "Ursprünglich: Art. 69<i>a</i>. Eingefügt durch Ziff. II der V vom 14. Sept. 2005 (AS <b>2005</b> 4645). Aufgehoben durch Anhang Ziff. 2 der V vom 21. Dez. 2016, mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 5113).",
      "links": [
       {
-       "label": "AS 2005 4645",
+       "label": "AS <b>2005</b> 4645",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/608"
       },
       {
-       "label": "AS 2016 5113",
+       "label": "AS <b>2016</b> 5113",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/812"
       }
      ],
@@ -2177,10 +2215,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Eingefügt durch Anhang Ziff. 2 der Gebührenverordnung SBFI vom 16. Juni 2006, in Kraft seit 1. Aug. 2006 (AS 2006 2639).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der Gebührenverordnung SBFI vom 16. Juni 2006, in Kraft seit 1. Aug. 2006 (AS <b>2006</b> 2639).",
      "links": [
       {
-       "label": "AS 2006 2639",
+       "label": "AS <b>2006</b> 2639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/404"
       }
      ],
@@ -2189,10 +2227,10 @@
     },
     {
      "nr": "57",
-     "text": "SR 412.109.3",
+     "text": "SR <b>412.109.3</b>",
      "links": [
       {
-       "label": "SR 412.109.3",
+       "label": "SR <b>412.109.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/404"
       }
      ],
@@ -2218,10 +2256,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I der V vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS 2024 217).",
+     "text": "Eingefügt durch Ziff. I der V vom 8. Mai 2024, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 217).",
      "links": [
       {
-       "label": "AS 2024 217",
+       "label": "AS <b>2024</b> 217",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/217"
       }
      ],
@@ -2230,10 +2268,10 @@
     },
     {
      "nr": "60",
-     "text": "SR 412.109.3",
+     "text": "SR<b> 412.109.3</b>",
      "links": [
       {
-       "label": "SR 412.109.3",
+       "label": "SR<b> 412.109.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/404"
       }
      ],
@@ -2259,10 +2297,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Eingefügt durch Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, in Kraft seit 1. Okt. 2012 (AS 2012 3967).",
+     "text": "Eingefügt durch Art. 82 Ziff. 3 der Sportförderungsverordnung vom 23. Mai 2012, in Kraft seit 1. Okt. 2012 (AS <b>2012</b> 3967).",
      "links": [
       {
-       "label": "AS 2012 3967",
+       "label": "AS <b>2012</b> 3967",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/461"
       }
      ],
@@ -2288,10 +2326,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 5147).",
+     "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5147).",
      "links": [
       {
-       "label": "AS 2017 5147",
+       "label": "AS <b>2017</b> 5147",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/565"
       }
      ],

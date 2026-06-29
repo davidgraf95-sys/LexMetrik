@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
-import type { Sektion, Fussnote } from '../../lib/normtext/browse';
+import type { Sektion, Fussnote, ErlassKopf } from '../../lib/normtext/browse';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { NormChip } from '../../components/vorlagen/ui';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
@@ -52,8 +52,12 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
   const fnProAbsatz: Record<number, string[]> = {};
   const fnProItem: Record<string, string[]> = {}; // Schlüssel «<blockIndex>|<marke>»
   const fnArtikelEbene: string[] = [];
+  // G11: Marker für section-heading-Fussnoten je Überschrift-Label — landen NICHT
+  // mehr anonym auf Artikelebene, sondern an der passenden Randtitel-/Sektions-Zeile.
+  const fnProSektion: Record<string, string[]> = {};
   for (const f of fussAnzeige) {
     if (!f.nr) continue;
+    if (f.sektion) { (fnProSektion[f.sektion] ??= []).push(f.nr); continue; }
     let idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
     if (f.item && idx < 0) idx = e.bloecke.findIndex((b) => (b.items ?? []).some((it) => it.marke === f.item));
     if (idx >= 0 && f.item && (e.bloecke[idx].items ?? []).some((it) => it.marke === f.item)) {
@@ -94,6 +98,13 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
   };
+  // Aufhebungsnotiz (G16/#3, David 28.6.2026): die amtliche «Aufgehoben durch …
+  // (AS …)»-Notiz eines voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote
+  // im Snapshot (absatz/item = null). Sie wird SCHLICHT inline gezeigt statt doppelt
+  // gated (eingeklappt + hinter dem Fussnoten-Schalter). Wortlaut nie erfunden (§1).
+  const aufhebungNotiz: Fussnote[] = ganzAufgehoben
+    ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
+    : [];
   return (
     <article id={`art-${e.artikel}`}
       className="nt-art-cv group relative z-0 nt-anker border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
@@ -113,7 +124,14 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
           {marg && marg.length > 0 ? (
             <div className="mb-1 space-y-0.5 font-serif leading-snug">
               {marg.map((m, i) => (
-                <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>{m}</div>
+                <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>
+                  {m}
+                  {/* G11: section-heading-Fussnoten-Marker an der passenden Randtitel-
+                      Zeile (blatt im Volltext, ganze Kette in der Suchsicht). */}
+                  {artOffen && fussnotenAuf && fnProSektion[m]?.map((nr, j) => (
+                    <span key={nr}>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
+                  ))}
+                </div>
               ))}
             </div>
           ) : e.titel ? (
@@ -124,10 +142,15 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
           {/* Artikelnummer-Zeile: «Art. N» als Anker; Zitat/Link rechtsbündig INLINE
               (ml-auto) statt als eigene Zeile darunter — schliesst den Abstand zum
               ersten Absatz (Auftrag David 26.6.2026, P8). */}
-          <div className="flex items-baseline gap-2">
-            <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
-              aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
-              className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+            {/* Aufgehobener Artikel: kein Klapp-Chevron (nichts zu entfalten —
+                der Wortlaut ist «…»); ein w-4-Platzhalter hält die «Art. N» bündig
+                zu den übrigen Artikeln. */}
+            {ganzAufgehoben
+              ? <span className="shrink-0 w-4" aria-hidden />
+              : <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
+                  aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+                  className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>}
             {imTreffer && onSpringe ? (
               <button type="button" onClick={() => onSpringe(e.artikel)}
                 title="Im Volltext zu diesem Artikel springen"
@@ -144,7 +167,22 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
                 <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
               </span>
             )}
+            {/* Amtliche Aufhebungsnotiz inline (eigene Zeile, dezent eingerückt) —
+                schliesst die §5-Lücke «nacktes aufgehoben/…» gegenüber Fedlex. */}
+            {ganzAufgehoben && aufhebungNotiz.length > 0 && (
+              <span className="basis-full pl-6 text-xs leading-snug text-ink-500">
+                {aufhebungNotiz.map((fn, i) => (
+                  <span key={i}>{i > 0 && '; '}{fnTextMitLinks(fn)}</span>
+                ))}
+              </span>
+            )}
           </div>
+          {/* G23 (M8): Delegationsnorm-Grundlage «(Art. N ArG)» — Fedlex zeigt sie
+              dezent unter der Überschrift; amtlicher Inhalt (§2), bisher verworfen.
+              Immer sichtbar (auch eingeklappt), wie der Randtitel. */}
+          {e.grundlage && (
+            <div className="mt-0.5 text-xs italic leading-snug text-ink-500">{e.grundlage}</div>
+          )}
         </div>
         {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
             overflow-x-clip + min-w-0: bei geteiltem/schmalem Bildschirm darf der
@@ -184,10 +222,54 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
   );
 }
 
+// M5 (§2 Fundiertheits-Floor): Erlass-Kopf = Ingress/Erlassformel bzw. materielle
+// Präambel + Erlassdatum + Kopf-Fussnoten. Fedlex zeigt das unter dem Titel; bei
+// uns war es zu 100 % verworfen (Extraktor startete erst beim ersten <article>).
+// Reine Darstellung aus dem Sidecar (§3) — Wortlaut unangetastet (§1). Die Kopf-
+// Fussnoten (Provenienz) liegen wie der Änderungs-Apparat hinter dem Schalter (§4).
+export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fussnotenAuf: boolean }) {
+  const hatPraeambel = !!kopf.praeambel?.length;
+  if (!kopf.erlassdatum && !hatPraeambel) return null;
+  const zeilenStil = (rolle: string): string => {
+    if (rolle === 'verb') return 'font-serif text-body-l text-ink-800';
+    if (rolle === 'autor') return 'font-serif text-body-l text-ink-800';
+    // ingress (Rechtsgrundlage) + praeambel (materiell, BV) ruhig im Lesefluss
+    return 'font-serif text-body-l leading-[1.65] text-ink-700';
+  };
+  return (
+    <section aria-label="Ingress" className="max-w-reading space-y-3 border-b border-line pb-5">
+      {kopf.erlassdatum && (
+        <p className="font-serif text-body-s text-ink-500">{kopf.erlassdatum}</p>
+      )}
+      {kopf.praeambelTitel && (
+        <p className="lc-overline">{kopf.praeambelTitel}</p>
+      )}
+      {hatPraeambel && (
+        <div className="space-y-2">
+          {kopf.praeambel!.map((z, i) => (
+            <p key={i} className={zeilenStil(z.rolle)}>{z.text}</p>
+          ))}
+        </div>
+      )}
+      {fussnotenAuf && kopf.fussnoten && kopf.fussnoten.length > 0 && (
+        <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
+          {kopf.fussnoten.map((fn, i) => (
+            <p key={i} className="text-xs leading-normal text-ink-500">
+              {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
+              {fnTextMitLinks(fn)}
+            </p>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 // Gliederungs-Überschrift im Fliesstext: klappbar (Fedlex-analog), volle
 // Bezeichnung, nach Ebene abgestuft.
-export function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
+export function SektionKopf({ s, refCb, offen, onToggle, bereich, fussnotenAuf }: {
   s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void; bereich?: string;
+  fussnotenAuf?: boolean;
 }) {
   const { pre, rest } = romanFrei(s.label);
   // Vollwertige Abschnitts-Überschrift im Fliesstext: feine Overline mit dem
@@ -205,20 +287,39 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   // am Titel-Span (unten). Nur existierende Tokens (§13).
   const titelStil = s.randtitel ? 'text-base' : s.ebene === 0 ? 'text-h2' : s.ebene === 1 ? 'text-h3' : s.ebene === 2 ? 'text-body-l' : 'text-base';
   const titelFont = s.randtitel ? 'font-serif font-semibold text-ink-800' : 'font-display font-semibold text-ink-900';
+  // G11: section-heading-Fussnoten-Marker. FnRef ist selbst ein <button> und darf
+  // NICHT im Toggle-<button> liegen (verschachtelte Buttons) → der Marker sitzt als
+  // Geschwister NEBEN dem Toggle in derselben Titelzeile. Nur zeigen, wenn der
+  // Fussnoten-Schalter AN ist UND die Sektion OFFEN ist: das Popover-Ziel
+  // (#fn-<artikel>-<nr>) lebt im {auf && …}-Block des Trägerartikels und ist bei
+  // eingeklappter Sektion ungemountet → sonst toter Bedienpfad (§13 F4, analog zum
+  // artOffen-Gate der Artikel-Marker).
+  const sekFn = offen && fussnotenAuf && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
   return (
     <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
-      <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
-        {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
-        <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          {/* Einklapp-Marke deutlich (analog Fedlex, Auftrag David): jede Stufe
-              inkl. Untergruppe ist klappbar — vorher war das Chevron zu blass/winzig,
-              darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
-              Steuerelement erkennbar. */}
+      {pre && (
+        <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek block text-left">
+          <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>
+        </button>
+      )}
+      <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+        {/* Einklapp-Marke deutlich (analog Fedlex, Auftrag David): jede Stufe
+            inkl. Untergruppe ist klappbar — vorher war das Chevron zu blass/winzig,
+            darum wirkte es, als ginge es nicht. Messing-Akzent macht es als
+            Steuerelement erkennbar. */}
+        <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek flex min-w-0 items-baseline gap-x-2 text-left">
           <span className={`shrink-0 w-4 text-body-s transition-colors ${offen ? 'text-brass-600' : 'text-ink-500'} group-hover/sek:text-brass-700`}>{offen ? '▾' : '▸'}</span>
           <span className={`${titelFont} ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
-          {bereich && <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>}
-        </span>
-      </button>
+        </button>
+        {sekFn && (
+          <span className="shrink-0">
+            {sekFn.map((f, i) => (
+              <span key={`${f.artikel}-${f.nr}`}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={f.artikel} nr={f.nr} /></span>
+            ))}
+          </span>
+        )}
+        {bereich && <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>}
+      </span>
     </div>
   );
 }

@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "942.20",
+  "titel": "Preisüberwachungsgesetz",
+  "erlassdatum": "vom 20. Dezember 1985 (Stand am 8. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 31 und 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 30. Mai 1984,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "[BS <b>1</b> 3; AS <b>1983</b> 240]",
+    "links": [
+     {
+      "label": "AS <b>1983</b> 240",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1983/240_240_240"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>1984</b> II 755",
+    "links": [
+     {
+      "label": "BBl <b>1984</b> II 755",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1984/2_755_781_695"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,14 +59,14 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],
@@ -43,10 +88,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -54,7 +99,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -63,10 +108,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 251",
+     "text": "SR <b>251</b>",
      "links": [
       {
-       "label": "SR 251",
+       "label": "SR <b>251</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6127"
       }
      ],
@@ -88,10 +133,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Ausdruck gemäss Ziff. I 33 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS 2012 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 33 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 3655). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2012 3655",
+       "label": "AS <b>2012</b> 3655",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       }
      ],
@@ -124,10 +169,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) angepasst.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004</b> 4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -136,14 +181,14 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],
@@ -152,10 +197,10 @@
     },
     {
      "nr": "9",
-     "text": "Ausdruck gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -163,7 +208,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -172,14 +217,14 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],
@@ -201,10 +246,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -212,7 +257,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -309,10 +354,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468). Die Berichtigung vom 7. Mai 2026 der RedK der BVers, veröffentlicht am 8. Mai 2026, betrifft nur den italienischen Text (AS 2026 206).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468). Die Berichtigung vom 7. Mai 2026 der RedK der BVers, veröffentlicht am 8. Mai 2026, betrifft nur den italienischen Text (AS <b>2026</b> 206).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -320,11 +365,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       },
       {
-       "label": "AS 2026 206",
+       "label": "AS <b>2026</b> 206",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/206"
       }
      ],
@@ -344,10 +389,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -355,7 +400,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -364,14 +409,14 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],
@@ -380,14 +425,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],
@@ -407,10 +452,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -418,7 +463,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -440,10 +485,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS 1996 546, 1805; BBl 1995 I 468).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des Kartellgesetzes vom 6. Okt. 1995, in Kraft seit 1. Juli 1996 (AS <b>1996</b> 546, 1805; BBl <b>1995</b> I 468).",
      "links": [
       {
-       "label": "AS 1996 546",
+       "label": "AS <b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -451,7 +496,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1805_1805_1805"
       },
       {
-       "label": "BBl 1995 I 468",
+       "label": "BBl <b>1995</b> I 468",
        "url": "https://fedlex.data.admin.ch/eli/fga/1995/1_468_472_389"
       }
      ],
@@ -495,10 +540,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Anhang Ziff. 137 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197, 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 137 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197, 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -506,7 +551,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -537,10 +582,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Aufgehoben durch Anhang Ziff. 137 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS 2006 2197, 1069; BBl 2001 4202).",
+     "text": "Aufgehoben durch Anhang Ziff. 137 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197, 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -548,7 +593,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -592,10 +637,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
@@ -617,14 +662,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS 1991 2092; BBl 1990 I 97).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 1991, in Kraft seit 1. Okt. 1991 (AS <b>1991</b> 2092; BBl <b>1990</b> I 97).",
      "links": [
       {
-       "label": "AS 1991 2092",
+       "label": "AS <b>1991</b> 2092",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2092_2092_2092"
       },
       {
-       "label": "BBl 1990 I 97",
+       "label": "BBl <b>1990</b> I 97",
        "url": "https://fedlex.data.admin.ch/eli/fga/1990/1_97_85_81"
       }
      ],

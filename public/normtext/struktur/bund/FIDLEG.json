@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "950.1",
+  "titel": "Bundesgesetz über die Finanzdienstleistungen",
+  "erlassdatum": "vom 15. Juni 2018 (Stand am 1. März 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 95, 97, 98 und 122 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrats vom 4. November 2015,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2015</b> 8901",
+    "links": [
+     {
+      "label": "BBl <b>2015</b> 8901",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +70,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -37,10 +82,10 @@
     },
     {
      "nr": "4",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -62,10 +107,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -74,10 +119,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -85,7 +130,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -94,10 +139,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -106,10 +151,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -117,7 +162,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -126,10 +171,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -158,10 +203,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -170,10 +215,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -182,10 +227,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -194,14 +239,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS <b>2024</b> 53; BBl <b>2020</b> 6885).",
      "links": [
       {
-       "label": "AS 2024 53",
+       "label": "AS <b>2024</b> 53",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
       },
       {
-       "label": "BBl 2020 6885",
+       "label": "BBl <b>2020</b> 6885",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
       }
      ],
@@ -210,14 +255,14 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS <b>2024</b> 53; BBl <b>2020</b> 6885).",
      "links": [
       {
-       "label": "AS 2024 53",
+       "label": "AS <b>2024</b> 53",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
       },
       {
-       "label": "BBl 2020 6885",
+       "label": "BBl <b>2020</b> 6885",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
       }
      ],
@@ -557,10 +602,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -681,10 +726,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -710,14 +755,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS 2021 33; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS <b>2021</b> 33; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -726,10 +771,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -738,10 +783,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -750,10 +795,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -824,10 +869,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -853,10 +898,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -886,10 +931,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -898,10 +943,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -909,7 +954,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -918,10 +963,10 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -929,7 +974,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -1130,10 +1175,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1142,10 +1187,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1211,10 +1256,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1223,10 +1268,10 @@
     },
     {
      "nr": "31",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1256,10 +1301,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1289,14 +1334,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS 2024 53; BBl 2020 6885).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS <b>2024</b> 53; BBl <b>2020</b> 6885).",
      "links": [
       {
-       "label": "AS 2024 53",
+       "label": "AS <b>2024</b> 53",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
       },
       {
-       "label": "BBl 2020 6885",
+       "label": "BBl <b>2020</b> 6885",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
       }
      ],
@@ -1305,10 +1350,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1338,10 +1383,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1350,10 +1395,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1362,10 +1407,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1414,10 +1459,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1466,10 +1511,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1478,10 +1523,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1530,10 +1575,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -1735,10 +1780,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1747,10 +1792,10 @@
     },
     {
      "nr": "43",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -1759,10 +1804,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1771,10 +1816,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -1800,10 +1845,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1812,10 +1857,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -1893,10 +1938,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "SR 272",
+     "text": "SR <b>272</b>",
      "links": [
       {
-       "label": "SR 272",
+       "label": "SR <b>272</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/262"
       }
      ],
@@ -1922,14 +1967,14 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS 2021 33; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Febr. 2021 (AS <b>2021</b> 33; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -2141,10 +2186,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2199,10 +2244,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -2211,10 +2256,10 @@
     },
     {
      "nr": "52",
-     "text": "V vom 6. Nov. 2019 über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes (AS 2019 4631).",
+     "text": "V vom 6. Nov. 2019 über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes (AS <b>2019</b> 4631).",
      "links": [
       {
-       "label": "AS 2019 4631",
+       "label": "AS <b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       }
      ],

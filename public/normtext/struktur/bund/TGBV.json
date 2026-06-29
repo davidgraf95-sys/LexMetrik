@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "211.432.11",
+  "titel": "Technische Verordnung des EJPD und des VBS über das Grundbuch",
+  "erlassdatum": "vom 28. Dezember 2012 (Stand am 1. Januar 2024) (Stand am 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Eidgenössische Justiz- und Polizeidepartement (EJPD) und das Eidgenössische Departement für Verteidigung, Bevölkerungsschutz und Sport (VBS),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 949a Absatz 3 und 949c des Zivilgesetzbuches (ZGB), die Artikel 19 Absatz 4, 23e, 34b Absatz 7, 34c Absatz 5, 40 Absatz 2 und 41 Absatz 1 der Grundbuchverordnung vom 23. September 2011 (GBV) und die Artikel 7 Absatz 5 und 46 Absatz 1 der Verordnung vom 18. November 1992 über die amtliche Vermessung (VAV),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>210</b>",
+    "links": [
+     {
+      "label": "SR <b>210</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>211.432.1</b>",
+    "links": [
+     {
+      "label": "SR <b>211.432.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2011/667"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>211.432.2</b>",
+    "links": [
+     {
+      "label": "SR <b>211.432.2</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1992/2446_2446_2446"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 528).",
+    "links": [
+     {
+      "label": "AS <b>2023</b> 528",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2023/528"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +81,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -24,10 +93,10 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -36,10 +105,10 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -48,10 +117,10 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -60,10 +129,10 @@
     },
     {
      "nr": "9",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -72,10 +141,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -97,10 +166,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -109,10 +178,10 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -121,10 +190,10 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -133,10 +202,10 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -145,10 +214,10 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -157,10 +226,10 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -204,10 +273,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 528).",
+     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 528).",
      "links": [
       {
-       "label": "AS 2023 528",
+       "label": "AS <b>2023</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/528"
       }
      ],
@@ -229,10 +298,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -241,10 +310,10 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -264,7 +333,7 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Diese Norm kann kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, 8404 Winterthur; www.snv.ch.",
+     "text": "Diese Norm kann kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, <i>8404 </i>Winterthur; www.snv.ch.",
      "links": [],
      "absatz": "1",
      "item": null
@@ -282,10 +351,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -314,10 +383,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -326,10 +395,10 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -351,7 +420,7 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Diese Norm kann kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, 8404 Winterthur; www.snv.ch.",
+     "text": "Diese Norm kann kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, <i>8404 </i>Winterthur; www.snv.ch.",
      "links": [],
      "absatz": null,
      "item": null
@@ -437,10 +506,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -449,10 +518,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -461,10 +530,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -473,10 +542,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 211.435.11",
+     "text": "SR <b>211.435.11</b>",
      "links": [
       {
-       "label": "SR 211.435.11",
+       "label": "SR <b>211.435.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/30"
       }
      ],
@@ -498,10 +567,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -510,10 +579,10 @@
     },
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -522,10 +591,10 @@
     },
     {
      "nr": "39",
-     "text": "SR 211.435.11",
+     "text": "SR <b>211.435.11</b>",
      "links": [
       {
-       "label": "SR 211.435.11",
+       "label": "SR <b>211.435.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/30"
       }
      ],
@@ -534,10 +603,10 @@
     },
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -559,10 +628,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 211.435.11",
+     "text": "SR <b>211.435.11</b>",
      "links": [
       {
-       "label": "SR 211.435.11",
+       "label": "SR <b>211.435.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/30"
       }
      ],
@@ -571,10 +640,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Fassung gemäss Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -596,22 +665,22 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "[AS 2004 5085; 2008 3437 Ziff. II 55. AS 2016 4651 Anhang Ziff. I]. Siehe heute: das BG vom 18. März 2016 (SR 943.03).",
+     "text": "[AS <b>2004</b> 5085; <b>2008</b> 3437 Ziff. II 55. AS <b>2016</b> 4651 Anhang Ziff. I]. Siehe heute: das BG vom 18. März 2016 (SR <b>943.03</b>).",
      "links": [
       {
-       "label": "AS 2004 5085",
+       "label": "AS <b>2004</b> 5085",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/788"
       },
       {
-       "label": "2008 3437",
+       "label": "<b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "AS 2016 4651",
+       "label": "AS <b>2016</b> 4651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
       },
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -640,10 +709,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -663,10 +732,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "SR 943.03",
+     "text": "SR <b>943.03</b>",
      "links": [
       {
-       "label": "SR 943.03",
+       "label": "SR <b>943.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/752"
       }
      ],
@@ -697,10 +766,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "[AS 2007 3353]",
+     "text": "[AS <b>2007</b> 3353]",
      "links": [
       {
-       "label": "AS 2007 3353",
+       "label": "AS <b>2007</b> 3353",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/408"
       }
      ],
@@ -744,15 +813,16 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6a. Abschnitt: Die Schnittstelle zum Suchindex des Grundstücksuchdienstes"
     }
    ]
   },
@@ -780,15 +850,16 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "11a. Abschnitt: Technische Anforderungen an die Schnittstelle für Abfragen über den Grundstücksuchdienst und Bewilligung zur Verwendung der Schnittstelle"
     }
    ]
   },
@@ -816,10 +887,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
@@ -841,10 +912,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 528).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 528).",
      "links": [
       {
-       "label": "AS 2023 528",
+       "label": "AS <b>2023</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/528"
       }
      ],
@@ -853,18 +924,18 @@
     },
     {
      "nr": "51",
-     "text": "[AS 1994 1864; 2003 514; 2008 2759]",
+     "text": "[AS <b>1994</b> 1864; <b>2003</b> 514; <b>2008</b> 2759]",
      "links": [
       {
-       "label": "AS 1994 1864",
+       "label": "AS <b>1994</b> 1864",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1864_1864_1864"
       },
       {
-       "label": "2003 514",
+       "label": "<b>2003</b> 514",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/112"
       },
       {
-       "label": "2008 2759",
+       "label": "<b>2008</b> 2759",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/386"
       }
      ],
@@ -886,10 +957,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 431.841",
+     "text": "SR <b>431.841</b>",
      "links": [
       {
-       "label": "SR 431.841",
+       "label": "SR <b>431.841</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/376"
       }
      ],
@@ -898,10 +969,10 @@
     },
     {
      "nr": "23",
-     "text": "SR 510.625",
+     "text": "SR <b>510.625</b>",
      "links": [
       {
-       "label": "SR 510.625",
+       "label": "SR <b>510.625</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/393"
       }
      ],
@@ -910,15 +981,16 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 528).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 528).",
      "links": [
       {
-       "label": "AS 2023 528",
+       "label": "AS <b>2023</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/528"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Abschnitt: Plan für das Grundbuch"
     }
    ]
   },
@@ -946,10 +1018,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "SR 510.625",
+     "text": "SR <b>510.625</b>",
      "links": [
       {
-       "label": "SR 510.625",
+       "label": "SR <b>510.625</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/393"
       }
      ],
@@ -958,10 +1030,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 431.841",
+     "text": "SR <b>431.841</b>",
      "links": [
       {
-       "label": "SR 431.841",
+       "label": "SR <b>431.841</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/376"
       }
      ],
@@ -970,15 +1042,16 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 528).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 29. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 528).",
      "links": [
       {
-       "label": "AS 2023 528",
+       "label": "AS <b>2023</b> 528",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/528"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3b. Abschnitt: Dokumente der amtlichen Vermessung für die Grundbuchführung"
     }
    ]
   },
@@ -1006,15 +1079,16 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS 2021 919).",
+     "text": "Eingefügt durch Ziff. I der V des EJPD und des VBS vom 10. Dez. 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 919).",
      "links": [
       {
-       "label": "AS 2021 919",
+       "label": "AS <b>2021</b> 919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/919"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Verfahren der Übernahme und Aktualisierung von Daten; Protokollierung"
     }
    ]
   },

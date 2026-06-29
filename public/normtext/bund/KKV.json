@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/KKV/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -27,6 +27,7 @@
       "erlass": "KKV",
       "artikel": "1_a",
       "artikelLabel": "Art. 1a",
+      "grundlage": "(Art. 2 Abs. 2 Bst. f KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -53,7 +54,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "189866e2cf595da76786d68a0672a274f4a0a4a0e0c8377f2937a16f606dff7f"
     },
@@ -64,6 +65,7 @@
       "erlass": "KKV",
       "artikel": "1_b",
       "artikelLabel": "Art. 1b",
+      "grundlage": "(Art. 2 Abs. 2 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -116,7 +118,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_1_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1dbd13653996ec23cdd30e92f3065b017e5fc3dcd3c3274fdfc7a93eec1c38af"
     },
@@ -135,7 +137,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_1_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -146,6 +148,7 @@
       "erlass": "KKV",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 2 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -154,7 +157,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8904ff9805847a961a83879b9c25e12c40f920671105d32c5fe23d339575c72a"
     },
@@ -173,7 +176,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_3_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -184,6 +187,7 @@
       "erlass": "KKV",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 7 Abs. 1, 3 und 4 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -212,7 +216,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ab1e17a1e905d4b304131652c97110428bd1e92e0e2f91e9cbc69320475b9d6e"
     },
@@ -231,7 +235,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -242,6 +246,7 @@
       "erlass": "KKV",
       "artikel": "6_a",
       "artikelLabel": "Art. 6a",
+      "grundlage": "(Art. 10 Abs. 3 ter KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -264,7 +269,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_6_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "63184faa5d7fa314a4a16098ceb15c0e5846ec4c5ac7704895fe218f17e01a94"
     },
@@ -275,6 +280,7 @@
       "erlass": "KKV",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 13 und 14 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -297,7 +303,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "741b39ce0067c3ad2b093ecc50df6131a4b63e1c69f8827e9727537ddece6ee1"
     },
@@ -308,6 +314,7 @@
       "erlass": "KKV",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 13 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -316,7 +323,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "de52567182031c208e10fdcaaa8e40929427f780134b4a832737e70f155392c3"
     },
@@ -335,7 +342,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -346,6 +353,7 @@
       "erlass": "KKV",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 14 Abs. 1 Bst. a, a bis und b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -358,7 +366,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ce751f7eafdeb2abe18220712cd772a81ed463bbe67a79be0662a5afc01e1cba"
     },
@@ -377,7 +385,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -388,6 +396,7 @@
       "erlass": "KKV",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 14 Abs. 1 Bst. c KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -416,7 +425,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "34b0999ee2e9a5572c2e31df94eda76f769dabd1b1cf1d629a7ca92f86ce7756"
     },
@@ -427,6 +436,7 @@
       "erlass": "KKV",
       "artikel": "12_a",
       "artikelLabel": "Art. 12a",
+      "grundlage": "(Art. 14 Abs. 1 ter KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -451,7 +461,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_12_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "6cae0f2a3786a8d54d80533ed8249d527f7348902ca153ffad2f29e547965d24"
     },
@@ -462,6 +472,7 @@
       "erlass": "KKV",
       "artikel": "12_b",
       "artikelLabel": "Art. 12b",
+      "grundlage": "(Art. 14 Abs. 1 ter KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -484,7 +495,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_12_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e4a14c3d715afdc9c6daf8a43b2277e9e88dd43afffb9e66a81d0e2ae034e8c6"
     },
@@ -495,6 +506,7 @@
       "erlass": "KKV",
       "artikel": "12_c",
       "artikelLabel": "Art. 12c",
+      "grundlage": "(Art. 14 Abs. 1 ter KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -521,7 +533,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_12_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "216d6d3f4b4d604ba0e4077203cf6546497c7ca71d0192db9c7c6e68f71fb8ac"
     },
@@ -532,6 +544,7 @@
       "erlass": "KKV",
       "artikel": "12_d",
       "artikelLabel": "Art. 12d",
+      "grundlage": "(Art. 14 Abs. 1 ter KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -570,7 +583,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_12_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3a88c4e3b593d68fa678e4114e494293aeab5c3779ae822fee5d869d6c459219"
     },
@@ -581,6 +594,7 @@
       "erlass": "KKV",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -589,7 +603,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "dd95ca2d018d776c44a007a2a782ebc519e0002b6018d5f45fc2265f3a07e2fc"
     },
@@ -600,6 +614,7 @@
       "erlass": "KKV",
       "artikel": "13_a",
       "artikelLabel": "Art. 13a",
+      "grundlage": "(Art. 15 Abs. 1 Bst. e KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -630,7 +645,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_13_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "001c118b618e1c632e99132447afd46b71bf1f108c1fd317bb8cba16763cb1f2"
     },
@@ -641,6 +656,7 @@
       "erlass": "KKV",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 16 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -667,7 +683,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "df88e82ffa3ea2f2ed2b7a5d5cf6e97429a116eedaac33d8e84038ca36410b7c"
     },
@@ -678,6 +694,7 @@
       "erlass": "KKV",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 16 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -742,7 +759,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "17ad7b6cae810ac43199b8b6192fcf6cd6a2f3bcf11f19b2403797b24d5d6c61"
     },
@@ -753,6 +770,7 @@
       "erlass": "KKV",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 17 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -779,7 +797,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7076e2893891f05a0b97a1da54ac5df1886f38a0d4ad797aeacce2b32de38323"
     },
@@ -790,6 +808,7 @@
       "erlass": "KKV",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 17 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -834,7 +853,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "cd30110e0fc93ad636f6a16e6b0cc1e7652bb631eba78df76d359ed35a561243"
     },
@@ -845,6 +864,7 @@
       "erlass": "KKV",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 17 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -867,7 +887,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8e79ef48d2fe916e1b019cd4a0b0a8f78d24bdeafa4c984c6ed6f4eacfae009e"
     },
@@ -886,7 +906,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -897,6 +917,7 @@
       "erlass": "KKV",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -934,11 +955,13 @@
             },
             {
               "marke": "1",
-              "text": "sie weder mit eigenen Forderungen zu verrechnen noch aus eigenen Vermögenswerten sicherzustellen,"
+              "text": "sie weder mit eigenen Forderungen zu verrechnen noch aus eigenen Vermögenswerten sicherzustellen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "keinen der Kapitalbestandteile gemäss Absatz 2 Buchstaben a und c ohne vorgängige Zustimmung der Prüfgesellschaft so weit herabzusetzen, dass das Mindestkapital unterschritten wird."
+              "text": "keinen der Kapitalbestandteile gemäss Absatz 2 Buchstaben a und c ohne vorgängige Zustimmung der Prüfgesellschaft so weit herabzusetzen, dass das Mindestkapital unterschritten wird.",
+              "tiefe": 1
             }
           ]
         },
@@ -949,9 +972,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "124bad47b87683902b788b03fa23b65d8bfd41f213a73cdf8da96c782dc6ef80"
+      "sha": "2c52db93c5578ebaf8089d7537b8aede96cd88cb8563088084ad752c1a4eba43"
     },
     {
       "id": "bund/KKV/art_21",
@@ -968,7 +991,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -979,6 +1002,7 @@
       "erlass": "KKV",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1039,7 +1063,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "5c7d9390605813b2cbb5fbf7bb2cf127f31584318d050e4bb1bdd327e141c6b5"
     },
@@ -1050,6 +1074,7 @@
       "erlass": "KKV",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1088,7 +1113,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "dd25e01b2482c6429392efe103b9c3aa8126a445069795a56c0c0537384a9820"
     },
@@ -1107,7 +1132,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1126,7 +1151,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_24_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1145,7 +1170,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_25_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1164,7 +1189,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1183,7 +1208,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_29_a_29_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1202,7 +1227,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1221,7 +1246,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_30_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1232,6 +1257,7 @@
       "erlass": "KKV",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 20 Abs. 1 Bst. a KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1259,15 +1285,18 @@
             },
             {
               "marke": "1",
-              "text": "eine gemeinsame Verwaltung,"
+              "text": "eine gemeinsame Verwaltung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Beherrschung, oder"
+              "text": "Beherrschung, oder",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "eine wesentliche direkte oder indirekte Beteiligung."
+              "text": "eine wesentliche direkte oder indirekte Beteiligung.",
+              "tiefe": 1
             }
           ]
         },
@@ -1282,9 +1311,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "450785b1b0791c41f5cac1c2e06f2a49aa6d665c133c4f3495f8ee4d139eccba"
+      "sha": "a90a1b16e33e9d785894ba6c27ec8298618afe2287c1b398841888fc4e552bb9"
     },
     {
       "id": "bund/KKV/art_31_a",
@@ -1293,6 +1322,7 @@
       "erlass": "KKV",
       "artikel": "31_a",
       "artikelLabel": "Art. 31a",
+      "grundlage": "(Art. 20 Abs. 1 Bst. a KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1305,7 +1335,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_31_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "0f292e96e574619dec66a4fc8575b1291b5dfb708b95f801cda05dfd68742249"
     },
@@ -1316,6 +1346,7 @@
       "erlass": "KKV",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 20 Abs. 1 Bst. a, 21 Abs. 3 und 63 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1336,7 +1367,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "cb4486016a16ed00a2e1c65af86e06ddbf4c7192aafc231a0d230fff11ee8ef5"
     },
@@ -1347,6 +1378,7 @@
       "erlass": "KKV",
       "artikel": "32_a",
       "artikelLabel": "Art. 32a",
+      "grundlage": "(Art. 63 Abs. 3 und 4 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1399,7 +1431,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_32_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9d50ab34847bd4ea3325b738d335a0cccff88e5037250379427e87e99a8e740d"
     },
@@ -1410,6 +1442,7 @@
       "erlass": "KKV",
       "artikel": "32_b",
       "artikelLabel": "Art. 32b",
+      "grundlage": "(Art. 20 Abs. 1 Bst. a KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1418,7 +1451,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_32_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "858062e7a14047ea7741a9f44d521a3d1b9983861dd55dc5cd494048d36c4143"
     },
@@ -1429,6 +1462,7 @@
       "erlass": "KKV",
       "artikel": "33",
       "artikelLabel": "Art. 33",
+      "grundlage": "(Art. 20 Abs. 1 Bst. b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1441,7 +1475,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "6c14eda650a72c7866d168bbb13a33cf3b0b8ea25efecb8997f81a84d1ca4e1c"
     },
@@ -1452,6 +1486,7 @@
       "erlass": "KKV",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 20 Abs. 1 Bst. c und 23 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1472,7 +1507,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "465185746b802835688a3195a52fd7c9b52f4118afd007360ceeb31ec250a14e"
     },
@@ -1491,7 +1526,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_34_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1522,7 +1557,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8a76eaed3ec28af0ec64eade02aa5997966e75dc0e1b000aaecf3a7f3aeb2e98"
     },
@@ -1533,6 +1568,7 @@
       "erlass": "KKV",
       "artikel": "35_a",
       "artikelLabel": "Art. 35a",
+      "grundlage": "(Art. 26 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1619,7 +1655,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_35_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "0c86d0bf657f67dea416b6b89cbef4549d002299b24944fa74b10736e851f189"
     },
@@ -1630,6 +1666,7 @@
       "erlass": "KKV",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 26 Abs. 3 Bst. b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1656,7 +1693,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "6bfc6d600d46813b06b84d37980d51213223437987a2dee92597bd2a0fd62e29"
     },
@@ -1667,6 +1704,7 @@
       "erlass": "KKV",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 26 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1843,7 +1881,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "be29e987168b16fc20272fd42705c86b2c4fbe1f2b2dfc26eff519f3ad1279c5"
     },
@@ -1854,6 +1892,7 @@
       "erlass": "KKV",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 26 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1876,7 +1915,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "706ad94733ba8ae4eb7d5b1c1a2618434cfeaeb5f2f3d79a52a9d8f2b165f300"
     },
@@ -1887,6 +1926,7 @@
       "erlass": "KKV",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 26 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1899,7 +1939,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "742b4855c921859789a7d8f2bd42cd16210d1efa00f041c06ef8f0daab7b6927"
     },
@@ -1910,6 +1950,7 @@
       "erlass": "KKV",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 26 Abs. 3 Bst. k und 78 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1934,7 +1975,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7bb822dc2ab13288b04e4730a4c3b433b5fbe8512809e86205319d18faefca48"
     },
@@ -1945,6 +1986,7 @@
       "erlass": "KKV",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 27 Abs. 2 und 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1973,7 +2015,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "d27808e171b01def0e5c5bba5db927a20a58aa46d89c2fa638f7485ab7e89301"
     },
@@ -1992,7 +2034,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_42_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2003,6 +2045,7 @@
       "erlass": "KKV",
       "artikel": "51",
       "artikelLabel": "Art. 51",
+      "grundlage": "(Art. 36 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2019,7 +2062,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "0b06be384134fcaefb6e12b4b1ba784dda3130ef64abbe7b9e107fa62aa06310"
     },
@@ -2030,6 +2073,7 @@
       "erlass": "KKV",
       "artikel": "52",
       "artikelLabel": "Art. 52",
+      "grundlage": "(Art. 36 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2038,7 +2082,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "038cc26040aeaff27a432e0a67759fa1cceeaee4275dfdc5e04398b41f9fbbdc"
     },
@@ -2049,6 +2093,7 @@
       "erlass": "KKV",
       "artikel": "53",
       "artikelLabel": "Art. 53",
+      "grundlage": "(Art. 36 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2057,7 +2102,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "bb83b152a2695d9e47e6b411efe8f12644b60befbfa8cfcbf1584e951f5f9e9e"
     },
@@ -2088,7 +2133,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "d93fd4b6ff5b19c65ba235b2d233fca90c4c577dab5725e98646dca8858b45a8"
     },
@@ -2099,6 +2144,7 @@
       "erlass": "KKV",
       "artikel": "55",
       "artikelLabel": "Art. 55",
+      "grundlage": "(Art. 39 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2157,7 +2203,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "0488d97d2eee9cd86fc779a705b4ba74a5e2844341aecbf85327f04f747a0402"
     },
@@ -2168,6 +2214,7 @@
       "erlass": "KKV",
       "artikel": "56",
       "artikelLabel": "Art. 56",
+      "grundlage": "(Art. 40 Abs. 4 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2176,7 +2223,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "238f6f7b0f17d1c6383c765d8d79278308800340e9d72c3bdef109e3326d6b6e"
     },
@@ -2195,7 +2242,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2206,6 +2253,7 @@
       "erlass": "KKV",
       "artikel": "58",
       "artikelLabel": "Art. 58",
+      "grundlage": "(Art. 42 Abs. 1 und 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2228,7 +2276,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "65e59bd840ae5e23648fbad3b7379762106177a8cc4e8cdd6a7bba913c9f6661"
     },
@@ -2239,6 +2287,7 @@
       "erlass": "KKV",
       "artikel": "59",
       "artikelLabel": "Art. 59",
+      "grundlage": "(Art. 42 Abs. 2 und 94 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2247,7 +2296,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "169b556ab7f7c5808026211c4a0257e3c3e08ea8d3031d83cef8b1d5fdc7cda0"
     },
@@ -2258,6 +2307,7 @@
       "erlass": "KKV",
       "artikel": "60",
       "artikelLabel": "Art. 60",
+      "grundlage": "(Art. 43 Abs. 1 Bst. f KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2266,7 +2316,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1fa403dca6dc8cf9d51bd7c83afff9cc87ca6ab4bcfe1da8ae93a143533474c7"
     },
@@ -2277,6 +2327,7 @@
       "erlass": "KKV",
       "artikel": "61",
       "artikelLabel": "Art. 61",
+      "grundlage": "(Art. 40 Abs. 4 und 78 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2293,7 +2344,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e7944e105ffe5cdadb43c471ca2c1915a860a6909dace93c244cf26a9a901f6b"
     },
@@ -2304,6 +2355,7 @@
       "erlass": "KKV",
       "artikel": "62",
       "artikelLabel": "Art. 62",
+      "grundlage": "(Art. 40 Abs. 4, 47 und 94 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2330,7 +2382,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1cb6b26800ef9c10f1fe0f0d3d8a797b216704dd6c3291d8f0a7ab352f64d07d"
     },
@@ -2341,6 +2393,7 @@
       "erlass": "KKV",
       "artikel": "62_a",
       "artikelLabel": "Art. 62a",
+      "grundlage": "(Art. 44 a KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2349,7 +2402,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_62_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ff31797cae4905e5aeb78061803d1cadfc8eae09fab785d31befe6658a36622e"
     },
@@ -2360,6 +2413,7 @@
       "erlass": "KKV",
       "artikel": "62_b",
       "artikelLabel": "Art. 62b",
+      "grundlage": "(Art. 43 und 44 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2386,7 +2440,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_62_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "49e933f2b850ceb119de97d4fece0524e481a6deb260a02ac895e354aa3ca862"
     },
@@ -2397,6 +2451,7 @@
       "erlass": "KKV",
       "artikel": "63",
       "artikelLabel": "Art. 63",
+      "grundlage": "(Art. 50 und 94 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2435,7 +2490,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "716753b4329d68e8b39b445157d41081e25a034dea65618143339bcf59fcfac0"
     },
@@ -2446,6 +2501,7 @@
       "erlass": "KKV",
       "artikel": "64",
       "artikelLabel": "Art. 64",
+      "grundlage": "(Art. 51 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2492,7 +2548,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c751c938358bd55d7abe103b04e65b890a3823e7a37787f6e1ed07c661e41dc5"
     },
@@ -2503,6 +2559,7 @@
       "erlass": "KKV",
       "artikel": "65",
       "artikelLabel": "Art. 65",
+      "grundlage": "(Art. 36 Abs. 3 und 51 Abs. 5 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2511,7 +2568,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ba2e55e1196df2f7f45589f168db11c361b63acb52c23f299c14183c99fd3b39"
     },
@@ -2530,7 +2587,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2541,6 +2598,7 @@
       "erlass": "KKV",
       "artikel": "67",
       "artikelLabel": "Art. 67",
+      "grundlage": "(Art. 53 ff. KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2569,7 +2627,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "915d9c8f172b7c5b5717c12cb4b5dc120c947d1ec8069ef0f96ed5066d5442d2"
     },
@@ -2580,6 +2638,7 @@
       "erlass": "KKV",
       "artikel": "68",
       "artikelLabel": "Art. 68",
+      "grundlage": "(Art. 53 ff. KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2592,7 +2651,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7951af950c9e8f8388ac57a43674f34173347d1c9f74f17eb61842530cf45ae3"
     },
@@ -2603,6 +2662,7 @@
       "erlass": "KKV",
       "artikel": "69",
       "artikelLabel": "Art. 69",
+      "grundlage": "(Art. 92 ff. KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2637,7 +2697,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "eb897ac4cd0150137d5ff73fbd2f6bee753c9394438457989ae331af178cb076"
     },
@@ -2648,6 +2708,7 @@
       "erlass": "KKV",
       "artikel": "70",
       "artikelLabel": "Art. 70",
+      "grundlage": "(Art. 54 Abs. 1 und 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2700,7 +2761,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e9882f99949efcb9aa73c580727ac0f6f38cec81b4c99e87947568eb6eb86048"
     },
@@ -2711,6 +2772,7 @@
       "erlass": "KKV",
       "artikel": "71",
       "artikelLabel": "Art. 71",
+      "grundlage": "(Art. 54 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2727,7 +2789,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f56d38cb6e67fbca65cedfcfec5f5631bc46176bd7d220e6084d1a1c61cc1419"
     },
@@ -2738,6 +2800,7 @@
       "erlass": "KKV",
       "artikel": "72",
       "artikelLabel": "Art. 72",
+      "grundlage": "(Art. 54 und 56 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2782,7 +2845,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7090862170bd0fc5f41a8fb1ba27c48fdb7746b3a9b44e8846b49d41204276b5"
     },
@@ -2793,6 +2856,7 @@
       "erlass": "KKV",
       "artikel": "73",
       "artikelLabel": "Art. 73",
+      "grundlage": "(Art. 54 und 57 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2847,7 +2911,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3fe2c7fbc575e6be984ee257dd16fb6f65841cb6a32b8e43d5a08766807bca3d"
     },
@@ -2858,6 +2922,7 @@
       "erlass": "KKV",
       "artikel": "73_a",
       "artikelLabel": "Art. 73a",
+      "grundlage": "(Art. 54 und 57 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2878,7 +2943,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_73_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7121a01027f919aef2e4e3e1e2d3b90035c5799184349c0786d5a30180552021"
     },
@@ -2889,6 +2954,7 @@
       "erlass": "KKV",
       "artikel": "74",
       "artikelLabel": "Art. 74",
+      "grundlage": "(Art. 54 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2947,7 +3013,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_74",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "a0286ebadce5e66572c59ffc7efddc2caef98f4b1c0fc6905efe2d78005191d4"
     },
@@ -2958,6 +3024,7 @@
       "erlass": "KKV",
       "artikel": "75",
       "artikelLabel": "Art. 75",
+      "grundlage": "(Art. 54 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2966,7 +3033,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_75",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b03276d68474e2a51546259bd008cdf568a88aa5c7bc2096dc4d0560ceaaef92"
     },
@@ -2977,6 +3044,7 @@
       "erlass": "KKV",
       "artikel": "76",
       "artikelLabel": "Art. 76",
+      "grundlage": "(Art. 26 Abs. 3 und 55 Abs. 1 Bst. a und b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3049,7 +3117,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "fb5d0e01a00633edfcf0409ed5b8df4d779384e384bab5c562e1f1bdd5f442de"
     },
@@ -3060,6 +3128,7 @@
       "erlass": "KKV",
       "artikel": "77",
       "artikelLabel": "Art. 77",
+      "grundlage": "(Art. 55 Abs. 1 Bst. c und d sowie Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3090,7 +3159,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4ec44586a4aaecfad12320c8bb0189e0b84a6b8b1e991924d6730bac1cf7411"
     },
@@ -3101,6 +3170,7 @@
       "erlass": "KKV",
       "artikel": "78",
       "artikelLabel": "Art. 78",
+      "grundlage": "(Art. 57 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3113,7 +3183,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_78",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "67310f1bc2caf02b37935b15207da26522f54abe865cc2d07765d53630c13ea9"
     },
@@ -3124,6 +3194,7 @@
       "erlass": "KKV",
       "artikel": "79",
       "artikelLabel": "Art. 79",
+      "grundlage": "(Art. 57 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3132,7 +3203,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9f31970c44efc0a6656e69f936176bdb9e941f0d69769a1370aa770a974d23d7"
     },
@@ -3143,6 +3214,7 @@
       "erlass": "KKV",
       "artikel": "80",
       "artikelLabel": "Art. 80",
+      "grundlage": "(Art. 57 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3163,7 +3235,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "17ec845cb3be9fa6e66dd05ec13eb82829b1296ac81831a3a855798d86be7aa8"
     },
@@ -3174,6 +3246,7 @@
       "erlass": "KKV",
       "artikel": "81",
       "artikelLabel": "Art. 81",
+      "grundlage": "(Art. 57 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3198,7 +3271,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c137fa17021320dbc9c70c9e21d810ce5bbafabbbbd9da8e4d23300997aa5df5"
     },
@@ -3209,6 +3282,7 @@
       "erlass": "KKV",
       "artikel": "82",
       "artikelLabel": "Art. 82",
+      "grundlage": "(Art. 57 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3235,7 +3309,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8f648fddadabde72469241e500bc76d2f6d3b5b0c80b995f61e300f15c3e2d58"
     },
@@ -3246,6 +3320,7 @@
       "erlass": "KKV",
       "artikel": "83",
       "artikelLabel": "Art. 83",
+      "grundlage": "(Art. 57 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3298,7 +3373,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b025ecaa476593e37bff32e527ceee56be232f226c05a41426cfc9a1f354495c"
     },
@@ -3309,6 +3384,7 @@
       "erlass": "KKV",
       "artikel": "84",
       "artikelLabel": "Art. 84",
+      "grundlage": "(Art. 57 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3343,7 +3419,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7bb75e03a57b590d404113be9c284734e1137ac86da443c667d78f7e8c1c277a"
     },
@@ -3354,6 +3430,7 @@
       "erlass": "KKV",
       "artikel": "85",
       "artikelLabel": "Art. 85",
+      "grundlage": "(Art. 75 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3370,7 +3447,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e06c506084827a0a8eabddef0a108531e61d7a7b4fe552b339e97b1e5b2ec8b2"
     },
@@ -3381,6 +3458,7 @@
       "erlass": "KKV",
       "artikel": "86",
       "artikelLabel": "Art. 86",
+      "grundlage": "(Art. 59 Abs. 1 und 62 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3453,7 +3531,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "20acf2d6115eba9111249bfd3910167840564348af9450cc37b06bfa25b7d055"
     },
@@ -3464,6 +3542,7 @@
       "erlass": "KKV",
       "artikel": "87",
       "artikelLabel": "Art. 87",
+      "grundlage": "(Art. 62 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3506,7 +3585,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b55b20702ebf8fca73742087afe5acfb9a00aa4ee394db3f18cc9ff24fd5c62e"
     },
@@ -3517,6 +3596,7 @@
       "erlass": "KKV",
       "artikel": "88",
       "artikelLabel": "Art. 88",
+      "grundlage": "(Art. 59 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3537,7 +3617,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b6c42f780a4e2801a0db36f7c2b16c83072e795b2a816dc264a1e149faeab832"
     },
@@ -3548,6 +3628,7 @@
       "erlass": "KKV",
       "artikel": "89",
       "artikelLabel": "Art. 89",
+      "grundlage": "(Art. 60 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3564,7 +3645,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1760d29ef801f95bf1efbddc36c894f809f83b24f1c03c0330dca979e7a5c485"
     },
@@ -3575,6 +3656,7 @@
       "erlass": "KKV",
       "artikel": "90",
       "artikelLabel": "Art. 90",
+      "grundlage": "(Art. 65 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3583,7 +3665,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3c564aacebdf23c057f7949ca9e387c868f92c0515b5766d4453522f6d893e24"
     },
@@ -3594,6 +3676,7 @@
       "erlass": "KKV",
       "artikel": "91",
       "artikelLabel": "Art. 91",
+      "grundlage": "(Art. 61 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3602,7 +3685,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c99a1acb63efa1e4cbca9fa4eb35f4dd822d412c02cabebe531c7f93a7ace536"
     },
@@ -3613,6 +3696,7 @@
       "erlass": "KKV",
       "artikel": "91_a",
       "artikelLabel": "Art. 91a",
+      "grundlage": "(Art. 63 Abs. 2 und 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3659,7 +3743,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_91_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "5cd58caaffda993188093e368c8d3fa6f3b86784146d77db313fcc10baaac055"
     },
@@ -3670,6 +3754,7 @@
       "erlass": "KKV",
       "artikel": "92",
       "artikelLabel": "Art. 92",
+      "grundlage": "(Art. 64 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3700,7 +3785,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "d4ebd20da385da9481122224a3846c7000551613bc2adbbd7b20ed527e7f6abb"
     },
@@ -3711,6 +3796,7 @@
       "erlass": "KKV",
       "artikel": "93",
       "artikelLabel": "Art. 93",
+      "grundlage": "(Art. 64 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3731,7 +3817,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "becfd0749c55ea71face02c3043e2ecb8c8c2c414d7950ec264a6fc20a3558db"
     },
@@ -3742,6 +3828,7 @@
       "erlass": "KKV",
       "artikel": "94",
       "artikelLabel": "Art. 94",
+      "grundlage": "(Art. 64 und 65 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3754,7 +3841,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b762c3985f0b5b0d74b826ecdaa18d5babfeb9a2bb43e1ef496ca3e1b056c51f"
     },
@@ -3765,6 +3852,7 @@
       "erlass": "KKV",
       "artikel": "95",
       "artikelLabel": "Art. 95",
+      "grundlage": "(Art. 67 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3777,7 +3865,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "49df27ebeb7a34459749ee7bf0b41ce35abe50b6493d22c4acbe68f697347e4b"
     },
@@ -3788,6 +3876,7 @@
       "erlass": "KKV",
       "artikel": "96",
       "artikelLabel": "Art. 96",
+      "grundlage": "(Art. 65 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3818,7 +3907,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "06c912543c5871328fd8c29259816eea1f3488888b1842d779f8c33cada4ad9b"
     },
@@ -3829,6 +3918,7 @@
       "erlass": "KKV",
       "artikel": "97",
       "artikelLabel": "Art. 97",
+      "grundlage": "(Art. 66 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3859,7 +3949,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e7080b6e4e740fc4a716df83478ce2937721ef01012fe7cce6a12ffa19032d8f"
     },
@@ -3870,6 +3960,7 @@
       "erlass": "KKV",
       "artikel": "98",
       "artikelLabel": "Art. 98",
+      "grundlage": "(Art. 66 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -3888,7 +3979,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f72a35df1a2b0019b4ab7b3dc1d12101d4ae7db5118e8321d637c63f039262b0"
     },
@@ -3899,6 +3990,7 @@
       "erlass": "KKV",
       "artikel": "99",
       "artikelLabel": "Art. 99",
+      "grundlage": "(Art. 69 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -3949,7 +4041,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c19a1c3a355fa2d9503bbcbef2146510087e413392856bd2e77033887bc9b7e1"
     },
@@ -3960,6 +4052,7 @@
       "erlass": "KKV",
       "artikel": "100",
       "artikelLabel": "Art. 100",
+      "grundlage": "(Art. 70 Abs. 2 und 71 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4012,7 +4105,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "884240348f330ba727fbda39fe01ce382faa1abb82dec8b1cf9e6c6941341d53"
     },
@@ -4023,6 +4116,7 @@
       "erlass": "KKV",
       "artikel": "101",
       "artikelLabel": "Art. 101",
+      "grundlage": "(Art. 69–71 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4049,7 +4143,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_101",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "a50d7ec607617904eb85caa54b24fc163d2e792534d9385377bd7687e912f6fd"
     },
@@ -4060,6 +4154,7 @@
       "erlass": "KKV",
       "artikel": "102",
       "artikelLabel": "Art. 102",
+      "grundlage": "(Art. 71 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4072,7 +4167,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_102",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8ff4d4e0d9c26d53fdffbafd1bc22dfbc1ca8948693f49ce0eef2fbdb1f2bca7"
     },
@@ -4083,6 +4178,7 @@
       "erlass": "KKV",
       "artikel": "102_a",
       "artikelLabel": "Art. 102a",
+      "grundlage": "(Art. 72 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4095,7 +4191,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_102_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f41869ad84f24ed07323d0c79be7cbcbde70165cee7c52d9ad6d4c03db7985b6"
     },
@@ -4106,6 +4202,7 @@
       "erlass": "KKV",
       "artikel": "103",
       "artikelLabel": "Art. 103",
+      "grundlage": "(Art. 72 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4114,7 +4211,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_103",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "cbe89e32492b12e34e45b170883fa264b1de95e793c9b4eb503721a4af1181e8"
     },
@@ -4125,6 +4222,7 @@
       "erlass": "KKV",
       "artikel": "104",
       "artikelLabel": "Art. 104",
+      "grundlage": "(Art. 73 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4163,7 +4261,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_104",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c9bf4a475cc80097aee3d420f71e59ff9a2e13c8c4fd18fcc6e35a64430d59bf"
     },
@@ -4174,6 +4272,7 @@
       "erlass": "KKV",
       "artikel": "105",
       "artikelLabel": "Art. 105",
+      "grundlage": "(Art. 74 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4186,7 +4285,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_105",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9b8cdcfa966e1decf44c484c739781bbced263d38608348ea32525a1d621d8f5"
     },
@@ -4197,6 +4296,7 @@
       "erlass": "KKV",
       "artikel": "105_a",
       "artikelLabel": "Art. 105a",
+      "grundlage": "(Art. 73 Abs. 2 und 2 bis KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -4223,7 +4323,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_105_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "d8606b1ed701d34cdcf990d130f4ffb6ba78d31b21e94e1d71f455eedd518b0b"
     },
@@ -4234,6 +4334,7 @@
       "erlass": "KKV",
       "artikel": "106",
       "artikelLabel": "Art. 106",
+      "grundlage": "(Art. 15 und 78 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4308,7 +4409,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_106",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "080423ab1c6b46f1a00d7eb7cc5b0a0f9d81c0d3d3714aac6007882c94d17571"
     },
@@ -4327,7 +4428,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_107",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4346,7 +4447,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_107_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4365,7 +4466,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_107_b_107_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4376,6 +4477,7 @@
       "erlass": "KKV",
       "artikel": "108",
       "artikelLabel": "Art. 108",
+      "grundlage": "(Art. 78 Abs. 1 und 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4396,7 +4498,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "574923a42f7fe136f044c4472406661754c4d7e63d6be3f5f70fc553fcbee00c"
     },
@@ -4407,6 +4509,7 @@
       "erlass": "KKV",
       "artikel": "108_a",
       "artikelLabel": "Art. 108a",
+      "grundlage": "(Art. 78 a KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4453,7 +4556,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_108_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "01188ec3ef21d3f62a0aed3fb42a33bceabc753d75acb39d50957b028478adf3"
     },
@@ -4464,6 +4567,7 @@
       "erlass": "KKV",
       "artikel": "109",
       "artikelLabel": "Art. 109",
+      "grundlage": "(Art. 79 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4506,7 +4610,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f392348891506c3c4cb2419e0221ff7588c4330bba11b54907ce7d43b74a8bdf"
     },
@@ -4517,6 +4621,7 @@
       "erlass": "KKV",
       "artikel": "110",
       "artikelLabel": "Art. 110",
+      "grundlage": "(Art. 81 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4547,7 +4652,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b9a1c209ba6458d567e080c880e53a88e8823f4a2cba5af70b53ee701ca7dcf4"
     },
@@ -4558,6 +4663,7 @@
       "erlass": "KKV",
       "artikel": "110_a",
       "artikelLabel": "Art. 110a",
+      "grundlage": "(Art. 15 und 78 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4570,7 +4676,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_110_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b0c715c92f0670018022214373e6c2f33a4efed3b1d1904df956973df76250b3"
     },
@@ -4581,6 +4687,7 @@
       "erlass": "KKV",
       "artikel": "111",
       "artikelLabel": "Art. 111",
+      "grundlage": "(Art. 82 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4593,7 +4700,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "359041585ba22b1368cecb9a293a6589d582d1ea73628c506af06e2ff77a4dd0"
     },
@@ -4604,6 +4711,7 @@
       "erlass": "KKV",
       "artikel": "112",
       "artikelLabel": "Art. 112",
+      "grundlage": "(Art. 92–94 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4646,7 +4754,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_112",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "5e2fcbd0dc11fc4ad4c214957272773f6bce5972b67faff23f5d1083e7d9ebeb"
     },
@@ -4665,7 +4773,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_113",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4676,6 +4784,7 @@
       "erlass": "KKV",
       "artikel": "114",
       "artikelLabel": "Art. 114",
+      "grundlage": "(Art. 92 und 95 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4695,19 +4804,23 @@
             },
             {
               "marke": "1",
-              "text": "Anlagepolitik, Anlagetechniken, Risikoverteilung sowie mit der Anlagepolitik verbundene Risiken,"
+              "text": "Anlagepolitik, Anlagetechniken, Risikoverteilung sowie mit der Anlagepolitik verbundene Risiken,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Verwendung des Nettoertrages und der Kapitalgewinne aus der Veräusserung von Sachen und Rechten,"
+              "text": "Verwendung des Nettoertrages und der Kapitalgewinne aus der Veräusserung von Sachen und Rechten,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Art, Höhe und Berechnung aller Vergütungen, die Ausgabe- und Rücknahmekommissionen sowie die Nebenkosten für den An- und Verkauf von Anlagen, wie Courtagen, Gebühren, Abgaben, die dem Fondsvermögen oder den Anlegern belastet werden dürfen,"
+              "text": "Art, Höhe und Berechnung aller Vergütungen, die Ausgabe- und Rücknahmekommissionen sowie die Nebenkosten für den An- und Verkauf von Anlagen, wie Courtagen, Gebühren, Abgaben, die dem Fondsvermögen oder den Anlegern belastet werden dürfen,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Laufzeit des Vertrages und die Voraussetzung der Auflösung;"
+              "text": "Laufzeit des Vertrages und die Voraussetzung der Auflösung;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -4730,9 +4843,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_114",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "e5aa54e201cb5f982a670a0f06140bd74b552155e60c537585cd830af835b221"
+      "sha": "0be7ef5790f2874d8de47efd1ed63f7f00d3eac4b6cf85c9f85dec745e0ddd67"
     },
     {
       "id": "bund/KKV/art_115",
@@ -4741,6 +4854,7 @@
       "erlass": "KKV",
       "artikel": "115",
       "artikelLabel": "Art. 115",
+      "grundlage": "(Art. 95 Abs. 1 Bst. a und b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4775,7 +4889,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_115",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "bc7717920929aa1dc5e620a084ff8e9c292f9a57c403c01836fc756675c20069"
     },
@@ -4794,7 +4908,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_115_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7fc4c0d1fbd89c4c7abf77ca59d8b7fdf151fb0e341ad1a9cbe566f744bc95e4"
     },
@@ -4805,6 +4919,7 @@
       "erlass": "KKV",
       "artikel": "116",
       "artikelLabel": "Art. 116",
+      "grundlage": "(Art. 96 und 97 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4839,7 +4954,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_116",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "975ef5fd65d957a2a4dd9bd8a152fd83e98f74bedae34a2e2077b0ee3e668924"
     },
@@ -4850,6 +4965,7 @@
       "erlass": "KKV",
       "artikel": "117",
       "artikelLabel": "Art. 117",
+      "grundlage": "(Art. 98 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4876,7 +4992,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_117",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ffbd2db1296427e3c689286cf0f8212b1c186e3d997505cae7351d22326fb92c"
     },
@@ -4887,6 +5003,7 @@
       "erlass": "KKV",
       "artikel": "118",
       "artikelLabel": "Art. 118",
+      "grundlage": "(Art. 98 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4903,7 +5020,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_118",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b9ed689d8181d8c6c61ff698986f6f10ee9b456cb2231f3d65365e62c070f24d"
     },
@@ -4914,6 +5031,7 @@
       "erlass": "KKV",
       "artikel": "119",
       "artikelLabel": "Art. 119",
+      "grundlage": "(Art. 9 Abs. 3 und 102 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4952,7 +5070,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_119",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "85ff078b18a16abbfd5eea8114217054ac7b441ea2d6c3f5957e24605ba6aa8e"
     },
@@ -4963,6 +5081,7 @@
       "erlass": "KKV",
       "artikel": "120",
       "artikelLabel": "Art. 120",
+      "grundlage": "(Art. 103 Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -4989,7 +5108,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_120",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "dc116574c4e91db484e19f606fd78aa5ff2c72644dea9967c22947846705be96"
     },
@@ -5000,6 +5119,7 @@
       "erlass": "KKV",
       "artikel": "121",
       "artikelLabel": "Art. 121",
+      "grundlage": "(Art. 103 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5062,7 +5182,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_121",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "643479069d9b7249a535099697b5a47d4e2689d6246b190e0c6162c7ab4e77a2"
     },
@@ -5073,6 +5193,7 @@
       "erlass": "KKV",
       "artikel": "122",
       "artikelLabel": "Art. 122",
+      "grundlage": "(Art. 110 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5085,7 +5206,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_122",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f8c43029ee42a80b4577a7f96a5e0d2e90005e3bae9f90fa4d07efb7d08fab6c"
     },
@@ -5096,6 +5217,7 @@
       "erlass": "KKV",
       "artikel": "122_a",
       "artikelLabel": "Art. 122a",
+      "grundlage": "(Art 110 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5112,7 +5234,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_122_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "74b1bd46c3f8b776689318e1e7a6effd5079ec57bb5088429aefe261aeb89e51"
     },
@@ -5123,6 +5245,7 @@
       "erlass": "KKV",
       "artikel": "122_b",
       "artikelLabel": "Art. 122b",
+      "grundlage": "(Art 110 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5153,7 +5276,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_122_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "0ee37e307974f29467d47ae4921aaeb7f4c576fe69bc07e46c81493a6106099e"
     },
@@ -5164,6 +5287,7 @@
       "erlass": "KKV",
       "artikel": "123",
       "artikelLabel": "Art. 123",
+      "grundlage": "(Art. 110 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5176,7 +5300,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_123",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "e43c2d17504533fe41721053b90aff58ba2628624998e29854cfaa407c4b8324"
     },
@@ -5187,6 +5311,7 @@
       "erlass": "KKV",
       "artikel": "124",
       "artikelLabel": "Art. 124",
+      "grundlage": "(Art. 112 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5195,7 +5320,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_124",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1fa403dca6dc8cf9d51bd7c83afff9cc87ca6ab4bcfe1da8ae93a143533474c7"
     },
@@ -5206,6 +5331,7 @@
       "erlass": "KKV",
       "artikel": "125",
       "artikelLabel": "Art. 125",
+      "grundlage": "(Art. 113 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5214,7 +5340,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_125",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "65d063cfa284398669756e4b92f1c6fbd44f6dc15d87af77296e59e1207ea914"
     },
@@ -5225,6 +5351,7 @@
       "erlass": "KKV",
       "artikel": "126",
       "artikelLabel": "Art. 126",
+      "grundlage": "(Art. 115 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5233,7 +5360,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "43ab9e5b9385554f99c0f3f208049b1439d02d44fd34d87e4320776d5f381a5f"
     },
@@ -5244,6 +5371,7 @@
       "erlass": "KKV",
       "artikel": "126_a",
       "artikelLabel": "Art. 126a",
+      "grundlage": "(Art. 13 Abs. 2 bis , 15 Abs. 3, 118 a Abs. 1 und 118 f Abs. 1 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5256,7 +5384,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "81a4405d6c6305d16303f6b502b385da2f3f11547af0e46d59ed92b90a17035e"
     },
@@ -5267,6 +5395,7 @@
       "erlass": "KKV",
       "artikel": "126_b",
       "artikelLabel": "Art. 126b",
+      "grundlage": "(Art. 118 a Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5309,7 +5438,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "066182dd926a4e3837c038c8d0de30efe23c58949e26c4e97f12e43180b3d2a4"
     },
@@ -5320,6 +5449,7 @@
       "erlass": "KKV",
       "artikel": "126_c",
       "artikelLabel": "Art. 126c",
+      "grundlage": "(Art. 118 b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5347,35 +5477,43 @@
             },
             {
               "marke": "1",
-              "text": "des vertraglichen Anlagefonds:"
+              "text": "des vertraglichen Anlagefonds:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "die Depotbank dem Statuswechsel zugestimmt hat und"
+              "text": "die Depotbank dem Statuswechsel zugestimmt hat und",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,"
+              "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,",
+              "tiefe": 2
             },
             {
               "marke": "2",
-              "text": "der SICAV:"
+              "text": "der SICAV:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "die Depotbank dem Statuswechsel zugestimmt hat"
+              "text": "die Depotbank dem Statuswechsel zugestimmt hat",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "diejenigen Unternehmensaktionärinnen und Unternehmensaktionäre dem Statuswechsel zugestimmt haben, die mindestens zwei Drittel der ausgegebenen Unternehmensaktien auf sich vereinigen, und"
+              "text": "diejenigen Unternehmensaktionärinnen und Unternehmensaktionäre dem Statuswechsel zugestimmt haben, die mindestens zwei Drittel der ausgegebenen Unternehmensaktien auf sich vereinigen, und",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,"
+              "text": "nur noch Anlegerinnen und Anleger in der kollektiven Kapitalanlage verbleiben, die dem Statuswechsel ausdrücklich zugestimmt haben,",
+              "tiefe": 2
             },
             {
               "marke": "3",
-              "text": "der Rechtsform der KmGK: sämtliche Anlegerinnen und Anleger dem Statuswechsel zugestimmt haben."
+              "text": "der Rechtsform der KmGK: sämtliche Anlegerinnen und Anleger dem Statuswechsel zugestimmt haben.",
+              "tiefe": 1
             }
           ]
         },
@@ -5390,9 +5528,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "717f0e91bf2faf8f8a89c89b1c02e31da9e64c4d5f53388fef20922afdb5d771"
+      "sha": "421d5f255a06c545ec4ddfb21c0fe77bffae98631b2c446c7275eaef745f12fd"
     },
     {
       "id": "bund/KKV/art_126_d",
@@ -5401,6 +5539,7 @@
       "erlass": "KKV",
       "artikel": "126_d",
       "artikelLabel": "Art. 126d",
+      "grundlage": "(Art. 118b KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5420,11 +5559,13 @@
             },
             {
               "marke": "1",
-              "text": "in der kollektiven Kapitalanlage verbleiben, falls sie dem Statuswechsel ausdrücklich zustimmen, oder"
+              "text": "in der kollektiven Kapitalanlage verbleiben, falls sie dem Statuswechsel ausdrücklich zustimmen, oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "ihre Anteile unter Beachtung der vertraglichen oder reglementarischen Rückgabefristen und -termine zurückgeben, falls sie ihre Anteile kündigen;"
+              "text": "ihre Anteile unter Beachtung der vertraglichen oder reglementarischen Rückgabefristen und -termine zurückgeben, falls sie ihre Anteile kündigen;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -5439,9 +5580,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "4372f1f2c3f67a1c15cc43f6148d5ad2a5d9fe36ecc59c2034942424eca4d2ff"
+      "sha": "1cb5ab04cd608078632377b35606d924e647e08a2d2c30758ee9aedf017d5579"
     },
     {
       "id": "bund/KKV/art_126_e",
@@ -5450,6 +5591,7 @@
       "erlass": "KKV",
       "artikel": "126_e",
       "artikelLabel": "Art. 126e",
+      "grundlage": "(Art. 118 b KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5458,7 +5600,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7d106209aa3c6b47c1437eec84ac326cbec5db3ee7d1961ab916bb0c79e7ddd1"
     },
@@ -5469,6 +5611,7 @@
       "erlass": "KKV",
       "artikel": "126_f",
       "artikelLabel": "Art. 126f",
+      "grundlage": "(Art. 118 d KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5491,7 +5634,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "28d570bf503ea761eeb8cdd58d0b6a045e8ef262c6e2e9d16da2a79a20156025"
     },
@@ -5502,6 +5645,7 @@
       "erlass": "KKV",
       "artikel": "126_g",
       "artikelLabel": "Art. 126g",
+      "grundlage": "(Art. 118 f KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5599,15 +5743,18 @@
             },
             {
               "marke": "1",
-              "text": "Inland und Ausland,"
+              "text": "Inland und Ausland,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Währungen,"
+              "text": "Währungen,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "den folgenden Anlagekategorien: Geldmarktinstrumente, Forderungen aus Pensionsgeschäften, Obligationen, Aktien und andere Beteiligungspapiere, Anteile an anderen Kollektivanlagen, strukturierte Produkte, Immobilien, übrige Wertpapiere;"
+              "text": "den folgenden Anlagekategorien: Geldmarktinstrumente, Forderungen aus Pensionsgeschäften, Obligationen, Aktien und andere Beteiligungspapiere, Anteile an anderen Kollektivanlagen, strukturierte Produkte, Immobilien, übrige Wertpapiere;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -5638,9 +5785,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "772e1085ea8d320fb20c5175224c97176d99e9ebdf76cff74765f73f0fdd5393"
+      "sha": "47338fb47dbd908079e60d1f389e53068868ba8c7cd29c3c6361f21da7c75fe8"
     },
     {
       "id": "bund/KKV/art_126_h",
@@ -5649,6 +5796,7 @@
       "erlass": "KKV",
       "artikel": "126_h",
       "artikelLabel": "Art. 126h",
+      "grundlage": "(Art. 118 g und 118 h KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5665,7 +5813,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9f8c629cd5abcf67cf71d525315191ee6430d31126b253e98cf616384baee6e7"
     },
@@ -5676,6 +5824,7 @@
       "erlass": "KKV",
       "artikel": "126_i",
       "artikelLabel": "Art. 126i",
+      "grundlage": "(Art. 118 j Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5684,7 +5833,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "430acf756b5495c4451df05a936a0c889c07d578fbb56f26621c663834c362ec"
     },
@@ -5695,6 +5844,7 @@
       "erlass": "KKV",
       "artikel": "126_j",
       "artikelLabel": "Art. 126j",
+      "grundlage": "(Art. 50, 94 und 118 a Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5743,7 +5893,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ba4d9d8c47c6cb991d42b195026a49999710378e998be30dd1bc81295e8c2c30"
     },
@@ -5754,6 +5904,7 @@
       "erlass": "KKV",
       "artikel": "126_k",
       "artikelLabel": "Art. 126k",
+      "grundlage": "(Art. 26 Abs. 3, 78 Abs. 3 und 118 a Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5778,7 +5929,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "a754b9db5dc86c3d12511fe47db0769076a9c4db76895a193ead4e7ae201cd4d"
     },
@@ -5789,6 +5940,7 @@
       "erlass": "KKV",
       "artikel": "126_l",
       "artikelLabel": "Art. 126l",
+      "grundlage": "(Art. 25 Abs. 3, 36 Abs. 2 und 118 a Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5805,7 +5957,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "db48817f1c89ad4837b3aa34f7894c9d287d19046cd2f504b3e2c512c7f59c2a"
     },
@@ -5816,6 +5968,7 @@
       "erlass": "KKV",
       "artikel": "126_m",
       "artikelLabel": "Art. 126m",
+      "grundlage": "(Art. 79 und 118 a Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -5832,7 +5985,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "6f79082552a59182cc599518e340d3449927e48456aeeed59d1b25a0ca17f066"
     },
@@ -5843,6 +5996,7 @@
       "erlass": "KKV",
       "artikel": "126_n",
       "artikelLabel": "Art. 126n",
+      "grundlage": "(Art. 81 Abs. 1, 118 a Abs. 2 und 118 m KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -5851,7 +6005,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_n",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c2aa4e6f9bf04239af3d56c1a892c91025e94424d7db75ca2e0186c4cc01a7bc"
     },
@@ -5874,7 +6028,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_o",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b528fef0a490281b7d84c9b76a30f4f9ed1e74cacdceff5d8157dc01aa47c96b"
     },
@@ -5919,7 +6073,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_p",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "6e63fa759a6849524ee71956307631c2b3b0e07b681f2e1454f9bc6b0d0c9cf0"
     },
@@ -5954,7 +6108,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_q",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "7e3481b5fc43ce82034b7b39d7961e519c6166fbfdc532d15b6417246c05968d"
     },
@@ -5983,7 +6137,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_r",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3471415fe78b131f3b7ea936b08292c561f745b80ed73b1d69319adef9c43d6e"
     },
@@ -6024,7 +6178,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_s",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9925c7beedfd6f9c13bcf7e4b9f0adb2f9f1580326cd0c52a3b03503f91d1631"
     },
@@ -6055,7 +6209,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_t",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "12a8b1c386b765a0362320188d9e59eb397f4e8c4dca3beb92f83097274ed094"
     },
@@ -6114,7 +6268,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_u",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "2faaf9ea76191a48ed666579b2e3c5d63f35d1a5c786e54d37d22daabac94626"
     },
@@ -6133,7 +6287,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_v",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "43f19ee11fe68f9fbb5e66327261ba096d510e75368f8709ca2d9ca18ff92b90"
     },
@@ -6159,32 +6313,37 @@
             },
             {
               "marke": "1",
-              "text": "den maximalen Prozentsatz, den der Verkehrswert eines Grundstücks ausmachen darf,"
+              "text": "den maximalen Prozentsatz, den der Verkehrswert eines Grundstücks ausmachen darf,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "den maximalen Prozentsatz, der in Bauland investiert werden kann,"
+              "text": "den maximalen Prozentsatz, der in Bauland investiert werden kann,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "den maximalen Prozentsatz, der in Baurechtsgrundstücke investiert werden kann,"
+              "text": "den maximalen Prozentsatz, der in Baurechtsgrundstücke investiert werden kann,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "den maximalen Prozentsatz, der in Schuldbriefe und andere vertragliche Grundpfandrechte investiert werden kann,"
+              "text": "den maximalen Prozentsatz, der in Schuldbriefe und andere vertragliche Grundpfandrechte investiert werden kann,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "den maximalen Prozentsatz, der in Anteile an anderen Immobilienfonds und Immobilieninvestmentgesellschaften investiert werden kann."
+              "text": "den maximalen Prozentsatz, der in Anteile an anderen Immobilienfonds und Immobilieninvestmentgesellschaften investiert werden kann.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_w",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "7d5018719a172b8729aacbafb48fadfe3e99a629dd133131dd0a9bafe90d95bd"
+      "sha": "7f55ef92fdaf3cc436a31e145b2f7d3a468317b2c0f9b6922f0f3c68f2011b1a"
     },
     {
       "id": "bund/KKV/art_126_x",
@@ -6249,7 +6408,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_x",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "42510c68315defbd9a9a9f5c9780eff673ca637804cce1d0fb21caa17b112396"
     },
@@ -6290,7 +6449,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_y",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "9f6b856cd04828112920858c593f978bb27a080073ebd5fd55b15b8c2e830200"
     },
@@ -6309,7 +6468,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "c8713cf6a4436197c68df569f520e098011b23f5a19a31dc69d4603d070ae049"
     },
@@ -6360,7 +6519,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "abbfff80c03fc770e38fa5288e751646d86757d8e5f51555177b2bef01e4e90d"
     },
@@ -6379,7 +6538,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "27f05b34483a2d1604cce8683b61492c70552e472f42ad38f30552297f2e7acb"
     },
@@ -6402,7 +6561,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_quater",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "4ab04991b3bc5e63390f95e1c0a5ad3589aa1da37ea6778cadf63d6be560ee33"
     },
@@ -6425,7 +6584,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_quinquies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "a5cc787afd5fcde981aa7b25b8d3a392c7385a113257c4b1fde491b3e9ff69bd"
     },
@@ -6444,7 +6603,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_sexies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "4be2aaa12342c7e5f33e533639d92770632d6ce8aed6c90e4911bd4e44f49206"
     },
@@ -6471,7 +6630,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_septies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "67121de8714f20136575c767b868e791b7f53e77408dbfa9c5be84a484e630e5"
     },
@@ -6511,15 +6670,18 @@
             },
             {
               "marke": "1",
-              "text": "des Fondsvertrags eines L-QIF in der Rechtsform des vertraglichen Anlagefonds,"
+              "text": "des Fondsvertrags eines L-QIF in der Rechtsform des vertraglichen Anlagefonds,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der Statuten und des Anlagereglements eines L-QIF in der Rechtsform der SICAV,"
+              "text": "der Statuten und des Anlagereglements eines L-QIF in der Rechtsform der SICAV,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "des Gesellschaftsvertrags eines L-QIF in der Rechtsform der KmGK;"
+              "text": "des Gesellschaftsvertrags eines L-QIF in der Rechtsform der KmGK;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -6546,9 +6708,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_octies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "c53d744d6ade95c4039b818dcf592dc12d704c71868e43078b5837c2163c775c"
+      "sha": "30d2f2384a258ce36a35a95a015fde71f5049347e1dd70deb08433b86315cb4c"
     },
     {
       "id": "bund/KKV/art_126_z_novies",
@@ -6568,11 +6730,13 @@
             },
             {
               "marke": "1",
-              "text": "Prüfberichte über die Prüfung der Jahresrechnung nach Artikel 118 i Absatz 2 KAG,"
+              "text": "Prüfberichte über die Prüfung der Jahresrechnung nach Artikel 118 i Absatz 2 KAG,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Kurzberichte über die Prüfung des L-QIF;"
+              "text": "Kurzberichte über die Prüfung des L-QIF;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -6591,9 +6755,9 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_novies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
-      "sha": "f712b1a091c71533c81690051f48e7112271fa889157615bc32893ab6e142548"
+      "sha": "6cdc3443e5e2848f7aacfb976c1e5b4a3eecac19db27d02458f5f96bf5203cbd"
     },
     {
       "id": "bund/KKV/art_126_z_decies",
@@ -6610,7 +6774,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_decies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "985966cb7095a67024d42815b212ee1638ed61fcd05face01033879173591a84"
     },
@@ -6641,7 +6805,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_undecies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "48acea2b83454531417a568613a075b2b1f4b6511e8125801206e370536e7a7a"
     },
@@ -6664,9 +6828,32 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z_duodecies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ed1f7bee739662c8fc26581ce49e2847bbf1b33f6da09eebc521080b6d9bd560"
+    },
+    {
+      "id": "bund/KKV/art_126_z__2",
+      "ebene": "bund",
+      "quelle": "KKV",
+      "erlass": "KKV",
+      "artikel": "126_z__2",
+      "artikelLabel": "Art. 126z",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die Prüfgesellschaft im Rahmen ihrer Prüfungstätigkeit wesentliche Mängel fest, so muss sie diese als Beanstandungen in den Prüfbericht über die Aufsichtsprüfung des für die Verwaltung des L‑QIF zuständigen Instituts aufnehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verletzung einer Vorschrift nach Artikel 118 a Absatz 1 KAG gilt immer als wesentlicher Mangel."
+        }
+      ],
+      "stand": "2025-11-25",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_126_z__2",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20251125",
+      "sha": "de1bfe703b6185fab52087e3a5df22d8a9bc0ff7acc0d442a4b3a47ea0dbcaf3"
     },
     {
       "id": "bund/KKV/art_127",
@@ -6675,6 +6862,7 @@
       "erlass": "KKV",
       "artikel": "127",
       "artikelLabel": "Art. 127",
+      "grundlage": "(Art. 120 Abs. 2 Bst. c und 122 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6683,7 +6871,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_127",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3e1e9551921bddaf0df353d5c0efe0f7c06304c510ed76f8046a7d8513ab860b"
     },
@@ -6694,6 +6882,7 @@
       "erlass": "KKV",
       "artikel": "127_a",
       "artikelLabel": "Art. 127a",
+      "grundlage": "(Art. 120 Abs. 1 und 4 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6702,7 +6891,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_127_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b9a70169224d94a125909ee0f8d47f87d0bad49daeb49d33d8ec0c29e32f667d"
     },
@@ -6713,6 +6902,7 @@
       "erlass": "KKV",
       "artikel": "127_b",
       "artikelLabel": "Art. 127b",
+      "grundlage": "(Art. 78 Abs. 3, 119 und 120 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6721,7 +6911,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_127_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "45471bcebf314a4c9b3cb4c7979947b3c7f726b168e60891bb2cb11672ceeec8"
     },
@@ -6732,6 +6922,7 @@
       "erlass": "KKV",
       "artikel": "128",
       "artikelLabel": "Art. 128",
+      "grundlage": "(Art. 120 Abs. 2 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6776,7 +6967,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_128",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ab501a7db7119abcec3c99383fc4941bc2889c0a7dfaa1a4c23f3bdc6979a8ad"
     },
@@ -6787,6 +6978,7 @@
       "erlass": "KKV",
       "artikel": "128_a",
       "artikelLabel": "Art. 128a",
+      "grundlage": "(Art. 124 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6799,7 +6991,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_128_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "ea84bd19ec6bcae2c25ec56e3d0e3009ea8dcbe22552eb8883dc9a119b138347"
     },
@@ -6810,6 +7002,7 @@
       "erlass": "KKV",
       "artikel": "129",
       "artikelLabel": "Art. 129",
+      "grundlage": "(Art. 120 Abs. 3 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6818,7 +7011,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_129",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "eb20acc7841f1b690e44af52fa420b9dda2c44cdb98560716dd87beb24a69248"
     },
@@ -6829,6 +7022,7 @@
       "erlass": "KKV",
       "artikel": "129_a",
       "artikelLabel": "Art. 129a",
+      "grundlage": "(Art. 120 Abs. 4 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6837,7 +7031,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_129_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "199cdda1c770156a48c9e7ebd9237f220366f85c3c10e7bb87f671fcdfc04e12"
     },
@@ -6848,6 +7042,7 @@
       "erlass": "KKV",
       "artikel": "129_b",
       "artikelLabel": "Art. 129b",
+      "grundlage": "(Art. 120 Abs. 5 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6856,7 +7051,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_129_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3a35c3fba241c810e2e80f443918d8bd6a7e394aa5b4d277835f91843d9ee4a9"
     },
@@ -6867,6 +7062,7 @@
       "erlass": "KKV",
       "artikel": "130",
       "artikelLabel": "Art. 130",
+      "grundlage": "(Art. 15 und 120 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6875,7 +7071,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_130",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "784c579df57b6ce323872115c71c37de160b7daa10ba31001b7df2cf5e6d3c4a"
     },
@@ -6886,6 +7082,7 @@
       "erlass": "KKV",
       "artikel": "131",
       "artikelLabel": "Art. 131",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -6906,7 +7103,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_131",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "cf2bd208039d1d458cdcf6c726d5abd5ba5f8b51f2b716ec9c412bc2613d9eb7"
     },
@@ -6917,6 +7114,7 @@
       "erlass": "KKV",
       "artikel": "131_a",
       "artikelLabel": "Art. 131a",
+      "grundlage": "(Art. 120 Abs. 4 KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6925,7 +7123,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_131_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f8491162310df4aa4846f162503cf3fab147229c68cc6b5b7644ccf76b582e25"
     },
@@ -6936,6 +7134,7 @@
       "erlass": "KKV",
       "artikel": "132",
       "artikelLabel": "Art. 132",
+      "grundlage": "(Art. 14 Abs. 1 Bst. d KAG)",
       "bloecke": [
         {
           "absatz": null,
@@ -6944,7 +7143,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_132",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4d8c797f0f43826629726d1d372e1815a20846a109d5d4d17b7d70ab0d42876"
     },
@@ -6955,6 +7154,7 @@
       "erlass": "KKV",
       "artikel": "133",
       "artikelLabel": "Art. 133",
+      "grundlage": "(Art. 75–77, 83 Abs. 4 und 124 Abs. 2 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7001,7 +7201,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_133",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "12b8139857e599155dbfc1129797b1190fd77d80b1b02cca7870962797e8373f"
     },
@@ -7012,6 +7212,7 @@
       "erlass": "KKV",
       "artikel": "134",
       "artikelLabel": "Art. 134",
+      "grundlage": "(Art. 126 Abs. 1 und 6 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7024,7 +7225,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_134",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "8693df2198f346e158e47273064fd1d74bb0ff335b25530acdad98ed04eac1f4"
     },
@@ -7035,6 +7236,7 @@
       "erlass": "KKV",
       "artikel": "135",
       "artikelLabel": "Art. 135",
+      "grundlage": "(Art. 126 Abs. 1 und 6 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7073,7 +7275,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_135",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "1943b1f6b7457317e33a619ceeae160ea5e38484a28f07f5399de140ef4a2635"
     },
@@ -7092,7 +7294,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_136",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7103,6 +7305,7 @@
       "erlass": "KKV",
       "artikel": "137",
       "artikelLabel": "Art. 137",
+      "grundlage": "(Art. 126 Abs. 5 und 6 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7115,7 +7318,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_137",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b5525ae7ac36fe76a4a2156b1020a007f6130495852a877dde63a67023065897"
     },
@@ -7134,7 +7337,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_138_140",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7145,6 +7348,7 @@
       "erlass": "KKV",
       "artikel": "141",
       "artikelLabel": "Art. 141",
+      "grundlage": "(Art. 96 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7161,7 +7365,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_141",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "5dcb4f5f57dbb7c281b97192a828725ffbd55b7c084b77949f48d153c65ba9c9"
     },
@@ -7172,6 +7376,7 @@
       "erlass": "KKV",
       "artikel": "142",
       "artikelLabel": "Art. 142",
+      "grundlage": "(Art. 1 und 144 KAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7202,7 +7407,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_142",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "03fb01b460794b08a49d7f28c713e9ee56e761fdaed2ff4db1901bdfa56ba3f9"
     },
@@ -7221,7 +7426,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_143",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7232,6 +7437,7 @@
       "erlass": "KKV",
       "artikel": "144",
       "artikelLabel": "Art. 144",
+      "grundlage": "(Art. 95 Abs. 4 Bst. b FIDLEG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -7260,7 +7466,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_144",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "f4856d036dfc2d654a5a8ba9ede245f0f018ce8d53747e1b4b08017a921fdd21"
     },
@@ -7279,7 +7485,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_144_a_144_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7298,7 +7504,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_144_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7325,7 +7531,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_144_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "58bfc2cbf8ddd5742b8a0073af03ff3e7168eb4e2925ff145a143e2cf9d668da"
     },
@@ -7344,7 +7550,7 @@
       ],
       "stand": "2025-11-25",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/859/de#art_145",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20251125",
       "sha": "3e3c8e39d3b2ffc9fc9c0d122acbec4ad0a890b7f64370765707e087d229d2a1"
     }

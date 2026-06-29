@@ -1,5 +1,86 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "831.111",
+  "titel": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung",
+  "erlassdatum": "vom 26. Mai 1961 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG), auf Artikel 154 Absatz 2 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG) und auf Artikel 86 Absatz 2 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
+    "links": [
+     {
+      "label": "AS <b>2000</b> 2828",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>830.1</b>",
+    "links": [
+     {
+      "label": "SR <b>830.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>831.10</b>",
+    "links": [
+     {
+      "label": "SR <b>831.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>831.20</b>",
+    "links": [
+     {
+      "label": "SR <b>831.20</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "Fassung gemäss Ziff. I der V vom 11. Sept. 2002. in Kraft seit 1. Jan. 2003 (AS <b>2002 </b>3716).",
+    "links": [
+     {
+      "label": "AS <b>2002 </b>3716",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2002/571"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +93,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. April 2001 (AS 2000 2828).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. April 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -37,10 +118,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -62,10 +143,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -85,10 +166,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Aufgehoben durch Ziff. I der V vom 16. März 2007, mit Wirkung seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Aufgehoben durch Ziff. I der V vom 16. März 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -110,10 +191,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -133,10 +214,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Aufgehoben durch Ziff. III der V vom 11. Okt. 1972, mit Wirkung seit 1. Jan. 1973 (AS 1972 2507).",
+     "text": "Aufgehoben durch Ziff. III der V vom 11. Okt. 1972, mit Wirkung seit 1. Jan. 1973 (AS <b>1972</b> 2507).",
      "links": [
       {
-       "label": "AS 1972 2507",
+       "label": "AS <b>1972</b> 2507",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2507_2560_2338"
       }
      ],
@@ -158,10 +239,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. April 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. April 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -170,14 +251,14 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 7. April 2004 (AS 2004 2027). Aufgehoben durch Ziff. II 1 der V vom 2. Nov. 2005, mit Wirkung seit 1. April 2006 (AS 2006 923).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. April 2004 (AS <b>2004</b> 2027). Aufgehoben durch Ziff. II 1 der V vom 2. Nov. 2005, mit Wirkung seit 1. April 2006 (AS <b>2006</b> 923).",
      "links": [
       {
-       "label": "AS 2004 2027",
+       "label": "AS <b>2004</b> 2027",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/230"
       },
       {
-       "label": "AS 2006 923",
+       "label": "AS <b>2006</b> 923",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/163"
       }
      ],
@@ -199,10 +280,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. April 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. April 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -211,10 +292,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -234,10 +315,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 1995, mit Wirkung seit 1. Jan. 1997 (AS 1996 686).",
+     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 1995, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 686).",
      "links": [
       {
-       "label": "AS 1996 686",
+       "label": "AS <b>1996</b> 686",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/686_686_686"
       }
      ],
@@ -257,10 +338,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. April 2001 (AS 2000 2828).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. April 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -282,10 +363,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -307,10 +388,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -332,10 +413,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BRB vom 3. April 1964, in Kraft seit 1. Jan. 1964 (AS 1964 340).",
+     "text": "Fassung gemäss Ziff. I des BRB vom 3. April 1964, in Kraft seit 1. Jan. 1964 (AS <b>1964</b> 340).",
      "links": [
       {
-       "label": "AS 1964 340",
+       "label": "AS <b>1964</b> 340",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/340_332_329"
       }
      ],
@@ -344,10 +425,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -356,10 +437,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -368,10 +449,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -393,10 +474,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -405,10 +486,10 @@
     },
     {
      "nr": "30",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -428,10 +509,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Aufgehoben durch Ziff. I der V vom 16. März 2007, mit Wirkung seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Aufgehoben durch Ziff. I der V vom 16. März 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -453,10 +534,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 1975, in Kraft seit 1. Jan. 1976 (AS 1975 1878).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 1975, in Kraft seit 1. Jan. 1976 (AS <b>1975</b> 1878).",
      "links": [
       {
-       "label": "AS 1975 1878",
+       "label": "AS <b>1975</b> 1878",
        "url": "https://fedlex.data.admin.ch/eli/oc/1975/1878_1878_1878"
       }
      ],
@@ -465,10 +546,10 @@
     },
     {
      "nr": "39",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -477,10 +558,10 @@
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -489,10 +570,10 @@
     },
     {
      "nr": "41",
-     "text": "Aufgehoben durch Ziff. I der V vom 7. Juli 1982, mit Wirkung seit 1. Jan. 1983 (AS 1982 1282).",
+     "text": "Aufgehoben durch Ziff. I der V vom 7. Juli 1982, mit Wirkung seit 1. Jan. 1983 (AS <b>1982</b> 1282).",
      "links": [
       {
-       "label": "AS 1982 1282",
+       "label": "AS <b>1982</b> 1282",
        "url": "https://fedlex.data.admin.ch/eli/oc/1982/1282_1282_1282"
       }
      ],
@@ -514,10 +595,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I des BRB vom 3. April 1964, in Kraft seit 1. Jan. 1964 (AS 1964 340).",
+     "text": "Fassung gemäss Ziff. I des BRB vom 3. April 1964, in Kraft seit 1. Jan. 1964 (AS <b>1964</b> 340).",
      "links": [
       {
-       "label": "AS 1964 340",
+       "label": "AS <b>1964</b> 340",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/340_332_329"
       }
      ],
@@ -539,10 +620,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -564,10 +645,10 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. IV des BRB vom 15. Jan. 1968, in Kraft seit 1. Jan. 1968 (AS 1968 43).",
+     "text": "Fassung gemäss Ziff. IV des BRB vom 15. Jan. 1968, in Kraft seit 1. Jan. 1968 (AS <b>1968</b> 43).",
      "links": [
       {
-       "label": "AS 1968 43",
+       "label": "AS <b>1968</b> 43",
        "url": "https://fedlex.data.admin.ch/eli/oc/1968/43_43_43"
       }
      ],
@@ -576,14 +657,14 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I des BRB vom 3. April 1964 (AS 1964 340). Fassung gemäss Ziff. I der V vom 7. Juli 1982, in Kraft seit 1. Jan. 1983 (AS 1982 1282).",
+     "text": "Eingefügt durch Ziff. I des BRB vom 3. April 1964 (AS <b>1964</b> 340). Fassung gemäss Ziff. I der V vom 7. Juli 1982, in Kraft seit 1. Jan. 1983 (AS <b>1982</b> 1282).",
      "links": [
       {
-       "label": "AS 1964 340",
+       "label": "AS <b>1964</b> 340",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/340_332_329"
       },
       {
-       "label": "AS 1982 1282",
+       "label": "AS <b>1982</b> 1282",
        "url": "https://fedlex.data.admin.ch/eli/oc/1982/1282_1282_1282"
       }
      ],
@@ -592,15 +673,16 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. IV des BRB vom 15. Jan. 1968, in Kraft seit 1. Jan. 1968 (AS 1968 43).",
+     "text": "Fassung gemäss Ziff. IV des BRB vom 15. Jan. 1968, in Kraft seit 1. Jan. 1968 (AS <b>1968</b> 43).",
      "links": [
       {
-       "label": "AS 1968 43",
+       "label": "AS <b>1968</b> 43",
        "url": "https://fedlex.data.admin.ch/eli/oc/1968/43_43_43"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "E. Renten und Taggelder"
     }
    ]
   },
@@ -617,10 +699,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -642,10 +724,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I der V vom 17. Juni 1985, in Kraft seit 1. Jan. 1986 (AS 1985 922).",
+     "text": "Fassung gemäss Ziff. I der V vom 17. Juni 1985, in Kraft seit 1. Jan. 1986 (AS <b>1985</b> 922).",
      "links": [
       {
-       "label": "AS 1985 922",
+       "label": "AS <b>1985</b> 922",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/922_922_922"
       }
      ],
@@ -654,10 +736,10 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
+     "text": "Fassung gemäss Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359). Siehe jedoch die SchlB dieser Änd. am Ende des vorliegenden Textes.",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -677,10 +759,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -702,10 +784,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 1975, in Kraft seit 1. Jan. 1976 (AS 1975 1878).",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Okt. 1975, in Kraft seit 1. Jan. 1976 (AS <b>1975</b> 1878).",
      "links": [
       {
-       "label": "AS 1975 1878",
+       "label": "AS <b>1975</b> 1878",
        "url": "https://fedlex.data.admin.ch/eli/oc/1975/1878_1878_1878"
       }
      ],
@@ -714,10 +796,10 @@
     },
     {
      "nr": "55",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -726,10 +808,10 @@
     },
     {
      "nr": "56",
-     "text": "SR 831.201",
+     "text": "SR <b>831.201</b>",
      "links": [
       {
-       "label": "SR 831.201",
+       "label": "SR <b>831.201</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1961/29_29_29"
       }
      ],
@@ -751,10 +833,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "[AS 1954 524]",
+     "text": "[AS <b>1954</b> 524]",
      "links": [
       {
-       "label": "AS 1954 524",
+       "label": "AS <b>1954</b> 524",
        "url": "https://fedlex.data.admin.ch/eli/oc/1954/524_540_424"
       }
      ],
@@ -776,10 +858,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -788,10 +870,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023 </b>506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023 </b>506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -800,10 +882,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023 </b>506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023 </b>506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -812,15 +894,16 @@
     },
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "D. Beiträge"
     }
    ]
   },
@@ -837,14 +920,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000 (AS 2000 2828). Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 464).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000 (AS <b>2000</b> 2828). Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 464).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       },
       {
-       "label": "AS 2024 464",
+       "label": "AS <b>2024</b> 464",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/464"
       }
      ],
@@ -866,10 +949,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -891,10 +974,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS 2007 1359).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. März 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 1359).",
      "links": [
       {
-       "label": "AS 2007 1359",
+       "label": "AS <b>2007</b> 1359",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/226"
       }
      ],
@@ -903,10 +986,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4613).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4613).",
      "links": [
       {
-       "label": "AS 2020 4613",
+       "label": "AS <b>2020</b> 4613",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/820"
       }
      ],
@@ -915,10 +998,10 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4613).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4613).",
      "links": [
       {
-       "label": "AS 2020 4613",
+       "label": "AS <b>2020</b> 4613",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/820"
       }
      ],
@@ -938,14 +1021,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I des BRB vom 3. April 1964 (AS 1964 340). Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Eingefügt durch Ziff. I des BRB vom 3. April 1964 (AS <b>1964</b> 340). Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 1964 340",
+       "label": "AS <b>1964</b> 340",
        "url": "https://fedlex.data.admin.ch/eli/oc/1964/340_332_329"
       },
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -965,14 +1048,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. II 3 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420). Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Eingefügt durch Ziff. II 3 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420). Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       },
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -994,10 +1077,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Okt. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],
@@ -1006,18 +1089,18 @@
     },
     {
      "nr": "45",
-     "text": "[AS 1972 2460. AS 2009 5333 Art. 2]. Siehe heute: die V des EDI vom 19. Okt. 2011 (SR 831.143.41).",
+     "text": "[AS <b>1972</b> 2460. AS <b>2009</b> 5333 Art. 2]. Siehe heute: die V des EDI vom 19. Okt. 2011 (SR <b>831.143.41</b>).",
      "links": [
       {
-       "label": "AS 1972 2460",
+       "label": "AS <b>1972</b> 2460",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2460_2513_2290"
       },
       {
-       "label": "AS 2009 5333",
+       "label": "AS <b>2009</b> 5333",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/636"
       },
       {
-       "label": "SR 831.143.41",
+       "label": "SR <b>831.143.41</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2011/675"
       }
      ],
@@ -1037,10 +1120,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2828).",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Okt. 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000</b> 2828).",
      "links": [
       {
-       "label": "AS 2000 2828",
+       "label": "AS <b>2000</b> 2828",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/479"
       }
      ],

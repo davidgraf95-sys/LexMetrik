@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "952.0",
+  "titel": "Bundesgesetz über die Banken und Sparkassen",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 34, 64 und 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 2. Februar 1934,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung des Titels gemäss Ziff. I des BG vom 22. April 1999, in Kraft seit 1. Okt. 1999 (AS <b>1999</b> 2405; <i>BBl <b>1998</b> 3847</i>).",
+    "links": [
+     {
+      "label": "AS <b>1999</b> 2405",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1999/368"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "[BS <b>1</b> 3; AS <b>1976</b> 2001]",
+    "links": [
+     {
+      "label": "AS <b>1976</b> 2001",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1976/2001_2001_2001"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1934</b> I 171",
+    "links": [
+     {
+      "label": "BBl <b>1934</b> I 171",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1934/1_171_172_"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +68,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -23,7 +79,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -39,14 +95,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -55,10 +111,10 @@
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -66,7 +122,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -86,10 +142,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -97,7 +153,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -106,10 +162,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -117,7 +173,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -126,10 +182,10 @@
     },
     {
      "nr": "19",
-     "text": "Ausdruck gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -137,7 +193,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -146,18 +202,18 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS 1995 246; BBl 1993 I 805). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -165,7 +221,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -185,10 +241,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144). Siehe auch die SchlB Änd. 22. 4. 1999 am Ende dieses Textes.",
+     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144). Siehe auch die SchlB Änd. 22. <i>4</i>. <i>1999 </i>am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -196,7 +252,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -205,14 +261,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -221,14 +277,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -237,14 +293,14 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -253,14 +309,14 @@
     },
     {
      "nr": "28",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -269,14 +325,14 @@
     },
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -285,14 +341,14 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -301,14 +357,14 @@
     },
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -317,10 +373,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -328,12 +384,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweiter Abschnitt: Bewilligung zum Geschäftsbetrieb"
     }
    ]
   },
@@ -348,14 +405,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang Ziff. II 5 des Nationalbankgesetzes vom 3. Okt. 2003, in Kraft seit 1. Jan. 2005 (AS 2004 1985; BBl 2002 6097).",
+     "text": "Fassung gemäss Anhang Ziff. II 5 des Nationalbankgesetzes vom 3. Okt. 2003, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1985; BBl <b>2002</b> 6097).",
      "links": [
       {
-       "label": "AS 2004 1985",
+       "label": "AS <b>2004</b> 1985",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/221"
       },
       {
-       "label": "BBl 2002 6097",
+       "label": "BBl <b>2002</b> 6097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/997"
       }
      ],
@@ -364,10 +421,10 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Fassung gemäss Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -375,12 +432,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Dritter Abschnitt: Eigene Mittel, Liquidität und andere Vorschriften über die Geschäftstätigkeit"
     }
    ]
   },
@@ -395,10 +453,10 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -406,7 +464,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -428,10 +486,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -440,19 +498,20 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS 2012 6679; BBl 2008 1589).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6679; BBl <b>2008</b> 1589).",
      "links": [
       {
-       "label": "AS 2012 6679",
+       "label": "AS <b>2012</b> 6679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/810"
       },
       {
-       "label": "BBl 2008 1589",
+       "label": "BBl <b>2008</b> 1589",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/416"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Vierter Abschnitt: Rechnungslegung"
     }
    ]
   },
@@ -469,19 +528,20 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS 2012 811; BBl 2011 4717).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS <b>2012</b> 811; BBl <b>2011</b> 4717).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Fünfter Abschnitt: Systemrelevante Banken"
     }
    ]
   },
@@ -540,18 +600,18 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -560,18 +620,18 @@
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -580,19 +640,20 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS 2012 811; BBl 2011 4717).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS <b>2012</b> 811; BBl <b>2011</b> 4717).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Sechster Abschnitt: Zusätzliches Kapital"
     }
    ]
   },
@@ -609,10 +670,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -634,10 +695,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -659,18 +720,18 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -679,10 +740,10 @@
     },
     {
      "nr": "76",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -702,14 +763,14 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -718,14 +779,14 @@
     },
     {
      "nr": "82",
-     "text": "Aufgehoben durch Anhang Ziff. 17 des BG vom 16. Dez. 1994, mit Wirkung seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1).",
+     "text": "Aufgehoben durch Anhang Ziff. 17 des BG vom 16. Dez. 1994, mit Wirkung seit 1. Jan. 1997 (AS <b>1995</b> 1227; BBl <b>1991</b> III 1).",
      "links": [
       {
-       "label": "AS 1995 1227",
+       "label": "AS <b>1995</b> 1227",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1227_1227_1227"
       },
       {
-       "label": "BBl 1991 III 1",
+       "label": "BBl <b>1991</b> III 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
@@ -734,19 +795,20 @@
     },
     {
      "nr": "80",
-     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1).",
+     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS <b>1995</b> 1227; BBl <b>1991</b> III 1).",
      "links": [
       {
-       "label": "AS 1995 1227",
+       "label": "AS <b>1995</b> 1227",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1227_1227_1227"
       },
       {
-       "label": "BBl 1991 III 1",
+       "label": "BBl <b>1991</b> III 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Siebenter Abschnitt: Spareinlagen und Depotwerte"
     }
    ]
   },
@@ -761,14 +823,14 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1).",
+     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS <b>1995</b> 1227; BBl <b>1991</b> III 1).",
      "links": [
       {
-       "label": "AS 1995 1227",
+       "label": "AS <b>1995</b> 1227",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1227_1227_1227"
       },
       {
-       "label": "BBl 1991 III 1",
+       "label": "BBl <b>1991</b> III 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
@@ -777,14 +839,14 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS 2004 2767; BBl 2002 8060).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       }
      ],
@@ -793,10 +855,10 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -804,7 +866,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -824,14 +886,14 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Aufgehoben durch Anhang Ziff. 5 des Bucheffektengesetzes vom 3. Okt. 2008, mit Wirkung seit 1. Jan. 2010 (AS 2009 3577; BBl 2006 9315).",
+     "text": "Aufgehoben durch Anhang Ziff. 5 des Bucheffektengesetzes vom 3. Okt. 2008, mit Wirkung seit 1. Jan. 2010 (AS <b>2009</b> 3577; BBl <b>2006</b> 9315).",
      "links": [
       {
-       "label": "AS 2009 3577",
+       "label": "AS <b>2009</b> 3577",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/450"
       },
       {
-       "label": "BBl 2006 9315",
+       "label": "BBl <b>2006</b> 9315",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1228"
       }
      ],
@@ -851,14 +913,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -867,10 +929,10 @@
     },
     {
      "nr": "89",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -879,10 +941,10 @@
     },
     {
      "nr": "90",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -891,10 +953,10 @@
     },
     {
      "nr": "91",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -903,10 +965,10 @@
     },
     {
      "nr": "87",
-     "text": "Ausdruck gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829). Diese Änderung wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829). Diese Änderung wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -914,12 +976,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Neunter Abschnitt: Überwachung und Prüfung"
     }
    ]
   },
@@ -934,10 +997,10 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -945,7 +1008,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -954,10 +1017,10 @@
     },
     {
      "nr": "93",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -965,12 +1028,13 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zehnter Abschnitt: Aufsicht"
     }
    ]
   },
@@ -985,14 +1049,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1014,14 +1078,14 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1030,10 +1094,10 @@
     },
     {
      "nr": "107",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1042,10 +1106,10 @@
     },
     {
      "nr": "108",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1054,14 +1118,14 @@
     },
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. III des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS 2023 355; BBl 2020 8967).",
+     "text": "Fassung gemäss Ziff. III des BG vom 18. März 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 355; BBl <b>2020</b> 8967).",
      "links": [
       {
-       "label": "AS 2023 355",
+       "label": "AS <b>2023</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/355"
       },
       {
-       "label": "BBl 2020 8967",
+       "label": "BBl <b>2020</b> 8967",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2421"
       }
      ],
@@ -1070,14 +1134,14 @@
     },
     {
      "nr": "110",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1086,19 +1150,20 @@
     },
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS 2004 2767; BBl 2002 8060).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Elfter Abschnitt: Massnahmen bei Insolvenzgefahr"
     }
    ]
   },
@@ -1115,10 +1180,10 @@
    "fussnoten": [
     {
      "nr": "111",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1126,7 +1191,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1135,10 +1200,10 @@
     },
     {
      "nr": "112",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1146,7 +1211,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1155,14 +1220,14 @@
     },
     {
      "nr": "113",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1171,10 +1236,10 @@
     },
     {
      "nr": "114",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1196,14 +1261,14 @@
    "fussnoten": [
     {
      "nr": "115",
-     "text": "Fassung gemäss Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Fassung gemäss Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -1212,14 +1277,14 @@
     },
     {
      "nr": "116",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1228,14 +1293,14 @@
     },
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1257,14 +1322,14 @@
    "fussnoten": [
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1273,14 +1338,14 @@
     },
     {
      "nr": "119",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1289,14 +1354,14 @@
     },
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1318,14 +1383,14 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1347,14 +1412,14 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1363,14 +1428,14 @@
     },
     {
      "nr": "124",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1379,10 +1444,10 @@
     },
     {
      "nr": "125",
-     "text": "SR 221.301",
+     "text": "SR <b>221.301</b>",
      "links": [
       {
-       "label": "SR 221.301",
+       "label": "SR <b>221.301</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
       }
      ],
@@ -1391,14 +1456,14 @@
     },
     {
      "nr": "126",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1420,14 +1485,14 @@
    "fussnoten": [
     {
      "nr": "131",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1449,10 +1514,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1461,14 +1526,14 @@
     },
     {
      "nr": "139",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS 2012 811; BBl 2011 4717).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS <b>2012</b> 811; BBl <b>2011</b> 4717).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       }
      ],
@@ -1477,14 +1542,14 @@
     },
     {
      "nr": "140",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1493,22 +1558,22 @@
     },
     {
      "nr": "141",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1517,14 +1582,14 @@
     },
     {
      "nr": "142",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1546,14 +1611,14 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1562,19 +1627,20 @@
     },
     {
      "nr": "143",
-     "text": "Ursprünglich vor Art. 29. Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS 2004 2767; BBl 2002 8060).",
+     "text": "Ursprünglich vor Art. 29. Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zwölfter Abschnitt: Konkursliquidation insolventer Banken (Bankenkonkurs)"
     }
    ]
   },
@@ -1591,10 +1657,10 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1603,14 +1669,14 @@
     },
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1619,14 +1685,14 @@
     },
     {
      "nr": "147",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1648,14 +1714,14 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -1688,14 +1754,14 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -1715,10 +1781,10 @@
    "fussnoten": [
     {
      "nr": "184",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1726,7 +1792,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1735,10 +1801,10 @@
     },
     {
      "nr": "185",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1758,14 +1824,14 @@
    "fussnoten": [
     {
      "nr": "186",
-     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS 2014 4073; BBl 2013 6857).",
+     "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 20. Juni 2014 (Bündelung der Aufsicht über Revisionsunternehmen und Prüfgesellschaften), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 4073; BBl <b>2013</b> 6857).",
      "links": [
       {
-       "label": "AS 2014 4073",
+       "label": "AS <b>2014</b> 4073",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/685"
       },
       {
-       "label": "BBl 2013 6857",
+       "label": "BBl <b>2013</b> 6857",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1303"
       }
      ],
@@ -1774,10 +1840,10 @@
     },
     {
      "nr": "187",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1797,10 +1863,10 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1808,7 +1874,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1817,14 +1883,14 @@
     },
     {
      "nr": "190",
-     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -1844,10 +1910,10 @@
    "fussnoten": [
     {
      "nr": "191",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1855,7 +1921,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1864,14 +1930,14 @@
     },
     {
      "nr": "192",
-     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1880,14 +1946,14 @@
     },
     {
      "nr": "193",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Dez. 2014 über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses, in Kraft seit 1. Juli 2015 (AS 2015 1535; BBl 2014 6231 6241).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Dez. 2014 über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses, in Kraft seit 1. Juli 2015 (AS <b>2015</b> 1535; BBl <b>2014</b> 6231 6241).",
      "links": [
       {
-       "label": "AS 2015 1535",
+       "label": "AS <b>2015</b> 1535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/304"
       },
       {
-       "label": "BBl 2014 6231",
+       "label": "BBl <b>2014</b> 6231",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1334"
       },
       {
@@ -1900,14 +1966,14 @@
     },
     {
      "nr": "194",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Dez. 2014 über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses, in Kraft seit 1. Juli 2015 (AS 2015 1535; BBl 2014 6231 6241).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Dez. 2014 über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses, in Kraft seit 1. Juli 2015 (AS <b>2015</b> 1535; BBl <b>2014</b> 6231 6241).",
      "links": [
       {
-       "label": "AS 2015 1535",
+       "label": "AS <b>2015</b> 1535",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/304"
       },
       {
-       "label": "BBl 2014 6231",
+       "label": "BBl <b>2014</b> 6231",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1334"
       },
       {
@@ -1920,14 +1986,14 @@
     },
     {
      "nr": "195",
-     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -1936,10 +2002,10 @@
     },
     {
      "nr": "196",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1959,10 +2025,10 @@
    "fussnoten": [
     {
      "nr": "197",
-     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -1970,7 +2036,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -1990,10 +2056,10 @@
    "fussnoten": [
     {
      "nr": "198",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2001,7 +2067,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2010,14 +2076,14 @@
     },
     {
      "nr": "199",
-     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2037,10 +2103,10 @@
    "fussnoten": [
     {
      "nr": "200",
-     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2048,7 +2114,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2068,10 +2134,10 @@
    "fussnoten": [
     {
      "nr": "202",
-     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2079,7 +2145,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2099,14 +2165,14 @@
    "fussnoten": [
     {
      "nr": "204",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS 2012 811; BBl 2011 4717).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), in Kraft seit 1. März 2012 (AS <b>2012</b> 811; BBl <b>2011</b> 4717).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       }
      ],
@@ -2126,14 +2192,14 @@
    "fussnoten": [
     {
      "nr": "207",
-     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1).",
+     "text": "Fassung gemäss Anhang Ziff. 17 des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS <b>1995</b> 1227; BBl <b>1991</b> III 1).",
      "links": [
       {
-       "label": "AS 1995 1227",
+       "label": "AS <b>1995</b> 1227",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1227_1227_1227"
       },
       {
-       "label": "BBl 1991 III 1",
+       "label": "BBl <b>1991</b> III 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
@@ -2142,10 +2208,10 @@
     },
     {
      "nr": "208",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -2165,14 +2231,14 @@
    "fussnoten": [
     {
      "nr": "209",
-     "text": "Aufgehoben durch Anhang Ziff. 17 des BG vom 16. Dez. 1994, mit Wirkung seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1).",
+     "text": "Aufgehoben durch Anhang Ziff. 17 des BG vom 16. Dez. 1994, mit Wirkung seit 1. Jan. 1997 (AS <b>1995</b> 1227; BBl <b>1991</b> III 1).",
      "links": [
       {
-       "label": "AS 1995 1227",
+       "label": "AS <b>1995</b> 1227",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/1227_1227_1227"
       },
       {
-       "label": "BBl 1991 III 1",
+       "label": "BBl <b>1991</b> III 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
@@ -2192,10 +2258,10 @@
    "fussnoten": [
     {
      "nr": "210",
-     "text": "Aufgehoben durch Ziff. I des BG vom 11. März 1971, mit Wirkung seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 11. März 1971, mit Wirkung seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -2203,7 +2269,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -2254,18 +2320,18 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2287,18 +2353,18 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS 2018 5247, 2019 4631; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5247, <b>2019</b> 4631; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "2019 4631",
+       "label": "<b>2019</b> 4631",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/762"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2307,10 +2373,10 @@
     },
     {
      "nr": "79",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2330,10 +2396,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2341,7 +2407,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2363,14 +2429,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2379,14 +2445,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2408,14 +2474,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -2424,10 +2490,10 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -2435,7 +2501,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -2444,10 +2510,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2456,10 +2522,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 221.302",
+     "text": "SR <b>221.302</b>",
      "links": [
       {
-       "label": "SR 221.302",
+       "label": "SR <b>221.302</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
       }
      ],
@@ -2468,10 +2534,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2480,10 +2546,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -2491,7 +2557,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -2511,22 +2577,22 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Anhang Ziff. II 5 des Nationalbankgesetzes vom 3. Okt. 2003 (AS 2004 1985; BBl 2002 6097). Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Anhang Ziff. II 5 des Nationalbankgesetzes vom 3. Okt. 2003 (AS <b>2004</b> 1985; BBl <b>2002</b> 6097). Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2004 1985",
+       "label": "AS <b>2004</b> 1985",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/221"
       },
       {
-       "label": "BBl 2002 6097",
+       "label": "BBl <b>2002</b> 6097",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/997"
       },
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2546,22 +2612,22 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS 1971 808; BBl 1970 I 1144). Fassung gemäss Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS <b>1971</b> 808; BBl <b>1970</b> I 1144). Fassung gemäss Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       },
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2570,10 +2636,10 @@
     },
     {
      "nr": "96",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2593,18 +2659,18 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (AS 2004 2767; BBl 2002 8060). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2612,7 +2678,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2632,18 +2698,18 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS 1971 808; BBl 1970 I 1144). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS <b>1971</b> 808; BBl <b>1970</b> I 1144). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2651,7 +2717,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2671,18 +2737,18 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS 1971 808; BBl 1970 I 1144). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS <b>1971</b> 808; BBl <b>1970</b> I 1144). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2690,7 +2756,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2717,18 +2783,18 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. April 1999 (AS 1999 2405; BBl 1998 3847). Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. April 1999 (AS <b>1999</b> 2405; <i>BBl <b>1998</b> 3847</i>). Aufgehoben durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 1999 2405",
+       "label": "AS <b>1999</b> 2405",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/368"
       },
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2748,18 +2814,18 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS 1995 246; BBl 1993 I 805). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2767,7 +2833,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2787,18 +2853,18 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS 1971 808; BBl 1970 I 1144). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS <b>1971</b> 808; BBl <b>1970</b> I 1144). Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -2806,7 +2872,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -2828,14 +2894,14 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2855,14 +2921,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2871,14 +2937,14 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2900,14 +2966,14 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Eingefügt durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5339; BBl 2014 7483).",
+     "text": "Eingefügt durch Anhang Ziff. 10 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5339; BBl <b>2014 </b>7483).",
      "links": [
       {
-       "label": "AS 2015 5339",
+       "label": "AS <b>2015</b> 5339",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/853"
       },
       {
-       "label": "BBl 2014 7483",
+       "label": "BBl <b>2014 </b>7483",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1633"
       }
      ],
@@ -2929,14 +2995,14 @@
    "fussnoten": [
     {
      "nr": "128",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2945,10 +3011,10 @@
     },
     {
      "nr": "129",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -2970,14 +3036,14 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -2999,14 +3065,14 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3015,10 +3081,10 @@
     },
     {
      "nr": "133",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3027,22 +3093,22 @@
     },
     {
      "nr": "134",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor) (AS 2012 811; BBl 2011 4717). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor) (AS <b>2012</b> 811; BBl <b>2011</b> 4717). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       },
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3064,22 +3130,22 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor) (AS 2012 811; BBl 2011 4717). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor) (AS <b>2012</b> 811; BBl <b>2011</b> 4717). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2012 811",
+       "label": "AS <b>2012</b> 811",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/126"
       },
       {
-       "label": "BBl 2011 4717",
+       "label": "BBl <b>2011</b> 4717",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/762"
       },
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3101,14 +3167,14 @@
    "fussnoten": [
     {
      "nr": "136",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3130,14 +3196,14 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3159,14 +3225,14 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3175,10 +3241,10 @@
     },
     {
      "nr": "151",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3187,14 +3253,14 @@
     },
     {
      "nr": "152",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3203,10 +3269,10 @@
     },
     {
      "nr": "153",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -3215,10 +3281,10 @@
     },
     {
      "nr": "154",
-     "text": "SR 831.42",
+     "text": "SR <b>831.42</b>",
      "links": [
       {
-       "label": "SR 831.42",
+       "label": "SR <b>831.42</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
       }
      ],
@@ -3227,14 +3293,14 @@
     },
     {
      "nr": "155",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3256,14 +3322,14 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3272,10 +3338,10 @@
     },
     {
      "nr": "157",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3295,14 +3361,14 @@
    "fussnoten": [
     {
      "nr": "158",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), mit Wirkung seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), mit Wirkung seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3324,10 +3390,10 @@
    "fussnoten": [
     {
      "nr": "159",
-     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Fassung gemäss Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -3335,7 +3401,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -3344,10 +3410,10 @@
     },
     {
      "nr": "160",
-     "text": "SR 957.1",
+     "text": "SR <b>957.1</b>",
      "links": [
       {
-       "label": "SR 957.1",
+       "label": "SR <b>957.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/450"
       }
      ],
@@ -3369,10 +3435,10 @@
    "fussnoten": [
     {
      "nr": "161",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3381,14 +3447,14 @@
     },
     {
      "nr": "162",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3397,14 +3463,14 @@
     },
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3437,14 +3503,14 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3453,10 +3519,10 @@
     },
     {
      "nr": "165",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3465,10 +3531,10 @@
     },
     {
      "nr": "166",
-     "text": "SR 291",
+     "text": "SR <b>291</b>",
      "links": [
       {
-       "label": "SR 291",
+       "label": "SR <b>291</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776"
       }
      ],
@@ -3477,14 +3543,14 @@
     },
     {
      "nr": "167",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 16. März 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3263; BBl 2017 4125).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 16. März 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3263; BBl <b>2017</b> 4125).",
      "links": [
       {
-       "label": "AS 2018 3263",
+       "label": "AS <b>2018</b> 3263",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/527"
       },
       {
-       "label": "BBl 2017 4125",
+       "label": "BBl <b>2017</b> 4125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1054"
       }
      ],
@@ -3493,14 +3559,14 @@
     },
     {
      "nr": "168",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. März 2018, in Kraft seit 1. Jan. 2019 (AS 2018 3263; BBl 2017 4125).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 16. März 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3263; BBl <b>2017</b> 4125).",
      "links": [
       {
-       "label": "AS 2018 3263",
+       "label": "AS <b>2018</b> 3263",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/527"
       },
       {
-       "label": "BBl 2017 4125",
+       "label": "BBl <b>2017</b> 4125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1054"
       }
      ],
@@ -3522,19 +3588,20 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zwölfter a. Abschnitt: Beschwerden in Verfahren nach dem elften und zwölften Abschnitt"
     }
    ]
   },
@@ -3551,10 +3618,10 @@
    "fussnoten": [
     {
      "nr": "172",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -3587,10 +3654,10 @@
    "fussnoten": [
     {
      "nr": "170",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -3599,10 +3666,10 @@
     },
     {
      "nr": "171",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -3624,14 +3691,14 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3640,19 +3707,20 @@
     },
     {
      "nr": "173",
-     "text": "Ursprünglich vor Art. 36. Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS 2004 2767; BBl 2002 8060).",
+     "text": "Ursprünglich vor Art. 36. Fassung gemäss Ziff. I des BG vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Dreizehnter Abschnitt: Einlagensicherung"
     }
    ]
   },
@@ -3669,14 +3737,14 @@
    "fussnoten": [
     {
      "nr": "175",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3685,14 +3753,14 @@
     },
     {
      "nr": "176",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3701,14 +3769,14 @@
     },
     {
      "nr": "177",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3730,22 +3798,22 @@
    "fussnoten": [
     {
      "nr": "178",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen) (AS 2011 3919; BBl 2010 3993). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen) (AS <b>2011</b> 3919; BBl <b>2010</b> 3993). Fassung gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       },
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3767,14 +3835,14 @@
    "fussnoten": [
     {
      "nr": "179",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -3796,14 +3864,14 @@
    "fussnoten": [
     {
      "nr": "180",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
@@ -3825,14 +3893,14 @@
    "fussnoten": [
     {
      "nr": "182",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013 (Nachrichtenlose Vermögenswerte), in Kraft seit 1. Jan. 2015 (AS 2014 1267; BBl 2010 7495).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013 (Nachrichtenlose Vermögenswerte), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 1267; BBl <b>2010</b> 7495).",
      "links": [
       {
-       "label": "AS 2014 1267",
+       "label": "AS <b>2014</b> 1267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/272"
       },
       {
-       "label": "BBl 2010 7495",
+       "label": "BBl <b>2010</b> 7495",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1348"
       }
      ],
@@ -3841,19 +3909,20 @@
     },
     {
      "nr": "181",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS 2011 3919; BBl 2010 3993).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 2011 (Sicherung der Einlagen), in Kraft seit 1. Sept. 2011 (AS <b>2011</b> 3919; BBl <b>2010</b> 3993).",
      "links": [
       {
-       "label": "AS 2011 3919",
+       "label": "AS <b>2011</b> 3919",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/559"
       },
       {
-       "label": "BBl 2010 3993",
+       "label": "BBl <b>2010</b> 3993",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/655"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Dreizehnter Abschnitt a: Nachrichtenlose Vermögenswerte"
     }
    ]
   },
@@ -3870,14 +3939,14 @@
    "fussnoten": [
     {
      "nr": "183",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013 (Nachrichtenlose Vermögenswerte), in Kraft seit 1. Jan. 2015 (AS 2014 1267; BBl 2010 7495).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013 (Nachrichtenlose Vermögenswerte), in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 1267; BBl <b>2010</b> 7495).",
      "links": [
       {
-       "label": "AS 2014 1267",
+       "label": "AS <b>2014</b> 1267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/272"
       },
       {
-       "label": "BBl 2010 7495",
+       "label": "BBl <b>2010</b> 7495",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1348"
       }
      ],
@@ -3897,18 +3966,18 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS 1995 246; BBl 1993 I 805). Fassung gemäss Ziff. I des BG vom 22. April 1999, in Kraft seit 1. Okt. 1999 (AS 1999 2405; BBl 1998 3847). Siehe auch die SchlB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994 (AS <b>1995</b> 246; BBl <b>1993</b> I 805). Fassung gemäss Ziff. I des BG vom 22. April 1999, in Kraft seit 1. Okt. 1999 (AS <b>1999</b> 2405; <i>BBl <b>1998</b> 3847</i>). Siehe auch die SchlB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       },
       {
-       "label": "AS 1999 2405",
+       "label": "AS <b>1999</b> 2405",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/368"
       }
      ],
@@ -3928,14 +3997,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -3955,10 +4024,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -3966,7 +4035,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -3975,10 +4044,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -3986,7 +4055,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -3995,14 +4064,14 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS 1995 2109; BBl 1994 IV 950).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS <b>1995</b> 2109; BBl <b>1994</b> IV 950).",
      "links": [
       {
-       "label": "AS 1995 2109",
+       "label": "AS <b>1995</b> 2109",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/2109_2109_2109"
       },
       {
-       "label": "BBl 1994 IV 950",
+       "label": "BBl <b>1994</b> IV 950",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/4_950_995_923"
       }
      ],
@@ -4011,14 +4080,14 @@
     },
     {
      "nr": "47",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4027,22 +4096,22 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 1994 (AS 1995 2109; BBl 1994 IV 950). Fassung gemäss Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. Dez. 1994 (AS <b>1995</b> 2109; BBl <b>1994</b> IV 950). Fassung gemäss Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 1995 2109",
+       "label": "AS <b>1995</b> 2109",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/2109_2109_2109"
       },
       {
-       "label": "BBl 1994 IV 950",
+       "label": "BBl <b>1994</b> IV 950",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/4_950_995_923"
       },
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4051,14 +4120,14 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4078,14 +4147,14 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4094,14 +4163,14 @@
     },
     {
      "nr": "35",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -4121,14 +4190,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4137,10 +4206,10 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -4148,7 +4217,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -4168,14 +4237,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4195,14 +4264,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4222,14 +4291,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS 2005 5269; BBl 2003 3789).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       }
      ],
@@ -4238,14 +4307,14 @@
     },
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -4254,14 +4323,14 @@
     },
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS 2022 732; BBl 2020 6359).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
-       "label": "AS 2022 732",
+       "label": "AS <b>2022</b> 732",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/732"
       },
       {
-       "label": "BBl 2020 6359",
+       "label": "BBl <b>2020</b> 6359",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
@@ -4281,18 +4350,18 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004 (AS 2005 5269; BBl 2003 3789). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Anhang Ziff. II 6 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2005 5269",
+       "label": "AS <b>2005</b> 5269",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/734"
       },
       {
-       "label": "BBl 2003 3789",
+       "label": "BBl <b>2003</b> 3789",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/577"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -4300,7 +4369,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -4320,14 +4389,14 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4347,10 +4416,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -4358,7 +4427,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -4367,14 +4436,14 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS 1995 2109; BBl 1994 IV 950).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS <b>1995</b> 2109; BBl <b>1994</b> IV 950).",
      "links": [
       {
-       "label": "AS 1995 2109",
+       "label": "AS <b>1995</b> 2109",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/2109_2109_2109"
       },
       {
-       "label": "BBl 1994 IV 950",
+       "label": "BBl <b>1994</b> IV 950",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/4_950_995_923"
       }
      ],
@@ -4383,14 +4452,14 @@
     },
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS 1995 2109; BBl 1994 IV 950).",
+     "text": "Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Juli 1995 (AS <b>1995</b> 2109; BBl <b>1994</b> IV 950).",
      "links": [
       {
-       "label": "AS 1995 2109",
+       "label": "AS <b>1995</b> 2109",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/2109_2109_2109"
       },
       {
-       "label": "BBl 1994 IV 950",
+       "label": "BBl <b>1994</b> IV 950",
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/4_950_995_923"
       }
      ],
@@ -4410,14 +4479,14 @@
    "fussnoten": [
     {
      "nr": "188",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2003, mit Wirkung seit 1. Juli 2004 (AS 2004 2767; BBl 2002 8060).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2003, mit Wirkung seit 1. Juli 2004 (AS <b>2004</b> 2767; BBl <b>2002</b> 8060).",
      "links": [
       {
-       "label": "AS 2004 2767",
+       "label": "AS <b>2004</b> 2767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/340"
       },
       {
-       "label": "BBl 2002 8060",
+       "label": "BBl <b>2002</b> 8060",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/1290"
       }
      ],
@@ -4437,10 +4506,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -4448,7 +4517,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -4457,14 +4526,14 @@
     },
     {
      "nr": "57",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4484,10 +4553,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -4495,7 +4564,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -4515,14 +4584,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. März 1994, in Kraft seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4542,10 +4611,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 33, 399; BBl 2020 233).",
+     "text": "Eingefügt durch Ziff. I 6 des BG vom 25. Sept. 2020 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 33, 399; BBl <b>2020</b> 233).",
      "links": [
       {
-       "label": "AS 2021 33",
+       "label": "AS <b>2021</b> 33",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/33"
       },
       {
@@ -4553,7 +4622,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/399"
       },
       {
-       "label": "BBl 2020 233",
+       "label": "BBl <b>2020</b> 233",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/16"
       }
      ],
@@ -4573,10 +4642,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS 1971 808 824 Art. 1; BBl 1970 I 1144). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971, in Kraft seit 1. Juli 1971 (AS <b>1971</b> 808 824 Art. 1; BBl <b>1970</b> I 1144). Siehe auch die SchlB Änd. 18. März 1994 am Ende dieses BG.",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
@@ -4584,7 +4653,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/824_825_825"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       }
      ],
@@ -4593,14 +4662,14 @@
     },
     {
      "nr": "59",
-     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS 1995 246; BBl 1993 I 805).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 18. März 1994, mit Wirkung seit 1. Febr. 1995 (AS <b>1995</b> 246; BBl <b>1993</b> I 805).",
      "links": [
       {
-       "label": "AS 1995 246",
+       "label": "AS <b>1995</b> 246",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/246_246_246"
       },
       {
-       "label": "BBl 1993 I 805",
+       "label": "BBl <b>1993</b> I 805",
        "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_805_757_609"
       }
      ],
@@ -4620,18 +4689,18 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "Eingefügt durch Ziff. 22 des Anhangs zum VStrR (AS 1974 1857; BBl 1971 I 993). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. 22 des Anhangs zum VStrR (AS <b>1974</b> 1857; BBl <b>1971</b> I 993). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1974 1857",
+       "label": "AS <b>1974</b> 1857",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1857_1857_1857"
       },
       {
-       "label": "BBl 1971 I 993",
+       "label": "BBl <b>1971</b> I 993",
        "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_993_1017_727"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -4639,7 +4708,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -4659,18 +4728,18 @@
    "fussnoten": [
     {
      "nr": "203",
-     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS 1971 808; BBl 1970 I 1144). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS 2008 5207 5205; BBl 2006 2829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 11. März 1971 (AS <b>1971</b> 808; BBl <b>1970</b> I 1144). Aufgehoben durch Anhang Ziff. 15 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, mit Wirkung seit 1. Jan. 2009 (AS <b>2008 </b>5207 5205; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 1971 808",
+       "label": "AS <b>1971</b> 808",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/808_808_809"
       },
       {
-       "label": "BBl 1970 I 1144",
+       "label": "BBl <b>1970</b> I 1144",
        "url": "https://fedlex.data.admin.ch/eli/fga/1970/1_1144__"
       },
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008 </b>5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
@@ -4678,7 +4747,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/735"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -4698,14 +4767,14 @@
    "fussnoten": [
     {
      "nr": "205",
-     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 14 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -4714,10 +4783,10 @@
     },
     {
      "nr": "206",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -4739,10 +4808,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -4764,10 +4833,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],

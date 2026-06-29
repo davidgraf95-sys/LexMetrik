@@ -1,5 +1,61 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "281.32",
+  "titel": "Verordnung über die Geschäftsführung der Konkursämter",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Schweizerische Bundesgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung von Artikel 15 des Schuldbetreibungs- und Konkursgesetzes (SchKG) ,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "Abkürzung eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 2884",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "SR <b>281.1</b>",
+    "links": [
+     {
+      "label": "SR <b>281.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529/20200101"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 2884",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,10 +74,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -47,10 +103,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -59,10 +115,10 @@
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des Beschlusses des BGer vom 16. Dez. 1988, mit Wirkung seit 16. Dez. 1988 (AS 1989 262).",
+     "text": "Aufgehoben durch Ziff. I des Beschlusses des BGer vom 16. Dez. 1988, mit Wirkung seit 16. Dez. 1988 (AS <b>1989</b> 262).",
      "links": [
       {
-       "label": "AS 1989 262",
+       "label": "AS <b>1989</b> 262",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/262_262_262"
       }
      ],
@@ -136,10 +192,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -148,10 +204,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -249,10 +305,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -261,10 +317,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Art. 5 der V des BGer vom 14. März 1938 über die Aufbewahrung der Betreibungs- und Konkursakten, in Kraft seit 30. März 1938 (AS 54 131).",
+     "text": "Fassung gemäss Art. 5 der V des BGer vom 14. März 1938 über die Aufbewahrung der Betreibungs- und Konkursakten, in Kraft seit 30. März 1938 (AS <b>54</b> 131).",
      "links": [
       {
-       "label": "AS 54 131",
+       "label": "AS <b>54</b> 131",
        "url": "https://fedlex.data.admin.ch/eli/oc/54/131_131_123"
       }
      ],
@@ -322,10 +378,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -351,17 +407,17 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Im italienischen Text bilden die Abs. 1 und 2 einen einzigen Absatz.",
+     "text": "Im italienischen Text bilden die Abs. 1 und <i>2 </i>einen einzigen Absatz.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -370,7 +426,7 @@
     },
     {
      "nr": "",
-     "text": "Im italienischen Text bilden die Abs. 1 und 2 einen einzigen Absatz.",
+     "text": "Im italienischen Text bilden die Abs. 1 und <i>2 </i>einen einzigen Absatz.",
      "links": [],
      "absatz": null,
      "item": null
@@ -395,10 +451,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -425,10 +481,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -437,10 +493,10 @@
     },
     {
      "nr": "",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
       }
      ],
@@ -449,10 +505,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -481,7 +537,8 @@
      "text": "Ursprünglich IV",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "V. Buch-, Kassa- und Rechnungsführung"
     }
    ]
   },
@@ -634,10 +691,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -664,10 +721,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -710,10 +767,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -740,10 +797,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -795,7 +852,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -836,10 +893,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -866,7 +923,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -890,10 +947,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -934,10 +991,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 221.229.1",
+     "text": "SR <b>221.229.1</b>",
      "links": [
       {
-       "label": "SR 221.229.1",
+       "label": "SR <b>221.229.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717/20110101"
       }
      ],
@@ -946,10 +1003,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -975,7 +1032,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -999,10 +1056,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1028,17 +1085,17 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": "d"
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1064,10 +1121,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1093,10 +1150,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1122,10 +1179,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1151,10 +1208,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1181,7 +1238,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1206,7 +1263,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1231,7 +1288,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1257,7 +1314,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1300,7 +1357,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1326,7 +1383,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1351,7 +1408,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1376,7 +1433,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1401,7 +1458,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -1441,10 +1498,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1471,10 +1528,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1501,10 +1558,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1531,10 +1588,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1561,10 +1618,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1591,10 +1648,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1621,10 +1678,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Satz eingefügt durch Ziff. I der V vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Satz eingefügt durch Ziff. I der V vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1691,10 +1748,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1754,10 +1811,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1815,10 +1872,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1885,10 +1942,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1897,10 +1954,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss den Art. 69 Abs. 3 und 136 Abs. 2 der V des BGer vom 23. April 1920 über die Zwangsverwertung von Grundstücken, in Kraft seit 1. Jan. 1921 (AS 36 425).",
+     "text": "Fassung gemäss den Art. 69 Abs. 3 und <i>136 </i>Abs. 2 der V des BGer vom 23. April 1920 über die Zwangsverwertung von Grundstücken, in Kraft seit 1. Jan. 1921 (AS <b>36 </b>425).",
      "links": [
       {
-       "label": "AS 36 425",
+       "label": "AS <b>36 </b>425",
        "url": "https://fedlex.data.admin.ch/eli/oc/36/425_433_469"
       }
      ],
@@ -1927,10 +1984,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1939,10 +1996,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1969,10 +2026,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -1999,10 +2056,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.51",
+     "text": "SR <b>281.51</b>",
      "links": [
       {
-       "label": "SR 281.51",
+       "label": "SR <b>281.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
       }
      ],
@@ -2029,7 +2086,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -2054,10 +2111,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2098,10 +2155,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2161,10 +2218,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2173,10 +2230,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.35",
+     "text": "SR <b>281.35</b>",
      "links": [
       {
-       "label": "SR 281.35",
+       "label": "SR <b>281.35</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/2937_2937_2937/20190101"
       }
      ],
@@ -2203,10 +2260,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2248,10 +2305,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2292,7 +2349,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -2316,10 +2373,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2345,10 +2402,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch V des BGer vom 23. April 1926, mit Wirkung seit 19. Dez. 1923 (AS 42 252).",
+     "text": "Aufgehoben durch V des BGer vom 23. April 1926, mit Wirkung seit 19. Dez. 1923 (AS <b>42</b> 252).",
      "links": [
       {
-       "label": "AS 42 252",
+       "label": "AS <b>42</b> 252",
        "url": "https://fedlex.data.admin.ch/eli/oc/42/252_272_266"
       }
      ],
@@ -2404,10 +2461,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2433,15 +2490,16 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Einfluss von Pro­zessen nach Art. 260 SchKG"
     }
    ]
   },
@@ -2462,10 +2520,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2474,14 +2532,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": "c"
@@ -2502,10 +2560,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2535,10 +2593,10 @@
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996, mit Wirkung seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2580,10 +2638,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.51",
+     "text": "SR <b>281.51</b>",
      "links": [
       {
-       "label": "SR 281.51",
+       "label": "SR <b>281.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
       }
      ],
@@ -2609,10 +2667,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 18. Mai 1979, in Kraft seit 1. Juli 1979 (AS 1979 813).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 18. Mai 1979, in Kraft seit 1. Juli 1979 (AS <b>1979</b> 813).",
      "links": [
       {
-       "label": "AS 1979 813",
+       "label": "AS <b>1979</b> 813",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/813_813_813"
       }
      ],
@@ -2621,10 +2679,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2633,10 +2691,10 @@
     },
     {
      "nr": "",
-     "text": "SR 221.431",
+     "text": "SR <b>221.431</b>",
      "links": [
       {
-       "label": "SR 221.431",
+       "label": "SR <b>221.431</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/216/20130101"
       }
      ],
@@ -2645,7 +2703,7 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null
@@ -2669,10 +2727,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2884).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2884).",
      "links": [
       {
-       "label": "AS 1996 2884",
+       "label": "AS <b>1996</b> 2884",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
@@ -2698,7 +2756,7 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
      "links": [],
      "absatz": null,
      "item": null

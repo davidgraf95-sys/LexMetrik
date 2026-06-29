@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "152.3",
+  "titel": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung",
+  "erlassdatum": "vom 17. Dezember 2004 (Stand am 1. November 2023)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 173 Absatz 2 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 12. Februar 2003,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2003 </b>1963",
+    "links": [
+     {
+      "label": "BBl <b>2003 </b>1963",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2003/246"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +70,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -37,14 +82,14 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Anhang Ziff. 1 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS 2008 5207; BBl 2006 2829).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5207; BBl <b>2006</b> 2829).",
      "links": [
       {
-       "label": "AS 2008 5207",
+       "label": "AS <b>2008</b> 5207",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/736"
       },
       {
-       "label": "BBl 2006 2829",
+       "label": "BBl <b>2006</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
@@ -66,10 +111,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -78,14 +123,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -162,14 +207,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -178,10 +223,10 @@
     },
     {
      "nr": "8",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -190,10 +235,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -226,14 +271,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -255,14 +300,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung des zweiten Satzes gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -271,14 +316,14 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -307,14 +352,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -336,14 +381,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Ausdruck gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -365,10 +410,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -377,14 +422,14 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -406,10 +451,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Anhang Ziff. 7 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 7 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -417,7 +462,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -426,10 +471,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS 2023 584; BBL 2020 8337, 9369).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 584; BBL <b>2020</b> 8337, 9369).",
      "links": [
       {
-       "label": "AS 2023 584",
+       "label": "AS <b>2023</b> 584",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/584"
       },
       {
@@ -442,10 +487,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS 2023 584; BBL 2020 8337, 9369).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 584; BBL <b>2020</b> 8337, 9369).",
      "links": [
       {
-       "label": "AS 2023 584",
+       "label": "AS <b>2023</b> 584",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/584"
       },
       {
@@ -458,10 +503,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS 2023 584; BBL 2020 8337, 9369).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 584; BBL <b>2020</b> 8337, 9369).",
      "links": [
       {
-       "label": "AS 2023 584",
+       "label": "AS <b>2023</b> 584",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/584"
       },
       {
@@ -474,10 +519,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS 2023 584; BBL 2020 8337, 9369).",
+     "text": "Fassung gemäss Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 584; BBL <b>2020</b> 8337, 9369).",
      "links": [
       {
-       "label": "AS 2023 584",
+       "label": "AS <b>2023</b> 584",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/584"
       },
       {
@@ -503,14 +548,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -519,14 +564,14 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -535,14 +580,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -551,14 +596,14 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -591,14 +636,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 10 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -673,10 +718,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS 2023 584; BBL 2020 8337, 9369).",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2022, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 584; BBL <b>2020</b> 8337, 9369).",
      "links": [
       {
-       "label": "AS 2023 584",
+       "label": "AS <b>2023</b> 584",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/584"
       },
       {

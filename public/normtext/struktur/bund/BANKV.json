@@ -1,5 +1,38 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "952.02",
+  "titel": "Verordnung über die Banken und Sparkassen",
+  "erlassdatum": "vom 30. April 2014 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Bankengesetz vom 8. November 1934 (BankG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>952.0</b>",
+    "links": [
+     {
+      "label": "SR <b>952.0</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +47,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -39,10 +72,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Aufgehoben durch Ziff. I der V vom 30. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Aufgehoben durch Ziff. I der V vom 30. Nov. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -51,10 +84,10 @@
     },
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -63,10 +96,10 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS 2016 1725).",
+     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1725).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       }
      ],
@@ -75,14 +108,14 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016 (AS 2016 1725). Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016 (AS <b>2016</b> 1725). Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       },
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -91,10 +124,10 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -103,10 +136,10 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -128,10 +161,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Ausdruck gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -153,10 +186,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -165,10 +198,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -177,10 +210,10 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. III der V vom 21. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5241).",
+     "text": "Eingefügt durch Ziff. III der V vom 21. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5241).",
      "links": [
       {
-       "label": "AS 2018 5241",
+       "label": "AS <b>2018</b> 5241",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/800"
       }
      ],
@@ -189,10 +222,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -214,10 +247,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Anhang 11 Ziff. 2 der Finanzdienstleistungsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS 2019 4459).",
+     "text": "Fassung gemäss Anhang 11 Ziff. 2 der Finanzdienstleistungsverordnung vom 6. Nov. 2019, in Kraft seit 1. Jan. 2020 (AS <b>2019 </b>4459).",
      "links": [
       {
-       "label": "AS 2019 4459",
+       "label": "AS <b>2019 </b>4459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/759"
       }
      ],
@@ -226,10 +259,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -238,10 +271,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -250,10 +283,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -262,10 +295,10 @@
     },
     {
      "nr": "19",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -274,10 +307,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -299,10 +332,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Juli 2017, in Kraft seit 1. Aug. 2017 (AS 2017 3823).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Juli 2017, in Kraft seit 1. Aug. 2017 (AS <b>2017</b> 3823).",
      "links": [
       {
-       "label": "AS 2017 3823",
+       "label": "AS <b>2017</b> 3823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/454"
       }
      ],
@@ -311,10 +344,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -323,10 +356,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -335,10 +368,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -347,10 +380,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -359,10 +392,10 @@
     },
     {
      "nr": "27",
-     "text": "Aufgehoben durch Ziff. I der V vom 30. Nov. 2018, mit Wirkung seit 1. April 2019 (AS 2018 5229).",
+     "text": "Aufgehoben durch Ziff. I der V vom 30. Nov. 2018, mit Wirkung seit 1. April 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -384,10 +417,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -413,10 +446,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -425,10 +458,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 29 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 29 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -437,15 +470,16 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Angaben zu Personen und Beteiligten im Bewilligungsgesuch und Änderung von Tatsachen"
     }
    ]
   },
@@ -466,10 +500,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -478,15 +512,16 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Organisation der Banken"
     }
    ]
   },
@@ -537,10 +572,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung des Klammerverweises gemäss Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Fassung des Klammerverweises gemäss Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -549,14 +584,14 @@
     },
     {
      "nr": "40",
-     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015 (AS 2015 5413). Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015 (AS <b>2015</b> 5413). Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       },
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -565,10 +600,10 @@
     },
     {
      "nr": "41",
-     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 29. Nov. 2023, in Kraft seit 1. Jan. 2025 (AS 2024 13).",
+     "text": "Eingefügt durch Anhang Ziff. 2 der V vom 29. Nov. 2023, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 13).",
      "links": [
       {
-       "label": "AS 2024 13",
+       "label": "AS <b>2024</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/13"
       }
      ],
@@ -639,10 +674,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -651,10 +686,10 @@
     },
     {
      "nr": "49",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -784,10 +819,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -813,10 +848,10 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -842,10 +877,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -886,10 +921,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1005,10 +1040,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1049,10 +1084,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -1132,10 +1167,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -1157,10 +1192,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -1409,10 +1444,10 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -1421,10 +1456,10 @@
     },
     {
      "nr": "77",
-     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS 2016 1725).",
+     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1725).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       }
      ],
@@ -1450,10 +1485,10 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS 2016 1725).",
+     "text": "Eingefügt durch Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1725).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       }
      ],
@@ -1494,10 +1529,10 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS 2016 1725).",
+     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1725).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       }
      ],
@@ -1506,10 +1541,10 @@
     },
     {
      "nr": "80",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 29. Nov. 2023, in Kraft seit 1. Jan. 2025 (AS 2024 13).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 29. Nov. 2023, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 13).",
      "links": [
       {
-       "label": "AS 2024 13",
+       "label": "AS <b>2024</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/13"
       }
      ],
@@ -1535,10 +1570,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -1547,10 +1582,10 @@
     },
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -1559,15 +1594,16 @@
     },
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Sanier- und Liquidierbarkeit"
     }
    ]
   },
@@ -1588,10 +1624,10 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -1600,10 +1636,10 @@
     },
     {
      "nr": "86",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -1627,10 +1663,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -1639,15 +1675,16 @@
     },
     {
      "nr": "91",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Information der Öffentlichkeit"
     }
    ]
   },
@@ -1664,7 +1701,7 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "[1972 821; 1989 1772; 1995 253; 1996 45, 3094; 1997 85 Art. 57 Ziff. 1; 1998 16; 2003 4077; 2004 2777, 2875; 2005 4849; 2006 4307 Anhang 7 Ziff. 1; 2008 1199, 5363 Anhang Ziff. 7; 2009 5279; 2011 3931; 2012 5435, 5441 Anhang 6 Ziff. 2, 7251 Art. 32]",
+     "text": "[<b>1972 </b>821; <i><b>1989 </b>1772</i>; <i><b>1995 </b>253</i>; <i><b>1996 </b>45</i>, <i>3094</i>; <i><b>1997 </b>85 </i>Art. 57 Ziff. 1; <i><b>1998 </b>16</i>; <i><b>2003 </b>4077</i>; <i><b>2004 </b>2777</i>, <i>2875</i>; <i><b>2005 </b>4849</i>; <i><b>2006 </b>4307 </i>Anhang 7 Ziff. 1; <i><b>2008 </b>1199</i>, <i>5363 </i>Anhang Ziff. 7; <i><b>2009 </b>5279</i>; <i><b>2011 </b>3931</i>; <i><b>2012 </b>5435</i>, <i>5441 </i>Anhang 6 Ziff. 2, <i>7251 </i>Art. 32]",
      "links": [],
      "absatz": null,
      "item": null
@@ -1695,10 +1732,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -1707,10 +1744,10 @@
     },
     {
      "nr": "96",
-     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS 2016 1725).",
+     "text": "Fassung gemäss Beilage Ziff. 1 der V vom 11. Mai 2016, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1725).",
      "links": [
       {
-       "label": "AS 2016 1725",
+       "label": "AS <b>2016</b> 1725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/312"
       }
      ],
@@ -1719,10 +1756,10 @@
     },
     {
      "nr": "97",
-     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -1759,15 +1796,16 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2a. Abschnitt: Organisation der Personen nach Artikel 1b BankG"
     }
    ]
   },
@@ -1848,10 +1886,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1860,10 +1898,10 @@
     },
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1872,10 +1910,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 952.06",
+     "text": "SR <b>952.06</b>",
      "links": [
       {
-       "label": "SR 952.06",
+       "label": "SR <b>952.06</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/883"
       }
      ],
@@ -1884,10 +1922,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1896,10 +1934,10 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1940,10 +1978,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -1952,10 +1990,10 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1964,10 +2002,10 @@
     },
     {
      "nr": "52",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -1976,10 +2014,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 952.06",
+     "text": "SR <b>952.06</b>",
      "links": [
       {
-       "label": "SR 952.06",
+       "label": "SR <b>952.06</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/883"
       }
      ],
@@ -2001,10 +2039,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -2026,10 +2064,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS 2015 5413).",
+     "text": "Eingefügt durch Anhang 1 Ziff. 11 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 5413).",
      "links": [
       {
-       "label": "AS 2015 5413",
+       "label": "AS <b>2015</b> 5413",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       }
      ],
@@ -2051,15 +2089,16 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Kapitel: Privilegierte Einlagen sowie privilegierte Einlegerinnen und Einleger"
     }
    ]
   },
@@ -2087,10 +2126,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -2099,10 +2138,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -2111,10 +2150,10 @@
     },
     {
      "nr": "64",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -2123,10 +2162,10 @@
     },
     {
      "nr": "65",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -2135,10 +2174,10 @@
     },
     {
      "nr": "66",
-     "text": "SR 831.42",
+     "text": "SR <b>831.42</b>",
      "links": [
       {
-       "label": "SR 831.42",
+       "label": "SR <b>831.42</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
       }
      ],
@@ -2171,10 +2210,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2183,15 +2222,16 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Einlagensicherung von Banken"
     }
    ]
   },
@@ -2208,10 +2248,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2233,10 +2273,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2258,10 +2298,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2283,10 +2323,10 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2308,10 +2348,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2333,10 +2373,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -2362,10 +2402,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2391,10 +2431,10 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2420,10 +2460,10 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2432,10 +2472,10 @@
     },
     {
      "nr": "89",
-     "text": "SR 952.03",
+     "text": "SR <b>952.03</b>",
      "links": [
       {
-       "label": "SR 952.03",
+       "label": "SR <b>952.03</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/629"
       }
      ],
@@ -2444,10 +2484,10 @@
     },
     {
      "nr": "90",
-     "text": "SR 952.06",
+     "text": "SR <b>952.06</b>",
      "links": [
       {
-       "label": "SR 952.06",
+       "label": "SR <b>952.06</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/883"
       }
      ],
@@ -2473,15 +2513,16 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Wesentliche Gruppengesellschaften systemrelevanter Banken mit Sitz in der Schweiz"
     }
    ]
   },
@@ -2528,10 +2569,10 @@
    "fussnoten": [
     {
      "nr": "98",
-     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 804).",
+     "text": "Eingefügt durch Ziff. I der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 804).",
      "links": [
       {
-       "label": "AS 2022 804",
+       "label": "AS <b>2022</b> 804",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/804"
       }
      ],
@@ -2553,10 +2594,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],
@@ -2565,10 +2606,10 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -2590,10 +2631,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -2602,10 +2643,10 @@
     },
     {
      "nr": "32",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -2631,10 +2672,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5229).",
+     "text": "Eingefügt durch Ziff. I der V vom 30. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5229).",
      "links": [
       {
-       "label": "AS 2018 5229",
+       "label": "AS <b>2018</b> 5229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/799"
       }
      ],

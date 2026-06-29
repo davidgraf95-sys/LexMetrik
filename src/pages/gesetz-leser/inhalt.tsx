@@ -6,8 +6,8 @@ import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
-  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeKantonSystematik,
-  baueGliederungsbaum, type Sektion, type StrukturMap,
+  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeErlassKopf, ladeKantonSystematik,
+  baueGliederungsbaum, type Sektion, type StrukturMap, type ErlassKopf,
 } from '../../lib/normtext/browse';
 import { sachgruppe, topTitel, type KantonSystematik } from '../../lib/normtext/systematik';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
@@ -15,7 +15,7 @@ import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
-import { ArtikelLeser, SektionKopf, SektionBaumTOC } from './parts';
+import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
 
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
@@ -24,6 +24,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const [erlass, setErlass] = useState<BrowseErlass | null>(null);
   const [eintraege, setEintraege] = useState<NormSnapshot[] | null>(null);
   const [struktur, setStruktur] = useState<StrukturMap | null>(null);
+  const [kopf, setKopf] = useState<ErlassKopf | null>(null);
   const [manifest, setManifest] = useState<BrowseManifest | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
@@ -107,6 +108,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     let lebt = true;
     void ladeBrowseManifest().then((m) => { if (lebt) setManifest(m); });
     void ladeStruktur(ebene, schluessel).then((s) => { if (lebt) setStruktur(s); });
+    void ladeErlassKopf(ebene, schluessel).then((k) => { if (lebt) setKopf(k); });
     // N13: Systematik-Bäume nur für die Kanton-Lesesicht laden; fehlen sie, bleibt
     // die Overline ohne Sachgebiet (§8 — nichts Erfundenes).
     if (ebene === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
@@ -467,6 +469,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
           </div>
         </header>
+        {/* M5: Erlass-Kopf-Slot auch im pdf-embed-Pfad (für PDF-Erlasse ohne
+            Struktur-Sidecar bleibt kopf=null → nichts gerendert). */}
+        {kopf && <ErlassKopfBlock kopf={kopf} fussnotenAuf={false} />}
         {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
             Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
             ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
@@ -600,7 +605,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       : [];
     return (
       <section key={s.id} className={`space-y-3 ${s.randtitel ? 'border-l border-line/60 pl-3' : ''}`}>
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} fussnotenAuf={fussnotenAuf} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
@@ -688,6 +693,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>
+
+      {/* M5: Erlass-Kopf (Ingress/Erlassformel bzw. materielle Präambel + Erlass-
+          datum + Kopf-Fussnoten) — Fedlex-Fundiertheits-Floor (§2), bisher verworfen. */}
+      {kopf && <ErlassKopfBlock kopf={kopf} fussnotenAuf={fussnotenAuf} />}
 
       {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
           eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.

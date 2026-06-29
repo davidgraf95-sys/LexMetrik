@@ -1,5 +1,43 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.748.0",
+  "titel": "Übereinkommen über die internationale Zivilluftfahrt",
+  "erlassdatum": "(Stand am 27. November 2025)",
+  "praeambelTitel": "Einleitung",
+  "praeambel": [
+   {
+    "rolle": "praeambel",
+    "text": "In der Erwägung, dass die künftige Entwicklung der internationalen Zivilluftfahrt in hohem Masse dazu beitragen kann, Freundschaft und Verständnis zwischen den Staaten und Völkern der Welt zu schaffen und zu erhalten, ihr Missbrauch jedoch zu einer Bedrohung der allgemeinen Sicherheit werden kann; und"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass es wünschenswert ist, zwischen den Staaten und Völkern Unstimmigkeiten zu vermeiden und die Zusammenarbeit zu fördern), von welcher der Frieden der Welt abhängt;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "haben daher die unterzeichneten Regierungen, die sich auf gewisse Grundsätze und Vereinbarungen geeinigt haben, damit sich die internationale Zivilluftfahrt in sicherer und geordneter Weise entwickeln kann und damit die internationalen Luftverkehrslinien auf der Grundlage gleicher Möglichkeiten errichtet und gesund und wirtschaftlich betrieben werden können,"
+   },
+   {
+    "rolle": "verb",
+    "text": "dieses Übereinkommen zu diesem Zweck abgeschlossen."
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Konsolidierte Version (AS <b>1971</b> 1301).",
+    "links": [
+     {
+      "label": "AS <b>1971</b> 1301",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1971/1301_1296_1296"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -408,14 +446,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "SR 0.232.01, SR 0.232.02",
+     "text": "SR <b>0.232.01</b>, SR<b> 0.232.02</b>",
      "links": [
       {
-       "label": "SR 0.232.01",
+       "label": "SR <b>0.232.01</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1027"
       },
       {
-       "label": "SR 0.232.02",
+       "label": "SR<b> 0.232.02</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1028"
       }
      ],
@@ -696,10 +734,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 16. Mai 1958 (AS 1958 283; BBl 1955 II 495).",
+     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 16. Mai 1958 (AS <b>1958</b> 283; <i>BBl <b>1955</b> II 495</i>).",
      "links": [
       {
-       "label": "AS 1958 283",
+       "label": "AS <b>1958</b> 283",
        "url": "https://fedlex.data.admin.ch/eli/oc/1958/283_289_295"
       }
      ],
@@ -755,14 +793,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Bereinigt durch das Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956 (AS 1957 202; BBl 1955 II 495) und vom 15. Sept. 1962, genehmigt durch die BVers am 19. Juli 1963, für die Schweiz in Kraft seit 11. Sept. 1975 (AS 1976 496; BBl 1963 II 192).",
+     "text": "Bereinigt durch das Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956 (AS <b>1957</b> 202; <i>BBl <b>1955</b> II 495</i>) und vom 15. Sept. 1962, genehmigt durch die BVers am 19. Juli 1963, für die Schweiz in Kraft seit 11. Sept. 1975 (AS <b>1976</b> 496; <i>BBl <b>1963</b> II 192</i>).",
      "links": [
       {
-       "label": "AS 1957 202",
+       "label": "AS <b>1957</b> 202",
        "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
       },
       {
-       "label": "AS 1976 496",
+       "label": "AS <b>1976</b> 496",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/496_496_496"
       }
      ],
@@ -788,10 +826,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 12. Dez. 1956 (AS 1957 202; BBl 1955 II 495).",
+     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 12. Dez. 1956 (AS <b>1957</b> 202; <i>BBl <b>1955</b> II 495</i>).",
      "links": [
       {
-       "label": "AS 1957 202",
+       "label": "AS <b>1957</b> 202",
        "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
       }
      ],
@@ -817,10 +855,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung des zweiten Satzes gemäss Prot. vom 26. Okt. 1990, für die Schweiz in Kraft seit 28. Nov. 2002 (AS 2004 3999).",
+     "text": "Fassung des zweiten Satzes gemäss Prot. vom 26. Okt. 1990, für die Schweiz in Kraft seit 28. Nov. 2002 (AS <b>2004 </b>3999).",
      "links": [
       {
-       "label": "AS 2004 3999",
+       "label": "AS <b>2004 </b>3999",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/580"
       }
      ],
@@ -921,10 +959,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Prot. vom 6. Okt. 1989, für die Schweiz in Kraft seit 18. April 2005 (AS 2005 3335).",
+     "text": "Fassung gemäss Prot. vom 6. Okt. 1989, für die Schweiz in Kraft seit 18. April 2005 (AS <b>2005</b> 3335).",
      "links": [
       {
-       "label": "AS 2005 3335",
+       "label": "AS <b>2005</b> 3335",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/484"
       }
      ],
@@ -1010,10 +1048,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 12. Dez. 1956 (AS 1957 202; BBl 1955 II 495).",
+     "text": "Fassung gemäss Prot. vom 14. Juni 1954, genehmigt durch die BVers am 12. März 1956, für die Schweiz in Kraft seit 12. Dez. 1956 (AS <b>1957</b> 202; <i>BBl <b>1955</b> II 495</i>).",
      "links": [
       {
-       "label": "AS 1957 202",
+       "label": "AS <b>1957</b> 202",
        "url": "https://fedlex.data.admin.ch/eli/oc/1957/202_206_216"
       }
      ],
@@ -1099,10 +1137,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 0.748.111.2",
+     "text": "SR <b>0.748.111.2</b>",
      "links": [
       {
-       "label": "SR 0.748.111.2",
+       "label": "SR <b>0.748.111.2</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3116"
       }
      ],
@@ -1383,10 +1421,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Heute: Internationaler Gerichtshof (Art. 37 des Statuts des Internationalen Gerichtshofs – SR 0.193.501).",
+     "text": "Heute: Internationaler Gerichtshof (Art. 37 des Statuts des Internationalen Gerichtshofs – SR <b>0.193.501</b>).",
      "links": [
       {
-       "label": "SR 0.193.501",
+       "label": "SR <b>0.193.501</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
       }
      ],
@@ -1412,10 +1450,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Heute: Internationaler Gerichtshof (Art. 37 des Statuts des Internationalen Gerichtshofs –SR 0.193.501).",
+     "text": "Heute: Internationaler Gerichtshof (Art. 37 des Statuts des Internationalen Gerichtshofs –SR <b>0.193.501</b>).",
      "links": [
       {
-       "label": "SR 0.193.501",
+       "label": "SR <b>0.193.501</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
       }
      ],
@@ -1602,10 +1640,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Eingefügt durch das Prot. vom 10. Mai 1984, von der BVers genehmigt am 2. Dez. 1985, für die Schweiz in Kraft seit 1. Okt. 1998 (AS 2004 3999, 3997; BBl 1985 II 185).",
+     "text": "Eingefügt durch das Prot. vom 10. Mai 1984, von der BVers genehmigt am 2. Dez. 1985, für die Schweiz in Kraft seit 1. Okt. 1998 (AS <b>2004 </b>3999, 3997; BBl <b>1985</b> II 185).",
      "links": [
       {
-       "label": "AS 2004 3999",
+       "label": "AS <b>2004 </b>3999",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/580"
       },
       {
@@ -1613,7 +1651,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/579"
       },
       {
-       "label": "BBl 1985 II 185",
+       "label": "BBl <b>1985</b> II 185",
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_185_187_174"
       }
      ],
@@ -1622,10 +1660,10 @@
     },
     {
      "nr": "3",
-     "text": "SR 0.120",
+     "text": "SR <b>0.120</b>",
      "links": [
       {
-       "label": "SR 0.120",
+       "label": "SR <b>0.120</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
       }
      ],
@@ -1651,10 +1689,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Eingefügt durch das Prot. vom 6. Okt. 1980, von der BVers genehmigt am 26. Nov. 1984, für die Schweiz in Kraft seit 20. Juni 1997 (AS 2004 3999, 3995; BBl 1984 I 665).",
+     "text": "Eingefügt durch das Prot. vom 6. Okt. 1980, von der BVers genehmigt am 26. Nov. 1984, für die Schweiz in Kraft seit 20. Juni 1997 (AS <b>2004 </b>3999, 3995; BBl <b>1984</b> I 665).",
      "links": [
       {
-       "label": "AS 2004 3999",
+       "label": "AS <b>2004 </b>3999",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/580"
       },
       {
@@ -1662,7 +1700,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/578"
       },
       {
-       "label": "BBl 1984 I 665",
+       "label": "BBl <b>1984</b> I 665",
        "url": "https://fedlex.data.admin.ch/eli/fga/1984/1_665_666_498"
       }
      ],

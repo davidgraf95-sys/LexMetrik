@@ -1,5 +1,88 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "830.1",
+  "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts",
+  "erlassdatum": "vom 6. Oktober 2000 (Stand am 1. Januar 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 112 Absatz 1, 114 Absatz 1 und 117 Absatz 1 der Bundesverfassung, nach Einsicht in den Bericht einer Kommission des Ständerates vom 27. September 1990 und in die Stellungnahmen des Bundesrates vom 17. April 1991, vom 17. August 1994 und vom 26. Mai 1999 und in den Bericht der Kommission für soziale Sicherheit und Gesundheit des Nationalrates vom 26. März 1999,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>1991</b> II 185",
+    "links": [
+     {
+      "label": "BBl <b>1991</b> II 185",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_185__"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1991</b> II 910",
+    "links": [
+     {
+      "label": "BBl <b>1991</b> II 910",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_910__"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "BBl <b>1994</b> V 921",
+    "links": [
+     {
+      "label": "BBl <b>1994</b> V 921",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1994/5_921__"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "Im Bundesblatt nicht veröffentlicht; siehe AB <b>1999</b> N 1241 und <i>1244</i>.",
+    "links": [],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "<i>BBl <b>1999</b> 4523</i>",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -36,14 +119,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -65,14 +148,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -105,14 +188,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -134,14 +217,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -150,14 +233,14 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -179,14 +262,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -195,14 +278,14 @@
     },
     {
      "nr": "13",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -211,14 +294,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS 2003 3837; BBl 2001 3205).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 21. März 2003 (4. IV-Revision), in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3837; BBl <b>2001</b> 3205).",
      "links": [
       {
-       "label": "AS 2003 3837",
+       "label": "AS <b>2003</b> 3837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/560"
       },
       {
-       "label": "BBl 2001 3205",
+       "label": "BBl <b>2001</b> 3205",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/617"
       }
      ],
@@ -284,10 +367,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -356,14 +439,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS 2021 705; BBl 2017 2535).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
-       "label": "AS 2021 705",
+       "label": "AS <b>2021</b> 705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/705"
       },
       {
-       "label": "BBl 2017 2535",
+       "label": "BBl <b>2017</b> 2535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/544"
       }
      ],
@@ -432,14 +515,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -510,14 +593,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -543,14 +626,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -559,14 +642,14 @@
     },
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -607,14 +690,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -623,14 +706,14 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -701,10 +784,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Die Berichtigung der RedK der BVers vom 3. Nov. 2021, publiziert am 10. Nov. 2021 betrifft nur den italienischen Text (AS 2021 658).",
+     "text": "Die Berichtigung der RedK der BVers vom 3. Nov. 2021, publiziert am 10. Nov. 2021 betrifft nur den italienischen Text (AS <b>2021</b> 658).",
      "links": [
       {
-       "label": "AS 2021 658",
+       "label": "AS <b>2021</b> 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/658"
       }
      ],
@@ -713,14 +796,14 @@
     },
     {
      "nr": "25",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS 2021 705; BBl 2017 2535).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
-       "label": "AS 2021 705",
+       "label": "AS <b>2021</b> 705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/705"
       },
       {
-       "label": "BBl 2017 2535",
+       "label": "BBl <b>2017</b> 2535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/544"
       }
      ],
@@ -729,10 +812,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -741,14 +824,14 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -849,14 +932,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Eingefügt durch Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -865,14 +948,14 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -881,14 +964,14 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -944,14 +1027,14 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -992,14 +1075,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS 2021 705; BBl 2017 2535).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
-       "label": "AS 2021 705",
+       "label": "AS <b>2021</b> 705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/705"
       },
       {
-       "label": "BBl 2017 2535",
+       "label": "BBl <b>2017</b> 2535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/544"
       }
      ],
@@ -1025,14 +1108,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS 2021 705; BBl 2017 2535).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
-       "label": "AS 2021 705",
+       "label": "AS <b>2021</b> 705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/705"
       },
       {
-       "label": "BBl 2017 2535",
+       "label": "BBl <b>2017</b> 2535",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/544"
       }
      ],
@@ -1058,10 +1141,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -1070,14 +1153,14 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1118,10 +1201,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 33 GVG – AS 1974 1051).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 33 GVG – AS <b>1974</b> 1051).",
      "links": [
       {
-       "label": "AS 1974 1051",
+       "label": "AS <b>1974</b> 1051",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1051_1051_1051"
       }
      ],
@@ -1162,14 +1245,14 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1225,14 +1308,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1273,10 +1356,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -1302,10 +1385,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1314,14 +1397,14 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Eingefügt durch Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1422,10 +1505,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1434,14 +1517,14 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1450,14 +1533,14 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1483,14 +1566,14 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 106 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1499,10 +1582,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
@@ -1573,10 +1656,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -1602,14 +1685,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -1665,14 +1748,14 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1681,10 +1764,10 @@
     },
     {
      "nr": "54",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -1740,14 +1823,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1773,14 +1856,14 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1789,14 +1872,14 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2011 (6. IV‑Revision, erstes Massnahmepaket), in Kraft seit 1. Jan. 2012 (AS 2011 5659; BBl 2010 1817).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2011 (6. IV‑Revision, erstes Massnahmepaket), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5659; BBl <b>2010</b> 1817).",
      "links": [
       {
-       "label": "AS 2011 5659",
+       "label": "AS <b>2011</b> 5659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/799"
       },
       {
-       "label": "BBl 2010 1817",
+       "label": "BBl <b>2010</b> 1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/340"
       }
      ],
@@ -1805,14 +1888,14 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -1838,14 +1921,14 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS 2007 5129; BBl 2005 4459).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
-       "label": "AS 2007 5129",
+       "label": "AS <b>2007</b> 5129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/722"
       },
       {
-       "label": "BBl 2005 4459",
+       "label": "BBl <b>2005</b> 4459",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/719"
       }
      ],
@@ -1867,14 +1950,14 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -1883,14 +1966,14 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -1923,10 +2006,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "SR 170.32",
+     "text": "SR <b>170.32</b>",
      "links": [
       {
-       "label": "SR 170.32",
+       "label": "SR <b>170.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1958/1413_1483_1489"
       }
      ],
@@ -1935,10 +2018,10 @@
     },
     {
      "nr": "67",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1960,10 +2043,10 @@
    "fussnoten": [
     {
      "nr": "68",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -1972,10 +2055,10 @@
     },
     {
      "nr": "69",
-     "text": "SR 313.0",
+     "text": "SR <b>313.0</b>",
      "links": [
       {
-       "label": "SR 313.0",
+       "label": "SR <b>313.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
       }
      ],
@@ -1984,14 +2067,14 @@
     },
     {
      "nr": "70",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 28 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS 2010 1881; BBl 2006 1085).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 28 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
-       "label": "AS 2010 1881",
+       "label": "AS <b>2010</b> 1881",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       },
       {
-       "label": "BBl 2006 1085",
+       "label": "BBl <b>2006</b> 1085",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
@@ -2000,10 +2083,10 @@
     },
     {
      "nr": "71",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -2012,14 +2095,14 @@
     },
     {
      "nr": "72",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS 2019 2829; BBl 2017 7403 7421).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2829; BBl <b>2017</b> 7403 7421).",
      "links": [
       {
-       "label": "AS 2019 2829",
+       "label": "AS <b>2019</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/519"
       },
       {
-       "label": "BBl 2017 7403",
+       "label": "BBl <b>2017</b> 7403",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2097"
       },
       {
@@ -2067,14 +2150,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Aufgehoben durch Ziff. II 38 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Aufgehoben durch Ziff. II 38 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008</b> 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -2127,14 +2210,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Anhang Ziff. 28 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS 2005 5685; BBl 2003 1288).",
+     "text": "Eingefügt durch Anhang Ziff. 28 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
-       "label": "AS 2005 5685",
+       "label": "AS <b>2005</b> 5685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/782"
       },
       {
-       "label": "BBl 2003 1288",
+       "label": "BBl <b>2003</b> 1288",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
@@ -2160,14 +2243,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS 2019 2829; BBl 2017 7403 7421).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2829; BBl <b>2017</b> 7403 7421).",
      "links": [
       {
-       "label": "AS 2019 2829",
+       "label": "AS <b>2019</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/519"
       },
       {
-       "label": "BBl 2017 7403",
+       "label": "BBl <b>2017</b> 7403",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2097"
       },
       {
@@ -2180,10 +2263,10 @@
     },
     {
      "nr": "34",
-     "text": "SR 961.01",
+     "text": "SR <b>961.01</b>",
      "links": [
       {
-       "label": "SR 961.01",
+       "label": "SR <b>961.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
@@ -2209,14 +2292,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS 2019 2829; BBl 2017 7403 7421).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Gesetzliche Grundlage für die Überwachung von Versicherten), in Kraft seit 1. Okt. 2019 (AS <b>2019</b> 2829; BBl <b>2017</b> 7403 7421).",
      "links": [
       {
-       "label": "AS 2019 2829",
+       "label": "AS <b>2019</b> 2829",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/519"
       },
       {
-       "label": "BBl 2017 7403",
+       "label": "BBl <b>2017</b> 7403",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2097"
       },
       {
@@ -2246,14 +2329,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
@@ -2275,10 +2358,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "SR 0.142.112.681",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "SR 0.142.112.681",
+       "label": "SR <b>0.142.112.681</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
       }
      ],
@@ -2287,19 +2370,20 @@
     },
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5a. Kapitel: Durchführung internationaler Sozialversicherungsabkommen"
     }
    ]
   },
@@ -2327,10 +2411,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
       }
      ],
@@ -2350,14 +2434,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS 2023 688; BBl 2020 1).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
-       "label": "AS 2023 688",
+       "label": "AS <b>2023</b> 688",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/688"
       },
       {
-       "label": "BBl 2020 1",
+       "label": "BBl <b>2020 </b>1",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1"
       }
      ],
@@ -2379,18 +2463,18 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS 2020 5137; BBl 2018 1607). Berichtigung der RedK der BVers vom 19. Mai 2021, publiziert am 18. Juni 2021 (AS 2021 358).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607). Berichtigung der RedK der BVers vom 19. Mai 2021, publiziert am 18. Juni 2021 (AS <b>2021</b> 358).",
      "links": [
       {
-       "label": "AS 2020 5137",
+       "label": "AS <b>2020</b> 5137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/892"
       },
       {
-       "label": "BBl 2018 1607",
+       "label": "BBl <b>2018</b> 1607",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/671"
       },
       {
-       "label": "AS 2021 358",
+       "label": "AS <b>2021</b> 358",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/358"
       }
      ],

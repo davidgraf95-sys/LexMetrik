@@ -20,16 +20,29 @@ export interface NormSnapshot {
    */
   titel?: string;
   /**
+   * G23 (M8) — Delegationsnorm-Verweis «(Art. N ArG)» aus Fedlex
+   * (<p class="man-template-referenz">): das Trägergesetz-Fundament einer
+   * Verordnungsbestimmung. Artikel-level Metadatum wie titel (NICHT im Block-sha,
+   * golden-neutral); fehlt, wenn die Quelle keinen Verweis trägt (§7: nichts
+   * fabrizieren). Wird in der Lesesicht als dezente Grundlagen-Zeile angezeigt.
+   */
+  grundlage?: string;
+  /**
    * Absatz-/Marginalie-Blöcke in Reihenfolge; absatz: '1','2','a','bis' …
    * - text: Einleitungstext des Absatzes OHNE die Listenpunkte.
    * - items (optional): lit./Ziff.-Aufzählungspunkte des Absatzes. marke ist
    *   die nackte Marke ('a','b','17','5a','20a') ohne Punkt/Klammer; text der
    *   Punkttext. Fehlt items, hat der Absatz keine Aufzählung (rückwärtskompat.).
+   *   tiefe (optional): explizite Verschachtelungsstufe (0 = direkte Liste des
+   *   Absatzes, weggelassen; 1+ = in eine Eltern-lit/Ziff. verschachtelt). Die
+   *   Lesesicht zitiert damit korrekt, ohne die Stufe aus dem Markentyp zu raten
+   *   (§1, M6). Fehlt tiefe, ist das Item auf Stufe 0 (oder Kanton-Daten ohne
+   *   Stufeninfo → Lesesicht-Heuristik).
    */
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */

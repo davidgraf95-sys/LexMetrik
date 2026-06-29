@@ -91,6 +91,37 @@ describe('ArtikelBody', () => {
     expect(out).toContain('aufgehoben'); // leeres item gedämpft
   });
 
+  // M6 §1: Bei invertierter Verschachtelung (Ziff. → lit.) muss das Zitat der
+  // verschachtelten lit. ihre Eltern-Ziff. tragen, und die NACHFOLGENDE Ziff.
+  // darf NICHT fälschlich unter die lit. genestet werden. Die explizite tiefe
+  // steuert das; die frühere Markentyp-Heuristik hätte hier falsch zitiert.
+  it('M6: invertierte Verschachtelung — Zitat lit. a = «Ziff. 1bis lit. a», Ziff. 2 bleibt top-level', () => {
+    const out = renderToString(
+      <ArtikelBody
+        artikel="16"
+        zitierKontext={{ artikelLabel: 'Art. 16', kuerzel: 'BankG' }}
+        passus={{ absatz: null }}
+        bloecke={[{
+          absatz: null, text: 'Als Depotwerte gelten:',
+          items: [
+            { marke: '1', text: 'bewegliche Sachen;' },
+            { marke: '1bis', text: 'kryptobasierte Vermögenswerte:' },
+            { marke: 'a', text: 'individuell zugeordnet;', tiefe: 1 },
+            { marke: 'b', text: 'einer Gemeinschaft zugeordnet;', tiefe: 1 },
+            { marke: '2', text: 'fiduziarisch innegehaltene Werte;' },
+            { marke: '3', text: 'frei verfügbare Lieferansprüche.' },
+          ],
+        }]}
+      />,
+    );
+    // Verschachtelte lit. a trägt die Eltern-Ziff.
+    expect(out).toContain('Art. 16 Ziff. 1bis lit. a BankG');
+    expect(out).toContain('Art. 16 Ziff. 1bis lit. b BankG');
+    // Die nachfolgende Ziff. 2 ist KORREKT top-level (nicht «lit. … Ziff. 2»).
+    expect(out).toContain('Art. 16 Ziff. 2 BankG');
+    expect(out).not.toContain('lit. 1bis Ziff. 2'); // der alte Heuristik-Fehler
+  });
+
   it('autolink: verlinkt zitierte Normen im Wortlaut, aus = Klartext', () => {
     const bl = [{ absatz: '1', text: 'Der Schuldner haftet nach Art. 41 OR für den Schaden.' }];
     const mitLink = renderToString(<ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} autolink />);

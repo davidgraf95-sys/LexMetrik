@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "142.205",
+  "titel": "Verordnung über die Integration von Ausländerinnen und Ausländern",
+  "erlassdatum": "vom 15. August 2018 (Stand am 1. Dezember 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Ausländer- und Integrationsgesetz vom 16. Dezember 2005 (AIG) sowie auf Artikel 119 des Asylgesetzes vom 26. Juni 1998 (AsylG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>142.20</b>",
+    "links": [
+     {
+      "label": "SR <b>142.20</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>142.31</b>",
+    "links": [
+     {
+      "label": "SR <b>142.31</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -102,10 +147,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -125,10 +170,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 670).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 670).",
      "links": [
       {
-       "label": "AS 2025 670",
+       "label": "AS <b>2025</b> 670",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/670"
       }
      ],
@@ -183,10 +228,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
@@ -195,10 +240,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS 2025 670).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2025, in Kraft seit 1. Dez. 2025 (AS <b>2025</b> 670).",
      "links": [
       {
-       "label": "AS 2025 670",
+       "label": "AS <b>2025</b> 670",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/670"
       }
      ],
@@ -207,10 +252,10 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS 2019 1229).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1229).",
      "links": [
       {
-       "label": "AS 2019 1229",
+       "label": "AS <b>2019</b> 1229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
       }
      ],
@@ -232,10 +277,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS 2019 1229).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1229).",
      "links": [
       {
-       "label": "AS 2019 1229",
+       "label": "AS <b>2019</b> 1229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
       }
      ],
@@ -244,10 +289,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Jan. 2023, in Kraft seit 1. März 2023 (AS 2023 46).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Jan. 2023, in Kraft seit 1. März 2023 (AS <b>2023 </b>46).",
      "links": [
       {
-       "label": "AS 2023 46",
+       "label": "AS <b>2023 </b>46",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/46"
       }
      ],
@@ -256,10 +301,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 851.1",
+     "text": "SR <b>851.1</b>",
      "links": [
       {
-       "label": "SR 851.1",
+       "label": "SR <b>851.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10359"
       }
      ],
@@ -281,10 +326,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
@@ -306,10 +351,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS 2019 1229).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1229).",
      "links": [
       {
-       "label": "AS 2019 1229",
+       "label": "AS <b>2019</b> 1229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
       }
      ],
@@ -331,10 +376,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
@@ -477,22 +522,22 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "[AS 2007 5551; 2013 5351; 2017 6543; 2018 745]",
+     "text": "[AS <b>2007</b> 5551; <b>2013</b> 5351; <b>2017</b> 6543; <b>2018</b> 745]",
      "links": [
       {
-       "label": "AS 2007 5551",
+       "label": "AS <b>2007</b> 5551",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/762"
       },
       {
-       "label": "2013 5351",
+       "label": "<b>2013</b> 5351",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/854"
       },
       {
-       "label": "2017 6543",
+       "label": "<b>2017</b> 6543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/720"
       },
       {
-       "label": "2018 745",
+       "label": "<b>2018</b> 745",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/95"
       }
      ],
@@ -525,10 +570,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS 2019 1229).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1229).",
      "links": [
       {
-       "label": "AS 2019 1229",
+       "label": "AS <b>2019</b> 1229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
       }
      ],
@@ -550,10 +595,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS 2019 1229).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1229).",
      "links": [
       {
-       "label": "AS 2019 1229",
+       "label": "AS <b>2019</b> 1229",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/234"
       }
      ],

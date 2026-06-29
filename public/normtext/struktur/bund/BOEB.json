@@ -1,5 +1,86 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "172.056.1",
+  "titel": "Bundesgesetz über das öffentliche Beschaffungswesen",
+  "erlassdatum": "vom 21. Juni 2019 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 173 Absatz 2 der Bundesverfassung, in Ausführung des Protokolls vom 30. März 2012 zur Änderung des Übereinkommens über das öffentliche Beschaffungswesen, der Artikel 3 und 8 des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über bestimmte Aspekte des öffentlichen Beschaffungswesens, von Artikel 3 von Anhang R des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation sowie weiterer internationaler Übereinkommen, welche Marktzugangsverpflichtungen im Bereich des öffentlichen Beschaffungswesens enthalten, nach Einsicht in die Botschaft des Bundesrates vom 15. Februar 2017,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2017</b> 2175",
+    "links": [
+     {
+      "label": "BBl <b>2017</b> 2175",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2017/421"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.172.052.68</b>",
+    "links": [
+     {
+      "label": "SR <b>0.172.052.68</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/481"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>0.632.31</b>",
+    "links": [
+     {
+      "label": "SR <b>0.632.31</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "BBl <b>2017</b> 1851",
+    "links": [
+     {
+      "label": "BBl <b>2017</b> 1851",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2017/417"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -36,10 +117,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
@@ -48,10 +129,10 @@
     },
     {
      "nr": "7",
-     "text": "SR 822.11",
+     "text": "SR <b>822.11</b>",
      "links": [
       {
-       "label": "SR 822.11",
+       "label": "SR <b>822.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9884"
       }
      ],
@@ -77,10 +158,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -89,10 +170,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 783.0",
+     "text": "SR <b>783.0</b>",
      "links": [
       {
-       "label": "SR 783.0",
+       "label": "SR <b>783.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9151"
       }
      ],
@@ -193,10 +274,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
@@ -229,10 +310,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 822.41",
+     "text": "SR <b>822.41</b>",
      "links": [
       {
-       "label": "SR 822.41",
+       "label": "SR <b>822.41</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9926"
       }
      ],
@@ -441,14 +522,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS 2024 648; BBl 2023 13, 437).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 15. März 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 648; BBl <b>2023</b> 13, 437).",
      "links": [
       {
-       "label": "AS 2024 648",
+       "label": "AS <b>2024</b> 648",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/648"
       },
       {
-       "label": "BBl 2023 13",
+       "label": "BBl <b>2023</b> 13",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/13"
       },
       {
@@ -633,14 +714,14 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. II 1 des BG vom 29. Sept. 2023 (Einführung einer Meldepflicht für Cyberangriffe auf kritische Infrastrukturen), in Kraft seit 1. April 2025 (AS 2024 257; 2025 168, 173; BBl 2023 84).",
+     "text": "Eingefügt durch Ziff. II 1 des BG vom 29. Sept. 2023 (Einführung einer Meldepflicht für Cyberangriffe auf kritische Infrastrukturen), in Kraft seit 1. April 2025 (AS <b>2024</b> 257; <b>2025</b> 168, 173; BBl <b>2023</b> 84).",
      "links": [
       {
-       "label": "AS 2024 257",
+       "label": "AS <b>2024</b> 257",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/257"
       },
       {
-       "label": "2025 168",
+       "label": "<b>2025</b> 168",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/168"
       },
       {
@@ -648,7 +729,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/173"
       },
       {
-       "label": "BBl 2023 84",
+       "label": "BBl <b>2023</b> 84",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/84"
       }
      ],
@@ -657,10 +738,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 128",
+     "text": "SR <b>128</b>",
      "links": [
       {
-       "label": "SR 128",
+       "label": "SR <b>128</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40013"
       }
      ],
@@ -669,10 +750,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 822.41",
+     "text": "SR <b>822.41</b>",
      "links": [
       {
-       "label": "SR 822.41",
+       "label": "SR <b>822.41</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9926"
       }
      ],
@@ -681,10 +762,10 @@
     },
     {
      "nr": "18",
-     "text": "SR 241",
+     "text": "SR <b>241</b>",
      "links": [
       {
-       "label": "SR 241",
+       "label": "SR <b>241</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6122"
       }
      ],
@@ -816,10 +897,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -841,10 +922,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
@@ -853,10 +934,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],

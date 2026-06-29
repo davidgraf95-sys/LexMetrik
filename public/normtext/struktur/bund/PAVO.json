@@ -1,5 +1,109 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "211.222.338",
+  "titel": "Verordnung über die Aufnahme von Pflegekindern",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 316 Absatz 2 des Zivilgesetzbuches (ZGB) und auf Artikel 30 Absatz 2 des Ausländer- und Integrationsgesetzes vom 16. Dezember 2005 sowie in Ausführung des Übereinkommens vom 20. November 1989 über die Rechte des Kindes und des Haager Kindesschutzübereinkommens vom 19. Oktober 1996,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
+    "links": [
+     {
+      "label": "AS <b>2012 </b>5801",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>210</b>",
+    "links": [
+     {
+      "label": "SR <b>210</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Der Titel wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
+    "links": [
+     {
+      "label": "SR <b>170.512</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>142.20</b>",
+    "links": [
+     {
+      "label": "SR <b>142.20</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>0.107</b>",
+    "links": [
+     {
+      "label": "SR <b>0.107</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1998/2055_2055_2055"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR <b>0.211.231.011</b>",
+    "links": [
+     {
+      "label": "SR <b>0.211.231.011</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2009/380"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
+    "links": [
+     {
+      "label": "AS <b>2012 </b>5801",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +118,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -26,10 +130,10 @@
     },
     {
      "nr": "9",
-     "text": "Ausdruck gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801). Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801). Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -38,10 +142,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -50,10 +154,10 @@
     },
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -75,10 +179,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -87,10 +191,10 @@
     },
     {
      "nr": "14",
-     "text": "Die Berichtigung vom 20. Juni 2017 betrifft nur den französischen Text (AS 2017 3543).",
+     "text": "Die Berichtigung vom 20. Juni 2017 betrifft nur den französischen Text (AS <b>2017</b> 3543).",
      "links": [
       {
-       "label": "AS 2017 3543",
+       "label": "AS <b>2017</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/392"
       }
      ],
@@ -112,10 +216,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -137,10 +241,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -162,10 +266,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Aufgehoben durch Ziff. I der V vom 29. Nov. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],
@@ -187,10 +291,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],
@@ -212,10 +316,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -237,10 +341,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -249,14 +353,14 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS 1989 54). Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS <b>1989</b> 54). Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       },
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],
@@ -289,10 +393,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -301,10 +405,10 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -324,14 +428,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 2002 (AS 2002 4167). Aufgehoben durch Anhang Ziff. II 1 der Adoptionsverordnung vom 29. Juni 2011, mit Wirkung seit 1. Jan. 2010 (AS 2011 3637).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 2002 (AS <b>2002 </b>4167). Aufgehoben durch Anhang Ziff. II 1 der Adoptionsverordnung vom 29. Juni 2011, mit Wirkung seit 1. Jan. 2010 (AS <b>2011</b> 3637).",
      "links": [
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       },
       {
-       "label": "AS 2011 3637",
+       "label": "AS <b>2011</b> 3637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/505"
       }
      ],
@@ -351,10 +455,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -376,10 +480,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -388,10 +492,10 @@
     },
     {
      "nr": "36",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. Okt. 2012, mit Wirkung seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -400,10 +504,10 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -425,10 +529,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -450,10 +554,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -486,10 +590,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -498,10 +602,10 @@
     },
     {
      "nr": "42",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -523,10 +627,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -535,10 +639,10 @@
     },
     {
      "nr": "44",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -560,10 +664,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -585,10 +689,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -610,10 +714,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -622,10 +726,10 @@
     },
     {
      "nr": "56",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -634,10 +738,10 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -646,10 +750,10 @@
     },
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -682,10 +786,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -718,10 +822,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -743,10 +847,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -755,10 +859,10 @@
     },
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -767,10 +871,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -779,14 +883,14 @@
     },
     {
      "nr": "64",
-     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR 311.0) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS 2006 3459; BBl 1999 1979).",
+     "text": "Fassung gemäss Art. 333 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       },
       {
-       "label": "AS 2006 3459",
+       "label": "AS <b>2006</b> 3459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
@@ -808,10 +912,10 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -866,10 +970,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -891,10 +995,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -916,15 +1020,16 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2014 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Dienstleistungsangebote in der Familienpflege"
     }
    ]
   },
@@ -941,10 +1046,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -953,10 +1058,10 @@
     },
     {
      "nr": "49",
-     "text": "Aufgehoben durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, mit Wirkung seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Aufgehoben durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, mit Wirkung seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -965,10 +1070,10 @@
     },
     {
      "nr": "50",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -990,10 +1095,10 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -1002,10 +1107,10 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -1027,10 +1132,10 @@
    "fussnoten": [
     {
      "nr": "53",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -1052,10 +1157,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Eingefügt durch Anhang 10 Ziff. II 9 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -1088,10 +1193,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -1113,10 +1218,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -1125,10 +1230,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 211.222.32",
+     "text": "SR <b>211.222.32</b>",
      "links": [
       {
-       "label": "SR 211.222.32",
+       "label": "SR <b>211.222.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/379"
       }
      ],
@@ -1148,14 +1253,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS 1989 54). Aufgehoben durch Ziff. I der V vom 29. Nov. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS <b>1989</b> 54). Aufgehoben durch Ziff. I der V vom 29. Nov. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       },
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],
@@ -1177,10 +1282,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS 1989 54).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988, in Kraft seit 1. Jan. 1989 (AS <b>1989</b> 54).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       }
      ],
@@ -1189,10 +1294,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],
@@ -1214,14 +1319,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS 1989 54). Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 5801).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS <b>1989</b> 54). Fassung gemäss Ziff. I der V vom 10. Okt. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012 </b>5801).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       },
       {
-       "label": "AS 2012 5801",
+       "label": "AS <b>2012 </b>5801",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/676"
       }
      ],
@@ -1243,14 +1348,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS 1989 54). Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 4167).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Dez. 1988 (AS <b>1989</b> 54). Fassung gemäss Ziff. I der V vom 29. Nov. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002 </b>4167).",
      "links": [
       {
-       "label": "AS 1989 54",
+       "label": "AS <b>1989</b> 54",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/54_54_54"
       },
       {
-       "label": "AS 2002 4167",
+       "label": "AS <b>2002 </b>4167",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/672"
       }
      ],

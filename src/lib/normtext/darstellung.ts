@@ -78,8 +78,18 @@ function randtitelSachtitel(stufe: string): string {
 export function randtitelKnoten(marginalie: string[]): { ahnen: string[]; blatt: string | null } {
   const raw = marginalie.map((s) => s.trim());
   if (raw.length === 0) return { ahnen: [], blatt: null };
-  const blattLeer = istLeererTitel(randtitelSachtitel(raw[raw.length - 1]));
-  const blatt = blattLeer ? null : raw[raw.length - 1];
+  const letzte = raw[raw.length - 1];
+  // Blatt = die artikel-EIGENE Sachüberschrift = die letzte Stufe NUR, wenn sie
+  // KEINEN strukturellen Aufzähler trägt (reine Sachüberschrift, ≈83 % der Fälle,
+  // z. B. «Gegenstand»). Trägt die letzte Stufe einen Aufzähler (A./I./1. =
+  // Gliederungs-Gruppierung), gehört sie in die TOC (ahnen) — AUCH wenn sie nur
+  // einen Artikel deckt (Auftrag David 28.6.2026: lückenlose Gliederung, die
+  // ZGB-Einleitung muss A–E vollständig zeigen; bisher fielen Blatt-Gruppierungen
+  // ohne eigene Unterstufe wie «A.», «D.» aus dem Baum → löchrige Folge B,C,E).
+  // Leeres «…» (aufgehobene Sachüberschrift) ist nie Blatt.
+  const hatAufzaehler = ENUM_RUN.test(letzte);
+  const blattLeer = istLeererTitel(randtitelSachtitel(letzte));
+  const blatt = (hatAufzaehler || blattLeer) ? null : letzte;
   const ahnenRoh = blatt ? raw.slice(0, -1) : raw;
   // Leere Zwischenstufen («…») nie als Knoten zeigen (reine Darstellung, §3).
   const ahnen = ahnenRoh.filter((s) => !istLeererTitel(randtitelSachtitel(s)));

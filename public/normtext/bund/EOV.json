@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/EOV/art_1",
@@ -8,6 +8,7 @@
       "erlass": "EOV",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "grundlage": "(Art. 10 Abs. 1 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -34,7 +35,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "d630762bd5d2de7a40118744afe6f9c2f644b57cfc8ebb0f759b2233bdaae070"
     },
@@ -45,6 +46,7 @@
       "erlass": "EOV",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 10 Abs. 2 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -53,7 +55,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "fbf52763fb813a8c7b75d1bbf7852f511f0a3798c9958f945ae12d2aa2154799"
     },
@@ -64,6 +66,7 @@
       "erlass": "EOV",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 1 a Abs. 4 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -72,7 +75,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "aba2e9549d0bc58a7ce1772750e4b0d1c4c0791b2b16a0affd723059eaca76be"
     },
@@ -83,6 +86,7 @@
       "erlass": "EOV",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -137,7 +141,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "ed7ee812652f2f745a0ce8751017f57bc044143a7c835ef13ac2e7e77b8abb06"
     },
@@ -148,6 +152,7 @@
       "erlass": "EOV",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -192,7 +197,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "0c0dc92405518315ea97c2695779eaf0ee88dd3f2e97cc798b4c277a93717c96"
     },
@@ -203,6 +208,7 @@
       "erlass": "EOV",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -215,7 +221,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "8c3dc0c34b41b1e3cbaf2b565737ae92c0c1df84bb42670ca0d1f6eedb7af476"
     },
@@ -226,6 +232,7 @@
       "erlass": "EOV",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -268,7 +275,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "804a1de8f0c4742c7fa98655fff0e4d1d329776495ed4a54438f2ade555f57c6"
     },
@@ -279,6 +286,7 @@
       "erlass": "EOV",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -287,7 +295,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "1c6cf4fe0d2c19d4855d99b03185501d5f3f5cfb90000600ef50eec8c3cbe724"
     },
@@ -298,6 +306,7 @@
       "erlass": "EOV",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 11 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -306,7 +315,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "87e4b9c4b95e12ca6bc7806bf78b9f4f739f5f2a06f73af90136b454f889bc53"
     },
@@ -317,6 +326,7 @@
       "erlass": "EOV",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 9 Abs. 4 dritter Satz EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -325,7 +335,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "28271e02c5293e164e52533298d0ec489f708c7ff0babad9c4063206ca901297"
     },
@@ -336,6 +346,7 @@
       "erlass": "EOV",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 9 Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -354,7 +365,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "5722d6b758b3c38337ffda8c73bff92b4359358f71364b56d44e2047a129f738"
     },
@@ -365,6 +376,7 @@
       "erlass": "EOV",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 7 Abs. 1 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -395,7 +407,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "4317719cb49737913ccb4807029cc36518663386dd8894f68ba6774c83e52fa7"
     },
@@ -406,6 +418,7 @@
       "erlass": "EOV",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 7 Abs. 2 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -418,7 +431,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "2fb1edb824d4d25daa324f4f6afb05e334601474e30205368eea6feb088ed023"
     },
@@ -451,7 +464,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "0ea51d6ca436d613cbddb50e963895632895ad00e5b8c22bb7e3812c7c41f43d"
     },
@@ -462,6 +475,7 @@
       "erlass": "EOV",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 19 Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -500,7 +514,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "7395ec3ed2e2792fcd8df814e4894e56440f70e87c560051ea7cf8393a4bfb8a"
     },
@@ -511,6 +525,7 @@
       "erlass": "EOV",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 19 Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -535,7 +550,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "f2a8acc3fcba6e16189a47ea2076d540156dad1bbc4fa2ba2f9077c5ca432579"
     },
@@ -546,6 +561,7 @@
       "erlass": "EOV",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 19 Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -554,7 +570,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "b86403a576e7ed407306aefc3da0e890d12129368b737e23134f42af96100584"
     },
@@ -565,6 +581,7 @@
       "erlass": "EOV",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 17 Abs. 1 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -577,7 +594,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e41e865adb9e2ab61918441ecbb4e78e15d0acc7b74e815bc72eebc69d18670a"
     },
@@ -588,6 +605,7 @@
       "erlass": "EOV",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 17 Abs. 2 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -618,7 +636,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "c472fc25aaa0c02aaa20eca03f67e28eb5c237aef3bcbead18786ee6bde3bd4b"
     },
@@ -629,6 +647,7 @@
       "erlass": "EOV",
       "artikel": "19_a",
       "artikelLabel": "Art. 19a",
+      "grundlage": "(Art. 19 Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -645,7 +664,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e693a933ed84fda0bef3f49cdbce7b038f76e614b7fb5c77efa20967e98be87d"
     },
@@ -656,6 +675,7 @@
       "erlass": "EOV",
       "artikel": "19_b",
       "artikelLabel": "Art. 19b",
+      "grundlage": "(Art. 21 a Abs. 4 Bst. b EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -716,7 +736,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "02eb4907ee08283ee1c15484c9d38acc0d7adad1bc8c6b8cbff35a9de5afcb74"
     },
@@ -727,6 +747,7 @@
       "erlass": "EOV",
       "artikel": "19_c",
       "artikelLabel": "Art. 19c",
+      "grundlage": "(Art. 21 a Abs. 4 Bst. d EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -749,7 +770,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e2ae94d33f4385cbfb8f1bb1d8e3214e21cf27e149e24d13a73c7c32a72c2ffe"
     },
@@ -760,6 +781,7 @@
       "erlass": "EOV",
       "artikel": "19_d",
       "artikelLabel": "Art. 19d",
+      "grundlage": "(Art. 21 a Abs. 4 Bst. f EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -768,7 +790,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "3e4e501429c9572f1dae6126f0b749ebb24754bde8fcf3dab18546145dbebe75"
     },
@@ -779,6 +801,7 @@
       "erlass": "EOV",
       "artikel": "19_e",
       "artikelLabel": "Art. 19e",
+      "grundlage": "(Art. 21 a Abs. 4 Bst. c EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -791,7 +814,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "bab7a5245da4a209855648eeb8a64afdc03cb2cee3b5c1270e0281ea3826ba3b"
     },
@@ -802,6 +825,7 @@
       "erlass": "EOV",
       "artikel": "19_f",
       "artikelLabel": "Art. 19f",
+      "grundlage": "(Art. 21 a Abs. 4 Bst. a EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -810,7 +834,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_19_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "f7da32de6f5760cff436d5cd5dd88d196e44b3b7721427e1d159e7f0a1a55932"
     },
@@ -821,6 +845,7 @@
       "erlass": "EOV",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 18 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -833,7 +858,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "7499a0617a5dc9573277f67b5093ea25fc4a5cc9cee7abe54cb2f41f2d52b4a3"
     },
@@ -844,6 +869,7 @@
       "erlass": "EOV",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -864,7 +890,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "fa6d656f6346b38c70064407eeacf715985356525e001835cbaa254765b24f21"
     },
@@ -875,6 +901,7 @@
       "erlass": "EOV",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 18 und 19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -887,7 +914,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "c0bf6e938079fdb3479e75a6284b85ebeeecfd837803777d07f28e6a0f690fe1"
     },
@@ -898,6 +925,7 @@
       "erlass": "EOV",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 16 c und 16 j Abs. 2 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -910,7 +938,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "f9665fe262686825219b547f1831533db335e90a516a08b4143287f8460dce18"
     },
@@ -921,6 +949,7 @@
       "erlass": "EOV",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 16 c Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -929,7 +958,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "cfbeade6ff9fce45f72d6119e20d41d567817d08a4320af7710eb8187a78b310"
     },
@@ -940,6 +969,7 @@
       "erlass": "EOV",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 16 d Abs. 3 erster Teilsatz EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -948,7 +978,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "037fd0dbcb7d0d8e9bd194ddf2b4eca21340df0029f53912178f574ea65e04b1"
     },
@@ -959,6 +989,7 @@
       "erlass": "EOV",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 16 b Abs. 1 Bst. a und 16 i Abs. 1 Bst. b EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -977,7 +1008,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "ce8c1b297b9cf3f9fc5c96e40eea50ac0bdf376226945188ace12548108683cc"
     },
@@ -988,6 +1019,7 @@
       "erlass": "EOV",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 16 b Abs. 1 Bst. b und 16 i Abs. 1 Bst. c EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1010,7 +1042,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "f13034e5d9fe10a695d6ff8068d82df0adcbd02979ce932625b7f23eb52ee6ac"
     },
@@ -1021,6 +1053,7 @@
       "erlass": "EOV",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 16 b Abs. 1 Bst. b und 16 i Abs. 1 Bst. c EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1039,7 +1072,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "a303ef918847b86e90dabd21f9343ed176f175f2b63a2de246d272bbd1bf5cff"
     },
@@ -1050,6 +1083,7 @@
       "erlass": "EOV",
       "artikel": "28_a",
       "artikelLabel": "Art. 28a",
+      "grundlage": "(Art. 16 b Abs. 1 Bst. b und 16 i Abs. 1 Bst. c EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1058,7 +1092,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_28_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "6d52671c145bbb8353ac1da5f2b4e88e63ba1f71177b3c62083afe4364a625f8"
     },
@@ -1069,6 +1103,7 @@
       "erlass": "EOV",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 16 b Abs. 3 und 16 i Abs. 3 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1129,7 +1164,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e243144308592a4adcf890ddec17ecfcf12c566befae87aae0b2c7f3b3c53dad"
     },
@@ -1140,6 +1175,7 @@
       "erlass": "EOV",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 16 b Abs. 3 und 16 i Abs. 3 EGO)",
       "bloecke": [
         {
           "absatz": null,
@@ -1158,7 +1194,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "834e835f3968c1921b4f13b73f6cb22493cd39512dd88d980fac30c79a3735c6"
     },
@@ -1169,6 +1205,7 @@
       "erlass": "EOV",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 16 e und 16 l EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1219,7 +1256,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "344070afffd9824fa689c89b47d6091d1dc204f6434e096065919f4aa774e889"
     },
@@ -1230,6 +1267,7 @@
       "erlass": "EOV",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 16 e und 16 l EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1238,7 +1276,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "0f6b1b3c174e44a339a8ab950e7c3705913d1ac8d736860380f5118c749d81e0"
     },
@@ -1249,6 +1287,7 @@
       "erlass": "EOV",
       "artikel": "33",
       "artikelLabel": "Art. 33",
+      "grundlage": "(Art. 16 e und 16 l EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1257,7 +1296,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "24689b2dde6b7768135a464c3f8b77d2fce5512f2934a63c7446f97321efa192"
     },
@@ -1268,6 +1307,7 @@
       "erlass": "EOV",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1294,7 +1334,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "2341fa7e4bd5b079832ae38d59c9380577650f946882caf947af5491b9634232"
     },
@@ -1305,6 +1345,7 @@
       "erlass": "EOV",
       "artikel": "34_a",
       "artikelLabel": "Art. 34a",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1325,7 +1366,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_34_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "6779224a87466ff117d772b46dab3ae30cd2ab624bedd579fb98e96b2bcd5cc6"
     },
@@ -1336,6 +1377,7 @@
       "erlass": "EOV",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 18 und 19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1360,7 +1402,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "d94b2c740439581cbc4ce3f72b166c8c191944e569b5ea79216353208c2dadf5"
     },
@@ -1371,6 +1413,7 @@
       "erlass": "EOV",
       "artikel": "35_a",
       "artikelLabel": "Art. 35a",
+      "grundlage": "(Art. 16 n EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1383,7 +1426,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e1d73900ee191b3287ac8920e69df841701d5f4e04f4e2fc483f04073a241022"
     },
@@ -1394,6 +1437,7 @@
       "erlass": "EOV",
       "artikel": "35_b",
       "artikelLabel": "Art. 35b",
+      "grundlage": "(Art. 16 n EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1412,7 +1456,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "90d429538d5391ed6023285e06e0738d1aff9061ad247481b34ab7693b3d0308"
     },
@@ -1423,6 +1467,7 @@
       "erlass": "EOV",
       "artikel": "35_c",
       "artikelLabel": "Art. 35c",
+      "grundlage": "(Art. 16 n EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1431,7 +1476,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "8426d14d321c5f6ad66fdb6369cf48e3f89932d1f03eff692101d95f3686f7c4"
     },
@@ -1442,6 +1487,7 @@
       "erlass": "EOV",
       "artikel": "35_d",
       "artikelLabel": "Art. 35d",
+      "grundlage": "(Art. 16 n EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1460,7 +1506,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "872f4f180ecb33d0988f8f2931b2a15d8fe3aef878965d364c4876fef5dbb28c"
     },
@@ -1471,6 +1517,7 @@
       "erlass": "EOV",
       "artikel": "35_e",
       "artikelLabel": "Art. 35e",
+      "grundlage": "(Art. 16 q Abs. 4 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1479,7 +1526,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "2e2859cbf261e200429ce97347bf836daba57efae91c4f854c376de0131fd096"
     },
@@ -1490,6 +1537,7 @@
       "erlass": "EOV",
       "artikel": "35_f",
       "artikelLabel": "Art. 35f",
+      "grundlage": "(Art. 16 r EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1540,7 +1588,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "607c866d5d5a742b4b6e0d657140ddaac4de53e8816357eab8dfde7e776a238c"
     },
@@ -1551,6 +1599,7 @@
       "erlass": "EOV",
       "artikel": "35_g",
       "artikelLabel": "Art. 35g",
+      "grundlage": "(Art. 16 r EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1559,7 +1608,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "b4942f7bf2d4207f470c8a1444bc9bed760abde747651de3c0894c6c8a5f5af9"
     },
@@ -1570,6 +1619,7 @@
       "erlass": "EOV",
       "artikel": "35_h",
       "artikelLabel": "Art. 35h",
+      "grundlage": "(Art. 16 r EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1578,7 +1628,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "47a361318ab41b3eec89f5df397b657272e1ebe7fe176c88993db001fc99cfdc"
     },
@@ -1589,6 +1639,7 @@
       "erlass": "EOV",
       "artikel": "35_i",
       "artikelLabel": "Art. 35i",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1605,7 +1656,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "87fa145cea0b135a60d7da2a6ff676aab7281c2d6ff012c50ea41cf530a3ffc3"
     },
@@ -1616,6 +1667,7 @@
       "erlass": "EOV",
       "artikel": "35_j",
       "artikelLabel": "Art. 35j",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1632,7 +1684,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "dcafaeab1118e8e64122e376df8823ff15847293f8a1582558bfd3f82e64a40c"
     },
@@ -1643,6 +1695,7 @@
       "erlass": "EOV",
       "artikel": "35_k",
       "artikelLabel": "Art. 35k",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1663,7 +1716,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_k",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "66c8a4586db4c9bd61fe1ecc548b549dc1f9cd15f343634fc96d0267bbefc315"
     },
@@ -1674,6 +1727,7 @@
       "erlass": "EOV",
       "artikel": "35_l",
       "artikelLabel": "Art. 35l",
+      "grundlage": "(Art. 16 t Abs. 1 Bst. b EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1682,7 +1736,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_l",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "541703b688de6a5a879f6cb9f1867d9b249a96e523caaef5c48706161a3d2938"
     },
@@ -1693,6 +1747,7 @@
       "erlass": "EOV",
       "artikel": "35_m",
       "artikelLabel": "Art. 35m",
+      "grundlage": "(Art. 16 t Abs. 1 Bst. b EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1711,7 +1766,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "8df80676e0d134572f2163e4ce87d6d08daab7f4b5e9114e94b02b747733df6c"
     },
@@ -1722,6 +1777,7 @@
       "erlass": "EOV",
       "artikel": "35_n",
       "artikelLabel": "Art. 35n",
+      "grundlage": "(Art. 16 w EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1768,7 +1824,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_n",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "1704dc4e0c0b16e718826615b361bc9b17ccbdcc0941ab4cfc270162b909c020"
     },
@@ -1779,6 +1835,7 @@
       "erlass": "EOV",
       "artikel": "35_o",
       "artikelLabel": "Art. 35o",
+      "grundlage": "(Art. 16 w EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1787,7 +1844,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_o",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "b4942f7bf2d4207f470c8a1444bc9bed760abde747651de3c0894c6c8a5f5af9"
     },
@@ -1798,6 +1855,7 @@
       "erlass": "EOV",
       "artikel": "35_p",
       "artikelLabel": "Art. 35p",
+      "grundlage": "(Art. 16 w EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -1806,7 +1864,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_p",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "dce7a36dd6aed97bb50d1677faea4e00c478c3c7521bfe1447fc4a0db53cbc55"
     },
@@ -1817,6 +1875,7 @@
       "erlass": "EOV",
       "artikel": "35_q",
       "artikelLabel": "Art. 35q",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1829,7 +1888,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_q",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "b56b5ce61ab1954bafc17d9dd798eb3e4637af350e96822d28266716462781df"
     },
@@ -1840,6 +1899,7 @@
       "erlass": "EOV",
       "artikel": "35_r",
       "artikelLabel": "Art. 35r",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1856,7 +1916,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_r",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "092e195958b35bd79be6e70e11959d91b64c54b7f0b8339d2505630f0e8401b0"
     },
@@ -1867,6 +1927,7 @@
       "erlass": "EOV",
       "artikel": "35_s",
       "artikelLabel": "Art. 35s",
+      "grundlage": "(Art. 17–19 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1891,7 +1952,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_35_s",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "6dbba40f421169a946e51e56c15c016e6ca062c436e01fe75afc721232d2b593"
     },
@@ -1902,6 +1963,7 @@
       "erlass": "EOV",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 27 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2012,7 +2074,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "e34547647a2a2cf62b2d482838894687ea864dd71a530c9c9b864dfd62895079"
     },
@@ -2023,6 +2085,7 @@
       "erlass": "EOV",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 19 a EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2051,7 +2114,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "d281970e3f9ff0b618029799f69f628ccbbf2c1d99bbcaa1e1b4172008783b85"
     },
@@ -2062,6 +2125,7 @@
       "erlass": "EOV",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 19 a EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2078,7 +2142,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "d55010699834fb69f6b3f5256ca5f63891b1fb5af73fe5b8b16d3df6faf94398"
     },
@@ -2089,6 +2153,7 @@
       "erlass": "EOV",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 21 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2097,7 +2162,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "bd51c2bb19d67bc972a34d8c638a8bdc846bc8511036298a2a19cdf9ec6fd494"
     },
@@ -2108,6 +2173,7 @@
       "erlass": "EOV",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 20 EOG)",
       "bloecke": [
         {
           "absatz": null,
@@ -2116,7 +2182,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "ca2b8b260a8d8b31d2f6fc566d6dc8cfccd0f7dbe3746abee48af00aaec757f0"
     },
@@ -2127,6 +2193,7 @@
       "erlass": "EOV",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 22 EOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -2139,7 +2206,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "114452d4bc87aed116c2e2ccbd31e5bcc893cbde71b8df37a646045270891aa9"
     },
@@ -2158,7 +2225,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "05abc927ccaba20f52f015270c0624744240d3efb771a17eea83dc689dc0dcbf"
     },
@@ -2181,7 +2248,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "14c9a9ccb3f85771f9c4dbfb86a3b80c7b744667aaf1bb4d82f127adecea25f1"
     },
@@ -2210,7 +2277,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "078e7de880ca8c54c864066b88b95ebe145ade74ce2705acfa16898c1a7b2984"
     },
@@ -2229,7 +2296,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2248,7 +2315,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "8dc004751ae97ff5889634f08d6b679fdb9276b2e6870464eab7308de2ce08a1"
     },
@@ -2267,7 +2334,7 @@
       ],
       "stand": "2026-06-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
       "sha": "2a9540549b2f7a75e7b3825b5206c8626043ed3a9ad9e2c15d619e9b48e04d2d"
     }

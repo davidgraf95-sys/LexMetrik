@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "784.101.2",
+  "titel": "Verordnung über Fernmeldeanlagen",
+  "erlassdatum": "vom 25. November 2015 (Stand am 15. August 2024)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 21a Absatz 2, 22 Absatz 5, 31 Absatz 1, 32, 32a, 33 Absatz 2, 34 Absatz 1, 59 Absatz 3, 62 und 64 Absatz 2 des Fernmeldegesetzes vom 30. April 1997 (FMG), in Ausführung des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse (THG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>784.10</b>",
+    "links": [
+     {
+      "label": "SR <b>784.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1997/2187_2187_2187"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>946.51</b>",
+    "links": [
+     {
+      "label": "SR <b>946.51</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
+    "links": [
+     {
+      "label": "AS <b>2020</b> 6213",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,10 +82,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -37,10 +94,10 @@
     },
     {
      "nr": "5",
-     "text": "SR 783.0",
+     "text": "SR <b>783.0</b>",
      "links": [
       {
-       "label": "SR 783.0",
+       "label": "SR <b>783.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/585"
       }
      ],
@@ -49,10 +106,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -61,10 +118,10 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -106,7 +163,7 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Die Normen können kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, 8404 Winterthur; www.snv.ch, oder beim Schweizerischen Verband der Telekommunikation ASUT, Klösterlistutz 8, 3013 Bern eingesehen oder gegen Entgelt bezogen werden.",
+     "text": "Die Normen können kostenlos eingesehen und gegen Bezahlung bezogen werden bei der Schweizerischen Normen-Vereinigung (SNV), Sulzerallee 70, <i>8404 </i>Winterthur; www.snv.ch, oder beim Schweizerischen Verband der Telekommunikation ASUT, Klösterlistutz 8, <i>3013 </i>Bern eingesehen oder gegen Entgelt bezogen werden.",
      "links": [],
      "absatz": "2",
      "item": null
@@ -150,10 +207,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -179,10 +236,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -191,10 +248,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -203,10 +260,10 @@
     },
     {
      "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -215,10 +272,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -227,10 +284,10 @@
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -239,10 +296,10 @@
     },
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -268,10 +325,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -366,10 +423,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -395,10 +452,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -439,10 +496,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -468,10 +525,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 946.512",
+     "text": "SR <b>946.512</b>",
      "links": [
       {
-       "label": "SR 946.512",
+       "label": "SR <b>946.512</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1904_1904_1904"
       }
      ],
@@ -497,10 +554,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -526,10 +583,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -538,10 +595,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -550,10 +607,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -579,10 +636,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -608,10 +665,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -652,10 +709,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -664,10 +721,10 @@
     },
     {
      "nr": "31",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -693,10 +750,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 16. Juli 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -716,10 +773,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -728,10 +785,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -740,10 +797,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 784.102.1",
+     "text": "SR <b>784.102.1</b>",
      "links": [
       {
-       "label": "SR 784.102.1",
+       "label": "SR <b>784.102.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1024"
       }
      ],
@@ -752,10 +809,10 @@
     },
     {
      "nr": "37",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -764,10 +821,10 @@
     },
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -783,10 +840,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 0.784.403.1",
+     "text": "SR <b>0.784.403.1</b>",
      "links": [
       {
-       "label": "SR 0.784.403.1",
+       "label": "SR <b>0.784.403.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/778"
       }
      ],
@@ -795,10 +852,10 @@
     },
     {
      "nr": "41",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -807,10 +864,10 @@
     },
     {
      "nr": "42",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -836,10 +893,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -848,10 +905,10 @@
     },
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -877,10 +934,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -889,10 +946,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -901,10 +958,10 @@
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -913,10 +970,10 @@
     },
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -925,10 +982,10 @@
     },
     {
      "nr": "49",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -954,10 +1011,10 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -966,10 +1023,10 @@
     },
     {
      "nr": "53",
-     "text": "SR 784.102.1",
+     "text": "SR <b>784.102.1</b>",
      "links": [
       {
-       "label": "SR 784.102.1",
+       "label": "SR <b>784.102.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1024"
       }
      ],
@@ -993,10 +1050,10 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "SR 784.102.1",
+     "text": "SR <b>784.102.1</b>",
      "links": [
       {
-       "label": "SR 784.102.1",
+       "label": "SR <b>784.102.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1024"
       }
      ],
@@ -1005,10 +1062,10 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -1017,10 +1074,10 @@
     },
     {
      "nr": "57",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -1029,10 +1086,10 @@
     },
     {
      "nr": "58",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -1054,10 +1111,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -1066,10 +1123,10 @@
     },
     {
      "nr": "62",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -1078,10 +1135,10 @@
     },
     {
      "nr": "63",
-     "text": "SR 192.12",
+     "text": "SR <b>192.12</b>",
      "links": [
       {
-       "label": "SR 192.12",
+       "label": "SR <b>192.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
@@ -1103,10 +1160,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -1115,10 +1172,10 @@
     },
     {
      "nr": "65",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -1140,10 +1197,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -1198,10 +1255,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -1210,14 +1267,14 @@
     },
     {
      "nr": "68",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR 170.512.1) auf den 1. Jan. 2022 angepasst (AS 2021 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst (AS <b>2021</b> 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
-       "label": "SR 170.512.1",
+       "label": "SR <b>170.512.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
       },
       {
-       "label": "AS 2021 589",
+       "label": "AS <b>2021</b> 589",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
       }
      ],
@@ -1226,10 +1283,10 @@
     },
     {
      "nr": "69",
-     "text": "SR 510.518.1",
+     "text": "SR <b>510.518.1</b>",
      "links": [
       {
-       "label": "SR 510.518.1",
+       "label": "SR <b>510.518.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1990/854_854_854"
       }
      ],
@@ -1273,10 +1330,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -1285,10 +1342,10 @@
     },
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 6213).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       }
      ],
@@ -1332,22 +1389,22 @@
    "fussnoten": [
     {
      "nr": "72",
-     "text": "[AS 2002 2086; 2003 4771; 2005 677; 2007 995, 7085 Ziff. II; 2008 1903; 2009 5837, 6243 Anhang 3 Ziff. II 7; 2012 6561; 2014 4169; 2016 119 Art. 30 Abs. 2 Bst. e]",
+     "text": "[AS <b>2002</b> 2086; <b>2003</b> 4771; <b>2005</b> 677; <b>2007</b> 995, 7085 Ziff. II; <b>2008</b> 1903; <b>2009 </b>5837, 6243 Anhang 3 Ziff. II 7; <b>2012</b> 6561; <b>2014</b> 4169; <b>2016 </b>119 Art. 30 Abs. 2 Bst. e]",
      "links": [
       {
-       "label": "AS 2002 2086",
+       "label": "AS <b>2002</b> 2086",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/310"
       },
       {
-       "label": "2003 4771",
+       "label": "<b>2003</b> 4771",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/695"
       },
       {
-       "label": "2005 677",
+       "label": "<b>2005</b> 677",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/72"
       },
       {
-       "label": "2007 995",
+       "label": "<b>2007</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/170"
       },
       {
@@ -1355,7 +1412,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/926"
       },
       {
-       "label": "2009 5837",
+       "label": "<b>2009 </b>5837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/707"
       },
       {
@@ -1363,15 +1420,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/763"
       },
       {
-       "label": "2012 6561",
+       "label": "<b>2012</b> 6561",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/788"
       },
       {
-       "label": "2014 4169",
+       "label": "<b>2014</b> 4169",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/698"
       },
       {
-       "label": "2016 119",
+       "label": "<b>2016 </b>119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/18"
       }
      ],
@@ -1393,10 +1450,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Die Änderungen können unter AS 2016 179 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>2016</b> 179 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2016 179",
+       "label": "AS <b>2016</b> 179",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/24"
       }
      ],
@@ -1418,22 +1475,22 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "[AS 2002 2086; 2003 4771; 2005 677; 2007 995, 7085 Ziff. II; 2008 1903; 2009 5837, 6243 Anhang 3 Ziff. II 7; 2012 6561; 2014 4169; 2016 119 Art. 30 Abs. 2 Bst. e]",
+     "text": "[AS <b>2002</b> 2086; <b>2003</b> 4771; <b>2005</b> 677; <b>2007</b> 995, 7085 Ziff. II; <b>2008</b> 1903; <b>2009 </b>5837, 6243 Anhang 3 Ziff. II 7; <b>2012</b> 6561; <b>2014</b> 4169; <b>2016 </b>119 Art. 30 Abs. 2 Bst. e]",
      "links": [
       {
-       "label": "AS 2002 2086",
+       "label": "AS <b>2002</b> 2086",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/310"
       },
       {
-       "label": "2003 4771",
+       "label": "<b>2003</b> 4771",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/695"
       },
       {
-       "label": "2005 677",
+       "label": "<b>2005</b> 677",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/72"
       },
       {
-       "label": "2007 995",
+       "label": "<b>2007</b> 995",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/170"
       },
       {
@@ -1441,7 +1498,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/926"
       },
       {
-       "label": "2009 5837",
+       "label": "<b>2009 </b>5837",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/707"
       },
       {
@@ -1449,15 +1506,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/763"
       },
       {
-       "label": "2012 6561",
+       "label": "<b>2012</b> 6561",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/788"
       },
       {
-       "label": "2014 4169",
+       "label": "<b>2014</b> 4169",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/698"
       },
       {
-       "label": "2016 119",
+       "label": "<b>2016 </b>119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/18"
       }
      ],
@@ -1466,14 +1523,14 @@
     },
     {
      "nr": "75",
-     "text": "[AS 1997 1016; 2000 734 Art. 19 Ziff. 2, 762 Ziff. I 3;2007 4477 Ziff. IV 23; 2009 6243 Anhang 3 Ziff. II 4; 2010 2583 Anhang 4 Ziff. II 1, 2749 Ziff. I 1; 2013 3509 Anhang Ziff. 2. AS 2016 105 Art. 29]",
+     "text": "[AS <b>1997 </b>1016; <b>2000 </b>734 Art. 19 Ziff. 2,762 Ziff. I 3;<b>2007 </b>4477 Ziff. IV 23; <b>2009 </b>6243 Anhang 3 Ziff. II 4; <b>2010 </b>2583 Anhang 4 Ziff. II 1,2749 Ziff. I 1; <b>2013 </b>3509 Anhang Ziff. 2. AS <b>2016</b> 105 Art. 29]",
      "links": [
       {
-       "label": "AS 1997 1016",
+       "label": "AS <b>1997 </b>1016",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1016_1016_1016"
       },
       {
-       "label": "2000 734",
+       "label": "<b>2000 </b>734",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/123"
       },
       {
@@ -1481,15 +1538,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/127"
       },
       {
-       "label": "2007 4477",
+       "label": "<b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       },
       {
-       "label": "2009 6243",
+       "label": "<b>2009 </b>6243",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/763"
       },
       {
-       "label": "2010 2583",
+       "label": "<b>2010 </b>2583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/348"
       },
       {
@@ -1497,11 +1554,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/358"
       },
       {
-       "label": "2013 3509",
+       "label": "<b>2013 </b>3509",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/653"
       },
       {
-       "label": "AS 2016 105",
+       "label": "AS <b>2016</b> 105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/17"
       }
      ],
@@ -1510,18 +1567,18 @@
     },
     {
      "nr": "76",
-     "text": "[AS 2009 6243; 2014 4159. AS 2016 119 Art. 30 Abs. 1]",
+     "text": "[AS <b>2009 </b>6243; <b>2014 </b>4159. AS <b>2016</b> 119 Art. 30 Abs. 1]",
      "links": [
       {
-       "label": "AS 2009 6243",
+       "label": "AS <b>2009 </b>6243",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/763"
       },
       {
-       "label": "2014 4159",
+       "label": "<b>2014 </b>4159",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/696"
       },
       {
-       "label": "AS 2016 119",
+       "label": "AS <b>2016</b> 119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/18"
       }
      ],
@@ -1530,10 +1587,10 @@
     },
     {
      "nr": "77",
-     "text": "SR 734.26",
+     "text": "SR <b>734.26</b>",
      "links": [
       {
-       "label": "SR 734.26",
+       "label": "SR <b>734.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/17"
       }
      ],
@@ -1542,10 +1599,10 @@
     },
     {
      "nr": "78",
-     "text": "SR 734.5",
+     "text": "SR <b>734.5</b>",
      "links": [
       {
-       "label": "SR 734.5",
+       "label": "SR <b>734.5</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/18"
       }
      ],
@@ -1580,15 +1637,16 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Kombiniertes Angebot von Funkanlagen und Ladenetzteilen"
     }
    ]
   },
@@ -1609,14 +1667,14 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020 (AS 2020 6213). Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020 (AS <b>2020</b> 6213). Fassung gemäss Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2020 6213",
+       "label": "AS <b>2020</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1023"
       },
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -1625,10 +1683,10 @@
     },
     {
      "nr": "51",
-     "text": "SR 784.102.1",
+     "text": "SR <b>784.102.1</b>",
      "links": [
       {
-       "label": "SR 784.102.1",
+       "label": "SR <b>784.102.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1024"
       }
      ],
@@ -1652,10 +1710,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
@@ -1679,10 +1737,10 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "SR 784.102.1",
+     "text": "SR <b>784.102.1</b>",
      "links": [
       {
-       "label": "SR 784.102.1",
+       "label": "SR <b>784.102.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2020/1024"
       }
      ],
@@ -1691,15 +1749,16 @@
     },
     {
      "nr": "59",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Funkanlagen, die durch die Armee oder den Zivilschutz in Frequenzbereichen betrieben werden, die sowohl für militärische als auch zivile Nutzungen vorgesehen sind"
     }
    ]
   },
@@ -1716,14 +1775,14 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 720). Berichtigung vom 15. Jan. 2024 (AS 2024 22).",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 720). Berichtigung vom 15. Jan. 2024 (AS <b>2024</b> 22).",
      "links": [
       {
-       "label": "AS 2023 720",
+       "label": "AS <b>2023</b> 720",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/720"
       },
       {
-       "label": "AS 2024 22",
+       "label": "AS <b>2024</b> 22",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/22"
       }
      ],
@@ -1732,10 +1791,10 @@
     },
     {
      "nr": "80",
-     "text": "Berichtigung vom 15. Aug. 2024 (AS 2024 415).",
+     "text": "Berichtigung vom 15. Aug. 2024 (AS <b>2024</b> 415).",
      "links": [
       {
-       "label": "AS 2024 415",
+       "label": "AS <b>2024</b> 415",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/415"
       }
      ],

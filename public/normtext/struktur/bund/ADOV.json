@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "211.221.36",
+  "titel": "Verordnung über die Adoption",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 269c Absatz 3 und 316 Absatz 2 des Zivilgesetzbuchs (ZGB) und die Artikel 15 Absatz 3 und 26 des Bundesgesetzes vom 22. Juni 2001 zum Haager Adoptionsübereinkommen und über Massnahmen zum Schutz des Kindes bei internationalen Adoptionen (BG-HAÜ),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>210</b>",
+    "links": [
+     {
+      "label": "SR <b>210</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>211.221.31</b>",
+    "links": [
+     {
+      "label": "SR <b>211.221.31</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/639"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -58,10 +102,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Anhang 10 Ziff. II 8 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS 2022 698).",
+     "text": "Fassung gemäss Anhang 10 Ziff. II 8 der Strafregisterverordnung vom 19. Okt. 2022, in Kraft seit 23. Jan. 2023 (AS <b>2022</b> 698).",
      "links": [
       {
-       "label": "AS 2022 698",
+       "label": "AS <b>2022</b> 698",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/698"
       }
      ],
@@ -147,10 +191,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -304,10 +348,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -340,18 +384,18 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "[AS 2006 5321. AS 2015 3849 Art. 17]. Heute: die V vom 7. Okt. 2015 über die Gebühren des Eidgenössischen Departements für auswärtige Angelegenheiten (SR 191.11).",
+     "text": "[AS <b>2006</b> 5321. AS <b>2015</b> 3849 Art. 17]. Heute: die V vom 7. Okt. 2015 über die Gebühren des Eidgenössischen Departements für auswärtige Angelegenheiten (SR <b>191.11</b>).",
      "links": [
       {
-       "label": "AS 2006 5321",
+       "label": "AS <b>2006</b> 5321",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/803"
       },
       {
-       "label": "AS 2015 3849",
+       "label": "AS <b>2015</b> 3849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/652"
       },
       {
-       "label": "SR 191.11",
+       "label": "SR <b>191.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/652"
       }
      ],

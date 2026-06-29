@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "832.104",
+  "titel": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung",
+  "erlassdatum": "vom 3. Juli 2002 (Stand am 1. Juni 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 96 des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung (Gesetz),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
+    "links": [
+     {
+      "label": "AS <b>2008</b> 5105",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>832.10</b>",
+    "links": [
+     {
+      "label": "SR <b>832.10</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
+    "links": [
+     {
+      "label": "AS <b>2008</b> 5105",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +71,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -39,10 +96,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -51,10 +108,10 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -63,10 +120,10 @@
     },
     {
      "nr": "7",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -75,10 +132,10 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -87,10 +144,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -99,10 +156,10 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Art. 17 der Ausbildungsförderverordnung Pflege vom 8. Mai 2024, in Kraft vom 1. Juli 2024 bis zum 30. Juni 2032 (AS 2024 219).",
+     "text": "Eingefügt durch Art. 17 der Ausbildungsförderverordnung Pflege vom 8. Mai 2024, in Kraft vom 1. Juli 2024 bis zum 30. Juni 2032 (AS <b>2024</b> 219).",
      "links": [
       {
-       "label": "AS 2024 219",
+       "label": "AS <b>2024</b> 219",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/219"
       }
      ],
@@ -111,10 +168,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 811.225",
+     "text": "SR <b>811.225</b>",
      "links": [
       {
-       "label": "SR 811.225",
+       "label": "SR <b>811.225</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2024/219"
       }
      ],
@@ -136,10 +193,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -159,10 +216,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -184,10 +241,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -209,10 +266,10 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -234,10 +291,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -246,10 +303,10 @@
     },
     {
      "nr": "17",
-     "text": "SR 811.11",
+     "text": "SR <b>811.11</b>",
      "links": [
       {
-       "label": "SR 811.11",
+       "label": "SR <b>811.11</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/537"
       }
      ],
@@ -271,10 +328,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -296,10 +353,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -321,10 +378,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -333,10 +390,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 832.102",
+     "text": "SR <b>832.102</b>",
      "links": [
       {
-       "label": "SR 832.102",
+       "label": "SR <b>832.102</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867"
       }
      ],
@@ -345,10 +402,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS 2025 318).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS <b>2025</b> 318).",
      "links": [
       {
-       "label": "AS 2025 318",
+       "label": "AS <b>2025</b> 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
      ],
@@ -381,10 +438,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -406,10 +463,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -418,10 +475,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 431.011",
+     "text": "SR <b>431.011</b>",
      "links": [
       {
-       "label": "SR 431.011",
+       "label": "SR <b>431.011</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/2093_2093_2093"
       }
      ],
@@ -430,10 +487,10 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS 2025 318).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS <b>2025</b> 318).",
      "links": [
       {
-       "label": "AS 2025 318",
+       "label": "AS <b>2025</b> 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
      ],
@@ -455,10 +512,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "SR 431.011",
+     "text": "SR <b>431.011</b>",
      "links": [
       {
-       "label": "SR 431.011",
+       "label": "SR <b>431.011</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/2093_2093_2093"
       }
      ],
@@ -467,10 +524,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS 2025 318).",
+     "text": "Fassung gemäss Anhang 3 Ziff. 19 der Bundesstatistikverordnung vom 30. April 2025, in Kraft seit 1. Juni 2025 (AS <b>2025</b> 318).",
      "links": [
       {
-       "label": "AS 2025 318",
+       "label": "AS <b>2025</b> 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
      ],
@@ -490,10 +547,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -513,10 +570,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS 2008 5105).",
+     "text": "Aufgehoben durch Ziff. I der V vom 22. Okt. 2008, mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5105).",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],
@@ -549,10 +606,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS 2008 5105). Siehe auch die SchlB dieser Änd. am Ende dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 22. Okt. 2008, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5105). Siehe auch die SchlB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS 2008 5105",
+       "label": "AS <b>2008</b> 5105",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/709"
       }
      ],

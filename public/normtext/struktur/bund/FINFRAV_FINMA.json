@@ -1,5 +1,85 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "958.111",
+  "titel": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Eidgenössische Finanzmarktaufsicht (FINMA),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 51 Absatz 2 des Finanzinstitutsgesetzes vom 15. Juni 2018 (FINIG), Artikel 74 Absatz 4 der Finanzinstitutsverordnung vom 6. November 2019 (FINIV), die Artikel 39 Absatz 2, 101 Absätze 1 und 2, 123 Absätze 1 und 2 sowie 135 Absatz 4 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG) und Artikel 36 Absatz 4 der Finanzmarktinfrastrukturverordnung vom 25. November 2015 (FinfraV),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>954.1</b>",
+    "links": [
+     {
+      "label": "SR <b>954.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>954.11</b>",
+    "links": [
+     {
+      "label": "SR <b>954.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2019/763"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>958.1</b>",
+    "links": [
+     {
+      "label": "SR <b>958.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>958.11</b>",
+    "links": [
+     {
+      "label": "SR <b>958.11</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2015/854"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+    "links": [
+     {
+      "label": "AS <b>2020</b> 5327",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,17 +92,17 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Weil es sich bei den Teilnehmern überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
+     "text": "Weil es sich bei den <i>Teilnehmern</i> überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -44,10 +124,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -69,10 +149,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -81,10 +161,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS 2022 845).",
+     "text": "Fassung gemäss Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS <b>2022</b> 845).",
      "links": [
       {
-       "label": "AS 2022 845",
+       "label": "AS <b>2022</b> 845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/845"
       }
      ],
@@ -93,10 +173,10 @@
     },
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS 2022 845).",
+     "text": "Fassung gemäss Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS <b>2022</b> 845).",
      "links": [
       {
-       "label": "AS 2022 845",
+       "label": "AS <b>2022</b> 845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/845"
       }
      ],
@@ -105,10 +185,10 @@
     },
     {
      "nr": "14",
-     "text": "Aufgehoben durch Ziff. I der V der FINMA vom 8. Dez. 2022, mit Wirkung seit 1. Febr. 2023 (AS 2022 845).",
+     "text": "Aufgehoben durch Ziff. I der V der FINMA vom 8. Dez. 2022, mit Wirkung seit 1. Febr. 2023 (AS <b>2022</b> 845).",
      "links": [
       {
-       "label": "AS 2022 845",
+       "label": "AS <b>2022</b> 845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/845"
       }
      ],
@@ -117,10 +197,10 @@
     },
     {
      "nr": "15",
-     "text": "Ausdruck gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -129,10 +209,10 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Eingefügt durch Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -165,10 +245,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -212,10 +292,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "SR 172.021.2",
+     "text": "SR <b>172.021.2</b>",
      "links": [
       {
-       "label": "SR 172.021.2",
+       "label": "SR <b>172.021.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/408"
       }
      ],
@@ -252,10 +332,10 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS 2017 547).",
+     "text": "Fassung gemäss Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 547).",
      "links": [
       {
-       "label": "AS 2017 547",
+       "label": "AS <b>2017</b> 547",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/96"
       }
      ],
@@ -356,10 +436,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -368,10 +448,10 @@
     },
     {
      "nr": "21",
-     "text": "SR 950.1",
+     "text": "SR <b>950.1</b>",
      "links": [
       {
-       "label": "SR 950.1",
+       "label": "SR <b>950.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
       }
      ],
@@ -412,10 +492,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -424,17 +504,17 @@
     },
     {
      "nr": "23",
-     "text": "Weil es sich bei den Bewilligungsträgern überwiegend um Gesellschaften handelt, wird hier auf die Paarform verzichtet.",
+     "text": "Weil es sich bei den <i>Bewilligungsträgern</i> überwiegend um Gesellschaften handelt, wird hier auf die Paarform verzichtet.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -443,10 +523,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -455,10 +535,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -484,10 +564,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -496,17 +576,17 @@
     },
     {
      "nr": "28",
-     "text": "Weil es sich bei den Emittenten überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
+     "text": "Weil es sich bei den <i>Emittenten</i> überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -532,7 +612,7 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Weil es sich bei den Anbietern überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
+     "text": "Weil es sich bei den <i>Anbietern</i> überwiegend um juristische Personen handelt, wird hier auf die Paarform verzichtet.",
      "links": [],
      "absatz": null,
      "item": "a"
@@ -571,10 +651,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS 2017 547).",
+     "text": "Fassung gemäss Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 547).",
      "links": [
       {
-       "label": "AS 2017 547",
+       "label": "AS <b>2017</b> 547",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/96"
       }
      ],
@@ -583,10 +663,10 @@
     },
     {
      "nr": "32",
-     "text": "Berichtigung vom 26. Nov. 2021 (AS 2021 775).",
+     "text": "Berichtigung vom 26. Nov. 2021 (AS <b>2021</b> 775).",
      "links": [
       {
-       "label": "AS 2021 775",
+       "label": "AS <b>2021</b> 775",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/775"
       }
      ],
@@ -867,10 +947,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS 2020 5327).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
      "links": [
       {
-       "label": "AS 2020 5327",
+       "label": "AS <b>2020</b> 5327",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
       }
      ],
@@ -1039,10 +1119,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS 2017 547).",
+     "text": "Eingefügt durch Ziff. I der V der FINMA vom 26. Jan. 2017, in Kraft seit 1. März 2017 (AS <b>2017</b> 547).",
      "links": [
       {
-       "label": "AS 2017 547",
+       "label": "AS <b>2017</b> 547",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/96"
       }
      ],
@@ -1064,10 +1144,10 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS 2022 845).",
+     "text": "Eingefügt durch Ziff. I der V der FINMA vom 8. Dez. 2022, in Kraft seit 1. Febr. 2023 (AS <b>2022</b> 845).",
      "links": [
       {
-       "label": "AS 2022 845",
+       "label": "AS <b>2022</b> 845",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/845"
       }
      ],

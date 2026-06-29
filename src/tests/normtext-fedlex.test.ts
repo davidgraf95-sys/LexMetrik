@@ -167,6 +167,115 @@ describe('extrahiereArtikel', () => {
       expect(b.items![1].text).toMatch(/^aus achtenswerten Beweggründen/);
       expect(b.items![5].text).toMatch(/^der Täter durch das Verhalten/);
     });
+
+    it('M6: explizite tiefe — lit. a/b…e = Stufe 0 (kein Schlüssel), Unterpunkte 1–4 = Stufe 1', () => {
+      const b = extrahiereArtikel(MSTG_ART_42, '42')!.bloecke[0];
+      // Top-Level-lit. tragen KEIN tiefe-Feld (byte-gleich zum Alt-Modell, §7).
+      expect(b.items![0].tiefe).toBeUndefined(); // a
+      expect(b.items!.filter((i) => /^[a-z]$/.test(i.marke)).every((i) => i.tiefe === undefined)).toBe(true);
+      // Verschachtelte Ziff. 1–4 tragen tiefe = 1.
+      expect(b.items!.filter((i) => /^\d$/.test(i.marke)).map((i) => i.tiefe)).toEqual([1, 1, 1, 1]);
+    });
+  });
+
+  describe('M6 §1-KRITISCH: invertierte Verschachtelung Ziff. → lit. (BankG Art. 16, real)', () => {
+    // Reale Fedlex-Struktur BankG art_16: Ziff. 1, 1bis (mit verschachtelten
+    // lit. a/b), 2, 3. Die FRÜHERE Render-Heuristik (Stufe aus Markentyp raten)
+    // entnestete lit. a/b fälschlich auf Stufe 0 UND schob die folgenden Ziff. 2/3
+    // fälschlich auf Stufe 1 (weil sie nach dem ersten Buchstaben «sahLit» annahm)
+    // → falsche Fundstellen für >=4 Items. Die explizite tiefe behebt das (§1).
+    const BANKG_ART_16 = `<article id="art_16"><a name="a16"></a><h6 class="heading" role="heading"><span class="display-icon"></span><span class="external-link-icon"></span><a href="#art_16"><b>Art. 16</b></a><sup><a href="#fn-d6e2283" id="fnbck-d6e2283">83</a></sup></h6><div class="collapseable"><p>Als Depotwerte im Sinne von Artikel 37<i>d</i> des Gesetzes gelten:<sup><a href="#fn-d6e2304" id="fnbck-d6e2304">84</a></sup></p><dl><dt>1. </dt><dd>bewegliche Sachen und Effekten der Depotkunden;</dd><dt>1<sup>bis</sup>.<sup><a href="#fn-d6e2327" id="fnbck-d6e2327">85</a></sup><sup> </sup></dt><dd><sup></sup>kryptobasierte Vermögenswerte, wenn sich die Bank verpflichtet hat, diese für den Depotkunden jederzeit bereitzuhalten, und diese:<dl><dt>a. </dt><dd>dem Depotkunden individuell zugeordnet sind, oder</dd><dt>b. </dt><dd>einer Gemeinschaft zugeordnet sind und ersichtlich ist, welcher Anteil am Gemeinschaftsvermögen dem Depotkunden zusteht;</dd></dl></dd><dt>2. </dt><dd>bewegliche Sachen, Effekten und Forderungen, welche die Bank für Rechnung der Depotkunden fiduziarisch innehat;</dd><dt>3. </dt><dd>frei verfügbare Lieferansprüche der Bank gegenüber Dritten aus Kassageschäften, abgelaufenen Termingeschäften, Deckungsgeschäften oder Emissionen für Rechnung der Depotkunden.</dd></dl></div></article>`;
+
+    it('Marken in Dokumentreihenfolge: 1, 1bis, a, b, 2, 3', () => {
+      const b = extrahiereArtikel(BANKG_ART_16, '16')!.bloecke[0];
+      expect(b.items!.map((i) => i.marke)).toEqual(['1', '1bis', 'a', 'b', '2', '3']);
+    });
+
+    it('tiefe korrekt: 1/1bis/2/3 = Stufe 0; lit. a/b unter 1bis = Stufe 1', () => {
+      const items = extrahiereArtikel(BANKG_ART_16, '16')!.bloecke[0].items!;
+      const byMarke = Object.fromEntries(items.map((i) => [i.marke, i.tiefe]));
+      expect(byMarke['1']).toBeUndefined();
+      expect(byMarke['1bis']).toBeUndefined();
+      expect(byMarke['2']).toBeUndefined(); // NICHT fälschlich Stufe 1
+      expect(byMarke['3']).toBeUndefined();
+      expect(byMarke['a']).toBe(1);
+      expect(byMarke['b']).toBe(1);
+    });
+  });
+
+  describe('M7 Tabellen-Kopf: kpf-als-<td> + colspan-Padding (GebV SchKG art_30, real)', () => {
+    // Reale Fedlex-Struktur: KEIN <th>; der Kopf steht als <td colspan="4">…
+    // <p class="man-template-tab-kpf">…</p></td>. Bisher als Datenzeile verkannt
+    // und mangels colspan-Expansion gegen die 6 Datenspalten verschoben (Kopf 2
+    // vs. Daten 6). SOLL: Kopf erkennen + colspan konsistent expandieren → 6/6.
+    const GEBV_ART_30 = `<article id="art_30"><div class="collapseable"><table border="1"><tr><td colspan="4"><p class="man-template-tab-kpf man-space-before-3 man-space-after-3">Zuschlagspreis, Kaufpreis oder Erlös/Franken</p></td><td colspan="2"><p class="man-template-tab-kpf-r man-space-before-3 man-space-after-3">Gebühr/Franken</p></td></tr><tr><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr-r"></p></td><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr man-space-before-2">bis</p></td><td><p class="man-template-tab-krpr man-space-before-2 man-text-align-right">500</p></td><td><p class="man-template-tab-krpr man-space-before-2 man-text-align-right">10.–</p></td></tr><tr><td><p class="man-template-tab-krpr">über</p></td><td><p class="man-template-tab-krpr-r">500</p></td><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr">bis</p></td><td><p class="man-template-tab-krpr-r">1&nbsp;000</p></td><td><p class="man-template-tab-krpr-r">50.–</p></td></tr></table></div></article>`;
+
+    it('Kopf wird erkannt (nicht als Datenzeile) und auf 6 Spalten gepaddet', () => {
+      const b = extrahiereArtikel(GEBV_ART_30, '30')!.bloecke.find((x) => x.mehrspaltig)!;
+      expect(b.mehrspaltig!.kopf).toEqual([
+        'Zuschlagspreis, Kaufpreis oder Erlös/Franken', '', '', '', 'Gebühr/Franken', '',
+      ]);
+    });
+
+    it('Datenzeilen behalten alle 6 Spalten, am Kopf ausgerichtet', () => {
+      const b = extrahiereArtikel(GEBV_ART_30, '30')!.bloecke.find((x) => x.mehrspaltig)!;
+      expect(b.mehrspaltig!.zeilen).toEqual([
+        ['', '', '', 'bis', '500', '10.–'],
+        ['über', '500', '', 'bis', '1 000', '50.–'],
+      ]);
+    });
+  });
+
+  describe('M9 G7: doppelte art_id — zweiter Artikel bleibt erhalten (__2-Suffix)', () => {
+    // Reale Fedlex-Quirk (KKV): zwei <article id="art_126_z"> — der zweite (126z
+    // tredecies) trägt dasselbe Token. Bisher «erster gewinnt» → zweiter verloren.
+    const DOPPEL = `<article id="art_126_z"><a name="a126z"></a><h6 class="heading"><a href="#art_126_z"><b>Art. 126z</b></a></h6><div class="collapseable"><p class="absatz">Erster Artikel zum L-QIF.</p></div></article><article id="art_126_z"><a name="ta126z"></a><h6 class="heading"><a href="#art_126_z"><b>Art. 126z</b></a> tredecies</h6><div class="collapseable"><p class="absatz">Zweiter Artikel: Wesentliche Mängel.</p></div></article>`;
+
+    it('alleArtikelTokens vergibt dem zweiten Vorkommen __2', () => {
+      expect(alleArtikelTokens(DOPPEL)).toEqual(['126_z', '126_z__2']);
+    });
+
+    it('beide Artikel extrahieren distinkten Inhalt', () => {
+      expect(extrahiereArtikel(DOPPEL, '126_z')!.bloecke[0].text).toBe('Erster Artikel zum L-QIF.');
+      expect(extrahiereArtikel(DOPPEL, '126_z__2')!.bloecke[0].text).toBe('Zweiter Artikel: Wesentliche Mängel.');
+    });
+
+    it('einfaches Token (kein Suffix) = erstes/einziges Vorkommen, unverändert', () => {
+      const r = extrahiereArtikel(OR_ART_77, '77');
+      expect(r!.bloecke).toHaveLength(4);
+    });
+  });
+
+  describe('M8 G23: Delegationsnorm-Verweis (man-template-referenz) wird erhalten', () => {
+    // Reale Fedlex-Struktur (ArGV1 art_1): <p class="man-template-referenz">
+    // (Art. 1 ArG)</p> direkt nach der Überschrift, vor Abs. 1 — bisher gedroppt.
+    const ARGV1_ART_1 = `<article id="art_1"><a name="a1"></a><h6 class="heading " role="heading"><span class="display-icon"></span><a href="#art_1"><b>Art. 1</b> Arbeitnehmer</a></h6><div class="collapseable"><p class="man-template-referenz"> (Art. 1 ArG)</p><p class="absatz "><sup>1</sup>&nbsp;Arbeitnehmer ist jede Person, die in einem Betrieb beschäftigt wird.</p></div></article>`;
+
+    it('grundlage = «(Art. 1 ArG)»; bleibt nicht im Absatztext', () => {
+      const r = extrahiereArtikel(ARGV1_ART_1, '1')!;
+      expect(r.grundlage).toBe('(Art. 1 ArG)');
+      expect(r.bloecke[0].absatz).toBe('1');
+      expect(r.bloecke[0].text).toMatch(/^Arbeitnehmer ist jede Person/);
+      expect(r.bloecke.map((b) => b.text).join(' ')).not.toContain('ArG)'); // nicht geleakt
+    });
+
+    it('Artikel ohne Verweis → grundlage undefined (nichts fabriziert, §7)', () => {
+      const r = extrahiereArtikel(HTML_ZPO, '96')!;
+      expect(r.grundlage).toBeUndefined();
+    });
+  });
+
+  describe('M7 Regression: <th>-Tabelle bleibt unverändert (colspan dort konsistent)', () => {
+    // <th>-Tabellen tragen colspan auf Kopf UND Daten (BVG-Stil) → durch
+    // konsistentes Ignorieren korrekt ausgerichtet. Der kpf-Pfad darf NICHT
+    // greifen; Kopf = letzte <th>-Zeile, Daten unverändert (byte-gleich).
+    const TH_TAB = `<article id="art_x"><div class="collapseable"><table border="1"><tr><th colspan="2"><p>Altersjahr</p></th><th><p>Ansatz</p></th></tr><tr><td colspan="2"><p>25–34</p></td><td><p>7</p></td></tr></table></div></article>`;
+
+    it('Kopf = <th>-Zeile ohne colspan-Expansion; Datenzeile 2 Zellen', () => {
+      const b = extrahiereArtikel(TH_TAB, 'x')!.bloecke.find((x) => x.mehrspaltig)!;
+      expect(b.mehrspaltig!.kopf).toEqual(['Altersjahr', 'Ansatz']);
+      expect(b.mehrspaltig!.zeilen).toEqual([['25–34', '7']]);
+    });
   });
 
   describe('<dt>-eingebetteter Text + leeres <dd> (Fedlex-Sonderform, ZPO art_250 Ziff. 15)', () => {
@@ -257,10 +366,12 @@ describe('alleArtikelTokens', () => {
     expect(tokens).not.toContain('SchlusstitelUebergang');
   });
 
-  it('dedupliziert Tokens (nur erster Vorkommen)', () => {
+  it('M9/G7: doppeltes Token wird nicht verworfen, sondern __2-suffixiert', () => {
+    // Geändert mit M9 (§6 fachliche Änderung): das zweite Vorkommen eines Tokens
+    // ging zuvor stumm verloren («erster gewinnt») — jetzt als «__2» erhalten,
+    // damit der zweite Artikel (z.B. KKV 126z tredecies) nicht fehlt (§8).
     const tokens = alleArtikelTokens(HTML_MIT_DUPLIKATEN);
-    expect(tokens).toEqual(['1', '2']);
-    expect(tokens).toHaveLength(2);
+    expect(tokens).toEqual(['1', '1__2', '2']);
   });
 
   it('liefert leeres Array bei leerem HTML', () => {

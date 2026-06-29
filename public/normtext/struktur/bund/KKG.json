@@ -1,5 +1,44 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "221.214.1",
+  "titel": "Bundesgesetz über den Konsumkredit",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 97 und 122 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 14. Dezember 1998,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "<i>BBl <b>1999</b> 3155</i>",
+    "links": [],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,14 +53,14 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -30,14 +69,14 @@
     },
     {
      "nr": "4",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -59,14 +98,14 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -99,14 +138,14 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -150,14 +189,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -166,14 +205,14 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -199,14 +238,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -219,10 +258,10 @@
     },
     {
      "nr": "10",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -231,10 +270,10 @@
     },
     {
      "nr": "11",
-     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR 171.10).",
+     "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG; SR <b>171.10</b>).",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -333,14 +372,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS 2015 4107; BBl 2014 921 2993).",
+     "text": "Fassung gemäss Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4107; BBl <b>2014</b> 921 2993).",
      "links": [
       {
-       "label": "AS 2015 4107",
+       "label": "AS <b>2015</b> 4107",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/689"
       },
       {
-       "label": "BBl 2014 921",
+       "label": "BBl <b>2014</b> 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/139"
       },
       {
@@ -353,14 +392,14 @@
     },
     {
      "nr": "13",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -369,14 +408,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS 2015 4107; BBl 2014 921 2993).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4107; BBl <b>2014</b> 921 2993).",
      "links": [
       {
-       "label": "AS 2015 4107",
+       "label": "AS <b>2015</b> 4107",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/689"
       },
       {
-       "label": "BBl 2014 921",
+       "label": "BBl <b>2014</b> 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/139"
       },
       {
@@ -389,14 +428,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -405,10 +444,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -417,14 +456,14 @@
     },
     {
      "nr": "17",
-     "text": "Dritter Satz eingefügt durch Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS 2015 4107; BBl 2014 921 2993).",
+     "text": "Dritter Satz eingefügt durch Ziff. II des BG vom 19. Juni 2015 (Revision des Widerrufsrechts), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4107; BBl <b>2014</b> 921 2993).",
      "links": [
       {
-       "label": "AS 2015 4107",
+       "label": "AS <b>2015</b> 4107",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/689"
       },
       {
-       "label": "BBl 2014 921",
+       "label": "BBl <b>2014</b> 921",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/139"
       },
       {
@@ -516,14 +555,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Ausdruck gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
+     "text": "Ausdruck gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -539,10 +578,10 @@
     },
     {
      "nr": "20",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
       }
      ],
@@ -551,10 +590,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -563,10 +602,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -588,14 +627,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -617,14 +656,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -633,14 +672,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -662,14 +701,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -702,14 +741,14 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Aufgehoben durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, mit Wirkung seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Aufgehoben durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, mit Wirkung seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -718,10 +757,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 281.1",
+     "text": "SR <b>281.1</b>",
      "links": [
       {
-       "label": "SR 281.1",
+       "label": "SR <b>281.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
@@ -730,14 +769,14 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -759,14 +798,14 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -799,14 +838,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -815,14 +854,14 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -835,14 +874,14 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -851,14 +890,14 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -884,14 +923,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -924,14 +963,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -962,14 +1001,14 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -982,10 +1021,10 @@
     },
     {
      "nr": "40",
-     "text": "SR 241",
+     "text": "SR <b>241</b>",
      "links": [
       {
-       "label": "SR 241",
+       "label": "SR <b>241</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1988/223_223_223"
       }
      ],
@@ -1027,14 +1066,14 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1043,10 +1082,10 @@
     },
     {
      "nr": "44",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -1068,14 +1107,14 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -1132,14 +1171,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1161,14 +1200,14 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS 2018 5247; BBl 2015 8901).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 (AS <b>2018</b> 5247; BBl <b>2015</b> 8901).",
      "links": [
       {
-       "label": "AS 2018 5247",
+       "label": "AS <b>2018</b> 5247",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/801"
       },
       {
-       "label": "BBl 2015 8901",
+       "label": "BBl <b>2015</b> 8901",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
@@ -1190,14 +1229,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {
@@ -1223,14 +1262,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS 2015 4111; BBl 2014 3259 3279).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 4111; BBl <b>2014</b> 3259 3279).",
      "links": [
       {
-       "label": "AS 2015 4111",
+       "label": "AS <b>2015</b> 4111",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/690"
       },
       {
-       "label": "BBl 2014 3259",
+       "label": "BBl <b>2014</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/678"
       },
       {

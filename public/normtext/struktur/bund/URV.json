@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "231.11",
+  "titel": "Verordnung über das Urheberrecht und verwandte Schutzrechte",
+  "erlassdatum": "vom 26. April 1993 (Stand am 1. Juli 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 39b, 55 Absatz 2 und 78 des Urheberrechtsgesetzes vom 9. Oktober 1992 (URG), auf Artikel 2 Absatz 2 des Bundesgesetzes vom 24. März 1995 über Statut und Aufgaben des Eidgenössischen Instituts für Geistiges Eigentum (IGEG) und auf Artikel 46a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 (RVOV),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>231.1</b>",
+    "links": [
+     {
+      "label": "SR <b>231.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/1798_1798_1798"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>172.010.31</b>",
+    "links": [
+     {
+      "label": "SR <b>172.010.31</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1995/5050_5050_5050"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>172.010</b>",
+    "links": [
+     {
+      "label": "SR <b>172.010</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427).",
+    "links": [
+     {
+      "label": "AS <b>2008</b> 2427",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -33,10 +102,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
@@ -45,26 +114,26 @@
     },
     {
      "nr": "6",
-     "text": "[AS 1996 1651; 2000 1157; 2008 5949 Ziff. II. AS 2009 6137 Ziff. II 1]. Siehe heute: Art. 8a ff. der Regierungs- und Verwaltungsorganisationsverordnung vom 25. Nov. 1998 (SR 172.010.1).",
+     "text": "[AS <b>1996 </b>1651; <b>2000 </b>1157; <b>2008 </b>5949 Ziff. II. AS <b>2009</b> 6137 Ziff. II 1]. Siehe heute: Art. 8<i>a</i> ff. der Regierungs- und Verwaltungsorganisationsverordnung vom 25. Nov. 1998 (SR <b>172.010.1</b>).",
      "links": [
       {
-       "label": "AS 1996 1651",
+       "label": "AS <b>1996 </b>1651",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/1651_1651_1651"
       },
       {
-       "label": "2000 1157",
+       "label": "<b>2000 </b>1157",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/188"
       },
       {
-       "label": "2008 5949",
+       "label": "<b>2008 </b>5949",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/819"
       },
       {
-       "label": "AS 2009 6137",
+       "label": "AS <b>2009</b> 6137",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/751"
       },
       {
-       "label": "SR 172.010.1",
+       "label": "SR <b>172.010.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/170"
       }
      ],
@@ -105,10 +174,10 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -117,14 +186,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152). Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       },
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
@@ -150,10 +219,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
@@ -194,10 +263,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -221,10 +290,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Aufgehoben durch Ziff. I der V vom 25. Okt. 1995, mit Wirkung seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Aufgehoben durch Ziff. I der V vom 25. Okt. 1995, mit Wirkung seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -280,10 +349,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -369,10 +438,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss bei Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss bei Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -381,10 +450,10 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -393,10 +462,10 @@
     },
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS 1995 5152).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 1995, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 5152).",
      "links": [
       {
-       "label": "AS 1995 5152",
+       "label": "AS <b>1995</b> 5152",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5152_5152_5152"
       }
      ],
@@ -427,15 +496,16 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Kapitel: Hilfeleistung beim Verbringen von Waren ins Zollgebiet oder aus dem Zollgebiet"
     }
    ]
   },
@@ -474,10 +544,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "SR 631.035",
+     "text": "SR <b>631.035</b>",
      "links": [
       {
-       "label": "SR 631.035",
+       "label": "SR <b>631.035</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/255"
       }
      ],
@@ -486,10 +556,10 @@
     },
     {
      "nr": "25",
-     "text": "SR 232.148",
+     "text": "SR <b>232.148</b>",
      "links": [
       {
-       "label": "SR 232.148",
+       "label": "SR <b>232.148</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2016/777"
       }
      ],
@@ -511,18 +581,18 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "[BS 2 836; AS 1956 1692; 1978 1692; 1982 523]",
+     "text": "[BS <b>2 </b>836; AS <b>1956 </b>1692; <b>1978 </b>1692; <b>1982 </b>523]",
      "links": [
       {
-       "label": "AS 1956 1692",
+       "label": "AS <b>1956 </b>1692",
        "url": "https://fedlex.data.admin.ch/eli/oc/1956/1692_1802_1813"
       },
       {
-       "label": "1978 1692",
+       "label": "<b>1978 </b>1692",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/1692_1692_1692"
       },
       {
-       "label": "1982 523",
+       "label": "<b>1982 </b>523",
        "url": "https://fedlex.data.admin.ch/eli/oc/1982/523_523_523"
       }
      ],
@@ -531,10 +601,10 @@
     },
     {
      "nr": "29",
-     "text": "[AS 1982 525]",
+     "text": "[AS <b>1982 </b>525]",
      "links": [
       {
-       "label": "AS 1982 525",
+       "label": "AS <b>1982 </b>525",
        "url": "https://fedlex.data.admin.ch/eli/oc/1982/525_525_525"
       }
      ],
@@ -543,10 +613,10 @@
     },
     {
      "nr": "30",
-     "text": "[AS 1958 273]",
+     "text": "[AS <b>1958 </b>273]",
      "links": [
       {
-       "label": "AS 1958 273",
+       "label": "AS <b>1958 </b>273",
        "url": "https://fedlex.data.admin.ch/eli/oc/1958/273_285_279"
       }
      ],
@@ -558,7 +628,8 @@
      "text": "Ursprünglich 4. Kapitel",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Kapitel: Schlussbestimmungen"
     }
    ]
   },
@@ -590,10 +661,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "SR 172.041.0",
+     "text": "SR <b>172.041.0</b>",
      "links": [
       {
-       "label": "SR 172.041.0",
+       "label": "SR <b>172.041.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/760_780_777"
       }
      ],
@@ -602,15 +673,16 @@
     },
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2427)",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427)",
      "links": [
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Gebühren"
     }
    ]
   },
@@ -661,10 +733,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -686,10 +758,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I 1 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS 2025 376).",
+     "text": "Fassung gemäss Ziff. I 1 der V vom 14. Mai 2025 über die Einführung eines vereinfachten Verfahrens zur Vernichtung von Kleinsendungen im Immaterialgüterrecht, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 376).",
      "links": [
       {
-       "label": "AS 2025 376",
+       "label": "AS <b>2025</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/376"
       }
      ],
@@ -698,15 +770,16 @@
     },
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2008, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1a. Kapitel: Beobachtungsstelle für technische Massnahmen"
     }
    ]
   },
@@ -723,10 +796,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS 2017 6213).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6213).",
      "links": [
       {
-       "label": "AS 2017 6213",
+       "label": "AS <b>2017</b> 6213",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/690"
       }
      ],
@@ -757,14 +830,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Anhang 2 Ziff. 3 der Behindertengleichstellungsverordnung vom 19. Nov. 2003 (AS 2003 4501). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Eingefügt durch Anhang 2 Ziff. 3 der Behindertengleichstellungsverordnung vom 19. Nov. 2003 (AS <b>2003</b> 4501). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 2003 4501",
+       "label": "AS <b>2003</b> 4501",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/668"
       },
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],
@@ -850,10 +923,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 1778). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS 2008 2427).",
+     "text": "Eingefügt durch Ziff. I der V vom 17. Mai 1995 (AS 1995 1778). Aufgehoben durch Ziff. I der V vom 21. Mai 2008, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2427).",
      "links": [
       {
-       "label": "AS 2008 2427",
+       "label": "AS <b>2008</b> 2427",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/348"
       }
      ],

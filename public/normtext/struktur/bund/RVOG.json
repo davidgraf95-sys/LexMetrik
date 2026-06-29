@@ -1,5 +1,66 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "172.010",
+  "titel": "Regierungs- und Verwaltungsorganisationsgesetz",
+  "erlassdatum": "vom 21. März 1997 (Stand am 1. Mai 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 173 Absatz 2 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 16. Oktober 1996,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "Fassung gemäss Ziff. I des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur), in Kraft seit 1. April 2012 (AS <b>2012</b> 941; BBl <b>2009</b> 8513).",
+    "links": [
+     {
+      "label": "AS <b>2012</b> 941",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2012/159"
+     },
+     {
+      "label": "BBl <b>2009</b> 8513",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2009/1469"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>1996 </b>V 1",
+    "links": [
+     {
+      "label": "BBl <b>1996 </b>V 1",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1996/5_1_1_1"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -115,14 +176,14 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, in Kraft seit 1. Febr. 2003 (AS 2003 187; BBl 2001 3845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, in Kraft seit 1. Febr. 2003 (AS <b>2003</b> 187; BBl <b>2001</b> 3845).",
      "links": [
       {
-       "label": "AS 2003 187",
+       "label": "AS <b>2003</b> 187",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/24"
       },
       {
-       "label": "BBl 2001 3845",
+       "label": "BBl <b>2001</b> 3845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/686"
       }
      ],
@@ -131,14 +192,14 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, in Kraft seit 1. Febr. 2003 (AS 2003 187; BBl 2001 3845).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, in Kraft seit 1. Febr. 2003 (AS <b>2003</b> 187; BBl <b>2001</b> 3845).",
      "links": [
       {
-       "label": "AS 2003 187",
+       "label": "AS <b>2003</b> 187",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/24"
       },
       {
-       "label": "BBl 2001 3845",
+       "label": "BBl <b>2001</b> 3845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/686"
       }
      ],
@@ -147,14 +208,14 @@
     },
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS 2011 5859; BBl 2010 3377 3413).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>5859; BBl <b>2010</b> 3377 3413).",
      "links": [
       {
-       "label": "AS 2011 5859",
+       "label": "AS <b>2011 </b>5859",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/807"
       },
       {
-       "label": "BBl 2010 3377",
+       "label": "BBl <b>2010</b> 3377",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/600"
       },
       {
@@ -264,26 +325,26 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811). Die Berichtigung der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG - SR 171.10) vom 22. Mai 2017, publiziert am 30. Mai 2017 betrifft nur den französischen Text (AS 2017 3259).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811). Die Berichtigung der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG - SR <b>171.10</b>) vom 22. Mai 2017, publiziert am 30. Mai 2017 betrifft nur den französischen Text (AS <b>2017</b> 3259).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       },
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       },
       {
-       "label": "AS 2017 3259",
+       "label": "AS <b>2017</b> 3259",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/333"
       }
      ],
@@ -389,18 +450,18 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -449,10 +510,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -501,18 +562,18 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -542,18 +603,18 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -598,18 +659,18 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -618,18 +679,18 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -638,18 +699,18 @@
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -765,18 +826,18 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -785,18 +846,18 @@
     },
     {
      "nr": "35",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -805,18 +866,18 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -825,18 +886,18 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -862,18 +923,18 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -882,10 +943,10 @@
     },
     {
      "nr": "39",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS 2000 273; BBl 1999 4809 5979).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS <b>2000</b> 273; <i>BBl <b>1999</b> 4809 </i>5979).",
      "links": [
       {
-       "label": "AS 2000 273",
+       "label": "AS <b>2000</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/54"
       },
       {
@@ -915,14 +976,14 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS 2000 2095; BBl 1997 III 1568, 1999 2538).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2095; BBl <b>1997</b> III 1568, <i><b>1999</b> 2538</i>).",
      "links": [
       {
-       "label": "AS 2000 2095",
+       "label": "AS <b>2000</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/318"
       },
       {
-       "label": "BBl 1997 III 1568",
+       "label": "BBl <b>1997</b> III 1568",
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1568_1401_1291"
       }
      ],
@@ -1113,14 +1174,14 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Aufgehoben durch Anhang Ziff. 2 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), mit Wirkung seit 1. Jan. 2016 (AS 2015 1583; BBl 2014 767).",
+     "text": "Aufgehoben durch Anhang Ziff. 2 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],
@@ -1169,18 +1230,18 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -1206,10 +1267,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "SR 173.32",
+     "text": "SR <b>173.32</b>",
      "links": [
       {
-       "label": "SR 173.32",
+       "label": "SR <b>173.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/352"
       }
      ],
@@ -1218,10 +1279,10 @@
     },
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang Ziff. 9 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS 2006 2197 1069; BBl 2001 4202).",
+     "text": "Fassung gemäss Anhang Ziff. 9 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
-       "label": "AS 2006 2197",
+       "label": "AS <b>2006</b> 2197",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
       },
       {
@@ -1229,7 +1290,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/188"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
@@ -1270,14 +1331,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. II 5 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS 2008 3437; BBl 2007 6121).",
+     "text": "Fassung gemäss Ziff. II 5 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008 </b>3437; BBl <b>2007</b> 6121).",
      "links": [
       {
-       "label": "AS 2008 3437",
+       "label": "AS <b>2008 </b>3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/447"
       },
       {
-       "label": "BBl 2007 6121",
+       "label": "BBl <b>2007</b> 6121",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/885"
       }
      ],
@@ -1286,14 +1347,14 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -1302,14 +1363,14 @@
     },
     {
      "nr": "54",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -1318,14 +1379,14 @@
     },
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS 2017 5205; BBl 2016 4691).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. März 2017 über das Stabilisierungsprogramm 2017–2019, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 5205; BBl <b>2016 </b>4691).",
      "links": [
       {
-       "label": "AS 2017 5205",
+       "label": "AS <b>2017</b> 5205",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/573"
       },
       {
-       "label": "BBl 2016 4691",
+       "label": "BBl <b>2016 </b>4691",
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1047"
       }
      ],
@@ -1366,19 +1427,20 @@
    "fussnoten": [
     {
      "nr": "56",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweites Kapitel: Planung und Koordination"
     }
    ]
   },
@@ -1414,10 +1476,10 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS 2000 273; BBl 1999 4809 5979).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS <b>2000</b> 273; <i>BBl <b>1999</b> 4809 </i>5979).",
      "links": [
       {
-       "label": "AS 2000 273",
+       "label": "AS <b>2000</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/54"
       },
       {
@@ -1447,14 +1509,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS 2000 2095; BBl 1997 III 1568, 1999 2538).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2095; BBl <b>1997</b> III 1568, <i><b>1999</b> 2538</i>).",
      "links": [
       {
-       "label": "AS 2000 2095",
+       "label": "AS <b>2000</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/318"
       },
       {
-       "label": "BBl 1997 III 1568",
+       "label": "BBl <b>1997</b> III 1568",
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1568_1401_1291"
       }
      ],
@@ -1463,10 +1525,10 @@
     },
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS 2000 273; BBl 1999 4809 5979).",
+     "text": "Fassung gemäss Ziff. I des BG vom 8. Okt. 1999, in Kraft seit 1. Jan. 2000 (AS <b>2000</b> 273; <i>BBl <b>1999</b> 4809 </i>5979).",
      "links": [
       {
-       "label": "AS 2000 273",
+       "label": "AS <b>2000</b> 273",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/54"
       },
       {
@@ -1479,14 +1541,14 @@
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS 2000 2095; BBl 1997 III 1568, 1999 2538).",
+     "text": "Fassung gemäss Ziff. I des BG vom 24. März 2000, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2095; BBl <b>1997</b> III 1568, <i><b>1999</b> 2538</i>).",
      "links": [
       {
-       "label": "AS 2000 2095",
+       "label": "AS <b>2000</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/318"
       },
       {
-       "label": "BBl 1997 III 1568",
+       "label": "BBl <b>1997</b> III 1568",
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1568_1401_1291"
       }
      ],
@@ -1544,14 +1606,14 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
@@ -1560,14 +1622,14 @@
     },
     {
      "nr": "64",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
@@ -1576,35 +1638,37 @@
     },
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Drittes Kapitel: Externe Beratung und ausserparlamentarische Kommissionen"
     },
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Externe Beratung"
     }
    ]
   },
@@ -1655,14 +1719,14 @@
    "fussnoten": [
     {
      "nr": "82",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 23. Juni 2000 über Titel und Orden ausländischer Behörden, in Kraft seit 1. Febr. 2001 (AS 2001 114; BBl 1999 7922).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 23. Juni 2000 über Titel und Orden ausländischer Behörden, in Kraft seit 1. Febr. 2001 (AS <b>2001</b> 114; BBl <b>1999</b> 7922).",
      "links": [
       {
-       "label": "AS 2001 114",
+       "label": "AS <b>2001</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/21"
       },
       {
-       "label": "BBl 1999 7922",
+       "label": "BBl <b>1999</b> 7922",
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
       }
      ],
@@ -1688,14 +1752,14 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Fassung gemäss Anhang Ziff. 4 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS 2005 5685; BBl 2003 1288).",
+     "text": "Fassung gemäss Anhang Ziff. 4 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
-       "label": "AS 2005 5685",
+       "label": "AS <b>2005</b> 5685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/782"
       },
       {
-       "label": "BBl 2003 1288",
+       "label": "BBl <b>2003</b> 1288",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
@@ -1721,22 +1785,22 @@
    "fussnoten": [
     {
      "nr": "89",
-     "text": "Eingefügt durch Ziff. I des BG vom 8. Okt. 1999 (AS 2000 289; BBl 1999 7922). Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Eingefügt durch Ziff. I des BG vom 8. Okt. 1999 (AS <b>2000</b> 289; BBl <b>1999</b> 7922). Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2000 289",
+       "label": "AS <b>2000</b> 289",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/56"
       },
       {
-       "label": "BBl 1999 7922",
+       "label": "BBl <b>1999</b> 7922",
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
       },
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
@@ -1762,14 +1826,14 @@
    "fussnoten": [
     {
      "nr": "94",
-     "text": "[AS 1979 114; 1983 170, 931 Art. 59 Ziff. 2; 1985 699; 1987 226 Ziff. II 2, 808; 1989 2116; 1990 3 Art. 1, 1530 Ziff. II 1, 1587 Art. 1; 1991 362 Ziff. I; 1992 2 Art. 1, 288 Anhang Ziff. 2, 510, 581 Anhang Ziff. 2; 1993 1770; 1995 978, 4093 Anhang Ziff. 2, 4362 Art. 1, 5050 Anhang Ziff. 1; 1996 546 Anhang Ziff. 1, 1486, 1498 Anhang Ziff. 1]",
+     "text": "[AS <b>1979</b> 114; <b>1983</b> 170,931 Art. 59 Ziff. 2; <b>1985</b> 699; <b>1987</b> 226 Ziff. II 2, 808; <b>1989</b> 2116; <b>1990</b> 3 Art. 1, 1530 Ziff. II 1, 1587 Art. 1; <b>1991</b> 362 Ziff. I; <b>1992</b> 2 Art. 1, 288 Anhang Ziff. 2, 510, 581 Anhang Ziff. 2; <b>1993</b> 1770; <b>1995</b> 978, 4093 Anhang Ziff. 2, 4362 Art. 1, 5050 Anhang Ziff. 1; <b>1996</b> 546 Anhang Ziff. 1, 1486, 1498 Anhang Ziff. 1]",
      "links": [
       {
-       "label": "AS 1979 114",
+       "label": "AS <b>1979</b> 114",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/114_114_114"
       },
       {
-       "label": "1983 170",
+       "label": "<b>1983</b> 170",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/170_170_170"
       },
       {
@@ -1777,11 +1841,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/931_931_931"
       },
       {
-       "label": "1985 699",
+       "label": "<b>1985</b> 699",
        "url": "https://fedlex.data.admin.ch/eli/oc/1985/699_699_699"
       },
       {
-       "label": "1987 226",
+       "label": "<b>1987</b> 226",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/226_226_226"
       },
       {
@@ -1789,11 +1853,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/808_808_808"
       },
       {
-       "label": "1989 2116",
+       "label": "<b>1989</b> 2116",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/2116_2116_2116"
       },
       {
-       "label": "1990 3",
+       "label": "<b>1990</b> 3",
        "url": "https://fedlex.data.admin.ch/eli/oc/1990/3_3_3"
       },
       {
@@ -1805,11 +1869,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1990/1587_1587_1587"
       },
       {
-       "label": "1991 362",
+       "label": "<b>1991</b> 362",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
       },
       {
-       "label": "1992 2",
+       "label": "<b>1992</b> 2",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/2_2_2"
       },
       {
@@ -1825,11 +1889,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/581_581_581"
       },
       {
-       "label": "1993 1770",
+       "label": "<b>1993</b> 1770",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/1770_1770_1770"
       },
       {
-       "label": "1995 978",
+       "label": "<b>1995</b> 978",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/978_978_978"
       },
       {
@@ -1845,7 +1909,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5050_5050_5050"
       },
       {
-       "label": "1996 546",
+       "label": "<b>1996</b> 546",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/546_546_546"
       },
       {
@@ -1865,7 +1929,8 @@
      "text": "Ursprünglich Drittes Kapitel.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Siebtes Kapitel: Schlussbestimmungen"
     }
    ]
   },
@@ -1884,14 +1949,14 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Aufgehoben durch Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, mit Wirkung seit 1. Febr. 2003 (AS 2003 187; BBl 2001 3845).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 22. März 2002 über die Anpassung von Organisationsbestimmungen des Bundesrechts, mit Wirkung seit 1. Febr. 2003 (AS <b>2003</b> 187; BBl <b>2001</b> 3845).",
      "links": [
       {
-       "label": "AS 2003 187",
+       "label": "AS <b>2003</b> 187",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/24"
       },
       {
-       "label": "BBl 2001 3845",
+       "label": "BBl <b>2001</b> 3845",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/686"
       }
      ],
@@ -1915,14 +1980,14 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Aufgehoben durch Art. 65 Ziff. 2 des Finanzhaushaltgesetzes vom 7. Okt. 2005, mit Wirkung seit 1. Mai 2006 (AS 2006 1275; BBl 2005 5).",
+     "text": "Aufgehoben durch Art. 65 Ziff. 2 des Finanzhaushaltgesetzes vom 7. Okt. 2005, mit Wirkung seit 1. Mai 2006 (AS <b>2006 </b>1275; BBl <b>2005</b> 5).",
      "links": [
       {
-       "label": "AS 2006 1275",
+       "label": "AS <b>2006 </b>1275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/227"
       },
       {
-       "label": "BBl 2005 5",
+       "label": "BBl <b>2005</b> 5",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/2"
       }
      ],
@@ -1976,26 +2041,26 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I des BG vom 24. März 2000 (AS 2000 2095; BBl 1997 III 1568, 1999 2538). Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 24. März 2000 (AS <b>2000 </b>2095; BBl <b>1997</b> III 1568, <i><b>1999</b> 2538</i>). Fassung gemäss Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2000 2095",
+       "label": "AS <b>2000 </b>2095",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/318"
       },
       {
-       "label": "BBl 1997 III 1568",
+       "label": "BBl <b>1997</b> III 1568",
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/3_1568_1401_1291"
       },
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -2025,18 +2090,18 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -2062,18 +2127,18 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2015 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -2099,18 +2164,18 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -2140,14 +2205,14 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS 2015 1583; BBl 2014 767).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],
@@ -2156,14 +2221,14 @@
     },
     {
      "nr": "43",
-     "text": "Aufgehoben durch Ziff. I 1 des BG vom 27. Sept. 2024 über die Massnahmen zur finanziellen und administrativen Entlastung ab 2025, mit Wirkung seit 1. Mai 2025 (AS 2025 196; BBl 2024 558).",
+     "text": "Aufgehoben durch Ziff. I 1 des BG vom 27. Sept. 2024 über die Massnahmen zur finanziellen und administrativen Entlastung ab 2025, mit Wirkung seit 1. Mai 2025 (AS <b>2025</b> 196; BBl <b>2024</b> 558).",
      "links": [
       {
-       "label": "AS 2025 196",
+       "label": "AS <b>2025</b> 196",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/196"
       },
       {
-       "label": "BBl 2024 558",
+       "label": "BBl <b>2024</b> 558",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/558"
       }
      ],
@@ -2193,18 +2258,18 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
@@ -2213,23 +2278,24 @@
     },
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS 2013 4549; BBl 2002 2095, 2010 7811).",
+     "text": "Eingefügt durch Ziff. I des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 4549; BBl <b>2002</b> 2095, <b>2010</b> 7811).",
      "links": [
       {
-       "label": "AS 2013 4549",
+       "label": "AS <b>2013</b> 4549",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/810"
       },
       {
-       "label": "BBl 2002 2095",
+       "label": "BBl <b>2002</b> 2095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/286"
       },
       {
-       "label": "2010 7811",
+       "label": "<b>2010</b> 7811",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1440"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Staatssekretäre und Staatssekretärinnen"
     }
    ]
   },
@@ -2248,19 +2314,20 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 19. Dez. 2003 über das Entlastungsprogramm 2003, in Kraft seit 1. Jan. 2005 (AS 2004 1633; BBl 2003 5615).",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 19. Dez. 2003 über das Entlastungsprogramm 2003, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1633; BBl <b>2003</b> 5615).",
      "links": [
       {
-       "label": "AS 2004 1633",
+       "label": "AS <b>2004</b> 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/200"
       },
       {
-       "label": "BBl 2003 5615",
+       "label": "BBl <b>2003</b> 5615",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/887"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Drittes Kapitel: Gebühren"
     }
    ]
   },
@@ -2281,14 +2348,14 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002 (AS 2003 3543; BBl 2001 3467 5428). Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002 (AS <b>2003</b> 3543; BBl <b>2001 </b>3467 5428). Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2003 3543",
+       "label": "AS <b>2003</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/510"
       },
       {
-       "label": "BBl 2001 3467",
+       "label": "BBl <b>2001 </b>3467",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
       },
       {
@@ -2296,11 +2363,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/853"
       },
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -2334,19 +2401,20 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS 2008 5941; BBl 2007 6641).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2008 (Neuordnung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 5941; BBl <b>2007</b> 6641).",
      "links": [
       {
-       "label": "AS 2008 5941",
+       "label": "AS <b>2008</b> 5941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/818"
       },
       {
-       "label": "BBl 2007 6641",
+       "label": "BBl <b>2007</b> 6641",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1016"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Ausserparlamentarische Kommissionen"
     }
    ]
   },
@@ -2466,10 +2534,10 @@
    "fussnoten": [
     {
      "nr": "66",
-     "text": "In Kraft seit 1. Jan. 2010 (AS 2009 6135).",
+     "text": "In Kraft seit 1. Jan. 2010 (AS <b>2009</b> 6135).",
      "links": [
       {
-       "label": "AS 2009 6135",
+       "label": "AS <b>2009</b> 6135",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/750"
       }
      ],
@@ -2499,59 +2567,62 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Ursprünglich 3. Kap. Eingefügt durch Ziff. I des BG vom 24. März 2000 über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten, in Kraft seit 1. Sept. 2000 (AS 2000 1891; BBl 1999 9005).",
+     "text": "Ursprünglich 3. Kap. Eingefügt durch Ziff. I des BG vom 24. März 2000 über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 1891; BBl <b>1999</b> 9005).",
      "links": [
       {
-       "label": "AS 2000 1891",
+       "label": "AS <b>2000</b> 1891",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/293"
       },
       {
-       "label": "BBl 1999 9005",
+       "label": "BBl <b>1999</b> 9005",
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_9005_8381_7979"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Bearbeitung von Personendaten und von Daten juristischer Personen"
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Bearbeitung von Personendaten und von Daten juristischer Personen"
     },
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur) (AS 2012 941; BBl 2009 8513). Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur) (AS <b>2012</b> 941; BBl <b>2009</b> 8513). Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2012 941",
+       "label": "AS <b>2012</b> 941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/159"
       },
       {
-       "label": "BBl 2009 8513",
+       "label": "BBl <b>2009</b> 8513",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1469"
       },
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Geschäftsverwaltungssysteme"
     }
    ]
   },
@@ -2576,10 +2647,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -2628,14 +2699,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2644,35 +2715,37 @@
     },
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur), in Kraft seit 1. April 2012 (AS 2012 941; BBl 2009 8513).",
+     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2010 (Datenschutz bei der Benutzung der elektronischen Infrastruktur), in Kraft seit 1. April 2012 (AS <b>2012</b> 941; BBl <b>2009</b> 8513).",
      "links": [
       {
-       "label": "AS 2012 941",
+       "label": "AS <b>2012</b> 941",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/159"
       },
       {
-       "label": "BBl 2009 8513",
+       "label": "BBl <b>2009</b> 8513",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1469"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Bearbeitung von Personendaten und von Daten juristischer Personen bei der Nutzung der elektronischen Infrastruktur"
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Bearbeitung von Personendaten und von Daten juristischer Personen bei der Nutzung der elektronischen Infrastruktur"
     }
    ]
   },
@@ -2697,14 +2770,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2713,10 +2786,10 @@
     },
     {
      "nr": "75",
-     "text": "SR 235.1",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR 235.1",
+       "label": "SR <b>235.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
@@ -2746,14 +2819,14 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2783,14 +2856,14 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2799,14 +2872,14 @@
     },
     {
      "nr": "78",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2815,14 +2888,14 @@
     },
     {
      "nr": "79",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -2947,19 +3020,20 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 13 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Bearbeitung von Daten juristischer Personen"
     }
    ]
   },
@@ -2984,10 +3058,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "SR 152.3",
+     "text": "SR <b>152.3</b>",
      "links": [
       {
-       "label": "SR 152.3",
+       "label": "SR <b>152.3</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/355"
       }
      ],
@@ -3030,14 +3104,14 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002 (AS 2003 3543; BBl 2001 3467 5428). Aufgehoben durch Anhang Ziff. 2 des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345 7385).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002 (AS <b>2003</b> 3543; BBl <b>2001 </b>3467 5428). Aufgehoben durch Anhang Ziff. 2 des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345 7385).",
      "links": [
       {
-       "label": "AS 2003 3543",
+       "label": "AS <b>2003</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/510"
       },
       {
-       "label": "BBl 2001 3467",
+       "label": "BBl <b>2001 </b>3467",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
       },
       {
@@ -3045,11 +3119,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/853"
       },
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -3077,14 +3151,14 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Ursprünglich Art. 62, anschliessend Art. 61a. Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Ursprünglich Art. 62, anschliessend Art. 61<i>a</i>. Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
@@ -3093,19 +3167,20 @@
     },
     {
      "nr": "85",
-     "text": "Ursprünglich vor Art. 62. Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Ursprünglich vor Art. 62. Fassung gemäss Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Zweites Kapitel: Genehmigung kantonaler Erlasse"
     }
    ]
   },
@@ -3126,14 +3201,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
@@ -3142,19 +3217,20 @@
     },
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Drittes Kapitel: Information über Verträge der Kantone unter sich oder mit dem Ausland"
     }
    ]
   },
@@ -3175,15 +3251,16 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Ziff. I 1 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS 1999 3071; BBl 1998 2591).",
+     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Ziff. I 1 des BG vom 18. Juni 1999 über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 3071; <i>BBl <b>1998</b> 2591</i>).",
      "links": [
       {
-       "label": "AS 1999 3071",
+       "label": "AS <b>1999</b> 3071",
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/472"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Viertes Kapitel: Konzentriertes Entscheidverfahren"
     }
    ]
   },
@@ -3234,14 +3311,14 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS 2003 3543; BBl 2001 3467 5428).",
+     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS <b>2003</b> 3543; BBl <b>2001 </b>3467 5428).",
      "links": [
       {
-       "label": "AS 2003 3543",
+       "label": "AS <b>2003</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/510"
       },
       {
-       "label": "BBl 2001 3467",
+       "label": "BBl <b>2001 </b>3467",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
       },
       {
@@ -3250,7 +3327,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Fünftes Kapitel: Steuerbefreiung und Schutz des Eigentums des Bundes"
     }
    ]
   },
@@ -3284,14 +3362,14 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS 2003 3543; BBl 2001 3467 5428).",
+     "text": "Ursprünglich Zweites Kapitel. Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS <b>2003</b> 3543; BBl <b>2001 </b>3467 5428).",
      "links": [
       {
-       "label": "AS 2003 3543",
+       "label": "AS <b>2003</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/510"
       },
       {
-       "label": "BBl 2001 3467",
+       "label": "BBl <b>2001 </b>3467",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
       },
       {
@@ -3300,7 +3378,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Sechstes Kapitel: Hausrecht"
     }
    ]
   },
@@ -3325,14 +3404,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS 2003 3543; BBl 2001 3467 5428).",
+     "text": "Eingefügt durch Anhang Ziff. II 3 des Parlamentsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Dez. 2003 (AS <b>2003</b> 3543; BBl <b>2001 </b>3467 5428).",
      "links": [
       {
-       "label": "AS 2003 3543",
+       "label": "AS <b>2003</b> 3543",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/510"
       },
       {
-       "label": "BBl 2001 3467",
+       "label": "BBl <b>2001 </b>3467",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
       },
       {
@@ -3345,14 +3424,14 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3365,14 +3444,14 @@
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3385,14 +3464,14 @@
     },
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3405,14 +3484,14 @@
     },
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3425,14 +3504,14 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3445,14 +3524,14 @@
     },
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS 2015 969; BBl 2012 7465).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS <b>2015</b> 969; BBl <b>2012 </b>7465).",
      "links": [
       {
-       "label": "AS 2015 969",
+       "label": "AS <b>2015</b> 969",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/177"
       },
       {
-       "label": "BBl 2012 7465",
+       "label": "BBl <b>2012 </b>7465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1138"
       }
      ],
@@ -3461,14 +3540,14 @@
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3481,14 +3560,14 @@
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS 2015 969; BBl 2012 7465).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS <b>2015</b> 969; BBl <b>2012 </b>7465).",
      "links": [
       {
-       "label": "AS 2015 969",
+       "label": "AS <b>2015</b> 969",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/177"
       },
       {
-       "label": "BBl 2012 7465",
+       "label": "BBl <b>2012 </b>7465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1138"
       }
      ],
@@ -3518,14 +3597,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 8. Okt. 2004 über die vorläufige Anwendung von völkerrechtlichen Verträgen, in Kraft seit 1. April 2005 (AS 2005 1245; BBl 2004 761 1017).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 8. Okt. 2004 über die vorläufige Anwendung von völkerrechtlichen Verträgen, in Kraft seit 1. April 2005 (AS <b>2005</b> 1245; BBl <b>2004 </b>761 1017).",
      "links": [
       {
-       "label": "AS 2005 1245",
+       "label": "AS <b>2005</b> 1245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/184"
       },
       {
-       "label": "BBl 2004 761",
+       "label": "BBl <b>2004 </b>761",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/149"
       },
       {
@@ -3538,14 +3617,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3558,14 +3637,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS 2015 969; BBl 2012 7465).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 26. Sept. 2014 über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge, in Kraft seit 1. Mai 2015 (AS <b>2015</b> 969; BBl <b>2012 </b>7465).",
      "links": [
       {
-       "label": "AS 2015 969",
+       "label": "AS <b>2015</b> 969",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/177"
       },
       {
-       "label": "BBl 2012 7465",
+       "label": "BBl <b>2012 </b>7465",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1138"
       }
      ],
@@ -3595,14 +3674,14 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471 5315).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -3636,14 +3715,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563 2803).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {
@@ -3677,14 +3756,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563 2803).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {
@@ -3718,14 +3797,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563 2803).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {

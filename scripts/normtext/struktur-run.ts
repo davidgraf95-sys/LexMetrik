@@ -10,6 +10,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { extrahiereStruktur } from './struktur-extrahiere.ts';
+import { extrahiereKopf } from './kopf-extrahiere.ts';
 import { extrahiereFussnoten, fnDefinitionen, type Fussnote } from './fussnoten-extrahiere.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 
@@ -40,17 +41,21 @@ for (const reg of bund) {
   // Deterministisch sortierte Token-Schlüssel für diff-freundliches JSON.
   const sortiert: Record<string, unknown> = {};
   for (const tok of Object.keys(struktur).sort()) {
-    const { randtitelFnIds, ...rest } = struktur[tok];
+    const { randtitelFn, ...rest } = struktur[tok];
     const perArt = fussnoten[tok] ?? [];
-    // Section-heading-Fussnoten auflösen (absatz/item null → am Artikel/Randtitel).
-    const rfn = (randtitelFnIds ?? [])
-      .map((idd) => defs.get(idd))
-      .filter((f): f is Fussnote => !!f && !perArt.some((p) => p.nr === f.nr))
-      .map((f) => ({ ...f, absatz: null, item: null }));
+    // Section-heading-Fussnoten auflösen (G11): absatz/item null → am Kopf, und
+    // `sektion` trägt das Quell-Heading (Label), damit der Renderer den Marker am
+    // richtigen Sektions-/Randtitel-Kopf setzt statt anonym auf Artikelebene.
+    const rfn = (randtitelFn ?? [])
+      .map((rf) => { const f = defs.get(rf.fnId); return f ? { ...f, absatz: null, item: null, sektion: rf.label } : null; })
+      .filter((f): f is Fussnote => !!f && !perArt.some((p) => p.nr === f.nr));
     const alle = [...perArt, ...rfn];
     sortiert[tok] = alle.length ? { ...rest, fussnoten: alle } : rest;
   }
-  writeFileSync(`${ZIEL}/${reg.key}.json`, JSON.stringify({ erzeugt, artikel: sortiert }, null, 1) + '\n', 'utf8');
+  // M5: Erlass-Kopf (preface/preamble) als Sidecar — golden-neutral (kein Snapshot).
+  const kopf = extrahiereKopf(html);
+  const doc = kopf ? { erzeugt, kopf, artikel: sortiert } : { erzeugt, artikel: sortiert };
+  writeFileSync(`${ZIEL}/${reg.key}.json`, JSON.stringify(doc, null, 1) + '\n', 'utf8');
   geschrieben++;
 }
 

@@ -1,5 +1,73 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "211.412.11",
+  "titel": "Bundesgesetz über das bäuerliche Bodenrecht",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 22, 31 und 64 der Bundesverfassung,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "nach Einsicht in die Botschaft des Bundesrates vom 19. Oktober 1988,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "[BS<b> 1</b> 3; AS <b>1969</b> 1249, <b>1996</b> 2502]. Den genannten Bestimmungen entsprechen heute die Art. 26, <i>36</i>, <i>104 </i>und <i>122 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
+    "links": [
+     {
+      "label": "AS <b>1969</b> 1249",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1969/1249_1265_1267"
+     },
+     {
+      "label": "<b>1996</b> 2502",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/2502_2502_2502"
+     },
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "Fassung gemäss Anhang Ziff. 3 des Gerichtsstandsgesetzes vom 24. März 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000 </b>2355; <i>BBl <b>1999</b> 2829</i>).",
+    "links": [
+     {
+      "label": "AS <b>2000 </b>2355",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2000/374"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "BBl <b>1988</b> III 953",
+    "links": [
+     {
+      "label": "BBl <b>1988</b> III 953",
+      "url": "https://fedlex.data.admin.ch/eli/fga/1988/3_953__"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -39,10 +107,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
       }
      ],
@@ -51,14 +119,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -67,14 +135,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -83,10 +151,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3463 3863; BBl 2012 2075).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
-       "label": "AS 2013 3463",
+       "label": "AS <b>2013</b> 3463",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/646"
       },
       {
@@ -94,7 +162,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/710"
       },
       {
-       "label": "BBl 2012 2075",
+       "label": "BBl <b>2012</b> 2075",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
@@ -124,10 +192,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3463 3863; BBl 2012 2075).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
-       "label": "AS 2013 3463",
+       "label": "AS <b>2013</b> 3463",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/646"
       },
       {
@@ -135,7 +203,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/710"
       },
       {
-       "label": "BBl 2012 2075",
+       "label": "BBl <b>2012</b> 2075",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
@@ -184,10 +252,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3463 3863; BBl 2012 2075).",
+     "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
-       "label": "AS 2013 3463",
+       "label": "AS <b>2013</b> 3463",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/646"
       },
       {
@@ -195,7 +263,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/710"
       },
       {
-       "label": "BBl 2012 2075",
+       "label": "BBl <b>2012</b> 2075",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
@@ -236,14 +304,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
@@ -252,10 +320,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS 2013 3463 3863; BBl 2012 2075).",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
-       "label": "AS 2013 3463",
+       "label": "AS <b>2013</b> 3463",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/646"
       },
       {
@@ -263,7 +331,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/710"
       },
       {
-       "label": "BBl 2012 2075",
+       "label": "BBl <b>2012</b> 2075",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
@@ -289,14 +357,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -305,10 +373,10 @@
     },
     {
      "nr": "",
-     "text": "SR 221.213.2",
+     "text": "SR <b>221.213.2</b>",
      "links": [
       {
-       "label": "SR 221.213.2",
+       "label": "SR <b>221.213.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926/20140101"
       }
      ],
@@ -334,14 +402,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -367,22 +435,22 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. II des BG vom 20. März 1998 (AS 2000 2042; BBl 1996 III 513). Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. II des BG vom 20. März 1998 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513). Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
       },
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -431,14 +499,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Ausdruck gemäss Anhang Ziff. 9 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Per­sonenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS 2011 725; BBl 2006 7001). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 9 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Per­sonenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2011 725",
+       "label": "AS <b>2011</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
       },
       {
-       "label": "BBl 2006 7001",
+       "label": "BBl <b>2006 </b>7001",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
@@ -523,14 +591,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -653,14 +721,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -747,14 +815,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -822,14 +890,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -935,10 +1003,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -983,10 +1051,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1012,14 +1080,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1028,10 +1096,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1091,10 +1159,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1124,10 +1192,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1252,10 +1320,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 221.213.2",
+     "text": "SR <b>221.213.2</b>",
      "links": [
       {
-       "label": "SR 221.213.2",
+       "label": "SR <b>221.213.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926/20140101"
       }
      ],
@@ -1264,14 +1332,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1301,14 +1369,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1336,10 +1404,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1367,14 +1435,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1529,14 +1597,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
@@ -1577,14 +1645,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. II des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Fassung gemäss Ziff. II des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
       }
      ],
@@ -1593,14 +1661,14 @@
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1609,14 +1677,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1625,14 +1693,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. II des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS 2000 2042; BBl 1996 III 513).",
+     "text": "Eingefügt durch Ziff. II des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
-       "label": "AS 2000 2042",
+       "label": "AS <b>2000</b> 2042",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/309"
       },
       {
-       "label": "BBl 1996 III 513",
+       "label": "BBl <b>1996</b> III 513",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
       }
      ],
@@ -1641,10 +1709,10 @@
     },
     {
      "nr": "",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
       }
      ],
@@ -1653,22 +1721,22 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998 (AS 1998 3009; BBl 1996 IV 1). Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1). Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       },
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1677,14 +1745,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1693,14 +1761,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1709,14 +1777,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -1725,14 +1793,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1773,14 +1841,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
@@ -1789,14 +1857,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Anhang Ziff. 1 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS 2004 2617; BBl 2000 4337).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
-       "label": "AS 2004 2617",
+       "label": "AS <b>2004</b> 2617",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
       },
       {
-       "label": "BBl 2000 4337",
+       "label": "BBl <b>2000</b> 4337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
@@ -1805,10 +1873,10 @@
     },
     {
      "nr": "",
-     "text": "SR 221.301",
+     "text": "SR <b>221.301</b>",
      "links": [
       {
-       "label": "SR 221.301",
+       "label": "SR <b>221.301</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/320/20140101"
       }
      ],
@@ -1817,14 +1885,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. II 3 des BG vom 11. Dez. 2009 (Renaturierung), in Kraft seit 1. Jan. 2011 (AS 2010 4285; BBl 2008 8043 8079).",
+     "text": "Eingefügt durch Ziff. II 3 des BG vom 11. Dez. 2009 (Renaturierung), in Kraft seit 1. Jan. 2011 (AS <b>2010 </b>4285; BBl <b>2008</b> 8043 8079).",
      "links": [
       {
-       "label": "AS 2010 4285",
+       "label": "AS <b>2010 </b>4285",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/620"
       },
       {
-       "label": "BBl 2008 8043",
+       "label": "BBl <b>2008</b> 8043",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1366"
       },
       {
@@ -1854,14 +1922,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 26. Juni 1998, mit Wirkung seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 26. Juni 1998, mit Wirkung seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1870,14 +1938,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1903,14 +1971,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Fassung gemäss Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1919,10 +1987,10 @@
     },
     {
      "nr": "",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
       }
      ],
@@ -1931,14 +1999,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Eingefügt durch Ziff. I des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -1979,14 +2047,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Eingefügt durch Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
@@ -2025,14 +2093,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 26. Juni 1998, mit Wirkung seit 1. Jan. 1999 (AS 1998 3009; BBl 1996 IV 1).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 26. Juni 1998, mit Wirkung seit 1. Jan. 1999 (AS <b>1998</b> 3009; BBl <b>1996</b> IV 1).",
      "links": [
       {
-       "label": "AS 1998 3009",
+       "label": "AS <b>1998</b> 3009",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/3009_3009_3009"
       },
       {
-       "label": "BBl 1996 IV 1",
+       "label": "BBl <b>1996</b> IV 1",
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
       }
      ],
@@ -2103,10 +2171,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2128,14 +2196,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2144,14 +2212,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2173,10 +2241,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2198,10 +2266,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2210,14 +2278,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2226,10 +2294,10 @@
     },
     {
      "nr": "",
-     "text": "SR 910.1",
+     "text": "SR <b>910.1</b>",
      "links": [
       {
-       "label": "SR 910.1",
+       "label": "SR <b>910.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/3033_3033_3033/20190101"
       }
      ],
@@ -2273,10 +2341,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2285,14 +2353,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. II 1 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS 2011 4637; BBl 2007 5283).",
+     "text": "Fassung gemäss Ziff. II 1 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
      "links": [
       {
-       "label": "AS 2011 4637",
+       "label": "AS <b>2011</b> 4637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
       },
       {
-       "label": "BBl 2007 5283",
+       "label": "BBl <b>2007</b> 5283",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
       }
      ],
@@ -2369,10 +2437,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Anhang Ziff. 3 des Gerichtsstandsgesetzes vom 24. März 2000, mit Wirkung seit 1. Jan. 2001 (AS 2000 2355; BBl 1999 2829).",
+     "text": "Aufgehoben durch Anhang Ziff. 3 des Gerichtsstandsgesetzes vom 24. März 2000, mit Wirkung seit 1. Jan. 2001 (AS <b>2000 </b>2355; <i>BBl <b>1999</b> 2829</i>).",
      "links": [
       {
-       "label": "AS 2000 2355",
+       "label": "AS <b>2000 </b>2355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/374"
       }
      ],
@@ -2440,10 +2508,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 700",
+     "text": "SR <b>700</b>",
      "links": [
       {
-       "label": "SR 700",
+       "label": "SR <b>700</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
       }
      ],
@@ -2492,14 +2560,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2508,14 +2576,14 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2539,14 +2607,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I 5 der V der BVers vom 20. Dez. 2006 über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes, mit Wirkung seit 1. Jan. 2007 (AS 2006 5599; BBl 2006 7759).",
+     "text": "Aufgehoben durch Ziff. I 5 der V der BVers vom 20. Dez. 2006 über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 5599; BBl <b>2006</b> 7759).",
      "links": [
       {
-       "label": "AS 2006 5599",
+       "label": "AS <b>2006</b> 5599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/826"
       },
       {
-       "label": "BBl 2006 7759",
+       "label": "BBl <b>2006</b> 7759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/974"
       }
      ],
@@ -2555,14 +2623,14 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I 5 der V der BVers vom 20. Dez. 2006 über die Anpassung von Er-lassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes, in Kraft seit 1. Jan. 2007 (AS 2006 5599; BBl 2006 7759).",
+     "text": "Eingefügt durch Ziff. I 5 der V der BVers vom 20. Dez. 2006 über die Anpassung von Er-lassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5599; BBl <b>2006</b> 7759).",
      "links": [
       {
-       "label": "AS 2006 5599",
+       "label": "AS <b>2006</b> 5599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/826"
       },
       {
-       "label": "BBl 2006 7759",
+       "label": "BBl <b>2006</b> 7759",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/974"
       }
      ],
@@ -2588,14 +2656,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
@@ -2604,10 +2672,10 @@
     },
     {
      "nr": "",
-     "text": "SR 173.110",
+     "text": "SR <b>173.110</b>",
      "links": [
       {
-       "label": "SR 173.110",
+       "label": "SR <b>173.110</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218/20190101"
       }
      ],
@@ -2633,14 +2701,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2666,14 +2734,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2699,10 +2767,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Die Änderungen können unter AS 1993 1410 konsultiert werden.",
+     "text": "Die Änderungen können unter AS <b>1993</b> 1410 konsultiert werden.",
      "links": [
       {
-       "label": "AS 1993 1410",
+       "label": "AS <b>1993</b> 1410",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/1410_1410_1410"
       }
      ],
@@ -2728,22 +2796,22 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "[AS 1952 403, 1973 93 Ziff. I 3, 1977 237 Ziff. II 4, 1986 926 Art. 59 Ziff. 2]",
+     "text": "[AS <b>1952</b> 403, <b>1973</b> 93 Ziff. I 3, <b>1977</b> 237 Ziff. II 4, <b>1986</b> 926 Art. 59 Ziff. 2]",
      "links": [
       {
-       "label": "AS 1952 403",
+       "label": "AS <b>1952</b> 403",
        "url": "https://fedlex.data.admin.ch/eli/oc/1952/403_415_419"
       },
       {
-       "label": "1973 93",
+       "label": "<b>1973</b> 93",
        "url": "https://fedlex.data.admin.ch/eli/oc/1973/93_93_99"
       },
       {
-       "label": "1977 237",
+       "label": "<b>1977</b> 237",
        "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
       },
       {
-       "label": "1986 926",
+       "label": "<b>1986</b> 926",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/926_926_926"
       }
      ],
@@ -2752,18 +2820,18 @@
     },
     {
      "nr": "",
-     "text": "[BS 9 80; AS 1955 685, 1962 1273 Art. 54 Abs. 1 Ziff. 4 Abs. 2, 1979 802]",
+     "text": "[BS <b>9 </b>80; AS <b>1955</b> 685, <b>1962</b> 1273 Art. 54 Abs. 1 Ziff. 4 Abs. 2, <b>1979</b> 802]",
      "links": [
       {
-       "label": "AS 1955 685",
+       "label": "AS <b>1955</b> 685",
        "url": "https://fedlex.data.admin.ch/eli/oc/1955/685_703_711"
       },
       {
-       "label": "1962 1273",
+       "label": "<b>1962</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/oc/1962/1273_1315_1323"
       },
       {
-       "label": "1979 802",
+       "label": "<b>1979</b> 802",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/802_802_802"
       }
      ],
@@ -2841,14 +2909,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Anhang Ziff. 9 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS 2005 5685; BBl 2003 1288).",
+     "text": "Eingefügt durch Anhang Ziff. 9 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
-       "label": "AS 2005 5685",
+       "label": "AS <b>2005</b> 5685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/782"
       },
       {
-       "label": "BBl 2003 1288",
+       "label": "BBl <b>2003</b> 1288",
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
@@ -2874,14 +2942,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4123; BBl 2002 4721).",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003 </b>4123; BBl <b>2002</b> 4721).",
      "links": [
       {
-       "label": "AS 2003 4123",
+       "label": "AS <b>2003 </b>4123",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/614"
       },
       {
-       "label": "BBl 2002 4721",
+       "label": "BBl <b>2002</b> 4721",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
@@ -2907,14 +2975,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS 2008 3585; BBl 2006 6337).",
+     "text": "Eingefügt durch Ziff. I des BG vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008 </b>3585; BBl <b>2006</b> 6337).",
      "links": [
       {
-       "label": "AS 2008 3585",
+       "label": "AS <b>2008 </b>3585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/462"
       },
       {
-       "label": "BBl 2006 6337",
+       "label": "BBl <b>2006</b> 6337",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],

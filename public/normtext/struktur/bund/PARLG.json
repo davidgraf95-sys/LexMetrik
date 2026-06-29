@@ -1,5 +1,62 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "171.10",
+  "titel": "Bundesgesetz über die Bundesversammlung",
+  "erlassdatum": "vom 13. Dezember 2002 (Stand am 2. März 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 164 Absatz 1 Buchstabe g der Bundesverfassung, nach Einsicht in den Bericht der Staatspolitischen Kommission des Nationalrates vom 1. März 2001 und in die Stellungnahme des Bundesrates vom 22. August 2001,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2001</b> 3467",
+    "links": [
+     {
+      "label": "BBl <b>2001</b> 3467",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2001/639"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "BBl <b>2001 </b>5428",
+    "links": [
+     {
+      "label": "BBl <b>2001 </b>5428",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2001/853"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -25,14 +82,14 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -45,14 +102,14 @@
     },
     {
      "nr": "5",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl <b>2022 </b>301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl <b>2022 </b>301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -65,14 +122,14 @@
     },
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -135,14 +192,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS 2025 530; BBl 2024 1799, 2462).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS <b>2025</b> 530; BBl <b>2024</b> 1799, 2462).",
      "links": [
       {
-       "label": "AS 2025 530",
+       "label": "AS <b>2025</b> 530",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/530"
       },
       {
-       "label": "BBl 2024 1799",
+       "label": "BBl <b>2024</b> 1799",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1799"
       },
       {
@@ -155,14 +212,14 @@
     },
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -192,14 +249,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -244,10 +301,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 171.21",
+     "text": "SR <b>171.21</b>",
      "links": [
       {
-       "label": "SR 171.21",
+       "label": "SR <b>171.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5010"
       }
      ],
@@ -288,14 +345,14 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -308,14 +365,14 @@
     },
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -328,14 +385,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -348,10 +405,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
@@ -407,14 +464,14 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -470,14 +527,14 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -490,14 +547,14 @@
     },
     {
      "nr": "20",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -510,14 +567,14 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -547,10 +604,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
@@ -559,14 +616,14 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -579,14 +636,14 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -616,14 +673,14 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Anhang 1 Ziff. 1 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS 2023 468; BBl 2019 6697).",
+     "text": "Fassung gemäss Anhang 1 Ziff. 1 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
-       "label": "AS 2023 468",
+       "label": "AS <b>2023</b> 468",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/468"
       },
       {
-       "label": "BBl 2019 6697",
+       "label": "BBl <b>2019</b> 6697",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
@@ -649,14 +706,14 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -669,14 +726,14 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -689,14 +746,14 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -737,14 +794,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -781,10 +838,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -793,14 +850,14 @@
     },
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471, 5315).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471, 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -813,14 +870,14 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471, 5315).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471, 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -846,14 +903,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Fassung gemäss Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS 2006 1275; BBl 2005 5).",
+     "text": "Fassung gemäss Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS <b>2006</b> 1275; BBl <b>2005</b> 5).",
      "links": [
       {
-       "label": "AS 2006 1275",
+       "label": "AS <b>2006</b> 1275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/227"
       },
       {
-       "label": "BBl 2005 5",
+       "label": "BBl <b>2005</b> 5",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/2"
       }
      ],
@@ -862,14 +919,14 @@
     },
     {
      "nr": "37",
-     "text": "Eingefügt durch Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS 2006 1275; BBl 2005 5).",
+     "text": "Eingefügt durch Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS <b>2006</b> 1275; BBl <b>2005</b> 5).",
      "links": [
       {
-       "label": "AS 2006 1275",
+       "label": "AS <b>2006</b> 1275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/227"
       },
       {
-       "label": "BBl 2005 5",
+       "label": "BBl <b>2005</b> 5",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/2"
       }
      ],
@@ -891,14 +948,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -907,10 +964,10 @@
     },
     {
      "nr": "39",
-     "text": "SR 614.0",
+     "text": "SR <b>614.0</b>",
      "links": [
       {
-       "label": "SR 614.0",
+       "label": "SR <b>614.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7792"
       }
      ],
@@ -919,14 +976,14 @@
     },
     {
      "nr": "40",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -959,10 +1016,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -971,14 +1028,14 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS 2011 5859; BBl 2010 3377, 3413).",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5859; BBl <b>2010</b> 3377, 3413).",
      "links": [
       {
-       "label": "AS 2011 5859",
+       "label": "AS <b>2011</b> 5859",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/807"
       },
       {
-       "label": "BBl 2010 3377",
+       "label": "BBl <b>2010</b> 3377",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/600"
       },
       {
@@ -991,14 +1048,14 @@
     },
     {
      "nr": "43",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS 2011 5859; BBl 2010 3377, 3413).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5859; BBl <b>2010</b> 3377, 3413).",
      "links": [
       {
-       "label": "AS 2011 5859",
+       "label": "AS <b>2011</b> 5859",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/807"
       },
       {
-       "label": "BBl 2010 3377",
+       "label": "BBl <b>2010</b> 3377",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/600"
       },
       {
@@ -1065,14 +1122,14 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -1162,14 +1219,14 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -1182,14 +1239,14 @@
     },
     {
      "nr": "48",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), mit Wirkung seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), mit Wirkung seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -1202,14 +1259,14 @@
     },
     {
      "nr": "49",
-     "text": "Aufgehoben durch Ziff. I des BG vom 15. Juni 2018, mit Wirkung seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 15. Juni 2018, mit Wirkung seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -1239,14 +1296,14 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -1344,14 +1401,14 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -1385,14 +1442,14 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1445,14 +1502,14 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -1524,14 +1581,14 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1565,14 +1622,14 @@
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1585,14 +1642,14 @@
     },
     {
      "nr": "66",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Juli 2015 (AS 2015 1583; BBl 2014 767).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Juli 2015 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],
@@ -1622,14 +1679,14 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563, 2803).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563, 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {
@@ -1642,10 +1699,10 @@
     },
     {
      "nr": "68",
-     "text": "SR 614.0",
+     "text": "SR <b>614.0</b>",
      "links": [
       {
-       "label": "SR 614.0",
+       "label": "SR <b>614.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7792"
       }
      ],
@@ -1694,14 +1751,14 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -1714,14 +1771,14 @@
     },
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563, 2803).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563, 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {
@@ -1734,14 +1791,14 @@
     },
     {
      "nr": "71",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS 2011 1381; BBl 2010 1563, 2803).",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen, in Kraft seit 1. Mai 2011 (AS <b>2011</b> 1381; BBl <b>2010</b> 1563, 2803).",
      "links": [
       {
-       "label": "AS 2011 1381",
+       "label": "AS <b>2011</b> 1381",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/210"
       },
       {
-       "label": "BBl 2010 1563",
+       "label": "BBl <b>2010</b> 1563",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/271"
       },
       {
@@ -1773,14 +1830,14 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1793,14 +1850,14 @@
     },
     {
      "nr": "72",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1809,7 +1866,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Abschnitt: Berichterstattung im Rat"
     }
    ]
   },
@@ -1832,14 +1890,14 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -1892,14 +1950,14 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -1999,10 +2057,10 @@
    "fussnoten": [
     {
      "nr": "76",
-     "text": "SR 171.21",
+     "text": "SR <b>171.21</b>",
      "links": [
       {
-       "label": "SR 171.21",
+       "label": "SR <b>171.21</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5010"
       }
      ],
@@ -2041,14 +2099,14 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Zeitgemässe Informations- und Dokumentationsangebote des Parlamentes), in Kraft seit 26. Nov. 2018 (AS 2018 3547; BBl 2017 6877, 6889).",
+     "text": "Eingefügt durch Ziff. I des BG vom 16. März 2018 (Zeitgemässe Informations- und Dokumentationsangebote des Parlamentes), in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3547; BBl <b>2017</b> 6877, 6889).",
      "links": [
       {
-       "label": "AS 2018 3547",
+       "label": "AS <b>2018</b> 3547",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/582"
       },
       {
-       "label": "BBl 2017 6877",
+       "label": "BBl <b>2017</b> 6877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2000"
       },
       {
@@ -2213,14 +2271,14 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS 2015 1583; BBl 2014 767).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],
@@ -2229,14 +2287,14 @@
     },
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -2281,14 +2339,14 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -2301,14 +2359,14 @@
     },
     {
      "nr": "82",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2321,14 +2379,14 @@
     },
     {
      "nr": "83",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2341,14 +2399,14 @@
     },
     {
      "nr": "84",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2378,14 +2436,14 @@
    "fussnoten": [
     {
      "nr": "85",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2415,14 +2473,14 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2452,14 +2510,14 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -2504,14 +2562,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2524,14 +2582,14 @@
     },
     {
      "nr": "89",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2637,14 +2695,14 @@
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -2735,14 +2793,14 @@
    "fussnoten": [
     {
      "nr": "91",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -2776,14 +2834,14 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -2874,14 +2932,14 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -2894,14 +2952,14 @@
     },
     {
      "nr": "98",
-     "text": "Aufgehoben durch Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -2956,14 +3014,14 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -2976,14 +3034,14 @@
     },
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -3021,14 +3079,14 @@
    "fussnoten": [
     {
      "nr": "101",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -3066,14 +3124,14 @@
    "fussnoten": [
     {
      "nr": "102",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -3134,14 +3192,14 @@
    "fussnoten": [
     {
      "nr": "103",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3179,14 +3237,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3270,14 +3328,14 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2009 (Bedingter Rückzug einer Volksinitiative) (AS 2010 271; BBl 2009 3591, 3609). Aufgehoben durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), mit Wirkung seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2009 (Bedingter Rückzug einer Volksinitiative) (AS <b>2010</b> 271; BBl <b>2009 </b>3591, 3609). Aufgehoben durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), mit Wirkung seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2010 271",
+       "label": "AS <b>2010</b> 271",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/35"
       },
       {
-       "label": "BBl 2009 3591",
+       "label": "BBl <b>2009 </b>3591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/699"
       },
       {
@@ -3285,11 +3343,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/701"
       },
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3342,14 +3400,14 @@
    "fussnoten": [
     {
      "nr": "106",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3394,14 +3452,14 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3414,14 +3472,14 @@
     },
     {
      "nr": "108",
-     "text": "Vierter Satz eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Vierter Satz eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3434,14 +3492,14 @@
     },
     {
      "nr": "109",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3454,14 +3512,14 @@
     },
     {
      "nr": "110",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3474,14 +3532,14 @@
     },
     {
      "nr": "111",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3511,10 +3569,10 @@
    "fussnoten": [
     {
      "nr": "112",
-     "text": "Die Berichtigung der RedK der BVers vom 17. Febr. 2016, veröffentlicht am 1. März 2016, betrifft nur den italienischen Text (AS 2016 657).",
+     "text": "Die Berichtigung der RedK der BVers vom 17. Febr. 2016, veröffentlicht am 1. März 2016, betrifft nur den italienischen Text (AS <b>2016</b> 657).",
      "links": [
       {
-       "label": "AS 2016 657",
+       "label": "AS <b>2016</b> 657",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/125"
       }
      ],
@@ -3540,14 +3598,14 @@
    "fussnoten": [
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3560,10 +3618,10 @@
     },
     {
      "nr": "114",
-     "text": "SR 930.31",
+     "text": "SR <b>930.31</b>",
      "links": [
       {
-       "label": "SR 930.31",
+       "label": "SR <b>930.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40201"
       }
      ],
@@ -3572,14 +3630,14 @@
     },
     {
      "nr": "115",
-     "text": "Eingefügt durch Art. 21 des Unternehmensentlastungsgesetzes vom 29. Sept. 2023, in Kraft seit 1. Okt. 2024 (AS 2024 118; BBl 2023 166).",
+     "text": "Eingefügt durch Art. 21 des Unternehmensentlastungsgesetzes vom 29. Sept. 2023, in Kraft seit 1. Okt. 2024 (AS <b>2024</b> 118; BBl <b>2023</b> 166).",
      "links": [
       {
-       "label": "AS 2024 118",
+       "label": "AS <b>2024</b> 118",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/118"
       },
       {
-       "label": "BBl 2023 166",
+       "label": "BBl <b>2023</b> 166",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/166"
       }
      ],
@@ -3605,10 +3663,10 @@
    "fussnoten": [
     {
      "nr": "116",
-     "text": "SR 172.061",
+     "text": "SR <b>172.061</b>",
      "links": [
       {
-       "label": "SR 172.061",
+       "label": "SR <b>172.061</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5216"
       }
      ],
@@ -3617,14 +3675,14 @@
     },
     {
      "nr": "117",
-     "text": "Fassung gemäss Art. 12 Ziff. 1 des Vernehmlassungsgesetzes vom 18. März 2005, in Kraft seit 1. Sept. 2005 (AS 2005 4099; BBl 2004 533).",
+     "text": "Fassung gemäss Art. 12 Ziff. 1 des Vernehmlassungsgesetzes vom 18. März 2005, in Kraft seit 1. Sept. 2005 (AS <b>2005</b> 4099; BBl <b>2004</b> 533).",
      "links": [
       {
-       "label": "AS 2005 4099",
+       "label": "AS <b>2005</b> 4099",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/542"
       },
       {
-       "label": "BBl 2004 533",
+       "label": "BBl <b>2004</b> 533",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/127"
       }
      ],
@@ -3633,14 +3691,14 @@
     },
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3653,14 +3711,14 @@
     },
     {
      "nr": "119",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -3705,14 +3763,14 @@
    "fussnoten": [
     {
      "nr": "120",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3725,14 +3783,14 @@
     },
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3762,14 +3820,14 @@
    "fussnoten": [
     {
      "nr": "122",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3799,14 +3857,14 @@
    "fussnoten": [
     {
      "nr": "123",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3855,14 +3913,14 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS 2013 3687; BBl 2011 6793, 6829).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Verbesserungen der Organisation und der Verfahren des Parlamentes), in Kraft seit 25. Nov. 2013 (AS <b>2013</b> 3687; BBl <b>2011 </b>6793, 6829).",
      "links": [
       {
-       "label": "AS 2013 3687",
+       "label": "AS <b>2013</b> 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/689"
       },
       {
-       "label": "BBl 2011 6793",
+       "label": "BBl <b>2011 </b>6793",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1081"
       },
       {
@@ -3875,14 +3933,14 @@
     },
     {
      "nr": "125",
-     "text": "Eingefügt durch Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS 2025 530; BBl 2024 1799, 2462).",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS <b>2025</b> 530; BBl <b>2024</b> 1799, 2462).",
      "links": [
       {
-       "label": "AS 2025 530",
+       "label": "AS <b>2025</b> 530",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/530"
       },
       {
-       "label": "BBl 2024 1799",
+       "label": "BBl <b>2024</b> 1799",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1799"
       },
       {
@@ -3895,10 +3953,10 @@
     },
     {
      "nr": "126",
-     "text": "Die Berichtigung der RedK der BVers vom 15. Febr. 2018, veröffentlicht am 27. Febr. 2018, betrifft nur den französischen Text (AS 2018 935).",
+     "text": "Die Berichtigung der RedK der BVers vom 15. Febr. 2018, veröffentlicht am 27. Febr. 2018, betrifft nur den französischen Text (AS <b>2018</b> 935).",
      "links": [
       {
-       "label": "AS 2018 935",
+       "label": "AS <b>2018</b> 935",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/126"
       }
      ],
@@ -3928,14 +3986,14 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS 2025 530; BBl 2024 1799, 2462).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS <b>2025</b> 530; BBl <b>2024</b> 1799, 2462).",
      "links": [
       {
-       "label": "AS 2025 530",
+       "label": "AS <b>2025</b> 530",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/530"
       },
       {
-       "label": "BBl 2024 1799",
+       "label": "BBl <b>2024</b> 1799",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1799"
       },
       {
@@ -3948,14 +4006,14 @@
     },
     {
      "nr": "128",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3968,14 +4026,14 @@
     },
     {
      "nr": "129",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -3988,14 +4046,14 @@
     },
     {
      "nr": "130",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4008,14 +4066,14 @@
     },
     {
      "nr": "131",
-     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2008, mit Wirkung seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4068,14 +4126,14 @@
    "fussnoten": [
     {
      "nr": "132",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4088,14 +4146,14 @@
     },
     {
      "nr": "133",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -4108,14 +4166,14 @@
     },
     {
      "nr": "134",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -4128,18 +4186,18 @@
     },
     {
      "nr": "135",
-     "text": "Fassung gemäss Ziff. I des BG vom 18. Juni 2021 (Differenzbereinigungsverfahren bei Motionen), in Kraft seit 1. Nov. 2021 (AS 2021 612; BBl 2020 9309; 2021 138).",
+     "text": "Fassung gemäss Ziff. I des BG vom 18. Juni 2021 (Differenzbereinigungsverfahren bei Motionen), in Kraft seit 1. Nov. 2021 (AS <b>2021</b> 612; BBl <b>2020</b> 9309; <b>2021</b> 138).",
      "links": [
       {
-       "label": "AS 2021 612",
+       "label": "AS <b>2021</b> 612",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/612"
       },
       {
-       "label": "BBl 2020 9309",
+       "label": "BBl <b>2020</b> 9309",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2508"
       },
       {
-       "label": "2021 138",
+       "label": "<b>2021</b> 138",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/138"
       }
      ],
@@ -4148,18 +4206,18 @@
     },
     {
      "nr": "136",
-     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2021 (Differenzbereinigungsverfahren bei Motionen), in Kraft seit 1. Nov. 2021 (AS 2021 612; BBl 2020 9309; 2021 138).",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2021 (Differenzbereinigungsverfahren bei Motionen), in Kraft seit 1. Nov. 2021 (AS <b>2021</b> 612; BBl <b>2020</b> 9309; <b>2021</b> 138).",
      "links": [
       {
-       "label": "AS 2021 612",
+       "label": "AS <b>2021</b> 612",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/612"
       },
       {
-       "label": "BBl 2020 9309",
+       "label": "BBl <b>2020</b> 9309",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2508"
       },
       {
-       "label": "2021 138",
+       "label": "<b>2021</b> 138",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/138"
       }
      ],
@@ -4189,14 +4247,14 @@
    "fussnoten": [
     {
      "nr": "137",
-     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007 (Verbindliche Wirkung der Motion), in Kraft seit 26. Mai 2008 (AS 2008 2113; BBl 2007 1457, 2149). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
+     "text": "Fassung gemäss Ziff. I des BG vom 5. Okt. 2007 (Verbindliche Wirkung der Motion), in Kraft seit 26. Mai 2008 (AS <b>2008</b> 2113; BBl <b>2007</b> 1457, 2149). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2008 2113",
+       "label": "AS <b>2008</b> 2113",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/303"
       },
       {
-       "label": "BBl 2007 1457",
+       "label": "BBl <b>2007</b> 1457",
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/198"
       },
       {
@@ -4209,14 +4267,14 @@
     },
     {
      "nr": "138",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -4229,14 +4287,14 @@
     },
     {
      "nr": "139",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -4249,14 +4307,14 @@
     },
     {
      "nr": "140",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -4309,14 +4367,14 @@
    "fussnoten": [
     {
      "nr": "141",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4367,14 +4425,14 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4387,14 +4445,14 @@
     },
     {
      "nr": "142",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4403,7 +4461,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Petitionen"
     }
    ]
   },
@@ -4428,14 +4487,14 @@
    "fussnoten": [
     {
      "nr": "144",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4469,14 +4528,14 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4508,14 +4567,14 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4524,7 +4583,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "2. Abschnitt: Eingaben"
     }
    ]
   },
@@ -4545,14 +4605,14 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4561,7 +4621,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Titel: Wahlen, Bestätigung von Wahlen und Feststellung der Amtsunfähigkeit"
     }
    ]
   },
@@ -4612,14 +4673,14 @@
    "fussnoten": [
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4750,14 +4811,14 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4770,14 +4831,14 @@
     },
     {
      "nr": "152",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4790,14 +4851,14 @@
     },
     {
      "nr": "153",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4810,14 +4871,14 @@
     },
     {
      "nr": "154",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4830,14 +4891,14 @@
     },
     {
      "nr": "155",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -4850,14 +4911,14 @@
     },
     {
      "nr": "156",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4870,14 +4931,14 @@
     },
     {
      "nr": "157",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4890,14 +4951,14 @@
     },
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4910,14 +4971,14 @@
     },
     {
      "nr": "159",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 26. Nov. 2018 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -4947,14 +5008,14 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Fassung gemäss Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS 2006 1275; BBl 2005 5).",
+     "text": "Fassung gemäss Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS <b>2006</b> 1275; BBl <b>2005</b> 5).",
      "links": [
       {
-       "label": "AS 2006 1275",
+       "label": "AS <b>2006</b> 1275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/227"
       },
       {
-       "label": "BBl 2005 5",
+       "label": "BBl <b>2005</b> 5",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/2"
       }
      ],
@@ -4963,14 +5024,14 @@
     },
     {
      "nr": "161",
-     "text": "Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS 2025 530; BBl 2024 1799, 2462).",
+     "text": "Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS <b>2025</b> 530; BBl <b>2024</b> 1799, 2462).",
      "links": [
       {
-       "label": "AS 2025 530",
+       "label": "AS <b>2025</b> 530",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/530"
       },
       {
-       "label": "BBl 2024 1799",
+       "label": "BBl <b>2024</b> 1799",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1799"
       },
       {
@@ -4983,14 +5044,14 @@
     },
     {
      "nr": "162",
-     "text": "Dritter Satz eingefügt gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Dritter Satz eingefügt gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -4999,14 +5060,14 @@
     },
     {
      "nr": "163",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -5015,14 +5076,14 @@
     },
     {
      "nr": "164",
-     "text": "Eingefügt durch Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS 2006 1275; BBl 2005 5).",
+     "text": "Eingefügt durch Art. 65 Ziff. 1 des Finanzhaushaltsgesetzes vom 7. Okt. 2005, in Kraft seit 1. Mai 2006 (AS <b>2006</b> 1275; BBl <b>2005</b> 5).",
      "links": [
       {
-       "label": "AS 2006 1275",
+       "label": "AS <b>2006</b> 1275",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/227"
       },
       {
-       "label": "BBl 2005 5",
+       "label": "BBl <b>2005</b> 5",
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/2"
       }
      ],
@@ -5048,14 +5109,14 @@
    "fussnoten": [
     {
      "nr": "165",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS 2015 1583; BBl 2014 767).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],
@@ -5081,14 +5142,14 @@
    "fussnoten": [
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS 2007 5231; BBl 2006 1837, 1857).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5231; BBl <b>2006 </b>1837, 1857).",
      "links": [
       {
-       "label": "AS 2007 5231",
+       "label": "AS <b>2007</b> 5231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/740"
       },
       {
-       "label": "BBl 2006 1837",
+       "label": "BBl <b>2006 </b>1837",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/164"
       },
       {
@@ -5118,14 +5179,14 @@
    "fussnoten": [
     {
      "nr": "167",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008 (Geschäftsbericht des Bundesrates), in Kraft seit 1. März 2009 (AS 2009 697; BBl 2008 1095, 1105).",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2008 (Geschäftsbericht des Bundesrates), in Kraft seit 1. März 2009 (AS <b>2009</b> 697; BBl <b>2008</b> 1095, 1105).",
      "links": [
       {
-       "label": "AS 2009 697",
+       "label": "AS <b>2009</b> 697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/115"
       },
       {
-       "label": "BBl 2008 1095",
+       "label": "BBl <b>2008</b> 1095",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/229"
       },
       {
@@ -5155,14 +5216,14 @@
    "fussnoten": [
     {
      "nr": "168",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS 2007 5231; BBl 2006 1837, 1857).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5231; BBl <b>2006 </b>1837, 1857).",
      "links": [
       {
-       "label": "AS 2007 5231",
+       "label": "AS <b>2007</b> 5231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/740"
       },
       {
-       "label": "BBl 2006 1837",
+       "label": "BBl <b>2006 </b>1837",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/164"
       },
       {
@@ -5192,14 +5253,14 @@
    "fussnoten": [
     {
      "nr": "169",
-     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS 2007 5231; BBl 2006 1837, 1857).",
+     "text": "Fassung gemäss Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5231; BBl <b>2006 </b>1837, 1857).",
      "links": [
       {
-       "label": "AS 2007 5231",
+       "label": "AS <b>2007</b> 5231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/740"
       },
       {
-       "label": "BBl 2006 1837",
+       "label": "BBl <b>2006 </b>1837",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/164"
       },
       {
@@ -5229,10 +5290,10 @@
    "fussnoten": [
     {
      "nr": "170",
-     "text": "SR 172.010",
+     "text": "SR <b>172.010</b>",
      "links": [
       {
-       "label": "SR 172.010",
+       "label": "SR <b>172.010</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
@@ -5241,14 +5302,14 @@
     },
     {
      "nr": "171",
-     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS 2011 5859; BBl 2010 3377, 3413).",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 17. Dez. 2010 über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5859; BBl <b>2010</b> 3377, 3413).",
      "links": [
       {
-       "label": "AS 2011 5859",
+       "label": "AS <b>2011</b> 5859",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/807"
       },
       {
-       "label": "BBl 2010 3377",
+       "label": "BBl <b>2010</b> 3377",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/600"
       },
       {
@@ -5261,14 +5322,14 @@
     },
     {
      "nr": "172",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. Dez. 2023 (Planungsbericht), in Kraft seit 1. Juni 2024 (AS 2024 200; BBl 2023 1081, 1482).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. Dez. 2023 (Planungsbericht), in Kraft seit 1. Juni 2024 (AS <b>2024</b> 200; BBl <b>2023</b> 1081, 1482).",
      "links": [
       {
-       "label": "AS 2024 200",
+       "label": "AS <b>2024</b> 200",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/200"
       },
       {
-       "label": "BBl 2023 1081",
+       "label": "BBl <b>2023</b> 1081",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1081"
       },
       {
@@ -5313,14 +5374,14 @@
    "fussnoten": [
     {
      "nr": "173",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -5350,14 +5411,14 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -5387,14 +5448,14 @@
    "fussnoten": [
     {
      "nr": "175",
-     "text": "Fassung gemäss Anhang Ziff. III 1 des Auslandschweizergesetzes vom 26. Sept. 2014, in Kraft seit 1. Nov. 2015 (AS 2015 3857; BBl 2014 1915, 2617).",
+     "text": "Fassung gemäss Anhang Ziff. III 1 des Auslandschweizergesetzes vom 26. Sept. 2014, in Kraft seit 1. Nov. 2015 (AS <b>2015</b> 3857; BBl <b>2014 </b>1915, 2617).",
      "links": [
       {
-       "label": "AS 2015 3857",
+       "label": "AS <b>2015</b> 3857",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/653"
       },
       {
-       "label": "BBl 2014 1915",
+       "label": "BBl <b>2014 </b>1915",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/363"
       },
       {
@@ -5407,14 +5468,14 @@
     },
     {
      "nr": "176",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 8. Okt. 2004 über die vorläufige Anwendung von völkerrechtlichen Verträgen (AS 2005 1245; BBl 2004 761, 1017). Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471, 5315).",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 8. Okt. 2004 über die vorläufige Anwendung von völkerrechtlichen Verträgen (AS <b>2005</b> 1245; BBl <b>2004 </b>761, 1017). Fassung gemäss Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471, 5315).",
      "links": [
       {
-       "label": "AS 2005 1245",
+       "label": "AS <b>2005</b> 1245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/184"
       },
       {
-       "label": "BBl 2004 761",
+       "label": "BBl <b>2004 </b>761",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/149"
       },
       {
@@ -5422,11 +5483,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/187"
       },
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -5439,14 +5500,14 @@
     },
     {
      "nr": "177",
-     "text": "Eingefügt Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS 2019 3119; BBl 2018 3471, 5315).",
+     "text": "Eingefügt Ziff. I 1 des BG vom 21. Juni 2019 über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge, in Kraft seit 2. Dez. 2019 (AS <b>2019</b> 3119; BBl <b>2018</b> 3471, 5315).",
      "links": [
       {
-       "label": "AS 2019 3119",
+       "label": "AS <b>2019</b> 3119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/575"
       },
       {
-       "label": "BBl 2018 3471",
+       "label": "BBl <b>2018</b> 3471",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1344"
       },
       {
@@ -5476,14 +5537,14 @@
    "fussnoten": [
     {
      "nr": "178",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -5496,10 +5557,10 @@
     },
     {
      "nr": "179",
-     "text": "SR 273",
+     "text": "SR <b>273</b>",
      "links": [
       {
-       "label": "SR 273",
+       "label": "SR <b>273</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
@@ -5508,10 +5569,10 @@
     },
     {
      "nr": "180",
-     "text": "SR 312.0",
+     "text": "SR <b>312.0</b>",
      "links": [
       {
-       "label": "SR 312.0",
+       "label": "SR <b>312.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6214"
       }
      ],
@@ -5537,14 +5598,14 @@
    "fussnoten": [
     {
      "nr": "181",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -5557,14 +5618,14 @@
     },
     {
      "nr": "182",
-     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Fassung gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -5594,10 +5655,10 @@
    "fussnoten": [
     {
      "nr": "184",
-     "text": "SR 273",
+     "text": "SR <b>273</b>",
      "links": [
       {
-       "label": "SR 273",
+       "label": "SR <b>273</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
@@ -5623,10 +5684,10 @@
    "fussnoten": [
     {
      "nr": "185",
-     "text": "SR 273",
+     "text": "SR <b>273</b>",
      "links": [
       {
-       "label": "SR 273",
+       "label": "SR <b>273</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
@@ -5721,22 +5782,22 @@
    "fussnoten": [
     {
      "nr": "187",
-     "text": "Eingefügt durch Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS 2010 3267; BBl 2008 8125). Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS 2025 530; BBl 2024 1799, 2462).",
+     "text": "Eingefügt durch Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125). Fassung gemäss Ziff. I des BG vom 21. März 2025 (Einreichung von Vorstössen und parlamentarischen Initiativen), in Kraft seit 8. Sept. 2025 (AS <b>2025</b> 530; BBl <b>2024</b> 1799, 2462).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       },
       {
-       "label": "AS 2025 530",
+       "label": "AS <b>2025</b> 530",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/530"
       },
       {
-       "label": "BBl 2024 1799",
+       "label": "BBl <b>2024</b> 1799",
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1799"
       },
       {
@@ -5749,19 +5810,20 @@
     },
     {
      "nr": "186",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Titel: Verkehr zwischen der Bundesversammlung und den eidgenössischen Gerichten sowie der Aufsichtsbehörde über die Bundesanwaltschaft"
     }
    ]
   },
@@ -5811,10 +5873,10 @@
    "fussnoten": [
     {
      "nr": "188",
-     "text": "SR 273",
+     "text": "SR <b>273</b>",
      "links": [
       {
-       "label": "SR 273",
+       "label": "SR <b>273</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
@@ -5858,10 +5920,10 @@
    "fussnoten": [
     {
      "nr": "189",
-     "text": "SR 152.1",
+     "text": "SR <b>152.1</b>",
      "links": [
       {
-       "label": "SR 152.1",
+       "label": "SR <b>152.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4931"
       }
      ],
@@ -5883,10 +5945,10 @@
    "fussnoten": [
     {
      "nr": "190",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
@@ -5908,14 +5970,14 @@
    "fussnoten": [
     {
      "nr": "191",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 17. Dez. 2004, in Kraft seit 1. Mai 2005 (AS 2005 4793; BBl 2004 1469, 1477).",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 17. Dez. 2004, in Kraft seit 1. Mai 2005 (AS <b>2005</b> 4793; BBl <b>2004 </b>1469, 1477).",
      "links": [
       {
-       "label": "AS 2005 4793",
+       "label": "AS <b>2005</b> 4793",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/645"
       },
       {
-       "label": "BBl 2004 1469",
+       "label": "BBl <b>2004 </b>1469",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/292"
       },
       {
@@ -5961,14 +6023,14 @@
    "fussnoten": [
     {
      "nr": "193",
-     "text": "Eingefügt durch Art. 5 Ziff. 1 des BG vom 18. März 2005 über den Aufbau des Bundesverwaltungsgerichts, in Kraft vom 1. Okt. 2005 bis zum 31. Dez. 2006 (AS 2005 4603; BBl 2004 4787).",
+     "text": "Eingefügt durch Art. 5 Ziff. 1 des BG vom 18. März 2005 über den Aufbau des Bundesverwaltungsgerichts, in Kraft vom 1. Okt. 2005 bis zum 31. Dez. 2006 (AS <b>2005</b> 4603; BBl <b>2004</b> 4787).",
      "links": [
       {
-       "label": "AS 2005 4603",
+       "label": "AS <b>2005</b> 4603",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/599"
       },
       {
-       "label": "BBl 2004 4787",
+       "label": "BBl <b>2004</b> 4787",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/845"
       }
      ],
@@ -5977,14 +6039,14 @@
     },
     {
      "nr": "194",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -5997,14 +6059,14 @@
     },
     {
      "nr": "195",
-     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2009 (Bedingter Rückzug einer Volksinitiative), in Kraft seit 1. Febr. 2010 (AS 2010 271; BBl 2009 3591, 3609).",
+     "text": "Eingefügt durch Ziff. II des BG vom 25. Sept. 2009 (Bedingter Rückzug einer Volksinitiative), in Kraft seit 1. Febr. 2010 (AS <b>2010</b> 271; BBl <b>2009 </b>3591, 3609).",
      "links": [
       {
-       "label": "AS 2010 271",
+       "label": "AS <b>2010</b> 271",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/35"
       },
       {
-       "label": "BBl 2009 3591",
+       "label": "BBl <b>2009 </b>3591",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/699"
       },
       {
@@ -6037,10 +6099,10 @@
     },
     {
      "nr": "197",
-     "text": "SR 161.1",
+     "text": "SR <b>161.1</b>",
      "links": [
       {
-       "label": "SR 161.1",
+       "label": "SR <b>161.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4940"
       }
      ],
@@ -6080,14 +6142,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des BG vom 10. Dez. 2020 (Covid-19: Teilnahme an Abstimmungen im Nationalrat; Unterbruch oder Verschiebung der Session) (AS 2020 5375; BBl 2020 9271, 9283). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 2. Dez. 2024 (AS 2023 483; 2024 675; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 10. Dez. 2020 (Covid-19: Teilnahme an Abstimmungen im Nationalrat; Unterbruch oder Verschiebung der Session) (AS <b>2020</b> 5375; BBl <b>2020</b> 9271, 9283). Fassung gemäss Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 2. Dez. 2024 (AS <b>2023</b> 483; <b>2024</b> 675; BBl <b>2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2020 5375",
+       "label": "AS <b>2020</b> 5375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/930"
       },
       {
-       "label": "BBl 2020 9271",
+       "label": "BBl <b>2020</b> 9271",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2503"
       },
       {
@@ -6095,15 +6157,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2505"
       },
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "2024 675",
+       "label": "<b>2024</b> 675",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/675"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl <b>2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -6131,14 +6193,14 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I des BG vom 10. Dez. 2020 (Covid-19: Teilnahme an Abstimmungen im Nationalrat; Unterbruch oder Verschiebung der Session), in Kraft vom 11. Dez. 2020 bis längstens zum 1. Okt. 2021 (AS 2020 5375; BBl 2020 9271, 9283).",
+     "text": "Eingefügt durch Ziff. I des BG vom 10. Dez. 2020 (Covid-19: Teilnahme an Abstimmungen im Nationalrat; Unterbruch oder Verschiebung der Session), in Kraft vom 11. Dez. 2020 bis längstens zum 1. Okt. 2021 (AS <b>2020</b> 5375; BBl <b>2020</b> 9271, 9283).",
      "links": [
       {
-       "label": "AS 2020 5375",
+       "label": "AS <b>2020</b> 5375",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/930"
       },
       {
-       "label": "BBl 2020 9271",
+       "label": "BBl <b>2020</b> 9271",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/2503"
       },
       {
@@ -6168,14 +6230,14 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Eingefügt gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS 2011 4537; BBl 2011 1817, 1839).",
+     "text": "Eingefügt gemäss Ziff. I des BG vom 17. Juni 2011 (Präzisierung der Informationsrechte der Aufsichtskommissionen), in Kraft seit 1. Nov. 2011 (AS <b>2011</b> 4537; BBl <b>2011 </b>1817, 1839).",
      "links": [
       {
-       "label": "AS 2011 4537",
+       "label": "AS <b>2011</b> 4537",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/633"
       },
       {
-       "label": "BBl 2011 1817",
+       "label": "BBl <b>2011 </b>1817",
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/209"
       },
       {
@@ -6203,19 +6265,20 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Eingefügt durch Ziff. II des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS 2006 1265; BBl 2004 7103).",
+     "text": "Eingefügt durch Ziff. II des BG vom 7. Okt. 2005, in Kraft seit 1. Juni 2006 (AS <b>2006</b> 1265; BBl <b>2004 </b>7103).",
      "links": [
       {
-       "label": "AS 2006 1265",
+       "label": "AS <b>2006</b> 1265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/224"
       },
       {
-       "label": "BBl 2004 7103",
+       "label": "BBl <b>2004 </b>7103",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1239"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "8. Kapitel: Verfahren bei Einsprachen gegen Verträge der Kantone unter sich oder mit dem Ausland"
     }
    ]
   },
@@ -6234,14 +6297,14 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008, in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -6250,7 +6313,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Kapitel: Feststellung der Amtsunfähigkeit von Mitgliedern des Bundesrates sowie der Bundeskanzlerin oder des Bundeskanzlers"
     }
    ]
   },
@@ -6271,14 +6335,14 @@
    "fussnoten": [
     {
      "nr": "183",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2004, in Kraft seit 1. Mai 2005 (AS 2005 4793; BBl 2004 1469, 1477).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2004, in Kraft seit 1. Mai 2005 (AS <b>2005</b> 4793; BBl <b>2004 </b>1469, 1477).",
      "links": [
       {
-       "label": "AS 2005 4793",
+       "label": "AS <b>2005</b> 4793",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/645"
       },
       {
-       "label": "BBl 2004 1469",
+       "label": "BBl <b>2004 </b>1469",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/292"
       },
       {
@@ -6308,14 +6372,14 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS 2011 4627; BBl 2010 7345, 7385).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), in Kraft seit 5. Dez. 2011 (AS <b>2011</b> 4627; BBl <b>2010</b> 7345, 7385).",
      "links": [
       {
-       "label": "AS 2011 4627",
+       "label": "AS <b>2011</b> 4627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/663"
       },
       {
-       "label": "BBl 2010 7345",
+       "label": "BBl <b>2010</b> 7345",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1294"
       },
       {
@@ -6343,10 +6407,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "SR 170.32",
+     "text": "SR <b>170.32</b>",
      "links": [
       {
-       "label": "SR 170.32",
+       "label": "SR <b>170.32</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4971"
       }
      ],
@@ -6355,14 +6419,14 @@
     },
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008 (Parlamentsrecht. Verschiedene Änderungen), in Kraft seit 2. März 2009 (AS 2009 725; BBl 2008 1869, 3177).",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2008 (Parlamentsrecht. Verschiedene Änderungen), in Kraft seit 2. März 2009 (AS <b>2009</b> 725; BBl<b> 2008</b> 1869, 3177).",
      "links": [
       {
-       "label": "AS 2009 725",
+       "label": "AS <b>2009</b> 725",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/124"
       },
       {
-       "label": "BBl 2008 1869",
+       "label": "BBl<b> 2008</b> 1869",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/423"
       },
       {
@@ -6371,7 +6435,8 @@
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Kapitel: Haftung für Schäden"
     }
    ]
   },
@@ -6392,18 +6457,18 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 2. März 2026 (AS 2023 483; 2026 78; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 2. März 2026 (AS <b>2023</b> 483; <b>2026</b> 78; BBl <b>2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "2026 78",
+       "label": "<b>2026</b> 78",
        "url": "https://fedlex.data.admin.ch/eli/oc/2026/78"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl <b>2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -6433,14 +6498,14 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -6470,18 +6535,18 @@
    "fussnoten": [
     {
      "nr": "51",
-     "text": "Eingefügt durch Ziff. II des BG vom 13. Dez. 2002, in Kraft seit 1. Aug. 2003 (AS 2003 2119; BBl 2001 4202; 2002 1181).",
+     "text": "Eingefügt durch Ziff. II des BG vom 13. Dez. 2002, in Kraft seit 1. Aug. 2003 (AS <b>2003</b> 2119; BBl <b>2001</b> 4202; <b>2002</b> 1181).",
      "links": [
       {
-       "label": "AS 2003 2119",
+       "label": "AS <b>2003</b> 2119",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/310"
       },
       {
-       "label": "BBl 2001 4202",
+       "label": "BBl <b>2001</b> 4202",
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       },
       {
-       "label": "2002 1181",
+       "label": "<b>2002</b> 1181",
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/147"
       }
      ],
@@ -6490,14 +6555,14 @@
     },
     {
      "nr": "52",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -6506,14 +6571,14 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -6522,14 +6587,14 @@
     },
     {
      "nr": "54",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -6538,14 +6603,14 @@
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -6554,14 +6619,14 @@
     },
     {
      "nr": "56",
-     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS 2010 3267; BBl 2008 8125).",
+     "text": "Fassung gemäss Anhang Ziff. II 2 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
-       "label": "AS 2010 3267",
+       "label": "AS <b>2010</b> 3267",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/444"
       },
       {
-       "label": "BBl 2008 8125",
+       "label": "BBl <b>2008 </b>8125",
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
@@ -6570,14 +6635,14 @@
     },
     {
      "nr": "57",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS 2022 491; BBl 2017 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 12 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
-       "label": "AS 2022 491",
+       "label": "AS <b>2022</b> 491",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
       },
       {
-       "label": "BBl 2017 6941",
+       "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
@@ -6607,14 +6672,14 @@
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -6648,14 +6713,14 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS 2023 483; BBl 2022 301, 433).",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. März 2023 (Verbesserungen der Funktionsweise des Parlamentes, insbesondere in Krisensituationen), in Kraft seit 4. Dez. 2023 (AS <b>2023</b> 483; BBl<b> 2022</b> 301, 433).",
      "links": [
       {
-       "label": "AS 2023 483",
+       "label": "AS <b>2023</b> 483",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/483"
       },
       {
-       "label": "BBl 2022 301",
+       "label": "BBl<b> 2022</b> 301",
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/301"
       },
       {
@@ -6689,14 +6754,14 @@
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS 2018 3461; BBl 2017 6797, 6865).",
+     "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2018, in Kraft seit 2. Dez. 2019 (AS <b>2018</b> 3461; BBl <b>2017</b> 6797, 6865).",
      "links": [
       {
-       "label": "AS 2018 3461",
+       "label": "AS <b>2018</b> 3461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/562"
       },
       {
-       "label": "BBl 2017 6797",
+       "label": "BBl <b>2017</b> 6797",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1995"
       },
       {
@@ -6724,14 +6789,14 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2021, in Kraft vom 2. Okt. 2021 bis zum 31. Dez. 2022 (AS 2021 588; BBl 2021 2181, 2183).",
+     "text": "Eingefügt durch Ziff. I des BG vom 1. Okt. 2021, in Kraft vom 2. Okt. 2021 bis zum 31. Dez. 2022 (AS <b>2021</b> 588; BBl <b>2021</b> 2181, 2183).",
      "links": [
       {
-       "label": "AS 2021 588",
+       "label": "AS <b>2021</b> 588",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/588"
       },
       {
-       "label": "BBl 2021 2181",
+       "label": "BBl <b>2021</b> 2181",
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/2181"
       },
       {
@@ -6765,14 +6830,14 @@
    "fussnoten": [
     {
      "nr": "93",
-     "text": "Eingefügt durch Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS 2007 5231; BBl 2006 1837, 1857).",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. Juni 2007 (Legislaturplanung), in Kraft seit 1. Dez. 2007 (AS <b>2007</b> 5231; BBl <b>2006 </b>1837, 1857).",
      "links": [
       {
-       "label": "AS 2007 5231",
+       "label": "AS <b>2007</b> 5231",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/740"
       },
       {
-       "label": "BBl 2006 1837",
+       "label": "BBl <b>2006 </b>1837",
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/164"
       },
       {
@@ -6785,14 +6850,14 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024 (Budgetberatung), in Kraft seit 9. Sept. 2024 (AS 2024 450; BBl 2023 2157, 2159).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024 (Budgetberatung), in Kraft seit 9. Sept. 2024 (AS <b>2024</b> 450; BBl <b>2023</b> 2157, 2159).",
      "links": [
       {
-       "label": "AS 2024 450",
+       "label": "AS <b>2024</b> 450",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/450"
       },
       {
-       "label": "BBl 2023 2157",
+       "label": "BBl <b>2023</b> 2157",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2157"
       },
       {
@@ -6805,14 +6870,14 @@
     },
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024 (Budgetberatung), in Kraft seit 9. Sept. 2024 (AS 2024 450; BBl 2023 2157, 2159).",
+     "text": "Fassung gemäss Ziff. I des BG vom 15. März 2024 (Budgetberatung), in Kraft seit 9. Sept. 2024 (AS <b>2024</b> 450; BBl <b>2023</b> 2157, 2159).",
      "links": [
       {
-       "label": "AS 2024 450",
+       "label": "AS <b>2024</b> 450",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/450"
       },
       {
-       "label": "BBl 2023 2157",
+       "label": "BBl <b>2023</b> 2157",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2157"
       },
       {
@@ -6825,14 +6890,14 @@
     },
     {
      "nr": "96",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS 2015 1583; BBl 2014 767).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 26. Sept. 2014 (Neues Führungsmodell für die Bundesverwaltung), in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 1583; BBl <b>2014</b> 767).",
      "links": [
       {
-       "label": "AS 2015 1583",
+       "label": "AS <b>2015</b> 1583",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/312"
       },
       {
-       "label": "BBl 2014 767",
+       "label": "BBl <b>2014</b> 767",
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/134"
       }
      ],

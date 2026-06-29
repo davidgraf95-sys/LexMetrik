@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/ERV/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7f97942b45f8fd9d432019bd1c7ee82bfc877a3aa9ed595e288ba95da8ec8445"
     },
@@ -61,7 +61,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "13ba8ea721175a68d0742b8bb14f4dbbf30723e4cf94da941ef7bb668a0ba71d"
     },
@@ -80,7 +80,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "02c882967c7ec1bd0bd8913674dad3e75fdabace94c56580eb00929f4296ee17"
     },
@@ -134,19 +134,23 @@
             },
             {
               "marke": "1",
-              "text": "mit mindestens je einem externen Rating der Ratingklassen 1–4 von zwei von der Eidgenössischen Finanzmarktaufsicht (FINMA) nach Artikel 6 anerkannten Ratingagenturen,"
+              "text": "mit mindestens je einem externen Rating der Ratingklassen 1–4 von zwei von der Eidgenössischen Finanzmarktaufsicht (FINMA) nach Artikel 6 anerkannten Ratingagenturen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "mit einem externen Rating der Ratingklassen 1–4 einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, wenn kein anderes externes Rating einer schlechteren Ratingklasse einer anerkannten Ratingagentur vorliegt,"
+              "text": "mit einem externen Rating der Ratingklassen 1–4 einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, wenn kein anderes externes Rating einer schlechteren Ratingklasse einer anerkannten Ratingagentur vorliegt,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einer Verfallsrendite und einer Restlaufzeit, die mit denjenigen von Titeln mit einem externen Rating der Ratingklassen 1–4 vergleichbar sind, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden, oder"
+              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einer Verfallsrendite und einer Restlaufzeit, die mit denjenigen von Titeln mit einem externen Rating der Ratingklassen 1–4 vergleichbar sind, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden, oder",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einem bankinternen Rating entsprechend den Ratingklassen 1–4, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden;"
+              "text": "ohne externes Rating einer von der FINMA nach Artikel 6 anerkannten Ratingagentur, aber mit einem bankinternen Rating entsprechend den Ratingklassen 1–4, sofern Titel des Emittenten an einer regulierten Börse oder an einem Markt gehandelt werden, an dem mindestens drei voneinander unabhängige Market-Maker normalerweise täglich Kurse stellen, die regelmässig publiziert werden;",
+              "tiefe": 1
             },
             {
               "marke": "h",
@@ -154,23 +158,28 @@
             },
             {
               "marke": "1",
-              "text": "kollektive Kapitalanlagen,"
+              "text": "kollektive Kapitalanlagen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Investmentclubs nach Artikel 2 Absatz 2 Buchstabe f des Kollektivanlagengesetzes vom 23. Juni 2006 (KAG),"
+              "text": "Investmentclubs nach Artikel 2 Absatz 2 Buchstabe f des Kollektivanlagengesetzes vom 23. Juni 2006 (KAG),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Investmentgesellschaften, auch wenn sie nicht dem KAG unterstehen,"
+              "text": "Investmentgesellschaften, auch wenn sie nicht dem KAG unterstehen,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "interne Sondervermögen nach Artikel 71 des Finanzdienstleistungsgesetzes vom 15. Juni 2018,"
+              "text": "interne Sondervermögen nach Artikel 71 des Finanzdienstleistungsgesetzes vom 15. Juni 2018,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Stiftungen, die nach ausländischem Recht errichtet wurden und die Verwaltung von kollektiven Vermögen bezwecken;"
+              "text": "Stiftungen, die nach ausländischem Recht errichtet wurden und die Verwaltung von kollektiven Vermögen bezwecken;",
+              "tiefe": 1
             },
             {
               "marke": "i",
@@ -200,36 +209,42 @@
             },
             {
               "marke": "1",
-              "text": "ihre Veräusserung,"
+              "text": "ihre Veräusserung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Veräusserung der Rechte an den betreffenden Finanzinstrumenten,"
+              "text": "Veräusserung der Rechte an den betreffenden Finanzinstrumenten,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Liquidation des Emittenten,"
+              "text": "Liquidation des Emittenten,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Rückzahlung mittels Ausgabe von Beteiligungstiteln des Emittenten, wenn:"
+              "text": "Rückzahlung mittels Ausgabe von Beteiligungstiteln des Emittenten, wenn:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "bei einer zwingenden Rückzahlung oder bei einer Rückzahlung nach Wahl des Emittenten: bei Ausgabe einer variablen Anzahl Beteiligungstitel eine allfällige Änderung des Forderungswerts gleichgerichtet, vergleichbar und verknüpft ist mit der Änderung des Werts einer gegebenen Anzahl Beteiligungstitel am Gesellschaftskapital"
+              "text": "bei einer zwingenden Rückzahlung oder bei einer Rückzahlung nach Wahl des Emittenten: bei Ausgabe einer variablen Anzahl Beteiligungstitel eine allfällige Änderung des Forderungswerts gleichgerichtet, vergleichbar und verknüpft ist mit der Änderung des Werts einer gegebenen Anzahl Beteiligungstitel am Gesellschaftskapital",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "bei einer Rückzahlung nach Wahl des Inhabers des Finanzinstruments: die FINMA den Antrag der Bank auf Behandlung als Forderung abgelehnt hat."
+              "text": "bei einer Rückzahlung nach Wahl des Inhabers des Finanzinstruments: die FINMA den Antrag der Bank auf Behandlung als Forderung abgelehnt hat.",
+              "tiefe": 2
             }
           ]
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "a64ff022435febcd10b39d1d04965708c3d8f06d95e653850521110dde6b7521"
+      "sha": "bcfafcc2d51527e1d447dbaa357d24d4ceb55a222c944d36993989d5129566e0"
     },
     {
       "id": "bund/ERV/art_4_a",
@@ -250,7 +265,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "db37b549bb99b37cabd09f35f5946b70b9604af355ad5a67b1d5116bdc916d07"
     },
@@ -307,7 +322,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "23a15c4e68f080fe2fe6e75bf893eb75c7fdcbebb5a11e9a5334e8f90769fbb2"
     },
@@ -363,11 +378,13 @@
             },
             {
               "marke": "1",
-              "text": "die Bank hat vollständige Kenntnis der dem Vermögen zugrunde liegenden Positionen und ihr stehen genügende und häufige, von einer Drittpartei überprüfte Informationen über diese Positionen zur Verfügung,"
+              "text": "die Bank hat vollständige Kenntnis der dem Vermögen zugrunde liegenden Positionen und ihr stehen genügende und häufige, von einer Drittpartei überprüfte Informationen über diese Positionen zur Verfügung,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die Bank erhält tägliche Preise für das Vermögen und hat Zugang zum Mandat oder zu den gesetzlichen Vorschriften der Anlagestrategie;"
+              "text": "die Bank erhält tägliche Preise für das Vermögen und hat Zugang zum Mandat oder zu den gesetzlichen Vorschriften der Anlagestrategie;",
+              "tiefe": 1
             },
             {
               "marke": "d",
@@ -406,9 +423,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "a70e3ccf6f94f768590b567ba6ebf732b2441c939a009fe51d4a0277e718807c"
+      "sha": "8a3a3884143d457a5f4bc2ddd000d12fdf313396ae2049f45cab5fec90a56866"
     },
     {
       "id": "bund/ERV/art_5_a",
@@ -429,7 +446,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_5_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "2f3fb7f735721256f8c9a54e8ebc498a22832d0290c840817dbba49ebfaa87d9"
     },
@@ -460,7 +477,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_5_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "2c6a984c6f12494ac6e9d713d3c563705c643e4fe000b38f51a2acb0ee86a454"
     },
@@ -521,7 +538,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "3f54bba092705f630da1fcd5a73223d7a8e4eb5138d43434d178ff4c40a5ad51"
     },
@@ -562,7 +579,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "635f710e6c33fe1d4a00e74069910b76b829e7354b82d7ca7ad8226a0f3f9181"
     },
@@ -605,7 +622,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "3e9feed10b266c3c81f42336eca912a886bc25cfe7eac60155aa813a8a90d4f5"
     },
@@ -652,7 +669,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b30c24c66e13902ed6f3b7dceb9cea5906f027a0a260515cd5b65feda62a51c1"
     },
@@ -679,7 +696,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6cbedaebffd805192399989dc0ffca745ecd20dc3030b4decb7cd2b09d6d6837"
     },
@@ -712,7 +729,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e58e4a7b4eaa4324b4e79c432ee7f716f5da5d40bcb834c960f3ed681944d531"
     },
@@ -731,7 +748,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4d5bdcb154707f66db98d167fc5876658e94fa431232d0663122833825dd8f0b"
     },
@@ -764,7 +781,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "da2721e31d2863b69732eb5a7beaf91cd78d6caf9648514df3c26448265bec44"
     },
@@ -791,7 +808,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c6b7839bce1a6e5e15a49ffc4a98e72bbeed556dd68e50d1757678739a200046"
     },
@@ -810,7 +827,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "632ce897b100c7682a6797c4efc530dfa3348359a310332cc5871ffaf215a2c6"
     },
@@ -837,7 +854,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "9281a7d7bab855e995292f6ce7f7fd2ff7647015f0fbdd665bc5a01686aed057"
     },
@@ -874,7 +891,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "12188a00fbb22e123b35f6512727b525c0f790a71e313af6700209a6b41ee7d6"
     },
@@ -897,7 +914,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c83ccae50f0c1553126545c39865d41165da7a89d5d12bfb4682ad7ea064b05f"
     },
@@ -930,7 +947,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e71cf4fb2b9cf7199558619736d1168fc6a3ed699fddddfb8fe1f9de1aa177a7"
     },
@@ -989,7 +1006,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6227eb9976d6ffe39fda00ccf0d4300eaf86f6b3d473b713bae2639574642203"
     },
@@ -1027,11 +1044,13 @@
             },
             {
               "marke": "1",
-              "text": "zu 100 Prozent, wenn die Erfolgsrechnung nach den Vorgaben der FINMA einer prüferischen Durchsicht unterzogen wurde,"
+              "text": "zu 100 Prozent, wenn die Erfolgsrechnung nach den Vorgaben der FINMA einer prüferischen Durchsicht unterzogen wurde,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "zu 70 Prozent, wenn die Erfolgsrechnung keiner prüferischen Durchsicht unterzogen wurde; in begründeten Fällen kann die FINMA für die Anrechnung ein Testat verlangen."
+              "text": "zu 70 Prozent, wenn die Erfolgsrechnung keiner prüferischen Durchsicht unterzogen wurde; in begründeten Fällen kann die FINMA für die Anrechnung ein Testat verlangen.",
+              "tiefe": 1
             }
           ]
         },
@@ -1042,9 +1061,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "bcf0bfaf772168c622f549196c12cf4a07750cee9f534a29aa0543aa28d8d061"
+      "sha": "3b2954857c24297f1a9f6943ab4302d3bcf2f5f22709c8da4d919767215510f5"
     },
     {
       "id": "bund/ERV/art_22",
@@ -1117,7 +1136,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b8c8400438718e15bee66d82f048dcc0aa0951b1beeefb3af64667e2b8e7c6a6"
     },
@@ -1140,7 +1159,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "92d4de8e243c0339b004bb0a595c431e9391ac748fb796253b9c82db06ec14c5"
     },
@@ -1169,7 +1188,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b954ca7fd85175fc8c95a2fb010fbbc82b4e5c063e4951a06d6da8814e53b5e1"
     },
@@ -1210,7 +1229,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "56aea5769891be52433f75777f0e7663bd4957eb0e6be172e05b830ad42167aa"
     },
@@ -1271,7 +1290,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_26",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "06511e7f7bd4d43c9e52c3fcdf9987c241800b310132e2b60f46eebe431a380f"
     },
@@ -1305,11 +1324,13 @@
             },
             {
               "marke": "1",
-              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen; oder"
+              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen; oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden;"
+              "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden;",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -1372,9 +1393,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_27",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "3da82f8b1e6a69f350c828f265c8b4ddfd115e62929f59116799fe267032af47"
+      "sha": "f223895880a47fb097402efe52665a4dce14e3052e24cfc9413241341a417144"
     },
     {
       "id": "bund/ERV/art_27_a",
@@ -1391,7 +1412,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_27_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f9725798019a7ab3d55ef5bba544cd0ba78f3b41e9f609c8e24ebb3ab1065987"
     },
@@ -1410,7 +1431,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "1b552082d73f07e2c6d482bd1187cbe4211e5c6481979fbc4c17afabadad0bc6"
     },
@@ -1447,7 +1468,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b999c9e43fa98e98855d6937f53350b7b365726c58d61367b54a2a84828e5dc3"
     },
@@ -1481,11 +1502,13 @@
             },
             {
               "marke": "1",
-              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen, oder"
+              "text": "die verbleibenden Eigenmittel den Anforderungen nach Artikel 41 weiter genügen, oder",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden; und"
+              "text": "ersatzweise genügend mindestens gleichwertige Eigenmittel ausgegeben werden; und",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -1522,9 +1545,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "611962a214de1230588df47afe112792b6af9f4c9e6c2682549adb3414f5c4e7"
+      "sha": "f13fa7c548b1355c4bb9c7b7ef0902be5791f5cab316bee1e6d677920e65a688"
     },
     {
       "id": "bund/ERV/art_31",
@@ -1559,7 +1582,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d17e31e7b7cc2233119b82074828b7547f0c0256541abd6452934902b2638411"
     },
@@ -1586,7 +1609,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_31_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ee1cf126e07a52726c604b0bda5a14a8ab19241411bd5461babe255d3b3fe90a"
     },
@@ -1655,7 +1678,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "729eb4540c6f5d5e6a4cdec6a3f48b5e6b4c9ce1922c56ef04dcab1205b38a73"
     },
@@ -1682,7 +1705,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "17ec7b9b46e143488798595ebb0389820589afb9c76256fadcfe85a946ab4410"
     },
@@ -1705,7 +1728,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "353ff980a720c59a14b4bf13c8d203ce5ebfb1c1117899abb35194d5cce84477"
     },
@@ -1736,7 +1759,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e4906a8d7fa560c2d4fb37826a74776c372b79da8842218bfe4e6cd187f001ca"
     },
@@ -1759,7 +1782,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "3ff17427bb6be7f20d7b0680dab87412a9abb83ffdd6de964658e09d9c210248"
     },
@@ -1790,7 +1813,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "3fdeb400a101adb51ec99699c8ee2eeca0e2524aca90ff827f5c7a4dcce3b3fb"
     },
@@ -1817,7 +1840,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "8eace7baa830852017d8d9fe8f05d44a12b6256866844dea3ff66d9395af41bd"
     },
@@ -1850,7 +1873,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ffa8e3e155207a3134157c3b8b9eb06dda953b1aa98dacd18f6416d473377f85"
     },
@@ -1873,7 +1896,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c77c15db733d0ac0879201ef3600d55702ef8a32f6fb53c79de086f2f627431f"
     },
@@ -1907,19 +1930,23 @@
             },
             {
               "marke": "1",
-              "text": "darf eine Kompensation nur leisten, wenn sie nach deren Zahlung die regulatorischen Anforderungen erfüllt,"
+              "text": "darf eine Kompensation nur leisten, wenn sie nach deren Zahlung die regulatorischen Anforderungen erfüllt,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "muss eine Kompensation leisten, wenn sie die Voraussetzungen von Ziffer 1 erfüllt und:"
+              "text": "muss eine Kompensation leisten, wenn sie die Voraussetzungen von Ziffer 1 erfüllt und:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "über einen definierten Kapitalpuffer verfügt oder"
+              "text": "über einen definierten Kapitalpuffer verfügt oder",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "wenn sie eine Ausschüttung an den Kanton vornimmt zur Deckung von dessen Kosten für die Refinanzierung des von ihm in der Sanierung eingeschossenen Kapitals."
+              "text": "wenn sie eine Ausschüttung an den Kanton vornimmt zur Deckung von dessen Kosten für die Refinanzierung des von ihm in der Sanierung eingeschossenen Kapitals.",
+              "tiefe": 2
             }
           ]
         },
@@ -1948,9 +1975,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_40_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "0dc19a9312a794ae93baaf99e2d30b272c95b6dcbfaa0f54929b8f63da6f549a"
+      "sha": "9c771273721fadc6740d7ee44934cfea7c01f723df05f2434626653799011861"
     },
     {
       "id": "bund/ERV/art_41",
@@ -1993,7 +2020,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6487ffc28dd9e592c1c9377c60596d3bdedeac442cc36bb324c7ce9c013d2b96"
     },
@@ -2030,7 +2057,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7bcde108e9f2df71feb1149afb43fd7a5472a06f7dbc12af489010b645aafd8a"
     },
@@ -2053,7 +2080,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6e38b121fb37d4c649e58416c9a8768c1db106097aef0cc4642456524a6ae026"
     },
@@ -2086,7 +2113,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fcd0995ae0dcf6e8ffb32f882083fab9ac2e5720e4dc2204b0ea2bc54c565496"
     },
@@ -2105,7 +2132,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b30d6735f18af0b03298ac2468d86ac5be17aa2f3a5f1e7435b4073b1b4ec6ca"
     },
@@ -2132,7 +2159,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "1d99aeb91b55132502991d75f5a9fa207984fb8980fb6c5ac08f91d4c8503a0b"
     },
@@ -2173,7 +2200,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d9bae4bfc266f735e6f9dcba0afa19331c5cc734317c4ac4c8d05f1993156291"
     },
@@ -2212,7 +2239,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_44_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "1e0c09f6d7760ac69fd07f064abaf34c667df4009133b8fb899283bd0599e740"
     },
@@ -2253,7 +2280,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b98dcf72ef34be7b0def60301b17db66041351793eaeeb772a2ed444e9cc796c"
     },
@@ -2350,7 +2377,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_45_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "5eae6cfd7e082f3862ec3a3fae501121cd8addefe3532a12de3d10bbd0bf1a67"
     },
@@ -2369,7 +2396,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_46_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2388,7 +2415,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "37f8375d3769973b6d58fc7a8594b06ae9c710c6b328888d7e7586f0de08f04e"
     },
@@ -2467,7 +2494,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "5bbb6861e296deb991e55b4143f75f816b2d86805d1cfd37cc1e67048918c255"
     },
@@ -2493,19 +2520,23 @@
             },
             {
               "marke": "1",
-              "text": "Verhaltensregeln nach dem Finanzdienstleistungsgesetz vom 15. Juni 2018,"
+              "text": "Verhaltensregeln nach dem Finanzdienstleistungsgesetz vom 15. Juni 2018,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Marktverhaltensregeln nach dem Finanzmarktinfrastrukturgesetz vom 19. Juni 2015,"
+              "text": "Marktverhaltensregeln nach dem Finanzmarktinfrastrukturgesetz vom 19. Juni 2015,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Geldwäscherei und Terrorismusfinanzierung nach dem Geldwäschereigesetz vom 10. Oktober 1997,"
+              "text": "Geldwäscherei und Terrorismusfinanzierung nach dem Geldwäschereigesetz vom 10. Oktober 1997,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "grenzüberschreitendes Geschäft;"
+              "text": "grenzüberschreitendes Geschäft;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -2516,9 +2547,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "c2d17c8be9d93aa74d1018b6a67ec3b6010b7f174160aa6788cd5684b62af178"
+      "sha": "f2110c17c477383aa627ad974ce8961a86d9bc1e4ea7c536ed32dd4a171da4e7"
     },
     {
       "id": "bund/ERV/art_47_d",
@@ -2543,7 +2574,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "19a9dfa7a8c841d464108bb52d92a68315e29aa305f63e44e89a5928dc58014f"
     },
@@ -2562,7 +2593,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fc6af60fa0b2868cd0da847898e587c2876f12efd801b697dae9e4e0ba3c28e2"
     },
@@ -2613,7 +2644,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "198f2e47aa86ba404ff2ff076abd7fd6c248ea06d4e67843c730482a6703a1b9"
     },
@@ -2718,7 +2749,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c68994f4ef029b05903d655bcbdbdbd0a0f8d601b4896dfdb170ce27cdda354e"
     },
@@ -2759,7 +2790,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "10c2253052d6c1069f17ce962387baf7328aa5511362e678087961b70cd385f7"
     },
@@ -2796,7 +2827,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_50_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "a6692ff2ca335a2c1fe39b74aaf5a20774279e9150c6a94caa8a51d092220a97"
     },
@@ -2853,7 +2884,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d60d40796178b0145fa2f28077acf25225e8cb061e840812c7e6cd7bd8941baf"
     },
@@ -2930,7 +2961,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "9ea4e2c43f1126f77e7e0350d0348094357f181993226f0b11ab0173e19bd437"
     },
@@ -3005,7 +3036,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "24cb7126c234f6c60f2ee3aaf63051375299322180a7932a7383482886da0f7a"
     },
@@ -3024,7 +3055,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e7be8bbf2416ebe628c0af638ed88d978002663066532a81318ab7e4d0d5b1c2"
     },
@@ -3043,7 +3074,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3073,11 +3104,13 @@
             },
             {
               "marke": "1",
-              "text": "VSA-CCR,"
+              "text": "VSA-CCR,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Marktwertansatz;"
+              "text": "Marktwertansatz;",
+              "tiefe": 1
             },
             {
               "marke": "c",
@@ -3104,9 +3137,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "e25f2d815407dd7b27173d675eedb3d7fa664d334fa361dd53b7da91e737c0a1"
+      "sha": "a6569e032d7c39ae25d060900e9748d14728444aed952bd8b811e802dfed75fb"
     },
     {
       "id": "bund/ERV/art_57",
@@ -3127,7 +3160,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7b5f234a9d984132b352b18d8537bb67cec5124aa640568687b72c810f848523"
     },
@@ -3160,7 +3193,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4cd9a7be2aaa578e9f05796db41c8517f00fe7618465eff0f83201801f2e02ae"
     },
@@ -3183,7 +3216,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "1bca8416e93c8bd571fd3fcff5f431c617320c4b6c3410086ead550c39ad7abd"
     },
@@ -3238,7 +3271,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_59_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "71f5c22cefff3056b699927355fc34b9e306a611498260c5dd1c12769853cc4f"
     },
@@ -3305,7 +3338,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_59_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6c4a96d4f6b4b384ad0027624e9b961bcad3dc9b67424b54775ae83c6edc08cc"
     },
@@ -3336,7 +3369,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c405ff24a5b115b9c32fb9e6202932ed3344cbdc2f862462ecb81a76bb34a1ea"
     },
@@ -3399,7 +3432,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "9d7edb57844a946d3c27bbd687dac7991e77388f09b47ccbe062154390d50ced"
     },
@@ -3466,7 +3499,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "52d7de69bfb038b1ea94bbaad72f19eeaa74869f6fe4a88e8dcd9ca95dfbbcd0"
     },
@@ -3561,7 +3594,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "89adfb2daf9efbfc1c74545ee182fa5523453498ffcc88af022a229d74b44b06"
     },
@@ -3588,7 +3621,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_63_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "29fd463b88c5541fd9d6431970eba50554f34715f8b3aa054f3d8d633fea6aa3"
     },
@@ -3631,7 +3664,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "5c133bae14e37e61a506ca501ef61604044fe885a4ad51beeb8fda9c45e0335a"
     },
@@ -3698,7 +3731,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_64_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c1a42df926580ec4bab5f73b3e804fce353c39d63e342816f2db4c778f93221f"
     },
@@ -3757,7 +3790,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_64_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7fa7524d8d479ab97fecdd559ec4ddc48723a67e0af206f78c4ece0190170a61"
     },
@@ -3776,7 +3809,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_64_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4bac384998ba74c08aa90ce71fc5bf713437f5222225544be1d5bf4a158a1c7e"
     },
@@ -3795,7 +3828,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7dad0cc5cacdbb0ead547b4a08b2aab3feb1241c48ba65ce8016be71890855f9"
     },
@@ -3840,7 +3873,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_65_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "45c440e25591746fbcb0346af0d6b6bb22ca409a506f84dff4dff6664df35d92"
     },
@@ -3875,7 +3908,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "5647c41c11b3d48a547832d5eb39fcf5790c28e8e8cd829940a8dafa1b474683"
     },
@@ -3898,7 +3931,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_66_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "dacaee8fcf7070601870017148ec98801592a7bc71c0fcb255d5ded28a4698ee"
     },
@@ -3917,7 +3950,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f21e24c9e7fe797c1579b8dd55576c653e4e8b0a4b5edefe7755d8583c59e91a"
     },
@@ -3940,7 +3973,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7243daa26c3820552e4cc8b85f7453901e88764b2eef431b9f73df6a127e7d33"
     },
@@ -3989,7 +4022,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_68_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "59b53ae3477f21f587c7cde03efdb19ddd491e01c43abc709c1d079c1fa627d4"
     },
@@ -4030,7 +4063,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "0bbece491c4cca56f257b6652606b3a6c874306bb331c5fd0c1d238937d7d524"
     },
@@ -4065,7 +4098,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "a429f005ad4316c4dccd42611f2f3b6eaaa1465b8766aa7da8000e8fc53dab1d"
     },
@@ -4087,15 +4120,18 @@
             },
             {
               "marke": "1",
-              "text": "Finanzierungen, für deren Rückzahlung und Sicherung hauptsächlich die Einnahmen aus dem finanzierten Projekt verwendet werden (Projektfinanzierungen),"
+              "text": "Finanzierungen, für deren Rückzahlung und Sicherung hauptsächlich die Einnahmen aus dem finanzierten Projekt verwendet werden (Projektfinanzierungen),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Finanzierungen des Erwerbs von Anlagen, Maschinen, Fahrzeugen und anderen Ausrüstungsgegenständen, deren Rückzahlung von den Zahlungsflüssen abhängt, die durch diese Vermögenswerte generiert werden (Objektfinanzierungen),"
+              "text": "Finanzierungen des Erwerbs von Anlagen, Maschinen, Fahrzeugen und anderen Ausrüstungsgegenständen, deren Rückzahlung von den Zahlungsflüssen abhängt, die durch diese Vermögenswerte generiert werden (Objektfinanzierungen),",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "kurzfristige Kredite zur Finanzierung von Vorräten, Lagerbeständen oder Forderungen aus börsengehandelten Rohstoffen, die aus dem Erlös aus dem Verkauf der finanzierten Waren zurückgezahlt werden (Rohstoffhandelsfinanzierungen); und"
+              "text": "kurzfristige Kredite zur Finanzierung von Vorräten, Lagerbeständen oder Forderungen aus börsengehandelten Rohstoffen, die aus dem Erlös aus dem Verkauf der finanzierten Waren zurückgezahlt werden (Rohstoffhandelsfinanzierungen); und",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -4103,11 +4139,13 @@
             },
             {
               "marke": "1",
-              "text": "das Unternehmen verfügt über wenige oder gar keine anderen wesentlichen Vermögenswerte oder Tätigkeiten und ist daher für die Rückzahlung der Verpflichtung massgeblich auf die Erträge aus den zu finanzierenden Vermögenswerten angewiesen,"
+              "text": "das Unternehmen verfügt über wenige oder gar keine anderen wesentlichen Vermögenswerte oder Tätigkeiten und ist daher für die Rückzahlung der Verpflichtung massgeblich auf die Erträge aus den zu finanzierenden Vermögenswerten angewiesen,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "der Vertrag räumt der Bank weitgehende Sicherungsrechte betreffend die Vermögenswerte und die daraus erzielten Erträge ein."
+              "text": "der Vertrag räumt der Bank weitgehende Sicherungsrechte betreffend die Vermögenswerte und die daraus erzielten Erträge ein.",
+              "tiefe": 1
             }
           ]
         },
@@ -4122,9 +4160,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_70_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "3472f63f4cbf9dbbdb8ee06c3d60e0a4a5ca9dbdcc96a0353fc754573f928676"
+      "sha": "8cc90f1fd0de9ab011cb5f87fa4fdbe41b21ac2e96174de9f4835393031324df"
     },
     {
       "id": "bund/ERV/art_70_b",
@@ -4149,7 +4187,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_70_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ffa39abea40c31cc865b0578d9bf9af22efa94d48be127b2fab562a38b4a3569"
     },
@@ -4186,7 +4224,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b68c4b878b94a48efedad522b499451cc289dcc028454fb744b5ed53be663730"
     },
@@ -4205,7 +4243,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_71_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e3cab169bd4dc6e956d82c16f1958a3e93c1ae5df80847bf9ba4451b57fa3bc6"
     },
@@ -4239,27 +4277,33 @@
             },
             {
               "marke": "1",
-              "text": "Forderungen gegenüber Zentralregierungen, Zentralbanken, supranationalen Organisationen, öffentlich-rechtlichen Körperschaften oder multilateralen Entwicklungsbanken oder Forderungen, die von einer solchen Institution garantiert sind;"
+              "text": "Forderungen gegenüber Zentralregierungen, Zentralbanken, supranationalen Organisationen, öffentlich-rechtlichen Körperschaften oder multilateralen Entwicklungsbanken oder Forderungen, die von einer solchen Institution garantiert sind;",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "direkt und indirekt grundpfandgesicherte Positionen für Wohnliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 80 Prozent;"
+              "text": "direkt und indirekt grundpfandgesicherte Positionen für Wohnliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 80 Prozent;",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "direkt und indirekt grundpfandgesicherte Positionen für Gewerbeliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 60 Prozent;"
+              "text": "direkt und indirekt grundpfandgesicherte Positionen für Gewerbeliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 60 Prozent;",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Forderungen gegenüber Banken mit einem Risikogewicht von maximal 30 Prozent oder Forderungen, die von einer solchen Bank garantiert sind; diese Forderungen dürfen maximal 15 Prozent der Vermögenswerte der ausgegebenen ausländischen gedeckten Schuldverschreibungen umfassen;"
+              "text": "Forderungen gegenüber Banken mit einem Risikogewicht von maximal 30 Prozent oder Forderungen, die von einer solchen Bank garantiert sind; diese Forderungen dürfen maximal 15 Prozent der Vermögenswerte der ausgegebenen ausländischen gedeckten Schuldverschreibungen umfassen;",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Barmittel oder kurzfristige liquide und sichere Forderungen, die vorübergehend zum Ausgleich von Bestandsveränderungen dienen;"
+              "text": "Barmittel oder kurzfristige liquide und sichere Forderungen, die vorübergehend zum Ausgleich von Bestandsveränderungen dienen;",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "Derivate, die zur Absicherung der Risiken der ausländischen gedeckten Schuldverschreibungen dienen."
+              "text": "Derivate, die zur Absicherung der Risiken der ausländischen gedeckten Schuldverschreibungen dienen.",
+              "tiefe": 1
             },
             {
               "marke": "e",
@@ -4274,9 +4318,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_71_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "1144de07cd45a85ac4a5bf831aafceb035b07beb55aae62e8d352fe77f334574"
+      "sha": "9eb9af8d79b3314aca9cfde772d948dd5cbb001c0675f3b3b100abb996bd0169"
     },
     {
       "id": "bund/ERV/art_72",
@@ -4313,7 +4357,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "33a96ea43a83ff995161c0e2feba18dbbf41d77e03b54d9aac87c79ed435849e"
     },
@@ -4344,7 +4388,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "98fa73beaf6513e6b972022b90c64d89924df1a8bb5d2f04610618d1e3c030ed"
     },
@@ -4401,7 +4445,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "da7f0cc6a7531df1bb3e941e91b7d32daac6f814428cc5301d018e83f27a3149"
     },
@@ -4475,15 +4519,18 @@
             },
             {
               "marke": "1",
-              "text": "natürliche Personen: 75 Prozent,"
+              "text": "natürliche Personen: 75 Prozent,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "KMU: 85 Prozent, unter Vorbehalt von Artikel 70 Absatz 4,"
+              "text": "KMU: 85 Prozent, unter Vorbehalt von Artikel 70 Absatz 4,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "alle anderen Gegenparteien: das Risikogewicht der Gegenpartei;"
+              "text": "alle anderen Gegenparteien: das Risikogewicht der Gegenpartei;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -4498,9 +4545,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "6a8023fda6ae91aa2095b39c17666cbee8330be85b045aee0e3d0a80461f9171"
+      "sha": "0d9738fa1966eb271975e2649d1fefb3ca7fa4b30018c03ee99f3d26188da342"
     },
     {
       "id": "bund/ERV/art_72_d",
@@ -4521,7 +4568,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "9112664f6978a6bc884a9894a8a85eac7281857fe3861fa5014d7e15117d3831"
     },
@@ -4556,7 +4603,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "2cb2fc9917b15086461ecc602509ac39ea44b9bbe7b8569cf527ea3609b63bd7"
     },
@@ -4593,7 +4640,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "164d730ccba094171005efdf3d09c8fb1babe8ea469264ba90e187e9eaad75cb"
     },
@@ -4612,7 +4659,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c61ce20e6152ae4470d3cdb409a15632b09b5e1431bff8dd62b47240b6cf41ae"
     },
@@ -4641,7 +4688,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "3cdec900cb4cbc5e228b080fed40c55fd5aef99dde88ab9ccc0fa5311f6a910d"
     },
@@ -4660,7 +4707,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_74_76",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4709,7 +4756,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "a3016f02ac101f7755e59fb6eea52af9ce381baafcf1e1768d1ef8885b456472"
     },
@@ -4764,7 +4811,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "675ebba7feecac46a022961d09d6801ed676d58016d7717e4b096e1508ef5c1a"
     },
@@ -4827,7 +4874,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ac80aaa22c11e08c28f169583f7f30b1cdde775c86715e1d49286f2985d5b01c"
     },
@@ -4864,7 +4911,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4e6e4f55c11ee3f27ec38a506c839a1b6785a88ce1eef9258f375eb092ac7ab"
     },
@@ -4905,7 +4952,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b49c10fdbe97dc1ca8602f0032cb6ed685732fddacdb45c94812c32b1139bcfa"
     },
@@ -4924,7 +4971,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4197339e4919a44294b3e6467ae14e79b5865717cc9aadfe9968a26331baefc0"
     },
@@ -4983,7 +5030,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fca3fd58548e982e0730dc8a19df261eca990a96c946884511c7220b734ad143"
     },
@@ -5024,7 +5071,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "75b77d4291917cd3ca5c308292ec0be6a0ba42bebea94daba47eb850f2eabd9e"
     },
@@ -5057,7 +5104,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e435779ef7e5513c483a00e04afea4cf1e1b13ea7ff012b3064c7fd093582095"
     },
@@ -5084,7 +5131,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6b97e805cee5602104d1b494e48d5a293e382293fa94655a5e26521c9dc78e90"
     },
@@ -5111,7 +5158,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "775845e68e400eefc4c218b14ec86b9963e17a9a56c7df2c5e436b0b9d6e03b7"
     },
@@ -5130,7 +5177,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_78_79",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5149,7 +5196,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_80",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5190,7 +5237,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_81",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "301f998123237c00822e6ce09673d71b904be76de2812ce99962d12c06de9104"
     },
@@ -5213,7 +5260,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_81_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e90462ba2d0b27dd48a2c657de35db399befc4044a33f3af112ea5d81b0c51b6"
     },
@@ -5266,7 +5313,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_81_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b89aa0d1e51e3ffe3a7937eafbee5c9fe0a81e63be21dd10618189029f3d5aaa"
     },
@@ -5299,7 +5346,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_81_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fccbcbc42c22d6dce52ef9dd666010d576372de6bd683125d5e78341dbffd474"
     },
@@ -5350,7 +5397,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_82",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "cbce04eb165026f458accd20a8dd0b81440a62b0ceaf7ea67a6096778071b2b0"
     },
@@ -5403,7 +5450,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "db2663cfa75d8225cb88f49b257e21fad862ae5f50bb03595afc85921689a9ae"
     },
@@ -5466,7 +5513,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_83_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "5a1ac900c64a2d9dfe394ed5a12c96f3ff0bb7db9529dc420333a8c221b67178"
     },
@@ -5489,7 +5536,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "2a465c28a7f9cda40edc58a2141ef5ce6b6f0c7ddd09d679d47d1e25a454e2ab"
     },
@@ -5516,7 +5563,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "14108c0aa8e98b6ef2d4d94f2300883b0327141abf889aae18e99f3b2243a14c"
     },
@@ -5539,7 +5586,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "100b9f71abda71318fd8005e316fe35ce995289d58181dbae34d83af4ee888d0"
     },
@@ -5558,7 +5605,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_86_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c06083e59133d2bcb008bdef999c6f8fae51881a3551c27afd63360a73d5542c"
     },
@@ -5581,7 +5628,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "2de1a182a6c2fa26d9d1cd30ebd96e4dd99abb46f1f8af3eb4d8f24712a5064d"
     },
@@ -5618,7 +5665,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "44d054625dc7c0dea94ba35f437de3aad8d0c1a2483991e44a7f9577e1537377"
     },
@@ -5637,7 +5684,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "21a64ccada22691e73fa6f4b8a05282740db30137e670191f2a38b94e537b618"
     },
@@ -5682,7 +5729,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ef5ae4686d61c3c32cb745a91b6c1602288de31990c21a25ace12083edf4514f"
     },
@@ -5701,7 +5748,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "54cf62c54579bf188895d2c09df1e1ecdec4e3aef0c101d3db1b7d438076e8e7"
     },
@@ -5792,7 +5839,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d06ece6412283a79d31e0c7a9e61b6cda23b5d35ff9f897a38665b95b3c38578"
     },
@@ -5815,7 +5862,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4ebb23f99bb4a2bf503668cbdcfa7c578e0f7cc422d6dcd62c78ee346e0db954"
     },
@@ -5838,7 +5885,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "11cd4bc718cb77a0348041cddb3c98c7cf863d0de9839511d2a521a9fd7c7cc0"
     },
@@ -5871,7 +5918,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f92169e61a3ec4516f72bf14eb10236de86ab4f896d501df1ebdc0441f11a8ac"
     },
@@ -5906,7 +5953,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "87169f7138e17a338c200a35f117ed9e49c04559b2a44b4f976a5f6d261c17e3"
     },
@@ -5959,7 +6006,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "c3d3d93675a8ff5416148c09fced9422f21567d7abee007c47d365c760e178c4"
     },
@@ -5990,7 +6037,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_93_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "1b738736b260f7c6b56f4400e2bf24e120c81415e5e530a8645cfd4309c3956d"
     },
@@ -6061,7 +6108,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "8fbfcba28e58381b04245fd2d33cc82c30a9901cf3218e003bec26af99fb750e"
     },
@@ -6084,7 +6131,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "85a4098970513b7e39956b84f380dae10a25164d12929f90723af9e660035a2a"
     },
@@ -6129,7 +6176,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d5624d9c015f02f49a0339e2c4cc3617415f34bd0e928ca8fbd490a6de58b3d8"
     },
@@ -6174,7 +6221,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "bd38d1fca425b07da69ca149782c5c0609e8113c6b69af4205ba88b425c717db"
     },
@@ -6193,7 +6240,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "19696363aca050bad6510263758516cbe5a00dfc8fdee64664d30b4755564718"
     },
@@ -6224,7 +6271,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ec3508f79160f9502184c1ab7fe7d52f189ed9296bba0527d72956d0e49520bc"
     },
@@ -6313,7 +6360,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "0ec5c846a03d074301763dff1fedfdf98dc88e5af50f9f0c55dac5262b619b9d"
     },
@@ -6332,7 +6379,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_101",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f95d2a73bdf8fc45d41d6a6198146764886eb6470c1b92e419c1320237e529ab"
     },
@@ -6351,7 +6398,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_102",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "481b43e25cbd1917c036f0ea40275ea7790d2f5f59bf271f916c744df9ed48c6"
     },
@@ -6377,36 +6424,42 @@
             },
             {
               "marke": "1",
-              "text": "0,05 ab und mit dem Tag, an dem die feste Übernahmezusage unwiderruflich eingegangen wird,"
+              "text": "0,05 ab und mit dem Tag, an dem die feste Übernahmezusage unwiderruflich eingegangen wird,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "0,1 am Tag der Liberierung der Emission,"
+              "text": "0,1 am Tag der Liberierung der Emission,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "0,25 am zweiten und dritten Bankwerktag nach der Liberierung der Emission,"
+              "text": "0,25 am zweiten und dritten Bankwerktag nach der Liberierung der Emission,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "0,5 am vierten Bankwerktag nach der Liberierung der Emission,"
+              "text": "0,5 am vierten Bankwerktag nach der Liberierung der Emission,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "0,75 am fünften Bankwerktag nach der Liberierung der Emission,"
+              "text": "0,75 am fünften Bankwerktag nach der Liberierung der Emission,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "1 ab und mit dem sechsten Bankwerktag nach der Liberierung der Emission."
+              "text": "1 ab und mit dem sechsten Bankwerktag nach der Liberierung der Emission.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_103",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "723288f29cb67084d4201b432ba54929a754745b0f90372bf0757726ff1a0f19"
+      "sha": "c4bcf944f61478d70fbdf1d345e237ee64bd9a169a31a58f8ca79daaac19e538"
     },
     {
       "id": "bund/ERV/art_104_105",
@@ -6423,7 +6476,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_104_105",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6442,7 +6495,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_106",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "0eb3fc882fd88b796fded1a2df4783c8375022c0f3270cf6a2a4c507856bd40a"
     },
@@ -6461,7 +6514,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_107_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -6520,7 +6573,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "005f15d83fbdf6d472256183dcc1211a67101da9cd240d132ad4959c6539c152"
     },
@@ -6543,7 +6596,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "37342e090a11f54d7ad0aabc5154605b6186f4c87d7cfeadc63cc72f2b9d807b"
     },
@@ -6562,7 +6615,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e1bd1501495db9464bc54c06d67ce9b0f8544cb9eb9195b39a4d334cf64110e5"
     },
@@ -6599,7 +6652,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_111_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "24463737cd210fcc6be2c4fc7fbb9108ccdf709f5def17a07a66f6ea0feecc09"
     },
@@ -6664,7 +6717,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_112",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b7cc36b9ddabfe45199134e9c4e23fa86ea97681ead26a2de1cdb084330ce5c5"
     },
@@ -6701,7 +6754,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_113",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "bc2b08bd66f13cb49b87b03f469dd7b5d5caac4615f207ed19610a3d64897d45"
     },
@@ -6720,7 +6773,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_114",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "34a4ffc43bf10187d74dbba6af7755252fd2084fdcefacd87f572b8099f02819"
     },
@@ -6747,7 +6800,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_115",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "0b3c1d5d5f0d12f772f030f4c2a68b491091d78767c4103e1d3a150063d8871d"
     },
@@ -6766,7 +6819,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_116",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f29ad96d165b7b0ebaa0529280303e0bd74d44006127ece63d588c0931512dae"
     },
@@ -6807,7 +6860,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_117",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "a24f2fececac11b80b495f19408af4a0af4125fb9584ab914a4986b4a626432d"
     },
@@ -6852,7 +6905,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_118",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "6474cf79f7ec65cd0723418d5eaecaf159302faa2891e60f6c217b5880ca85e2"
     },
@@ -6921,7 +6974,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_119",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d37deb9edfe68e3f909e66ee3a353305ac05f084adf4e56b7d3118c1d667050e"
     },
@@ -6940,7 +6993,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_120_123",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -6989,7 +7042,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_124",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "8e8a4ea701040812d8b50fc846b63c39b80e97af76c587b5cc2f5c2983229aa5"
     },
@@ -7016,7 +7069,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_124_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f046de276aca6210e1a14e328003e52db2ecec95980e94e0e5627b5d194a52fd"
     },
@@ -7035,7 +7088,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_125",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7054,7 +7107,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_125_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7091,7 +7144,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_126",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ca79498c1e7cdfa116896fee92297f5a6b3f76d7b051b99a6b563d74e157f64d"
     },
@@ -7164,7 +7217,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_126_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "76bc1c842e68da45148c9a28d5236aacbc8461b39b3a12b8627370b58f205fb3"
     },
@@ -7205,7 +7258,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_126_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fd91f02650c095cbbfff8a2b1f8502d7f3319127011c293e4e5e22cc16639ca8"
     },
@@ -7242,7 +7295,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_127",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "efdc41bd9ad435047418f9b9be6d1e0d17c14b6087a1c4435d7e5233215c8893"
     },
@@ -7287,7 +7340,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_127_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "ea0bc5c0d21513f3059d489defb14f22cab71d033acfc3f0bb30d0ef8fefef9e"
     },
@@ -7320,7 +7373,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_128",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "abbbb49f249db774ecc611ba4329046a241f11bcc9c84a416891e6a288a63e48"
     },
@@ -7365,7 +7418,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_129",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "071138b214bff3613157fea1f5eed8a3a4a5b496a297f4cc0422d73be048b0cd"
     },
@@ -7406,7 +7459,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_130",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "cf762cdee148cecd1951ffbdb53506fca0340ab147307cb23b604ffb02a786f7"
     },
@@ -7428,11 +7481,13 @@
             },
             {
               "marke": "1",
-              "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 1,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital zur Erfüllung der Mindesteigenmittel verwendet werden, dessen auslösendes Ereignis eintritt, wenn das anrechenbare harte Kernkapital 7 Prozent bei der RWA-Quote unterschreitet (Wandlungskapital mit hohem Trigger),"
+              "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 1,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital zur Erfüllung der Mindesteigenmittel verwendet werden, dessen auslösendes Ereignis eintritt, wenn das anrechenbare harte Kernkapital 7 Prozent bei der RWA-Quote unterschreitet (Wandlungskapital mit hohem Trigger),",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Eigenmittelpuffer: hartes Kernkapital;"
+              "text": "Eigenmittelpuffer: hartes Kernkapital;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -7440,20 +7495,22 @@
             },
             {
               "marke": "1",
-              "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 3,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital mit hohem Trigger zur Erfüllung der Mindesteigenmittel verwendet werden,"
+              "text": "Mindesteigenmittel: hartes Kernkapital; im Umfang von maximal 3,5 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital mit hohem Trigger zur Erfüllung der Mindesteigenmittel verwendet werden,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Eigenmittelpuffer: hartes Kernkapital; im Umfang von maximal 0,8 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital mit hohem Trigger zur Erfüllung des Eigenmittelpuffers verwendet werden."
+              "text": "Eigenmittelpuffer: hartes Kernkapital; im Umfang von maximal 0,8 Prozent kann als zusätzliches Kernkapital in Form von Wandlungskapital mit hohem Trigger zur Erfüllung des Eigenmittelpuffers verwendet werden.",
+              "tiefe": 1
             }
           ]
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_131",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "a19952346497409c80ff3388bc115177039ae00fd3f021516f08800383dc9f4a"
+      "sha": "85cbe0d71d7cfa5a4bc95a21884f2447f75864b1321dc3eb5613911313628a34"
     },
     {
       "id": "bund/ERV/art_131_a",
@@ -7470,7 +7527,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_131_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f75c3ae4f4dd3c1bb70361bfefd51ae614d33ecc7617e8bcf04878e7a483079c"
     },
@@ -7489,7 +7546,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_131_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "7d77b9a6d22df97d0b623f0c7f27c6f3977d33c21a345d7321d0edac492cec58"
     },
@@ -7515,27 +7572,33 @@
             },
             {
               "marke": "1",
-              "text": "für Einheiten, die systemrelevante Funktionen ausüben (Art. 124 Abs. 3 Bst. a): 62 Prozent der Gesamtanforderung auf Stufe Finanzgruppe und auf Stufe Einzelinstitut,"
+              "text": "für Einheiten, die systemrelevante Funktionen ausüben (Art. 124 Abs. 3 Bst. a): 62 Prozent der Gesamtanforderung auf Stufe Finanzgruppe und auf Stufe Einzelinstitut,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "auf den Stufen oberste Einheit einer Finanzgruppe (Art. 124 Abs. 3 Bst. b) sowie bedeutende untergeordnete Finanzgruppen (Art. 124 Abs. 3 Bst. c), sofern nicht die Anforderung von Ziffer 1 zur Anwendung kommt: 75 Prozent der Gesamtanforderung,"
+              "text": "auf den Stufen oberste Einheit einer Finanzgruppe (Art. 124 Abs. 3 Bst. b) sowie bedeutende untergeordnete Finanzgruppen (Art. 124 Abs. 3 Bst. c), sofern nicht die Anforderung von Ziffer 1 zur Anwendung kommt: 75 Prozent der Gesamtanforderung,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "auf Stufe Einzelinstitut einer Bank nach Artikel 124 Absatz 3 Buchstabe c oder d die Summe aus:"
+              "text": "auf Stufe Einzelinstitut einer Bank nach Artikel 124 Absatz 3 Buchstabe c oder d die Summe aus:",
+              "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "den Nominalbeträgen von zusätzlichen verlustabsorbierenden Mitteln, die an Tochtergesellschaften weitergegeben werden"
+              "text": "den Nominalbeträgen von zusätzlichen verlustabsorbierenden Mitteln, die an Tochtergesellschaften weitergegeben werden",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "75 Prozent der Gesamtanforderung, mit Ausnahme von zu konsolidierenden Beteiligungen, einschliesslich des in gleicher Weise erfassten regulatorischen Kapitals und von Risiken aus gruppeninternen Beziehungen und"
+              "text": "75 Prozent der Gesamtanforderung, mit Ausnahme von zu konsolidierenden Beteiligungen, einschliesslich des in gleicher Weise erfassten regulatorischen Kapitals und von Risiken aus gruppeninternen Beziehungen und",
+              "tiefe": 2
             },
             {
               "marke": "–",
-              "text": "30 Prozent der für diese Einheit konsolidiert geltenden Anforderungen;"
+              "text": "30 Prozent der für diese Einheit konsolidiert geltenden Anforderungen;",
+              "tiefe": 2
             },
             {
               "marke": "b",
@@ -7566,9 +7629,9 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
-      "sha": "f019f5c79d6f1f51afb94b0c7d3bf0b6765542ea15a3736d51c3a0995dd97616"
+      "sha": "8992782b7bad7336a805e70bf20d44ebde5931ae3aae8bcbfd635dd03e8f5b2f"
     },
     {
       "id": "bund/ERV/art_132_a",
@@ -7589,7 +7652,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "e9f5cc0b9ee641f1eb8a6b0d9899f7048369478fe3fad45c41a61b4ad2d01dc1"
     },
@@ -7618,7 +7681,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4e9d22de8670c5352a4e98a55203f9c481dbaa7b798b79fbc6e375b00c03ea3"
     },
@@ -7637,7 +7700,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_133",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "dc62d260631bf8d014fa4d66277ac69909cf0d3cdf5ea933d06cde4c51b504f3"
     },
@@ -7656,7 +7719,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_134_135",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -7711,7 +7774,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_136",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "4480b1f2f848a1b78f6d4f621fd8a57bb91298453b9bb7d9f07fbf4be5f05472"
     },
@@ -7730,7 +7793,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_137_138",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7749,7 +7812,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_139_142",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7768,7 +7831,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_143_147",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7787,7 +7850,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7806,7 +7869,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -7861,7 +7924,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "feb5eb477fc16ad893f41541c7e421bceaf5bd548f20a7b8c141084d6bb29d01"
     },
@@ -7880,7 +7943,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "bea248c56dab565485771bda36e8698520b73c3744c5b7d3e9448a92e7cce7de"
     },
@@ -7899,7 +7962,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "0bc1408a5c7f2bcc719770d9c3c98fc2dc5594c64e8985e02e45eec47c25c239"
     },
@@ -7932,7 +7995,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "f75367f427f9493235e56d0ccdc7344c9dc66c9dcc0936abe0ed6a23fdd095c8"
     },
@@ -7951,7 +8014,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "d61ee63a9466c35726f06afc0089db1e4915991648b195a817751ec5d5ee35bd"
     },
@@ -8006,7 +8069,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "85b2d0b536648163e844b2efd574188a273ad1e543d1a3ad878cdf5f4fca1d7b"
     },
@@ -8025,7 +8088,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "abfb3aa4f595a75e2eb993a5d8d402eccab20562f2b2320c61c5545d7f9f5aba"
     },
@@ -8044,7 +8107,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "8d0e00924d0eea4f6c1f553f2617cf5a34281161d1478250312e0fe08a0d3fd2"
     },
@@ -8063,7 +8126,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_j",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "512c6dac4f123e2b73d5c90185e810a119ea4b66e162b4a1f1880e3d46fabb7a"
     },
@@ -8082,7 +8145,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_k_148_m",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -8101,7 +8164,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_149",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "9dd71cf96038344143bbe3d185319da11302aa0794551fad30bfd2a5bd5f7277"
     },
@@ -8120,7 +8183,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_150",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "258bbb9e07d00cdd2b0fe974b57a9173846d061a94bad92e21ecee612d308512"
     },
@@ -8147,7 +8210,7 @@
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_151",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20250124",
       "sha": "aaf6daf5b1e914116162fc4bd5b194fb739f54bfe8a33bcdf049f0c99b036903"
     }

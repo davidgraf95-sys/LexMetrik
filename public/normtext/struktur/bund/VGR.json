@@ -1,5 +1,37 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "173.320.1",
+  "titel": "Geschäftsreglement für das Bundesverwaltungsgericht",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Bundesverwaltungsgericht (BVGer),"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 16 Absatz 1 Buchstabe a des Verwaltungsgerichtsgesetzes vom 17. Juni 2005 (VGG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "erlässt folgendes Reglement:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>173.32</b>",
+    "links": [
+     {
+      "label": "SR <b>173.32</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2006/352"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -18,10 +50,10 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 355).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 355).",
      "links": [
       {
-       "label": "AS 2022 355",
+       "label": "AS <b>2022</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/355"
       }
      ],
@@ -45,10 +77,10 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, mit Wirkung seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, mit Wirkung seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -119,10 +151,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 355).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 355).",
      "links": [
       {
-       "label": "AS 2022 355",
+       "label": "AS <b>2022</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/355"
       }
      ],
@@ -146,10 +178,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 23. März 2021, mit Wirkung seit 1. Jan. 2021 (AS 2021 629).",
+     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 23. März 2021, mit Wirkung seit 1. Jan. 2021 (AS <b>2021</b> 629).",
      "links": [
       {
-       "label": "AS 2021 629",
+       "label": "AS <b>2021</b> 629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/629"
       }
      ],
@@ -190,10 +222,10 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS 2022 355).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 14. Juni 2022, in Kraft seit 1. Juli 2022 (AS <b>2022</b> 355).",
      "links": [
       {
-       "label": "AS 2022 355",
+       "label": "AS <b>2022</b> 355",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/355"
       }
      ],
@@ -288,10 +320,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 23. März 2021, in Kraft seit 1. Jan. 2021 (AS 2021 629).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 23. März 2021, in Kraft seit 1. Jan. 2021 (AS <b>2021</b> 629).",
      "links": [
       {
-       "label": "AS 2021 629",
+       "label": "AS <b>2021</b> 629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/629"
       }
      ],
@@ -300,10 +332,10 @@
     },
     {
      "nr": "9",
-     "text": "SR 173.320.4",
+     "text": "SR <b>173.320.4</b>",
      "links": [
       {
-       "label": "SR 173.320.4",
+       "label": "SR <b>173.320.4</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/323"
       }
      ],
@@ -329,10 +361,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS 2017 3401).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS <b>2017</b> 3401).",
      "links": [
       {
-       "label": "AS 2017 3401",
+       "label": "AS <b>2017</b> 3401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/373"
       }
      ],
@@ -341,10 +373,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 25. Juni 2019, in Kraft seit 1. Aug. 2019 (AS 2019 2203).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 25. Juni 2019, in Kraft seit 1. Aug. 2019 (AS <b>2019</b> 2203).",
      "links": [
       {
-       "label": "AS 2019 2203",
+       "label": "AS <b>2019</b> 2203",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/412"
       }
      ],
@@ -353,15 +385,16 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS 2017 3401).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS <b>2017</b> 3401).",
      "links": [
       {
-       "label": "AS 2017 3401",
+       "label": "AS <b>2017</b> 3401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/373"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "6. Abschnitt: Schlichtungsbehörden"
     }
    ]
   },
@@ -380,10 +413,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 12. Dez. 2017, in Kraft seit 1. Jan. 2018 (AS 2018 3).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 12. Dez. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2018</b> 3).",
      "links": [
       {
-       "label": "AS 2018 3",
+       "label": "AS <b>2018</b> 3",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/2"
       }
      ],
@@ -409,10 +442,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -483,10 +516,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 18. März 2014, in Kraft seit 1. April 2014 (AS 2014 695).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 18. März 2014, in Kraft seit 1. April 2014 (AS <b>2014</b> 695).",
      "links": [
       {
-       "label": "AS 2014 695",
+       "label": "AS <b>2014</b> 695",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/145"
       }
      ],
@@ -495,10 +528,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -524,10 +557,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 121",
+     "text": "SR <b>121</b>",
      "links": [
       {
-       "label": "SR 121",
+       "label": "SR <b>121</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
@@ -536,10 +569,10 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 23. März 2021, in Kraft seit 1. Jan. 2021 (AS 2021 629).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 23. März 2021, in Kraft seit 1. Jan. 2021 (AS <b>2021</b> 629).",
      "links": [
       {
-       "label": "AS 2021 629",
+       "label": "AS <b>2021</b> 629",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/629"
       }
      ],
@@ -548,10 +581,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 6. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4305).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 6. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4305).",
      "links": [
       {
-       "label": "AS 2018 4305",
+       "label": "AS <b>2018</b> 4305",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/692"
       }
      ],
@@ -560,10 +593,10 @@
     },
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -572,10 +605,10 @@
     },
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -584,10 +617,10 @@
     },
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -596,10 +629,10 @@
     },
     {
      "nr": "26",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
@@ -655,10 +688,10 @@
    "fussnoten": [
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -699,10 +732,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 30. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 501).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 30. Aug. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 501).",
      "links": [
       {
-       "label": "AS 2022 501",
+       "label": "AS <b>2022</b> 501",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/501"
       }
      ],
@@ -754,10 +787,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -779,10 +812,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -791,10 +824,10 @@
     },
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -803,10 +836,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -815,14 +848,14 @@
     },
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 19. Sept. 2017 (AS 2017 5767). Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 19. Sept. 2017 (AS <b>2017</b> 5767). Fassung gemäss Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2017 5767",
+       "label": "AS <b>2017</b> 5767",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/623"
       },
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -831,10 +864,10 @@
     },
     {
      "nr": "35",
-     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, mit Wirkung seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Aufgehoben durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, mit Wirkung seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -843,10 +876,10 @@
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -923,10 +956,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "[AS 2006 5287]",
+     "text": "[AS <b>2006</b> 5287]",
      "links": [
       {
-       "label": "AS 2006 5287",
+       "label": "AS <b>2006</b> 5287",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/799"
       }
      ],
@@ -935,10 +968,10 @@
     },
     {
      "nr": "42",
-     "text": "Die Änderung kann unter AS 2008 2189 konsultiert werden.",
+     "text": "Die Änderung kann unter AS <b>2008</b> 2189 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2008 2189",
+       "label": "AS <b>2008</b> 2189",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/320"
       }
      ],
@@ -960,10 +993,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "SR 171.10",
+     "text": "SR <b>171.10</b>",
      "links": [
       {
-       "label": "SR 171.10",
+       "label": "SR <b>171.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
@@ -996,10 +1029,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "[AS 2006 5287]",
+     "text": "[AS <b>2006</b> 5287]",
      "links": [
       {
-       "label": "AS 2006 5287",
+       "label": "AS <b>2006</b> 5287",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/799"
       }
      ],
@@ -1034,15 +1067,16 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS 2016 1373).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 17. Nov. 2015, in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1373).",
      "links": [
       {
-       "label": "AS 2016 1373",
+       "label": "AS <b>2016</b> 1373",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/271"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Abschnitt: Abteilungspräsidium"
     }
    ]
   },
@@ -1063,10 +1097,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS 2017 3401).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 21. März 2017, in Kraft seit 1. Juli 2017 (AS <b>2017</b> 3401).",
      "links": [
       {
-       "label": "AS 2017 3401",
+       "label": "AS <b>2017</b> 3401",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/373"
       }
      ],
@@ -1075,10 +1109,10 @@
     },
     {
      "nr": "14",
-     "text": "SR 151.1",
+     "text": "SR <b>151.1</b>",
      "links": [
       {
-       "label": "SR 151.1",
+       "label": "SR <b>151.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1996/1498_1498_1498"
       }
      ],
@@ -1087,10 +1121,10 @@
     },
     {
      "nr": "15",
-     "text": "SR 172.327.1",
+     "text": "SR <b>172.327.1</b>",
      "links": [
       {
-       "label": "SR 172.327.1",
+       "label": "SR <b>172.327.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/124"
       }
      ],
@@ -1116,10 +1150,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -1141,10 +1175,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -1153,10 +1187,10 @@
     },
     {
      "nr": "38",
-     "text": "SR 172.021",
+     "text": "SR <b>172.021</b>",
      "links": [
       {
-       "label": "SR 172.021",
+       "label": "SR <b>172.021</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
@@ -1178,10 +1212,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -1203,10 +1237,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],
@@ -1228,10 +1262,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS 2023 238).",
+     "text": "Eingefügt durch Ziff. I des Beschlusses des BVGer vom 13. Dez. 2022, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 238).",
      "links": [
       {
-       "label": "AS 2023 238",
+       "label": "AS <b>2023</b> 238",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/238"
       }
      ],

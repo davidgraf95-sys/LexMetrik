@@ -1,5 +1,122 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "946.512",
+  "titel": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde‑ und Zulassungsstellen",
+  "erlassdatum": "vom 17. Juni 1996 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 8, 10, 15 und 16 des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse, in Anwendung des Abkommens vom 3. Dezember 1998 zwischen der Schweiz und Kanada über die gegenseitige Anerkennung von Konformitätsbewertungen, in Anwendung des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die gegenseitige Anerkennung von Konformitätsbewertungen, in Anwendung des Abkommens vom 21. Juni 2001 zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation und seines Anhanges I, in Anwendung des Abkommens vom 17. November 2022 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die gegenseitige Anerkennung von Konformitätsbewertungen, in Anwendung des Abkommens vom 12. Januar 2023 zwischen der Schweizerischen Eidgenossenschaft und den Vereinigten Staaten von Amerika über die gegenseitige Anerkennung betreffend die gute Herstellungspraxis für Arzneimittel,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>946.51</b>",
+    "links": [
+     {
+      "label": "SR <b>946.51</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.946.523.21</b>",
+    "links": [
+     {
+      "label": "SR <b>0.946.523.21</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2001/436"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.946.526.81</b>",
+    "links": [
+     {
+      "label": "SR <b>0.946.526.81</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/276"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "AS <b>2003</b> 2685",
+    "links": [
+     {
+      "label": "AS <b>2003</b> 2685",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2003/416"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>0.632.31</b>",
+    "links": [
+     {
+      "label": "SR <b>0.632.31</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR <b>0.946.536.71</b>",
+    "links": [
+     {
+      "label": "SR <b>0.946.536.71</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2023/11"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR <b>0.812.101.933.6</b>",
+    "links": [
+     {
+      "label": "SR <b>0.812.101.933.6</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2023/419"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "8",
+    "text": "Fassung gemäss Ziff. I der V vom 16. Dez. 2022, in Kraft seit 27. Juli 2023 (AS <b>2023</b> 418).",
+    "links": [
+     {
+      "label": "AS <b>2023</b> 418",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2023/418"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +131,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Ausdruck gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -26,10 +143,10 @@
     },
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -75,10 +192,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS 2006 1089).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 1089).",
      "links": [
       {
-       "label": "AS 2006 1089",
+       "label": "AS <b>2006</b> 1089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/194"
       }
      ],
@@ -87,10 +204,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS 2006 1089).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 1089).",
      "links": [
       {
-       "label": "AS 2006 1089",
+       "label": "AS <b>2006</b> 1089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/194"
       }
      ],
@@ -114,10 +231,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS 2006 1089).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 1089).",
      "links": [
       {
-       "label": "AS 2006 1089",
+       "label": "AS <b>2006</b> 1089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/194"
       }
      ],
@@ -141,10 +258,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I 6.9 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS 2011 5227).",
+     "text": "Fassung gemäss Ziff. I 6.<i>9 </i>der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5227).",
      "links": [
       {
-       "label": "AS 2011 5227",
+       "label": "AS <b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
      ],
@@ -153,10 +270,10 @@
     },
     {
      "nr": "15",
-     "text": "Aufgehoben durch Ziff. I 6.9 der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2012 (AS 2011 5227).",
+     "text": "Aufgehoben durch Ziff. I 6.<i>9 </i>der V vom 9. Nov. 2011 (Überprüfung der ausserparlamentarischen Kommissionen), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 5227).",
      "links": [
       {
-       "label": "AS 2011 5227",
+       "label": "AS <b>2011</b> 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
      ],
@@ -208,10 +325,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -237,10 +354,10 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -296,10 +413,10 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -308,10 +425,10 @@
     },
     {
      "nr": "19",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -335,10 +452,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -347,10 +464,10 @@
     },
     {
      "nr": "21",
-     "text": "Aufgehoben durch Ziff. I der V vom 10. März 2006, mit Wirkung seit 1. April 2006 (AS 2006 1089).",
+     "text": "Aufgehoben durch Ziff. I der V vom 10. März 2006, mit Wirkung seit 1. April 2006 (AS <b>2006</b> 1089).",
      "links": [
       {
-       "label": "AS 2006 1089",
+       "label": "AS <b>2006</b> 1089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/194"
       }
      ],
@@ -359,10 +476,10 @@
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Ziff. II der V vom 7. Nov. 2007, in Kraft seit 1. Dez. 2007 (AS 2007 5757).",
+     "text": "Fassung gemäss Ziff. II der V vom 7. Nov. 2007, in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5757).",
      "links": [
       {
-       "label": "AS 2007 5757",
+       "label": "AS<b> 2007</b> 5757",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/782"
       }
      ],
@@ -463,10 +580,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -492,10 +609,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -545,10 +662,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -572,10 +689,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Nov. 2015, in Kraft seit 20. April 2016 (AS 2016 261).",
+     "text": "Fassung gemäss Ziff. I der V vom 25. Nov. 2015, in Kraft seit 20. April 2016 (AS <b>2016</b> 261).",
      "links": [
       {
-       "label": "AS 2016 261",
+       "label": "AS <b>2016</b> 261",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/32"
       }
      ],
@@ -584,10 +701,10 @@
     },
     {
      "nr": "27",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Mai 2002, in Kraft seit 1. Juni 2002 (AS 2002 2140).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Mai 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 2140).",
      "links": [
       {
-       "label": "AS 2002 2140",
+       "label": "AS <b>2002</b> 2140",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/322"
       }
      ],
@@ -613,10 +730,10 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -625,15 +742,16 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Fassung gemäss Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Bezeichnungsgesuch und Anforderungen an die Bezeichnungsbehörde"
     }
    ]
   },
@@ -654,10 +772,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Ausdruck gemäss Art. 21 Ziff. 22 der V vom 17. Nov. 1999, in Kraft seit 1. Juli 1999 (AS 2000 187). Diese Änd. ist im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Art. 21 Ziff. 22 der V vom 17. Nov. 1999, in Kraft seit 1. Juli 1999 (AS <b>2000</b> 187). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2000 187",
+       "label": "AS <b>2000</b> 187",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/34"
       }
      ],
@@ -683,10 +801,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Eingefügt durch Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -712,10 +830,10 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -741,10 +859,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -768,15 +886,16 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "5. Abschnitt: Entscheid"
     }
    ]
   },
@@ -812,10 +931,10 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -872,10 +991,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Fassung des Satzes gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung des Satzes gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -897,10 +1016,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -909,10 +1028,10 @@
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -921,10 +1040,10 @@
     },
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS 2003 4323).",
+     "text": "Fassung gemäss Ziff. I der V vom 5. Nov. 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 4323).",
      "links": [
       {
-       "label": "AS 2003 4323",
+       "label": "AS <b>2003</b> 4323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/644"
       }
      ],
@@ -946,10 +1065,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Mai 2002, in Kraft seit 1. Juni 2002 (AS 2002 2140).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Mai 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 2140).",
      "links": [
       {
-       "label": "AS 2002 2140",
+       "label": "AS <b>2002</b> 2140",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/322"
       }
      ],
@@ -958,10 +1077,10 @@
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Dez. 2022, in Kraft seit 27. Juli 2023 (AS 2023 418).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Dez. 2022, in Kraft seit 27. Juli 2023 (AS <b>2023</b> 418).",
      "links": [
       {
-       "label": "AS 2023 418",
+       "label": "AS <b>2023</b> 418",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/418"
       }
      ],
@@ -983,10 +1102,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS 2006 1089).",
+     "text": "Fassung gemäss Ziff. I der V vom 10. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 1089).",
      "links": [
       {
-       "label": "AS 2006 1089",
+       "label": "AS <b>2006</b> 1089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/194"
       }
      ],
@@ -995,10 +1114,10 @@
     },
     {
      "nr": "47",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS 2004 4937) auf den 1. Jan. 2013 angepasst.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) auf den 1. Jan. 2013 angepasst.",
      "links": [
       {
-       "label": "AS 2004 4937",
+       "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
@@ -1020,10 +1139,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "[AS 1991 2317]",
+     "text": "[AS <b>1991 </b>2317]",
      "links": [
       {
-       "label": "AS 1991 2317",
+       "label": "AS <b>1991 </b>2317",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2317_2317_2317"
       }
      ],
@@ -1045,10 +1164,10 @@
    "fussnoten": [
     {
      "nr": "49",
-     "text": "[AS 1991 2317]",
+     "text": "[AS <b>1991 </b>2317]",
      "links": [
       {
-       "label": "AS 1991 2317",
+       "label": "AS <b>1991 </b>2317",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2317_2317_2317"
       }
      ],
@@ -1085,10 +1204,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -1114,10 +1233,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -1143,10 +1262,10 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -1172,10 +1291,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS 2012 2887).",
+     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 1. Juni 2012 (AS <b>2012</b> 2887).",
      "links": [
       {
-       "label": "AS 2012 2887",
+       "label": "AS <b>2012</b> 2887",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/343"
       }
      ],
@@ -1197,10 +1316,10 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I der V des WBF vom 5. Mai 2014, in Kraft seit 1. Juli 2014 (AS 2014 1411).",
+     "text": "Eingefügt durch Ziff. I der V des WBF vom 5. Mai 2014, in Kraft seit 1. Juli 2014 (AS <b>2014</b> 1411).",
      "links": [
       {
-       "label": "AS 2014 1411",
+       "label": "AS <b>2014</b> 1411",
        "url": "https://fedlex.data.admin.ch/eli/oc/2014/301"
       }
      ],

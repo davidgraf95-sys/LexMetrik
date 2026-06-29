@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "0.275.12",
+  "titel": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen",
+  "praeambelTitel": "Präambel",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Hohen Vertragsparteien dieses Übereinkommens,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "entschlossen, in ihren Hoheitsgebieten den Rechtsschutz der dort ansässigen Perso­nen zu verstärken,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erwägung, dass es zu diesem Zweck geboten ist, die internationale Zustän­digkeit ihrer Gerichte festzulegen, die Anerkennung von Entscheidungen zu erleichtern und ein beschleunigtes Verfahren einzuführen, um die Vollstreckung von Entscheidungen, öffentlichen Urkunden und gerichtlichen Vergleichen sicherzustel­len,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "im Bewusstsein der zwischen ihnen bestehenden Bindungen, die im wirtschaftlichen Bereich durch die Freihandelsabkommen zwischen der Europäischen Gemeinschaft und bestimmten Mitgliedstaaten der Europäischen Freihandelsassoziation bestätigt worden sind,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "unter Berücksichtigung:"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Überzeugung, dass die Ausdehnung der Grundsätze der Verordnung (EG) Nr. 44/2001 auf die Vertragsparteien des vorliegenden Übereinkommens die recht­liche und wirtschaftliche Zusammenarbeit verstärken wird,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in dem Wunsch, eine möglichst einheitliche Auslegung des Übereinkommens sicherzustellen,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "haben in diesem Sinne beschlossen, dieses Übereinkommen zu schliessen, und"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "sind wie folgt übereingekommen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "Art. 1 Abs. 1 des BB vom 11. Dez. 2009 (AS <b>2010</b> 5601)",
+    "links": [
+     {
+      "label": "AS <b>2010</b> 5601",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2010/800"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "[AS <b>1991</b> 2436]",
+    "links": [
+     {
+      "label": "AS <b>1991</b> 2436",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1991/2436_2436_2436"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -285,10 +354,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 0.232.142.2",
+     "text": "SR <b>0.232.142.2</b>",
      "links": [
       {
-       "label": "SR 0.232.142.2",
+       "label": "SR <b>0.232.142.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/849/20130503"
       }
      ],
@@ -351,10 +420,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 0.274.131",
+     "text": "SR <b>0.274.131</b>",
      "links": [
       {
-       "label": "SR 0.274.131",
+       "label": "SR <b>0.274.131</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1994/2809_2809_2809/20200713"
       }
      ],

@@ -1,5 +1,37 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "950.11",
+  "titel": "Verordnung über die Finanzdienstleistungen",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Finanzdienstleistungsgesetz vom 15. Juni 2018 (FIDLEG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "SR <b>950.1</b>",
+    "links": [
+     {
+      "label": "SR <b>950.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2019/758"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -586,10 +618,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 952.0",
+     "text": "SR <b>952.0</b>",
      "links": [
       {
-       "label": "SR 952.0",
+       "label": "SR <b>952.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
@@ -714,10 +746,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 956.122",
+     "text": "SR <b>956.122</b>",
      "links": [
       {
-       "label": "SR 956.122",
+       "label": "SR <b>956.122</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/749"
       }
      ],
@@ -766,10 +798,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -778,10 +810,10 @@
     },
     {
      "nr": "",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
@@ -811,10 +843,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -901,10 +933,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -934,10 +966,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400).",
+     "text": "Fassung gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -967,10 +999,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Ausdruck gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS 2021 400). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
-       "label": "AS 2021 400",
+       "label": "AS <b>2021</b> 400",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
       }
      ],
@@ -1509,10 +1541,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 956.122",
+     "text": "SR <b>956.122</b>",
      "links": [
       {
-       "label": "SR 956.122",
+       "label": "SR <b>956.122</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/749"
       }
      ],
@@ -1561,10 +1593,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 172.041.1",
+     "text": "SR <b>172.041.1</b>",
      "links": [
       {
-       "label": "SR 172.041.1",
+       "label": "SR <b>172.041.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
@@ -1727,10 +1759,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 958.1",
+     "text": "SR <b>958.1</b>",
      "links": [
       {
-       "label": "SR 958.1",
+       "label": "SR <b>958.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/853"
       }
      ],
@@ -1986,10 +2018,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 955.0",
+     "text": "SR <b>955.0</b>",
      "links": [
       {
-       "label": "SR 955.0",
+       "label": "SR <b>955.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/892_892_892"
       }
      ],
@@ -1998,10 +2030,10 @@
     },
     {
      "nr": "",
-     "text": "SR 954.1",
+     "text": "SR <b>954.1</b>",
      "links": [
       {
-       "label": "SR 954.1",
+       "label": "SR <b>954.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/801"
       }
      ],
@@ -2042,10 +2074,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "AS 1997 68",
+     "text": "AS <b>1997</b> 68",
      "links": [
       {
-       "label": "AS 1997 68",
+       "label": "AS <b>1997</b> 68",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/68_68_68"
       }
      ],
@@ -2054,10 +2086,10 @@
     },
     {
      "nr": "",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -2066,10 +2098,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2078,10 +2110,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2090,10 +2122,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2102,10 +2134,10 @@
     },
     {
      "nr": "",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2114,10 +2146,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2126,10 +2158,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2155,10 +2187,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "AS 1997 68",
+     "text": "AS <b>1997</b> 68",
      "links": [
       {
-       "label": "AS 1997 68",
+       "label": "AS <b>1997</b> 68",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/68_68_68"
       }
      ],
@@ -2167,10 +2199,10 @@
     },
     {
      "nr": "",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -2179,10 +2211,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2191,10 +2223,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2203,10 +2235,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2215,10 +2247,10 @@
     },
     {
      "nr": "",
-     "text": "SR 956.1",
+     "text": "SR <b>956.1</b>",
      "links": [
       {
-       "label": "SR 956.1",
+       "label": "SR <b>956.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2008/736"
       }
      ],
@@ -2227,10 +2259,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],
@@ -2286,10 +2318,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -2298,10 +2330,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2007 4791",
+     "text": "AS <b>2007</b> 4791",
      "links": [
       {
-       "label": "AS 2007 4791",
+       "label": "AS <b>2007</b> 4791",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/685"
       }
      ],
@@ -2310,10 +2342,10 @@
     },
     {
      "nr": "",
-     "text": "AS 27 317",
+     "text": "AS <b>27</b> 317",
      "links": [
       {
-       "label": "AS 27 317",
+       "label": "AS <b>27</b> 317",
        "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
       }
      ],
@@ -2339,10 +2371,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 835).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 835).",
      "links": [
       {
-       "label": "AS 2021 835",
+       "label": "AS <b>2021</b> 835",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/835"
       }
      ],
@@ -2351,10 +2383,10 @@
     },
     {
      "nr": "",
-     "text": "SR 951.311",
+     "text": "SR <b>951.311</b>",
      "links": [
       {
-       "label": "SR 951.311",
+       "label": "SR <b>951.311</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/859"
       }
      ],
@@ -2363,10 +2395,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 607",
+     "text": "AS <b>2013</b> 607",
      "links": [
       {
-       "label": "AS 2013 607",
+       "label": "AS <b>2013</b> 607",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/117"
       }
      ],
@@ -2375,10 +2407,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2011 3177",
+     "text": "AS <b>2011</b> 3177",
      "links": [
       {
-       "label": "AS 2011 3177",
+       "label": "AS <b>2011</b> 3177",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/401"
       }
      ],
@@ -2404,10 +2436,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS 2021 835).",
+     "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 835).",
      "links": [
       {
-       "label": "AS 2021 835",
+       "label": "AS <b>2021</b> 835",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/835"
       }
      ],
@@ -2416,10 +2448,10 @@
     },
     {
      "nr": "",
-     "text": "SR 951.31",
+     "text": "SR <b>951.31</b>",
      "links": [
       {
-       "label": "SR 951.31",
+       "label": "SR <b>951.31</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
@@ -2428,10 +2460,10 @@
     },
     {
      "nr": "",
-     "text": "AS 2013 585",
+     "text": "AS <b>2013</b> 585",
      "links": [
       {
-       "label": "AS 2013 585",
+       "label": "AS <b>2013</b> 585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/116"
       }
      ],

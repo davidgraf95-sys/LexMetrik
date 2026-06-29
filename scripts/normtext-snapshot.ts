@@ -264,14 +264,19 @@ function sha256Bloecke(
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number }>;
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>,
 ): string {
   const zusammen = bloecke
     .map((b) => {
-      const itemTeil = (b.items ?? []).map((i) => `${i.marke}\t${i.text}`).join('\n');
+      // tiefe fliesst in den sha NUR wenn > 0 → nicht verschachtelte Listen
+      // bleiben byte-gleich (kein spuriöser Drift); echte Verschachtelung
+      // (geänderte Fundstelle) wird vom Drift-Check erfasst (§1/§7, M6).
+      const itemTeil = (b.items ?? [])
+        .map((i) => `${i.marke}\t${i.text}${i.tiefe ? `\t${i.tiefe}` : ''}`)
+        .join('\n');
       const tabTeil = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
       const mTeil = b.mehrspaltig
         ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
@@ -996,7 +1001,13 @@ async function main(): Promise<void> {
         quelle: gesetzKey,
         erlass,
         artikel: token,
-        artikelLabel: artikelLabel(token),
+        // M9/G7: Synthese-Suffix «__2» (doppelte art_id) NICHT ins Label ziehen —
+        // beide Artikel zeigen ihre echte Basis-Bezeichnung («Art. 126z»); der
+        // Inhalt unterscheidet sie. Anker/id behalten den Suffix (eindeutig).
+        artikelLabel: artikelLabel(token.replace(/__\d+$/, '')),
+        // G23 (M8): Delegationsnorm-Grundlage «(Art. N ArG)», falls vorhanden.
+        // Artikel-level wie titel → NICHT im Block-sha (golden-neutral).
+        ...(extrakt.grundlage ? { grundlage: extrakt.grundlage } : {}),
         bloecke: extrakt.bloecke,
         stand,
         quelleUrl: `https://www.fedlex.admin.ch/eli/${eli}/de#${ankerVoll}`,

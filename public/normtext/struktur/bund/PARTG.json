@@ -1,5 +1,50 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "211.231",
+  "titel": "Bundesgesetz über die eingetragene Partnerschaft gleichgeschlechtlicher Paare",
+  "erlassdatum": "vom 18. Juni 2004 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf die Artikel 38 Absatz 2, 112 Absatz 1, 113 Absatz 1, 119 Absatz 2, 121 Absatz 1, 122 Absatz 1, 123 Absatz 1, 128 Absatz 1 und 129 Absatz 1 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 29. November 2002,"
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>101</b>",
+    "links": [
+     {
+      "label": "SR <b>101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "BBl <b>2003 </b>1288",
+    "links": [
+     {
+      "label": "BBl <b>2003 </b>1288",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +57,10 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "AS 2021 747",
+     "text": "AS <b>2021</b> 747",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       }
      ],
@@ -24,23 +69,24 @@
     },
     {
      "nr": "3",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Kapitel: Gegenstand"
     }
    ]
   },
@@ -70,14 +116,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS 2024 590; BBl 2023 2127).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
      "links": [
       {
-       "label": "AS 2024 590",
+       "label": "AS <b>2024</b> 590",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
       },
       {
-       "label": "BBl 2023 2127",
+       "label": "BBl <b>2023</b> 2127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],
@@ -103,14 +149,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS 2024 590; BBl 2023 2127).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
      "links": [
       {
-       "label": "AS 2024 590",
+       "label": "AS <b>2024</b> 590",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
       },
       {
-       "label": "BBl 2023 2127",
+       "label": "BBl <b>2023</b> 2127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],
@@ -166,10 +212,10 @@
    "fussnoten": [
     {
      "nr": "12",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -178,14 +224,14 @@
     },
     {
      "nr": "13",
-     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -256,10 +302,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -268,14 +314,14 @@
     },
     {
      "nr": "15",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -406,10 +452,10 @@
    "fussnoten": [
     {
      "nr": "16",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -418,14 +464,14 @@
     },
     {
      "nr": "17",
-     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -434,14 +480,14 @@
     },
     {
      "nr": "18",
-     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Erbrecht), mit Wirkung seit 1. Jan. 2023 (AS 2021 312; BBl 2018 5813).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Erbrecht), mit Wirkung seit 1. Jan. 2023 (AS <b>2021</b> 312; BBl <b>2018</b> 5813).",
      "links": [
       {
-       "label": "AS 2021 312",
+       "label": "AS <b>2021</b> 312",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/312"
       },
       {
-       "label": "BBl 2018 5813",
+       "label": "BBl <b>2018</b> 5813",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2131"
       }
      ],
@@ -465,18 +511,18 @@
    "fussnoten": [
     {
      "nr": "19",
-     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
@@ -502,10 +548,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -531,14 +577,14 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -594,14 +640,14 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Erbrecht), in Kraft seit 1. Jan. 2023 (AS 2021 312; BBl 2018 5813).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Erbrecht), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 312; BBl <b>2018</b> 5813).",
      "links": [
       {
-       "label": "AS 2021 312",
+       "label": "AS <b>2021</b> 312",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/312"
       },
       {
-       "label": "BBl 2018 5813",
+       "label": "BBl <b>2018</b> 5813",
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2131"
       }
      ],
@@ -657,10 +703,10 @@
    "fussnoten": [
     {
      "nr": "26",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -669,14 +715,14 @@
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -698,18 +744,18 @@
    "fussnoten": [
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
@@ -718,23 +764,24 @@
     },
     {
      "nr": "28",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4a. Kapitel: Umwandlung der eingetragenen Partnerschaft in eine Ehe"
     }
    ]
   },
@@ -762,10 +809,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Die Koordinationsbestimmungen können unter AS 2005 5685 konsultiert werden.",
+     "text": "Die Koordinationsbestimmungen können unter AS <b>2005</b> 5685 konsultiert werden.",
      "links": [
       {
-       "label": "AS 2005 5685",
+       "label": "AS <b>2005</b> 5685",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/782"
       }
      ],
@@ -811,14 +858,14 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS 2012 2569; BBl 2009 7573 7581).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 2569; BBl <b>2009 </b>7573 7581).",
      "links": [
       {
-       "label": "AS 2012 2569",
+       "label": "AS <b>2012</b> 2569",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/309"
       },
       {
-       "label": "BBl 2009 7573",
+       "label": "BBl <b>2009 </b>7573",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1347"
       },
       {
@@ -848,14 +895,14 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS 2017 3699; BBl 2015 877).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
-       "label": "AS 2017 3699",
+       "label": "AS <b>2017</b> 3699",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
       },
       {
-       "label": "BBl 2015 877",
+       "label": "BBl <b>2015</b> 877",
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
       }
      ],
@@ -864,10 +911,10 @@
     },
     {
      "nr": "22",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
@@ -893,14 +940,14 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS 2012 2569; BBl 2009 7573 7581).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 2569; BBl <b>2009 </b>7573 7581).",
      "links": [
       {
-       "label": "AS 2012 2569",
+       "label": "AS <b>2012</b> 2569",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/309"
       },
       {
-       "label": "BBl 2009 7573",
+       "label": "BBl <b>2009 </b>7573",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1347"
       },
       {
@@ -926,18 +973,18 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
@@ -959,14 +1006,14 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS 2012 2569; BBl 2009 7573 7581).",
+     "text": "Eingefügt durch Ziff. II 2 des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 2569; BBl <b>2009 </b>7573 7581).",
      "links": [
       {
-       "label": "AS 2012 2569",
+       "label": "AS <b>2012</b> 2569",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/309"
       },
       {
-       "label": "BBl 2009 7573",
+       "label": "BBl <b>2009 </b>7573",
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1347"
       },
       {
@@ -992,14 +1039,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS 2024 590; BBl 2023 2127).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
      "links": [
       {
-       "label": "AS 2024 590",
+       "label": "AS <b>2024</b> 590",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
       },
       {
-       "label": "BBl 2023 2127",
+       "label": "BBl <b>2023</b> 2127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],
@@ -1023,18 +1070,18 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
@@ -1058,18 +1105,18 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS 2021 747; BBl 2019 8595; 2020 1273).",
+     "text": "Aufgehoben durch Anhang Ziff. 1 des BG vom 18. Dez. 2020 (Ehe für alle), mit Wirkung seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
      "links": [
       {
-       "label": "AS 2021 747",
+       "label": "AS <b>2021</b> 747",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
       },
       {
-       "label": "BBl 2019 8595",
+       "label": "BBl <b>2019</b> 8595",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
       },
       {
-       "label": "2020 1273",
+       "label": "<b>2020</b> 1273",
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
       }
      ],
@@ -1095,14 +1142,14 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS 2024 590; BBl 2023 2127).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
      "links": [
       {
-       "label": "AS 2024 590",
+       "label": "AS <b>2024</b> 590",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
       },
       {
-       "label": "BBl 2023 2127",
+       "label": "BBl <b>2023</b> 2127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],
@@ -1128,14 +1175,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS 2024 590; BBl 2023 2127).",
+     "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
      "links": [
       {
-       "label": "AS 2024 590",
+       "label": "AS <b>2024</b> 590",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
       },
       {
-       "label": "BBl 2023 2127",
+       "label": "BBl <b>2023</b> 2127",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],

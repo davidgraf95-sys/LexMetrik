@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "812.212.21",
+  "titel": "Verordnung über die Arzneimittel",
+  "erlassdatum": "vom 21. September 2018 (Stand am 1. Januar 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf das Heilmittelgesetz vom 15. Dezember 2000 (HMG), auf Artikel 39 Absatz 1 des Umweltschutzgesetzes vom 7. Oktober 1983, auf Artikel 44 Absatz 1 des Lebensmittelgesetzes vom 20. Juni 2014 und auf Artikel 31 des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse,"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR <b>812.21</b>",
+    "links": [
+     {
+      "label": "SR <b>812.21</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>814.01</b>",
+    "links": [
+     {
+      "label": "SR <b>814.01</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9437"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>817.0</b>",
+    "links": [
+     {
+      "label": "SR <b>817.0</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9645"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>946.51</b>",
+    "links": [
+     {
+      "label": "SR <b>946.51</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -12,10 +81,10 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Aufgehoben durch Ziff. I der V vom 19. Nov. 2025, mit Wirkung seit 1. Jan. 2026 (AS 2025 777).",
+     "text": "Aufgehoben durch Ziff. I der V vom 19. Nov. 2025, mit Wirkung seit 1. Jan. 2026 (AS <b>2025</b> 777).",
      "links": [
       {
-       "label": "AS 2025 777",
+       "label": "AS <b>2025</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
       }
      ],
@@ -24,10 +93,10 @@
     },
     {
      "nr": "6",
-     "text": "SR 810.211",
+     "text": "SR <b>810.211</b>",
      "links": [
       {
-       "label": "SR 810.211",
+       "label": "SR <b>810.211</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9240"
       }
      ],
@@ -36,14 +105,14 @@
     },
     {
      "nr": "7",
-     "text": "SR 812.212.1. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "SR <b>812.212.1</b>. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       },
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -69,10 +138,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "SR 810.211",
+     "text": "SR <b>810.211</b>",
      "links": [
       {
-       "label": "SR 810.211",
+       "label": "SR <b>810.211</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9240"
       }
      ],
@@ -98,10 +167,10 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "SR 451.61",
+     "text": "SR <b>451.61</b>",
      "links": [
       {
-       "label": "SR 451.61",
+       "label": "SR <b>451.61</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7181"
       }
      ],
@@ -157,10 +226,10 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "SR 814.911",
+     "text": "SR <b>814.911</b>",
      "links": [
       {
-       "label": "SR 814.911",
+       "label": "SR <b>814.911</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9622"
       }
      ],
@@ -216,10 +285,10 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "SR 814.911",
+     "text": "SR <b>814.911</b>",
      "links": [
       {
-       "label": "SR 814.911",
+       "label": "SR <b>814.911</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9622"
       }
      ],
@@ -228,10 +297,10 @@
     },
     {
      "nr": "12",
-     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 723).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der V vom 23. Nov. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 723).",
      "links": [
       {
-       "label": "AS 2022 723",
+       "label": "AS <b>2022</b> 723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
       }
      ],
@@ -240,10 +309,10 @@
     },
     {
      "nr": "13",
-     "text": "SR 451.61",
+     "text": "SR <b>451.61</b>",
      "links": [
       {
-       "label": "SR 451.61",
+       "label": "SR <b>451.61</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7181"
       }
      ],
@@ -284,10 +353,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "SR 232.14",
+     "text": "SR <b>232.14</b>",
      "links": [
       {
-       "label": "SR 232.14",
+       "label": "SR <b>232.14</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5975"
       }
      ],
@@ -448,15 +517,16 @@
    "fussnoten": [
     {
      "nr": "15",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Änderungen der Zulassung bei Humanarzneimitteln"
     }
    ]
   },
@@ -529,10 +599,10 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
@@ -588,10 +658,10 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
@@ -660,10 +730,10 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. III der V vom 16. Juni 2023, in Kraft seit 1. Aug. 2023 (AS 2023 306).",
+     "text": "Fassung gemäss Ziff. III der V vom 16. Juni 2023, in Kraft seit 1. Aug. 2023 (AS <b>2023</b> 306).",
      "links": [
       {
-       "label": "AS 2023 306",
+       "label": "AS <b>2023</b> 306",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/306"
       }
      ],
@@ -792,10 +862,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "SR 812.121.1",
+     "text": "SR <b>812.121.1</b>",
      "links": [
       {
-       "label": "SR 812.121.1",
+       "label": "SR <b>812.121.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9340"
       }
      ],
@@ -896,10 +966,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "SR 832.112.31",
+     "text": "SR <b>832.112.31</b>",
      "links": [
       {
-       "label": "SR 832.112.31",
+       "label": "SR <b>832.112.31</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10157"
       }
      ],
@@ -940,10 +1010,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Nov. 2025, in Kraft seit 1. Jan. 2026 (AS 2025 777).",
+     "text": "Eingefügt durch Ziff. I der V vom 19. Nov. 2025, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 777).",
      "links": [
       {
-       "label": "AS 2025 777",
+       "label": "AS <b>2025</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
       }
      ],
@@ -952,10 +1022,10 @@
     },
     {
      "nr": "25",
-     "text": "SR 816.1",
+     "text": "SR <b>816.1</b>",
      "links": [
       {
-       "label": "SR 816.1",
+       "label": "SR <b>816.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9640"
       }
      ],
@@ -964,10 +1034,10 @@
     },
     {
      "nr": "26",
-     "text": "SR 816.11",
+     "text": "SR <b>816.11</b>",
      "links": [
       {
-       "label": "SR 816.11",
+       "label": "SR <b>816.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9641"
       }
      ],
@@ -1024,10 +1094,10 @@
     },
     {
      "nr": "28",
-     "text": "SR 816.1",
+     "text": "SR <b>816.1</b>",
      "links": [
       {
-       "label": "SR 816.1",
+       "label": "SR <b>816.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9640"
       }
      ],
@@ -1036,10 +1106,10 @@
     },
     {
      "nr": "29",
-     "text": "SR 816.11",
+     "text": "SR <b>816.11</b>",
      "links": [
       {
-       "label": "SR 816.11",
+       "label": "SR <b>816.11</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9641"
       }
      ],
@@ -1061,10 +1131,10 @@
    "fussnoten": [
     {
      "nr": "30",
-     "text": "Eingefügt durch Ziff. I der V vom 25. Jan. 2023, in Kraft seit 1. April 2023 (AS 2023 41).",
+     "text": "Eingefügt durch Ziff. I der V vom 25. Jan. 2023, in Kraft seit 1. April 2023 (AS <b>2023</b> 41).",
      "links": [
       {
-       "label": "AS 2023 41",
+       "label": "AS <b>2023</b> 41",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/41"
       }
      ],
@@ -1095,10 +1165,10 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang 8 Ziff. II 3 der Arzneimittel-Bewilligungsverordnung vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5029).",
+     "text": "Fassung gemäss Anhang 8 Ziff. II 3 der Arzneimittel-Bewilligungsverordnung vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5029).",
      "links": [
       {
-       "label": "AS 2018 5029",
+       "label": "AS <b>2018</b> 5029",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/786"
       }
      ],
@@ -1120,10 +1190,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "SR 812.212.27",
+     "text": "SR <b>812.212.27</b>",
      "links": [
       {
-       "label": "SR 812.212.27",
+       "label": "SR <b>812.212.27</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9369"
       }
      ],
@@ -1190,14 +1260,14 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "SR 812.212.1. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "SR <b>812.212.1</b>. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       },
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -1221,10 +1291,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
@@ -1233,10 +1303,10 @@
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
@@ -1262,14 +1332,14 @@
    "fussnoten": [
     {
      "nr": "36",
-     "text": "SR 812.212.1. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "SR <b>812.212.1</b>. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       },
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -1340,14 +1410,14 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "SR 812.212.1. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR 170.512) auf den 1. Jan. 2019 angepasst.",
+     "text": "SR <b>812.212.1</b>. Der Verweis wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst.",
      "links": [
       {
-       "label": "SR 812.212.1",
+       "label": "SR <b>812.212.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       },
       {
-       "label": "SR 170.512",
+       "label": "SR <b>170.512</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
@@ -1382,10 +1452,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 813.112.1",
+     "text": "SR <b>813.112.1</b>",
      "links": [
       {
-       "label": "SR 813.112.1",
+       "label": "SR <b>813.112.1</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9397"
       }
      ],
@@ -1487,10 +1557,10 @@
    "fussnoten": [
     {
      "nr": "41",
-     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 99 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS 2022 568).",
+     "text": "Fassung des zweiten Satzes gemäss Anhang 2 Ziff. II 99 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
-       "label": "AS 2022 568",
+       "label": "AS <b>2022</b> 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
@@ -1542,10 +1612,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "SR 814.501",
+     "text": "SR <b>814.501</b>",
      "links": [
       {
-       "label": "SR 814.501",
+       "label": "SR <b>814.501</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9534"
       }
      ],
@@ -1569,10 +1639,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Aufgehoben durch Anhang Ziff. 2 der V vom 23. Nov. 2022, mit Wirkung seit 1. Jan. 2023 (AS 2022 723).",
+     "text": "Aufgehoben durch Anhang Ziff. 2 der V vom 23. Nov. 2022, mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 723).",
      "links": [
       {
-       "label": "AS 2022 723",
+       "label": "AS <b>2022</b> 723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/723"
       }
      ],
@@ -1605,10 +1675,10 @@
     },
     {
      "nr": "45",
-     "text": "SR 814.911",
+     "text": "SR <b>814.911</b>",
      "links": [
       {
-       "label": "SR 814.911",
+       "label": "SR <b>814.911</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9622"
       }
      ],
@@ -1634,10 +1704,10 @@
    "fussnoten": [
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. III der V vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 570).",
+     "text": "Fassung gemäss Ziff. III der V vom 22. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 570).",
      "links": [
       {
-       "label": "AS 2023 570",
+       "label": "AS <b>2023</b> 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
      ],
@@ -1646,10 +1716,10 @@
     },
     {
      "nr": "47",
-     "text": "SR 832.10",
+     "text": "SR <b>832.10</b>",
      "links": [
       {
-       "label": "SR 832.10",
+       "label": "SR <b>832.10</b>",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
@@ -1765,10 +1835,10 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "AS 2004 4037",
+     "text": "AS <b>2004</b> 4037",
      "links": [
       {
-       "label": "AS 2004 4037",
+       "label": "AS <b>2004</b> 4037",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/591"
       }
      ],
@@ -1807,15 +1877,16 @@
    "fussnoten": [
     {
      "nr": "18",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS 2022 16).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 12. Jan. 2022 über Anpassungen an das neue Tierarzneimittelrecht der EU, in Kraft seit 28. Jan. 2022 (AS <b>2022</b> 16).",
      "links": [
       {
-       "label": "AS 2022 16",
+       "label": "AS <b>2022</b> 16",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/16"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3a. Abschnitt: Änderungen der Zulassung bei Tierarzneimitteln"
     }
    ]
   },
@@ -1875,10 +1946,10 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Eingefügt durch Anhang 8 Ziff. II 3 der Arzneimittel-Bewilligungsverordnung vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 5029).",
+     "text": "Eingefügt durch Anhang 8 Ziff. II 3 der Arzneimittel-Bewilligungsverordnung vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5029).",
      "links": [
       {
-       "label": "AS 2018 5029",
+       "label": "AS <b>2018</b> 5029",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/786"
       }
      ],
@@ -1902,10 +1973,10 @@
    "fussnoten": [
     {
      "nr": "40",
-     "text": "Aufgehoben durch Ziff. I der V vom 19. Nov. 2025, mit Wirkung seit 1. Jan. 2026 (AS 2025 777).",
+     "text": "Aufgehoben durch Ziff. I der V vom 19. Nov. 2025, mit Wirkung seit 1. Jan. 2026 (AS <b>2025</b> 777).",
      "links": [
       {
-       "label": "AS 2025 777",
+       "label": "AS <b>2025</b> 777",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/777"
       }
      ],

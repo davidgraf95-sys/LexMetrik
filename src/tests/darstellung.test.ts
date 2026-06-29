@@ -4,15 +4,24 @@ import {
   artikelGanzAufgehoben, randtitelKnoten,
 } from '../lib/normtext/darstellung';
 
-// randtitelKnoten (6b): Ahnen-Gruppierungen (eigene Knoten) vom artikel-eigenen
-// Blatt (Sachüberschrift) trennen. Das Blatt wird POSITIONSWEISE bestimmt.
+// randtitelKnoten (6b + M3/28.6.2026): Aufzähler-Stufen (A./I./1. = strukturelle
+// Gliederung) werden zu eigenen TOC-Knoten (ahnen) — auch als Blatt; nur die
+// aufzählerlose artikel-eigene Sachüberschrift bleibt Blatt.
 describe('randtitelKnoten', () => {
-  it('teilt mehrstufige Kette in Ahnen + Blatt (Marker bleibt im Ahnen-Label)', () => {
+  it('mehrstufige Aufzähler-Kette → alle Stufen Ahnen, kein Blatt (lückenlose Gliederung)', () => {
     expect(randtitelKnoten(['A. Abschluss', 'II. Antrag', '1. Frist']))
-      .toEqual({ ahnen: ['A. Abschluss', 'II. Antrag'], blatt: '1. Frist' });
+      .toEqual({ ahnen: ['A. Abschluss', 'II. Antrag', '1. Frist'], blatt: null });
   });
-  it('Einzel-Sachüberschrift → kein Ahn, nur Blatt', () => {
+  it('einzelne Aufzähler-Gruppierung («A. Anwendung des Rechts») → Knoten, nicht Blatt (ZGB-Einleitung A–E)', () => {
+    expect(randtitelKnoten(['A. Anwendung des Rechts']))
+      .toEqual({ ahnen: ['A. Anwendung des Rechts'], blatt: null });
+  });
+  it('Einzel-Sachüberschrift ohne Aufzähler → kein Ahn, nur Blatt', () => {
     expect(randtitelKnoten(['Gegenstand'])).toEqual({ ahnen: [], blatt: 'Gegenstand' });
+  });
+  it('Aufzähler-Gruppe + aufzählerlose Sachüberschrift → Gruppe Ahn, Sachüberschrift Blatt', () => {
+    expect(randtitelKnoten(['B. Inhalt der Rechtsverhältnisse', 'Gegenstand']))
+      .toEqual({ ahnen: ['B. Inhalt der Rechtsverhältnisse'], blatt: 'Gegenstand' });
   });
   it('leere Kette → kein Ahn, kein Blatt', () => {
     expect(randtitelKnoten([])).toEqual({ ahnen: [], blatt: null });
@@ -23,7 +32,7 @@ describe('randtitelKnoten', () => {
   });
   it('verwirft leere Zwischenstufen, nicht echte Titel', () => {
     expect(randtitelKnoten(['A. X', '…', '1. Frist']))
-      .toEqual({ ahnen: ['A. X'], blatt: '1. Frist' });
+      .toEqual({ ahnen: ['A. X', '1. Frist'], blatt: null });
   });
 });
 

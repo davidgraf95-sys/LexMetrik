@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-25",
+  "erzeugt": "2026-06-29",
   "eintraege": [
     {
       "id": "bund/AHVG/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_1",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f22f5bac90d171dcc6b79a2911a05c73e32f5394aa6ef465a4d64a8400d753e"
     },
@@ -50,15 +50,18 @@
             },
             {
               "marke": "1",
-              "text": "im Dienste der Eidgenossenschaft,"
+              "text": "im Dienste der Eidgenossenschaft,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "im Dienste der internationalen Organisationen, mit denen der Bundesrat ein Sitzabkommen abgeschlossen hat und die als Arbeitgeber im Sinne von Artikel 12 gelten,"
+              "text": "im Dienste der internationalen Organisationen, mit denen der Bundesrat ein Sitzabkommen abgeschlossen hat und die als Arbeitgeber im Sinne von Artikel 12 gelten,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "im Dienste privater, vom Bund namhaft subventionierter Hilfsorganisationen nach Artikel 11 des Bundesgesetzes vom 19. März 1976 über die internationale Entwicklungszusammenarbeit und humanitäre Hilfe."
+              "text": "im Dienste privater, vom Bund namhaft subventionierter Hilfsorganisationen nach Artikel 11 des Bundesgesetzes vom 19. März 1976 über die internationale Entwicklungszusammenarbeit und humanitäre Hilfe.",
+              "tiefe": 1
             }
           ]
         },
@@ -123,9 +126,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_1_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "c040663c69490663f70b352de41de7b8dbe7bb8d29bb6d02cbb04b0732974f47"
+      "sha": "246da68f3be3e3af00544f0e4ffa3257d98d1456e5fd8b0a57059e6c8b4a7d6e"
     },
     {
       "id": "bund/AHVG/art_2",
@@ -162,7 +165,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_2",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "de78f7d4eab87c7b855a4565c7b61af17e9f010a952907ae233599529b625574"
     },
@@ -235,7 +238,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_3",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e1917112eba27f89b7a8cd6cc74a3f6113acb761d8f117ae4cd207c9df6e60e3"
     },
@@ -268,7 +271,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_4",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0cd808be34099832d4a8f746a6dfb344ff34f04571f496aea5fc984e0af8ba68"
     },
@@ -313,7 +316,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_5",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6c7723490412a71937b066389472af265b7a62382cd89b354302cb677a244814"
     },
@@ -336,7 +339,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_6",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b365908de3e0961ea548d877f19decd495fec5e5ee5957a42bcc0c25454f8d81"
     },
@@ -355,7 +358,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_7",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4374238f12547859cb1c4843b896f22855ef3b2ab80b7c85aac950fe9e4ccf31"
     },
@@ -378,7 +381,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_8",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "34b8f400521f4f3887479c4210dcb8b2920b8186d9b9be46787bcb615db0c657"
     },
@@ -439,7 +442,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_9",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "80740993ae27dce7520fcd2f3593b402728a58246e15520ace027ae590bc3094"
     },
@@ -458,7 +461,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_9_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8bc587ea4d6807646eda592cb6d8a09c74c3b5ac47f4f72a20ad5efcc8ee2389"
     },
@@ -507,7 +510,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_10",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1ddb9977a0e1da7306ed9c16797c990761cfb5e698e1d07caa73afe8948c26e2"
     },
@@ -530,7 +533,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_11",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c2971ab346f5ee4ec5ce8b44de48887fabbb2691cf9bb1dc0e3893b344590ab3"
     },
@@ -567,7 +570,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_12",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a16cedde7799e56e595ae5bfda888fc071799b2b79feafce9a2098f35d362352"
     },
@@ -586,7 +589,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_13",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "11332d88d8a752bac6664dd4d7d8e9eb73a3b60ec47f408abd7ce40be48ce44d"
     },
@@ -665,7 +668,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_14",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "885695f2239fbcf24cdf0b8b5bdfd3f96e07bd74da1e0740bc18e5550f84cc4c"
     },
@@ -692,7 +695,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_14_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1afad111ab0eb301a418dca08f74c8f5d862c7844d335aa3dce898bac087baa9"
     },
@@ -715,7 +718,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_15",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "571a35cc33f4c4e2a7dd419bed4aaab0d774756fd45fc95be9e1e95554e8d86e"
     },
@@ -742,7 +745,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_16",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "80b7d07f6a8f908e9a23fbe78ba4b2df70f2b88f36fc822f66a9aec2874f82fe"
     },
@@ -761,7 +764,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_17",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -792,7 +795,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_18",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "fb3c72879fecb62b2e1d92bed1cb5251093b4537642d51a266058fe33acb4b18"
     },
@@ -811,7 +814,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_19",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -848,7 +851,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_20",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "738f1237f16f3abda66f3b056ce58baa24db534665722450c6cb76fa8a1dcb98"
     },
@@ -871,7 +874,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_21",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a0212b261113cd3b6080dd2508de795f06624cfdd0a47092ef29ff2af730bc7c"
     },
@@ -890,7 +893,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_22",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -931,7 +934,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_22_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "29731fb2f7c75b6115cff8e641de2d233a94ea4a9ccd067cbe0a5d20e48d99dd"
     },
@@ -954,7 +957,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_22_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5ded1b436092569ab5b7d9f5b0269df27216be8ac613a5c18c07a63b25df7138"
     },
@@ -1009,7 +1012,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_23",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5a6746a8800d24f02834dfaf8c9d5c06acae32de33771b92f05b9496bb643d6f"
     },
@@ -1032,7 +1035,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_24",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e8cbadacc1453ce9abd2f5da16805714203a534021793a669e6c24ba19deb43e"
     },
@@ -1069,7 +1072,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_24_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b7efdfe33da95d1fe9e1c4c492469924869336bcb87b07c0ccee6ce2bf876fec"
     },
@@ -1088,7 +1091,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_24_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d68dce88699ef0ad8b8b942bcbfcbc0ec315f2e6bf4739f6c8d2e6574078e67b"
     },
@@ -1123,7 +1126,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_25",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8d72d211d3801982789eb3bdca9355b2404c93d1d86d216cba286298b4a0c8d1"
     },
@@ -1142,7 +1145,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_26_28",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1161,7 +1164,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_28_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b21e1d6ed786bb0b0bc9876617097e7b99e876760912009777862f9656febcdd"
     },
@@ -1194,7 +1197,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1f0cb314a1f0ea653fc4a0b09db849550f59da6b35b4d951297e361d9ea6a052"
     },
@@ -1261,7 +1264,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3a602ab8f4a1a0ca4244dbaab9332c5b213a3afb9b565d79692f84765bd2543e"
     },
@@ -1298,7 +1301,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d20f26f7c2358849e06f239a90c8f41761f5565f3b0bb06664bb7418ac4eb476"
     },
@@ -1331,7 +1334,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_quater",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d737b0413776e7d570c4b2757b2aeb076e7ad75eea43428e06c78374afbe73eb"
     },
@@ -1402,7 +1405,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_quinquies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c64c633a0ec45bbfde26781dd41e11c3b6a2536703477dfea25a334ea347d9fd"
     },
@@ -1447,7 +1450,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_sexies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "95a89b968833d7b70be553d51376fd2ab34ae787f98abdd6a3761c9c6c8d08ca"
     },
@@ -1500,7 +1503,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_29_septies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8a5d3ba4985e8cfbaec20664e761d9b8de4d037e6bcaaa6d9a3dc987986f7b33"
     },
@@ -1523,7 +1526,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_30",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3dc7933c203c5eb9fac596a62499295d795184ae48afa422ea1688c75131b5e9"
     },
@@ -1542,7 +1545,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_30_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "fd2b43becd272e1799060caf685d7ac8ff8c80ee3a1f77acbfcf7cf53170a16a"
     },
@@ -1583,7 +1586,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_30_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d3db4a8809182270478c09327dc567412f8fc806461ac360760a11e567bed2a8"
     },
@@ -1602,7 +1605,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_31",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8deaf6eefb2655b3f1fd32235d8cc07681e411444693a7a0564b89f618f90a9f"
     },
@@ -1621,7 +1624,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_32",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1648,7 +1651,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_33",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c6dbc4606565576fb40acf362b66c4a0afe48699c26778b5ef2bdd0c08cbe86d"
     },
@@ -1683,7 +1686,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_33_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "90090fc0766207c09a5b1ae946f90fa2d5344cacf0b0f44961e944d4a01e7223"
     },
@@ -1718,7 +1721,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_33_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a6d74877d53530468960cbfad4ccc6fd81fb28d41ce0f105708f76a593e406af"
     },
@@ -1773,7 +1776,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_34",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b7eb1481438814a48a432d34602abec681890ce40b2d49d0415717319707f6b5"
     },
@@ -1870,7 +1873,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_34_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "23250704e53ec3cd4e435f72c6904f4dbb77993c93c74f039e2bec7b67b575e8"
     },
@@ -1897,7 +1900,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_34_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bbe959a4f4b6e8a3213f3b875eeeee2f76d0267abdc2c1d4ffad00b929bf4445"
     },
@@ -1934,7 +1937,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_35",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "214c35757004fae13808164f44d7b8a7fe1b930c15dad068134c1d7a49ab6a1b"
     },
@@ -1953,7 +1956,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_35_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "643ac8e6359a0252db6e29426abac01c0aeddafbea5a6551a19aac95644fac24"
     },
@@ -1976,7 +1979,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_35_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "98958fc29e99408e40415918a8b54986e3183f731fe46861b0dcf8268a824d2e"
     },
@@ -1995,7 +1998,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_36",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f1ee4b92fff0511971795ac132328a53cf7d86d03afec66bec4500554f73fab0"
     },
@@ -2022,7 +2025,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_37",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6da2e7c0af7113809a20a6a6aa72f4f708a1d833de476c8c2a19be8e26a896cf"
     },
@@ -2041,7 +2044,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_37_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ab2621eb69a29c1ed7d862f6d3975710307d50108ace532e905a3d71b0f3204b"
     },
@@ -2068,7 +2071,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_38",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cbe6bd1ed7a809f9a759b41b0e5263891375598fa6cfd58f5e493266a9e8f4e5"
     },
@@ -2099,7 +2102,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_39",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7ddd6f4e0590d299ccba14f9adf67bf8ca3c908a093a43a79306801f18592820"
     },
@@ -2134,7 +2137,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4ecc37bd25262a297ea7c5ba8f239729e6eb7b87b177812cb6b8ef388f2000c4"
     },
@@ -2161,7 +2164,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cf97fd36fac4f49903864ba996c3c01be17a47bcd6a0475b0d6f7e1e990a6924"
     },
@@ -2184,7 +2187,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a87af853f5120d5e71e46c6c962ec06f0b8d969532d62343840058bc70da3b5f"
     },
@@ -2235,7 +2238,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b2dc0508ca6fe114850004284e1a6cfa699455ab1275cfdd8c7d86619c92be5a"
     },
@@ -2262,7 +2265,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_41",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2266f1b17622171ae70f0cc506f684519ef2e4997b0bbe732438b13ed98a8066"
     },
@@ -2289,7 +2292,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_42",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b9544b7217b739680aac47d14866c3eda62828aec5ab4d3528975460d35fbf9c"
     },
@@ -2316,7 +2319,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_43",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6a45b57f8ebe5eec3464614b918711399809d7bd94315efdad42e011b36a2888"
     },
@@ -2359,7 +2362,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_43_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a6b6691dccbb55ca3dd5e8ce2fc63bd7be2bd1ac77670894728f30926ac0f845"
     },
@@ -2378,7 +2381,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_43_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "df52144771dc49b23385465774ec059c63c7036e92668210f4599629d2e5dd25"
     },
@@ -2405,7 +2408,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_43_quater",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "21451271891d1ac14f0bdaae020eb3da708f6334008739b1f603a9813365ad95"
     },
@@ -2424,7 +2427,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_43_quinquies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ea2eaf77f83a738f9f13aea04fdf223691df7b960ca2639f30f03d86722da998"
     },
@@ -2447,7 +2450,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_44",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "78564ac85cd492bbdc1889250d62616f9b8e419ffc7147df1445ef64b13fb2e9"
     },
@@ -2466,7 +2469,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_45",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2497,7 +2500,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_46",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9e70f8c8348b4598ceb2ea7afd591ac98053dc8f85bb5e12a3fca4ee4942ce9e"
     },
@@ -2516,7 +2519,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_47",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2535,7 +2538,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_48",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2554,7 +2557,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_48_bis_48_sexies",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2573,7 +2576,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "aeaab1af91221f6080d4b34539ca34873f6587f44e9fdbe269b5d2511879eebe"
     },
@@ -2600,7 +2603,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c1a1b36b0a09c43eda2ec0a9f7aae4879b90a443d2e1973d45851e9c5ee45cd2"
     },
@@ -2619,7 +2622,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e80ebae877a960f218d7d7ec1288fb141760a7c8c21d036f1aff8d01e0b0f1f4"
     },
@@ -2670,7 +2673,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b1fb6bb053a8ff1d701129c76c0699fafe969496dc48acec818d58e9faf5f018"
     },
@@ -2721,7 +2724,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "82e128655d952ae5bb4514e1e514d388b2bbb5e696a3a82f8c45a4dc9e465449"
     },
@@ -2770,7 +2773,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "002221dbea511efff4c098c3acebe10096bde02877592ede42e322092e884d11"
     },
@@ -2823,7 +2826,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_49_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8f0c13b99cf7b50e7596d48d0b8e5686c7506847151e19717125dbb753955e7c"
     },
@@ -2842,7 +2845,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2896,35 +2899,43 @@
             },
             {
               "marke": "1",
-              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+              "text": "Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "Zivilgerichten, wenn die Daten für die Beurteilung eines familien- oder erbrechtlichen Streitfalles erforderlich sind,"
+              "text": "Zivilgerichten, wenn die Daten für die Beurteilung eines familien- oder erbrechtlichen Streitfalles erforderlich sind,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "Strafgerichten und Strafuntersuchungsbehörden, wenn die Daten für die Abklärung eines Verbrechens oder eines Vergehens erforderlich sind,"
+              "text": "Strafgerichten und Strafuntersuchungsbehörden, wenn die Daten für die Abklärung eines Verbrechens oder eines Vergehens erforderlich sind,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "Betreibungsämtern, nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs,"
+              "text": "Betreibungsämtern, nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "Steuerbehörden, wenn die Daten für die Anwendung der Steuergesetze erforderlich sind,"
+              "text": "Steuerbehörden, wenn die Daten für die Anwendung der Steuergesetze erforderlich sind,",
+              "tiefe": 1
             },
             {
               "marke": "6",
-              "text": "den Kindes- und Erwachsenenschutzbehörden nach Artikel 448 Absatz 4 ZGB,"
+              "text": "den Kindes- und Erwachsenenschutzbehörden nach Artikel 448 Absatz 4 ZGB,",
+              "tiefe": 1
             },
             {
               "marke": "7",
-              "text": "…"
+              "text": "…",
+              "tiefe": 1
             },
             {
               "marke": "8",
-              "text": "den Migrationsbehörden nach Artikel 97 Absatz 1 des Ausländer- und Integrationsgesetzes vom 16. Dezember 2005."
+              "text": "den Migrationsbehörden nach Artikel 97 Absatz 1 des Ausländer- und Integrationsgesetzes vom 16. Dezember 2005.",
+              "tiefe": 1
             }
           ]
         },
@@ -2965,9 +2976,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "707088d02fb6ee240bc3c6b0d74fff54904168fa6827aa5ad8e5762bb4fe26e8"
+      "sha": "a61c66cb6e5dcdd0a2e4ce7e4beb3517842c1e5eb8e8d53b9d7383be05b69420"
     },
     {
       "id": "bund/AHVG/art_50_b",
@@ -3010,7 +3021,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cc56fe97d9dc6f066467b02ac32fba4fa859769dfb02a4ddbbf92932cbbfad3c"
     },
@@ -3057,7 +3068,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7ef12ec38ae82c7b6bdcb822eb99f2f3ef3dee3973a24982a359091972ad0127"
     },
@@ -3076,7 +3087,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_d_50_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3107,7 +3118,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_51",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "85c809e8a909243526909d14359cd21a3a1f771366e7ffe16b1846fcb6b8cc09"
     },
@@ -3146,7 +3157,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_52",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f6debe58aba4400ee3cc96bcdc9f27af239189bf426c7084f7ec422eda45a08c"
     },
@@ -3183,7 +3194,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_53",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2b5df6770ec99ff9fad861d6fcbc56d3e1368c7a9247e104ed723b9cde759974"
     },
@@ -3202,7 +3213,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_54",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -3247,7 +3258,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_55",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5bf5833f53413e9e40818ab75352e64e61f93d87c6a7a6f5e04ae423b0f66aa8"
     },
@@ -3274,7 +3285,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_56",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "1c81fe418205138d001b33edaae2fdb124463a88c0cc7c8567ee632ba28b00f4"
     },
@@ -3331,7 +3342,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_57",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "998f66028ae8bac54bcd7ccbdaa54bdc11a8a459b37003053b714f29e76e8b80"
     },
@@ -3396,7 +3407,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_58",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2004bc841415cb85160d1047a9d41df36498f48a07c7a2e5bd6ca18c48eb24f0"
     },
@@ -3419,7 +3430,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_59",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c4ce446c1e74149f9383692f915fd8f626442dec526590c3eac81798c847f67b"
     },
@@ -3454,7 +3465,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_60",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d8eead2df41fbdb43714a1fb586320ae37765d627b261f09220e03a840939f68"
     },
@@ -3515,7 +3526,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_61",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0c1865d33bb0713907faf0d71ca54bf0ba0b4bde0a0900eedea229abfbd1161b"
     },
@@ -3538,7 +3549,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_62",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "94e12a1b9071afcf8f5214dd16ad7106d390a076b04c383ee59b8961a07bf8e8"
     },
@@ -3603,7 +3614,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_63",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0288bcbe5c7c8622437fb83023768e04f38c4d7eed0d8f629f549eed79256686"
     },
@@ -3634,7 +3645,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_63_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cf30e4109cccf647cb716d325cb2664be669b3739da1735c4ff96ca11f0e19bf"
     },
@@ -3661,7 +3672,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_63_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "488d3452e2c25476f300784695a1e33f5036acb4e85baaa21eaecb8c0689f53b"
     },
@@ -3708,7 +3719,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_64",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c8c4d49de6576c1f37a2525bd4ca8681822b10ce4da2f0bd679bb1381d1704cd"
     },
@@ -3727,7 +3738,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_64_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "78cf3f93e3f4dfe04fc33c5bed5066638d35d4a2adadf8c6753b53f8b2876b5f"
     },
@@ -3754,7 +3765,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_65",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "5207daaeb442a5a69d0d2a08e67af6a420992d0fe36e94d3454c49c808e16f44"
     },
@@ -3781,7 +3792,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_66",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e1596b224b106815b34b990d5c2655ec2a4d3f77285651faecbdff046e0e69d3"
     },
@@ -3814,7 +3825,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_66_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "2b88e9904583d0a5128cb996b8a39420e3d6af25eef2b85d6d7520bda73995d8"
     },
@@ -3833,7 +3844,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_66_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f19efc2a8bef2b3b72b5a0e7b52de1e57552145ba227a6547a5072a7590f65bb"
     },
@@ -3874,7 +3885,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_67",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "d4f64b0597f1a7a51cfe1ea69870d1ffbcb40f4c8bd50efb76ff3637c1979a54"
     },
@@ -3909,7 +3920,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_68",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "98f42de6941b725ff1ec2337c238d5326903a392710d52a61899ab5caa6e5369"
     },
@@ -3966,7 +3977,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_68_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "686d21fff37c178809cdfbc7c0bcfb535ff7846a7059aa446d4e5c03290c87e4"
     },
@@ -4011,7 +4022,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_68_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b49bb1edbdec146c11c509901be0532db67f48fded22fe04c418c373debb0b91"
     },
@@ -4046,7 +4057,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_69",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "150ffcc3120e9d5f60031f27ded1a5c7efc286315d1dc0cb6ec0c7cd68ab872a"
     },
@@ -4091,7 +4102,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_70",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "7a47bf81de82d17d50b3d9d4a963689ed738d386a8fbc03be3ff394af178a953"
     },
@@ -4138,7 +4149,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_71",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "15f26a0d15d67c5ec4511164ff432d697da600296c25c5fd86963c3e86e2cfaa"
     },
@@ -4157,7 +4168,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_71_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9405b1d1248fd6b9d56f43c624c64d40ca84a442220e766e363b38c66ce05522"
     },
@@ -4176,7 +4187,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_72",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "158c9a4788d4bc3576d06f7807726e7f5930c421144babb768b292b4cd6ee28e"
     },
@@ -4221,7 +4232,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_72_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ccfb309927f9f3f20d27e38c2abee5de887758a7a5d9349e1c03e56bb802d3a6"
     },
@@ -4282,7 +4293,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_72_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "78db918b2f6da0baa5c7b8095b1bdb83b91ef98772533af2b7db4150f77b5c24"
     },
@@ -4305,7 +4316,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_73",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "3dadbefb685ec087bec4835c7f347109c58b58598b5b5c3ac68b4bda0fe3634f"
     },
@@ -4324,7 +4335,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_74_83",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4343,7 +4354,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_84",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c4f6fdfac5908d6ca416728fe6854804c6c21a1d229b8a4275441a081d20e06f"
     },
@@ -4362,7 +4373,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_85",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4389,7 +4400,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_85_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "e2f250346be81919a373497cff5c8a113691257b68785ea8412df3f997c30fcf"
     },
@@ -4408,7 +4419,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_86",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4459,7 +4470,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_87",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "956db637594b9ef34a70ff1c439e8cd6202565b5186e4ae00c4e20c514110736"
     },
@@ -4494,7 +4505,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_88",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "8a08f69a716781bbf8b64eadcb88546b8a13229ee7b9ad77047a5da4fb03bf12"
     },
@@ -4513,7 +4524,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_89",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4532,7 +4543,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_90",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "859b5155528d261ac77b5742b819e43ef0eae400ea2fde0107688fd77bebec53"
     },
@@ -4555,7 +4566,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_91",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "cbc3ad9e6198989d26f5c653c0aedb84abb405b46e4888e72997a70672b4b94c"
     },
@@ -4574,7 +4585,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_92",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4593,7 +4604,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_92_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4612,7 +4623,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_93",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bc230070a33a6ca9e84b9f7b6cd5d4ddb3963007b246787f24cf3adfe3909d7a"
     },
@@ -4639,7 +4650,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_93_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a32c07295640ae04509a21e0aeacca3c98543465cd073247f3a315df8b5d25b8"
     },
@@ -4658,7 +4669,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_94",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4721,7 +4732,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_95",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "51d9478493b8e8e5821fa25e38cc9f327f33409c50cee8bfb741a80775492060"
     },
@@ -4740,7 +4751,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_95_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "0962c673fe2d9d953d2c45ac410dd6c1f9c06c6db5163bb4d0e0f3857be3ebaa"
     },
@@ -4759,7 +4770,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_96",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4778,7 +4789,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_97",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4797,7 +4808,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_98",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4816,7 +4827,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_99",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4835,7 +4846,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_100",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4854,7 +4865,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_101",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4903,7 +4914,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_101_bis",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bdc92a5d9ecbc645aa68c670f32925925f00f2fed3441ad5a5b2ea4ac069c6e9"
     },
@@ -4922,7 +4933,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_101_ter",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -4971,7 +4982,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_102",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "bdc8c8562e3f60731e34ee0402ba91348d8c26f91e189b306ada9a286f7d2ef8"
     },
@@ -4990,7 +5001,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_103",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f9e4e915d90ef2ecf1e4a0a021898abd6a4a95dd4e7b666ebf7d25a62b52b7e1"
     },
@@ -5013,7 +5024,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_104",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "6ec33c1b678a6dfa487c8e651145eef49049b3ca1fd4b7cfaf60d4377f9e48a4"
     },
@@ -5032,7 +5043,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_105_106",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5059,7 +5070,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_107",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "05d229df5c4f8ba215c03626b9069c721284f930e60878881b5b8674ffa71747"
     },
@@ -5078,7 +5089,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_108",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5097,7 +5108,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_109",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "ca0c2614a9065bd7bcf258f8fcf6c183f04e162d066f3058aad8b9180be77b82"
     },
@@ -5116,7 +5127,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_110",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5135,7 +5146,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_111",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5154,7 +5165,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_112",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5173,7 +5184,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_113_153",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -5240,7 +5251,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_a",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f33aeb9b184f3d512dfc7be0cfc54ca3af763904c51a3b1061d702604181796"
     },
@@ -5259,7 +5270,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_b",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "21adff12218c915139e82ec587627b38e7adeae115e6cb8aa91616b24d6de442"
     },
@@ -5281,23 +5292,28 @@
             },
             {
               "marke": "1",
-              "text": "die eidgenössischen Departemente und die Bundeskanzlei,"
+              "text": "die eidgenössischen Departemente und die Bundeskanzlei,",
+              "tiefe": 1
             },
             {
               "marke": "2",
-              "text": "die dezentralisierten Einheiten der Bundesverwaltung,"
+              "text": "die dezentralisierten Einheiten der Bundesverwaltung,",
+              "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "die Einheiten der Kantons- und Gemeindeverwaltungen,"
+              "text": "die Einheiten der Kantons- und Gemeindeverwaltungen,",
+              "tiefe": 1
             },
             {
               "marke": "4",
-              "text": "die Organisationen und Personen des öffentlichen oder privaten Rechts, die nicht den Verwaltungen nach den Ziffern 1–3 angehören und die durch Bundesrecht, kantonales Recht oder kommunales Recht oder durch Vertrag mit Verwaltungsaufgaben betraut sind, sofern das anwendbare Recht die systematische Verwendung der AHV-Nummer vorsieht,"
+              "text": "die Organisationen und Personen des öffentlichen oder privaten Rechts, die nicht den Verwaltungen nach den Ziffern 1–3 angehören und die durch Bundesrecht, kantonales Recht oder kommunales Recht oder durch Vertrag mit Verwaltungsaufgaben betraut sind, sofern das anwendbare Recht die systematische Verwendung der AHV-Nummer vorsieht,",
+              "tiefe": 1
             },
             {
               "marke": "5",
-              "text": "die Bildungsinstitutionen;"
+              "text": "die Bildungsinstitutionen;",
+              "tiefe": 1
             },
             {
               "marke": "b",
@@ -5316,9 +5332,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_c",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "933ea0d6176e03299352dd1dd1881f5d9cb35048b27d37edea3aba4edc854fe8"
+      "sha": "d61e937414c12af2c6e529bcec9e1550c919000b0d122c94ae512b55bf5675c4"
     },
     {
       "id": "bund/AHVG/art_153_d",
@@ -5357,7 +5373,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_d",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "a9fb7a6a4f5b4f20dbded75415895910bfe79b57b9f7d4a9850bc8e0a8e4d9f7"
     },
@@ -5390,7 +5406,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_e",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "626f966bfa2420f9b52587a5f1a227a07870d80bf97e86f88200dc190b9107ae"
     },
@@ -5423,7 +5439,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_f",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "4bd2d9cdc4e863946f3e6e5bdb4f1db7d3dd16a76165274bf1bf14205ae1f6fe"
     },
@@ -5456,7 +5472,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_g",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "f53b96af5a97a2ea1c9e2f6957c1a0147a867a93faca69b42e91d58deb6a2256"
     },
@@ -5475,7 +5491,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_h",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9f2cd2b83f04091ea6a4b8e9b7f26adb853064db18dbf73266724a8468394fde"
     },
@@ -5502,7 +5518,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_153_i",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "c4c86c458874438ec4eb2d57a440fcaa1b1671a8a3f4de3bf00dc73de4c569ab"
     },
@@ -5525,7 +5541,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_154",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9efccc75173c77ba216ed446efb129c1e7b3d558559daf1e777d5102e3b519a8"
     },
@@ -5544,7 +5560,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_155",
-      "abgerufen": "2026-06-25",
+      "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     }

@@ -124,4 +124,22 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
     const out = ssr(<NormText text="gemäss Art. 6a hier" />);
     expect(out).not.toContain('#art-6_a');
   });
+
+  // M12 (§1/§6): bare «Artikel N ‹KÜRZEL›» = Fremd-/Trägergesetz-Verweis, kein
+  // Self-Verweis → falscher Self-Sprunglink wird unterdrückt (BGerR-Befund).
+  it('«Artikel 5 BGG» (ausgeschrieben + Kürzel) wird NICHT self-verlinkt', () => {
+    const out = ssr(<NormText text="richtet sich nach Artikel 5 BGG sinngemäss" intern={intern} />);
+    expect(out).not.toContain('#art-5"');
+    expect(out).toContain('Artikel 5 BGG'); // Text bleibt erhalten
+  });
+
+  it('«Artikel 20 OR» wird NICHT self-verlinkt (Trägergesetz)', () => {
+    const out = ssr(<NormText text="gemäss Artikel 20 OR gilt" intern={intern} />);
+    expect(out).not.toContain('#art-20"');
+  });
+
+  it('«Artikel 5 Absatz 2» (EIN Grossbuchstabe) bleibt ein Self-Sprung', () => {
+    const out = ssr(<NormText text="nach Artikel 5 Absatz 2 hier" intern={intern} />);
+    expect(out).toContain('#art-5"');
+  });
 });

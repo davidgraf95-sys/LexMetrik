@@ -1,5 +1,74 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "831.301",
+  "titel": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung",
+  "erlassdatum": "vom 15. Januar 1971 (Stand am 1. Januar 2025)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Schweizerische Bundesrat,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) und auf die Artikel 4 Absatz 4, 5 Absatz 6, 9 Absatz 5, 10 Absätze 1 und 1, 11a Absatz 3 zweiter Satz, 14 Absatz 4, 24 Absatz 2 zweiter Satz und 33 des Bundesgesetzes vom 6. Oktober 2006 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "Fassung des Tit. gemäss Ziff. V der V vom 11. Okt. 1972, in Kraft seit 1. Jan. 1973 (AS <b>1972</b> 2507). Gemäss derselben Bestimmungen wurden die Randtit. in Sachüberschriften umgewandelt.",
+    "links": [
+     {
+      "label": "AS <b>1972</b> 2507",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1972/2507_2560_2338"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>830.1</b>",
+    "links": [
+     {
+      "label": "SR <b>830.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>831.30</b>",
+    "links": [
+     {
+      "label": "SR <b>831.30</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
+    "links": [
+     {
+      "label": "AS <b>2020</b> 599",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -22,10 +91,10 @@
    "fussnoten": [
     {
      "nr": "8",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -34,10 +103,10 @@
     },
     {
      "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 607).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 607).",
      "links": [
       {
-       "label": "AS 2022 607",
+       "label": "AS <b>2022</b> 607",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/607"
       }
      ],
@@ -46,39 +115,42 @@
     },
     {
      "nr": "5",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "Erster Abschnitt: Ergänzungsleistungen"
     },
     {
      "nr": "6",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "A. Der Anspruch und die Berechnungsgrundlagen"
     },
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "I. Anspruch"
     }
    ]
   },
@@ -103,10 +175,10 @@
    "fussnoten": [
     {
      "nr": "14",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -143,10 +215,10 @@
     },
     {
      "nr": "16",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -155,14 +227,14 @@
     },
     {
      "nr": "17",
-     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan 2008 (AS 2007 5155). Die Berichtigung vom 3. April 2024 betrifft nur den italienischen Text (AS 2024 130).",
+     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan 2008 (AS <b>2007</b> 5155). Die Berichtigung vom 3. April 2024 betrifft nur den italienischen Text (AS <b>2024</b> 130).",
      "links": [
       {
-       "label": "AS 2007 5155",
+       "label": "AS <b>2007</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/723"
       },
       {
-       "label": "AS 2024 130",
+       "label": "AS <b>2024</b> 130",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/130"
       }
      ],
@@ -171,10 +243,10 @@
     },
     {
      "nr": "18",
-     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5155).",
+     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5155).",
      "links": [
       {
-       "label": "AS 2007 5155",
+       "label": "AS <b>2007</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/723"
       }
      ],
@@ -183,10 +255,10 @@
     },
     {
      "nr": "19",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -195,10 +267,10 @@
     },
     {
      "nr": "20",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS 1989 1238).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS <b>1989</b> 1238).",
      "links": [
       {
-       "label": "AS 1989 1238",
+       "label": "AS <b>1989</b> 1238",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/1238_1238_1238"
       }
      ],
@@ -228,10 +300,10 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -261,10 +333,10 @@
    "fussnoten": [
     {
      "nr": "24",
-     "text": "Ursprünglich: Art. 1c. Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Ursprünglich: Art. 1<i>c</i>. Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -294,10 +366,10 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Ursprünglich: Art. 4. Fassung gemäss Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS 1996 695).",
+     "text": "Ursprünglich: Art. 4. Fassung gemäss Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 695).",
      "links": [
       {
-       "label": "AS 1996 695",
+       "label": "AS <b>1996</b> 695",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/695_695_695"
       }
      ],
@@ -306,10 +378,10 @@
     },
     {
      "nr": "26",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -339,10 +411,10 @@
    "fussnoten": [
     {
      "nr": "27",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1204).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1204).",
      "links": [
       {
-       "label": "AS 1986 1204",
+       "label": "AS <b>1986</b> 1204",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1204_1204_1204"
       }
      ],
@@ -351,10 +423,10 @@
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -363,10 +435,10 @@
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan. 2008 (AS 2007 5155).",
+     "text": "Fassung gemäss Ziff. II 3 der V vom 28. Sept. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5155).",
      "links": [
       {
-       "label": "AS 2007 5155",
+       "label": "AS <b>2007</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/723"
       }
      ],
@@ -375,10 +447,10 @@
     },
     {
      "nr": "30",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Sept. 1994, in Kraft seit 1. Jan. 1995 (AS 1994 2174).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Sept. 1994, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2174).",
      "links": [
       {
-       "label": "AS 1994 2174",
+       "label": "AS <b>1994</b> 2174",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/2174_2174_2174"
       }
      ],
@@ -387,10 +459,10 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Sept. 1994, in Kraft seit 1. Jan. 1995 (AS 1994 2174).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Sept. 1994, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2174).",
      "links": [
       {
-       "label": "AS 1994 2174",
+       "label": "AS <b>1994</b> 2174",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/2174_2174_2174"
       }
      ],
@@ -420,10 +492,10 @@
    "fussnoten": [
     {
      "nr": "32",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -432,10 +504,10 @@
     },
     {
      "nr": "33",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -465,10 +537,10 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -517,10 +589,10 @@
    "fussnoten": [
     {
      "nr": "39",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -529,10 +601,10 @@
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -541,10 +613,10 @@
     },
     {
      "nr": "41",
-     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS 1991 2119).",
+     "text": "Aufgehoben durch Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS <b>1991</b> 2119).",
      "links": [
       {
-       "label": "AS 1991 2119",
+       "label": "AS <b>1991</b> 2119",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2119_2119_2119"
       }
      ],
@@ -553,15 +625,16 @@
     },
     {
      "nr": "38",
-     "text": "Ursprünglich: Kapitel II. Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Ursprünglich: Kapitel II. Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "IIa. Anrechenbare Einnahmen, anerkannte Ausgaben und Vermögen"
     }
    ]
   },
@@ -586,10 +659,10 @@
    "fussnoten": [
     {
      "nr": "43",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS 1991 2119).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS <b>1991</b> 2119).",
      "links": [
       {
-       "label": "AS 1991 2119",
+       "label": "AS <b>1991</b> 2119",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2119_2119_2119"
       }
      ],
@@ -636,10 +709,10 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -669,10 +742,10 @@
    "fussnoten": [
     {
      "nr": "54",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -702,10 +775,10 @@
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS 1991 2119).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS <b>1991</b> 2119).",
      "links": [
       {
-       "label": "AS 1991 2119",
+       "label": "AS <b>1991</b> 2119",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2119_2119_2119"
       }
      ],
@@ -714,10 +787,10 @@
     },
     {
      "nr": "63",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -747,10 +820,10 @@
    "fussnoten": [
     {
      "nr": "74",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -780,10 +853,10 @@
    "fussnoten": [
     {
      "nr": "84",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS 1989 1238).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS <b>1989</b> 1238).",
      "links": [
       {
-       "label": "AS 1989 1238",
+       "label": "AS <b>1989</b> 1238",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/1238_1238_1238"
       }
      ],
@@ -813,10 +886,10 @@
    "fussnoten": [
     {
      "nr": "86",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -825,15 +898,16 @@
     },
     {
      "nr": "85",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "III. Vergütung von Krankheits- und Behinderungskosten"
     }
    ]
   },
@@ -858,10 +932,10 @@
    "fussnoten": [
     {
      "nr": "92",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -870,10 +944,10 @@
     },
     {
      "nr": "93",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -882,10 +956,10 @@
     },
     {
      "nr": "94",
-     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 607).",
+     "text": "Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 607).",
      "links": [
       {
-       "label": "AS 2022 607",
+       "label": "AS <b>2022</b> 607",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/607"
       }
      ],
@@ -897,7 +971,8 @@
      "text": "Ursprünglich Ziff. III.",
      "links": [],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "IV. Verschiedene Bestimmungen"
     }
    ]
   },
@@ -922,10 +997,10 @@
    "fussnoten": [
     {
      "nr": "95",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -955,10 +1030,10 @@
    "fussnoten": [
     {
      "nr": "100",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -967,10 +1042,10 @@
     },
     {
      "nr": "101",
-     "text": "Fassung gemäss Ziff. I der V vom 27. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS 1993 2928).",
+     "text": "Fassung gemäss Ziff. I der V vom 27. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS <b>1993</b> 2928).",
      "links": [
       {
-       "label": "AS 1993 2928",
+       "label": "AS <b>1993</b> 2928",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/2928_2928_2928"
       }
      ],
@@ -979,10 +1054,10 @@
     },
     {
      "nr": "102",
-     "text": "Eingefügt durch Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS 1989 1238).",
+     "text": "Eingefügt durch Ziff. I der V vom 12. Juni 1989, in Kraft seit 1. Jan. 1990 (AS <b>1989</b> 1238).",
      "links": [
       {
-       "label": "AS 1989 1238",
+       "label": "AS <b>1989</b> 1238",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/1238_1238_1238"
       }
      ],
@@ -991,10 +1066,10 @@
     },
     {
      "nr": "103",
-     "text": "Eingefügt durch Ziff. II 1 der V vom 22. Juni 2011, in Kraft seit 1. Jan. 2012 (AS 2011 3527).",
+     "text": "Eingefügt durch Ziff. II 1 der V vom 22. Juni 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3527).",
      "links": [
       {
-       "label": "AS 2011 3527",
+       "label": "AS <b>2011</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
      ],
@@ -1024,10 +1099,10 @@
    "fussnoten": [
     {
      "nr": "105",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1036,10 +1111,10 @@
     },
     {
      "nr": "106",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -1088,10 +1163,10 @@
    "fussnoten": [
     {
      "nr": "107",
-     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420).",
+     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       }
      ],
@@ -1100,10 +1175,10 @@
     },
     {
      "nr": "108",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1112,10 +1187,10 @@
     },
     {
      "nr": "109",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1124,10 +1199,10 @@
     },
     {
      "nr": "110",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1136,10 +1211,10 @@
     },
     {
      "nr": "111",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -1148,10 +1223,10 @@
     },
     {
      "nr": "112",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1160,10 +1235,10 @@
     },
     {
      "nr": "113",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1172,10 +1247,10 @@
     },
     {
      "nr": "114",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1184,10 +1259,10 @@
     },
     {
      "nr": "115",
-     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -1196,10 +1271,10 @@
     },
     {
      "nr": "116",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1208,10 +1283,10 @@
     },
     {
      "nr": "117",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -1220,10 +1295,10 @@
     },
     {
      "nr": "118",
-     "text": "Fassung gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Fassung gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -1232,14 +1307,14 @@
     },
     {
      "nr": "119",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 1986 (AS 1986 1204). Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 1986 (AS <b>1986</b> 1204). Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1986 1204",
+       "label": "AS <b>1986</b> 1204",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1204_1204_1204"
       },
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -1248,10 +1323,10 @@
     },
     {
      "nr": "120",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987, in Kraft seit 1. Jan. 1988 (AS 1987 1797).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987, in Kraft seit 1. Jan. 1988 (AS <b>1987</b> 1797).",
      "links": [
       {
-       "label": "AS 1987 1797",
+       "label": "AS <b>1987</b> 1797",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/1797_1797_1797"
       }
      ],
@@ -1281,10 +1356,10 @@
    "fussnoten": [
     {
      "nr": "124",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -1293,10 +1368,10 @@
     },
     {
      "nr": "125",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -1305,10 +1380,10 @@
     },
     {
      "nr": "126",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -1338,10 +1413,10 @@
    "fussnoten": [
     {
      "nr": "133",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -1371,10 +1446,10 @@
    "fussnoten": [
     {
      "nr": "142",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1404,10 +1479,10 @@
    "fussnoten": [
     {
      "nr": "145",
-     "text": "Fassung des Satzes gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Fassung des Satzes gemäss Ziff. I der V vom 11. Sept. 2002, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -1437,10 +1512,10 @@
    "fussnoten": [
     {
      "nr": "146",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1468,10 +1543,10 @@
    "fussnoten": [
     {
      "nr": "147",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -1501,10 +1576,10 @@
    "fussnoten": [
     {
      "nr": "148",
-     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1513,10 +1588,10 @@
     },
     {
      "nr": "149",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -1546,10 +1621,10 @@
    "fussnoten": [
     {
      "nr": "151",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1577,10 +1652,10 @@
    "fussnoten": [
     {
      "nr": "152",
-     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1610,10 +1685,10 @@
    "fussnoten": [
     {
      "nr": "153",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1622,10 +1697,10 @@
     },
     {
      "nr": "154",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -1634,10 +1709,10 @@
     },
     {
      "nr": "155",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1667,10 +1742,10 @@
    "fussnoten": [
     {
      "nr": "156",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1700,10 +1775,10 @@
    "fussnoten": [
     {
      "nr": "157",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1731,10 +1806,10 @@
    "fussnoten": [
     {
      "nr": "158",
-     "text": "Fassung gemäss Ziff. II 93 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS 2006 4705).",
+     "text": "Fassung gemäss Ziff. II 93 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
-       "label": "AS 2006 4705",
+       "label": "AS <b>2006</b> 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
      ],
@@ -1764,10 +1839,10 @@
    "fussnoten": [
     {
      "nr": "160",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1776,10 +1851,10 @@
     },
     {
      "nr": "161",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -1788,10 +1863,10 @@
     },
     {
      "nr": "162",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -1800,10 +1875,10 @@
     },
     {
      "nr": "163",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -1812,15 +1887,16 @@
     },
     {
      "nr": "159",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "I. An die jährlichen Ergänzungsleistungen"
     }
    ]
   },
@@ -1845,10 +1921,10 @@
    "fussnoten": [
     {
      "nr": "165",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1857,10 +1933,10 @@
     },
     {
      "nr": "166",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1869,10 +1945,10 @@
     },
     {
      "nr": "167",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1881,10 +1957,10 @@
     },
     {
      "nr": "168",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -1893,10 +1969,10 @@
     },
     {
      "nr": "169",
-     "text": "Fassung gemäss Ziff. I der V vom 27. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS 1993 2928).",
+     "text": "Fassung gemäss Ziff. I der V vom 27. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS <b>1993</b> 2928).",
      "links": [
       {
-       "label": "AS 1993 2928",
+       "label": "AS <b>1993</b> 2928",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/2928_2928_2928"
       }
      ],
@@ -1926,10 +2002,10 @@
    "fussnoten": [
     {
      "nr": "171",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -1959,10 +2035,10 @@
    "fussnoten": [
     {
      "nr": "172",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -1971,10 +2047,10 @@
     },
     {
      "nr": "173",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857"
       }
      ],
@@ -2000,10 +2076,10 @@
    "fussnoten": [
     {
      "nr": "182",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 4617).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Okt. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4617).",
      "links": [
       {
-       "label": "AS 2020 4617",
+       "label": "AS <b>2020</b> 4617",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/822"
       }
      ],
@@ -2012,10 +2088,10 @@
     },
     {
      "nr": "183",
-     "text": "Fassung gemäss Ziff. V der V vom 11. Okt. 1972, in Kraft seit 1. Jan. 1973 (AS 1972 2507).",
+     "text": "Fassung gemäss Ziff. V der V vom 11. Okt. 1972, in Kraft seit 1. Jan. 1973 (AS <b>1972</b> 2507).",
      "links": [
       {
-       "label": "AS 1972 2507",
+       "label": "AS <b>1972</b> 2507",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2507_2560_2338"
       }
      ],
@@ -2024,10 +2100,10 @@
     },
     {
      "nr": "184",
-     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. Jan. 2006 (AS 2005 5637).",
+     "text": "Fassung gemäss Ziff. I der V vom 23. Nov. 2005, in Kraft seit 1. Jan. 2006 (AS <b>2005</b> 5637).",
      "links": [
       {
-       "label": "AS 2005 5637",
+       "label": "AS <b>2005</b> 5637",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/770"
       }
      ],
@@ -2036,15 +2112,16 @@
     },
     {
      "nr": "181",
-     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420).",
+     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "I. Beiträge der Alters-, Hinterlassenen- und Invalidenversicherung"
     }
    ]
   },
@@ -2072,10 +2149,10 @@
     },
     {
      "nr": "186",
-     "text": "Fassung gemäss Ziff. V der V vom 11. Okt. 1972, in Kraft seit 1. Jan. 1973 (AS 1972 2507).",
+     "text": "Fassung gemäss Ziff. V der V vom 11. Okt. 1972, in Kraft seit 1. Jan. 1973 (AS <b>1972</b> 2507).",
      "links": [
       {
-       "label": "AS 1972 2507",
+       "label": "AS <b>1972</b> 2507",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2507_2560_2338"
       }
      ],
@@ -2084,10 +2161,10 @@
     },
     {
      "nr": "187",
-     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420).",
+     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       }
      ],
@@ -2113,10 +2190,10 @@
    "fussnoten": [
     {
      "nr": "188",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2125,10 +2202,10 @@
     },
     {
      "nr": "189",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -2137,10 +2214,10 @@
     },
     {
      "nr": "190",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -2149,10 +2226,10 @@
     },
     {
      "nr": "191",
-     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -2193,10 +2270,10 @@
    "fussnoten": [
     {
      "nr": "192",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1204).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1204).",
      "links": [
       {
-       "label": "AS 1986 1204",
+       "label": "AS <b>1986</b> 1204",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1204_1204_1204"
       }
      ],
@@ -2205,10 +2282,10 @@
     },
     {
      "nr": "193",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2234,10 +2311,10 @@
    "fussnoten": [
     {
      "nr": "194",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2246,10 +2323,10 @@
     },
     {
      "nr": "195",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2258,10 +2335,10 @@
     },
     {
      "nr": "196",
-     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420).",
+     "text": "Fassung gemäss Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       }
      ],
@@ -2270,10 +2347,10 @@
     },
     {
      "nr": "197",
-     "text": "Eingefügt durch Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS 1978 420).",
+     "text": "Eingefügt durch Ziff. II 2 der V vom 5. April 1978, in Kraft seit 1. Jan. 1979 (AS <b>1978</b> 420).",
      "links": [
       {
-       "label": "AS 1978 420",
+       "label": "AS <b>1978</b> 420",
        "url": "https://fedlex.data.admin.ch/eli/oc/1978/420_420_420"
       }
      ],
@@ -2299,10 +2376,10 @@
    "fussnoten": [
     {
      "nr": "198",
-     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1204).",
+     "text": "Fassung gemäss Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1204).",
      "links": [
       {
-       "label": "AS 1986 1204",
+       "label": "AS <b>1986</b> 1204",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1204_1204_1204"
       }
      ],
@@ -2358,10 +2435,10 @@
    "fussnoten": [
     {
      "nr": "199",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2370,10 +2447,10 @@
     },
     {
      "nr": "200",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -2399,10 +2476,10 @@
    "fussnoten": [
     {
      "nr": "201",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -2428,10 +2505,10 @@
    "fussnoten": [
     {
      "nr": "202",
-     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -2440,10 +2517,10 @@
     },
     {
      "nr": "203",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2469,10 +2546,10 @@
    "fussnoten": [
     {
      "nr": "213",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2496,10 +2573,10 @@
    "fussnoten": [
     {
      "nr": "214",
-     "text": "Aufgehoben durch Ziff. I der V vom 24. Sept. 2004, mit Wirkung seit 1. Jan. 2005 (AS 2004 4369).",
+     "text": "Aufgehoben durch Ziff. I der V vom 24. Sept. 2004, mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 4369).",
      "links": [
       {
-       "label": "AS 2004 4369",
+       "label": "AS <b>2004</b> 4369",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/663"
       }
      ],
@@ -2525,10 +2602,10 @@
    "fussnoten": [
     {
      "nr": "215",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2537,10 +2614,10 @@
     },
     {
      "nr": "216",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2562,10 +2639,10 @@
    "fussnoten": [
     {
      "nr": "217",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2587,14 +2664,14 @@
    "fussnoten": [
     {
      "nr": "218",
-     "text": "[AS 1965 1045, 1969 77 Ziff. II Bst. B Ziff. 6 125 Ziff. V Bst. a]",
+     "text": "[AS <b>1965</b> 1045, <b>1969</b> 77 Ziff. II Bst. B Ziff. 6 125 Ziff. V Bst. a]",
      "links": [
       {
-       "label": "AS 1965 1045",
+       "label": "AS <b>1965</b> 1045",
        "url": "https://fedlex.data.admin.ch/eli/oc/1965/1045_1057_1041"
       },
       {
-       "label": "1969 77",
+       "label": "<b>1969</b> 77",
        "url": "https://fedlex.data.admin.ch/eli/oc/1969/77_81_81"
       }
      ],
@@ -2624,14 +2701,14 @@
    "fussnoten": [
     {
      "nr": "35",
-     "text": "Eingefügt durch Anhang Ziff. 3 der V vom 11. Juni 2021 über Überbrückungsleistungen für ältere Arbeitslose (AS 2021 376). Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Eingefügt durch Anhang Ziff. 3 der V vom 11. Juni 2021 über Überbrückungsleistungen für ältere Arbeitslose (AS <b>2021</b> 376). Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 2021 376",
+       "label": "AS <b>2021</b> 376",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/376"
       },
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -2640,10 +2717,10 @@
     },
     {
      "nr": "36",
-     "text": "SR 837.2",
+     "text": "SR <b>837.2</b>",
      "links": [
       {
-       "label": "SR 837.2",
+       "label": "SR <b>837.2</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2021/373"
       }
      ],
@@ -2652,10 +2729,10 @@
     },
     {
      "nr": "37",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -2685,10 +2762,10 @@
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS 1986 1204).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Juni 1986, in Kraft seit 1. Jan. 1987 (AS <b>1986</b> 1204).",
      "links": [
       {
-       "label": "AS 1986 1204",
+       "label": "AS <b>1986</b> 1204",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1204_1204_1204"
       }
      ],
@@ -2718,10 +2795,10 @@
    "fussnoten": [
     {
      "nr": "45",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987, in Kraft seit 1. Jan. 1988 (AS 1987 1797). Siehe auch die SchlB dieser Änd. am Schluss der vorliegenden V.",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987, in Kraft seit 1. Jan. 1988 (AS <b>1987</b> 1797). Siehe auch die SchlB dieser Änd. am Schluss der vorliegenden V.",
      "links": [
       {
-       "label": "AS 1987 1797",
+       "label": "AS <b>1987</b> 1797",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/1797_1797_1797"
       }
      ],
@@ -2730,10 +2807,10 @@
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2742,10 +2819,10 @@
     },
     {
      "nr": "47",
-     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Jan. 2004 (AS 2003 3877).",
+     "text": "Fassung gemäss Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3877).",
      "links": [
       {
-       "label": "AS 2003 3877",
+       "label": "AS <b>2003</b> 3877",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/562"
       }
      ],
@@ -2754,10 +2831,10 @@
     },
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS 2020 4545).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4545).",
      "links": [
       {
-       "label": "AS 2020 4545",
+       "label": "AS <b>2020</b> 4545",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/801"
       }
      ],
@@ -2766,10 +2843,10 @@
     },
     {
      "nr": "49",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
       }
      ],
@@ -2778,10 +2855,10 @@
     },
     {
      "nr": "50",
-     "text": "SR 831.26",
+     "text": "SR <b>831.26</b>",
      "links": [
       {
-       "label": "SR 831.26",
+       "label": "SR <b>831.26</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/802"
       }
      ],
@@ -2790,10 +2867,10 @@
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2823,14 +2900,14 @@
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987 (AS 1987 1797). Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 1987 (AS <b>1987</b> 1797). Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1987 1797",
+       "label": "AS <b>1987</b> 1797",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/1797_1797_1797"
       },
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -2839,10 +2916,10 @@
     },
     {
      "nr": "53",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2872,14 +2949,14 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 1995 (AS 1996 695). Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS 2023 506).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 1995 (AS <b>1996</b> 695). Fassung gemäss Anhang Ziff. 5 der V vom 30. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 506).",
      "links": [
       {
-       "label": "AS 1996 695",
+       "label": "AS <b>1996</b> 695",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/695_695_695"
       },
       {
-       "label": "AS 2023 506",
+       "label": "AS <b>2023</b> 506",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/506"
       }
      ],
@@ -2888,10 +2965,10 @@
     },
     {
      "nr": "56",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -2921,14 +2998,14 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS 1997 2961). Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS <b>1997</b> 2961). Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       },
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -2958,10 +3035,10 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2582).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 2582).",
      "links": [
       {
-       "label": "AS 1998 2582",
+       "label": "AS <b>1998</b> 2582",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
       }
      ],
@@ -2991,10 +3068,10 @@
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS 2004 4643).",
+     "text": "Eingefügt durch Anhang Ziff. 1 der V vom 27. Okt. 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4643).",
      "links": [
       {
-       "label": "AS 2004 4643",
+       "label": "AS <b>2004</b> 4643",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/712"
       }
      ],
@@ -3003,10 +3080,10 @@
     },
     {
      "nr": "60",
-     "text": "SR 831.40",
+     "text": "SR <b>831.40</b>",
      "links": [
       {
-       "label": "SR 831.40",
+       "label": "SR <b>831.40</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1983/797_797_797"
       }
      ],
@@ -3036,10 +3113,10 @@
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3069,10 +3146,10 @@
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -3081,10 +3158,10 @@
     },
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -3093,10 +3170,10 @@
     },
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -3126,10 +3203,10 @@
    "fussnoten": [
     {
      "nr": "67",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -3138,10 +3215,10 @@
     },
     {
      "nr": "68",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
@@ -3171,10 +3248,10 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -3204,10 +3281,10 @@
    "fussnoten": [
     {
      "nr": "70",
-     "text": "Eingefügt durch Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS 2020 4545).",
+     "text": "Eingefügt durch Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4545).",
      "links": [
       {
-       "label": "AS 2020 4545",
+       "label": "AS <b>2020</b> 4545",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/801"
       }
      ],
@@ -3237,10 +3314,10 @@
    "fussnoten": [
     {
      "nr": "71",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3249,10 +3326,10 @@
     },
     {
      "nr": "72",
-     "text": "SR 832.12",
+     "text": "SR <b>832.12</b>",
      "links": [
       {
-       "label": "SR 832.12",
+       "label": "SR <b>832.12</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/839"
       }
      ],
@@ -3282,10 +3359,10 @@
    "fussnoten": [
     {
      "nr": "73",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3315,10 +3392,10 @@
    "fussnoten": [
     {
      "nr": "75",
-     "text": "Ursprünglich: Art. 17. Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS 1991 2119).",
+     "text": "Ursprünglich: Art. 17. Fassung gemäss Ziff. I der V vom 21. Aug. 1991, in Kraft seit 1. Jan. 1992 (AS <b>1991</b> 2119).",
      "links": [
       {
-       "label": "AS 1991 2119",
+       "label": "AS <b>1991</b> 2119",
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/2119_2119_2119"
       }
      ],
@@ -3327,10 +3404,10 @@
     },
     {
      "nr": "76",
-     "text": "Aufgehoben durch Ziff. I der V vom 16. Sept. 1998, mit Wirkung seit 1. Jan. 1999 (AS 1998 2582).",
+     "text": "Aufgehoben durch Ziff. I der V vom 16. Sept. 1998, mit Wirkung seit 1. Jan. 1999 (AS <b>1998</b> 2582).",
      "links": [
       {
-       "label": "AS 1998 2582",
+       "label": "AS <b>1998</b> 2582",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
       }
      ],
@@ -3339,14 +3416,14 @@
     },
     {
      "nr": "77",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998 (AS 1998 2582). Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS 2022 607).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998 (AS <b>1998</b> 2582). Fassung gemäss Ziff. I der V vom 12. Okt. 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 607).",
      "links": [
       {
-       "label": "AS 1998 2582",
+       "label": "AS <b>1998</b> 2582",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
       },
       {
-       "label": "AS 2022 607",
+       "label": "AS <b>2022</b> 607",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/607"
       }
      ],
@@ -3355,10 +3432,10 @@
     },
     {
      "nr": "78",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998, in Kraft seit 1. Jan. 1999 (AS 1998 2582).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998, in Kraft seit 1. Jan. 1999 (AS <b>1998</b> 2582).",
      "links": [
       {
-       "label": "AS 1998 2582",
+       "label": "AS <b>1998</b> 2582",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
       }
      ],
@@ -3388,10 +3465,10 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3421,10 +3498,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3454,10 +3531,10 @@
    "fussnoten": [
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3466,10 +3543,10 @@
     },
     {
      "nr": "82",
-     "text": "SR 211.223.13",
+     "text": "SR <b>211.223.13</b>",
      "links": [
       {
-       "label": "SR 211.223.13",
+       "label": "SR <b>211.223.13</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/145"
       }
      ],
@@ -3499,10 +3576,10 @@
    "fussnoten": [
     {
      "nr": "83",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3530,14 +3607,14 @@
    "fussnoten": [
     {
      "nr": "87",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS 1997 2961). Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS <b>1997</b> 2961). Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       },
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -3567,14 +3644,14 @@
    "fussnoten": [
     {
      "nr": "88",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Jan. 2004 (AS 2003 3877). Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Mai 2003, in Kraft seit 1. Jan. 2004 (AS <b>2003</b> 3877). Fassung gemäss Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2003 3877",
+       "label": "AS <b>2003</b> 3877",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/562"
       },
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -3583,10 +3660,10 @@
     },
     {
      "nr": "89",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 5679).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>5679).",
      "links": [
       {
-       "label": "AS 2011 5679",
+       "label": "AS <b>2011 </b>5679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/800"
       }
      ],
@@ -3595,10 +3672,10 @@
     },
     {
      "nr": "90",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 5679).",
+     "text": "Fassung gemäss Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>5679).",
      "links": [
       {
-       "label": "AS 2011 5679",
+       "label": "AS <b>2011 </b>5679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/800"
       }
      ],
@@ -3628,14 +3705,14 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 1981 (AS 1981 1696). Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 1981 (AS <b>1981</b> 1696). Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 1981 1696",
+       "label": "AS <b>1981</b> 1696",
        "url": "https://fedlex.data.admin.ch/eli/oc/1981/1696_1696_1696"
       },
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3644,10 +3721,10 @@
     },
     {
      "nr": "11",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -3656,10 +3733,10 @@
     },
     {
      "nr": "12",
-     "text": "SR 831.10",
+     "text": "SR <b>831.10</b>",
      "links": [
       {
-       "label": "SR 831.10",
+       "label": "SR <b>831.10</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
@@ -3689,10 +3766,10 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3722,10 +3799,10 @@
    "fussnoten": [
     {
      "nr": "96",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3755,10 +3832,10 @@
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Ursprünglich: Art. 21a. Eingefügt durch Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS 1996 695).",
+     "text": "Ursprünglich: Art. 21<i>a</i>. Eingefügt durch Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 695).",
      "links": [
       {
-       "label": "AS 1996 695",
+       "label": "AS <b>1996</b> 695",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/695_695_695"
       }
      ],
@@ -3767,10 +3844,10 @@
     },
     {
      "nr": "98",
-     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Fassung gemäss Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -3800,10 +3877,10 @@
    "fussnoten": [
     {
      "nr": "99",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3831,14 +3908,14 @@
    "fussnoten": [
     {
      "nr": "104",
-     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998 (AS 1998 2582). Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS 2002 3726).",
+     "text": "Eingefügt durch Ziff. I der V vom 16. Sept. 1998 (AS <b>1998</b> 2582). Aufgehoben durch Ziff. I der V vom 11. Sept. 2002, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3726).",
      "links": [
       {
-       "label": "AS 1998 2582",
+       "label": "AS <b>1998</b> 2582",
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
       },
       {
-       "label": "AS 2002 3726",
+       "label": "AS <b>2002</b> 3726",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/577"
       }
      ],
@@ -3868,10 +3945,10 @@
    "fussnoten": [
     {
      "nr": "121",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -3880,10 +3957,10 @@
     },
     {
      "nr": "122",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
       }
      ],
@@ -3892,10 +3969,10 @@
     },
     {
      "nr": "123",
-     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS 2020 4545).",
+     "text": "Fassung gemäss Ziff. I 2 der V vom 7. Okt. 2020 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4545).",
      "links": [
       {
-       "label": "AS 2020 4545",
+       "label": "AS <b>2020</b> 4545",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/801"
       }
      ],
@@ -3925,14 +4002,14 @@
    "fussnoten": [
     {
      "nr": "127",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS 1997 2961). Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS <b>1997</b> 2961). Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       },
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -3941,10 +4018,10 @@
     },
     {
      "nr": "128",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -3953,10 +4030,10 @@
     },
     {
      "nr": "129",
-     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS 2024 467).",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 467).",
      "links": [
       {
-       "label": "AS 2024 467",
+       "label": "AS <b>2024</b> 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/467"
       }
      ],
@@ -3984,10 +4061,10 @@
    "fussnoten": [
     {
      "nr": "130",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -3996,10 +4073,10 @@
     },
     {
      "nr": "131",
-     "text": "Aufgehoben durch Ziff. I der V vom 12. Okt. 2022, mit Wirkung seit 1. Jan. 2023 (AS 2022 607).",
+     "text": "Aufgehoben durch Ziff. I der V vom 12. Okt. 2022, mit Wirkung seit 1. Jan. 2023 (AS <b>2022</b> 607).",
      "links": [
       {
-       "label": "AS 2022 607",
+       "label": "AS <b>2022</b> 607",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/607"
       }
      ],
@@ -4008,10 +4085,10 @@
     },
     {
      "nr": "132",
-     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -4041,10 +4118,10 @@
    "fussnoten": [
     {
      "nr": "134",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4074,10 +4151,10 @@
    "fussnoten": [
     {
      "nr": "135",
-     "text": "Ursprünglich: Art. 27a. Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Ursprünglich: Art. 27<i>a</i>. Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -4086,10 +4163,10 @@
     },
     {
      "nr": "136",
-     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2908).",
+     "text": "Fassung gemäss Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2908).",
      "links": [
       {
-       "label": "AS 2000 2908",
+       "label": "AS <b>2000</b> 2908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/508"
       }
      ],
@@ -4098,10 +4175,10 @@
     },
     {
      "nr": "137",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -4131,10 +4208,10 @@
    "fussnoten": [
     {
      "nr": "138",
-     "text": "Ursprünglich: Art. 27b. Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS 2000 2908).",
+     "text": "Ursprünglich: Art. 27<i>b</i>. Eingefügt durch Ziff. I der V vom 22. Nov. 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2908).",
      "links": [
       {
-       "label": "AS 2000 2908",
+       "label": "AS <b>2000</b> 2908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/508"
       }
      ],
@@ -4143,10 +4220,10 @@
     },
     {
      "nr": "139",
-     "text": "SR 831.101",
+     "text": "SR <b>831.101</b>",
      "links": [
       {
-       "label": "SR 831.101",
+       "label": "SR <b>831.101</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/63/1185_1183_1185"
       }
      ],
@@ -4176,10 +4253,10 @@
    "fussnoten": [
     {
      "nr": "140",
-     "text": "Ursprünglich: Art. 27c. Eingefügt durch Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 5679).",
+     "text": "Ursprünglich: Art. 27<i>c</i>. Eingefügt durch Anhang Ziff. 1 der V vom 16. Nov. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011 </b>5679).",
      "links": [
       {
-       "label": "AS 2011 5679",
+       "label": "AS <b>2011 </b>5679",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/800"
       }
      ],
@@ -4188,10 +4265,10 @@
     },
     {
      "nr": "141",
-     "text": "SR 831.20",
+     "text": "SR <b>831.20</b>",
      "links": [
       {
-       "label": "SR 831.20",
+       "label": "SR <b>831.20</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
       }
      ],
@@ -4221,10 +4298,10 @@
    "fussnoten": [
     {
      "nr": "143",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -4233,10 +4310,10 @@
     },
     {
      "nr": "144",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4266,10 +4343,10 @@
    "fussnoten": [
     {
      "nr": "150",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS 1996 695).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Nov. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 695).",
      "links": [
       {
-       "label": "AS 1996 695",
+       "label": "AS <b>1996</b> 695",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/695_695_695"
       }
      ],
@@ -4299,10 +4376,10 @@
    "fussnoten": [
     {
      "nr": "164",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -4332,10 +4409,10 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4344,15 +4421,16 @@
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "II. Zusammenrechnung der anerkannten Ausgaben und der anrechenbaren Einnahmen sowie des Vermögens von Familienmitgliedern"
     }
    ]
   },
@@ -4377,10 +4455,10 @@
    "fussnoten": [
     {
      "nr": "170",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -4410,15 +4488,16 @@
    "fussnoten": [
     {
      "nr": "174",
-     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Eingefügt durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "II. An die Verwaltungskosten"
     }
    ]
   },
@@ -4443,10 +4522,10 @@
    "fussnoten": [
     {
      "nr": "175",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -4476,10 +4555,10 @@
    "fussnoten": [
     {
      "nr": "176",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -4488,10 +4567,10 @@
     },
     {
      "nr": "177",
-     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS 2018 4683).",
+     "text": "Fassung gemäss Ziff. I der V vom 14. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 4683).",
      "links": [
       {
-       "label": "AS 2018 4683",
+       "label": "AS <b>2018</b> 4683",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/739"
       }
      ],
@@ -4521,10 +4600,10 @@
    "fussnoten": [
     {
      "nr": "178",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4533,10 +4612,10 @@
     },
     {
      "nr": "179",
-     "text": "SR 616.1",
+     "text": "SR <b>616.1</b>",
      "links": [
       {
-       "label": "SR 616.1",
+       "label": "SR <b>616.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857"
       }
      ],
@@ -4566,15 +4645,16 @@
    "fussnoten": [
     {
      "nr": "180",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "III. Kürzung des Bundesbeitrags an die Verwaltungskosten"
     }
    ]
   },
@@ -4614,10 +4694,10 @@
    "fussnoten": [
     {
      "nr": "204",
-     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS 1997 2961).",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Nov. 1997, in Kraft seit 1. Jan. 1998 (AS <b>1997</b> 2961).",
      "links": [
       {
-       "label": "AS 1997 2961",
+       "label": "AS <b>1997</b> 2961",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2961_2961_2961"
       }
      ],
@@ -4626,10 +4706,10 @@
     },
     {
      "nr": "205",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4638,10 +4718,10 @@
     },
     {
      "nr": "206",
-     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS 2007 5823).",
+     "text": "Aufgehoben durch Ziff. I 18 der V vom 7. Nov. 2007 über die Neugestaltung des Finanzausgleichs und die Aufgabenteilung zwischen Bund und Kantonen, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5823).",
      "links": [
       {
-       "label": "AS 2007 5823",
+       "label": "AS <b>2007</b> 5823",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/789"
       }
      ],
@@ -4650,10 +4730,10 @@
     },
     {
      "nr": "207",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4662,10 +4742,10 @@
     },
     {
      "nr": "208",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS 2020 599).",
+     "text": "Fassung gemäss Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 599).",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4674,10 +4754,10 @@
     },
     {
      "nr": "209",
-     "text": "SR 832.102",
+     "text": "SR <b>832.102</b>",
      "links": [
       {
-       "label": "SR 832.102",
+       "label": "SR <b>832.102</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867"
       }
      ],
@@ -4686,14 +4766,14 @@
     },
     {
      "nr": "210",
-     "text": "Eingefügt durch Ziff. II 1 der V vom 22. Juni 2011 (AS 2011 3527). Fassung gemäss Ziff. I der V vom 21. Sept. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 6341).",
+     "text": "Eingefügt durch Ziff. II 1 der V vom 22. Juni 2011 (AS <b>2011</b> 3527). Fassung gemäss Ziff. I der V vom 21. Sept. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6341).",
      "links": [
       {
-       "label": "AS 2011 3527",
+       "label": "AS <b>2011</b> 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       },
       {
-       "label": "AS 2012 6341",
+       "label": "AS <b>2012</b> 6341",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/750"
       }
      ],
@@ -4702,10 +4782,10 @@
     },
     {
      "nr": "211",
-     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Juli 2020 (AS 2020 599). Siehe auch die SchlB am Schluss dieses Textes.",
+     "text": "Eingefügt durch Ziff. I der V vom 29. Jan. 2020, in Kraft seit 1. Juli 2020 (AS <b>2020</b> 599). Siehe auch die SchlB am Schluss dieses Textes.",
      "links": [
       {
-       "label": "AS 2020 599",
+       "label": "AS <b>2020</b> 599",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/112"
       }
      ],
@@ -4714,10 +4794,10 @@
     },
     {
      "nr": "212",
-     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2012, in Kraft seit 1. Jan. 2013 (AS 2012 6341).",
+     "text": "Eingefügt durch Ziff. I der V vom 21. Sept. 2012, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 6341).",
      "links": [
       {
-       "label": "AS 2012 6341",
+       "label": "AS <b>2012</b> 6341",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/750"
       }
      ],

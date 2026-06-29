@@ -1,5 +1,49 @@
 {
- "erzeugt": "2026-06-25",
+ "erzeugt": "2026-06-29",
+ "kopf": {
+  "srNummer": "281.42",
+  "titel": "Verordnung des Bundesgerichts über die Zwangs­verwertung von Grundstücken",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Das Schweizerische Bundesgericht,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "in Anwendung von Artikel 15 des BG vom 11. April 1889 über Schuldbetreibung und Konkurs (SchKG),"
+   },
+   {
+    "rolle": "verb",
+    "text": "verordnet:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "",
+    "text": "Abkürzung eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
+    "links": [
+     {
+      "label": "AS <b>1996</b> 2900",
+      "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "",
+    "text": "SR <b>281.1</b>",
+    "links": [
+     {
+      "label": "SR <b>281.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529/20200101"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
  "artikel": {
   "1": {
    "gliederung": [
@@ -14,10 +58,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -26,10 +70,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -38,10 +82,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.41",
+     "text": "SR <b>281.41</b>",
      "links": [
       {
-       "label": "SR 281.41",
+       "label": "SR <b>281.41</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/39/55_55_57/20170101"
       }
      ],
@@ -63,10 +107,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -89,10 +133,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -127,10 +171,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -139,14 +183,14 @@
     },
     {
      "nr": "",
-     "text": "[AS 1967 1405, 1969 385 1120, 1970 480 714, 1971 683 1712, 1972 2675, 1974 578 1977 2050, 1975 2033, 1976 962, 1977 2122, 1979 287 1180, 1980 2 777, 1981 1863, 1983 1656, 1986 39 991 1991 Art. 45 Ziff. 2, 1987 440, 1988 370, 1989 565 764 1899, 1990 1448, 1992 94 1243, 1993 62 2473, 1994 1442 2788, 1995 5491, 1996 14 470 Art. 55 Abs. 2, 1997 270 1435. AS 1997 2461 Art. 13 Bst. a]. Siehe heute: die V vom 26. Nov. 2003 (SR 783.01).",
+     "text": "[AS <b>1967</b> 1405, <b>1969</b> 385 1120, <b>1970</b> 480 714, <b>1971</b> 683 1712, <b>1972</b> 2675, <b>1974</b> 578 1977 2050, <b>1975</b> 2033, <b>1976</b> 962, <b>1977</b> 2122, <b>1979</b> 287 1180, <b>1980</b> 2 777, <b>1981</b> 1863, <b>1983</b> 1656, <b>1986</b> 39 991 1991 Art. 45 Ziff. 2, <b>1987</b> 440, <b>1988</b> 370, <b>1989</b> 565 764 1899, <b>1990</b> 1448, <b>1992</b> 94 1243, <b>1993</b> 62 2473, <b>1994</b> 1442 2788, <b>1995</b> 5491, <b>1996</b> 14 470 Art. 55 Abs. 2, <b>1997</b> 270 1435. AS <b>1997</b> 2461 Art. 13 Bst. a]. Siehe heute: die V vom 26. Nov. 2003 (SR <b>783.01</b>).",
      "links": [
       {
-       "label": "AS 1967 1405",
+       "label": "AS <b>1967</b> 1405",
        "url": "https://fedlex.data.admin.ch/eli/oc/1967/1405_1447_1440"
       },
       {
-       "label": "1969 385",
+       "label": "<b>1969</b> 385",
        "url": "https://fedlex.data.admin.ch/eli/oc/1969/385_393_393"
       },
       {
@@ -154,7 +198,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1969/1120_1140_1142"
       },
       {
-       "label": "1970 480",
+       "label": "<b>1970</b> 480",
        "url": "https://fedlex.data.admin.ch/eli/oc/1970/480_480_480"
       },
       {
@@ -162,7 +206,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1970/714_714_714"
       },
       {
-       "label": "1971 683",
+       "label": "<b>1971</b> 683",
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/683_680_680"
       },
       {
@@ -170,11 +214,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1971/1712_1717_1717"
       },
       {
-       "label": "1972 2675",
+       "label": "<b>1972</b> 2675",
        "url": "https://fedlex.data.admin.ch/eli/oc/1972/2675_2727_2508"
       },
       {
-       "label": "1974 578",
+       "label": "<b>1974</b> 578",
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/578_578_578"
       },
       {
@@ -186,19 +230,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/2050_2050_2050"
       },
       {
-       "label": "1975 2033",
+       "label": "<b>1975</b> 2033",
        "url": "https://fedlex.data.admin.ch/eli/oc/1975/2033_2033_2033"
       },
       {
-       "label": "1976 962",
+       "label": "<b>1976</b> 962",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/962_962_962"
       },
       {
-       "label": "1977 2122",
+       "label": "<b>1977</b> 2122",
        "url": "https://fedlex.data.admin.ch/eli/oc/1977/2122_2122_2122"
       },
       {
-       "label": "1979 287",
+       "label": "<b>1979</b> 287",
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/287_287_287"
       },
       {
@@ -206,7 +250,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1979/1180_1180_1180"
       },
       {
-       "label": "1980 2",
+       "label": "<b>1980</b> 2",
        "url": "https://fedlex.data.admin.ch/eli/oc/1980/2_2_2"
       },
       {
@@ -214,15 +258,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1980/777_777_777"
       },
       {
-       "label": "1981 1863",
+       "label": "<b>1981</b> 1863",
        "url": "https://fedlex.data.admin.ch/eli/oc/1981/1863_1863_1863"
       },
       {
-       "label": "1983 1656",
+       "label": "<b>1983</b> 1656",
        "url": "https://fedlex.data.admin.ch/eli/oc/1983/1656_1656_1656"
       },
       {
-       "label": "1986 39",
+       "label": "<b>1986</b> 39",
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/39_39_39"
       },
       {
@@ -234,15 +278,15 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1986/1991_1991_1991"
       },
       {
-       "label": "1987 440",
+       "label": "<b>1987</b> 440",
        "url": "https://fedlex.data.admin.ch/eli/oc/1987/440_440_440"
       },
       {
-       "label": "1988 370",
+       "label": "<b>1988</b> 370",
        "url": "https://fedlex.data.admin.ch/eli/oc/1988/370_370_370"
       },
       {
-       "label": "1989 565",
+       "label": "<b>1989</b> 565",
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/565_565_565"
       },
       {
@@ -254,11 +298,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1989/1899_1899_1899"
       },
       {
-       "label": "1990 1448",
+       "label": "<b>1990</b> 1448",
        "url": "https://fedlex.data.admin.ch/eli/oc/1990/1448_1448_1448"
       },
       {
-       "label": "1992 94",
+       "label": "<b>1992</b> 94",
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/94_94_94"
       },
       {
@@ -266,7 +310,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/1243_1243_1243"
       },
       {
-       "label": "1993 62",
+       "label": "<b>1993</b> 62",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/62_62_62"
       },
       {
@@ -274,7 +318,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/2473_2473_2473"
       },
       {
-       "label": "1994 1442",
+       "label": "<b>1994</b> 1442",
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/1442_1442_1442"
       },
       {
@@ -282,11 +326,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1994/2788_2788_2788"
       },
       {
-       "label": "1995 5491",
+       "label": "<b>1995</b> 5491",
        "url": "https://fedlex.data.admin.ch/eli/oc/1995/5491_5491_5491"
       },
       {
-       "label": "1996 14",
+       "label": "<b>1996</b> 14",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/14_14_14"
       },
       {
@@ -294,7 +338,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/470_470_470"
       },
       {
-       "label": "1997 270",
+       "label": "<b>1997</b> 270",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/270_270_270"
       },
       {
@@ -302,11 +346,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1435_1435_1435"
       },
       {
-       "label": "AS 1997 2461",
+       "label": "AS <b>1997</b> 2461",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2461_2461_2461"
       },
       {
-       "label": "SR 783.01",
+       "label": "SR <b>783.01</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/2012/586/20190101"
       }
      ],
@@ -330,10 +374,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -342,10 +386,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -354,10 +398,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -366,10 +410,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -378,10 +422,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -390,10 +434,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -417,10 +461,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -469,10 +513,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -502,10 +546,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -514,10 +558,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -526,10 +570,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -560,10 +604,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -572,10 +616,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -625,10 +669,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -677,10 +721,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -689,10 +733,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -701,10 +745,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -713,10 +757,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -725,10 +769,10 @@
     },
     {
      "nr": "",
-     "text": "SR 221.229.1",
+     "text": "SR <b>221.229.1</b>",
      "links": [
       {
-       "label": "SR 221.229.1",
+       "label": "SR <b>221.229.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717/20110101"
       }
      ],
@@ -737,10 +781,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.51",
+     "text": "SR <b>281.51</b>",
      "links": [
       {
-       "label": "SR 281.51",
+       "label": "SR <b>281.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
       }
      ],
@@ -749,10 +793,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -782,10 +826,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -836,10 +880,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -889,10 +933,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -942,10 +986,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -975,10 +1019,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -987,10 +1031,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -999,10 +1043,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1030,10 +1074,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1067,10 +1111,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1104,10 +1148,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1188,10 +1232,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -1200,10 +1244,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1212,10 +1256,10 @@
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1250,10 +1294,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -1262,10 +1306,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1274,10 +1318,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1286,10 +1330,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1298,10 +1342,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -1359,10 +1403,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1420,10 +1464,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1458,10 +1502,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1519,10 +1563,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1531,10 +1575,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1569,10 +1613,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1607,10 +1651,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1669,10 +1713,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1707,15 +1751,16 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "IV. Vom Schuld­ner aner­kannte, von einem Gläu­biger mit Erfolg be­strittene An­sprüche"
     }
    ]
   },
@@ -1745,15 +1790,16 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "V. Anfechtung von Rang und Höhe. Ver­hält­nis zwischen Gläu-bi­gern einer Grup­pe"
     }
    ]
   },
@@ -1806,10 +1852,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1845,10 +1891,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1934,10 +1980,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1946,10 +1992,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -1958,10 +2004,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -1970,10 +2016,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2009,10 +2055,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2021,10 +2067,10 @@
     },
     {
      "nr": "",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
       }
      ],
@@ -2060,10 +2106,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 7. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS 1993 3183).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 7. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS <b>1993</b> 3183).",
      "links": [
       {
-       "label": "AS 1993 3183",
+       "label": "AS <b>1993</b> 3183",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/3183_3183_3183"
       }
      ],
@@ -2072,10 +2118,10 @@
     },
     {
      "nr": "",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
       }
      ],
@@ -2132,10 +2178,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2144,10 +2190,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2182,10 +2228,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2220,10 +2266,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2291,10 +2337,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2329,10 +2375,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2414,10 +2460,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2451,10 +2497,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.51",
+     "text": "SR <b>281.51</b>",
      "links": [
       {
-       "label": "SR 281.51",
+       "label": "SR <b>281.51</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
       }
      ],
@@ -2488,10 +2534,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -2526,10 +2572,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -2564,10 +2610,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -2602,10 +2648,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Anhang Ziff. 2 der Grundbuchverordnung vom 23. Sept. 2011, in Kraft seit 1. Jan. 2012 (AS 2011 4659).",
+     "text": "Fassung gemäss Anhang Ziff. 2 der Grundbuchverordnung vom 23. Sept. 2011, in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4659).",
      "links": [
       {
-       "label": "AS 2011 4659",
+       "label": "AS <b>2011</b> 4659",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/667"
       }
      ],
@@ -2664,10 +2710,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2749,10 +2795,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2761,10 +2807,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -2798,10 +2844,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -2810,10 +2856,10 @@
     },
     {
      "nr": "",
-     "text": "SR 220",
+     "text": "SR <b>220</b>",
      "links": [
       {
-       "label": "SR 220",
+       "label": "SR <b>220</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
       }
      ],
@@ -2843,10 +2889,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -2876,27 +2922,29 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "4. Requisitorialverwertungen"
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164). Gemäss derselben Bestimmung wurden in den Randtit. der Art. 74-78 die römischen Zahlen I-V durch die Bst. A-E ersetzt.",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164). Gemäss derselben Bestimmung wurden in den Randtit. der Art. 74-78 die römischen Zahlen I-V durch die Bst. A-E ersetzt.",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "A. Fälle"
     }
    ]
   },
@@ -2921,10 +2969,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "AS 1976 606",
+     "text": "AS <b>1976</b> 606",
      "links": [
       {
-       "label": "AS 1976 606",
+       "label": "AS <b>1976</b> 606",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/606_606_606"
       }
      ],
@@ -2933,10 +2981,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3004,10 +3052,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3048,10 +3096,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3078,10 +3126,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3108,10 +3156,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3138,10 +3186,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3150,10 +3198,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung von Satz 2 gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung von Satz 2 gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3179,10 +3227,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3208,10 +3256,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3237,10 +3285,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3249,10 +3297,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3296,10 +3344,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3308,10 +3356,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3320,10 +3368,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung von Satz 2 gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung von Satz 2 gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3332,10 +3380,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3363,10 +3411,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3375,10 +3423,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3404,10 +3452,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3416,10 +3464,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3446,10 +3494,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3458,10 +3506,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3488,10 +3536,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss V des BGer vom 19. Dez. 1923, in Kraft seit 3. März 1924 (AS 40 25).",
+     "text": "Fassung gemäss V des BGer vom 19. Dez. 1923, in Kraft seit 3. März 1924 (AS <b>40</b> 25).",
      "links": [
       {
-       "label": "AS 40 25",
+       "label": "AS <b>40</b> 25",
        "url": "https://fedlex.data.admin.ch/eli/oc/40/25_25_27"
       }
      ],
@@ -3500,10 +3548,10 @@
     },
     {
      "nr": "",
-     "text": "SR 311.0",
+     "text": "SR <b>311.0</b>",
      "links": [
       {
-       "label": "SR 311.0",
+       "label": "SR <b>311.0</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799/20200303"
       }
      ],
@@ -3512,10 +3560,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3542,10 +3590,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss V des BGer vom 19. Dez. 1923, in Kraft seit 3. März 1924 (AS 40 25).",
+     "text": "Fassung gemäss V des BGer vom 19. Dez. 1923, in Kraft seit 3. März 1924 (AS <b>40</b> 25).",
      "links": [
       {
-       "label": "AS 40 25",
+       "label": "AS <b>40</b> 25",
        "url": "https://fedlex.data.admin.ch/eli/oc/40/25_25_27"
       }
      ],
@@ -3554,10 +3602,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3601,10 +3649,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3632,10 +3680,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3662,10 +3710,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3674,10 +3722,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3704,10 +3752,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3716,10 +3764,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3728,10 +3776,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3740,10 +3788,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3770,10 +3818,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3800,10 +3848,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3829,10 +3877,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3859,10 +3907,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3890,10 +3938,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3921,10 +3969,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -3933,10 +3981,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -3945,10 +3993,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -3976,10 +4024,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4007,10 +4055,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4019,10 +4067,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4050,10 +4098,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4081,10 +4129,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4093,10 +4141,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4105,10 +4153,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4185,10 +4233,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4214,10 +4262,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4226,10 +4274,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4285,10 +4333,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4297,10 +4345,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4326,10 +4374,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4338,10 +4386,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4398,10 +4446,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4428,10 +4476,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4453,10 +4501,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -4479,10 +4527,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4491,10 +4539,10 @@
     },
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4529,10 +4577,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -4541,10 +4589,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4567,10 +4615,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4605,10 +4653,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4617,10 +4665,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4643,10 +4691,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -4655,10 +4703,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4667,10 +4715,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4679,10 +4727,10 @@
     },
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4705,10 +4753,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4717,10 +4765,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4729,10 +4777,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4779,10 +4827,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS 1996 2900).",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4810,10 +4858,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164 2420).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164 2420).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       },
       {
@@ -4826,10 +4874,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4838,10 +4886,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4866,10 +4914,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4878,10 +4926,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -4890,10 +4938,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -4902,10 +4950,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -4930,10 +4978,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4958,10 +5006,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -4970,10 +5018,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -4982,10 +5030,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5010,10 +5058,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5022,10 +5070,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -5034,10 +5082,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5062,10 +5110,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5090,10 +5138,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5102,10 +5150,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5130,10 +5178,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5142,10 +5190,10 @@
     },
     {
      "nr": "",
-     "text": "SR 281.32",
+     "text": "SR <b>281.32</b>",
      "links": [
       {
-       "label": "SR 281.32",
+       "label": "SR <b>281.32</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
       }
      ],
@@ -5154,10 +5202,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5187,10 +5235,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5199,10 +5247,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5211,10 +5259,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5244,10 +5292,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5256,10 +5304,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5289,10 +5337,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5322,10 +5370,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5360,14 +5408,14 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975 (AS 1976 164). Fassung gemäss Ziff. I der V des BGer vom 7. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS 1993 3183).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975 (AS <b>1976</b> 164). Fassung gemäss Ziff. I der V des BGer vom 7. Sept. 1993, in Kraft seit 1. Jan. 1994 (AS <b>1993</b> 3183).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       },
       {
-       "label": "AS 1993 3183",
+       "label": "AS <b>1993</b> 3183",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/3183_3183_3183"
       }
      ],
@@ -5376,10 +5424,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5410,10 +5458,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5444,10 +5492,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5478,10 +5526,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5512,10 +5560,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5546,10 +5594,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5558,10 +5606,10 @@
     },
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5570,10 +5618,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5604,10 +5652,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5637,10 +5685,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5649,10 +5697,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5661,10 +5709,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5694,10 +5742,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS 1996 2900).",
+     "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
      "links": [
       {
-       "label": "AS 1996 2900",
+       "label": "AS <b>1996</b> 2900",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
@@ -5727,10 +5775,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5758,10 +5806,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
@@ -5770,10 +5818,10 @@
     },
     {
      "nr": "",
-     "text": "SR 210",
+     "text": "SR <b>210</b>",
      "links": [
       {
-       "label": "SR 210",
+       "label": "SR <b>210</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
       }
      ],
@@ -5799,10 +5847,10 @@
    "fussnoten": [
     {
      "nr": "",
-     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS 1976 164).",
+     "text": "Eingefügt durch Ziff. I der V des BGer vom 4. Dez. 1975, in Kraft seit 1. April 1976 (AS <b>1976</b> 164).",
      "links": [
       {
-       "label": "AS 1976 164",
+       "label": "AS <b>1976</b> 164",
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],

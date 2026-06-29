@@ -14,10 +14,15 @@
  */
 
 export interface ArtikelText {
+  /** G23 (M8): Delegationsnorm-Verweis «(Art. N ArG)» aus
+   *  <p class="man-template-referenz"> — die Trägergesetz-Grundlage, auf der eine
+   *  Verordnungsbestimmung beruht. Steht in Fedlex direkt unter der Überschrift;
+   *  wurde bisher von keiner Block-Alternative erfasst und stumm verworfen. */
+  grundlage?: string;
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
      *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis). */
     mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
@@ -48,13 +53,23 @@ export function entferneFussnotenSups(html: string): string {
  * @returns     ArtikelText mit Absatz-Blöcken, oder null wenn Anker fehlt
  */
 export function extrahiereArtikel(html: string, token: string): ArtikelText | null {
+  // M9/G7: doppelte art_id. Ein Erlass kann ZWEI <article id="art_TOKEN"> mit
+  // identischem Token tragen (KKV art_126_z: «Anlagebeschränkungen» + «126z
+  // tredecies Wesentliche Mängel»; betmg/vwvg/pavo: aufgehobene Bereichs-Artikel
+  // «15a–15c»). alleArtikelTokens vergibt dem 2./3. Vorkommen einen Synthese-
+  // Suffix «__2»/«__3»; hier extrahieren wir dann das N-te Vorkommen des
+  // BASIS-Tokens. Ohne Suffix (Normalfall) = erstes Vorkommen, byte-gleich.
+  const suffix = token.match(/^(.*)__(\d+)$/);
+  const basisToken = suffix ? suffix[1] : token;
+  const nth = suffix ? Number(suffix[2]) : 1;
   // Escape des Tokens für die Regex (Unterstriche sind literal, kein Sonderzeichen)
-  const escapedToken = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedToken = basisToken.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const articleRe = new RegExp(
     `<article[^>]*\\sid="art_${escapedToken}"[^>]*>([\\s\\S]*?)</article>`,
-    'i',
+    'gi',
   );
-  const articleMatch = html.match(articleRe);
+  const treffer = [...html.matchAll(articleRe)];
+  const articleMatch = treffer[nth - 1];
   if (!articleMatch) return null;
 
   // Fussnoten-Apparat (<div class="footnotes">…</div>) und Artikel-Überschrift
@@ -62,9 +77,20 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   // entfernt — sonst leckt der Fallback-Pfad (unnummerierte plain-<p>-Artikel wie
   // BETMG/VStrR) den Fussnotentext + Marker in den Normtext (Bug-Check 23.6.2026).
   // Der Haupt-Loop matcht diese Elemente ohnehin nicht; nur der Fallback profitiert.
-  const inner = articleMatch[1]
+  const innerRoh = articleMatch[1]
     .replace(/<div\s+class="footnotes">[\s\S]*$/i, '') // Apparat steht am Artikelende
     .replace(/<h6\b[^>]*>[\s\S]*?<\/h6>/gi, '');
+
+  // G23 (M8): Delegationsnorm-Verweis <p class="man-template-referenz">(Art. N ArG)</p>
+  // direkt nach der Überschrift — bisher von keiner Block-Alternative erfasst und
+  // stumm verloren (~7100 Verordnungs-Bestimmungen). Als artikel-level `grundlage`
+  // erhalten (amtlicher Inhalt, §2/§8) und aus dem Body entfernen, damit er nicht
+  // in den Fallback-Text leakt. Die Marke trägt vereinzelt einen Fussnoten-<sup>.
+  const refRe = /<p\b[^>]*\bclass="[^"]*\bman-template-referenz\b[^"]*"[^>]*>([\s\S]*?)<\/p>/i;
+  const refMatch = innerRoh.match(refRe);
+  const grundlage = refMatch ? entferneTags(entferneFussnotenSups(refMatch[1])) || undefined : undefined;
+  const inner = innerRoh.replace(new RegExp(refRe.source, 'gi'), '');
+  const mitGrundlage = grundlage ? { grundlage } : {};
 
   // <p>-Absätze UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE durchlaufen
   // (Geschwister im collapseable-div). Vier Alternativen:
@@ -167,17 +193,17 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   // mitten im Satz) auf eines reduzieren.
   if (bloecke.length === 0) {
     const text = entferneTags(entferneFussnotenSups(inner)).replace(/^\s*Art\.\s*\S+\s*/, '').replace(/\s{2,}/g, ' ').replace(/\s+([.,;:])/g, '$1').trim();
-    if (text) return { bloecke: [{ absatz: null, text }] };
+    if (text) return { ...mitGrundlage, bloecke: [{ absatz: null, text }] };
     // Leerer Artikel-Körper (Fedlex rendert aufgehobene, aber noch nummerierte
     // Artikel als blosse Überschrift mit leerem <div class="collapseable">, z.B.
     // SVG art_107): faithful als «aufgehoben»-Block darstellen (Konvention «…»,
     // NormPopover zeigt «aufgehoben»). So bleibt der Artikel in der
     // Vollständigkeit erfasst statt stumm zu fehlen (§8 Ehrlichkeit, kein
     // Aufweichen des Vollständigkeitstests).
-    return { bloecke: [{ absatz: null, text: '…' }] };
+    return { ...mitGrundlage, bloecke: [{ absatz: null, text: '…' }] };
   }
 
-  return { bloecke };
+  return { ...mitGrundlage, bloecke };
 }
 
 /**
@@ -219,13 +245,24 @@ export function findeDlEnde(html: string, startIdx: number): number {
  *         bei verschachteltem <dl> nur der Einleitungstext VOR der Unterliste.
  *
  * AUSGABE-MODELL (flach, abwärtskompatibel): Unterpunkte werden als weitere
- * Items NACH ihrem Eltern-Item in DOKUMENTREIHENFOLGE angehängt. Die Lesesicht
- * (ArtikelBody) rekonstruiert die Verschachtelung aus den Marken-Typen
- * (lit a/b/c = Stufe 0; Ziff 1/2/3 NACH einem lit = Stufe 1) — dasselbe
- * Datenmodell, das schon flache lit/Ziff/Strich-Listen zweistufig rendert.
+ * Items NACH ihrem Eltern-Item in DOKUMENTREIHENFOLGE angehängt. Jedes Item
+ * trägt eine EXPLIZITE `tiefe` (0 = direkte Liste des Absatzes, +1 je
+ * verschachtelter <dl>). Damit muss die Lesesicht (ArtikelBody) die
+ * Verschachtelung NICHT mehr aus den Marken-Typen RATEN — das Raten erzeugte
+ * falsche Zitate, wenn Fedlex die übliche Reihenfolge umkehrt (Ziff. → lit.
+ * statt lit. → Ziff.): die geratene Stufe entnestete die lit. fälschlich auf
+ * Absatzebene und die Fundstelle wurde falsch (§1-Bug G8, M6 28.6.2026).
+ *
+ * `tiefe` wird NUR emittiert, wenn > 0 (verschachtelt). Top-Level-Items
+ * (tiefe 0) bleiben byte-gleich zum bisherigen Modell {marke,text} → keine
+ * unnötige Snapshot-Re-Segnung für nicht verschachtelte Erlasse; nur Artikel
+ * MIT echter Verschachtelung brechen den Daten-Index (bewusst, §7).
  */
-function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: string }> {
-  const items: Array<{ marke: string; text: string }> = [];
+function parseDefinitionsListe(
+  dlInner: string,
+  tiefe = 0,
+): Array<{ marke: string; text: string; tiefe?: number }> {
+  const items: Array<{ marke: string; text: string; tiefe?: number }> = [];
   // Iterativer Scan über die direkten <dt>…<dd>-Paare DIESER Ebene. Ein <dd>
   // kann eine verschachtelte <dl> enthalten; deren Ende wird balanciert bestimmt
   // (findeDlEnde), damit das <dd>-Ende nicht am inneren </dl> falsch erkannt wird.
@@ -283,15 +320,17 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
     // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
     // wie bisher nur bei Text (leere Items werden verworfen).
     if (marke && (text || subDlIdx >= 0)) {
-      items.push({ marke, text });
+      // tiefe NUR setzen, wenn verschachtelt (>0) → Top-Level byte-gleich (§7).
+      items.push(tiefe > 0 ? { marke, text, tiefe } : { marke, text });
     }
 
-    // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item).
+    // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item),
+    // eine Stufe tiefer — die Stufe wird explizit geführt, nicht geraten.
     if (subDlIdx >= 0) {
       const subEnde = findeDlEnde(ddRoh, subDlIdx);
       const subOpenLen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i)![0].length;
       const subInner = ddRoh.slice(subDlIdx + subOpenLen, subEnde - '</dl>'.length);
-      for (const sub of parseDefinitionsListe(subInner)) items.push(sub);
+      for (const sub of parseDefinitionsListe(subInner, tiefe + 1)) items.push(sub);
     }
   }
   return items;
@@ -319,29 +358,88 @@ export function findeDdEnde(html: string, startIdx: number): number {
   return html.length;
 }
 
+/** Tag-/Fussnoten-bereinigter Inhalt einer Tabellen-Zelle. */
+function zellText(c: string): string {
+  return entferneTags(c.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, ''));
+}
+
+/**
+ * Zerlegt die Zellen einer <tr> (Tag `td` oder `th`) zu einem Spalten-Array und
+ * EXPANDIERT colspan: eine Zelle mit colspan=N belegt N Spalten — der Text steht
+ * in der ersten, die übrigen (N-1) sind leer. So bleibt die Spaltenzahl von Kopf
+ * und Daten konsistent, wenn NUR der Kopf gruppierte (colspan-)Zellen hat
+ * (GebV SchKG art_30: Kopf 2 colspan-Zellen über 6 Datenspalten). Minimal — kein
+ * Zell-Merge/rowspan (David-Entscheid 28.6.: «minimal colspan→Kopf-Padding»).
+ */
+function zeileMitColspan(rowHtml: string, tag: 'td' | 'th'): string[] {
+  const zellen: string[] = [];
+  const re = new RegExp(`<${tag}\\b([^>]*)>([\\s\\S]*?)</${tag}>`, 'gi');
+  for (const c of rowHtml.matchAll(re)) {
+    const span = Number(c[1].match(/\bcolspan=["']?(\d+)/i)?.[1] ?? '1') || 1;
+    zellen.push(zellText(c[2]));
+    for (let k = 1; k < span; k++) zellen.push('');
+  }
+  return zellen;
+}
+
 /**
  * Zerlegt eine Fedlex-<table> in einen mehrspaltig-Block {kopf, zeilen}.
- * <th>-Zellen der ersten Zeile bilden den Kopf; <td>-Zeilen die Daten. Jede
- * Zelle wird tag-bereinigt (Fussnoten-<sup> getilgt). Leere Zeilen entfallen.
- * Reale Struktur (IVG art_28b): <tr><th><p>…</p></th>…</tr><tr><td><p>…</p></td>…</tr>.
+ *
+ * ZWEI Markup-Varianten:
+ *  (A) <th>-Tabellen (IVG art_28b, AHVV/BVG-Tarife): erste/letzte <th>-Zeile =
+ *      Kopf, <td>-Zeilen = Daten — colspan wird (wie bisher) IGNORIERT, weil dort
+ *      Kopf UND Daten dieselben colspan tragen und so konsistent ausgerichtet
+ *      sind (Audit «colspan widerlegt» trifft für <th>-Tabellen zu). UNVERÄNDERT
+ *      → byte-gleich.
+ *  (B) kpf-als-<td>-Tabellen (GebV SchKG art_30): KEIN <th>, der Kopf steht als
+ *      <td><p class="man-template-tab-kpf">…</p></td> — bisher als Datenzeile
+ *      verkannt (G20) und ohne colspan-Expansion gegen die Daten verschoben.
+ *      Hier: Kopf-Zeilen erkennen, colspan KONSISTENT (Kopf + Daten dieser
+ *      Tabelle) expandieren, mehrere Kopfzeilen spaltenweise zusammenführen
+ *      (G19: obere Kopfzeile ging sonst verloren).
+ * Reale Struktur: <tr><td colspan="4"><p class="man-template-tab-kpf">…</p></td>…</tr>.
  */
 function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: string[][] } {
-  let kopf: string[] = [];
+  const hatTh = /<th\b/i.test(tableInner);
+  const istKpfStil = !hatTh && /man-template-tab-kpf/i.test(tableInner);
+
+  if (!istKpfStil) {
+    // ── Variante (A) + plain-<td>: bestehender Pfad, byte-gleich ──────────────
+    let kopf: string[] = [];
+    const zeilen: string[][] = [];
+    for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+      const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) => zellText(c[1]));
+      if (ths.length > 0) {
+        if (ths.some((x) => x !== '')) kopf = ths;
+        continue;
+      }
+      const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) => zellText(c[1]));
+      if (tds.some((x) => x !== '')) zeilen.push(tds);
+    }
+    return kopf.length > 0 ? { kopf, zeilen } : { zeilen };
+  }
+
+  // ── Variante (B): kpf-als-<td> — Kopf-Erkennung + colspan-Padding (G19/G20) ──
+  const kopfZeilen: string[][] = [];
   const zeilen: string[][] = [];
   for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) =>
-      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
-    );
-    if (ths.length > 0) {
-      if (ths.some((x) => x !== '')) kopf = ths;
-      continue;
-    }
-    const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
-      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
-    );
-    if (tds.some((x) => x !== '')) zeilen.push(tds);
+    const zellenRoh = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)];
+    // Kopfzeile: jede nicht-leere Zelle trägt die tab-kpf-Klasse (keine Datenzelle).
+    const istKopf =
+      zellenRoh.some((c) => /man-template-tab-kpf/i.test(c[1])) &&
+      zellenRoh.every((c) => /man-template-tab-kpf/i.test(c[1]) || zellText(c[1]) === '');
+    const zellen = zeileMitColspan(r[1], 'td');
+    if (istKopf) kopfZeilen.push(zellen);
+    else if (zellen.some((x) => x !== '')) zeilen.push(zellen);
   }
-  return kopf.length > 0 ? { kopf, zeilen } : { zeilen };
+  // Mehrere Kopfzeilen spaltenweise zusammenführen (G19): je Spalte die nicht-
+  // leeren Texte der Kopfzeilen mit ' ' verbinden — nichts geht verloren (§8).
+  const breite = Math.max(0, ...kopfZeilen.map((z) => z.length));
+  const kopf: string[] = [];
+  for (let c = 0; c < breite; c++) {
+    kopf.push(kopfZeilen.map((z) => z[c] ?? '').filter(Boolean).join(' '));
+  }
+  return kopf.some((x) => x !== '') ? { kopf, zeilen } : { zeilen };
 }
 
 /**
@@ -361,21 +459,24 @@ function entferneTags(s: string): string {
  *
  * Matcht: id="art_<TOKEN>" wobei TOKEN mit einer Ziffer beginnt (strukturelle
  * Nicht-Artikel-Anker wie «art_SchlusstitelUebergang» werden ausgeschlossen).
- * Tokens werden dedupliziert (erster Vorkommen gewinnt), Reihenfolge wie im HTML.
+ *
+ * M9/G7: Ein wiederholtes Token wird NICHT mehr verworfen (sonst ginge der zweite
+ * Artikel stumm verloren, §8) — das N-te Vorkommen erhält einen Synthese-Suffix
+ * «__2»/«__3». extrahiereArtikel löst diesen Suffix wieder auf das N-te Vorkommen
+ * des Basis-Tokens auf. Reihenfolge wie im HTML.
  *
  * @param html - Volltext des Fedlex-Filestore-HTML
- * @returns Array der Token-Strings (ohne «art_»-Präfix), z.B. ['1','2','335_c']
+ * @returns Array der Token-Strings, z.B. ['1','2','335_c','126_z','126_z__2']
  */
 export function alleArtikelTokens(html: string): string[] {
   const re = /id="art_(\d[\w]*)"/g;
-  const seen = new Set<string>();
+  const anzahl = new Map<string, number>();
   const tokens: string[] = [];
   for (const m of html.matchAll(re)) {
-    const token = m[1];
-    if (!seen.has(token)) {
-      seen.add(token);
-      tokens.push(token);
-    }
+    const basis = m[1];
+    const n = (anzahl.get(basis) ?? 0) + 1;
+    anzahl.set(basis, n);
+    tokens.push(n === 1 ? basis : `${basis}__${n}`);
   }
   return tokens;
 }

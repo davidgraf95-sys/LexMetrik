@@ -29,6 +29,20 @@ export function ReiterUebersicht() {
   const [panelOffen, setPanelOffen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  // Flyout-Position: viewport-fixiert, aber AM TRIGGER verankert (nicht in der
+  // Viewport-Ecke). Früher `fixed top-16 right-2` → das Panel klappte am rechten
+  // Bildschirmrand auf, egal wo der ☰-Trigger stand (David 28.6.: «erscheint am
+  // anderen Ende des Bildschirms»). Jetzt rechtsbündig unter den Trigger geklemmt
+  // (8px Rand) — gleiches Muster wie FnRef.positioniere (ArtikelBody).
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+  const positioniere = () => {
+    const t = triggerRef.current;
+    if (t == null || typeof window === 'undefined') return;
+    const r = t.getBoundingClientRect();
+    const breite = Math.min(320, window.innerWidth - 16); // w-[20rem] bzw. max-w-[calc(100vw-1rem)]
+    const left = Math.max(8, Math.min(r.right - breite, window.innerWidth - breite - 8));
+    setPos({ top: r.bottom + 4, left });
+  };
 
   // Reader-Labels (Gesetz/Entscheid) aus den ohnehin lazy ladbaren Manifesten —
   // nur laden, wenn ein Reiter eine solche Route trägt.
@@ -60,6 +74,18 @@ export function ReiterUebersicht() {
     };
     document.addEventListener('mousedown', zu);
     return () => document.removeEventListener('mousedown', zu);
+  }, [panelOffen]);
+
+  // Position am Trigger nachführen, solange das Flyout offen ist (Scroll/Resize).
+  useEffect(() => {
+    if (!panelOffen) return;
+    const neu = () => positioniere();
+    window.addEventListener('scroll', neu, true);
+    window.addEventListener('resize', neu);
+    return () => {
+      window.removeEventListener('scroll', neu, true);
+      window.removeEventListener('resize', neu);
+    };
   }, [panelOffen]);
 
   // Dialog-Fokusverwaltung (role="dialog"): Fokus beim Öffnen INS portalierte
@@ -117,19 +143,20 @@ export function ReiterUebersicht() {
         aria-haspopup="dialog"
         aria-expanded={panelOffen}
         aria-label="Alle geöffneten Reiter"
-        onClick={() => setPanelOffen((v) => !v)}
+        onClick={() => { if (!panelOffen) positioniere(); setPanelOffen((v) => !v); }}
       >
         <span aria-hidden className="text-base leading-none">☰</span>
         <span className="num text-micro text-ink-500">{tabs.length}</span>
       </button>
 
-      {panelOffen && createPortal(
+      {panelOffen && pos && createPortal(
         <div
           ref={panelRef}
           tabIndex={-1}
           role="dialog"
           aria-label="Alle geöffneten Reiter"
-          className="fixed top-16 right-2 sm:right-4 z-40 mt-1 w-[20rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg p-2 max-h-[70vh] overflow-y-auto focus:outline-none"
+          style={{ top: pos.top, left: pos.left }}
+          className="fixed z-40 w-[20rem] max-w-[calc(100vw-1rem)] rounded-lg border border-line bg-paper-raised shadow-lg p-2 max-h-[70vh] overflow-y-auto focus:outline-none"
         >
           <TabPanel
             tabs={tabs}
