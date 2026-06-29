@@ -141,7 +141,7 @@ export function Shell({ children }: { children: ReactNode }) {
 
         {/* Rechte Spalte: Top-Streifen + Inhalt + Footer. Im Multipane-Modus
             höhenbegrenzt (h-screen), damit die Panes je eigen scrollen. */}
-        <div className={`flex-1 min-w-0 flex flex-col ${multipane ? 'h-screen' : 'min-h-screen'}`}>
+        <div className={`flex-1 min-w-0 flex flex-col ${multipane ? 'h-dvh' : 'min-h-screen'}`}>
           <Topbar
             onMenu={() => setSchubladeOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
@@ -188,7 +188,7 @@ export function Shell({ children }: { children: ReactNode }) {
               {pane.sekundaer.map((pfad, i) => (
                 <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`}
                   onSchliessen={() => schliesseUndFokus(i)}
-                  onTeilen={() => { void navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer)); }} />
+                  onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer))} />
               ))}
             </div>
           )}

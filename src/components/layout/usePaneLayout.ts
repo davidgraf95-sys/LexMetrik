@@ -46,7 +46,12 @@ function ladePanes(): string[] {
     // B-5: ein geteilter Layout-Link `?p=pfad||pfad` gewinnt über localStorage —
     // so reproduziert das Öffnen eines geteilten Links den Pane-Satz.
     const geteilt = new URLSearchParams(window.location.search).get('p');
-    if (geteilt) return saeubere(geteilt.split('||').map((s) => decodeURIComponent(s)));
+    if (geteilt) {
+      // URLSearchParams.get hat bereits dekodiert → NICHT erneut decodeURIComponent.
+      const seed = saeubere(geteilt.split('||'));
+      // Defektes/leeres ?p= darf gespeicherte Panes NICHT löschen → nur bei Treffer gewinnen.
+      if (seed.length) return seed;
+    }
     const roh = window.localStorage.getItem(PANES_KEY);
     if (!roh) return [];
     const arr = JSON.parse(roh);
@@ -60,7 +65,7 @@ export function layoutPermalink(sekundaer: string[]): string {
   if (typeof window === 'undefined') return '';
   const u = new URL(window.location.href);
   // searchParams.set kodiert selbst — NICHT vorab encodeURIComponent (sonst
-  // doppelt kodiert). Trenner «||» (| → %7C). ladePanes dekodiert defensiv nach.
+  // doppelt kodiert). Trenner «||» (| → %7C); ladePanes liest via get() (dekodiert).
   if (sekundaer.length) u.searchParams.set('p', sekundaer.join('||'));
   else u.searchParams.delete('p');
   return u.toString();

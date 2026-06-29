@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
@@ -17,6 +17,19 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
+
+// ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
+// Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
+// hätten je Render neue Identität und würden Effekte (IntersectionObserver,
+// Hash-Sprung) bei jedem Render neu auslösen (Re-Render-/Scroll-Schleife). Als
+// Modulfunktionen sind sie stabil und nicht Teil der Effect-Deps (nur die
+// Primitiven `imPane` + die Ref `wurzel` zählen).
+function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> | null): HTMLElement | null {
+  return imPane ? wurzel?.current ?? null : null;
+}
+function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
+  return root ? root.querySelector(`[id="art-${token}"]`) : document.getElementById(`art-${token}`);
+}
 
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
@@ -100,15 +113,6 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // NUR ein SEKUNDÄRES Pane unterdrückt globale URL-/Reiter-Writes — das primäre
   // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
   const istSekundaer = rolle === 'sekundaer';
-  // Plain-Funktionen — der React-Compiler memoisiert sie (imPane/wurzel sind für
-  // die Lebensdauer einer Instanz fix); dürfen so in Effect-Deps stehen, ohne
-  // manuelle Memo (useCallback mit ref.current bricht preserve-manual-memoization).
-  const paneWurzel = (): HTMLElement | null => (imPane ? wurzel?.current ?? null : null);
-  const findeArtikel = (token: string): HTMLElement | null => {
-    const root = paneWurzel();
-    return root ? root.querySelector(`[id="art-${token}"]`) : document.getElementById(`art-${token}`);
-  };
-  const alleArtikel = (): NodeListOf<Element> => (paneWurzel() ?? document).querySelectorAll('[id^="art-"]');
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
@@ -153,9 +157,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // = Klammer-Inhalt am Ende des Volltitels (LEGES-Konvention), sonst der Titel.
   useEffect(() => {
     if (!erlass || typeof document === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane treibt den Browser-Tab-Titel nicht (B-2.5)
     const kurz = erlass.titel.match(/\(([^)]+)\)\s*$/)?.[1] ?? erlass.titel;
     document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
-  }, [erlass]);
+  }, [erlass, istSekundaer]);
 
   const { sektionen, ohneGliederung } = useMemo(
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
@@ -244,7 +249,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Erst nach dem Aufklapp-Render scrollen (behavior:auto wie der Hash-Sprung);
     // grosse Sektionen wachsen beim Aufklappen → nach Settle ein Korrektur-Scroll.
     const scrolle = () => {
-      const el = findeArtikel(token);
+      const el = findeArt(paneRoot(imPane, wurzel), token);
       if (!el) return;
       el.scrollIntoView({ block: 'center', behavior: 'auto' });
       el.classList.add('lc-ziel-blink');
@@ -254,7 +259,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrolle();
       window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
     }, 110));
-  }, [sektionen, basisPfad, istSekundaer, findeArtikel]);
+  }, [sektionen, basisPfad, istSekundaer, imPane]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
@@ -291,7 +296,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     sucheVorher.current = suche;
     if (typeof window === 'undefined') return;
     // Im Pane scrollt der Pane-Container, nicht das Fenster (B-2.5).
-    const sc = paneWurzel();
+    const sc = paneRoot(imPane, wurzel);
     const hole = () => sc ? sc.scrollTop : window.scrollY;
     const setze = (y: number) => sc ? sc.scrollTo(0, y) : window.scrollTo(0, y);
     if (!war && suche) {
@@ -302,7 +307,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrollVorSuche.current = null;
       window.requestAnimationFrame(() => setze(y));
     }
-  }, [suche, paneWurzel]);
+  }, [suche, imPane]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -335,13 +340,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     window.requestAnimationFrame(() => {
       if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
-        const el = findeArtikel(token);
+        const el = findeArt(paneRoot(imPane, wurzel), token);
         el?.scrollIntoView({ block: 'center', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
     });
-  }, [eintraege, sektionen, istSekundaer, findeArtikel]);
+  }, [eintraege, sektionen, istSekundaer, imPane]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
@@ -366,7 +371,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
       // Mittelpunkt im Viewport-Koordinatensystem (getBoundingClientRect): im Pane
       // die Pane-Mitte, sonst die Fenster-Mitte (B-2.5).
-      const sc = paneWurzel();
+      const sc = paneRoot(imPane, wurzel);
       const mitte = sc ? sc.getBoundingClientRect().top + sc.clientHeight / 2 : window.innerHeight / 2;
       const rects = [...sichtbar.values()]
         .filter((en) => en.isIntersecting)
@@ -418,18 +423,18 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
       if (!raf) raf = window.requestAnimationFrame(auswerten);
-    }, { root: paneWurzel(), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    }, { root: paneRoot(imPane, wurzel), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
     // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
     // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
     // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
     // läuft über die Deps neu und beobachtet die dann sichtbaren Artikel.
-    alleArtikel().forEach((el) => io.observe(el));
+    (paneRoot(imPane, wurzel) ?? document).querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
     return () => {
       io.disconnect();
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
     };
-  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, paneWurzel, alleArtikel]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach
