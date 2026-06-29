@@ -24,6 +24,7 @@ import { ERLASS_LINKS } from '../../data/erlassLinks';
 
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { AdresseBundSuche } from '../ui/AdresseBundSuche';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 import { AMT_KANTONE, MIETE_AMT_KANTONE } from '../../data/schlichtung/amtAufloesung';
 
@@ -53,6 +54,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
   minimal?: boolean;
 } = {}) {
   const { f, setF, rechtsweg, setRechtsweg, set, schritt, setSchritt, plzTreffer, istMiete, istArbeit, istGeld, istScheidung, vermoegensrechtlich, streitwert, vdStufe, soGleicheGemeinde, setSoGleicheGemeinde, amt, mieteAmt, mieteKandidaten, zhKreise, zhStrasse, setZhStrasse, zhNummer, setZhNummer, zhStrassenInfo, fehler, ergebnis, r, rechtsmittel, obereInstanz, stelle, recherche, kantonOffen, kantonDaten, gemeindeFremd, sgPrefill, fahrplan, kosten, hgWeicheAktiv, handelsgericht, eingabeText, aktenzeichen, setAktenzeichen, pdfConfig, schritte, maxIndex, aktiverSchritt, zeige, weiterAus } = useZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl });
+  const pk = usePaneKlasse();
 
   return (
     <BeruehrtRahmen>
@@ -77,7 +79,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         {/* Rechtsweg */}
         <div className="space-y-2">
           <GruppenTitel>Rechtsweg</GruppenTitel>
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-4 gap-2', 'grid grid-cols-1 @3xl/pane:grid-cols-4 gap-2')}>
             {RECHTSWEGE.map((w) => (
               <button key={w.code} type="button" disabled={!w.aktiv}
                 aria-pressed={rechtsweg === w.code}
@@ -108,7 +110,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         <div className="space-y-2">
           <GruppenTitel>Was suchen Sie?</GruppenTitel>
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={[
               { code: 'einleitung' as Instanz, label: 'Verfahren einleiten', sub: 'Zuständige Schlichtungsbehörde bzw. erstes Gericht finden' },
               { code: 'rechtsmittel' as Instanz, label: 'Rechtsmittel ergreifen', sub: 'Berufung/Beschwerde — zuständige obere Instanz' },
@@ -127,7 +129,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
           <div className="space-y-3">
             <GruppenTitel>Was wird angefochten?</GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={[
                 { code: 'endentscheid' as RmObjekt, label: 'Endentscheid', sub: 'Das Verfahren wird ganz oder teilweise abgeschlossen' },
                 { code: 'zwischenentscheid' as RmObjekt, label: 'Zwischenentscheid', sub: 'z. B. über Zuständigkeit oder Ausstand (selbständig eröffnet)' },
@@ -137,7 +139,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               value={f.rmObjekt}
               onSelect={(code) => set('rmObjekt', code)}
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
               <Field label="Verfahrensart der Vorinstanz" hint="entscheidet über Fristlänge (30/10 Tage) und Gerichtsferien-Stillstand">
                 <select className={inputCls} value={f.rmVerfahren} onChange={(e) => set('rmVerfahren', e.target.value as RmVerfahren)}>
                   <option value="ordentlich_vereinfacht">Ordentliches oder vereinfachtes Verfahren</option>
@@ -170,7 +172,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         <div className="space-y-2">
           <GruppenTitel>Art des Streits</GruppenTitel>
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 @3xl/pane:grid-cols-3 gap-2')}
             items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
             value={f.streitsache}
             onSelect={(code) => set('streitsache', code)}
@@ -224,7 +226,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
           <GruppenTitel>
             {f.instanz === 'einleitung' ? 'Wo ist die Sache örtlich anzuknüpfen?' : 'In welchem Kanton wurde entschieden?'}
           </GruppenTitel>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             {f.instanz === 'einleitung' && (
             <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
               <div className="space-y-1.5">
@@ -293,7 +295,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         {zeige('streitwert') && (
         <div className="space-y-3">
           <GruppenTitel>Um wie viel geht es?</GruppenTitel>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
               <div className="space-y-1.5">
                 <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
@@ -1043,7 +1045,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
             )}
 
             {/* Verfahrens-Eckdaten — bewusst NACH Stelle/Fahrplan/Kosten (Endkonsumenten-Dramaturgie 6.6.2026) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               {[
                 { label: 'Örtlich (Grundsatz)', val: r.oertlich.gerichtsstand },
                 { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },

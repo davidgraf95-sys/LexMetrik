@@ -12,6 +12,7 @@ import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Lehrvertrag (Art. 344–346a OR) ────────────────────────
 // Sonderregime der «besonderen Einzelarbeitsverträge» mit eigenem Schema
@@ -43,6 +44,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
 
   const { ergebnis } = useMemo(() => lvZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefeLvGates(a), [a]);
+  const pk = usePaneKlasse();
 
   // Lohn-Staffel an die Lehrdauer koppeln (ein CHF-Feld je Lehrjahr).
   const setDauer = (rohJahre: number) => {
@@ -87,7 +89,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           </div>
           <div className="space-y-3">
             <GruppenTitel>Lernende Person</GruppenTitel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               <Field label="Vorname"><input className={inputCls} value={a.lernendeVorname} onChange={(e) => set('lernendeVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.lernendeName} onChange={(e) => set('lernendeName', e.target.value)} /></Field>
             </div>
@@ -108,7 +110,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           <div className="space-y-2">
             <GruppenTitel>Abschluss</GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['efz', 'EFZ', '3–4 Jahre'],
                 ['eba', 'EBA', '2 Jahre'],
@@ -118,7 +120,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               onSelect={(code) => set('bildungstyp', code)}
             />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
             <Field label="Lehrbeginn"><DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} /></Field>
             <Field label="Dauer (Jahre)" hint="koppelt die Lohnstaffel"><input type="number" min={1} max={5} className={inputCls + ' num w-28'} value={a.dauerJahre} onChange={(e) => setDauer(Number(e.target.value))} /></Field>
           </div>
@@ -141,7 +143,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
         <div className="space-y-4">
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Lohn je Lehrjahr (Art. 344a Abs. 2 OR)`} /></GruppenTitel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               {a.lohnLehrjahre.map((l, i) => (
                 <Field key={l.jahr} label={`${l.jahr}. Lehrjahr (CHF / Monat)`}>
                   <BetragsFeld className={inputCls + ' num'} value={l.chf} onChange={(v) => setLohn(i, v)} placeholder="z. B. 700" />
@@ -149,7 +151,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
             <Field label="Wochenarbeitszeit (Stunden)" hint="inkl. Berufsfachschule und üK"><input type="number" min={1} max={45} step={0.5} className={inputCls + ' num'} value={a.wochenstunden} onChange={(e) => set('wochenstunden', Number(e.target.value) || 41)} /></Field>
             <Field label="Ferien (Wochen / Lehrjahr)" hint="mindestens 5 Wochen bis zum vollendeten 20. Altersjahr (Art. 345a Abs. 3 OR)"><input type="number" min={4} max={8} className={inputCls + ' num'} value={a.ferienWochen} onChange={(e) => set('ferienWochen', Number(e.target.value) || 5)} /></Field>
           </div>

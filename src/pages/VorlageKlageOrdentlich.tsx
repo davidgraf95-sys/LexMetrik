@@ -18,6 +18,7 @@ import { KANTONE } from '../lib/kantone';
 import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 import { karte } from '../lib/startseiteConfig';
 import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
 
@@ -61,6 +62,7 @@ export function VorlageKlageOrdentlich() {
 
   const fehler = maengel.filter((m) => m.schritt === schritt).map((m) => m.text);
   const card = karte('klage-ordentlich');
+  const pk = usePaneKlasse();
 
   const inhalt = () => {
     switch (SCHRITTE[schritt].id) {
@@ -114,7 +116,7 @@ export function VorlageKlageOrdentlich() {
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
                     placeholder="z. B. Bezirksgericht X" />
                 </Field>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Strasse und Hausnummer">
                     <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
                       onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
@@ -177,7 +179,7 @@ export function VorlageKlageOrdentlich() {
       case 'begehren': return (
         <div className="space-y-4">
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
             items={[
               { code: 'beziffert' as const, label: 'Beziffertes Begehren', sub: 'Bestimmter Betrag (Art. 84 Abs. 2 ZPO)' },
               { code: 'unbeziffert' as const, label: 'Unbezifferte Forderungsklage', sub: 'Mit Mindestwert (Art. 85 ZPO)' },
@@ -187,14 +189,14 @@ export function VorlageKlageOrdentlich() {
             onSelect={(code) => set('begehrenTyp', code)}
           />
           {a.begehrenTyp === 'beziffert' && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               <Field label="Betrag (CHF)"><BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls} aria-label="Forderungsbetrag" /></Field>
               <Field label="Zins %" optional><input className={inputCls + ' num'} value={a.zins?.satz ?? ''} onChange={(e) => set('zins', { satz: e.target.value, abDatum: a.zins?.abDatum ?? '' })} placeholder="5" /></Field>
               <Field label="Zins seit" optional><DatumsFeld value={a.zins?.abDatum ?? ''} onChange={(v) => set('zins', { satz: a.zins?.satz ?? '', abDatum: v })} className={inputCls} /></Field>
             </div>
           )}
           {a.begehrenTyp === 'unbeziffert' && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               <Field label="Mindestwert (CHF)" hint="Art. 85 Abs. 1 ZPO – vorläufiger Streitwert">
                 <BetragsFeld value={a.unbeziffertMindest ?? ''} onChange={(v) => set('unbeziffertMindest', v)} className={inputCls} aria-label="Mindestwert" />
               </Field>
@@ -372,7 +374,7 @@ export function VorlageKlageOrdentlich() {
             <button type="button" className="lc-btn-outline lc-btn-sm"
               onClick={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}>+ Beilage</button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Ort"><input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} /></Field>
             <Field label="Datum"><DatumsFeld value={a.datum} onChange={(v) => set('datum', v)} className={inputCls} /></Field>
           </div>

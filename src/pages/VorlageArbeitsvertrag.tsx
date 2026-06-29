@@ -17,6 +17,7 @@ import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Einzelarbeitsvertrag (Art. 319 ff. OR) ────────────────
 // Erste Vorlage auf dem generischen Wizard-Rahmen. Validierungskern ist die
@@ -102,6 +103,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       defaults: AV_DEFAULTS,
       speicherKey: SPEICHER_KEY,
     });
+  const pk = usePaneKlasse();
 
   const ergebnis = useMemo(() => avZusammenstellen({ ...a, untertyp }), [a, untertyp]);
   const gates = useMemo(() => pruefeAvGates(a), [a]);
@@ -150,7 +152,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           </div>
           <div className="space-y-3">
             <GruppenTitel>Arbeitnehmer/in</GruppenTitel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               <Field label="Vorname"><input className={inputCls} value={a.arbeitnehmerVorname} onChange={(e) => set('arbeitnehmerVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.arbeitnehmerName} onChange={(e) => set('arbeitnehmerName', e.target.value)} /></Field>
             </div>
@@ -169,7 +171,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <Field label="Funktion / Tätigkeit">
             <input className={inputCls} value={a.funktion} onChange={(e) => set('funktion', e.target.value)} placeholder="z. B. Sachbearbeiterin Treuhand" />
           </Field>
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-[1fr_10rem] gap-3')}>
             <Field label="Arbeitsort">
               <input className={inputCls} value={a.arbeitsort} onChange={(e) => set('arbeitsort', e.target.value)} placeholder="z. B. Basel" />
             </Field>
@@ -202,7 +204,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
             <div className="space-y-3 pt-1">
               <GruppenTitel><NormText text={`Probezeit (Art. 335b OR)`} /></GruppenTitel>
               <SelectionGrid
-                className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+                className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
                 items={([
                   // Bei Befristung gibt es keine gesetzliche Vermutung
                   // (Art. 335b Abs. 1 OR) – die Probezeit wird VEREINBART.
@@ -227,7 +229,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       case 'lohn': return (
         <div className="space-y-4">
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={([['monatslohn', 'Monatslohn'], ['stundenlohn', 'Stundenlohn']] as const).map(([code, label]) => ({ code, label }))}
             value={a.lohnModell}
             onSelect={(code) => {
@@ -258,7 +260,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
 
       case 'zeit': return (
         <div className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
             <Field label="Pensum (%)">
               <input type="number" min={1} max={100} className={inputCls + ' num'} value={a.pensumProzent}
                 onChange={(e) => set('pensumProzent', Math.min(100, Math.max(1, Number(e.target.value) || 100)))} />
@@ -271,7 +273,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Überstunden (Art. 321c OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['gesetzlich', 'Gesetzlich', 'Freizeit oder Lohn + 25 %'],
                 ['kompensation', 'Kompensation', 'grundsätzlich Freizeit'],
@@ -296,7 +298,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
             <div className="space-y-2 pt-1">
               <GruppenTitel><NormText text={`Kündigungsfrist nach der Probezeit (Art. 335c OR)`} /></GruppenTitel>
               <SelectionGrid
-                className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
                 items={([
                   ['gesetzlich', 'Gesetzliche Staffel', '1 / 2 / 3 Monate nach Dienstjahren'],
                   ['abweichend', 'Einheitliche Frist', 'für beide Parteien gleich (schriftlich)'],
@@ -320,7 +322,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Lohnfortzahlung bei Krankheit (Art. 324a OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={([
                 ['gesetzlich', 'Gesetzliche Regelung', '3 Wochen im 1. Dienstjahr, danach Skala'],
                 ['ktg', 'Krankentaggeld-Versicherung', 'gleichwertige Lösung (Abs. 4)'],
@@ -329,7 +331,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
               onSelect={(code) => set('lohnfortzahlung', code)}
             />
             {a.lohnfortzahlung === 'ktg' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                 <Field label="Taggeld (% des Lohnes)"><input type="number" min={50} max={100} className={inputCls + ' num'} value={a.ktgProzent ?? 80} onChange={(e) => set('ktgProzent', Number(e.target.value))} /></Field>
                 <Field label="Leistungsdauer (Tage)" hint="innert 900 Tagen"><input type="number" min={180} max={1095} className={inputCls + ' num'} value={a.ktgTage ?? 730} onChange={(e) => set('ktgTage', Number(e.target.value))} /></Field>
                 <Field label="Wartefrist (Tage)" hint="über 3 Tage nur gleichwertig, wenn der Arbeitgeber 80 % zahlt">
@@ -347,7 +349,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Spesen (Art. 327a OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={([
                 ['effektiv', 'Effektiver Ersatz', 'gegen Beleg (gesetzliches Minimum)'],
                 ['pauschal', 'Pauschalspesen', 'pro Monat (schriftlich; muss alles decken)'],
@@ -402,7 +404,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
               <Field label="Gegenstand (untersagte Tätigkeit)">
                 <input className={inputCls} value={a.kvGegenstand ?? ''} onChange={(e) => set('kvGegenstand', e.target.value)} placeholder="z. B. Treuhand- und Revisionsdienstleistungen" />
               </Field>
-              <div className="grid grid-cols-1 sm:grid-cols-[1fr_9rem] gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_9rem] gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-[1fr_9rem] gap-3')}>
                 <Field label="Örtlicher Geltungsbereich">
                   <input className={inputCls} value={a.kvOrt ?? ''} onChange={(e) => set('kvOrt', e.target.value)} placeholder="z. B. Kantone BS und BL" />
                 </Field>

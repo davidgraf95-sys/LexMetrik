@@ -16,6 +16,7 @@ import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
 import { KANTONE } from '../../lib/kantone';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (lit. b)' },
@@ -49,6 +50,7 @@ export function KombinierteAnsicht() {
   // Standard-Kanton (Einstellungen) als Default – konsistent zu den
   // Schwesterformularen (Auftrag David); DEFAULTS.kanton ist nur Fallback.
   const [form, setForm] = useState<ArbeitsrechtInput>(() => ({ ...DEFAULTS, kanton: getStandardKanton() }));
+  const pk = usePaneKlasse();
 
   const set = <K extends keyof ArbeitsrechtInput>(k: K, v: ArbeitsrechtInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -132,8 +134,8 @@ export function KombinierteAnsicht() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
+        <div className={pk('sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4', 'sm:col-span-3 grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <div className="space-y-1">
             <label className="block text-body-s font-medium text-ink-700">Vertragsbeginn</label>
             <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
@@ -181,7 +183,7 @@ export function KombinierteAnsicht() {
           <button type="button" onClick={addEreignis} className="lc-btn-outline lc-btn-sm">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
-          <div key={i} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={i} className={pk('lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end', 'lc-panel p-3 grid grid-cols-1 @3xl/pane:grid-cols-4 gap-3 items-end')}>
             <div className="space-y-1">
               <label className="text-xs font-medium text-ink-600">Typ</label>
               <select value={e.typ} onChange={(ev) => updateEreignis(i, 'typ', ev.target.value)} className={inputCls + ' text-xs'}>

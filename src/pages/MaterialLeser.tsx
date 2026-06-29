@@ -4,6 +4,8 @@ import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ladeMaterial } from '../lib/materialien/browse';
 import { KontextPanel } from '../components/kontext/KontextPanel';
 import { GEBIET_LABEL } from '../lib/normtext/register';
+import { usePaneKontext } from '../components/layout/PaneKontext';
+import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
 import type { BrowseMaterial } from '../lib/materialien/typen';
 
 // ─── Reader EINES Materials (/materialien/:key) ─────────────────────────────
@@ -24,6 +26,8 @@ function formatiereDatum(iso: string): string {
 
 export function MaterialLeser() {
   const { key = '' } = useParams();
+  const { imPane } = usePaneKontext();
+  const meldeKopf = useMeldeInhaltsKopf();
   // Ein Zustand pro geladenem key — `laden` wird abgeleitet (kein synchrones
   // setState im Effect; vermeidet kaskadierende Renders, react-hooks-Regel).
   const [data, setData] = useState<{ key: string; material: BrowseMaterial | null } | null>(null);
@@ -37,6 +41,18 @@ export function MaterialLeser() {
     });
     return () => { lebt = false; };
   }, [key]);
+
+  // Einzelansicht-Kopf melden (sonst zeigte der Pfad-Fallback «Zuletzt geöffnet»,
+  // weil verlaufLabel keine Materialien-Keys auflöst). Kurz-Label = Klammer-Inhalt
+  // des Titels (z. B. «WML»), sonst der Titel. Nur in der Einzelansicht (!imPane).
+  useEffect(() => {
+    if (imPane) return;
+    const mat = data && data.key === key ? data.material : null;
+    if (!mat) return;
+    const kurz = mat.titel.match(/\(([^)]+)\)\s*$/)?.[1] ?? mat.titel;
+    meldeKopf({ breadcrumb: [{ label: 'Materialien', to: '/materialien' }, { label: kurz }] });
+  }, [imPane, data, key, meldeKopf]);
+  useEffect(() => () => meldeKopf(null), [meldeKopf]);
 
   const laden = !data || data.key !== key;
   const material = laden ? null : data.material;

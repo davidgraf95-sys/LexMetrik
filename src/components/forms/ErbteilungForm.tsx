@@ -16,6 +16,7 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const ERB_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der gesetzlichen Erbteile, Pflichtteile und der verfügbaren Quote ' +
@@ -72,6 +73,7 @@ const ET_LINK_SPEC: PermalinkSpec<EtLink & Record<string, unknown>> = {
 };
 
 export function ErbteilungForm() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<EtLink>>(() => {
     try { return permalinkLesen(ET_LINK_SPEC, window.location.search); } catch { return {}; }
   });
@@ -170,7 +172,7 @@ export function ErbteilungForm() {
       <PflichtDisclaimer kurz="Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum." text={ERB_DISCLAIMER} />
 
       {/* Grundangaben */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Todesdatum" hint="Recht-Schalter: bis 31.12.2022 altes Recht, ab 1.1.2023 neues Recht (Art. 15/16 SchlT ZGB)">
           <DatumsFeld value={todesdatum} onChange={(v) => setTodesdatum(v)} className={inputCls} />
         </Field>
@@ -201,7 +203,7 @@ export function ErbteilungForm() {
       {/* 1. Parentel */}
       <div className="space-y-3">
         <GruppenTitel><NormText text={`1. Parentel – Nachkommen (Art. 457 ZGB)`} /></GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Lebende Kinder (Anzahl)">
             <input type="number" inputMode="decimal" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
           </Field>
@@ -231,7 +233,7 @@ export function ErbteilungForm() {
       {!hatErste && (
         <div className="space-y-3">
           <GruppenTitel><NormText text={`2. Parentel – elterlicher Stamm (Art. 458 ZGB)`} /></GruppenTitel>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Vater">
               <select value={vater} onChange={(e) => setVater(e.target.value as ElternStatus)} className={inputCls}>
                 {ELTERN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
@@ -264,7 +266,7 @@ export function ErbteilungForm() {
               </select>
             </Field>
             {gueterstand === 'errungenschaftsbeteiligung' && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
                 <Field label="Eigengut Erblasser (CHF)"><BetragsFeld erlaubeNegativ value={betraege.eigengut} onChange={(v) => setBetraege((b) => ({ ...b, eigengut: v }))} className={inputCls} /></Field>
                 <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><BetragsFeld erlaubeNegativ value={betraege.vorschlagE} onChange={(v) => setBetraege((b) => ({ ...b, vorschlagE: v }))} className={inputCls} /></Field>
                 <Field label="Vorschlag Überlebender (CHF)"><BetragsFeld erlaubeNegativ value={betraege.vorschlagU} onChange={(v) => setBetraege((b) => ({ ...b, vorschlagU: v }))} className={inputCls} /></Field>
@@ -274,7 +276,7 @@ export function ErbteilungForm() {
               <Field label="Vermögen des Erblassers (CHF)"><BetragsFeld erlaubeNegativ value={betraege.vermoegen} onChange={(v) => setBetraege((b) => ({ ...b, vermoegen: v }))} className={inputCls + ' w-44'} /></Field>
             )}
             {gueterstand === 'guetergemeinschaft' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
                 <Field label="Eigengut Erblasser (CHF)"><BetragsFeld erlaubeNegativ value={betraege.eigengut} onChange={(v) => setBetraege((b) => ({ ...b, eigengut: v }))} className={inputCls} /></Field>
                 <Field label="Gesamtgut (CHF)"><BetragsFeld erlaubeNegativ value={betraege.gesamtgut} onChange={(v) => setBetraege((b) => ({ ...b, gesamtgut: v }))} className={inputCls} /></Field>
               </div>
@@ -288,7 +290,7 @@ export function ErbteilungForm() {
       {ergebnis && (
         <ErgebnisBlock>
           {/* Eckdaten */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             <EckdatenKachel label="Rechtsstand"
               wert={ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'} />
             <EckdatenKachel akzent num label="Verfügbare Quote"

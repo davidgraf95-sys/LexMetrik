@@ -22,6 +22,7 @@ import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Klage im vereinfachten Verfahren (BS-Pilot) ───────────
 // Zweite Eingabe-Vorlage (nach Schlichtungsgesuch BS). Wie dort BEWUSST ohne
@@ -49,6 +50,7 @@ const BANNER_KV: PdfBanner = {
 // natürliche Person (Auftrag David: bei der Scheidung sind die Parteien stets
 // Ehegatten — eine «juristische Person» ergibt dort keinen Sinn).
 export function ParteiEditor({ p, onChange, nurNatuerlich }: { p: SgPartei; onChange: (p: SgPartei) => void; nurNatuerlich?: boolean }) {
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-3">
       {!nurNatuerlich && (
@@ -65,7 +67,7 @@ export function ParteiEditor({ p, onChange, nurNatuerlich }: { p: SgPartei; onCh
         />
       )}
       {p.typ === 'natuerlich' ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
           <Field label="Vorname"><input className={inputCls} value={p.vorname} onChange={(e) => onChange({ ...p, vorname: e.target.value })} /></Field>
           <Field label="Nachname"><input className={inputCls} value={p.name} onChange={(e) => onChange({ ...p, name: e.target.value })} /></Field>
           <Field label="Strasse Nr."><input className={inputCls} value={p.strasse} onChange={(e) => onChange({ ...p, strasse: e.target.value })} /></Field>
@@ -75,7 +77,7 @@ export function ParteiEditor({ p, onChange, nurNatuerlich }: { p: SgPartei; onCh
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
           <Field label="Firma (gemäss Handelsregister)"><input className={inputCls} value={p.firma} onChange={(e) => onChange({ ...p, firma: e.target.value })} /></Field>
           <Field label="UID" optional hint={p.uid?.trim() && !uidGueltig(p.uid) ? 'Prüfziffer stimmt nicht — Format CHE-xxx.xxx.xxx' : undefined}>
             <input className={inputCls} placeholder="CHE-xxx.xxx.xxx" value={p.uid ?? ''}
@@ -125,6 +127,7 @@ export function VorlageKlageVereinfacht() {
 
   const fehler = maengel.filter((m) => m.schritt === schritt).map((m) => m.text);
   const card = karte('klage-vereinfacht');
+  const pk = usePaneKlasse();
 
   const inhalt = () => {
     switch (SCHRITTE[schritt].id) {
@@ -183,7 +186,7 @@ export function VorlageKlageVereinfacht() {
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
                     placeholder="z. B. Bezirksgericht X" />
                 </Field>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Strasse und Hausnummer">
                     <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
                       onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
@@ -199,7 +202,7 @@ export function VorlageKlageVereinfacht() {
             )}
           </div>
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={KV_MATERIEN.map((m) => ({ code: m.id, label: m.label, sub: m.hint }))}
             value={a.materie}
             onSelect={(code) => set('materie', code as KvMaterie)}
@@ -240,7 +243,7 @@ export function VorlageKlageVereinfacht() {
       case 'begehren': return (
         <div className="space-y-4">
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={[
               { code: 'beziffert' as const, label: 'Beziffertes Begehren', sub: 'Bestimmter Betrag (Art. 84 Abs. 2 ZPO)' },
               { code: 'unbeziffert' as const, label: 'Unbezifferte Forderungsklage', sub: 'Mit Mindestwert (Art. 85 ZPO)' },
@@ -249,13 +252,13 @@ export function VorlageKlageVereinfacht() {
             onSelect={(code) => set('begehrenTyp', code)}
           />
           {a.begehrenTyp === 'beziffert' ? (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               <Field label="Betrag (CHF)"><BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls} aria-label="Forderungsbetrag" /></Field>
               <Field label="Zins % " optional><input className={inputCls + ' num'} value={a.zins?.satz ?? ''} onChange={(e) => set('zins', { satz: e.target.value, abDatum: a.zins?.abDatum ?? '' })} placeholder="5" /></Field>
               <Field label="Zins seit" optional><DatumsFeld value={a.zins?.abDatum ?? ''} onChange={(v) => set('zins', { satz: a.zins?.satz ?? '', abDatum: v })} className={inputCls} /></Field>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               <Field label="Mindestwert (CHF)" hint="Art. 85 Abs. 1 ZPO – vorläufiger Streitwert">
                 <BetragsFeld value={a.unbeziffertMindest ?? ''} onChange={(v) => set('unbeziffertMindest', v)} className={inputCls} aria-label="Mindestwert" />
               </Field>
@@ -404,7 +407,7 @@ export function VorlageKlageVereinfacht() {
             <button type="button" className="lc-btn-outline lc-btn-sm"
               onClick={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}>+ Beilage</button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Ort"><input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} /></Field>
             <Field label="Datum"><DatumsFeld value={a.datum} onChange={(v) => set('datum', v)} className={inputCls} /></Field>
           </div>

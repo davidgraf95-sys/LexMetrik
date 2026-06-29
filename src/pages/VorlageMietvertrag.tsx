@@ -17,6 +17,7 @@ import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Mietvertrag Wohn-/Geschäftsräume (Art. 253 ff. OR) ────
 // Zentrale Weiche: objektTyp (Wohnraum | Geschäftsraum) + Kanton – gemäss
@@ -74,6 +75,7 @@ export function VorlageMietvertrag() {
   const gates = useMemo(() => pruefeMvGates(a), [a]);
   const wohnung = a.objektTyp === 'wohnung';
   const fristMin = mvGesetzlicheFrist(a.objektTyp);
+  const pk = usePaneKlasse();
 
   const fehlerImSchritt = (i: number): string[] => {
     const f: string[] = [];
@@ -111,7 +113,7 @@ export function VorlageMietvertrag() {
         <div className="space-y-4">
           {/* Untermiete-Weiche (Ausbau 6.6.2026, Art. 262 OR geltende Fassung) */}
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={([
               ['hauptmiete', 'Mietvertrag (Hauptmiete)', 'Vermieter:in vermietet die eigene Sache'],
               ['untermiete', 'Untermietvertrag', 'Hauptmieter:in vermietet ganz oder teilweise weiter (Art. 262 OR)'],
@@ -133,7 +135,7 @@ export function VorlageMietvertrag() {
           {a.mietverhaeltnis === 'untermiete' && (
             <div className="lc-card p-4 space-y-3">
               <GruppenTitel>Hauptmietvertrag & Zustimmung (Art. 262 OR)</GruppenTitel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                 <Field label="Hauptvermieter:in (Name)">
                   <input className={inputCls} value={a.hmVermieterName ?? ''} onChange={(e) => set('hmVermieterName', e.target.value || undefined)} placeholder="z. B. Immo AG" />
                 </Field>
@@ -178,7 +180,7 @@ export function VorlageMietvertrag() {
             </div>
           )}
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
             items={([
               ['wohnung', 'Wohnraum', 'Wohnung, Einfamilienhaus – voller Mieterschutz'],
               ['geschaeftsraum', 'Geschäftsraum', 'Büro, Laden, Gewerbe – freiere Gestaltung'],
@@ -200,7 +202,7 @@ export function VorlageMietvertrag() {
           <Field label="Adresse des Mietobjekts">
             <input className={inputCls} value={a.objektAdresse} onChange={(e) => set('objektAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" />
           </Field>
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-[1fr_10rem] gap-3')}>
             <Field label="Mitvermietete Nebenräume" optional>
               <input className={inputCls} value={a.nebenraeume ?? ''} onChange={(e) => set('nebenraeume', e.target.value || undefined)} placeholder="z. B. Kellerabteil Nr. 7, Estrich" />
             </Field>
@@ -279,7 +281,7 @@ export function VorlageMietvertrag() {
           <div className="space-y-2">
             <GruppenTitel>Mietzins-Modell</GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['standard', 'Standard', `Referenzzins-Basis ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} %`],
                 ['index', 'Indexmiete', 'LIK-gebunden – Vertrag ≥ 5 Jahre'],
@@ -294,7 +296,7 @@ export function VorlageMietvertrag() {
               }}
             />
             {a.mietzinsModell === 'index' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                 <Field label="LIK-Basisstand (Monat/Jahr)" hint="z. B. «Mai 2026» – definiert die Anpassungsbasis (Art. 17 VMWG)">
                   <input className={inputCls} value={a.indexBasisMonat ?? ''} onChange={(e) => set('indexBasisMonat', e.target.value || undefined)} placeholder="z. B. Mai 2026" />
                 </Field>
@@ -306,7 +308,7 @@ export function VorlageMietvertrag() {
             {a.mietzinsModell === 'staffel' && (
               <div className="space-y-2">
                 {(a.staffeln ?? []).map((s, i) => (
-                  <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr_10rem_auto] gap-2 items-end">
+                  <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_10rem_auto] gap-2 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_10rem_auto] gap-2 items-end')}>
                     <Field label={i === 0 ? 'Erhöhung ab' : ''}>
                       <DatumsFeld value={s.ab} onChange={(v) => setStaffel(i, { ab: v })} className={inputCls} />
                     </Field>
@@ -328,7 +330,7 @@ export function VorlageMietvertrag() {
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Nebenkosten (Art. 257a OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['akonto', 'Akonto', 'mit jährlicher Abrechnung'],
                 ['pauschale', 'Pauschale', 'Durchschnitt dreier Jahre'],
@@ -343,7 +345,7 @@ export function VorlageMietvertrag() {
                   <BetragsFeld className={inputCls + ' num w-40'} value={a.nebenkostenCHF ?? ''} onChange={(v) => set('nebenkostenCHF', v || undefined)} placeholder="z. B. 250" />
                 </Field>
                 <p className="text-xs text-ink-500">Positionen einzeln wählen – eine Sammelklausel genügt nicht:</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-1.5', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-1.5')}>
                   {nkKatalog.map((p) => (
                     <Checkbox
                       checked={a.nkPositionen.includes(p)}
@@ -366,7 +368,7 @@ export function VorlageMietvertrag() {
           <div className="space-y-2">
             <GruppenTitel>Tierhaltung</GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['kleintiere', 'Kleintiere frei', 'übrige mit Zustimmung'],
                 ['zustimmung', 'Nur mit Zustimmung', 'jede Tierhaltung'],

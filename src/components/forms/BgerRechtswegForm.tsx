@@ -15,6 +15,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { BGER_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { SelectionGrid } from '../ui/SelectionGrid';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { getStandardKanton } from '../../lib/einstellungen';
 import {
@@ -83,6 +84,7 @@ const zahl = (roh: string): number | null => {
 };
 
 export function BgerRechtswegForm() {
+  const pk = usePaneKlasse();
   const ausLink = useMemo(() => {
     try { return permalinkLesen(BGER_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {} as Record<string, unknown>; }
@@ -167,13 +169,13 @@ export function BgerRechtswegForm() {
         text={BGER_DISCLAIMER} />
 
       <SelectionGrid
-        className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+        className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-2`}
         items={WEGE.map((w) => ({ code: w.code, label: w.label, sub: w.sub }))}
         value={weg}
         onSelect={(code) => setWeg(code)}
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         {weg === 'zivil' && (
           <Field label="Rechtsgebiet" hint="steuert Streitwert-Schwelle (Art. 74 BGG) und Abteilung (Art. 33/34 BGerR)">
             <select value={gebiet} onChange={(e) => setGebiet(e.target.value as BgerZivilgebiet)} className={inputCls}>
@@ -206,7 +208,7 @@ export function BgerRechtswegForm() {
                 placeholder="z. B. 25'000" aria-label="Streitwert vor Bundesgericht" />
             </Field>
           )}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-2`}>
             <Checkbox checked={einzigeInstanz} onChange={setEinzigeInstanz} label="einzige kantonale Instanz hat entschieden (Art. 5/6/8 ZPO)" />
             <Checkbox checked={konkursrichter} onChange={setKonkursrichter} label="Entscheid des Konkurs-/Nachlassrichters" />
             <Checkbox checked={schiedsgericht} onChange={setSchiedsgericht} label="Schiedsentscheid (Art. 77 BGG)" />
@@ -232,7 +234,7 @@ export function BgerRechtswegForm() {
         <Checkbox checked={vorsorglich} onChange={setVorsorglich} label="Verfahren betreffend aufschiebende Wirkung / vorsorgliche Massnahmen (inkl. Haftsachen)" />
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         <Field label="Eröffnung der vollständigen Ausfertigung" optional hint="für das konkrete Fristende">
           <DatumsFeld value={eroeffnung} onChange={setEroeffnung} className={inputCls} />
         </Field>
@@ -245,7 +247,7 @@ export function BgerRechtswegForm() {
 
       {ergebnis && (
         <ErgebnisBlock>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-3`}>
             <EckdatenKachel label="Beschwerde" wert={ergebnis.beschwerdeTyp.replace('Beschwerde in ', '')} sub={ergebnis.fristNorm} />
             <EckdatenKachel label="Frist" akzent={!ergebnis.fristende}
               wert={ergebnis.fristTage === null ? 'jederzeit' : `${ergebnis.fristTage} Tage`}

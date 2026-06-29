@@ -21,6 +21,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const VERJ_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Verjährung (Art. 60, 67, 127 ff. OR, Stand Revision 1.1.2020) – ' +
@@ -96,6 +97,7 @@ const VJ_LINK_SPEC: PermalinkSpec<VjLink & Record<string, unknown>> = {
 };
 
 export function VerjaehrungForm() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<VjLink>>(() => {
     try { return permalinkLesen(VJ_LINK_SPEC, window.location.search); } catch { return {}; }
   });
@@ -190,7 +192,7 @@ export function VerjaehrungForm() {
       </Field>
 
       {/* Daten */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label={beginnLabel} hint="Beginn der (relativen) Frist – der Beginntag zählt nicht (Art. 132 OR)">
           <DatumsFeld value={beginnRelativ} onChange={setBeginnRelativ} className={inputCls} />
         </Field>
@@ -283,7 +285,7 @@ export function VerjaehrungForm() {
       {ergebnis && (
         <ErgebnisBlock>
           {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
-          <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>
+          <div className={pk(`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`, `grid grid-cols-1 @lg/pane:grid-cols-2 ${hatAbsolut ? '@4xl/pane:grid-cols-4' : '@xl/pane:grid-cols-3'} gap-3`)}>
             <FristKarte
               label={hatAbsolut ? `Relative Frist – ${REGIME[regime].relativJahre} Jahre` : `Frist – ${REGIME[regime].relativJahre} Jahre`}
               sub={`ab ${beginnLabel}`}

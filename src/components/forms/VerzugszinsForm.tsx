@@ -16,6 +16,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const VERZUGSZINS_DISCLAIMER =
   'Automatisierte Orientierungsberechnung des Verzugszinses nach Art. 104 OR – keine Rechtsberatung. ' +
@@ -93,6 +94,7 @@ const VZ_LINK_SPEC: PermalinkSpec<VzLink> = {
 };
 
 export function VerzugszinsForm() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<VzLink>>(() => {
     try { return permalinkLesen(VZ_LINK_SPEC, window.location.search); } catch { return {}; }
   });
@@ -160,7 +162,7 @@ export function VerzugszinsForm() {
       {/* Beispiele */}
       <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.state) }))} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Geschuldeter Betrag (CHF)" hint="Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an">
           <BetragsFeld value={form.kapital ? String(form.kapital) : ''} onChange={(v) => set('kapital', Number(v) || 0)} className={inputNum} placeholder="z. B. 10'000" />
         </Field>
@@ -213,7 +215,7 @@ export function VerzugszinsForm() {
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
         {rows.map((row, i) => (
-          <div key={row.id} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={row.id} className={pk('lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end', 'lc-panel p-3 grid grid-cols-1 @3xl/pane:grid-cols-4 gap-3 items-end')}>
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">Typ</label>
               <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
@@ -243,7 +245,7 @@ export function VerzugszinsForm() {
         <ErgebnisBlock>
           {ergebnis.status === 'ok' && (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
                 {[
                   { label: 'Verzugszins (gesamt)', val: `CHF ${ergebnis.zinsTotalCHF}`, akzent: true },
                   { label: 'Offenes Kapital', val: `CHF ${ergebnis.kapitalOffenCHF}` },

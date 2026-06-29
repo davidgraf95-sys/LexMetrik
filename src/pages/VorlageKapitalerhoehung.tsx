@@ -18,6 +18,7 @@ import { KANTONE } from '../lib/kantone';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Maske: Kapitalerhöhung AG/GmbH (Plan 9c, Auftrag David 7.6.2026) ────────
 // Rechtslogik in lib/vorlagen/kapitalerhoehung.ts (§3); Wortlaut-Grundlage
@@ -95,6 +96,7 @@ export function VorlageKapitalerhoehung() {
 
   const ag = rechtsform === 'ag';
   const docxErlaubt = card?.modus === 'vorlage' && (card.output?.includes('docx') ?? false);
+  const pk = usePaneKlasse();
 
   return (
     <div className="space-y-6">
@@ -122,7 +124,7 @@ export function VorlageKapitalerhoehung() {
       <PflichtDisclaimer />
 
       <section className="lc-card p-5 sm:p-6 space-y-5">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="Rechtsform">
             <select className={inputCls} value={rechtsform} onChange={(e) => setRechtsform(e.target.value as KeRechtsform)}>
               <option value="ag">Aktiengesellschaft (AG)</option>
@@ -147,7 +149,7 @@ export function VorlageKapitalerhoehung() {
         <NotariatsHinweis kanton={kanton} />
       <HrAmtHinweis kanton={kanton} />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label={`Firma (mit Zusatz «${ag ? 'AG' : 'GmbH'}»)`}>
             <input className={inputCls} value={firma} onChange={(e) => setFirma(e.target.value)} />
           </Field>
@@ -155,7 +157,7 @@ export function VorlageKapitalerhoehung() {
             <input className={inputCls} value={sitz} onChange={(e) => setSitz(e.target.value)} />
           </Field>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label={`Bisheriges ${ag ? 'Aktienkapital' : 'Stammkapital'} (CHF)`}>
             <input className={inputCls} inputMode="numeric" placeholder="Tausender mit Apostroph, z. B. 100'000" value={bisher} onChange={(e) => setBisher(e.target.value)} />
           </Field>
@@ -175,7 +177,7 @@ export function VorlageKapitalerhoehung() {
             <input className={inputCls} value={statutenArtikel} onChange={(e) => setStatutenArtikel(e.target.value)} placeholder="z. B. 3" />
           </Field>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label={`Datum ${ag ? 'GV' : 'GsV'}-Beschluss (6-Monats-Verfall!)`}
             hint={(() => { const v = keVerfallDatum(gvDatum); return v
               ? `Anmeldung spätestens am ${v.split('-').reverse().join('.')} — sonst fällt der Beschluss dahin (früher anmelden; eine Wochenend-/Feiertagsverlängerung ist nicht gesichert).`
@@ -194,7 +196,7 @@ export function VorlageKapitalerhoehung() {
         <div className="space-y-2">
           <p className="text-body-s font-medium text-ink-900"><NormText text={`Zeichner:innen (Zeichnungsschein je Person, Art. 652 OR)`} /></p>
           {zeichner.map((z) => (
-            <div key={z.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto_auto] gap-2 items-end">
+            <div key={z.key} className={pk('grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto_auto] gap-2 items-end', 'grid grid-cols-1 @5xl/pane:grid-cols-[2fr_3fr_1fr_auto_auto] gap-2 items-end')}>
               <Field label="Name">
                 <input className={inputCls} value={z.name}
                   onChange={(e) => setZeichner((alt) => alt.map((x) => x.key === z.key ? { ...x, name: e.target.value } : x))} />
@@ -240,7 +242,7 @@ export function VorlageKapitalerhoehung() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700')}>
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={bezugsrechtGewahrt} onChange={(e) => setBezugsrechtGewahrt(e.target.checked)} />
             Bezugsrecht weder eingeschränkt noch aufgehoben (Art. 652b OR)
@@ -255,7 +257,7 @@ export function VorlageKapitalerhoehung() {
           </label>
         </div>
         {bankInUrkunde && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Bank (in der Urkunde genannt)">
               <input className={inputCls} value={bankName} onChange={(e) => setBankName(e.target.value)} />
             </Field>
@@ -264,7 +266,7 @@ export function VorlageKapitalerhoehung() {
             </Field>
           </div>
         )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Ort (Unterschriften)">
             <input className={inputCls} value={ort} onChange={(e) => setOrt(e.target.value)} />
           </Field>

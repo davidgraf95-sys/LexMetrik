@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
 import { NormText } from '../NormText';
 import { Link } from 'react-router-dom';
@@ -76,6 +77,7 @@ const STRAF_DISCLAIMER =
   'Rechtsfragen; offene Weichen werden ausgewiesen. Behördenangaben: geprüfte Recherche, fachliche Abnahme ausstehend.';
 
 export function StrafZustaendigkeitTeil() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<StrafLinkZustand>>(() => {
     try {
       const l = permalinkLesen(STRAF_LINK_SPEC, window.location.search) as Partial<StrafLinkZustand>;
@@ -115,7 +117,7 @@ export function StrafZustaendigkeitTeil() {
         <div className="space-y-2">
           <GruppenTitel>2 · Worum geht es?</GruppenTitel>
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+            className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
             items={ANLIEGEN}
             value={anliegen}
             onSelect={setAnliegen}
@@ -131,7 +133,7 @@ export function StrafZustaendigkeitTeil() {
       <div className="space-y-2">
         <GruppenTitel>2 · Worum geht es?</GruppenTitel>
         <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+          className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
           items={ANLIEGEN}
           value={anliegen}
           onSelect={setAnliegen}
@@ -140,7 +142,7 @@ export function StrafZustaendigkeitTeil() {
 
       <div className="space-y-2">
         <GruppenTitel>3 · Konstellation</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Tatort-Lage" hint="Grundsatz: Behörden des Begehungsortes (Art. 31 StPO)">
             <select className={inputCls} value={tatort} onChange={(e) => setTatort(e.target.value as StrafTatortLage)}>
               {TATORT.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
@@ -254,7 +256,7 @@ export function StrafZustaendigkeitTeil() {
             zusatz="Für antragsabhängige Delikte zusätzlich: Vorlage «Strafantrag» (Art. 30 ff. StGB, Frist 3 Monate)." />
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
           <EckdatenKachel label="Forum" wert={r.forum.normen[0]?.artikel ?? '—'} sub="örtliche Anknüpfung" />
           <EckdatenKachel label="Behörde" wert={uebertretung ? 'StA / Übertretungsbehörde' : 'Staatsanwaltschaft'} />
           <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
@@ -377,6 +379,7 @@ const RM_LABEL: Record<string, string> = {
 
 
 function StrafRechtsmittelTeil() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<StrafRmLinkZustand>>(() => {
     try {
       const l = permalinkLesen(STRAF_RM_LINK_SPEC, window.location.search) as Partial<StrafRmLinkZustand>;
@@ -428,7 +431,7 @@ function StrafRechtsmittelTeil() {
     <div className="space-y-6">
       <div className="space-y-2">
         <GruppenTitel>3 · Angefochtener Entscheid</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Entscheidtyp" hint="bestimmt das statthafte Rechtsmittel (Art. 393/398/410 StPO)">
             <select className={inputCls} value={entscheidTyp} onChange={(e) => setEntscheidTyp(e.target.value as StrafEntscheidTyp)}>
               {ENTSCHEIDTYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
@@ -460,7 +463,7 @@ function StrafRechtsmittelTeil() {
           <Checkbox checked={bund} onChange={setBund} label="Bundesgerichtsbarkeit (Verfahren der Bundesanwaltschaft)" />
         </div>
         {!bund && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Kanton (für die konkrete Instanz-Adresse)" optional>
               <select className={inputCls} value={kanton} onChange={(e) => setKanton(e.target.value as Kanton | '')}>
                 <option value="">– wählen –</option>
@@ -508,7 +511,7 @@ function StrafRechtsmittelTeil() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
           <EckdatenKachel label="Rechtsmittel" wert={RM_LABEL[r.statthaft]} sub={r.statthaft !== 'keines' ? r.normverweise[r.normverweise.length - 1]?.artikel : undefined} />
           <EckdatenKachel label="Instanz" wert={r.statthaft === 'keines' ? '—' : r.instanz.split(' (')[0]} />
           <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist.split(' — ')[0]} />

@@ -4,6 +4,7 @@ import { EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorl
 import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import { BetragsFeld } from '../BetragsFeld';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { PdfExportButton } from '../PdfExport';
@@ -186,13 +187,15 @@ export function SchkgZustaendigkeitTeil() {
   let r: ReturnType<typeof bestimmeSchkgZustaendigkeit> | null;
   try { r = bestimmeSchkgZustaendigkeit(input); } catch { r = null; }
 
+  const pk = usePaneKlasse();
+
   return (
     <div className="space-y-6">
       {/* 2 · Anliegen */}
       <div className="space-y-2">
         <GruppenTitel>2 · Worum geht es?</GruppenTitel>
         <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
+          className={pk('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 @3xl/pane:grid-cols-3 gap-2')}
           items={ANLIEGEN.map((a) => ({ code: a.code, label: a.label, sub: a.sub }))}
           value={anliegen}
           onSelect={setAnliegen}
@@ -202,7 +205,7 @@ export function SchkgZustaendigkeitTeil() {
       {/* 3 · Schuldner + Konstellation */}
       <div className="space-y-2">
         <GruppenTitel>3 · Schuldnerin/Schuldner und Konstellation</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Schuldner-Typ" hint="bestimmt den Betreibungsort (Art. 46–50 SchKG)">
             <select value={schuldnerTyp} onChange={(e) => setSchuldnerTyp(e.target.value as SchkgSchuldnerTyp)} className={inputCls}>
               {SCHULDNER.map((s) => <option key={s.code} value={s.code}>{s.label}</option>)}
@@ -268,7 +271,7 @@ export function SchkgZustaendigkeitTeil() {
                 : 'massgeblich ist die Herleitung oben (z. B. Wohnsitz/Sitz der Schuldnerseite)'}
           {' '}— zeigt das zuständige Betreibungsamt bzw. das amtliche kantonale Verzeichnis.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="PLZ" hint="amtliches Ortschaftenverzeichnis — setzt Kanton und Gemeinde">
             <input
               type="text" inputMode="numeric" maxLength={4} value={ortPlz}
@@ -455,7 +458,7 @@ export function SchkgZustaendigkeitTeil() {
             </div>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             <EckdatenKachel label="Zuständige Stelle" wert={r.forum.stelle.split(' (')[0].split(' ODER')[0]} sub={r.forum.stelle.includes('ODER') ? 'Wahlgerichtsstand — Details unten' : undefined} />
             <EckdatenKachel label="Eingabe" wert={r.eingabe.art.split(' (')[0]} />
             <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
