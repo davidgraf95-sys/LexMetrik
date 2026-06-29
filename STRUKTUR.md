@@ -23,6 +23,26 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 5) — E container-responsive Panes + F PaneKopf=InhaltsKopf · Prod-Deploy
+
+Branch `feat/split-view-strang-a`, von Branch-HEAD auf Prod (PR #52 offen für main).
+- **E (Container-responsiv, ultracode-Analyse):** jedes Pane wählt sein Layout nach SEINER
+  Breite. Technik B (Gesetz-Leser): ResizeObserver auf der Pane-Wurzel (1024px) → `istXl =
+  imPane ? istBreit : istXlVp`; die früher viewport-`xl:`-Layoutklassen (2-Spalten-Grid, TOC-
+  Sidebar, Lesespalte) jetzt `istXl`-getrieben → **breites Pane = voller Einzelbildschirm-Aufbau
+  (zweispaltig + Gliederung), schmales = einspaltig + Drawer**. Technik A: Wizard-Split via
+  usePaneKlasse (md→@3xl/pane). Identitäts-`imPane`-Gates unberührt.
+- **F:** Gesetz-Leser meldet Kopfdaten unconditionally; der nächste InhaltsKopfMeldeProvider
+  fängt sie (Einzelansicht→InhaltsKopf, Pane→eigener PaneKopf). **PaneKopf zeigt bei Gesetzen
+  Breadcrumb «Gesetze › Bund › OR» + laufenden Artikel** (Parität zur Einzelansicht).
+- **Kürzel** hinter dem laufenden Artikel («Art. 7 OR»).
+- **Fundierter Session-Bug-Check** (6 Lupen × adversarial, 11 bestätigt) → gefixt: Cross-Pane-
+  TOC-Scroll (paneRoot-Scope), Aside-Höhe/interner Scroll, F-Breadcrumb-Dopplung (Inline
+  entfernt), <nav>-Landmark-Flut, ResizeObserver-Flackern (border-box), Wizard-Klassenordnung.
+  DEFERRED: Sekundär-Pane-Re-Render-Churn (Memo-Refactor, reine Perf).
+- gate grün · 86 e2e grün · golden byte-gleich · Prod verifiziert (Pane 1070px→2-spaltig,
+  PaneKopf «Gesetze›Bund›OR · Art.9 OR»). OFFEN: Technik-A-Rest (Formular-Grids P2–P5).
+
 ## Session 29.6.2026 (Forts. 4) — Inhalts-Kopf (Einzelansicht) + Verweis-Popup-Fix · Prod-Deploy
 
 Auftrag David (A–D, nach «go» + «ja zu deploy»). Branch `feat/split-view-strang-a`,
