@@ -12,6 +12,9 @@ import { SekundaerPane } from './Pane';
 import { PaneProvider } from './PaneKontext';
 import { useDialogFokus } from './useDialogFokus';
 
+// Neutraler Pane-Kontext für den 1-Pane-Fall (DOM-/verhaltensneutral, stabil).
+const KEIN_PANE = { imPane: false, rolle: 'primaer' as const, wurzel: null };
+
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
 // ziehen ODER per Tastatur (Pfeil ←/→) verstellen. role="separator" mit
 // aria-valuenow/min/max macht die Geste WCAG-zugänglich (axe-Tor). Reine
@@ -96,6 +99,25 @@ export function Shell({ children }: { children: ReactNode }) {
   // darunter (B-4) horizontales Swipe-/Snap-Falten (1 Pane sichtbar, wischen). Der
   // Default (keine Panes) bleibt der byte-gleiche 1-Pane-Pfad (Prerender hat nie Panes).
   const multipane = pane.sekundaer.length > 0;
+  // Scroll-Übergabe beim Moduswechsel: in 1-Pane scrollt das Fenster, im Multipane
+  // das primäre Pane. Ohne Übergabe spränge die Leseposition beim Öffnen/Schliessen
+  // auf 0 — wir merken den Scroll der aktuellen Quelle und übertragen ihn (rAF).
+  const scrollMerk = useRef(0);
+  useEffect(() => {
+    const ziel = multipane ? primaerWurzel.current : null;
+    const lese = () => { scrollMerk.current = ziel ? ziel.scrollTop : window.scrollY; };
+    const el: HTMLElement | Window = ziel ?? window;
+    el.addEventListener('scroll', lese, { passive: true });
+    return () => el.removeEventListener('scroll', lese);
+  }, [multipane]);
+  useEffect(() => {
+    const y = scrollMerk.current;
+    const id = requestAnimationFrame(() => {
+      if (multipane) { if (primaerWurzel.current) primaerWurzel.current.scrollTop = y; }
+      else { window.scrollTo(0, y); }
+    });
+    return () => cancelAnimationFrame(id);
+  }, [multipane]);
   // B-2: «daneben öffnen» nur ab lg + solange Kapazität frei ist.
   const paneSteuerung = { oeffneDaneben: pane.oeffneDaneben, kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER };
   // Fokus nach dem Schliessen eines Panes zurück in den Hauptinhalt (A11y).
@@ -142,18 +164,22 @@ export function Shell({ children }: { children: ReactNode }) {
         {/* Rechte Spalte: Top-Streifen + Inhalt + Footer. Im Multipane-Modus
             höhenbegrenzt (h-screen), damit die Panes je eigen scrollen. */}
         <div className={`flex-1 min-w-0 flex flex-col ${multipane ? 'h-dvh' : 'min-h-screen'}`}>
+          {/* PaneSteuerung umfasst AUCH die Topbar — der Reiter-Tracker dort bietet
+              «⧉ nebeneinander öffnen» an (usePaneSteuerung). */}
+          <PaneSteuerungProvider value={paneSteuerung}>
           <Topbar
             onMenu={() => setSchubladeOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
             inhaltBreit={inhaltsbreite.breit}
             onInhaltsbreiteSetzen={inhaltsbreite.setBreite}
+            zeigeInhaltsbreite={!multipane}
           />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (
             <div className="bg-warn-bg border-b border-warn-500">
-              <div className={`${inhaltsbreiteKlasse} mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2`}>
+              <div className={`${multipane ? 'max-w-none' : inhaltsbreiteKlasse} mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2`}>
                 <p className="text-body-s text-warn-700">
                   Diese Sprachfassung ist in Bearbeitung. Inhalte werden vorerst auf Deutsch angezeigt.
                 </p>
@@ -165,33 +191,30 @@ export function Shell({ children }: { children: ReactNode }) {
             </div>
           )}
 
-          <PaneSteuerungProvider value={paneSteuerung}>
-          {!multipane ? (
-            <>
-              <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
-                <div className={`${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
-              </main>
-
-              <Footer />
-            </>
-          ) : (
-            // ── Multipane (B-1): primäres Pane (BrowserRouter, treibt URL/Titel/
-            //    Reiter) links + sekundäre location-fixierte Panes (<Routes location>)
-            //    rechts. Jedes Pane scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
-            <div className="flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory">
-              <PaneProvider value={{ imPane: true, rolle: 'primaer', wurzel: primaerWurzel }}>
+          {/* STABILE Element-Kette um {children} in 1-Pane UND Multipane → kein
+              Remount des Primär-Inhalts beim Öffnen/Schliessen des ersten/letzten
+              Panes (sonst Scroll-/State-Verlust, Bugcheck). In 1-Pane ist der
+              Wrapper `contents` (layoutneutral) + PaneProvider DOM-neutral →
+              Default byte-gleich (Fensterscroll, kein container-type, kein overflow). */}
+            <div className={multipane ? 'flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory' : 'contents'}>
+              <PaneProvider value={multipane ? { imPane: true, rolle: 'primaer', wurzel: primaerWurzel } : KEIN_PANE}>
                 <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
-                  className="@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start">
-                  <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12">{children}</div>
+                  className={multipane
+                    ? '@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start'
+                    : 'flex-1 w-full focus:outline-none'}>
+                  <div className={multipane
+                    ? 'mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12'
+                    : `${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
                 </main>
               </PaneProvider>
-              {pane.sekundaer.map((pfad, i) => (
+              {/* Sekundäre location-fixierte Panes (<Routes location> + eigener Navigator). */}
+              {multipane && pane.sekundaer.map((pfad, i) => (
                 <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`}
                   onSchliessen={() => schliesseUndFokus(i)}
                   onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer))} />
               ))}
             </div>
-          )}
+          {!multipane && <Footer />}
           </PaneSteuerungProvider>
         </div>
       </div>

@@ -28,7 +28,11 @@ function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> | null)
   return imPane ? wurzel?.current ?? null : null;
 }
 function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
-  return root ? root.querySelector(`[id="art-${token}"]`) : document.getElementById(`art-${token}`);
+  if (!root) return document.getElementById(`art-${token}`);
+  // CSS.escape: ein präparierter #hash-Token (z. B. mit «"]») darf den Selektor
+  // nicht sprengen. getElementById (document-Pfad) ist ohnehin selektor-frei.
+  const id = `art-${token}`;
+  return root.querySelector(`#${typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(id) : id}`);
 }
 
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
@@ -259,7 +263,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrolle();
       window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
     }, 110));
-  }, [sektionen, basisPfad, istSekundaer, imPane]);
+  }, [sektionen, basisPfad, istSekundaer, imPane, wurzel]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
@@ -307,7 +311,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrollVorSuche.current = null;
       window.requestAnimationFrame(() => setze(y));
     }
-  }, [suche, imPane]);
+  }, [suche, imPane, wurzel]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -346,7 +350,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
     });
-  }, [eintraege, sektionen, istSekundaer, imPane]);
+  }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
@@ -434,7 +438,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
     };
-  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane, wurzel]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach

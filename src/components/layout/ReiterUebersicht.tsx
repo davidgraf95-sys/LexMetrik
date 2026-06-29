@@ -7,6 +7,7 @@ import { type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { reiterKategorie, herkunftVon, KAT_ORDER, HERKUNFT_ORDER } from '../../lib/tabGruppen';
 import { TabPanel } from './TabPanel';
 import { useDialogFokus } from './useDialogFokus';
+import { usePaneSteuerung } from './usePaneLayout';
 
 // ─── «Alle Reiter»-Übersicht in der Topbar (Auftrag David 26.6.2026) ────────
 //
@@ -25,6 +26,7 @@ export function ReiterUebersicht() {
   const tabs = useTabs();
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
+  const { oeffneDaneben, kannOeffnen } = usePaneSteuerung();
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
   const [panelOffen, setPanelOffen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -164,6 +166,7 @@ export function ReiterUebersicht() {
             aktivSchluessel={aktivSchluessel}
             onNavigate={(p) => { navigate(p); setPanelOffen(false); }}
             onSchliessen={schliessen}
+            onDaneben={kannOeffnen ? (p) => { oeffneDaneben(p); setPanelOffen(false); } : undefined}
           />
           {tabs.length > 1 && (
             <div className="mt-1 border-t border-line pt-1">

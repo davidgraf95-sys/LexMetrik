@@ -1,27 +1,32 @@
-import { Suspense, useRef, useState } from 'react';
+import { Suspense, useContext, useMemo, useRef, useState } from 'react';
+import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
 
-// ─── Sekundäres Split-View-Pane (B-1) ──────────────────────────────────────
+// ─── Sekundäres Split-View-Pane (B-1 + B-3-Navigation) ─────────────────────
 //
 // Ein zusätzliches Lesefenster, das einen ZWEITEN Erlass/Rechner neben dem
-// primären Pane zeigt. Technik: `<RouteSwitch location={pfad}>` (= react-routers
-// `<Routes location>`), das die Seite für DIESEN Pfad im SELBEN BrowserRouter
-// rendert — react-router v7 verbietet einen verschachtelten zweiten Router
-// (MemoryRouter-in-BrowserRouter wirft, empirisch im B-1-Smoke bestätigt).
+// primären Pane zeigt. Technik: `<RouteSwitch location={loc}>` (= react-routers
+// `<Routes location>`) im SELBEN BrowserRouter — react-router v7 verbietet einen
+// verschachtelten zweiten Router (MemoryRouter-in-BrowserRouter wirft).
+//
+// EIGENE Navigation (B-3-vorgezogen): Ein Pane hat eine eigene `loc`-State und
+// einen eigenen `navigator` (über UNSAFE_NavigationContext). So aktualisieren
+// `useNavigate`/`setSearchParams`/`<Link>` IM Pane NUR das Pane (loc), nie den
+// primären BrowserRouter — sonst würde z. B. der Rechtsweg-Umschalter eines
+// Rechners im Sekundär-Pane die Haupt-URL kapern (Bugcheck-Major). Das primäre
+// Pane bleibt die einzige URL-Quelle.
 //
 // Eigene <Suspense>+<ErrorBoundary> (ein ladendes/fehlerndes Pane leert die
-// anderen nicht), eigener Scroll-Container + `@container/pane` (Container-Query
-// → pane-fähige Layouts reagieren auf die PANE-Breite, nicht den Viewport).
+// anderen nicht), eigener Scroll-Container + `@container/pane` (Container-Query).
 //
 // §5/§8: KEIN RouteMeta/TabTracker hier — Titel/Reiter treibt allein das primäre
-// Pane (B3). Derselbe Routen-Baum (RouteSwitch), nur an anderer Location.
-// Zustandslos: das Pane kennt nur seinen Pfad.
-//
-// GRENZE B-1 (→ B-3): Die Sicht ist auf `pfad` fixiert; ein Klick auf einen
-// echten Router-Link IM Pane navigiert noch das primäre (URL-)Pane. Interne
-// #Anker (Artikel) scrollen lokal. Eigene Pane-Navigation kommt in B-3.
+// Pane. Zustandslos: das Pane kennt nur seine(n) Pfad(e), nie Formularinhalt.
+
+function toStr(to: To): string {
+  return typeof to === 'string' ? to : createPath(to);
+}
 
 function Laden() {
   // Identisch zum App-Suspense-Fallback (FAHRPLAN-DESIGN 5.3).
@@ -41,6 +46,33 @@ export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
 }) {
   const wurzel = useRef<HTMLElement>(null);
   const [kopiert, setKopiert] = useState(false);
+  // Pane-eigene History + Navigator → das Pane ist eine AUTONOME, voll
+  // navigierbare Sicht: Links, Breadcrumbs (RechnerKopf «Übersicht/Katalog»),
+  // push/replace UND zurück/vorwärts (go) wirken NUR im Pane, nie im primären
+  // BrowserRouter. Den Eltern-NavigationContext erben und nur den navigator
+  // ersetzen (future/useTransitions/static/basename bleiben korrekt). Eigener
+  // In-Memory-Stack in einer Ref; `tick` erzwingt das Re-Render bei Navigation.
+  const elternNav = useContext(UNSAFE_NavigationContext);
+  const [hist, setHist] = useState<{ stack: string[]; idx: number }>({ stack: [pfad], idx: 0 });
+  const loc = hist.stack[hist.idx];
+  const navKontext = useMemo(() => ({
+    ...elternNav,
+    static: false,
+    navigator: {
+      ...elternNav.navigator,
+      createHref: (to: To) => toStr(to),
+      encodeLocation: (to: To) => parsePath(toStr(to)) as Location,
+      go: (delta: number) => setHist((h) => ({ ...h, idx: Math.max(0, Math.min(h.stack.length - 1, h.idx + delta)) })),
+      push: (to: To) => setHist((h) => {
+        const stack = [...h.stack.slice(0, h.idx + 1), toStr(to)];
+        return { stack, idx: stack.length - 1 };
+      }),
+      replace: (to: To) => setHist((h) => {
+        const stack = [...h.stack]; stack[h.idx] = toStr(to);
+        return { stack, idx: h.idx };
+      }),
+    },
+  }), [elternNav]);
   return (
     <PaneProvider value={{ imPane: true, rolle: 'sekundaer', wurzel }}>
       <section
@@ -48,9 +80,10 @@ export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
         aria-label={label}
         className="@container/pane relative flex-1 min-w-0 overflow-y-auto overscroll-contain border-l border-line focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start"
       >
-        {/* Schliessen-Knopf: sticky oben rechts, damit das Pane jederzeit
-            wieder geschlossen werden kann (kein Sackgassen-Zustand). */}
-        <div className="sticky top-0 z-10 flex justify-end gap-1.5 p-1.5">
+        {/* Schliessen/Teilen: sticky oben rechts. Die Leiste selbst ist
+            pointer-events-none, damit der darunterliegende Seitenkopf (Breadcrumb
+            «Übersicht/Katalog») klickbar bleibt — nur die Knöpfe fangen Klicks. */}
+        <div className="pointer-events-none sticky top-0 z-10 flex justify-end gap-1.5 p-1.5 [&>button]:pointer-events-auto">
           {onTeilen && (
             <button
               type="button"
@@ -78,11 +111,15 @@ export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
           </button>
         </div>
         <div className="mx-auto w-full max-w-content px-5 sm:px-6 pb-8 -mt-7">
-          <ErrorBoundary>
-            <Suspense fallback={<Laden />}>
-              <RouteSwitch location={pfad} />
-            </Suspense>
-          </ErrorBoundary>
+          {/* Eigener Navigator (UNSAFE_NavigationContext) → Navigation bleibt im Pane.
+              static:false + leere basename wie im BrowserRouter. */}
+          <UNSAFE_NavigationContext.Provider value={navKontext}>
+            <ErrorBoundary>
+              <Suspense fallback={<Laden />}>
+                <RouteSwitch location={loc} />
+              </Suspense>
+            </ErrorBoundary>
+          </UNSAFE_NavigationContext.Provider>
         </div>
       </section>
     </PaneProvider>

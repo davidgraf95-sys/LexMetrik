@@ -28,13 +28,22 @@ function normPfad(pfad: string): string {
   return tabSchluessel(pfad);
 }
 
-/** Defensiv säubern: nur absolute Pfade, normalisiert, dedupliziert, gekappt. */
+/**
+ * Defensiv säubern: nur absolute Pfade, gekappt, dedupliziert nach Reiter-Identität
+ * (normPfad). Gespeichert wird der VOLLE Pfad inkl. #hash — der wählt bei manchen
+ * Werkzeugen das Unter-Rechner-Tab (z. B. /rechner/zustaendigkeit#schkg); würde man
+ * normalisiert speichern, öffnete das Pane auf dem falschen Tab. Dedup nur über die
+ * Identität, damit zwei Hash-Varianten desselben Pfads sich nicht fälschlich tilgen.
+ */
 function saeubere(arr: unknown[]): string[] {
   const sauber: string[] = [];
+  const gesehen = new Set<string>();
   for (const x of arr) {
     if (typeof x !== 'string' || !x.startsWith('/')) continue;
     const n = normPfad(x);
-    if (!sauber.includes(n)) sauber.push(n);
+    if (gesehen.has(n)) continue;
+    gesehen.add(n);
+    sauber.push(x);
     if (sauber.length >= MAX_SEKUNDAER) break;
   }
   return sauber;
@@ -78,8 +87,6 @@ export interface PaneLayout {
   oeffneDaneben: (pfad: string) => void;
   /** Schliesst das sekundäre Pane an Index i. */
   schliesse: (i: number) => void;
-  /** Schliesst alle sekundären Panes (zurück auf 1-Pane = heute). */
-  schliesseAlle: () => void;
 }
 
 export function usePaneLayout(): PaneLayout {
@@ -104,16 +111,15 @@ export function usePaneLayout(): PaneLayout {
 
   const oeffneDaneben = useCallback((pfad: string) => {
     const n = normPfad(pfad);
-    setSekundaer((s) => (s.length >= MAX_SEKUNDAER || s.includes(n) ? s : [...s, n]));
+    // Vollen Pfad (inkl. #hash) speichern, Dedup über die Reiter-Identität.
+    setSekundaer((s) => (s.length >= MAX_SEKUNDAER || s.some((x) => normPfad(x) === n) ? s : [...s, pfad]));
   }, []);
 
   const schliesse = useCallback((i: number) => {
     setSekundaer((s) => s.filter((_, idx) => idx !== i));
   }, []);
 
-  const schliesseAlle = useCallback(() => setSekundaer([]), []);
-
-  return { sekundaer, oeffneDaneben, schliesse, schliesseAlle };
+  return { sekundaer, oeffneDaneben, schliesse };
 }
 
 // ─── Pane-Steuerung (B-2) ──────────────────────────────────────────────────
