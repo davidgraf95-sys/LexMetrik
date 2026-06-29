@@ -23,6 +23,23 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts.) — Split-View B-1 + B-2 (ultracode, NICHT deployt)
+
+Fortsetzung gleicher Branch `feat/split-view-strang-a`. Auftrag David: B-1 + B-2 mit ultracode,
+fundierter Bug-Check nach B-1. **Committet, noch nicht deployt** (Prod hält A/B-0/B-0b, `d20f2337`).
+- **B-1 Pane-Container** (`e3795776`): ultracode-Architektur-Design (3 Vorschläge→bewertet→
+  synthetisiert) löste 2 harte Fragen (container-vs-viewport, Scroll-Treue). Default 1 Pane
+  byte-gleich; Multipane ab lg. Sekundär-Pane via `<RouteSwitch location>` (NICHT MemoryRouter —
+  react-router v7 verbietet Nesting, im Smoke gefangen). `PaneKontext`/`paneKlasse` (CQ nur im Pane),
+  `usePaneLayout` (Pfade only), `Pane.tsx`. Smoke: Gesetz | Rechner nebeneinander, 0 Fehler.
+- **B-1-Bugcheck** (ultracode, 6 Linsen, 23→13 bestätigt, alle LATENT): Kernbefund — gesetz-leser
+  an window/document-Globals gekoppelt → als Sekundär-Pane fehlerhaft (URL/Scroll/Tab); Rechner sauber.
+- **B-2 «Rechner daneben»** (`ec4bb1d8`, SICHERE Scope, Davids Entscheid): KontextPanel-Werkzeuge
+  bekommen ⧉ → Rechner als Sekundär-Pane neben dem Gesetz (Verzahnung Norm→Werkzeug, smoke-bestätigt).
+  `PaneSteuerung`-Kontext, Fokus-Rückgabe. 86 e2e grün.
+- **OFFEN: B-2.5** (gesetz-leser pane-fähig: window/DOM-Globals entkoppeln) BEVOR Gesetz im
+  Sekundär-Pane erlaubt wird; dann B-4 Mobil-Faltung, B-5 Layout-Permalink. Detail `FAHRPLAN-SPLIT-VIEW.md`.
+
 ## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
 
 Auftrag David: Split-View (ROADMAP-Strang 14) mit ultracode bauen; «push und deploy»; Bug-Checks

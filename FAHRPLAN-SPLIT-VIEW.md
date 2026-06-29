@@ -1,7 +1,9 @@
 # FAHRPLAN — Multi-Pane / Split-View (+ Breiten-Umschalter)
 
-> **Stand 29.6.2026 · Strang A FERTIG + B-0 FERTIG (Branch `feat/split-view-strang-a`,
-> nicht deployt — Batch-Fenster).** Detail-„Wie" zum ROADMAP-Strang
+> **Stand 29.6.2026 · A + B-0 + B-0b + B-1 + B-2 FERTIG (Branch `feat/split-view-strang-a`).**
+> A/B-0/B-0b auf **Prod** (Commit `d20f2337`); B-1 (`e3795776`) + B-2 (`ec4bb1d8`) committet,
+> noch nicht deployt. **Nächstes = B-2.5** (gesetz-leser pane-fähig, dann Gesetz-im-Sekundär-Pane
+> freigeben) → B-4 Mobil → B-5. Detail-„Wie" zum ROADMAP-Strang
 > *„Multi-Pane / Split-View"*. Steuerung (Reihenfolge/Park) bleibt in `ROADMAP.md`;
 > Ist-Zustand/Deploy in `STRUKTUR.md`. Auftrag David 29.6.2026: zwei oder drei
 > „Engines" nebeneinander **wie im Browser** — Gesetz | Rechner | Begründungs-Absatz.
@@ -88,22 +90,41 @@ Jede Phase: Default = heutiges 1-Pane-Verhalten ⇒ Golden grün.
   `App.tsx` in `src/RouteSwitch.tsx` gezogen; App.tsx rendert `<RouteSwitch />` an gleicher
   Stelle. Verhaltensneutral bewiesen (golden byte-gleich, 57 Routen prerendern, Runtime-Smoke
   sauber). Risikoarmes Fundament gelegt.
-- **B-0b Container-Query-Fundament** (siehe Kernbefund): Plugin **oder** `index.css`-Basis +
-  **CQ-1**-Migration der pane-fähigen Layouts. **Der Hauptaufwand.**
-- **B-1 Pane-Container in `Shell.tsx`**: `usePaneLayout` (sichtbare Pane-Pfade; Vorlage
-  `useSeitenleiste`/`tabs.ts`). Shell rendert `panes.map(p => <Pane path=p/>)` mit Flex +
-  Ziehgriffen (Ziehgriff-Code aus Shell.tsx wiederverwendbar). **Default 1 Pane = exakt heute.**
+- **B-0b Container-Query-Fundament** *(✅ Plugin-Teil FERTIG, Commit `9e66cd98`; CQ-1-Migration
+  in B-1 eingeflossen)*: `@tailwindcss/container-queries` installiert + verdrahtet, verhaltensneutral.
+- **B-1 Pane-Container in `Shell.tsx`** *(✅ FERTIG, Commit `e3795776`)*: `usePaneLayout` (nur
+  Pfade, localStorage, max 2 sekundär). Shell: Default-Branch byte-gleich; Multipane-Branch (ab lg,
+  ≥1 sekundär) = Flex-Reihe primär + `sekundaer.map`. **Default 1 Pane = exakt heute** (golden
+  byte-gleich, 57 Routen prerendern, Smoke 0 Fehler, mobil Fallback).
   - Primär-Pane: bestehender `BrowserRouter` (treibt URL — B3).
-  - Sekundär-Pane: `<MemoryRouter initialEntries={[panePfad]}><RouteSwitch/></MemoryRouter>` —
-    eigene History/Scroll, interne Links/Anker bleiben im Pane.
-  - **Pro Pane eigene `<Suspense>` + `<ErrorBoundary>`** — ein ladendes/fehlerndes Pane
-    leert die anderen nicht.
-  - Jedes Pane `container-type: inline-size` + eigener Scroll-Container (`overflow-y-auto`).
-- **B-2 Pane-Steuerung**: „nebeneinander öffnen" aus `ReiterUebersicht` + Reader/Rechner-
-  Kontextpanel („Werkzeug rechts daneben" → Verzahnung). Schließen; max 3; responsiv 1/2/3.
-  „Fokussiertes Pane" treibt URL/`document.title`/Tab-Write (sonst konkurrieren Panes).
-- **B-3 Scroll & Fokus pro Pane**: `ScrollWiederherstellung`/`ScrollZuHash` von window auf
-  Pane-Container umstellen; A11y (jedes Pane `<section aria-label>`, Tastatur-Wechsel).
+  - Sekundär-Pane: **`<RouteSwitch location={pfad}>`** (= `<Routes location>`) im SELBEN Router —
+    **NICHT** MemoryRouter (react-router v7 verbietet verschachtelten Router; im Smoke bestätigt).
+  - **Pro Pane eigene `<Suspense>` + `<ErrorBoundary>`** + `@container/pane` + eigener Scroll.
+  - CQ-1: Rechtsprechung/Schnellrechner via `paneKlasse` (@3xl/pane); gesetz-leser im Pane
+    einspaltig+Drawer (`istXl` pane-aware). `container-type` NUR am Pane-Wrapper (kein Default-Drift).
+- **B-1-Bugcheck (ultracode, 6 Linsen, 13 bestätigt — alle LATENT bis ein Opener existiert):**
+  Kernbefund: der **gesetz-leser ist an window/document-Globals gekoppelt** (`window.history.
+  replaceState` in `springeZuArtikel`, `window.location`-Reads, Tab-Tracker, document-globale
+  `getElementById('art-…')` + IntersectionObserver). Als **Primär**-Pane korrekt (es IST die URL),
+  als **Sekundär**-Pane fehlerhaft (zerstört Haupt-URL, scrollt falsches Pane via Duplikat-`art-`-IDs,
+  trackt falschen Tab). Rechner-Panes sind sauber.
+- **B-2 Pane-Steuerung** *(✅ FERTIG — SICHERE Scope, Commit `ec4bb1d8`)*: „⧉ daneben öffnen" im
+  Gesetzleser-`KontextPanel` («Passende Werkzeuge») öffnet einen **Rechner** als Sekundär-Pane
+  (Gesetz primär | Rechner sekundär — die Verzahnung, smoke-bestätigt). `PaneSteuerung`-Kontext
+  (`oeffneDaneben`/`kannOeffnen`, nur ab lg + freie Kapazität, max 2 sekundär). Schliessen +
+  Fokus-Rückgabe. **Nur pane-SICHERE Ziele (Rechner).**
+- **B-2.5 (NEU, vorgelagert vor weitere Pane-Inhalte) — gesetz-leser pane-fähig machen**
+  *(die B-1-Bugcheck-Majors; nötig BEVOR ein Gesetz im Sekundär-Pane geöffnet werden darf)*:
+  1. `springeZuArtikel`/Deeplink/Tab-Tracker: `window.history.replaceState` + `window.location`-Reads
+     bei `imPane` unterdrücken (Pane darf Haupt-History/-URL nie schreiben).
+  2. DOM-Queries (`getElementById('art-…')`, `querySelectorAll('[id^=art-]')`, IntersectionObserver)
+     auf den **Pane-Root** scopen (Ref via Kontext) statt `document` — sonst Duplikat-ID-Kollision.
+  3. Scroll/Observer auf den **Pane-Scroll-Container** statt `window` (Midpoint aus Pane-Rect).
+  4. „Nächste Instanz"/`merkeTab`/`aktualisiereTabArtikel` aus `basisPfad` statt `window.location`.
+  Danach: B-2-Opener auch für Gesetze/Entscheide freigeben + EntscheidLeser-Lesemodus per Portal
+  aus dem `@container/pane` lösen (sonst nicht mehr vollflächig).
+- **B-3 Scroll & Fokus pro Pane** *(teilweise in B-2.5 vorgezogen)*: `ScrollWiederherstellung`/
+  `ScrollZuHash` von window auf Pane-Container; A11y (jedes Pane `<section aria-label>`, Tastatur-Wechsel).
 - **B-4 Mobil-Faltung**: < `lg` → 1 Pane + Reiter-Umschaltung (kein 3-Spalten-Quetschen);
   bestehende Schubladen-Logik nutzen.
 - **B-5 (optional) Layout teilen**: aktueller Pane-Satz → `?p=…`-Permalink (B3→B2-Brücke);
