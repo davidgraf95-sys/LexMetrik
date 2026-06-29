@@ -47,8 +47,9 @@ export interface SekundaerPaneProps {
   ziehbar?: boolean;
   /** flex-grow u. a. für die ziehbare Pane-Breite (nur ab lg gesetzt). */
   style?: CSSProperties;
-  /** Meldet die LIVE-Location des Panes nach In-Pane-Navigation (für Titel/teilen/promote). */
-  onNavigiert?: (pfad: string) => void;
+  /** Meldet die LIVE-Location des Panes (Seed-pfad, aktuelle Location) nach In-Pane-
+   *  Navigation (für Titel/teilen/promote). (pfad, loc) → stabile Shell-Callback. */
+  onNavigiert?: (pfad: string, loc: string) => void;
   /** Drag-Drop: Griff (Kopf) + Spalte (Drop-Ziel). */
   onDragStart?: (e: DragEvent) => void;
   onDragEnd?: (e: DragEvent) => void;
@@ -73,7 +74,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
   // Live-Location nach oben melden (Titelleiste/teilen/promote/Dedup nutzen den
   // AKTUELL gezeigten Pfad, nicht den Anfangs-pfad). Der Pane-Key bleibt der
   // Seed-pfad → kein Remount bei In-Pane-Navigation.
-  useEffect(() => { onNavigiert?.(loc); }, [loc, onNavigiert]);
+  useEffect(() => { onNavigiert?.(pfad, loc); }, [pfad, loc, onNavigiert]);
   const navKontext = useMemo(() => ({
     ...elternNav,
     static: false,
