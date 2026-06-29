@@ -23,6 +23,7 @@ import { SCHKG_LINK_SPEC, type SchkgLink } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 
 const EINHEITEN: { code: SchkgEinheit; label: string }[] = [
@@ -101,6 +102,7 @@ export function SchkgFristenForm() {
   const [hemmung, setHemmung] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.hemmungAn ?? false, von: ausLink.hemmungVon ?? '', bis: ausLink.hemmungBis ?? '' });
   const [rechtsstillstand, setRechtsstillstand] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.rsAn ?? false, von: ausLink.rsVon ?? '', bis: ausLink.rsBis ?? '' });
 
+  const pk = usePaneKlasse();
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) => setForm((f) => ({ ...f, [k]: v }));
   const presetsDerPhase = PRESETS_SCHKG.filter((p) => p.phase === phase);
 
@@ -212,7 +214,7 @@ export function SchkgFristenForm() {
 
       {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
           die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
-      <div className="rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+      <div className={pk('rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', 'rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
         <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
@@ -237,7 +239,7 @@ export function SchkgFristenForm() {
       )}
 
       {/* Eingaben */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Auslösendes Ereignis (Datum)" hint={form.ausloeser}>
           <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
@@ -332,7 +334,7 @@ export function SchkgFristenForm() {
                   <h3 className="text-h3 font-display font-semibold text-ink-900">{sansAmp(a.titel)}</h3>
                   {badge && <span className={`lc-badge ${badge.cls}`}>{badge.label}</span>}
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
                   {[
                     { label: 'Auslösendes Ereignis', val: e.massgeblicherEreignistag },
                     { label: 'Fristbeginn (dies a quo)', val: e.diesAQuo },

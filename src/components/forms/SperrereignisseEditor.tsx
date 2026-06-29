@@ -2,6 +2,7 @@ import type { Sperrereignis, SperrereignisTyp } from '../../types/legal';
 import { NormText } from '../NormText';
 import { DatumsFeld } from '../DatumsFeld';
 import { inputCls } from '../vorlagen/ui';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import { SPERREREIGNIS_TYPEN, MIT_NIEDERKUNFT, sperrereignisEntfernen } from './sperrereignisseShared';
 
 // ─── Geteilter Sperrereignis-Listen-Editor (Art. 336c OR) ───────────────────
@@ -22,6 +23,7 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
   /** Optionaler Zusatz neben dem Titel (z. B. «nur bei Arbeitgeberkündigung relevant»). */
   hinweis?: string;
 }) {
+  const pk = usePaneKlasse();
   const update = (i: number, patch: Partial<Sperrereignis>) => {
     const list = [...wert];
     list[i] = { ...list[i], ...patch } as Sperrereignis;
@@ -54,7 +56,7 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
             <span className="text-xs font-semibold text-ink-600">Ereignis {i + 1}</span>
             <button type="button" onClick={() => onChange(sperrereignisEntfernen(wert, i))} className="text-body-s text-danger-700 hover:underline">Entfernen</button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             <div className="space-y-1">
               <label className="text-xs font-medium text-ink-600">Typ</label>
               <select value={e.typ} onChange={(ev) => update(i, { typ: ev.target.value as SperrereignisTyp })} className={inputCls + ' text-xs'}>

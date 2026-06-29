@@ -17,6 +17,7 @@ import { IcsExportButton } from '../IcsExportButton';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
 import { SperrereignisseEditor } from './SperrereignisseEditor';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
@@ -69,6 +70,8 @@ export function KuendigungSperrForm({ onBeendigung }: {
     try { return Object.keys(permalinkLesen(KSP_LINK_SPEC, window.location.search)).length > 0; }
     catch { return false; }
   });
+
+  const pk = usePaneKlasse();
 
   const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) => {
     setBeruehrt(true);
@@ -130,7 +133,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
       <PflichtDisclaimer
         kurz="Kündigungsfrist und Sperrfristen nach Art. 335c / 336c OR; massgeblich sind GAV und Einzelvertrag."
         text={KSP_DISCLAIMER} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Vertragsbeginn">
           <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
         </Field>
@@ -221,7 +224,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
         <ErgebnisBlock>
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               <div className="lc-tile border-t-[3px] border-t-danger-500">
                 <p className="lc-overline mb-1">Status</p>
                 <p className="text-h2 leading-none font-semibold text-danger-700">NICHTIG</p>
@@ -236,7 +239,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Status</p>
                 <p className="text-body-l font-semibold text-sage-700">Gültig</p>

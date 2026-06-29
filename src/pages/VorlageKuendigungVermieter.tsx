@@ -10,6 +10,7 @@ import { KANTONE } from '../lib/kantone';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Maske 2b: Vermieter-Kündigung — CHECKLISTE, bewusst KEINE Vollvorlage ──
 // Bauspezifikation: bibliothek/recherche/kuendigungs-masken.md (§8-Grenze):
@@ -24,6 +25,7 @@ const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 export function VorlageKuendigungVermieter() {
   const card = karte('kuendigung-vermieter');
+  const pk = usePaneKlasse();
   const { locale } = useLocale();
   const [objekt, setObjekt] = useState<Mietobjekt>('wohnung');
   const [kanton, setKanton] = useState<Kanton | ''>('');
@@ -98,7 +100,7 @@ export function VorlageKuendigungVermieter() {
 
       <section className="lc-card p-5 sm:p-6 space-y-4">
         <GruppenTitel>Termin- und Fristen-Auskunft (Mietengine)</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="Objektart">
             <select className={inputCls} value={objekt} onChange={(e) => setObjekt(e.target.value as Mietobjekt)}>
               <option value="wohnung">Wohnung</option>
@@ -117,7 +119,7 @@ export function VorlageKuendigungVermieter() {
           </Field>
         </div>
         {auskunft && auskunft.status !== 'nichtig' && (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             <div className="lc-tile">
               <p className="lc-overline mb-1">Wirksamer Endtermin</p>
               <p className="num text-body-l font-semibold text-ink-900">{auskunft.endtermin ?? '–'}</p>

@@ -24,6 +24,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── Allgemeiner Fristenrechner (Free) – UI ─────────────────────────────────
 // Reine Darstellung; sämtliche Rechtsregeln liegen in lib/allgemeineFrist.ts.
@@ -54,6 +55,7 @@ const DEFAULTS: State = {
 // der Preset-Index des Tagerechners listet sie von dort (§5).
 
 export function AllgemeineFristForm() {
+  const pk = usePaneKlasse();
   const [tab, setTab] = useState<'frist' | 'rueckwaerts' | 'zwischen'>('frist');
   // FE-3: Preset-Index-Links tragen den Fach-Preset-Schlüssel (fp=) —
   // dieselbe Wirkung wie der Chip-Klick (Länge/Einheit/Toggles + Hinweis).
@@ -177,7 +179,7 @@ export function AllgemeineFristForm() {
             <summary className="cursor-pointer text-body-s font-medium text-ink-700">
               Wie wurde die Frist ausgelöst? <span className="text-ink-500 font-normal">(optionaler Hinweis-Helfer – keine verbindliche Zustellberechnung)</span>
             </summary>
-            <div className="mt-3 grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
+            <div className={pk('mt-3 grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 items-end', 'mt-3 grid grid-cols-1 @4xl/pane:grid-cols-[1fr_1fr_auto] gap-3 items-end')}>
               <Field label="Zustellart">
                 <select className={inputCls} value={zustellArt} onChange={(e) => setZustellArt(e.target.value as ZustellArt | '')}>
                   <option value="">– wählen –</option>
@@ -240,7 +242,7 @@ export function AllgemeineFristForm() {
             </p>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Startdatum (auslösendes Ereignis)" hint="zählt nicht mit – dies a quo non computatur (Art. 77 OR)">
               <DatumsFeld value={form.start} onChange={(v) => set('start', v)} className={inputCls} />
             </Field>
@@ -285,7 +287,7 @@ export function AllgemeineFristForm() {
           {ergebnis && (
             <ErgebnisBlock id="lc-ergebnis-allgemein">
               {/* Prominente Eckdaten (Angleichung an ZPO/SchKG) */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
                 {[
                   { label: 'Ereignistag (zählt nicht)', val: ergebnis.resultat.startISO.split('-').reverse().join('.') },
                   { label: 'Fristbeginn (dies a quo)', val: ergebnis.resultat.fristbeginnISO!.split('-').reverse().join('.') },
@@ -335,7 +337,7 @@ export function AllgemeineFristForm() {
             Art. 700 Abs. 1 OR). Keine automatische Verschiebung – die Verschiebungsrichtung bei
             Wochenend-/Feiertagskollision ist höchstrichterlich ungeklärt.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Stichtag / Termin" hint="bis zu dem die Frist gewahrt sein muss">
               <DatumsFeld value={rueck.stichtag} onChange={(v) => setRueck((r) => ({ ...r, stichtag: v }))} className={inputCls} />
             </Field>
@@ -368,7 +370,7 @@ export function AllgemeineFristForm() {
           </div>
           {rueckErgebnis && (
             <ErgebnisBlock id="lc-ergebnis-allgemein">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                 {[
                   { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}`, akzent: true },
                   { label: 'Stichtag / Termin', val: rueckErgebnis.resultat.startISO.split('-').reverse().join('.') },
@@ -405,12 +407,12 @@ export function AllgemeineFristForm() {
               «Bis» liegt vor «Von» – angezeigt wird der Abstand als Betrag.
             </p>
           )}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Von"><DatumsFeld value={von} onChange={setVon} className={inputCls} /></Field>
             <Field label="Bis"><DatumsFeld value={bis} onChange={setBis} className={inputCls} /></Field>
           </div>
           {zwischen && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lc-reveal">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3 lc-reveal', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3 lc-reveal')}>
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Kalendertage</p>
                 <p className="num text-h2 leading-none font-medium text-ink-900">{zwischen.kalendertage}</p>

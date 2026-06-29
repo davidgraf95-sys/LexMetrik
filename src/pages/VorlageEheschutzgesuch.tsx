@@ -17,6 +17,7 @@ import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Eheschutzgesuch (Art. 175 ff. ZGB, summarisch) ────────
 // Dritte Musterklagen-Maske Familienrecht (Bauspez. §3.1): der Begehren-
@@ -37,6 +38,7 @@ const BANNER_EG: PdfBanner = {
 };
 
 export function VorlageEheschutzgesuch() {
+  const pk = usePaneKlasse();
   const card = karte('eheschutzgesuch');
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<EgAntworten>({ defaults: EG_DEFAULTS });
@@ -95,7 +97,7 @@ export function VorlageEheschutzgesuch() {
                   <input className={inputCls} value={a.gerichtManuell?.name ?? ''}
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })} />
                 </Field>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Strasse und Hausnummer">
                     <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
                       onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })} />
@@ -132,7 +134,7 @@ export function VorlageEheschutzgesuch() {
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
-                <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end">
+                <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem_auto] gap-3 items-end')}>
                   <Field label={`Kind ${i + 1} – Vorname`}>
                     <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
                   </Field>
@@ -149,7 +151,7 @@ export function VorlageEheschutzgesuch() {
               </button>
               <Field label="Obhut (Antrag)">
                 <SelectionGrid
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                  className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
                   items={[
                     { code: 'gericht' as const, label: 'Gerichtlich zu regeln' },
                     { code: 'gesuchsteller' as const, label: 'Obhut bei der gesuchstellenden Partei' },
@@ -173,7 +175,7 @@ export function VorlageEheschutzgesuch() {
         <div className="space-y-4">
           <Field label="Eheliche Wohnung (Art. 176 Abs. 1 Ziff. 2 ZGB)">
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={[
                 { code: 'gesuchsteller' as const, label: 'Zuweisung an die gesuchstellende Partei' },
                 { code: 'gesuchsgegner' as const, label: 'Zuweisung an die Gegenpartei' },
@@ -194,7 +196,7 @@ export function VorlageEheschutzgesuch() {
             <>
               <Field label="Kindesunterhalt">
                 <SelectionGrid
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                  className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
                   items={[
                     { code: 'gericht' as const, label: 'Gerichtlich festzusetzen' },
                     { code: 'beziffert' as const, label: 'Beziffert (Bar/Betreuung getrennt)' },
@@ -204,7 +206,7 @@ export function VorlageEheschutzgesuch() {
                 />
               </Field>
               {a.kindesunterhalt === 'beziffert' && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Barunterhalt je Kind (CHF/Monat)">
                     <input className={inputCls} inputMode="decimal" value={a.barunterhaltBetrag}
                       onChange={(e) => set('barunterhaltBetrag', e.target.value)} placeholder="z. B. 1200" />
@@ -219,7 +221,7 @@ export function VorlageEheschutzgesuch() {
           )}
           <Field label="Ehegattenunterhalt (Art. 176 Abs. 1 Ziff. 1 ZGB)">
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={[
                 { code: 'gericht' as const, label: 'Gerichtlich festzusetzen' },
                 { code: 'beziffert' as const, label: 'Beziffert' },

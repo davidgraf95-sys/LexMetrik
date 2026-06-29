@@ -21,6 +21,7 @@ import {
 import { KANTON_NAMEN } from '../../data/tarif/typen';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { chfGanz as chf } from '../../lib/vorlagen/datum';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── Prozesskosten-Cockpit (Art. 95/96 ZPO) ─────────────────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/prozesskosten.ts über die
@@ -93,6 +94,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
 }
 
 export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {}) {
+  const pk = usePaneKlasse();
   const ausLink = useMemo(() => {
     try { return permalinkLesen(PK_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {} as Record<string, unknown>; }
@@ -199,7 +201,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
         <span>Nicht vermögensrechtliche Streitigkeit (kein Streitwert) — eigener kantonaler Gebührenrahmen, Festsetzung nach Bedeutung/Aufwand</span>
       </label>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Kanton">
           <select value={kanton} onChange={(e) => setKanton(e.target.value as KantonCode)} className={inputCls} aria-label="Kanton">
             {KANTONE.map((k) => <option key={k} value={k}>{k} — {KANTON_NAMEN[k]}</option>)}
@@ -238,7 +240,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
 
       {ergebnis && (
         <ErgebnisBlock>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
             <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : handelsgericht ? 'Gerichtskosten (Handelsgericht)' : effektivePhase === 'schlichtung' ? 'Gerichtskosten (Schlichtungstarif)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
@@ -342,7 +344,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
                 <p className="mt-3 text-body-s text-ink-600">Ermessensverteilung — kein bezifferter Wert; massgebend ist die richterliche Würdigung.</p>
               ) : kostenrisiko.berechenbar ? (
                 <>
-                  <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className={pk('mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3', 'mt-3 grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
                     <div className="lc-tile">
                       <p className="text-xs text-ink-500 mb-1">Gerichtskosten zu Ihren Lasten{kostenrisiko.unentgeltlich ? ' (UR-befreit)' : ''}</p>
                       <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.gerichtskostenZuLasten)}</p>

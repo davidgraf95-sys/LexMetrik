@@ -11,6 +11,7 @@ import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppe
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
 import { useErlassOeffnen, istErlassOffen } from '../lib/useErlassOeffnen';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 type Ebene = 'bund' | 'kanton' | 'international';
 
@@ -59,8 +60,9 @@ function Segment({ aktiv, onWahl }: { aktiv: Ebene; onWahl: (e: Ebene) => void }
 }
 
 function Gitter({ erlasse }: { erlasse: BrowseErlass[] }) {
+  const pk = usePaneKlasse();
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div className={pk('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 @3xl/pane:grid-cols-3 gap-3')}>
       {erlasse.map((e) => <ErlassKarte key={e.key} e={e} />)}
     </div>
   );
@@ -91,6 +93,7 @@ function Kategorie({ id, offen, onToggle, kopf, anzahl, children }: {
 // Inhalt einer Untergruppe: Leitgesetze als Karten, untergeordnetes
 // Ausführungsrecht (Verordnungen/Reglemente) dezent als eingerückte Liste.
 function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] }) {
+  const pk = usePaneKlasse();
   const gesetze = items.filter((e) => !istVerordnung(e));
   const verordnungen = items.filter(istVerordnung);
   return (
@@ -103,7 +106,7 @@ function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] 
       {verordnungen.length > 0 && (
         <div className="pl-3 border-l-2 border-line/70 ml-0.5">
           <p className="lc-overline text-ink-500 mb-1">Verordnungen &amp; Ausführungsrecht</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-4')}>
             {verordnungen.map((e) => <ErlassZeile key={e.key} e={e} />)}
           </div>
         </div>
@@ -243,6 +246,7 @@ function SysZeile({ e }: { e: BrowseErlass }) {
 // titel, darunter nach SR-Nr sortierte Zeilen. Die Seiten-Suche liefert die
 // flache Trefferliste — diese gegliederte Ansicht zeigt sich nur ohne Suche.
 function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: KantonSystematik }) {
+  const pk = usePaneKlasse();
   const gruppen = useMemo(() => {
     const rangTop = sachgebietRang(sys);
     const tops = new Map<string, Map<string, BrowseErlass[]>>();
@@ -304,7 +308,7 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
                     <span aria-hidden className="flex-1 h-px bg-line/70" />
                   </div>
                 )}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-5', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-5')}>
                   {u.items.map((e) => <SysZeile key={e.key} e={e} />)}
                 </div>
               </section>
@@ -317,6 +321,7 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
 }
 
 export function Gesetze() {
+  const pk = usePaneKlasse();
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
   const [systematik, setSystematik] = useState<Record<string, KantonSystematik>>({});
   const [fehler, setFehler] = useState(false);
@@ -570,7 +575,7 @@ export function Gesetze() {
                   <p className="text-body-s text-ink-500 max-w-reading">
                     Kanton wählen — die Erlasse werden dann nach der amtlichen Systematik des Kantons (Sachgebiete) gegliedert.
                   </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                  <div className={pk('grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5', 'grid grid-cols-2 @xl/pane:grid-cols-3 @4xl/pane:grid-cols-4 gap-2.5')}>
                     {gruppiereNachKanton(kantGefiltert).map((g) => (
                       <button type="button" key={g.kanton} onClick={() => setzeKanton(g.kanton)}
                         className="lc-card group flex items-center gap-3 p-3.5 text-left transition-colors hover:border-brass-400">

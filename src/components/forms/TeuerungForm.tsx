@@ -16,6 +16,7 @@ import { BegruendungSlot } from '../BegruendungSlot';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── LIK-Teuerungsrechner – UI ──────────────────────────────────────────────
 // Reine Darstellung; Formel, Basis-AUTO-Wahl und alle Rechtsregeln liegen in
@@ -66,6 +67,7 @@ const TEU_LINK_SPEC: PermalinkSpec<TeuLink & Record<string, unknown>> = {
 };
 
 export function TeuerungForm() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<TeuLink>>(() => {
     try { return permalinkLesen(TEU_LINK_SPEC, window.location.search); } catch { return {}; }
   });
@@ -124,13 +126,13 @@ export function TeuerungForm() {
 
       {/* Anwendungsfall (Progressive Disclosure) */}
       <SelectionGrid
-        className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+        className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-2`}
         items={MODI.map((m) => ({ code: m.code, label: m.label, sub: m.sub }))}
         value={modus}
         onSelect={setModus}
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         <Field label={modus === 'indexmiete' ? 'Nettomietzins alt (CHF/Monat)' : modus === 'unterhalt' ? 'Unterhaltsbeitrag gemäss Urteil (CHF)' : 'Betrag alt (CHF)'}>
           <BetragsFeld className={inputCls + ' num w-44'} value={betrag}
             aria-invalid={!!fehler && /Betrag/.test(fehler)}
@@ -155,7 +157,7 @@ export function TeuerungForm() {
       {ergebnis && (
         <ErgebnisBlock>
           {/* Eckdaten (UX B17): Wichtigstes zuerst, wie bei den übrigen Rechnern */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-3`}>
             {[
               { label: 'Indexierter Betrag', val: `CHF ${ergebnis.betragNeu.toLocaleString('de-CH', { minimumFractionDigits: 2 })}`, akzent: true },
               { label: 'Veränderung', val: `${ergebnis.prozent > 0 ? '+' : ''}${ergebnis.prozent.toFixed(1)} %` },

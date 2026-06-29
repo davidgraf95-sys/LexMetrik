@@ -18,6 +18,7 @@ import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type Pe
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 const MIET_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Kündigungstermine und -fristen im Mietrecht (Art. 253 ff. OR) – ' +
@@ -82,6 +83,7 @@ const MR_LINK_SPEC: PermalinkSpec<MrLink & Record<string, unknown>> = {
 };
 
 export function MietrechtForm() {
+  const pk = usePaneKlasse();
   const [ausLink] = useState<Partial<MrLink>>(() => {
     try { return permalinkLesen(MR_LINK_SPEC, window.location.search); } catch { return {}; }
   });
@@ -176,7 +178,7 @@ export function MietrechtForm() {
     <div className="space-y-6">
       <PflichtDisclaimer kurz="Orientierung (Art. 253 ff. OR). Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde." text={MIET_DISCLAIMER} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         <Field label="Kündigungsart">
           <select value={art} onChange={(e) => setArt(e.target.value as Kuendigungsart)} className={inputCls}>
             {ARTEN.map((a) => <option key={a.code} value={a.code}>{a.label}</option>)}
@@ -227,7 +229,7 @@ export function MietrechtForm() {
         <Checkbox checked={ohneDez} onChange={setOhneDez} label="Ausnahme: nicht auf den 31. Dezember" />
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={`grid grid-cols-1 ${pk('sm:grid-cols-2', '@lg/pane:grid-cols-2')} gap-4`}>
         {/* brauchtMietbeginn deckt die Fälle moebliertes_zimmer/gesetzlich bereits
             ab – aber nur, solange terminsucheAktiv gilt; das verhindert, dass ein
             nach Art-Wechsel (z. B. Zahlungsverzug) stehengebliebener quelle-State
@@ -272,7 +274,7 @@ export function MietrechtForm() {
         <ErgebnisBlock>
           {/* FE-5: byte-gleiches Markup → geteilte EckdatenKachel (Inventur
               10.6.2026: einzige exakt deckungsgleiche Rest-Dublette). */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-3`}>
             <EckdatenKachel akzent num
               label={ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}
               wert={ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'} />

@@ -15,6 +15,7 @@ import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
 import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
@@ -40,6 +41,7 @@ const BANNER_SK: PdfBanner = {
 
 export function VorlageScheidungsklage() {
   const card = karte('scheidungsklage');
+  const pk = usePaneKlasse();
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<SkAntworten>({ defaults: SK_DEFAULTS });
 
@@ -100,7 +102,7 @@ export function VorlageScheidungsklage() {
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
                     placeholder="z. B. Bezirksgericht X" />
                 </Field>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Strasse und Hausnummer">
                     <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
                       onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
@@ -117,7 +119,7 @@ export function VorlageScheidungsklage() {
           </div>
           <Field label="Scheidungsgrund (Art. 290 lit. b ZPO)">
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={[
                 { code: '114' as const, label: 'Getrenntleben (Art. 114 ZGB)', sub: 'mindestens zwei Jahre bei Eintritt der Rechtshängigkeit' },
                 { code: '115' as const, label: 'Unzumutbarkeit (Art. 115 ZGB)', sub: 'vor Ablauf der zwei Jahre — schwerwiegende, nicht zuzurechnende Gründe' },
@@ -153,7 +155,7 @@ export function VorlageScheidungsklage() {
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
-                <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end">
+                <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem_auto] gap-3 items-end')}>
                   <Field label={`Kind ${i + 1} – Vorname`}>
                     <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
                   </Field>
@@ -170,7 +172,7 @@ export function VorlageScheidungsklage() {
               </button>
               <Field label="Obhut (Antrag)">
                 <SelectionGrid
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                  className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
                   items={[
                     { code: 'gericht' as const, label: 'Gerichtlich zu regeln', sub: 'Offizialmaxime — kein eigener Antrag' },
                     { code: 'klaeger' as const, label: 'Obhut bei der klagenden Partei' },
@@ -190,7 +192,7 @@ export function VorlageScheidungsklage() {
         <div className="space-y-4">
           <Field label="Nachehelicher Unterhalt (Art. 290 lit. c ZPO)">
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={[
                 { code: 'gericht' as const, label: 'Gerichtlich festzusetzen' },
                 { code: 'keiner' as const, label: 'Keiner (Negativ-Antrag)' },

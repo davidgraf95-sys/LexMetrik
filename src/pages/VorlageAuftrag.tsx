@@ -11,6 +11,7 @@ import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Auftrag / Dienstleistungsvertrag (Art. 394 ff. OR) ─────
 // P1-Grundtyp der Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3).
@@ -48,6 +49,7 @@ const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 export function VorlageAuftrag() {
   const card = karte('auftrag');
+  const pk = usePaneKlasse();
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<AfAntworten>({ defaults: AF_DEFAULTS, speicherKey: SPEICHER_KEY });
 
@@ -102,7 +104,7 @@ export function VorlageAuftrag() {
       case 'inhalt': return (
         <div className="space-y-4">
           <Field label="Art des Mandats" hint="bestimmt die Rahmung der Gegenstandsumschreibung">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div className={pk('grid grid-cols-2 sm:grid-cols-4 gap-2', 'grid grid-cols-2 @3xl/pane:grid-cols-4 gap-2')}>
               {MANDAT_OPTIONEN.map((m) => (
                 <button key={m.id} type="button"
                   onClick={() => set('mandatstyp', m.id)}

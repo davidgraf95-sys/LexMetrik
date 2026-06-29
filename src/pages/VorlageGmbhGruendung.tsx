@@ -12,6 +12,7 @@ import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Maske: GmbH-Gründung — Checkliste + Dokumentmappe (Plan 9b, 7.6.2026) ───
 // Checkliste: deterministische Unterlagenliste (lib/gruendungsunterlagen.ts).
@@ -44,6 +45,7 @@ const CHF = new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF',
 export function VorlageGmbhGruendung() {
   const card = karte('gmbh-gruendung');
   const { locale } = useLocale();
+  const pk = usePaneKlasse();
 
   const [einlageArt, setEinlageArt] = useState<EinlageArt>('bar');
   const [besondereVorteile, setBesondereVorteile] = useState(false);
@@ -114,7 +116,7 @@ export function VorlageGmbhGruendung() {
 
       <section className="lc-card p-5 sm:p-6 space-y-4">
         <GruppenTitel>Gründungs-Konstellation</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="Liberierung">
             <select className={inputCls} value={einlageArt} onChange={(e) => setEinlageArt(e.target.value as EinlageArt)}>
               <option value="bar">Bareinlage</option>
@@ -133,7 +135,7 @@ export function VorlageGmbhGruendung() {
             <input className={inputCls} inputMode="numeric" placeholder="z. B. 20000" value={leistungen} onChange={(e) => setLeistungen(e.target.value)} />
           </Field>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700')}>
           <label className="flex items-center gap-2"><input type="checkbox" checked={besondereVorteile} onChange={(e) => setBesondereVorteile(e.target.checked)} /> Besondere Vorteile für Gründer/Dritte</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={gfGewaehlt} onChange={(e) => setGfGewaehlt(e.target.checked)} /> Geschäftsführung beruht auf Wahl</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={mehrereGf} onChange={(e) => setMehrereGf(e.target.checked)} /> Mehrere Geschäftsführer:innen <span className="text-xs text-ink-500">(Dokumentmappe: aus der erfassten GF-Liste abgeleitet)</span></label>

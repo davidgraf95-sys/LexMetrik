@@ -1,4 +1,5 @@
 import { Field, inputCls } from '../../components/vorlagen/ui';
+import { usePaneKlasse } from '../../components/layout/PaneKontext';
 import { NormText } from '../../components/NormText';
 import { NotariatsHinweis, HrAmtHinweis } from '../../components/vorlagen/Dokumentmappe';
 import { PflichtDisclaimer } from '../../components/PflichtDisclaimer';
@@ -28,6 +29,7 @@ export function SchrittKonstellation({ ctx }: { ctx: AgSchrittCtx }) {
     immobilienHauptzweck, setImmobilienHauptzweck, fremdwaehrung, setFremdwaehrung,
     bankInUrkunde, setBankInUrkunde, chVertretung, setChVertretung, checkliste,
   } = ctx;
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-4">
       <PflichtDisclaimer />
@@ -35,7 +37,7 @@ export function SchrittKonstellation({ ctx }: { ctx: AgSchrittCtx }) {
         title="Füllt alle Schritte mit einem vollständigen Demo-Datensatz (gemischte qualifizierte Gründung) — zum Ausprobieren; eigene Eingaben werden überschrieben.">
         Mit Musterdaten füllen (Demo)
       </button>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Liberierung">
           <select className={inputCls} value={einlageArt} onChange={(e) => setEinlageArt(e.target.value as EinlageArt)}>
             <option value="bar">Bareinlage</option>
@@ -86,9 +88,10 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
     stichentscheidGv, setStichentscheidGv, gjBeginn, setGjBeginn, gjEnde, setGjEnde,
     gjErstesEnde, setGjErstesEnde,
   } = ctx;
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
         <Field label="Firma (mit Zusatz «AG», Art. 950 OR)">
           <input className={inputCls} value={firma} onChange={(e) => setFirma(e.target.value)} placeholder="z. B. Muster Immobilien AG" />
         </Field>
@@ -142,7 +145,7 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
       {inhaberaktien && (
         <div className="rounded-md border border-line p-3 space-y-3">
           <p className="text-body-s font-medium text-ink-900"><NormText text={`Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)`} /></p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Voraussetzung">
               <select className={inputCls} value={inhaberKotiert ? 'kotiert' : 'bucheffekten'}
                 onChange={(e) => setInhaberKotiert(e.target.value === 'kotiert')}>
@@ -180,7 +183,7 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
           Kapitalband (Art. 653s ff. OR — VR-Ermächtigung, max. 5 Jahre, ±½ des Kapitals)
         </label>
         {kapitalband && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
             <Field label="Richtung der Ermächtigung">
               <select className={inputCls} value={kbRichtung}
                 onChange={(e) => setKbRichtung(e.target.value as AgDokAntworten['kbRichtung'])}>
@@ -204,7 +207,7 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
           Bedingtes Kapital (Art. 653 ff. OR — Wandel-/Optionsrechte, max. ½ des Kapitals)
         </label>
         {bedingtesKapital && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
             <Field label={`Nennbetrag des bedingten Kapitals (${wc})`}>
               <input className={inputCls} inputMode="numeric" value={bkBetrag} onChange={(e) => setBkBetrag(e.target.value)} placeholder="z. B. 50'000" />
             </Field>
@@ -222,7 +225,7 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
           </label>
         )}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Geschäftsjahr-Beginn (Statuten)">
           <input className={inputCls} value={gjBeginn} onChange={(e) => setGjBeginn(e.target.value)} placeholder="z. B. 1. Januar" />
         </Field>
@@ -246,9 +249,10 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
     wc, neuerKey, verrechnungen, setVerrechnungen, besondereVorteile, vorteile, setVorteile,
     revisorName, setRevisorName,
   } = ctx;
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
         <Field label={fremdwaehrung ? `Aktienkapital (${waehrung}; Gegenwert mind. CHF 100'000)` : "Aktienkapital (CHF, mind. 100'000)"}>
           <input className={inputCls} inputMode="numeric" placeholder="Tausender mit Apostroph, z. B. 100'000" value={ak} onChange={(e) => setAk(e.target.value)} />
         </Field>
@@ -267,7 +271,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
       </div>
 
       {fremdwaehrung && (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="Währung des Aktienkapitals (Anhang 3 HRegV)">
             <select className={inputCls} value={waehrung} onChange={(e) => setWaehrung(e.target.value as AgWaehrung)}>
               {AG_FREMDWAEHRUNGEN.map((w) => <option key={w} value={w}>{w}</option>)}
@@ -283,7 +287,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
       )}
 
       {bankInUrkunde && (einlageArt === 'bar' || einlageArt === 'gemischt') && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Bank (in der Urkunde genannt)">
             <input className={inputCls} value={bankName} onChange={(e) => setBankName(e.target.value)} />
           </Field>
@@ -304,7 +308,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
           </p>
           {sacheinlagen.map((s) => (
             <div key={s.key} className="rounded-md border border-line p-3 space-y-2">
-              <div className="grid grid-cols-1 sm:grid-cols-[1fr_2fr_2fr_auto] gap-2 items-end">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_2fr_2fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[1fr_2fr_2fr_auto] gap-2 items-end')}>
                 <Field label="Art der Einlage">
                   <select className={inputCls} value={s.typ}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, typ: e.target.value as AgSacheinlageZeile['typ'] } : x))}>
@@ -323,7 +327,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
                 <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Sacheinlage entfernen"
                   onClick={() => setSacheinlagen((alt) => alt.filter((x) => x.key !== s.key))}>✕</button>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 items-end">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-4 gap-2 items-end', 'grid grid-cols-1 @3xl/pane:grid-cols-4 gap-2 items-end')}>
                 <Field label={`Bewertung (${wc})`}>
                   <input className={inputCls} inputMode="numeric" value={s.wertChf}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, wertChf: e.target.value } : x))} />
@@ -342,7 +346,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
                 </Field>
               </div>
               {s.typ === 'geschaeft' && (
-                <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 items-end">
+                <div className={pk('grid grid-cols-1 sm:grid-cols-5 gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-5 gap-2 items-end')}>
                   <label className="flex items-center gap-2 text-body-s text-ink-700 pb-2">
                     <input type="checkbox" checked={s.imHrEingetragen}
                       onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, imHrEingetragen: e.target.checked } : x))} />
@@ -366,7 +370,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
                   </Field>
                 </div>
               )}
-              <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-2 items-start">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-2 items-start', 'grid grid-cols-1 @lg/pane:grid-cols-[auto_1fr] gap-2 items-start')}>
                 <label className="flex items-center gap-2 text-body-s text-ink-700 pt-2">
                   <input type="checkbox" checked={s.grundstueck}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, grundstueck: e.target.checked } : x))} />
@@ -396,7 +400,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
           <p className="text-body-s font-medium text-ink-900"><NormText text={`Verrechnungsliberierung (Art. 634a OR)`} /></p>
           {verrechnungen.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
-              <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end')}>
                 <Field label="Gläubiger:in (Name)">
                   <input className={inputCls} value={v.glaeubigerName}
                     onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, glaeubigerName: e.target.value } : x))} />
@@ -431,7 +435,7 @@ export function SchrittKapital({ ctx }: { ctx: AgSchrittCtx }) {
           <p className="text-body-s font-medium text-ink-900"><NormText text={`Besondere Vorteile (Art. 636 OR)`} /></p>
           {vorteile.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
-              <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_auto] gap-2 items-end">
+              <div className={pk('grid grid-cols-1 sm:grid-cols-[2fr_1fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[2fr_1fr_auto] gap-2 items-end')}>
                 <Field label="Begünstigte:r (Name)">
                   <input className={inputCls} value={v.beguenstigter}
                     onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, beguenstigter: e.target.value } : x))} />
@@ -475,6 +479,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
     protokollfuehrer, setProtokollfuehrer, sitzungBeginn, setSitzungBeginn,
     sitzungEnde, setSitzungEnde, optingOut, rsName, setRsName, rsSitz, setRsSitz,
   } = ctx;
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-4">
       {/* Gründer */}
@@ -482,7 +487,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
         <p className="text-body-s font-medium text-ink-900">Gründer:innen und Zeichnung (Art. 629/630 OR)</p>
         {gruender.map((g) => (
           <div key={g.key} className="rounded-md border border-line p-3 space-y-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
               <Field label="Name">
                 <input className={inputCls} value={g.name}
                   onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
@@ -492,7 +497,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
                   onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, angaben: e.target.value } : x))} />
               </Field>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end')}>
               <Field label="Gezeichnete Aktien">
                 <input className={inputCls} inputMode="numeric" value={g.anzahl}
                   onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, anzahl: e.target.value } : x))} />
@@ -523,7 +528,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
         <p className="text-body-s font-medium text-ink-900">Verwaltungsrat (Art. 707 ff. OR)</p>
         {vr.map((v) => (
           <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}>
               <Field label="Name">
                 <input className={inputCls} value={v.name}
                   onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
@@ -537,7 +542,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
                   onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, wohnort: e.target.value } : x))} />
               </Field>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
               <Field label="Adresse (für die Wahlannahmeerklärung)">
                 <input className={inputCls} value={v.adresse}
                   onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, adresse: e.target.value } : x))} />
@@ -570,7 +575,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
           onClick={() => setVr((alt) => [...alt, { key: neuerKey(), name: '', herkunft: '', wohnort: '', adresse: '', praesident: alt.length === 0, zeichnungsArt: 'einzelunterschrift' }])}>
           + VR-Mitglied hinzufügen
         </button>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
           <Field label="Protokollführung (leer = Präsident:in)">
             <input className={inputCls} value={protokollfuehrer} onChange={(e) => setProtokollfuehrer(e.target.value)} />
           </Field>
@@ -587,7 +592,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900">Weitere Zeichnungsberechtigte (optional, ins VR-Protokoll)</p>
         {vertretungen.map((v) => (
-          <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end">
+          <div key={v.key} className={pk('grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end')}>
             <Field label="Name">
               <input className={inputCls} value={v.name}
                 onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
@@ -613,7 +618,7 @@ export function SchrittPersonen({ ctx }: { ctx: AgSchrittCtx }) {
       </div>
 
       {!optingOut && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Revisionsstelle (Name)">
             <input className={inputCls} value={rsName} onChange={(e) => setRsName(e.target.value)} />
           </Field>
@@ -638,9 +643,10 @@ export function SchrittWeiteres({ ctx }: { ctx: AgSchrittCtx }) {
     ntUrkundeText, setNtUrkundeText, ntStatutenArtikel, setNtStatutenArtikel,
     ntStatutenAbsatz, setNtStatutenAbsatz, ntStatutenText, setNtStatutenText,
   } = ctx;
+  const pk = usePaneKlasse();
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         {eigeneBueros ? (
           <Field label="Rechtsdomizil (Adresse am Sitz)">
             <input className={inputCls} value={rechtsdomizil} onChange={(e) => setRechtsdomizil(e.target.value)} />
@@ -709,7 +715,7 @@ export function SchrittWeiteres({ ctx }: { ctx: AgSchrittCtx }) {
         </label>
         {nachtragAktiv && (
           <div className="rounded-md border border-line p-3 space-y-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
               <Field label="Datum der Gründungsurkunde">
                 <input type="date" className={inputCls} value={ntGruendungsdatum} onChange={(e) => setNtGruendungsdatum(e.target.value)} />
               </Field>
@@ -720,7 +726,7 @@ export function SchrittWeiteres({ ctx }: { ctx: AgSchrittCtx }) {
             <Field label="Neuer Wortlaut der Urkunden-Ziffer">
               <textarea className={inputCls} rows={3} value={ntUrkundeText} onChange={(e) => setNtUrkundeText(e.target.value)} />
             </Field>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
               <Field label="Geänderter Statuten-Artikel (Nr.)">
                 <input className={inputCls} inputMode="numeric" value={ntStatutenArtikel} onChange={(e) => setNtStatutenArtikel(e.target.value)} />
               </Field>

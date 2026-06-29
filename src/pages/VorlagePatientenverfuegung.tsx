@@ -12,6 +12,7 @@ import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Patientenverfügung (Art. 370–373 ZGB) ─────────────────
 // Form: schriftlich, datiert, eigenhändig unterschrieben (Art. 371 Abs. 1) —
@@ -59,6 +60,7 @@ export function VorlagePatientenverfuegung() {
 
   const ergebnis = useMemo(() => pvZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefePvGates(a), [a]);
+  const pk = usePaneKlasse();
 
   const fehlerImSchritt = (i: number): string[] => {
     const f: string[] = [];
@@ -83,7 +85,7 @@ export function VorlagePatientenverfuegung() {
   const inhalt = () => {
     switch (SCHRITTE[schritt].id) {
       case 'person': return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Vorname"><input className={inputCls} value={a.vorname} onChange={(e) => set('vorname', e.target.value)} /></Field>
           <Field label="Nachname"><input className={inputCls} value={a.name} onChange={(e) => set('name', e.target.value)} /></Field>
           <Field label="Geburtsdatum" hint="Kein Mindestalter – massgebend ist die Urteilsfähigkeit (Art. 16 ZGB)">
@@ -142,7 +144,7 @@ export function VorlagePatientenverfuegung() {
             <GruppenTitel>Behandlungsziel</GruppenTitel>
             <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) – Widersprüche werden geprüft, nie still aufgelöst.</p>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={ZIELE.map((z) => ({ code: z.code, label: z.label, sub: z.sub }))}
               value={a.ziel}
               onSelect={waehleZiel}
@@ -189,7 +191,7 @@ export function VorlagePatientenverfuegung() {
             Ihrem Namen, wo die Verfügung keine Antwort gibt (Art. 370 Abs. 2 ZGB). Ohne Bezeichnung
             gilt die gesetzliche Kaskade (Art. 378 ZGB).
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Vertretungsperson" optional>
               <input className={inputCls} value={a.vertretungName ?? ''} onChange={(e) => set('vertretungName', e.target.value)} placeholder="Vorname Nachname" />
             </Field>
