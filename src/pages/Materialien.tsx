@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 import { MaterialKarte } from '../components/materialien/MaterialKarte';
 import {
   ladeMaterialManifest, gruppiereNachBehoerde, filtere, vorhandeneDoktypen,
@@ -23,6 +24,7 @@ export function Materialien() {
   const [behoerde, setBehoerde] = useState<BehoerdeId | ''>('');
   const [doktyp, setDoktyp] = useState<DoktypId | ''>('');
   const [suche, setSuche] = useState('');
+  const pk = usePaneKlasse();
 
   useEffect(() => {
     let lebt = true;
@@ -120,7 +122,7 @@ export function Materialien() {
                     </div>
                     <p className="text-body-s text-ink-500 max-w-reading">{g.name}</p>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <div className={pk('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 @3xl/pane:grid-cols-3 gap-3')}>
                     {g.materialien.map((m) => <MaterialKarte key={m.key} m={m} />)}
                   </div>
                 </section>

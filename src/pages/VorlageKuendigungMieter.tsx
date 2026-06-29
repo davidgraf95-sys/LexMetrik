@@ -13,6 +13,7 @@ import { KANTONE } from '../lib/kantone';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Kündigung des Mietverhältnisses durch Mieter:in (2a) ──
 // Bauspezifikation: bibliothek/recherche/kuendigungs-masken.md (6.6.2026).
@@ -46,6 +47,7 @@ const OBJEKTE: { code: Mietobjekt; label: string }[] = [
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 export function VorlageKuendigungMieter() {
+  const pk = usePaneKlasse();
   const card = karte('kuendigung-mieter');
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<KmAntworten>({
@@ -128,7 +130,7 @@ export function VorlageKuendigungMieter() {
           <Field label="Mietobjekt (Adresse, ggf. Wohnungs-Nr.)">
             <input className={inputCls} value={a.mietobjektAdresse} onChange={(e) => set('mietobjektAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort, 3. OG links" />
           </Field>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Objektart" hint="bestimmt die gesetzliche Mindestfrist">
               <select className={inputCls} value={a.objekt} onChange={(e) => set('objekt', e.target.value as Mietobjekt)}>
                 {OBJEKTE.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
@@ -188,7 +190,7 @@ export function VorlageKuendigungMieter() {
           </Field>
           {a.terminQuelle === 'vertraglich_monate' && (
             <Field label="Vereinbarte Monatsenden">
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-1.5">
+              <div className={pk('grid grid-cols-3 sm:grid-cols-4 gap-1.5', 'grid grid-cols-3 @3xl/pane:grid-cols-4 gap-1.5')}>
                 {Array.from({ length: 12 }, (_, m) => m + 1).map((m) => (
                   <label key={m} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" checked={a.vertragsTermineMonate.includes(m)}

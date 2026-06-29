@@ -11,10 +11,14 @@ import { ReiterUebersicht } from './ReiterUebersicht';
 // Logo/Wortmarke · globale Katalog-Suche · Sprachumschalter. Auf Mobil zusätzlich
 // der ☰-Schalter, der die Seitenleisten-Schublade öffnet (onMenu, von Shell);
 // auf Desktop ein Schalter, der die persistente Seitenleiste ein-/ausklappt.
-export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalten }: {
+export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalten, inhaltBreit, onInhaltsbreiteSetzen, zeigeInhaltsbreite = true }: {
   onMenu: () => void;
   seitenleisteEingeklappt: boolean;
   onSeitenleisteUmschalten: () => void;
+  inhaltBreit: boolean;
+  onInhaltsbreiteSetzen: (b: 'kompakt' | 'breit') => void;
+  /** Im Split-View ausgeblendet: der Breiten-Schalter wäre dort wirkungslos. */
+  zeigeInhaltsbreite?: boolean;
 }) {
   return (
     <header
@@ -46,6 +50,38 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
             {seitenleisteEingeklappt && <line x1="5.5" y1="9" x2="6.5" y2="9" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />}
           </svg>
         </button>
+
+        {/* Desktop: Inhaltsspalte kompakt/breit schalten (Vorstufe Split-View,
+            Strang A). Segmentierter Schalter — die aktive Wahl trägt
+            aria-pressed; Tastatur + sichtbarer Fokus über die globale
+            :focus-visible-Outline. Ab lg, mobil aus (dort gilt ohnehin die
+            schmale Spalte). */}
+        {zeigeInhaltsbreite && (
+        <div role="group" aria-label="Inhaltsbreite" className="hidden lg:inline-flex shrink-0 items-center gap-0.5 rounded-lg border border-line bg-surface p-0.5">
+          {([['Kompakt', 'kompakt'], ['Breit', 'breit']] as const).map(([label, wert]) => {
+            const aktiv = inhaltBreit === (wert === 'breit');
+            return (
+              <button
+                key={wert}
+                type="button"
+                // Eigenständiger Name je Knopf: der Name einer role="group" wird
+                // von Screenreadern nicht zuverlässig vorgelesen (wie EntscheidFilter).
+                aria-label={`Inhaltsbreite: ${label}`}
+                aria-pressed={aktiv}
+                onClick={() => onInhaltsbreiteSetzen(wert)}
+                // Aktiv-Fill solides bg-brass-100 (das /NN-Alpha kompiliert mit
+                // diesen var()-Farbtokens zu nichts → sichtbarer Zustand ginge
+                // verloren). Gewählt-Zustand: Fill + dunklerer Text.
+                // Gewählt: Fill + Ring (der Fill allein < 3:1 Nicht-Text-Kontrast,
+                // §13/F2) + dunklerer Text. Ring ist layoutneutral (kein 1px-Sprung).
+                className={`rounded-md px-2.5 py-1 text-body-s transition-colors ${aktiv ? 'bg-brass-100 text-ink-900 ring-1 ring-inset ring-brass-500' : 'text-ink-600 hover:text-ink-900'}`}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+        )}
 
         {/* Logo nur unterhalb lg — ab lg trägt die Seitenleiste die Marke. */}
         <Link to="/" className="lg:hidden inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">

@@ -22,6 +22,7 @@ import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 
 const EINHEITEN: { code: ZpoEinheit; label: string }[] = [
@@ -69,6 +70,7 @@ const DEFAULTS: ZpoInput = {
 
 
 export function ZpoFristenForm() {
+  const pk = usePaneKlasse();
   // Permalink einmalig lesen (lazy, validiert) — speist die Initialwerte.
   const [ausLink] = useState<Partial<ZpoLink>>(() => {
     try { return permalinkLesen(ZPO_LINK_SPEC, window.location.search); } catch { return {}; }
@@ -197,7 +199,7 @@ export function ZpoFristenForm() {
       ) : (
       <>
       {/* Frist-Preset */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
         <Field label="Frist-Vorlage" hint="Setzt Länge, Verfahren, Stillstand und Erstreckbarkeit automatisch">
           <select value={presetKey} onChange={(e) => { const p = PRESETS.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setPresetKey(''); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
@@ -210,7 +212,7 @@ export function ZpoFristenForm() {
       </div>
 
       {/* Eingaben */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Auslösendes Ereignis (Datum)" hint="Zustellung/Eröffnung der fristauslösenden Mitteilung">
           <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
@@ -318,7 +320,7 @@ export function ZpoFristenForm() {
       {ergebnis && (
         <ErgebnisBlock id="lc-ergebnis-zpo">
           {/* Prominente Eckdaten */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             {[
               { label: 'Massgeblicher Ereignistag', val: ergebnis.massgeblicherEreignistag },
               { label: 'Fristbeginn (dies a quo)', val: ergebnis.diesAQuo },

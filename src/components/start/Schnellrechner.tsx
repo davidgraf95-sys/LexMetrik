@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { usePaneKlasse } from '../layout/PaneKontext';
 import type { Kanton } from '../../types/legal';
 import { EinfacheFristForm } from '../forms/EinfacheFristForm';
 import { FristenKalender, type FristMarkierung } from './FristenKalender';
@@ -76,6 +77,9 @@ function GebuehrenTab() {
 }
 
 export function Schnellrechner() {
+  // Split-View B-1: im Pane reagiert das 2-Spalten-Layout auf die PANE-Breite
+  // (@3xl/pane) statt auf den Viewport; ausserhalb byte-gleich (lg:).
+  const pk = usePaneKlasse();
   const [tab, setTab] = useState<Tab>('fristen');
   // #7: das Formular meldet sein Ergebnis hoch; der Kalender (rechts) ist reine
   // Visualisierung davon — keine doppelten Eingaben mehr.
@@ -106,11 +110,11 @@ export function Schnellrechner() {
           <div className="space-y-4">
             {/* Zwei Hälften: links rechnen (Eingabe), rechts der Kalender als reine
                 Visualisierung DESSELBEN Ergebnisses (#7 — keine doppelten Eingaben). */}
-            <div className="grid gap-5 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
+            <div className={pk('grid gap-5 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start', 'grid gap-5 @3xl/pane:grid-cols-[18rem_minmax(0,1fr)] @3xl/pane:items-start')}>
               <div className="space-y-2">
                 <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
-              <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
+              <div className={pk('space-y-2 lg:border-l lg:border-line lg:pl-5', 'space-y-2 @3xl/pane:border-l @3xl/pane:border-line @3xl/pane:pl-5')}>
                 <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
                 <FristenKalender markierung={fristErgebnis?.markierung ?? null} kanton={fristErgebnis?.kanton ?? getStandardKanton()} />
               </div>

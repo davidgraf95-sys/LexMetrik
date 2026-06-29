@@ -15,6 +15,7 @@ import {
 } from '../../lib/vorlagen/gruendungGmbhDokumente';
 import { KANTONE } from '../../lib/kantone';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── Dokumentmappe der GmbH-Gründung (Plan 9b Ausbaustufe, 7.6.2026) ─────────
 // Darstellung + Eingabesammlung; sämtliche Rechtslogik (Gates, Schemas,
@@ -65,6 +66,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
   // Stabile Listen-Keys (Voll-Audit 5.6.: keine Index-Keys in Editoren)
   const naechsterKey = useRef(1);
   const neuerKey = () => naechsterKey.current++;
+  const pk = usePaneKlasse();
 
   const antworten: GmbhDokAntworten = useMemo(() => ({
     ...weichen,
@@ -102,7 +104,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
       </div>
 
       {/* Gesellschaft */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
         <Field label="Firma (mit Zusatz «GmbH», Art. 950 OR)">
           <input className={inputCls} value={firma} onChange={(e) => setFirma(e.target.value)} placeholder="z. B. Muster Treuhand GmbH" />
         </Field>
@@ -125,7 +127,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
         <input type="checkbox" checked={zweckErweiterung} onChange={(e) => setZweckErweiterung(e.target.checked)} />
         Übliche Zweck-Erweiterungsklausel (Zweigniederlassungen, Beteiligungen, Grundstücke, Finanzierungen)
       </label>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
         <Field label="Stammkapital (CHF, mind. 20'000)">
           <input className={inputCls} inputMode="numeric" placeholder="Tausender mit Apostroph, z. B. 20'000" value={stammkapital} onChange={(e) => setStammkapital(e.target.value)} />
         </Field>
@@ -141,7 +143,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900"><NormText text={`Gründer:innen und Zeichnung (Art. 777a OR)`} /></p>
         {gruender.map((g) => (
-          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end">
+          <div key={g.key} className={pk('grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end')}>
             <Field label="Name">
               <input className={inputCls} value={g.name}
                 onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
@@ -168,7 +170,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900"><NormText text={`Geschäftsführung (Art. 809 OR; nur natürliche Personen)`} /></p>
         {gfs.map((g) => (
-          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto] gap-2 items-end">
+          <div key={g.key} className={pk('grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto] gap-2 items-end', 'grid grid-cols-1 @5xl/pane:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto] gap-2 items-end')}>
             <Field label="Name">
               <input className={inputCls} value={g.name}
                 onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
@@ -211,7 +213,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
         <div className="space-y-2">
           <p className="text-body-s font-medium text-ink-900"><NormText text={`Weitere Vertretungsberechtigte (Art. 71 Abs. 1 lit. f HRegV)`} /></p>
           {vertretungen.map((v) => (
-            <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end">
+            <div key={v.key} className={pk('grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end', 'grid grid-cols-1 @4xl/pane:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end')}>
               <Field label="Name">
                 <input className={inputCls} value={v.name}
                   onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
@@ -238,7 +240,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
       )}
 
       {/* Kontext-Angaben aus den Weichen */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         {weichen.bankInUrkundeGenannt && weichen.einlageArt === 'bar' && (
           <>
             <Field label="Bank (in der Urkunde genannt)">
@@ -283,7 +285,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
 
       {/* Parameter der gewählten Statutenklauseln */}
       {(k.includes('nachschuss') || k.includes('nebenleistung') || k.includes('konkurrenzverbot') || k.includes('vetorecht')) && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           {k.includes('nachschuss') && (
             <Field label="Nachschuss je Stammanteil (CHF, max. 2 × Nennwert)">
               <input className={inputCls} inputMode="numeric" value={nachschussBetrag} onChange={(e) => setNachschussBetrag(e.target.value)} />

@@ -1,8 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
+import { usePaneKontext } from '../../components/layout/PaneKontext';
+import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
@@ -16,6 +19,23 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
+
+// ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
+// Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
+// hätten je Render neue Identität und würden Effekte (IntersectionObserver,
+// Hash-Sprung) bei jedem Render neu auslösen (Re-Render-/Scroll-Schleife). Als
+// Modulfunktionen sind sie stabil und nicht Teil der Effect-Deps (nur die
+// Primitiven `imPane` + die Ref `wurzel` zählen).
+function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> | null): HTMLElement | null {
+  return imPane ? wurzel?.current ?? null : null;
+}
+function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
+  if (!root) return document.getElementById(`art-${token}`);
+  // CSS.escape: ein präparierter #hash-Token (z. B. mit «"]») darf den Selektor
+  // nicht sprengen. getElementById (document-Pfad) ist ohnehin selektor-frei.
+  const id = `art-${token}`;
+  return root.querySelector(`#${typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(id) : id}`);
+}
 
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
@@ -80,14 +100,48 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Code «tocOffen» fälschlich als 2-Spalten-aktiv → unter xl verschwand der
   // Gliederungs-Zugang beim Scrollen (Auftrag David: «bei geteiltem Bildschirm
   // jederzeit ausklappbar, analog Seitenleiste»). SSR-Default false = mobil-Layout.
-  const [istXl, setIstXl] = useState(false);
+  const [istXlVp, setIstXlVp] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1280px)');
-    const upd = () => setIstXl(mq.matches);
+    const upd = () => setIstXlVp(mq.matches);
     upd();
     mq.addEventListener('change', upd);
     return () => mq.removeEventListener('change', upd);
   }, []);
+  const { imPane, rolle, wurzel, overlayWurzel } = usePaneKontext();
+  // Split-View E (Container-responsiv): ein Pane wählt sein Layout nach SEINER
+  // Breite, nicht nach dem Viewport. `istXl` (treibt 2-Spalten-Gliederung + Drawer-
+  // vs-Sidebar) kommt im Pane aus einem ResizeObserver auf der Pane-Wurzel (Schwelle
+  // PANE_BREIT_PX), sonst unverändert aus matchMedia (1280px) → Nicht-Pane byte-gleich.
+  // Reines @container-CSS reicht hier NICHT: istXl steuert bedingtes Rendering
+  // (Vollbar/Kompaktknopf, Existenz des Drawers), das CSS nicht schalten kann.
+  const PANE_BREIT_PX = 1024;
+  const [istBreit, setIstBreit] = useState(false);
+  useEffect(() => {
+    // Kein Reset bei !imPane nötig: istXl ignoriert istBreit dann ohnehin.
+    if (!imPane || !wurzel?.current || typeof ResizeObserver === 'undefined') return;
+    const el = wurzel.current;
+    const ro = new ResizeObserver((eintraege) => {
+      // border-box (inkl. Scrollbar) → die Scrollbarbreite verschiebt den
+      // Schwellenvergleich nicht (kein Flackern an der 1024px-Grenze).
+      for (const e of eintraege) {
+        const w = e.borderBoxSize?.[0]?.inlineSize ?? e.contentRect.width;
+        setIstBreit(w >= PANE_BREIT_PX);
+      }
+    });
+    ro.observe(el, { box: 'border-box' });
+    return () => ro.disconnect();
+  }, [imPane, wurzel]);
+  const istXl = imPane ? istBreit : istXlVp;
+  // A3: aktuell gelesener Artikel (live) für den Einzelansicht-Kopf. Nur in der
+  // Einzelansicht (!imPane) gepflegt; im Split-View trägt der PaneKopf den Titel.
+  const meldeInhaltsKopf = useMeldeInhaltsKopf();
+  const [aktArtikel, setAktArtikel] = useState<string | null>(null);
+  // B-2.5: In einem Pane scopen wir DOM-Queries + Scroll auf die Pane-Wurzel
+  // (sonst kollidieren doppelte `art-`-IDs / trifft der Scroll das falsche Pane).
+  // NUR ein SEKUNDÄRES Pane unterdrückt globale URL-/Reiter-Writes — das primäre
+  // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
+  const istSekundaer = rolle === 'sekundaer';
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
@@ -103,6 +157,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // sonst ein localStorage-Write + globales TABS_EVENT pro überschrittener
   // Artikelgrenze (Scroll-Jank auf langen Erlassen). Reine Timing-Optimierung (§6.4).
   const tabArtikelTimer = useRef<number | null>(null);
+  // Entprellt die Kopf-Artikel-Meldung: beim schnellen Durchscrollen sonst ein
+  // setKopfDaten (Shell) pro Artikelgrenze → unnötige Re-Renders der übrigen Panes.
+  const aktArtikelTimer = useRef<number | null>(null);
 
   useEffect(() => {
     let lebt = true;
@@ -132,9 +189,34 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // = Klammer-Inhalt am Ende des Volltitels (LEGES-Konvention), sonst der Titel.
   useEffect(() => {
     if (!erlass || typeof document === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane treibt den Browser-Tab-Titel nicht (B-2.5)
     const kurz = erlass.titel.match(/\(([^)]+)\)\s*$/)?.[1] ?? erlass.titel;
     document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
-  }, [erlass]);
+  }, [erlass, istSekundaer]);
+
+  // A/A2/A3/F: Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel · Stand · aktueller
+  // Artikel). Wird vom NÄCHSTEN Provider gefangen: Einzelansicht → Inhalts-Kopf
+  // (Shell); Split-View → der jeweilige PaneKopf (SekundaerPane bzw. primär Shell).
+  // Live-Artikel kommt aus dem IntersectionObserver.
+  useEffect(() => {
+    if (!erlass) return;
+    const ebeneLabel = erlass.rechtsgebiet === 'international'
+      ? 'International'
+      : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`;
+    // Ebene-Segment klickbar → gefilterte Gesetzes-Übersicht (?ebene=/?kt=).
+    const ebeneTo = erlass.rechtsgebiet === 'international'
+      ? '/gesetze?ebene=international'
+      : erlass.ebene === 'bund' ? '/gesetze'
+        : `/gesetze?ebene=kanton&kt=${encodeURIComponent(erlass.kanton ?? '')}`;
+    meldeInhaltsKopf({
+      breadcrumb: [{ label: 'Gesetze', to: '/gesetze' }, { label: ebeneLabel, to: ebeneTo }, { label: erlass.kuerzel }],
+      stand: erlass.stand ? formatiereDatum(erlass.stand) : null,
+      // Hinter dem laufenden Artikel die Gesetzesabkürzung (z. B. «Art. 7 OR»).
+      artikel: aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null,
+    });
+  }, [erlass, aktArtikel, meldeInhaltsKopf]);
+  // Beim Verlassen den Kopf räumen (Shell setzt bei Routenwechsel ohnehin zurück).
+  useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
   const { sektionen, ohneGliederung } = useMemo(
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
@@ -213,13 +295,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // ?search (Instanz-Diskriminator ?r) erhalten, sonst verliert ein Mehrfach-
     // Reiter seine Identität. Aktiven Reiter auf diesen Artikel melden → Live-
     // Label «Kürzel – Art. X» bei Mehrfach-Instanz (Auftrag David).
-    const ziel = `${basisPfad}${window.location.search}#art-${token}`;
-    window.history.replaceState(null, '', ziel);
-    aktualisiereTabArtikel(ziel);
+    // Sekundäres Pane: NIE die Haupt-URL/-Reiter überschreiben (es ist nicht die
+    // adressierte Seite). Primär/1-Pane: wie heute URL + Reiter-Live-Label pflegen.
+    if (!istSekundaer) {
+      const ziel = `${basisPfad}${window.location.search}#art-${token}`;
+      window.history.replaceState(null, '', ziel);
+      aktualisiereTabArtikel(ziel);
+    }
     // Erst nach dem Aufklapp-Render scrollen (behavior:auto wie der Hash-Sprung);
     // grosse Sektionen wachsen beim Aufklappen → nach Settle ein Korrektur-Scroll.
     const scrolle = () => {
-      const el = document.getElementById(`art-${token}`);
+      const el = findeArt(paneRoot(imPane, wurzel), token);
       if (!el) return;
       el.scrollIntoView({ block: 'center', behavior: 'auto' });
       el.classList.add('lc-ziel-blink');
@@ -229,7 +315,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrolle();
       window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
     }, 110));
-  }, [sektionen, basisPfad]);
+  }, [sektionen, basisPfad, istSekundaer, imPane, wurzel]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
@@ -238,6 +324,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const letzteNavKey = useRef<string | null>(null);
   useEffect(() => {
     if (!sektionen.length || typeof window === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane: location.key ist fix («default»), kein Instanz-Wechsel
     // Nur bei ECHTER Navigation (location.key wechselt), nicht wenn sektionen
     // nachlädt. Den Initial-Load (erster key) deckt der Lade-Hash-Effekt ab →
     // kein doppelter Sprung/Blink. Dieser Effekt trägt nur den Instanz-Wechsel
@@ -251,7 +338,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const token = decodeURIComponent(m[1]);
     const id = window.requestAnimationFrame(() => springeZuArtikel(token));
     return () => window.cancelAnimationFrame(id);
-  }, [location.key, location.hash, sektionen, springeZuArtikel]);
+  }, [location.key, location.hash, sektionen, springeZuArtikel, istSekundaer]);
 
   // Suche aktivieren → an den Anfang scrollen; Suche schliessen/leeren → an die
   // Scrollposition VOR der Suche zurück (Auftrag David). Grund fürs Hoch-Scrollen
@@ -264,15 +351,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const war = sucheVorher.current;
     sucheVorher.current = suche;
     if (typeof window === 'undefined') return;
+    // Im Pane scrollt der Pane-Container, nicht das Fenster (B-2.5).
+    const sc = paneRoot(imPane, wurzel);
+    const hole = () => sc ? sc.scrollTop : window.scrollY;
+    const setze = (y: number) => sc ? sc.scrollTo(0, y) : window.scrollTo(0, y);
     if (!war && suche) {
-      scrollVorSuche.current = window.scrollY;
-      window.requestAnimationFrame(() => window.scrollTo(0, 0));
+      scrollVorSuche.current = hole();
+      window.requestAnimationFrame(() => setze(0));
     } else if (war && !suche && scrollVorSuche.current != null) {
       const y = scrollVorSuche.current;
       scrollVorSuche.current = null;
-      window.requestAnimationFrame(() => window.scrollTo(0, y));
+      window.requestAnimationFrame(() => setze(y));
     }
-  }, [suche]);
+  }, [suche, imPane, wurzel]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -295,6 +386,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
   useEffect(() => {
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane: kein eigener #hash (pfad ist anker-frei), nie Haupt-URL lesen
     const m = window.location.hash.match(/^#art-(.+)$/);
     if (!m) return;
     // Deep-Link mit Artikel-Anker → aktiven Reiter darauf melden (Live-Label).
@@ -304,13 +396,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     window.requestAnimationFrame(() => {
       if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
-        const el = document.getElementById(`art-${token}`);
+        const el = findeArt(paneRoot(imPane, wurzel), token);
         el?.scrollIntoView({ block: 'center', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
     });
-  }, [eintraege, sektionen]);
+  }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
@@ -333,7 +425,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const auswerten = () => {
       raf = 0;
       if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
-      const mitte = window.innerHeight / 2;
+      // Mittelpunkt im Viewport-Koordinatensystem (getBoundingClientRect): im Pane
+      // die Pane-Mitte, sonst die Fenster-Mitte (B-2.5).
+      const sc = paneRoot(imPane, wurzel);
+      const mitte = sc ? sc.getBoundingClientRect().top + sc.clientHeight / 2 : window.innerHeight / 2;
       const rects = [...sichtbar.values()]
         .filter((en) => en.isIntersecting)
         .map((en) => {
@@ -343,13 +438,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       const token = aktiverArtikel(rects, mitte);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
+      // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf),
+      // entprellt (150 ms) → coalesct schnelle Artikelgrenzen, weniger Pane-Re-Renders.
+      const artLabel = `Art. ${token.replace(/_/g, '')}`;
+      if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
+      aktArtikelTimer.current = window.setTimeout(() => setAktArtikel(artLabel), 150);
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
       //     localStorage-Write + globales TABS_EVENT pro Artikelgrenze.
-      const tabZiel = `${basisPfad}${window.location.search}#art-${token}`;
-      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
-      tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      // Sekundäres Pane treibt den globalen Reiter-Tracker NICHT (es ist nicht die URL).
+      if (!istSekundaer) {
+        const tabZiel = `${basisPfad}${window.location.search}#art-${token}`;
+        if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+        tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      }
       // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
       //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
       //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
@@ -381,17 +484,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
       if (!raf) raf = window.requestAnimationFrame(auswerten);
-    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
-    // Alle aktuell gerenderten Artikel beobachten. Auf-/Zuklappen (offen) und
-    // Suche (suche) verändern die DOM-Artikelmenge → Effekt läuft über die Deps
-    // neu und beobachtet die dann sichtbaren Artikel.
-    document.querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
+    }, { root: paneRoot(imPane, wurzel), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
+    // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
+    // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
+    // läuft über die Deps neu und beobachtet die dann sichtbaren Artikel.
+    (paneRoot(imPane, wurzel) ?? document).querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
     return () => {
       io.disconnect();
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+      if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
     };
-  }, [sektionen, ohneGliederung, basisPfad, offen, suche]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane, wurzel]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach
@@ -401,7 +506,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // feld des TOC-Containers gelaufen ist (sonst kein unnötiger Sprung).
   useEffect(() => {
     if (typeof document === 'undefined') return;
-    const cont = document.querySelector('[data-toc]') as HTMLElement | null;
+    // Pane-gescopt: sonst trifft der globale Query ein FREMDES Pane (zwei breite
+    // Gesetz-Panes haben je ein [data-toc]) → falsches Pane scrollt (E-Regression).
+    const wurzelEl = paneRoot(imPane, wurzel);
+    const cont = (wurzelEl ?? document).querySelector('[data-toc]') as HTMLElement | null;
     if (!cont) return;
     const aktive = cont.querySelectorAll('[data-toc-aktiv]');
     const el = aktive[aktive.length - 1] as HTMLElement | undefined;
@@ -411,7 +519,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (er.top < cr.top + 8 || er.bottom > cr.bottom - 8) {
       cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
     }
-  }, [aktivIds, tocBaum]);
+  }, [aktivIds, tocBaum, imPane, wurzel]);
 
   const sucheTrim = suche.trim().toLowerCase();
   const treffer = useMemo(
@@ -448,13 +556,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const titelRedundantP = titelOhneSuffixP.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
     return (
       <div className="space-y-5">
-        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-          <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-          <span className="mx-1.5 text-ink-300">›</span>
-          {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-          <span className="mx-1.5 text-ink-300">›</span>
-          <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-        </div>
+        {/* Breadcrumb trägt der Kopf (Inhalts-Kopf bzw. PaneKopf) — kein Inline-Dup. */}
         <header className="space-y-2.5 border-b border-line pb-5">
           <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
           <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
@@ -656,15 +758,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
 
   return (
     <div className="space-y-5">
-      {/* Breadcrumb (scrollt weg; die Suchleiste ist die sticky Kopfzeile) */}
-      <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-        <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-        <span className="mx-1.5 text-ink-300">›</span>
-        {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-        <span className="mx-1.5 text-ink-300">›</span>
-        <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-      </div>
-
+      {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
+          → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane). */}
       <header className="space-y-2.5 border-b border-line pb-5">
         <p className="lc-overline">{erlass.rechtsgebiet === 'international'
           ? (overlineGebiet ?? 'Staatsvertrag')
@@ -712,7 +807,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           eng macht/abschneidet. */}
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-          style={{ top: '4rem' }}>
+          style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}>
           {istXl ? (
             <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && (
@@ -742,30 +837,54 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
           steht oben, darunter (falls vorhanden) der Gliederungsbaum; Sektionswahl
           schliesst den Drawer (springeZuSektion). */}
-      {!istXl && tocAuf && (
-        <>
-          <div className="fixed inset-0 z-40 bg-ink-900/30 xl:hidden" onClick={() => setTocAuf(false)} aria-hidden />
-          <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
-            className="fixed inset-x-0 z-50 xl:hidden bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain"
-            style={{ top: '4rem' }}>
-            <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
-              <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
-              <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+      {!istXl && tocAuf && (() => {
+        // Im Pane in die Overlay-Schicht portalieren + `absolute` (vom relative-
+        // Wrapper eingefangen) → der Drawer bleibt IM Pane statt als `position:fixed`
+        // über beide Panes zu quellen (container-type fängt fixed nicht). Ausserhalb
+        // unverändert `fixed` an den Viewport (byte-gleich).
+        const ziel = (imPane && overlayWurzel?.current) || null;
+        const inPane = ziel != null;
+        const drawer = (
+          <>
+            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
+              onClick={() => setTocAuf(false)} aria-hidden />
+            {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Such-Kopf, NUR der
+                Gliederungsbaum scrollt darunter → verdeckt die Trefferliste nicht.
+                In der Einzelansicht beginnt er UNTER dem Inhalts-Kopf (Topbar 4rem
+                + Kopf 2.25rem); im Pane in der Overlay-Schicht ab dessen Oberkante. */}
+            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
+              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'xl:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
+              style={inPane ? undefined : { top: 'calc(4rem + 2.25rem)' }}>
+              <div className="shrink-0 border-b border-line bg-paper-raised">
+                <div className="flex items-center justify-between px-4 pt-2.5 pb-1.5">
+                  <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
+                  <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+                </div>
+                <div className="flex items-center gap-2 px-4 pb-2.5">{sucheEingabe}</div>
+              </div>
+              {sektionen.length > 0 && <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-2 [scrollbar-width:thin]">{tocBaumEl}</div>}
             </div>
-            <div className="px-4 pt-3 pb-1">{sucheEingabe}</div>
-            {sektionen.length > 0 && <div className="px-3 py-2 border-t border-line mt-2">{tocBaumEl}</div>}
-          </div>
-        </>
-      )}
+          </>
+        );
+        return ziel ? createPortal(drawer, ziel) : drawer;
+      })()}
 
-      <div className={sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
-        {/* xl-Spalte (nur ab 1280px): Suche + Gliederungsbaum, sticky. Unter xl
-            wird die Gliederung NICHT inline hier gerendert (sie scrollte sonst weg),
-            sondern als Overlay-Drawer (oben) über den sticky ☰-Knopf. */}
-        {sektionen.length > 0 && (
+      {/* 2-Spalten-Gliederung: ab `istXl` — im Pane container-breitenabhängig
+          (ResizeObserver), sonst viewport-xl. istXl treibt die Klassen direkt
+          (kein xl:-Prefix), damit ein BREITES Pane denselben Aufbau wie der
+          Einzelbildschirm bekommt. */}
+      <div className={istXl && sektionen.length > 0 && tocOffen ? 'grid grid-cols-[16rem_minmax(0,1fr)] gap-8' : ''}>
+        {/* TOC-Spalte (Suche + Gliederungsbaum, sticky). Nur wenn istXl; darunter
+            Overlay-Drawer (oben) über den sticky ☰-Knopf. Im schmalen Pane: Drawer. */}
+        {istXl && sektionen.length > 0 && (
           <aside
-            style={{ top: 'calc(4rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 1.5rem)' }}
-            className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
+            style={imPane
+              // Im Pane: an die SICHTBARE Pane-Höhe binden (Topbar 4rem + PaneKopf
+              // 2.25rem ab), nicht an die indefinite Grid-Zeile (calc(100%) löste
+              // gegen content-Höhe → kein interner Scroll, sticky brach).
+              ? { top: '0.5rem', maxHeight: 'calc(100dvh - 4rem - 2.25rem - 1rem)' }
+              : { top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
+            className={`mb-0 sticky flex-col ${tocOffen ? 'flex' : 'hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
                 <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
@@ -777,7 +896,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               <p className="lc-overline">Gliederung</p>
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-500 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
-            <div data-toc className="xl:flex-1 xl:min-h-0 xl:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
+            <div data-toc className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]">
               {tocBaumEl}
             </div>
           </aside>
@@ -787,7 +906,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             Im 2-Spalten-Fall greift die Begrenzung erst ab xl über das Grid; darunter
             (lg–xl, geteilter Bildschirm) bleibt der Text zentriert + auf eine
             komfortable Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
-        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? 'mx-auto w-full max-w-[52rem] xl:mx-0 xl:max-w-none' : 'mx-auto w-full max-w-[56rem]'}`}>
+        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-[52rem]') : 'mx-auto w-full max-w-[56rem]'}`}>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>

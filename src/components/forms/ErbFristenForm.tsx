@@ -15,6 +15,7 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
 // Reine Darstellung über src/lib/erbFristen.ts (§3): Tatbestand wählen,
@@ -46,6 +47,7 @@ export function ErbFristenForm() {
   const [verschieben, setVerschieben] = useState(ausLink.verschieben ?? true);
   const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? getStandardKanton());
 
+  const pk = usePaneKlasse();
   const preset = ERB_FRISTEN.find((p) => p.key === key)!;
   const erbgang = ERB_FRISTEN.filter((p) => p.gruppe === 'erbgang');
   const klagen = ERB_FRISTEN.filter((p) => p.gruppe === 'klage');
@@ -83,7 +85,7 @@ export function ErbFristenForm() {
         text={ERB_DISCLAIMER}
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
         <Field label="Tatbestand" hint={preset.norm}>
           <select className={inputCls} value={key} onChange={(e) => setKey(e.target.value as ErbFristKey)}>
             <optgroup label="Erbgang: Ausschlagung & Inventar">
@@ -113,7 +115,7 @@ export function ErbFristenForm() {
 
       {ergebnis && (
         <ErgebnisBlock>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
             <EckdatenKachel akzent num label="Fristende" wert={ergebnis.resultat.endDatum}
               sub={ergebnis.resultat.endWochentag} />
             <EckdatenKachel num label="Frist"

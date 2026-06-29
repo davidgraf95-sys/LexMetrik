@@ -12,6 +12,7 @@ import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 // ─── Vorlagen-Wizard: Handelsreisendenvertrag (Art. 347–350a OR) ────────────
 // Sonderregime mit eigenem Schema (lib/vorlagen/handelsreisendenvertrag.ts).
@@ -36,6 +37,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
 
   const { ergebnis } = useMemo(() => hrZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefeHrGates(a), [a]);
+  const pk = usePaneKlasse();
 
   const fehlerImSchritt = (i: number): string[] => {
     const f: string[] = [];
@@ -73,7 +75,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           </div>
           <div className="space-y-3">
             <GruppenTitel>Handelsreisende/r</GruppenTitel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
               <Field label="Vorname"><input className={inputCls} value={a.reisenderVorname} onChange={(e) => set('reisenderVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.reisenderName} onChange={(e) => set('reisenderName', e.target.value)} /></Field>
             </div>
@@ -93,7 +95,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Vollmacht (Art. 348b OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={([
                 ['vermittlung', 'Nur Vermittlung', 'gesetzlicher Default'],
                 ['abschluss', 'Abschluss', 'ohne Inkasso-/Stundungsbefugnis'],
@@ -111,7 +113,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Lohnmodell (Art. 349a OR)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-3 gap-2', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-2')}
               items={([
                 ['fix', 'Festes Gehalt', 'ohne Provision'],
                 ['fix_provision', 'Fix + Provision', 'Gehalt + Provision'],
@@ -121,7 +123,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
               onSelect={(code) => set('lohnmodell', code)}
             />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
             {a.lohnmodell !== 'provision' && (
               <Field label="Festes Gehalt (CHF / Monat)"><BetragsFeld className={inputCls + ' num'} value={a.fixCHF} onChange={(v) => set('fixCHF', v)} placeholder="z. B. 5'000" /></Field>
             )}
@@ -135,7 +137,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           <div className="space-y-2">
             <GruppenTitel><NormText text={`Auslagenersatz (Art. 349d OR – stets gesondert)`} /></GruppenTitel>
             <SelectionGrid
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
               items={([
                 ['effektiv', 'Effektiv', 'gegen Beleg'],
                 ['pauschal', 'Pauschale', 'gesondert pro Monat'],

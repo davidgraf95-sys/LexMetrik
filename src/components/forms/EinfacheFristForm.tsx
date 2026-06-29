@@ -12,6 +12,7 @@ import type { Kanton } from '../../types/legal';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import type { FristMarkierung } from '../start/FristenKalender';
 import { getStandardKanton } from '../../lib/einstellungen';
+import { usePaneKlasse } from '../layout/PaneKontext';
 
 // ─── Einfacher Fristenrechner (S-5a FAHRPLAN-STRUKTUR-UMBAU) ────────────────
 //
@@ -100,6 +101,9 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
   // standardmässig heute, auch auf der Startseite. Die App hydratisiert nicht
   // (main.tsx createRoot render-then-replace) → kein date-input-Hydration-Mismatch.
   const heute = new Date().toLocaleDateString('sv-SE');
+  // Split-View: Grids richten sich nach der Pane-Breite (Container-Query) statt
+  // nach dem Viewport. Ausserhalb eines Panes liefert pk den Viewport-String.
+  const pk = usePaneKlasse();
   const [start, setStart] = useState(heute);
   const [laenge, setLaenge] = useState(10);
   const [einheit, setEinheit] = useState<Einheit>('tage');
@@ -188,7 +192,7 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
     <div className="space-y-4">
       {/* items-end: bei verschieden hohen Labels (z.B. zweizeilig) bleiben die
           Eingabefelder auf gleicher Höhe (Auftrag David). */}
-      <div className={`grid grid-cols-2 ${minimal ? '' : 'sm:grid-cols-4'} gap-3 max-w-2xl items-end`}>
+      <div className={`grid grid-cols-2 ${minimal ? '' : pk('sm:grid-cols-4', '@3xl/pane:grid-cols-4')} gap-3 max-w-2xl items-end`}>
         <label className="block space-y-1">
           <span className="lc-overline block">Datum (Ereignis)</span>
           <input type="date" value={start} onChange={(e) => setStart(e.target.value)}
@@ -228,7 +232,7 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
       ) : (
         <fieldset className="space-y-1.5">
           <legend className="lc-overline">Ferien / Stillstand</legend>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-2xl">
+          <div className={`grid grid-cols-1 ${pk('sm:grid-cols-3', '@xl/pane:grid-cols-3')} gap-2 max-w-2xl`}>
             {FERIEN_OPTIONEN.map((o) => (
               <label key={o.code}
                 className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>

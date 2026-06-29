@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
@@ -9,6 +10,8 @@ import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/brows
 import { kopfModell, type KopfLabelKey } from '../lib/rechtsprechung/kopf';
 import { normalisiereRegeste } from '../lib/rechtsprechung/register';
 import { GEBIET_LABEL } from '../lib/normtext/register';
+import { usePaneKontext } from '../components/layout/PaneKontext';
+import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
 import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/rechtsprechung/typen';
 
 // Reader EINES Entscheids (/rechtsprechung/:key). Lädt Manifest-Eintrag → Datei
@@ -92,6 +95,8 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 
 function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string; ansichtParam: string | null }) {
   const navigate = useNavigate();
+  const { imPane } = usePaneKontext();
+  const meldeInhaltsKopf = useMeldeInhaltsKopf();
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
@@ -139,6 +144,21 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
     });
     return () => { lebt = false; };
   }, [schluessel, ansichtParam, navigate]);
+
+  // Parität zum Gesetz-Leser: Kopfdaten (Breadcrumb Rechtsprechung › Ebene › Nr)
+  // melden — der nächste Provider fängt sie (Einzelansicht → Inhalts-Kopf, Pane →
+  // PaneKopf). Ebene nicht klickbar (Übersicht filtert nicht nach Bund/Kanton).
+  useEffect(() => {
+    if (!snap) return;
+    meldeInhaltsKopf({
+      breadcrumb: [
+        { label: 'Rechtsprechung', to: '/rechtsprechung' },
+        { label: snap.kanton === 'CH' ? 'Bund' : `Kanton ${snap.kanton}` },
+        { label: snap.bgeReferenz ?? snap.nummer },
+      ],
+    });
+  }, [snap, meldeInhaltsKopf]);
+  useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
   // Browser-Tab: Zitierung des Entscheids.
   useEffect(() => {
@@ -199,7 +219,12 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
   const aktiveAbschnitte = ansicht === 'auszug' && hatAuszug ? snap.auszugAbschnitte! : snap.abschnitte;
   // sticky-Höhe als CSS-Variable: zweizeilig (Tabs + Sprung-Chips) bzw. einzeilig
   // (nur Sprung-Chips). Anker-Sektionen verrechnen das als scroll-margin-top.
-  const stickHoehe = switcherSichtbar ? '10.5rem' : '7rem';
+  // In der Einzelansicht klebt die Leiste UNTER dem Inhalts-Kopf (Topbar 4rem +
+  // Kopf 2.25rem); im Pane liegen Topbar/PaneKopf AUSSERHALB des Scroll-Containers
+  // → Offset ~0. scroll-margin (--rsp-stick) entsprechend.
+  const stickHoehe = imPane
+    ? (switcherSichtbar ? '7rem' : '3.5rem')
+    : (switcherSichtbar ? '12.75rem' : '9.25rem');
   // Sprung-Ziele: nach dem aktiven Body (+ Regeste, wenn sie gezeigt wird) — passt zur sichtbaren Ansicht.
   const vorhandene = new Set<Abschnittstyp>(aktiveAbschnitte.map((a) => a.typ));
   if (zeigeRegeste) vorhandene.add('regeste');
@@ -226,15 +251,8 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
           Abschnitt nicht hinter dem gemeinsamen Kopf-Block verschwindet. Greift nur im
           Haupt-Body (.rsp-anker), nicht im Lesemodus-Overlay (eigene schlanke Leiste). */}
       <style>{`.rsp-anker [id]{scroll-margin-top:var(--rsp-stick,7rem)}`}</style>
-      {/* Breadcrumb (scrollt weg; die Sprung-Navigation ist die sticky Kopfzeile) */}
-      <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-        <Link to="/rechtsprechung" className="hover:text-brass-700">Rechtsprechung</Link>
-        <span className="mx-1.5 text-ink-300">›</span>
-        {snap.kanton === 'CH' ? 'Bund' : `Kanton ${snap.kanton}`}
-        <span className="mx-1.5 text-ink-300">›</span>
-        <span className="text-ink-700 font-medium num">{snap.bgeReferenz ?? snap.nummer}</span>
-      </div>
-
+      {/* Breadcrumb trägt der Kopf (Inhalts-Kopf in der Einzelansicht, PaneKopf im
+          Split-View) — kein Inline-Dup mehr (Parität zum Gesetz-Leser). */}
       <header className="space-y-2.5 border-b border-line pb-5">
         {/* 1 Identität (stets): Gericht · Abteilung · Sachgebiet */}
         <p className="lc-overline">
@@ -319,7 +337,8 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
           (§8: «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»), darunter die Sprung-Chips.
           Die App-Topbar liegt mit z-20 darüber, dieser Block mit z-[15] darunter. */}
       {(switcherSichtbar || navZiele.length > 0) && (
-        <div className="sticky top-16 z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line space-y-2">
+        <div style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}
+          className="sticky z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line space-y-2">
           {switcherSichtbar && (
             <Tabs
               items={[
@@ -459,7 +478,11 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
     };
   }, [onClose]);
 
-  return (
+  // Per Portal an <body>: sonst fängt ein `@container/pane`-Vorfahr (Split-View)
+  // das `position:fixed`-Overlay ein und der Lesemodus wäre nicht mehr vollflächig
+  // (B-1-Bugcheck #7). Default geschlossen → kein SSR/Prerender-Pfad.
+  if (typeof document === 'undefined') return null;
+  return createPortal(
     <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Lesemodus — ${snap.zitierung}`}
       className="fixed inset-0 z-50 overflow-y-auto bg-paper">
       {/* schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen */}
@@ -513,7 +536,8 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
           </p>
         </footer>
       </article>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

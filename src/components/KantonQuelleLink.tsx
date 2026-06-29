@@ -69,7 +69,7 @@ export function KantonQuelleLink({ quelle, className, children }: {
         {children ?? 'amtliche Quelle ↗'}
       </a>
       {offen && (
-        <NormPopoverOverlay onClose={schliessen}>
+        <NormPopoverOverlay onClose={schliessen} triggerRef={triggerRef}>
           {snapshot && snapshot !== 'laedt'
             ? <NormPopover snapshot={snapshot} passus={{ absatz: p?.absatz ?? null, lit: p?.lit, ziff: p?.ziff }} onClose={schliessen} />
             : <NormPopoverHuelle zustand={snapshot === 'laedt' ? 'laedt' : 'fehlt'} url={quelle.quelleUrl} artikel={anzeigeLabel} onClose={schliessen} />}

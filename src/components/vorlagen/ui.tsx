@@ -1,4 +1,4 @@
-import { cloneElement, createContext, isValidElement, useContext, useEffect, useId, useRef, useState } from 'react';
+import { cloneElement, createContext, isValidElement, useContext, useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from 'react';
 import { createPortal } from 'react-dom';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
@@ -167,7 +167,7 @@ export function NormChip({ artikel, anzeige, hrefOverride, title, linkClass = CH
         {inhalt}
       </a>
       {offen && (
-        <NormPopoverOverlay onClose={schliessen}>
+        <NormPopoverOverlay onClose={schliessen} triggerRef={triggerRef}>
           {snapshot && snapshot !== 'laedt'
             ? <NormPopover snapshot={snapshot} passus={{ absatz: ref?.absatz ?? null, lit: ref?.lit, ziff: ref?.ziff }} onClose={schliessen} />
             : <NormPopoverHuelle zustand={snapshot === 'laedt' ? 'laedt' : 'fehlt'} url={url} artikel={artikel} onClose={schliessen} />}
@@ -197,10 +197,17 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
   );
 }
 
-// Overlay/Backdrop + Zentrierung für die Norm-Vorschau. NormPopover liefert
-// bewusst nur den Dialog-Inhalt (lc-card), nicht das Overlay — beides stellt
-// dieser Rahmen: zentriert, Klick auf den Backdrop schliesst. Rein
-// clientseitig gerendert (nur wenn offen, also nie im SSR/Prerender).
+// Overlay/Backdrop für die Norm-Vorschau. NormPopover liefert bewusst nur den
+// Dialog-Inhalt (lc-card), nicht das Overlay — beides stellt dieser Rahmen:
+// das Popover erscheint AM KLICKORT (am Trigger verankert, nicht mittig — Wunsch
+// David), Klick auf den Backdrop schliesst. Rein clientseitig (nie im Prerender).
+//
+// Verankerung: fixe Koordinaten aus dem getBoundingClientRect des Triggers
+// (unter dem Trigger, sonst darüber; horizontal in den Viewport geklemmt). Der
+// Portal hängt am body → ausserhalb jedes `container-type`-Vorfahren, also
+// Viewport-Koordinaten korrekt AUCH in einem Split-View-Pane (sonst läge das
+// fixed-Popover am Pane-Container statt am Viewport — der eigentliche Bug).
+// Ohne triggerRef (Altaufrufer) bleibt es mittig.
 //
 // PORTAL an document.body: Der Auslöser (Norm-Chip / «amtliche Quelle»-Link)
 // steht teils in einem <p> (z. B. die Tarif-Quelle-Zeile). Würde das Overlay
@@ -219,8 +226,42 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
 // Beides nur im useEffect (window/document) → SSR/Prerender unberührt; der
 // Erst-Render bleibt byte-gleich (Overlay rendert ohnehin nur clientseitig).
 // Der Fokus-Rückgabe auf den Trigger bleibt beim Aufrufer (triggerRef).
-export function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+export function NormPopoverOverlay({ children, onClose, triggerRef }: {
+  children: React.ReactNode;
+  onClose: () => void;
+  /** Trigger-Element → Popover wird daran verankert (sonst zentriert). */
+  triggerRef?: RefObject<HTMLElement | null>;
+}) {
   const dialogContainerRef = useRef<HTMLDivElement>(null);
+  // Verankerte Position (am Trigger). null = noch nicht berechnet/kein Trigger.
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+
+  // Position aus dem Trigger-Rect ableiten: bevorzugt UNTER dem Trigger, sonst
+  // darüber; horizontal an den Viewport geklemmt. useLayoutEffect misst die
+  // gerenderte Kartenhöhe und setzt die Position VOR dem Paint (kein Springen).
+  useLayoutEffect(() => {
+    const trigger = triggerRef?.current;
+    const karte = dialogContainerRef.current;
+    if (trigger == null || karte == null) return;
+    const berechne = () => {
+      const t = trigger.getBoundingClientRect();
+      const kw = karte.offsetWidth;
+      const kh = karte.offsetHeight;
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const m = 8; // Sicherheitsabstand zum Rand
+      const left = Math.min(Math.max(m, t.left), Math.max(m, vw - kw - m));
+      let top = t.bottom + 6;
+      if (top + kh + m > vh) {
+        const oben = t.top - kh - 6;
+        top = oben >= m ? oben : Math.max(m, vh - kh - m);
+      }
+      setPos({ top, left });
+    };
+    berechne();
+    window.addEventListener('resize', berechne);
+    return () => window.removeEventListener('resize', berechne);
+  }, [triggerRef, children]);
 
   // Fokus-Falle: hält Tab/Shift+Tab innerhalb des Dialogs (zyklisch). Die reine
   // Index-Berechnung liegt in naechsterFokus (testbar); hier nur DOM-Zugriff.
@@ -256,13 +297,21 @@ export function NormPopoverOverlay({ children, onClose }: { children: React.Reac
   }, []);
 
   if (typeof document === 'undefined') return null; // SSR/Prerender: kein Overlay
+  const verankert = triggerRef != null;
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4"
+      // Verankert: transparenter Klick-Fänger (kein Dim, Popover-Charakter).
+      // Zentriert (Altpfad): gedimmter, mittig gestellter Modal-Backdrop.
+      className={verankert ? 'fixed inset-0 z-50' : 'fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4'}
       onClick={onClose}
     >
       {/* Klicks im Dialog dürfen nicht zum Backdrop durchschlagen. */}
-      <div ref={dialogContainerRef} onClick={(e) => e.stopPropagation()} className="w-full max-w-xl">
+      <div
+        ref={dialogContainerRef}
+        onClick={(e) => e.stopPropagation()}
+        style={verankert ? { position: 'fixed', top: pos?.top ?? 0, left: pos?.left ?? 0, visibility: pos ? 'visible' : 'hidden' } : undefined}
+        className="w-full max-w-xl"
+      >
         {children}
       </div>
     </div>,
