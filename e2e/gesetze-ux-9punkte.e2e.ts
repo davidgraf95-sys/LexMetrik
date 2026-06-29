@@ -7,26 +7,38 @@ const SHOT = '/private/tmp/claude-501/-Users-david/b109e112-2abc-41f2-9de0-81562
 test.describe('Gesetze-UX 9 Punkte', () => {
   test('P4: Gliederung/Randtitel steht VOR der Artikelnummer (Fedlex-Reihenfolge)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    const art = page.locator('#art-1');
-    await expect(art).toBeVisible();
-    // DOM-Reihenfolge: der Randtitel («Im Allgemeinen») kommt VOR «Art. 1».
-    const reihenfolge = await art.evaluate((el) => {
-      const txt = el.textContent ?? '';
-      return { randIdx: txt.indexOf('Im Allgemeinen'), artIdx: txt.indexOf('Art. 1') };
+    await expect(page.locator('#art-1')).toBeVisible();
+    // §6.3-Anpassung 29.6.2026 (B1-Modell, Verhalten verifiziert): Der Randtitel
+    // ist seit B1 ein eigener Gliederungs-Sektionskopf ([data-sek], Fedlex-analog)
+    // und steht in DOKUMENT-Reihenfolge VOR der Artikelnummer — nicht mehr als
+    // Marginalie INNERHALB von #art-1. Geprüft: der «Im Allgemeinen»-Sektionskopf
+    // existiert und kommt vor #art-1.
+    const ord = await page.evaluate(() => {
+      const knoten = [...document.querySelectorAll('[data-sek], [id^="art-"]')];
+      const sek = [...document.querySelectorAll('[data-sek]')].find((s) => {
+        const c = s.cloneNode(true) as HTMLElement;
+        c.querySelectorAll('[data-sek], [id^="art-"]').forEach((x) => x.remove());
+        return /Im Allgemeinen/.test(c.textContent ?? '');
+      });
+      const art1 = document.getElementById('art-1');
+      if (!sek || !art1) return { found: false, before: false };
+      return { found: true, before: knoten.indexOf(sek) < knoten.indexOf(art1) };
     });
-    expect(reihenfolge.randIdx).toBeGreaterThanOrEqual(0);
-    expect(reihenfolge.artIdx).toBeGreaterThan(reihenfolge.randIdx);
+    expect(ord.found, '«Im Allgemeinen» als Sektionskopf vorhanden').toBe(true);
+    expect(ord.before, 'Sektionskopf steht vor #art-1').toBe(true);
   });
 
-  test('Einklappen analog Fedlex: Artikel-Body klappt zu, Überschrift+Nummer bleiben', async ({ page }) => {
+  test('Einklappen analog Fedlex: Artikel-Body klappt zu, Nummer bleibt; Randtitel-Sektionskopf bleibt', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
     const art = page.locator('#art-1');
     await expect(art).toContainText('Willensäusserung'); // Body sichtbar
     await art.getByRole('button', { name: 'Artikel einklappen' }).click();
-    // Body weg, aber Artikelnummer + Randtitel bleiben sichtbar (Fedlex-treu).
-    await expect(art.getByText(/durch übereinstimmende/i)).toHaveCount(0);
+    // Body weg, Artikelnummer bleibt. §6.3-Anpassung 29.6.2026: Der Randtitel
+    // «Im Allgemeinen» ist seit B1 ein eigener Sektionskopf AUSSERHALB des Artikels
+    // (immer sichtbar) — daher auf Seitenebene geprüft, nicht mehr innerhalb #art-1.
+    await expect(art.getByText('Willensäusserung')).toHaveCount(0);
     await expect(art.getByText('Art. 1')).toBeVisible();
-    await expect(art.getByText('Im Allgemeinen')).toBeVisible();
+    await expect(page.getByText('Im Allgemeinen', { exact: false }).first()).toBeVisible();
     // Wieder aufklappen.
     await art.getByRole('button', { name: 'Artikel ausklappen' }).click();
     await expect(art).toContainText('Willensäusserung');

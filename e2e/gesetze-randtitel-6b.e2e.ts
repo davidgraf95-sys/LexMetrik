@@ -11,10 +11,24 @@ test('Randtitel-Gruppierungen sind einklappbare Sektions-Knoten (ZGB)', async ({
   await expect(page.locator('#art-11')).toBeVisible()
 
   // Promotete Randtitel-Stufen erscheinen als Fliesstext-Sektionsköpfe (data-sek
-  // mit aria-expanded) — sowohl die Buchstaben- («II.») als auch die Ziffern-Ebene.
+  // mit einklappbarem aria-expanded-Knopf) — sowohl die Buchstaben- («II.») als
+  // auch die Ziffern-Ebene.
+  //
+  // §6.3-Anpassung 29.6.2026 (B1 / G11 änderte das DOM, Verhalten verifiziert
+  // unverändert): Der Titel-Knopf liegt seit G11 in einem <span> (damit der
+  // Fussnoten-Marker Geschwister statt verschachtelter Button ist), ist also NICHT
+  // mehr direktes Kind von [data-sek]. Darum Nachkomme-Selektor `[data-sek] button`
+  // statt `[data-sek] > button`. Den Kopf-Text lesen wir aus dem [data-sek] OHNE
+  // verschachtelte Untersektionen/Artikel (clone + strip), unabhängig davon, wie
+  // roman-/Ziffern-Präfix und Resttitel in Knöpfe aufgeteilt sind.
   const sekHeads = await page.evaluate(() =>
-    [...document.querySelectorAll('[data-sek] > button[aria-expanded]')]
-      .map((b) => (b.textContent ?? '').trim()),
+    [...document.querySelectorAll('[data-sek]')]
+      .filter((s) => s.querySelector('button[aria-expanded]'))
+      .map((s) => {
+        const c = s.cloneNode(true) as HTMLElement
+        c.querySelectorAll('[data-sek], [id^="art-"]').forEach((x) => x.remove())
+        return (c.textContent ?? '').replace(/\s+/g, ' ').trim()
+      }),
   )
   expect(sekHeads.some((t) => /II\.\s*Handlungsf/.test(t)), 'II. Handlungsfähigkeit').toBe(true)
   expect(sekHeads.some((t) => /2\.\s*Voraussetzungen/.test(t)), '2. Voraussetzungen (verschachtelt)').toBe(true)
@@ -22,7 +36,7 @@ test('Randtitel-Gruppierungen sind einklappbare Sektions-Knoten (ZGB)', async ({
   // Einklappen der verschachtelten Gruppe «2. Voraussetzungen» blendet Art. 13–16
   // aus; der direkt unter «II.» liegende Art. 12 bleibt sichtbar (Reihenfolge).
   await expect(page.locator('#art-13')).toBeVisible()
-  const kopf = page.locator('[data-sek] > button', { hasText: '2. Voraussetzungen' }).first()
+  const kopf = page.locator('[data-sek] button', { hasText: '2. Voraussetzungen' }).first()
   await kopf.scrollIntoViewIfNeeded()
   await kopf.click()
   await expect(page.locator('#art-13')).toHaveCount(0)
