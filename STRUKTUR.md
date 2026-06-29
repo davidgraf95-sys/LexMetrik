@@ -23,6 +23,28 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 — Governance: §14 Aufnahme/Einordnung + Querschnitt-Gegenprüfung strukturiert
+
+Auftrag David: den weiteren Aufbau so **dokumentieren**, dass künftige Sessions ihn autonom
+durchführen — Hybrid bestätigt (`ROADMAP.md` = ein Eingang/Backlog, FAHRPLANs = Detailquellen),
+neue Aufträge **abgleichen → bündeln → einordnen**, Qualität rückwirkend sichern. Reine
+Doku/Governance (`**.md`), kein Code → CI/Golden unberührt, kein Risiko-Pfad (`Gegenpruefung: n/a`).
+- **`CLAUDE.md` §14** neu: Aufnahme & Einordnung neuer Aufträge — Eingang ROADMAP, keine ungebundene
+  `FAHRPLAN-*.md`, Abgleich→Bündeln→Einordnen (nicht über Risiko-Klassen bündeln), DoD inkl.
+  adversariale Gegenprüfung, Trailer-Konvention `Roadmap:`/`Gegenpruefung:`, Kontext-Hygiene
+  (Delegieren > Persistieren > Handoff > `/compact`).
+- **`ROADMAP.md` Querschnitt-Band** neu: **QS-GP** (adversariale Gegenprüfung systematisiert — Gate
+  `check:gegenpruefung`, Protokoll-Skill, Register mit Stand, rückwirkende Kampagne) + **QS-PH**
+  (Plan-Hygiene-Wächter). Alles `[OF]`, **noch zu bauen**.
+- **`ROADMAP.md` Welle 2 · 6** neu: **W2·6-BGE** — P0-Fix BGE-Auszug abgeschnitten (30 BGE; OCL
+  `paragraph_excerpt_chars=5000`, Daten- nicht CSS-Fehler; Fix = Voll-Nachladen + §7-Regenerierung +
+  Schutz-Tor in `check:entscheide`). Diagnose via ultracode (Opus-Agent).
+- **`ROADMAP.md` Welle 14** ergänzt: Bildschirm-/Responsive-Audit (ultracode) **gebündelt** mit
+  Split-View. **Archiv-Hygiene** ergänzt: verify-then-archive-Methode für obsolete FAHRPLANs.
+- Strukturierungs-Texte via **ultracode-Workflow** (Entwurf → adversarialer Kritiker → Final, 10
+  Opus-Agenten); der Kritiker fing einen Self-Sufficiency-Defekt (§14 verwies auf das noch nicht
+  gebaute Tor → als «im Aufbau» markiert).
+
 ## Session 29.6.2026 — Normtext-Darstellung Bund/DE: B1 komplett (Worktree-Merge) · Deploy
 
 Auftrag David: Gesetzesdarstellung Bund/DE auf Fedlex-Niveau (Worktree `feat/normtext-bund-de`,

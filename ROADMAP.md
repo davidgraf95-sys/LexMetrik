@@ -84,6 +84,41 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
   trägt sichtbaren ehrlichen Status (`verified`/`entwurf`/`geplant`) + Stand; Golden-Abdeckung &
   Norm-Anker-Prüfung automatisieren. **Stärkste zeitsperre-konforme Arbeit** — macht die
   Dez-Abnahme billig; dauerhaft begleitend.
+- **Adversariale Gegenprüfung — systematisiert** *(QS-GP, LERNPHASE B, `[OF]`)*, neu 29.6.2026 —
+  erweitert die Verifikations-Infrastruktur. Der adversariale Zweitdurchgang (unabhängiger
+  Opus-Agent, frischer Kontext, Auftrag: Output gegen die amtliche Quelle **widerlegen**) fing real
+  die teuersten Bugs (Tabellen-Drop, Footnote-Leak, `bis`/`ter`-Verlust), hängt aber bisher an
+  Session-Disziplin statt an einem Tor. Bausteine:
+  - **a · Gegenprüfungs-Gate `check:gegenpruefung`** — eingehängt in `npm run gate` (**nur lokal**,
+    CI unverändert). Schneidet `git diff` ∩ Risiko-Pfade: **Extraktion** `scripts/normtext/**`,
+    `src/lib/normtext/**`, `public/normtext/*.json` · **Rechnen** `src/lib/*(tarif|kosten|gebuehr|`
+    `zustaendigkeit|frist|verjaehr|streitwert|beurkund|gruendung|schkg|straf|bger)*.ts` plus die
+    Engine-Verzeichnisse `src/lib/tarif/**`, `src/lib/fristenspiegel/**` · **Norm/Tarif**
+    `src/data/tarif/**`, `src/lib/vorlagen/**`. Trifft der Diff diese Globs, verlangt das Tor einen
+    **Nachweis** (Commit-Trailer `Gegenpruefung:`; vor dem Commit liegt das Token in
+    `bibliothek/.gegenpruefung-pending`, **gitignored** — Eintrag in `.gitignore` ergänzen), sonst
+    **rot**. Über-Triggerung auf reine Tor-/Test-Änderungen wird mit Trailer
+    `Gegenpruefung: n/a — reine Prüflogik` quittiert. **ERSTE AKTION beim Bau:** die Glob-Form gegen
+    den real existierenden Baum prüfen (Verzeichnisse vs. `*.ts` — `src/lib/tarif`/`fristenspiegel`
+    sind Ordner), sonst läuft das Tor leer. Das Tor selbst ist reine Prüflogik → golden byte-gleich (§6).
+  - **b · Adversariales Protokoll als feste Skill** — unabhängiger Opus-Agent, frischer Kontext, vor
+    sich Output **und** amtliche Quelle, Auftrag: widerlegen; **beim Rechnen** unabhängig aus der
+    Norm nachrechnen (nicht den Code lesen). Gibt dem Trailer `Gegenpruefung:` überall dieselbe,
+    nachvollziehbare Bedeutung.
+  - **c · Gegenprüfungs-Register mit «Stand»** (`bibliothek/`, §11) — hält je Snapshot/Engine fest,
+    welcher protokollierte Durchgang vorliegt (Datum, Verdikt, **gepinnte Quell-Version**) →
+    Rück-Prüfung als Burn-down. Gekoppelt an `check:fedlex-versionen`: überholter Pin ⇒ Eintrag wird
+    «**neu fällig**».
+  - **d · Rückwirkende Kampagne** *(Batches, Opus, `[OF]`)* — risiko-priorisiert: **Rechnen →
+    extrahierte Normen → Rest**; enthält die **BGE-Korpus-Regenerierung** (Welle 2 · 6). Gegen
+    amtliche Quelle verifizierbar; Verdikte ins Register (c). **Constraints:** reine Re-Verifikation
+    öffnet **keinen** 26×-Slot; ein daraus folgender Daten-Bulklauf (Korpus neu ziehen) ist ein
+    26×-Asset → nur bei freiem Slot, nie zwei parallel (Leitprinzip 4). Korrekturen aus der Kampagne
+    sind verhaltensändernd → golden-gegated (§6) + Push/Deploy nur auf Davids Ja (§9).
+- **Plan-Hygiene-Wächter** *(QS-PH, `[OF]`)*. Mechanischer Check nach Vorbild des SessionStart-Hooks
+  `.claude/hooks/struktur-aktuell.py`: meldet **rot**, sobald eine neu hinzugefügte `FAHRPLAN-*.md`
+  **nicht aus `ROADMAP.md` verlinkt** ist — setzt die Plan-Hygiene-Regel durch (jede `FAHRPLAN-*.md`
+  muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1).
 - **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
@@ -204,6 +239,28 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
+    - **P0-Fix BGE-Auszug abgeschnitten** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*. Diagnose
+      29.6.2026 (verifiziert): Die Default-«Auszug»-Ansicht der BGE-Leitentscheide
+      (`EntscheidLeser.tsx` öffnet Leitentscheide in der Auszug-Ansicht und rendert
+      `auszugAbschnitte`) schneidet Erwägungen **still mitten im Wort** ab (U+2026-Marker).
+      **Datenfehler, nicht CSS:** Der amtliche Sammlungs-Auszug wird über die OCL-`/structure`
+      mit `paragraph_excerpt_chars=5000` geholt (`holeBgeLeitentscheid`,
+      `scripts/normtext/adapter-entscheide.ts`, ~Z. 566) und — anders als der Urteils-Body —
+      NICHT voll nachgeladen. **30 BGE betroffen** (Auszug bricht ab, gemessen 29.6.2026);
+      zusätzlich 2 BGE auch im Volltext gekappt (`151_V_30`, `151_V_100`). Der Volltext
+      `abschnitte` ist sonst unversehrt (voll-Umschalter greift). Beleg:
+      `public/rechtsprechung/bund/bge/152_III_137.json` (E.4.1-Auszug bricht bei «…ko» ab).
+      *Fix:* Im Auszug-Pfad dieselbe Voll-Nachlade-Schleife fahren, die `holeEntscheidOCL`
+      (~Z. 432–439, `holeErwaegung`) für den Urteils-Body bereits nutzt — der OCL-Cap (Max
+      5000 Z., höher → HTTP 422) lässt sich NICHT anheben, je gekapptem Erwägungs-Absatz muss
+      der Volltext nachgeladen werden. Dann die betroffenen BGE über den §7-Generator neu
+      erzeugen (`npm run entscheide -- --datum=$(date +%F) --bge-von=<Stichtag> --additiv`,
+      `scripts/normtext-entscheide.ts`) — **KEIN Hand-Edit** (§7/§8). *Schutz-Tor (Wiederkehr
+      verhindern):* `check:entscheide` (`scripts/normtext/check-entscheide.ts`, bereits in der
+      `check`-Kette) um eine Prüfung erweitern, die Auszug- **und** Volltext-Blöcke flaggt,
+      deren Text auf U+2026 / mitten im Wort endet (harter Verstoss → exit 1). Abnahme:
+      `npm run gate` grün, Golden byte-gleich (Gesetze unberührt), `check:entscheide` grün;
+      Deploy nur mit Davids Ja (§9). **Öffnet keinen 26×-Slot.**
 - [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
   (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
   (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
@@ -238,6 +295,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **Kernaufwand = CSS Container-Queries** (450 Viewport-Breakpoints brechen in schmalen Panes;
   gestuft CQ-1). Detail + Architektur-Befund: `FAHRPLAN-SPLIT-VIEW.md`. §12-Kollisionsdateien
   `Shell.tsx`/`Topbar.tsx`/`App.tsx`/`tailwind.config.js` → nie parallel.
+  - [ ] **Gebündelt (Auftrag David 29.6.2026): Bildschirm-/Responsive-Audit** *(SPLIT-VIEW, `[OF]`)* — **ein** `ultracode`-Workflow fotografiert **Seiten × Breakpoints** (Handy hoch ~390 · Tablet ~768 · Laptop ~1280 · Desktop ~1536 · Ultrawide ~2560) und flaggt Layout/Umbruch/**Tabellen-Overflow** (maschinell je `<table>`/Pane über `scrollWidth>clientWidth`, deterministisch §2). **Werkzeug zuerst prüfen (§5/§10): auf dem bestehenden Playwright-bash-Harness `scripts/screenshots.ts` aufsetzen** — Playwright-Start, Motiv→Route, Arg-Parsing und ehrliches FEHLT-Logging (§8) sind dort schon da; nur die Breitenliste (heute 360/768/1280) auf die fünf erweitern und die Seitenmenge ergänzen, **nicht** neu erfinden. **NICHT** der Playwright-MCP (Bash-Lektion 22.6.); Playwright ist bereits Dependency. **Aufruf** (kontextlos lauffähig): `npm run preview -- --port 4321 --strictPort`, dann `npx vite-node scripts/screenshots.ts -- --base-url http://localhost:4321 --out abnahme/responsive-audit/ist-<sha7>` — neuer Ausgabe-Pfad ⇒ eine `.gitignore`-Zeile `abnahme/responsive-audit/` ergänzen, Binär-PNGs nie committen (§6). **Rein lesend:** berührt selbst keine §12-Kollisionsdatei und kein Golden-/Logik-Tor (§6), Status-Modell unberührt (§8), kein Deploy ohne Davids Ja (§9); Befund = Screenshot-Mappe + Defektliste, **rein visuell verifizierbar, keine Davids-Fachzeit**. **Kein eigener Strang — gehört in Schritt 14** (dasselbe Breakpoint-/Container-Query-Subsystem), denn die aus dem Audit folgenden Fixes treffen **dieselben §12-Kollisionsdateien wie Schritt 14** → **im selben Worktree wie Strang B, nie als paralleler Strang** (kein 26×-Bezug).
 
 ### Studierende-Layer (querliegend, `[OF]`, billig)
 
@@ -339,6 +397,12 @@ harter Auflage.
   Verzahnung/GESETZE-IMPORT → vor aufsetzenden Strängen mitdenken.
 - **Archiv-Kandidaten** (Code-Stand prüfen): BGE-DARSTELLUNG-EINHEITLICH · INTERNATIONAL-VOLLTEXT-Rest.
   RECHTSPRECHUNG-Dach/TARIF-STUFE2/BGER-RECHTSWEG deployt → nur Abnahme.
+  **Methode** (verify-then-archive, ultracode): die 28→`ROADMAP.md`-Konsolidierung ist seit 28.6.
+  erledigt — offen ist nur das Archivieren obsoleter `FAHRPLAN-*.md` (Repo-Wurzel). Je FAHRPLAN
+  prüft **ein Opus-Agent**, ob ALLE offenen Punkte bereits in `ROADMAP.md` stehen; nur zu 100%
+  gemappte Dateien wandern per `git mv` nach `archiv/` (kein Informationsverlust), der Rest bleibt
+  liegen bis gemappt. Reine Doku-Hygiene → kein Deploy/§9, kein Golden/§6, kein Worktree-Zwang
+  (keine Kollisionsdatei, §12). `[OF]`
 - **Stale Doku-Köpfe** (in der jeweiligen `FAHRPLAN-*.md` korrigieren): POPUP «27»→218 · VERTRAGS-
   VARIANTEN «1000» · LUECKEN · NOTARIAT-GRUNDBUCH.
 - **Klein-Backlog** (Issue-Ebene): Direktklage Art. 8 ZPO < 100k plausibilisieren · stabile Keys in
