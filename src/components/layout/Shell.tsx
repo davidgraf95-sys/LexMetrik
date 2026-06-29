@@ -119,11 +119,19 @@ export function Shell({ children }: { children: ReactNode }) {
   // verschieben (min 0.25, damit kein Pane kollabiert). ←/→ als Tastatur-Schritt.
   const MIN_GROW = 0.25;
   const verstelleBreite = (g: number, dxFrac: number, basis: number[]) => {
+    // dxFrac so kappen, dass KEINE der beiden Nachbarspalten unter MIN_GROW fällt —
+    // beide bekommen denselben Betrag (+/−), daher bleibt ihre Grow-Summe konstant
+    // (sonst wuchs eine Seite an den Extremen unbegrenzt, die andere kollabierte).
+    const d = Math.max(MIN_GROW - basis[g], Math.min(basis[g + 1] - MIN_GROW, dxFrac));
     const next = [...basis];
-    next[g] = Math.max(MIN_GROW, basis[g] + dxFrac);
-    next[g + 1] = Math.max(MIN_GROW, basis[g + 1] - dxFrac);
+    next[g] = basis[g] + d;
+    next[g + 1] = basis[g + 1] - d;
     setBreiten(next);
   };
+  // Teardown eines laufenden Gutter-Drags bei Unmount (sonst feuert move auf einen
+  // abgebauten Baum, bis das nächste pointerup käme) — wie ZiehGriff.
+  const gutterAufRef = useRef<(() => void) | null>(null);
+  useEffect(() => () => gutterAufRef.current?.(), []);
   const ziehGutter = (g: number) => (e: ReactPointerEvent) => {
     e.preventDefault();
     const row = rowRef.current; if (!row) return;
@@ -134,7 +142,9 @@ export function Shell({ children }: { children: ReactNode }) {
     const auf = () => {
       window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', auf);
       document.body.style.cursor = ''; document.body.style.userSelect = '';
+      gutterAufRef.current = null;
     };
+    gutterAufRef.current = auf;
     document.body.style.cursor = 'col-resize'; document.body.style.userSelect = 'none';
     window.addEventListener('pointermove', move); window.addEventListener('pointerup', auf);
   };
@@ -222,16 +232,28 @@ export function Shell({ children }: { children: ReactNode }) {
     kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER,
     istOffen,
   };
+  // liveLocs-Eintrag eines (entfernten/ersetzten) Seed-Pfads aufräumen (sonst Leak +
+  // kurz veraltetes Label, wenn derselbe Seed später erneut geöffnet wird).
+  const raeumeLiveLoc = (seed: string) =>
+    setLiveLocs((m) => { if (!(seed in m)) return m; const n = { ...m }; delete n[seed]; return n; });
   // Fokus nach dem Schliessen eines Panes zurück in den Hauptinhalt (A11y).
   const schliesseUndFokus = (i: number) => {
+    const seed = pane.sekundaer[i];
     pane.schliesse(i);
+    raeumeLiveLoc(seed);
     requestAnimationFrame(() => document.getElementById('inhalt')?.focus());
   };
   // Sekundär → Hauptfenster: dieses Pane wird die URL, das alte Hauptfenster rutscht an seinen Platz.
   const zumHauptfenster = (i: number) => {
     const altPrimaer = pathname + search + (typeof window !== 'undefined' ? window.location.hash : '');
     const ziel = livePfad(i);
-    pane.ersetze(i, altPrimaer);
+    const seed = pane.sekundaer[i];
+    // Würde der alte Primär ein bereits offenes ANDERES Pane duplizieren (gleicher
+    // normPfad)? Dann NICHT als zweiten gleichen Seed schreiben (doppelter React-Key
+    // → State-Vermengung/Pane-Verlust), sondern dieses Pane schliessen.
+    const dup = liveSek.some((s, j) => j !== i && tabSchluessel(s) === tabSchluessel(altPrimaer));
+    if (dup) pane.schliesse(i); else pane.ersetze(i, altPrimaer);
+    raeumeLiveLoc(seed);
     navigate(ziel);
   };
   // Hauptfenster ✕: erstes Sekundär (live) zum Hauptfenster befördern (sonst zur Startseite).

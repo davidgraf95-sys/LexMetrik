@@ -202,7 +202,12 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
   const aktiveAbschnitte = ansicht === 'auszug' && hatAuszug ? snap.auszugAbschnitte! : snap.abschnitte;
   // sticky-Höhe als CSS-Variable: zweizeilig (Tabs + Sprung-Chips) bzw. einzeilig
   // (nur Sprung-Chips). Anker-Sektionen verrechnen das als scroll-margin-top.
-  const stickHoehe = switcherSichtbar ? '10.5rem' : '7rem';
+  // In der Einzelansicht klebt die Leiste UNTER dem Inhalts-Kopf (Topbar 4rem +
+  // Kopf 2.25rem); im Pane liegen Topbar/PaneKopf AUSSERHALB des Scroll-Containers
+  // → Offset ~0. scroll-margin (--rsp-stick) entsprechend.
+  const stickHoehe = imPane
+    ? (switcherSichtbar ? '7rem' : '3.5rem')
+    : (switcherSichtbar ? '12.75rem' : '9.25rem');
   // Sprung-Ziele: nach dem aktiven Body (+ Regeste, wenn sie gezeigt wird) — passt zur sichtbaren Ansicht.
   const vorhandene = new Set<Abschnittstyp>(aktiveAbschnitte.map((a) => a.typ));
   if (zeigeRegeste) vorhandene.add('regeste');
@@ -325,7 +330,8 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
           (§8: «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»), darunter die Sprung-Chips.
           Die App-Topbar liegt mit z-20 darüber, dieser Block mit z-[15] darunter. */}
       {(switcherSichtbar || navZiele.length > 0) && (
-        <div className="sticky top-16 z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line space-y-2">
+        <div style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}
+          className="sticky z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line space-y-2">
           {switcherSichtbar && (
             <Tabs
               items={[

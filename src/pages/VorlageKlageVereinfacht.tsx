@@ -89,7 +89,7 @@ export function ParteiEditor({ p, onChange, nurNatuerlich }: { p: SgPartei; onCh
             <Field label="PLZ"><input className={inputCls + ' num'} value={p.sitzPlz} onChange={(e) => onChange({ ...p, sitzPlz: e.target.value })} /></Field>
             <Field label="Ort"><input className={inputCls} value={p.sitzOrt} onChange={(e) => onChange({ ...p, sitzOrt: e.target.value })} /></Field>
           </div>
-          <div className="sm:col-span-2">
+          <div className={pk('sm:col-span-2', '@lg/pane:col-span-2')}>
             <ZefixSuche firma={p.firma} uid={p.uid} onUebernehmen={(t) =>
               onChange({
                 ...p, firma: t.firma, uid: t.uid,
