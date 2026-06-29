@@ -38,6 +38,8 @@ OCL-Keyed-Lookup-**Präfixkollision**: `/decisions/151_V_1` matcht fälschlich `
   KEINE Spur von 151 V 194/306, Naht lückenlos + wortgetreu. gate/golden byte-gleich.
 - Offen (klein, OCL-Datenasymmetrie, separat): `aktenzeichen`/`abteilung`/`titel` null; 151_V_30 ohne
   `rubrum`/`dispositivOrders`.
+- → **deployt `0b921d03`, live** `lexmetrik.vercel.app` (151_V_1/151_V_30 = bgeRef korrekt, 0 Kappungen,
+  Seiten 200). **W2·6-BGE damit vollständig erledigt + live.**
 
 ## Session 29.6.2026 — W2·6-BGE: BGE-Auszug-Kappung gefixt (32/34) + Prod-Deploy
 
