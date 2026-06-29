@@ -25,6 +25,16 @@ Filestore-HTML (`id="art_…"`), LexWork-SPA-Backend (clex.ch u. a.).
 
 ---
 
+> **Erweiterung 29.6.2026 (aus QA-Sweep, → `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md` M11/M6):**
+> - **Verweis löst Popup aus (M11a):** ein gesetzesübergreifender Verweis erzeugt das Norm-Vorschau-
+>   Popover. Testfall **Art. 24 GebV SchKG → Art. 112/113 SchKG** (prüfen, ob es dort entsteht).
+> - **Artikel-Bezeichnung im Popover (M11b):** die Vorschau zeigt zusätzlich den **Sachtitel**, z. B.
+>   **«Art. 113 SchKG – Nachträge»** (aus dem `<h6>`-Heading bzw. Section-Randtitel der Quelle), nicht nur «Art. 113 SchKG».
+> - **Auflösung über ELI/`data-rs` statt Heuristik (M6):** verifiziert — neuere Fedlex-Fassungen tragen
+>   `data-rs` am SR-Verweis, ältere nur die ELI im `href`; intern `#` vs. extern absolute ELI. Damit wird
+>   der falsche Selbstverweis (**Art. 89a Abs. 6 ZGB → BVG**, nicht intern) korrekt aufgelöst. Deckt sich
+>   mit `DESIGN-REGLEMENT-NORMTEXT.md` §6 «Verweis-Ziele werden nicht geraten».
+
 ## §7-Entscheid (Voraussetzung dieses Fahrplans)
 
 David hat am 16.6.2026 **§7 für Zitate gelockert**: gespeicherter Gesetzestext

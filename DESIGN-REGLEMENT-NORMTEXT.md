@@ -89,22 +89,50 @@ solches markiert — nie als Vollständigkeit ausgegeben.
   Randtitel im TOC nie mit der Artikel-eigenen Sachüberschrift doppeln.
 - **Zusammengehörigkeit einheitlich.** Die Gruppierungs-Striche (zeigen, dass
   Artikel zusammengehören) folgen *einer* Logik — gleicher Strich überall, kein
-  Mal-ja-mal-nein zwischen Knoten- und Blatt-Randtiteln.
+  Mal-ja-mal-nein zwischen Knoten- und Blatt-Randtiteln. **(David 29.6.):** die
+  Striche müssen **bei jedem Bund-Gesetz** vorhanden sein (Quelle: `<section …/lvl_…>`
+  + `aria-level`, OR-Wurzel `part_`) — heute fehlen sie bei einigen. Zusätzlich ein
+  **An/Aus-Umschalter pro Gesetz** (zustandslos), ob die Striche angezeigt werden.
 - **Einheitliche linke Textkante.** Der Einzug ist gleich, ob ein Artikel
   nummerierte Absätze hat oder nur einen Block (`absatz=null`) — keine
   springende Textkante zwischen Artikeln.
 - **Aufgehobene Artikel: schlicht statt verspielt.** Ein voll aufgehobener
-  Artikel zeigt als **dezente Einzeile** seine amtliche Aufhebungsnotiz
-  («Aufgehoben durch … [AS …]») — das ist amtlicher Inhalt (§2), kein «…».
-  Kein Accordion/Toggle-Apparat. Ruhig, aber vollständig.
+  Artikel zeigt als **dezente, immer sichtbare Statuszeile «· aufgehoben»** seinen
+  Zustand (das *ist* der Artikelzustand, §2). Die amtliche **Aufhebungs-Zitatzeile**
+  («Aufgehoben durch … [AS …]») ist eine Änderungs-Fussnote und steht — wie jede
+  andere Fussnote — **hinter dem Fussnoten-Schalter, erst auf Klick** (Entscheid
+  David 29.6.: einheitliches Fussnoten-Verhalten; vorher war sie bei Aufhebungen
+  als einzige standardmässig offen). Kein eigener Accordion-Apparat je Artikel —
+  derselbe Schalter wie überall. Ruhig, aber vollständig.
 - **Fussnoten wie Fedlex.** Platzierung + Abstand folgen dem Fedlex-Ist
   (einheitlich, kein Mal-Abstand-mal-keiner); Hervorhebungen (fett/kursiv) im
   Fussnotentext bleiben erhalten.
 - **Änderungsstatus ruhig.** Der Änderungsvermerk je Bestimmung («Eingefügt
   durch / Fassung gemäss / in Kraft seit / AS …») bleibt **hinter dem Fussnoten-
   Schalter** (David-Entscheid 28.6.: ruhiges Schriftbild > Oberflächen-
-  Fundiertheit; der Inhalt ist da, auf Klick). Die *aufgehoben*-Notiz dagegen
-  ist immer sichtbar (sie *ist* der Artikelzustand).
+  Fundiertheit; der Inhalt ist da, auf Klick). **Einheitlich (David 29.6.):** auch
+  die *Aufhebungs*-Zitatzeile («Aufgehoben durch … AS …») steht hinter dem Schalter;
+  einzig die **Statuszeile «· aufgehoben»** bleibt immer sichtbar (sie *ist* der
+  Artikelzustand, nicht die Fussnote).
+
+### §4a · Suche, Gliederung & Tabellen (QA-Sweep David 29.6.2026)
+
+Detailplan: `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md` (M4/M5/M7/M8/M10).
+
+- **Suche ↔ Gliederung responsiv (M4/M5/M7).** Über alle Breakpoints: die Gliederung
+  darf das **Suchfeld und die gefundenen Artikel nicht verdecken** (schmaler Viewport →
+  Drawer/Overlay statt Überlagerung). Gliederung + Suche schliessen **kompakt an den
+  Header** an (keine lose Lücke). Nach einer Suche springt der Treffer **vollständig
+  sichtbar** an — nie unter den Sticky-Header geschoben/oben abgeschnitten (Scroll-Offset).
+- **Treffer-Hervorhebung (M8).** Der im Gesetzes-Suchfeld gesuchte Begriff wird **im
+  Normtext markiert** (sichtbares Highlight), nicht nur per Sprung angezeigt.
+- **Tabellen-Layout (M10, → Tabellen-Regelwerk T-C/T-D).** Renderer ist **dumme Projektion**
+  von `spalten.length`; Ausrichtung folgt dem **Spaltentyp** (Text/Bereich links,
+  Zahl/Betrag rechts mit `tabular-nums`), **einheitlich pro Spalte** — kein zellweises
+  Alternieren. Staffel-Spanne erscheint als **eine** linksbündige Zelle («über 100 bis
+  500»), keine Phantom-Leerspalte. Mobil seitlich scrollbar (Zahlen brechen nicht um),
+  ARIA-Tabellensemantik vollständig (Kopf↔Zelle), Kontrast/Fokus über Tokens (§13/F).
+  Tausender-Apostroph/Währung sind **Anzeige**, nie im Snapshot (§7).
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 
@@ -153,7 +181,15 @@ Bild), bleiben Bild — kein erfundenes OCR/LaTeX, ehrlich dokumentiert.
 
 Diese im Audit geprüften Punkte sind **kein** Defizit und werden **nicht**
 gebaut: Titel-`<br>`-Plättung, Absatz-`<p>`-in-`<table>`-Verschlucken, «Fussnoten-
-Apparat per Default aus» (ist korrekt), volle `colspan/rowspan`-Logik (nur
-minimales `colspan`→Kopf-Padding für verschobene Köpfe), «N.—»-Spacing,
+Apparat per Default aus» (ist korrekt), volle `rowspan`-Logik (rowspan/verschachtelte
+Tabelle → ehrlicher Text-Fallback), «N.—»-Spacing,
 `art-`-vs-`art_`-Anker, «Deeplink vom Renderer verworfen» (wird genutzt). Details:
 `AUDIT-FEDLEX-DARSTELLUNG-2026-06-28.md`, Abschnitt «Widerlegt».
+
+> **Korrektur 29.6.2026 (verifiziert gg. Filestore-HTML):** Der Audit-Schluss
+> «`<th>`-Tabellen brauchen kein `colspan` (Kopf+Daten tragen dasselbe)» ist an
+> **GebV SchKG Art. 20 falsifiziert** — dort trägt **nur der Kopf** `colspan="3"`,
+> die 6 Datenzellen sind colspan-los → Kopf 2 ≠ Zeile 6 = zerrissen. Neue Regel:
+> `colspan` wird in **beiden** Markup-Varianten expandiert und die Staffel-Spanne zu
+> einer logischen Zelle verdichtet (Tabellen-Regelwerk T-A2/T-A3/T-A6 in
+> `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md`). Nur `rowspan`/Verschachtelung bleibt Fallback.

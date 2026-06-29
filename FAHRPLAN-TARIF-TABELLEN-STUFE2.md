@@ -1,5 +1,15 @@
 # Fahrplan Kantonale Tarif-Tabellen — Stufe 2 (22.6.2026)
 
+> **Update 29.6.2026 — BUND-Tabellen separat erfasst:** Ein eigenständiges, vollständiges
+> **Tabellen-Regelwerk (T-A…T-F) + seitenweiter Bund-Umsetzungsplan** liegt in
+> `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md` (Anhang 1+2, Milestone M10). Es betrifft den **Fedlex**-
+> Extraktor (`extrahiere-fedlex.ts`, 28 Bund-Erlasse mit `mehrspaltig`) und ist von DIESEM
+> Kanton-Fahrplan getrennt; Schema (`spalten`-Modell) + Renderer + Validator `check:tabellen`
+> werden aber **geteilt** → der Renderer muss kanton-abwärtskompatibel bleiben. Kern-Befund:
+> bei `<th>`-Tabellen trägt teils **nur der Kopf** colspan (GebV SchKG Art. 20) → der frühere
+> Audit-Schluss «`<th>`-colspan widerlegt» ist an Art. 20 **falsifiziert**. Kanton-Nachzug aufs
+> kanonische Modell = Folge-Arbeitspaket nach Bund-Abnahme.
+
 **Kontext:** Stufe 1 (Füllpunkt-Zweispalter «Beschreibung . . . . Betrag» → `tabelle`) ist
 für SG auf Prod (s. STRUKTUR-Karte 22.6.). Mechanik: §7-Generator-Extrakt
 (`scripts/normtext/tarif-tabelle.ts` + `reichereTabellen` in `adapter-pdf.ts`), Render
