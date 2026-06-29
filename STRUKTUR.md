@@ -46,8 +46,9 @@ Danach Auftrag «weitermachen im plan / run till dry» → B-2.5 → B-4 → B-5
 - **2. ultracode-Bugcheck (B-2.5/B-4/B-5, 13 bestätigt)** fing einen **Re-Render-Loop-BLOCKER** vor
   Deploy: React-Compiler ist NICHT aktiv → instabile in-Komponente-Helfer churnten Effekte/Observer
   im Default-Leser. Fix `c9a8cca9` (Modul-Ebene-Helfer) + Honesty-Fixes (Clipboard, ?p=, title).
-- **Split-View KOMPLETT** (A→B-5; B-3-Rest = Scroll-Positions-Wiederherstellung pro Pane + Tastatur-
-  Pane-Wechsel, offen). B-2.5/B-4/B-5 Deploy ausstehend (Davids Ja). Detail `FAHRPLAN-SPLIT-VIEW.md`.
+- **Split-View KOMPLETT + auf Prod** (A→B-5, `61dfa598`, lexmetrik.vercel.app; Live-Smoke: ⧉ öffnet
+  Pane, 0 Fehler). B-3-Rest (Scroll-Positions-Wiederherstellung pro Pane + Tastatur-Pane-Wechsel)
+  offen. Detail `FAHRPLAN-SPLIT-VIEW.md`.
 
 ## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
 
