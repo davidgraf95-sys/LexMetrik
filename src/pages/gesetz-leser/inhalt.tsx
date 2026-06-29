@@ -157,6 +157,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // sonst ein localStorage-Write + globales TABS_EVENT pro überschrittener
   // Artikelgrenze (Scroll-Jank auf langen Erlassen). Reine Timing-Optimierung (§6.4).
   const tabArtikelTimer = useRef<number | null>(null);
+  // Entprellt die Kopf-Artikel-Meldung: beim schnellen Durchscrollen sonst ein
+  // setKopfDaten (Shell) pro Artikelgrenze → unnötige Re-Renders der übrigen Panes.
+  const aktArtikelTimer = useRef<number | null>(null);
 
   useEffect(() => {
     let lebt = true;
@@ -435,8 +438,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       const token = aktiverArtikel(rects, mitte);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
-      // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf).
-      setAktArtikel(`Art. ${token.replace(/_/g, '')}`);
+      // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf),
+      // entprellt (150 ms) → coalesct schnelle Artikelgrenzen, weniger Pane-Re-Renders.
+      const artLabel = `Art. ${token.replace(/_/g, '')}`;
+      if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
+      aktArtikelTimer.current = window.setTimeout(() => setAktArtikel(artLabel), 150);
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
@@ -488,6 +494,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       io.disconnect();
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+      if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
     };
   }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane, wurzel]);
 
