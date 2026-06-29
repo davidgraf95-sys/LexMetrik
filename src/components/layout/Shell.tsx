@@ -6,6 +6,7 @@ import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
+import { useInhaltsbreite } from './useInhaltsbreite';
 import { useDialogFokus } from './useDialogFokus';
 
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
@@ -68,6 +69,13 @@ export function Shell({ children }: { children: ReactNode }) {
   const [schubladeOffen, setSchubladeOffen] = useState(false);
   const schubladeRef = useRef<HTMLDivElement>(null);
   const seitenleiste = useSeitenleiste();
+  const inhaltsbreite = useInhaltsbreite();
+
+  // Inhaltsspalte: kompakt = heutige schmale Spalte (Golden byte-gleich),
+  // breit = grosszügiger auf grossen Schirmen. Lesespalte `max-w-reading`
+  // (Fliesstext) bleibt unberührt (§13.2). Banner + Inhalt teilen die Klasse,
+  // damit der Hinweisstreifen mit dem Inhalt fluchtet.
+  const inhaltsbreiteKlasse = inhaltsbreite.breit ? 'max-w-screen-2xl' : 'max-w-content';
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -110,12 +118,14 @@ export function Shell({ children }: { children: ReactNode }) {
             onMenu={() => setSchubladeOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
+            inhaltBreit={inhaltsbreite.breit}
+            onInhaltsbreiteSetzen={inhaltsbreite.setBreite}
           />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (
             <div className="bg-warn-bg border-b border-warn-500">
-              <div className="max-w-content mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2">
+              <div className={`${inhaltsbreiteKlasse} mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2`}>
                 <p className="text-body-s text-warn-700">
                   Diese Sprachfassung ist in Bearbeitung. Inhalte werden vorerst auf Deutsch angezeigt.
                 </p>
@@ -128,7 +138,7 @@ export function Shell({ children }: { children: ReactNode }) {
           )}
 
           <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
-            <div className="max-w-content mx-auto px-5 sm:px-6 py-8 sm:py-12">{children}</div>
+            <div className={`${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
           </main>
 
           <Footer />
