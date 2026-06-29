@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
+import { Fragment, useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Topbar } from './Topbar';
@@ -12,6 +12,8 @@ import { SekundaerPane } from './Pane';
 import { PaneKopf } from './PaneKopf';
 import { usePaneDnd } from './usePaneDnd';
 import { PaneProvider } from './PaneKontext';
+import { InhaltsKopf } from './InhaltsKopf';
+import { InhaltsKopfMeldeProvider, istInhaltsPfad, kopfVonPfad, type KopfDaten } from './InhaltsKopfKontext';
 import { tabSchluessel } from '../../lib/tabs';
 import { verlaufLabel, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { useDialogFokus } from './useDialogFokus';
@@ -180,8 +182,10 @@ export function Shell({ children }: { children: ReactNode }) {
   }, [multipane]);
   // Pane-Titel/Stand: Manifeste lazy laden, sobald multipane (Label für Gesetz/Entscheid).
   const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
+  // Manifeste auch für den Einzelansicht-Kopf (Breadcrumb-Blattlabel) laden.
+  const kopfMoeglich = istInhaltsPfad(pathname);
   useEffect(() => {
-    if (!multipane) return;
+    if (!multipane && !kopfMoeglich) return;
     let lebt = true;
     void (async () => {
       const [g, e] = await Promise.all([
@@ -191,7 +195,11 @@ export function Shell({ children }: { children: ReactNode }) {
       if (lebt) setManifeste({ gesetze: g, entscheide: e });
     })();
     return () => { lebt = false; };
-  }, [multipane]);
+  }, [multipane, kopfMoeglich]);
+  // Kopfdaten der aktuellen Einzelansicht: Inhaltsseiten melden sie (Kontext);
+  // sonst Pfad-Fallback. Bei Routenwechsel zurückgesetzt (frische Seite meldet neu).
+  const [kopfDaten, setKopfDaten] = useState<KopfDaten | null>(null);
+  const meldeKopf = useCallback((d: KopfDaten | null) => setKopfDaten(d), []);
   // Live-Location je Pane (gekeyt am STABILEN Seed-pfad, der auch der React-Key ist
   // → kein Remount). Titel/teilen/promote/Dedup nutzen den aktuell gezeigten Pfad.
   const [liveLocs, setLiveLocs] = useState<Record<string, string>>({});
@@ -245,7 +253,7 @@ export function Shell({ children }: { children: ReactNode }) {
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
   const [letzterPfad, setLetzterPfad] = useState(pathname);
-  if (pathname !== letzterPfad) { setLetzterPfad(pathname); if (schubladeOffen) setSchubladeOffen(false); }
+  if (pathname !== letzterPfad) { setLetzterPfad(pathname); if (schubladeOffen) setSchubladeOffen(false); if (kopfDaten) setKopfDaten(null); }
 
   // Fokus-Falle + Escape + Fokus-Rückgabe an den ☰-Auslöser über den geteilten
   // Dialog-Hook (§5: dieselbe Fokusverwaltung wie alle Overlays). Der Container
@@ -307,11 +315,20 @@ export function Shell({ children }: { children: ReactNode }) {
             </div>
           )}
 
+          {/* Einzelansicht-Kopf (kein Split-View): Breadcrumb · aktueller Artikel ·
+              Stand · ✕→Start. Analog zur Pane-Titelleiste, aber ohne Verschiebe-
+              Steuerung. Im Multipane übernimmt der PaneKopf. */}
+          {!multipane && istInhaltsPfad(pathname) && (
+            <InhaltsKopf daten={kopfDaten ?? kopfVonPfad(pathname, manifeste)}
+              breiteKlasse={inhaltsbreiteKlasse} onSchliessen={() => navigate('/')} />
+          )}
+
           {/* STABILE Element-Kette um {children} in 1-Pane UND Multipane → kein
               Remount des Primär-Inhalts beim Öffnen/Schliessen des ersten/letzten
               Panes (sonst Scroll-/State-Verlust, Bugcheck). In 1-Pane ist der
               Wrapper `contents` (layoutneutral) + PaneProvider DOM-neutral →
               Default byte-gleich (Fensterscroll, kein container-type, kein overflow). */}
+          <InhaltsKopfMeldeProvider value={meldeKopf}>
             <div ref={multipane ? rowRef : undefined} className={multipane ? 'flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory' : 'contents'}>
               {/* Primäres Pane — gleiche Element-Kette zu {children} in beiden Modi
                   (Wrapper = `contents` im 1-Pane), nur Klassen/Provider wechseln →
@@ -358,6 +375,7 @@ export function Shell({ children }: { children: ReactNode }) {
                 </Fragment>
               ))}
             </div>
+          </InhaltsKopfMeldeProvider>
           {!multipane && <Footer />}
           </PaneSteuerungProvider>
         </div>

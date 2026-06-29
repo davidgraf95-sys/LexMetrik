@@ -5,6 +5,7 @@ import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tab
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import { usePaneKontext } from '../../components/layout/PaneKontext';
+import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
@@ -113,6 +114,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // eines Panes byte-gleich zum Viewport-Verhalten (Default/Prerender).
   const { imPane, rolle, wurzel, overlayWurzel } = usePaneKontext();
   const istXl = imPane ? false : istXlVp;
+  // A3: aktuell gelesener Artikel (live) für den Einzelansicht-Kopf. Nur in der
+  // Einzelansicht (!imPane) gepflegt; im Split-View trägt der PaneKopf den Titel.
+  const meldeInhaltsKopf = useMeldeInhaltsKopf();
+  const [aktArtikel, setAktArtikel] = useState<string | null>(null);
   // B-2.5: In einem Pane scopen wir DOM-Queries + Scroll auf die Pane-Wurzel
   // (sonst kollidieren doppelte `art-`-IDs / trifft der Scroll das falsche Pane).
   // NUR ein SEKUNDÄRES Pane unterdrückt globale URL-/Reiter-Writes — das primäre
@@ -166,6 +171,28 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const kurz = erlass.titel.match(/\(([^)]+)\)\s*$/)?.[1] ?? erlass.titel;
     document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
   }, [erlass, istSekundaer]);
+
+  // A/A2/A3: Einzelansicht-Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel ·
+  // Stand · aktueller Artikel). Nur in der Einzelansicht (!imPane); im Split-View
+  // trägt der PaneKopf den Titel. Live-Artikel kommt aus dem IntersectionObserver.
+  useEffect(() => {
+    if (imPane || !erlass) return;
+    const ebeneLabel = erlass.rechtsgebiet === 'international'
+      ? 'International'
+      : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`;
+    // Ebene-Segment klickbar → gefilterte Gesetzes-Übersicht (?ebene=/?kt=).
+    const ebeneTo = erlass.rechtsgebiet === 'international'
+      ? '/gesetze?ebene=international'
+      : erlass.ebene === 'bund' ? '/gesetze'
+        : `/gesetze?ebene=kanton&kt=${encodeURIComponent(erlass.kanton ?? '')}`;
+    meldeInhaltsKopf({
+      breadcrumb: [{ label: 'Gesetze', to: '/gesetze' }, { label: ebeneLabel, to: ebeneTo }, { label: erlass.kuerzel }],
+      stand: erlass.stand ? formatiereDatum(erlass.stand) : null,
+      artikel: aktArtikel,
+    });
+  }, [imPane, erlass, aktArtikel, meldeInhaltsKopf]);
+  // Beim Verlassen den Kopf räumen (Shell setzt bei Routenwechsel ohnehin zurück).
+  useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
   const { sektionen, ohneGliederung } = useMemo(
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
@@ -387,6 +414,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       const token = aktiverArtikel(rects, mitte);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
+      // A3: aktuellen Artikel an den Einzelansicht-Kopf melden (nur dort sichtbar).
+      if (!imPane) setAktArtikel(`Art. ${token.replace(/_/g, '')}`);
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
@@ -496,13 +525,15 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const titelRedundantP = titelOhneSuffixP.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
     return (
       <div className="space-y-5">
-        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-          <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-          <span className="mx-1.5 text-ink-300">›</span>
-          {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-          <span className="mx-1.5 text-ink-300">›</span>
-          <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-        </div>
+        {imPane && (
+          <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
+            <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
+            <span className="mx-1.5 text-ink-300">›</span>
+            {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
+            <span className="mx-1.5 text-ink-300">›</span>
+            <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
+          </div>
+        )}
         <header className="space-y-2.5 border-b border-line pb-5">
           <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
           <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
@@ -704,14 +735,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
 
   return (
     <div className="space-y-5">
-      {/* Breadcrumb (scrollt weg; die Suchleiste ist die sticky Kopfzeile) */}
-      <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-        <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
-        <span className="mx-1.5 text-ink-300">›</span>
-        {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
-        <span className="mx-1.5 text-ink-300">›</span>
-        <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-      </div>
+      {/* Breadcrumb: in der Einzelansicht trägt sie der Inhalts-Kopf (oben, sticky);
+          hier nur noch IM Pane (Split-View hat keinen Inhalts-Kopf). */}
+      {imPane && (
+        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
+          <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
+          <span className="mx-1.5 text-ink-300">›</span>
+          {erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
+          <span className="mx-1.5 text-ink-300">›</span>
+          <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
+        </div>
+      )}
 
       <header className="space-y-2.5 border-b border-line pb-5">
         <p className="lc-overline">{erlass.rechtsgebiet === 'international'
@@ -801,15 +835,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           <>
             <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
               onClick={() => setTocAuf(false)} aria-hidden />
+            {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Such-Kopf, NUR der
+                Gliederungsbaum scrollt darunter → verdeckt die Trefferliste nicht.
+                In der Einzelansicht beginnt er UNTER dem Inhalts-Kopf (Topbar 4rem
+                + Kopf 2.25rem); im Pane in der Overlay-Schicht ab dessen Oberkante. */}
             <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
-              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-full' : `fixed inset-x-0 z-50 max-h-[80vh] ${imPane ? '' : 'xl:hidden'}`} bg-paper-raised border-b border-line shadow-lg overflow-y-auto overscroll-contain`}
-              style={inPane ? undefined : { top: '4rem' }}>
-              <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
-                <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
-                <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'xl:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
+              style={inPane ? undefined : { top: 'calc(4rem + 2.25rem)' }}>
+              <div className="shrink-0 border-b border-line bg-paper-raised">
+                <div className="flex items-center justify-between px-4 pt-2.5 pb-1.5">
+                  <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
+                  <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+                </div>
+                <div className="flex items-center gap-2 px-4 pb-2.5">{sucheEingabe}</div>
               </div>
-              <div className="px-4 pt-3 pb-1">{sucheEingabe}</div>
-              {sektionen.length > 0 && <div className="px-3 py-2 border-t border-line mt-2">{tocBaumEl}</div>}
+              {sektionen.length > 0 && <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-2 [scrollbar-width:thin]">{tocBaumEl}</div>}
             </div>
           </>
         );
