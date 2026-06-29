@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
@@ -459,7 +460,11 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
     };
   }, [onClose]);
 
-  return (
+  // Per Portal an <body>: sonst fängt ein `@container/pane`-Vorfahr (Split-View)
+  // das `position:fixed`-Overlay ein und der Lesemodus wäre nicht mehr vollflächig
+  // (B-1-Bugcheck #7). Default geschlossen → kein SSR/Prerender-Pfad.
+  if (typeof document === 'undefined') return null;
+  return createPortal(
     <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Lesemodus — ${snap.zitierung}`}
       className="fixed inset-0 z-50 overflow-y-auto bg-paper">
       {/* schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen */}
@@ -513,7 +518,8 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
           </p>
         </footer>
       </article>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

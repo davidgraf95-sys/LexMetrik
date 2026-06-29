@@ -23,6 +23,83 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 3) — Split-View «Browser-Fenster»-Redesign (ultracode, NICHT deployt)
+
+Auftrag David: Split-View intuitiv + state-of-the-art; je Pane Titelleiste (was ist offen + ✕),
+Drag-Drop-Umsortierung, Drawer-Bleed beheben, Logik prüfen, Code aufräumen. Branch gleich.
+- **ultracode-Design** (3 Entwürfe→bewertet→synthese): «Browser-Fenster»-Modell, Pane-Liste als
+  Render-Projektion (kein zweiter State), 1-Pane-Default byte-gleich.
+- **PaneKopf.tsx** je Pane: Label · «Stand TT.MM.JJJJ» · ⠿ · ◂▸ · ⇱ Hauptfenster · ⧉ · ✕.
+- **Drag-Drop** sekundärer Panes (usePaneDnd-Hook) + ◂▸ Tastatur/Touch + F6-Wechsel (sichtbarer Fokus).
+- **Drawer-Bleed behoben:** Gesetz-TOC/Suche portaliert in eine Pane-Overlay-Schicht (absolute) →
+  bleibt im Pane (container-type fängt fixed nicht). Empirisch bestätigt.
+- **Logik:** Live-Location-Sync (Titel/teilen/promote/Dedup nutzen den GEZEIGTEN Pfad); Dedup gegen
+  ALLE offenen Panes inkl. Primär; promote = Swap; primär ✕ → nächstes Pane/Startseite; #hash erhalten.
+- **3. ultracode-Bugcheck** (18 Befunde) behoben (Live-Location-Major, F6-Fokus, Kontrast brass-700,
+  aria-modal, teilen-catch). Aufräumen: DnD in usePaneDnd extrahiert; kein toter Code (lint-grün).
+- Sweep: Gesetz/Entscheid/Rechner/Vorlage/Materialien rendern sauber im Pane; gate grün, 86 e2e grün,
+  golden byte-gleich. Deploy ausstehend.
+
+## Session 29.6.2026 (Forts.) — Split-View B-1 + B-2 (ultracode, NICHT deployt)
+
+Fortsetzung gleicher Branch `feat/split-view-strang-a`. Auftrag David: B-1 + B-2 mit ultracode,
+fundierter Bug-Check nach B-1. **Auf Prod deployt (`bec0ecb7`, dpl_5m8am2Mj, lexmetrik.vercel.app).**
+Danach Auftrag «weitermachen im plan / run till dry» → B-2.5 → B-4 → B-5 autonom.
+- **B-1 Pane-Container** (`e3795776`): ultracode-Architektur-Design (3 Vorschläge→bewertet→
+  synthetisiert) löste 2 harte Fragen (container-vs-viewport, Scroll-Treue). Default 1 Pane
+  byte-gleich; Multipane ab lg. Sekundär-Pane via `<RouteSwitch location>` (NICHT MemoryRouter —
+  react-router v7 verbietet Nesting, im Smoke gefangen). `PaneKontext`/`paneKlasse` (CQ nur im Pane),
+  `usePaneLayout` (Pfade only), `Pane.tsx`. Smoke: Gesetz | Rechner nebeneinander, 0 Fehler.
+- **B-1-Bugcheck** (ultracode, 6 Linsen, 23→13 bestätigt, alle LATENT): Kernbefund — gesetz-leser
+  an window/document-Globals gekoppelt → als Sekundär-Pane fehlerhaft (URL/Scroll/Tab); Rechner sauber.
+- **B-2 «Rechner daneben»** (`ec4bb1d8`, SICHERE Scope, Davids Entscheid): KontextPanel-Werkzeuge
+  bekommen ⧉ → Rechner als Sekundär-Pane neben dem Gesetz (Verzahnung Norm→Werkzeug, smoke-bestätigt).
+  `PaneSteuerung`-Kontext, Fokus-Rückgabe. 86 e2e grün.
+- **B-2.5** (`9170ee59`): gesetz-leser pane-fähig (window/DOM-Globals via Modulhelfer paneRoot/findeArt
+  entkoppelt; Sekundär unterdrückt URL/Titel/Reiter); ⧉ «daneben» auch für Erlasse; EntscheidLeser-
+  Lesemodus per Portal. Zwei Gesetze nebeneinander verifiziert.
+- **B-4** (`3587d1fd`): Mobil-Faltung — Snap-Wischen unter lg, `h-dvh`. **B-5** (`860d914b`): teilbarer
+  `?p=`-Permalink (Round-trip verifiziert).
+- **2. ultracode-Bugcheck (B-2.5/B-4/B-5, 13 bestätigt)** fing einen **Re-Render-Loop-BLOCKER** vor
+  Deploy: React-Compiler ist NICHT aktiv → instabile in-Komponente-Helfer churnten Effekte/Observer
+  im Default-Leser. Fix `c9a8cca9` (Modul-Ebene-Helfer) + Honesty-Fixes (Clipboard, ?p=, title).
+- **Split-View KOMPLETT + auf Prod** (A→B-5, `61dfa598`, lexmetrik.vercel.app; Live-Smoke: ⧉ öffnet
+  Pane, 0 Fehler).
+- **Optimierung + autonome Panes** (`5d696c16`, Auftrag David, noch nicht deployt): 3. ultracode-
+  Bugcheck (21→20 bestätigt, keine Blocker) fand u. a. **useNavigate-Hijack** (Navigation in einem
+  Sekundär-Pane kaperte die Haupt-URL) → Fix: **jedes Pane hat eigene In-Memory-History + Navigator**
+  (UNSAFE_NavigationContext) → Links/Breadcrumbs/zurück wirken nur im Pane (beide Seiten autonom).
+  **Tracker-Öffnen** (ReiterUebersicht ⧉ → jede Engine/Gesetz ins Split). **#hash erhalten** (Werkzeug-
+  Unter-Tabs). **Kein Remount** beim Öffnen/Schliessen (stabile Element-Kette + Scroll-Übergabe).
+  Breadcrumb-Kopf im Pane wieder bedienbar (pointer-events). + Polish (Kontrast, Schalter im Split aus,
+  exhaustive-deps). Detail `FAHRPLAN-SPLIT-VIEW.md`.
+
+## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
+
+Auftrag David: Split-View (ROADMAP-Strang 14) mit ultracode bauen; «push und deploy»; Bug-Checks
+zwischen jeden Schritt. Worktree `feat/split-view-strang-a`, Detail in `FAHRPLAN-SPLIT-VIEW.md`.
+**Deployt auf Prod (lexmetrik.vercel.app), Commit `d20f2337`, Branch nicht auf main gemergt
+(Direkt-Push geblockt → PR offen).**
+- **Strang A — Inhaltsbreite-Umschalter** `[Kompakt|Breit]` im Top-Streifen (ab `lg`): zentrale
+  Inhaltsspalte `max-w-content ↔ max-w-screen-2xl`; Lesespalte `max-w-reading` unberührt (§13.2).
+  Default kompakt = heutiges Verhalten (Golden byte-gleich). Neuer Hook `useInhaltsbreite`
+  (localStorage, SSR-sicher, Lesen+Schreiben in try/catch). **ultracode-6-Linsen-Review (24 Agenten)**
+  → 4 Befunde behoben: toter `bg-brass-100/70`-Fill (Alpha kompiliert mit var()-Tokens zu nichts, F7)
+  → solides `bg-brass-100`; je Knopf `aria-label="Inhaltsbreite: …"`; localStorage-Lesepfad gehärtet;
+  expliziter Setter statt Toggle-mit-Guard.
+- **B-0 — `<Routes>` → `src/RouteSwitch.tsx`** (verhaltensneutral, golden byte-gleich, 57 Routen
+  prerendern, Runtime-Smoke sauber): Routen-Baum standalone mountbar für künftige MemoryRouter-Panes.
+- **B-0b 1/2 — `@tailwindcss/container-queries`** installiert + verdrahtet (Davids Entscheid: CQ-1 +
+  Plugin); verhaltensneutral (gebautes CSS 0× `@container`). Breakpoint-Migration (CQ-1) folgt
+  gekoppelt an B-1 (Pane-Container) — sonst Container-vs-Viewport-Default-Verschiebung.
+- **e2e-Fix (§6.3):** 3 Gesetze-Reader-Tests waren vorbestehend rot auf main (aus PR #50 B1, NICHT
+  von Split-View) — sie prüften das alte Randtitel-DOM. B1-Verhalten empirisch verifiziert korrekt
+  (kein Code-Fix), Tests aufs B1-Modell nachgezogen (`[data-sek]`-Sektionsköpfe). Voller e2e: 86 grün.
+- **§9-Deploy:** alle Tore grün (tsc/vitest/golden/lint/check/build/e2e) · Bug-Check 2 unabh. Agenten
+  (Code-Lupe + empirischer Browser-Repro) sauber · Nachkontrolle: 8 Kernrouten 200, Live-Asset-Hash =
+  lokal (`index-COXIlfSD.js`), Schalter live in prerenderter `/rechner`.
+- **Nächster Schritt:** B-1 (Pane-Container, 2–3 Panes) inkl. CQ-1-Migration — eigene fokussierte Session.
+
 ## Session 29.6.2026 — Normtext-Darstellung Bund/DE: B1 komplett (Worktree-Merge) · Deploy
 
 Auftrag David: Gesetzesdarstellung Bund/DE auf Fedlex-Niveau (Worktree `feat/normtext-bund-de`,

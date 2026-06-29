@@ -4,6 +4,7 @@ import {
   kontextSync, kontextEntscheide,
   type KontextTyp, type EntscheidRef,
 } from '../../lib/kontext';
+import { usePaneSteuerung } from '../layout/usePaneLayout';
 
 // ─── Einheitliches «Kontext»-Panel (B3) ─────────────────────────────────────
 //
@@ -35,6 +36,9 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
   // Synchron (in-Bundle) — billig + deterministisch, daher pro Render berechnet
   // statt memoisiert (kleine Register, kein O(n²); §6.4).
   const { normen, materialien, werkzeuge } = kontextSync(typ, normKeys);
+  // B-2 Verzahnung: Rechner direkt NEBEN dem Normtext öffnen (Split-View).
+  // Nur ab lg + freier Pane-Kapazität sichtbar (Werkzeuge sind pane-sicher).
+  const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
 
   // Entscheide lazy aus dem Norm→Entscheid-Index. Stabiler Dep-Key über die
   // join-Signatur (Array-/Objekt-Identität wechselt sonst je Render). Das
@@ -84,11 +88,18 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
             <Gruppe titel="Angewandte Erlasse" anzahl={normen.length}>
               <ul className="flex flex-wrap gap-2">
                 {normen.map((n) => (
-                  <li key={n.key}>
+                  <li key={n.key} className="inline-flex items-center">
                     <Link to={n.pfad} title={n.titel}
                       className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
                       {n.kuerzel}
                     </Link>
+                    {kannOeffnen && !istOffen(n.pfad) && (
+                      <button type="button" onClick={() => oeffneDaneben(n.pfad)}
+                        title={`${n.kuerzel} nebeneinander öffnen`} aria-label={`${n.kuerzel} nebeneinander öffnen`}
+                        className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
+                        <span aria-hidden className="text-base leading-none">⧉</span>
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -151,11 +162,20 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
               {/* Mobil eine scrollbare Chip-Reihe, ab sm normaler Umbruch. */}
               <ul className="flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
                 {werkzeuge.map((w) => (
-                  <li key={w.id} className="shrink-0">
+                  <li key={w.id} className="shrink-0 inline-flex items-center">
                     <Link to={w.href}
                       className="lc-chip whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
                       <span className="text-ink-500 mr-1" aria-hidden>{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
                     </Link>
+                    {/* «daneben öffnen»: Norm bleibt links, Werkzeug erscheint
+                        rechts im Split-View (B-2). Nur ab lg + freier Kapazität. */}
+                    {kannOeffnen && !istOffen(w.href) && (
+                      <button type="button" onClick={() => oeffneDaneben(w.href)}
+                        title={`${w.titel} nebeneinander öffnen`} aria-label={`${w.titel} nebeneinander öffnen`}
+                        className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
+                        <span aria-hidden className="text-base leading-none">⧉</span>
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>
