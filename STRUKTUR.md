@@ -23,6 +23,22 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·6-BGE Rest geschlossen: OCL-id-Kollision gelöst (34/34) + Prod-Deploy
+
+Fortsetzung W2·6-BGE: die 2 zuvor quarantänten BGE (`151_V_1`, `151_V_30`) gefixt. Ursache war eine
+OCL-Keyed-Lookup-**Präfixkollision**: `/decisions/151_V_1` matcht fälschlich `151_V_194`.
+- **Fix** (`adapter-entscheide.ts`): `holeBgeLeitentscheid` probiert mehrere Id-Formen
+  (`151_V_1` · `151 V 1` · `bge_BGE_151_V_1`), nimmt nur die idNorm-exakt passende Entscheidung;
+  Struktur/Erwägungs-Nachladen über die kanonische `decision_id`. Snapshot-Id bleibt `bund/bge/151_V_1`
+  (`mappeEntscheidOCL` leitet sie aus `docket_number` ab, nicht aus `decision_id`).
+- `--bge-refresh` → 2/2 neu gezogen; **0 Kappungen im ganzen Korpus** (34/34 BGE voll).
+- WARN-Quarantäne (`BGE_KAPPUNG_QUARANTAENE`) wieder **entfernt** (aufgeräumt) — Schutz-Tor reines FEHLER.
+- **Adversariale Gegenprüfung** (Opus, amtliche Quelle): beide tragen die RICHTIGE Entscheidung
+  (151 V 1 = KVG-Pflegebeiträge/IV-HE-Praxisänderung; 151 V 30 = Wirtschaftlichkeitskontrolle) —
+  KEINE Spur von 151 V 194/306, Naht lückenlos + wortgetreu. gate/golden byte-gleich.
+- Offen (klein, OCL-Datenasymmetrie, separat): `aktenzeichen`/`abteilung`/`titel` null; 151_V_30 ohne
+  `rubrum`/`dispositivOrders`.
+
 ## Session 29.6.2026 — W2·6-BGE: BGE-Auszug-Kappung gefixt (32/34) + Prod-Deploy
 
 Auftrag David: `W2·6-BGE` fixen. BGE-Leitentscheide schnitten ihren amtlichen Sammlungs-Auszug

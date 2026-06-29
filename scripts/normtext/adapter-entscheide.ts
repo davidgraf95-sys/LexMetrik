@@ -571,22 +571,24 @@ export function bgeRoemischSachgebiet(docket: string): Rechtsgebiet | null {
  * aza-Az.: ehrlicher Sammlungs-Auszug (azaUrteil=null), nie ein vermuteter Body (§8).
  */
 export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Promise<EntscheidSnapshot | null> {
-  const det = await jget<OclDecision>(`${API}/decisions/${encodeURIComponent(bgeId)}?fields=full`);
-  if (!det || !det.decision_id || det.court !== 'bge') return null;
-  if ((det.language ?? 'de') !== 'de') return null;
-  // Exakt-Id-Guard (§8): die OCL-Keyed-Lookup /decisions/{id} matcht bei kurzen
-  // Seiten-Ids PRÄFIXUNSCHARF (z. B. 151_V_1 → 151_V_194, 151_V_30 → 151_V_306).
-  // Nur die exakt passende Entscheidung übernehmen — lieber kein Eintrag als ein falscher.
-  // OCL liefert decision_id inkonsistent (z. B. `bge_BGE_150_III_223`, `bge_152 III 51`):
-  // Kern (Band/Teil/Seite) normalisieren — `bge`-Token + Separatoren strippen. So matcht die
-  // richtige Entscheidung trotz Formatdrift, eine präfixunscharfe Fehlzuordnung (151_V_1 →
-  // 151_V_194) bleibt aber abgewiesen.
+  // OCL liefert decision_id inkonsistent (`bge_BGE_150_III_223`, `bge_152 III 51`) UND die
+  // Keyed-Lookup matcht kurze Seiten-Ids PRÄFIXUNSCHARF: `/decisions/151_V_1` → 151_V_194.
+  // Die präfix-volle bzw. mit-Spaces-Form löst eindeutig auf. Darum mehrere Id-Formen probieren
+  // und nur die EXAKT passende Entscheidung nehmen (idNorm-Kern: `bge`-Token + Separatoren
+  // strippen) — so bleibt eine Fehlzuordnung (151_V_1 → 151_V_194) ausgeschlossen (§8).
   const idNorm = (s: string) => s.toLowerCase().replace(/bge/g, '').replace(/[_\s.-]/g, '');
-  if (idNorm(String(det.decision_id)) !== idNorm(bgeId)) return null;
-  const str = await jget<OclStructure>(`${API}/structure/${encodeURIComponent(bgeId)}?paragraph_excerpt_chars=5000`);
-  // W2·6-BGE: gekappte Sammlungs-Auszug-Erwägungen voll nachladen (wie der Urteils-Body),
-  // sonst bricht auszugAbschnitte still mitten im Wort ab (U+2026, 30 BGE betroffen).
-  await fuelleGekappteErwaegungen(bgeId, str);
+  let det: OclDecision | null = null;
+  for (const kand of [bgeId, bgeId.replace(/_/g, ' '), `bge_BGE_${bgeId}`]) {
+    const d = await jget<OclDecision>(`${API}/decisions/${encodeURIComponent(kand)}?fields=full`);
+    if (d?.decision_id && d.court === 'bge' && (d.language ?? 'de') === 'de'
+        && idNorm(String(d.decision_id)) === idNorm(bgeId)) { det = d; break; }
+  }
+  if (!det) return null;
+  // Strukturtext + Erwägungs-Nachladen über die KANONISCHE decision_id (kurze Form wäre wieder
+  // präfixunscharf). W2·6-BGE: gekappte Sammlungs-Auszug-Erwägungen voll nachladen.
+  const kanonId = String(det.decision_id);
+  const str = await jget<OclStructure>(`${API}/structure/${encodeURIComponent(kanonId)}?paragraph_excerpt_chars=5000`);
+  await fuelleGekappteErwaegungen(kanonId, str);
 
   const azaAz = azaAusBgeKopf(det.full_text);
   const azaKey = azaAz ? citedRefZuId(azaAz) : null;

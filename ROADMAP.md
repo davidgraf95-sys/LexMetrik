@@ -239,7 +239,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
-    - [~] **BGE-Auszug abgeschnitten — 32/34 gefixt** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*.
+    - [x] **BGE-Auszug abgeschnitten — vollständig gefixt (34/34)** *(W2·6-BGE, Inhaltsverlust, `[OF]`)*.
       29.6.2026 GEFIXT + verifiziert (gate/golden byte-gleich, zwei adversariale Gegenprüfungen
       gegen amtliche Quelle; die 1. fand einen Schutz-Tor-Blindfleck — Regex verlangte einen
       Buchstaben vor U+2026 und übersah 5 auf Space/Punkt/Ziffer endende Kappungen → Regex auf
@@ -248,20 +248,19 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       Urteils-Body — den OCL-`/structure`-Auszug nicht voll nach (Datenfehler, nicht CSS).
       **Fix** (`scripts/normtext/adapter-entscheide.ts`): geteilter Helfer `fuelleGekappteErwaegungen`
       lädt gekappte Erwägungen (`holeErwaegung`) in BEIDEN Pfaden voll nach (Trigger: `text_chars
-      ≥4900` ODER Ellipsis-Ende); **Exakt-Id-Guard** gegen die präfixunscharfe OCL-Keyed-Lookup.
+      ≥4900` ODER Ellipsis-Ende); **Id-Disambiguierung** gegen die präfixunscharfe OCL-Keyed-Lookup:
+      mehrere Id-Formen probieren (`151_V_1` · `151 V 1` · `bge_BGE_151_V_1`), nur die EXAKT passende
+      Entscheidung nehmen, Struktur über die kanonische `decision_id` holen.
       **Regenerierung** ohne Vollbau via neuem Flag `npm run entscheide -- --additiv --bge-refresh`
       (zieht nur die aktuell gekappten BGE neu, by-id-Überschreib; Bund/Kanton/eidg unberührt,
       §7 kein Hand-Edit). **Schutz-Tor** in `check:entscheide`: Block, der auf U+2026 endet
       (`(?<!\()…\s*$` — ausser amtl. «(…)»), ist ein gekapptes Excerpt → FEHLER/exit 1; deckt
-      `abschnitte` + `auszugAbschnitte`. **Ergebnis:** 32 BGE regeneriert + voll, gate/golden
-      byte-gleich. **Öffnet keinen 26×-Slot.**
-      - [ ] **Rest: 2 BGE OCL-id-Kollision** — `bge_151_V_1`, `bge_151_V_30` sind über den OCL-
-        Keyed-Lookup `/decisions/{id}` nicht sauber re-fetchbar (kurze Seiten-Id matcht präfix-
-        unscharf: `151_V_1`→`151_V_194`, `151_V_30`→`151_V_306`; in der Enumeration ab 2024 nicht
-        enthalten). Bewusst NICHT hand-editiert (§7); im Schutz-Tor als **WARN-Quarantäne**
-        (`BGE_KAPPUNG_QUARANTAENE` in `check-entscheide.ts`) geführt statt gate-blockierend (live
-        unverändert, keine Regression). Schliessen = echte OCL-Id-Auflösung (Such-/Listen-Endpoint
-        mit Exakt-Match) finden, re-fetchen, Quarantäne-Set entfernen.
+      `abschnitte` + `auszugAbschnitte`. **Ergebnis:** ALLE 34 BGE regeneriert + voll, gate/golden
+      byte-gleich, `check:entscheide` 0 Kappungen. **Öffnet keinen 26×-Slot.**
+      - [x] **Rest 30.6.2026 geschlossen** — `bge_151_V_1`/`bge_151_V_30` (kurze Seiten-Ids, deren
+        `/decisions/151_V_1` präfixunscharf auf `151_V_194` matchte) jetzt über die Id-Disambiguierung
+        (`151 V 1` bzw. `bge_BGE_151_V_1` lösen eindeutig auf, ref=`BGE 151 V 1`) sauber re-gefetcht —
+        kein Hand-Edit (§7). WARN-Quarantäne wieder entfernt, Tor ist reines FEHLER.
 - [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
   (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
   (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
