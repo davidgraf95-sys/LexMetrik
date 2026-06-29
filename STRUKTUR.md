@@ -23,6 +23,23 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 3) — Split-View «Browser-Fenster»-Redesign (ultracode, NICHT deployt)
+
+Auftrag David: Split-View intuitiv + state-of-the-art; je Pane Titelleiste (was ist offen + ✕),
+Drag-Drop-Umsortierung, Drawer-Bleed beheben, Logik prüfen, Code aufräumen. Branch gleich.
+- **ultracode-Design** (3 Entwürfe→bewertet→synthese): «Browser-Fenster»-Modell, Pane-Liste als
+  Render-Projektion (kein zweiter State), 1-Pane-Default byte-gleich.
+- **PaneKopf.tsx** je Pane: Label · «Stand TT.MM.JJJJ» · ⠿ · ◂▸ · ⇱ Hauptfenster · ⧉ · ✕.
+- **Drag-Drop** sekundärer Panes (usePaneDnd-Hook) + ◂▸ Tastatur/Touch + F6-Wechsel (sichtbarer Fokus).
+- **Drawer-Bleed behoben:** Gesetz-TOC/Suche portaliert in eine Pane-Overlay-Schicht (absolute) →
+  bleibt im Pane (container-type fängt fixed nicht). Empirisch bestätigt.
+- **Logik:** Live-Location-Sync (Titel/teilen/promote/Dedup nutzen den GEZEIGTEN Pfad); Dedup gegen
+  ALLE offenen Panes inkl. Primär; promote = Swap; primär ✕ → nächstes Pane/Startseite; #hash erhalten.
+- **3. ultracode-Bugcheck** (18 Befunde) behoben (Live-Location-Major, F6-Fokus, Kontrast brass-700,
+  aria-modal, teilen-catch). Aufräumen: DnD in usePaneDnd extrahiert; kein toter Code (lint-grün).
+- Sweep: Gesetz/Entscheid/Rechner/Vorlage/Materialien rendern sauber im Pane; gate grün, 86 e2e grün,
+  golden byte-gleich. Deploy ausstehend.
+
 ## Session 29.6.2026 (Forts.) — Split-View B-1 + B-2 (ultracode, NICHT deployt)
 
 Fortsetzung gleicher Branch `feat/split-view-strang-a`. Auftrag David: B-1 + B-2 mit ultracode,
