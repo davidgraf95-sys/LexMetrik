@@ -23,6 +23,32 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
+
+Auftrag David: Split-View (ROADMAP-Strang 14) mit ultracode bauen; «push und deploy»; Bug-Checks
+zwischen jeden Schritt. Worktree `feat/split-view-strang-a`, Detail in `FAHRPLAN-SPLIT-VIEW.md`.
+**Deployt auf Prod (lexmetrik.vercel.app), Commit `d20f2337`, Branch nicht auf main gemergt
+(Direkt-Push geblockt → PR offen).**
+- **Strang A — Inhaltsbreite-Umschalter** `[Kompakt|Breit]` im Top-Streifen (ab `lg`): zentrale
+  Inhaltsspalte `max-w-content ↔ max-w-screen-2xl`; Lesespalte `max-w-reading` unberührt (§13.2).
+  Default kompakt = heutiges Verhalten (Golden byte-gleich). Neuer Hook `useInhaltsbreite`
+  (localStorage, SSR-sicher, Lesen+Schreiben in try/catch). **ultracode-6-Linsen-Review (24 Agenten)**
+  → 4 Befunde behoben: toter `bg-brass-100/70`-Fill (Alpha kompiliert mit var()-Tokens zu nichts, F7)
+  → solides `bg-brass-100`; je Knopf `aria-label="Inhaltsbreite: …"`; localStorage-Lesepfad gehärtet;
+  expliziter Setter statt Toggle-mit-Guard.
+- **B-0 — `<Routes>` → `src/RouteSwitch.tsx`** (verhaltensneutral, golden byte-gleich, 57 Routen
+  prerendern, Runtime-Smoke sauber): Routen-Baum standalone mountbar für künftige MemoryRouter-Panes.
+- **B-0b 1/2 — `@tailwindcss/container-queries`** installiert + verdrahtet (Davids Entscheid: CQ-1 +
+  Plugin); verhaltensneutral (gebautes CSS 0× `@container`). Breakpoint-Migration (CQ-1) folgt
+  gekoppelt an B-1 (Pane-Container) — sonst Container-vs-Viewport-Default-Verschiebung.
+- **e2e-Fix (§6.3):** 3 Gesetze-Reader-Tests waren vorbestehend rot auf main (aus PR #50 B1, NICHT
+  von Split-View) — sie prüften das alte Randtitel-DOM. B1-Verhalten empirisch verifiziert korrekt
+  (kein Code-Fix), Tests aufs B1-Modell nachgezogen (`[data-sek]`-Sektionsköpfe). Voller e2e: 86 grün.
+- **§9-Deploy:** alle Tore grün (tsc/vitest/golden/lint/check/build/e2e) · Bug-Check 2 unabh. Agenten
+  (Code-Lupe + empirischer Browser-Repro) sauber · Nachkontrolle: 8 Kernrouten 200, Live-Asset-Hash =
+  lokal (`index-COXIlfSD.js`), Schalter live in prerenderter `/rechner`.
+- **Nächster Schritt:** B-1 (Pane-Container, 2–3 Panes) inkl. CQ-1-Migration — eigene fokussierte Session.
+
 ## Session 29.6.2026 — Normtext-Darstellung Bund/DE: B1 komplett (Worktree-Merge) · Deploy
 
 Auftrag David: Gesetzesdarstellung Bund/DE auf Fedlex-Niveau (Worktree `feat/normtext-bund-de`,
