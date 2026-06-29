@@ -1,3 +1,5 @@
+import containerQueries from '@tailwindcss/container-queries';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
@@ -57,5 +59,10 @@ export default {
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
     },
   },
-  plugins: [],
+  // Container-Queries (Split-View B-0b, Entscheid David 29.6.2026): erlaubt
+  // @-Utilities (@xl:grid-cols-…), die auf die CONTAINER-Breite reagieren statt
+  // auf den Viewport — Voraussetzung dafür, dass ein schmales Pane (B-1) nicht
+  // weiter Vollbild-Layouts rendert. Reine Utility-Erweiterung; ungenutzt = kein
+  // Effekt (noch keine @-Klasse vergeben → verhaltensneutral).
+  plugins: [containerQueries],
 };
