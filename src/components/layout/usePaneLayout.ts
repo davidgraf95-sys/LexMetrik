@@ -87,6 +87,10 @@ export interface PaneLayout {
   oeffneDaneben: (pfad: string) => void;
   /** Schliesst das sekundäre Pane an Index i. */
   schliesse: (i: number) => void;
+  /** Sortiert ein sekundäres Pane um (Drag-Drop/◂▸) — reines Array-Splice, keine Navigation. */
+  verschiebe: (von: number, nach: number) => void;
+  /** Ersetzt das sekundäre Pane an Index i (für «zum Hauptfenster»: alter Primär rutscht hierher). */
+  ersetze: (i: number, pfad: string) => void;
 }
 
 export function usePaneLayout(): PaneLayout {
@@ -119,7 +123,21 @@ export function usePaneLayout(): PaneLayout {
     setSekundaer((s) => s.filter((_, idx) => idx !== i));
   }, []);
 
-  return { sekundaer, oeffneDaneben, schliesse };
+  const verschiebe = useCallback((von: number, nach: number) => {
+    setSekundaer((s) => {
+      if (von === nach || von < 0 || nach < 0 || von >= s.length || nach >= s.length) return s;
+      const n = [...s];
+      const [x] = n.splice(von, 1);
+      n.splice(nach, 0, x);
+      return n;
+    });
+  }, []);
+
+  const ersetze = useCallback((i: number, pfad: string) => {
+    setSekundaer((s) => (i < 0 || i >= s.length ? s : s.map((x, idx) => (idx === i ? normPfad(pfad) : x))));
+  }, []);
+
+  return { sekundaer, oeffneDaneben, schliesse, verschiebe, ersetze };
 }
 
 // ─── Pane-Steuerung (B-2) ──────────────────────────────────────────────────
@@ -133,9 +151,11 @@ export function usePaneLayout(): PaneLayout {
 export interface PaneSteuerung {
   oeffneDaneben: (pfad: string) => void;
   kannOeffnen: boolean;
+  /** true, wenn der Pfad bereits offen ist (Primär-URL oder ein Pane) → kein Doppel. */
+  istOffen: (pfad: string) => boolean;
 }
 
-const PaneSteuerungContext = createContext<PaneSteuerung>({ oeffneDaneben: () => {}, kannOeffnen: false });
+const PaneSteuerungContext = createContext<PaneSteuerung>({ oeffneDaneben: () => {}, kannOeffnen: false, istOffen: () => false });
 
 export const PaneSteuerungProvider = PaneSteuerungContext.Provider;
 

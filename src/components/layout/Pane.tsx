@@ -1,35 +1,29 @@
-import { Suspense, useContext, useMemo, useRef, useState } from 'react';
+import { Suspense, useContext, useMemo, useRef, useState, type DragEvent } from 'react';
 import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
+import { PaneKopf } from './PaneKopf';
 
-// ─── Sekundäres Split-View-Pane (B-1 + B-3-Navigation) ─────────────────────
+// ─── Sekundäres Split-View-Pane («Browser-Fenster»-Modell) ──────────────────
 //
-// Ein zusätzliches Lesefenster, das einen ZWEITEN Erlass/Rechner neben dem
-// primären Pane zeigt. Technik: `<RouteSwitch location={loc}>` (= react-routers
-// `<Routes location>`) im SELBEN BrowserRouter — react-router v7 verbietet einen
-// verschachtelten zweiten Router (MemoryRouter-in-BrowserRouter wirft).
+// Autonome, voll navigierbare Sicht neben dem primären Pane. Aufbau:
+//   Spalte (flex-col)
+//     ├─ PaneKopf            (Titelleiste: Label·Stand·⠿·◂▸·Hauptfenster·teilen·✕)
+//     └─ relative-Wrapper
+//          ├─ Scroll-div (@container/pane, overflow) ── der Inhalt (RouteSwitch)
+//          └─ Overlay-div (absolute, pointer-events-none) ── Drawer/Suche portalieren
+//             hierhin → bleiben IM Pane (kein fixed-Bleed über beide Panes).
 //
-// EIGENE Navigation (B-3-vorgezogen): Ein Pane hat eine eigene `loc`-State und
-// einen eigenen `navigator` (über UNSAFE_NavigationContext). So aktualisieren
-// `useNavigate`/`setSearchParams`/`<Link>` IM Pane NUR das Pane (loc), nie den
-// primären BrowserRouter — sonst würde z. B. der Rechtsweg-Umschalter eines
-// Rechners im Sekundär-Pane die Haupt-URL kapern (Bugcheck-Major). Das primäre
-// Pane bleibt die einzige URL-Quelle.
-//
-// Eigene <Suspense>+<ErrorBoundary> (ein ladendes/fehlerndes Pane leert die
-// anderen nicht), eigener Scroll-Container + `@container/pane` (Container-Query).
-//
-// §5/§8: KEIN RouteMeta/TabTracker hier — Titel/Reiter treibt allein das primäre
-// Pane. Zustandslos: das Pane kennt nur seine(n) Pfad(e), nie Formularinhalt.
+// EIGENE History + Navigator (UNSAFE_NavigationContext): Links/Breadcrumbs/zurück
+// wirken NUR im Pane, nie im primären BrowserRouter. §5/§8: kein RouteMeta/
+// TabTracker; zustandslos (nur Pfade). §3: reine Darstellung.
 
 function toStr(to: To): string {
   return typeof to === 'string' ? to : createPath(to);
 }
 
 function Laden() {
-  // Identisch zum App-Suspense-Fallback (FAHRPLAN-DESIGN 5.3).
   return (
     <div className="py-16 text-center space-y-3">
       <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
@@ -38,20 +32,33 @@ function Laden() {
   );
 }
 
-export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
+export interface SekundaerPaneProps {
   pfad: string;
   label: string;
+  stand?: string | null;
   onSchliessen: () => void;
-  onTeilen?: () => Promise<void> | undefined;
-}) {
+  onHauptfenster: () => void;
+  onTeilen?: () => void;
+  onLinks?: () => void;
+  onRechts?: () => void;
+  kannLinks?: boolean;
+  kannRechts?: boolean;
+  ziehbar?: boolean;
+  /** Drag-Drop: Griff (Kopf) + Spalte (Drop-Ziel). */
+  onDragStart?: (e: DragEvent) => void;
+  onDragEnd?: (e: DragEvent) => void;
+  onDragOver?: (e: DragEvent) => void;
+  onDrop?: (e: DragEvent) => void;
+  /** true = Drop-Indikator an dieser Spalte zeigen. */
+  ueber?: boolean;
+}
+
+export function SekundaerPane(props: SekundaerPaneProps) {
+  const { pfad, label, stand, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts,
+    kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
   const wurzel = useRef<HTMLElement>(null);
-  const [kopiert, setKopiert] = useState(false);
-  // Pane-eigene History + Navigator → das Pane ist eine AUTONOME, voll
-  // navigierbare Sicht: Links, Breadcrumbs (RechnerKopf «Übersicht/Katalog»),
-  // push/replace UND zurück/vorwärts (go) wirken NUR im Pane, nie im primären
-  // BrowserRouter. Den Eltern-NavigationContext erben und nur den navigator
-  // ersetzen (future/useTransitions/static/basename bleiben korrekt). Eigener
-  // In-Memory-Stack in einer Ref; `tick` erzwingt das Re-Render bei Navigation.
+  const overlayWurzel = useRef<HTMLDivElement>(null);
+  // Pane-eigene History + Navigator.
   const elternNav = useContext(UNSAFE_NavigationContext);
   const [hist, setHist] = useState<{ stack: string[]; idx: number }>({ stack: [pfad], idx: 0 });
   const loc = hist.stack[hist.idx];
@@ -74,54 +81,35 @@ export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
     },
   }), [elternNav]);
   return (
-    <PaneProvider value={{ imPane: true, rolle: 'sekundaer', wurzel }}>
-      <section
-        ref={wurzel}
-        aria-label={label}
-        className="@container/pane relative flex-1 min-w-0 overflow-y-auto overscroll-contain border-l border-line focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start"
+    <PaneProvider value={{ imPane: true, rolle: 'sekundaer', wurzel, overlayWurzel }}>
+      <div
+        onDragOver={onDragOver}
+        onDrop={onDrop}
+        className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-500' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
-        {/* Schliessen/Teilen: sticky oben rechts. Die Leiste selbst ist
-            pointer-events-none, damit der darunterliegende Seitenkopf (Breadcrumb
-            «Übersicht/Katalog») klickbar bleibt — nur die Knöpfe fangen Klicks. */}
-        <div className="pointer-events-none sticky top-0 z-10 flex justify-end gap-1.5 p-1.5 [&>button]:pointer-events-auto">
-          {onTeilen && (
-            <button
-              type="button"
-              onClick={() => {
-                // «kopiert» nur bei tatsächlichem Erfolg (Clipboard kann fehlen/blockiert sein, §8).
-                onTeilen()?.then(() => {
-                  setKopiert(true);
-                  window.setTimeout(() => setKopiert(false), 1600);
-                }).catch(() => { /* Clipboard blockiert — kein falsches Feedback */ });
-              }}
-              aria-label="Layout-Link kopieren"
-              title={kopiert ? 'Link kopiert' : 'Layout-Link kopieren'}
-              className="inline-flex h-7 items-center gap-1 rounded-md border border-line bg-surface px-2 text-micro text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors"
-            >
-              <span aria-hidden className="text-base leading-none">⧉</span>{kopiert ? 'kopiert' : 'teilen'}
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={onSchliessen}
-            aria-label={`Pane schliessen: ${label}`}
-            className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-line bg-surface text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors"
-          >
-            <span aria-hidden className="text-base leading-none">✕</span>
-          </button>
+        <PaneKopf
+          label={label} stand={stand} rolle="sekundaer"
+          onSchliessen={onSchliessen} onHauptfenster={onHauptfenster} onTeilen={onTeilen}
+          onLinks={onLinks} onRechts={onRechts} kannLinks={kannLinks} kannRechts={kannRechts}
+          ziehbar={ziehbar} onDragStart={onDragStart} onDragEnd={onDragEnd}
+        />
+        <div className="relative flex-1 min-h-0">
+          <section ref={wurzel} aria-label={label} tabIndex={-1} data-pane="sekundaer"
+            className="@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus:outline-none">
+            <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-6">
+              <UNSAFE_NavigationContext.Provider value={navKontext}>
+                <ErrorBoundary>
+                  <Suspense fallback={<Laden />}>
+                    <RouteSwitch location={loc} />
+                  </Suspense>
+                </ErrorBoundary>
+              </UNSAFE_NavigationContext.Provider>
+            </div>
+          </section>
+          {/* Overlay-Schicht: Pane-Drawer portalieren hierhin (absolute → im Pane). */}
+          <div ref={overlayWurzel} className="pointer-events-none absolute inset-0 overflow-hidden" />
         </div>
-        <div className="mx-auto w-full max-w-content px-5 sm:px-6 pb-8 -mt-7">
-          {/* Eigener Navigator (UNSAFE_NavigationContext) → Navigation bleibt im Pane.
-              static:false + leere basename wie im BrowserRouter. */}
-          <UNSAFE_NavigationContext.Provider value={navKontext}>
-            <ErrorBoundary>
-              <Suspense fallback={<Laden />}>
-                <RouteSwitch location={loc} />
-              </Suspense>
-            </ErrorBoundary>
-          </UNSAFE_NavigationContext.Provider>
-        </div>
-      </section>
+      </div>
     </PaneProvider>
   );
 }

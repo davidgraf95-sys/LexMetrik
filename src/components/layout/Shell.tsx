@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type DragEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Topbar } from './Topbar';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
@@ -9,11 +9,14 @@ import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSe
 import { useInhaltsbreite } from './useInhaltsbreite';
 import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER, layoutPermalink } from './usePaneLayout';
 import { SekundaerPane } from './Pane';
+import { PaneKopf } from './PaneKopf';
 import { PaneProvider } from './PaneKontext';
+import { tabSchluessel } from '../../lib/tabs';
+import { verlaufLabel, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { useDialogFokus } from './useDialogFokus';
 
 // Neutraler Pane-Kontext für den 1-Pane-Fall (DOM-/verhaltensneutral, stabil).
-const KEIN_PANE = { imPane: false, rolle: 'primaer' as const, wurzel: null };
+const KEIN_PANE = { imPane: false, rolle: 'primaer' as const, wurzel: null, overlayWurzel: null };
 
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
 // ziehen ODER per Tastatur (Pfeil ←/→) verstellen. role="separator" mit
@@ -71,10 +74,12 @@ function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: numbe
 // Oberkategorien + Sekundär-Nav) ist entfallen.
 export function Shell({ children }: { children: ReactNode }) {
   const { locale, setLocale } = useLocale();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
+  const navigate = useNavigate();
   const [schubladeOffen, setSchubladeOffen] = useState(false);
   const schubladeRef = useRef<HTMLDivElement>(null);
   const primaerWurzel = useRef<HTMLElement>(null); // Scroll-/Query-Wurzel des primären Panes (B-2.5)
+  const primaerOverlay = useRef<HTMLDivElement>(null); // Overlay-Schicht des primären Panes (Drawer)
   const seitenleiste = useSeitenleiste();
   const inhaltsbreite = useInhaltsbreite();
 
@@ -118,13 +123,83 @@ export function Shell({ children }: { children: ReactNode }) {
     });
     return () => cancelAnimationFrame(id);
   }, [multipane]);
-  // B-2: «daneben öffnen» nur ab lg + solange Kapazität frei ist.
-  const paneSteuerung = { oeffneDaneben: pane.oeffneDaneben, kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER };
+  // B-3a: F6 / Shift+F6 wechselt den Fokus zyklisch zwischen den Panes
+  // (Standard-Regionswechsel-Taste). Jedes Pane trägt `data-pane` + tabIndex=-1.
+  useEffect(() => {
+    if (!multipane) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'F6') return;
+      const panes = Array.from(document.querySelectorAll<HTMLElement>('[data-pane]'));
+      if (panes.length < 2) return;
+      e.preventDefault();
+      const aktiv = document.activeElement;
+      let idx = panes.findIndex((p) => p === aktiv || p.contains(aktiv));
+      if (idx === -1) idx = 0;
+      panes[(idx + (e.shiftKey ? -1 : 1) + panes.length) % panes.length].focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [multipane]);
+  // Pane-Titel/Stand: Manifeste lazy laden, sobald multipane (Label für Gesetz/Entscheid).
+  const [manifeste, setManifeste] = useState<VerlaufManifeste>({});
+  useEffect(() => {
+    if (!multipane) return;
+    let lebt = true;
+    void (async () => {
+      const [g, e] = await Promise.all([
+        import('../../lib/normtext/browse').then((m) => m.ladeBrowseManifest()).catch(() => null),
+        import('../../lib/rechtsprechung/browse').then((m) => m.ladeEntscheidManifest()).catch(() => null),
+      ]);
+      if (lebt) setManifeste({ gesetze: g, entscheide: e });
+    })();
+    return () => { lebt = false; };
+  }, [multipane]);
+  const titelVon = (pfad: string) => {
+    const stand = erlassVonPfad(pfad, manifeste)?.stand ?? null;
+    const m = stand && /^(\d{4})-(\d{2})-(\d{2})/.exec(stand);
+    return { label: verlaufLabel(pfad, manifeste), stand: m ? `${m[3]}.${m[2]}.${m[1]}` : stand };
+  };
+
+  // Dedup gegen ALLE offenen Panes (Primär-URL inkl.) — nie ein bereits gezeigtes doppeln.
+  const istOffen = (pfad: string) => {
+    const n = tabSchluessel(pfad);
+    return tabSchluessel(pathname + search) === n || pane.sekundaer.some((x) => tabSchluessel(x) === n);
+  };
+  // B-2: «daneben öffnen» nur ab lg + Kapazität; kein Doppel.
+  const paneSteuerung = {
+    oeffneDaneben: (pfad: string) => { if (!istOffen(pfad)) pane.oeffneDaneben(pfad); },
+    kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER,
+    istOffen,
+  };
   // Fokus nach dem Schliessen eines Panes zurück in den Hauptinhalt (A11y).
   const schliesseUndFokus = (i: number) => {
     pane.schliesse(i);
     requestAnimationFrame(() => document.getElementById('inhalt')?.focus());
   };
+  // Sekundär → Hauptfenster: dieses Pane wird die URL, das alte Hauptfenster rutscht an seinen Platz.
+  const zumHauptfenster = (i: number) => {
+    const altPrimaer = pathname + search;
+    const ziel = pane.sekundaer[i];
+    pane.ersetze(i, altPrimaer);
+    navigate(ziel);
+  };
+  // Hauptfenster ✕: erstes Sekundär zum Hauptfenster befördern (sonst zur Startseite).
+  const schliesseHaupt = () => {
+    if (pane.sekundaer.length > 0) { const z = pane.sekundaer[0]; pane.schliesse(0); navigate(z); }
+    else navigate('/');
+  };
+  // Drag-Drop-Umsortierung der SEKUNDÄREN Panes (Index im sekundaer-Array).
+  const gezogen = useRef<number | null>(null);
+  const [ueber, setUeber] = useState<number | null>(null);
+  const dndSpalte = (i: number) => ({
+    onDragOver: (e: DragEvent) => { if (gezogen.current != null && gezogen.current !== i) { e.preventDefault(); if (ueber !== i) setUeber(i); } },
+    onDrop: (e: DragEvent) => { e.preventDefault(); const von = gezogen.current; if (von != null && von !== i) pane.verschiebe(von, i); gezogen.current = null; setUeber(null); },
+    ueber: ueber === i,
+  });
+  const dndGriff = (i: number) => ({
+    onDragStart: (e: DragEvent) => { gezogen.current = i; e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', String(i)); },
+    onDragEnd: () => { gezogen.current = null; setUeber(null); },
+  });
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -197,21 +272,38 @@ export function Shell({ children }: { children: ReactNode }) {
               Wrapper `contents` (layoutneutral) + PaneProvider DOM-neutral →
               Default byte-gleich (Fensterscroll, kein container-type, kein overflow). */}
             <div className={multipane ? 'flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory' : 'contents'}>
-              <PaneProvider value={multipane ? { imPane: true, rolle: 'primaer', wurzel: primaerWurzel } : KEIN_PANE}>
-                <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
-                  className={multipane
-                    ? '@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none max-lg:flex-none max-lg:w-full max-lg:snap-start'
-                    : 'flex-1 w-full focus:outline-none'}>
-                  <div className={multipane
-                    ? 'mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12'
-                    : `${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
-                </main>
-              </PaneProvider>
-              {/* Sekundäre location-fixierte Panes (<Routes location> + eigener Navigator). */}
+              {/* Primäres Pane — gleiche Element-Kette zu {children} in beiden Modi
+                  (Wrapper = `contents` im 1-Pane), nur Klassen/Provider wechseln →
+                  kein Remount. PaneKopf + Overlay sind multipane-only GESCHWISTER
+                  (nicht Vorfahren von {children}). */}
+              <div className={multipane ? 'flex flex-col flex-1 min-w-0 max-lg:flex-none max-lg:w-full max-lg:snap-start' : 'contents'}>
+                {multipane && (
+                  <PaneKopf {...titelVon(pathname)} rolle="primaer" onSchliessen={schliesseHaupt} />
+                )}
+                <div className={multipane ? 'relative flex-1 min-h-0' : 'contents'}>
+                  <PaneProvider value={multipane ? { imPane: true, rolle: 'primaer', wurzel: primaerWurzel, overlayWurzel: primaerOverlay } : KEIN_PANE}>
+                    <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
+                      data-pane={multipane ? 'primaer' : undefined}
+                      className={multipane
+                        ? '@container/pane absolute inset-0 overflow-y-auto overscroll-contain focus:outline-none'
+                        : 'flex-1 w-full focus:outline-none'}>
+                      <div className={multipane
+                        ? 'mx-auto w-full max-w-content px-5 sm:px-6 py-6'
+                        : `${inhaltsbreiteKlasse} mx-auto px-5 sm:px-6 py-8 sm:py-12`}>{children}</div>
+                    </main>
+                  </PaneProvider>
+                  {multipane && <div ref={primaerOverlay} className="pointer-events-none absolute inset-0 overflow-hidden" />}
+                </div>
+              </div>
+              {/* Sekundäre Panes (<Routes location> + eigener Navigator + PaneKopf). */}
               {multipane && pane.sekundaer.map((pfad, i) => (
-                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`}
+                <SekundaerPane key={pfad} pfad={pfad} {...titelVon(pfad)}
                   onSchliessen={() => schliesseUndFokus(i)}
-                  onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer))} />
+                  onHauptfenster={() => zumHauptfenster(i)}
+                  onTeilen={() => { void navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer)); }}
+                  onLinks={() => pane.verschiebe(i, i - 1)} onRechts={() => pane.verschiebe(i, i + 1)}
+                  kannLinks={i > 0} kannRechts={i < pane.sekundaer.length - 1}
+                  ziehbar={pane.sekundaer.length > 1} {...dndGriff(i)} {...dndSpalte(i)} />
               ))}
             </div>
           {!multipane && <Footer />}

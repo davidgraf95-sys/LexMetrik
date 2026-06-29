@@ -28,9 +28,17 @@ export interface PaneKontextWert {
    * `null` ausserhalb eines Panes.
    */
   wurzel: RefObject<HTMLElement | null> | null;
+  /**
+   * Overlay-Schicht des Panes (nicht-scrollendes Geschwister im relative-Wrapper).
+   * Pane-Overlays (Gesetz-TOC/Suche-Drawer) portalieren hierhin und positionieren
+   * `absolute` → sie bleiben IM Pane statt als `position:fixed` über beide Panes zu
+   * quellen (`container-type` fängt fixed NICHT). `null` ausserhalb eines Panes →
+   * Overlay portaliert wie bisher an `document.body` (`fixed`, byte-gleich).
+   */
+  overlayWurzel: RefObject<HTMLElement | null> | null;
 }
 
-const PaneKontext = createContext<PaneKontextWert>({ imPane: false, rolle: 'primaer', wurzel: null });
+const PaneKontext = createContext<PaneKontextWert>({ imPane: false, rolle: 'primaer', wurzel: null, overlayWurzel: null });
 
 /** Provider — nur der Pane-Wrapper (Pane.tsx) setzt `imPane: true`. */
 export const PaneProvider = PaneKontext.Provider;

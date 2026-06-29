@@ -38,7 +38,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
   const { normen, materialien, werkzeuge } = kontextSync(typ, normKeys);
   // B-2 Verzahnung: Rechner direkt NEBEN dem Normtext öffnen (Split-View).
   // Nur ab lg + freier Pane-Kapazität sichtbar (Werkzeuge sind pane-sicher).
-  const { oeffneDaneben, kannOeffnen } = usePaneSteuerung();
+  const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
 
   // Entscheide lazy aus dem Norm→Entscheid-Index. Stabiler Dep-Key über die
   // join-Signatur (Array-/Objekt-Identität wechselt sonst je Render). Das
@@ -93,7 +93,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                       className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
                       {n.kuerzel}
                     </Link>
-                    {kannOeffnen && (
+                    {kannOeffnen && !istOffen(n.pfad) && (
                       <button type="button" onClick={() => oeffneDaneben(n.pfad)}
                         title={`${n.kuerzel} nebeneinander öffnen`} aria-label={`${n.kuerzel} nebeneinander öffnen`}
                         className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
@@ -169,7 +169,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                     </Link>
                     {/* «daneben öffnen»: Norm bleibt links, Werkzeug erscheint
                         rechts im Split-View (B-2). Nur ab lg + freier Kapazität. */}
-                    {kannOeffnen && (
+                    {kannOeffnen && !istOffen(w.href) && (
                       <button type="button" onClick={() => oeffneDaneben(w.href)}
                         title={`${w.titel} nebeneinander öffnen`} aria-label={`${w.titel} nebeneinander öffnen`}
                         className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">

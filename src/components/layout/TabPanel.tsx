@@ -18,7 +18,7 @@ import { HerkunftIcon } from '../HerkunftIcon';
 // Artikel. Reine Darstellung/Navigation (§3): die Reiter-Liste lebt in
 // lib/tabs.ts, die Gruppierung in lib/tabGruppen.ts (SSoT §5).
 
-export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchliessen, onDaneben }: {
+export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchliessen, onDaneben, paneOffen }: {
   tabs: TabEintrag[];
   manifeste: VerlaufManifeste;
   aktivSchluessel: string;
@@ -26,6 +26,8 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   onSchliessen: (path: string) => void;
   /** Split-View: Reiter NEBEN dem aktuellen Inhalt öffnen (nur ab lg + Kapazität). */
   onDaneben?: (path: string) => void;
+  /** true, wenn der Pfad bereits offen ist → ⧉ ausblenden (kein Doppel). */
+  paneOffen?: (path: string) => boolean;
 }) {
   // Eingeklappte Gruppen-IDs (Default: alles offen → der Nutzer sieht direkt
   // alle Reiter; «geht nochmals auf»). Klick auf den Kopf klappt zu/auf.
@@ -130,7 +132,7 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
           <span aria-hidden className="text-micro leading-none">▼</span>
         </button>
         {/* ⧉ — nebeneinander öffnen (Split-View): nur ab lg + freier Kapazität. */}
-        {onDaneben && (
+        {onDaneben && !paneOffen?.(t.path) && (
           <button type="button" onClick={() => onDaneben(t.path)}
             aria-label={`Reiter «${name}» nebeneinander öffnen`}
             className="hidden lg:inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 transition-colors">

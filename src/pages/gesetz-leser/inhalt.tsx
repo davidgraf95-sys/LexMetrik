@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
@@ -110,7 +111,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Drawer — eine feste 16rem-TOC-Spalte würde ein Pane zu stark beschneiden.
   // istXl steuert genau diese 2-Spalten-Logik; im Pane also fest false. Ausserhalb
   // eines Panes byte-gleich zum Viewport-Verhalten (Default/Prerender).
-  const { imPane, rolle, wurzel } = usePaneKontext();
+  const { imPane, rolle, wurzel, overlayWurzel } = usePaneKontext();
   const istXl = imPane ? false : istXlVp;
   // B-2.5: In einem Pane scopen wir DOM-Queries + Scroll auf die Pane-Wurzel
   // (sonst kollidieren doppelte `art-`-IDs / trifft der Scroll das falsche Pane).
@@ -789,21 +790,31 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
           steht oben, darunter (falls vorhanden) der Gliederungsbaum; Sektionswahl
           schliesst den Drawer (springeZuSektion). */}
-      {!istXl && tocAuf && (
-        <>
-          <div className={`fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`} onClick={() => setTocAuf(false)} aria-hidden />
-          <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
-            className={`fixed inset-x-0 z-50 ${imPane ? '' : 'xl:hidden'} bg-paper-raised border-b border-line shadow-lg max-h-[80vh] overflow-y-auto overscroll-contain`}
-            style={{ top: '4rem' }}>
-            <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
-              <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
-              <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+      {!istXl && tocAuf && (() => {
+        // Im Pane in die Overlay-Schicht portalieren + `absolute` (vom relative-
+        // Wrapper eingefangen) → der Drawer bleibt IM Pane statt als `position:fixed`
+        // über beide Panes zu quellen (container-type fängt fixed nicht). Ausserhalb
+        // unverändert `fixed` an den Viewport (byte-gleich).
+        const ziel = (imPane && overlayWurzel?.current) || null;
+        const inPane = ziel != null;
+        const drawer = (
+          <>
+            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
+              onClick={() => setTocAuf(false)} aria-hidden />
+            <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Suche & Gliederung"
+              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-full' : `fixed inset-x-0 z-50 max-h-[80vh] ${imPane ? '' : 'xl:hidden'}`} bg-paper-raised border-b border-line shadow-lg overflow-y-auto overscroll-contain`}
+              style={inPane ? undefined : { top: '4rem' }}>
+              <div className="sticky top-0 flex items-center justify-between border-b border-line bg-paper-raised px-4 py-2.5">
+                <p className="lc-overline">{sektionen.length > 0 ? 'Suche & Gliederung' : 'Im Gesetz suchen'}</p>
+                <button type="button" onClick={() => setTocAuf(false)} className="text-micro text-ink-500 hover:text-brass-700">✕ schliessen</button>
+              </div>
+              <div className="px-4 pt-3 pb-1">{sucheEingabe}</div>
+              {sektionen.length > 0 && <div className="px-3 py-2 border-t border-line mt-2">{tocBaumEl}</div>}
             </div>
-            <div className="px-4 pt-3 pb-1">{sucheEingabe}</div>
-            {sektionen.length > 0 && <div className="px-3 py-2 border-t border-line mt-2">{tocBaumEl}</div>}
-          </div>
-        </>
-      )}
+          </>
+        );
+        return ziel ? createPortal(drawer, ziel) : drawer;
+      })()}
 
       <div className={!imPane && sektionen.length > 0 && tocOffen ? 'xl:grid xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-8' : ''}>
         {/* xl-Spalte (nur ab 1280px): Suche + Gliederungsbaum, sticky. Unter xl
