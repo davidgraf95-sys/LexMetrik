@@ -10,6 +10,7 @@ import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/brows
 import { kopfModell, type KopfLabelKey } from '../lib/rechtsprechung/kopf';
 import { normalisiereRegeste } from '../lib/rechtsprechung/register';
 import { GEBIET_LABEL } from '../lib/normtext/register';
+import { usePaneKontext } from '../components/layout/PaneKontext';
 import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/rechtsprechung/typen';
 
 // Reader EINES Entscheids (/rechtsprechung/:key). Lädt Manifest-Eintrag → Datei
@@ -93,6 +94,7 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 
 function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string; ansichtParam: string | null }) {
   const navigate = useNavigate();
+  const { imPane } = usePaneKontext();
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
   const [kopiert, setKopiert] = useState(false);
@@ -227,14 +229,17 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
           Abschnitt nicht hinter dem gemeinsamen Kopf-Block verschwindet. Greift nur im
           Haupt-Body (.rsp-anker), nicht im Lesemodus-Overlay (eigene schlanke Leiste). */}
       <style>{`.rsp-anker [id]{scroll-margin-top:var(--rsp-stick,7rem)}`}</style>
-      {/* Breadcrumb (scrollt weg; die Sprung-Navigation ist die sticky Kopfzeile) */}
-      <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
-        <Link to="/rechtsprechung" className="hover:text-brass-700">Rechtsprechung</Link>
-        <span className="mx-1.5 text-ink-300">›</span>
-        {snap.kanton === 'CH' ? 'Bund' : `Kanton ${snap.kanton}`}
-        <span className="mx-1.5 text-ink-300">›</span>
-        <span className="text-ink-700 font-medium num">{snap.bgeReferenz ?? snap.nummer}</span>
-      </div>
+      {/* Breadcrumb: in der Einzelansicht trägt sie der Inhalts-Kopf (oben, sticky);
+          hier nur noch IM Pane (Split-View hat keinen Inhalts-Kopf). */}
+      {imPane && (
+        <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
+          <Link to="/rechtsprechung" className="hover:text-brass-700">Rechtsprechung</Link>
+          <span className="mx-1.5 text-ink-300">›</span>
+          {snap.kanton === 'CH' ? 'Bund' : `Kanton ${snap.kanton}`}
+          <span className="mx-1.5 text-ink-300">›</span>
+          <span className="text-ink-700 font-medium num">{snap.bgeReferenz ?? snap.nummer}</span>
+        </div>
+      )}
 
       <header className="space-y-2.5 border-b border-line pb-5">
         {/* 1 Identität (stets): Gericht · Abteilung · Sachgebiet */}

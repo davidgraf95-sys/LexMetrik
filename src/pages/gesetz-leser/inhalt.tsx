@@ -794,7 +794,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           eng macht/abschneidet. */}
       {!zweiSpalten && (
         <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-          style={{ top: '4rem' }}>
+          style={{ top: imPane ? '4rem' : 'calc(4rem + 2.25rem)' }}>
           {istXl ? (
             <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && (
@@ -863,7 +863,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         {/* Im Pane (B-1): keine feste TOC-Spalte — einspaltig + Drawer. */}
         {!imPane && sektionen.length > 0 && (
           <aside
-            style={{ top: 'calc(4rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 1.5rem)' }}
+            style={{ top: 'calc(4rem + 2.25rem + 0.75rem)', maxHeight: 'calc(100vh - 4rem - 2.25rem - 1.5rem)' }}
             className={`hidden xl:mb-0 xl:sticky xl:flex-col ${tocOffen ? 'xl:flex' : 'xl:hidden'}`}>
             {zweiSpalten && (
               <div data-such-bar className="mb-3 shrink-0">
