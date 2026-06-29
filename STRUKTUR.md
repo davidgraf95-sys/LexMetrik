@@ -23,6 +23,17 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 7) — Re-Render-Entprellung + Bug-Check über heutigen Code
+
+- **Perf:** Kopf-Artikel-Meldung 150ms entprellt → weniger Pane-Re-Renders beim Scrollen.
+- **Fundierter Bug-Check** über das heutige 70-Datei-Delta (6 unabhängige Lupen: Effekte,
+  Layout/byte-gleich, Kopf-Kontextfluss, Pane-Mechanik, Popover/Drawer, Technik-A). 7 Befunde
+  behoben: **MEDIUM** EntscheidLeser-Sticky-Leiste verdeckte den Inhalts-Kopf (top/--rsp-stick
+  imPane-abhängig); **MITTEL** Promote/⇱ doppelter React-Key (Dedup); data-such-bar-Pane-Offset;
+  Gutter-Klemmung summenerhaltend; liveLocs-Cleanup; ziehGutter-Teardown; 2× Technik-A-col-span.
+  DEFERRED: onNavigiert-useCallback, Drawer-Tab-Trap/F6, Popover-Überhang (Body-Portal inhärent),
+  Entscheid-Breadcrumb-Parität. gate grün (golden byte-gleich), 86 e2e grün.
+
 ## Session 29.6.2026 (Forts. 6) — Pane-Kopf-Ausrichtung + Technik A (Form-Grids container-responsiv) · auf main (PR #52)
 
 - **Pane-Kopf links bündig:** PaneKopf-Breadcrumb (Identitätsblock pl-0 + gap-1) fluchtet
