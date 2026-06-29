@@ -23,6 +23,28 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 29.6.2026 (Forts. 4) — Inhalts-Kopf (Einzelansicht) + Verweis-Popup-Fix · Prod-Deploy
+
+Auftrag David (A–D, nach «go» + «ja zu deploy»). Branch `feat/split-view-strang-a`,
+**von Branch-HEAD auf Prod deployt** (PR #52 offen für main, Self-Merge geblockt — David merged).
+- **A/A2/A3 Inhalts-Kopf:** jede geöffnete Inhaltsseite (Gesetz/Rechner/Vorlage/Entscheid/
+  Material) trägt oben — analog zur Split-View-Pane-Leiste, aber OHNE Verschiebe-Steuerung —
+  einen sticky Kopf: klickbare Breadcrumb «Gesetze › Bund › OR» (jede Ebene navigierbar,
+  Ebene → gefilterte Übersicht ?ebene=/?kt=), bei Gesetzen mittig der **live mitlaufende
+  Artikel** (IntersectionObserver), rechts Stand + ✕ → Startseite. Neue `InhaltsKopf.tsx` +
+  `InhaltsKopfKontext.ts`; Seiten melden Kopfdaten (Gesetz/Material voll), sonst Pfad-Fallback.
+  Kein Kopf auf Katalog/Meta; im Split-View bleibt der PaneKopf (In-Content-Breadcrumb der
+  Leser jetzt imPane-gegated → keine Dopplung).
+- **B/C Drawer kompakt:** Gliederung/Suche begrenzte Höhe (60vh/75%), fixer Such-Kopf, nur
+  der Baum scrollt → verdeckt die Trefferliste nicht mehr; unter dem Kopf.
+- **D Verweis-Popup am Klickort (überall):** `NormPopoverOverlay` verankert am Trigger
+  (getBoundingClientRect, Portal an body → korrekt auch im Pane trotz container-type) statt
+  viewport-zentriert.
+- 2 ultracode-Bugchecks (Code-Lupe + empirische Repros): 4 Befunde gefixt (Sticky-Offsets
+  unter dem Kopf, Rechtsprechung-Doppel-Breadcrumb, Materialien «Zuletzt geöffnet»-Label).
+  gate grün · 86 e2e grün · golden byte-gleich · Prod live verifiziert (Breadcrumb + Live-Art.7).
+- OFFEN/separat: **E** (Panes container-responsiv nach Pane-Breite) — eigener Task, mit ultracode.
+
 ## Session 29.6.2026 (Forts. 3) — Split-View «Browser-Fenster»-Redesign (ultracode, NICHT deployt)
 
 Auftrag David: Split-View intuitiv + state-of-the-art; je Pane Titelleiste (was ist offen + ✕),
