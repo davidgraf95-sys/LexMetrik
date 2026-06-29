@@ -2,11 +2,12 @@ import { useRef, useState, type DragEvent } from 'react';
 
 // ─── Pane-Drag-Drop (Split-View) ───────────────────────────────────────────
 //
-// Umsortieren der SEKUNDÄREN Panes per HTML5-Drag-Drop (⠿-Griff am PaneKopf →
-// Drop auf eine Pane-Spalte). Muster wie TabPanel: gezogener Index in einer Ref
-// (überlebt Re-Render), überfahrener Index als State (Drop-Indikator). Reine
-// Array-Umsortierung (`verschiebe`), keine Navigation — verlustfrei.
-export function usePaneDnd(verschiebe: (von: number, nach: number) => void) {
+// Umsortieren der Panes per HTML5-Drag-Drop (⠿-Griff am PaneKopf → Drop auf eine
+// Pane-Spalte). GLOBALE Indizes über die ganze Pane-Liste (0 = primär, 1.. =
+// sekundär); `move` interpretiert sie (Sekundär-Reorder vs. Tausch mit dem
+// Hauptfenster). Muster wie TabPanel: gezogener Index in Ref (überlebt Re-Render),
+// überfahrener Index als State (Drop-Indikator).
+export function usePaneDnd(move: (von: number, nach: number) => void) {
   const gezogen = useRef<number | null>(null);
   const [ueber, setUeber] = useState<number | null>(null);
 
@@ -31,7 +32,7 @@ export function usePaneDnd(verschiebe: (von: number, nach: number) => void) {
     onDrop: (e: DragEvent) => {
       e.preventDefault();
       const von = gezogen.current;
-      if (von != null && von !== i) verschiebe(von, i);
+      if (von != null && von !== i) move(von, i);
       gezogen.current = null;
       setUeber(null);
     },

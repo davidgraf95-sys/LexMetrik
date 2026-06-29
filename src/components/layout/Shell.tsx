@@ -196,8 +196,16 @@ export function Shell({ children }: { children: ReactNode }) {
     if (pane.sekundaer.length > 0) { const z = livePfad(0); pane.schliesse(0); navigate(z); }
     else navigate('/');
   };
-  // Drag-Drop-Umsortierung der SEKUNDÄREN Panes (siehe usePaneDnd).
-  const dnd = usePaneDnd(pane.verschiebe);
+  // Pane verschieben über die GANZE Liste (global: 0 = Hauptfenster, 1.. = sekundär):
+  // an/über das Hauptfenster ziehen = tauschen (promote); sonst Sekundär-Reorder.
+  // Greift für Drag-Drop UND die ◂▸-Knöpfe → «verschieben» wirkt auch bei 2 Panes.
+  const verschiebePane = (von: number, nach: number) => {
+    if (von === nach) return;
+    if (von === 0) zumHauptfenster(nach - 1);       // Hauptfenster auf ein Pane → tauschen
+    else if (nach === 0) zumHauptfenster(von - 1);  // Pane auf das Hauptfenster → befördern
+    else pane.verschiebe(von - 1, nach - 1);        // Sekundär ↔ Sekundär
+  };
+  const dnd = usePaneDnd(verschiebePane);
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -274,9 +282,12 @@ export function Shell({ children }: { children: ReactNode }) {
                   (Wrapper = `contents` im 1-Pane), nur Klassen/Provider wechseln →
                   kein Remount. PaneKopf + Overlay sind multipane-only GESCHWISTER
                   (nicht Vorfahren von {children}). */}
-              <div className={multipane ? 'flex flex-col flex-1 min-w-0 max-lg:flex-none max-lg:w-full max-lg:snap-start' : 'contents'}>
+              <div {...(multipane ? { onDragOver: dnd.spalte(0).onDragOver, onDrop: dnd.spalte(0).onDrop } : {})}
+                className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-brass-700' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
                 {multipane && (
-                  <PaneKopf {...titelVon(pathname)} rolle="primaer" onSchliessen={schliesseHaupt} />
+                  <PaneKopf {...titelVon(pathname)} rolle="primaer" onSchliessen={schliesseHaupt}
+                    onRechts={() => verschiebePane(0, 1)} kannRechts={pane.sekundaer.length > 0}
+                    ziehbar {...dnd.griff(0)} />
                 )}
                 <div className={multipane ? 'relative flex-1 min-h-0' : 'contents'}>
                   <PaneProvider value={multipane ? { imPane: true, rolle: 'primaer', wurzel: primaerWurzel, overlayWurzel: primaerOverlay } : KEIN_PANE}>
@@ -300,9 +311,9 @@ export function Shell({ children }: { children: ReactNode }) {
                   onSchliessen={() => schliesseUndFokus(i)}
                   onHauptfenster={() => zumHauptfenster(i)}
                   onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
-                  onLinks={() => pane.verschiebe(i, i - 1)} onRechts={() => pane.verschiebe(i, i + 1)}
-                  kannLinks={i > 0} kannRechts={i < pane.sekundaer.length - 1}
-                  ziehbar={pane.sekundaer.length > 1} {...dnd.griff(i)} {...dnd.spalte(i)} />
+                  onLinks={() => verschiebePane(i + 1, i)} onRechts={() => verschiebePane(i + 1, i + 2)}
+                  kannLinks kannRechts={i < pane.sekundaer.length - 1}
+                  ziehbar={multipane} {...dnd.griff(i + 1)} {...dnd.spalte(i + 1)} />
               ))}
             </div>
           {!multipane && <Footer />}
