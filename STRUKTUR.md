@@ -47,8 +47,15 @@ Danach Auftrag «weitermachen im plan / run till dry» → B-2.5 → B-4 → B-5
   Deploy: React-Compiler ist NICHT aktiv → instabile in-Komponente-Helfer churnten Effekte/Observer
   im Default-Leser. Fix `c9a8cca9` (Modul-Ebene-Helfer) + Honesty-Fixes (Clipboard, ?p=, title).
 - **Split-View KOMPLETT + auf Prod** (A→B-5, `61dfa598`, lexmetrik.vercel.app; Live-Smoke: ⧉ öffnet
-  Pane, 0 Fehler). B-3-Rest (Scroll-Positions-Wiederherstellung pro Pane + Tastatur-Pane-Wechsel)
-  offen. Detail `FAHRPLAN-SPLIT-VIEW.md`.
+  Pane, 0 Fehler).
+- **Optimierung + autonome Panes** (`5d696c16`, Auftrag David, noch nicht deployt): 3. ultracode-
+  Bugcheck (21→20 bestätigt, keine Blocker) fand u. a. **useNavigate-Hijack** (Navigation in einem
+  Sekundär-Pane kaperte die Haupt-URL) → Fix: **jedes Pane hat eigene In-Memory-History + Navigator**
+  (UNSAFE_NavigationContext) → Links/Breadcrumbs/zurück wirken nur im Pane (beide Seiten autonom).
+  **Tracker-Öffnen** (ReiterUebersicht ⧉ → jede Engine/Gesetz ins Split). **#hash erhalten** (Werkzeug-
+  Unter-Tabs). **Kein Remount** beim Öffnen/Schliessen (stabile Element-Kette + Scroll-Übergabe).
+  Breadcrumb-Kopf im Pane wieder bedienbar (pointer-events). + Polish (Kontrast, Schalter im Split aus,
+  exhaustive-deps). Detail `FAHRPLAN-SPLIT-VIEW.md`.
 
 ## Session 29.6.2026 — Split-View Strang A + B-0/B-0b · Prod-Deploy (ultracode)
 
