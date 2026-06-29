@@ -28,23 +28,42 @@ function normPfad(pfad: string): string {
   return tabSchluessel(pfad);
 }
 
+/** Defensiv säubern: nur absolute Pfade, normalisiert, dedupliziert, gekappt. */
+function saeubere(arr: unknown[]): string[] {
+  const sauber: string[] = [];
+  for (const x of arr) {
+    if (typeof x !== 'string' || !x.startsWith('/')) continue;
+    const n = normPfad(x);
+    if (!sauber.includes(n)) sauber.push(n);
+    if (sauber.length >= MAX_SEKUNDAER) break;
+  }
+  return sauber;
+}
+
 function ladePanes(): string[] {
   if (typeof window === 'undefined') return [];
   try {
+    // B-5: ein geteilter Layout-Link `?p=pfad||pfad` gewinnt über localStorage —
+    // so reproduziert das Öffnen eines geteilten Links den Pane-Satz.
+    const geteilt = new URLSearchParams(window.location.search).get('p');
+    if (geteilt) return saeubere(geteilt.split('||').map((s) => decodeURIComponent(s)));
     const roh = window.localStorage.getItem(PANES_KEY);
     if (!roh) return [];
     const arr = JSON.parse(roh);
     if (!Array.isArray(arr)) return [];
-    // Defensiv: nur Strings, normalisiert, dedupliziert, gekappt.
-    const sauber: string[] = [];
-    for (const x of arr) {
-      if (typeof x !== 'string' || !x.startsWith('/')) continue;
-      const n = normPfad(x);
-      if (!sauber.includes(n)) sauber.push(n);
-      if (sauber.length >= MAX_SEKUNDAER) break;
-    }
-    return sauber;
+    return saeubere(arr);
   } catch { return []; }
+}
+
+/** Baut den teilbaren Layout-Permalink (aktuelle URL + ?p=sekundär-Pfade). */
+export function layoutPermalink(sekundaer: string[]): string {
+  if (typeof window === 'undefined') return '';
+  const u = new URL(window.location.href);
+  // searchParams.set kodiert selbst — NICHT vorab encodeURIComponent (sonst
+  // doppelt kodiert). Trenner «||» (| → %7C). ladePanes dekodiert defensiv nach.
+  if (sekundaer.length) u.searchParams.set('p', sekundaer.join('||'));
+  else u.searchParams.delete('p');
+  return u.toString();
 }
 
 export interface PaneLayout {
@@ -60,6 +79,18 @@ export interface PaneLayout {
 
 export function usePaneLayout(): PaneLayout {
   const [sekundaer, setSekundaer] = useState<string[]>(ladePanes);
+
+  // B-5: ?p= war nur Seed (geteilter Link) → nach dem Übernehmen aus der URL
+  // entfernen, damit ein Reload den dann lokalen Zustand nutzt (localStorage),
+  // nicht erneut den geteilten Satz aufzwingt. Einmalig.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const u = new URL(window.location.href);
+    if (u.searchParams.has('p')) {
+      u.searchParams.delete('p');
+      window.history.replaceState(window.history.state, '', u.pathname + u.search + u.hash);
+    }
+  }, []);
 
   useEffect(() => {
     try { window.localStorage.setItem(PANES_KEY, JSON.stringify(sekundaer)); }

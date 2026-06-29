@@ -7,7 +7,7 @@ import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
 import { useInhaltsbreite } from './useInhaltsbreite';
-import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER } from './usePaneLayout';
+import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER, layoutPermalink } from './usePaneLayout';
 import { SekundaerPane } from './Pane';
 import { PaneProvider } from './PaneKontext';
 import { useDialogFokus } from './useDialogFokus';
@@ -186,7 +186,9 @@ export function Shell({ children }: { children: ReactNode }) {
                 </main>
               </PaneProvider>
               {pane.sekundaer.map((pfad, i) => (
-                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`} onSchliessen={() => schliesseUndFokus(i)} />
+                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`}
+                  onSchliessen={() => schliesseUndFokus(i)}
+                  onTeilen={() => { void navigator.clipboard?.writeText(layoutPermalink(pane.sekundaer)); }} />
               ))}
             </div>
           )}

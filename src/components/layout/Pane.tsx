@@ -1,4 +1,4 @@
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
@@ -33,12 +33,14 @@ function Laden() {
   );
 }
 
-export function SekundaerPane({ pfad, label, onSchliessen }: {
+export function SekundaerPane({ pfad, label, onSchliessen, onTeilen }: {
   pfad: string;
   label: string;
   onSchliessen: () => void;
+  onTeilen?: () => void;
 }) {
   const wurzel = useRef<HTMLElement>(null);
+  const [kopiert, setKopiert] = useState(false);
   return (
     <PaneProvider value={{ imPane: true, rolle: 'sekundaer', wurzel }}>
       <section
@@ -48,7 +50,18 @@ export function SekundaerPane({ pfad, label, onSchliessen }: {
       >
         {/* Schliessen-Knopf: sticky oben rechts, damit das Pane jederzeit
             wieder geschlossen werden kann (kein Sackgassen-Zustand). */}
-        <div className="sticky top-0 z-10 flex justify-end p-1.5">
+        <div className="sticky top-0 z-10 flex justify-end gap-1.5 p-1.5">
+          {onTeilen && (
+            <button
+              type="button"
+              onClick={() => { onTeilen(); setKopiert(true); window.setTimeout(() => setKopiert(false), 1600); }}
+              aria-label="Layout-Link kopieren"
+              title={kopiert ? 'Link kopiert' : 'Layout-Link kopieren'}
+              className="inline-flex h-7 items-center gap-1 rounded-md border border-line bg-surface px-2 text-micro text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors"
+            >
+              <span aria-hidden className="text-base leading-none">⧉</span>{kopiert ? 'kopiert' : 'teilen'}
+            </button>
+          )}
           <button
             type="button"
             onClick={onSchliessen}
