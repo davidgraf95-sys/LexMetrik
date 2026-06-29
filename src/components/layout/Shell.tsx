@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type DragEvent, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Topbar } from './Topbar';
@@ -10,6 +10,7 @@ import { useInhaltsbreite } from './useInhaltsbreite';
 import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER, layoutPermalink } from './usePaneLayout';
 import { SekundaerPane } from './Pane';
 import { PaneKopf } from './PaneKopf';
+import { usePaneDnd } from './usePaneDnd';
 import { PaneProvider } from './PaneKontext';
 import { tabSchluessel } from '../../lib/tabs';
 import { verlaufLabel, erlassVonPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
@@ -195,18 +196,8 @@ export function Shell({ children }: { children: ReactNode }) {
     if (pane.sekundaer.length > 0) { const z = livePfad(0); pane.schliesse(0); navigate(z); }
     else navigate('/');
   };
-  // Drag-Drop-Umsortierung der SEKUNDÄREN Panes (Index im sekundaer-Array).
-  const gezogen = useRef<number | null>(null);
-  const [ueber, setUeber] = useState<number | null>(null);
-  const dndSpalte = (i: number) => ({
-    onDragOver: (e: DragEvent) => { if (gezogen.current != null && gezogen.current !== i) { e.preventDefault(); if (ueber !== i) setUeber(i); } },
-    onDrop: (e: DragEvent) => { e.preventDefault(); const von = gezogen.current; if (von != null && von !== i) pane.verschiebe(von, i); gezogen.current = null; setUeber(null); },
-    ueber: ueber === i,
-  });
-  const dndGriff = (i: number) => ({
-    onDragStart: (e: DragEvent) => { gezogen.current = i; e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', String(i)); },
-    onDragEnd: () => { gezogen.current = null; setUeber(null); },
-  });
+  // Drag-Drop-Umsortierung der SEKUNDÄREN Panes (siehe usePaneDnd).
+  const dnd = usePaneDnd(pane.verschiebe);
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -311,7 +302,7 @@ export function Shell({ children }: { children: ReactNode }) {
                   onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
                   onLinks={() => pane.verschiebe(i, i - 1)} onRechts={() => pane.verschiebe(i, i + 1)}
                   kannLinks={i > 0} kannRechts={i < pane.sekundaer.length - 1}
-                  ziehbar={pane.sekundaer.length > 1} {...dndGriff(i)} {...dndSpalte(i)} />
+                  ziehbar={pane.sekundaer.length > 1} {...dnd.griff(i)} {...dnd.spalte(i)} />
               ))}
             </div>
           {!multipane && <Footer />}
