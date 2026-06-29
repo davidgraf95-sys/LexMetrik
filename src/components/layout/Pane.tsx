@@ -1,4 +1,4 @@
-import { Suspense, useContext, useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
+import { Suspense, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from 'react';
 import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
@@ -44,6 +44,8 @@ export interface SekundaerPaneProps {
   kannLinks?: boolean;
   kannRechts?: boolean;
   ziehbar?: boolean;
+  /** flex-grow u. a. für die ziehbare Pane-Breite (nur ab lg gesetzt). */
+  style?: CSSProperties;
   /** Meldet die LIVE-Location des Panes nach In-Pane-Navigation (für Titel/teilen/promote). */
   onNavigiert?: (pfad: string) => void;
   /** Drag-Drop: Griff (Kopf) + Spalte (Drop-Ziel). */
@@ -57,7 +59,7 @@ export interface SekundaerPaneProps {
 
 export function SekundaerPane(props: SekundaerPaneProps) {
   const { pfad, label, stand, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts,
-    kannLinks, kannRechts, ziehbar, onNavigiert, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
+    kannLinks, kannRechts, ziehbar, style, onNavigiert, onDragStart, onDragEnd, onDragOver, onDrop, ueber } = props;
   const wurzel = useRef<HTMLElement>(null);
   const overlayWurzel = useRef<HTMLDivElement>(null);
   // Pane-eigene History + Navigator.
@@ -91,6 +93,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
       <div
         onDragOver={onDragOver}
         onDrop={onDrop}
+        style={style}
         className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-700' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Topbar } from './Topbar';
@@ -28,7 +28,7 @@ function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: numbe
   // die window-Listener trotzdem löst (kein Leak).
   const aufRef = useRef<(() => void) | null>(null);
   useEffect(() => () => aufRef.current?.(), []);
-  const ziehen = (e: React.PointerEvent) => {
+  const ziehen = (e: ReactPointerEvent) => {
     e.preventDefault();
     const startX = e.clientX;
     const startB = breite;
@@ -46,7 +46,7 @@ function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: numbe
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', auf);
   };
-  const taste = (e: React.KeyboardEvent) => {
+  const taste = (e: ReactKeyboardEvent) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); setBreite(breite - BREITE_SCHRITT); }
     else if (e.key === 'ArrowRight') { e.preventDefault(); setBreite(breite + BREITE_SCHRITT); }
   };
@@ -105,6 +105,41 @@ export function Shell({ children }: { children: ReactNode }) {
   // darunter (B-4) horizontales Swipe-/Snap-Falten (1 Pane sichtbar, wischen). Der
   // Default (keine Panes) bleibt der byte-gleiche 1-Pane-Pfad (Prerender hat nie Panes).
   const multipane = pane.sekundaer.length > 0;
+  // Pane-Breiten als flex-grow je Pane (global, 0=primär). Ziehbare Gutter
+  // zwischen den Panes verstellen sie; bei Pane-Anzahl-Wechsel auf gleich (1)
+  // zurückgesetzt. Session-lokal (kein localStorage — transiente Layout-Wahl).
+  const paneZahl = 1 + pane.sekundaer.length;
+  const [breiten, setBreiten] = useState<number[]>(() => Array(paneZahl).fill(1));
+  if (breiten.length !== paneZahl) setBreiten(Array(paneZahl).fill(1));
+  const rowRef = useRef<HTMLDivElement>(null);
+  const wachstum = (idx: number) => (istLg ? { flexGrow: breiten[idx] ?? 1 } : undefined);
+  // Ziehen der Gutter an Grenze g (zwischen Pane g und g+1): dx → Anteil → grow
+  // verschieben (min 0.25, damit kein Pane kollabiert). ←/→ als Tastatur-Schritt.
+  const MIN_GROW = 0.25;
+  const verstelleBreite = (g: number, dxFrac: number, basis: number[]) => {
+    const next = [...basis];
+    next[g] = Math.max(MIN_GROW, basis[g] + dxFrac);
+    next[g + 1] = Math.max(MIN_GROW, basis[g + 1] - dxFrac);
+    setBreiten(next);
+  };
+  const ziehGutter = (g: number) => (e: ReactPointerEvent) => {
+    e.preventDefault();
+    const row = rowRef.current; if (!row) return;
+    const w = row.clientWidth || 1;
+    const total = breiten.reduce((a, b) => a + b, 0) || paneZahl;
+    const startX = e.clientX; const basis = [...breiten];
+    const move = (ev: PointerEvent) => verstelleBreite(g, ((ev.clientX - startX) / w) * total, basis);
+    const auf = () => {
+      window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', auf);
+      document.body.style.cursor = ''; document.body.style.userSelect = '';
+    };
+    document.body.style.cursor = 'col-resize'; document.body.style.userSelect = 'none';
+    window.addEventListener('pointermove', move); window.addEventListener('pointerup', auf);
+  };
+  const gutterTaste = (g: number) => (e: ReactKeyboardEvent) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); verstelleBreite(g, -0.1, breiten); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); verstelleBreite(g, 0.1, breiten); }
+  };
   // Scroll-Übergabe beim Moduswechsel: in 1-Pane scrollt das Fenster, im Multipane
   // das primäre Pane. Ohne Übergabe spränge die Leseposition beim Öffnen/Schliessen
   // auf 0 — wir merken den Scroll der aktuellen Quelle und übertragen ihn (rAF).
@@ -277,12 +312,13 @@ export function Shell({ children }: { children: ReactNode }) {
               Panes (sonst Scroll-/State-Verlust, Bugcheck). In 1-Pane ist der
               Wrapper `contents` (layoutneutral) + PaneProvider DOM-neutral →
               Default byte-gleich (Fensterscroll, kein container-type, kein overflow). */}
-            <div className={multipane ? 'flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory' : 'contents'}>
+            <div ref={multipane ? rowRef : undefined} className={multipane ? 'flex-1 flex min-h-0 max-lg:overflow-x-auto max-lg:snap-x max-lg:snap-mandatory' : 'contents'}>
               {/* Primäres Pane — gleiche Element-Kette zu {children} in beiden Modi
                   (Wrapper = `contents` im 1-Pane), nur Klassen/Provider wechseln →
                   kein Remount. PaneKopf + Overlay sind multipane-only GESCHWISTER
                   (nicht Vorfahren von {children}). */}
               <div {...(multipane ? { onDragOver: dnd.spalte(0).onDragOver, onDrop: dnd.spalte(0).onDrop } : {})}
+                style={multipane ? wachstum(0) : undefined}
                 className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-brass-700' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
                 {multipane && (
                   <PaneKopf {...titelVon(pathname)} rolle="primaer" onSchliessen={schliesseHaupt}
@@ -306,14 +342,20 @@ export function Shell({ children }: { children: ReactNode }) {
               </div>
               {/* Sekundäre Panes (<Routes location> + eigener Navigator + PaneKopf). */}
               {multipane && pane.sekundaer.map((pfad, i) => (
-                <SekundaerPane key={pfad} pfad={pfad} {...titelVon(livePfad(i))}
-                  onNavigiert={(p) => setLiveLocs((m) => (m[pfad] === p ? m : { ...m, [pfad]: p }))}
-                  onSchliessen={() => schliesseUndFokus(i)}
-                  onHauptfenster={() => zumHauptfenster(i)}
-                  onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
-                  onLinks={() => verschiebePane(i + 1, i)} onRechts={() => verschiebePane(i + 1, i + 2)}
-                  kannLinks kannRechts={i < pane.sekundaer.length - 1}
-                  ziehbar={multipane} {...dnd.griff(i + 1)} {...dnd.spalte(i + 1)} />
+                <Fragment key={pfad}>
+                  {/* Ziehbare Gutter zwischen Pane i und i+1 (Grenze i). */}
+                  <div role="separator" aria-orientation="vertical" aria-label="Pane-Breite anpassen" tabIndex={0}
+                    onPointerDown={ziehGutter(i)} onKeyDown={gutterTaste(i)}
+                    className="hidden lg:block shrink-0 w-1.5 -mx-0.5 z-10 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus-visible:bg-brass-400 focus-visible:outline-none" />
+                  <SekundaerPane pfad={pfad} {...titelVon(livePfad(i))} style={wachstum(i + 1)}
+                    onNavigiert={(p) => setLiveLocs((m) => (m[pfad] === p ? m : { ...m, [pfad]: p }))}
+                    onSchliessen={() => schliesseUndFokus(i)}
+                    onHauptfenster={() => zumHauptfenster(i)}
+                    onTeilen={() => navigator.clipboard?.writeText(layoutPermalink(liveSek))?.catch(() => {})}
+                    onLinks={() => verschiebePane(i + 1, i)} onRechts={() => verschiebePane(i + 1, i + 2)}
+                    kannLinks kannRechts={i < pane.sekundaer.length - 1}
+                    ziehbar={multipane} {...dnd.griff(i + 1)} {...dnd.spalte(i + 1)} />
+                </Fragment>
               ))}
             </div>
           {!multipane && <Footer />}
