@@ -23,6 +23,25 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — Dev-Werkzeug: Skill `korpus-werkstatt` (Content-Produktion + Verifikation)
+
+Auftrag David: einen evaluierten Fremd-Skill (Lexplorer/`swiss-legal-research`) als Basis für einen
+EIGENEN Lexmetrik-Skill nehmen. Fremd-Skill als Produktfeature **verworfen** (statische SPA,
+«deterministisch statt KI» §2, CSP-Sperre, fremde MCP-Server) — nur die Methodik übernommen.
+- **Neu:** repo-scoped Claude-Code-Skill `.claude/skills/korpus-werkstatt/` (7 Dateien) — Orchestrierungs-/
+  Verifikations-Schicht VOR Abnahme/Deploy für die Korpora **Normtext + Rechtsprechung**. Muster
+  `methodology/` (was+warum) ↔ `tools/` (Mechanik) ↔ `review.md` (adversarialer Pass). Verweist auf
+  CLAUDE.md §§/STANDARDS statt zu duplizieren (§5); übergibt Release an `deploy-check`, fachliche
+  Abnahme an `abnahme`. Zuschnitt bewusst Normtext+Rechtsprechung (Tarife/Vorlagen späterer Ausbau).
+- **Bau via 3 ultracode-Workflows** (Plan-Härtung 21 Befunde · Bau+Verifikation · Härtung): grounded
+  gegen die echten Pipelines (`fedlex:eli`/`normtext`/`entscheide`), drift-feste Symbolverweise
+  (0 nackte Datei:Zeile-Anker), Cross-File-Konsistenz. Alle referenzierten npm-Befehle real.
+- **Trockentest bestanden:** `review.md` gegen die «Tabelle-verloren»-Bugklasse — DBG Art. 36 (Tarif)
+  verifiziert (2 `mehrspaltig`-Tabellen, Zeilen quelltreu gg. Fedlex); 3 Heuristik-Verdachtsfälle per
+  Quell-Gegenprobe als Prosa entlarvt (KVV/ASYLV2/VINTA: 0 `<table>` in der Quelle).
+- Reine Doku/Dev-Tooling, kein App-Code/Norm-Tarif → **kein Risiko-Pfad** (`Gegenpruefung: n/a`),
+  CI/Golden unberührt, nicht user-facing/nicht deployt. → committet `c9f80041` (lokal, nicht gepusht).
+
 ## Session 30.6.2026 — W2·6-BGE Rest geschlossen: OCL-id-Kollision gelöst (34/34) + Prod-Deploy
 
 Fortsetzung W2·6-BGE: die 2 zuvor quarantänten BGE (`151_V_1`, `151_V_30`) gefixt. Ursache war eine
