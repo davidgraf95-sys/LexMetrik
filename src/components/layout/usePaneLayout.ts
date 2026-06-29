@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { tabSchluessel } from '../../lib/tabs';
 
 // ─── Pane-Layout (Split-View B-1) ──────────────────────────────────────────
@@ -78,4 +78,25 @@ export function usePaneLayout(): PaneLayout {
   const schliesseAlle = useCallback(() => setSekundaer([]), []);
 
   return { sekundaer, oeffneDaneben, schliesse, schliesseAlle };
+}
+
+// ─── Pane-Steuerung (B-2) ──────────────────────────────────────────────────
+//
+// Damit tief verschachtelte Stellen (z. B. das KontextPanel «Passende
+// Werkzeuge» im Gesetzleser) ein Pane öffnen können, ohne das Layout
+// durchzureichen, stellt Shell diese Steuerung als Kontext bereit.
+// `kannOeffnen` ist nur ab lg + freier Kapazität true → die «daneben»-Aktion
+// erscheint genau dann, wenn ein Pane auch wirklich aufgeht.
+
+export interface PaneSteuerung {
+  oeffneDaneben: (pfad: string) => void;
+  kannOeffnen: boolean;
+}
+
+const PaneSteuerungContext = createContext<PaneSteuerung>({ oeffneDaneben: () => {}, kannOeffnen: false });
+
+export const PaneSteuerungProvider = PaneSteuerungContext.Provider;
+
+export function usePaneSteuerung(): PaneSteuerung {
+  return useContext(PaneSteuerungContext);
 }

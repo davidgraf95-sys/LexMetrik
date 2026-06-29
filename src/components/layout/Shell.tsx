@@ -7,7 +7,7 @@ import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
 import { useInhaltsbreite } from './useInhaltsbreite';
-import { usePaneLayout } from './usePaneLayout';
+import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER } from './usePaneLayout';
 import { SekundaerPane } from './Pane';
 import { PaneProvider } from './PaneKontext';
 import { useDialogFokus } from './useDialogFokus';
@@ -92,6 +92,13 @@ export function Shell({ children }: { children: ReactNode }) {
     return () => mq.removeEventListener('change', upd);
   }, []);
   const multipane = istLg && pane.sekundaer.length > 0;
+  // B-2: «daneben öffnen» nur ab lg + solange Kapazität frei ist.
+  const paneSteuerung = { oeffneDaneben: pane.oeffneDaneben, kannOeffnen: istLg && pane.sekundaer.length < MAX_SEKUNDAER };
+  // Fokus nach dem Schliessen eines Panes zurück in den Hauptinhalt (A11y).
+  const schliesseUndFokus = (i: number) => {
+    pane.schliesse(i);
+    requestAnimationFrame(() => document.getElementById('inhalt')?.focus());
+  };
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -154,6 +161,7 @@ export function Shell({ children }: { children: ReactNode }) {
             </div>
           )}
 
+          <PaneSteuerungProvider value={paneSteuerung}>
           {!multipane ? (
             <>
               <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
@@ -164,8 +172,8 @@ export function Shell({ children }: { children: ReactNode }) {
             </>
           ) : (
             // ── Multipane (B-1): primäres Pane (BrowserRouter, treibt URL/Titel/
-            //    Reiter) links + sekundäre MemoryRouter-Panes rechts. Jedes Pane
-            //    scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
+            //    Reiter) links + sekundäre location-fixierte Panes (<Routes location>)
+            //    rechts. Jedes Pane scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
             <div className="flex-1 flex min-h-0">
               <PaneProvider value={{ imPane: true, rolle: 'primaer' }}>
                 <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
@@ -174,10 +182,11 @@ export function Shell({ children }: { children: ReactNode }) {
                 </main>
               </PaneProvider>
               {pane.sekundaer.map((pfad, i) => (
-                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`} onSchliessen={() => pane.schliesse(i)} />
+                <SekundaerPane key={pfad} pfad={pfad} label={`Zusätzliches Lesefenster ${i + 1}`} onSchliessen={() => schliesseUndFokus(i)} />
               ))}
             </div>
           )}
+          </PaneSteuerungProvider>
         </div>
       </div>
 
