@@ -124,11 +124,20 @@ Jede Phase: Default = heutiges 1-Pane-Verhalten ⇒ Golden grün.
 A → B-0 → B-0b → B-1 → B-2 → B-3 → B-4 → (B-5 optional). Eigener Worktree;
 jede Phase `npm run gate` grün + Default Golden byte-gleich; visuell breit/2-/3-Pane + mobil.
 
-## Offene Entscheide vor Bau-Beginn
+## Entscheide (alle getroffen 29.6.2026)
 - ✅ **A: Breit-Wert** — `max-w-screen-2xl` (1536px) gewählt + umgesetzt (Strang A).
-- **B-0b: Container-Query-Tiefe** — CQ-1 (empf.) / CQ-2 / CQ-3? *(offen — Davids Entscheid)*
-- **B-0b: `@tailwindcss/container-queries`-Plugin oder handgeschriebene `@container`-Regeln?**
-  *(offen — Davids Entscheid)*
+- ✅ **B-0b: Container-Query-Tiefe = CQ-1** (David 29.6.): nur die ~10–15 layoutbestimmenden
+  Breakpoints der pane-fähigen Seiten; Kosmetik bleibt am Viewport.
+- ✅ **B-0b: Technik = Plugin** `@tailwindcss/container-queries` (David 29.6.), nicht handgeschrieben.
+
+> **⚠ Vor B-0b zu klären (Befund dieser Session):** B-0b liegt im Plan VOR B-1 (Panes). Setzt man
+> `container-type: inline-size` schon am heutigen Einzel-Wrapper, feuern die `@xl:`-Utilities künftig
+> auf die **Container**breite (Inhaltsfläche, schmaler als der Viewport um Sidebar + Padding) statt auf
+> die **Viewport**breite — d. h. der Default ist NICHT mehr exakt das heutige Verhalten (Golden bleibt
+> grün, weil es nur Engines prüft; die Verschiebung ist rein visuell). Entweder `container-type` erst in
+> B-1 mit dem Pane-Container einführen, oder den Schwellenwert je Stelle so nachziehen, dass das
+> Einzel-Pane optisch unverändert bleibt (Visualdiff-Tor). Darum ist B-0b eine **eigene fokussierte
+> Session** wert.
 
 > **Bekanntes Merkmal aus dem Review (kein Bug):** Der A-Umschalter erscheint ab `lg`,
 > wirkt sich aber erst aus, wenn die verfügbare Inhaltsbreite 1120px übersteigt (abhängig
