@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useRef } from 'react';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
 import { PaneProvider } from './PaneKontext';
@@ -38,9 +38,11 @@ export function SekundaerPane({ pfad, label, onSchliessen }: {
   label: string;
   onSchliessen: () => void;
 }) {
+  const wurzel = useRef<HTMLElement>(null);
   return (
-    <PaneProvider value={{ imPane: true, rolle: 'sekundaer' }}>
+    <PaneProvider value={{ imPane: true, rolle: 'sekundaer', wurzel }}>
       <section
+        ref={wurzel}
         aria-label={label}
         className="@container/pane relative flex-1 min-w-0 overflow-y-auto overscroll-contain border-l border-line focus:outline-none"
       >

@@ -71,6 +71,7 @@ export function Shell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   const [schubladeOffen, setSchubladeOffen] = useState(false);
   const schubladeRef = useRef<HTMLDivElement>(null);
+  const primaerWurzel = useRef<HTMLElement>(null); // Scroll-/Query-Wurzel des primären Panes (B-2.5)
   const seitenleiste = useSeitenleiste();
   const inhaltsbreite = useInhaltsbreite();
 
@@ -175,8 +176,8 @@ export function Shell({ children }: { children: ReactNode }) {
             //    Reiter) links + sekundäre location-fixierte Panes (<Routes location>)
             //    rechts. Jedes Pane scrollt eigen; kein Footer im Arbeits-Splitmodus. ──
             <div className="flex-1 flex min-h-0">
-              <PaneProvider value={{ imPane: true, rolle: 'primaer' }}>
-                <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
+              <PaneProvider value={{ imPane: true, rolle: 'primaer', wurzel: primaerWurzel }}>
+                <main ref={primaerWurzel} id="inhalt" tabIndex={-1} aria-label="Hauptinhalt"
                   className="@container/pane flex-1 min-w-0 overflow-y-auto overscroll-contain focus:outline-none">
                   <div className="mx-auto w-full max-w-content px-5 sm:px-6 py-8 sm:py-12">{children}</div>
                 </main>

@@ -93,8 +93,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Drawer — eine feste 16rem-TOC-Spalte würde ein Pane zu stark beschneiden.
   // istXl steuert genau diese 2-Spalten-Logik; im Pane also fest false. Ausserhalb
   // eines Panes byte-gleich zum Viewport-Verhalten (Default/Prerender).
-  const { imPane } = usePaneKontext();
+  const { imPane, rolle, wurzel } = usePaneKontext();
   const istXl = imPane ? false : istXlVp;
+  // B-2.5: In einem Pane scopen wir DOM-Queries + Scroll auf die Pane-Wurzel
+  // (sonst kollidieren doppelte `art-`-IDs / trifft der Scroll das falsche Pane).
+  // NUR ein SEKUNDÄRES Pane unterdrückt globale URL-/Reiter-Writes — das primäre
+  // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
+  const istSekundaer = rolle === 'sekundaer';
+  // Plain-Funktionen — der React-Compiler memoisiert sie (imPane/wurzel sind für
+  // die Lebensdauer einer Instanz fix); dürfen so in Effect-Deps stehen, ohne
+  // manuelle Memo (useCallback mit ref.current bricht preserve-manual-memoization).
+  const paneWurzel = (): HTMLElement | null => (imPane ? wurzel?.current ?? null : null);
+  const findeArtikel = (token: string): HTMLElement | null => {
+    const root = paneWurzel();
+    return root ? root.querySelector(`[id="art-${token}"]`) : document.getElementById(`art-${token}`);
+  };
+  const alleArtikel = (): NodeListOf<Element> => (paneWurzel() ?? document).querySelectorAll('[id^="art-"]');
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
@@ -220,13 +234,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // ?search (Instanz-Diskriminator ?r) erhalten, sonst verliert ein Mehrfach-
     // Reiter seine Identität. Aktiven Reiter auf diesen Artikel melden → Live-
     // Label «Kürzel – Art. X» bei Mehrfach-Instanz (Auftrag David).
-    const ziel = `${basisPfad}${window.location.search}#art-${token}`;
-    window.history.replaceState(null, '', ziel);
-    aktualisiereTabArtikel(ziel);
+    // Sekundäres Pane: NIE die Haupt-URL/-Reiter überschreiben (es ist nicht die
+    // adressierte Seite). Primär/1-Pane: wie heute URL + Reiter-Live-Label pflegen.
+    if (!istSekundaer) {
+      const ziel = `${basisPfad}${window.location.search}#art-${token}`;
+      window.history.replaceState(null, '', ziel);
+      aktualisiereTabArtikel(ziel);
+    }
     // Erst nach dem Aufklapp-Render scrollen (behavior:auto wie der Hash-Sprung);
     // grosse Sektionen wachsen beim Aufklappen → nach Settle ein Korrektur-Scroll.
     const scrolle = () => {
-      const el = document.getElementById(`art-${token}`);
+      const el = findeArtikel(token);
       if (!el) return;
       el.scrollIntoView({ block: 'center', behavior: 'auto' });
       el.classList.add('lc-ziel-blink');
@@ -236,7 +254,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       scrolle();
       window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
     }, 110));
-  }, [sektionen, basisPfad]);
+  }, [sektionen, basisPfad, istSekundaer, findeArtikel]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
@@ -245,6 +263,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const letzteNavKey = useRef<string | null>(null);
   useEffect(() => {
     if (!sektionen.length || typeof window === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane: location.key ist fix («default»), kein Instanz-Wechsel
     // Nur bei ECHTER Navigation (location.key wechselt), nicht wenn sektionen
     // nachlädt. Den Initial-Load (erster key) deckt der Lade-Hash-Effekt ab →
     // kein doppelter Sprung/Blink. Dieser Effekt trägt nur den Instanz-Wechsel
@@ -258,7 +277,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const token = decodeURIComponent(m[1]);
     const id = window.requestAnimationFrame(() => springeZuArtikel(token));
     return () => window.cancelAnimationFrame(id);
-  }, [location.key, location.hash, sektionen, springeZuArtikel]);
+  }, [location.key, location.hash, sektionen, springeZuArtikel, istSekundaer]);
 
   // Suche aktivieren → an den Anfang scrollen; Suche schliessen/leeren → an die
   // Scrollposition VOR der Suche zurück (Auftrag David). Grund fürs Hoch-Scrollen
@@ -271,15 +290,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const war = sucheVorher.current;
     sucheVorher.current = suche;
     if (typeof window === 'undefined') return;
+    // Im Pane scrollt der Pane-Container, nicht das Fenster (B-2.5).
+    const sc = paneWurzel();
+    const hole = () => sc ? sc.scrollTop : window.scrollY;
+    const setze = (y: number) => sc ? sc.scrollTo(0, y) : window.scrollTo(0, y);
     if (!war && suche) {
-      scrollVorSuche.current = window.scrollY;
-      window.requestAnimationFrame(() => window.scrollTo(0, 0));
+      scrollVorSuche.current = hole();
+      window.requestAnimationFrame(() => setze(0));
     } else if (war && !suche && scrollVorSuche.current != null) {
       const y = scrollVorSuche.current;
       scrollVorSuche.current = null;
-      window.requestAnimationFrame(() => window.scrollTo(0, y));
+      window.requestAnimationFrame(() => setze(y));
     }
-  }, [suche]);
+  }, [suche, paneWurzel]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -302,6 +325,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
   useEffect(() => {
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
+    if (istSekundaer) return; // sekundäres Pane: kein eigener #hash (pfad ist anker-frei), nie Haupt-URL lesen
     const m = window.location.hash.match(/^#art-(.+)$/);
     if (!m) return;
     // Deep-Link mit Artikel-Anker → aktiven Reiter darauf melden (Live-Label).
@@ -311,13 +335,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     window.requestAnimationFrame(() => {
       if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
-        const el = document.getElementById(`art-${token}`);
+        const el = findeArtikel(token);
         el?.scrollIntoView({ block: 'center', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
     });
-  }, [eintraege, sektionen]);
+  }, [eintraege, sektionen, istSekundaer, findeArtikel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
   // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
@@ -340,7 +364,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const auswerten = () => {
       raf = 0;
       if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
-      const mitte = window.innerHeight / 2;
+      // Mittelpunkt im Viewport-Koordinatensystem (getBoundingClientRect): im Pane
+      // die Pane-Mitte, sonst die Fenster-Mitte (B-2.5).
+      const sc = paneWurzel();
+      const mitte = sc ? sc.getBoundingClientRect().top + sc.clientHeight / 2 : window.innerHeight / 2;
       const rects = [...sichtbar.values()]
         .filter((en) => en.isIntersecting)
         .map((en) => {
@@ -354,9 +381,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       //     aktualisiereTabArtikel ist idempotent + no-op ohne passenden Reiter.
       //     Entprellt (trailing): beim schnellen Durchscrollen sonst ein
       //     localStorage-Write + globales TABS_EVENT pro Artikelgrenze.
-      const tabZiel = `${basisPfad}${window.location.search}#art-${token}`;
-      if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
-      tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      // Sekundäres Pane treibt den globalen Reiter-Tracker NICHT (es ist nicht die URL).
+      if (!istSekundaer) {
+        const tabZiel = `${basisPfad}${window.location.search}#art-${token}`;
+        if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
+        tabArtikelTimer.current = window.setTimeout(() => aktualisiereTabArtikel(tabZiel), 200);
+      }
       // (a) Gliederung: aktiven Pfad markieren + den Zweig automatisch AUFklappen
       //     und beim Verlassen wieder ZUklappen (K, Auftrag David 26.6.2026) —
       //     aber nur Zweige, die der Spy selbst geöffnet hat (autoOffenRef);
@@ -388,17 +418,18 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
       if (!raf) raf = window.requestAnimationFrame(auswerten);
-    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
-    // Alle aktuell gerenderten Artikel beobachten. Auf-/Zuklappen (offen) und
-    // Suche (suche) verändern die DOM-Artikelmenge → Effekt läuft über die Deps
-    // neu und beobachtet die dann sichtbaren Artikel.
-    document.querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
+    }, { root: paneWurzel(), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
+    // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
+    // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
+    // läuft über die Deps neu und beobachtet die dann sichtbaren Artikel.
+    alleArtikel().forEach((el) => io.observe(el));
     return () => {
       io.disconnect();
       if (raf) cancelAnimationFrame(raf);
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
     };
-  }, [sektionen, ohneGliederung, basisPfad, offen, suche]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, paneWurzel, alleArtikel]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach

@@ -88,11 +88,18 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
             <Gruppe titel="Angewandte Erlasse" anzahl={normen.length}>
               <ul className="flex flex-wrap gap-2">
                 {normen.map((n) => (
-                  <li key={n.key}>
+                  <li key={n.key} className="inline-flex items-center">
                     <Link to={n.pfad} title={n.titel}
                       className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
                       {n.kuerzel}
                     </Link>
+                    {kannOeffnen && (
+                      <button type="button" onClick={() => oeffneDaneben(n.pfad)}
+                        title={`${n.kuerzel} nebeneinander öffnen`} aria-label={`${n.kuerzel} nebeneinander öffnen`}
+                        className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
+                        <span aria-hidden className="text-base leading-none">⧉</span>
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>

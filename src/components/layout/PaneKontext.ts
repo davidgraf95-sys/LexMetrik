@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, type RefObject } from 'react';
 
 // ─── Pane-Kontext (Split-View B-1) ─────────────────────────────────────────
 //
@@ -21,9 +21,16 @@ export interface PaneKontextWert {
   /** true ⇔ dieser Teilbaum läuft in einem Split-View-Pane (Container-Query-Modus). */
   imPane: boolean;
   rolle: PaneRolle;
+  /**
+   * Scroll-/Wurzelelement des Panes (B-2.5). Pane-fähige Reader scopen DOM-Queries
+   * (`#art-…`, Beobachter-Root) und Scroll hierauf statt auf `document`/`window` —
+   * sonst kollidieren doppelte `art-`-IDs und der Scroll trifft das falsche Pane.
+   * `null` ausserhalb eines Panes.
+   */
+  wurzel: RefObject<HTMLElement | null> | null;
 }
 
-const PaneKontext = createContext<PaneKontextWert>({ imPane: false, rolle: 'primaer' });
+const PaneKontext = createContext<PaneKontextWert>({ imPane: false, rolle: 'primaer', wurzel: null });
 
 /** Provider — nur der Pane-Wrapper (Pane.tsx) setzt `imPane: true`. */
 export const PaneProvider = PaneKontext.Provider;
