@@ -4838,6 +4838,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "Zürich",

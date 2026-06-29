@@ -551,65 +551,43 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Forderung/Franken",
-              "Gebühr/Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Forderung/Franken"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "",
-                "",
-                "",
-                "bis",
-                "100",
+                "bis 100",
                 "7.–"
               ],
               [
-                "über",
-                "100",
-                "",
-                "bis",
-                "500",
+                "über 100 bis 500",
                 "20.–"
               ],
               [
-                "über",
-                "500",
-                "",
-                "bis",
-                "1 000",
+                "über 500 bis 1 000",
                 "40.–"
               ],
               [
-                "über",
-                "1 000",
-                "",
-                "bis",
-                "10 000",
+                "über 1 000 bis 10 000",
                 "60.–"
               ],
               [
-                "über",
-                "10 000",
-                "",
-                "bis",
-                "100 000",
+                "über 10 000 bis 100 000",
                 "90.–"
               ],
               [
-                "über",
-                "100 000",
-                "",
-                "bis",
-                "1 000 000",
+                "über 100 000 bis 1 000 000",
                 "190.–"
               ],
               [
-                "über",
-                "1 000 000",
-                "",
-                "",
-                "",
+                "über 1 000 000",
                 "400.–"
               ]
             ]
@@ -632,7 +610,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_16",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "101455b3ec61b63f7002d38d7e9b8f66b8225dd08e7cbd9c5f4782ced700c60b"
+      "sha": "8863ed4f0e7f37c91e8ba2ffc7d0d21abdb4f1f2385545a2d24041b10bfc5e98"
     },
     {
       "id": "bund/GEBV_SCHKG/art_17",
@@ -688,23 +666,23 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Summe/Franken",
-              "",
-              "",
-              "Gebühr/Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Summe/Franken"
+              },
+              {
+                "typ": "text",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "bis",
-                "1000",
-                "",
+                "bis 1000",
                 "5.–"
               ],
               [
-                "über",
-                "1000",
-                "",
+                "über 1000",
                 "5 Promille, jedoch höchstens 500.–"
               ]
             ]
@@ -723,7 +701,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_19",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "f7cdc884a1110ca29cc1c9236229bc5c17fed2baa0d4f701e638d8e03b6187b6"
+      "sha": "16c98edbcc05dda86d31c48561a744bb980d19d00989ae587c6020fca5ec6c15"
     },
     {
       "id": "bund/GEBV_SCHKG/art_20",
@@ -741,65 +719,43 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Forderung/Franken",
-              "Gebühr/Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Forderung/Franken"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "",
-                "",
-                "",
-                "bis",
-                "100",
+                "bis 100",
                 "10.–"
               ],
               [
-                "über",
-                "100",
-                "",
-                "bis",
-                "500",
+                "über 100 bis 500",
                 "25.–"
               ],
               [
-                "über",
-                "500",
-                "",
-                "bis",
-                "1 000",
+                "über 500 bis 1 000",
                 "45.–"
               ],
               [
-                "über",
-                "1 000",
-                "",
-                "bis",
-                "10 000",
+                "über 1 000 bis 10 000",
                 "65.–"
               ],
               [
-                "über",
-                "10 000",
-                "",
-                "bis",
-                "100 000",
+                "über 10 000 bis 100 000",
                 "90.–"
               ],
               [
-                "über",
-                "100 000",
-                "",
-                "bis",
-                "1 000 000",
+                "über 100 000 bis 1 000 000",
                 "190.–"
               ],
               [
-                "über",
-                "1 000 000",
-                "",
-                "",
-                "",
+                "über 1 000 000",
                 "400.–"
               ]
             ]
@@ -822,7 +778,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_20",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "3cc729c81f09b7ccc45b0f873215fee89527f20f7a0a580f25732d0ae7d36988"
+      "sha": "a37c6b5e402ed34f5c5f21e4d4990d80e1f691db201b82a27bde164b436ecf16"
     },
     {
       "id": "bund/GEBV_SCHKG/art_21",
@@ -1081,53 +1037,35 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Zuschlagspreis, Kaufpreis oder Erlös/Franken",
-              "",
-              "",
-              "",
-              "Gebühr/Franken",
-              ""
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Zuschlagspreis, Kaufpreis oder Erlös/Franken"
+              },
+              {
+                "typ": "text",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "",
-                "",
-                "",
-                "bis",
-                "500",
+                "bis 500",
                 "10.–"
               ],
               [
-                "über",
-                "500",
-                "",
-                "bis",
-                "1 000",
+                "über 500 bis 1 000",
                 "50.–"
               ],
               [
-                "über",
-                "1 000",
-                "",
-                "bis",
-                "10 000",
+                "über 1 000 bis 10 000",
                 "100.–"
               ],
               [
-                "über",
-                "10 000",
-                "",
-                "bis",
-                "100 000",
+                "über 10 000 bis 100 000",
                 "200.–"
               ],
               [
-                "über",
-                "100 000",
-                "",
-                "",
-                "",
+                "über 100 000",
                 "2 Promille"
               ]
             ]
@@ -1158,7 +1096,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_30",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "68c41e77511de938726710d6ca3c2d389ff7796e4a72915221794325b5b1025f"
+      "sha": "b89508c3554869f5e4307bbc01ab5e169166271cbd47ecaf4704e341840f72f8"
     },
     {
       "id": "bund/GEBV_SCHKG/art_31",
@@ -1570,20 +1508,23 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Aktiven/Franken",
-              "",
-              "Gebühr/Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Aktiven/Franken"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "bis",
-                "500 000",
+                "bis 500 000",
                 "400.–"
               ],
               [
-                "über",
-                "500 000",
+                "über 500 000",
                 "1000.–"
               ]
             ]
@@ -1594,7 +1535,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_45",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "f29c855a4191985511df5bd78884783c1c902f5243a17060abe079dad234511b"
+      "sha": "67f788df80ee481e52d03908bbe9ad7d4bb89126b3616af714ee372c14ea70ae"
     },
     {
       "id": "bund/GEBV_SCHKG/art_46",
@@ -1712,54 +1653,36 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert/Franken",
-              "",
-              "",
-              "",
-              "Gebühr/Franken",
-              ""
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert/Franken"
+              },
+              {
+                "typ": "text",
+                "titel": "Gebühr/Franken"
+              }
             ],
             "zeilen": [
               [
-                "",
-                "",
-                "bis",
-                "1 000",
-                "40–150",
-                ""
+                "bis 1 000",
+                "40–150"
               ],
               [
-                "über",
-                "1 000",
-                "bis",
-                "10 000",
-                "50–300",
-                ""
+                "über 1 000 bis 10 000",
+                "50–300"
               ],
               [
-                "über",
-                "10 000",
-                "bis",
-                "100 000",
-                "60–500",
-                ""
+                "über 10 000 bis 100 000",
+                "60–500"
               ],
               [
-                "über",
-                "100 000",
-                "bis",
-                "1 000 000",
-                "70–2 000",
-                ""
+                "über 100 000 bis 1 000 000",
+                "70–2 000"
               ],
               [
-                "über",
-                "1 000 000",
-                "",
-                "",
-                "500–4 000",
-                ""
+                "über 1 000 000",
+                "500–4 000"
               ]
             ]
           }
@@ -1777,7 +1700,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_48",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "52ee7d70b6370b0cf7046a6a3b5fd801b1ac6c7fdcc481ca9c34e308c33383eb"
+      "sha": "3eb565dc2c8e164d90d5c8b82a8e70e13cd8aceb25de9e68b45896dfacd169c5"
     },
     {
       "id": "bund/GEBV_SCHKG/art_49_50",

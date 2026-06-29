@@ -45,8 +45,27 @@ export interface NormSnapshot {
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
-    /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */
-    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+    /**
+     * Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.).
+     *
+     * KANONISCHES MODELL (T-B1, M10): `spalten` ist der explizite Spalten-Vektor
+     * und die EINZIGE Quelle der Spaltenzahl N. Harte Invariante (T-B2): für jeden
+     * emittierten Block gilt `spalten.length === N` und `∀i: zeilen[i].length === N`.
+     * `typ` steuert Ausrichtung + Format (T-B4): `bereich`/`text` links; `zahl`/
+     * `betrag` rechts mit Tausender; `bereich` trägt die generatorseitig verdichtete
+     * Staffel-Spanne (T-A6, verlustfreie Konkatenation amtlicher Token, T-E2).
+     *
+     * ABWÄRTSKOMPAT (L0/§7): `kopf?` ist das Alt-Schema — noch nicht migrierte
+     * KANTON-Snapshots tragen `{kopf,zeilen}` ohne `spalten`. Der Renderer rendert
+     * beide; neue Bund-Snapshots tragen IMMER `spalten`. Genau EINES von beiden ist
+     * massgeblich: `spalten` hat Vorrang, `kopf` ist Legacy-Fallback.
+     */
+    mehrspaltig?: {
+      spalten?: Array<{ typ: 'bereich' | 'zahl' | 'text' | 'betrag'; titel: string }>;
+      /** Legacy (Kanton/Alt-Bund): Spaltenköpfe ohne Typ. Vom Renderer als Fallback gerendert. */
+      kopf?: string[];
+      zeilen: string[][];
+    };
   }>;
   /** Konsolidierungs-/Fassungsdatum der Quelle (ISO 'YYYY-MM-DD'). */
   stand: string;

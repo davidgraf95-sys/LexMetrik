@@ -4953,9 +4953,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Meter"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Meter"
+              }
             ],
             "zeilen": [
               [
@@ -5037,7 +5043,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_94",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "1bb090c3367ac1883813ed8a99d78478472d009d76f9bf28b72fb797b2cfbea7"
+      "sha": "7c9a046fce5b825d7e3ee73ffe5172e488cb4f09945fcde56d62e4a2d2492c41"
     },
     {
       "id": "bund/VTS/art_95",
@@ -5055,9 +5061,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Tonnen"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Tonnen"
+              }
             ],
             "zeilen": [
               [
@@ -5127,9 +5139,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Tonnen"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Tonnen"
+              }
             ],
             "zeilen": [
               [
@@ -5188,7 +5206,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_95",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "435fff32577dc2280cf3a9f13e1c5f6b742273e2fbd6b6b7e2d3f3dce729f132"
+      "sha": "6e709f1f1fb62f0f3113380944488af8123af3f06c5093995b58faf8766462bd"
     },
     {
       "id": "bund/VTS/art_96",
@@ -6656,6 +6674,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "a. bei einstöckigen Gesellschaftswagen mit mehr als 23 Sitzplätzen einschliesslich Führer oder Führerin sowie bei Stehplätzen",
@@ -7174,9 +7202,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Meter"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Meter"
+              }
             ],
             "zeilen": [
               [
@@ -7202,6 +7236,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "Breite",
@@ -7218,6 +7262,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "a. Länge",
@@ -7235,7 +7289,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_135",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "01aae24f91adf6ad5551e0d64b5dbb2969fb72d25952de77c3e3e51552d08d3b"
+      "sha": "6029498dfd6744079140946c987e4d972f1020991c32312c26f277d291775d5d"
     },
     {
       "id": "bund/VTS/art_136",
@@ -7283,9 +7337,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Tonnen"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Tonnen"
+              }
             ],
             "zeilen": [
               [
@@ -7350,7 +7410,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_136",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "e35fa583a03d95268f643d8187598807aee08d15781faf6dd8d79151865c2f38"
+      "sha": "bc06ab2a6dbcd8a124756e98f3a21348a908fe6379117d8c36587f4df853ea5a"
     },
     {
       "id": "bund/VTS/art_136_a",
@@ -7368,9 +7428,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Plätze"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Plätze"
+              }
             ],
             "zeilen": [
               [
@@ -7413,7 +7479,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_136_a",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "79ac2268730f42ba80dd304f0e383bf7db58e43d420e7fb010341ff0dc235ebb"
+      "sha": "c4714cb269af30cb79cf6a8fe42f6f9d89de3b4ab1e709e0f779a4a8fda9a57a"
     },
     {
       "id": "bund/VTS/art_137",
@@ -9220,9 +9286,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Meter"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Meter"
+              }
             ],
             "zeilen": [
               [
@@ -9261,7 +9333,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_182",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "34654649f4c5f4f2982ca5554c7a8ced9d8de52d3e83a6c1cc4808b52a728e2d"
+      "sha": "013f03689d700ff2d0cfe8adb9bda90e40c856b376be5d7fe1ac5020a315be2d"
     },
     {
       "id": "bund/VTS/art_183",
@@ -9279,9 +9351,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Tonnen"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tonnen"
+              },
+              {
+                "typ": "zahl",
+                "titel": ""
+              }
             ],
             "zeilen": [
               [
@@ -9311,9 +9389,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Tonnen"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Tonnen"
+              }
             ],
             "zeilen": [
               [
@@ -9360,7 +9444,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_183",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260430",
-      "sha": "f9236a875c8faeef9270ccad689f285bf79edfabb5b07b4e756833578a43efc6"
+      "sha": "b4c19cc15d12b28b33e0f68767d93706774ff148a0dbe492f1158481df653844"
     },
     {
       "id": "bund/VTS/art_184",

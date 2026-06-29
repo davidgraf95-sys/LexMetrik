@@ -147,7 +147,20 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   **Datei:** `ArtikelBody.tsx`. **Gate:** Render-Test (Art. 349–358/359 ZGB bündig zu Art. 348).
 
 ### M10 · Tabellendarstellung — Regelwerk + seitenweite Bund-Umsetzung — Batch A (Generator) + B (Render)
-- [ ] **Status:** **Regelwerk T-A…T-F + Umsetzungsplan vollständig erarbeitet** (Anhang 1 + 2 unten).
+- [x] **GEBAUT + GEGATED 30.6.2026** (Worktree `feat/normtext-tabellen-kanonisch`, nicht deployt). Kanonisches
+  `spalten`-Modell (T-B1) additiv in `typen.ts`; reiner Normalisierer `scripts/normtext/tabelle-normalisieren.ts`
+  (Staffel-Verdichtung T-A6 datengetrieben statt Kopf-colspan [K3] · zwei-Zeilen-Kopf-Merge T-A5 rettet verlorene
+  Captions · logischer Pfad über Daten-Zellgrenzen mit Ambiguitäts-Guard · ehrlicher Legacy-Fallback bei ragged/Prosa
+  T-E4) · 53 TDD-Tests; Extraktor verdrahtet; Renderer = dumme typgesteuerte Projektion + **Legacy-Pfad byte-gleich für
+  Kanton** (L0-Abwärtskompat) + 17 Render-Tests; neuer `--erlass=`-Filter im Generator; **28 Bund-Snapshots EINMAL
+  regeneriert** → Byte-Diff-Beweis: 25 Dateien/59 Tabellen geändert, **0 Nicht-Tabellen-Änderungen, 0 verlorene Token,
+  0 Nicht-Bund-Dateien**; neuer blockierender Validator `check:tabellen` (Bund scharf: **69 kanonisch / 0 Aritäts-/
+  Leerspalten-/Staffel-Brüche**, 9 ehrliche Legacy-Fallbacks gelistet; Kanton Report). Gate grün (tsc/vitest/golden/
+  lint/check) **ausser orthogonalem OR-Currency-Drift** (kein Bezug zu M10, OR hat keine Tabellen — separat). **Adversariale
+  Gegenprüfung (unabh. Opus, frischer Kontext, gegen Fedlex-HTML): 8/8 FAITHFUL, 0 REFUTED.** RESIDUUM: AHVV Art. 52
+  Legacy-Caption-Lücke (kein Datenwert betroffen, byte-gleich zu heute); BV.196/DBG.36/FZA.10/VGKE.4/VTS.94/GEBV Art. 37
+  bleiben Legacy-Fallback (ragged/Prosa, nicht-regressiv).
+- [x] **Status:** **Regelwerk T-A…T-F + Umsetzungsplan vollständig erarbeitet** (Anhang 1 + 2 unten).
   **Root-Cause:** `<th>`-colspan ignoriert → Kopf ≠ Zellzahl; **~60 Defekt-Blöcke / 28 Bund-Erlasse**
   (4 Klassen). **Soll:** rechteckiges, typisiertes `spalten`-Modell, colspan in beiden Markup-Varianten
   expandieren, Staffel-Spanne deterministisch zu **einer** lesbaren Zelle verdichten, harte Invariante

@@ -371,34 +371,38 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken",
-              "",
-              "Jahresbeitrag (AHV + IV) Franken",
-              "Zuschlag für jede weitere Stufe von 50 000 Franken Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Jahresbeitrag (AHV + IV) Franken"
+              },
+              {
+                "typ": "text",
+                "titel": "Zuschlag für jede weitere Stufe von 50 000 Franken Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken"
+              }
             ],
             "zeilen": [
               [
-                "bis",
-                "600 000",
+                "bis 600 000",
                 "1 010",
                 "–"
               ],
               [
-                "ab",
-                "600 000",
+                "ab 600 000",
                 "1 111",
                 "101"
               ],
               [
-                "ab",
-                "1 750 000",
+                "ab 1 750 000",
                 "3 434",
                 "151.50"
               ],
               [
-                "ab",
-                "8 950 000",
+                "ab 8 950 000",
                 "25 250",
                 "–"
               ]
@@ -410,7 +414,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/419_429_439/de#art_13_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "9188b21af296062c10d211603954eb669d4e5aa1bd2cb81ce5b5e3518c4d3873"
+      "sha": "5bc644c1a77dbc444778f0b00532dc0a3cc104fa1fcd9f453384bdae75c8d89b"
     },
     {
       "id": "bund/VFV/art_14",

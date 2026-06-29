@@ -24,12 +24,18 @@ export interface ArtikelText {
     text: string;
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
-     *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis). */
-    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+     *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis).
+     *  M10: kanonisches `spalten`-Modell (T-B1) statt rohem `{kopf,zeilen}`. */
+    mehrspaltig?: {
+      spalten?: Array<{ typ: 'bereich' | 'zahl' | 'text' | 'betrag'; titel: string }>;
+      kopf?: string[];
+      zeilen: string[][];
+    };
   }>;
 }
 
 import { dekodiereEntities } from './html-entities.ts';
+import { normalisiereTabelle, type RohTabelle, type RohZelle } from './tabelle-normalisieren.ts';
 
 /**
  * Entfernt Fussnoten-Marker <sup><a …>NNN</a></sup> aus einem HTML-Fragment,
@@ -131,8 +137,17 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
     if (match[0] === '') { bloeckeUndListenRe.lastIndex++; continue; }
     if (match[5] !== undefined) {
       // ── Tabelle (<table><tr><th>…</th></tr><tr><td>…</td></tr></table>) ──────
-      const mehr = parseFedlexTabelle(match[5]);
-      if (mehr.zeilen.length > 0) bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+      // M10: kanonisches spalten-Modell (rechteckig, Staffel verdichtet, T-B1).
+      // Lässt sich keine wortlauttreue Rechteck-Form herstellen (ragged/Prosa),
+      // bleibt der Alt-Parse {kopf,zeilen} erhalten — exakte Nicht-Regression,
+      // der Renderer rendert Legacy weiter (T-E5); der Validator listet sie.
+      const norm = normalisiereTabelle(parseRohTabelle(match[5]));
+      if (norm) {
+        bloecke.push({ absatz: null, text: '', mehrspaltig: { spalten: norm.spalten, zeilen: norm.zeilen } });
+      } else {
+        const mehr = parseFedlexTabelle(match[5]);
+        if (mehr.zeilen.length > 0) bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+      }
     } else if (match[1] !== undefined || match[2] !== undefined || match[3] !== undefined) {
       // ── Absatz (<p class="absatz"> | <p><sup>N</sup> | <p> vor <dl>) ──────
       const roh = match[1] ?? match[2] ?? match[3]!;
@@ -440,6 +455,52 @@ function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: stri
     kopf.push(kopfZeilen.map((z) => z[c] ?? '').filter(Boolean).join(' '));
   }
   return kopf.some((x) => x !== '') ? { kopf, zeilen } : { zeilen };
+}
+
+/** Roh-Zellen einer <tr> (tag `td`|`th`) MIT colspan — Text via zellText
+ *  (fussnoten-/tag-bereinigt). Keine colspan-Expansion hier; die macht der
+ *  reine Normalisierer (T-A2). */
+function rohZellen(rowHtml: string, tag: 'td' | 'th'): RohZelle[] {
+  const out: RohZelle[] = [];
+  const re = new RegExp(`<${tag}\\b([^>]*)>([\\s\\S]*?)</${tag}>`, 'gi');
+  for (const c of rowHtml.matchAll(re)) {
+    const span = Number(c[1].match(/\bcolspan=["']?(\d+)/i)?.[1] ?? '1') || 1;
+    out.push({ text: zellText(c[2]), colspan: span });
+  }
+  return out;
+}
+
+/**
+ * Zerlegt eine Fedlex-<table> in roh geparste Kopf-/Datenzeilen (mit colspan),
+ * OHNE zu normalisieren — Eingabe für `normalisiereTabelle` (M10, T-F8).
+ * Kopf-Erkennung beide Markup-Welten: (A) `<th>`-Zeile; (B) `<td>`-Zeile, deren
+ * nicht-leere Zellen ALLE die `man-template-tab-kpf`-Klasse tragen. MEHRERE
+ * Kopfzeilen werden gesammelt (T-A5-Merge geschieht im Normalisierer; der
+ * Alt-Pfad behielt nur die letzte → G19-Caption-Verlust, z.B. AHVV Art. 21).
+ */
+function parseRohTabelle(tableInner: string): RohTabelle {
+  const kopfZeilen: RohZelle[][] = [];
+  const datenZeilen: RohZelle[][] = [];
+  for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+    const rowHtml = r[1];
+    if (/<th\b/i.test(rowHtml)) {
+      const ths = rohZellen(rowHtml, 'th');
+      if (ths.some((z) => z.text !== '')) kopfZeilen.push(ths);
+      continue;
+    }
+    const tds = rohZellen(rowHtml, 'td');
+    const istKpf =
+      /man-template-tab-kpf/i.test(rowHtml) &&
+      [...rowHtml.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].every(
+        (m) => /man-template-tab-kpf/i.test(m[1]) || zellText(m[1]) === '',
+      );
+    if (istKpf) {
+      if (tds.some((z) => z.text !== '')) kopfZeilen.push(tds);
+    } else if (tds.some((z) => z.text !== '')) {
+      datenZeilen.push(tds);
+    }
+  }
+  return { kopfZeilen, datenZeilen };
 }
 
 /**

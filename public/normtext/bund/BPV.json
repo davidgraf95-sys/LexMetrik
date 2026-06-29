@@ -1880,9 +1880,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Lohnklasse",
-              "Höchstbetrag in Franken"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Lohnklasse"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Höchstbetrag in Franken"
+              }
             ],
             "zeilen": [
               [
@@ -2045,7 +2051,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/319/de#art_36",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "b1f83c27ae81d716ff612165f7d984ea0d49f802c00395a7833120df57d803fc"
+      "sha": "cc07116fdbfaea4e0e5181b2d640042c1fefe1fd4d454ffce82f700c44c25c0a"
     },
     {
       "id": "bund/BPV/art_37",

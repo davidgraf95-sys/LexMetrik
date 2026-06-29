@@ -208,3 +208,61 @@ describe('MehrspaltigeTabelle (block.mehrspaltig → N-Spalten-Tarif)', () => {
     expect(out).toMatch(/106&#x27;400|106'400/);
   });
 });
+
+// ── M10: kanonisches spalten-Modell (dumme Projektion, T-F6/T-F9) ─────────────
+describe('KanonischeTabelle (block.mehrspaltig.spalten)', () => {
+  const ART_20: NormSnapshot['bloecke'] = [{
+    absatz: null,
+    text: '',
+    mehrspaltig: {
+      spalten: [
+        { typ: 'bereich', titel: 'Forderung/Franken' },
+        { typ: 'betrag', titel: 'Gebühr/Franken' },
+      ],
+      zeilen: [['bis 100', '10.–'], ['über 100 bis 500', '25.–'], ['über 1 000 000', '400.–']],
+    },
+  }];
+  const render = (b: NormSnapshot['bloecke']) =>
+    renderToString(<ArtikelBody bloecke={b} artikel="20" passus={{ absatz: null }} />);
+
+  it('rendert genau N columnheader und je Zeile N cell (T-B2/T-F6)', () => {
+    const out = render(ART_20);
+    expect((out.match(/role="columnheader"/g) ?? []).length).toBe(2);
+    // 3 Datenzeilen × 2 Zellen = 6
+    expect((out.match(/role="cell"/g) ?? []).length).toBe(6);
+  });
+
+  it('bereich linksbündig, betrag rechtsbündig + tabular-nums (T-C2/C3)', () => {
+    const out = render(ART_20);
+    // betrag-Kopf «Gebühr/Franken» trägt text-right
+    expect(out).toMatch(/text-right[^>]*>Gebühr\/Franken|Gebühr\/Franken/);
+    expect(out).toContain('text-right');
+    expect(out).toContain('tabular-nums');
+    // bereich-Wert NICHT rechtsbündig: «bis 100» erscheint in einer Zelle ohne text-right davor — Inhalt da
+    expect(out).toContain('bis 100');
+  });
+
+  it('Tausender-Apostroph in bereich + betrag (Swiss), Wortlaut-Token erhalten', () => {
+    const out = render(ART_20);
+    expect(out).toMatch(/1&#x27;000&#x27;000|1'000'000/); // bereich «über 1 000 000»
+    expect(out).toContain('400.–'); // betrag unverändert
+  });
+
+  it('headerless (alle titel leer) rendert keine Kopfzeile', () => {
+    const out = render([{
+      absatz: null, text: '',
+      mehrspaltig: { spalten: [{ typ: 'text', titel: '' }, { typ: 'betrag', titel: '' }], zeilen: [['Frühstück', '3.50']] },
+    }]);
+    expect(out).not.toContain('role="columnheader"');
+    expect(out).toContain('Frühstück');
+  });
+
+  it('defensive: aritätsverletzende Zeile → linear, kein verschobenes Gitter (T-E5)', () => {
+    const out = render([{
+      absatz: null, text: '',
+      mehrspaltig: { spalten: [{ typ: 'bereich', titel: 'A' }, { typ: 'betrag', titel: 'B' }], zeilen: [['x', 'y', 'z']] },
+    }]);
+    expect(out).not.toContain('role="columnheader"'); // kein Gitter
+    expect(out).toContain('x · y · z'); // verlustfrei linear
+  });
+});

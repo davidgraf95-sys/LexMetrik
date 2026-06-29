@@ -212,34 +212,93 @@ function istNumerischeZelle(s: string): boolean {
   return /\d/.test(t) && !/[A-Za-zÀ-ÿ]{4,}/.test(t);
 }
 
-// N-Spalten-Tarif-Tabelle (Stufe 2) aus strukturiertem block.mehrspaltig.
-// Optionaler Kopf (kopf[]), beliebig viele Datenzeilen (zeilen[][]).
-// Numerische Zellen rechtsbündig + gruppiereTausender; Text-Zellen linksbündig.
-// Reine Darstellung (§3); Zell-Wortlaut unverändert (ausser Tausender-Apostroph).
-function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string[][] }) {
+// Spaltentyp des kanonischen Modells (M10, T-B1) — spiegelt
+// scripts/normtext/tabelle-normalisieren.ts; hier lokal, weil die Render-Schicht
+// nicht aus scripts/ importiert (§3-Schichtentrennung).
+type TabSpalte = { typ: 'bereich' | 'zahl' | 'text' | 'betrag'; titel: string };
+
+// N-Spalten-Tabelle aus block.mehrspaltig. Dispatcht: kanonisches `spalten`-Modell
+// (Bund, M10) → dumme typgesteuerte Projektion; Alt-`{kopf,zeilen}` (Kanton/Legacy)
+// → unveränderter Alt-Renderer (abwärtskompatibel, byte-gleiche Darstellung).
+function MehrspaltigeTabelle({ spalten, kopf, zeilen }: { spalten?: TabSpalte[]; kopf?: string[]; zeilen: string[][] }) {
+  if (spalten && spalten.length > 0) return <KanonischeTabelle spalten={spalten} zeilen={zeilen} />;
+  return <LegacyMehrspaltigeTabelle kopf={kopf} zeilen={zeilen} />;
+}
+
+// Kanonische Tabelle (T-C1–C6/T-D1–D7): N = spalten.length, Ausrichtung +
+// Tausender-Gruppierung rein typgesteuert; KEINE Inhalts-Heuristik, KEIN Padding
+// (§3 dumme Projektion). Zell-Wortlaut unverändert (nur Tausender-Apostroph = Anzeige).
+function KanonischeTabelle({ spalten, zeilen }: { spalten: TabSpalte[]; zeilen: string[][] }) {
+  const N = spalten.length;
+  // Defensive (T-E5): empfängt der Renderer trotz Gate eine aritätsverletzende
+  // Zeile, rendert er linear (verlustfrei, alle Werte in Quellreihenfolge) statt
+  // ein verschobenes Gitter — heilt nie, wirft nie.
+  if (zeilen.some((z) => z.length !== N)) {
+    return (
+      <span data-mehrspaltig="" className="mt-1.5 block text-ink-700">
+        {zeilen.map((z, ri) => (
+          <span key={ri} className="block leading-snug">{z.filter((c) => c.trim() !== '').join(' · ')}</span>
+        ))}
+      </span>
+    );
+  }
+  const rechts = (typ: TabSpalte['typ']) => typ === 'zahl' || typ === 'betrag';
+  const gruppieren = (typ: TabSpalte['typ']) => typ !== 'text'; // bereich/zahl/betrag: Swiss-Apostroph
+  const hatKopf = spalten.some((s) => s.titel !== '');
+  const zelleCls = (typ: TabSpalte['typ'], kopfZeile: boolean) =>
+    `table-cell px-3 py-1.5 leading-snug align-baseline${rechts(typ) ? ' text-right whitespace-nowrap [font-variant-numeric:tabular-nums]' : ''}${
+      kopfZeile || rechts(typ) ? ' font-medium text-ink-800' : ' text-ink-700'
+    }`;
+  return (
+    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0]">
+      {/* ARIA-Tabellen-Semantik auf den display:table-Spans; je Datenzeile genau
+          N cell zu N columnheader (folgt aus T-B2). Echtes <table> ist im
+          Phrasing-/<p>-Kontext nicht möglich. */}
+      <span role="table" aria-label="Tarif-Tabelle" className="table w-full">
+        {hatKopf && (
+          <span role="row" className="table-row bg-paper-sunken/40">
+            {spalten.map((s, ci) => (
+              <span key={ci} role="columnheader" className={zelleCls(s.typ, true)}>{s.titel}</span>
+            ))}
+          </span>
+        )}
+        {zeilen.map((z, ri) => (
+          <span key={ri} role="row" className="table-row">
+            {z.map((cell, ci) => (
+              <span
+                key={ci}
+                role="cell"
+                className={`${zelleCls(spalten[ci].typ, false)}${ri > 0 || hatKopf ? ' border-t border-line/60' : ''}`}
+              >
+                {gruppieren(spalten[ci].typ) ? gruppiereTausender(cell) : cell}
+              </span>
+            ))}
+          </span>
+        ))}
+      </span>
+    </span>
+  );
+}
+
+// Alt-Renderer für Legacy-`{kopf,zeilen}` (Kanton/nicht migrierte Bund-Fallbacks):
+// UNVERÄNDERT übernommen — Inhalts-Heuristik + Padding bleiben, damit Kanton-Tabellen
+// byte-gleich rendern (L0-Abwärtskompatibilität). Bund nutzt KanonischeTabelle.
+function LegacyMehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string[][] }) {
   const spalten = Math.max(kopf?.length ?? 0, ...zeilen.map((z) => z.length));
   const padZeile = (z: string[]) => {
     const padded = [...z];
     while (padded.length < spalten) padded.push('');
     return padded;
   };
-  // Spalte gilt als numerisch, wenn irgendeine ihrer Datenzellen numerisch ist
-  // → rechtsbündig (Kopf + Zellen einheitlich), für saubere Zahlenkolonnen.
   const spalteNumerisch = Array.from({ length: spalten }, (_, ci) =>
     zeilen.some((z) => istNumerischeZelle(z[ci] ?? '')),
   );
-  // CSS-Table = inhaltsbasierte Spaltenbreiten (übersichtlicher als gleichbreite
-  // Flex-Spalten); Wrapper scrollt horizontal statt zu clippen → auf schmalen
-  // Viewports bleibt jede Spalte lesbar (§Lesbarkeit). Beträge brechen nicht um.
   const zelleCls = (ci: number, kopfZeile: boolean) =>
     `table-cell px-3 py-1.5 leading-snug align-baseline${spalteNumerisch[ci] ? ' text-right whitespace-nowrap' : ''}${
       kopfZeile ? ' font-medium text-ink-800' : spalteNumerisch[ci] ? ' font-medium text-ink-800' : ' text-ink-700'
     }`;
   return (
     <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
-      {/* ARIA-Tabellen-Semantik auf den display:table-Spans (W2.2): Screenreader
-          lesen Zeilen/Spalten; KEINE visuelle Änderung (Rollen sind pixel-neutral).
-          Echtes <table> ist hier nicht möglich (Phrasing-/<p>-Kontext). */}
       <span role="table" aria-label="Tarif-Tabelle" className="table w-full">
         {kopf && kopf.length > 0 && (
           <span role="row" className="table-row bg-paper-sunken/40">
@@ -256,11 +315,6 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
                 role="cell"
                 className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-line/60' : ''}`}
               >
-                {/* Tausender-Apostroph in allen Zellen: auch die Streitwert-Spalte
-                    («über 5 000 bis 10 000») soll gruppiert werden — so von den
-                    Render-Tests verlangt. Eine seltene 4-stellige Nicht-Geld-Zahl
-                    (Jahr/Referenz) in einer Textspalte ist der bewusst in Kauf
-                    genommene Preis (§3 Darstellung, Quellwert unberührt). */}
                 {gruppiereTausender(cell)}
               </span>
             ))}
@@ -378,7 +432,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // Mehrspalten-Tabelle (Stufe 2) hat Vorrang vor Stufe 1 + Text.
                 // Early-return NUR wenn mehrspaltig vorhanden UND mindestens eine Zeile.
                 if (b.mehrspaltig && b.mehrspaltig.zeilen.length > 0)
-                  return <MehrspaltigeTabelle kopf={b.mehrspaltig.kopf} zeilen={b.mehrspaltig.zeilen} />;
+                  return <MehrspaltigeTabelle spalten={b.mehrspaltig.spalten} kopf={b.mehrspaltig.kopf} zeilen={b.mehrspaltig.zeilen} />;
                 // Strukturierte Tarif-Tabelle (Stufe 1) hat Vorrang vor der
                 // Text-Heuristik. block.text (Vortext) bleibt leer (Task-2-Konvention:
                 // bei tableisierten Blöcken ist text ''); nur TarifTabelle rendern.

@@ -23,6 +23,36 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b M10: Bund-Tabellen kanonisches `spalten`-Modell (gebaut + gegated, nicht deployt)
+
+ROADMAP-Schritt **Welle 2 · 5b**, Milestone **M10** (Tabellendarstellung Bund) aus
+`FAHRPLAN-GESETZESDARSTELLUNG-BUND.md`. Worktree `feat/normtext-tabellen-kanonisch` (isoliert, §12),
+Split-View-Konflikt entschärft (PR #51 längst auf main, kein Live-Agent auf `ArtikelBody.tsx`).
+
+**Was:** Defekte Fedlex-Tabellen (colspan-Verlust → Kopf≠Zellzahl, empty-padded Köpfe, Spacer-Spalten,
+zerrissene Staffel-Spannen; ~60 Defekt-Blöcke/28 Erlasse) auf ein rechteckiges, typisiertes `spalten`-Modell
+(T-B1) umgestellt. Kern = reiner, DOM-freier Normalisierer `scripts/normtext/tabelle-normalisieren.ts`:
+(1) **Staffel-Verdichtung** datengetrieben (`über 100 bis 500` aus 5 Zellen → 1 `bereich`-Zelle, verlustfreie
+Konkatenation amtlicher Token) — folgt dem Daten-Muster, NICHT der irreführenden Kopf-colspan 3/3 (K3-Leitfall
+GebV SchKG Art. 20); (2) **Zwei-Zeilen-Kopf-Merge** (T-A5) rettet zuvor verlorene Captions (AHVV Art. 21
+«Beitragssatz in Prozent» war weg); (3) **logischer Pfad** über Daten-Zellgrenzen mit Ambiguitäts-Guard
+(verwirft Fedlex-colspan-Misalignment → Legacy, z.B. AHVV Art. 52); (4) **ehrlicher Legacy-Fallback** bei
+ragged/Prosa (T-E4, byte-gleich zu heute). Schema additiv (Kanton-`{kopf,zeilen}` unberührt, L0-Abwärtskompat);
+Renderer = dumme typgesteuerte Projektion + unveränderter Legacy-Pfad. Neuer Generator-Filter `--erlass=`.
+
+**Verifikation:** 53 Normalisierer-TDD-Tests + 17 Render-Tests + umgeschriebene M7-Tests (zementierten die
+Defektklasse). 28 Snapshots EINMAL regeneriert → **Byte-Diff: 25 Dateien/59 Tabellen, 0 Nicht-Tabellen-Änderung,
+0 verlorene Token, 0 Nicht-Bund-Dateien** (§6.3). Neuer blockierender Validator `check:tabellen` (Bund scharf:
+**69 kanonisch / 0 Aritäts-/Leerspalten-/Staffel-Brüche**; 9 Legacy-Fallbacks transparent gelistet; Kanton Report).
+**Adversariale Gegenprüfung** (unabhängiger Opus, frischer Kontext, gegen echtes Fedlex-Filestore-HTML): **8/8
+FAITHFUL, 0 REFUTED**. Gate grün (tsc/vitest/golden/lint/check) **ausser** orthogonalem **OR-Currency-Drift**
+(3 neu + 2 umstrukturiert + 12 geänderte Mietrecht/Gewährleistungs-Artikel in der aktuellen Konsolidierung; OR hat
+KEINE Tabellen → kein M10-Bezug; vorbestehend auch auf main, separat zu ziehen — NICHT in M10 gefaltet).
+
+**Offen:** Push/Deploy (Batch-Fenster, Davids Ja §9). Residuen: AHVV Art. 52 Legacy-Caption-Lücke (kein Datenwert);
+BV.196/DBG.36/FZA.10/VGKE.4/VTS.94/GEBV Art. 37 bleiben Legacy (ragged/Prosa). Nächste M10-Batches: B-Render-Rest
+(M2/M9/M3), C (Suche/Layout M4/M5/M7/M8), D (Popover M11/M6), sowie M1/M6-Datenteil (Batch A Rest).
+
 ## Session 30.6.2026 — Dev-Werkzeug: Skill `korpus-werkstatt` (Content-Produktion + Verifikation)
 
 Auftrag David: einen evaluierten Fremd-Skill (Lexplorer/`swiss-legal-research`) als Basis für einen

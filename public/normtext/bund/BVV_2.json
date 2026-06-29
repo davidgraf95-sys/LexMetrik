@@ -496,9 +496,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Bisherige Beträge Franken",
-              "Neue Beträge Franken"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Bisherige Beträge Franken"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Neue Beträge Franken"
+              }
             ],
             "zeilen": [
               [
@@ -525,7 +531,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de#art_5",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "c32a2be4082a8d2bc14e1df74c594bb46c9f3df706534c073e5fca84399657f2"
+      "sha": "1c76ca0f47903df28161294c2e94811d4283a6af2d6de7dfc8af63efa8a68edd"
     },
     {
       "id": "bund/BVV_2/art_6",
@@ -4094,10 +4100,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Jahrgang",
-              "ordentliches Rentenalter Frauen",
-              "Mindestumwandlungssatz Frauen"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Jahrgang"
+              },
+              {
+                "typ": "zahl",
+                "titel": "ordentliches Rentenalter Frauen"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Mindestumwandlungssatz Frauen"
+              }
             ],
             "zeilen": [
               [
@@ -4148,7 +4163,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de#art_62_c",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "aa0c647bf18789be7cb00f8ef8a88717abda5b4866a88cad5ec3a184112be9fd"
+      "sha": "f62080937a62ce3dc3bdc13c7ff3cf5492e1b06b9f4048c7b2dd7f0ebd8310a2"
     },
     {
       "id": "bund/BVV_2/art_62_d",

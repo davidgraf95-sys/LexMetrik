@@ -1814,9 +1814,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Anspruchsberechtigter Jahrgang",
-              "Monatlicher Zuschlag in Prozent des Grundzuschlags"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Anspruchsberechtigter Jahrgang"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Monatlicher Zuschlag in Prozent des Grundzuschlags"
+              }
             ],
             "zeilen": [
               [
@@ -1875,7 +1881,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_34_bis",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "23250704e53ec3cd4e435f72c6904f4dbb77993c93c74f039e2bec7b67b575e8"
+      "sha": "71f5bdfc07c7e32a5caed57d28e87d5894ecfe75b97b43ce28c1e25eb495b85d"
     },
     {
       "id": "bund/AHVG/art_34_ter",
@@ -2207,11 +2213,23 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Vorbezugsjahre",
-              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen tiefer als oder gleich hoch ist wie der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34",
-              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher als der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34, aber tiefer als oder gleich hoch ist wie der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34",
-              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher ist als der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Vorbezugsjahre"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen tiefer als oder gleich hoch ist wie der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher als der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34, aber tiefer als oder gleich hoch ist wie der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher ist als der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34"
+              }
             ],
             "zeilen": [
               [
@@ -2240,7 +2258,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40_c",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "b2dc0508ca6fe114850004284e1a6cfa699455ab1275cfdd8c7d86619c92be5a"
+      "sha": "39b87af8265bb03ef2d6cbe12ccf33dc5e5a67af8fe250bb5227e86b7411e217"
     },
     {
       "id": "bund/AHVG/art_41",

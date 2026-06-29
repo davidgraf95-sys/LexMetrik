@@ -1973,10 +1973,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "von mindestens",
-              "aber weniger als",
-              ""
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Jährliches Erwerbseinkommen in Franken von mindestens"
+              },
+              {
+                "typ": "zahl",
+                "titel": "aber weniger als"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Beitragssatz in Prozent des Erwerbseinkommens"
+              }
             ],
             "zeilen": [
               [
@@ -2076,7 +2085,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/187/de#art_36",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260601",
-      "sha": "e34547647a2a2cf62b2d482838894687ea864dd71a530c9c9b864dfd62895079"
+      "sha": "b837fd7440f862996c9f7d79916e0b30efce67a20dfb7de156a0a51a176abc67"
     },
     {
       "id": "bund/EOV/art_37",
