@@ -309,7 +309,7 @@ export function NormPopoverOverlay({ children, onClose, triggerRef }: {
       <div
         ref={dialogContainerRef}
         onClick={(e) => e.stopPropagation()}
-        style={verankert ? { position: 'fixed', top: pos?.top ?? 0, left: pos?.left ?? 0, visibility: pos ? 'visible' : 'hidden' } : undefined}
+        style={verankert ? { position: 'fixed', top: pos?.top ?? 0, left: pos?.left ?? 0, maxWidth: 'calc(100vw - 16px)', visibility: pos ? 'visible' : 'hidden' } : undefined}
         className="w-full max-w-xl"
       >
         {children}

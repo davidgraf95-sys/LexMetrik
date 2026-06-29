@@ -166,7 +166,7 @@ export function Rechtsprechung() {
       {alle && alle.length > 0 && (
         <div className={pk('lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6', '@3xl/pane:grid @3xl/pane:grid-cols-[14rem_minmax(0,1fr)] @3xl/pane:gap-6')}>
           {/* Links: Sachgebiets-Rail (Mobil oben als Chip-Band). */}
-          <div className="mb-4 lg:mb-0">
+          <div className={pk('mb-4 lg:mb-0', 'mb-4 @3xl/pane:mb-0')}>
             <SachgebietKacheln
               zaehler={railZaehler}
               gesamt={railGesamt}

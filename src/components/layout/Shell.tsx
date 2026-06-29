@@ -128,6 +128,16 @@ export function Shell({ children }: { children: ReactNode }) {
     next[g + 1] = basis[g + 1] - d;
     setBreiten(next);
   };
+  // Gutter-ARIA: Breite des linken Pane als Prozent des Nachbarpaars (SR-Wertansage,
+  // WCAG 4.1.2) — analog zum ZiehGriff der Seitenleiste (aria-valuenow/min/max).
+  const gutterWert = (g: number) => {
+    const summe = ((breiten[g] ?? 1) + (breiten[g + 1] ?? 1)) || 1;
+    return {
+      now: Math.round(((breiten[g] ?? 1) / summe) * 100),
+      min: Math.round((MIN_GROW / summe) * 100),
+      max: Math.round(((summe - MIN_GROW) / summe) * 100),
+    };
+  };
   // Teardown eines laufenden Gutter-Drags bei Unmount (sonst feuert move auf einen
   // abgebauten Baum, bis das nächste pointerup käme) — wie ZiehGriff.
   const gutterAufRef = useRef<(() => void) | null>(null);
@@ -259,6 +269,9 @@ export function Shell({ children }: { children: ReactNode }) {
     if (dup) pane.schliesse(i); else pane.ersetze(i, altPrimaer);
     raeumeLiveLoc(seed);
     navigate(ziel);
+    // Fokus zurückgeben wie beim Schliessen (sonst fällt er nach Unmount des
+    // auslösenden PaneKopfs auf <body> — Tastatur/SR verlieren die Position).
+    requestAnimationFrame(() => document.getElementById('inhalt')?.focus());
   };
   // Hauptfenster ✕: erstes Sekundär (live) zum Hauptfenster befördern (sonst zur Startseite).
   const schliesseHaupt = () => {
@@ -388,7 +401,8 @@ export function Shell({ children }: { children: ReactNode }) {
               {multipane && pane.sekundaer.map((pfad, i) => (
                 <Fragment key={pfad}>
                   {/* Ziehbare Gutter zwischen Pane i und i+1 (Grenze i). */}
-                  <div role="separator" aria-orientation="vertical" aria-label="Pane-Breite anpassen" tabIndex={0}
+                  <div role="separator" aria-orientation="vertical" aria-label="Pane-Breite anpassen"
+                    aria-valuenow={gutterWert(i).now} aria-valuemin={gutterWert(i).min} aria-valuemax={gutterWert(i).max} tabIndex={0}
                     onPointerDown={ziehGutter(i)} onKeyDown={gutterTaste(i)}
                     className="hidden lg:block shrink-0 w-1.5 -mx-0.5 z-10 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus-visible:bg-brass-400 focus-visible:outline-none" />
                   <SekundaerPane pfad={pfad} {...titelVon(livePfad(i))} style={wachstum(i + 1)}
