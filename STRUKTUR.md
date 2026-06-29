@@ -44,6 +44,16 @@ Doku/Governance (`**.md`), kein Code → CI/Golden unberührt, kein Risiko-Pfad 
 - Strukturierungs-Texte via **ultracode-Workflow** (Entwurf → adversarialer Kritiker → Final, 10
   Opus-Agenten); der Kritiker fing einen Self-Sufficiency-Defekt (§14 verwies auf das noch nicht
   gebaute Tor → als «im Aufbau» markiert).
+- **Prod-Deploy main (Auftrag David: «push und deploy auch ja»).** Beim Push divergierte `main`:
+  Remote trug die ganze **Split-View-Strecke (PRs #51–#54)**, lokal 2 ungepushte Doku-Commits →
+  **gemergt** (§12, einziger Konflikt STRUKTUR.md additiv gelöst). **§9-Ritual** über das
+  46-Commit/59-Datei-Delta: Tore grün (gate · build · 86 e2e); **Bug-Check** als ultracode (6 Opus-
+  Finder × adversariale Verifikation, 15 Agenten) → **7 von 9 bestätigt**, kein HOCH, **keine Logik-/
+  Golden-Verletzung**. **4 gefixt** vor Deploy: #1 MITTEL Gutter-ARIA (WCAG 4.1.2), #2 MITTEL
+  Pane-Befördern-Fokus, #3 NIEDRIG Popover-Mobil-Klemmung, #5 NIEDRIG Rail-Abstand; **#4/#6/#7
+  NIEDRIG** in ROADMAP Welle 14 gequeued. Deploy aus sauberem `/tmp`-Worktree → **live**
+  `lexmetrik.vercel.app` (Commit `0d7ee7f7`, Asset `index-Bg7D2XiA.js` = lokal, Kernrouten 200).
+  Split-View damit prod-freigegeben. **Offen/live:** BGE-Auszug-Bug `W2·6-BGE` (separat gequeued).
 ## Session 29.6.2026 (Forts. 7) — Re-Render-Entprellung + Bug-Check über heutigen Code
 
 - **Perf:** Kopf-Artikel-Meldung 150ms entprellt → weniger Pane-Re-Renders beim Scrollen.
