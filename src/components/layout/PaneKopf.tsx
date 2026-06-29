@@ -41,8 +41,10 @@ const knopf = 'inline-flex h-7 w-7 items-center justify-center rounded-md text-i
 export function PaneKopf({ icon, label, stand, breadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   return (
     <div className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-700' : ''}`}>
-      {/* Links: Identität (Icon · Label · Stand). */}
-      <div className="flex min-w-0 items-center gap-1.5 pl-1">
+      {/* Links: Identität (Icon · Label · Stand). pl-0 + enger gap → der Breadcrumb-
+          Text fluchtet mit dem Inhalts-Gutter darunter (☰-Knopf/Artikeltext), statt
+          vom ⠿-Griff nach rechts geschoben zu werden (Wunsch David: links bündig). */}
+      <div className="flex min-w-0 items-center gap-1 pl-0">
         {ziehbar && (
           <span
             draggable
