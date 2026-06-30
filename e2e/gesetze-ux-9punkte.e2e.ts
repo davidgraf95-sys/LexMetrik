@@ -1,8 +1,14 @@
 import { test, expect } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
 
 // Visuelle + funktionale Verifikation der 9 Gesetze-UX-Punkte (Auftrag David
 // 26.6.2026). Screenshots landen unter test-results/ux9/ zur Sichtprüfung.
-const SHOT = '/private/tmp/claude-501/-Users-david/b109e112-2abc-41f2-9de0-8156251c0959/scratchpad';
+// WICHTIG: relativer Pfad (test-results/ ist gitignored) — KEIN absoluter,
+// maschinenlokaler Scratchpad-Pfad. Ein solcher (aus einer früheren Session
+// hart einkopiert) existiert auf dem CI-Runner nicht → ENOENT brach die Browser-
+// Smoke-Stufe. mkdirSync stellt das Zielverzeichnis auf jeder Maschine sicher.
+const SHOT = 'test-results/ux9';
+mkdirSync(SHOT, { recursive: true });
 
 test.describe('Gesetze-UX 9 Punkte', () => {
   test('P4: Gliederung/Randtitel steht VOR der Artikelnummer (Fedlex-Reihenfolge)', async ({ page }) => {
