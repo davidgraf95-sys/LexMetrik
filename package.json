@@ -54,7 +54,8 @@
     "fedlex:eli": "vite-node scripts/fedlex-eli-aufloesen.ts --",
     "normtext:pdf": "vite-node scripts/normtext/pdf-fetch.ts --",
     "check:pdf": "vite-node scripts/normtext/check-pdf.ts",
-    "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz"
+    "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz",
+    "check:perf-budget": "vite-node scripts/check-perf-budget.ts"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",

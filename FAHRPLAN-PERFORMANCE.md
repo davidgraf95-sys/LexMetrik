@@ -28,9 +28,16 @@
 - ⏸️ **NewsHeader-CLS (Rank 3) zurückgestellt** — saubere Reservierung bräuchte ein Magic-Number
   (§13-Konflikt); korrekt nur via Build-time-News-Prerender (M) → bleibt als nächster CLS-Schritt.
 
-**Offen / nächste:** Tor `check:perf-budget` (0) · Rank 2-Reader-Chunk-Vorladen + News-Prerender (3) ·
-M-Daten-Pfad (6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding, 10 Snapshot-Format) ·
-Render-/Split-View-Feinschliff (4, 9, 12, 14) · Fonts (11).
+**30.6.2026 — Tor `check:perf-budget` (Item 0, Bundle-Teil) gebaut** (`scripts/check-perf-budget.ts`,
+in `package.json` + deploy-check-Ritual nach dem Build, Chrome-frei/CI-tauglich): sichert die
+vendor-react-Topologie (ein stabiler Chunk), die gzip-Budgets (Entry ≤ 60 KB, vendor-react ≤ 90 KB)
+und den Doppel-React-Schutz (react-dom darf nur im vendor-Chunk liegen). Negativtests grün→rot→grün.
+Offen am Tor: die **Lighthouse-Metrik-Schranken** (CLS/LCP/TBT unter 4× CPU) — bleiben vorerst
+manueller Mess-Schritt im Deploy-Ritual (CI-Chrome noch nicht verdrahtet).
+
+**Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · Rank 2-Reader-Chunk-Vorladen +
+News-Prerender (3) · **M-Daten-Pfad → LCP** (6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding,
+10 Snapshot-Format) · Render-/Split-View-Feinschliff (4, 9, 12, 14) · Fonts (11).
 
 ---
 

@@ -30,7 +30,18 @@ npm run golden:vergleich   # byte-gleich; Exit-Code prüfen!
 npm run check       # Sweep, Smoke, Register; check:caches VOR check:zitate
 npm run test:e2e    # Playwright (a11y/axe beide Theme-Modi + Funktions-Smokes);
                     # braucht dist (nach build), startet vite preview selbst.
+npm run check:perf-budget  # QS-PERF: Bundle-Topologie/-Budget + Single-React;
+                    # liest das gebaute dist (nach build), Chrome-frei.
 ```
+
+- **Perf-Budget ins Deploy-Tor (30.6.2026, QS-PERF/§15):** `check:perf-budget`
+  sichert die vendor-react-Topologie (ein stabiler Chunk, kein react-dom-Rückfall
+  in den Entry → kein Doppel-React) und die gzip-Budgets. Deterministisch/Chrome-
+  frei, braucht aber das gebaute `dist` → wie e2e nur vor dem Deploy, nicht im
+  schnellen `gate`. Die Lighthouse-Metrik-Schranken (CLS/LCP/TBT auf
+  `/gesetze/bund/OR` unter 4× CPU) bleiben der manuelle Mess-Schritt in Schritt 4
+  (Nachkontrolle), bis ein CI-Chrome verdrahtet ist — Soll-Werte in
+  `FAHRPLAN-PERFORMANCE.md`.
 
 - **E2E ins Deploy-Tor (26.6.2026):** `test:e2e` ist NICHT im schnellen `gate`
   (build+Browser, zu langsam pro Iteration), gehört aber zwingend vor jeden
