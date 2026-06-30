@@ -39,14 +39,19 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     const art = page.locator('#art-1');
     await expect(art).toContainText('Willensäusserung'); // Body sichtbar
     await art.getByRole('button', { name: 'Artikel einklappen' }).click();
+    // Erst auf das deterministische Umschalt-Signal warten (Knopf trägt jetzt
+    // «Artikel ausklappen»), DANN den Body prüfen — sonst rennt die Assertion auf
+    // langsamen CI-Runnern gegen die noch laufende Einklapp-Umschaltung (Flake).
+    await expect(art.getByRole('button', { name: 'Artikel ausklappen' })).toBeVisible();
     // Body weg, Artikelnummer bleibt. §6.3-Anpassung 29.6.2026: Der Randtitel
     // «Im Allgemeinen» ist seit B1 ein eigener Sektionskopf AUSSERHALB des Artikels
     // (immer sichtbar) — daher auf Seitenebene geprüft, nicht mehr innerhalb #art-1.
     await expect(art.getByText('Willensäusserung')).toHaveCount(0);
     await expect(art.getByText('Art. 1')).toBeVisible();
     await expect(page.getByText('Im Allgemeinen', { exact: false }).first()).toBeVisible();
-    // Wieder aufklappen.
+    // Wieder aufklappen — ebenso erst auf das Umschalt-Signal warten.
     await art.getByRole('button', { name: 'Artikel ausklappen' }).click();
+    await expect(art.getByRole('button', { name: 'Artikel einklappen' })).toBeVisible();
     await expect(art).toContainText('Willensäusserung');
   });
 
