@@ -42,8 +42,12 @@ Fremdgesetz steht nur im Chapeau → bisher falscher interner ZGB-Self-Link. **F
 **2 Live-Feedback-Fixes:** (1) Gruppierungslinien-Umschalter aus der Suchleiste in die **Kopf-Aktionszeile**
 (oben am Gesetz) verschoben. (2) Einzelartikel-Sektion zeigt das «Art. N»-Bereich-Badge nur noch eingeklappt
 (offen ist es redundant zum Artikelkopf darunter); echte Spannen («Art. 252–359») bleiben. Beide visuell
-verifiziert. **PROD läuft weiter auf 3c4b3ab0** (vor Batch A); diese Commits sind auf dem Branch/PR #55, NICHT
-neu deployt (Deploy braucht frisches §9-Ja).
+verifiziert. **AUF PROD DEPLOYT 30.6.2026** (Davids Ja «yes deploy»): `lexmetrik.vercel.app`, Deployment
+`dpl_J56rFqQ2cU2Svj8z8K6GYXSQK8WC`, Asset `index-D-Nrda6H.js`, aus sauberem `/tmp`-Worktree @ Branch-HEAD
+`02136603`. §9-Tore grün (tsc/vitest/golden/lint/check + build + e2e 86); §9-Bug-Check (unabh. Opus über das
+Delta `3c4b3ab0..HEAD`): 0 Blocker. Kernrouten + `/gesetze/bund/ZGB` 200. **PR #55** weiterhin offen für `main`
+(Selbst-Merge in Auto-Modus geblockt → Davids Review/Merge; danach STRUKTUR auf `main` spiegeln + Branch/Worktree
+entfernen).
 
 ## Session 30.6.2026 — W2·5b PROD-DEPLOY (Tabellen + Reader-Batch-B + OR-Currency live)
 
