@@ -112,7 +112,18 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   `ArtikelBody.tsx`. **Gate:** Render-Test (Status sichtbar, «Aufgehoben durch …» erst nach Klick).
 
 ### M3 · Randtitel-/Gruppierungslinien für jedes Gesetz + Umschalter — Batch B (Render)
-- [ ] **Quelle:** `<section id=".../lvl_…">` + `aria-level` (OR: `part_`). **Root-Cause:** Linien heute
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Root-Cause war NICHT die
+  Datenlage** (209/218 Bund-Erlasse tragen `gliederung`, alle 218 ein Sidecar) sondern EINE Render-Bedingung:
+  `inhalt.tsx` zog die Gruppierungslinie (`border-l border-line/60 pl-3`) nur für `randtitel`-Knoten, nie für die
+  offizielle Teil/Titel/Abschnitt-`gliederung`. **Fix:** `renderSektion` ist jetzt tiefen-bewusst — die vertikale
+  Schachtelungslinie + Einzug gilt für JEDE geschachtelte Sektion (`tiefe > 0`, offiziell UND Randtitel), die
+  Wurzel (tiefe 0) bleibt bündig (kein Voll-Dokument-Einzug). **Umschalter** `gruppierungslinienAn` (zustandslos,
+  component-local `useState(true)` wie `fussnotenAuf`, je Pane eigener Zustand; Knopf «✓ Linien» neben «Fussnoten»,
+  nur wenn das Gesetz geschachtelt ist). Statt aria-level/`lvl_`/`part_` nutzt der Extraktor wie bisher die
+  Heading-Tag-Tiefe (`Sektion.ebene`) — für «Linien je Gesetz» ausreichend, kein Datenschicht-Umbau nötig.
+  **Visuell verifiziert** (Playwright/Bash, ZGB tief + OR `Abteilung` + VMWG flach, je 1280/390, Linien an/aus):
+  Parität, Wurzel bündig, kein Über-Einzug, Toggle flippt sauber, flache Gesetze ohne Toggle. Reine Darstellung (§3).
+- [ ] ~~**Quelle:** `<section id=".../lvl_…">` + `aria-level` (OR: `part_`).~~ **Root-Cause:** Linien heute
   nur bei manchen Gesetzen; keine Umschaltmöglichkeit. **Soll:** (a) Gruppierungslinien aus der
   Section-Schachtelung für **jedes Bund-Gesetz** ableiten; (b) **An/Aus-Umschalter pro Gesetz**
   (zustandslos). **Datei:** Struktur-Sidecar (`struktur-extrahiere.ts`, falls Info fehlt) +

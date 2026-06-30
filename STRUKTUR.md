@@ -23,6 +23,16 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b Batch B (M2/M9/M3): aufgehobene Artikel + Gruppierungslinien (gebaut + gegated)
+
+**M3 (Gruppierungslinien je Gesetz + Umschalter):** Root-Cause war NICHT die Datenlage (209/218 Bund-Erlasse
+tragen `gliederung`) sondern eine Render-Bedingung — `inhalt.tsx` zog die vertikale Schachtelungslinie nur für
+`randtitel`-Knoten, nie für die offizielle Teil/Titel/Abschnitt-Gliederung. **Fix:** `renderSektion` tiefen-bewusst
+→ Linie + Einzug für JEDE geschachtelte Sektion (`tiefe > 0`, offiziell + Randtitel), Wurzel bündig. **Umschalter**
+`gruppierungslinienAn` (zustandslos `useState(true)` wie `fussnotenAuf`, je Pane eigen; Knopf «✓ Linien» neben
+«Fussnoten», nur bei geschachteltem Gesetz). Visuell verifiziert (Playwright/Bash: ZGB/OR/VMWG × 1280/390 ×
+an/aus — Parität, kein Über-Einzug). Reine Darstellung (§3). **Damit Batch B (M2/M9/M3) komplett.**
+
 ## Session 30.6.2026 — W2·5b Batch B (M2/M9): aufgehobene Artikel (gebaut + gegated, nicht deployt)
 
 Nach M10 die ersten Render-Punkte von **Batch B** (selber Branch/Worktree `feat/normtext-tabellen-kanonisch`).
