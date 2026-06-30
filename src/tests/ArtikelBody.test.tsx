@@ -339,3 +339,33 @@ describe('absatzMarke (bis/ter-Rekonstruktion, §3 — Wortlaut unangetastet)', 
     expect(absatzMarke('2', 'Der Vertrag ist nichtig.')).toEqual({ marke: '2', rest: 'Der Vertrag ist nichtig.' });
   });
 });
+
+// ── M6 (Auftrag David): Fremdgesetz-Chapeau — bare Item-Verweise nicht intern
+// fehl-verlinken (ZGB Art. 89a Abs. 6/7 zitieren BVG-Artikel, nicht ZGB). ───────
+describe('M6 — Fremdgesetz-Chapeau unterdrückt falsche bare-Self-Links', () => {
+  const intern = { tokenMap: new Map([['52', '52'], ['1', '1']]), basisPfad: '/gesetze/bund/ZGB', springeZu: () => {} };
+  it('«Art. 52» in einem BVG-Chapeau-Item → KEIN interner #art-52-Sprunglink', () => {
+    const bl: NormSnapshot['bloecke'] = [{
+      absatz: '6',
+      text: 'Für Personalfürsorgestiftungen … gelten überdies die folgenden Bestimmungen des Bundesgesetzes vom 25. Juni 1982 über die berufliche … Vorsorge (BVG) über:',
+      items: [{ marke: '3', text: 'die Verantwortlichkeit (Art. 52);' }],
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bl} artikel="89_a" passus={{ absatz: null }} autolink intern={intern}
+        zitierKontext={{ artikelLabel: 'Art. 89a', kuerzel: 'ZGB' }} />,
+    );
+    expect(out).toContain('Art. 52'); // Wortlaut bleibt
+    expect(out).not.toContain('#art-52'); // aber kein falscher Self-Link
+  });
+  it('Kontrolle: dasselbe «Art. 52» in einem NORMALEN Item bleibt intern verlinkt', () => {
+    const bl: NormSnapshot['bloecke'] = [{
+      absatz: '1', text: 'Es gelten folgende Regeln:',
+      items: [{ marke: 'a', text: 'die Sache nach Art. 52;' }],
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} autolink intern={intern}
+        zitierKontext={{ artikelLabel: 'Art. 1', kuerzel: 'ZGB' }} />,
+    );
+    expect(out).toContain('#art-52'); // korrekter Self-Link
+  });
+});

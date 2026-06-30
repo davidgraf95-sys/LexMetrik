@@ -94,10 +94,14 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
 > **Batch**. Alle `[OF]` (keine Davids-Fachzeit nötig), Scope zuerst Bund.
 
 ### M1 · Präambel-Fussnoten richtig zuordnen — Batch A
-- [ ] **Quelle:** Fussnote im `<div id="preamble">` (BV). **Root-Cause:** Extraktor verliert das
-  Präambel-Scoping → Fussnote landet bei Art. 1. **Soll:** Präambel-Fussnoten der Präambel zuordnen.
-  **Datei:** `scripts/normtext/kopf-extrahiere.ts` / `fussnoten-extrahiere.ts`. **Gate:** Snapshot-Test
-  BV-Präambel (Fussnote ≠ Art. 1).
+- [x] **ERLEDIGT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Befund (Recon
+  30.6.):** die Daten-Zuordnung ist bereits KORREKT — die BV-Präambel-Fussnote («Angenommen in der
+  Volksabstimmung …») sitzt auf `kopf.fussnoten` (Erlass-Kopf), NICHT bei Art. 1 (war durch M5/ErlassKopf
+  29.6. behoben). `extrahiereFussnoten` scopt strikt per `<article>` → eine Fussnote im `<div id="preamble">`
+  kann nie an einen Artikel hängen. **Gemacht:** die korrekte Zuordnung mit Tests **fest verankert**
+  (`normtext-kopf-g15.test.ts`: BV-Präambel-Fussnote am Kopf + Leak-Schutz Präambel↛Art. 1). OFFEN (optionale
+  Politur, kein Misattributions-Gate): Inline-«¹»-Marker im Präambel-Fliesstext (braucht Kopf-Datenstruktur
+  mit Markerpositionen — eigenes kleines Paket).
 
 ### M2 · Fussnoten einheitlich erst auf Klick — Batch B (Render)
 - [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`): in `gesetz-leser/parts.tsx`
@@ -141,11 +145,20 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   `DESIGN-REGLEMENT-NORMTEXT.md`.)
 
 ### M6 · Verweis Art. 89a Abs. 6 ZGB → BVG korrekt auflösen — Batch A + D
-- [ ] **Quelle:** ELI/`data-rs` am Verweis; intern `#` vs. extern ELI. **Root-Cause:** Auflösung per
-  Text-Heuristik landet intern im ZGB statt im BVG. **Soll:** gesetzesübergreifende Verweise über
-  **ELI/`data-rs`/href** auflösen (Fallback ELI aus href bei fehlendem `data-rs`). **Datei:**
-  Norm-Resolver + Extraktor (Verweis-Erfassung). **Gate:** Test «Art. 89a VI ZGB → BVG»; mutmasslich
-  ganze **Klasse** intern/extern-Fehlauflösung.
+- [x] **Batch-A-Teil ERLEDIGT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Befund
+  (Recon 30.6.):** die Auflösung passiert RENDER-seitig (`NormText`-Heuristik), NICHT im Extraktor — die
+  bloßen Item-Verweise («Art. 52») tragen KEIN `href`/`data-rs` (Klartext); das Fremdgesetz steht nur einmal
+  im Chapeau («… Bestimmungen des … (BVG) … über:»). Der bisherige M12-Guard greift nur, wenn direkt nach dem
+  Verweis ein Kürzel steht → ZGB 89a Abs. 6/7 fielen durch und verlinkten intern auf ZGB. **Fix (ArtikelBody):**
+  `etabliertFremdgesetz()` erkennt den Fremdgesetz-Chapeau; dessen Items rendern OHNE `intern` → kein falscher
+  bare-Self-Link (§1, M12-Philosophie «lieber kein Link als ein falscher»; amtliche Kürzel-Verweise bleiben über
+  `NORM_IM_TEXT` aktiv). **Verifiziert:** Render-Tests (ZGB-89a-Pattern + Kontroll-Self-Link) + **Korpus-Sweep
+  über 218 Bund-Dateien**: 14 Treffer, alle entweder echte Anwendbarkeits-Chapeaus (ELG/EOG/IVG→AHVG, BANKV→OR,
+  FAMZG→ATSG, ZGB→BVG) oder harmlos (0 verlinkbare Item-Refs) → **kein legitimer Self-Link fälschlich
+  unterdrückt**. Selbst ein Fehl-Treffer degradiert nur (Link→Text), nie ein falscher Link.
+- [ ] **OFFEN: Batch-D-Teil** — die Items zum Fremdgesetz tatsächlich AUFLÖSEN (Popup/Link «Art. 52 → BVG»
+  via Chapeau-Kontext + `data-rs` der Chapeau-Fussnote). Gehört zum Verweis-Popup (`FAHRPLAN-GESETZESTEXT-POPUP.md`),
+  Batch D.
 
 ### M7 · Nach Suche abgeschnittenes Gesetz — Batch C
 - [ ] **Root-Cause:** Sprung-/Scroll-Position nach Suche; Sticky-Header verdeckt den Treffer, Text

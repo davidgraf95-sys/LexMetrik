@@ -23,6 +23,28 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b Batch A fertig (M1 + M6-Datenteil) + 2 Live-Feedback-Fixes
+
+Nach dem Prod-Deploy: **Batch A** (Extraktor/Pipeline) zu Ende geführt + zwei Reader-Feedbacks von David.
+
+**M1 (Präambel-Fussnoten):** Recon ergab — die Daten-Zuordnung ist bereits korrekt (BV-Präambel-Fussnote
+auf `kopf.fussnoten`, nicht Art. 1; war durch M5 behoben). `extrahiereFussnoten` scopt strikt per `<article>`.
+Mit Tests **fest verankert** (`normtext-kopf-g15.test.ts`). Offen nur optionale Inline-«¹»-Marker-Politur.
+
+**M6-Datenteil (Verweis-Auflösung):** Recon ergab — Auflösung ist RENDER-seitig (`NormText`), die bloßen
+Item-Verweise tragen kein `href`/`data-rs`. ZGB 89a Abs. 6/7 zitieren BVG-Artikel bloß («Art. 52»), das
+Fremdgesetz steht nur im Chapeau → bisher falscher interner ZGB-Self-Link. **Fix (`ArtikelBody`):**
+`etabliertFremdgesetz()` erkennt den «… Bestimmungen des … (BVG) … über:»-Chapeau; seine Items rendern ohne
+`intern` → kein falscher bare-Self-Link (§1/M12-Philosophie; Kürzel-Verweise bleiben über `NORM_IM_TEXT`).
+**Korpus-Sweep (218 Bund-Dateien): 14 Treffer, kein legitimer Self-Link fälschlich unterdrückt.** Batch-D-Teil
+(Item tatsächlich auf BVG auflösen/Popup) bleibt offen.
+
+**2 Live-Feedback-Fixes:** (1) Gruppierungslinien-Umschalter aus der Suchleiste in die **Kopf-Aktionszeile**
+(oben am Gesetz) verschoben. (2) Einzelartikel-Sektion zeigt das «Art. N»-Bereich-Badge nur noch eingeklappt
+(offen ist es redundant zum Artikelkopf darunter); echte Spannen («Art. 252–359») bleiben. Beide visuell
+verifiziert. **PROD läuft weiter auf 3c4b3ab0** (vor Batch A); diese Commits sind auf dem Branch/PR #55, NICHT
+neu deployt (Deploy braucht frisches §9-Ja).
+
 ## Session 30.6.2026 — W2·5b PROD-DEPLOY (Tabellen + Reader-Batch-B + OR-Currency live)
 
 **Auf Prod deployt 30.6.2026** (Davids Ja «bug check und push und deploy»): `lexmetrik.vercel.app`,

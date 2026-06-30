@@ -212,6 +212,26 @@ function istNumerischeZelle(s: string): boolean {
   return /\d/.test(t) && !/[A-Za-zÀ-ÿ]{4,}/.test(t);
 }
 
+// M6 (Auftrag David): Erkennt einen Chapeau-Absatz, der die Bestimmungen eines
+// FREMDEN Gesetzes für anwendbar erklärt — «… gelten … die folgenden Bestimmungen
+// des … (BVG) … über:» (ZGB Art. 89a Abs. 6/7 → BVG). Die nachfolgenden Items
+// zitieren BLOSSE Fremd-Artikel («Art. 52»); der interne Self-Sprunglink würde
+// die dann FÄLSCHLICH auf den eigenen Erlass zeigen (ZGB statt BVG). Trifft das zu,
+// wird in den Items das bare-Ref-Linking unterdrückt (lieber kein Link als ein
+// plausibel-falscher — §1, M12-Philosophie/David 28.6.; das amtliche Kürzel im Text
+// bleibt über NORM_IM_TEXT verlinkt). Selbst ein Fehl-Treffer DEGRADIERT nur
+// (Link → Text), erzeugt NIE einen falschen Link.
+function etabliertFremdgesetz(absatzText: string, eigenesKuerzel?: string): boolean {
+  const t = absatzText.trim();
+  if (!/:\s*$/.test(t)) return false; // führt eine Aufzählung ein (Doppelpunkt am Ende)
+  if (!/\bBestimmungen\s+(?:des|der)\b/i.test(t)) return false; // «Bestimmungen des/der …»
+  const eigen = (eigenesKuerzel ?? '').toUpperCase().replace(/[^A-ZÄÖÜ]/g, '');
+  for (const m of t.matchAll(/\b([A-ZÄÖÜ]{2,8})\b/g)) {
+    if (m[1].toUpperCase() !== eigen) return true; // ein fremdes Gesetzeskürzel (BVG/FZG ≠ ZGB)
+  }
+  return false;
+}
+
 // Spaltentyp des kanonischen Modells (M10, T-B1) — spiegelt
 // scripts/normtext/tabelle-normalisieren.ts; hier lokal, weil die Render-Schicht
 // nicht aus scripts/ importiert (§3-Schichtentrennung).
@@ -373,6 +393,10 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   // (autolink) — der Popover-Pfad (autolink=false) bleibt zeichenidentisch (§6 golden).
   const glaetteInterpunktion = (s: string) => s.replace(/ +([.,])/g, '$1');
   const verlinkt = (s: string) => (autolink ? <NormText text={glaetteInterpunktion(s)} intern={intern} /> : s);
+  // M6: wie `verlinkt`, aber OHNE `intern` → keine bare-Self-Sprunglinks. Für Items
+  // unter einem Fremdgesetz-Chapeau (etabliertFremdgesetz), wo «Art. N» NICHT auf
+  // den eigenen Erlass zeigt. Amtliche Kürzel-Verweise (NORM_IM_TEXT) bleiben aktiv.
+  const verlinktFremd = (s: string) => (autolink ? <NormText text={glaetteInterpunktion(s)} /> : s);
   const zk = zitierKontext;
 
   return (
@@ -387,6 +411,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
         const blockDezent = istAbsatzZitiert && passusMarke != null;
         // Absatznummern mit lat. Suffix («1bis», «2ter») hängend darstellen (§3).
         const { marke: absMarke, rest: rohtext } = absatzMarke(b.absatz, b.text);
+        // M6: erklärt dieser Absatz die Bestimmungen eines Fremdgesetzes für
+        // anwendbar, zitieren seine Items bloße Fremd-Artikel → bare-Ref-Linking
+        // dort unterdrücken (kein falscher Self-Link, §1). `pruefeBlock`-Kontext = b.text.
+        const fremdItems = autolink && etabliertFremdgesetz(b.text, zk?.kuerzel);
+        const verlinkeItem = (s: string) => (fremdItems ? verlinktFremd(s) : verlinkt(s));
         return (
           <div
             key={i}
@@ -561,7 +590,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                               // bleiben byte-gleich (golden, §6).
                               const sz = staffelZeilen(it.text);
                               // Geld-Kontext-Tausender auch in Items (§3, FIX 2 — 22.6.2026).
-                              if (!sz) return verlinkt(gruppiereBetraege(it.text));
+                              // M6: in Fremdgesetz-Chapeau-Items ohne bare-Self-Link (verlinkeItem).
+                              if (!sz) return verlinkeItem(gruppiereBetraege(it.text));
                               return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} />;
                             })()}
                         {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}

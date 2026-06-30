@@ -5,7 +5,7 @@
  */
 import { describe, it, expect } from 'vitest';
 import { extrahiereKopf } from '../../scripts/normtext/kopf-extrahiere';
-import { fnDefinitionen } from '../../scripts/normtext/fussnoten-extrahiere';
+import { fnDefinitionen, extrahiereFussnoten } from '../../scripts/normtext/fussnoten-extrahiere';
 import { extrahiereStruktur } from '../../scripts/normtext/struktur-extrahiere';
 
 // ── ZGB-Kopf: Gesetz mit Ingress (Erlassformel) ──────────────────────────────
@@ -44,8 +44,31 @@ describe('M5 · extrahiereKopf — Erlass-Kopf (preface/preamble)', () => {
     expect(k!.praeambel!.at(-1)!.text).toBe('geben sich folgende Verfassung:');
   });
 
+  // M1 (Auftrag David): die Präambel-Fussnote («Angenommen in der Volksabstimmung
+  // …») gehört zur PRÄAMBEL (Erlass-Kopf), NICHT zu Art. 1.
+  it('BV: Präambel-Fussnote sitzt am Erlass-Kopf, nicht am ersten Artikel (M1)', () => {
+    const k = extrahiereKopf(BV_KOPF)!;
+    expect(k.fussnoten!.length).toBe(1);
+    expect(k.fussnoten![0].nr).toBe('1');
+    expect(k.fussnoten![0].text).toContain('Volksabstimmung');
+  });
+
   it('gibt null zurück, wenn weder Titel noch Präambel vorhanden sind', () => {
     expect(extrahiereKopf('<main><article id="art_1">x</article></main>')).toBeNull();
+  });
+
+  // M1: extrahiereFussnoten scopt strikt per <article> — eine Fussnote im
+  // <div id="preamble"> (kein Artikel) kann NIE an Art. 1 hängen.
+  it('Präambel-Fussnote leakt nicht in den ersten Artikel (M1)', () => {
+    const HTML =
+      `<div id="preamble"><p class="man-template-verb">geben sich folgende Verfassung<sup><a href="#fn-pre" id="fnbck-pre">1</a></sup>:</p>` +
+      `<div class="footnotes"><p id="fn-pre">Angenommen in der Volksabstimmung.</p></div></div>` +
+      `<article id="art_1"><div class="collapseable"><p class="absatz"><sup>1</sup> Reiner Artikeltext ohne Präambel-Bezug.</p>` +
+      `<div class="footnotes"><p id="fn-art">Eigene Artikel-Fussnote.</p></div></div></article>`;
+    const fn = extrahiereFussnoten(HTML);
+    const art1 = fn['1'] ?? [];
+    // Art. 1 trägt KEINE Präambel-Fussnote.
+    expect(art1.some((f) => f.text.includes('Volksabstimmung'))).toBe(false);
   });
 
   // Ältere Erlasse (VRV/VStG/VwVG) + Staatsverträge setzen die Erlassformel in
