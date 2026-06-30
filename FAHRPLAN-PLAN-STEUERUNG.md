@@ -225,8 +225,8 @@ lint` (eslint, in `gate voll`) bestehen.
 
 Konkretes Inventar (Befund #10 — abschliessend, prüfbar gegen `inventar.ts`):
 **S0 · Schritte W1·1, W1·2, W1·3, W1·4 · W2·5, W2·5b, W2·6, W2·7, W2·8, W2·9 · W3·10…W3·14 ·
-Querschnitt LERNPHASE-AB, QS-GP, QS-PH, SEO-A11Y, QS-PERF · nested Bündel W2·6-B (B1/B2/B3),
-W3·14-Responsive-Audit, W3·14-S (S1/S2), W3·14-a11y.** (Nomenklatur: es sind **Schritte 1–14 über
+Querschnitt LERNPHASE-AB, QS-GP, QS-PH, SEO-A11Y, QS-PERF · nested Bündel W2·6-B,
+W3·14-Responsive-Audit, W3·14-S, W3·14-a11y.** (Nomenklatur: es sind **Schritte 1–14 über
 Welle 1–3**, nicht «Wellen 1–14».)
 
 Schritte:
