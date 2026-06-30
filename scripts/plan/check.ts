@@ -78,7 +78,7 @@ export function pruefe(
 }
 
 // CLI
-if (process.argv[1] && process.argv[1].endsWith('check.ts')) {
+if (!process.env.VITEST) {
   const md = readFileSync('ROADMAP.md', 'utf8');
   const fahrplan = readdirSync('.').filter((f) => /^FAHRPLAN-.*\.md$/.test(f));
   const probleme = pruefe(md, fahrplan, (p) => existsSync(p));

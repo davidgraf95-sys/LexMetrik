@@ -61,7 +61,7 @@ export function resolve(einheiten: Einheit[]): Buckets {
 }
 
 // CLI
-if (process.argv[1] && process.argv[1].endsWith('next.ts')) {
+if (!process.env.VITEST) {
   const { einheiten } = parseRoadmap(readFileSync('ROADMAP.md', 'utf8'));
   const b = resolve(einheiten);
   const z = (s: string) => console.log(s);

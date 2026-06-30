@@ -30,7 +30,7 @@ export function setField(md: string, id: string, feld: string, wert: string): st
 }
 
 // CLI: vite-node scripts/plan/set.ts -- <id> <feld>=<wert>
-if (process.argv[1] && process.argv[1].endsWith('set.ts')) {
+if (!process.env.VITEST) {
   const arg = process.argv.slice(2);
   const id = arg[0];
   const [feld, wert] = (arg[1] ?? '').split('=');
