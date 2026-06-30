@@ -444,6 +444,14 @@ describe('alleSchlussteilAnker (M13)', () => {
   it('liefert leeres Array, wenn das Gesetz keinen Schlussteil hat', () => {
     expect(alleSchlussteilAnker('<article id="art_1"><p>x</p></article>')).toEqual([]);
   });
+
+  it('erfasst auch die «disp_N»-Variante OHNE «u» (z.B. VZG-Schlussbestimmungen)', () => {
+    const html = `<article id="art_134"><p class="absatz ">Haupttext.</p></article>
+      <article id="disp_1/art_135"><p class="absatz ">Schlussbestimmung.</p></article>
+      <article id="disp_1/art_136"><p class="absatz ">…</p></article>`;
+    expect(alleSchlussteilAnker(html)).toEqual(['disp_1/art_135', 'disp_1/art_136']);
+    expect(ankerZuToken('disp_1/art_135')).toBe('disp_1_art_135');
+  });
 });
 
 describe('ankerZuToken / schlussteilLabelSuffix (M13)', () => {

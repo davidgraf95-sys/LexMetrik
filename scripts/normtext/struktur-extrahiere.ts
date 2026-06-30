@@ -39,9 +39,10 @@ export interface ArtikelStruktur {
 
 const TAG = /<(\/?)(div|article|h[1-6])\b([^>]*)>/gi;
 const CLASS = /\bclass="([^"]*)"/i;
-// M13: Haupttext-Artikel «art_…» ODER Schlusstitel-/UeB-Artikel «disp_uN/art_…».
-// Strukturelle Anker (disp_u1/chap_1, …/lvl_A) tragen kein «art_» → ausgeschlossen.
-const ID = /\bid="((?:disp_u\d+\/)?art_[^"]+)"/i;
+// M13: Haupttext-Artikel «art_…» ODER Schlusstitel-/UeB-Artikel «disp_uN/art_…»
+// (auch «disp_N/art_…» ohne «u», z.B. VZG). Strukturelle Anker (disp_u1/chap_1,
+// …/lvl_A) tragen kein «art_» → ausgeschlossen.
+const ID = /\bid="((?:disp_u?\d+\/)?art_[^"]+)"/i;
 
 function hatKlasse(attrs: string, name: string): boolean {
   const m = attrs.match(CLASS);

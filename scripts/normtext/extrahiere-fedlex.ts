@@ -581,7 +581,9 @@ export function alleArtikelTokens(html: string): string[] {
  * @returns z.B. ['disp_u1/art_1','disp_u1/art_6_b_bis','disp_u2/art_178', …]
  */
 export function alleSchlussteilAnker(html: string): string[] {
-  const re = /<article[^>]*\sid="(disp_u\d+\/art_\w+)"/gi;
+  // Fedlex nutzt ZWEI disp-Varianten: «disp_u1/art_…» (Normalfall) UND «disp_1/art_…»
+  // OHNE «u» (z.B. VZG-Schlussbestimmungen art_135/136). Beide erfassen («u?»).
+  const re = /<article[^>]*\sid="(disp_u?\d+\/art_\w+)"/gi;
   const anzahl = new Map<string, number>();
   const anker: string[] = [];
   for (const m of html.matchAll(re)) {
