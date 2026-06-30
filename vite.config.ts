@@ -15,6 +15,15 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
+    // Die erschöpfenden Konstellations-Sweeps (prozesskosten/beurkundung/
+    // fristenspiegel/schkgZustaendigkeit) laufen über die volle Kantons×Streitwert
+    // ×Materie×Instanz×Verfahren-Matrix (Hunderttausende Iterationen je inkl.
+    // PDF-Bericht). Lokal < 5 s, auf langsamen CI-Runnern überschritten sie aber
+    // den Vitest-Default (5000 ms) → sporadisch «Test timed out» (kein echter
+    // Fehler). Globales Zeitbudget grosszügig auf 30 s heben: das verlangsamt
+    // schnelle Tests nicht (Timeout greift nur bei Überschreitung), macht die
+    // legitim schweren Sweeps aber stabil — Assertions unverändert (§6.3).
+    testTimeout: 30000,
     // Agent-Worktrees unter .claude/ nicht mittesten (sonst doppelte Suite
     // bzw. Fehlschläge aus halbfertigen Ständen fremder Sessions, 6.6.2026).
     exclude: ['**/node_modules/**', '**/dist/**', '**/.claude/**'],
