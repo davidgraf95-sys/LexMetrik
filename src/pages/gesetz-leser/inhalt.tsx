@@ -94,15 +94,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     });
   };
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
-  const [tocAuf, setTocAuf] = useState(false); // unter xl: Gliederungs-Drawer offen?
-  const [tocOffen, setTocOffen] = useState(true); // ab xl: Gliederungsspalte ein-/ausklappen
-  // Echte xl-Erkennung (2-Spalten gibt es nur ab 1280px). Ohne sie behandelte der
-  // Code «tocOffen» fälschlich als 2-Spalten-aktiv → unter xl verschwand der
-  // Gliederungs-Zugang beim Scrollen (Auftrag David: «bei geteiltem Bildschirm
-  // jederzeit ausklappbar, analog Seitenleiste»). SSR-Default false = mobil-Layout.
+  const [tocAuf, setTocAuf] = useState(false); // unter lg: Gliederungs-Drawer offen?
+  const [tocOffen, setTocOffen] = useState(true); // ab lg: Gliederungsspalte ein-/ausklappen
+  // 2-Spalten-Erkennung. R2 (Auftrag David 30.6.2026): Schwelle von 1280px auf
+  // 1024px (Tailwind lg) gesenkt → die linke Gliederungsspalte erscheint schon auf
+  // kleineren Laptops «grundsätzlich», nicht erst ab 1280px. 1024px deckt sich mit
+  // der Schwelle der persistenten App-Seitenleiste (lg) UND mit PANE_BREIT_PX (1024)
+  // des Pane-Pfads → unter lg sind sowohl Seitenleiste als auch Gliederung Drawer
+  // (kohärent, «nur bei echt-zu-klein in den Drawer»). Die Lesespalte bleibt nutzbar:
+  // Inhaltsbreite ist auf max-w-content (70rem) gedeckelt, abzüglich 16rem TOC + gap-8
+  // läuft der Fliesstext (max-w-reading 40rem) nie unter ~26rem. SSR-Default false =
+  // mobil-Layout (byte-gleich). Ohne diese Erkennung behandelte der Code «tocOffen»
+  // fälschlich als 2-Spalten-aktiv → der Gliederungs-Zugang verschwand beim Scrollen.
   const [istXlVp, setIstXlVp] = useState(false);
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1280px)');
+    const mq = window.matchMedia('(min-width: 1024px)');
     const upd = () => setIstXlVp(mq.matches);
     upd();
     mq.addEventListener('change', upd);
@@ -112,7 +118,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Split-View E (Container-responsiv): ein Pane wählt sein Layout nach SEINER
   // Breite, nicht nach dem Viewport. `istXl` (treibt 2-Spalten-Gliederung + Drawer-
   // vs-Sidebar) kommt im Pane aus einem ResizeObserver auf der Pane-Wurzel (Schwelle
-  // PANE_BREIT_PX), sonst unverändert aus matchMedia (1280px) → Nicht-Pane byte-gleich.
+  // PANE_BREIT_PX = 1024), sonst aus matchMedia (1024px, R2) — beide Pfade ab 1024.
   // Reines @container-CSS reicht hier NICHT: istXl steuert bedingtes Rendering
   // (Vollbar/Kompaktknopf, Existenz des Drawers), das CSS nicht schalten kann.
   const PANE_BREIT_PX = 1024;
@@ -322,7 +328,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const scrolle = () => {
       const el = findeArt(paneRoot(imPane, wurzel), token);
       if (!el) return;
-      el.scrollIntoView({ block: 'center', behavior: 'auto' });
+      // R1: an den OBEREN Lese-Rand sprungen (block:'start' + nt-anker-scroll-margin
+      // ≈5rem) statt zentrieren — deckt sich mit der oben angesetzten Scroll-Spy-
+      // Bezugslinie, sonst markierte der Spy nach dem Sprung den Vorgänger-Artikel.
+      el.scrollIntoView({ block: 'start', behavior: 'auto' });
       el.classList.add('lc-ziel-blink');
       window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
     };
@@ -412,7 +421,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
         const el = findeArt(paneRoot(imPane, wurzel), token);
-        el?.scrollIntoView({ block: 'center', behavior: 'auto' });
+        // R1: oberer Lese-Rand statt Mitte (deckt sich mit der Scroll-Spy-Bezugslinie).
+        el?.scrollIntoView({ block: 'start', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
@@ -420,14 +430,18 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
-  // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
-  // daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-Markierung +
-  // automatisches Auf-/Zuklappen des aktiven Zweigs (P9/K) UND (b) das Live-Label des aktiven Reiters
-  // «Kürzel – Art. X» (P2). IntersectionObserver statt getBoundingClientRect-
-  // Schleife wegen content-visibility:auto (Off-Screen-Artikel sind nur Platz-
-  // halter); das schmale Mittel-Band (rootMargin -45%/-45%) meldet genau den
-  // zentrierten Artikel. Die Auswahl-Logik ist die reine, getestete Funktion
-  // aktiverArtikel (§2/§3).
+  // IntersectionObserver bestimmt den Artikel, der OBEN im Viewport angeschnitten
+  // ist, und speist daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-
+  // Markierung + automatisches Auf-/Zuklappen des aktiven Zweigs (P9/K) UND (b) das
+  // Live-Label des aktiven Reiters «Kürzel – Art. X» (P2). IntersectionObserver
+  // statt getBoundingClientRect-Schleife wegen content-visibility:auto (Off-Screen-
+  // Artikel sind nur Platzhalter).
+  // R1 (Auftrag David 30.6.2026): NICHT mehr der mittige Artikel, sondern der
+  // ZUOBERST angeschnittene — die Bezugslinie sitzt am Sprung-Landepunkt (5rem unter
+  // dem Container-Oberrand, deckungsgleich mit `.nt-anker`), das Beobachtungs-Band
+  // liegt darum oben (rootMargin oben ~45 % statt -45%/-45%). Die Auswahl-Logik bleibt
+  // die reine, getestete Funktion aktiverArtikel — sie wählt generisch den Artikel
+  // an der Bezugslinie (§2/§3).
   const letzterArtToken = useRef<string | null>(null);
   useEffect(() => {
     // C (Auftrag David 26.6.2026): auch starten, wenn der Erlass KEINE Gliederung
@@ -440,17 +454,27 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const auswerten = () => {
       raf = 0;
       if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
-      // Mittelpunkt im Viewport-Koordinatensystem (getBoundingClientRect): im Pane
-      // die Pane-Mitte, sonst die Fenster-Mitte (B-2.5).
+      // Bezugslinie im Viewport-Koordinatensystem (getBoundingClientRect): R1 — nicht
+      // mehr die Mitte, sondern eine Linie nahe dem oberen Lese-Rand, damit der zuoberst
+      // angeschnittene Artikel «dran» ist. Im Pane relativ zur Pane-Oberkante, sonst
+      // zum Fenster (B-2.5).
+      // KRITISCH (R1×R3): Der Klick-/Anker-Sprung landet den Artikel über die
+      // `.nt-anker`-scroll-margin (= 5rem, index.css) genau 5rem unter dem
+      // Container-Oberrand. Die Bezugslinie MUSS denselben Offset treffen, sonst
+      // markiert der Spy nach dem Sprung den Vorgänger. Darum FIXER rem-Offset (5rem
+      // + Epsilon), NICHT ein Höhen-Prozent: rem-basiert skaliert er mit der
+      // R3-Schriftskala mit und ist unabhängig von der Viewport-Höhe/vom Zoom.
       const sc = paneRoot(imPane, wurzel);
-      const mitte = sc ? sc.getBoundingClientRect().top + sc.clientHeight / 2 : window.innerHeight / 2;
+      const oben = sc ? sc.getBoundingClientRect().top : 0;
+      const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const bezug = oben + 5 * remPx + 8;
       const rects = [...sichtbar.values()]
         .filter((en) => en.isIntersecting)
         .map((en) => {
           const r = en.target.getBoundingClientRect();
           return { token: (en.target as HTMLElement).id.replace(/^art-/, ''), top: r.top, bottom: r.bottom };
         });
-      const token = aktiverArtikel(rects, mitte);
+      const token = aktiverArtikel(rects, bezug);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
       // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf),
@@ -501,7 +525,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
       if (!raf) raf = window.requestAnimationFrame(auswerten);
-    }, { root: paneRoot(imPane, wurzel), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      // R1: Beobachtungs-Band im oberen Bereich (obere ~45 % der Container-Höhe).
+      // Grosszügig genug, dass die FIXE Bezugslinie (~5rem) bei jeder Viewport-Höhe
+      // und jeder R3-Schriftskala drin liegt; aktiverArtikel wählt daraus exakt den
+      // Artikel an der Linie. Eine schmale %-Bande verfehlte die fixe Linie bei
+      // grossen Schirmen/Zoom.
+    }, { root: paneRoot(imPane, wurzel), rootMargin: '0px 0px -55% 0px', threshold: 0 });
     // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
     // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
     // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
@@ -751,8 +780,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   );
   // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
   // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
-  // 2-Spalten-Layout ist NUR ab xl aktiv (xl:grid). Darunter immer einspaltig →
-  // die Suche + der Gliederungs-Zugang leben in der STICKY Vollbreiten-Leiste.
+  // 2-Spalten-Layout ist NUR ab lg aktiv (istXl, R2: 1024px). Darunter immer
+  // einspaltig → Suche + Gliederungs-Zugang leben in der STICKY Vollbreiten-Leiste.
   const zweiSpalten = sektionen.length > 0 && tocOffen && istXl;
 
   // Gliederungs-Baum EINMAL beschreiben (genutzt in der xl-Spalte UND im
@@ -831,8 +860,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           sitzt die Suche in der linken Spalte oberhalb der TOC (Auftrag David:
           nicht über dem Gesetzestext). */}
       {/* Sticky Kopfzeile UNTER dem Reiter-Streifen. Zwei Varianten (Auftrag David
-          25.6.2026): ab xl (eingeklappte Spalte) die volle Suchleiste + ☰-Knopf zum
-          Wiedereinblenden der Spalte; UNTER xl nur EIN kompakter Knopf, der Suche +
+          25.6.2026): ab lg (eingeklappte Spalte) die volle Suchleiste + ☰-Knopf zum
+          Wiedereinblenden der Spalte; UNTER lg nur EIN kompakter Knopf, der Suche +
           Gliederung als Overlay-Drawer auf Wunsch öffnet (analog Seitenleiste) —
           so nimmt der Reader keine zweite volle Bar weg, die den Reiter-Streifen
           eng macht/abschneidet. */}
@@ -858,11 +887,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         </div>
       )}
 
-      {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) erst ab xl (1280px) —
-          darunter (geteilter Bildschirm / mittlere Breiten) bekommt der Normtext die
-          volle Spaltenbreite, die Gliederung sitzt als einklappbarer Block darüber
-          (wie mobil). So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da
-          ist. Reine Darstellung (§3). */}
+      {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) ab lg (1024px, R2) —
+          darunter (mobil / sehr schmale Fenster) bekommt der Normtext die volle
+          Spaltenbreite, die Gliederung sitzt als einklappbarer Drawer (wie mobil).
+          So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da ist —
+          deckungsgleich mit der App-Seitenleiste (lg). Reine Darstellung (§3). */}
       {/* Unter xl: Suche + Gliederung als Overlay-Drawer (analog Seitenleiste),
           NUR auf Wunsch über den sticky ☰-Knopf geöffnet (Auftrag David 25.6.2026)
           — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
@@ -877,14 +906,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         const inPane = ziel != null;
         const drawer = (
           <>
-            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
+            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'lg:hidden'}`}
               onClick={() => setTocAuf(false)} aria-hidden />
             {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Such-Kopf, NUR der
                 Gliederungsbaum scrollt darunter → verdeckt die Trefferliste nicht.
                 In der Einzelansicht beginnt er UNTER dem Inhalts-Kopf (Topbar 4rem
                 + Kopf 2.25rem); im Pane in der Overlay-Schicht ab dessen Oberkante. */}
             <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
-              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'xl:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
+              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'lg:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
               style={inPane ? undefined : { top: 'calc(4rem + 2.25rem)' }}>
               <div className="shrink-0 border-b border-line bg-paper-raised">
                 <div className="flex items-center justify-between px-4 pt-2.5 pb-1.5">
@@ -934,9 +963,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         )}
 
         {/* Lesespalte: ohne 2-Spalten-Sidebar zentriert + auf ~56rem begrenzt.
-            Im 2-Spalten-Fall greift die Begrenzung erst ab xl über das Grid; darunter
-            (lg–xl, geteilter Bildschirm) bleibt der Text zentriert + auf eine
-            komfortable Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
+            Im 2-Spalten-Fall greift die Begrenzung ab lg über das Grid (R2: 1024px);
+            darunter (mobil/schmal) bleibt der Text zentriert + auf eine komfortable
+            Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-[52rem]') : 'mx-auto w-full max-w-[56rem]'}`}>
           {treffer ? (
             <div className="space-y-4">

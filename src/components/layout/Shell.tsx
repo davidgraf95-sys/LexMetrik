@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { useLocale } from '../locale';
 import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
-import { useInhaltsbreite } from './useInhaltsbreite';
+import { useSchriftskala } from './useSchriftskala';
 import { usePaneLayout, PaneSteuerungProvider, MAX_SEKUNDAER, layoutPermalink } from './usePaneLayout';
 import { SekundaerPane } from './Pane';
 import { PaneKopf } from './PaneKopf';
@@ -84,13 +84,13 @@ export function Shell({ children }: { children: ReactNode }) {
   const primaerWurzel = useRef<HTMLElement>(null); // Scroll-/Query-Wurzel des primären Panes (B-2.5)
   const primaerOverlay = useRef<HTMLDivElement>(null); // Overlay-Schicht des primären Panes (Drawer)
   const seitenleiste = useSeitenleiste();
-  const inhaltsbreite = useInhaltsbreite();
-
-  // Inhaltsspalte: kompakt = heutige schmale Spalte (Golden byte-gleich),
-  // breit = grosszügiger auf grossen Schirmen. Lesespalte `max-w-reading`
-  // (Fliesstext) bleibt unberührt (§13.2). Banner + Inhalt teilen die Klasse,
-  // damit der Hinweisstreifen mit dem Inhalt fluchtet.
-  const inhaltsbreiteKlasse = inhaltsbreite.breit ? 'max-w-screen-2xl' : 'max-w-content';
+  // R3 (Auftrag David 30.6.2026): globale Schriftskala (A−/A+) statt
+  // Inhaltsbreite-Umschalter. Der Hook skaliert die Wurzel-rem (Effekt) und
+  // liefert die Steuer-API für die Topbar. Die zentrale Inhaltsspalte läuft nun
+  // fest auf `max-w-content` (= die frühere Default-Breite «kompakt», Golden
+  // byte-gleich); die «breit»-Option (max-w-screen-2xl) entfällt mit dem Umschalter.
+  const schriftskala = useSchriftskala();
+  const inhaltsbreiteKlasse = 'max-w-content';
 
   // Split-View (B-1): sekundäre Panes nur ab lg nebeneinander; mobil + Prerender
   // = 1 Pane (istLg startet false → SSR/Default byte-gleich, B-4-Faltung gratis).
@@ -334,9 +334,7 @@ export function Shell({ children }: { children: ReactNode }) {
             onMenu={() => setSchubladeOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
-            inhaltBreit={inhaltsbreite.breit}
-            onInhaltsbreiteSetzen={inhaltsbreite.setBreite}
-            zeigeInhaltsbreite={!multipane}
+            schrift={schriftskala}
           />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
