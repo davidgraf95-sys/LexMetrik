@@ -19,6 +19,9 @@ import {
   extrahiereArtikelAusAnker,
   ankerZuToken,
   schlussteilLabelSuffix,
+  alleAnhangAnker,
+  extrahiereAnhang,
+  anhangLabelVonAnker,
 } from './normtext/extrahiere-fedlex.ts';
 import {
   sammleKantonInventar,
@@ -1070,6 +1073,42 @@ async function main(): Promise<void> {
         bloecke: extrakt.bloecke,
         stand,
         // Roher Anker (mit «/», ohne Synthese-Suffix) als Live-Sprungziel.
+        quelleUrl: `https://www.fedlex.admin.ch/eli/${eli}/de#${anker.replace(/__\d+$/, '')}`,
+        abgerufen,
+        fassungsToken: konsolidierung,
+        sha: sha256Bloecke(extrakt.bloecke),
+      };
+      snapshotListe.push(snapshot);
+      goldenIndex[id] = snapshot.sha;
+    }
+
+    // ── M13-Annex: Anhänge (annex_N | annex_N_N | annex_N_a) ──────────────────
+    // Die Anhänge liegen in einem eigenen Container <div id="annex"> (Geschwister
+    // von <main>, nach <div id="dispositions">) als FLACHE <section id="annex_*">
+    // — KEINE <article>, KEINE art_-Nummerierung. ADDITIV an Haupttext+Schlussteil
+    // angehängt, mit eigenem Token-Namespace («annex_1», «annex_1_1»), der nicht
+    // mit dem Haupttext kollidiert. Reine Gruppen-Überschriften ohne eigenen Body
+    // (extrahiereAnhang === null) werden übersprungen. Das Struktur-Sidecar
+    // (extrahiereAnhangStruktur) gruppiert sie über die Gliederung «Anhänge» zur
+    // eigenen Top-Sektion (0 Renderer-Umbau, wie M13-disp).
+    for (const anker of alleAnhangAnker(html)) {
+      const extrakt = extrahiereAnhang(html, anker);
+      if (extrakt === null || extrakt.bloecke.length === 0) {
+        uebersprungen.push({ gesetz: gesetzKey, token: anker });
+        continue;
+      }
+      const token = ankerZuToken(anker); // annex_1 / annex_1_1 — kein «art_», kein «/» → unverändert
+      const id = `bund/${gesetzKey}/${token}`;
+      const snapshot: NormSnapshot = {
+        id,
+        ebene: 'bund',
+        quelle: gesetzKey,
+        erlass,
+        artikel: token,
+        artikelLabel: extrakt.titel || anhangLabelVonAnker(anker),
+        bloecke: extrakt.bloecke,
+        stand,
+        // Roher Anker als Live-Sprungziel (Anhänge tragen kein «/», ggf. Synthese-Suffix entfernen).
         quelleUrl: `https://www.fedlex.admin.ch/eli/${eli}/de#${anker.replace(/__\d+$/, '')}`,
         abgerufen,
         fassungsToken: konsolidierung,

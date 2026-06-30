@@ -22,7 +22,7 @@
  * IDENTISCH zum Snapshot-`artikel`-Token gebildet (sonst bräche der Join).
  */
 
-import { ankerZuToken } from './extrahiere-fedlex.ts';
+import { ankerZuToken, alleAnhangAnker, extrahiereAnhang } from './extrahiere-fedlex.ts';
 
 export interface ArtikelStruktur {
   /** Amtliche Gliederung von aussen nach innen (Teil → Titel → Abschnitt …). */
@@ -166,6 +166,32 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
       const knoten = divstack.pop()!;
       if (knoten.pushed && context.length) context.pop();
     }
+  }
+  return result;
+}
+
+/**
+ * M13-Annex: Struktur-Sidecar für die Anhänge. Jeder content-tragende Anhang
+ * (slash-freie annex_*-Sektion mit Body) erhält die Gliederung «Anhänge», sodass
+ * der Reader sie über `baueGliederungsbaum` von selbst zur eigenen Top-Sektion
+ * gruppiert (analog «Schlusstitel» bei M13-disp) — 0 Renderer-Umbau.
+ *
+ * Die Anhang-Sektionen liegen ausserhalb des `<article>`-Schemas, das
+ * extrahiereStruktur (div/article-Stack) abläuft; sie werden darum NICHT von der
+ * Haupt-Walk erfasst, sondern hier ADDITIV ergänzt — der bestehende Struktur-
+ * Output für Artikel/Schlusstitel bleibt damit byte-gleich.
+ *
+ * WICHTIG (Konsistenz-Tor): die Keys MÜSSEN exakt den Snapshot-Tokens
+ * entsprechen, die der Generator behält. Beide nutzen denselben Keep-Prädikat
+ * (extrahiereAnhang ≠ null) → reine Gruppen-Überschriften ohne Body erscheinen
+ * weder als Snapshot-Eintrag noch als Struktur-Schlüssel (kein verwaister Key).
+ */
+export function extrahiereAnhangStruktur(html: string): Record<string, ArtikelStruktur> {
+  const result: Record<string, ArtikelStruktur> = {};
+  for (const anker of alleAnhangAnker(html)) {
+    const ex = extrahiereAnhang(html, anker);
+    if (!ex || ex.bloecke.length === 0) continue;
+    result[ankerZuToken(anker)] = { gliederung: [{ ebene: 1, label: 'Anhänge' }], marginalie: [] };
   }
   return result;
 }

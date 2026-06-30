@@ -28,7 +28,7 @@ import {
   sammleZhPdfInventar,
   sammlePdfInventar,
 } from './inventar-kanton.ts';
-import { alleArtikelTokens, alleSchlussteilAnker } from './extrahiere-fedlex.ts';
+import { alleArtikelTokens, alleSchlussteilAnker, alleAnhangAnker, extrahiereAnhang } from './extrahiere-fedlex.ts';
 import {
   fehlendeBundArtikel,
   unerwarteteKantonLueckenMitQuelleUrl,
@@ -401,13 +401,20 @@ async function main(): Promise<void> {
     const htmlTokens = alleArtikelTokens(html);
     // M13: Schlusstitel-/UeB-Anker (eigenes Schema) ebenfalls auf Vollabdeckung prüfen.
     const schlussteilAnker = alleSchlussteilAnker(html);
+    // M13-Annex: NUR content-tragende Anhang-Anker prüfen (reine Gruppen-
+    // Überschriften ohne Body sind keine Snapshot-Einträge) — gleicher Keep-
+    // Prädikat wie Generator/Struktur (extrahiereAnhang ≠ null).
+    const anhangAnker = alleAnhangAnker(html).filter((a) => {
+      const ex = extrahiereAnhang(html, a);
+      return ex !== null && ex.bloecke.length > 0;
+    });
     bundHtmlGeprüft++;
 
     const gesetz = eintrag.name.toUpperCase();
     // Es gibt keine bekannte Skip-Liste für leere Artikel (extrahiereArtikel liefert nie leer
     // bei gültigen Tokens in der aktuellen Implementierung).
     const leereArtikel = new Set<string>();
-    const fehlend = fehlendeBundArtikel(gesetz, htmlTokens, bundSnapshotIds, leereArtikel, schlussteilAnker);
+    const fehlend = fehlendeBundArtikel(gesetz, htmlTokens, bundSnapshotIds, leereArtikel, schlussteilAnker, anhangAnker);
 
     const echteFehlend = fehlend.filter((f) => !f.warLeererArtikel);
     const skippe = fehlend.filter((f) => f.warLeererArtikel);

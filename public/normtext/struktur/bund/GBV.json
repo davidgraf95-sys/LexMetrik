@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-29",
+ "erzeugt": "2026-06-30",
  "kopf": {
   "srNummer": "211.432.1",
   "titel": "Grundbuchverordnung",
@@ -4222,6 +4222,15 @@
      "item": null
     }
    ]
+  },
+  "lvl_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

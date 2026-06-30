@@ -403,6 +403,21 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
     <div data-lese={zitierKontext ? '' : undefined}
       className={className ?? 'px-5 py-4 space-y-2.5'}>
       {bloecke.map((b, i) => {
+        // M13-Annex: Unter-Überschrift innerhalb eines Anhangs (Ziffer-Titel,
+        // h2–h6). Eigener Zwischentitel — kein Absatz/Item, keine Zitat-/Tabellen-
+        // Logik. Tiefe (2 = Anhang-Hauptziffer … 6) steuert die Betonung. Reine
+        // Darstellung (§3); golden-neutral, da bestehende Blöcke nie `titel` tragen.
+        if (b.titel !== undefined) {
+          const flach = b.titel <= 2;
+          return (
+            <p
+              key={i}
+              className={`${zitierKontext ? '' : 'text-body-s '}font-semibold text-ink-800 ${flach ? 'mt-3' : 'mt-2'} ${zk ? 'pl-9 [text-indent:0]' : ''}`}
+            >
+              {b.text}
+            </p>
+          );
+        }
         const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
         // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
         // zitiertem Item wird der Block dezent umrandet, das Item trägt die

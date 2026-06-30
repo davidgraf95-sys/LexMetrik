@@ -23,6 +23,22 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — M13-Annex (Anhänge) Bund FERTIG + gegatet (Branch `feat/normtext-annex-m13`)
+
+**Stand:** Worktree `.claude/worktrees/m13-annex`, Branch `feat/normtext-annex-m13` (von main@`70ae45d9`). Voll-Gate grün; **Deploy = Davids Ja (§9).** Auslöser David: «mach weiter mit Anhängen / run till dry» — der M13-Rest «Anhänge» (B2).
+
+**Befund:** Fedlex legt die Anhänge in einen EIGENEN Container `<div id="annex">` (Geschwister von `<main>`, NACH `<div id="dispositions">`) als **`<section>`** ab — KEINE `<article>`, KEINE `art_`-Nummer → vom `art_`-/`disp_`-Enumerator gar nicht erfasst, **komplett gefehlt** (390 Einträge / 134 Bund-Gesetze, vorher 0).
+
+**Lösung (additiv, eigene Risiko-Klasse):** dedizierter Pfad `alleAnhangAnker` + `extrahiereAnhang` (Anhänge sind heterogen: Unter-Überschriften h2–h6, klassenlose `<p>`, `<dl>`, `<table>` — eigener Parser statt des Artikel-Parsers). Token-Namespace `annex_*`/`lvl_*` (kollisionsfrei), Struktur-Sidecar-Gliederung «Anhänge» → gliederungsgetriebener Reader bildet die Top-Sektion, **0 Renderer-Umbau** ausser EINEM neuen Block-Feld `titel?` (Ziffer-Zwischentitel; ArtikelBody rendert es als Zwischenüberschrift). `alleAnhangAnker` löst alle Varianten: nummeriert (`annex_1`/`annex_1_1`/`annex_4_a`), EINZELNER «Anhang» (`annex_uN` — BVG/KVG/IPRG/VAG/AHVG), ohne annex-Präfix (`lvl_uN` — KAG/FIDLEG; `lvl_dNeN` DTD-opak — GFK); Deckblatt «Anhänge» (Inhaltsübersicht) per Blatt-Regel + Nummerierungs-Test ausgeschlossen.
+
+**Bewusste Abweichung (§7/§1):** wie M13-disp KEINE `anhaenge[]`-Schema-Dimension — Token-Namespace + Sidecar; einziges neues Feld `titel?` (render-only, golden-neutral). Korrektur zur Vorab-Quantifizierung: «53 `<article>`-gewickelt» traf NICHT zu (alle Anhänge sind `<section>`); die 2221 Anker zählten genestete `lvl_*`-Stufen mit (Extraktionseinheit = top-level Anhang).
+
+**§6-Beweis:** Engine-Golden `lexmetrik-golden.json` byte-gleich (201 Fälle). `normtext-snapshot.json` **+370 annex-Keys, 0 Artikel/disp-sha geändert** (zusätzlich 2 verwaiste OR-Golden-Orphans `226_a`/`226_f` aufgeräumt — `OR.json` trug längst die Range-Form `226_a_226_d`; reine Index-Konsistenz, kein Inhalt). Voll-Gate (tsc/vitest/golden/lint/build/check) **grün**; `check:vollstaendigkeit` + `check:struktur-konsistenz` um Anhang-Anker erweitert; Playwright-Sicht GSchV/ChemRRV/BVG/KAG.
+
+**Gegenprüfung (2 adversariale Opus-Pässe, Code + Fidelity):** fanden **6 §1-Befunde, alle gefixt+verifiziert:** **(C1)** Apparat-Variant-Klasse `footnotes section-heading-footnote` (69 Stellen/14 Erlasse, VTS) leckte Änderungs-/Aufhebungs-Historie als Normtext → Klasse-enthält-`footnotes` strippen (heilt auch repealte Anhänge → «…»); **(C2)** geschachtelte Layout-Tabellen (`<table>` in Zelle, SSV) zerschnitten non-greedy → `findeTableEnde` balanciert (Signal-Legenden 4.78–4.95 zurück); **(C3)** marke-lose `<dd>`-Notiz nach statt vor ihrer Liste → reorder; **(D1)** Marken-Kürzung «1.1.1»→«1» / «Flupo»→«f»; **(D2)** all-`<th>`-Datentabellen als reiner Kopf gelesen (LRV Grenzwerte, VTS Sitzmasse); **(D3)** VERSCHACHTELTE marke-lose `<dd>` verloren (VTS Anhang 7 «2,9 m/s²») → `markeloseNotizen` rekursiv. **§6-kritisch:** D1/D2 sitzen in den GETEILTEN Parsern (`parseDefinitionsListe`/`parseRohTabelle`/`parseFedlexTabelle`) → über ein **`anhang`-Flag NUR im Anhang-Pfad** aktiviert, der Haupttext-Pfad bleibt **byte-gleich (empirisch: 0 geänderte Artikel-sha)**. Dieselbe Garbling-Klasse im Haupttext (Staatsverträge `i`→`ii`) = eigener, deklarierter Folgeschritt (Artikel-Re-Bless). Wort-Coverage 99.65 % über 44 479 Anhang-Wörter, 0 realer Verlust. 12 neue Anhang-Unit-Tests.
+
+**Heimat:** `FAHRPLAN-NORMTEXT-DARSTELLUNG.md` §M13 (Status nachgezogen), Detail `bibliothek/normen/norm-vorschau-snapshot-system.md` §M13-Annex. **OFFEN (M13-Rest):** Bilder/Formeln-`<img>`-Pass; danach LugÜ-Protokolle. **Deploy = Davids Ja (§9).**
+
 ## Session 30.6.2026 — M13 Schlussteil (Schlusstitel/UeB) Bund FERTIG + AUF PROD DEPLOYT (PR #56)
 
 **Stand:** Commit `d1af7252`, **deployt auf lexmetrik.vercel.app** (`dpl_8WSPr3Yf…`, Prod-verifiziert: ZGB 1277 Art. live, OR-`219a`-Gliederung live behoben), Branch `feat/normtext-schlusstitel-m13` gepusht, **PR #56** offen für main (David mergt).
