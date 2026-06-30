@@ -55,7 +55,10 @@
     "normtext:pdf": "vite-node scripts/normtext/pdf-fetch.ts --",
     "check:pdf": "vite-node scripts/normtext/check-pdf.ts",
     "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz",
-    "check:perf-budget": "vite-node scripts/check-perf-budget.ts"
+    "check:perf-budget": "vite-node scripts/check-perf-budget.ts",
+    "plan:next": "vite-node scripts/plan/next.ts",
+    "plan:set": "vite-node scripts/plan/set.ts",
+    "check:plan": "vite-node scripts/plan/check.ts"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
