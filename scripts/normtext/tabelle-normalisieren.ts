@@ -97,12 +97,12 @@ function inferiereTyp(zellen: string[]): Spaltentyp {
   const ne = zellen.map((c) => c.trim()).filter((c) => c !== '');
   if (ne.length === 0) return 'text';
   // betrag: Geldbetrag, der auf die amtliche Strich-Form endet (10.– · 1000.– · 45.–);
-  // Tausender =  / /Apostroph/Leerzeichen. Reine 2-Dezimal-Zahlen (Prozentsätze
+  // Tausender =  / /Apostroph/Leerzeichen. Reine 2-Dezimal-Zahlen (Prozentsätze
   // wie 4,35) sind KEIN betrag → bleiben zahl (gleiche Rechtsausrichtung, kein .–-Render).
-  const istBetrag = (c: string) => /^\d[\d   '’.,]*\s*[.,]?[–—-]$/.test(c);
+  const istBetrag = (c: string) => /^\d[\d\u00a0\u202f '’.,]*\s*[.,]?[–—-]$/.test(c);
   // zahl: reine Zahl (inkl. Tausender-/Dezimal-Trenner), KEIN Bindestrich-Bereich,
   // keine Buchstaben (4,35 · 17 600 · 10 100 · 1000)
-  const istZahl = (c: string) => /^\d[\d   '’.,]*$/.test(c) && !/[–—-]/.test(c);
+  const istZahl = (c: string) => /^\d[\d\u00a0\u202f '’.,]*$/.test(c) && !/[–—-]/.test(c);
   if (ne.every(istBetrag)) return 'betrag';
   if (ne.every(istZahl)) return 'zahl';
   return 'text';
