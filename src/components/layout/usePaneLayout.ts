@@ -5,7 +5,7 @@ import { tabSchluessel } from '../../lib/tabs';
 //
 // Hält die Pfade der SEKUNDÄREN Panes (das primäre Pane ist immer der bestehende
 // BrowserRouter und treibt die URL). Reiner UI-Zustand der Darstellungsschicht
-// (§3). Blaupause: useSeitenleiste/useInhaltsbreite (typeof-window-Guard,
+// (§3). Blaupause: useSeitenleiste/useSchriftskala (typeof-window-Guard,
 // localStorage, SSR/prerender-sicher via render-then-replace, kein Hydrate).
 //
 // ZUSTANDSLOS (§5, Berufsgeheimnis): es werden AUSSCHLIESSLICH Pfade gespeichert,
