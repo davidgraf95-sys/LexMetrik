@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b Batch B (M2/M9): aufgehobene Artikel (gebaut + gegated, nicht deployt)
+
+Nach M10 die ersten Render-Punkte von **Batch B** (selber Branch/Worktree `feat/normtext-tabellen-kanonisch`).
+**M2** (David 29.6.): die amtliche Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» in `gesetz-leser/parts.tsx`
+wandert hinter den Fussnoten-Schalter (`fussnotenAuf`) — erst auf Klick, einheitlich wie jede Fussnote; die
+Statuszeile **«· aufgehoben» bleibt unabhängig immer sichtbar** (Artikelzustand). Kehrt den 28.6.-«inline immer»-
+Zwischenstand um. **M9**: Chevron-Knopf (aktiv) und `…`-Platzhalter (aufgehoben) tragen jetzt dieselbe feste
+`inline-flex w-4`-Leitspalte → die «Art. N» fluchten **bündig auf einer Ebene** (vorher Glyphenbreite vs. fixe
+w-4 → Versatz). Render-Tests `gesetz-leser-m2.test.tsx` (5 Fälle); tsc/lint/vitest grün. Visuelle Schluss-Abnahme
+bei David. **OFFEN Batch B: M3** (Gruppierungslinien je Gesetz + Umschalter — grösserer Strukturpunkt, eigene
+Bau-Einheit), dann Batch C (M4/M5/M7/M8) + D (M11/M6) + Batch-A-Rest (M1, M6-Datenteil).
+
 ## Session 30.6.2026 — OR-Currency nachgezogen (separat von M10, gegated, nicht deployt)
 
 Beim M10-Cache-Refresh (`fedlex-cache.sh`) zeigte sich ein **vorbestehender** OR-Currency-Drift: die

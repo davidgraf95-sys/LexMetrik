@@ -100,6 +100,10 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   BV-Präambel (Fussnote ≠ Art. 1).
 
 ### M2 · Fussnoten einheitlich erst auf Klick — Batch B (Render)
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`): in `gesetz-leser/parts.tsx`
+  ist die Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» jetzt hinter dem Fussnoten-Schalter
+  (`fussnotenAuf`) — erst auf Klick wie jede Fussnote; Statuszeile «· aufgehoben» bleibt unabhängig immer
+  sichtbar. Kehrt den 28.6.-«inline immer»-Zwischenstand um. Render-Test `gesetz-leser-m2.test.tsx`.
 - [ ] **Quelle:** Aufhebungs-Text ist eine `<div class="footnotes">`. **Root-Cause:** bei aufgehobenen
   Artikeln wird die Aufhebungs-Fussnote dauerhaft gezeigt, sonst erst auf Klick. **Soll (Entscheid
   David 29.6.):** **alle** Fussnoten — inkl. der Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» —
@@ -142,9 +146,10 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   **Datei:** Such-/Reader-Render. **Gate:** Test (Markup-Highlight bei Suche).
 
 ### M9 · Aufgehobene Artikel auf gleicher Ebene — Batch B (Render)
-- [ ] **Quelle:** aufgehobener Artikel = leerer Körper + Aufhebungs-Fussnote. **Root-Cause:**
-  Einrückung/Ausrichtung weicht von aktiven Artikeln ab. **Soll:** bündig auf gleicher Ebene.
-  **Datei:** `ArtikelBody.tsx`. **Gate:** Render-Test (Art. 349–358/359 ZGB bündig zu Art. 348).
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`): in `gesetz-leser/parts.tsx`
+  tragen Chevron-Knopf (aktiv) UND `…`-Platzhalter (aufgehoben) dieselbe feste `inline-flex w-4`-Leitspalte
+  → die «Art. N» fluchten bündig auf einer Ebene (vorher Glyphen-Breite vs. fixe w-4 → Versatz). Render-Test
+  `gesetz-leser-m2.test.tsx` (beide w-4). Visuelle Schluss-Abnahme bei David (`abnahme-david-selbst`).
 
 ### M10 · Tabellendarstellung — Regelwerk + seitenweite Bund-Umsetzung — Batch A (Generator) + B (Render)
 - [x] **GEBAUT + GEGATED 30.6.2026** (Worktree `feat/normtext-tabellen-kanonisch`, nicht deployt). Kanonisches

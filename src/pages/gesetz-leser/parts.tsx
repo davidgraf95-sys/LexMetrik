@@ -98,10 +98,12 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
   };
-  // Aufhebungsnotiz (G16/#3, David 28.6.2026): die amtliche «Aufgehoben durch …
-  // (AS …)»-Notiz eines voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote
-  // im Snapshot (absatz/item = null). Sie wird SCHLICHT inline gezeigt statt doppelt
-  // gated (eingeklappt + hinter dem Fussnoten-Schalter). Wortlaut nie erfunden (§1).
+  // Aufhebungsnotiz (G16/#3): die amtliche «Aufgehoben durch … (AS …)»-Notiz eines
+  // voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote im Snapshot
+  // (absatz/item = null). M2 (David 29.6.2026): sie wird wie JEDE Fussnote erst auf
+  // Klick gezeigt — einheitlich hinter dem Fussnoten-Schalter (`fussnotenAuf`); die
+  // Statuszeile «· aufgehoben» (Artikelzustand) bleibt davon unberührt immer sichtbar.
+  // Wortlaut nie erfunden (§1).
   const aufhebungNotiz: Fussnote[] = ganzAufgehoben
     ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
     : [];
@@ -143,14 +145,16 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
               (ml-auto) statt als eigene Zeile darunter — schliesst den Abstand zum
               ersten Absatz (Auftrag David 26.6.2026, P8). */}
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-            {/* Aufgehobener Artikel: kein Klapp-Chevron (nichts zu entfalten —
-                der Wortlaut ist «…»); ein w-4-Platzhalter hält die «Art. N» bündig
-                zu den übrigen Artikeln. */}
+            {/* M9: aufgehobener Artikel trägt kein Klapp-Chevron (nichts zu entfalten —
+                der Wortlaut ist «…»), aber EINEN gleich breiten w-4-Platzhalter wie der
+                Chevron-Knopf der aktiven Artikel → die «Art. N» fluchten bündig auf
+                EINER Ebene (Art. 349–358 ZGB bündig zu Art. 348). Beide inline-flex
+                w-4 justify-center, damit die Glyphe nicht die Spaltenbreite verschiebt. */}
             {ganzAufgehoben
-              ? <span className="shrink-0 w-4" aria-hidden />
+              ? <span className="inline-flex w-4 shrink-0" aria-hidden />
               : <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
                   aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
-                  className="shrink-0 text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>}
+                  className="inline-flex w-4 shrink-0 justify-center text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>}
             {imTreffer && onSpringe ? (
               <button type="button" onClick={() => onSpringe(e.artikel)}
                 title="Im Volltext zu diesem Artikel springen"
@@ -167,9 +171,10 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
                 <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
               </span>
             )}
-            {/* Amtliche Aufhebungsnotiz inline (eigene Zeile, dezent eingerückt) —
-                schliesst die §5-Lücke «nacktes aufgehoben/…» gegenüber Fedlex. */}
-            {ganzAufgehoben && aufhebungNotiz.length > 0 && (
+            {/* Amtliche Aufhebungsnotiz (eigene Zeile, dezent eingerückt) — M2: erst
+                auf Klick (hinter dem Fussnoten-Schalter), wie jede andere Fussnote.
+                Die Statuszeile «· aufgehoben» oben bleibt unabhängig immer sichtbar. */}
+            {ganzAufgehoben && fussnotenAuf && aufhebungNotiz.length > 0 && (
               <span className="basis-full pl-6 text-xs leading-snug text-ink-500">
                 {aufhebungNotiz.map((fn, i) => (
                   <span key={i}>{i > 0 && '; '}{fnTextMitLinks(fn)}</span>
