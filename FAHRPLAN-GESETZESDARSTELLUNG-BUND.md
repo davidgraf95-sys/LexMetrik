@@ -94,12 +94,20 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
 > **Batch**. Alle `[OF]` (keine Davids-Fachzeit nötig), Scope zuerst Bund.
 
 ### M1 · Präambel-Fussnoten richtig zuordnen — Batch A
-- [ ] **Quelle:** Fussnote im `<div id="preamble">` (BV). **Root-Cause:** Extraktor verliert das
-  Präambel-Scoping → Fussnote landet bei Art. 1. **Soll:** Präambel-Fussnoten der Präambel zuordnen.
-  **Datei:** `scripts/normtext/kopf-extrahiere.ts` / `fussnoten-extrahiere.ts`. **Gate:** Snapshot-Test
-  BV-Präambel (Fussnote ≠ Art. 1).
+- [x] **ERLEDIGT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Befund (Recon
+  30.6.):** die Daten-Zuordnung ist bereits KORREKT — die BV-Präambel-Fussnote («Angenommen in der
+  Volksabstimmung …») sitzt auf `kopf.fussnoten` (Erlass-Kopf), NICHT bei Art. 1 (war durch M5/ErlassKopf
+  29.6. behoben). `extrahiereFussnoten` scopt strikt per `<article>` → eine Fussnote im `<div id="preamble">`
+  kann nie an einen Artikel hängen. **Gemacht:** die korrekte Zuordnung mit Tests **fest verankert**
+  (`normtext-kopf-g15.test.ts`: BV-Präambel-Fussnote am Kopf + Leak-Schutz Präambel↛Art. 1). OFFEN (optionale
+  Politur, kein Misattributions-Gate): Inline-«¹»-Marker im Präambel-Fliesstext (braucht Kopf-Datenstruktur
+  mit Markerpositionen — eigenes kleines Paket).
 
 ### M2 · Fussnoten einheitlich erst auf Klick — Batch B (Render)
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`): in `gesetz-leser/parts.tsx`
+  ist die Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» jetzt hinter dem Fussnoten-Schalter
+  (`fussnotenAuf`) — erst auf Klick wie jede Fussnote; Statuszeile «· aufgehoben» bleibt unabhängig immer
+  sichtbar. Kehrt den 28.6.-«inline immer»-Zwischenstand um. Render-Test `gesetz-leser-m2.test.tsx`.
 - [ ] **Quelle:** Aufhebungs-Text ist eine `<div class="footnotes">`. **Root-Cause:** bei aufgehobenen
   Artikeln wird die Aufhebungs-Fussnote dauerhaft gezeigt, sonst erst auf Klick. **Soll (Entscheid
   David 29.6.):** **alle** Fussnoten — inkl. der Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» —
@@ -108,7 +116,18 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   `ArtikelBody.tsx`. **Gate:** Render-Test (Status sichtbar, «Aufgehoben durch …» erst nach Klick).
 
 ### M3 · Randtitel-/Gruppierungslinien für jedes Gesetz + Umschalter — Batch B (Render)
-- [ ] **Quelle:** `<section id=".../lvl_…">` + `aria-level` (OR: `part_`). **Root-Cause:** Linien heute
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Root-Cause war NICHT die
+  Datenlage** (209/218 Bund-Erlasse tragen `gliederung`, alle 218 ein Sidecar) sondern EINE Render-Bedingung:
+  `inhalt.tsx` zog die Gruppierungslinie (`border-l border-line/60 pl-3`) nur für `randtitel`-Knoten, nie für die
+  offizielle Teil/Titel/Abschnitt-`gliederung`. **Fix:** `renderSektion` ist jetzt tiefen-bewusst — die vertikale
+  Schachtelungslinie + Einzug gilt für JEDE geschachtelte Sektion (`tiefe > 0`, offiziell UND Randtitel), die
+  Wurzel (tiefe 0) bleibt bündig (kein Voll-Dokument-Einzug). **Umschalter** `gruppierungslinienAn` (zustandslos,
+  component-local `useState(true)` wie `fussnotenAuf`, je Pane eigener Zustand; Knopf «✓ Linien» neben «Fussnoten»,
+  nur wenn das Gesetz geschachtelt ist). Statt aria-level/`lvl_`/`part_` nutzt der Extraktor wie bisher die
+  Heading-Tag-Tiefe (`Sektion.ebene`) — für «Linien je Gesetz» ausreichend, kein Datenschicht-Umbau nötig.
+  **Visuell verifiziert** (Playwright/Bash, ZGB tief + OR `Abteilung` + VMWG flach, je 1280/390, Linien an/aus):
+  Parität, Wurzel bündig, kein Über-Einzug, Toggle flippt sauber, flache Gesetze ohne Toggle. Reine Darstellung (§3).
+- [ ] ~~**Quelle:** `<section id=".../lvl_…">` + `aria-level` (OR: `part_`).~~ **Root-Cause:** Linien heute
   nur bei manchen Gesetzen; keine Umschaltmöglichkeit. **Soll:** (a) Gruppierungslinien aus der
   Section-Schachtelung für **jedes Bund-Gesetz** ableiten; (b) **An/Aus-Umschalter pro Gesetz**
   (zustandslos). **Datei:** Struktur-Sidecar (`struktur-extrahiere.ts`, falls Info fehlt) +
@@ -126,11 +145,20 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   `DESIGN-REGLEMENT-NORMTEXT.md`.)
 
 ### M6 · Verweis Art. 89a Abs. 6 ZGB → BVG korrekt auflösen — Batch A + D
-- [ ] **Quelle:** ELI/`data-rs` am Verweis; intern `#` vs. extern ELI. **Root-Cause:** Auflösung per
-  Text-Heuristik landet intern im ZGB statt im BVG. **Soll:** gesetzesübergreifende Verweise über
-  **ELI/`data-rs`/href** auflösen (Fallback ELI aus href bei fehlendem `data-rs`). **Datei:**
-  Norm-Resolver + Extraktor (Verweis-Erfassung). **Gate:** Test «Art. 89a VI ZGB → BVG»; mutmasslich
-  ganze **Klasse** intern/extern-Fehlauflösung.
+- [x] **Batch-A-Teil ERLEDIGT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`). **Befund
+  (Recon 30.6.):** die Auflösung passiert RENDER-seitig (`NormText`-Heuristik), NICHT im Extraktor — die
+  bloßen Item-Verweise («Art. 52») tragen KEIN `href`/`data-rs` (Klartext); das Fremdgesetz steht nur einmal
+  im Chapeau («… Bestimmungen des … (BVG) … über:»). Der bisherige M12-Guard greift nur, wenn direkt nach dem
+  Verweis ein Kürzel steht → ZGB 89a Abs. 6/7 fielen durch und verlinkten intern auf ZGB. **Fix (ArtikelBody):**
+  `etabliertFremdgesetz()` erkennt den Fremdgesetz-Chapeau; dessen Items rendern OHNE `intern` → kein falscher
+  bare-Self-Link (§1, M12-Philosophie «lieber kein Link als ein falscher»; amtliche Kürzel-Verweise bleiben über
+  `NORM_IM_TEXT` aktiv). **Verifiziert:** Render-Tests (ZGB-89a-Pattern + Kontroll-Self-Link) + **Korpus-Sweep
+  über 218 Bund-Dateien**: 14 Treffer, alle entweder echte Anwendbarkeits-Chapeaus (ELG/EOG/IVG→AHVG, BANKV→OR,
+  FAMZG→ATSG, ZGB→BVG) oder harmlos (0 verlinkbare Item-Refs) → **kein legitimer Self-Link fälschlich
+  unterdrückt**. Selbst ein Fehl-Treffer degradiert nur (Link→Text), nie ein falscher Link.
+- [ ] **OFFEN: Batch-D-Teil** — die Items zum Fremdgesetz tatsächlich AUFLÖSEN (Popup/Link «Art. 52 → BVG»
+  via Chapeau-Kontext + `data-rs` der Chapeau-Fussnote). Gehört zum Verweis-Popup (`FAHRPLAN-GESETZESTEXT-POPUP.md`),
+  Batch D.
 
 ### M7 · Nach Suche abgeschnittenes Gesetz — Batch C
 - [ ] **Root-Cause:** Sprung-/Scroll-Position nach Suche; Sticky-Header verdeckt den Treffer, Text
@@ -142,12 +170,26 @@ Abweichungen nur (a) inhaltsgetrieben und (b) generations-/jahrgangsbedingt.
   **Datei:** Such-/Reader-Render. **Gate:** Test (Markup-Highlight bei Suche).
 
 ### M9 · Aufgehobene Artikel auf gleicher Ebene — Batch B (Render)
-- [ ] **Quelle:** aufgehobener Artikel = leerer Körper + Aufhebungs-Fussnote. **Root-Cause:**
-  Einrückung/Ausrichtung weicht von aktiven Artikeln ab. **Soll:** bündig auf gleicher Ebene.
-  **Datei:** `ArtikelBody.tsx`. **Gate:** Render-Test (Art. 349–358/359 ZGB bündig zu Art. 348).
+- [x] **GEBAUT + GEGATED 30.6.2026** (Branch `feat/normtext-tabellen-kanonisch`): in `gesetz-leser/parts.tsx`
+  tragen Chevron-Knopf (aktiv) UND `…`-Platzhalter (aufgehoben) dieselbe feste `inline-flex w-4`-Leitspalte
+  → die «Art. N» fluchten bündig auf einer Ebene (vorher Glyphen-Breite vs. fixe w-4 → Versatz). Render-Test
+  `gesetz-leser-m2.test.tsx` (beide w-4). Visuelle Schluss-Abnahme bei David (`abnahme-david-selbst`).
 
 ### M10 · Tabellendarstellung — Regelwerk + seitenweite Bund-Umsetzung — Batch A (Generator) + B (Render)
-- [ ] **Status:** **Regelwerk T-A…T-F + Umsetzungsplan vollständig erarbeitet** (Anhang 1 + 2 unten).
+- [x] **GEBAUT + GEGATED 30.6.2026** (Worktree `feat/normtext-tabellen-kanonisch`, nicht deployt). Kanonisches
+  `spalten`-Modell (T-B1) additiv in `typen.ts`; reiner Normalisierer `scripts/normtext/tabelle-normalisieren.ts`
+  (Staffel-Verdichtung T-A6 datengetrieben statt Kopf-colspan [K3] · zwei-Zeilen-Kopf-Merge T-A5 rettet verlorene
+  Captions · logischer Pfad über Daten-Zellgrenzen mit Ambiguitäts-Guard · ehrlicher Legacy-Fallback bei ragged/Prosa
+  T-E4) · 53 TDD-Tests; Extraktor verdrahtet; Renderer = dumme typgesteuerte Projektion + **Legacy-Pfad byte-gleich für
+  Kanton** (L0-Abwärtskompat) + 17 Render-Tests; neuer `--erlass=`-Filter im Generator; **28 Bund-Snapshots EINMAL
+  regeneriert** → Byte-Diff-Beweis: 25 Dateien/59 Tabellen geändert, **0 Nicht-Tabellen-Änderungen, 0 verlorene Token,
+  0 Nicht-Bund-Dateien**; neuer blockierender Validator `check:tabellen` (Bund scharf: **69 kanonisch / 0 Aritäts-/
+  Leerspalten-/Staffel-Brüche**, 9 ehrliche Legacy-Fallbacks gelistet; Kanton Report). Gate grün (tsc/vitest/golden/
+  lint/check) **ausser orthogonalem OR-Currency-Drift** (kein Bezug zu M10, OR hat keine Tabellen — separat). **Adversariale
+  Gegenprüfung (unabh. Opus, frischer Kontext, gegen Fedlex-HTML): 8/8 FAITHFUL, 0 REFUTED.** RESIDUUM: AHVV Art. 52
+  Legacy-Caption-Lücke (kein Datenwert betroffen, byte-gleich zu heute); BV.196/DBG.36/FZA.10/VGKE.4/VTS.94/GEBV Art. 37
+  bleiben Legacy-Fallback (ragged/Prosa, nicht-regressiv).
+- [x] **Status:** **Regelwerk T-A…T-F + Umsetzungsplan vollständig erarbeitet** (Anhang 1 + 2 unten).
   **Root-Cause:** `<th>`-colspan ignoriert → Kopf ≠ Zellzahl; **~60 Defekt-Blöcke / 28 Bund-Erlasse**
   (4 Klassen). **Soll:** rechteckiges, typisiertes `spalten`-Modell, colspan in beiden Markup-Varianten
   expandieren, Staffel-Spanne deterministisch zu **einer** lesbaren Zelle verdichten, harte Invariante

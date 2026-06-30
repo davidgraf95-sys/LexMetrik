@@ -2581,9 +2581,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Invaliditätsgrad",
-              "Prozentualer Anteil"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Invaliditätsgrad"
+              },
+              {
+                "typ": "text",
+                "titel": "Prozentualer Anteil"
+              }
             ],
             "zeilen": [
               [
@@ -2634,7 +2640,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/827_857_845/de#art_28_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "35c60f4a9ae443b71c098354d330acbf4a9c2d8edefa172f621e8c87cd029ca2"
+      "sha": "0103751901fe7ce76c9c14c53f19afc532c02f2c53f0a7df4bf2df0e2a201722"
     },
     {
       "id": "bund/IVG/art_29",

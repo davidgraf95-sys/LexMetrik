@@ -167,9 +167,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Anwendung",
-              "Bewilligungsbehörde"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Anwendung"
+              },
+              {
+                "typ": "text",
+                "titel": "Bewilligungsbehörde"
+              }
             ],
             "zeilen": [
               [
@@ -192,7 +198,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_4",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "78a22eecbe3b4a273303361600255031477e25673ab1375de94e6cdf61a64dda"
+      "sha": "be59d3c5e2dc5ae008d14c4e397e1ceda9b06915ee439d12cb00b8c6f135e34c"
     },
     {
       "id": "bund/CHEMRRV/art_4_a",

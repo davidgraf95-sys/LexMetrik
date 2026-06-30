@@ -942,9 +942,25 @@ async function main(): Promise<void> {
   }
 
   const shellQuelle = readFileSync('scripts/fedlex-cache.sh', 'utf8');
-  const eintraege = parseFedlexCacheEintraege(shellQuelle);
+  const alleEintraege = parseFedlexCacheEintraege(shellQuelle);
 
-  console.log(`\n[Normtext-Snapshot] datum=${abgerufen}, ${eintraege.length} Gesetze`);
+  // --erlass=KEY,KEY: Bund-Lauf auf einzelne Erlasse eingrenzen (M10: nur die
+  // mehrspaltig-Erlasse regenerieren → minimaler, prüfbarer git-Diff). Setzt
+  // --nur=bund-Semantik voraus; Golden wird gemerged (nicht ersetzt), s. unten.
+  const erlassArg = process.argv.find((a) => a.startsWith('--erlass='));
+  const erlassFilter = erlassArg
+    ? new Set(erlassArg.slice('--erlass='.length).toLowerCase().split(',').map((s) => s.trim()).filter(Boolean))
+    : null;
+  const eintraege = erlassFilter
+    ? alleEintraege.filter((e) => erlassFilter.has(e.name.toLowerCase()))
+    : alleEintraege;
+  if (erlassFilter && eintraege.length !== erlassFilter.size) {
+    const gefunden = new Set(eintraege.map((e) => e.name.toLowerCase()));
+    const fehlt = [...erlassFilter].filter((k) => !gefunden.has(k));
+    throw new Error(`--erlass: unbekannte Erlass-Keys (nicht in fedlex-cache.sh): ${fehlt.join(', ')}`);
+  }
+
+  console.log(`\n[Normtext-Snapshot] datum=${abgerufen}, ${eintraege.length} Gesetze${erlassFilter ? ' (--erlass-Filter)' : ''}`);
 
   // Caches sicherstellen
   sicherstelleCaches(eintraege);
@@ -1065,11 +1081,14 @@ async function main(): Promise<void> {
       );
     }
     const gemischt: Record<string, string> = {};
-    // kantonale (und sonstige Nicht-bund-) Einträge unverändert übernehmen
+    // Bei --erlass-Filter: ALLE bestehenden Keys behalten (nur die regenerierten
+    // Erlasse werden überschrieben) — sonst gingen die nicht-regenerierten bund/*
+    // verloren. Ohne Filter (Voll-Bund): alle bund/* verwerfen + frisch ersetzen
+    // (fängt gelöschte Artikel).
     for (const k of Object.keys(bestand)) {
-      if (!k.startsWith('bund/')) gemischt[k] = bestand[k];
+      if (erlassFilter ? true : !k.startsWith('bund/')) gemischt[k] = bestand[k];
     }
-    // frische bund/*-Einträge ergänzen
+    // frische bund/*-Einträge ergänzen/überschreiben
     for (const k of Object.keys(goldenIndex)) gemischt[k] = goldenIndex[k];
     const sortiert: Record<string, string> = {};
     for (const k of Object.keys(gemischt).sort()) sortiert[k] = gemischt[k];

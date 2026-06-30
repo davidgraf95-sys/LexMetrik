@@ -5161,13 +5161,17 @@
         {
           "absatz": "3",
           "text": "Ergeben sich später solche Mängel, so muss die Anzeige sofort nach der Entdeckung erfolgen, widrigenfalls die Sache auch rücksichtlich dieser Mängel als genehmigt gilt."
+        },
+        {
+          "absatz": "4",
+          "text": "Soweit Mängel einer Sache, die bestimmungsgemäss in ein unbewegliches Werk integriert worden ist, die Mangelhaftigkeit des Werks verursacht haben, sind diese innert 60 Tagen anzuzeigen. Mängel, die bei der übungsgemässen Untersuchung nicht erkennbar waren, sind innert 60 Tagen nach ihrer Entdeckung anzuzeigen. Die Vereinbarung kürzerer Fristen ist unwirksam."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_201",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "7be3ed105406321240eb9675716d4490ea817b64d1a17099fc9d2673e56b89bf"
+      "sha": "3f61dc96b79948eb77ae68daf4b3101cd5f47ce6b86d86b5b0bbb41d6daae331"
     },
     {
       "id": "bund/OR/art_202",
@@ -5747,14 +5751,41 @@
         },
         {
           "absatz": "3",
-          "text": "Die Pflicht zur Gewährleistung für die Mängel eines Gebäudes verjährt mit dem Ablauf von fünf Jahren, vom Erwerb des Eigentums an gerechnet."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_219",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "65ccab5a985196a7531dd8c30c8d9523b8a4c48d314bf830596c9a06a5162e6a"
+      "sha": "caa2e26e2af7ab77c892cdb1ac1386842ad9f10173726df8fde7972b042f28df"
+    },
+    {
+      "id": "bund/OR/art_219_a",
+      "ebene": "bund",
+      "quelle": "OR",
+      "erlass": "OR",
+      "artikel": "219_a",
+      "artikelLabel": "Art. 219a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Frist für die Mängelrüge beträgt beim Grundstückkauf 60 Tage. Mängel, die bei der übungsgemässen Untersuchung nicht erkennbar waren, sind innert 60 Tagen nach ihrer Entdeckung anzuzeigen. Die Vereinbarung kürzerer Fristen ist unwirksam."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Käufer eines Grundstücks mit einer Baute, die noch zu errichten ist oder weniger als zwei Jahre vor dem Verkauf neu errichtet wurde, kann auch unentgeltliche Verbesserung verlangen. Dieser Anspruch untersteht den Bestimmungen über den Werkvertrag."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Ansprüche des Käufers wegen Mängeln des Grundstücks verjähren mit Ablauf von fünf Jahren nach dem Erwerb des Eigentums. Die Verjährungsfrist kann nicht zu Lasten des Käufers abgeändert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_219_a",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20260101",
+      "sha": "2cadafb1449b7591a89a0fd08bf33e87897d29a3208cb2335a4463d4f2650d36"
     },
     {
       "id": "bund/OR/art_220",
@@ -5910,12 +5941,12 @@
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
-      "id": "bund/OR/art_226_a",
+      "id": "bund/OR/art_226_a_226_d",
       "ebene": "bund",
       "quelle": "OR",
       "erlass": "OR",
-      "artikel": "226_a",
-      "artikelLabel": "Art. 226a",
+      "artikel": "226_a_226_d",
+      "artikelLabel": "Art. 226a–226d",
       "bloecke": [
         {
           "absatz": null,
@@ -5923,7 +5954,7 @@
         }
       ],
       "stand": "2026-01-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_226_a",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_226_a_226_d",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
@@ -5948,12 +5979,12 @@
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
-      "id": "bund/OR/art_226_f",
+      "id": "bund/OR/art_226_f_226_k",
       "ebene": "bund",
       "quelle": "OR",
       "erlass": "OR",
-      "artikel": "226_f",
-      "artikelLabel": "Art. 226f",
+      "artikel": "226_f_226_k",
+      "artikelLabel": "Art. 226f–226k",
       "bloecke": [
         {
           "absatz": null,
@@ -5961,7 +5992,7 @@
         }
       ],
       "stand": "2026-01-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_226_f",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_226_f_226_k",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
@@ -8179,13 +8210,21 @@
         {
           "absatz": "3",
           "text": "Die Absätze 1 und 2 gelten auch, wenn der Vermieter beabsichtigt, sonstwie den Mietvertrag einseitig zu Lasten des Mieters zu ändern, namentlich seine bisherigen Leistungen zu vermindern oder neue Nebenkosten einzuführen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Mitteilung einer Mietzinserhöhung und anderer einseitiger Vertragsänderungen genügt eine auf mechanischem Weg nachgebildete Unterschrift auf dem vorgeschriebenen Formular."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Mitteilung von Mietzinserhöhungen, die in einer Vereinbarung nach Artikel 269 c vorgesehen sind, genügt die schriftliche Form."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_269_d",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "58c3505e1def517367b59da410725cb22ad18d9d8267e4c780405ce4f1b89b6b"
+      "sha": "8fbc4d9334c1d6ef93f0e71963f467255304f4e9d4b44e1221b9abeb2962c104"
     },
     {
       "id": "bund/OR/art_270",
@@ -10626,7 +10665,7 @@
         },
         {
           "absatz": "2",
-          "text": "Stellt der Arbeitnehmer im Einverständnis mit dem Arbeitgeber selbst ein Motorfahrzeug, so sind ihm überdies die öffentlichen Abgaben für das Fahrzeug, die Prämien für die Haftpflichtversicherung und eine angemessene Entschädigung für die Abnützung des Fahrzeugs nach Massgabe des Gebrauchs für die Arbeit zu vergüten."
+          "text": "Stellt der Arbeitnehmer im Einverständnis mit dem Arbeitgeber selbst ein Motorfahrzeug, so sind ihm überdies die öffentlichen Abgaben für das Fahrzeug, die Prämien für die Haftpflichtversicherung und eine angemessene Entschädigung für die Abnützung des Fahrzeugs nach Mass-gabe des Gebrauchs für die Arbeit zu vergüten."
         },
         {
           "absatz": "3",
@@ -10637,7 +10676,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_327_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "7a15bf21b04c234fc8b154f4d9c684a8ff64f622e8f98e30b9b42d6f0dc752bf"
+      "sha": "21a636fe8cd1edf3cee62833cf92d673a06868a150618cb192f919a98fbf1ac8"
     },
     {
       "id": "bund/OR/art_327_c",
@@ -13788,113 +13827,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Durch Abrede, Normalarbeitsvertrag oder Gesamtarbeitsvertrag darf von den folgenden Vorschriften weder zuungunsten des Arbeitgebers noch des Arbeitnehmers abgewichen werden:",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Überstundenarbeit)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 4 (Vorschuss)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Verrechnung mit Gegenforderungen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Abtretung und Verpfändung von Lohnforderungen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Zuweisung von Arbeit)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 2 und 3 (Ferienlohn)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 2 (Zuwendungen für die Personalfürsorge)"
-            },
-            {
-              "marke": "a",
-              "text": "(Abtretung und Verpfändung von Forderungen auf Vorsorgeleistungen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Kündigung beim langjährigen Arbeitsverhältnis)"
-            },
-            {
-              "marke": "a",
-              "text": "(Kündigung des Arbeitsverhältnisses)"
-            },
-            {
-              "marke": "a",
-              "text": "(Sozialplan während eines Konkurs- oder eines Nachlassverfahrens)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Missbräuchliche Kündigung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Entschädigung bei missbräuchlicher Kündigung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Geltendmachung der Entschädigung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Kündigung zur Unzeit durch den Arbeitnehmer)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 2 (Fristlose Auflösung aus wichtigen Gründen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Folgen bei gerechtfertigter Auflösung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Folgen bei ungerechtfertigtem Nichtantritt oder Verlassen der Arbeitsstelle)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Fälligkeit der Forderungen)"
-            },
-            {
-              "marke": "a",
-              "text": "(Rückgabepflichten)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 2 (Folgen der Übertretung des Konkurrenzverbotes)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Zivilrechtliche Wirkungen des öffentlichen Rechts)"
-            },
-            {
-              "marke": "a",
-              "text": "(Vorzeitige Auflösung des Lehrvertrages)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Verhinderung an der Reisetätigkeit)"
-            },
-            {
-              "marke": "a",
-              "text": "(Besondere Kündigung)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Rückgabepflichten)."
-            }
-          ]
+          "text": "Durch Abrede, Normalarbeitsvertrag oder Gesamtarbeitsvertrag darf von den folgenden Vorschriften weder zuungunsten des Arbeitgebers noch des Arbeitnehmers abgewichen werden:"
         },
         {
           "absatz": "2",
@@ -13905,7 +13838,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_361",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "16111b517263ea5fd1bf76651a5da70bc7c44bb5540b7c45e59ea191ffa24699"
+      "sha": "4365b98fbe45991a21d08861a7e1cd00f19064153edfcdf3b638f051a28d2f2d"
     },
     {
       "id": "bund/OR/art_362",
@@ -13917,249 +13850,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Durch Abrede, Normalarbeitsvertrag oder Gesamtarbeitsvertrag darf von den folgenden Vorschriften nicht zuungunsten der Arbeitnehmerin oder des Arbeitnehmers abgewichen werden:",
-          "items": [
-            {
-              "marke": "a",
-              "text": "(Haftung des Arbeitnehmers)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 2 und 3 (Anteil am Geschäftsergebnis)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 2 (Entstehung des Provisionsanspruchs)"
-            },
-            {
-              "marke": "a",
-              "text": "(Provisionsabrechnung)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 zweiter Satz (Lohnabrechnung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Lohn bei Annahmeverzug des Arbeitgebers)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 3 (Lohn bei Verhinderung des Arbeitnehmers)"
-            },
-            {
-              "marke": "a",
-              "text": "(Lohn bei obligatorischer Versicherung des Arbeitnehmers)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1, 3 und 4 (Akkordlohnarbeit)"
-            },
-            {
-              "marke": "a",
-              "text": "(Akkordlohn)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Auslagenersatz im Allgemeinen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Auslagenersatz bei Motorfahrzeug)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Vorschuss für Auslagen)"
-            },
-            {
-              "marke": "a",
-              "text": "(Schutz der Persönlichkeit des Arbeitnehmers im Allgemeinen)"
-            },
-            {
-              "marke": "a",
-              "text": "(Schutz der Persönlichkeit bei Hausgemeinschaft)"
-            },
-            {
-              "marke": "a",
-              "text": "(Schutz der Persönlichkeit bei der Bearbeitung von Personendaten)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1, 2 und 3 (Freizeit)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 3 (Dauer der Ferien)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 2 und 3 (Kürzung der Ferien)"
-            },
-            {
-              "marke": "a",
-              "text": "(Zusammenhang und Zeitpunkt der Ferien)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Ferienlohn)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1 und 3 (Jugendurlaub)"
-            },
-            {
-              "marke": "a",
-              "text": "(Mutterschaftsurlaub)"
-            },
-            {
-              "marke": "a",
-              "text": "(Urlaub des andern Elternteils)"
-            },
-            {
-              "marke": "a",
-              "text": "(Urlaub im Falle des Todes der Mutter)"
-            },
-            {
-              "marke": "a",
-              "text": "(Urlaub für die Betreuung von Angehörigen)"
-            },
-            {
-              "marke": "a",
-              "text": "(Urlaub für die Betreuung eines wegen Krankheit oder Unfall gesundheitlich schwer beeinträchtigten Kindes)"
-            },
-            {
-              "marke": "a",
-              "text": "(Adoptionsurlaub)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 1, 3 und 4 (Kaution)"
-            },
-            {
-              "marke": "a",
-              "text": "(Zeugnis)"
-            },
-            {
-              "marke": "a",
-              "text": "Absätze 3 und 4 (Beitragsleistung und Auskunftspflicht bei Personalfürsorge)"
-            },
-            {
-              "marke": "a",
-              "text": "(Beginn und Ende des Vorsorgeschutzes)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 4 (Vergütung bei Erfindungen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Haftung bei Übergang des Arbeitsverhältnisses)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Kündigungsfristen)"
-            },
-            {
-              "marke": "a",
-              "text": "(Verhandlungspflicht zwecks Abschlusses eines Sozialplans)"
-            },
-            {
-              "marke": "a",
-              "text": "(Aufstellung des Sozialplans durch ein Schiedsgericht)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 2 (Missbräuchliche Kündigung durch den Arbeitgeber)"
-            },
-            {
-              "marke": "a",
-              "text": "(Kündigung zur Unzeit durch den Arbeitgeber)"
-            },
-            {
-              "marke": "a",
-              "text": "(Fristlose Auflösung wegen Lohngefährdung)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Folgen bei ungerechtfertigter Entlassung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Tod des Arbeitnehmers)"
-            },
-            {
-              "marke": "a",
-              "text": "(Tod des Arbeitgebers)"
-            },
-            {
-              "marke": "a",
-              "text": "(Voraussetzungen der Abgangsentschädigung)"
-            },
-            {
-              "marke": "a",
-              "text": "(Ersatzleistungen)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Voraussetzungen des Konkurrenzverbotes)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Beschränkung des Konkurrenzverbotes)"
-            },
-            {
-              "marke": "a",
-              "text": "(Wegfall des Konkurrenzverbotes)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Unverzichtbarkeit)"
-            },
-            {
-              "marke": "a",
-              "text": "(Pflichten des Lehrmeisters)"
-            },
-            {
-              "marke": "a",
-              "text": "(Lehrzeugnis)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Lohn des Handelsreisenden)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Ausrichtung der Provision)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Lohn bei Verhinderung an der Reisetätigkeit)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Retentionsrecht des Handelsreisenden)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Provision bei Beendigung des Arbeitsverhältnisses)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 3 (Haftung des Heimarbeitnehmers)"
-            },
-            {
-              "marke": "a",
-              "text": "(Abnahme des Arbeitserzeugnisses)"
-            },
-            {
-              "marke": "a",
-              "text": "(Ausrichtung des Lohnes)"
-            },
-            {
-              "marke": "a",
-              "text": "Absatz 1 (Lohn bei Verhinderung an der Arbeitsleistung)."
-            }
-          ]
+          "text": "Durch Abrede, Normalarbeitsvertrag oder Gesamtarbeitsvertrag darf von den folgenden Vorschriften nicht zuungunsten der Arbeitnehmerin oder des Arbeitnehmers abgewichen werden:"
         },
         {
           "absatz": "2",
@@ -14170,7 +13861,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_362",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "f61f49a4f3d0ba89eae7274df4304431160c56f3148b1092313589b09e966c64"
+      "sha": "d5feb9523e5e79247dfd1daa7494cf26cf9515b0383548fff7a30e4d0a2aa936"
     },
     {
       "id": "bund/OR/art_363",
@@ -14281,6 +13972,20 @@
           "text": "Nach Ablieferung des Werkes hat der Besteller, sobald es nach dem üblichen Geschäftsgange tunlich ist, dessen Beschaffenheit zu prüfen und den Unternehmer von allfälligen Mängeln in Kenntnis zu setzen."
         },
         {
+          "absatz": "1bis",
+          "text": "Die Frist für die Mängelrüge beträgt bei einem unbeweglichen Werk 60 Tage. Die Vereinbarung einer kürzeren Frist ist unwirksam. Dasselbe gilt für die folgenden Mängel eines Werks, die die Mangelhaftigkeit eines unbeweglichen Werks verursacht haben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mängel eines beweglichen Werks, das bestimmungsgemäss in das unbewegliche Werk integriert worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Mängel eines Werks, das von einem Architekten oder Ingenieur erstellt und bestimmungsgemäss als Grundlage für die Erstellung des unbeweglichen Werks verwendet worden ist."
+            }
+          ]
+        },
+        {
           "absatz": "2",
           "text": "Jeder Teil ist berechtigt, auf seine Kosten eine Prüfung des Werkes durch Sachverständige und die Beurkundung des Befundes zu verlangen."
         }
@@ -14289,7 +13994,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_367",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "4dfb07d54794507122dc462d429caae0ac6350fbd8d77f53a07cbeea68820ea7"
+      "sha": "95941bbeb85fa2c1cc37c4699117820ace9f1540c1a42281b1f5547aaf77ac7d"
     },
     {
       "id": "bund/OR/art_368",
@@ -14305,7 +14010,11 @@
         },
         {
           "absatz": "2",
-          "text": "Sind die Mängel oder die Abweichungen vom Vertrage minder erheblich, so kann der Besteller einen dem Minderwerte des Werkes entsprechenden Abzug am Lohne machen oder auch, sofern dieses dem Unternehmer nicht übermässige Kosten verursacht, die unentgeltliche Verbesserung des Werkes und bei Verschulden Schadenersatz verlangen."
+          "text": "Sind die Mängel oder die Abweichungen vom Vertrage minder erheblich, so kann der Besteller einen dem Minderwerte des Werkes entsprechenden Abzug am Lohne machen oder auch, sofern dieses dem Unternehmer nicht übermässige Kosten verursacht, die unentgeltliche Verbesserung des Werkes und bei Verschulden Schadenersatz verlangen. Im Falle der unentgeltlichen Verbesserung gilt Artikel 366 Absatz 2 sinngemäss."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Eine zum Voraus getroffene Verabredung, wonach der Anspruch auf unentgeltliche Verbesserung eingeschränkt oder ausgeschlossen wird, ist ungültig, wenn der Mangel eine Baute betrifft."
         },
         {
           "absatz": "3",
@@ -14316,7 +14025,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_368",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "dc79c6e9643cbf7bc2c9c63fe8b96c8bed7ef2dd1a60db13614155fb40427da1"
+      "sha": "07eedbbbde69c991aa9afa2601a48e42105187b9fb15f87421f4ff093ceb5164"
     },
     {
       "id": "bund/OR/art_369",
@@ -14356,13 +14065,27 @@
         {
           "absatz": "3",
           "text": "Treten die Mängel erst später zu Tage, so muss die Anzeige sofort nach der Entdeckung erfolgen, widrigenfalls das Werk auch rücksichtlich dieser Mängel als genehmigt gilt."
+        },
+        {
+          "absatz": "4",
+          "text": "Mängel eines unbeweglichen Werks, die bei der Abnahme und ordnungsmässigen Prüfung nicht erkennbar waren, sind innert 60 Tagen nach ihrer Entdeckung anzuzeigen. Die Vereinbarung kürzerer Fristen ist unwirksam. Dasselbe gilt für die folgenden Mängel eines Werks, die die Mangelhaftigkeit eines unbeweglichen Werks verursacht haben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mängel eines beweglichen Werks, das bestimmungsgemäss in das unbewegliche Werk integriert worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Mängel eines Werks, das von einem Architekten oder Ingenieur erstellt und bestimmungsgemäss als Grundlage für die Erstellung des unbeweglichen Werks verwendet worden ist."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_370",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "b0f65869fb298e9ee538d4f0c57e6f1cf2fe8894fa2133366ebc5f2a29122a18"
+      "sha": "82a48724f77f8470143418311bb5937b10bdc3c72cd97c6be2a458b9c02ee77a"
     },
     {
       "id": "bund/OR/art_371",
@@ -14382,14 +14105,14 @@
         },
         {
           "absatz": "3",
-          "text": "Im Übrigen kommen die Regeln für die Verjährung der entsprechenden Ansprüche des Käufers sinngemäss zur Anwendung."
+          "text": "Die Verjährungsfrist von fünf Jahren kann nicht zu Lasten des Bestellers abgeändert werden. Im Übrigen kommen die Regeln für die Verjährung der entsprechenden Ansprüche des Käufers sinngemäss zur Anwendung."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_371",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "3ad46b2077e4e015aafa6b4b38ca1a6abff1de4e49f2943bdf3076f4935feab8"
+      "sha": "74ca7836ec09434c323ec0c1fbf7d7b4089fbccee739558c9fee2257091a16a9"
     },
     {
       "id": "bund/OR/art_372",
@@ -26972,7 +26695,7 @@
             },
             {
               "marke": "2",
-              "text": "solange begründete Aus sicht besteht, dass die Über schuldung innert angemessener Frist, spätestens aber 90 Tage nach Vorliegen der geprüften Zwischenabschlüssen, behoben werden kann und dass die Forderungen der Gläubiger nicht zusätz lich gefährdet werden ."
+              "text": "solange begründete Aus sicht besteht, dass die Über schuldung innert angemessener Frist, spätestens aber 90 Tage nach Vorliegen der geprüften Zwischenabschlüsse, behoben werden kann und dass die Forderungen der Gläubiger nicht zusätz lich gefährdet werden ."
             }
           ]
         },
@@ -26989,7 +26712,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_725_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "dd182d75e3433df0faaba342e32aee2021d5d7ad76c9a3122949d1eff1369171"
+      "sha": "5edb6f55fcb7f96d3122e50dacb636a106bfca1316e278e628f80700ddb6d83b"
     },
     {
       "id": "bund/OR/art_725_c",
@@ -36027,14 +35750,14 @@
         },
         {
           "absatz": "2",
-          "text": "Werden Aktiven zum Börsenkurs oder zum Marktpreis am Bilanzstichtag bewertet, so darf eine Wertberichtigung zulasten der Erfolgsrechnung gebildet werden, um Schwankungen im Kursverlauf Rechnung zu tragen. Solche Wertberichtigungen sind jedoch nicht zulässig, wenn dadurch sowohl der Anschaffungswert als auch der allenfalls tiefere Kurswert unterschritten würden. Der Betrag der Schwankungsreserven ist insgesamt in der Bilanz oder im Anhang gesondert auszuweisen."
+          "text": "Werden Aktiven zum Börsenkurs oder zum Marktpreis am Bilanzstichtag bewertet, so darf eine Wertberichtigung zulasten der Erfolgsrechnung gebildet werden, um Schwankungen im Kursverlauf Rechnung zu tragen. Solche Wertberichtigungen sind jedoch nicht zulässig, wenn dadurch sowohl der Anschaffungswert als auch der allenfalls tie fere Kurswert unterschritten würden. Der Betrag der Schwankungsreserven ist insgesamt in der Bilanz oder im Anhang gesondert auszuweisen."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_960_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "cca37d4febcf2d331d464a0e2788c74ac16596550b54dc37b25e01786e35ee1a"
+      "sha": "95c252d01092e6c5cd6715a75082e99041b38e1909ad23593cfcb5918b7d1860"
     },
     {
       "id": "bund/OR/art_960_c",

@@ -516,9 +516,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Altersjahr",
-              "Ansatz in Prozenten des koordinierten Lohnes"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Altersjahr"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Ansatz in Prozenten des koordinierten Lohnes"
+              }
             ],
             "zeilen": [
               [
@@ -545,7 +551,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_16",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "a90d82631c891555b3138b614b0abdd54321bce2505e79f61e78a6d09ebe80e8"
+      "sha": "436e16c5688d89246de93b6b7dcdd797839f1b53aec3121fd03b2b6cfa491517"
     },
     {
       "id": "bund/BVG/art_17",
@@ -907,9 +913,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Invaliditätsgrad",
-              "Prozentualer Anteil"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Invaliditätsgrad"
+              },
+              {
+                "typ": "text",
+                "titel": "Prozentualer Anteil"
+              }
             ],
             "zeilen": [
               [
@@ -960,7 +972,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_24_a",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "55abf259a3460ded61d2e2caa40b8b5d3b7f4561a5036ec6eea29a44042c1346"
+      "sha": "4f8ae15b9c7545bcc9548ee24b4f23445c63758342c7c72650563c076e02dfe4"
     },
     {
       "id": "bund/BVG/art_24_b",
@@ -5918,10 +5930,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Männer",
-              "Frauen",
-              ""
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Altersjahr Männer"
+              },
+              {
+                "typ": "text",
+                "titel": "Frauen"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Ansatz in Prozenten des koordinierten Lohnes"
+              }
             ],
             "zeilen": [
               [
@@ -5952,7 +5973,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_95",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "8b42ed6e6852239a3ed5a2ca35c2d4a404f47c7a49249ce874a96ec2a37bafa1"
+      "sha": "843387f3ab810c570ce0847691ae57158f39b234290160a2009df97289bd3577"
     },
     {
       "id": "bund/BVG/art_96",

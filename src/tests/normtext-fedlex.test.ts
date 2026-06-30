@@ -203,25 +203,28 @@ describe('extrahiereArtikel', () => {
     });
   });
 
-  describe('M7 Tabellen-Kopf: kpf-als-<td> + colspan-Padding (GebV SchKG art_30, real)', () => {
+  describe('M10 T-F5(ii) kpf-als-<td> colspan 4/2 → kanonisches spalten-Modell (GebV SchKG art_30)', () => {
     // Reale Fedlex-Struktur: KEIN <th>; der Kopf steht als <td colspan="4">…
-    // <p class="man-template-tab-kpf">…</p></td>. Bisher als Datenzeile verkannt
-    // und mangels colspan-Expansion gegen die 6 Datenspalten verschoben (Kopf 2
-    // vs. Daten 6). SOLL: Kopf erkennen + colspan konsistent expandieren → 6/6.
+    // <p class="man-template-tab-kpf">…</p></td>. SOLL (M10): rechteckiges, typisiertes
+    // spalten-Modell — die Forderungs-Spanne zu EINER bereich-Zelle verdichtet (T-A6),
+    // Spacer-Spalte gestrichen (T-A7), kopf == Zellzahl (T-B2). Ersetzt die alte
+    // Erwartung (leer-gepaddetes 6-Spalten-Roh-Raster = Defektklasse 2 zementiert).
     const GEBV_ART_30 = `<article id="art_30"><div class="collapseable"><table border="1"><tr><td colspan="4"><p class="man-template-tab-kpf man-space-before-3 man-space-after-3">Zuschlagspreis, Kaufpreis oder Erlös/Franken</p></td><td colspan="2"><p class="man-template-tab-kpf-r man-space-before-3 man-space-after-3">Gebühr/Franken</p></td></tr><tr><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr-r"></p></td><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr man-space-before-2">bis</p></td><td><p class="man-template-tab-krpr man-space-before-2 man-text-align-right">500</p></td><td><p class="man-template-tab-krpr man-space-before-2 man-text-align-right">10.–</p></td></tr><tr><td><p class="man-template-tab-krpr">über</p></td><td><p class="man-template-tab-krpr-r">500</p></td><td><p class="man-template-tab-krpr"></p></td><td><p class="man-template-tab-krpr">bis</p></td><td><p class="man-template-tab-krpr-r">1&nbsp;000</p></td><td><p class="man-template-tab-krpr-r">50.–</p></td></tr></table></div></article>`;
 
-    it('Kopf wird erkannt (nicht als Datenzeile) und auf 6 Spalten gepaddet', () => {
+    it('liefert 2 typisierte Spalten (bereich | betrag), kopf == Zellzahl', () => {
       const b = extrahiereArtikel(GEBV_ART_30, '30')!.bloecke.find((x) => x.mehrspaltig)!;
-      expect(b.mehrspaltig!.kopf).toEqual([
-        'Zuschlagspreis, Kaufpreis oder Erlös/Franken', '', '', '', 'Gebühr/Franken', '',
+      expect(b.mehrspaltig!.spalten).toEqual([
+        { typ: 'bereich', titel: 'Zuschlagspreis, Kaufpreis oder Erlös/Franken' },
+        { typ: 'betrag', titel: 'Gebühr/Franken' },
       ]);
+      expect(b.mehrspaltig!.kopf).toBeUndefined(); // kein Legacy-Feld mehr
     });
 
-    it('Datenzeilen behalten alle 6 Spalten, am Kopf ausgerichtet', () => {
+    it('verdichtet die Spanne wortlauttreu zu EINER bereich-Zelle', () => {
       const b = extrahiereArtikel(GEBV_ART_30, '30')!.bloecke.find((x) => x.mehrspaltig)!;
       expect(b.mehrspaltig!.zeilen).toEqual([
-        ['', '', '', 'bis', '500', '10.–'],
-        ['über', '500', '', 'bis', '1 000', '50.–'],
+        ['bis 500', '10.–'],
+        ['über 500 bis 1 000', '50.–'],
       ]);
     });
   });
@@ -265,15 +268,19 @@ describe('extrahiereArtikel', () => {
     });
   });
 
-  describe('M7 Regression: <th>-Tabelle bleibt unverändert (colspan dort konsistent)', () => {
-    // <th>-Tabellen tragen colspan auf Kopf UND Daten (BVG-Stil) → durch
-    // konsistentes Ignorieren korrekt ausgerichtet. Der kpf-Pfad darf NICHT
-    // greifen; Kopf = letzte <th>-Zeile, Daten unverändert (byte-gleich).
+  describe('M10 T-F5(iii) <th>-Tabelle Kopf+Daten gleiche colspan → Werte byte-gleich', () => {
+    // <th>-Tabellen tragen colspan auf Kopf UND Daten (BVG-Stil). M10 expandiert
+    // beide konsistent, streicht die geteilte Spacer-Spalte und liefert das
+    // kanonische 2-Spalten-Modell — die ZellWERTE bleiben byte-identisch
+    // ('Altersjahr','Ansatz' / '25–34','7'), nur die Form ist jetzt typisiert.
     const TH_TAB = `<article id="art_x"><div class="collapseable"><table border="1"><tr><th colspan="2"><p>Altersjahr</p></th><th><p>Ansatz</p></th></tr><tr><td colspan="2"><p>25–34</p></td><td><p>7</p></td></tr></table></div></article>`;
 
-    it('Kopf = <th>-Zeile ohne colspan-Expansion; Datenzeile 2 Zellen', () => {
+    it('2 typisierte Spalten, Werte unverändert', () => {
       const b = extrahiereArtikel(TH_TAB, 'x')!.bloecke.find((x) => x.mehrspaltig)!;
-      expect(b.mehrspaltig!.kopf).toEqual(['Altersjahr', 'Ansatz']);
+      expect(b.mehrspaltig!.spalten).toEqual([
+        { typ: 'text', titel: 'Altersjahr' },
+        { typ: 'zahl', titel: 'Ansatz' },
+      ]);
       expect(b.mehrspaltig!.zeilen).toEqual([['25–34', '7']]);
     });
   });

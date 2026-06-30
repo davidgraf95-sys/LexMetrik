@@ -36,10 +36,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "von mindestens",
-              "aber weniger als",
-              ""
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Jährliches Erwerbseinkommen in Franken von mindestens"
+              },
+              {
+                "typ": "zahl",
+                "titel": "aber weniger als"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Beitragssatz in Prozent des Erwerbseinkommens"
+              }
             ],
             "zeilen": [
               [
@@ -139,7 +148,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de#art_1_bis",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250601",
-      "sha": "c7ffd1777898ecc42c63fbd64b64dff712666cfae035f1b8288bbf167492eb42"
+      "sha": "41f09bf6f0b4aee6c17e404bb5f8ac7fd31eaf2e310805069b66e75fa0b665be"
     },
     {
       "id": "bund/IVV/art_1_ter",
@@ -5953,6 +5962,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "a. bei einer Abwesenheit vom Wohnort von fünf bis acht Stunden",

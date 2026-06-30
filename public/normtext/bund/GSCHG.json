@@ -992,6 +992,20 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "bis 60 l/s Abflussmenge Q 347",

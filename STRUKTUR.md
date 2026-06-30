@@ -23,6 +23,115 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b Batch A fertig (M1 + M6-Datenteil) + 2 Live-Feedback-Fixes
+
+Nach dem Prod-Deploy: **Batch A** (Extraktor/Pipeline) zu Ende geführt + zwei Reader-Feedbacks von David.
+
+**M1 (Präambel-Fussnoten):** Recon ergab — die Daten-Zuordnung ist bereits korrekt (BV-Präambel-Fussnote
+auf `kopf.fussnoten`, nicht Art. 1; war durch M5 behoben). `extrahiereFussnoten` scopt strikt per `<article>`.
+Mit Tests **fest verankert** (`normtext-kopf-g15.test.ts`). Offen nur optionale Inline-«¹»-Marker-Politur.
+
+**M6-Datenteil (Verweis-Auflösung):** Recon ergab — Auflösung ist RENDER-seitig (`NormText`), die bloßen
+Item-Verweise tragen kein `href`/`data-rs`. ZGB 89a Abs. 6/7 zitieren BVG-Artikel bloß («Art. 52»), das
+Fremdgesetz steht nur im Chapeau → bisher falscher interner ZGB-Self-Link. **Fix (`ArtikelBody`):**
+`etabliertFremdgesetz()` erkennt den «… Bestimmungen des … (BVG) … über:»-Chapeau; seine Items rendern ohne
+`intern` → kein falscher bare-Self-Link (§1/M12-Philosophie; Kürzel-Verweise bleiben über `NORM_IM_TEXT`).
+**Korpus-Sweep (218 Bund-Dateien): 14 Treffer, kein legitimer Self-Link fälschlich unterdrückt.** Batch-D-Teil
+(Item tatsächlich auf BVG auflösen/Popup) bleibt offen.
+
+**2 Live-Feedback-Fixes:** (1) Gruppierungslinien-Umschalter aus der Suchleiste in die **Kopf-Aktionszeile**
+(oben am Gesetz) verschoben. (2) Einzelartikel-Sektion zeigt das «Art. N»-Bereich-Badge nur noch eingeklappt
+(offen ist es redundant zum Artikelkopf darunter); echte Spannen («Art. 252–359») bleiben. Beide visuell
+verifiziert. **AUF PROD DEPLOYT 30.6.2026** (Davids Ja «yes deploy»): `lexmetrik.vercel.app`, Deployment
+`dpl_J56rFqQ2cU2Svj8z8K6GYXSQK8WC`, Asset `index-D-Nrda6H.js`, aus sauberem `/tmp`-Worktree @ Branch-HEAD
+`02136603`. §9-Tore grün (tsc/vitest/golden/lint/check + build + e2e 86); §9-Bug-Check (unabh. Opus über das
+Delta `3c4b3ab0..HEAD`): 0 Blocker. Kernrouten + `/gesetze/bund/ZGB` 200. **PR #55** weiterhin offen für `main`
+(Selbst-Merge in Auto-Modus geblockt → Davids Review/Merge; danach STRUKTUR auf `main` spiegeln + Branch/Worktree
+entfernen).
+
+## Session 30.6.2026 — W2·5b PROD-DEPLOY (Tabellen + Reader-Batch-B + OR-Currency live)
+
+**Auf Prod deployt 30.6.2026** (Davids Ja «bug check und push und deploy»): `lexmetrik.vercel.app`,
+Deployment `dpl_3n53z3tJs6CgT2vqCAtHMnRpq8RF`, Asset `index-DgTsq1vu.js`. Quelle = Branch-HEAD
+**`feat/normtext-tabellen-kanonisch` @ 3c4b3ab0** (deployt aus sauberem `/tmp`-Worktree, §12.3). Enthält
+M10 (Tabellen `spalten`-Modell), OR-Currency (Baumängel), Reader-Batch-B M2/M9/M3, Bug-Check-Härtung.
+**§9-Tore alle grün** (tsc/vitest/golden/lint/check + build + e2e 86); **§9-Bug-Check** = 2 unabhängige
+Opus-Agenten (Code-Lupe + 300k-Fuzzer) ohne Blocker, 2 latente Funde gefixt; **Adversarial M10 8/8 +
+OR 15/15 FAITHFUL**. Live verifiziert: Art.20 kanonisches `spalten` + OR art_219a vorhanden, Kernrouten 200.
+**PR #55 für `main` offen** (Selbst-Merge in Auto-Modus geblockt → Davids Review/Merge); `main` bis Merge
+auf 033a1783. Nach Merge: STRUKTUR auf `main` spiegeln + Branch/Worktree entfernen.
+
+## Session 30.6.2026 — W2·5b Batch B (M2/M9/M3): aufgehobene Artikel + Gruppierungslinien (gebaut + gegated)
+
+**M3 (Gruppierungslinien je Gesetz + Umschalter):** Root-Cause war NICHT die Datenlage (209/218 Bund-Erlasse
+tragen `gliederung`) sondern eine Render-Bedingung — `inhalt.tsx` zog die vertikale Schachtelungslinie nur für
+`randtitel`-Knoten, nie für die offizielle Teil/Titel/Abschnitt-Gliederung. **Fix:** `renderSektion` tiefen-bewusst
+→ Linie + Einzug für JEDE geschachtelte Sektion (`tiefe > 0`, offiziell + Randtitel), Wurzel bündig. **Umschalter**
+`gruppierungslinienAn` (zustandslos `useState(true)` wie `fussnotenAuf`, je Pane eigen; Knopf «✓ Linien» neben
+«Fussnoten», nur bei geschachteltem Gesetz). Visuell verifiziert (Playwright/Bash: ZGB/OR/VMWG × 1280/390 ×
+an/aus — Parität, kein Über-Einzug). Reine Darstellung (§3). **Damit Batch B (M2/M9/M3) komplett.**
+
+## Session 30.6.2026 — W2·5b Batch B (M2/M9): aufgehobene Artikel (gebaut + gegated, nicht deployt)
+
+Nach M10 die ersten Render-Punkte von **Batch B** (selber Branch/Worktree `feat/normtext-tabellen-kanonisch`).
+**M2** (David 29.6.): die amtliche Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» in `gesetz-leser/parts.tsx`
+wandert hinter den Fussnoten-Schalter (`fussnotenAuf`) — erst auf Klick, einheitlich wie jede Fussnote; die
+Statuszeile **«· aufgehoben» bleibt unabhängig immer sichtbar** (Artikelzustand). Kehrt den 28.6.-«inline immer»-
+Zwischenstand um. **M9**: Chevron-Knopf (aktiv) und `…`-Platzhalter (aufgehoben) tragen jetzt dieselbe feste
+`inline-flex w-4`-Leitspalte → die «Art. N» fluchten **bündig auf einer Ebene** (vorher Glyphenbreite vs. fixe
+w-4 → Versatz). Render-Tests `gesetz-leser-m2.test.tsx` (5 Fälle); tsc/lint/vitest grün. Visuelle Schluss-Abnahme
+bei David. **OFFEN Batch B: M3** (Gruppierungslinien je Gesetz + Umschalter — grösserer Strukturpunkt, eigene
+Bau-Einheit), dann Batch C (M4/M5/M7/M8) + D (M11/M6) + Batch-A-Rest (M1, M6-Datenteil).
+
+## Session 30.6.2026 — OR-Currency nachgezogen (separat von M10, gegated, nicht deployt)
+
+Beim M10-Cache-Refresh (`fedlex-cache.sh`) zeigte sich ein **vorbestehender** OR-Currency-Drift: die
+committete `OR.json` war veraltet gegen die aktuelle gepinnte Konsolidierung (Stand 2026-01-01). Ursache =
+**OR-Baumängel-Revision** (BG 20.12.2024, in Kraft 1.1.2026): `OR.json` deterministisch regeneriert
+(`--erlass=or`, §7 kein Hand-Edit). Diff: **3 neu** (art_219a + 2 zusammengeführte aufgehobene Bereiche
+art_226a–d / art_226f–k), **2 alte Einzelartikel** ersetzt (offiziell verschmolzen), **12 geänderte**
+(art_201/219/269d/327b/361/362/367/368/370/371/725b/960b — neue Abs/lit der Baumängel-Reform, gender-neutral
+362). **Adversariale Opus-Gegenprüfung gegen Fedlex-HTML: 15/15 FAITHFUL, 0 REFUTED** — legitime Currency,
+keine Korruption. **check:vollstaendigkeit jetzt GRÜN.** Ohne Tabellen-Bezug → bewusst NICHT in M10 gefaltet
+(§14.2). OR ist der einzige driftende Bund-Erlass (check:vollstaendigkeit flaggte nur OR).
+
+**BACKLOG (vorbestehende OR-Extraktions-Lücken, von der Gegenprüfung gefunden, NICHT von dieser Regen verursacht,
+in alt+neu identisch):** (a) **Aufzählungs-Tabellen in art_361/362 fehlen** — die `<p class="man-template-tab-krpr">`-
+Zeilen (Katalog der (zweiseitig) zwingenden Bestimmungen, 89 Zeilen OR-weit) werden vom Extraktor nicht erfasst
+(nur `<table>` + absatz/dl), substanzieller Listeninhalt fehlt; (b) **Farbspan-Wortfugen** — Fedlex splittet
+geänderte Wörter über `<span style="color…">`, der Extraktor fügt eine Spurious-Space ein («Aus sicht»), 38/40
+Artikel betroffen, rein whitespace (kein Rechtstext verloren). Beides eigenes Extraktor-Härtungspaket (nicht M10).
+
+## Session 30.6.2026 — W2·5b M10: Bund-Tabellen kanonisches `spalten`-Modell (gebaut + gegated, nicht deployt)
+
+ROADMAP-Schritt **Welle 2 · 5b**, Milestone **M10** (Tabellendarstellung Bund) aus
+`FAHRPLAN-GESETZESDARSTELLUNG-BUND.md`. Worktree `feat/normtext-tabellen-kanonisch` (isoliert, §12),
+Split-View-Konflikt entschärft (PR #51 längst auf main, kein Live-Agent auf `ArtikelBody.tsx`).
+
+**Was:** Defekte Fedlex-Tabellen (colspan-Verlust → Kopf≠Zellzahl, empty-padded Köpfe, Spacer-Spalten,
+zerrissene Staffel-Spannen; ~60 Defekt-Blöcke/28 Erlasse) auf ein rechteckiges, typisiertes `spalten`-Modell
+(T-B1) umgestellt. Kern = reiner, DOM-freier Normalisierer `scripts/normtext/tabelle-normalisieren.ts`:
+(1) **Staffel-Verdichtung** datengetrieben (`über 100 bis 500` aus 5 Zellen → 1 `bereich`-Zelle, verlustfreie
+Konkatenation amtlicher Token) — folgt dem Daten-Muster, NICHT der irreführenden Kopf-colspan 3/3 (K3-Leitfall
+GebV SchKG Art. 20); (2) **Zwei-Zeilen-Kopf-Merge** (T-A5) rettet zuvor verlorene Captions (AHVV Art. 21
+«Beitragssatz in Prozent» war weg); (3) **logischer Pfad** über Daten-Zellgrenzen mit Ambiguitäts-Guard
+(verwirft Fedlex-colspan-Misalignment → Legacy, z.B. AHVV Art. 52); (4) **ehrlicher Legacy-Fallback** bei
+ragged/Prosa (T-E4, byte-gleich zu heute). Schema additiv (Kanton-`{kopf,zeilen}` unberührt, L0-Abwärtskompat);
+Renderer = dumme typgesteuerte Projektion + unveränderter Legacy-Pfad. Neuer Generator-Filter `--erlass=`.
+
+**Verifikation:** 53 Normalisierer-TDD-Tests + 17 Render-Tests + umgeschriebene M7-Tests (zementierten die
+Defektklasse). 28 Snapshots EINMAL regeneriert → **Byte-Diff: 25 Dateien/59 Tabellen, 0 Nicht-Tabellen-Änderung,
+0 verlorene Token, 0 Nicht-Bund-Dateien** (§6.3). Neuer blockierender Validator `check:tabellen` (Bund scharf:
+**69 kanonisch / 0 Aritäts-/Leerspalten-/Staffel-Brüche**; 9 Legacy-Fallbacks transparent gelistet; Kanton Report).
+**Adversariale Gegenprüfung** (unabhängiger Opus, frischer Kontext, gegen echtes Fedlex-Filestore-HTML): **8/8
+FAITHFUL, 0 REFUTED**. Gate grün (tsc/vitest/golden/lint/check) **ausser** orthogonalem **OR-Currency-Drift**
+(3 neu + 2 umstrukturiert + 12 geänderte Mietrecht/Gewährleistungs-Artikel in der aktuellen Konsolidierung; OR hat
+KEINE Tabellen → kein M10-Bezug; vorbestehend auch auf main, separat zu ziehen — NICHT in M10 gefaltet).
+
+**Offen:** Push/Deploy (Batch-Fenster, Davids Ja §9). Residuen: AHVV Art. 52 Legacy-Caption-Lücke (kein Datenwert);
+BV.196/DBG.36/FZA.10/VGKE.4/VTS.94/GEBV Art. 37 bleiben Legacy (ragged/Prosa). Nächste M10-Batches: B-Render-Rest
+(M2/M9/M3), C (Suche/Layout M4/M5/M7/M8), D (Popover M11/M6), sowie M1/M6-Datenteil (Batch A Rest).
+
 ## Session 30.6.2026 — Dev-Werkzeug: Skill `korpus-werkstatt` (Content-Produktion + Verifikation)
 
 Auftrag David: einen evaluierten Fremd-Skill (Lexplorer/`swiss-legal-research`) als Basis für einen

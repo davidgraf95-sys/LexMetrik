@@ -7763,9 +7763,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Prämienstufen",
-              "Bonus in % der Ausgangsprämie"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Prämienstufen"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Bonus in % der Ausgangsprämie"
+              }
             ],
             "zeilen": [
               [
@@ -7804,7 +7810,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de#art_98",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "c3afed338b75c561049c6a3918271787bbb983f3bf461c701dc616e8971f0132"
+      "sha": "38f8a6d1743d10e9c1c08fabe5d252f6e73652bd593d45b538ac6df4bf42088a"
     },
     {
       "id": "bund/KVV/art_99",

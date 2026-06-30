@@ -21,6 +21,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "a. UVEK",
@@ -2552,6 +2562,16 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
             "zeilen": [
               [
                 "a. Hochhalten eines Armes:",

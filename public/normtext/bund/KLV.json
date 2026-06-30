@@ -1627,9 +1627,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Massnahme",
-              "Voraussetzung"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Massnahme"
+              },
+              {
+                "typ": "text",
+                "titel": "Voraussetzung"
+              }
             ],
             "zeilen": [
               [
@@ -1676,7 +1682,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "2a7df4ef17899dd46ad0bb6a9de21f5d603dfddac6711fb14fb9c9bdbd6a3ddd"
+      "sha": "a5968088ca46f3c4f0eb4af589f03f7c50373e8923648f62a9638254112efdec"
     },
     {
       "id": "bund/KLV/art_12_c",
@@ -1694,9 +1700,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Massnahme",
-              "Voraussetzung"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Massnahme"
+              },
+              {
+                "typ": "text",
+                "titel": "Voraussetzung"
+              }
             ],
             "zeilen": [
               [
@@ -1711,7 +1723,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_c",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "f538154b45597baa9fa18ac7c7c54ec16fb5c02c4ff26093f1e8e9dc7cddac3d"
+      "sha": "2ed0b21ef91b122746c78f88899b57b856626425f7fee8c89814c5b55e7c232a"
     },
     {
       "id": "bund/KLV/art_12_d",
@@ -1729,9 +1741,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Massnahme",
-              "Voraussetzung"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Massnahme"
+              },
+              {
+                "typ": "text",
+                "titel": "Voraussetzung"
+              }
             ],
             "zeilen": [
               [
@@ -1774,7 +1792,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_d",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "cbf80b227e8558a8da453f2849e45698128c6df8219aa2a7b95f6c743974a936"
+      "sha": "c42f84603478438f3edb956cae9004a5f2652cfafdd843e64313e532ba52c040"
     },
     {
       "id": "bund/KLV/art_12_e",
@@ -1792,9 +1810,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Massnahme",
-              "Voraussetzung"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Massnahme"
+              },
+              {
+                "typ": "text",
+                "titel": "Voraussetzung"
+              }
             ],
             "zeilen": [
               [
@@ -1821,7 +1845,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_12_e",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "43b2b42a0a58cb9cfdb8fcb28ab88411fcb67cf7f0fecb86ba772e3246301e9a"
+      "sha": "9ff6e30a0498377d1e59acb24c2db26c88108d1972659fcac6d1b32d0be3f41a"
     },
     {
       "id": "bund/KLV/art_13",
@@ -1839,9 +1863,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Massnahme",
-              "Voraussetzung"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Massnahme"
+              },
+              {
+                "typ": "text",
+                "titel": "Voraussetzung"
+              }
             ],
             "zeilen": [
               [
@@ -1900,7 +1930,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de#art_13",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260511",
-      "sha": "a8f6f396f589195c2978af163f67649afadc33eb4cbed6437272350035044983"
+      "sha": "9b63783e47cc86a558e06fc85035a4e5e2ae933755aff570b6ee3bce7811bfad"
     },
     {
       "id": "bund/KLV/art_14",

@@ -143,6 +143,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
   const istSekundaer = rolle === 'sekundaer';
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
+  // M3: Gruppierungslinien (vertikale Schachtelungslinie je Sektion) — pro Gesetz
+  // an/aus, zustandslos (component-local useState wie fussnotenAuf; jeder Pane
+  // eigener Zustand). Default AN, damit jedes Gesetz seine Section-Schachtelung
+  // sichtbar nestet (Parität ZGB/OR ↔ Teil/Titel/Abschnitt-Gesetze).
+  const [gruppierungslinienAn, setGruppierungslinienAn] = useState(true);
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
   const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
@@ -693,21 +698,27 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Ein Knoten kann seit 6b DIREKTE Artikel UND Unter-Knoten tragen (z. B.
   // «II. Handlungsfähigkeit» enthält Art. 12 direkt und die Untergruppe
   // «2. Voraussetzungen») — beide werden in Dokument-Reihenfolge gemischt.
-  const renderSektion = (s: Sektion, defOpen: boolean): ReactNode => {
+  const renderSektion = (s: Sektion, defOpen: boolean, tiefe: number): ReactNode => {
     const auf = istOffen(s.id, defOpen);
     // Kinder + direkte Artikel in EINER nach Dokument-Position sortierten Liste.
     const inhalt = auf
       ? [
-          ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true) })),
+          ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
             el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
+    // M3: Gruppierungslinie aus der Section-Schachtelung — vertikale Linie + Einzug
+    // für JEDE geschachtelte Sektion (tiefe > 0), unabhängig vom Typ (offizielle
+    // Teil/Titel/Abschnitt-Gliederung UND Randtitel-Gruppen). Die WURZEL (tiefe 0)
+    // bleibt bündig (kein Voll-Dokument-Einzug). An/Aus über den Umschalter; aus =
+    // flach (nur die horizontalen Sektions-Trennlinien in SektionKopf bleiben).
+    const linie = gruppierungslinienAn && tiefe > 0;
     return (
-      <section key={s.id} className={`space-y-3 ${s.randtitel ? 'border-l border-line/60 pl-3' : ''}`}>
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} fussnotenAuf={fussnotenAuf} />
+      <section key={s.id} className={`space-y-3 ${linie ? 'border-l border-line/60 pl-3' : ''}`}>
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} bereichEinzel={sammleArtikel(s).length === 1} fussnotenAuf={fussnotenAuf} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
@@ -785,6 +796,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               navigate(ziel);
             }}
             className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
+          {/* M3 (Auftrag David): Gruppierungslinien-Umschalter oben AM GESETZ (nicht
+              bei der Suche/Fussnoten). Zustandslos (je Pane eigen), nur wenn das
+              Gesetz überhaupt geschachtelt ist. */}
+          {sektionen.length > 0 && (
+            <button type="button" onClick={() => setGruppierungslinienAn((v) => !v)} aria-pressed={gruppierungslinienAn}
+              className={`lc-chip hover:text-brass-700 ${gruppierungslinienAn ? 'text-brass-700' : ''}`}
+              title="Gliederungs-/Gruppierungslinien ein- oder ausblenden" aria-label="Gruppierungslinien ein- oder ausblenden">{gruppierungslinienAn ? '✓ Linien' : '⊟ Linien'}</button>
+          )}
           <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>
@@ -920,7 +939,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                   {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />)}
                 </div>
               )}
-              {sektionen.map((s) => renderSektion(s, true))}
+              {sektionen.map((s) => renderSektion(s, true, 0))}
             </div>
           )}
 

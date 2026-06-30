@@ -1254,10 +1254,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Anzahl Personen",
-              "Grad der Hilflosigkeit",
-              "Höchstbetrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Anzahl Personen"
+              },
+              {
+                "typ": "text",
+                "titel": "Grad der Hilflosigkeit"
+              },
+              {
+                "typ": "text",
+                "titel": "Höchstbetrag"
+              }
             ],
             "zeilen": [
               [
@@ -1293,7 +1302,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_19_b",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20250101",
-      "sha": "fd1f1db4627644fec7fe3fd57d9e6592042780a6e6acc91ed945f7ec38848360"
+      "sha": "84d1051bf70d3ae89b8994f523e4ade78d1b246a71055242cd7f011a9ca38322"
     },
     {
       "id": "bund/ELV/art_20",

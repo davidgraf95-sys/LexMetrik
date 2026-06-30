@@ -830,9 +830,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Franken"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "text",
+                "titel": "Franken"
+              }
             ],
             "zeilen": [
               [
@@ -859,7 +865,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_11",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "d55b453aa7305cd6c9511def237c3e60a3b290695655d2ac4be2adbe5d5ff6d6"
+      "sha": "a1c9fef95e2d403db878db79fd1a18d34ee0c217d3fb98e57a2c19c9ce8de974"
     },
     {
       "id": "bund/AHVV/art_12",
@@ -1090,10 +1096,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "von mindestens",
-              "aber weniger als",
-              ""
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Jährliches Erwerbseinkommen in Franken von mindestens"
+              },
+              {
+                "typ": "zahl",
+                "titel": "aber weniger als"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Beitragssatz in Prozent des Erwerbseinkommens"
+              }
             ],
             "zeilen": [
               [
@@ -1193,7 +1208,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_21",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "65287a073d1ff0e79c967e852c31c796bf1a46d78860381cd724319e71faff51"
+      "sha": "787b65166cfee7a276ca9fa182ef4d366ad1b6a0b16b9e967d3c2311ad02feb4"
     },
     {
       "id": "bund/AHVV/art_22",
@@ -1393,33 +1408,38 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Franken",
-              "Franken",
-              "Franken"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Jahresbeitrag Franken"
+              },
+              {
+                "typ": "text",
+                "titel": "Zuschlag für jede weitere Stufe von 50 000 Franken Vermögen bzw. mit 20 multipliziertes jährliches Renteneinkommen Franken"
+              }
             ],
             "zeilen": [
               [
-                "bis",
-                "350 000",
+                "bis 350 000",
                 "435",
                 "–"
               ],
               [
-                "ab",
-                "350 000",
+                "ab 350 000",
                 "522",
                 "87"
               ],
               [
-                "ab",
-                "1 750 000",
+                "ab 1 750 000",
                 "2958",
                 "130.50"
               ],
               [
-                "ab",
-                "8 950 000",
+                "ab 8 950 000",
                 "21 750",
                 "–."
               ]
@@ -1455,7 +1475,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_28",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "56866024ccb8629a95070dd780eb69b6f9b5d13a175be5a5674f845b773084e1"
+      "sha": "a31c72059fbbb84bf4986dd164d07458c1bc93ff30461cb820aeab2be3d2ae8e"
     },
     {
       "id": "bund/AHVV/art_28_bis",
@@ -3103,10 +3123,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Bei vollen Beitragsjahren des Versicherten von",
-              "bis",
-              "Zusätzlich anrechenbare Beitragsjahre bis zu"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Bei vollen Beitragsjahren des Versicherten von"
+              },
+              {
+                "typ": "zahl",
+                "titel": "bis"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Zusätzlich anrechenbare Beitragsjahre bis zu"
+              }
             ],
             "zeilen": [
               [
@@ -3132,7 +3161,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_52_d",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "3f561b2df10e17d4a3ceb725a658740a70e36b78b10e21dc209d1e150bf81d7b"
+      "sha": "3e6cb39c25d43fda53680e5192224d76f56e0e99b28d6222adaf06d590d4a62c"
     },
     {
       "id": "bund/AHVV/art_52_d_bis",
@@ -3515,9 +3544,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "Prozent"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              },
+              {
+                "typ": "zahl",
+                "titel": "Prozent"
+              }
             ],
             "zeilen": [
               [
@@ -3576,7 +3611,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_54",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "47638aa3b8ac64f43a8fdba078413d8be2c6af4378aba7b47b96e0c02016110b"
+      "sha": "fc11e4b2ed846b5b019a833ebfc7d0207594bc05778a88745e56a3c31e4137dd"
     },
     {
       "id": "bund/AHVV/art_54_bis",
@@ -3663,12 +3698,27 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Aufschubsdauer in Jahren",
-              "und 0–2 Monaten",
-              "und 3–5 Monaten",
-              "und 6–8 Monaten",
-              "und 9–11 Monaten"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Aufschubsdauer in Jahren"
+              },
+              {
+                "typ": "zahl",
+                "titel": "und 0–2 Monaten"
+              },
+              {
+                "typ": "zahl",
+                "titel": "und 3–5 Monaten"
+              },
+              {
+                "typ": "zahl",
+                "titel": "und 6–8 Monaten"
+              },
+              {
+                "typ": "zahl",
+                "titel": "und 9–11 Monaten"
+              }
             ],
             "zeilen": [
               [
@@ -3730,7 +3780,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_55_ter",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "345473f73326a72533024aa53800862908b498caae512ece41abd0ca2b7e6614"
+      "sha": "ffb5db90ddc72a1055495a80188763104c1589eedcfea2603775e84ffefa7227"
     },
     {
       "id": "bund/AHVV/art_55_quater",
@@ -3814,20 +3864,59 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Vorbezugsdauer in Jahren"
+              },
+              {
+                "typ": "text",
+                "titel": "und Monaten 0"
+              },
+              {
+                "typ": "zahl",
+                "titel": "1"
+              },
+              {
+                "typ": "zahl",
+                "titel": "2"
+              },
+              {
+                "typ": "zahl",
+                "titel": "3"
+              },
+              {
+                "typ": "zahl",
+                "titel": "4"
+              },
+              {
+                "typ": "zahl",
+                "titel": "5"
+              },
+              {
+                "typ": "zahl",
+                "titel": "6"
+              },
+              {
+                "typ": "zahl",
+                "titel": "7"
+              },
+              {
+                "typ": "zahl",
+                "titel": "8"
+              },
+              {
+                "typ": "zahl",
+                "titel": "9"
+              },
+              {
+                "typ": "zahl",
+                "titel": "10"
+              },
+              {
+                "typ": "zahl",
+                "titel": "11"
+              }
             ],
             "zeilen": [
               [
@@ -3895,7 +3984,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_56_bis",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "93bb4f5e66a4f52907090572c3518dae01b3814e311d32900bfb249bbbeca746"
+      "sha": "c894862fec5f4707a11ef5f1b0630866a512d56978a3f5976d09d6061ff07ce8"
     },
     {
       "id": "bund/AHVV/art_56_ter",
@@ -3950,20 +4039,59 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Vorbezugsdauer in Jahren"
+              },
+              {
+                "typ": "text",
+                "titel": "und Monaten 0"
+              },
+              {
+                "typ": "zahl",
+                "titel": "1"
+              },
+              {
+                "typ": "zahl",
+                "titel": "2"
+              },
+              {
+                "typ": "zahl",
+                "titel": "3"
+              },
+              {
+                "typ": "zahl",
+                "titel": "4"
+              },
+              {
+                "typ": "zahl",
+                "titel": "5"
+              },
+              {
+                "typ": "zahl",
+                "titel": "6"
+              },
+              {
+                "typ": "zahl",
+                "titel": "7"
+              },
+              {
+                "typ": "zahl",
+                "titel": "8"
+              },
+              {
+                "typ": "zahl",
+                "titel": "9"
+              },
+              {
+                "typ": "zahl",
+                "titel": "10"
+              },
+              {
+                "typ": "zahl",
+                "titel": "11"
+              }
             ],
             "zeilen": [
               [
@@ -4039,20 +4167,59 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Vorbezugsdauer in Jahren"
+              },
+              {
+                "typ": "text",
+                "titel": "und Monaten 0"
+              },
+              {
+                "typ": "zahl",
+                "titel": "1"
+              },
+              {
+                "typ": "zahl",
+                "titel": "2"
+              },
+              {
+                "typ": "zahl",
+                "titel": "3"
+              },
+              {
+                "typ": "zahl",
+                "titel": "4"
+              },
+              {
+                "typ": "zahl",
+                "titel": "5"
+              },
+              {
+                "typ": "zahl",
+                "titel": "6"
+              },
+              {
+                "typ": "zahl",
+                "titel": "7"
+              },
+              {
+                "typ": "zahl",
+                "titel": "8"
+              },
+              {
+                "typ": "zahl",
+                "titel": "9"
+              },
+              {
+                "typ": "zahl",
+                "titel": "10"
+              },
+              {
+                "typ": "zahl",
+                "titel": "11"
+              }
             ],
             "zeilen": [
               [
@@ -4128,20 +4295,59 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "",
-              "0",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Vorbezugsdauer in Jahren"
+              },
+              {
+                "typ": "text",
+                "titel": "und Monaten 0"
+              },
+              {
+                "typ": "zahl",
+                "titel": "1"
+              },
+              {
+                "typ": "zahl",
+                "titel": "2"
+              },
+              {
+                "typ": "zahl",
+                "titel": "3"
+              },
+              {
+                "typ": "zahl",
+                "titel": "4"
+              },
+              {
+                "typ": "zahl",
+                "titel": "5"
+              },
+              {
+                "typ": "zahl",
+                "titel": "6"
+              },
+              {
+                "typ": "zahl",
+                "titel": "7"
+              },
+              {
+                "typ": "zahl",
+                "titel": "8"
+              },
+              {
+                "typ": "zahl",
+                "titel": "9"
+              },
+              {
+                "typ": "zahl",
+                "titel": "10"
+              },
+              {
+                "typ": "zahl",
+                "titel": "11"
+              }
             ],
             "zeilen": [
               [
@@ -4216,7 +4422,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de#art_56_quater",
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
-      "sha": "d23a3dc985d4093bc5206d41dccf5879dac5bbba10b49a2a224782e46e06adf5"
+      "sha": "d3ac21492e87240de955bb591b127c450e1b93a7eefb2df45def4f0aea8c365c"
     },
     {
       "id": "bund/AHVV/art_57",
