@@ -47,5 +47,15 @@ describe('resolve', () => {
     ]);
     expect(b.slot26xBelegtVon).toBe('P');
     expect(b.readyNow).not.toContain('Q');
+    expect(b.wartet26xSlot).toContain('Q');
+  });
+
+  it('26x: zwei frische ready-26x → nur lex-erstes ready-now, anderes wartet auf Slot', () => {
+    const b = resolve([
+      einheit('B', { asset26x: true }),
+      einheit('A', { asset26x: true }),
+    ]);
+    expect(b.readyNow).toEqual(['A']);
+    expect(b.wartet26xSlot).toEqual(['B']);
   });
 });

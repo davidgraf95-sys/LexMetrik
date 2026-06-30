@@ -9,6 +9,7 @@ export interface Buckets {
   wartetFachzeit: string[];
   blockiert: { id: string; blocker: string }[];
   geparkt: string[];
+  wartet26xSlot: string[];
   slot26xBelegtVon: string | null;
 }
 
@@ -23,6 +24,8 @@ export function resolve(einheiten: Einheit[]): Buckets {
   const wartetFachzeit: string[] = [];
   const blockiert: { id: string; blocker: string }[] = [];
   const geparkt: string[] = [];
+  const wartet26xSlot: string[] = [];
+  let ready26xAdmitted = false;
 
   for (const e of sortiert) {
     const t = e.etikett;
@@ -33,7 +36,8 @@ export function resolve(einheiten: Einheit[]): Buckets {
     if (!t.of) { wartetFachzeit.push(e.id); continue; }
     const offen = t.dep.filter((d) => !done.has(d));
     if (offen.length) { wartetDep.push({ id: e.id, offen }); continue; }
-    if (t.asset26x && slot26xBelegtVon) continue; // Slot belegt → nicht ready-now
+    if (t.asset26x && (slot26xBelegtVon || ready26xAdmitted)) { wartet26xSlot.push(e.id); continue; }
+    if (t.asset26x) ready26xAdmitted = true;
     readyNow.push(e.id);
   }
 
@@ -53,7 +57,7 @@ export function resolve(einheiten: Einheit[]): Buckets {
     }
     if (!platziert) lanes.push([id]);
   }
-  return { readyNow, lanes, wartetDep, wartetFachzeit, blockiert, geparkt, slot26xBelegtVon };
+  return { readyNow, lanes, wartetDep, wartetFachzeit, blockiert, geparkt, wartet26xSlot, slot26xBelegtVon };
 }
 
 // CLI
@@ -67,5 +71,6 @@ if (process.argv[1] && process.argv[1].endsWith('next.ts')) {
   if (b.wartetFachzeit.length) z(`👤 wartet auf Davids Fachzeit: ${b.wartetFachzeit.join(', ')}`);
   if (b.blockiert.length) z(`⛔ blockiert: ${b.blockiert.map((x) => `${x.id}(${x.blocker})`).join(', ')}`);
   if (b.geparkt.length) z(`🅿️  geparkt: ${b.geparkt.join(', ')}`);
+  if (b.wartet26xSlot.length) z(`⏸️  wartet auf 26×-Slot: ${b.wartet26xSlot.join(', ')}`);
   if (b.slot26xBelegtVon) z(`📦 26×-Slot belegt von: ${b.slot26xBelegtVon}`);
 }
