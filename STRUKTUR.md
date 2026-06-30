@@ -23,9 +23,9 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 30.6.2026 — M13-Annex (Anhänge) Bund FERTIG + gegatet (Branch `feat/normtext-annex-m13`)
+## Session 30.6.2026 — M13-Annex (Anhänge) Bund FERTIG + GEMERGT (PR #57) + AUF PROD DEPLOYT
 
-**Stand:** Worktree `.claude/worktrees/m13-annex`, Branch `feat/normtext-annex-m13` (von main@`70ae45d9`). Voll-Gate grün; **Deploy = Davids Ja (§9).** Auslöser David: «mach weiter mit Anhängen / run till dry» — der M13-Rest «Anhänge» (B2).
+**Stand:** **PR #57 GEMERGT auf main@`e8c3b0e0`** + **AUF PROD DEPLOYT** (`lexmetrik.vercel.app`, `dpl_e3ktVMd3S8ef…`, Davids Ja «mergen + deployen»; Prod-verifiziert: Asset-Hash live=lokal, LRV-Anhang-3-Emissionstabelle mit «Hellstrahler/Dunkelstrahler» live gerendert, Kernrouten 200, e2e 86 grün). Branch+Worktree aufgeräumt. Auslöser David: «mach weiter mit Anhängen / run till dry» — der M13-Rest «Anhänge» (B2).
 
 **Befund:** Fedlex legt die Anhänge in einen EIGENEN Container `<div id="annex">` (Geschwister von `<main>`, NACH `<div id="dispositions">`) als **`<section>`** ab — KEINE `<article>`, KEINE `art_`-Nummer → vom `art_`-/`disp_`-Enumerator gar nicht erfasst, **komplett gefehlt** (390 Einträge / 134 Bund-Gesetze, vorher 0).
 
@@ -37,7 +37,7 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 **Gegenprüfung (2 adversariale Opus-Pässe, Code + Fidelity):** fanden **6 §1-Befunde, alle gefixt+verifiziert:** **(C1)** Apparat-Variant-Klasse `footnotes section-heading-footnote` (69 Stellen/14 Erlasse, VTS) leckte Änderungs-/Aufhebungs-Historie als Normtext → Klasse-enthält-`footnotes` strippen (heilt auch repealte Anhänge → «…»); **(C2)** geschachtelte Layout-Tabellen (`<table>` in Zelle, SSV) zerschnitten non-greedy → `findeTableEnde` balanciert (Signal-Legenden 4.78–4.95 zurück); **(C3)** marke-lose `<dd>`-Notiz nach statt vor ihrer Liste → reorder; **(D1)** Marken-Kürzung «1.1.1»→«1» / «Flupo»→«f»; **(D2)** all-`<th>`-Datentabellen als reiner Kopf gelesen (LRV Grenzwerte, VTS Sitzmasse); **(D3)** VERSCHACHTELTE marke-lose `<dd>` verloren (VTS Anhang 7 «2,9 m/s²») → `markeloseNotizen` rekursiv. **§6-kritisch:** D1/D2 sitzen in den GETEILTEN Parsern (`parseDefinitionsListe`/`parseRohTabelle`/`parseFedlexTabelle`) → über ein **`anhang`-Flag NUR im Anhang-Pfad** aktiviert, der Haupttext-Pfad bleibt **byte-gleich (empirisch: 0 geänderte Artikel-sha)**. Dieselbe Garbling-Klasse im Haupttext (Staatsverträge `i`→`ii`) = eigener, deklarierter Folgeschritt (Artikel-Re-Bless). Wort-Coverage 99.65 % über 44 479 Anhang-Wörter, 0 realer Verlust. 12 neue Anhang-Unit-Tests.
 
-**Heimat:** `FAHRPLAN-NORMTEXT-DARSTELLUNG.md` §M13 (Status nachgezogen), Detail `bibliothek/normen/norm-vorschau-snapshot-system.md` §M13-Annex. **OFFEN (M13-Rest):** Bilder/Formeln-`<img>`-Pass; danach LugÜ-Protokolle. **Deploy = Davids Ja (§9).**
+**Heimat:** `FAHRPLAN-NORMTEXT-DARSTELLUNG.md` §M13 (Status nachgezogen), Detail `bibliothek/normen/norm-vorschau-snapshot-system.md` §M13-Annex. **OFFEN (M13-Rest):** Bilder/Formeln-`<img>`-Pass; danach LugÜ-Protokolle; Haupttext-Marken-Garbling (Folgeschritt, Artikel-Re-Bless).
 
 ## Session 30.6.2026 — M13 Schlussteil (Schlusstitel/UeB) Bund FERTIG + AUF PROD DEPLOYT (PR #56)
 
