@@ -154,7 +154,12 @@ ohnehin verschiebt).
 ## Der `next`-Resolver — Regeln + vollständige Ausgabe (Befund #6, #7, #12, #13, #16)
 
 **`ready-now` (grün, jetzt baubar)** wenn **alle**: `status==ready` · `of==ja` · `blocker==null` · alle
-`dep` sind `done` · falls `26x==ja`: kein **anderer** `26x==ja` auf `wip`.
+`dep` sind `done` · falls `26x==ja`: **kein anderes 26× ist aktiv ODER bereits empfohlen** — d. h. kein
+26× auf `wip` UND in dieser Auflösung wurde noch kein anderes 26× in `ready-now` zugelassen (höchstens
+**ein** 26× gleichzeitig aktiv/empfohlen — ROADMAP-Leitprinzip 4 «nie zwei 26×-Assets parallel»; der
+zuerst zugelassene = lexikografisch erster). Verfehlt ein `ready`-26× diese Bedingung, fällt es **nicht
+durch**, sondern in den Bucket `wartet auf 26×-Slot` (Befund Task-3-Review: stiller Durchfall + zwei
+frische 26× gleichzeitig).
 
 **`26x`/`parked`-Semantik (Befund #12):** `parked` und `blocked` belegen den 26×-Slot **nicht** (nur
 `wip` tut es). Das Parken eines 26×-Schritts gibt also den Slot frei (ROADMAP-Leitprinzip 4 →
@@ -170,7 +175,8 @@ Spec heilt):
 3. **wartet auf Davids Fachzeit** (`of==nein`)
 4. **blockiert** (mit Blocker-Token + Klartext aus dem Register)
 5. **geparkt**
-6. **26×-Slot belegt von …** (falls zutreffend)
+6. **wartet auf 26×-Slot** (ready-26×, aber ein anderes 26× ist aktiv/bereits empfohlen — nichts geht still verloren)
+7. **26×-Slot belegt von …** (falls zutreffend)
 
 Determinismus (§2): gleiche ROADMAP → gleiche Ausgabe. Tagesbezug nie in der Auswahllogik.
 
