@@ -23,6 +23,14 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — Performance-Grundsatz + ultracode-Audit + Quick-Win-Batch 1 (DEPLOYT)
+
+**Stand:** Auf Davids Frage «macht Lexmetrik alte Computer langsamer?» gemessen (Lighthouse 4× CPU): ja — `/gesetze/bund/OR` Score **42**, **CLS 0,64**. ultracode-Audit (38 Opus-Agenten, adversarial gegen Logikverlust): 25 verifizierte logik-sichere Optimierungen. **Grundsatz festgeschrieben** (CLAUDE.md **§15** + ROADMAP **Leitprinzip 7**/Querschnitt **QS-PERF** + **FAHRPLAN-PERFORMANCE.md** + Memory): *Lexmetrik nicht merklich langsamer, ausser bei Logikverlust — Treue gewinnt immer.*
+
+**Gebaut + DEPLOYT (Commits `9e914242`+`d9d4d0a0`, golden 201 byte-identisch, 2870 Tests + 86 e2e, doppelter §9-Bug-Check kein Blocker):** Rank 1 `React.memo`(ArtikelLeser) · Rank 5 `vendor-react`-manualChunks (Entry **323→101 KB roh**) · Rank 2-CLS `min-h-screen` (Reader-Ladezustand + Suspense-Fallback). **Prod-Messung 4× CPU before→after:** OR Score 42→**70**, CLS 0,64→**0**, TBT 330→**60 ms**; Startseite Score 64→**86**, CLS 0,57→**0**. LCP unverändert 6,2 s (= M-Daten-Pfad, offen).
+
+**Offen (FAHRPLAN-PERFORMANCE):** Tor `check:perf-budget` · M-Daten-Pfad (idle-Defer/Web-Worker/Sharding/Snapshot-Format → LCP) · zurückgestellt: Rank 4 TOC-memo (Hook-Reorder), NewsHeader-CLS (Prerender statt Magic-Number).
+
 ## Session 30.6.2026 — Analyse + Architektur-Entscheid «Quell-Architektur Bund-Normtext (AKN-XML)», kein Code
 
 **Stand:** Reine **Analyse-Session** (David: «kein Code, nur Analyse»). Council-Entscheid (DMAD, 5 Opus-Advisor + Devil's-Advocate + Chairman) zur Frage «wie ein Bundesgesetz am besten darstellen / Fehleranfälligkeit grundsätzlich senken». Festgehalten in **ROADMAP** (Bündel N), **FAHRPLAN-NORMTEXT-DARSTELLUNG §Quell-Architektur-Entscheid**, **CLAUDE.md §7** (neue Regel «Quell-Wahl zuerst») + 2 Memorys. **Keine Produktiv-Code-Änderung, golden unberührt.**
