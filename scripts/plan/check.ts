@@ -44,6 +44,8 @@ export function pruefe(
   const zaehl = new Map<string, number>();
   for (const e of einheiten) zaehl.set(e.id, (zaehl.get(e.id) ?? 0) + 1);
   for (const [id, n] of zaehl) if (n > 1) probleme.push({ id, meldung: `id "${id}" mehrfach etikettiert` });
+  const invSet = new Set(inventar);
+  for (const e of einheiten) if (!invSet.has(e.id)) probleme.push({ id: e.id, meldung: `@meta "${e.id}" ist nicht im Inventar (verwaist)` });
 
   for (const e of einheiten) {
     const t = e.etikett;
@@ -54,7 +56,7 @@ export function pruefe(
     // (3) blocker-Konsistenz
     if ((t.status === 'blocked' || t.status === 'parked')) {
       if (!t.blocker) probleme.push({ id: e.id, meldung: `status ${t.status} ohne blocker` });
-      else if (!(t.blocker in blockers)) probleme.push({ id: e.id, meldung: `blocker "${t.blocker}" nicht im @blockers-Register` });
+      else if (!Object.prototype.hasOwnProperty.call(blockers, t.blocker)) probleme.push({ id: e.id, meldung: `blocker "${t.blocker}" nicht im @blockers-Register` });
     }
     if (t.status === 'ready' && t.blocker) probleme.push({ id: e.id, meldung: `status ready aber blocker gesetzt` });
     // (4) dep-IDs existieren
