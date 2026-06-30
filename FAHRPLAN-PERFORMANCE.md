@@ -145,6 +145,32 @@ marginalen Zusatzgewinn — entsprechend spät.
 
 ---
 
+## Architektur-Befunde aus dem Bau (30.6.2026 — präziser als der Roh-Audit)
+
+Beim Umsetzen zeigten sich zwei Subtilitäten, die der High-Level-Audit überging — **vor dem Bau
+der jeweiligen Items beachten:**
+
+1. **Das Register IST der Inhalts-Index — nicht defer-bar, nur shard-bar (betrifft Rank 8 + 6).**
+   `ladeBrowseManifest()` (`browse.ts:32`) ist gecacht, und **`ladeErlass(key)` ruft es intern auf**,
+   um `e.datei` (die Snapshot-Datei) zu finden. Das 920-KB-`register.json` liegt damit ZWINGEND im
+   kritischen Ladepfad — ein `requestIdleCallback`-Defer würde den Inhalt selbst verzögern. Korrekt
+   ist nur **Sharding** (`register-bund.json` ~93 KB / `register-kanton.json` ~623 KB): der Reader
+   einer Bund-Seite findet `e.datei` im 93-KB-Bund-Shard. **Achtung Kopplung:** `Shell.tsx:212` lädt
+   dasselbe Manifest (gecacht, für Breadcrumb/Pane-Titel) — schert man nur den Reader auf den Shard
+   aus, laden **beide** (Shard + volles Register) → schlimmer. Sharding muss **koordiniert** über
+   Generator + `browse.ts` + `inhalt.tsx` + `Shell.tsx` (+ `normtext-register.test`) erfolgen; ein
+   zusammenhängender M/L-Umbau am Inhalts-Ladepfad, eigener Zyklus mit golden + Doppel-Bug-Check.
+2. **render-then-replace vereitelt naives idle-Defer für LCP (betrifft Rank 6).** Der Reader nutzt
+   `createRoot` (`main.tsx:39`) — React **verwirft** das prerenderte 930-KB-HTML beim Mount. Der
+   Audit nimmt an «das prerenderte HTML trägt LCP, während der React-Baum nachmountet» — das gilt
+   NUR, wenn man das HTML nicht sofort verwirft. Naives `requestIdleCallback` um den Fetch könnte LCP
+   **verschlechtern** (Inhalt malt später). Der LCP-Hebel braucht einen echten Architektur-Entscheid
+   (prerendertes HTML als First-Paint stehenlassen, bis die Daten da sind — oder Snapshot verkleinern,
+   Rank 10) → eigener Design-Schritt (ggf. Council/Brainstorming), kein mechanischer Edit.
+   **Zusatz-Risiko:** `ladeStruktur` (1,2 MB, Marginalien/Fussnoten/TOC) zu defern droht den gerade
+   erreichten CLS=0 zu zerstören (späte Marginalien-/TOC-Insertion) — vor jedem Struktur-Defer Mobile-
+   CLS gegenmessen.
+
 ## Audit-Rohdaten
 
 Vollständige 25 verifizierten Befunde (je mit `costEvidence`, `logicLossAssessment`, `recommendedFix`,
