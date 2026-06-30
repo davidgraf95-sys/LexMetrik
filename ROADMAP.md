@@ -85,7 +85,7 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 <!-- @blockers
 wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offen)
 §4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt
-26x-slot: 26×-Slot belegt — erst öffnen, wenn ein anderes 26×-Asset frei ist (Leitprinzip 4)
+26x-slot: 26×-Anspruch noch von W1·4 (blocked, 26x) gehalten — erst öffnen, wenn ein anderes 26×-Asset frei ist (Leitprinzip 4)
 -->
 
 ---
@@ -135,7 +135,7 @@ wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offe
   **nicht aus `ROADMAP.md` verlinkt** ist — setzt die Plan-Hygiene-Regel durch (jede `FAHRPLAN-*.md`
   muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1). Detail + Etikett-System: **`FAHRPLAN-PLAN-STEUERUNG.md`** (Tor `check:plan` = Etikett-Konsistenz + FAHRPLAN-Verlinkung der referenzierten Dateien).
 - **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
-  <!-- @meta id: SEO-A11Y · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-SEO-A11Y-GOVERNANCE.md -->
+  <!-- @meta id: SEO-A11Y · status: ready · of: ja · blocker: null · dep: [] · kollision: [public/normtext/register.json, src/lib/seo.ts, scripts/prerender.ts, vercel.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-SEO-A11Y-GOVERNANCE.md -->
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
 - **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
@@ -306,7 +306,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   fertigstellen; Festsetzung/Dispositiv → Welle 2.
   *Nächster Schritt:* I4 `kriterien`-Feld + I9-Rest **[OF]**; **I2 ⟵ Recherche `wbqdyap3x`**
   (Blockade). **Park-Entscheid:** bewusst bei «I4/I9 fertig, I2 blockiert» parken = **26×-Slot
-  freigeben** (Voraussetzung für Welle 3 · Schritt 11).
+  freigeben** (Voraussetzung für Welle 3 · Schritt 12).
 
 ### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
 
@@ -389,7 +389,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
   Zitierer BGE/BGer + Rubrum-Vorlage Art. 112 BGG/238 ZPO; reiner User-Input-Builder).
 - [ ] **8 · Schriften-Baukasten** *(VORLAGEN, Worktree)* — Berufung/BGG-Beschwerde/Sistierung/
-  <!-- @meta id: W2·8 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VORLAGEN-AUSBAU.md -->
+  <!-- @meta id: W2·8 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VORLAGEN-AUSBAU.md -->
   Beweisverzeichnis über `vorlagen/engine.ts`; Zulässigkeit nur Hinweis, Status «entwurf».
 - [ ] **9 · Aufräum-Item** *(UX-PUNKTELISTE ⚫ überholt)*. Deliverable = Mapping-Tabelle
   <!-- @meta id: W2·9 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-UX-PUNKTELISTE.md -->
@@ -411,7 +411,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   der Prozesskosten-26×-Slot frei ist** (Schritt 4). BS-Pilot; Kantonale-Entscheide-Import hart
   **nachgelagert**, nie gleichzeitig.
 - [ ] **13 · Vorlagen-Breite** *(VORLAGEN V5/V6/V8, GMBH G2, VERTRAGS-VARIANTEN P3; Worktree)*.
-  <!-- @meta id: W3·13 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
+  <!-- @meta id: W3·13 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein -->
   Tiefe vor Stückzahl. GmbH qualifizierte Gründung (777c II) · Musterklagen (Bauhandwerkerpfand) ·
   Basistypen (Kauf/Fahrniskauf Art. 184 ff. dispositiv, Schenkung/Pacht/Darlehen/Bürgschaft).
 - [ ] **14 · Multi-Pane / Split-View** *(SPLIT-VIEW, Fundament-Umbau, eigener Worktree; Auftrag

@@ -87,7 +87,7 @@ export function pruefe(
     for (const d of t.dep) if (!vorhanden.has(d)) probleme.push({ id: e.id, meldung: `dep "${d}" existiert nicht` });
     // (6) kollision-Pfade existieren (Globs: nur einfache Existenz des Pfads bzw. Verzeichnis-Präfix)
     for (const k of t.kollision) {
-      const basis = k.replace(/[*?].*$/, '');
+      const basis = k.replace(/[*?{[].*$/, '');
       if (!fileExists(basis)) probleme.push({ id: e.id, meldung: `kollision-Pfad "${k}" existiert nicht` });
     }
   }

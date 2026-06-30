@@ -27,7 +27,17 @@ export function parseRoadmap(md: string): { einheiten: Einheit[]; blockers: Reco
       // Sektion = Überschriftstext ohne Marker/Emoji und ohne Tail (— … / *(…)*)
       sektion = z.replace(/^##+\s+/, '').replace(/^[⚡🚀▶■\s]+/u, '').replace(/\s+—.*$/, '').replace(/\s+\*.*$/, '').trim();
     }
-    if (z.trim().startsWith('<!-- @blockers')) { imBlockers = !z.includes('-->'); continue; }
+    if (z.trim().startsWith('<!-- @blockers')) {
+      imBlockers = !z.includes('-->');
+      if (!imBlockers) {
+        const innen = z.replace(/.*<!--\s*@blockers/, '').replace(/-->.*/, '');
+        for (const teil of innen.split(/[;\n]/)) {
+          const bm = teil.match(/^\s*([^:]+):\s*(.+)$/);
+          if (bm) blockers[bm[1].trim()] = bm[2].trim();
+        }
+      }
+      continue;
+    }
     if (imBlockers) {
       if (z.trim().startsWith('-->')) { imBlockers = false; continue; }
       const bm = z.match(/^\s*([^:]+):\s*(.*)$/);

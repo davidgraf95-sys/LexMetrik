@@ -14,7 +14,7 @@ export interface Buckets {
   slot26xBelegtVon: string | null;
 }
 
-function kollBasis(p: string): string { return p.replace(/[*?{].*$/, ''); }
+function kollBasis(p: string): string { return p.replace(/[*?{[].*$/, ''); }
 function pfadUeberlappt(x: string, y: string): boolean {
   const a = kollBasis(x), b = kollBasis(y);
   if (a === '' || b === '' || a === b) return true;

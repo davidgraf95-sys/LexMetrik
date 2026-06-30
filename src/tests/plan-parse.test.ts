@@ -57,6 +57,12 @@ describe('parseRoadmap — Robustheit', () => {
     const md = ['## Die geordnete Abarbeitung', '<!-- @blockers b1: x -->', '- [ ] **y**', '  <!-- @meta id: A · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
     expect(parseRoadmap(md).einheiten.map((e) => e.id)).toEqual(['A']);
   });
+  it('einzeiliger @blockers MIT Inline-Eintrag registriert ihn', () => {
+    const md = ['## Die geordnete Abarbeitung', '<!-- @blockers b1: grund -->', '- [ ] **y**', '  <!-- @meta id: A · status: blocked · of: ja · blocker: b1 · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
+    const { blockers, einheiten } = parseRoadmap(md);
+    expect(blockers.b1).toBe('grund');
+    expect(einheiten.map((e) => e.id)).toEqual(['A']);
+  });
   it('Checkbox [X] gross + * /+ -Bullets werden erkannt', () => {
     const md = ['## Die geordnete Abarbeitung', '* [X] **z**', '  <!-- @meta id: A · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
     expect(parseRoadmap(md).einheiten[0].checkbox).toBe('[x]');
