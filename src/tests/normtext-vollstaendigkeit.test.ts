@@ -10,12 +10,46 @@ import {
   unerwarteteKantonLueckenMitQuelleUrl,
   pruefeInhaltsSanity,
   pruefeManifestKonsistenz,
+  pruefeStrukturKonsistenz,
 } from '../../scripts/normtext/vollstaendigkeit-logik.ts';
 import type {
   BekannteLuecke,
   KantonInventarGruppeRef,
   SnapshotEintrag,
 } from '../../scripts/normtext/vollstaendigkeit-logik.ts';
+
+// ─── pruefeStrukturKonsistenz (Tor: Sidecar ↔ Snapshot, 30.6.2026) ────────────
+describe('pruefeStrukturKonsistenz', () => {
+  it('konsistent: gleiche Token-Menge → keine Befunde', () => {
+    const r = pruefeStrukturKonsistenz(['1', '2', '335_c'], ['1', '2', '335_c']);
+    expect(r.verwaist).toEqual([]);
+    expect(r.fehlend).toEqual([]);
+    expect(r.fehlendDoppelId).toEqual([]);
+  });
+
+  it('fängt den realen OR-Drift (verwaiste + fehlende Struktur)', () => {
+    // main-Zustand 30.6.2026: Snapshot trug schon 219_a/226_a_226_d/226_f_226_k,
+    // Struktur noch 226_a/226_f (verwaist) und ohne 219_a (fehlend).
+    const snap = ['218', '219', '219_a', '226_a_226_d', '226_f_226_k'];
+    const stru = ['218', '219', '226_a', '226_f'];
+    const r = pruefeStrukturKonsistenz(snap, stru);
+    expect(r.verwaist.sort()).toEqual(['226_a', '226_f']);
+    expect(r.fehlend.sort()).toEqual(['219_a', '226_a_226_d', '226_f_226_k']);
+  });
+
+  it('Doppelartikel-«__N» ohne Struktur ist KEIN Fehler (nur Hinweis)', () => {
+    const r = pruefeStrukturKonsistenz(['126_z', '126_z__2'], ['126_z']);
+    expect(r.verwaist).toEqual([]);
+    expect(r.fehlend).toEqual([]); // __2 NICHT als Fehler
+    expect(r.fehlendDoppelId).toEqual(['126_z__2']);
+  });
+
+  it('Schlusstitel-Token werden wie normale Token geprüft', () => {
+    // disp-Token im Snapshot, aber kein Struktur-Schlüssel → echter Fehler.
+    const r = pruefeStrukturKonsistenz(['1', 'disp_u1_art_1'], ['1']);
+    expect(r.fehlend).toEqual(['disp_u1_art_1']);
+  });
+});
 
 // ─── fehlendeBundArtikel ──────────────────────────────────────────────────────
 
@@ -36,6 +70,31 @@ describe('fehlendeBundArtikel', () => {
     expect(result[0].token).toBe('2');
     expect(result[0].gesetz).toBe('OR');
     expect(result[0].warLeererArtikel).toBe(false);
+  });
+
+  it('M13: prüft auch Schlusstitel-Anker (disp) über kollisionsfreies Token', () => {
+    // Haupttext-art_178 vorhanden, Schlusstitel disp_u2/art_178 FEHLT → eine Lücke,
+    // die nicht durch den gleichnamigen Haupttext-Artikel maskiert wird (§8).
+    const snapshotIds = new Set(['bund/ZGB/art_178', 'bund/ZGB/disp_u1_art_1']);
+    const result = fehlendeBundArtikel(
+      'ZGB',
+      ['178'],
+      snapshotIds,
+      new Set(),
+      ['disp_u1/art_1', 'disp_u2/art_178'],
+    );
+    expect(result).toHaveLength(1);
+    expect(result[0].snapshotId).toBe('bund/ZGB/disp_u2_art_178');
+    expect(result[0].token).toBe('disp_u2_art_178');
+  });
+
+  it('M13: keine Lücke, wenn alle Schlusstitel-Anker im Snapshot sind', () => {
+    const snapshotIds = new Set(['bund/ZGB/disp_u1_art_1', 'bund/ZGB/disp_u2_art_178']);
+    const result = fehlendeBundArtikel('ZGB', [], snapshotIds, new Set(), [
+      'disp_u1/art_1',
+      'disp_u2/art_178',
+    ]);
+    expect(result).toHaveLength(0);
   });
 
   it('markiert leere Artikel korrekt (warLeererArtikel = true)', () => {

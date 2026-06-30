@@ -222,6 +222,11 @@ export function gruppiereBetraege(text: string): string {
 // EINER Nummer (Buchstaben-Suffix «40_g», Einzelartikel «335_c») bleiben unberührt.
 export function labelMitBereich(label: string, id: string): string {
   if (/[–-]/.test(label)) return label;
+  // M13: Schlusstitel-/UeB-Token («disp_u1_art_31_32») beginnen mit Buchstaben.
+  // Ihr Label ist bereits generatorseitig korrekt gesetzt (artikelLabel über den
+  // reinen Suffix, inkl. Bereich «Art. 31–32»); die heuristische Bereichs-
+  // Rekonstruktion aus dem Token würde hier nur Müll erzeugen → früh raus.
+  if (!/^\d/.test(id)) return label;
   const toks = id.split('_');
   const numPos = toks.map((t, i) => (/^\d+$/.test(t) ? i : -1)).filter((i) => i >= 0);
   if (numPos.length < 2) return label;

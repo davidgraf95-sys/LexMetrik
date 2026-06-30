@@ -14,7 +14,15 @@
  * unmittelbar folgende <div class="collapseable">, deren Inhalt (inkl. Artikel)
  * unter ihnen liegt. Ein Stack aus div/article (nur diese zählen fürs Nesting)
  * hält den aktuellen Gliederungs-/Marginalien-Kontext je Artikel.
+ *
+ * M13: erfasst auch die Schlusstitel-/UeB-Divisionen (`<article id="disp_uN/art_*">`,
+ * gewickelt in `<div id="dispositions">`). Die Überschriften-Erfassung (h1/h2/
+ * div.heading + section-heading-footnote) gilt dort unverändert; nur die ID-Regex
+ * öffnet das disp-Anker-Schema. Der Sidecar-Schlüssel wird über ankerZuToken
+ * IDENTISCH zum Snapshot-`artikel`-Token gebildet (sonst bräche der Join).
  */
+
+import { ankerZuToken } from './extrahiere-fedlex.ts';
 
 export interface ArtikelStruktur {
   /** Amtliche Gliederung von aussen nach innen (Teil → Titel → Abschnitt …). */
@@ -31,7 +39,9 @@ export interface ArtikelStruktur {
 
 const TAG = /<(\/?)(div|article|h[1-6])\b([^>]*)>/gi;
 const CLASS = /\bclass="([^"]*)"/i;
-const ID = /\bid="(art_[^"]+)"/i;
+// M13: Haupttext-Artikel «art_…» ODER Schlusstitel-/UeB-Artikel «disp_uN/art_…».
+// Strukturelle Anker (disp_u1/chap_1, …/lvl_A) tragen kein «art_» → ausgeschlossen.
+const ID = /\bid="((?:disp_u\d+\/)?art_[^"]+)"/i;
 
 function hatKlasse(attrs: string, name: string): boolean {
   const m = attrs.match(CLASS);
@@ -110,7 +120,7 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
                 c.attached = true;
               }
             }
-            artId = id[1].slice(4);
+            artId = ankerZuToken(id[1]);
             result[artId] = {
               gliederung: context.filter((c) => c.kind === 'g').map((c) => ({ ebene: c.ebene, label: c.label })),
               marginalie: context.filter((c) => c.kind === 'm').map((c) => c.label),

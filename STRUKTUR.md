@@ -23,6 +23,22 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — M13 Schlussteil (Schlusstitel/UeB) Bund FERTIG + gegatet (Worktree, Deploy offen)
+
+**Auslöser David:** «im ZGB fehlt der Schlussteil — muss bei allen Gesetzen enthalten sein, sofern vorhanden.» Das ist der geplante **B2-Schritt M13** (Normtext-Darstellung).
+
+**Befund:** Fedlex legt neu-nummerierte Schluss-Divisionen (ZGB-Schlusstitel, «Schluss-/Übergangsbestimmungen der Änderung vom …») unter eigenem Anker-Schema `<article id="disp_uN/art_*">` ab (in `<div id="dispositions">`, ausserhalb `<main>`). Sie nummerieren neu ab Art. 1 → kollidieren mit dem Haupttext. Der digit-only-Enumerator erfasste sie nicht → **275 Artikel fehlten komplett** (ZGB 178, OR 83, PatG 9, SchKG 4, SVG 1).
+
+**Lösung (additiv, niedriger Blast):** `alleSchlussteilAnker` + `extrahiereArtikelAusAnker` (geteilte Block-Parserei mit Haupttext) + kollisionsfreies Token `disp_uN_art_*` via `ankerZuToken` (geteilt Generator↔Struktur-Extraktor). Schlussteil-Einträge an `eintraege[]` angehängt; Struktur-Sidecar (ID-Regex um `disp_uN/art_` geöffnet) liefert die Gliederung → der gliederungsgetriebene Reader bildet daraus von selbst eine neue **Top-Sektion** («Schlusstitel: Anwendungs- und Einführungsbestimmungen» usw.). **Null Renderer-Umbau**; nur zwei Kopf-/Tab-Label-Stellen mussten disp-Token korrekt als «Art. 3» statt «Art. dispu1art3» formatieren.
+
+**Bewusste Abweichung vom B2-Plan (§7/§1, dokumentiert):** KEINE neue Schema-Dimension `NormSnapshotDatei.anhaenge[]` — Schlussteil-Artikel SIND Artikel, daher Token-Namespace statt Schema-Strahlung in 6 Dateien.
+
+**§6-Beweis:** Golden `normtext-snapshot.json` rein **additiv +275 disp-Keys, 0 geändert, 0 entfernt** (Haupttext byte-gleich, Extraktor-Refactor verhaltensneutral); Engine-Golden `lexmetrik-golden.json` unberührt. Voll-Gate (tsc/vitest/golden/lint/check) **grün**; `check:vollstaendigkeit` erweitert (Schlussteil mitgeprüft); neue Unit-Tests; Playwright-Sicht ZGB (2 Div.) + OR (13 Div.).
+
+**Gegenprüfung + Härtung (David: «grosser Fehler, darf nicht vorkommen»):** Die adversariale Gegenprüfung fand zwei stille Datenrisiken: **F1** — `ladeSnapshot` baute die Lookup-id fix als `…/art_<token>`, hätte für jeden Schlusstitel-Zugriff still `null` geliefert → **gefixt** (namespace-bewusst) + Test. **F2** — der OR-**Struktur-Sidecar war auf `main`/Produktion veraltet** (Snapshot trug schon die 1.1.2026-Konsolidierung mit `219_a`/`226_a_226_d`, die Struktur noch `226_a`/`226_f` → einige OR-Artikel rendern in Prod OHNE Gliederung/Randtitel); Ursache: Snapshot und Struktur werden von zwei getrennten Generatoren gebaut, Drift blieb ungeprüft. Meine Regeneration korrigiert OR; **zusätzlich neues Offline-Tor `check:struktur-konsistenz`** (Snapshot-Token ↔ Struktur-Schlüssel je Bund-Gesetz, im `check` verdrahtet) — beweisbar: es hätte den OR-Drift auf `main` ROT gefangen. So kann diese Klasse stillen Drifts nie wieder verschifft werden (§7/§8). Diff: 5 Snapshot + 5 Struktur + golden + register + 11 Code-Dateien (inkl. neues Tor).
+
+**Heimat:** `FAHRPLAN-NORMTEXT-DARSTELLUNG.md` §M13 (Status nachgezogen), Detail `bibliothek/normen/norm-vorschau-snapshot-system.md` §M13. **OFFEN:** M13-Rest = Anhänge (`annex_*`, G18/G13) — eigener Pass. **Deploy = Davids Ja (§9).**
+
 ## Session 30.6.2026 — W2·5b Batch A fertig (M1 + M6-Datenteil) + 2 Live-Feedback-Fixes
 
 Nach dem Prod-Deploy: **Batch A** (Extraktor/Pipeline) zu Ende geführt + zwei Reader-Feedbacks von David.

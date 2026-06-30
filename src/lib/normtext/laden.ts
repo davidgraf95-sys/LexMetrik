@@ -101,6 +101,12 @@ export async function ladeSnapshot(
 ): Promise<NormSnapshot | null> {
   const datei = await ladeDatei(pfad(ebene, quelle, erlassRef));
   if (!datei || !Array.isArray(datei.eintraege)) return null;
-  const id = `${ebene}/${quelle}/art_${artikelToken}`;
+  // M13: Schlusstitel-/UeB-Token tragen den eigenen Namespace («disp_u1_art_1»)
+  // und werden OHNE «art_»-Präfix als id gespeichert (bund/OR/disp_u1_art_1).
+  // Haupttext-Token bleiben «art_<token>». Sonst läge der Lookup für jeden
+  // Schlusstitel-Zugriff still daneben (§8: kein stilles «Artikel nicht gefunden»).
+  const id = artikelToken.startsWith('disp_')
+    ? `${ebene}/${quelle}/${artikelToken}`
+    : `${ebene}/${quelle}/art_${artikelToken}`;
   return datei.eintraege.find((e) => e.id === id) ?? null;
 }

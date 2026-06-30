@@ -10,7 +10,57 @@
  *   4. pruefeManifestKonsistenz — Kanton-Manifest vs. tatsächliche Dateien
  */
 
+import { ankerZuToken } from './extrahiere-fedlex.ts';
+
 // ─── Typen ─────────────────────────────────────────────────────────────────────
+
+/**
+ * Prüfung 5 (30.6.2026): Struktur-Sidecar ↔ Snapshot-Konsistenz.
+ *
+ * Snapshot (`public/normtext/bund/<G>.json`) und Struktur-Sidecar
+ * (`public/normtext/struktur/bund/<G>.json`) werden von ZWEI getrennten Befehlen
+ * erzeugt (`npm run normtext` vs. `normtext:struktur`). Wird nur einer neu
+ * gebaut (z.B. Snapshot auf neue Konsolidierung re-gepinnt, Struktur vergessen),
+ * driften sie STILL auseinander: Artikel rendern ohne ihre Gliederung/Randtitel,
+ * verwaiste Struktur-Schlüssel zeigen ins Leere. Genau dieser Defekt lag am
+ * 30.6.2026 in Produktion (OR: `219_a`/`226_a_226_d` ohne Struktur, `226_a`/
+ * `226_f` verwaist). Dieses Tor macht den Drift unmöglich, still zu verschiffen.
+ *
+ * Invariante je Bund-Snapshot-Gesetz:
+ *   (a) KEIN verwaister Struktur-Schlüssel (jeder Struktur-Schlüssel hat einen
+ *       Snapshot-Eintrag) — verwaiste Schlüssel = veraltete Struktur.
+ *   (b) JEDER Snapshot-Token hat einen Struktur-Schlüssel — AUSSER den
+ *       Synthese-Suffix-Token «…__N» (2./3. Vorkommen einer doppelten art_id;
+ *       die Struktur keyt nach roher HTML-id ohne Suffix → bekannte, dokumentierte
+ *       Doppelartikel-Grenze, separat als `fehlendDoppelId` geführt, kein Fehler).
+ */
+export interface StrukturKonsistenz {
+  /** Struktur-Schlüssel ohne Snapshot-Eintrag (veraltete Struktur → FEHLER). */
+  verwaist: string[];
+  /** Snapshot-Token ohne Struktur (echter Token, kein «__N» → FEHLER). */
+  fehlend: string[];
+  /** Snapshot-Token «…__N» ohne Struktur (Doppelartikel-Grenze → nur Hinweis). */
+  fehlendDoppelId: string[];
+}
+
+/**
+ * Reine Konsistenz-Prüfung (testbar). `snapshotTokens` = alle `artikel`-Werte
+ * der Snapshot-Datei; `strukturKeys` = alle Schlüssel von `struktur.artikel`.
+ */
+export function pruefeStrukturKonsistenz(
+  snapshotTokens: readonly string[],
+  strukturKeys: readonly string[],
+): StrukturKonsistenz {
+  const snap = new Set(snapshotTokens);
+  const stru = new Set(strukturKeys);
+  const verwaist = [...stru].filter((k) => !snap.has(k));
+  const fehlendAlle = [...snap].filter((t) => !stru.has(t));
+  return {
+    verwaist,
+    fehlend: fehlendAlle.filter((t) => !/__\d+$/.test(t)),
+    fehlendDoppelId: fehlendAlle.filter((t) => /__\d+$/.test(t)),
+  };
+}
 
 export interface BundArtikelLuecke {
   /** Name des Gesetzes (z.B. 'OR'). */
@@ -71,6 +121,10 @@ export interface ManifestFehler {
  * @param htmlTokens   - Array aller art_*-Tokens aus der Fedlex-HTML (via alleArtikelTokens)
  * @param snapshotIds  - Set aller vorhandenen Snapshot-IDs (z.B. 'bund/OR/art_1')
  * @param leereArtikel - Tokens, für die extrahiereArtikel leer zurückgab (dokumentierter Skip)
+ * @param schlussteilAnker - M13: VOLLE Schlusstitel-/UeB-Anker (via alleSchlussteilAnker,
+ *                   z.B. 'disp_u1/art_1'). Deren Snapshot-id wird über ankerZuToken
+ *                   gebildet — exakt wie im Generator —, sodass auch der Schlussteil
+ *                   auf Vollabdeckung geprüft wird (§7), ohne den Haupttext-Pfad zu ändern.
  * @returns Fehlende Artikel (in HTML, nicht im Snapshot, ausser dokumentierte Skips)
  */
 export function fehlendeBundArtikel(
@@ -78,12 +132,27 @@ export function fehlendeBundArtikel(
   htmlTokens: string[],
   snapshotIds: Set<string>,
   leereArtikel: ReadonlySet<string>,
+  schlussteilAnker: readonly string[] = [],
 ): BundArtikelLuecke[] {
   const fehlend: BundArtikelLuecke[] = [];
   const gesetzOben = gesetz.toUpperCase();
 
   for (const token of htmlTokens) {
     const snapshotId = `bund/${gesetzOben}/art_${token}`;
+    if (!snapshotIds.has(snapshotId)) {
+      fehlend.push({
+        gesetz: gesetzOben,
+        token,
+        snapshotId,
+        warLeererArtikel: leereArtikel.has(token),
+      });
+    }
+  }
+
+  // M13: Schlussteil-Anker mit eigenem Token-Namespace (kollisionsfrei zum Haupttext).
+  for (const anker of schlussteilAnker) {
+    const token = ankerZuToken(anker);
+    const snapshotId = `bund/${gesetzOben}/${token}`;
     if (!snapshotIds.has(snapshotId)) {
       fehlend.push({
         gesetz: gesetzOben,

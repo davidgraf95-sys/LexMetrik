@@ -256,6 +256,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return map;
   }, [eintraege]);
 
+  // M13: Token → korrektes Anzeige-Label («Art. 3», «Art. 31–32») für den
+  // Scroll-Spy-/Reiter-Kopf. Schlusstitel-Token («disp_u1_art_3») lassen sich
+  // NICHT heuristisch aus dem Token ableiten — hier den echten artikelLabel des
+  // Eintrags nehmen (Haupttext byte-gleich: dort ist es ohnehin «Art. <token>»).
+  const artLabelByToken = useMemo(() => {
+    const map = new Map<string, string>();
+    (eintraege ?? []).forEach((e) => map.set(e.artikel, labelMitBereich(e.artikelLabel, e.artikel)));
+    return map;
+  }, [eintraege]);
+
   // Ueberschrift je Artikel im FLIESSTEXT: nur noch die artikel-EIGENE
   // Sachueberschrift (das Randtitel-Blatt). Die uebergeordneten, von mehreren
   // Artikeln geteilten Randtitel-Gruppierungen (A. ... -> II. ...) sind seit 6b
@@ -445,7 +455,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       letzterArtToken.current = token;
       // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf),
       // entprellt (150 ms) → coalesct schnelle Artikelgrenzen, weniger Pane-Re-Renders.
-      const artLabel = `Art. ${token.replace(/_/g, '')}`;
+      // Echtes Label des Eintrags (deckt Schlusstitel «Art. 3» korrekt ab);
+      // Fallback auf die Token-Heuristik nur, falls kein Eintrag passt.
+      const artLabel = artLabelByToken.get(token) ?? `Art. ${token.replace(/_/g, '')}`;
       if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
       aktArtikelTimer.current = window.setTimeout(() => setAktArtikel(artLabel), 150);
       // (b) Reiter-Live-Label: ?search (Instanz-?r) erhalten, Hash = #art-token.

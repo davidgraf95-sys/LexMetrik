@@ -10818,6 +10818,108 @@
       "abgerufen": "2026-06-29",
       "fassungsToken": "20260101",
       "sha": "9c4bb7956f9904de7fd9c746e039e9b4d392f8d867e69ee96238669b7ba1b5b3"
+    },
+    {
+      "id": "bund/SCHKG/disp_u1_art_1",
+      "ebene": "bund",
+      "quelle": "SCHKG",
+      "erlass": "SchKG",
+      "artikel": "disp_u1_art_1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat, das Bundesgericht und die Kantone erlassen die Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#disp_u1/art_1",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20260101",
+      "sha": "72ba3aec9c051f8aa5bfb506cf242d11af006f986691460435fcd21d5efebd8f"
+    },
+    {
+      "id": "bund/SCHKG/disp_u1_art_2",
+      "ebene": "bund",
+      "quelle": "SCHKG",
+      "erlass": "SchKG",
+      "artikel": "disp_u1_art_2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrensvorschriften dieses Gesetzes und seine Ausführungsbestimmungen sind mit ihrem Inkrafttreten auf hängige Verfahren anwendbar, soweit sie mit ihnen vereinbar sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Länge von Fristen, die vor dem Inkrafttreten dieses Gesetzes zu laufen begonnen haben, gilt das bisherige Recht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die im bisherigen Recht enthaltenen Privilegien (Art. 146 und 219) gelten weiter, wenn vor dem Inkrafttreten dieses Gesetzes der Konkurs eröffnet oder die Pfändung vollzogen worden ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Der privilegierte Teil der Frauengutsforderung wird in folgenden Fällen in einer besonderen Klasse zwischen der zweiten und der dritten Klasse kolloziert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn die Ehegatten weiter unter Güterverbindung oder externer Gütergemeinschaft nach den Artikeln 211 und 224 ZGB in der Fassung von 1907 leben;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Ehegatten unter Errungenschaftsbeteiligung nach Artikel 9 c des Schlusstitels zum ZGB in der Fassung von 1984 leben."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Verjährung der vor Inkrafttreten dieses Gesetzes durch Verlustschein verurkundeten Forderungen beginnt mit dem Inkrafttreten dieses Gesetzes zu laufen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#disp_u1/art_2",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20260101",
+      "sha": "aae8bd76a3c04276c85f8781d71a9b6e5850c88bc55b05943bacb77f97da5924"
+    },
+    {
+      "id": "bund/SCHKG/disp_u1_art_3",
+      "ebene": "bund",
+      "quelle": "SCHKG",
+      "erlass": "SchKG",
+      "artikel": "disp_u1_art_3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#disp_u1/art_3",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20260101",
+      "sha": "d147cd44d42c86288a85cb632db509b0cda396453a20f6732e4cefc24695fe36"
+    },
+    {
+      "id": "bund/SCHKG/disp_u1_art_4",
+      "ebene": "bund",
+      "quelle": "SCHKG",
+      "erlass": "SchKG",
+      "artikel": "disp_u1_art_4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#disp_u1/art_4",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20260101",
+      "sha": "01af0b15342c11ad72a4987de0bfc952de3fcf246af309eb60a8ec0624b40680"
     }
   ]
 }

@@ -161,3 +161,67 @@ Trenn-Leerzeichen ergänzt bzw. Layout (Zeilen/Hervorhebung) gesetzt.
     («Begrün-2.2.1, 2.2.2, dung») bleibt — eine Display-Regel kann das nicht von
     echten Hängestrich-Komposita («Kaufs-, Rückkaufs- und …») unterscheiden;
     vollständige Auflösung nur über spaltenbewusste Extraktion (offen, ZH-Anhang).
+
+## M13 — Schlussteil (Schlusstitel/UeB/Schlussbestimmungen), Bund (30.6.2026)
+
+**Quelle/Stand:** Fedlex-Filestore-HTML, gepinnte Konsolidierungen (ZGB
+`cc/24/233_245_233`/20260101, OR `cc/27/317_321_377`/20260101, PatG/SchKG/SVG
+analog `scripts/fedlex-cache.sh`). Abrufdatum 2026-06-29 (gleicher Fetch wie B1).
+
+**Befund (Lücke):** Fedlex legt **neu-nummerierte Schluss-Divisionen** unter einem
+EIGENEN Anker-Schema ab — `<article id="disp_uN/art_*">`, gewickelt in
+`<div id="dispositions">` **ausserhalb `<main>`**. Diese Artikel beginnen mit
+eigener Nummerierung (Art. 1, 2 …) und KOLLIDIEREN mit dem Haupttext (`art_1`).
+Der digit-only-Enumerator `alleArtikelTokens` (`/id="art_(\d[\w]*)"/`) erfasste
+sie nicht → sie fehlten komplett (ZGB 178, OR 83, PatG 9, SchKG 4, SVG 1 = **275**).
+
+**Regel (deterministisch):**
+1. **Enumerieren:** `alleSchlussteilAnker(html)` matcht `<article id="disp_uN/art_*">`
+   in HTML-Reihenfolge (Doppelte → `__N`-Suffix wie Haupttext).
+2. **Token-Namespace (Kollisions-Falle gelöst):** `ankerZuToken` bildet aus dem
+   Anker ein dateiweit EINDEUTIGES Token: `art_335_c`→`335_c` (Haupttext, byte-gleich);
+   `disp_u1/art_1`→`disp_u1_art_1` (`/`→`_`). So überschreibt der Schlusstitel-Art.1
+   NIE den Haupttext-Art.1 (`id`, Golden-Key, Struktur-Sidecar, DOM-Anker alle disjunkt).
+3. **Extrahieren:** `extrahiereArtikelAusAnker(html, anker)` — identische Block-
+   Parserei wie Haupttext (Absatz/dl/Tabelle byte-gleich), nur das gesuchte
+   `<article id>` unterscheidet sich. `extrahiereArtikel(token)` delegiert hierhin.
+4. **Speichern (additiv):** an dieselben `eintraege[]` angehängt; `artikel`=Token,
+   `artikelLabel`=`artikelLabel(reinerSuffix)` (Range «Art. 31–32» korrekt),
+   `quelleUrl`=ECHTER Anker `#disp_u1/art_1`.
+5. **Gruppieren:** Struktur-Sidecar (`struktur-extrahiere.ts`, ID-Regex um
+   `(?:disp_uN/)?art_` geöffnet) liefert die Gliederung («Schlusstitel: Anwendungs-
+   und Einführungsbestimmungen» u.ä.) — der gliederungsgetriebene Reader bildet
+   daraus von selbst eine neue Top-Sektion. **Kein Renderer-Umbau.**
+
+**Bewusste Abweichung vom B2-Plan (§7/§1):** KEINE neue Schema-Dimension
+`NormSnapshotDatei.anhaenge[]` — die Schlussteil-Artikel SIND Artikel und werden
+über den Token-Namespace + Sidecar in die bestehende Maschinerie integriert
+(niedrigerer Blast-Radius: 0 Renderer-Änderung, Haupttext-Golden byte-gleich).
+Re-Bless rein additiv: golden/normtext-snapshot.json +275 disp-Keys, **0 geändert,
+0 entfernt** (Engine-Golden unberührt).
+
+**Geltungsbereich/Ausnahmen:** disp-Divisionen sind selten — nur 5 Bund-Gesetze
+(die meisten Schlussbestimmungen sind reguläre `art_` im Hauptteil, längst erfasst).
+Divisionen je Gesetz: ZGB 2, OR 13, PatG/SchKG/SVG je 1. Range-Artikel
+(`disp_u1/art_31_32`) und «aufgehoben»-Stellen («…») korrekt.
+
+**Tore:** `check:vollstaendigkeit` erweitert (Schlussteil-Anker mitgeprüft,
+kollisionsfreies Token verhindert Maskierung durch gleichnamigen Haupttext-Art.);
+`check:normtext`-Drift additiv grün; neue Unit-Tests (Enumerator/Extraktor/Token/
+Label/Vollständigkeit). Voll-Gate grün + Playwright-Sicht (ZGB 2 Div., OR 13 Div.).
+**NEU `check:struktur-konsistenz`** (aus Gegenprüfung): prüft je Bund-Gesetz, dass
+die Struktur-Sidecar-Schlüssel exakt den Snapshot-Token entsprechen (kein
+verwaister/fehlender Schlüssel; `__N`-Doppelartikel ausgenommen). Hintergrund:
+Snapshot und Struktur werden von ZWEI Generatoren gebaut; vorher konnte ein
+vergessener `normtext:struktur`-Lauf das Sidecar STILL veralten lassen (real: OR
+auf main — `219_a`/`226_*` ohne Gliederung). Das Tor hätte den OR-Drift ROT gefangen.
+
+**Gegenprüfungs-Fix F1:** `ladeSnapshot` baute die Lookup-id fix als `…/art_<token>`
+→ für jeden Schlusstitel-Zugriff (`disp_*`) still `null`. Jetzt namespace-bewusst.
+
+**Pflegebedarf:** keine datierten Parameter (folgt der Fedlex-Konsolidierung
+mit). **Offen (M13-Rest):** Anhänge `annex_*` (G18 Anhang-Tabellen + disp-Fussnoten
+G13) — separater Pass, andere Risiko-Klasse (Tabellen/Formulare).
+
+**Abnahme-Status:** maschinell verifiziert (Golden additiv, Gate grün, Sicht-
+prüfung) + 1 adversariale Gegenprüfung; **fachliche Abnahme David offen.**
