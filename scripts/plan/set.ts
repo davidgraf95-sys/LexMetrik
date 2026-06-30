@@ -14,7 +14,7 @@ export function setField(md: string, id: string, feld: string, wert: string): st
   // Zeile normalisieren (kanonische Feld-Reihenfolge), dann das eine Feld ersetzen.
   const indent = zeilen[idx].match(/^(\s*)/)![1];
   const normalisiert = serializeEtikett(parseEtikett(zeilen[idx]), indent);
-  const ersetzt = normalisiert.replace(new RegExp(`(\\b${feld}): [^·]*?( ·| -->)`), `$1: ${wert}$2`);
+  const ersetzt = normalisiert.replace(new RegExp(`(\\b${feld}): .*?(?= ·| -->)`), `$1: ${wert}`);
   const neu = parseEtikett(ersetzt); // validiert den neuen Wert (wirft bei ungültig)
   zeilen[idx] = serializeEtikett(neu, indent);
 

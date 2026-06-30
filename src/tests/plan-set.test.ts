@@ -28,4 +28,14 @@ describe('setField', () => {
   it('wirft, wenn id nicht existiert', () => {
     expect(() => setField(MD, 'W9·9', 'status', 'done')).toThrow();
   });
+
+  it('ändert ein Feld mit Mittelpunkt-Werten (dep mit W2·n-IDs)', () => {
+    const md = [
+      '- [ ] **6 · X**',
+      '  <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [W2·5] · kollision: [] · worktree: nein · 26x: nein -->',
+      '',
+    ].join('\n');
+    const out = setField(md, 'W2·6', 'dep', '[W2·5, W2·7]');
+    expect(out).toContain('dep: [W2·5, W2·7]');
+  });
 });
