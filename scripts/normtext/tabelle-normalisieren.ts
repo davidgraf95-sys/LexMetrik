@@ -74,20 +74,34 @@ function zellGrenzen(row: RohZelle[]): Array<{ start: number; span: number }> {
 
 /** Lone Staffel-Schlüsselwörter, die als EINZELZELLE einen unverdichteten
  *  Spannen-Rest verraten (T-F1 Regel 5). Bleibt so etwas im Rechteck stehen,
- *  ist die Tabelle ein mis-gesplitteter Staffel-Block → ehrlicher Text-Fallback. */
-const STAFFEL_WORT = new Set(['bis', 'über', 'ueber', 'ab', 'und', 'et', 'jusqu’à', "jusqu'à"]);
+ *  ist die Tabelle ein mis-gesplitteter Staffel-Block → ehrlicher Text-Fallback.
+ *  Identisch mit `LONE_STAFFEL` in `check-tabellen.ts` (de/fr Vollständigkeit,
+ *  Bug-Check 30.6.2026 — divergierende Listen vermeiden). */
+export const STAFFEL_WORT = new Set(['bis', 'über', 'ueber', 'ab', 'und', 'et', 'de', 'à', 'jusqu’à', "jusqu'à"]);
 
 /** Staffel-Grammatik (T-A6): die verdichtete `bereich`-Spanne MUSS exakt einer
  *  dieser abgeschlossenen Signaturen entsprechen, sonst keine Verdichtung
- *  (§2 — im Zweifel kein Raten). Token sind unverändert amtlich (T-E2). */
+ *  (§2 — im Zweifel kein Raten). Token sind unverändert amtlich (T-E2).
+ *
+ *  HÄRTUNG (Bug-Check 30.6.2026): der Bereichswert ist eine REINE ZAHL (Ziffern +
+ *  Tausender-/Dezimaltrenner), nie ein betrags-/textartiger Token. So bricht ein
+ *  fälschlich in die Spanne gerutschter Wert (z.B. «99.–» bei einem fehlerhaften
+ *  Quell-Markup ohne Kopf an der Wertspalte) die Grammatik → ehrlicher Fallback,
+ *  statt den Betrag still in den Bereich-String zu joinen. */
 export function istStaffelSpanne(s: string): boolean {
   const t = s.trim();
   if (t === '') return false;
-  // „bis 100" · „über 100 bis 500" · „über 1 000 000" · „ab 600 000" …
+  // Zahl mit Ziffer-Anfang UND -Ende, dazwischen nur Tausender-/Dezimaltrenner
+  // (nbsp/narrow-nbsp/Leerzeichen/Punkt/Komma/Apostroph) — KEIN Strich, KEINE Buchstaben.
+  const NUM = "\\d(?:[\\d\\u00a0\\u202f.,'’\\u0020]*\\d)?";
+  const treffer = (p: string) => new RegExp(`^${p}$`, 'i').test(t);
   return (
-    /^(bis|jusqu’à|jusqu'à)\s+\S.*$/i.test(t) ||
-    /^(über|ueber|ab|de)\s+\S.*\s+(bis|à|jusqu’à|jusqu'à)\s+\S.*$/i.test(t) ||
-    /^(über|ueber|ab|de)\s+\S.*$/i.test(t)
+    // „bis 100" · „jusqu’à 100"
+    treffer(`(?:bis|jusqu’à|jusqu'à)\\s+${NUM}`) ||
+    // „über 100 bis 500" · „de 100 à 500"
+    treffer(`(?:über|ueber|ab|de)\\s+${NUM}\\s+(?:bis|à|jusqu’à|jusqu'à)\\s+${NUM}`) ||
+    // „über 1 000 000" · „ab 600 000"
+    treffer(`(?:über|ueber|ab|de)\\s+${NUM}`)
   );
 }
 

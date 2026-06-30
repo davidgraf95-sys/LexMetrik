@@ -22,7 +22,9 @@ import { join } from 'node:path';
 import type { NormSnapshotDatei } from '../../src/lib/normtext/typen.ts';
 
 const TYP_OK = new Set(['bereich', 'zahl', 'text', 'betrag']);
-const LONE_STAFFEL = new Set(['bis', 'über', 'ueber', 'ab', 'und', 'et', 'de']);
+// Identisch mit STAFFEL_WORT in tabelle-normalisieren.ts (Bug-Check 30.6.2026:
+// divergierende Listen → ein fr «de»/«jusqu’à»-Rest fiel sonst auseinander).
+const LONE_STAFFEL = new Set(['bis', 'über', 'ueber', 'ab', 'und', 'et', 'de', 'à', 'jusqu’à', "jusqu'à"]);
 
 interface Befund {
   datei: string;

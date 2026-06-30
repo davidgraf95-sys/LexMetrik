@@ -181,4 +181,14 @@ describe('istStaffelSpanne — abgeschlossene Signaturen (T-A6)', () => {
     expect(istStaffelSpanne('')).toBe(false);
     expect(istStaffelSpanne('Frühstück')).toBe(false);
   });
+  it('Härtung: ein in die Spanne gerutschter Betrag/Text bricht die Grammatik', () => {
+    // Bug-Check 30.6.2026: fehlerhaftes Markup ohne Kopf an der Wertspalte würde
+    // sonst «99.–» still in den Bereich joinen → jetzt reine Zahl erzwungen.
+    expect(istStaffelSpanne('bis 100 99.–')).toBe(false);
+    expect(istStaffelSpanne('über 100 bis 500 25.–')).toBe(false);
+    expect(istStaffelSpanne('über 10 Mio.')).toBe(false); // Buchstaben → kein Bereich
+    // legitime reine Zahlen bleiben Treffer (inkl. Tausender mit Leerzeichen):
+    expect(istStaffelSpanne('über 100 000 bis 1 000 000')).toBe(true);
+    expect(istStaffelSpanne('bis 1000')).toBe(true);
+  });
 });
