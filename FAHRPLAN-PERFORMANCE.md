@@ -11,6 +11,29 @@
 
 ---
 
+## Stand (Bau-Fortschritt)
+
+**30.6.2026 — Quick-Win-Batch 1 gebaut** (Commit `9e914242`, golden 201 byte-identisch,
+2870 Tests + 86 e2e grün, doppelter §9-Bug-Check):
+
+- ✅ **Rank 1** — `React.memo` um `ArtikelLeser` (`parts.tsx`).
+- ✅ **Rank 5** — `vendor-react`-manualChunks (`vite.config.ts`). Entry **323 → 101 KB roh**
+  (30 KB gzip), `vendor-react` 73 KB gzip stabil benannt.
+- ✅ **Rank 2 (CLS-Teil)** — `min-h-screen` am Reader-Ladezustand + Suspense-Fallback.
+  **Messung (Preview, 4× CPU): CLS 0,64 → 0,002**, Score 42 → 60. Der Reader-Chunk-Vorlade-
+  Teil von Rank 2 ist noch offen.
+- ⏸️ **Rank 4 zurückgestellt** — `SektionBaumTOC`-memo + Handler-`useCallback` brauchen
+  einen Hook-Reorder über die early-returns; laut Synthese marginal nach den Memos → eigener
+  Schritt, nicht Quick Win.
+- ⏸️ **NewsHeader-CLS (Rank 3) zurückgestellt** — saubere Reservierung bräuchte ein Magic-Number
+  (§13-Konflikt); korrekt nur via Build-time-News-Prerender (M) → bleibt als nächster CLS-Schritt.
+
+**Offen / nächste:** Tor `check:perf-budget` (0) · Rank 2-Reader-Chunk-Vorladen + News-Prerender (3) ·
+M-Daten-Pfad (6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding, 10 Snapshot-Format) ·
+Render-/Split-View-Feinschliff (4, 9, 12, 14) · Fonts (11).
+
+---
+
 ## Der Anlass (gemessen, Produktion `lexmetrik.vercel.app`)
 
 Lexmetrik ist eine **client-gerenderte Vite-SPA**. Lange Gesetze werden als HTML prerendert
