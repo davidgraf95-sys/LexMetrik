@@ -275,3 +275,49 @@ Jeder neue Auftrag wird über **einen** Eingang aufgenommen, gebündelt und vero
 4. **Definition of Done:** §6-/§9-Tore grün **und** — bei Risiko-Pfaden (Extraktion / Rechnen / Norm-Tarif) — lief die adversariale Gegenprüfung (Tor **`check:gegenpruefung`**, geführt als Querschnitt **`QS-GP`** im Querschnitt-Band der `ROADMAP.md` — *derzeit im Aufbau (`[OF]`); bis das Tor steht, das adversariale Protokoll manuell fahren*). Verhaltensändernd ⇒ golden byte-gleich (§6). Status-Marker (§8) gesetzt und die STRUKTUR-Pflege (Kopf-Abschnitt »STRUKTUR.md aktuell halten«) erfüllt: Session-Karte in `STRUKTUR.md` nachgezogen.
 5. **Trailer-Konvention.** Ein Commit, der einen ROADMAP-Schritt erfüllt, trägt `Roadmap: <ID>` (stabile Schritt-ID = Wellen-Schritt-Nummer bzw. Querschnitt-Tag aus `ROADMAP.md`, z. B. `W2·6` für «Welle 2 · 6», `QS-GP`). Risiko-Pfad-Commits zusätzlich `Gegenpruefung: <Verdikt> (<Modell>, <Linsen>) — <Befunde>` (oder `Gegenpruefung: n/a — reine Prüflogik` bei Tor-/Test-Code ohne Inhaltsänderung). So bleibt Schritt → Commit → Prüfung rückverfolgbar.
 6. **Kontext-Hygiene.** Hebel-Reihenfolge: **Delegieren > Persistieren > gezielt lesen > Handoff > `/compact`.** Schwere Lese-/Prüfarbeit an Sub-Agenten/Workflows geben (hält Tool-Output aus dem Hauptkontext). Wahrheit ist der laufend auf Platte geschriebene Zustand (`ROADMAP.md`, `STRUKTUR.md`, Register, Commits). Komprimieren/Handoff **nur an einer Bauschritt-Grenze**, nie mitten im Schritt; bei persistiertem Zustand einen frischen Session-Handoff vor `/compact` bevorzugen. Eine `/compact`-Zusammenfassung ist **Zeiger auf die Platte, kein Detailspeicher**.
+
+## §15 Geräte-Last: nicht merklich langsamer — ausser bei Logikverlust (Anweisung David 30.6.2026)
+
+**Lexmetrik wird so gebaut, dass es den Computer des Nutzers nicht merklich langsamer
+macht — SOLANGE daraus kein Logikverlust entsteht.** Diese Regel ist der **Korrektheit
+(§1) untergeordnet**: bei Konflikt gewinnt **immer die Treue**, nie das Tempo.
+
+«**Logikverlust**» = jeder Verlust an **Inhalts-Treue** (vollständiger Normtext, Tabellen,
+Fussnoten), **Rechtsregel-Treue** (Rechner/Werte), **Funktions-Treue** (Ctrl+F über das
+*ganze* Gesetz, `#art_`-Anker/Deep-Links, Print/PDF-Vollständigkeit, Scroll-Spy/TOC,
+Split-View-Pane-Zustand) oder **golden-Byte-Gleichheit**. Jede Performance-Maßnahme trägt
+eine **explizite Logikverlust-Bewertung**; ohne sie wird sie nicht gemerged.
+
+Prüfbare Bau-Regeln (jede mit Treue-Vorbehalt):
+
+1. **Keine DOM-entfernende Virtualisierung von Normtext.** Off-screen-Kosten nur über CSS
+   `content-visibility:auto` + `contain-intrinsic-size` senken — jeder Artikel-Knoten bleibt
+   im DOM. Verboten ist Windowing/Unmount, das Ctrl+F, Anker-Sprung, Kopieren, Screenreader
+   oder SEO über das vollständige Gesetz bricht. *(Lieber langsamer als unvollständig durchsuchbar.)*
+2. **CLS = 0 durch reservierten Platz, nie durch weniger Inhalt.** Jeder asynchron einwachsende
+   oder localStorage-/fetch-divergente Block bekommt am **prerenderten** Element eine
+   token-basierte Mindesthöhe (Mass-Token, kein Magic-Number §13). Client-Initialstate auf den
+   Server-Zustand pinnen; abweichender Stand erst per `useEffect` nach Mount. *(Reservierung darf
+   keinen Inhalt verstecken/kürzen.)*
+3. **Schwere Features lazy + off-critical-path, nie eager-Korpus.** Grosse Parses
+   (Snapshot, Struktur-Sidecar, Suchindex) erst bei Bedarf/Interaktion bzw. per
+   `requestIdleCallback` (+`setTimeout`-Fallback, garantiert feuernd) oder im Web-Worker — nie
+   synchron im ersten Paint. Der **volle** Parse bleibt (kein Teilparse, der Fussnoten/Kopf droppt).
+   *(Defer ändert nur das WANN, nie das WAS — das prerenderte HTML trägt LCP/TTI content-vollständig.)*
+4. **Memoisierung ist Pflicht, weil der React Compiler AUS ist.** Wiederkehrend gemountete
+   Listen-Komponenten mit `React.memo` (Default-Komparator), Handler mit `useCallback`
+   (vollständige Deps!), teure Ableitungen in `useMemo`, geteilt via WeakMap auf die
+   Datenreferenz (nie global-token-Key → Erlass-Kollision). *(Nur Default-Shallow-memo, kein
+   Custom-Komparator, der `fussnotenAuf`/`marg`/`intern`/`suche` unterschlägt — Output byte-identisch.)*
+5. **Render-then-replace bleibt; kein naives `hydrateRoot`.** Der Prerender stammt aus einem
+   separaten String-Builder (`erlassVolltextHtml`) und der Reader fetcht async — Hydration würde
+   Markup-Mismatch (stiller Normtext-Verlust) und §5-Mismatches reaktivieren. Bundle-Splitting
+   (`manualChunks`) und Datei-Sharding sind erlaubt, solange die Union datengleich/byte-identisch
+   bleibt und golden + `check:normtext`/`check:struktur-konsistenz` grün bleiben.
+
+**Operationalisierung (die «Garantie»):** das Tor **`check:perf-budget`** (Lighthouse-CI auf
+`/gesetze/bund/OR` + Startseite unter 4× CPU, gestaffelte CLS/LCP/TBT/Bundle-Schwellen) in der
+`gate`-Kette, **gegengekoppelt** an `golden:vergleich`/`check:normtext`/`check:struktur-konsistenz`/
+`check:suchindex` + einen Reader-Smoke (Ctrl+F/Anker/Print/Fussnote) — **Tempo zählt nur, wenn
+die Treue grün bleibt.** Was zu bauen ist: `ROADMAP.md` → Querschnitt **`QS-PERF`** →
+**`FAHRPLAN-PERFORMANCE.md`** (priorisierter Plan, ultracode-Audit 30.6.2026).

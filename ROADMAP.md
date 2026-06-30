@@ -69,6 +69,12 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 6. **Push/Deploy nur auf Davids frisches Ja (§9);** jeder verhaltensändernde Schritt golden-gegated
    (§6). **§1 (Logik vor allem) / §5 (eine Quelle)** sind Invarianten über allen Wellen.
    **Zustandslosigkeit** (kein Dossier-Creep) ist Querschnittsregel.
+7. **Geräte-Last: nicht merklich langsamer — ausser bei Logikverlust** (Anweisung David 30.6.2026,
+   voll in **CLAUDE.md §15**). Lexmetrik darf den Computer des Nutzers nicht merklich verlangsamen,
+   **solange daraus kein Logikverlust** (Inhalts-/Rechtsregel-/Funktions-Treue, golden-Byte-Gleichheit)
+   entsteht; bei Konflikt gewinnt **immer die Treue** (§1-untergeordnet). Jede Optimierung trägt eine
+   explizite Logikverlust-Bewertung. Operationalisiert durch das Tor **`check:perf-budget`** →
+   Querschnitt **`QS-PERF`** / **`FAHRPLAN-PERFORMANCE.md`**.
 
 **Verifikations-Blockaden (einmal definiert, danach nur referenziert):**
 - **§4 — Lizenz/CORS für Live-Rechtsprechung** (CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits
@@ -122,6 +128,27 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 - **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
+- **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
+  Lexmetrik soll Computer **nicht merklich langsamer** machen, **ohne Logikverlust** (Treue gewinnt
+  immer). Detailquelle: **`FAHRPLAN-PERFORMANCE.md`** (ultracode-Audit 30.6.2026, 25 verifizierte,
+  logik-sichere Befunde; adversarial gegen Logikverlust geprüft). Gemessener Anlass: `/gesetze/bund/OR`
+  unter 4× CPU Score **42**, **CLS 0,64**; Startseite CLS 0,57. **Empfohlene Reihenfolge:**
+  - **a · Tor `check:perf-budget`** — Lighthouse-CI auf `/gesetze/bund/OR` + Startseite (mobil, 4× CPU),
+    gestaffelte CLS/LCP/TBT/Bundle-Schwellen, in die `gate`-Kette. **Gegengekoppelt** an
+    `golden:vergleich`/`check:normtext`/`check:struktur-konsistenz`/`check:suchindex` + Reader-Smoke
+    (Ctrl+F/Anker/Print/Fussnote) — Tempo zählt nur, wenn die Treue grün bleibt.
+  - **b · Billig & verlustfrei zuerst** *(hoch/S, kein Logikrisiko)*: `React.memo` um `ArtikelLeser`
+    (kappt Scroll-Spy-Kaskade über ~1000 Artikel) · token-Mindesthöhen gegen CLS (Reader-Ladezustand,
+    Suspense-Fallback, `NewsHeader`) + Reader-Chunk vorladen · `vendor-react`-manualChunks.
+  - **c · M-Daten-Pfad** *(adopt-with-care, golden-gegated)*: OR-Fetch/Struktur-Parse per
+    `requestIdleCallback` defern (vollen Parse behalten) · Suchindex (16 MiB) in Web-Worker ·
+    `register.json` in Bund/Kanton sharden · Snapshot-Format verschlanken (Provenienz-Header-Hoist).
+  - **d · Render-/Split-View-Feinschliff** *(zuletzt — nach den Memos marginal)*: TOC stabilisieren,
+    `aktArtikel`-Tracker auslagern, Pane-Open-Guard + Such-Debounce, Fallback-Font-Metriken.
+  - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
+    DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
+    Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
+    bei `vite.config.ts`/Generatoren/`public/normtext/**` (§12). Trailer `Roadmap: QS-PERF`.
 
 ---
 
