@@ -23,6 +23,25 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — OR-Currency nachgezogen (separat von M10, gegated, nicht deployt)
+
+Beim M10-Cache-Refresh (`fedlex-cache.sh`) zeigte sich ein **vorbestehender** OR-Currency-Drift: die
+committete `OR.json` war veraltet gegen die aktuelle gepinnte Konsolidierung (Stand 2026-01-01). Ursache =
+**OR-Baumängel-Revision** (BG 20.12.2024, in Kraft 1.1.2026): `OR.json` deterministisch regeneriert
+(`--erlass=or`, §7 kein Hand-Edit). Diff: **3 neu** (art_219a + 2 zusammengeführte aufgehobene Bereiche
+art_226a–d / art_226f–k), **2 alte Einzelartikel** ersetzt (offiziell verschmolzen), **12 geänderte**
+(art_201/219/269d/327b/361/362/367/368/370/371/725b/960b — neue Abs/lit der Baumängel-Reform, gender-neutral
+362). **Adversariale Opus-Gegenprüfung gegen Fedlex-HTML: 15/15 FAITHFUL, 0 REFUTED** — legitime Currency,
+keine Korruption. **check:vollstaendigkeit jetzt GRÜN.** Ohne Tabellen-Bezug → bewusst NICHT in M10 gefaltet
+(§14.2). OR ist der einzige driftende Bund-Erlass (check:vollstaendigkeit flaggte nur OR).
+
+**BACKLOG (vorbestehende OR-Extraktions-Lücken, von der Gegenprüfung gefunden, NICHT von dieser Regen verursacht,
+in alt+neu identisch):** (a) **Aufzählungs-Tabellen in art_361/362 fehlen** — die `<p class="man-template-tab-krpr">`-
+Zeilen (Katalog der (zweiseitig) zwingenden Bestimmungen, 89 Zeilen OR-weit) werden vom Extraktor nicht erfasst
+(nur `<table>` + absatz/dl), substanzieller Listeninhalt fehlt; (b) **Farbspan-Wortfugen** — Fedlex splittet
+geänderte Wörter über `<span style="color…">`, der Extraktor fügt eine Spurious-Space ein («Aus sicht»), 38/40
+Artikel betroffen, rein whitespace (kein Rechtstext verloren). Beides eigenes Extraktor-Härtungspaket (nicht M10).
+
 ## Session 30.6.2026 — W2·5b M10: Bund-Tabellen kanonisches `spalten`-Modell (gebaut + gegated, nicht deployt)
 
 ROADMAP-Schritt **Welle 2 · 5b**, Milestone **M10** (Tabellendarstellung Bund) aus
