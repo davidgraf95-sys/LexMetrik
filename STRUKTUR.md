@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — W2·5b PROD-DEPLOY (Tabellen + Reader-Batch-B + OR-Currency live)
+
+**Auf Prod deployt 30.6.2026** (Davids Ja «bug check und push und deploy»): `lexmetrik.vercel.app`,
+Deployment `dpl_3n53z3tJs6CgT2vqCAtHMnRpq8RF`, Asset `index-DgTsq1vu.js`. Quelle = Branch-HEAD
+**`feat/normtext-tabellen-kanonisch` @ 3c4b3ab0** (deployt aus sauberem `/tmp`-Worktree, §12.3). Enthält
+M10 (Tabellen `spalten`-Modell), OR-Currency (Baumängel), Reader-Batch-B M2/M9/M3, Bug-Check-Härtung.
+**§9-Tore alle grün** (tsc/vitest/golden/lint/check + build + e2e 86); **§9-Bug-Check** = 2 unabhängige
+Opus-Agenten (Code-Lupe + 300k-Fuzzer) ohne Blocker, 2 latente Funde gefixt; **Adversarial M10 8/8 +
+OR 15/15 FAITHFUL**. Live verifiziert: Art.20 kanonisches `spalten` + OR art_219a vorhanden, Kernrouten 200.
+**PR #55 für `main` offen** (Selbst-Merge in Auto-Modus geblockt → Davids Review/Merge); `main` bis Merge
+auf 033a1783. Nach Merge: STRUKTUR auf `main` spiegeln + Branch/Worktree entfernen.
+
 ## Session 30.6.2026 — W2·5b Batch B (M2/M9/M3): aufgehobene Artikel + Gruppierungslinien (gebaut + gegated)
 
 **M3 (Gruppierungslinien je Gesetz + Umschalter):** Root-Cause war NICHT die Datenlage (209/218 Bund-Erlasse
