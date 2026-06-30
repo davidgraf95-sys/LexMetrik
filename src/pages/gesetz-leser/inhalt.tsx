@@ -718,7 +718,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const linie = gruppierungslinienAn && tiefe > 0;
     return (
       <section key={s.id} className={`space-y-3 ${linie ? 'border-l border-line/60 pl-3' : ''}`}>
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} fussnotenAuf={fussnotenAuf} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} bereichEinzel={sammleArtikel(s).length === 1} fussnotenAuf={fussnotenAuf} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
@@ -735,13 +735,6 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
         className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}
         title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
-      {/* M3: Gruppierungslinien-Umschalter — nur wenn das Gesetz überhaupt
-          geschachtelt ist (sonst nichts zu nesten). Spiegelt den Fussnoten-Schalter. */}
-      {sektionen.length > 0 && (
-        <button type="button" onClick={() => setGruppierungslinienAn((v) => !v)} aria-pressed={gruppierungslinienAn}
-          className={`shrink-0 text-micro ${gruppierungslinienAn ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}
-          title="Gruppierungslinien ein-/ausblenden" aria-label="Gruppierungslinien ein-/ausblenden">{gruppierungslinienAn ? '✓ Linien' : 'Linien'}</button>
-      )}
     </>
   );
   // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
@@ -803,6 +796,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               navigate(ziel);
             }}
             className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
+          {/* M3 (Auftrag David): Gruppierungslinien-Umschalter oben AM GESETZ (nicht
+              bei der Suche/Fussnoten). Zustandslos (je Pane eigen), nur wenn das
+              Gesetz überhaupt geschachtelt ist. */}
+          {sektionen.length > 0 && (
+            <button type="button" onClick={() => setGruppierungslinienAn((v) => !v)} aria-pressed={gruppierungslinienAn}
+              className={`lc-chip hover:text-brass-700 ${gruppierungslinienAn ? 'text-brass-700' : ''}`}
+              title="Gliederungs-/Gruppierungslinien ein- oder ausblenden" aria-label="Gruppierungslinien ein- oder ausblenden">{gruppierungslinienAn ? '✓ Linien' : '⊟ Linien'}</button>
+          )}
           <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>

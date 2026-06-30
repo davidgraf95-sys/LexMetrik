@@ -272,8 +272,10 @@ export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fuss
 
 // Gliederungs-Überschrift im Fliesstext: klappbar (Fedlex-analog), volle
 // Bezeichnung, nach Ebene abgestuft.
-export function SektionKopf({ s, refCb, offen, onToggle, bereich, fussnotenAuf }: {
+export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel, fussnotenAuf }: {
   s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void; bereich?: string;
+  /** Die Sektion umfasst genau EINEN Artikel (Bereich = «Art. N», keine Spanne). */
+  bereichEinzel?: boolean;
   fussnotenAuf?: boolean;
 }) {
   const { pre, rest } = romanFrei(s.label);
@@ -323,7 +325,13 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, fussnotenAuf }
             ))}
           </span>
         )}
-        {bereich && <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>}
+        {/* Artikel-Bereich-Badge. Bei einer EINZELartikel-Sektion ist das «Art. N»
+            redundant, sobald die Sektion OFFEN ist (der Artikel steht direkt
+            darunter mit voller Kopfzeile, Auftrag David) → nur im eingeklappten
+            Zustand zeigen. Echte Spannen («Art. 1–10») bleiben immer sichtbar. */}
+        {bereich && !(bereichEinzel && offen) && (
+          <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>
+        )}
       </span>
     </div>
   );

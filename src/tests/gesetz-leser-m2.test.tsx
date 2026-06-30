@@ -6,7 +6,7 @@
  */
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
-import { ArtikelLeser } from '../pages/gesetz-leser/parts';
+import { ArtikelLeser, SektionKopf } from '../pages/gesetz-leser/parts';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import type { Fussnote } from '../lib/normtext/browse';
@@ -67,5 +67,27 @@ describe('M9 — aufgehobene und aktive Artikel fluchten bündig (gleiche w-4-Le
     const out = renderArt(aufgehoben);
     expect(out).toMatch(/class="[^"]*\binline-flex\b[^"]*\bw-4\b/);
     expect(out).not.toContain('▾'); // kein Chevron
+  });
+});
+
+// ── Redundanz: Einzelartikel-Sektion zeigt das «Art. N»-Badge nicht doppelt ───
+// (Auftrag David 30.6.2026: bei genau EINEM Artikel unter der Sektion ist das
+// Bereich-Badge redundant zum Artikelkopf darunter — nur eingeklappt zeigen.)
+describe('SektionKopf — Einzelartikel-Bereich-Badge', () => {
+  const sek = { id: 's1', ebene: 5, label: 'C. Schulden zwischen Ehegatten', kinder: [], artikel: [], randtitel: true };
+  const render = (offen: boolean, bereich: string, bereichEinzel: boolean) =>
+    renderToString(<SektionKopf s={sek as never} refCb={() => {}} onToggle={() => {}} offen={offen} bereich={bereich} bereichEinzel={bereichEinzel} />);
+  it('Einzelartikel + OFFEN → kein redundantes «Art. 250»', () => {
+    const out = render(true, 'Art. 250', true);
+    expect(out).toContain('C. Schulden zwischen Ehegatten');
+    expect(out).not.toContain('Art. 250');
+  });
+  it('Einzelartikel + EINGEKLAPPT → «Art. 250» bleibt (informativ)', () => {
+    const out = render(false, 'Art. 250', true);
+    expect(out).toContain('Art. 250');
+  });
+  it('Spanne (mehrere Artikel) → «Art. 252–359» bleibt immer', () => {
+    const out = render(true, 'Art. 252–359', false);
+    expect(out).toContain('Art. 252–359');
   });
 });
