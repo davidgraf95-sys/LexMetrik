@@ -23,7 +23,10 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 30.6.2026 — M13 Schlussteil (Schlusstitel/UeB) Bund FERTIG + gegatet (Worktree, Deploy offen)
+## Session 30.6.2026 — M13 Schlussteil (Schlusstitel/UeB) Bund FERTIG + AUF PROD DEPLOYT (PR #56)
+
+**Stand:** Commit `d1af7252`, **deployt auf lexmetrik.vercel.app** (`dpl_8WSPr3Yf…`, Prod-verifiziert: ZGB 1277 Art. live, OR-`219a`-Gliederung live behoben), Branch `feat/normtext-schlusstitel-m13` gepusht, **PR #56** offen für main (David mergt).
+
 
 **Auslöser David:** «im ZGB fehlt der Schlussteil — muss bei allen Gesetzen enthalten sein, sofern vorhanden.» Das ist der geplante **B2-Schritt M13** (Normtext-Darstellung).
 
