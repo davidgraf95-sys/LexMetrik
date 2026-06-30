@@ -96,13 +96,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
   const [tocAuf, setTocAuf] = useState(false); // unter xl: Gliederungs-Drawer offen?
   const [tocOffen, setTocOffen] = useState(true); // ab xl: Gliederungsspalte ein-/ausklappen
-  // Echte xl-Erkennung (2-Spalten gibt es nur ab 1280px). Ohne sie behandelte der
-  // Code «tocOffen» fälschlich als 2-Spalten-aktiv → unter xl verschwand der
-  // Gliederungs-Zugang beim Scrollen (Auftrag David: «bei geteiltem Bildschirm
-  // jederzeit ausklappbar, analog Seitenleiste»). SSR-Default false = mobil-Layout.
+  // 2-Spalten-Erkennung. R2 (Auftrag David 30.6.2026): Schwelle von 1280px auf
+  // 1024px (Tailwind lg) gesenkt → die linke Gliederungsspalte erscheint schon auf
+  // kleineren Laptops «grundsätzlich», nicht erst ab 1280px. 1024px deckt sich mit
+  // der Schwelle der persistenten App-Seitenleiste (lg) UND mit PANE_BREIT_PX (1024)
+  // des Pane-Pfads → unter lg sind sowohl Seitenleiste als auch Gliederung Drawer
+  // (kohärent, «nur bei echt-zu-klein in den Drawer»). Die Lesespalte bleibt nutzbar:
+  // Inhaltsbreite ist auf max-w-content (70rem) gedeckelt, abzüglich 16rem TOC + gap-8
+  // läuft der Fliesstext (max-w-reading 40rem) nie unter ~26rem. SSR-Default false =
+  // mobil-Layout (byte-gleich). Ohne diese Erkennung behandelte der Code «tocOffen»
+  // fälschlich als 2-Spalten-aktiv → der Gliederungs-Zugang verschwand beim Scrollen.
   const [istXlVp, setIstXlVp] = useState(false);
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1280px)');
+    const mq = window.matchMedia('(min-width: 1024px)');
     const upd = () => setIstXlVp(mq.matches);
     upd();
     mq.addEventListener('change', upd);
@@ -112,7 +118,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Split-View E (Container-responsiv): ein Pane wählt sein Layout nach SEINER
   // Breite, nicht nach dem Viewport. `istXl` (treibt 2-Spalten-Gliederung + Drawer-
   // vs-Sidebar) kommt im Pane aus einem ResizeObserver auf der Pane-Wurzel (Schwelle
-  // PANE_BREIT_PX), sonst unverändert aus matchMedia (1280px) → Nicht-Pane byte-gleich.
+  // PANE_BREIT_PX = 1024), sonst aus matchMedia (1024px, R2) — beide Pfade ab 1024.
   // Reines @container-CSS reicht hier NICHT: istXl steuert bedingtes Rendering
   // (Vollbar/Kompaktknopf, Existenz des Drawers), das CSS nicht schalten kann.
   const PANE_BREIT_PX = 1024;
@@ -873,11 +879,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         </div>
       )}
 
-      {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) erst ab xl (1280px) —
-          darunter (geteilter Bildschirm / mittlere Breiten) bekommt der Normtext die
-          volle Spaltenbreite, die Gliederung sitzt als einklappbarer Block darüber
-          (wie mobil). So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da
-          ist. Reine Darstellung (§3). */}
+      {/* 2-Spalten (Gliederungs-Sidebar links, Inhalt rechts) ab lg (1024px, R2) —
+          darunter (mobil / sehr schmale Fenster) bekommt der Normtext die volle
+          Spaltenbreite, die Gliederung sitzt als einklappbarer Drawer (wie mobil).
+          So frisst die feste 16rem-TOC-Spalte erst, wenn genug Breite da ist —
+          deckungsgleich mit der App-Seitenleiste (lg). Reine Darstellung (§3). */}
       {/* Unter xl: Suche + Gliederung als Overlay-Drawer (analog Seitenleiste),
           NUR auf Wunsch über den sticky ☰-Knopf geöffnet (Auftrag David 25.6.2026)
           — so liegt keine zweite Dauer-Bar unter dem Reiter-Streifen. Die Suche
@@ -892,14 +898,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         const inPane = ziel != null;
         const drawer = (
           <>
-            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'xl:hidden'}`}
+            <div className={inPane ? 'pointer-events-auto absolute inset-0 z-40 bg-ink-900/30' : `fixed inset-0 z-40 bg-ink-900/30 ${imPane ? '' : 'lg:hidden'}`}
               onClick={() => setTocAuf(false)} aria-hidden />
             {/* Kompakt (Wunsch David): begrenzte Höhe, fixer Such-Kopf, NUR der
                 Gliederungsbaum scrollt darunter → verdeckt die Trefferliste nicht.
                 In der Einzelansicht beginnt er UNTER dem Inhalts-Kopf (Topbar 4rem
                 + Kopf 2.25rem); im Pane in der Overlay-Schicht ab dessen Oberkante. */}
             <div ref={tocDrawerRef} tabIndex={-1} role="dialog" aria-modal={inPane ? undefined : true} aria-label="Suche & Gliederung"
-              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'xl:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
+              className={`${inPane ? 'pointer-events-auto absolute inset-x-0 top-0 z-50 max-h-[75%]' : `fixed inset-x-0 z-50 max-h-[60vh] ${imPane ? '' : 'lg:hidden'}`} flex flex-col bg-paper-raised border-b border-line shadow-lg`}
               style={inPane ? undefined : { top: 'calc(4rem + 2.25rem)' }}>
               <div className="shrink-0 border-b border-line bg-paper-raised">
                 <div className="flex items-center justify-between px-4 pt-2.5 pb-1.5">
