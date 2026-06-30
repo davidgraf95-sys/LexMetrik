@@ -51,6 +51,20 @@ function ladeFaktor(): number {
   } catch { return DEFAULT_FAKTOR; }
 }
 
+/**
+ * Wendet die gespeicherte Schriftskala VOR dem ersten Render an (Aufruf in
+ * main.tsx, analog `wendeThemaAn`) — so blitzt für Nutzer mit eigener Wahl nicht
+ * kurz die Default-Grösse auf. Default 1.0 ⇒ kein inline-Stil (byte-gleich). Der
+ * Hook-Effekt hält den Wert danach zur Laufzeit synchron.
+ */
+export function wendeSchriftskalaAn(): void {
+  if (typeof document === 'undefined') return;
+  const f = ladeFaktor();
+  const el = document.documentElement;
+  if (f === DEFAULT_FAKTOR) el.style.removeProperty('font-size');
+  else el.style.fontSize = `${Math.round(f * 100)}%`;
+}
+
 export interface Schriftskala {
   /** Aktueller rem-Faktor (eine der STUFEN). */
   faktor: number;

@@ -12,11 +12,15 @@ import '@fontsource-variable/source-serif-4/index.css'
 import './index.css'
 import App from './App.tsx'
 import { effektivesThema, wendeThemaAn } from './components/thema'
+import { wendeSchriftskalaAn } from './components/layout/useSchriftskala'
 
 // Thema so früh wie möglich anwenden (vor dem ersten App-Render) — ohne
 // CSP-verbotenes Inline-Script bleibt für Dunkel-Nutzer ein kurzes Aufblitzen
 // des prerenderten Light-HTML; das hält es minimal.
 wendeThemaAn(effektivesThema())
+// Ebenso die gespeicherte Schriftskala (R3) vor dem ersten Render anwenden —
+// kein Aufblitzen der Default-Grösse für Nutzer mit eigener Wahl.
+wendeSchriftskalaAn()
 
 // Veralteter Chunk nach einem Deploy: Vite feuert 'vite:preloadError', wenn ein
 // vorab geladener Modul-Chunk fehlt (offener Tab zeigt auf alte Hashes). Einmal
