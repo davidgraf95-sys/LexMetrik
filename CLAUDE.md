@@ -129,6 +129,18 @@ ist der Snapshot kein Zitat, sondern eine zweite Wahrheit (§5) — dann nicht
 speichern. Der Snapshot ist nie die massgebliche Fassung; das ist die amtliche
 Quelle (in der UI offengelegt, §8).
 
+**Quell-Wahl zuerst (Anweisung David 30.6.2026):** Vor jeder Datenextraktion
+aus einer amtlichen Quelle wird **empirisch erhoben, welches Format/welcher
+Endpunkt das Ziel technisch am besten erreicht** (strukturiertes Schema >
+gerendertes HTML > PDF; an die **höchste verfügbare Struktur** andocken) — nicht
+reflexhaft die naheliegende Quelle. Probe-Fetch je Kandidat, Inhalt prüfen
+(Soft-404-Shells erkennen). **Aber:** ein Quell-/Format-Wechsel wird per Messung
+(POC/Differenz) belegt, nie angenommen — Fehler sitzen oft in der eigenen
+Transformation, nicht in der Quelle; Wechsel inkrementell, nie Big-Bang.
+Beispiel/Detail: Memory `extraktion-amtliche-quellen-beste-option`,
+`FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Quell-Architektur-Entscheid` (Fedlex-HTML vs.
+Akoma-Ntoso-XML).
+
 **Build-Regel Norm-Snapshots (verbindlich, Auftrag David 16.6.2026):** Die
 Volltext-Snapshots (`public/normtext/`) werden AUSSCHLIESSLICH vom Generator
 `npm run normtext -- --datum=$(date +%F)` erzeugt, nie von Hand editiert. Jeder

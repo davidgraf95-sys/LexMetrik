@@ -180,3 +180,62 @@ B1 (JETZT, EIN Worktree, GENAU EINE Daten-Re-Segnung am Ende) = M0-M12: die Doku
 BEWUSST NICHT in B1 — die schweren Struktur-Regionen als EIGENER grosser Daten-Pass B2 (M13 Schlusstitel/UeB/Anhaenge + M14 Wort-genaue Fussnoten): JA, klare Empfehlung B2, mit Begruendung. M13 (G24-G27) ist der EINZIGE Cluster, der (a) eine NEUE Schema-Dimension erzwingt (nicht-Artikel-Eintraege mit eigenem Token-Namespace st_/anhang_), die in 6+ Dateien + Tore (vollstaendigkeit-logik, check-drift, sha256Bloecke, browse-typen) ausstrahlt; (b) den mit Abstand groessten ADDITIVEN Re-Bless erzeugt (allein ZGB +178 Art., dazu 277 UeB-Art + 150 Anhang-Sektionen — hunderte NEUE Eintraege); (c) seine eigentliche Schwierigkeit NICHT im Parsen hat, sondern in der Token-Kollision disp_u1/art_1 vs art_1 (ohne eigenen id-Raum stiller Daten-Verlust), die ungeteilte, gestaffelte adversariale Verifikation verlangt (Pilot ZGB/OR -> Rest 62/121). Es mit B1 zu buendeln wuerde die Verifizierbarkeit der EINEN B1-Re-Segnung sprengen. Entscheidend: M13 ist ADDITIV (neue Eintraege) und trifft damit DISJUNKTE Daten gegenueber dem MODIFIZIERENDEN B1-Block -> die zwei Re-Segnungen interferieren minimal, der Schnitt ist sauber: B1 = alles innerhalb des bestehenden Artikel-Schemas; B2 = der zweite Extraktionspfad ausserhalb von <article>. NICHT der Netz-Bezug ist der Trennfaktor (HTML liegt fuer alle Erlasse inkl. Anhaengen in /tmp gecacht; fedlex-cache.sh re-fetcht nur Fehlendes), sondern Schema-Blast-Radius + Golden-Segment-Groesse + adversariale Ueberblickbarkeit. EHRLICH zu L0: M13 ist der GROESSTE Fundiertheits-Sprung (ZGB unvollstaendig ohne Schlusstitel) — B2 nur aus Risiko/Verifizierbarkeit, daher als ALLERERSTER B2-Schritt unmittelbar nach B1-Abnahme. M14 (G14, ~1121 Marker) ist von #10/#11 entkoppelt und reine Darstellung (kein Info-Verlust) -> eigener adversarialer Sidecar-Pass in B2, baut auf dem tag-bewussten clean() aus M10/G15 auf.
 
 B3 = M15 (FR/IT G29) + M16 (Versionierung #2, G28/G30-33) — eigene Initiativen ausserhalb dieser Arbeit. ESCAPE-HATCH in B1: nur M8 hat eine externe Abhaengigkeit (Fedlex-Filestore-Bild-URL); falls deren Aufloesung instabil, wandern G21/G22 nach B2 (huckepack auf M13s Render-Slot-Infra), G23 (rein lokal) bleibt B1.
+
+## Quell-Architektur-Entscheid — AKN-XML als Langfrist-Fundament (Council 30.6.2026)
+
+> **Steuer-Eintrag: ROADMAP Bündel N** (→ Schritt 5b/6). Dies ist die Detailquelle (§14.1). Memory:
+> `lexmetrik-akn-xml-architektur-entscheid`.
+
+**Frage (David, 30.6.):** Wie senken wir die Fehleranfälligkeit der Gesetzesdarstellung *grundsätzlich* —
+bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-Advisor + Devil's-Advocate).
+
+### Empirische Befunde (diese Session gemessen)
+
+- Fedlex liefert jede Norm als **Akoma-Ntoso-XML** am selben Filestore wie das HTML: `…/de/xml/…-de-xml.xml`
+  (Suffix `-N` analog HTML). Strukturiert: `<article eId="art_X">`/`<num>`/`<paragraph>`/`<ref href="…/eli/…">`/
+  `<authorialNote>`/`<table>`. **JSON/JSON-LD/RDF-Body = Soft-404** (nur Metadaten-SPARQL); DOCX/PDF = Renderings.
+  Wir bauen heute auf dem **HTML** (§7). XML ist die einzige semantisch strukturierte Fassung — wir lesen das
+  *gerenderte Foto* statt des *Bauplans*.
+- **N1** («Art. 7 b»→«7b») = UNSER Whitespace beim Strippen von `<i>`/`<sup>` (Quelle: `7<i>b</i>`, kein
+  Leerzeichen; ebenso `1<sup>bis</sup>`). XML hat dieselbe Struktur ⇒ **XML löst N1 NICHT**; Fix am Extraktor.
+- **N2** = Resolver ignoriert das **explizite ELI-Ziel, das schon im HTML steht** (19 Fremd-ELI in BetmKV,
+  identisch im XML, z.B. StGB `eli/cc/54/757_781_799`). Fix = Ziel **lesen statt raten** — **Geschwister von
+  M12** (`restMitIntern`-Resolver). Ziele nur **erlass-genau** (kein `#art`); Artikel-Präzision selbst auflösen.
+- golden (aus HTML) auf jedem geprüften Artikel korrekt inkl. DBG-Steuertabellen (Art. 36, beide Tarife)
+  ⇒ **Anzeige ist nicht das Problem**.
+- Naiver XML-vs-golden-Diff = 28–58 % **Rauschen** (grober Zweit-Extraktor verfehlt `<blockList>`/`<item>`/
+  Tabellen). **Lektion: ein Orakel ist nur so gut wie sein schwächerer Zeuge; Parität ist teuer.**
+
+### eId-Stabilitäts-Probe (Devil's-Advocate-Knackpunkt — empirisch widerlegt)
+
+| Test | Befund |
+|---|---|
+| StGB 20240101→20260612 (2,5 J.) | **99,7 % eIds stabil** (471/472); Einschübe `art_181b/193a/197a` als **Suffix**, Nachbarn unverschoben |
+| VMWG-Einschub `art_19a` | `art_19/20/21/22` **identisch** geblieben → **identitätsbasiert, kein Renumbering** |
+| DE/FR/IT (8 Gesetze) | ~95–99 % identische eId-Mengen, alle Artikelzahlen gleich |
+| Einzige Instabilität | **aufgehobene Artikel-Bereiche** (leere Stubs): `art_356_361`→`art_356/357/358_361`, DE `art_67__70_` vs FR `art_67` → kleine Reconciliation-Regel, geringe Stakes |
+
+→ Das Fundament für stabile Identität + Zitations-Graph ist **real, nicht erhofft**.
+
+### Verdikt: A und C sequenziell (B verworfen)
+
+- **B** «AKN-XML direkt rendern, kein Extrakt» **verworfen**: löst N2 nicht, koppelt 60+ Live-Gesetze an
+  einen unbewiesenen Renderer, Display schon korrekt.
+- **Phase 0 — jetzt, `[OF]`, variantenunabhängig** (= die Arbeit aus Bündel N, deckt sich mit QS-GP/LERNPHASE-B):
+  1. Asymmetrisches **Verifikations-Tor**: **Containment** (jedes Quell-Wort verbucht → fängt stille Drops) +
+     **Struktur-Invarianten** (Absätze lückenlos 1→2→3, jeder interne Verweis löst auf, kein Fussnoten-Markup
+     im Body). Robust gegen Parser-Grobheit, kein zweiter Voll-Extraktor nötig.
+  2. **Status-Marker** in Kraft/aufgehoben/noch-nicht-in-Kraft (Haftungs-Blindspot, vom Council gefangen; §8).
+  3. **N1-Fix** (Whitespace beim Inline-Tag-Strip, §1: keine blinde Regex — Tag-Grenze der Quelle als Signal).
+  4. **N2-Fix** via vorhandenem ELI → **Verweis-Chips** (erweitert M12; das höchst-hebelnde *Feature*).
+- **Phase 1 — freigegeben durch die eId-Probe, inkrementell über den Drift-Zyklus, NIE Big-Bang:** XML als
+  Primär-Quelle pro **neuem/driftendem** Gesetz (reitet auf der ohnehin nötigen Re-Verifikation) → ermöglicht
+  **`#art`-genaue** Chips, **ELI-Zitations-Graph** (Burggraben), DE/FR/IT-Knoten-Diff (**M15**), Point-in-Time
+  (**M16**, «Drift wird zum Feature»). Erweitert die **§7-Build-Regel** um einen AKN-Adapter
+  (`scripts/normtext/adapter-akn.ts`) neben dem HTML-Adapter; Currency-Gate `check:fedlex-versionen` bleibt Arbiter.
+
+### Caveats (nicht vergessen)
+
+Zitations-Graph-Kanten sind selbst **Haftung** (tote/aufgehobene ELI behandeln, wer verifiziert Kanten) ·
+**N2-Fehlerrate messen** vor jeder Migration · Outside-View: «Rewrite auf saubere Quelle» stallt bei
+Solo-Produkten meistens → **Phase 0 muss in EINER Session stehen**, sonst ist die Architektur-Wette zu gross.

@@ -23,6 +23,16 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 30.6.2026 — Analyse + Architektur-Entscheid «Quell-Architektur Bund-Normtext (AKN-XML)», kein Code
+
+**Stand:** Reine **Analyse-Session** (David: «kein Code, nur Analyse»). Council-Entscheid (DMAD, 5 Opus-Advisor + Devil's-Advocate + Chairman) zur Frage «wie ein Bundesgesetz am besten darstellen / Fehleranfälligkeit grundsätzlich senken». Festgehalten in **ROADMAP** (Bündel N), **FAHRPLAN-NORMTEXT-DARSTELLUNG §Quell-Architektur-Entscheid**, **CLAUDE.md §7** (neue Regel «Quell-Wahl zuerst») + 2 Memorys. **Keine Produktiv-Code-Änderung, golden unberührt.**
+
+**Befunde (empirisch gemessen):** Fedlex liefert jede Norm als **Akoma-Ntoso-XML** (strukturiert) am selben Filestore wie das HTML — wir bauen auf HTML. **N1** («Art. 7 b») = unser Whitespace beim Inline-Tag-Strip (`7<i>b</i>`), XML löst es NICHT. **N2** = explizites ELI-Verweisziel steht schon im HTML, Resolver liest es nicht (Geschwister **M12**). golden (HTML) auf jedem geprüften Artikel korrekt inkl. DBG-Tabellen → Anzeige ist nicht das Problem. Naiver XML-vs-golden-Diff = 28–58 % Rauschen (Orakel nur so gut wie schwächerer Zeuge).
+
+**eId-Stabilitäts-Probe (entscheidend):** StGB 2,5 J. = **99,7 %** eIds stabil; Einschübe als Suffix, Nachbarn unverschoben; DE/FR/IT ~95–99 % ausgerichtet; einzige Instabilität = aufgehobene Bereiche. → Fundament für Phase 1 belegt.
+
+**Verdikt:** B («XML direkt rendern») verworfen. **Phase 0 jetzt** = Verifikations-Tor (Containment + Invarianten) + Status-Marker (in Kraft/aufgehoben/noch-nicht) + N1/N2-Fix via vorhandenem ELI → Verweis-Chips (erweitert M12). **Phase 1 inkrementell** HTML→AKN-XML über den Drift-Zyklus → `#art`-Chips, ELI-Zitations-Graph, M15 (DE/FR/IT), M16 (Point-in-Time). **Heimat:** ROADMAP Bündel N → FAHRPLAN-NORMTEXT §Quell-Architektur-Entscheid; Memorys `lexmetrik-akn-xml-architektur-entscheid` + Daueranweisung `extraktion-amtliche-quellen-beste-option` (Schwester `werkzeuge-zuerst-prüfen`).
+
 ## Session 30.6.2026 — Bündel R (Reader-Lese-Steuerung) gebaut + gegated (Push/PR, Deploy = Davids Ja)
 
 **Stand:** Branch `feat/buendel-r-reader-ux` (eigener Worktree, §12), 4 Feature-Commits + diese Karte. **Voll-Gate grün** (tsc/vitest/golden/lint/check) · **golden byte-gleich** (reine Darstellung, §3) · **67 e2e lokal grün** (gesetze/9-Punkte/a11y/tastatur/smoke). Visuell verifiziert (Playwright, ZGB). **Auslöser David:** Auftrags-Eingang 30.6. **Bündel R** (3 Reader-UI-Aufträge), «run till dry». Push/PR auf Davids «push it»; **Deploy = separates Ja (§9)**.
