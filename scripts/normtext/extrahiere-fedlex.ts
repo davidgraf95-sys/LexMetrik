@@ -59,19 +59,37 @@ export function entferneFussnotenSups(html: string): string {
  * @returns     ArtikelText mit Absatz-Blöcken, oder null wenn Anker fehlt
  */
 export function extrahiereArtikel(html: string, token: string): ArtikelText | null {
-  // M9/G7: doppelte art_id. Ein Erlass kann ZWEI <article id="art_TOKEN"> mit
-  // identischem Token tragen (KKV art_126_z: «Anlagebeschränkungen» + «126z
-  // tredecies Wesentliche Mängel»; betmg/vwvg/pavo: aufgehobene Bereichs-Artikel
-  // «15a–15c»). alleArtikelTokens vergibt dem 2./3. Vorkommen einen Synthese-
-  // Suffix «__2»/«__3»; hier extrahieren wir dann das N-te Vorkommen des
-  // BASIS-Tokens. Ohne Suffix (Normalfall) = erstes Vorkommen, byte-gleich.
-  const suffix = token.match(/^(.*)__(\d+)$/);
-  const basisToken = suffix ? suffix[1] : token;
+  // Haupttext-Artikel: Anker = «art_<token>». Delegiert an die anker-basierte
+  // Variante (byte-gleich; der Anker wird nur explizit benannt).
+  return extrahiereArtikelAusAnker(html, `art_${token}`);
+}
+
+/**
+ * Wie extrahiereArtikel, aber mit dem VOLLEN Anker statt nur der Artikel-Nr. —
+ * z.B. «art_335_c» (Haupttext) ODER «disp_u1/art_1» (Schlusstitel/UeB, M13).
+ * Die Block-Parserei darunter ist identisch; nur das gesuchte <article id="…">
+ * unterscheidet sich. So fällt der Schlusstitel (eigenes Anker-Schema
+ * `disp_uN/art_*`, von alleArtikelTokens digit-only nicht erfasst) nicht mehr
+ * stumm weg (§7-Vollabdeckung), ohne den Haupttext-Pfad anzufassen.
+ *
+ * @param ankerRoh - Voller Anker, optional mit Synthese-Suffix «__2» (N-tes
+ *                   Vorkommen bei doppelter id, s. alleArtikelTokens/alleSchlussteilAnker).
+ */
+export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): ArtikelText | null {
+  // M9/G7: doppelte id. Ein Erlass kann ZWEI <article id="…"> mit identischem
+  // Anker tragen (KKV art_126_z: «Anlagebeschränkungen» + «126z tredecies
+  // Wesentliche Mängel»; betmg/vwvg/pavo: aufgehobene Bereichs-Artikel «15a–15c»).
+  // alleArtikelTokens/alleSchlussteilAnker vergeben dem 2./3. Vorkommen einen
+  // Synthese-Suffix «__2»/«__3»; hier extrahieren wir dann das N-te Vorkommen des
+  // BASIS-Ankers. Ohne Suffix (Normalfall) = erstes Vorkommen, byte-gleich.
+  const suffix = ankerRoh.match(/^(.*)__(\d+)$/);
+  const basisAnker = suffix ? suffix[1] : ankerRoh;
   const nth = suffix ? Number(suffix[2]) : 1;
-  // Escape des Tokens für die Regex (Unterstriche sind literal, kein Sonderzeichen)
-  const escapedToken = basisToken.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Escape des Ankers für die Regex (Unterstriche und «/» sind literal, kein
+  // Sonderzeichen — der «/»-Trenner des disp-Schemas bleibt unberührt).
+  const escapedToken = basisAnker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const articleRe = new RegExp(
-    `<article[^>]*\\sid="art_${escapedToken}"[^>]*>([\\s\\S]*?)</article>`,
+    `<article[^>]*\\sid="${escapedToken}"[^>]*>([\\s\\S]*?)</article>`,
     'gi',
   );
   const treffer = [...html.matchAll(articleRe)];
@@ -540,4 +558,60 @@ export function alleArtikelTokens(html: string): string[] {
     tokens.push(n === 1 ? basis : `${basis}__${n}`);
   }
   return tokens;
+}
+
+/**
+ * M13 — Schlusstitel-/Übergangs-/Schlussbestimmungs-Artikel.
+ *
+ * Fedlex legt neu-nummerierte Schluss-Divisionen («Schlusstitel:
+ * Anwendungs- und Einführungsbestimmungen» beim ZGB, «Schlussbestimmungen der
+ * Änderung vom …», «Übergangsbestimmungen …») unter einem EIGENEN Anker-Schema
+ * ab: `<article id="disp_uN/art_*">` (gewickelt in `<div id="dispositions">`,
+ * ausserhalb von `<main>`). Diese Artikel beginnen MIT EIGENER Nummerierung neu
+ * (Art. 1, 2 …) und kollidieren so mit dem Haupttext (art_1). alleArtikelTokens
+ * (digit-only, Präfix `art_`) erfasst sie nicht → bis M13 fielen sie stumm weg
+ * (ZGB: 178 Artikel, OR: 83, PatG/SchKG/SVG: 14).
+ *
+ * Liefert die VOLLEN Anker (`disp_u1/art_1`) in HTML-Reihenfolge. Doppelte Anker
+ * erhalten — wie alleArtikelTokens — einen Synthese-Suffix «__2»/«__3»
+ * (extrahiereArtikelAusAnker löst ihn auf). Der Generator/Struktur-Pfad bildet
+ * daraus über ankerZuToken ein dateiweit EINDEUTIGES Token (`disp_u1_art_1`),
+ * das nicht mit dem Haupttext-Token «1» kollidiert.
+ *
+ * @returns z.B. ['disp_u1/art_1','disp_u1/art_6_b_bis','disp_u2/art_178', …]
+ */
+export function alleSchlussteilAnker(html: string): string[] {
+  // Fedlex nutzt ZWEI disp-Varianten: «disp_u1/art_…» (Normalfall) UND «disp_1/art_…»
+  // OHNE «u» (z.B. VZG-Schlussbestimmungen art_135/136). Beide erfassen («u?»).
+  const re = /<article[^>]*\sid="(disp_u?\d+\/art_\w+)"/gi;
+  const anzahl = new Map<string, number>();
+  const anker: string[] = [];
+  for (const m of html.matchAll(re)) {
+    const basis = m[1];
+    const n = (anzahl.get(basis) ?? 0) + 1;
+    anzahl.set(basis, n);
+    anker.push(n === 1 ? basis : `${basis}__${n}`);
+  }
+  return anker;
+}
+
+/**
+ * Bildet aus einem vollen Anker das dateiweit eindeutige, DOM-/URL-sichere Token
+ * (= Wert des Snapshot-Felds `artikel`, zugleich Struktur-Sidecar-Schlüssel).
+ * Beide Erzeuger — der Snapshot-Generator UND der Struktur-Extraktor — MÜSSEN
+ * dieselbe Ableitung verwenden, sonst bricht der Sidecar-Join (gliederung/
+ * marginalie fänden den Schlusstitel-Artikel nicht).
+ *
+ *   'art_335_c'        → '335_c'          (Haupttext, byte-gleich zu bisher)
+ *   'disp_u1/art_1'    → 'disp_u1_art_1'  (Schlusstitel: «/» → «_», kollisionsfrei)
+ *   'disp_u1/art_1__2' → 'disp_u1_art_1__2'
+ */
+export function ankerZuToken(anker: string): string {
+  return anker.startsWith('art_') ? anker.slice(4) : anker.replace(/\//g, '_');
+}
+
+/** Die reine Artikel-Nummer aus einem Schlussteil-Anker, für das Label.
+ *  'disp_u1/art_6_b_bis' → '6_b_bis'; 'disp_u1/art_31_32__2' → '31_32'. */
+export function schlussteilLabelSuffix(anker: string): string {
+  return anker.replace(/__\d+$/, '').replace(/^.*\/art_/, '');
 }

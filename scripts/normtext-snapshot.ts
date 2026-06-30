@@ -12,7 +12,14 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { parseFedlexCacheEintraege } from './normtext/inventar-bund.ts';
-import { extrahiereArtikel, alleArtikelTokens } from './normtext/extrahiere-fedlex.ts';
+import {
+  extrahiereArtikel,
+  alleArtikelTokens,
+  alleSchlussteilAnker,
+  extrahiereArtikelAusAnker,
+  ankerZuToken,
+  schlussteilLabelSuffix,
+} from './normtext/extrahiere-fedlex.ts';
 import {
   sammleKantonInventar,
   sammleFallback,
@@ -1032,6 +1039,42 @@ async function main(): Promise<void> {
         sha: sha256Bloecke(extrakt.bloecke),
       };
 
+      snapshotListe.push(snapshot);
+      goldenIndex[id] = snapshot.sha;
+    }
+
+    // ── M13: Schlussteil (Schlusstitel/UeB/Schlussbestimmungen) ───────────────
+    // Neu-nummerierte Schluss-Divisionen liegen unter eigenem Anker-Schema
+    // (`<article id="disp_uN/art_*">`) und fielen vom digit-only-Enumerator weg.
+    // ADDITIV an die HAUPTTEXT-Einträge angehängt (HTML-Reihenfolge: nach
+    // art_977), mit kollisionsfreiem Token-Namespace («disp_u1_art_1») — der
+    // Haupttext bleibt byte-gleich. Die Lese-/Gliederungs-Maschinerie gruppiert
+    // sie über das Struktur-Sidecar (gliederung-Label «Schlusstitel: …») von
+    // selbst zur eigenen Top-Sektion. quelleUrl trägt den ECHTEN Anker (mit «/»).
+    for (const anker of alleSchlussteilAnker(html)) {
+      const extrakt = extrahiereArtikelAusAnker(html, anker);
+      if (extrakt === null || extrakt.bloecke.length === 0) {
+        uebersprungen.push({ gesetz: gesetzKey, token: anker });
+        continue;
+      }
+      const token = ankerZuToken(anker);
+      const id = `bund/${gesetzKey}/${token}`;
+      const snapshot: NormSnapshot = {
+        id,
+        ebene: 'bund',
+        quelle: gesetzKey,
+        erlass,
+        artikel: token,
+        artikelLabel: artikelLabel(schlussteilLabelSuffix(anker)),
+        ...(extrakt.grundlage ? { grundlage: extrakt.grundlage } : {}),
+        bloecke: extrakt.bloecke,
+        stand,
+        // Roher Anker (mit «/», ohne Synthese-Suffix) als Live-Sprungziel.
+        quelleUrl: `https://www.fedlex.admin.ch/eli/${eli}/de#${anker.replace(/__\d+$/, '')}`,
+        abgerufen,
+        fassungsToken: konsolidierung,
+        sha: sha256Bloecke(extrakt.bloecke),
+      };
       snapshotListe.push(snapshot);
       goldenIndex[id] = snapshot.sha;
     }

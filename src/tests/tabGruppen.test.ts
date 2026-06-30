@@ -64,4 +64,9 @@ describe('artikelLabelVonPfad', () => {
   it('null ohne Anker', () => {
     expect(artikelLabelVonPfad('/gesetze/bund/or')).toBeNull();
   });
+  it('M13: Schlusstitel-Token zeigt nur die reine Artikel-Nr., nicht das Token', () => {
+    expect(artikelLabelVonPfad('/gesetze/bund/zgb#art-disp_u1_art_3')).toBe('Art. 3');
+    expect(artikelLabelVonPfad('/gesetze/bund/zgb#art-disp_u1_art_31_32')).toBe('Art. 31–32');
+    expect(artikelLabelVonPfad('/gesetze/bund/zgb#art-disp_u2_art_178')).toBe('Art. 178');
+  });
 });

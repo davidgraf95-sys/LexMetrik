@@ -80,6 +80,28 @@ describe('ladeSnapshot (Client-Loader)', () => {
     expect(snap).toBeNull();
   });
 
+  it('(e) M13: Schlusstitel-Token «disp_*» trifft den Eintrag (id ohne art_-Präfix)', async () => {
+    // Regression F1 (30.6.2026): disp-Einträge werden als «bund/OR/disp_u2_art_1»
+    // gespeichert. ladeSnapshot baute fix «…/art_<token>» → für jeden Schlusstitel-
+    // Zugriff still null. Jetzt namespace-bewusst.
+    const dispDatei: NormSnapshotDatei = {
+      erzeugt: '2026-06-29',
+      eintraege: [{
+        id: 'bund/OR/disp_u2_art_1', ebene: 'bund', quelle: 'OR', erlass: 'OR',
+        artikel: 'disp_u2_art_1', artikelLabel: 'Art. 1',
+        bloecke: [{ absatz: '1', text: 'Schlussbestimmung …' }],
+        stand: '2026-01-01', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#disp_u2/art_1',
+        abgerufen: '2026-06-29', fassungsToken: '20260101', sha: 'def',
+      }],
+    };
+    const { ladeSnapshot } = await import('../lib/normtext/laden');
+    global.fetch = vi.fn().mockResolvedValue(fetchOk(dispDatei));
+    const snap = await ladeSnapshot('bund', 'OR', 'disp_u2_art_1');
+    expect(snap).not.toBeNull();
+    expect(snap!.id).toBe('bund/OR/disp_u2_art_1');
+    expect(snap!.artikelLabel).toBe('Art. 1');
+  });
+
   it('Netzwerk-/Parse-Fehler → null (kein throw)', async () => {
     const { ladeSnapshot } = await import('../lib/normtext/laden');
     global.fetch = vi.fn().mockRejectedValue(new Error('Netzfehler'));

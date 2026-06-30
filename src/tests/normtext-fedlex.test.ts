@@ -10,7 +10,15 @@
  *   - Absätze ohne führendes <sup> (Unterparagraphen) erhalten absatz: null
  */
 import { describe, it, expect } from 'vitest';
-import { extrahiereArtikel, alleArtikelTokens, entferneFussnotenSups } from '../../scripts/normtext/extrahiere-fedlex';
+import {
+  extrahiereArtikel,
+  alleArtikelTokens,
+  entferneFussnotenSups,
+  alleSchlussteilAnker,
+  extrahiereArtikelAusAnker,
+  ankerZuToken,
+  schlussteilLabelSuffix,
+} from '../../scripts/normtext/extrahiere-fedlex';
 
 // ── Fixture 1: OR Art. 77 (3 nummerierte Absätze + 1 Unterabsatz ohne Nummer) ──
 // Echter Ausschnitt aus /tmp/or.html (Konsolidierung 20260101)
@@ -387,6 +395,102 @@ describe('alleArtikelTokens', () => {
 
   it('liefert leeres Array wenn keine art_-Anker vorhanden', () => {
     expect(alleArtikelTokens('<html><body><p>kein Artikel</p></body></html>')).toEqual([]);
+  });
+
+  it('M13: erfasst die disp-Schlusstitel-Anker NICHT (eigener Pfad)', () => {
+    const html = `<article id="art_1"><p class="absatz ">A.</p></article>
+      <article id="disp_u1/art_1"><p class="absatz ">Schlusstitel A.</p></article>`;
+    // alleArtikelTokens bleibt digit-only — der Schlusstitel kommt über alleSchlussteilAnker.
+    expect(alleArtikelTokens(html)).toEqual(['1']);
+  });
+});
+
+// ── M13: Schlusstitel-/UeB-/Schlussbestimmungs-Pfad (disp_uN/art_*) ───────────
+describe('alleSchlussteilAnker (M13)', () => {
+  const SCHLUSS_HTML = `
+    <div id="dispositions">
+      <section id="disp_u1"><h1 class="heading">Schlusstitel</h1>
+        <article id="disp_u1/art_1"><p class="absatz "><sup>1</sup>&nbsp;Erster Schlusstitel-Artikel.</p></article>
+        <article id="disp_u1/art_6_b_bis"><p class="absatz ">Mit lat. Suffix.</p></article>
+        <article id="disp_u1/art_31_32"><p class="absatz ">…</p></article>
+      </section>
+      <section id="disp_u2"><h1 class="heading">Wortlaut der früheren Bestimmungen</h1>
+        <article id="disp_u2/art_178"><p class="absatz ">Andere Division, gleiche Nr. wie Haupttext.</p></article>
+      </section>
+    </div>`;
+
+  it('liefert die vollen disp-Anker in HTML-Reihenfolge', () => {
+    expect(alleSchlussteilAnker(SCHLUSS_HTML)).toEqual([
+      'disp_u1/art_1',
+      'disp_u1/art_6_b_bis',
+      'disp_u1/art_31_32',
+      'disp_u2/art_178',
+    ]);
+  });
+
+  it('ignoriert strukturelle disp-Anker (chap/lvl) und Haupttext-Artikel', () => {
+    const html = `<article id="art_5"><p class="absatz ">Haupttext.</p></article>
+      <section id="disp_u1/chap_1"><div class="heading" id="disp_u1/chap_1/lvl_A">A.</div>
+      <article id="disp_u1/art_1"><p class="absatz ">S.</p></article></section>`;
+    expect(alleSchlussteilAnker(html)).toEqual(['disp_u1/art_1']);
+  });
+
+  it('dedupliziert doppelte disp-Anker mit __N-Suffix', () => {
+    const html = `<article id="disp_u1/art_1"><p class="absatz ">Erst.</p></article>
+      <article id="disp_u1/art_1"><p class="absatz ">Zweit.</p></article>`;
+    expect(alleSchlussteilAnker(html)).toEqual(['disp_u1/art_1', 'disp_u1/art_1__2']);
+  });
+
+  it('liefert leeres Array, wenn das Gesetz keinen Schlussteil hat', () => {
+    expect(alleSchlussteilAnker('<article id="art_1"><p>x</p></article>')).toEqual([]);
+  });
+
+  it('erfasst auch die «disp_N»-Variante OHNE «u» (z.B. VZG-Schlussbestimmungen)', () => {
+    const html = `<article id="art_134"><p class="absatz ">Haupttext.</p></article>
+      <article id="disp_1/art_135"><p class="absatz ">Schlussbestimmung.</p></article>
+      <article id="disp_1/art_136"><p class="absatz ">…</p></article>`;
+    expect(alleSchlussteilAnker(html)).toEqual(['disp_1/art_135', 'disp_1/art_136']);
+    expect(ankerZuToken('disp_1/art_135')).toBe('disp_1_art_135');
+  });
+});
+
+describe('ankerZuToken / schlussteilLabelSuffix (M13)', () => {
+  it('Haupttext-Anker bleiben byte-gleich (slice art_)', () => {
+    expect(ankerZuToken('art_335_c')).toBe('335_c');
+    expect(ankerZuToken('art_977')).toBe('977');
+  });
+  it('disp-Anker werden kollisionsfrei (/ → _)', () => {
+    expect(ankerZuToken('disp_u1/art_1')).toBe('disp_u1_art_1');
+    expect(ankerZuToken('disp_u2/art_178')).toBe('disp_u2_art_178');
+    expect(ankerZuToken('disp_u1/art_1__2')).toBe('disp_u1_art_1__2');
+  });
+  it('Token kollidiert NICHT mit gleicher Haupttext-Nummer', () => {
+    expect(ankerZuToken('disp_u2/art_178')).not.toBe(ankerZuToken('art_178'));
+  });
+  it('Label-Suffix = reine Artikel-Nummer (für artikelLabel)', () => {
+    expect(schlussteilLabelSuffix('disp_u1/art_1')).toBe('1');
+    expect(schlussteilLabelSuffix('disp_u1/art_6_b_bis')).toBe('6_b_bis');
+    expect(schlussteilLabelSuffix('disp_u1/art_31_32__2')).toBe('31_32');
+  });
+});
+
+describe('extrahiereArtikelAusAnker (M13)', () => {
+  it('extrahiert einen disp-Schlusstitel-Artikel wie einen Haupttext-Artikel', () => {
+    const html = `<article id="disp_u1/art_1"><h6 class="heading"><a href="#disp_u1/art_1"><b>Art. 1</b></a></h6><div class="collapseable"><p class="absatz "><sup>1</sup>&nbsp;Erster Absatz.</p><p class="absatz "><sup>2</sup>&nbsp;Zweiter Absatz.</p></div></article>`;
+    const e = extrahiereArtikelAusAnker(html, 'disp_u1/art_1');
+    expect(e?.bloecke.map((b) => b.absatz)).toEqual(['1', '2']);
+    expect(e?.bloecke[0].text).toBe('Erster Absatz.');
+  });
+
+  it('löst den __N-Suffix auf das N-te Vorkommen auf', () => {
+    const html = `<article id="disp_u1/art_1"><div class="collapseable"><p class="absatz ">Erst.</p></div></article><article id="disp_u1/art_1"><div class="collapseable"><p class="absatz ">Zweit.</p></div></article>`;
+    expect(extrahiereArtikelAusAnker(html, 'disp_u1/art_1')?.bloecke[0].text).toBe('Erst.');
+    expect(extrahiereArtikelAusAnker(html, 'disp_u1/art_1__2')?.bloecke[0].text).toBe('Zweit.');
+  });
+
+  it('extrahiereArtikel(token) ist die anker-Variante mit art_-Präfix (byte-gleich)', () => {
+    const html = `<article id="art_77"><div class="collapseable"><p class="absatz "><sup>1</sup>&nbsp;Text.</p></div></article>`;
+    expect(extrahiereArtikel(html, '77')).toEqual(extrahiereArtikelAusAnker(html, 'art_77'));
   });
 });
 

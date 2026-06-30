@@ -68,6 +68,15 @@ export function kantonVonPfad(path: string, m: VerlaufManifeste = {}): string | 
 export function artikelLabelVonPfad(path: string): string | null {
   const m = /#art-(.+)$/.exec(path);
   if (!m) return null;
-  const tok = decodeURIComponent(m[1]).replace(/_/g, '');
+  const roh = decodeURIComponent(m[1]);
+  if (!roh) return null;
+  // M13: Schlusstitel-/UeB-Token «disp_uN_art_<suffix>» tragen den Namespace im
+  // Token. Nur die reine Artikel-Nummer anzeigen («Art. 3», «Art. 31–32»),
+  // nicht das ganze Token («Art. dispu1art3»). Haupttext bleibt byte-gleich.
+  if (roh.startsWith('disp_')) {
+    const suffix = roh.replace(/^.*_art_/, '').replace(/_(?=\d)/g, '–').replace(/_/g, '');
+    return suffix ? `Art. ${suffix}` : null;
+  }
+  const tok = roh.replace(/_/g, '');
   return tok ? `Art. ${tok}` : null;
 }

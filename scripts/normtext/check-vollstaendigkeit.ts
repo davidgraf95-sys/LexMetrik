@@ -28,7 +28,7 @@ import {
   sammleZhPdfInventar,
   sammlePdfInventar,
 } from './inventar-kanton.ts';
-import { alleArtikelTokens } from './extrahiere-fedlex.ts';
+import { alleArtikelTokens, alleSchlussteilAnker } from './extrahiere-fedlex.ts';
 import {
   fehlendeBundArtikel,
   unerwarteteKantonLueckenMitQuelleUrl,
@@ -399,13 +399,15 @@ async function main(): Promise<void> {
 
     const html = readFileSync(htmlPfad, 'utf8');
     const htmlTokens = alleArtikelTokens(html);
+    // M13: Schlusstitel-/UeB-Anker (eigenes Schema) ebenfalls auf Vollabdeckung prüfen.
+    const schlussteilAnker = alleSchlussteilAnker(html);
     bundHtmlGeprüft++;
 
     const gesetz = eintrag.name.toUpperCase();
     // Es gibt keine bekannte Skip-Liste für leere Artikel (extrahiereArtikel liefert nie leer
     // bei gültigen Tokens in der aktuellen Implementierung).
     const leereArtikel = new Set<string>();
-    const fehlend = fehlendeBundArtikel(gesetz, htmlTokens, bundSnapshotIds, leereArtikel);
+    const fehlend = fehlendeBundArtikel(gesetz, htmlTokens, bundSnapshotIds, leereArtikel, schlussteilAnker);
 
     const echteFehlend = fehlend.filter((f) => !f.warLeererArtikel);
     const skippe = fehlend.filter((f) => f.warLeererArtikel);

@@ -1,8 +1,29 @@
 import { describe, it, expect } from 'vitest';
 import {
   gruppiereTausender, gruppiereBetraege, normalisiereAbsatzNummer, absatzMarke,
-  artikelGanzAufgehoben, randtitelKnoten,
+  artikelGanzAufgehoben, randtitelKnoten, labelMitBereich,
 } from '../lib/normtext/darstellung';
+
+// labelMitBereich: rekonstruiert das Halbgeviert eines Bereichs-Artikels aus dem
+// Token — aber NUR für Haupttext-Token (führende Ziffer). M13-Schlusstitel-Token
+// («disp_u1_art_*») tragen ihr Label bereits korrekt.
+describe('labelMitBereich', () => {
+  it('rekonstruiert den Bereich aus dem Haupttext-Token', () => {
+    expect(labelMitBereich('Art. 226a226d', '226_a_226_d')).toBe('Art. 226a–226d');
+    expect(labelMitBereich('Art. 6770', '67_70')).toBe('Art. 67–70');
+  });
+  it('lässt Einzelartikel unberührt', () => {
+    expect(labelMitBereich('Art. 335c', '335_c')).toBe('Art. 335c');
+  });
+  it('M13: disp-Schlusstitel-Token werden NICHT als Bereich missdeutet', () => {
+    // «disp_u1_art_31_32» enthält zwei Zahlen — ohne den Buchstaben-Präfix-Guard
+    // würde daraus «Art. dispu1art31–32». Das Label ist bereits generatorseitig
+    // gesetzt und muss unverändert durchgereicht werden.
+    expect(labelMitBereich('Art. 31–32', 'disp_u1_art_31_32')).toBe('Art. 31–32');
+    expect(labelMitBereich('Art. 1', 'disp_u1_art_1')).toBe('Art. 1');
+    expect(labelMitBereich('Art. 178', 'disp_u2_art_178')).toBe('Art. 178');
+  });
+});
 
 // randtitelKnoten (6b + M3/28.6.2026): Aufzähler-Stufen (A./I./1. = strukturelle
 // Gliederung) werden zu eigenen TOC-Knoten (ahnen) — auch als Blatt; nur die

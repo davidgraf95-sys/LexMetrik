@@ -3817,6 +3817,52 @@
       "abgerufen": "2026-06-29",
       "fassungsToken": "20120101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VZG/disp_1_art_135",
+      "ebene": "bund",
+      "quelle": "VZG",
+      "erlass": "VZG",
+      "artikel": "disp_1_art_135",
+      "artikelLabel": "Art. 135",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vorliegende Verordnung tritt am 1. Januar 1921 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/36/425_433_469/de#disp_1/art_135",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20120101",
+      "sha": "ace5c0dab3efbc227f4a5dc8fb7a0654b3fc5a6cc7846340725d5b1edbee994a"
+    },
+    {
+      "id": "bund/VZG/disp_1_art_136",
+      "ebene": "bund",
+      "quelle": "VZG",
+      "erlass": "VZG",
+      "artikel": "disp_1_art_136",
+      "artikelLabel": "Art. 136",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle mit den Bestimmungen dieser Verordnung im Widerspruch ste­henden Verordnungsvorschriften und Anweisungen werden aufge­ho­ben."
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere wird die Verordnung des Bundesgerichtes vom 21. De­zember 1916 betreffend die von den Betreibungs- und Konkurs­äm­tern anzumeldenden Eintragungen und Vormerkungen im Grund­b­uch aufgehoben und Artikel 74 Absatz 3 KOV durch Arti­kel 69 Absatz 3 hiervor abgeändert."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/36/425_433_469/de#disp_1/art_136",
+      "abgerufen": "2026-06-29",
+      "fassungsToken": "20120101",
+      "sha": "256c655a2f9484196b0265e94eaf3f6da02ac9c472192da1f674670041b75c95"
     }
   ]
 }
