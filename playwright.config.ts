@@ -9,6 +9,12 @@ export default defineConfig({
   testMatch: '**/*.e2e.ts',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
+  // Auf dem 2-Kern-CI-Runner konkurrierten mehrere parallele Worker um EINEN
+  // vite-preview-Server samt schwerer Reader-Seite → CPU-Aushungerung, einzelne
+  // Klicks blockierten bis zum 30-s-Test-Timeout (lokal selbst bei 8× CPU-Drossel
+  // < 1 s, 0 Konsolenfehler — also Contention, kein Code-Defekt). Auf CI darum
+  // 1 Worker (sequenziell, stabil); lokal volle Parallelität.
+  workers: process.env.CI ? 1 : undefined,
   retries: process.env.CI ? 2 : 0,
   reporter: process.env.CI ? 'github' : 'list',
   // Auf langsamen CI-Runnern überschreiten einzelne Web-First-Assertions den
