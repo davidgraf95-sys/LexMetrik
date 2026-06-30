@@ -22,6 +22,12 @@ export interface ArtikelText {
   bloecke: Array<{
     absatz: string | null;
     text: string;
+    /** M13-Annex: Unter-Überschrift INNERHALB eines Anhangs (Ziffer-Titel,
+     *  h2–h6 der Anhang-Sektionen). Wert = Heading-Tiefe (2–6). Reiner
+     *  Render-Hinweis (wie `absatz`), fliesst NICHT in den sha — der Titel-Text
+     *  steht in `text` und ist dort abgedeckt. Nur Anhang-Einträge tragen das
+     *  Feld; bestehende Artikel nie → golden-neutral (additiv). */
+    titel?: number;
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
      *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis).
@@ -294,6 +300,13 @@ export function findeDlEnde(html: string, startIdx: number): number {
 function parseDefinitionsListe(
   dlInner: string,
   tiefe = 0,
+  // M13-Annex: nur im Anhang-Pfad die erweiterte Marken-Erkennung (mehrteilige
+  // gepunktete Ziffern «1.1.1», beschreibende Legenden-Schlüssel). Der Haupttext-
+  // /Schlusstitel-Pfad bleibt BYTE-GLEICH (default false) — die Anhang-Korrektur
+  // re-segnet bewusst KEINE bestehenden Artikel-Snapshots (§6/§1; die identische
+  // Garbling-Klasse im Haupttext — Staatsverträge i→ii, Abkürzungs-Legenden — ist
+  // ein eigener, deklarierter Folgeschritt mit Artikel-Re-Bless).
+  anhang = false,
 ): Array<{ marke: string; text: string; tiefe?: number }> {
   const items: Array<{ marke: string; text: string; tiefe?: number }> = [];
   // Iterativer Scan über die direkten <dt>…<dd>-Paare DIESER Ebene. Ein <dd>
@@ -322,8 +335,17 @@ function parseDefinitionsListe(
     // «a.» / «17.» / «a)» → nackte Marke ohne Punkt/Klammer.
     // Bug-Audit 19.6.2026: lat. Suffix bis/ter/quater/quinquies erhalten (sonst
     // «cbis»→«c», «1bis»→«1b»). Suffix VOR optionalem Buchstaben (wie ABS-Regex).
-    const markeMatch = markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
-    const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(/[.)]\s*$/, '');
+    // M13-Annex (Gegenprüfung), NUR im Anhang-Pfad (anhang): (a) MEHRTEILIGE Ziffern
+    // «1.1.1»/«211.1» (Anhänge nummerieren tief gepunktet) komplett erfassen —
+    // `(?:\.\d+)*` — statt auf die erste Ziffer zu kürzen (sonst zwölf identische
+    // «1.»-Labels, Zitat verfälscht). (b) Der Einbuchstaben-Zweig nur als ECHTE
+    // lit.-Marke (gefolgt von ./)/Space/Ende), sonst kürzte ein BESCHREIBENDES <dt>
+    // («Flupo:», «SEM:») auf den ersten Buchstaben und kollabierte Legenden-Schlüssel.
+    // Der Haupttext-/Schlusstitel-Pfad nutzt die ALTE Regex → byte-gleich (§6).
+    const markeMatch = anhang
+      ? markeRoh.match(/^([0-9]+(?:\.[0-9]+)*(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?(?=[.)\s]|$))\s*[.)]?/i)
+      : markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
+    const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(anhang ? /[.):]\s*$/ : /[.)]\s*$/, '');
 
     const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
     const ddOhneFn = ddVorListe.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
@@ -363,7 +385,7 @@ function parseDefinitionsListe(
       const subEnde = findeDlEnde(ddRoh, subDlIdx);
       const subOpenLen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i)![0].length;
       const subInner = ddRoh.slice(subDlIdx + subOpenLen, subEnde - '</dl>'.length);
-      for (const sub of parseDefinitionsListe(subInner, tiefe + 1)) items.push(sub);
+      for (const sub of parseDefinitionsListe(subInner, tiefe + 1, anhang)) items.push(sub);
     }
   }
   return items;
@@ -432,7 +454,7 @@ function zeileMitColspan(rowHtml: string, tag: 'td' | 'th'): string[] {
  *      (G19: obere Kopfzeile ging sonst verloren).
  * Reale Struktur: <tr><td colspan="4"><p class="man-template-tab-kpf">…</p></td>…</tr>.
  */
-function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: string[][] } {
+function parseFedlexTabelle(tableInner: string, anhang = false): { kopf?: string[]; zeilen: string[][] } {
   const hatTh = /<th\b/i.test(tableInner);
   const istKpfStil = !hatTh && /man-template-tab-kpf/i.test(tableInner);
 
@@ -443,7 +465,13 @@ function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: stri
     for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
       const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) => zellText(c[1]));
       if (ths.length > 0) {
-        if (ths.some((x) => x !== '')) kopf = ths;
+        if (!ths.some((x) => x !== '')) continue;
+        // M13-Annex (Gegenprüfung), NUR im Anhang-Pfad: <th>-DATEN-Zeile (Klasse
+        // krpr/utit) ist KEIN Kopf — sonst überschriebe eine reine <th>-Tabelle
+        // (LRV Anhang 3) ihren Kopf zeilenweise und verlöre ALLE Datenzeilen (§1).
+        // Haupttext-Pfad UNVERÄNDERT (jede nicht-leere <th>-Zeile = Kopf, byte-gleich).
+        if (anhang && /man-template-tab-(?:krpr|utit)/i.test(r[1])) zeilen.push(ths);
+        else kopf = ths;
         continue;
       }
       const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) => zellText(c[1]));
@@ -496,14 +524,26 @@ function rohZellen(rowHtml: string, tag: 'td' | 'th'): RohZelle[] {
  * Kopfzeilen werden gesammelt (T-A5-Merge geschieht im Normalisierer; der
  * Alt-Pfad behielt nur die letzte → G19-Caption-Verlust, z.B. AHVV Art. 21).
  */
-function parseRohTabelle(tableInner: string): RohTabelle {
+function parseRohTabelle(tableInner: string, anhang = false): RohTabelle {
   const kopfZeilen: RohZelle[][] = [];
   const datenZeilen: RohZelle[][] = [];
   for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
     const rowHtml = r[1];
     if (/<th\b/i.test(rowHtml)) {
       const ths = rohZellen(rowHtml, 'th');
-      if (ths.some((z) => z.text !== '')) kopfZeilen.push(ths);
+      // M13-Annex (Gegenprüfung), NUR im Anhang-Pfad: Fedlex rendert manche DATEN-
+      // Zeilen ebenfalls als <th> und unterscheidet sie NUR über die Klasse
+      // (`man-template-tab-krpr`/`-utit` = Daten, `-kpf` = Kopf). Eine Tabelle, deren
+      // Datenrumpf komplett aus <th class="…-krpr"> besteht (LRV Anhang 3 Grenzwerte,
+      // VTS Anhang 9 Sitzmasse), wurde sonst KOMPLETT als Kopf gelesen → Datenzeilen
+      // verloren (§1). Haupttext-Pfad UNVERÄNDERT (jede <th>-Zeile = Kopf, byte-gleich).
+      if (anhang) {
+        if (ths.every((z) => z.text === '')) continue;
+        if (/man-template-tab-(?:krpr|utit)/i.test(rowHtml)) datenZeilen.push(ths);
+        else kopfZeilen.push(ths);
+      } else if (ths.some((z) => z.text !== '')) {
+        kopfZeilen.push(ths);
+      }
       continue;
     }
     const tds = rohZellen(rowHtml, 'td');
@@ -614,4 +654,331 @@ export function ankerZuToken(anker: string): string {
  *  'disp_u1/art_6_b_bis' → '6_b_bis'; 'disp_u1/art_31_32__2' → '31_32'. */
 export function schlussteilLabelSuffix(anker: string): string {
   return anker.replace(/__\d+$/, '').replace(/^.*\/art_/, '');
+}
+
+// ─── M13-Annex: Anhänge (annex_*) ────────────────────────────────────────────
+//
+// Fedlex legt die Anhänge in einen EIGENEN Container <div id="annex"> (Geschwister
+// von <main>, nach <div id="dispositions">). Jeder Anhang ist eine FLACHE
+// <section id="annex_N" | "annex_N_N" | "annex_N_a"> (slash-frei); ihr Teilbaum
+// enthält ausschliesslich lvl_*-Untersektionen, NIE eine weitere annex_*-Sektion
+// (die sind Geschwister — verifiziert chemrrv: annex_1 schliesst VOR annex_1_1).
+// Darum doppelt das Extrahieren der ganzen Sektion keinen Geschwister-Anhang.
+//
+// Anders als Haupttext (<article id="art_*">) und Schlusstitel (<article
+// id="disp_uN/art_*">) sind Anhänge KEINE <article> und tragen KEINE
+// art_-Nummerierung → eigener Anker-/Extraktionspfad. Inhalt ist heterogen:
+// <p class="absatz">, KLASSENLOSE <p> (FIDLEV-Anhänge sind komplett klassenlos),
+// <dl>-Listen, echte <table> (inkl. man-template-tab-kpf/krpr-Zellen) und
+// Unter-Überschriften (h2–h6 = Ziffern). Der dedizierte Extraktor erfasst all
+// das in Dokumentreihenfolge; die Unter-Überschriften werden als `titel`-Blöcke
+// (Tiefe = Heading-Level) erhalten, damit die Ziffern-Struktur im Lesefluss
+// nicht verloren geht.
+
+export interface AnhangText {
+  /** Echter Fedlex-Titel des Anhangs («Anhang 1», «Anhang 1.1», «Anhang 4a»),
+   *  aus der ersten <hN class="heading"> der Sektion. */
+  titel: string;
+  bloecke: ArtikelText['bloecke'];
+}
+
+/**
+ * Findet zu einem <section>-Öffnungs-Tag (an Position startIdx beginnend) den
+ * Index NACH dem PASSENDEN schliessenden </section> — balanciert über die
+ * <section>/</section>-Tiefe (Anhänge schachteln lvl_*-Sektionen). Analog
+ * findeDlEnde. Fehlt das schliessende Tag (malformed), Stringende (defensiv).
+ */
+export function findeSectionEnde(html: string, startIdx: number): number {
+  const re = /<section\b[^>]*>|<\/section>/gi;
+  re.lastIndex = startIdx;
+  let tiefe = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    if (m[0].toLowerCase().startsWith('</')) {
+      tiefe--;
+      if (tiefe === 0) return m.index + m[0].length;
+    } else {
+      tiefe++;
+    }
+  }
+  return html.length;
+}
+
+/**
+ * Findet zu einem <table>-Öffnungs-Tag (an startIdx) den Index NACH dem PASSENDEN
+ * schliessenden </table> — balanciert über die <table>/</table>-Tiefe. Fedlex legt
+ * Layout-Tabellen (Bild-/Formel-Gitter) als <table> IN eine Zelle einer äusseren
+ * <table> (z.B. SSV Anhang 2). Ein non-greedy `[\s\S]*?</table>` stoppte am
+ * INNEREN </table> → die äussere Tabelle würde zerschnitten und Folgezeilen
+ * (Signal-Legenden 4.78–4.95) gingen verloren (§1, Bug-Befund Gegenprüfung).
+ */
+export function findeTableEnde(html: string, startIdx: number): number {
+  const re = /<table\b[^>]*>|<\/table>/gi;
+  re.lastIndex = startIdx;
+  let tiefe = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    if (m[0].toLowerCase().startsWith('</')) {
+      tiefe--;
+      if (tiefe === 0) return m.index + m[0].length;
+    } else {
+      tiefe++;
+    }
+  }
+  return html.length;
+}
+
+/**
+ * Marke-LOSE <dd>-Notizen einer Anhang-<dl> (Fedlex nutzt <dl><dt></dt><dd>…</dd>
+ * auch als reine Einrückung/Notiz, ohne lit./Ziff.-Marke). parseDefinitionsListe
+ * verwirft marke-lose Items (Artikel-Pfad, golden-fixiert) → im Anhang ginge der
+ * <dd>-Notiztext stumm verloren (§1; FIDLEV/VTS/LRV-Anhänge nutzen das hundertfach).
+ * Liefert je marke-loser Top-Level-<dd> den reinen Notiztext (VOR einer evtl.
+ * Unterliste — deren markierte Items erfasst parseDefinitionsListe separat).
+ */
+function markeloseNotizen(dlInner: string): string[] {
+  const notizen: string[] = [];
+  const dtRe = /<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = dtRe.exec(dlInner)) !== null) {
+    const ddStart = dtRe.lastIndex;
+    const ddEnde = findeDdEnde(dlInner, ddStart);
+    const ddRoh = dlInner.slice(ddStart, ddEnde);
+    dtRe.lastIndex = ddEnde + '</dd>'.length;
+    const marke = entferneTags(m[1]).replace(/[.)]\s*$/, '').trim();
+    const subDlIdx = ddRoh.search(/<dl\b[^>]*>/i);
+    if (marke === '') {
+      // marke-loses <dd>: der reine Notiztext (vor einer evtl. Unterliste).
+      const ddText = entferneTags(entferneFussnotenSups(subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh)).trim();
+      if (ddText) notizen.push(ddText);
+    }
+    // REKURSION: auch UNTER einem MARKIERTEN Eltern-Item kann eine ganze Unterliste
+    // marke-loser <dd> stecken (z.B. VTS Anhang 7 Bremsverzögerungen «Klasse 3: 2,9
+    // m/s²»). parseDefinitionsListe verwirft marke-lose Items auf JEDER Ebene → der
+    // Top-Level-Scan allein verlöre verschachtelte Notizen (§1). Daher in jede
+    // Unterliste absteigen (marke-los vs. marke-tragend bleibt disjunkt → keine Dublette).
+    if (subDlIdx >= 0) {
+      const subEnde = findeDlEnde(ddRoh, subDlIdx);
+      const subOpen = ddRoh.slice(subDlIdx).match(/^<dl\b[^>]*>/i);
+      if (subOpen) {
+        const subInner = ddRoh.slice(subDlIdx + subOpen[0].length, subEnde - '</dl>'.length);
+        notizen.push(...markeloseNotizen(subInner));
+      }
+    }
+  }
+  return notizen;
+}
+
+/** Sichtbarer Text einer Anhang-Überschrift: der <a>-Text ohne Icons/Fussnoten.
+ *  «<span class="display-icon"></span>…<a href="#annex_1">Anhang 1 </a>» → «Anhang 1». */
+function anhangUeberschrift(hInner: string): string {
+  const ohneZier = hInner
+    .replace(/<span\s+class="(?:display-icon|external-link-icon)"[^>]*>[\s\S]*?<\/span>/gi, '')
+    .replace(/<sup\b[\s\S]*?<\/sup>/gi, '');
+  return entferneTags(ohneZier);
+}
+
+/**
+ * Alle Anhang-Anker eines Erlasses in HTML-Reihenfolge — die OBERSTEN Anhang-
+ * Sektionen im <div id="annex">-Container.
+ *
+ * Kandidaten sind die SLASH-FREIEN <section id="…">, deren id mit «annex»/«lvl»
+ * beginnt (genestete Stufen tragen einen «/», z.B. annex_1/lvl_u1 → kein Match,
+ * weil nach `[^"/]*` das schliessende «"» fehlt). Das erfasst ALLE realen
+ * Varianten: nummeriert (annex_1, annex_1_1, annex_4_a — ChemRRV/GSchV/FIDLEV),
+ * EINZELNER unnummerierter «Anhang» (annex_uN — BVG/KVG/IPRG/VAG/AHVG) und der
+ * Sonderfall OHNE annex-Präfix (lvl_uN — KAG/FIDLEG).
+ *
+ * RECORD = ein Kandidat, der KEINEN anderen Kandidaten umschliesst (Blatt im
+ * Anhang-Baum). Damit fällt die Deckblatt-Sektion («Anhänge», umschliesst die
+ * nummerierten annex_N als Geschwister, z.B. ChemRRV annex_u1) automatisch weg —
+ * ihre Kinder sind die Einträge —, während der EINZELNE «Anhang» (annex_uN/lvl_uN,
+ * enthält nur lvl_*-Unterstufen mit «/») korrekt als ein Eintrag erhalten bleibt.
+ * Doppelte ids erhalten — wie alleArtikelTokens — einen Synthese-Suffix «__2».
+ */
+export function alleAnhangAnker(html: string): string[] {
+  const divStart = html.search(/<div\s+id="annex"\s*>/i);
+  if (divStart < 0) return [];
+  const seg = html.slice(divStart);
+  const re = /<section[^>]*\sid="((?:annex|lvl)[^"/]*)"/gi;
+  const kandidaten: Array<{ id: string; start: number; end: number }> = [];
+  for (const m of seg.matchAll(re)) {
+    if (m[1] === 'annex') continue; // (die Container-id ist ein <div>, kein <section>; defensiv)
+    const s = m.index ?? 0;
+    kandidaten.push({ id: m[1], start: s, end: findeSectionEnde(seg, s) });
+  }
+  const records = kandidaten.filter(
+    (k) => !kandidaten.some((o) => o !== k && o.start > k.start && o.start < k.end),
+  );
+  // Deckblatt-Auschluss: Tragen die Records NUMMERIERTE Anhänge (annex_1, annex_2…),
+  // dann ist eine zusätzliche UNNUMMERIERTE Sektion (annex_uN/lvl_uN) das Deckblatt
+  // «Anhänge» — eine reine Inhaltsübersicht (listet die Anhang-Titel, ChemRRV) und
+  // KEIN eigener Anhang → ausschliessen (sonst Dublette zur Gliederung «Anhänge»).
+  // Fehlt jede Nummerierung (BVG/KVG/KAG/FIDLEG: ein einziger «Anhang»), IST die
+  // unnummerierte Sektion der Anhang → behalten.
+  const hatNummerierte = records.some((k) => /^annex_\d/.test(k.id));
+  const echte = hatNummerierte
+    ? records.filter((k) => !/^(?:annex_u\d+|lvl_u\d+)$/.test(k.id))
+    : records;
+  const anzahl = new Map<string, number>();
+  const anker: string[] = [];
+  for (const k of echte) {
+    const n = (anzahl.get(k.id) ?? 0) + 1;
+    anzahl.set(k.id, n);
+    anker.push(n === 1 ? k.id : `${k.id}__${n}`);
+  }
+  return anker;
+}
+
+/**
+ * Extrahiert einen ganzen Anhang (eine slash-freie annex_*-Sektion) als Block-
+ * Liste in Dokumentreihenfolge. Erfasst: Unter-Überschriften (h2–h6 → `titel`-
+ * Block), <p> (mit ODER ohne Klasse — FIDLEV-Anhänge sind klassenlos), <dl>-
+ * Listen, echte <table>. Die ERSTE Überschrift der Sektion ist der Anhang-Titel
+ * (→ `titel`-Feld, NICHT in den Body) und wird vom Body-Lauf ausgenommen.
+ *
+ * Inline-Bild-Glyphen (image/imageN.png, Formelbilder) werden von entferneTags
+ * verworfen — bewusst (eigener Bild-Pass nach M13-Annex, §8 offengelegt).
+ *
+ * @returns AnhangText, oder null wenn die Sektion fehlt ODER keinen Block trägt
+ *          (reine Gruppen-Überschrift wie chemrrv annex_1 → kein eigener Eintrag).
+ */
+export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | null {
+  const suffix = ankerRoh.match(/^(.*)__(\d+)$/);
+  const basisAnker = suffix ? suffix[1] : ankerRoh;
+  const nth = suffix ? Number(suffix[2]) : 1;
+  const escaped = basisAnker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const openRe = new RegExp(`<section[^>]*\\sid="${escaped}"[^>]*>`, 'gi');
+  const opens = [...html.matchAll(openRe)];
+  const open = opens[nth - 1];
+  if (!open) return null;
+  const start = open.index ?? 0;
+  const innerStart = start + open[0].length;
+  const ende = findeSectionEnde(html, start);
+  const innerRoh = html.slice(innerStart, ende - '</section>'.length);
+
+  // Fussnoten-Apparat je (Unter-)Sektion entfernen — sonst leckt der Apparat-Text
+  // (Änderungs-/Aufhebungs-Historie) in den Anhang-Body. Anders als beim Artikel
+  // (Apparat am Ende → bis Stringende strippen) können Anhang-Fussnoten je
+  // Untersektion auftreten, darum jeden Apparat-<div> EINZELN (non-greedy) tilgen.
+  // WICHTIG: die Klasse ist NICHT immer nackt «footnotes» — Sektions-Überschriften
+  // tragen «footnotes section-heading-footnote» (69 Stellen/14 Erlasse, z.B. VTS).
+  // Daher KLASSE-ENTHÄLT-footnotes matchen, nicht exakt-gleich (sonst leckte die
+  // Änderungshistorie als Normtext, §1/§8). Apparat enthält nur <p> (kein
+  // verschachteltes <div>) → das erste </div> ist sein Schliess-Tag.
+  const inner = innerRoh.replace(/<div\b[^>]*\bclass="[^"]*\bfootnotes\b[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '');
+
+  // Titel = erste Überschrift der Sektion; aus dem Body-Lauf ausnehmen.
+  const titelMatch = inner.match(/<h[1-6][^>]*\bclass="[^"]*\bheading\b[^"]*"[^>]*>([\s\S]*?)<\/h[1-6]>/i);
+  const titel = titelMatch ? anhangUeberschrift(titelMatch[1]) : basisAnker;
+  const koerper = titelMatch ? inner.replace(titelMatch[0], '') : inner;
+
+  const NICHT_P = '(?:(?!</p>)[\\s\\S])*?';
+  // Reihenfolge ist bedeutsam: die Tabellen-Alternative steht VOR der generischen
+  // <p>-Alternative, weil Fedlex Anhang-Tabellen in einen <p>-Wrapper legt
+  // (`<p><div class="table"><table>…</table></div></p>`, invalides HTML, aber so
+  // ausgeliefert). Stünde <p> zuerst, schluckte sie die ganze Tabelle und
+  // entferneTags plättete sie zu Text (Tabellen-Totalverlust, Bug-Befund). Die
+  // optionalen Wrapper-Präfixe (<p> / <div class="table">) fallen daher in die
+  // Tabellen-Alternative; ein Wrapper ohne folgendes <table> lässt sie scheitern
+  // → Backtrack auf die <p>-Prosa-Alternative an derselben Stelle.
+  const re = new RegExp(
+    '<h([2-6])[^>]*\\bclass="[^"]*\\bheading\\b[^"]*"[^>]*>([\\s\\S]*?)</h\\1>' +                       // (1)/(2) Unter-Überschrift
+      '|(?:<p>\\s*)?(?:<div\\b[^>]*\\bclass="[^"]*\\btable\\b[^"]*"[^>]*>\\s*)?(<table[^>]*>)' +         // (3) Tabellen-Öffnung (ggf. <p>/<div class="table">-umwickelt); Ende balanciert
+      `|<p[^>]*>(${NICHT_P})</p>` +                                                                     // (4) Absatz (klassenlos ok)
+      '|(<dl[^>]*>)',                                                                                   // (5) Liste
+    'gi',
+  );
+
+  const bloecke: ArtikelText['bloecke'] = [];
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(koerper)) !== null) {
+    if (match[0] === '') { re.lastIndex++; continue; }
+    if (match[1] !== undefined) {
+      // ── Unter-Überschrift (Ziffer) ───────────────────────────────────────
+      const text = anhangUeberschrift(match[2]);
+      if (text) bloecke.push({ absatz: null, text, titel: Number(match[1]) });
+    } else if (match[3] !== undefined) {
+      // ── Tabelle <table> (ggf. <p>/<div class="table">-umwickelt) ─────────
+      // BALANCIERTES Ende (findeTableEnde): Fedlex schachtelt Layout-Tabellen
+      // (Bild-Gitter) in Zellen → ein non-greedy </table> verlöre die Folgezeilen
+      // der ÄUSSEREN Tabelle (SSV-Signal-Legenden, §1). Der Tabellen-Anfang liegt
+      // hinter dem optionalen <p>/<div>-Präfix: match[3] ist der <table>-Öffner.
+      const tableStart = match.index + (match[0].length - match[3].length);
+      const tableEnde = findeTableEnde(koerper, tableStart);
+      const tableInner = koerper.slice(tableStart + match[3].length, tableEnde - '</table>'.length);
+      re.lastIndex = tableEnde;
+      const norm = normalisiereTabelle(parseRohTabelle(tableInner, true));
+      if (norm && norm.zeilen.length > 0) {
+        bloecke.push({ absatz: null, text: '', mehrspaltig: { spalten: norm.spalten, zeilen: norm.zeilen } });
+      } else {
+        const mehr = parseFedlexTabelle(tableInner, true);
+        if (mehr.zeilen.length > 0) {
+          bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+        } else if ((mehr.kopf?.length ?? 0) > 0) {
+          // KOPF-ONLY-Tabelle: Fedlex rendert die Spalten-Legende (z.B. «Name |
+          // EINECS | CAS | Beschränkungen») als 1-Zeilen-Tabelle, die eigentlichen
+          // Daten folgen in <dl>/<p>. Eine zeilenlose mehrspaltig-Tabelle würde
+          // nicht rendern (Reader verlangt zeilen.length>0) und triggerte den
+          // Leerblock-Sanity. Faithful als Text-Zeile (Spaltentitel · -getrennt)
+          // behalten — so geht die Legende nicht verloren (§1).
+          const legende = (mehr.kopf ?? []).filter(Boolean).join(' · ');
+          if (legende) bloecke.push({ absatz: null, text: legende });
+        }
+      }
+    } else if (match[4] !== undefined) {
+      // ── Absatz <p> (mit oder ohne Klasse) ────────────────────────────────
+      const roh = match[4];
+      // Absatznummer: führendes nacktes <sup>N</sup> (ohne <a>-Kind).
+      const supMatch = roh.match(/^(?:\s|&nbsp;|<\/?inl>)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
+      let absatz: string | null = null;
+      if (supMatch && !/<a[\s>]/i.test(supMatch[1]) && /^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supMatch[1].trim())) {
+        absatz = supMatch[1].trim();
+      }
+      const ohneFootnotes = entferneFussnotenSups(roh);
+      const ohneAbsatzNr = absatz
+        ? ohneFootnotes.replace(/^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i, '')
+        : ohneFootnotes;
+      const text = entferneTags(ohneAbsatzNr).replace(/\s+([.,;:])/g, '$1').trim();
+      if (text) bloecke.push({ absatz, text });
+    } else if (match[5] !== undefined) {
+      // ── Liste <dl> (balanciert) ──────────────────────────────────────────
+      const dlEnde = findeDlEnde(koerper, match.index);
+      const dlInner = koerper.slice(match.index + match[5].length, dlEnde - '</dl>'.length);
+      re.lastIndex = dlEnde;
+      // Marke-lose <dd>-Notizen (leeres <dt>, Fedlex-Einrückung) ZUERST als Prosa
+      // sichern — sonst Textverlust (§1) UND falsche Lesereihenfolge: die Notiz
+      // leitet i.d.R. ihre Unterliste EIN («… wie folgt gekennzeichnet:» vor a/b/c).
+      // Die nachfolgende Item-Liste hängt sich dann an die letzte Notiz an (Lead +
+      // Items = ein Block), statt VOR ihr zu stehen.
+      for (const notiz of markeloseNotizen(dlInner)) bloecke.push({ absatz: null, text: notiz });
+      const items = parseDefinitionsListe(dlInner, 0, true);
+      if (items.length > 0) {
+        const vor = bloecke[bloecke.length - 1];
+        // An den vorausgehenden Einleitungs-Absatz/Notiz anhängen — NUR wenn der ein
+        // reiner Text-Block ohne eigene Liste/Tabelle/Titel ist (sonst eigener Block).
+        if (vor && vor.text && vor.titel === undefined && !vor.items && !vor.mehrspaltig) {
+          vor.items = items;
+        } else {
+          bloecke.push({ absatz: null, text: '', items });
+        }
+      }
+    }
+  }
+
+  // Leerer Anhang-Körper: in der Praxis ein AUFGEHOBENER Anhang (Fedlex rendert
+  // «Anhang N» + Aufhebungs-Fussnote, sonst nichts — die Fussnote ist oben
+  // gestrippt). Wie beim aufgehobenen Artikel (s. extrahiereArtikelAusAnker)
+  // faithful als «aufgehoben»-Marker («…») behalten statt stumm zu verlieren
+  // (§8 Ehrlichkeit; der Reader zeigt «aufgehoben»). So bleibt der Anhang in der
+  // Vollständigkeit/Struktur erfasst und konsistent mit dem Artikel-Pfad.
+  if (bloecke.length === 0) return { titel, bloecke: [{ absatz: null, text: '…' }] };
+  return { titel, bloecke };
+}
+
+/** Fallback-Label aus dem Anker, wenn die Sektion keinen Titel trägt.
+ *  'annex_1' → «Anhang 1»; 'annex_1_1' → «Anhang 1.1»; 'annex_4_a' → «Anhang 4a». */
+export function anhangLabelVonAnker(anker: string): string {
+  const roh = anker.replace(/__\d+$/, '').replace(/^annex_/, '');
+  return 'Anhang ' + roh.replace(/_(?=\d)/g, '.').replace(/_/g, '');
 }

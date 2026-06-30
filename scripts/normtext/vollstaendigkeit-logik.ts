@@ -133,6 +133,7 @@ export function fehlendeBundArtikel(
   snapshotIds: Set<string>,
   leereArtikel: ReadonlySet<string>,
   schlussteilAnker: readonly string[] = [],
+  anhangAnker: readonly string[] = [],
 ): BundArtikelLuecke[] {
   const fehlend: BundArtikelLuecke[] = [];
   const gesetzOben = gesetz.toUpperCase();
@@ -159,6 +160,22 @@ export function fehlendeBundArtikel(
         token,
         snapshotId,
         warLeererArtikel: leereArtikel.has(token),
+      });
+    }
+  }
+
+  // M13-Annex: Anhang-Anker (annex_*). Es werden NUR die content-tragenden Anker
+  // übergeben (extrahiereAnhang ≠ null) — reine Gruppen-Überschriften ohne Body
+  // sind keine Snapshot-Einträge und dürfen keine Lücke melden (Caller filtert).
+  for (const anker of anhangAnker) {
+    const token = ankerZuToken(anker);
+    const snapshotId = `bund/${gesetzOben}/${token}`;
+    if (!snapshotIds.has(snapshotId)) {
+      fehlend.push({
+        gesetz: gesetzOben,
+        token,
+        snapshotId,
+        warLeererArtikel: false,
       });
     }
   }

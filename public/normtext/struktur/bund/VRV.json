@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-29",
+ "erzeugt": "2026-06-30",
  "kopf": {
   "srNummer": "741.11",
   "titel": "Verkehrsregelnverordnung",
@@ -6699,6 +6699,24 @@
      "item": null
     }
    ]
+  },
+  "annex_I": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
+  },
+  "annex_I_I": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

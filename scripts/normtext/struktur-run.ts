@@ -9,7 +9,7 @@
  * Aufruf: npm run normtext:struktur -- --datum=$(date +%F)
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { extrahiereStruktur } from './struktur-extrahiere.ts';
+import { extrahiereStruktur, extrahiereAnhangStruktur } from './struktur-extrahiere.ts';
 import { extrahiereKopf } from './kopf-extrahiere.ts';
 import { extrahiereFussnoten, fnDefinitionen, type Fussnote } from './fussnoten-extrahiere.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
@@ -33,6 +33,9 @@ for (const reg of bund) {
   if (!existsSync(cache)) { fehlend.push(reg.key); continue; }
   const html = readFileSync(cache, 'utf8');
   const struktur = extrahiereStruktur(html);
+  // M13-Annex: Anhang-Gliederung («Anhänge») additiv ergänzen — Keys lockstep
+  // mit den Snapshot-Annex-Tokens (gleicher Keep-Prädikat, Konsistenz-Tor).
+  Object.assign(struktur, extrahiereAnhangStruktur(html));
   const anzahl = Object.keys(struktur).length;
   if (anzahl === 0) { fehlend.push(`${reg.key}(0)`); continue; }
   // Fussnoten (Änderungs-/AS/BBl-Historie) je Artikel dazumischen.

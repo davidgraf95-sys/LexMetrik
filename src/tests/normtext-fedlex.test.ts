@@ -18,6 +18,9 @@ import {
   extrahiereArtikelAusAnker,
   ankerZuToken,
   schlussteilLabelSuffix,
+  alleAnhangAnker,
+  extrahiereAnhang,
+  anhangLabelVonAnker,
 } from '../../scripts/normtext/extrahiere-fedlex';
 
 // ── Fixture 1: OR Art. 77 (3 nummerierte Absätze + 1 Unterabsatz ohne Nummer) ──
@@ -518,5 +521,132 @@ describe('Fussnoten-Marker werden auch im Fallback-Zweig entfernt', () => {
     expect(entferneFussnotenSups('Text<sup> <inl><a href="#x">12</a></inl> </sup>.')).toBe('Text.');
     // Absatznummer-<sup> OHNE <a> bleibt unberührt
     expect(entferneFussnotenSups('<sup>2</sup>Absatztext')).toBe('<sup>2</sup>Absatztext');
+  });
+});
+
+// ── M13-Annex: Anhänge (annex_*) ────────────────────────────────────────────
+// Fixtures = vereinfachte, aber strukturtreue Ausschnitte der realen Fedlex-
+// Anhang-Container (verifiziert an chemrrv/fidlev/gschv/bvg/kag/lrv/vts).
+
+describe('alleAnhangAnker (M13-Annex)', () => {
+  it('nummerierte Anhänge: Deckblatt «Anhänge» (annex_uN) wird ausgeschlossen', () => {
+    const html =
+      '<div id="annex">' +
+      '<section id="annex_u1"><h1 class="heading"><a href="#annex_u1">Anhänge</a></h1></section>' +
+      '<section id="annex_1"><h1 class="heading"><a href="#annex_1">Anhang 1</a></h1></section>' +
+      '<section id="annex_1_1"><h1 class="heading"><a href="#annex_1_1">Anhang 1.1</a></h1></section>' +
+      '</div>';
+    expect(alleAnhangAnker(html)).toEqual(['annex_1', 'annex_1_1']);
+  });
+
+  it('EINZELNER unnummerierter Anhang (annex_uN, BVG-Manier) bleibt erhalten', () => {
+    const html =
+      '<div id="annex"><section id="annex_u1"><h1 class="heading"><a href="#annex_u1">Anhang</a></h1>' +
+      '<div class="collapseable"><section id="annex_u1/lvl_u1"><p>Inhalt</p></section></div></section></div>';
+    expect(alleAnhangAnker(html)).toEqual(['annex_u1']);
+  });
+
+  it('Sonderfall ohne annex-Präfix (lvl_uN, KAG/FIDLEG)', () => {
+    const html =
+      '<div id="annex"><section id="lvl_u1"><h1 class="heading"><a href="#lvl_u1">Anhang</a></h1>' +
+      '<div class="collapseable"><section id="lvl_u1/lvl_1"><p>X</p></section></div></section></div>';
+    expect(alleAnhangAnker(html)).toEqual(['lvl_u1']);
+  });
+
+  it('liefert leeres Array, wenn das Gesetz keinen <div id="annex"> hat', () => {
+    expect(alleAnhangAnker('<main><article id="art_1"></article></main>')).toEqual([]);
+  });
+});
+
+describe('extrahiereAnhang (M13-Annex)', () => {
+  const sektion = (id: string, inner: string) => `<section id="${id}">${inner}</section>`;
+  const wrap = (inner: string) => `<div id="annex">${inner}</div>`;
+
+  it('Titel + Unter-Überschrift (Ziffer) als titel-Block, Prosa als Absatz', () => {
+    const html = wrap(
+      sektion('annex_1',
+        '<h1 class="heading"><a href="#annex_1">Anhang 1</a></h1><div class="collapseable">' +
+        '<p>(Art. 5)</p>' +
+        '<section id="annex_1/lvl_1"><h2 class="heading"><a href="#x">1 Oberirdische Gewässer</a></h2>' +
+        '<div class="collapseable"><p class="absatz">Die Gewässer sollen naturnah sein.</p></div></section>' +
+        '</div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_1')!;
+    expect(ex.titel).toBe('Anhang 1');
+    expect(ex.bloecke).toEqual([
+      { absatz: null, text: '(Art. 5)' },
+      { absatz: null, text: '1 Oberirdische Gewässer', titel: 2 },
+      { absatz: null, text: 'Die Gewässer sollen naturnah sein.' },
+    ]);
+  });
+
+  it('marke-lose <dd>-Notiz (leeres <dt>) bleibt als Prosa, VOR ihrer Unterliste', () => {
+    const html = wrap(
+      sektion('annex_1',
+        '<h1 class="heading"><a href="#annex_1">Anhang 1</a></h1><div class="collapseable">' +
+        '<dl><dt></dt><dd>Wie folgt gekennzeichnet:<dl><dt>a. </dt><dd>erstens</dd><dt>b. </dt><dd>zweitens</dd></dl></dd></dl>' +
+        '</div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_1')!;
+    // Notiz steht VOR den Items und trägt sie als Lead-in.
+    expect(ex.bloecke[0].text).toBe('Wie folgt gekennzeichnet:');
+    expect(ex.bloecke[0].items?.map((i) => `${i.marke}:${i.text}`)).toEqual(['a:erstens', 'b:zweitens']);
+  });
+
+  it('mehrteilige gepunktete Ziffer-Marke «1.1.1» bleibt vollständig (nicht «1»)', () => {
+    const html = wrap(
+      sektion('annex_2',
+        '<h1 class="heading"><a href="#annex_2">Anhang 2</a></h1><div class="collapseable">' +
+        '<dl><dt>1.1.1 </dt><dd>alpha</dd><dt>1.1.2 </dt><dd>beta</dd></dl></div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_2')!;
+    expect(ex.bloecke[0].items?.map((i) => i.marke)).toEqual(['1.1.1', '1.1.2']);
+  });
+
+  it('beschreibende <dt>-Marke («Flupo:») wird NICHT auf den ersten Buchstaben gekürzt', () => {
+    const html = wrap(
+      sektion('annex_3',
+        '<h1 class="heading"><a href="#annex_3">Anhang 3</a></h1><div class="collapseable">' +
+        '<dl><dt>Flupo: </dt><dd>Flughafenpolizei</dd><dt>SEM: </dt><dd>Staatssekretariat</dd></dl></div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_3')!;
+    // Beschreibende Legenden-Schlüssel behalten ihre Original-Schreibung (Abkürzung
+    // «SEM» bleibt gross) — nur einteilige lit./Ziff.-Marken werden kleingeschrieben.
+    expect(ex.bloecke[0].items?.map((i) => i.marke)).toEqual(['Flupo', 'SEM']);
+  });
+
+  it('Apparat-Variante «footnotes section-heading-footnote» leckt nicht in den Body', () => {
+    const html = wrap(
+      sektion('annex_4',
+        '<h1 class="heading"><a href="#annex_4">Anhang 4</a>' +
+        '<span><sup><a href="#fn1">5</a></sup></span></h1>' +
+        '<div class="footnotes section-heading-footnote"><p id="fn1">Bereinigt gemäss Ziff. II der V vom …</p></div>' +
+        '<div class="collapseable"><p class="absatz">Echter Anhang-Inhalt.</p></div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_4')!;
+    expect(ex.bloecke.some((b) => /Bereinigt gemäss/.test(b.text))).toBe(false);
+    expect(ex.bloecke).toEqual([{ absatz: null, text: 'Echter Anhang-Inhalt.' }]);
+  });
+
+  it('aufgehobener Anhang (nur Titel + Aufhebungs-Fussnote) → «…»-Block', () => {
+    const html = wrap(
+      sektion('annex_5',
+        '<h1 class="heading"><a href="#annex_5">Anhang 5</a></h1>' +
+        '<div class="footnotes"><p>Aufgehoben durch Ziff. I der V …</p></div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_5')!;
+    expect(ex.bloecke).toEqual([{ absatz: null, text: '…' }]);
+  });
+
+  it('fehlende Sektion → null', () => {
+    expect(extrahiereAnhang(wrap(''), 'annex_99')).toBeNull();
+  });
+});
+
+describe('anhangLabelVonAnker (M13-Annex)', () => {
+  it('leitet ein Fallback-Label aus dem Anker ab', () => {
+    expect(anhangLabelVonAnker('annex_1')).toBe('Anhang 1');
+    expect(anhangLabelVonAnker('annex_1_1')).toBe('Anhang 1.1');
+    expect(anhangLabelVonAnker('annex_4_a')).toBe('Anhang 4a');
   });
 });

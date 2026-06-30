@@ -42,6 +42,10 @@ export interface NormSnapshot {
   bloecke: Array<{
     absatz: string | null;
     text: string;
+    /** M13-Annex: Unter-Überschrift innerhalb eines Anhangs (Ziffer-Titel, h2–h6).
+     *  Wert = Heading-Tiefe (2–6). Nur Anhang-Einträge tragen das Feld; der
+     *  Renderer (ArtikelBody) zeigt den `text` dann als Zwischenüberschrift. */
+    titel?: number;
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;

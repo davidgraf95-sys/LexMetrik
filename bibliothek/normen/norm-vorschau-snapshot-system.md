@@ -225,3 +225,93 @@ G13) — separater Pass, andere Risiko-Klasse (Tabellen/Formulare).
 
 **Abnahme-Status:** maschinell verifiziert (Golden additiv, Gate grün, Sicht-
 prüfung) + 1 adversariale Gegenprüfung; **fachliche Abnahme David offen.**
+
+## M13-Annex — Anhänge (annex_*), Bund (30.6.2026)
+
+**Quelle/Stand:** Fedlex-Filestore-HTML, dieselben gepinnten Konsolidierungen wie
+B1/M13 (`scripts/fedlex-cache.sh`), Abrufdatum 2026-06-30. Kein neuer Erlass —
+ein **neuer Extraktionspfad über den bestehenden Bund-Korpus** (kein cache.sh-/
+register-Eintrag geändert).
+
+**Befund (Lücke):** Fedlex legt die Anhänge in einen EIGENEN Container
+`<div id="annex">` (Geschwister von `<main>`, NACH `<div id="dispositions">`).
+Jeder Anhang ist eine **`<section>`** (KEINE `<article>`, KEINE `art_`-Nummer) —
+darum vom `art_`-/`disp_`-Enumerator nicht erfasst, komplett gefehlt. Anker-Schema
+hierarchisch: top `annex_N`/`annex_N_N`/`annex_N_a` (nummeriert), `annex_uN`
+(einzelner unnummerierter «Anhang»), `lvl_uN` (KAG/FIDLEG: einziger Anhang OHNE
+annex-Präfix) und `lvl_dNeN` (DTD-generierte opake id, z.B. GFK-Staatsvertrag);
+genestete Stufen tragen einen «/» (`annex_1/lvl_u1/…`). Ergebnis:
+**390 Anhang-Einträge über 134 Bund-Gesetze** (vorher 0).
+
+**Regel (deterministisch):**
+1. **Enumerieren — `alleAnhangAnker(html)`:** im `<div id="annex">` alle SLASH-
+   FREIEN `<section id="(annex|lvl)…">`. RECORD = ein Kandidat, der KEINEN anderen
+   umschliesst (Blatt). Das schliesst das **Deckblatt** «Anhänge» (Inhaltsübersicht,
+   listet die Anhang-Titel — ChemRRV `annex_u1`) automatisch aus, **sobald
+   nummerierte Anhänge existieren**; fehlt jede Nummerierung (BVG/KVG/KAG/FIDLEG:
+   ein einziger «Anhang»), bleibt die unnummerierte Sektion der eine Eintrag.
+   *Lektion (Zähl-Falle):* die Variante `lvl_dNeN` (GFK u.a.) trägt KEIN «u» — ein
+   Filter `(annex_|lvl_u)` unterzählt; korrekt ist `(annex_|lvl_)`.
+2. **Token-Namespace:** `ankerZuToken` → `annex_1`, `annex_1_1`, `annex_u1`,
+   `lvl_u1` (kein `art_`, kein `/` → unverändert). Kollisionsfrei zu Haupttext/disp.
+3. **Extrahieren — `extrahiereAnhang(html, anker)`** (DEDIZIERT, andere Risiko-
+   Klasse als der Artikel-Parser): balancierte `<section>`-Klammer (`findeSectionEnde`),
+   Fussnoten-Apparat je Untersektion gestrippt, ERSTE Überschrift = Anhang-Titel
+   (→ `titel`-Feld). Body-Lauf in Dokumentreihenfolge, 4 Block-Klassen:
+   - **Unter-Überschriften** (h2–h6 der Ziffern) → neuer Block `{titel: tiefe, text}`
+     (additives Schema-Feld, render-only, NICHT im sha; Heading-Text steht in `text`).
+   - **Tabellen** — `<table>`, AUCH `<p>/<div class="table">`-umwickelt (Fedlex
+     liefert `<p><div class="table"><table>…` = invalides HTML). Tabellen-Alternative
+     steht VOR der `<p>`-Alternative, sonst schluckte `<p>` die Tabelle (Bug-Befund).
+     Kopf-only-Tabellen (Spalten-Legende, Daten folgen in `<dl>`) → Text-Zeile.
+   - **`<p>`-Prosa** (mit ODER ohne Klasse — FIDLEV-Anhänge sind klassenlos).
+   - **`<dl>`-Listen** via `parseDefinitionsListe`; ZUSÄTZLICH **marke-lose `<dd>`**
+     (`<dl><dt></dt><dd>…</dd>` = Fedlex-Einrückung) als Prosa gesichert
+     (`markeloseNotizen`), weil parseDefinitionsListe marke-lose Items verwirft
+     (Artikel-Pfad golden-fixiert) → sonst Textverlust (FIDLEV/VTS/LRV, §1-Bug).
+   Leerer Anhang (= aufgehoben, nur Titel+Aufhebungs-Fussnote) → `…`-Block
+   («aufgehoben», §8, wie aufgehobener Artikel).
+4. **Gruppieren:** `extrahiereAnhangStruktur(html)` gibt jedem Anhang die Gliederung
+   **«Anhänge»** (additiv im Struktur-Sidecar, Keys lockstep mit den Snapshot-Token)
+   → gliederungsgetriebener Reader bildet die Top-Sektion «Anhänge». **Kein
+   Renderer-Umbau** ausser dem `titel`-Block (ArtikelBody: Zwischenüberschrift).
+
+**Bewusste Abweichung (§7/§1):** wie M13-disp KEINE `anhaenge[]`-Schema-Dimension —
+Token-Namespace + Sidecar. EINZIGES neues Block-Feld: `titel?` (render-only, golden-
+neutral, da bestehende Artikel-Blöcke es nie tragen). Re-Bless additiv (+370 annex-
+Keys, 0 Artikel/disp geändert; Engine-Golden `lexmetrik-golden.json` byte-gleich).
+
+**Bilder/Formeln** (`<img src="image/imageN.png">`, Inline-Glyphen) werden weiter
+von `entferneTags` verworfen — **bewusst** (eigener Bild-Pass nach M13-Annex,
+§8 offengelegt).
+
+**Geltungsbereich:** 134/218 Bund-Gesetze haben Anhänge. Wort-Coverage-Audit
+(committetes Snapshot-JSON vs. Roh-HTML, Fussnoten-Marker/Bilder ausgenommen):
+**99.65 %** über 44 479 Anhang-Wörter, schwächster Erlass 98 %; Rest = Tokenizer-
+Artefakte (Kommas in Chemikalien-Namen), keine realen Verluste.
+
+**Gegenprüfung (2 adversariale Opus-Pässe, Code + Fidelity) — 6 §1-Befunde, alle
+gefixt+verifiziert:** (C1) Apparat-Variant-Klasse `footnotes section-heading-footnote`
+leckte Änderungshistorie als Normtext (VTS); (C2) geschachtelte Layout-Tabellen
+zerschnitten (SSV Signal-Legenden) → `findeTableEnde`; (C3) marke-lose `<dd>`-Notiz
+nach statt vor ihrer Liste; (D1) Marken-Kürzung «1.1.1»→«1» / «Flupo»→«f»; (D2)
+all-`<th>`-Datentabellen als reiner Kopf gelesen (LRV Grenzwerte, VTS Sitzmasse);
+(D3) VERSCHACHTELTE marke-lose `<dd>` verloren (VTS Anhang 7 «2,9 m/s²») →
+`markeloseNotizen` rekursiv. **D1/D2 betreffen die GETEILTEN Parser
+(`parseDefinitionsListe`/`parseRohTabelle`/`parseFedlexTabelle`) → über ein
+`anhang`-Flag NUR im Anhang-Pfad aktiviert; der Haupttext-/Schlusstitel-Pfad bleibt
+BYTE-GLEICH (empirisch: 0 geänderte Artikel-sha).** Die identische Garbling-Klasse
+im Haupttext (Staatsverträge `i`→`ii`, Abkürzungs-Legenden) ist ein eigener,
+deklarierter Folgeschritt mit bewusstem Artikel-Re-Bless.
+
+**Tore:** `check:vollstaendigkeit` (Anhang-Anker mitgeprüft, Sanity «leerer-block»);
+`check:struktur-konsistenz` (Sidecar-Keys ↔ Snapshot-Token lockstep);
+`check:normtext`-Drift additiv grün; Voll-Gate grün; Playwright-Sicht
+(GSchV/ChemRRV/BVG/KAG); 12 neue Anhang-Unit-Tests.
+
+**Pflegebedarf:** keine datierten Parameter (folgt der Fedlex-Konsolidierung).
+**Offen:** Bilder/Formeln-Pass; danach Staatsvertrags-Protokolle (LugÜ).
+
+**Abnahme-Status:** maschinell verifiziert (Golden additiv, Gate grün, Wort-
+Coverage-Audit, Sicht­prüfung) + adversariale Gegenprüfung; **fachliche Abnahme
+David offen** (Zeitsperre bis 1.12.2026).
