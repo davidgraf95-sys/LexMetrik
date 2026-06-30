@@ -23,6 +23,30 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — Plan-Steuerung «ein Etikett pro Schritt» (QS-PH, Branch `feat/plan-steuerung`, NICHT gemergt/deployt)
+
+Maschinenlesbares `<!-- @meta … -->`-Etikett je ROADMAP-Schritt
+(status/of/blocker/dep/kollision/worktree/26x/fahrplan) + Werkzeuge unter
+`scripts/plan/`: **`plan:next`** (Resolver → Buckets ready-now/wartet-dep/
+wartet-Fachzeit/blockiert/geparkt/wartet-26x-Slot + deterministische Lanes),
+**`plan:set`** (Feld + gekoppelte Checkbox), **`check:plan`** (Wächter, in der
+`check`-Gate-Kette: Schema · Checkbox-Kopplung · `@blockers`-Register ·
+dep-Existenz+Azyklie · max-1-26x-wip · kollision-Existenz · FAHRPLAN-Link der
+referenzierten Dateien · verwaiste/fehlende `@meta`). Behebt die §5-Drift
+(Checkbox ↔ Prosa-Fortschrittsblock): `npm run plan:next` ist ab jetzt die
+deterministische Antwort auf «was darf ich bauen?». ROADMAP einmalig etikettiert:
+25 Einheiten (S0, Schritte 1–14, 5 Querschnitt, 4 nested Bündel), `@blockers`-
+Register, Fortschritts-Block aufgelöst. **W1·4 = blocked** (`wbqdyap3x`, 26×-Slot
+bleibt; `plan:set W1·4 status=parked` gäbe ihn frei für Welle 3); **W3·12 geparkt**.
+Subagent-getrieben (8 Tasks TDD, je Task-Review + Fix-Loops), doppelt verifiziert
+(Repo-Faktencheck + adversariale Opus-Audits inkl. 16-Befund-Spec-Audit).
+**golden byte-gleich** (kein Produkt-Code), kein Deploy (§9). Detail:
+`FAHRPLAN-PLAN-STEUERUNG.md`; Plan: `docs/superpowers/plans/2026-07-01-plan-steuerung.md`.
+**Gate-Hinweis:** `check:plan` + tsc/vitest/golden/lint grün; das Voll-Gate ist heute
+(1.7.) durch einen **unverwandten, fälligen Daten-Pflege-Backlog** rot (`check:verfall`:
+SG-GKV verfallen 30.6. · ZGB+ZPO Fedlex-Re-Pin fällig · Streitwert-Miete) — separater
+Posten «Pflege & Termine», nicht aus diesem Branch.
+
 ## Session 30.6.2026 — Performance-Grundsatz + ultracode-Audit + Quick-Win-Batch 1 (DEPLOYT)
 
 **Stand:** Auf Davids Frage «macht Lexmetrik alte Computer langsamer?» gemessen (Lighthouse 4× CPU): ja — `/gesetze/bund/OR` Score **42**, **CLS 0,64**. ultracode-Audit (38 Opus-Agenten, adversarial gegen Logikverlust): 25 verifizierte logik-sichere Optimierungen. **Grundsatz festgeschrieben** (CLAUDE.md **§15** + ROADMAP **Leitprinzip 7**/Querschnitt **QS-PERF** + **FAHRPLAN-PERFORMANCE.md** + Memory): *Lexmetrik nicht merklich langsamer, ausser bei Logikverlust — Treue gewinnt immer.*
