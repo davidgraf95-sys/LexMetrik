@@ -1,5 +1,5 @@
 // scripts/plan/check.ts
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { parseRoadmap, type Einheit } from './parse';
 import { INVENTAR } from './inventar';
 
@@ -82,8 +82,14 @@ export function pruefe(
 // CLI
 if (!process.env.VITEST) {
   const md = readFileSync('ROADMAP.md', 'utf8');
-  const fahrplan = readdirSync('.').filter((f) => /^FAHRPLAN-.*\.md$/.test(f));
-  const probleme = pruefe(md, fahrplan, (p) => existsSync(p));
+  // FAHRPLAN-Link-Check (QS-PH) NUR für vom Plan referenzierte Dateien: jedes @meta-
+  // `fahrplan:`-Feld + die QS-PH-Spec. Die historisch unverlinkten FAHRPLAN-*.md
+  // (Archiv-Backlog, s. ROADMAP «Strang-Detailpunkte») werden NICHT retroaktiv
+  // erzwungen — das Ur-QS-PH zielt auf neu referenzierte Dateien, nicht auf Altlasten.
+  const { einheiten } = parseRoadmap(md);
+  const referenziert = new Set<string>(['FAHRPLAN-PLAN-STEUERUNG.md']);
+  for (const e of einheiten) if (e.etikett.fahrplan) referenziert.add(e.etikett.fahrplan);
+  const probleme = pruefe(md, [...referenziert], (p) => existsSync(p));
   if (probleme.length) {
     console.error('check:plan ROT:');
     for (const p of probleme) console.error(`  - ${p.id ?? '(global)'}: ${p.meldung}`);
