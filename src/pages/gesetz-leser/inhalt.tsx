@@ -322,7 +322,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const scrolle = () => {
       const el = findeArt(paneRoot(imPane, wurzel), token);
       if (!el) return;
-      el.scrollIntoView({ block: 'center', behavior: 'auto' });
+      // R1: an den OBEREN Lese-Rand sprungen (block:'start' + nt-anker-scroll-margin
+      // ≈5rem) statt zentrieren — deckt sich mit der oben angesetzten Scroll-Spy-
+      // Bezugslinie, sonst markierte der Spy nach dem Sprung den Vorgänger-Artikel.
+      el.scrollIntoView({ block: 'start', behavior: 'auto' });
       el.classList.add('lc-ziel-blink');
       window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
     };
@@ -412,7 +415,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
         const el = findeArt(paneRoot(imPane, wurzel), token);
-        el?.scrollIntoView({ block: 'center', behavior: 'auto' });
+        // R1: oberer Lese-Rand statt Mitte (deckt sich mit der Scroll-Spy-Bezugslinie).
+        el?.scrollIntoView({ block: 'start', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
@@ -420,14 +424,17 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN
-  // IntersectionObserver bestimmt den Artikel im Viewport-MITTELPUNKT und speist
-  // daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-Markierung +
-  // automatisches Auf-/Zuklappen des aktiven Zweigs (P9/K) UND (b) das Live-Label des aktiven Reiters
-  // «Kürzel – Art. X» (P2). IntersectionObserver statt getBoundingClientRect-
-  // Schleife wegen content-visibility:auto (Off-Screen-Artikel sind nur Platz-
-  // halter); das schmale Mittel-Band (rootMargin -45%/-45%) meldet genau den
-  // zentrierten Artikel. Die Auswahl-Logik ist die reine, getestete Funktion
-  // aktiverArtikel (§2/§3).
+  // IntersectionObserver bestimmt den Artikel, der OBEN im Viewport angeschnitten
+  // ist, und speist daraus zwei Konsumenten aus EINER Quelle — (a) die Gliederungs-
+  // Markierung + automatisches Auf-/Zuklappen des aktiven Zweigs (P9/K) UND (b) das
+  // Live-Label des aktiven Reiters «Kürzel – Art. X» (P2). IntersectionObserver
+  // statt getBoundingClientRect-Schleife wegen content-visibility:auto (Off-Screen-
+  // Artikel sind nur Platzhalter).
+  // R1 (Auftrag David 30.6.2026): NICHT mehr der mittige Artikel, sondern der
+  // ZUOBERST angeschnittene — die Bezugslinie sitzt nahe dem oberen Lese-Rand (≈12 %
+  // unter der sticky Topbar), das Beobachtungs-Band liegt darum oben (rootMargin
+  // -6%/-82% statt -45%/-45%). Die Auswahl-Logik bleibt die reine, getestete
+  // Funktion aktiverArtikel — sie wählt generisch den Artikel an der Bezugslinie (§2/§3).
   const letzterArtToken = useRef<string | null>(null);
   useEffect(() => {
     // C (Auftrag David 26.6.2026): auch starten, wenn der Erlass KEINE Gliederung
@@ -440,17 +447,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const auswerten = () => {
       raf = 0;
       if (jumpLock.current) return; // während eines Klick-Sprungs nicht dazwischenfunken
-      // Mittelpunkt im Viewport-Koordinatensystem (getBoundingClientRect): im Pane
-      // die Pane-Mitte, sonst die Fenster-Mitte (B-2.5).
+      // Bezugslinie im Viewport-Koordinatensystem (getBoundingClientRect): R1 — nicht
+      // mehr die Mitte, sondern eine Linie nahe dem oberen Lese-Rand (12 % der
+      // sichtbaren Höhe unter dem Oberrand des Scroll-Containers), damit der zuoberst
+      // angeschnittene Artikel «dran» ist. Im Pane relativ zur Pane-Oberkante, sonst
+      // zum Fenster (B-2.5). Die 12 % räumen die sticky Topbar (h-16) frei.
       const sc = paneRoot(imPane, wurzel);
-      const mitte = sc ? sc.getBoundingClientRect().top + sc.clientHeight / 2 : window.innerHeight / 2;
+      const oben = sc ? sc.getBoundingClientRect().top : 0;
+      const hoehe = sc ? sc.clientHeight : window.innerHeight;
+      const bezug = oben + hoehe * 0.12;
       const rects = [...sichtbar.values()]
         .filter((en) => en.isIntersecting)
         .map((en) => {
           const r = en.target.getBoundingClientRect();
           return { token: (en.target as HTMLElement).id.replace(/^art-/, ''), top: r.top, bottom: r.bottom };
         });
-      const token = aktiverArtikel(rects, mitte);
+      const token = aktiverArtikel(rects, bezug);
       if (!token || token === letzterArtToken.current) return; // dedup: nur bei Wechsel
       letzterArtToken.current = token;
       // A3/F: aktuellen Artikel an den Kopf melden (Einzelansicht-Kopf ODER PaneKopf),
@@ -501,7 +513,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const io = new IntersectionObserver((entries) => {
       for (const en of entries) sichtbar.set(en.target, en);
       if (!raf) raf = window.requestAnimationFrame(auswerten);
-    }, { root: paneRoot(imPane, wurzel), rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      // R1: Beobachtungs-Band oben statt mittig — der Streifen 6 %–18 % von der
+      // Oberkante enthält die Bezugslinie (12 %); so meldet der Observer genau die
+      // Artikel, die den oberen Lese-Rand kreuzen.
+    }, { root: paneRoot(imPane, wurzel), rootMargin: '-6% 0px -82% 0px', threshold: 0 });
     // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
     // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
     // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
