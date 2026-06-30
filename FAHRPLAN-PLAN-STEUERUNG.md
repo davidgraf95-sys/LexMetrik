@@ -170,13 +170,16 @@ auflösbar), parked = bewusst zurückgestellt (Steuer-Entscheid).
 Spec heilt):
 1. **`ready-now`** + welche **parallel** gehen — Lanes über **paarweise disjunkte, kanonisierte,
    real existierende** `kollision`-Pfade; bei mehreren maximalen Mengen **greedy in lexikografischer
-   ID-Reihenfolge** (deterministisch, §2).
+   ID-Reihenfolge** (deterministisch, §2). Lane-Regel: **leere `kollision` = undeklariert →
+   konservativ eigene Lane (nie blind parallelisiert)**; Globs/Verzeichnis-Präfixe zählen als
+   Überlappung (z. B. `public/x/*.json` kollidiert mit `public/x/OR.json`).
 2. **wartet auf dep** (mit der offenen dep-ID)
 3. **wartet auf Davids Fachzeit** (`of==nein`)
 4. **blockiert** (mit Blocker-Token + Klartext aus dem Register)
 5. **geparkt**
-6. **wartet auf 26×-Slot** (ready-26×, aber ein anderes 26× ist aktiv/bereits empfohlen — nichts geht still verloren)
-7. **26×-Slot belegt von …** (falls zutreffend)
+6. **in Arbeit (wip)** — die aktiven `wip`-Einheiten (dürfen nicht lautlos verschwinden)
+7. **wartet auf 26×-Slot** (ready-26×, aber ein anderes 26× ist aktiv/bereits empfohlen — nichts geht still verloren)
+8. **26×-Slot belegt von …** (falls zutreffend)
 
 Determinismus (§2): gleiche ROADMAP → gleiche Ausgabe. Tagesbezug nie in der Auswahllogik.
 
@@ -208,9 +211,10 @@ der unmittelbar danach laufende `check:plan` nie an der eigenen Setzer-Aktion ro
 - **`kollision`:** jeder Pfad/Glob ist repo-relativ **und** expandiert auf ≥1 real existierende Datei
   (sonst läuft die Lane-Disjunktheit leer → §12-Falle; Lehre aus ROADMAP-`QS-GP`).
 - **FAHRPLAN-Link-Check (eingegliedertes Ur-`QS-PH`, Befund #8):** jede `FAHRPLAN-*.md` im Repo-Wurzel
-  ist aus `ROADMAP.md` verlinkt (inkl. **dieser** Datei aus dem `QS-PH`-Eintrag), sonst rot. Damit ist
-  `check:plan` ⊇ dem ursprünglich für `QS-PH` geplanten Verlinkungs-Wächter — kein zweites Tool, nichts
-  fällt unter den Tisch.
+  ist aus `ROADMAP.md` verlinkt — **ausser** den im `ARCHIV_BACKLOG` grandfatherten Altlasten
+  (Archiv-Kandidaten, s. ROADMAP «Strang-Detailpunkte»); eine **NEUE/neu referenzierte** unverlinkte
+  FAHRPLAN wird rot. Damit ist `check:plan` ⊇ dem ursprünglich für `QS-PH` geplanten Verlinkungs-
+  Wächter — kein zweites Tool, nichts fällt unter den Tisch.
 - **Nur Prüflogik** → golden byte-gleich (§6).
 
 **Einhängung (verifiziert):** `check:plan` wird der **`check`-`&&`-Kette in `package.json`** hinzugefügt;
@@ -239,7 +243,10 @@ Schritte:
 5. Header-Datum aktualisieren; `QS-PH`-Eintrag im Querschnitt-Band um Link auf **diese** Datei +
    `check:plan`-Beschreibung ergänzen (sonst schlägt der eigene FAHRPLAN-Link-Check an).
 6. **Schritt 4 = Steuer-Entscheid, nicht raten (§7/§1):** `blocked` (Blocker auflösbar, 26×-Slot bleibt)
-   vs. `parked` (bewusst zurückgestellt, **gibt 26×-Slot frei** für Schritt 11/12). Die ROADMAP
+   vs. `parked` (bewusst zurückgestellt, **gibt 26×-Slot frei** für Schritt 11/12). *Klarstellung
+   (Befund #12): den 26×-Slot belegt allein `wip`; `blocked` wie `parked` belegen ihn nicht — «Slot
+   bleibt» meint hier nur, dass der blockierte Schritt seinen 26×-Anspruch behält, nicht eine
+   aktive Belegung.* Die ROADMAP
    dokumentiert den **Park-Entscheid** als Absicht — beim Befüllen mit dieser dokumentierten Absicht
    abgleichen; im Zweifel David bestätigen lassen, nicht eigenmächtig den Slot-Status setzen.
 

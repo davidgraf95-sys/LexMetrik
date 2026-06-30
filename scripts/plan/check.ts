@@ -1,9 +1,33 @@
 // scripts/plan/check.ts
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { parseRoadmap, type Einheit } from './parse';
 import { INVENTAR } from './inventar';
 
 export interface Problem { id: string | null; meldung: string }
+
+// Archiv-Backlog (Stand 1.7.2026): FAHRPLAN-*.md, die historisch nicht aus ROADMAP.md
+// verlinkt sind (Archiv-Kandidaten, s. ROADMAP «Strang-Detailpunkte»). Grandfathered, damit
+// der Link-Check NEU hinzugefügte/referenzierte unverlinkte FAHRPLAN rot meldet, ohne die
+// Altlast jedesmal rotzumachen. Beim Archivieren/Verlinken einer Datei hier streichen.
+const ARCHIV_BACKLOG = new Set<string>([
+  'FAHRPLAN-BEURKUNDUNGS-AUSBAU.md',
+  'FAHRPLAN-BGE-DARSTELLUNG-EINHEITLICH.md',
+  'FAHRPLAN-BGER-RECHTSWEG.md',
+  'FAHRPLAN-BS-VORBILDKANTON.md',
+  'FAHRPLAN-ENTSCHEIDSUCHE-AUSBAU.md',
+  'FAHRPLAN-FALL-RUECKGRAT.md',
+  'FAHRPLAN-FUNDAMENT-UMBAU.md',
+  'FAHRPLAN-GMBH-GRUENDUNG.md',
+  'FAHRPLAN-GRUNDLAGEN.md',
+  'FAHRPLAN-INTERNATIONAL-VOLLTEXT.md',
+  'FAHRPLAN-KANTONALE-ENTSCHEIDE.md',
+  'FAHRPLAN-LUECKEN-SCHLIESSEN.md',
+  'FAHRPLAN-NOTARIAT-GRUNDBUCH.md',
+  'FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN.md',
+  'FAHRPLAN-RECHTSPRECHUNG.md',
+  'FAHRPLAN-RECHTSSAMMLUNG.md',
+  'FAHRPLAN-VERTRAGS-VARIANTEN.md',
+]);
 
 const CHECKBOX_STATUS: Record<string, string[]> = {
   '[x]': ['done'],
@@ -82,14 +106,19 @@ export function pruefe(
 // CLI
 if (!process.env.VITEST) {
   const md = readFileSync('ROADMAP.md', 'utf8');
-  // FAHRPLAN-Link-Check (QS-PH) NUR für vom Plan referenzierte Dateien: jedes @meta-
-  // `fahrplan:`-Feld + die QS-PH-Spec. Die historisch unverlinkten FAHRPLAN-*.md
-  // (Archiv-Backlog, s. ROADMAP «Strang-Detailpunkte») werden NICHT retroaktiv
-  // erzwungen — das Ur-QS-PH zielt auf neu referenzierte Dateien, nicht auf Altlasten.
-  const { einheiten } = parseRoadmap(md);
-  const referenziert = new Set<string>(['FAHRPLAN-PLAN-STEUERUNG.md']);
-  for (const e of einheiten) if (e.etikett.fahrplan) referenziert.add(e.etikett.fahrplan);
-  const probleme = pruefe(md, [...referenziert], (p) => existsSync(p));
+  // FAHRPLAN-Link-Check (QS-PH): JEDE FAHRPLAN-*.md im Repo-Wurzel muss aus ROADMAP.md
+  // verlinkt sein — AUSSER den in ARCHIV_BACKLOG grandfatherten Altlasten (Archiv-Kandidaten).
+  // So meldet der Check eine NEU hinzugefügte/neu referenzierte unverlinkte FAHRPLAN rot,
+  // ohne die historische Altlast jedesmal rotzumachen.
+  const alle = readdirSync('.').filter((f) => /^FAHRPLAN-.*\.md$/.test(f));
+  const zuPruefen = alle.filter((f) => !ARCHIV_BACKLOG.has(f));
+  let probleme: Problem[];
+  try {
+    probleme = pruefe(md, zuPruefen, (p) => existsSync(p));
+  } catch (e) {
+    console.error('check:plan ROT:\n  - (global): @meta nicht lesbar — ' + (e as Error).message);
+    process.exit(1);
+  }
   if (probleme.length) {
     console.error('check:plan ROT:');
     for (const p of probleme) console.error(`  - ${p.id ?? '(global)'}: ${p.meldung}`);

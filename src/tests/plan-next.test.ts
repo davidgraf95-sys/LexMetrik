@@ -59,3 +59,23 @@ describe('resolve', () => {
     expect(b.wartet26xSlot).toEqual(['B']);
   });
 });
+
+describe('resolve — Lane-Sicherheit + inArbeit (Sweep)', () => {
+  it('leere kollision → konservativ eigene Lane (nicht co-laned)', () => {
+    const b = resolve([einheit('A'), einheit('B')]);
+    expect(b.lanes).toEqual([['A'], ['B']]);
+  });
+  it('Glob vs exakt auf derselben Datei → kollidiert (getrennte Lanes)', () => {
+    const b = resolve([einheit('A', { kollision: ['public/x/OR.json'] }), einheit('B', { kollision: ['public/x/*.json'] })]);
+    expect(b.lanes).toEqual([['A'], ['B']]);
+  });
+  it('disjunkte konkrete Pfade → co-laned', () => {
+    const b = resolve([einheit('A', { kollision: ['src/a.ts'] }), einheit('B', { kollision: ['src/b.ts'] })]);
+    expect(b.lanes).toEqual([['A', 'B']]);
+  });
+  it('wip-Einheit erscheint in inArbeit, nicht lautlos weg', () => {
+    const b = resolve([einheit('A', { status: 'wip' }), einheit('B')]);
+    expect(b.inArbeit).toEqual(['A']);
+    expect(b.readyNow).toEqual(['B']);
+  });
+});
