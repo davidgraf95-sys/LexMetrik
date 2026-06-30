@@ -22,7 +22,7 @@ function ja(v: string): boolean {
 }
 function liste(v: string): string[] {
   const innen = v.trim().replace(/^\[/, '').replace(/\]$/, '').trim();
-  return innen === '' ? [] : innen.split(',').map((s) => s.trim());
+  return innen === '' ? [] : innen.split(',').map((s) => s.trim()).filter(Boolean);
 }
 function nullbar(v: string): string | null {
   return v === 'null' ? null : v;
@@ -46,7 +46,7 @@ export function parseEtikett(line: string): Etikett {
   return {
     id: feld.id,
     status,
-    statusAgent: sm[2] ?? null,
+    statusAgent: sm[2] || null,
     of: ja(feld.of),
     blocker: nullbar(feld.blocker),
     dep: liste(feld.dep),

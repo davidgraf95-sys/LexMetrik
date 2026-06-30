@@ -10,12 +10,12 @@ export interface Einheit {
 }
 
 function checkboxAus(zeile: string): Checkbox {
-  const m = zeile.match(/^\s*-\s*\[([ x~])\]/);
-  return m ? (`[${m[1]}]` as Checkbox) : null;
+  const m = zeile.match(/^\s*[-*+]\s*\[([ xX~])\]/);
+  return m ? (`[${m[1].toLowerCase()}]` as Checkbox) : null;
 }
 
 export function parseRoadmap(md: string): { einheiten: Einheit[]; blockers: Record<string, string> } {
-  const zeilen = md.split('\n');
+  const zeilen = md.split(/\r?\n/);
   const einheiten: Einheit[] = [];
   const blockers: Record<string, string> = {};
   let sektion = '';
@@ -27,7 +27,7 @@ export function parseRoadmap(md: string): { einheiten: Einheit[]; blockers: Reco
       // Sektion = Überschriftstext ohne Marker/Emoji und ohne Tail (— … / *(…)*)
       sektion = z.replace(/^##+\s+/, '').replace(/^[⚡🚀▶■\s]+/u, '').replace(/\s+—.*$/, '').replace(/\s+\*.*$/, '').trim();
     }
-    if (z.trim().startsWith('<!-- @blockers')) { imBlockers = true; continue; }
+    if (z.trim().startsWith('<!-- @blockers')) { imBlockers = !z.includes('-->'); continue; }
     if (imBlockers) {
       if (z.trim().startsWith('-->')) { imBlockers = false; continue; }
       const bm = z.match(/^\s*([^:]+):\s*(.*)$/);

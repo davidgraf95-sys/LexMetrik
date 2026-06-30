@@ -44,3 +44,15 @@ describe('serializeEtikett', () => {
     expect(serializeEtikett(e, '  ')).toContain('status: wip(reader-wt)');
   });
 });
+
+describe('parseEtikett — Robustheit', () => {
+  it('leere Listen-Member werden gefiltert', () => {
+    const e = parseEtikett('<!-- @meta id: A · status: ready · of: ja · blocker: null · dep: [W1,] · kollision: [] · worktree: nein · 26x: nein -->');
+    expect(e.dep).toEqual(['W1']);
+  });
+  it('wip() leere Klammer → statusAgent null (round-trip stabil)', () => {
+    const e = parseEtikett('<!-- @meta id: A · status: wip() · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->');
+    expect(e.statusAgent).toBeNull();
+    expect(parseEtikett(serializeEtikett(e, '')).statusAgent).toBeNull();
+  });
+});

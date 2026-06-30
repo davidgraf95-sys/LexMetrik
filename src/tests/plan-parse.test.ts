@@ -45,3 +45,20 @@ describe('parseRoadmap', () => {
     expect(blockers['wbqdyap3x']).toContain('Recherche offen');
   });
 });
+
+describe('parseRoadmap — Robustheit', () => {
+  it('CRLF: @blockers werden trotz \\r geparst', () => {
+    const md = ['## Die geordnete Abarbeitung', '<!-- @blockers', 'b1: grund', '-->', '- [ ] **x**', '  <!-- @meta id: A · status: blocked · of: ja · blocker: b1 · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\r\n');
+    const { blockers, einheiten } = parseRoadmap(md);
+    expect(blockers.b1).toBe('grund');
+    expect(einheiten.map((e) => e.id)).toEqual(['A']);
+  });
+  it('einzeiliger @blockers-Kommentar schluckt nicht das ganze Dokument', () => {
+    const md = ['## Die geordnete Abarbeitung', '<!-- @blockers b1: x -->', '- [ ] **y**', '  <!-- @meta id: A · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
+    expect(parseRoadmap(md).einheiten.map((e) => e.id)).toEqual(['A']);
+  });
+  it('Checkbox [X] gross + * /+ -Bullets werden erkannt', () => {
+    const md = ['## Die geordnete Abarbeitung', '* [X] **z**', '  <!-- @meta id: A · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
+    expect(parseRoadmap(md).einheiten[0].checkbox).toBe('[x]');
+  });
+});

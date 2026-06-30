@@ -38,4 +38,10 @@ describe('setField', () => {
     const out = setField(md, 'W2·6', 'dep', '[W2·5, W2·7]');
     expect(out).toContain('dep: [W2·5, W2·7]');
   });
+
+  it('Wert mit $ wird literal eingesetzt (keine Backreference)', () => {
+    const md = ['- [ ] **x**', '  <!-- @meta id: A · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->'].join('\n');
+    const out = setField(md, 'A', 'kollision', '[src/$1/x.ts]');
+    expect(out).toContain('kollision: [src/$1/x.ts]');
+  });
 });
