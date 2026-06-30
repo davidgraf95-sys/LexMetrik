@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useState, memo, type ReactNode } from 'react';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
@@ -13,7 +13,7 @@ import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
   marg?: string[];
   // Absolute Tiefe der ERSTEN gezeigten Randtitel-Stufe (Delta-Offset). Damit
@@ -225,7 +225,7 @@ export function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, in
       </div>
     </article>
   );
-}
+});
 
 // M5 (§2 Fundiertheits-Floor): Erlass-Kopf = Ingress/Erlassformel bzw. materielle
 // Präambel + Erlassdatum + Kopf-Fussnoten. Fedlex zeigt das unter dem Titel; bei

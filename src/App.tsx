@@ -149,8 +149,10 @@ export default function App() {
           sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}
       <ErrorBoundary key={pathname}>
       <Suspense fallback={
-        /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3) */
-        <div className="py-16 text-center space-y-3">
+        /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3).
+           min-h-screen reserviert die Routenhöhe, damit der Lazy-Chunk-Ladeframe das
+           Dokument nicht auf eine Zeile kollabiert (CLS, §15/2; Token §13). */
+        <div className="min-h-screen py-16 text-center space-y-3">
           <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
           <p className="text-body-s text-ink-500">Wird geladen …</p>
         </div>}>

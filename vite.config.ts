@@ -12,6 +12,23 @@ export default defineConfig({
       html2canvas: fileURLToPath(new URL('./src/lib/pdf/html2canvas-stub.ts', import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Nur die React-Familie in einen stabil benannten vendor-react-Chunk
+        // isolieren (Default-Chunking sonst unberührt). react-dom/react-router
+        // lagen bisher im App-Entry → jeder Shell-Commit rehashte ~130 kB
+        // Engine; ausgegliedert bleibt sie über Deploys im HTTP-Cache der
+        // Wiederbesucher. Reine Chunk-Grenze — Modul-Reihenfolge/Inhalt
+        // unverändert, golden pinnt Outputs nicht Asset-Hashes (§15/5, §6.4).
+        manualChunks(id: string) {
+          if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) {
+            return 'vendor-react';
+          }
+        },
+      },
+    },
+  },
   test: {
     environment: 'node',
     globals: true,

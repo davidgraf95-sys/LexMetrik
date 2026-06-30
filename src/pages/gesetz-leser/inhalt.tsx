@@ -637,8 +637,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     );
   }
   if (!erlass || !eintraege) {
+    // Mindesthöhe reserviert die volle Lesehöhe, solange Snapshot/Struktur async
+    // laden: ohne sie kollabiert das (bei Bund prerenderte) Volltext-Dokument auf
+    // die kurze Spinner-Zeile und der einwachsende React-Baum erzeugt den grossen
+    // CLS-Sprung. min-h-screen ist ein Token (§13), reserviert nur Platz, kürzt
+    // keinen Inhalt (§15/2).
     return (
-      <div className="py-12 text-center space-y-3">
+      <div className="min-h-screen py-12 text-center space-y-3">
         <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
         <p className="text-body-s text-ink-500">Der Erlass wird abgerufen …</p>
       </div>
