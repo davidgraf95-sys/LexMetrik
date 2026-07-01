@@ -9822,6 +9822,18 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/erv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 53,
+            "hoehe": 8,
+            "formel": true,
+            "sha": "8c0d699fdc4ff1c5da6ec2319ef0350babefdaab20ed36a45859f783858bdbd5"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Hierin bezeichnen:"
         },
         {
@@ -9849,7 +9861,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_4_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a6b4b5bf21207089d291972f66ce1a6c4a915d38d843817a6366e59faeb86122"
+      "sha": "23fcc3f04fe53a210d38738fb4e3179036ff4bcc10de065714776740dd0e6af4"
     },
     {
       "id": "bund/ERV/annex_5",
@@ -10009,12 +10021,34 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/erv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 150,
+            "hoehe": 4,
+            "sha": "52e0ea0b781e385c653f159bfda7ee4d9295947a80f46245560ec080e0280dd3"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "2",
               "text": "Dienstleistungskomponente (SC)"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/erv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 177,
+            "hoehe": 11,
+            "sha": "c0d2c4f068e635ad77fab718f3f97dfad69beb787081aff6e2389e138deb3426"
+          }
         },
         {
           "absatz": null,
@@ -10029,12 +10063,34 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/erv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 130,
+            "hoehe": 4,
+            "sha": "52d8b9bfd3966e5cdb3ae261073b34ee5b829ae854aef80439f975ecb15f5ded"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "4",
               "text": "Interner Verlustmultiplikator (ILM)"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/erv/image5.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 38,
+            "hoehe": 9,
+            "sha": "9ed5e0573350411aaeabe92da9df4ee605e5285158232885c6d00fc143f348ff"
+          }
         },
         {
           "absatz": null,
@@ -10049,7 +10105,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_5_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "c3753e315c9d564e86a25e72f9f9d4c9e4d1f7ff7f6a3a71148dc6134fa33e99"
+      "sha": "628074475e4c46cc10e37c71a5d3b89c1e656041fef9df9255a825ba7b1607bd"
     },
     {
       "id": "bund/ERV/annex_6",

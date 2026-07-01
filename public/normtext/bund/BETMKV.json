@@ -3713,14 +3713,32 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/betmkv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "3ab165e05ed84a1c13a3ca8b34ed94cbf5c956bb9dafc4737341214cfaa0d890"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Rückseite der Bescheinigung"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/betmkv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "e2a81cd36e3589e2a4f6962ee393315948d6c7cced6996a6530bcc1e8408b0eb"
+          }
         }
       ],
       "stand": "2023-01-23",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230123",
-      "sha": "a23a8fa3bb8a4687d4707373377f7204a98fa272d1c2e3692c891a2395ab8962"
+      "sha": "ef3e160f7cacfd484b4d08ca8f2810e4ada43ad4e026f86b6f8e24cfdc9a9320"
     }
   ]
 }

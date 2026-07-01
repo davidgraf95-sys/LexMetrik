@@ -37,7 +37,28 @@ export interface ArtikelText {
       kopf?: string[];
       zeilen: string[][];
     };
+    /** Bilder/Formeln (Bündel «Bilder & Formeln», 1.7.2026): Fedlex liefert
+     *  Piktogramme (SSV/VTS/chem. Warnzeichen) UND Formeln als `<img>`. `entferneTags`
+     *  verwarf sie bisher stumm. `bild` = EIN Standalone-Bild/Formel (`<p class="bild">
+     *  <img>`); `bildKacheln` = flaches Karten-Raster aus einem reinen Piktogramm-Katalog
+     *  (SSV Anhang 2). `datei` trägt nach der Extraktion die RELATIVE Quell-src
+     *  («image/imageN.png»); der Generator (normtext-snapshot) rechnet sie zur amtlichen
+     *  Filestore-URL, lädt herunter, setzt `datei` auf den lokalen Pfad + `sha`. */
+    bild?: BildRef;
+    bildKacheln?: Array<{ bild?: BildRef; nummer?: string; name?: string }>;
   }>;
+}
+
+export interface BildRef {
+  /** Nach Extraktion: relative Quell-src («image/imageN.png»). Nach Generator-
+   *  Lauf: lokaler Pfad («bilder/<erlass>/imageN.png»). */
+  datei: string;
+  alt: string;
+  formel?: boolean;
+  breite?: number;
+  hoehe?: number;
+  /** sha256 über die Bild-Bytes (§7-Drift) — vom Generator gesetzt. */
+  sha?: string;
 }
 
 import { dekodiereEntities } from './html-entities.ts';
@@ -149,7 +170,11 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       `|<p[^>]*>((?:\\s|&nbsp;|<\\/?inl>)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
       `|<p[^>]*>(${NICHT_P})</p>(?=\\s*<dl)` +
       '|(<dl[^>]*>)' +
-      '|<table[^>]*>([\\s\\S]*?)</table>',
+      '|<table[^>]*>([\\s\\S]*?)</table>' +
+      // Bild-Absatz (Formel/Piktogramm als Standalone-<p> mit <img>) — bisher von
+      // keiner Alternative erfasst → stumm verworfen. Kommt NACH den obigen, damit
+      // Absatz/Tabelle Vorrang behalten (1.7.2026).
+      '|<p[^>]*>((?:(?!</p>)[\\s\\S])*?<img\\b[^>]*>(?:(?!</p>)[\\s\\S])*?)</p>',
     'gi',
   );
   const bloecke: ArtikelText['bloecke'] = [];
@@ -165,12 +190,26 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // Lässt sich keine wortlauttreue Rechteck-Form herstellen (ragged/Prosa),
       // bleibt der Alt-Parse {kopf,zeilen} erhalten — exakte Nicht-Regression,
       // der Renderer rendert Legacy weiter (T-E5); der Validator listet sie.
-      const norm = normalisiereTabelle(parseRohTabelle(match[5]));
-      if (norm) {
-        bloecke.push({ absatz: null, text: '', mehrspaltig: { spalten: norm.spalten, zeilen: norm.zeilen } });
+      // Reiner Piktogramm-Katalog (SSV Anhang 2 u.ä.) → flaches Kachel-Raster.
+      const kacheln = parseBildKacheln(match[5]);
+      if (kacheln) {
+        bloecke.push({ absatz: null, text: '', bildKacheln: kacheln });
       } else {
-        const mehr = parseFedlexTabelle(match[5]);
-        if (mehr.zeilen.length > 0) bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+        const norm = normalisiereTabelle(parseRohTabelle(match[5]));
+        if (norm) {
+          bloecke.push({ absatz: null, text: '', mehrspaltig: { spalten: norm.spalten, zeilen: norm.zeilen } });
+        } else {
+          const mehr = parseFedlexTabelle(match[5]);
+          if (mehr.zeilen.length > 0) bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+        }
+        // GEMISCHTE Tabelle mit Bildern (z.B. SSV Anhang 3 Illustration): Tabelle
+        // bleibt Tabelle (§1), die Bilder werden dennoch erfasst (Containment) und
+        // nach der Tabelle als eigene Bild-Blöcke angehängt.
+        for (const img of alleImgTags(match[5])) {
+          const b = bildAusImg(img);
+          b.alt = 'Amtliche Abbildung';
+          bloecke.push({ absatz: null, text: '', bild: b });
+        }
       }
     } else if (match[1] !== undefined || match[2] !== undefined || match[3] !== undefined) {
       // ── Absatz (<p class="absatz"> | <p><sup>N</sup> | <p> vor <dl>) ──────
@@ -202,6 +241,14 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       if (text) {
         bloecke.push({ absatz, text });
       }
+      // Bild im Absatz (selten, aber kein stiller Verlust — Containment): nach dem
+      // Text als eigener Bild-Block. `<p class="bild">`-Standalone landet dagegen in
+      // match[6]; hier nur Bilder, die IN einem Text-Absatz stecken.
+      for (const img of alleImgTags(ohneAbsatzNr)) {
+        const b = bildAusImg(img);
+        b.alt = 'Amtliche Abbildung';
+        bloecke.push({ absatz: null, text: '', bild: b });
+      }
     } else if (match[4] !== undefined) {
       // ── Aufzählung (<dl><dt>marke.</dt><dd>text</dd>…</dl>) ───────────────
       // Balancierte <dl>…</dl>-Klammer: match[4] ist nur der Öffnungs-Tag; das
@@ -219,6 +266,14 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
           // Liste ohne vorangehenden Absatz (selten) → eigener Block.
           bloecke.push({ absatz: null, text: '', items });
         }
+      }
+    } else if (match[6] !== undefined) {
+      // ── Bild-Absatz (Formel/Piktogramm als Standalone-<p> mit <img>) ─────────
+      const img = match[6].match(/<img\b[^>]*>/i)?.[0];
+      if (img) {
+        const b = bildAusImg(img);
+        b.alt = 'Amtliche Abbildung';
+        bloecke.push({ absatz: null, text: '', bild: b });
       }
     }
   }
@@ -242,6 +297,8 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
     return { ...mitGrundlage, bloecke: [{ absatz: null, text: '…' }] };
   }
 
+  ergaenzeFehlendeBilder(bloecke, inner);
+  markiereFormeln(bloecke);
   return { ...mitGrundlage, bloecke };
 }
 
@@ -584,9 +641,17 @@ const INLINE_STRIP_TAGS = new Set([
  * entferneTags getilgt (entferneFussnotenSups) — hier bleibt kein Marker, der
  * durch das leerzeichenlose Strippen in den Text leaken könnte.
  */
+// Fedlex-Template-Platzhalter «<span data-message="…">[tab]</span>» (Abstandshalter
+// in Tabellen/Formularen, z.B. SSV Anhang 1) als GANZES Element entfernen — sonst
+// bliebe der literale «[tab]»-Text stehen. EINE Quelle für ALLE Strip-Pfade (entferne-
+// Tags UND Marken-Extraktion), damit «marke-los» überall gleich beurteilt wird (sonst
+// Dublette: Notiz + Item aus demselben <dt>[tab]</dt>) (Bündel Bilder&Formeln, 1.7.2026).
+const TAB_PLATZHALTER = /<span\b[^>]*\bdata-message="[^"]*"[^>]*>\s*\[[a-z]+\]\s*<\/span>/gi;
+
 function entferneTags(s: string): string {
   return dekodiereEntities(
     s
+      .replace(TAB_PLATZHALTER, '')
       // Reine Ziffern-<sup>/<sub> (Exponent «m²», typografischer Bruch «133¹⁄₃»,
       // Absatz-Hochzahl «72³» im BV-Register, Tabellen-Fussnote «47/50¹») tragen
       // eine Bedeutung, die beim leerzeichenlosen Verkleben an eine Nachbarziffer
@@ -605,6 +670,106 @@ function entferneTags(s: string): string {
   )
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+// ─── Bilder & Formeln (1.7.2026) ────────────────────────────────────────────
+// Fedlex liefert Piktogramme (SSV/VTS/chem.) und Formeln als <img src="image/…png">.
+// Der Extraktor erfasst die RELATIVE src (kein Netz); der Generator lädt herunter.
+
+/** Ein einzelnes <img>-Tag → BildRef (datei = relative src, Masse aus data-scaled-*). */
+function bildAusImg(imgTag: string): BildRef {
+  const zahl = (re: RegExp): number | undefined => Number(imgTag.match(re)?.[1] ?? '') || undefined;
+  return {
+    datei: imgTag.match(/\bsrc="([^"]*)"/i)?.[1] ?? '',
+    alt: entferneTags(imgTag.match(/\balt="([^"]*)"/i)?.[1] ?? ''),
+    breite: zahl(/\bdata-scaled-width="(\d+)"/i) ?? zahl(/\bwidth="(\d+)"/i),
+    hoehe: zahl(/\bdata-scaled-height="(\d+)"/i) ?? zahl(/\bheight="(\d+)"/i),
+  };
+}
+
+/** Alle <img>-Tags eines HTML-Fragments (für Containment + Nicht-Katalog-Zellen). */
+function alleImgTags(html: string): string[] {
+  return [...html.matchAll(/<img\b[^>]*>/gi)].map((m) => m[0]);
+}
+
+/**
+ * Reiner Piktogramm-Katalog? → flache Kachel-Liste, sonst null (dann bleibt es eine
+ * normale Tabelle). Katalog NUR, wenn genug Bild-Zellen UND (fast) jede nicht-leere
+ * Zelle ein Bild trägt — so bleibt eine GEMISCHTE Datentabelle (SSV Anhang 3:
+ * Zeit-Tabelle + Illustration) eine Tabelle (§1) und verliert ihre Daten nicht.
+ */
+function parseBildKacheln(tableInner: string): Array<{ bild?: BildRef; nummer?: string; name?: string }> | null {
+  const zellen = [...tableInner.matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((m) => m[1]);
+  const nichtLeer = zellen.filter((z) => entferneTags(z) !== '' || /<img\b/i.test(z));
+  const mitBild = nichtLeer.filter((z) => /<img\b/i.test(z));
+  if (mitBild.length < 3 || mitBild.length < nichtLeer.length * 0.8) return null;
+  const kacheln: Array<{ bild?: BildRef; nummer?: string; name?: string }> = [];
+  for (const z of nichtLeer) {
+    const imgs = alleImgTags(z);
+    // ALLE <dt>/<dd>-Paare der Zelle (eine Zelle kann EIN Bild + MEHRERE Signale
+    // tragen, z.B. «6.10 Haltelinie / 6.11 Stop / 6.12 …» — sonst Textverlust §1).
+    const paare = [...z.matchAll(/<dt\b[^>]*>([\s\S]*?)<\/dt>\s*<dd\b[^>]*>([\s\S]*?)<\/dd>/gi)]
+      .map((m) => ({ nummer: entferneTags(m[1]) || undefined, name: entferneTags(m[2]) || undefined }));
+    // Kein <dt>/<dd> → ganzer bildloser Zelltext als ein Name (nichts verlieren).
+    if (paare.length === 0) {
+      const rest = entferneTags(z.replace(/<img\b[^>]*>/gi, ''));
+      if (rest) paare.push({ nummer: undefined, name: rest });
+    }
+    // Bilder und Paare index-weise zu Kacheln zusammenführen: keine Zeile verliert
+    // ihr Bild, kein Bild verliert seinen Text; Überzahl auf einer Seite → eigene Kachel.
+    const anzahl = Math.max(imgs.length, paare.length, 1);
+    for (let i = 0; i < anzahl; i++) {
+      const p = paare[i] ?? {};
+      const bild = imgs[i] ? bildAusImg(imgs[i]) : undefined;
+      // alt aus der amtlichen Bezeichnung ableiten (§8: keine Erfindung, nur die Quelle).
+      if (bild) bild.alt = p.name ? `Signal: ${p.name}` : 'Amtliche Abbildung';
+      kacheln.push({ ...(bild ? { bild } : {}), nummer: p.nummer, name: p.name });
+    }
+  }
+  return kacheln.length ? kacheln : null;
+}
+
+/**
+ * Containment-Sicherheitsnetz: hängt jedes QUELL-Bild, das die Block-Parser nicht
+ * erfasst haben (z.B. Formel-Variablen als <img> in <dt>/<dd> oder inline <sub>),
+ * als eigenen Bild-Block an — so geht KEIN amtliches Bild still verloren (§1/§8).
+ * Platzierung am Ende statt inline ist eine bewusste, dokumentierte Vereinfachung
+ * (Formel-Symbol-Inline = eigener Folgeschritt); Vollständigkeit hat Vorrang.
+ */
+// Ein Standalone-Bild ist eine FORMEL, wenn der nächste vorausgehende Text-Block
+// eine Rechen-Einleitung ist («Formel …», «… wie folgt:», «… umgerechnet:»). §8-
+// konservativ: Piktogramme (Signale/Warnzeichen) stehen NIE nach so einem Lead-in
+// (sie folgen normalen Sätzen/Überschriften), werden also nicht fälschlich als
+// Formel etikettiert. Kachel-Signale (bildKacheln) sind ausgenommen.
+const FORMEL_KONTEXT = /\bFormeln?\b|\bGleichung\b|(?:berechnet|ermittelt|errechnet|umgerechnet|umzurechnen|bestimmt sich|wie folgt)\s*:?\s*$/i;
+
+function markiereFormeln(bloecke: ArtikelText['bloecke']): void {
+  bloecke.forEach((b, i) => {
+    if (!b.bild) return;
+    for (let j = i - 1; j >= 0; j--) {
+      const t = bloecke[j].text;
+      if (t) {
+        if (FORMEL_KONTEXT.test(t)) b.bild.formel = true;
+        break;
+      }
+    }
+  });
+}
+
+function ergaenzeFehlendeBilder(bloecke: ArtikelText['bloecke'], quellHtml: string): void {
+  const erfasst = new Set<string>();
+  for (const b of bloecke) {
+    if (b.bild) erfasst.add(b.bild.datei);
+    for (const k of b.bildKacheln ?? []) if (k.bild) erfasst.add(k.bild.datei);
+  }
+  for (const img of alleImgTags(quellHtml)) {
+    const b = bildAusImg(img);
+    if (b.datei && !erfasst.has(b.datei)) {
+      b.alt = 'Amtliche Abbildung';
+      bloecke.push({ absatz: null, text: '', bild: b });
+      erfasst.add(b.datei);
+    }
+  }
 }
 
 /**
@@ -779,7 +944,13 @@ function markeloseNotizen(dlInner: string): string[] {
     const ddEnde = findeDdEnde(dlInner, ddStart);
     const ddRoh = dlInner.slice(ddStart, ddEnde);
     dtRe.lastIndex = ddEnde + '</dd>'.length;
-    const marke = entferneTags(m[1]).replace(/[.)]\s*$/, '').trim();
+    // Marke-los-Bestimmung MUSS mit parseDefinitionsListe übereinstimmen (Roh-Tag-
+    // Strip, der «[tab]» behält) — sonst hielte markeloseNotizen ein «<dt>[tab]</dt>»
+    // für marke-los (Notiz) UND parseDefinitionsListe für ein Item → Text doppelt
+    // (Fix 1.7.2026: entferneTags strippt den [tab]-Spacer für Tabellen, darf hier
+    // aber die Disjunktheit nicht kippen). Nur Fussnoten-Sups vorher tilgen.
+    const marke = dekodiereEntities(m[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '').replace(/<[^>]+>/g, ''))
+      .replace(/[.)]\s*$/, '').trim();
     const subDlIdx = ddRoh.search(/<dl\b[^>]*>/i);
     if (marke === '') {
       // marke-loses <dd>: der reine Notiztext (vor einer evtl. Unterliste).
@@ -942,6 +1113,12 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
       const tableEnde = findeTableEnde(koerper, tableStart);
       const tableInner = koerper.slice(tableStart + match[3].length, tableEnde - '</table>'.length);
       re.lastIndex = tableEnde;
+      // Reiner Piktogramm-Katalog (SSV Anhang 2 Signal-Legenden) → Kachel-Raster.
+      const kacheln = parseBildKacheln(tableInner);
+      if (kacheln) {
+        bloecke.push({ absatz: null, text: '', bildKacheln: kacheln });
+        continue;
+      }
       const norm = normalisiereTabelle(parseRohTabelle(tableInner, true));
       if (norm && norm.zeilen.length > 0) {
         bloecke.push({ absatz: null, text: '', mehrspaltig: { spalten: norm.spalten, zeilen: norm.zeilen } });
@@ -960,6 +1137,13 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
           if (legende) bloecke.push({ absatz: null, text: legende });
         }
       }
+      // Gemischte Anhang-Tabelle mit Bildern (kein reiner Katalog): Tabelle bleibt,
+      // Bilder werden dennoch als eigene Blöcke erfasst (Containment, §1).
+      for (const img of alleImgTags(tableInner)) {
+        const b = bildAusImg(img);
+        b.alt = 'Amtliche Abbildung';
+        bloecke.push({ absatz: null, text: '', bild: b });
+      }
     } else if (match[4] !== undefined) {
       // ── Absatz <p> (mit oder ohne Klasse) ────────────────────────────────
       const roh = match[4];
@@ -975,6 +1159,11 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
         : ohneFootnotes;
       const text = entferneTags(ohneAbsatzNr).replace(/\s+([.,;:])/g, '$1').trim();
       if (text) bloecke.push({ absatz, text });
+      for (const img of alleImgTags(ohneAbsatzNr)) {
+        const b = bildAusImg(img);
+        b.alt = 'Amtliche Abbildung';
+        bloecke.push({ absatz: null, text: '', bild: b });
+      }
     } else if (match[5] !== undefined) {
       // ── Liste <dl> (balanciert) ──────────────────────────────────────────
       const dlEnde = findeDlEnde(koerper, match.index);
@@ -1007,6 +1196,8 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
   // (§8 Ehrlichkeit; der Reader zeigt «aufgehoben»). So bleibt der Anhang in der
   // Vollständigkeit/Struktur erfasst und konsistent mit dem Artikel-Pfad.
   if (bloecke.length === 0) return { titel, bloecke: [{ absatz: null, text: '…' }] };
+  ergaenzeFehlendeBilder(bloecke, koerper);
+  markiereFormeln(bloecke);
   return { titel, bloecke };
 }
 

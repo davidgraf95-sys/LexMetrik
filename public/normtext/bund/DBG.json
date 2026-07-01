@@ -1002,6 +1002,60 @@
           "text": "Leibrentenversicherungen sowie Leibrenten- und Verpfründungsverträge sind im Umfang ihres Ertragsanteils steuerbar. Dieser bestimmt sich wie folgt:",
           "items": [
             {
+              "marke": "a",
+              "text": "Bei garantierten Leistungen aus Leibrentenversicherungen, die dem Versicherungsvertragsgesetz vom 2. April 1908 (VVG) unterstehen, ist der im Zeitpunkt des Vertragsabschlusses auf der Grundlage von Artikel 36 Absatz 1 des Versicherungsaufsichtsgesetzes vom 17. Dezember 2004 bestimmte maximale technische Zinssatz (m) während der gesamten Vertragsdauer massgebend:"
+            },
+            {
+              "marke": "1",
+              "text": "Ist dieser Zinssatz grösser als null, so berechnet sich der Ertragsanteil, auf den nächstliegenden ganzen Prozentwert auf- oder abgerundet, wie folgt:",
+              "tiefe": 1
+            }
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/dbg/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 58,
+            "hoehe": 7,
+            "formel": true,
+            "sha": "bf98d7c9aa6b64865e886366cb7b9e64ead15238688c89bfa709e460e143003a"
+          },
+          "items": [
+            {
+              "marke": "2",
+              "text": "Ist dieser Zinssatz negativ oder null, so beträgt der Ertragsanteil null Prozent."
+            },
+            {
+              "marke": "b",
+              "text": "Bei Überschussleistungen aus Leibrentenversicherungen, die dem VVG unterstehen, entspricht der Ertragsanteil 70 Prozent dieser Leistungen."
+            },
+            {
+              "marke": "c",
+              "text": "Bei Leistungen aus ausländischen Leibrentenversicherungen, aus Leibrenten- und aus Verpfründungsverträgen ist die Höhe der um 0,5 Prozentpunkte erhöhten annualisierten Rendite zehnjähriger Bundesobligationen (r) während des betreffenden Steuerjahres und der neun vorangegangenen Jahre massgebend:"
+            },
+            {
+              "marke": "1",
+              "text": "Ist diese Rendite grösser als null, so berechnet sich der Ertragsanteil, auf den nächstliegenden ganzen Prozentwert auf- oder abgerundet, wie folgt:",
+              "tiefe": 1
+            }
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/dbg/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 58,
+            "hoehe": 8,
+            "formel": true,
+            "sha": "5c0f13dd40402c2cc0a99f03c80e08916483fd765791fa6304663ddbe3d7b0d1"
+          },
+          "items": [
+            {
               "marke": "2",
               "text": "Ist diese Rendite negativ oder null, so beträgt der Ertragsanteil null Prozent."
             }
@@ -1016,7 +1070,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_22",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "5fa67aa8d71ecc2364b3699e663afaf3313a8078612cbd666845e9a70e7c7e99"
+      "sha": "86d419af14303bdbe326f8ab78bbddc75e62e2b4dc913afcb07371e8dcfbea28"
     },
     {
       "id": "bund/DBG/art_23",

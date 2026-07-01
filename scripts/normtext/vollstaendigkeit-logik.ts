@@ -289,6 +289,9 @@ export interface SnapshotBlock {
   tabelle?: Array<{ beschreibung: string; betrag: string }>;
   /** Mehrspalten-Tarif-Tabelle (Stufe 2, ZH-Staffeln / ·–-Tabellen); gültig als Block-Inhalt auch wenn text leer. */
   mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+  /** Bild/Formel bzw. Piktogramm-Kachel-Raster (Bilder&Formeln 1.7.2026); gültig als Block-Inhalt auch wenn text leer. */
+  bild?: { datei: string };
+  bildKacheln?: Array<{ bild?: { datei: string }; nummer?: string; name?: string }>;
 }
 
 export interface SnapshotEintrag {
@@ -320,7 +323,8 @@ export function pruefeInhaltsSanity(eintraege: ReadonlyArray<SnapshotEintrag>): 
       const hatItems = Array.isArray(b.items) && b.items.length > 0;
       const hatTabelle = Array.isArray(b.tabelle) && b.tabelle.length > 0;
       const hatMehrspaltig = b.mehrspaltig != null && Array.isArray(b.mehrspaltig.zeilen) && b.mehrspaltig.zeilen.length > 0;
-      if (!hatText && !hatItems && !hatTabelle && !hatMehrspaltig) {
+      const hatBild = b.bild != null || (Array.isArray(b.bildKacheln) && b.bildKacheln.length > 0);
+      if (!hatText && !hatItems && !hatTabelle && !hatMehrspaltig && !hatBild) {
         // Aufgehoben-Konvention (S1, BS-Audit 23.6.2026): ein EINZELNER leerer
         // Block ist die bewusste, ehrliche Darstellung eines aufgehobenen, aber
         // umnummerierten Artikels (Display → gedämpftes «aufgehoben»; §8). Der

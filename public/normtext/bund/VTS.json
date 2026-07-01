@@ -6711,7 +6711,7 @@
               ],
               [
                 "d. bei Kleinbussen, ausgenommen Schulbussen",
-                "[tab] 1,50 m."
+                "1,50 m."
               ]
             ]
           }
@@ -6737,7 +6737,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_121",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "fde984d666294674f30bc2158fd1b10e3d6ad34d54042c9ab7d49d8170a2ef98"
+      "sha": "436707d3b3354b6d1a04e1353b64a69b4997f9ed7d6f58ffc0134308f3386e10"
     },
     {
       "id": "bund/VTS/art_122",
@@ -6787,6 +6787,18 @@
           "text": "Gesellschaftswagen und Kleinbusse benötigen Notausstiege mit einer lichten Weite von mindestens 0,60 m auf 0,43 m. Die Anzahl (n) richtet sich nach folgender Formel:"
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 108,
+            "hoehe": 8,
+            "formel": true,
+            "sha": "1c519214458d3e7299b67437b1059314164c2a1446c3453e56346bbbb92d49c5"
+          }
+        },
+        {
           "absatz": "4",
           "text": "In Gesellschaftswagen muss eine Bordapotheke mit noch nicht überschrittenem Ablaufdatum nach der DIN -Norm 13164 vorhanden sein."
         },
@@ -6799,7 +6811,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#art_123",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "359f7e6c99a65f9b387358660f14bf3b8c03043cd399d2c60ca017f7f6cd704b"
+      "sha": "5185eef94b690d387e98c91102d32b8aea3c93b858d7bfa5248da46192848f4a"
     },
     {
       "id": "bund/VTS/art_123_a",
@@ -13288,6 +13300,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vts/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 31,
+            "hoehe": 32,
+            "sha": "239a949c15094008660b915afc6bdada7bce32827a00c6a3dee2bb84b5ffa857"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "spalten": [
               {
@@ -13365,6 +13388,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image3.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 39,
+            "hoehe": 39,
+            "sha": "2c5591fb44228dd960f0edcaeebed00f8c928184341dc11ef2160b84582c3e40"
+          }
+        },
+        {
+          "absatz": null,
           "text": "3 Zeichen für Fahrzeuge von Gehörlosen",
           "titel": 3
         },
@@ -13387,6 +13421,17 @@
                 "Der Grund des quadratischen Zeichens (Seitenlänge gleich 8 cm) ist blau, das Symbol weiss."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image4.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 34,
+            "hoehe": 32,
+            "sha": "26e623f210336f4571328b7f6e119f112f1f303ff33c6592180c53f076fe4be3"
           }
         },
         {
@@ -13417,6 +13462,17 @@
                 "Mindestmasse: Höhe der Ellipse 11,5 cm Breite der Ellipse 17,5 cm Höhe der Buchstaben 8 cm Breite der Buchstaben 4 cm Strichbreite 1 cm"
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image5.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 35,
+            "hoehe": 22,
+            "sha": "5ef43e80a27e134b146a6eaee2614ae2be2708601fb54ac50a13997f61403867"
           }
         },
         {
@@ -13461,6 +13517,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image6.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 28,
+            "hoehe": 32,
+            "sha": "ac357605532114403dadeb54bae608d3a949e5e557f65eb6954c111b968ba23d"
+          }
+        },
+        {
+          "absatz": null,
           "text": "6 Winkkelle",
           "titel": 3
         },
@@ -13471,6 +13538,17 @@
         {
           "absatz": null,
           "text": "Die Anzeigetafel trägt einen weissen Pfeil auf rotem Grund; beide Farben müssen aus retroreflektierendem Material sein."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image7.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 105,
+            "hoehe": 52,
+            "sha": "1e3bc6cc31acde1feef19b325acb8ef98a5ca0cd2ee9551e947935be8b6da5cf"
+          }
         },
         {
           "absatz": null,
@@ -13496,6 +13574,17 @@
                 "Der Grund der quadratischen Tafel mit abgerundeten Ecken ist hellgelb (selektivgelb) oder gelb (orangenfarbig), das Symbol und der Rand sind schwarz. Das Symbol hat demjenigen des Gefahrensignals 1.23 zu entsprechen. Seitenlänge 40 cm Randbreite 2 cm"
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image8.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 41,
+            "hoehe": 42,
+            "sha": "9cfa952c7884df8ef50efceaf730dc57bf880fbbbd0a5b5635fc78acc4ba6627"
           }
         },
         {
@@ -13526,6 +13615,28 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image9.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 31,
+            "hoehe": 31,
+            "sha": "942c6e6af8e5c64c6eb06b00a5a4adb1d13b8d35df9fec4f553f0498460a3fb6"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image10.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 31,
+            "hoehe": 31,
+            "sha": "12466257a634eae88a9381acc01044cc102027210cb60e0c78781c214b3cd808"
+          }
+        },
+        {
+          "absatz": null,
           "text": "8 Hintere Markierungstafeln für bestimmte Motorwagen",
           "titel": 3
         },
@@ -13539,7 +13650,29 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image11.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 15,
+            "sha": "ad6b9200bf551a93fb207208dee3bc6099fe59d82830b624d519c74a04e82de5"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung II"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image12.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 15,
+            "sha": "442ababcc3980e56db17611c6f0ca835eed4f8d0326d0f36195f7f10cafba7f9"
+          }
         },
         {
           "absatz": null,
@@ -13547,7 +13680,29 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image13.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 45,
+            "sha": "d050197ad087f6af738c455b90c0054916a09f0e588887cc2a2c51a75ce1e4e0"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung IV"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image14.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 106,
+            "hoehe": 34,
+            "sha": "6260792f30fc66d88ad06755f9755bf462b53fa8626922b8b7a79a7ca63a95d3"
+          }
         },
         {
           "absatz": null,
@@ -13564,7 +13719,29 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image15.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 106,
+            "hoehe": 16,
+            "sha": "6fdbc1f6081d2ce3221f256f2a8abd2cbe384266937206f3280ecff4ed9be097"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung II"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image16.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 14,
+            "sha": "71e3091cd56ce6d2c9dc14d4f58edf07d5ec1e4503297ad254efb8a7be9b1014"
+          }
         },
         {
           "absatz": null,
@@ -13572,7 +13749,29 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image17.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 45,
+            "sha": "f12dcf526171e0f1435288464520a4ab40cd2c3c17ffe2f838692d406abd2b53"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung IV"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image18.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 107,
+            "hoehe": 35,
+            "sha": "6bbbee13e7ea5311f542ee5f12e9f5169413d1adb161b28fb99fb1e66e72b3f4"
+          }
         },
         {
           "absatz": null,
@@ -13582,6 +13781,17 @@
         {
           "absatz": null,
           "text": "(Art. 68 Abs. 4)"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image19.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 74,
+            "hoehe": 63,
+            "sha": "3d8ee1dfdcf09373fbe7da8db6d8d4805616d6682bc0c5e7d89d9a217e3849f6"
+          }
         },
         {
           "absatz": null,
@@ -13661,13 +13871,24 @@
               ]
             ]
           }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image20.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 20,
+            "hoehe": 20,
+            "sha": "d9d305c59e98762ef533cd4bdcb7c111d46153e2dde81e7ba985d918f3682813"
+          }
         }
       ],
       "stand": "2026-04-30",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#annex_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "ab7bc567159696a58aa87130d2c99a6700f4e2d93d5f60cd50f48dcb939662d9"
+      "sha": "94dca0702a8b6c33a0a5ec0599ddfaf82de615c823900ff4dd55f260f6050237"
     },
     {
       "id": "bund/VTS/annex_5",
@@ -14218,6 +14439,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image21.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 105,
+            "hoehe": 153,
+            "sha": "6797c3bd42173e9f00feccf97db92d9c82c4a0ae7d740b7f3c644ebe783dfd72"
+          }
+        },
+        {
+          "absatz": null,
           "text": "34 Messanordnung",
           "titel": 4
         },
@@ -14319,6 +14551,17 @@
               "text": "Schwere Motorwagen, bei denen die Anzahl Abstufungen (Vorwärtsfahrmöglichkeiten) X beträgt (einschliesslich derjenigen Abstufungen, die durch ein Zusatzgetriebe oder durch eine Achse mit mehreren Überset-"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image22.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 92,
+            "hoehe": 14,
+            "sha": "07da88b1a3b238693500c33de9ecdef7a9d5cca55d22fe1c9998527ce59cd1a3"
+          }
         },
         {
           "absatz": null,
@@ -14569,6 +14812,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image23.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 106,
+            "hoehe": 89,
+            "sha": "a81d76824835e2e01c8d2c9e7b1656adbb271f9f3d4052fd96ff833db8d76b80"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Bei der «7-Meter-Standmessung» dürfen folgende Grenzwerte nicht überschritten werden:",
           "items": [
             {
@@ -14679,6 +14933,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image24.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 105,
+            "hoehe": 88,
+            "sha": "727c321d6470e319bf998f4ad1147e35db94f36e11984c52cceb0e0ad2f21757"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Der nachstehende Grenzwert darf nicht überschritten werden:",
           "items": [
             {
@@ -14726,7 +14991,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#annex_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "9c423a92c27cbce4713da06b0017a83c2fd41338ac2701c28ce66eeb4488e166"
+      "sha": "4ff9282b7871292d2024c1ce9f1b0c2eb705ae271862dcd96ad97848411603c2"
     },
     {
       "id": "bund/VTS/annex_7",
@@ -15001,6 +15266,17 @@
         {
           "absatz": null,
           "text": "Die Wirksamkeit der Bremsen kann insbesondere auch anlässlich der Nachprüfung über die Abbremsung nach dem folgenden Verfahren ermittelt werden:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image25.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 89,
+            "hoehe": 11,
+            "sha": "f3ba03e1ccc04adb1f0ce557324a6c7ebafc2a32514555719638d43cd4263716"
+          }
         },
         {
           "absatz": null,
@@ -15522,6 +15798,17 @@
               "text": "Die Bremsverzögerung muss vom leeren und vom beladenen Fahrzeug auf ebener Strasse mit trockenem Hartbelag erreicht werden. Die Bremswirkung muss bei kalten Bremsen (Temperatur an den Bremstrommeln oder Bremsscheiben unter 100 °C) erreicht werden. Gemessen wird die mittlere Verzögerung, die definiert ist als die durchschnittliche Geschwindigkeitsminderung in m/s 2 auf der Strecke, die vom Beginn der Betätigung der Bremsanlage (inklusive der Ansprech- und Schwellzeit) bis zum Stillstand des Fahrzeuges zurückgelegt wird. Kann mit einem Messgerät nur die maximale Verzögerung ermittelt werden, so muss sie mindestens 20 Prozent höher sein als die vorgeschriebene mittlere Verzögerung."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image26.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 82,
+            "hoehe": 9,
+            "sha": "44144eb6b1d2cf453f6cc91aea8a92b8dd8619dd8fe834247c9123389c486f54"
+          }
         },
         {
           "absatz": null,
@@ -16078,7 +16365,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#annex_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "6336b4507170f878967fe169fa614716f00ec7b7422ef0e222fbc4695b943f37"
+      "sha": "1af3af2fef5a66da7ac6bc5da9fa19c8155ecfb846f07a12f13d7408813bc42b"
     },
     {
       "id": "bund/VTS/annex_8",
@@ -16293,23 +16580,23 @@
             "zeilen": [
               [
                 "– leichte Motorwagen",
-                "[tab] 0,38 m",
-                "[tab] 0,38 m"
+                "0,38 m",
+                "0,38 m"
               ],
               [
                 "– schwere Motorwagen (ausgenommen Gesellschaftswagen)",
-                "[tab] 0,45 m",
-                "[tab] 0,38 m"
+                "0,45 m",
+                "0,38 m"
               ],
               [
                 "– Kleinbusse",
-                "[tab] 0,45 m",
-                "[tab] 0,40 m"
+                "0,45 m",
+                "0,40 m"
               ],
               [
                 "– Schulbusse",
-                "[tab] 0,30 m",
-                "[tab] 0,30 m"
+                "0,30 m",
+                "0,30 m"
               ],
               [
                 "– Gesellschaftswagen siehe Ziffern 331.1 und 331.2",
@@ -16810,7 +17097,22 @@
         },
         {
           "absatz": null,
-          "text": "N = A +",
+          "text": "N = A +"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image27.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 50,
+            "hoehe": 8,
+            "sha": "343b4395df6021fe8f377646f20e373706893fa235b66bf16a7b3c010fbf44d3"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "342",
@@ -16881,7 +17183,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#annex_9",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "3ef26f1a23ddb53cd26e91031d81fd38d41990396b84b5298fe6d94f657d498f"
+      "sha": "731182d38f7fb59846158f1fc69214d1c90be1d6c62f72b2f137717be8468f44"
     },
     {
       "id": "bund/VTS/annex_10",
@@ -17282,9 +17584,9 @@
               ],
               [
                 "– Zentrum des Fernlichtbündels",
-                "[tab] min. 32*",
-                "[tab] min. 16*",
-                "[tab] min. 8*"
+                "min. 32*",
+                "min. 16*",
+                "min. 8*"
               ],
               [
                 "",
@@ -17669,6 +17971,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image28.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 70,
+            "hoehe": 35,
+            "sha": "c0392d59fb7650c09c4c16bf14cb38fef2d74a954852dbfd01d4faf18cb76012"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung II"
         },
         {
@@ -17686,6 +17999,17 @@
                 "Nur für Fahrzeuge bis 6 m Länge zulässig"
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image29.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 70,
+            "hoehe": 37,
+            "sha": "450caccfa85e6bafc1cc4e07da6319eb7ed8ee5f829410a42774cadd146992c0"
           }
         },
         {
@@ -17711,6 +18035,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image30.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 57,
+            "hoehe": 36,
+            "sha": "6338e617f3735766db12e70d4a3eb0efc879885728728648efc547abd8e4d3fc"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung IV"
         },
         {
@@ -17732,6 +18067,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image31.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 71,
+            "hoehe": 39,
+            "sha": "a1f736aedab741c6d39216108e497278f8e9b434d2397c64109a04f25b540d7c"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung V"
         },
         {
@@ -17749,6 +18095,17 @@
                 "Nur für Fahrzeuge bis 6 m Länge zulässig. Distanz der seitlichen Blinker vom vorderen Fahrzeugrand höchstens 2,50 m. Die leuchtende Fläche der mitblinkenden seitlichen Markierlichter muss mindestens je 12,5 cm 2 betragen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image32.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 73,
+            "hoehe": 50,
+            "sha": "ccb1f9c1030f5e352b24a581db1bee9b20f0d902d84773eb9e017621e6e5394a"
           }
         },
         {
@@ -17783,8 +18140,30 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image33.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 71,
+            "hoehe": 36,
+            "sha": "948e3ff81666d5dee21b030d49c6a1cec6d49848368805ef8cb3a00a646c8d52"
+          }
+        },
+        {
+          "absatz": null,
           "text": "53 Motorräder mit Seitenwagen",
           "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image34.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 68,
+            "hoehe": 56,
+            "sha": "361fc76635e946f27f8a57bdb8038b8e967e74e8e1e9e41557dd300464b2ba66"
+          }
         },
         {
           "absatz": null,
@@ -17794,6 +18173,17 @@
         {
           "absatz": null,
           "text": "Anordnung I"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image35.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 57,
+            "hoehe": 43,
+            "sha": "4546868680ae57a1015c4b8366a86064f251f04508c7ee98296c9ab52a707876"
+          }
         },
         {
           "absatz": null,
@@ -17814,6 +18204,17 @@
                 "Der Wert von 5° für den toten Winkel der Sichtbarkeit des seitlichen Zusatz-Richtungsblinkers nach hinten ist eine obere Grenze. Dieser Wert kann auf 10° erhöht werden, wenn 5° nicht eingehalten werden können. d ≤ 1,80 m"
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image36.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 56,
+            "hoehe": 43,
+            "sha": "7c7467810e3c6aa4bfad89dc59f964ec86d0099448ab88d2114e392a3485cecd"
           }
         },
         {
@@ -17839,6 +18240,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image37.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 63,
+            "hoehe": 48,
+            "sha": "407326e6c2641b5ed69cc426f3700339cdc9f4e653be2c142f86b839e9a572f5"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Anordnung IV"
         },
         {
@@ -17856,6 +18268,17 @@
                 "Der Wert von 10° für die Sichtbarkeit der vorderen Richtungsblinker nach innen kann bei Fahrzeugen mit einer Breite über alles von nicht mehr als 1,40 m auf 3° verringert werden."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image38.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 63,
+            "hoehe": 49,
+            "sha": "a9f994a60b9234cff0a8706667c4bfc1c95c6377cff0a3f97b9f5f40ee66b352"
           }
         },
         {
@@ -17898,6 +18321,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image39.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 66,
+            "hoehe": 37,
+            "sha": "0c427c97dd960519ed416071c0da215863015ea8cf26f92ce2b860195b58a79f"
+          }
+        },
+        {
+          "absatz": null,
           "text": "6 Sichtwinkel für Stand‑, Schluss‑, Brems‑, Markier‑, Park- und Nebelschlusslichter",
           "titel": 3
         },
@@ -17922,6 +18356,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image40.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 72,
+            "hoehe": 39,
+            "sha": "7281214dbd080965e367fa31519802194e6f28eff5c80e109afd0a337586aea1"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Bei Fahrzeugen der Klassen M 1 und N 1 können die horizontalen Sichtwinkel nach aussen auf 45° reduziert werden, wenn vorne bzw. hinten ergänzende seitliche Markierlichter mit einer Leuchtfläche von mindestens je 12,5 cm 2 angebracht sind. Bei Anhängern muss der innere Sichtwinkel mindestens 5° betragen"
         },
         {
@@ -17931,8 +18376,30 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image41.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 57,
+            "hoehe": 23,
+            "sha": "f0fc430e80b2e99f4d15fce2fa8b6865615661c18b6f634987afcee256bc5dc4"
+          }
+        },
+        {
+          "absatz": null,
           "text": "65 Für das zusätzliche Bremslicht",
           "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image42.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 60,
+            "hoehe": 15,
+            "sha": "75b7827dec039384d446c2280d38c9b7f6a4583b5ff6881490a34f54a1cc9d2f"
+          }
         },
         {
           "absatz": null,
@@ -17941,8 +18408,30 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image43.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 43,
+            "hoehe": 28,
+            "sha": "51bfb20610efe5563bcc358682e8fd0a6b9e0e8fbf25399d97495bbde8b86609"
+          }
+        },
+        {
+          "absatz": null,
           "text": "67 Für Nebelschlusslichter",
           "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image44.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 58,
+            "hoehe": 20,
+            "sha": "5fcbe5f918761d716c34fc43e53025ca7471ef75b883bd0cfe656cf4dfb44e91"
+          }
         },
         {
           "absatz": null,
@@ -17975,6 +18464,17 @@
               "text": "Bei Fahrzeugen, deren Anbau der Beleuchtungseinrichtungen nach anerkannten internationalen Vorschriften genehmigt ist, richtet sich die Einstellung nach diesen Vorschriften."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vts/image45.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 105,
+            "hoehe": 100,
+            "sha": "7990ed7025eaebb635ce22b4e4079a017c0f7984969babe9829c8b0d594ed584"
+          }
         },
         {
           "absatz": null,
@@ -18134,7 +18634,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de#annex_10",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260430",
-      "sha": "14e78b4e235e34e113697ccf68b00c954ebde0637dfdd7353ae43e4d9e2469c2"
+      "sha": "93204e3ccd25c2b6d72134347892e710f0b81053c773740e4e92986ffdd460eb"
     },
     {
       "id": "bund/VTS/annex_11",

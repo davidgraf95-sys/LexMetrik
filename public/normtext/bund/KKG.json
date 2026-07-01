@@ -1442,6 +1442,16 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/kkg/image1.png",
+            "alt": "Amtliche Abbildung",
+            "formel": true,
+            "sha": "ba3da9564134344bc0693fb6ef6f0fccef2011b15a7b2a153b447792ac9528cc"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Die in der Formel verwendeten Buchstaben und Symbole haben folgende Bedeu­tung:"
         },
         {
@@ -1489,7 +1499,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#annex_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "d607f7f3cded65113cdf27d77c40f89c52948763482c33b0e3be5e689199edb7"
+      "sha": "96c53bcfc4080ef180c5fc8b6c434194bcee8a7aa25c3dd3720dabc751d7701d"
     },
     {
       "id": "bund/KKG/annex_2",

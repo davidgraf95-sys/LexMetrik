@@ -4608,6 +4608,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 102,
+            "hoehe": 86,
+            "sha": "248ba37345b70889dc468f2f404149ab04176c1b55148fe17b59f2de63bf976d"
+          }
+        },
+        {
+          "absatz": null,
           "text": "474 Messungen",
           "titel": 5
         },
@@ -6132,7 +6143,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1986/208_208_208/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "5a08bc352fff853400d147906384606829230f0a7d905bdfb38a092f76043354"
+      "sha": "417e550cccc35c065ba7774d88b0698a19efe8f0f18981f2781304966951b990"
     },
     {
       "id": "bund/LRV/annex_3",
@@ -7244,6 +7255,33 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "e579ed710beca7467df5cbf2a626815a72ab6704859d199dbe98159ec09cb723"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "6a6713249b7727faf13dd224559244990aff49a895dc6a0184b366fc86a43d89"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "a71d16843f450e1623cc4579e62a6a7dfb3fc4cfbe4db813fd66bb941fd11193"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Dabei bedeuten:",
           "items": [
             {
@@ -7277,7 +7315,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1986/208_208_208/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "dd76ccf55568f5b85939c4a420ada984ea497f58327413c84b9e70c85159300b"
+      "sha": "a7e8246a324f307983b0b7b7e7a79d3a7514896e4ef1521eb09d5276b628cf59"
     },
     {
       "id": "bund/LRV/annex_4",
@@ -8524,12 +8562,43 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image5.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 93,
+            "hoehe": 158,
+            "sha": "e579ed710beca7467df5cbf2a626815a72ab6704859d199dbe98159ec09cb723"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Bestimmung des Korrekturfaktors g für Bebauung und Bewuchs",
           "titel": 3
         },
         {
           "absatz": null,
           "text": "Diagramm 2"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image6.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 84,
+            "hoehe": 64,
+            "sha": "6a6713249b7727faf13dd224559244990aff49a895dc6a0184b366fc86a43d89"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lrv/image7.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "a71d16843f450e1623cc4579e62a6a7dfb3fc4cfbe4db813fd66bb941fd11193"
+          }
         },
         {
           "absatz": null,
@@ -8544,7 +8613,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1986/208_208_208/de#annex_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "8ff99f55ce74d3eecda2cfee0f26f9d7f2f861260c6ec3f349910d42f680c1cd"
+      "sha": "780a49d37e54d9aa742f4e22322c60a91cc6b6abf9c029c5f7c8ee0437b2da9b"
     },
     {
       "id": "bund/LRV/annex_7",

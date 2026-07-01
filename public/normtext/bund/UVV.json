@@ -5092,13 +5092,45 @@
               ]
             ]
           }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/uvv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 49,
+            "hoehe": 9,
+            "formel": true,
+            "sha": "02707c83575e2eeb967856d87446a80481d5270d4565620537b4462e887c251e"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/uvv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "formel": true,
+            "sha": "8ffd9b77858540d911cfd82a1fe84f06294d00efa91f092d661b9b9483d7fc3c"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/uvv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "formel": true,
+            "sha": "5dcacfea1f693c02e82cfc70b36b2eecbbd3e316d9dc3c38043a0c8b22ed9cfb"
+          }
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/38_38_38/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "3c1c3b35ba2982902978f852a6c778c52942562a7daaa78b8ced259f85a47267"
+      "sha": "d25660c320d066e60e1eb95c09c4717136f8bf63cfa6764fd4d93865ec033b8c"
     },
     {
       "id": "bund/UVV/annex_3",

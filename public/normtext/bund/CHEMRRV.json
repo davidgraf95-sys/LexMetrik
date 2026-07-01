@@ -3310,6 +3310,17 @@
           }
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/chemrrv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 64,
+            "hoehe": 45,
+            "sha": "b93f881a7c94a13cd237979dc5e224fcc6a09e25e1e793305d087135fe55bdb3"
+          }
+        },
+        {
           "absatz": "2",
           "text": "Die Herstellerin muss auch asbesthaltige Zubereitungen und Gegenstände mit den Angaben nach Absatz 1 versehen. Werden die Angaben direkt auf die Zubereitung oder den Gegenstand aufgedruckt, so genügt für Kopf und Feld eine einzige Farbe, die sich deutlich von der Unterlage abhebt. Die Textfelder können in diesem Fall auch unter einem einzigen Kopf direkt neben- oder untereinander angebracht werden."
         },
@@ -3362,7 +3373,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "01e2550a471fd95e568c53eb0a54510a764ff9dd6d7f87ef3adc0cb9cc27f012"
+      "sha": "1c9491eb681cdd8914185eb1bc8786b1d2bb04c6546828e2e1cc6a0e16c753ca"
     },
     {
       "id": "bund/CHEMRRV/annex_1_7",
@@ -11447,6 +11458,17 @@
           "text": "Zubereitungen und Gegenstände, die Recycling-PVC enthalten, müssen mit der Aufschrift «Enthält Recycling-PVC» oder mit folgendem Piktogramm versehen sein:"
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/chemrrv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 13,
+            "hoehe": 13,
+            "sha": "f8d76118a85f818473fc3349ad033ec56c811adb9b7c501206b3cf5071f12195"
+          }
+        },
+        {
           "absatz": "3",
           "text": "Zubereitungen, deren Massengehalt an Methylendiphenyl-Diisocyanat 0,1 Prozent oder mehr beträgt, und die für die Abgabe an die breite Öffentlichkeit bestimmt sind, müssen mit folgender Aufschrift versehen sein: «Bei Personen, die bereits für Diisocyanate sensibilisiert sind, kann der Umgang mit diesem Produkt allergische Reaktionen auslösen. – Bei Asthma, ekzematösen Hauterkrankungen oder Hautproblemen Kontakt, einschließlich Hautkontakt, mit dem Produkt vermeiden. – Das Produkt nicht bei ungenügender Lüftung verwenden oder Schutzmaske mit entsprechendem Gasfilter (Typ A1 nach EN 14387) tragen.»"
         },
@@ -11551,7 +11573,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_9",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "96befc2ef4535a0e480ae7e4f6522fbf10f9fcb503b29bcd49fca0d03f89419d"
+      "sha": "153a0cf1dd4a8bab0d2dcde1b4438007d493f23e314de99342b30706234a1d8d"
     },
     {
       "id": "bund/CHEMRRV/annex_2_10",

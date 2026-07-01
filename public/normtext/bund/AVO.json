@@ -10307,18 +10307,51 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/avo/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 108,
+            "hoehe": 3,
+            "sha": "f9fc387783b4f191e1dea1b611b46a2ae7ef17b4a3b503a92181abec1356d18b"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Der Expected Shortfall ESα [X] einer Zufallsvariablen X bei einer Eintrittswahrscheinlichkeit α ∈ (0,1) (typischerweise klein) ist definiert als"
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/avo/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 108,
+            "hoehe": 11,
+            "sha": "f0f4aaba1e11f55c556b7931ba2e6b8dc28704ca65b64766236fdf7c781ea474"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Falls die Verteilung von X stetig ist, so ist der Expected Shortfall ESα [X] gegeben durch den bedingten Erwartungswert"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/avo/image3.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 108,
+            "hoehe": 3,
+            "sha": "853acc81bb86b868df27ccc72d811626f3d486342025b95256789cd3de66cc46"
+          }
         }
       ],
       "stand": "2026-02-26",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/735/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260226",
-      "sha": "0875902f93bb06f8a440a778f8b01e97bd23e6cd0e6cab8bdcb2469ff86f14db"
+      "sha": "4e1a781a1110dc56ee1b9642c963c471328f4a2256f32a19e6d201869d63e028"
     },
     {
       "id": "bund/AVO/annex_4",
