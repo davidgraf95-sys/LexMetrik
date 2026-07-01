@@ -23,6 +23,25 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — Scheduled Re-Pin ZGB+ZPO auf 20260701: BLOCKIERT (Egress-Policy)
+
+**Stand:** Terminierte Verfallsregister-Aufgabe (Stichtag 1.7.2026): Fedlex-Re-Pin ZGB+ZPO auf Konsolidierung 20260701 sollte empirisch (§7) verifiziert und gepinnt werden. **NICHT vollzogen.** Fedlex-Filestore (`fedlex.data.admin.ch`) ist durch die Egress-Policy dieser Remote-Umgebung **vollständig gesperrt** (403 connect_rejected — proxy denial; curl + WebFetch + npm check:fedlex-versionen alle gleich blockiert). §7-Verifikation empirisch unmöglich → keine Änderung an `scripts/fedlex-cache.sh`, keiner der Register-/Dossier-Dateien.
+
+**Voraus-Check 7.6.2026 gilt weiterhin** (Dossier `fedlex-pin-nachverifikation-2026-06.md`): ZGB (AS 2026 94: Art. 302/302a; AS 2026 16: Art. 926 ff.) und ZPO (AS 2026 16: Art. 260a/260b NEU) betreffen **keine** der verdrahteten Pflicht-Anker → reine Re-Pins ohne Engine-Folgen laut Voraus-Check; empirische Bestätigung ausstehend.
+
+**Handlungsbedarf (manuell von Umgebung mit Fedlex-Zugang):** `bash scripts/fedlex-cache.sh` laufen lassen — ZGB alt `20260101`→neu `20260701` (html-1); ZPO alt `20250101`→neu `20260701` (n=0, no-suffix laut Dossier). Empirisch: neue Datei laden, Anker-Inventar alt↔neu vergleichen (neue ZPO-Anker art_260_a/art_260_b erwartet), Pflicht-Anker textidentisch bestätigen. Dann: `scripts/fedlex-cache.sh` aktualisieren (zwei Zeilen), Quellen-Register + parameter-verfall.md + Dossier-Nachtrag nachführen. Danach `npm run check:caches && npm run check:zitate && npm run check:verfall && npm run gate`.
+
+**Auch fällig (im PR erwähnt, nicht bearbeitet per Aufgabe):** Verfallsregister-Zeile «Streitwert-Formeln Miete…» ebenfalls per 1.7.2026 fällig.
+
+## Session 30.6.2026 — QS-PERF Folge: Architektur-Befunde + Tor check:perf-budget (Autonomous-Session §12)
+
+**Stand:** Zwei Commits einer Autonomous-Session nach dem Quick-Win-Batch 1 (Roadmap: **QS-PERF**) — Karte gem. §12 nachgezogen, kein Code erneut umgesetzt:
+
+- **Commit `9ca3e3b`** — `FAHRPLAN-PERFORMANCE.md` um **2 Bau-Befunde** ergänzt, die der Roh-Audit übersehen hatte: **(1)** Register IST der Inhalts-Index — Defer nicht möglich, nur Sharding koordiniert über Generator/browse.ts/inhalt.tsx/Shell.tsx (betrifft Rank 6/8). **(2)** render-then-replace vereitelt naives idle-Defer für LCP — React verwirft das prerenderte HTML sofort → naives `requestIdleCallback` um Fetch könnte LCP *verschlechtern*; braucht Design-Entscheid, nicht mechanischen Edit (betrifft Rank 6). Kein Produktiv-Code, golden unberührt.
+- **Commit `1d3a3c9`** — Tor **`check:perf-budget`** (QS-PERF Item 0, Bundle-Teil): `scripts/check-perf-budget.ts` Chrome-frei/CI-tauglich; sichert vendor-react-Topologie (genau ein stabiler Chunk), gzip-Budgets (Entry ≤ 60 KB, vendor-react ≤ 90 KB), Doppel-React-Schutz (react-dom nur im vendor-Chunk). In `package.json` + deploy-check-Skill eingehängt. Negativtests grün→rot→grün inkl. react-dom-im-Entry-Regression. Lighthouse-Metrik-Schranken (CLS/LCP/TBT unter 4× CPU) = weiterhin manueller Mess-Schritt (CI-Chrome noch nicht verdrahtet).
+
+**Offen nach dieser Folge:** Lighthouse-Schranken am Tor (CI-Chrome) · Rank 2-Reader-Chunk-Vorladen · M-Daten-Pfad → LCP (Rank 6/7/8/10) · Render-Hotpath-Rest (4/9/12/14) · Fonts (11).
+
 ## Session 30.6.2026 — Performance-Grundsatz + ultracode-Audit + Quick-Win-Batch 1 (DEPLOYT)
 
 **Stand:** Auf Davids Frage «macht Lexmetrik alte Computer langsamer?» gemessen (Lighthouse 4× CPU): ja — `/gesetze/bund/OR` Score **42**, **CLS 0,64**. ultracode-Audit (38 Opus-Agenten, adversarial gegen Logikverlust): 25 verifizierte logik-sichere Optimierungen. **Grundsatz festgeschrieben** (CLAUDE.md **§15** + ROADMAP **Leitprinzip 7**/Querschnitt **QS-PERF** + **FAHRPLAN-PERFORMANCE.md** + Memory): *Lexmetrik nicht merklich langsamer, ausser bei Logikverlust — Treue gewinnt immer.*
