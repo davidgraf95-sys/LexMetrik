@@ -1,6 +1,6 @@
 # LexMetrik — Handlungsplan (DER eine Steuerungsplan)
 
-> **Stand 28.6.2026.** Die **einzige Steuerungsquelle**: sie entscheidet **Reihenfolge** +
+> **Stand 1.7.2026.** Die **einzige Steuerungsquelle**: sie entscheidet **Reihenfolge** +
 > **bau-jetzt vs. geparkt** und ist so geordnet, dass eine **künftige Session sie autonom
 > Schritt für Schritt abarbeiten** kann. Sie faltet das frühere `HANDLUNGSPLAN.md` ein
 > (→ `archiv/`). Das *Wie* je Strang steht in der jeweiligen `FAHRPLAN-*.md` (Detailquelle),
@@ -82,15 +82,23 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
   KANTONALE-P1-Adapter **geparkt**. Nicht-§4-blockierte Korpus-/Übersichtsarbeit ist ausgenommen.
 - **Prozesskosten I2** ⟵ Recherche `wbqdyap3x` (Schlichtungs-/Reduktionsfaktoren).
 
+<!-- @blockers
+wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offen)
+§4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt
+26x-slot: 26×-Anspruch noch von W1·4 (blocked, 26x) gehalten — erst öffnen, wenn ein anderes 26×-Asset frei ist (Leitprinzip 4)
+-->
+
 ---
 
 ## Querschnitt-Band (läuft begleitend — kein Reihenfolge-Slot)
 
 - **Status-Marker-Audit + Verifikations-Infrastruktur** *(LERNPHASE A/B, `[OF]`)*. Jede Karte/Engine
+  <!-- @meta id: LERNPHASE-AB · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-LERNPHASE-2026.md -->
   trägt sichtbaren ehrlichen Status (`verified`/`entwurf`/`geplant`) + Stand; Golden-Abdeckung &
   Norm-Anker-Prüfung automatisieren. **Stärkste zeitsperre-konforme Arbeit** — macht die
   Dez-Abnahme billig; dauerhaft begleitend.
 - **Adversariale Gegenprüfung — systematisiert** *(QS-GP, LERNPHASE B, `[OF]`)*, neu 29.6.2026 —
+  <!-- @meta id: QS-GP · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   erweitert die Verifikations-Infrastruktur. Der adversariale Zweitdurchgang (unabhängiger
   Opus-Agent, frischer Kontext, Auftrag: Output gegen die amtliche Quelle **widerlegen**) fing real
   die teuersten Bugs (Tabellen-Drop, Footnote-Leak, `bis`/`ter`-Verlust), hängt aber bisher an
@@ -122,13 +130,16 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
     26×-Asset → nur bei freiem Slot, nie zwei parallel (Leitprinzip 4). Korrekturen aus der Kampagne
     sind verhaltensändernd → golden-gegated (§6) + Push/Deploy nur auf Davids Ja (§9).
 - **Plan-Hygiene-Wächter** *(QS-PH, `[OF]`)*. Mechanischer Check nach Vorbild des SessionStart-Hooks
+  <!-- @meta id: QS-PH · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PLAN-STEUERUNG.md -->
   `.claude/hooks/struktur-aktuell.py`: meldet **rot**, sobald eine neu hinzugefügte `FAHRPLAN-*.md`
   **nicht aus `ROADMAP.md` verlinkt** ist — setzt die Plan-Hygiene-Regel durch (jede `FAHRPLAN-*.md`
-  muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1).
+  muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1). Detail + Etikett-System: **`FAHRPLAN-PLAN-STEUERUNG.md`** (Tor `check:plan` = Etikett-Konsistenz + FAHRPLAN-Verlinkung der referenzierten Dateien).
 - **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
+  <!-- @meta id: SEO-A11Y · status: ready · of: ja · blocker: null · dep: [] · kollision: [public/normtext/register.json, src/lib/seo.ts, scripts/prerender.ts, vercel.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-SEO-A11Y-GOVERNANCE.md -->
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
 - **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
+  <!-- @meta id: QS-PERF · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PERFORMANCE.md -->
   Lexmetrik soll Computer **nicht merklich langsamer** machen, **ohne Logikverlust** (Treue gewinnt
   immer). Detailquelle: **`FAHRPLAN-PERFORMANCE.md`** (ultracode-Audit 30.6.2026, 25 verifizierte,
   logik-sichere Befunde; adversarial gegen Logikverlust geprüft). Gemessener Anlass: `/gesetze/bund/OR`
@@ -153,6 +164,7 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 ---
 
 ## ⚡ S0 — fristgetrieben (FRIST 30.6.2026) — ✅ gebaut + gegated 28.6.2026 (Live offen, Batch-Fenster)
+<!-- @meta id: S0 · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
 
 **Verfallsregister mechanisch.** `check:verfall` muss den am 30.6. ablaufenden SG-GKV-Tarif +
 die weiteren datierten Verfälle (s. «Pflege & Termine») erfassen und auf einer benannten UI-Fläche
@@ -174,16 +186,6 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 
 > Reihenfolge nach Praxis-Hebel × Machbarkeit ohne Fachzeit × Abhängigkeiten. Alles `[OF]`, sofern
 > nicht vermerkt. Details + Bau-Auflagen je Werkzeug: «Funktions-Katalog» unten + jeweilige `FAHRPLAN-*.md`.
-
-> **■ Fortschritt 28.6.2026 (eine grosse Session, 3 Prod-Deploys):**
-> - **S0** Verfallsregister-UI ✅ **LIVE**
-> - **Welle 1 · 1** Begründungs-Absatz (alle [OF]-Teile, Phasen 0–5; PDF-Block AUS = Davids Entscheid) ✅ **LIVE**
-> - **Welle 1 · 2** Norm↔Werkzeug-Brücke (Index gehärtet + Erlass-Karten-Hinweis) ✅ **LIVE**
-> - **Welle 1 · 3** Alltags-Cockpits: #2 Streitwert-Grenzwert ✅ **LIVE**; #3/#4 bestanden bereits; #1 Fristen-Cockpit zurückgestellt (S-5c)
-> - **Welle 1 · 4** Prozesskosten-Moat: zu ~90 % FERTIG; offen nur **I2** (Recherche `wbqdyap3x` blockiert) + **I4** (per-Kanton, mit I2)
-> - **Welle 2 · 5** Auffindbarkeit: zweiachsiger Einstieg ✅ **LIVE** · globale Artikel-Volltextsuche (FlexSearch, 24'183 Bund-Artikel) ✅ **LIVE**; offen: Kanton in den Index + FUNDAMENT-UMBAU-Rahmen
-> - **Deploys:** `b7273ae0` (S0+Welle1·1+W2-Index) · `88895088` (Streitwert+Einstieg) · `aebd72fb` (Volltextsuche, inkl. HOCH-Bug-Fix tote Links).
-> - **Nächster offener [OF]-Block:** Welle 2 · 6 (Konsultieren) — Mehrsprach DE/FR/IT braucht aber einen Fedlex-Netz-Generator (nicht autonom); kleinere autonome Reste: Kanton-Artikel in den Suchindex, Rechtsprechung-P0 (SG-Regeste, §4-sensibel).
 
 > **■ Auftrags-Eingang 30.6.2026 (David) — §14 gebündelt + verortet.** 13 Aufträge, alle `[OF]`
 > (reine Darstellung oder amtliche Daten, keine Davids-Fachzeit). **Risiko-Klassen getrennt halten**
@@ -263,13 +265,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 
 ### Welle 1 — Kern: Norm → Werkzeug → Schriftsatz + die Alltags-Klingen
 
-- [ ] **1 · Begründungs-Absatz** *(BEGRUENDUNGS-ABSATZ, ~5 %)*. Aus dem Rechen-Ergebnis ein
+- [x] **1 · Begründungs-Absatz** *(BEGRUENDUNGS-ABSATZ, ~5 %)*. Aus dem Rechen-Ergebnis ein
+  <!-- @meta id: W1·1 · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-BEGRUENDUNGS-ABSATZ.md -->
   **kopierfertiger, normgestützter Absatz** (UI **und** PDF), jeder Wert mit Norm+Link+Stand
   (schliesst die Rückrichtung *Werkzeug→Norm*). **Erst EIN Flaggschiff-Vertikalschnitt komplett**
   (Prozesskosten): Ergebnis → Absatz → PDF-Block → Kopier-Hook; dann Rollout.
   *Nächster Schritt:* PDF-Block (`pdfModel.ts`) + Kopier-Hook am Prozesskosten-Rechner; die 4
   David-Entscheide als **Default-und-Flag** setzen. §8-Rahmung «keine Rechtsberatung».
 - [x] **2 · Norm↔Werkzeug-Brücke** *(RECHTSSAMMLUNG P4/D1)* — **Index-Teil erledigt 28.6.2026
+  <!-- @meta id: W1·2 · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   (gegated, nicht deployt).** `werkzeugeFuerNorm` (erlass-granular, 17 Erlasse) benannt + Map
   `ERLASS_WERKZEUGE` exportiert + Konsistenz-Tor `werkzeuge.test.ts` (kein stiller Tippfehler →
   heimlich fehlendes Werkzeug, §8). Anzeige im Reader (KontextPanel «Passende Werkzeuge») bestand
@@ -277,6 +281,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   4.3). SSoT = Katalog (§5). **Der zweiachsige Startseiten-Einstieg (Rechtsgebiet × Aufgabe) ist
   Schritt 5** (Welle 2) und nutzt denselben Index — kein zweiter Pfad.
 - [x] **3 · Alltags-Rechner als Cockpits** *(neu-Verpackung vorhandener Engines, `[OF]`)* —
+  <!-- @meta id: W1·3 · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   **abgearbeitet 28.6.2026:** #2 neu gebaut (Grenzwert-Abgleich); #3 + #4 bestanden bereits
   (kein §5-Duplikat gebaut); #1 zurückgestellt (S-5c-Konflikt, Davids Entscheid offen):
   - **Fristen-Cockpit** (Vorwärts/Rückwärts/Stillstand) über `fristenspiegel/` + `icsExport`.
@@ -297,14 +302,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     integriert in der Rechtsmittel-Gabelung des Navigators. Eine separate `rechtsmittel.ts` wäre
     §5-Duplikat → bewusst NICHT gebaut.
 - [ ] **4 · Prozesskosten-Cockpit Restbau** *(PROZESSKOSTEN-COCKPIT, Hauptmoat, 26×)*. Risiko-Modus
+  <!-- @meta id: W1·4 · status: blocked · of: ja · blocker: wbqdyap3x · dep: [] · kollision: [] · worktree: nein · 26x: ja · fahrplan: FAHRPLAN-PROZESSKOSTEN-COCKPIT.md -->
   fertigstellen; Festsetzung/Dispositiv → Welle 2.
   *Nächster Schritt:* I4 `kriterien`-Feld + I9-Rest **[OF]**; **I2 ⟵ Recherche `wbqdyap3x`**
   (Blockade). **Park-Entscheid:** bewusst bei «I4/I9 fertig, I2 blockiert» parken = **26×-Slot
-  freigeben** (Voraussetzung für Welle 3 · Schritt 11).
+  freigeben** (Voraussetzung für Welle 3 · Schritt 12).
 
 ### Welle 2 — Griff (Auffindbarkeit) + Konsultieren + mehr Klingen
 
 - [~] **5 · Auffindbarkeits-Schicht** *(ein Index → mehrere Oberflächen)*. **Zweiachsiger Einstieg
+  <!-- @meta id: W2·5 · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   (Rechtsgebiet × Aufgabe)** ✅ **28.6.2026 (gegated, nicht deployt):** `einstiegMatrix()`
   (`src/lib/einstieg.ts`) projiziert den Katalog (§5) auf Rechtsgebiet × Aufgabe; Komponente
   `ZweiachsigerEinstieg` als zweite Achse auf `/rechner` (aufklappbare Gebiets-Kacheln, Werkzeuge
@@ -318,7 +325,8 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Phrasen unscharf (§8-ehrlich). Snippet + Sprung `#art-`. Visuell bestätigt.
   **Offen:** Kanton-Volltext im Index nachziehen · **Startseiten-Modul-Rahmen** (FUNDAMENT-UMBAU
   Phase 0, eigener Worktree, Visualdiff-Tor).
-- [ ] **5b · Reader-Darstellung Bund** *(GESETZESDARSTELLUNG-BUND, `[OF]`, eigener Worktree)* —
+- [~] **5b · Reader-Darstellung Bund** *(GESETZESDARSTELLUNG-BUND, `[OF]`, eigener Worktree)* —
+  <!-- @meta id: W2·5b · status: wip(reader-wt) · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/inhalt.tsx, src/pages/gesetz-leser/parts.tsx, src/components/normtext/ArtikelBody.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-BUND.md -->
   konsolidierter QA-Sweep der **Bund-Gesetzesdarstellung** (29.6.2026): 11 Defekt-/Ausbau-Punkte
   (Präambel-Fussnoten · Fussnoten einheitlich erst auf Klick · Randtitel-/Gruppierungslinien je
   Gesetz + Umschalter · Suche↔Gliederung responsiv + kompakt zum Header · Verweis ZGB→BVG via
@@ -331,11 +339,13 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **Renderer abwärtskompatibel** (Kanton-Altdaten nicht brechen); golden byte-gleich + §6.3;
   neuer `check:tabellen`-Validator. Tabellen-Detail quer in `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`,
   Layout/a11y in `DESIGN-REGLEMENT-NORMTEXT.md`, Popover in `FAHRPLAN-GESETZESTEXT-POPUP.md`.
-  - **+ Auftrags-Eingang 30.6.:** **Bündel R** (R1 Scroll-Spy Kopf+Gliederung · R2 Gliederung links auf
-    kleineren Laptops · R3 +/− Schriftgrösse statt Kompakt/Breit) und **Bündel N** (N1 zerrissene
+  - **+ Auftrags-Eingang 30.6.:** **[x] Bündel R ✅ FERTIG + LIVE** (PR #59 `0560fd87`, prod-verifiziert 30.6.
+    via Perf-Deploy): R1 Scroll-Spy Kopf+Gliederung · R2 Gliederung links ab 1024 px · R3 A−/A+ Schriftgrösse
+    statt Kompakt/Breit. **Offen:** **Bündel N** (N1 zerrissene
     Artikelnummer «7 b»→«7b», 111/218 Erlasse, Extraktor-Härtung L0 · N2 falsche Verweis-Auflösung,
     §1-nah) — Details im Eingangsblock oben.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
+  <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
     Fassungen gleich verbindlich). Heute nur `de` befüllt. *Aufbau:* Generator je Erlass 3
     Sprachfassungen aus Fedlex → `…<lang>.json`; Synopse-UI im Gesetzleser (Spalten + Diff).
@@ -347,6 +357,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
     - [ ] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1** BGE ohne «vollständiges Urteil» (12/272,
+      <!-- @meta id: W2·6-B · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
       `azaUrteil:null`+kein Auszug → AZA-Resolver, *Daten/`QS-GP`*) · **B2** Regeste amtlich = Absätze +
       massgebliche Artikel fett (Quelle nachextrahieren, *Daten/`QS-GP`*, Geschwister von B1) · **B3**
       Sticky-Kopf überdeckt Body in `EntscheidLeser.tsx` (*reine UI, eigener Commit*). Details im Eingangsblock oben.
@@ -373,30 +384,38 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
         (`151 V 1` bzw. `bge_BGE_151_V_1` lösen eindeutig auf, ref=`BGE 151 V 1`) sauber re-gefetcht —
         kein Hand-Edit (§7). WARN-Quarantäne wieder entfernt, Tor ist reines FEHLER.
 - [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
+  <!-- @meta id: W2·7 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
   (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
   Zitierer BGE/BGer + Rubrum-Vorlage Art. 112 BGG/238 ZPO; reiner User-Input-Builder).
 - [ ] **8 · Schriften-Baukasten** *(VORLAGEN, Worktree)* — Berufung/BGG-Beschwerde/Sistierung/
+  <!-- @meta id: W2·8 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VORLAGEN-AUSBAU.md -->
   Beweisverzeichnis über `vorlagen/engine.ts`; Zulässigkeit nur Hinweis, Status «entwurf».
 - [ ] **9 · Aufräum-Item** *(UX-PUNKTELISTE ⚫ überholt)*. Deliverable = Mapping-Tabelle
+  <!-- @meta id: W2·9 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-UX-PUNKTELISTE.md -->
   **alt-Punkt → Code-Pfad → Status**, *bevor* Restpunkte C2/C5 angefasst werden.
 
 ### Welle 3 — Tiefe / Breite (opportunistisch)
 
 - [ ] **10 · Neue Rechner-Klingen** *(`[OF]`, §2/§7)*: **Zustellfiktions-Engine** (deterministisch,
+  <!-- @meta id: W3·10 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   fristrelevant) · **Gesellschaftsrechtliche Schwellen-Module** (OR 727/671/653s, harte Zahlen) ·
   **Schutzrechts-Gebühren IGE** · **Normfassungs-/Geltungsstand-Prüfer** (intertemporal).
 - [ ] **11 · Gesetzgebungs-/Rechtsetzungs-Tracking** *(neu, amtlich)*. Übersicht «was kommt»:
+  <!-- @meta id: W3·11 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   Vernehmlassungen (admin.ch), Parlamentsgeschäfte (parlament.ch), in AS/BBl publiziert aber noch
   nicht in Kraft (Fedlex), künftige Fassungen — Drift gegen die geltende Fassung. Andockpunkt
   `fedlex.ts`/Drift-System.
 - [ ] **12 · Kantonaler Breitenimport** *(GESETZE-IMPORT-3TIER Phase 2, 26×)*. **Erst öffnen, wenn
+  <!-- @meta id: W3·12 · status: parked · of: ja · blocker: 26x-slot · dep: [] · kollision: [] · worktree: nein · 26x: ja · fahrplan: FAHRPLAN-GESETZE-IMPORT-3TIER.md -->
   der Prozesskosten-26×-Slot frei ist** (Schritt 4). BS-Pilot; Kantonale-Entscheide-Import hart
   **nachgelagert**, nie gleichzeitig.
 - [ ] **13 · Vorlagen-Breite** *(VORLAGEN V5/V6/V8, GMBH G2, VERTRAGS-VARIANTEN P3; Worktree)*.
+  <!-- @meta id: W3·13 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein -->
   Tiefe vor Stückzahl. GmbH qualifizierte Gründung (777c II) · Musterklagen (Bauhandwerkerpfand) ·
   Basistypen (Kauf/Fahrniskauf Art. 184 ff. dispositiv, Schenkung/Pacht/Darlehen/Bürgschaft).
 - [ ] **14 · Multi-Pane / Split-View** *(SPLIT-VIEW, Fundament-Umbau, eigener Worktree; Auftrag
+  <!-- @meta id: W3·14 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/components/layout/Shell.tsx, src/components/layout/Topbar.tsx, src/App.tsx, tailwind.config.js] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-SPLIT-VIEW.md -->
   David 29.6.2026)*. 2–3 „Engines" nebeneinander **wie im Browser** → der **Verzahnungs-Burggraben
   sichtbar** (Gesetz | Rechner | Begründungs-Absatz). **Erst Strang A** (Inhaltsbreite-Umschalter
   kompakt/breit, klein, `[OF]`), **dann Strang B** (Split-View: `RouteSwitch`-Extraktion →
@@ -406,11 +425,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **Kernaufwand = CSS Container-Queries** (450 Viewport-Breakpoints brechen in schmalen Panes;
   gestuft CQ-1). Detail + Architektur-Befund: `FAHRPLAN-SPLIT-VIEW.md`. §12-Kollisionsdateien
   `Shell.tsx`/`Topbar.tsx`/`App.tsx`/`tailwind.config.js` → nie parallel.
-  - [ ] **Gebündelt (Auftrag David 29.6.2026): Bildschirm-/Responsive-Audit** *(SPLIT-VIEW, `[OF]`)* — **ein** `ultracode`-Workflow fotografiert **Seiten × Breakpoints** (Handy hoch ~390 · Tablet ~768 · Laptop ~1280 · Desktop ~1536 · Ultrawide ~2560) und flaggt Layout/Umbruch/**Tabellen-Overflow** (maschinell je `<table>`/Pane über `scrollWidth>clientWidth`, deterministisch §2). **Werkzeug zuerst prüfen (§5/§10): auf dem bestehenden Playwright-bash-Harness `scripts/screenshots.ts` aufsetzen** — Playwright-Start, Motiv→Route, Arg-Parsing und ehrliches FEHLT-Logging (§8) sind dort schon da; nur die Breitenliste (heute 360/768/1280) auf die fünf erweitern und die Seitenmenge ergänzen, **nicht** neu erfinden. **NICHT** der Playwright-MCP (Bash-Lektion 22.6.); Playwright ist bereits Dependency. **Aufruf** (kontextlos lauffähig): `npm run preview -- --port 4321 --strictPort`, dann `npx vite-node scripts/screenshots.ts -- --base-url http://localhost:4321 --out abnahme/responsive-audit/ist-<sha7>` — neuer Ausgabe-Pfad ⇒ eine `.gitignore`-Zeile `abnahme/responsive-audit/` ergänzen, Binär-PNGs nie committen (§6). **Rein lesend:** berührt selbst keine §12-Kollisionsdatei und kein Golden-/Logik-Tor (§6), Status-Modell unberührt (§8), kein Deploy ohne Davids Ja (§9); Befund = Screenshot-Mappe + Defektliste, **rein visuell verifizierbar, keine Davids-Fachzeit**. **Kein eigener Strang — gehört in Schritt 14** (dasselbe Breakpoint-/Container-Query-Subsystem), denn die aus dem Audit folgenden Fixes treffen **dieselben §12-Kollisionsdateien wie Schritt 14** → **im selben Worktree wie Strang B, nie als paralleler Strang** (kein 26×-Bezug).
+  - [ ] **Gebündelt (Auftrag David 29.6.2026): Bildschirm-/Responsive-Audit** *(SPLIT-VIEW, `[OF]`)* — **ein** `ultracode`-Workflow
+    <!-- @meta id: W3·14-Responsive-Audit · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein --> fotografiert **Seiten × Breakpoints** (Handy hoch ~390 · Tablet ~768 · Laptop ~1280 · Desktop ~1536 · Ultrawide ~2560) und flaggt Layout/Umbruch/**Tabellen-Overflow** (maschinell je `<table>`/Pane über `scrollWidth>clientWidth`, deterministisch §2). **Werkzeug zuerst prüfen (§5/§10): auf dem bestehenden Playwright-bash-Harness `scripts/screenshots.ts` aufsetzen** — Playwright-Start, Motiv→Route, Arg-Parsing und ehrliches FEHLT-Logging (§8) sind dort schon da; nur die Breitenliste (heute 360/768/1280) auf die fünf erweitern und die Seitenmenge ergänzen, **nicht** neu erfinden. **NICHT** der Playwright-MCP (Bash-Lektion 22.6.); Playwright ist bereits Dependency. **Aufruf** (kontextlos lauffähig): `npm run preview -- --port 4321 --strictPort`, dann `npx vite-node scripts/screenshots.ts -- --base-url http://localhost:4321 --out abnahme/responsive-audit/ist-<sha7>` — neuer Ausgabe-Pfad ⇒ eine `.gitignore`-Zeile `abnahme/responsive-audit/` ergänzen, Binär-PNGs nie committen (§6). **Rein lesend:** berührt selbst keine §12-Kollisionsdatei und kein Golden-/Logik-Tor (§6), Status-Modell unberührt (§8), kein Deploy ohne Davids Ja (§9); Befund = Screenshot-Mappe + Defektliste, **rein visuell verifizierbar, keine Davids-Fachzeit**. **Kein eigener Strang — gehört in Schritt 14** (dasselbe Breakpoint-/Container-Query-Subsystem), denn die aus dem Audit folgenden Fixes treffen **dieselben §12-Kollisionsdateien wie Schritt 14** → **im selben Worktree wie Strang B, nie als paralleler Strang** (kein 26×-Bezug).
   - [ ] **+ Auftrags-Eingang 30.6.: Bündel S** — **S1** Breadcrumbs in der Pane laufen über globalen
+    <!-- @meta id: W3·14-S · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
     Router-`<Link>` (`InhaltsKopf.tsx` Z.30) statt PaneKontext-Navigator → fixen · **S2** Tracker «alles
     schliessen» muss auch `usePaneLayout` (Pane-Store) leeren. S1+S2 bündeln. Details im Eingangsblock oben.
   - [ ] **Split-View a11y-Restpunkte** *(SPLIT-VIEW, `[OF]`, NIEDRIG — aus §9-Bug-Check 29.6.2026)* —
+    <!-- @meta id: W3·14-a11y · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: ja · 26x: nein -->
     3 verifizierte, bewusst **nach** dem Prod-Deploy zurückgestellte Kanten (Fokus-Logik-Regressions-
     risiko vor Deploy zu hoch): **#4** `usePaneLayout.ts` Z.102–110 strippt `?p=` per
     `history.replaceState` am React-Router vorbei → `useLocation().search` veraltet (Sidebar-Aktiv-
