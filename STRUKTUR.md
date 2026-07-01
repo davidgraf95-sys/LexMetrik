@@ -23,6 +23,28 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — I4 Bemessungskriterien + I9-Rest → W1·4 geparkt, 26×-Slot frei (NICHT gemergt/deployt)
+
+**W1·4-Abschluss (Prozesskosten-Cockpit).** **I4 `kriterien`-Feld:** neues Anzeigefeld
+`kriterien`/`kriterienNorm` auf `KantonalerTarif` (`src/data/tarif/typen.ts`) + Durchreichung über
+`TarifQuelle`/`quelle()` in `lib/prozesskosten.ts`; die **Bemessungskriterien** (wonach die Behörde
+die Gebühr im Rahmen festsetzt) je Kanton für Gerichtskosten (25, GR gk hat keine Kriteriennorm →
+generischer Fallback) und Parteientschädigung (26) — **frisch am amtlichen Erlass extrahiert**
+(7 parallele Opus-Agenten, meist `…/api/…/texts_of_law/…`; Strukturbefund: zitierte Norm = meist nur
+Streitwert-Staffel, Kriterien in einer allgemeinen Bestimmung). Anzeige im per-Posten
+Ermessensrahmen-Block **nur bei Spanne** (§8), `ProzesskostenForm.tsx`. **§11-Register:**
+`bibliothek/register/bemessungskriterien-tarife-kantone.md` (Wortlaut + confidence je Eintrag).
+**Adversariale Gegenprüfung (QS-GP, 2 unabhängige Opus-Agenten):** 1 Fund korrigiert (OW pe:
+Art. 4a→**Art. 32 GebOR**), 4 Titel-Korrekturen an Altdaten bestätigt (AR/ZG pe = «Verordnung über den
+Anwaltstarif», JU gk «Décret … émoluments judiciaires», JU pe «Ordonnance … honoraires d'avocat»),
+TG-pe-Abkürzung «HonTV» als offene erlassName-Frage geflaggt. **I9-Rest:** Notariats-/
+Grundbuch-Querverweis im Cockpit (Art. 55 SchlT ZGB / Art. 954 ZGB → `/rechner/notariat-grundbuch`).
+**Engine unberührt → golden byte-gleich (201 Fälle).** Gate grün (tsc·vitest·golden·lint 0 Fehler·
+check). Visuell verifiziert (Playwright: BE-Spanne zeigt Kriterien + Norm, GR gk leer/pe gefüllt,
+Querverweis). **Alles auf `recherche`/vor-Abnahme (§7); nichts `geprüft`.** **W1·4 → `parked`,
+26×-Slot FREI** (Voraussetzung Welle 3 · Schritt 12); I2 bleibt blockiert (`wbqdyap3x`).
+**Deploy/Push offen — wartet auf Davids Ja (§9).**
+
 ## Session 1.7.2026 — Plan-Steuerung «ein Etikett pro Schritt» (QS-PH, Branch `feat/plan-steuerung`, NICHT gemergt/deployt)
 
 Maschinenlesbares `<!-- @meta … -->`-Etikett je ROADMAP-Schritt
