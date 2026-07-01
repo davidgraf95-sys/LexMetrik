@@ -102,7 +102,12 @@ wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offe
   erweitert die Verifikations-Infrastruktur. Der adversariale Zweitdurchgang (unabhängiger
   Opus-Agent, frischer Kontext, Auftrag: Output gegen die amtliche Quelle **widerlegen**) fing real
   die teuersten Bugs (Tabellen-Drop, Footnote-Leak, `bis`/`ter`-Verlust), hängt aber bisher an
-  Session-Disziplin statt an einem Tor. Bausteine:
+  Session-Disziplin statt an einem Tor. **Design-Detailquelle:**
+  [`docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md`](docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md);
+  Nachweis-Register [`bibliothek/register/gegenpruefung-register.md`](bibliothek/register/gegenpruefung-register.md).
+  **Stand 1.7.2026: Bausteine a+b+c gebaut** (Tor `check:gegenpruefung` in `npm run gate`,
+  Skill »gegenpruefung«, Register + Quittier-Helfer `npm run gegenpruefung:ok`); offen nur
+  Baustein d (rückwirkende Kampagne). Bausteine:
   - **a · Gegenprüfungs-Gate `check:gegenpruefung`** — eingehängt in `npm run gate` (**nur lokal**,
     CI unverändert). Schneidet `git diff` ∩ Risiko-Pfade: **Extraktion** `scripts/normtext/**`,
     `src/lib/normtext/**`, `public/normtext/*.json` · **Rechnen** `src/lib/*(tarif|kosten|gebuehr|`
