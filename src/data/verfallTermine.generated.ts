@@ -14,30 +14,9 @@ export type VerfallTermin = {
 
 export const VERFALL_STAND = "7.6.2026";
 export const VERFALL_QUELLE = "bibliothek/register/parameter-verfall.md";
-export const VERFALL_MANUELL_ANZAHL = 19;
+export const VERFALL_MANUELL_ANZAHL = 20;
 
 export const VERFALL_TERMINE: VerfallTermin[] = [
-  {
-    "label": "SG Gerichtskostenverordnung (GKV, sGS 941.12): in Vollzug BIS 30.6.2026",
-    "datum": "2026-06-30",
-    "quelle": "Freitext"
-  },
-  {
-    "label": "Fedlex-Re-Pins terminiert: ZGB+ZPO 1.7.2026 (AS 2026 94/16); StGB 12.6.2026 (AS 2026 231) VOLLZOGEN 12.6.2026",
-    "datum": "2026-07-01",
-    "quelle": "Tabelle",
-    "fundstelle": "`scripts/fedlex-cache.sh` ← `normen/fedlex-pin-nachverifikation-2026-06.md`",
-    "wert": "Voraus-Check 7.6.2026: KEINE zitierten Artikel betroffen — reine Re-Pins; StGB/ZPO-Dateien liegen als No-Suffix (n=0!). StGB am 12.6.2026 auf 20260612 gepinnt (Anker 477/477 stabil, zitierte Artikel normtext-identisch, nur Art. 354/357 geändert)",
-    "rhythmus": "einmalig je Stichtag (`check:caches` + `check:zitate` danach)"
-  },
-  {
-    "label": "Streitwert-Formeln Miete (3-Jahres-Sperrfrist BGE 137 III 389 · 20×-Regel Art. 92 II ZPO) + Ordnungsbussen Art. 343 I lit. b/c (5000/1000)",
-    "datum": "2026-07-01",
-    "quelle": "Tabelle",
-    "fundstelle": "nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 4.4, § 2 R14) — nicht verdrahtet",
-    "wert": "ZPO-Cache 20250101 / BGE",
-    "rhythmus": "bei ZPO-Re-Pin (nächster: 1.7.2026, s. Re-Pin-Zeile)"
-  },
   {
     "label": "Hypothekarischer Referenzzinssatz",
     "datum": "2026-09-01",
@@ -87,6 +66,14 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "fundstelle": "`gruendungsunterlagen.ts` (`emissionsabgabe`, `EMISSIONSABGABE_FREIBETRAG_CHF`)",
     "wert": "Art. 6 Abs. 1 lit. h / 8 Abs. 1 StG @ 1.1.2024 (Cache)",
     "rhythmus": "jährlich — politisch volatil (Abschaffungs-Vorlagen)"
+  },
+  {
+    "label": "Fedlex-Re-Pins terminiert: ZGB+ZPO 1.7.2026 VOLLZOGEN 1.7.2026 (AS 2026 94/16); StGB 12.6.2026 (AS 2026 231) VOLLZOGEN 12.6.2026",
+    "datum": "2027-01-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` ← `normen/fedlex-pin-nachverifikation-2026-06.md`",
+    "wert": "ZGB→20260701/html-1 (FALLE: n=0 ist STALE ohne AS 2026 94 art_302 — nur html-1 kanonisch; 6 Anker byte-identisch, Inventar 1099→1099). ZPO→20260701/no-suffix (14 Anker operativ byte-identisch, art_314 nur Fussnoten-Reklassifikation; neu art_260a/b). Volltext-Snapshots + Struktur + Manifest gezielt regeneriert (`--erlass=zgb,zpo`), Engine-golden byte-gleich, adversarial QS-GP. `check:caches`/`check:zitate` grün 1.7.2026",
+    "rhythmus": "einmalig je Stichtag (`check:caches`+`check:zitate`+ggf. `normtext --erlass`)"
   },
   {
     "label": "HReg-Gebühren (Neueintragung 420/280/210 …)",

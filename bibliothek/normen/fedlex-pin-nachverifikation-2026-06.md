@@ -46,6 +46,30 @@ neu `stgb|…|20260612|0|…`):
 - `check:caches` + `check:zitate` danach grün; Verfallsregister-Zeile auf
   den nächsten Stichtag 1.7.2026 (ZGB/ZPO) gestellt.
 
+### Nachtrag: ZGB + ZPO-Re-Pin VOLLZOGEN (1.7.2026)
+
+Am Stichtag empirisch nachverifiziert (Byte-Diff der zitierten Anker alt↔neu,
+Anker-Inventar, SPARQL-`dateApplicability`-Cross-Check), gepinnt UND die
+Volltext-Snapshots gezielt regeneriert (`npm run normtext -- --nur=bund
+--erlass=zgb,zpo`; Struktur-Sidecar + Browse-Manifest nachgezogen; Engine-golden
+byte-gleich; adversariale QS-GP der neuen Artikel):
+
+- **ZGB → `20260701` / html-1** (`zgb|…|20260701|1|…`). **FALLE:** unter
+  `.../20260701/` liefern **beide** n=0 UND n=1 echtes HTML (1099 Anker, SR 210),
+  aber **n=0 ist STALE** — ihm fehlt die AS-2026-94-Änderung an `art_302`
+  (gewaltfreie Erziehung: neuer 2. Satz Abs. 1 + neuer Abs. 4). Nur **html-1**
+  trägt sie; SPARQL bestätigt `-html-1.html` kanonisch. n=0 zu pinnen wäre ein
+  stiller Regress. Alle 6 zitierten Anker byte-identisch; Inventar 1099→1099
+  (art_302 Intra-Artikel, KEIN neuer Anker — Prognose art_302/302a insoweit falsch).
+- **ZPO → `20260701` / No-Suffix (n=0)** (`zpo|…|20260701|0|…`; n≥1 = Casemates-
+  SPA). Alle 14 zitierten Anker operativ byte-identisch; art_314 nur Fussnoten-
+  Reklassifikation (Berufungsfristen 10/30 T. unverändert). **Neu: art_260a/260b**
+  (summarischer Besitzesschutz, AS 2026 16 Ziff. II) in den Snapshot aufgenommen.
+- SPARQL: die auf 2026-07-01 geltende Fassung ist für SR 210 + 272 exakt die
+  20260701-Konsolidierung. `check:caches` (ZGB 6 / ZPO 14 Anker) + `check:zitate`
+  (732 Zitate, 0 Befunde) + Voll-Gate grün. Register auf «VOLLZOGEN 1.7.2026»,
+  nächste Prüfung Jan. 2027.
+
 ## Geltungsbereich & Ausnahmen
 
 - Diffs decken die VOM CODE ZITIERTEN Artikel vollständig ab plus

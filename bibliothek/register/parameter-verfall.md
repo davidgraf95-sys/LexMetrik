@@ -28,7 +28,7 @@ Kandidat» markiert waren).
 | MWST-Pflicht-Schwellen (100k; 150k gemeinnützig) | nur Dossier (`recherche/gesellschaftsgruendung.md` Teil 5) — NICHT verdrahtet | ESTV-Abruf 6.6.2026; MWSTG-Cache-Verifikation offen | jährlich + zwingend vor Verdrahtung | vor Verdrahtung |
 | Notariats-Anlaufstellen je Kanton (inkl. Listen-PDFs) | `src/lib/notariate.ts` ↔ `behoerden/notariate-kantone.md` | URLs geprüft 7.6.2026; Listen-Stände SZ 4/2026 · OW 5/2026 · NE 1/2026 · GE 6/2025; **UR/AI/BL verifiziert 7.6.2026 (System amtlich; Personenlisten teils nur offline)** | **jährlich**; UR/AI/BL vorab klären | **UR/AI/BL: vor Abnahme** · Listen: Juni 2027 |
 | Gesetzgebungs-Monitoring: «kleine BGG-Revision» | `bestimmeRechtsmittel` (Art. 74/100/46-Behauptungen) ← `normen/zustaendigkeit-engine-verifikation.md` | Botschaft 5.12.2025, parlamentarisches Stadium (Stand 6.6.2026, bj.admin.ch); **BGG-Kons. 1.4.2026 war NICHT diese Revision** (Energierecht AS 2026 99, geprüft 7.6.2026) | bei AS-Publikation: Art. 74/100/46 neu prüfen | bei Inkrafttreten |
-| Fedlex-Re-Pins terminiert: ZGB+ZPO 1.7.2026 (AS 2026 94/16); StGB 12.6.2026 (AS 2026 231) **VOLLZOGEN 12.6.2026** | `scripts/fedlex-cache.sh` ← `normen/fedlex-pin-nachverifikation-2026-06.md` | Voraus-Check 7.6.2026: KEINE zitierten Artikel betroffen — reine Re-Pins; StGB/ZPO-Dateien liegen als No-Suffix (n=0!). StGB am 12.6.2026 auf 20260612 gepinnt (Anker 477/477 stabil, zitierte Artikel normtext-identisch, nur Art. 354/357 geändert) | einmalig je Stichtag (`check:caches` + `check:zitate` danach) | 1.7.2026 |
+| Fedlex-Re-Pins terminiert: ZGB+ZPO 1.7.2026 **VOLLZOGEN 1.7.2026** (AS 2026 94/16); StGB 12.6.2026 (AS 2026 231) **VOLLZOGEN 12.6.2026** | `scripts/fedlex-cache.sh` ← `normen/fedlex-pin-nachverifikation-2026-06.md` | **ZGB→20260701/html-1** (FALLE: n=0 ist STALE ohne AS 2026 94 art_302 — nur html-1 kanonisch; 6 Anker byte-identisch, Inventar 1099→1099). **ZPO→20260701/no-suffix** (14 Anker operativ byte-identisch, art_314 nur Fussnoten-Reklassifikation; neu art_260a/b). Volltext-Snapshots + Struktur + Manifest gezielt regeneriert (`--erlass=zgb,zpo`), Engine-golden byte-gleich, adversarial QS-GP. `check:caches`/`check:zitate` grün 1.7.2026 | einmalig je Stichtag (`check:caches`+`check:zitate`+ggf. `normtext --erlass`) | Jan. 2027 |
 | HG-Bestand & internationale Spruchkörper (Art. 6 IV lit. c ZPO) | `zustaendigkeit.ts` (HG-Weichen) ← dito | ZH/BE/AG/SG, Stand 6.6.2026 | bei kantonaler Errichtung nachführen | — |
 | AHV/IV/EO Selbständige (Satz, sinkende Skala) + Bundes-Verzugszinsen | nur Dossiers (`gesellschaftsgruendung.md` Teil 5; `recherche/INDEX.md`-Nachträge) — nicht verdrahtet | 10,0 % / Skala < CHF 60'500 (Merkblatt 2.02, 2026); EFD 4,0 % | **jährlich** + vor Verdrahtung | Jan. 2027 |
 | Amtliche Muster-Suiten (Statuten/Urkunden/Erklärungen/KE) | `bibliothek/muster/` (MANIFEST.md) ← Bausteine der 3 Dokumentmappen | ZH 26.7.2024 · SG «…2023» · GL undatiert · EHRA 1.4.2017 (ÜBERHOLT, nur Referenz) | bei OR-/HRegV-Rechtsänderung neu abrufen + Baustein-Abgleich | mit nächstem OR-Pin |
@@ -40,7 +40,7 @@ Kandidat» markiert waren).
 | MWST-Normalsatz in «zzgl. MwSt.»-Rechtsbegehren-Bausteinen | nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 2 R6) — NICHT verdrahtet; Quellen nennen überholte 7,7 %/8 %, Dossier beziffert bewusst NIE (Engine soll parametrisieren: heute 8,1 %, s. MWST-Zeile oben) | 10.6.2026 | jährlich + zwingend vor Bau der Vorlage «ordentliche Klage» | vor Verdrahtung |
 | BGer-Praxis Vermieter-Klage Mietzinserhöhung = Feststellungsklage (4A_616/2020) als Begehren-Weiche | nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 4.4) — nicht verdrahtet | Urteil 6.5.2021 (via Privatquelle 2022) | bei Miet-Dossier-Pflege / neuem BGE | vor Verdrahtung |
 | Zulässigkeit abstraktes Erbteilungs-Begehren unter eidg. ZPO (BGer offen) | nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 4.5) | Quellen-Stand 2017/2018 | vor Bau einer Erbteilungs-Klage-Vorlage neu prüfen | vor Verdrahtung |
-| Streitwert-Formeln Miete (3-Jahres-Sperrfrist BGE 137 III 389 · 20×-Regel Art. 92 II ZPO) + Ordnungsbussen Art. 343 I lit. b/c (5000/1000) | nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 4.4, § 2 R14) — nicht verdrahtet | ZPO-Cache 20250101 / BGE | bei ZPO-Re-Pin (nächster: 1.7.2026, s. Re-Pin-Zeile) | 1.7.2026 |
+| Streitwert-Formeln Miete (3-Jahres-Sperrfrist BGE 137 III 389 · 20×-Regel Art. 92 II ZPO) + Ordnungsbussen Art. 343 I lit. b/c (5000/1000) | nur Dossier (`recherche/ordentliche-klage-rechtsbegehren.md` § 4.4, § 2 R14) — nicht verdrahtet | ZPO-Cache **20260701** / BGE — beim ZPO-Re-Pin 1.7.2026 verifiziert: Fristen-/Zuständigkeits-Anker (142–148, 314, 321, 92 II i.V.m. 2–94a) byte-identisch, Dossier-Werte unverändert | erneut vor Verdrahtung / bei nächstem ZPO-Re-Pin | vor Verdrahtung |
 
 ## Konventionen
 
@@ -58,9 +58,14 @@ Kandidat» markiert waren).
 - **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
 
 ## Terminierte Nachfolgefassungen kantonaler Kosten-Erlasse (✓2-Befund 5.6.2026)
-- **SG Gerichtskostenverordnung (GKV, sGS 941.12): in Vollzug BIS 30.6.2026**
-  — ab 1.7.2026 gilt eine Nachfolgefassung → vor jeder Nutzung ab Juli 2026
-  neu ziehen (Staffeln können ändern!).
+- **SG Gerichtskostenverordnung (GKV, sGS 941.12): Nachfolgefassung seit 1.7.2026 in Vollzug — AUFGELÖST + verifiziert 1.7.2026.**
+  Nachtrag vom 5.12.2025 (nGS 2026-001), LexWork `current_version` 3863. Art. 10
+  (Entscheidgebühren-Rahmen Fr. 500.– bis Fr. 6000.–) und Art. 11 (Streitwert-%-
+  Decke: über 50k→höchstens 200 %, über 100k→300 %, je weitere 250k→je +100 %)
+  sind **wortgleich zur Vorfassung** → Rechner-Werte (`gerichtskosten.ts` SG)
+  unverändert korrekt. Verifiziert gegen die amtliche in-Kraft-Fassung
+  (`gesetzessammlung.sg.ch/api/de/versions/3863/pdf_file`, pdfjs-Extraktion Art. 10/11,
+  1.7.2026). Nächste periodische Prüfung: Juni 2027 (kein publizierter Sunset).
 - **GR Honorarverordnung (HV, BR 310.250): bis 31.12.2026** (Nachfolge 1.1.2027).
 - **BE EAV (BSG 168.711, amtliche Anwälte): bis 31.12.2026** (Nachfolge 1.1.2027).
 - Quelle: OrdoLex-API `current_version`-Metadaten (Doppelcheck 5.6.2026).
@@ -75,13 +80,17 @@ Kandidat» markiert waren).
   hinkte hinterher. Der UI-Vorbehalt in zustaendigkeitKosten kann nach
   Davids Abnahme des Kostenrechner-Dossiers fallen.
 
-## SG GKV — DIVERGENZ zum Sunset 30.6.2026 (6.6.2026)
-Die Gebühren-Tiefenerfassung fand im aktuell publizierten konsolidierten
-Text (gesetzessammlung.sg.ch 941.12) KEINE Sunset-Klausel und keine
-publizierte Nachfolgefassung; der ✓2-Befund vom 5.6. («in Vollzug bis
-30.6.2026», OrdoLex-Metadaten) bleibt als Vorbehalt stehen. → Am
-1.7.2026 aktiv prüfen, welche Aussage zutrifft; bis dahin Hinweis in
-zustaendigkeitKosten.SG unverändert lassen.
+## SG GKV — DIVERGENZ zum Sunset 30.6.2026 — AUFGELÖST 1.7.2026
+Am 5./6.6.2026 fand die Gebühren-Tiefenerfassung im damals publizierten
+konsolidierten Text KEINE Sunset-Klausel und keine publizierte Nachfolge; die
+OrdoLex-Metadaten «in Vollzug bis 30. Juni 2026» blieben als Vorbehalt stehen.
+**Auflösung 1.7.2026:** Die LexWork-API führt seit heute `current_version` 3863
+«Aktuelle Fassung in Vollzug seit: 01.07.2026 (Erlassdatum 05.12.2025)» — die
+Nachfolge existierte real (Nachtrag 5.12.2025, nGS 2026-001), war am 6.6. nur
+noch nicht in der Konsolidierung sichtbar. Art. 10/11 sind wortgleich zur
+Vorfassung (s. Abschnitt «Terminierte Nachfolgefassungen» oben) → die Rechner-
+Werte (`zustaendigkeitKosten.SG` / `gerichtskosten.ts`) bleiben unverändert
+korrekt; der UI-Vorbehalt kann unabhängig davon nach Davids Abnahme fallen.
 
 ## FR Bezirksgericht Saane — PROVISORISCHE Adresse (Re-Audit 6.6.2026)
 Route d'Englisberg 13, 1763 Granges-Paccot ist ein Provisorium (Umzug

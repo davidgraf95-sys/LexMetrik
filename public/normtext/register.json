@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-01",
   "erlasse": [
     {
       "key": "ZGB",
@@ -14,9 +14,9 @@
       "status": "snapshot",
       "datei": "bund/ZGB.json",
       "artikelAnzahl": 1277,
-      "stand": "2026-01-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de",
-      "fassungsToken": "20260101",
+      "fassungsToken": "20260701",
       "pdfPfad": null
     },
     {
@@ -751,10 +751,10 @@
       "rang": 1,
       "status": "snapshot",
       "datei": "bund/ZPO.json",
-      "artikelAnzahl": 428,
-      "stand": "2025-01-01",
+      "artikelAnzahl": 430,
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de",
-      "fassungsToken": "20250101",
+      "fassungsToken": "20260701",
       "pdfPfad": null
     },
     {
