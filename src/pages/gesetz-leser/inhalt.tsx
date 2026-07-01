@@ -48,6 +48,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const [manifest, setManifest] = useState<BrowseManifest | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
+  // Rank 9 (QS-PERF, §15/3): entprellter Suchwert. Das Eingabefeld bleibt sofort
+  // responsiv (`suche`), aber die TEUREN Ableitungen — Treffer-Filter über ~1000
+  // Artikel + IntersectionObserver-Neuaufbau — laufen erst ~200 ms nach dem letzten
+  // Tastendruck über `sucheDebounced` statt bei JEDEM Zeichen (Jank auf schwacher
+  // CPU). LEEREN wirkt SOFORT (kein Lag beim Suche-Verlassen / Treffer→Artikel-Sprung,
+  // `springeZuArtikel` setzt setSuche('')). Reine Timing-Optimierung (§6.4): ändert
+  // nur WANN gefiltert wird, nie WAS (dieselbe passtAufSuche-Menge, dieselbe Ansicht).
+  const [sucheDebounced, setSucheDebounced] = useState('');
+  useEffect(() => {
+    // Leeren: 0 ms (praktisch sofort, ein Tick — kein Lag beim Suche-Verlassen /
+    // Treffer→Artikel-Sprung). Tippen: 200 ms entprellt. Beide über setTimeout,
+    // damit kein synchrones set-state-in-effect entsteht (Muster wie UniversalSuche).
+    const id = window.setTimeout(() => setSucheDebounced(suche), suche === '' ? 0 : 200);
+    return () => window.clearTimeout(id);
+  }, [suche]);
   // Scrollposition VOR der Suche merken → beim Leeren der Suche dorthin zurück,
   // statt an den Anfang zu springen (Auftrag David). Ein Treffer-Klick nullt das
   // (springt stattdessen zum Artikel).
@@ -424,22 +439,25 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // «aus dem Bild». Nach oben scrollen holt Suchleiste + Gliederung zurück ins
   // Sichtfeld. Reine Scroll-Steuerung (kein setState) → keine Render-Kaskade.
   useEffect(() => {
+    // An `sucheDebounced` gekoppelt (nicht `suche`): der Ansichtswechsel Volltext↔
+    // Trefferliste erfolgt über `treffer` (aus sucheDebounced), darum muss die
+    // Scroll-Rettung/-Rückgabe mit genau diesem Moment fluchten (Rank 9).
     const war = sucheVorher.current;
-    sucheVorher.current = suche;
+    sucheVorher.current = sucheDebounced;
     if (typeof window === 'undefined') return;
     // Im Pane scrollt der Pane-Container, nicht das Fenster (B-2.5).
     const sc = paneRoot(imPane, wurzel);
     const hole = () => sc ? sc.scrollTop : window.scrollY;
     const setze = (y: number) => sc ? sc.scrollTo(0, y) : window.scrollTo(0, y);
-    if (!war && suche) {
+    if (!war && sucheDebounced) {
       scrollVorSuche.current = hole();
       window.requestAnimationFrame(() => setze(0));
-    } else if (war && !suche && scrollVorSuche.current != null) {
+    } else if (war && !sucheDebounced && scrollVorSuche.current != null) {
       const y = scrollVorSuche.current;
       scrollVorSuche.current = null;
       window.requestAnimationFrame(() => setze(y));
     }
-  }, [suche, imPane, wurzel]);
+  }, [sucheDebounced, imPane, wurzel]);
 
   // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
   const internRefs = useMemo<InternRefs | undefined>(() => {
@@ -585,8 +603,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     }, { root: paneRoot(imPane, wurzel), rootMargin: '0px 0px -55% 0px', threshold: 0 });
     // Alle aktuell gerenderten Artikel beobachten — im Pane nur die DIESES Panes
     // (B-2.5: sonst beobachtet der Spy auch das andere Pane → falsches Live-Label).
-    // Auf-/Zuklappen (offen) und Suche (suche) verändern die DOM-Artikelmenge → Effekt
-    // läuft über die Deps neu und beobachtet die dann sichtbaren Artikel.
+    // Auf-/Zuklappen (offen) und Suche (sucheDebounced) verändern die DOM-Artikelmenge
+    // → Effekt läuft über die Deps neu und beobachtet die dann sichtbaren Artikel.
+    // Rank 9: an sucheDebounced statt suche gekoppelt — der Observer-Neuaufbau (alle
+    // art--Knoten neu beobachten) läuft so nicht bei jedem Tastendruck.
     (paneRoot(imPane, wurzel) ?? document).querySelectorAll('[id^="art-"]').forEach((el) => io.observe(el));
     return () => {
       io.disconnect();
@@ -594,7 +614,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       if (tabArtikelTimer.current != null) window.clearTimeout(tabArtikelTimer.current);
       if (aktArtikelTimer.current != null) window.clearTimeout(aktArtikelTimer.current);
     };
-  }, [sektionen, ohneGliederung, basisPfad, offen, suche, istSekundaer, imPane, wurzel]);
+  }, [sektionen, ohneGliederung, basisPfad, offen, sucheDebounced, istSekundaer, imPane, wurzel]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, nie die
   // Seite scrollen. Läuft bei JEDEM Wechsel des aktiven Pfads (aktivIds) UND nach
@@ -619,7 +639,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     }
   }, [aktivIds, tocBaum, imPane, wurzel]);
 
-  const sucheTrim = suche.trim().toLowerCase();
+  const sucheTrim = sucheDebounced.trim().toLowerCase(); // Rank 9: entprellt (nicht `suche`)
   const treffer = useMemo(
     () => (eintraege && sucheTrim ? eintraege.filter((e) => passtAufSuche(e, sucheTrim)) : null),
     [eintraege, sucheTrim],
@@ -997,7 +1017,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-[52rem]') : 'mx-auto w-full max-w-[56rem]'}`}>
           {treffer ? (
             <div className="space-y-4">
-              <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
+              <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
               {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
