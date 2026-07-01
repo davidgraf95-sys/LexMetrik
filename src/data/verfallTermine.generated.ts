@@ -18,11 +18,6 @@ export const VERFALL_MANUELL_ANZAHL = 19;
 
 export const VERFALL_TERMINE: VerfallTermin[] = [
   {
-    "label": "SG Gerichtskostenverordnung (GKV, sGS 941.12): in Vollzug BIS 30.6.2026",
-    "datum": "2026-06-30",
-    "quelle": "Freitext"
-  },
-  {
     "label": "Fedlex-Re-Pins terminiert: ZGB+ZPO 1.7.2026 (AS 2026 94/16); StGB 12.6.2026 (AS 2026 231) VOLLZOGEN 12.6.2026",
     "datum": "2026-07-01",
     "quelle": "Tabelle",

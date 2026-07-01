@@ -58,9 +58,14 @@ Kandidat» markiert waren).
 - **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
 
 ## Terminierte Nachfolgefassungen kantonaler Kosten-Erlasse (✓2-Befund 5.6.2026)
-- **SG Gerichtskostenverordnung (GKV, sGS 941.12): in Vollzug BIS 30.6.2026**
-  — ab 1.7.2026 gilt eine Nachfolgefassung → vor jeder Nutzung ab Juli 2026
-  neu ziehen (Staffeln können ändern!).
+- **SG Gerichtskostenverordnung (GKV, sGS 941.12): Nachfolgefassung seit 1.7.2026 in Vollzug — AUFGELÖST + verifiziert 1.7.2026.**
+  Nachtrag vom 5.12.2025 (nGS 2026-001), LexWork `current_version` 3863. Art. 10
+  (Entscheidgebühren-Rahmen Fr. 500.– bis Fr. 6000.–) und Art. 11 (Streitwert-%-
+  Decke: über 50k→höchstens 200 %, über 100k→300 %, je weitere 250k→je +100 %)
+  sind **wortgleich zur Vorfassung** → Rechner-Werte (`gerichtskosten.ts` SG)
+  unverändert korrekt. Verifiziert gegen die amtliche in-Kraft-Fassung
+  (`gesetzessammlung.sg.ch/api/de/versions/3863/pdf_file`, pdfjs-Extraktion Art. 10/11,
+  1.7.2026). Nächste periodische Prüfung: Juni 2027 (kein publizierter Sunset).
 - **GR Honorarverordnung (HV, BR 310.250): bis 31.12.2026** (Nachfolge 1.1.2027).
 - **BE EAV (BSG 168.711, amtliche Anwälte): bis 31.12.2026** (Nachfolge 1.1.2027).
 - Quelle: OrdoLex-API `current_version`-Metadaten (Doppelcheck 5.6.2026).
@@ -75,13 +80,17 @@ Kandidat» markiert waren).
   hinkte hinterher. Der UI-Vorbehalt in zustaendigkeitKosten kann nach
   Davids Abnahme des Kostenrechner-Dossiers fallen.
 
-## SG GKV — DIVERGENZ zum Sunset 30.6.2026 (6.6.2026)
-Die Gebühren-Tiefenerfassung fand im aktuell publizierten konsolidierten
-Text (gesetzessammlung.sg.ch 941.12) KEINE Sunset-Klausel und keine
-publizierte Nachfolgefassung; der ✓2-Befund vom 5.6. («in Vollzug bis
-30.6.2026», OrdoLex-Metadaten) bleibt als Vorbehalt stehen. → Am
-1.7.2026 aktiv prüfen, welche Aussage zutrifft; bis dahin Hinweis in
-zustaendigkeitKosten.SG unverändert lassen.
+## SG GKV — DIVERGENZ zum Sunset 30.6.2026 — AUFGELÖST 1.7.2026
+Am 5./6.6.2026 fand die Gebühren-Tiefenerfassung im damals publizierten
+konsolidierten Text KEINE Sunset-Klausel und keine publizierte Nachfolge; die
+OrdoLex-Metadaten «in Vollzug bis 30. Juni 2026» blieben als Vorbehalt stehen.
+**Auflösung 1.7.2026:** Die LexWork-API führt seit heute `current_version` 3863
+«Aktuelle Fassung in Vollzug seit: 01.07.2026 (Erlassdatum 05.12.2025)» — die
+Nachfolge existierte real (Nachtrag 5.12.2025, nGS 2026-001), war am 6.6. nur
+noch nicht in der Konsolidierung sichtbar. Art. 10/11 sind wortgleich zur
+Vorfassung (s. Abschnitt «Terminierte Nachfolgefassungen» oben) → die Rechner-
+Werte (`zustaendigkeitKosten.SG` / `gerichtskosten.ts`) bleiben unverändert
+korrekt; der UI-Vorbehalt kann unabhängig davon nach Davids Abnahme fallen.
 
 ## FR Bezirksgericht Saane — PROVISORISCHE Adresse (Re-Audit 6.6.2026)
 Route d'Englisberg 13, 1763 Granges-Paccot ist ein Provisorium (Umzug

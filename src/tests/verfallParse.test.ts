@@ -34,13 +34,12 @@ describe('parseZelle — Datums-Grammatik', () => {
 });
 
 describe('sammleTermine — gegen das echte Register', () => {
-  it('erfasst den am 30.6.2026 ablaufenden SG-GKV-Tarif (S0-Kern)', () => {
+  it('SG-GKV-Nachfolgefassung 1.7.2026 aufgelöst → kein Verfall-Termin mehr (S0-Kern erledigt)', () => {
+    // Am 1.7.2026 verifiziert: LexWork current_version 3863 in Vollzug seit
+    // 1.7.2026 (Nachtrag 5.12.2025, nGS 2026-001), Art. 10/11 wortgleich → die
+    // «bis 30.6.2026»-Freitext-Frist ist aufgelöst und trägt keinen Termin mehr.
     const sg = termine.find((t) => t.label.includes('SG Gerichtskostenverordnung'));
-    expect(sg).toBeDefined();
-    expect(sg?.datum).toBe('2026-06-30');
-    expect(sg?.quelle).toBe('Freitext');
-    // Volles Label für die UI (nicht auf 70 Zeichen abgeschnitten).
-    expect(sg?.label).toContain('30.6.2026');
+    expect(sg).toBeUndefined();
   });
   it('erfasst die weiteren datierten Verfälle aus «Pflege & Termine»', () => {
     expect(datumVon('Referenzzinssatz')).toBe('2026-09-01'); // Anfang Sept.
