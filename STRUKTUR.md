@@ -23,6 +23,24 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — QS-PERF Quick-Win-Batch 2 (Rank 4 + Rank 3; NICHT deployt)
+
+**Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`, Branch `feat/perf-batch2-render-cls-fonts`).**
+Zweiter Quick-Win-Batch aus `FAHRPLAN-PERFORMANCE.md`, rein Darstellungs-/Build-Schicht (kein
+Risiko-Pfad → `check:gegenpruefung` n/a). **Rank 4 (Render-Hotpath):** `SektionBaumTOC` `React.memo`;
+`tocToggle`/`springeZuSektion` `useCallback` (Letzteres über den early-return gehoben = der in Batch 1
+zurückgestellte Hook-Reorder); Sektions-Bereichslabel + Einzelartikel-Flag in **einem** Bottom-up-
+`useMemo` (`sektionMeta`, `[sektionen,artIndex]`) statt 2× O(Subtree) je Sektion je Scroll-Render —
+kappt die Scroll-Spy-Re-Render-Kaskade über ~1000 OR-Artikel. Labels byte-identisch. **Rank 3
+(Startseiten-CLS):** `NewsHeader` reserviert beim async-Laden **und** am geladenen Streifen dieselbe
+`min-h-[12.5rem]`; **gemessen** (Playwright/Preview) Streifen 11,61 rem Desktop / 11,17 rem mobil <
+12,5 rem → CLS des Streifens = 0. **Rank 11 (Fonts) bewusst verschoben** — braucht gemessene
+Metrik-Overrides (fontkit/Fontaine), geraten würde CLS verschlechtern. **Verifikation:** `npm run gate`
+grün (2870 Tests + golden 201 byte-gleich + lint + alle checks), `check:perf-budget` grün (Entry 30,3 KB /
+vendor-react 71,7 KB gzip), 49 e2e grün (16 Reader inkl. TOC-Sprung/Scroll-Spy + 33 a11y/Rechtsprechung).
+Commit-Trailer `Roadmap: QS-PERF` · `Gegenpruefung: n/a — reine Darstellungsschicht`. **Push/Deploy §9
+offen (Davids Ja).** Detail-Stand: `FAHRPLAN-PERFORMANCE.md` §Stand.
+
 ## Session 1.7.2026 — QS-GP Gegenprüfungs-Gate gebaut (Bausteine a+b+c) — gemergt PR #67 + PROD-LIVE
 
 **Grundlagenarbeit (Querschnitt QS-GP, `[OF]`, ultracode).** Das adversariale Gegenprüfungs-Protokoll
