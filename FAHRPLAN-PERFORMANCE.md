@@ -68,10 +68,23 @@ plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):
   Navigation → erstes Gesetz öffnet ohne Chunk-Parse-Warten/Spinner-Frame. Rein additiver Cache-Warm,
   off-critical-path (§6.4/§15/3). Der CLS-Teil von Rank 2 war schon in Batch 1 (min-h) gelöst.
 
+**1.7.2026 — Rank 9 (Teil: In-Gesetz-Suche entprellt) gebaut** (Branch `feat/perf-batch4-suche-debounce`,
+Gate grün + 15 Reader-e2e grün):
+
+- ✅ **Rank 9 (Such-Debounce)** — die In-Gesetz-Suche filterte bei JEDEM Tastendruck ~1000 Artikel neu
+  UND baute den IntersectionObserver neu auf (Jank auf schwacher CPU). Neu: `sucheDebounced` (200 ms,
+  Leeren 0 ms/sofort für den Treffer→Artikel-Sprung) speist Treffer-Filter + Observer-Dep + Scroll-Rettung;
+  das Eingabefeld bleibt an `suche` sofort responsiv. Reine Timing-Optimierung (§6.4): dieselbe
+  `passtAufSuche`-Menge, dieselbe Ansicht — nur WANN gefiltert wird. Gilt auch im Einzel-Reader (nicht nur
+  Split-View). **Verifikation:** Gate grün, `gesetze.e2e.ts:54` (In-Gesetz-Suche) + 14 weitere Reader-e2e grün.
+- ⏸️ **Rank 9 (Pane-Open-Guard) offen** — «höchstens 1 schweres OR-Klasse-Pane gleichzeitig» braucht eine
+  deterministische Heavy-Klassifikation aus dem Register + disabled-Zustand in der Split-View-Pane-Öffnung
+  (eigener, split-view-spezifischer Schritt).
+
 **Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · News-Prerender (3-optional) ·
 **M-Daten-Pfad → LCP** (6 idle-Defer *braucht Architektur-Entscheid*, 7 Web-Worker-Suche,
 8 Register-Sharding, 10 Snapshot-Format — **7/8/10 sind Risiko-Pfad → `check:gegenpruefung`**) ·
-Split-View-Feinschliff (9 Debounce/Pane-Guard, 12/13 marginal, 14) · optionaler build-time-Preload
+Split-View-Feinschliff (9 Pane-Guard, 12/13 marginal, 14) · optionaler build-time-Preload
 der 2 latin-woff2 (LCP-sekundär, braucht hashfeste Injektion).
 
 > **«Dry»-Grenze der sicheren Autonom-Arbeit (1.7.2026):** CLS (2/3), Render-CPU (1/4), Fonts (11),

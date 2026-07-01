@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — QS-PERF Rank 9 (Teil): In-Gesetz-Suche entprellt (Branch `feat/perf-batch4-suche-debounce`)
+
+**Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Die In-Gesetz-Suche im Reader filterte bei
+JEDEM Tastendruck ~1000 Artikel neu und baute den IntersectionObserver neu auf → Jank auf schwacher CPU.
+Neu `sucheDebounced` (200 ms; Leeren 0 ms/sofort, damit Treffer→Artikel-Sprung nicht laggt) speist
+Treffer-Filter (`inhalt.tsx` treffer-useMemo), Observer-Dep und Scroll-Rettung; das Eingabefeld bleibt an
+`suche` sofort responsiv. Muster wie `UniversalSuche` (setTimeout, kein synchrones set-state-in-effect).
+Reine Timing-Optimierung (§6.4): identische `passtAufSuche`-Menge/Ansicht, nur WANN gefiltert wird — gilt
+auch im Einzel-Reader. **Verifikation:** `npm run gate` grün (golden byte-gleich), 15 Reader-e2e grün inkl.
+`gesetze.e2e.ts:54` (In-Gesetz-Suche funktioniert). Trailer `Roadmap: QS-PERF` · `Gegenpruefung: n/a`. **Offen
+bleibt** der Pane-Open-Guard-Teil von Rank 9 (split-view-spezifisch). Detail: `FAHRPLAN-PERFORMANCE.md` §Stand.
+
 ## Session 1.7.2026 — Fix: Kompakt-Kalender Einzelmonat füllt die Karte (Branch `fix/kalender-einzelmonat-fuellt-karte`)
 
 **UI-Bugfix (im Zuge QS-PERF entdeckt).** Die e2e `schnellrechner-kalender.e2e.ts:38` («füllt seine
