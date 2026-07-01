@@ -134,3 +134,44 @@ Die gemeinsame Diff-Hash-Kernfunktion wird von Tor und Helfer geteilt (eine Quel
 
 `npm run gate` grün; die sechs Tor-Tests grün; golden byte-gleich; `check:plan` grün nach
 ROADMAP-Verdrahtung. Verhaltensändernd an Engines: **nein** → keine Davids-Fachzeit.
+
+## Verifikations-Befunde (ultracode-Bau + adversariale Prüfung, 2026-07-01)
+
+Gebaut per ultracode-Workflow (8 Agenten): 3-Linsen-Härtung → sequenzieller Bau → 3 Skeptiker +
+Schluss-Tor. Ergebnis: **GATE GRÜN, golden 201 Fälle byte-gleich, 21 Tests grün.** Zusätzlich
+unabhängig gegengeprüft (Live-E2E: ROT ohne Nachweis → quittieren → GRÜN → Byte-Änderung → ROT).
+
+Die Härtung fing 4 **Blocker** vor dem Bau (alle im Kern behoben, s. `scripts/gegenpruefung/kern.ts`):
+1. `git status` ohne `-uall` kollabiert neue Verzeichnisse zu `?? public/` → ein neu generierter
+   Extraktions-Teilbaum entkäme dem Tor. **Fix:** `--porcelain=v1 -z -uall --no-renames`.
+2. Glob `public/normtext/*.json` trifft nur 4 Top-Level-Index-Dateien, nicht die verschachtelten
+   Volltexte (OR.json etc.). **Fix:** `public/normtext/**` (Präfix-Prädikat `startsWith`).
+3. Die Rechnen-„Alternation" `src/lib/*(a|b|…)*.ts` ist **keine** gültige Glob-Syntax (matcht 75/75
+   top-level `.ts`). **Fix:** hand-gerolltes Prädikat `^src/lib/[^/]+\.ts$` + Basename-Regex auf die
+   Stichwörter (nur die ~28 gewollten Engine-Dateien).
+4. Extraktions-Snapshots liegen verschachtelt (2589 JSON) → einstufiges `*.json` unter-matcht.
+   Mit Fix 2 erledigt.
+
+**Bewusste Design-Grenze (kein Fix — dokumentiert):** Der Kern bindet an die **Working-Tree-Bytes
+von Platte**, nicht an den Git-Index. Ein Angreifer könnte `git add` (böse v2) → Platte auf (gut v1)
+zurücksetzen → blank `git commit` und so einen nie geprüften Index-Inhalt mit grünem Tor committen.
+**Nicht geschlossen, weil:** (a) das Bedrohungsmodell ist Vergessens-Disziplin, kein Angreifer
+(kein Git-Hook, keine CI-Durchsetzung — ein Angreifer überspringt `npm run gate` ohnehin); (b) ein
+„Index==Working-Tree"-Wächter würde die **nach CLAUDE.md §12.2 vorgeschriebenen Teil-Commits per
+Pathspec** (`git commit -- <dateien>`, Index ≠ WT legitim) ständig fälschlich rot machen. Der übliche
+Weg `git add -A && git commit` schliesst die Lücke ohnehin. **Auflage:** quittieren unmittelbar vor
+dem Commit; das Tor bindet an den Working-Tree.
+
+**Zwei Nice-Beobachtungen (kein Bypass, akzeptiert):** (1) Die Auto-Ausnahme `scripts/**` +
+Basename-„check" nimmt bewusst die Extraktions-**Check-Skripte** (`scripts/normtext/check-*.ts`) aus —
+korrekt, da diese reine Prüflogik sind; ein hypothetisches Extraktions-Skript mit „check" im Namen
+wäre eine Namens-Kollision (per Namenswahl vermeidbar). (2) `check-gegenpruefung.ts` führt seine CLI
+bei jedem Nicht-vitest-Import aus (nur `VITEST`-Guard) — fragil, aber benigne (kein `src/` importiert
+`scripts/`; Aufruf nur als CLI). Beide nicht änderungswürdig.
+
+## Offen nach dem Bau
+
+- **Nicht committet** (§9 — Davids Ja abwarten); Branch `feat/gegenpruefung-gate`.
+- **STRUKTUR.md**-Session-Karte + **CLAUDE.md §14.4**-Wortlaut („Tor derzeit im Aufbau" →
+  „Tor steht") beim committenden/mergenden Schritt nachziehen.
+- Baustein **d** (rückwirkende Korpus-Kampagne) — spätere Runde.

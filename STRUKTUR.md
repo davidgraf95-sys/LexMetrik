@@ -23,6 +23,25 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — QS-GP Gegenprüfungs-Gate gebaut (Bausteine a+b+c; NICHT deployt)
+
+**Grundlagenarbeit (Querschnitt QS-GP, `[OF]`, ultracode).** Das adversariale Gegenprüfungs-Protokoll
+ist von Session-Disziplin zu einem **mechanischen Tor** geworden. **Baustein a:** `check:gegenpruefung`
+(`scripts/check-gegenpruefung.ts` + geteilte Kernfunktion `scripts/gegenpruefung/kern.ts`) — schneidet
+den Working-Tree-Diff ∩ Risiko-Pfade (Rechnen/Extraktion/Norm-Tarif) ∖ Auto-Ausnahme (reine Prüflogik)
+und verlangt einen **an genau diesen Diff gebundenen sha256-Nachweis**; fehlt/Mismatch/Verdikt≠bestanden
+⇒ ROT. CI-Selbstschutz (grün no-op), in `npm run check` (nur lokales `gate`), **nicht** in CI.
+**Baustein b:** Skill `~/.claude/skills/gegenpruefung/SKILL.md` (unabhängig, Opus, frischer Kontext,
+widerlegen; Modus Extraktion zeichenweise / Modus Rechnen unabhängig aus der Norm). **Baustein c:**
+Register `bibliothek/register/gegenpruefung-register.md` + Helfer `npm run gegenpruefung:ok`
+(schreibt gitignoredes `.gegenpruefung-pending` + Register-Zeile) + WARN-Kopplung an überholte Quelle-Pins
+(`scripts/fedlex-pins.ts`, aus `fedlex-versionen-pruefen.ts` extrahiert). Baustein d (rückwirkende
+Kampagne) bewusst später. **Verifikation:** ultracode-Workflow (3-Linsen-Härtung fing 4 Blocker: `-uall`,
+verschachtelte `public/normtext/**`, kaputte Glob-Alternation → hand-gerolltes Prädikat; Bau; 3 Skeptiker
+ohne Bypass) + unabhängiger Live-E2E; Gate grün, **golden 201 Fälle byte-gleich**, 21 Tests grün.
+Golden-neutral (reine Prüflogik), keine Davids-Fachzeit. Design + Befunde:
+`docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md`. CLAUDE.md §14.4 auf «Tor steht» aktualisiert.
+
 ## Session 1.7.2026 — I4 Bemessungskriterien + I9-Rest → W1·4 geparkt, 26×-Slot frei (NICHT gemergt/deployt)
 
 **W1·4-Abschluss (Prozesskosten-Cockpit).** **I4 `kriterien`-Feld:** neues Anzeigefeld

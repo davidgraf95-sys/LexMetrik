@@ -19,27 +19,11 @@
 //          (§7), Quellen-Register nachführen.
 // Exit 0 → alle Pins aktuell; künftige Fassungen nur als HINWEIS.
 // Exit 2 → Endpoint/Netz-Fehler (keine Aussage möglich).
-import { readFileSync } from 'node:fs';
-import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+// SSoT §5: die Pin-Liste wird aus scripts/fedlex-cache.sh geparst — die
+// Parse-Logik liegt einmal in scripts/fedlex-pins.ts (auch vom Gegenprüfungs-Tor genutzt).
+import { lesePins, type Pin } from './fedlex-pins';
 
-const CACHE_SH = resolve(dirname(fileURLToPath(import.meta.url)), 'fedlex-cache.sh');
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';
-
-type Pin = { name: string; eli: string; kons: string }; // kons als ISO «YYYY-MM-DD»
-
-function lesePins(): Pin[] {
-  const sh = readFileSync(CACHE_SH, 'utf8');
-  const pins: Pin[] = [];
-  for (const m of sh.matchAll(/^\s*"([a-z_]+)\|([a-z0-9/_]+)\|(\d{8})\|/gm)) {
-    pins.push({
-      name: m[1],
-      eli: m[2],
-      kons: `${m[3].slice(0, 4)}-${m[3].slice(4, 6)}-${m[3].slice(6, 8)}`,
-    });
-  }
-  return pins;
-}
 
 async function frageKonsolidierungen(pins: Pin[]): Promise<Map<string, string[]>> {
   const werte = pins.map((p) => `<https://fedlex.data.admin.ch/eli/${p.eli}>`).join(' ');

@@ -50,3 +50,7 @@ e2e-shots/
 # Recherche-/MCP-Artefakte (nicht versionieren)
 .playwright-mcp/
 public/such-index/
+
+# Gegenprüfungs-Gate (QS-GP): Vor-Commit-Türsteher, an den lokalen Diff gebunden
+# (das dauerhafte Register bibliothek/register/gegenpruefung-register.md wird committet)
+bibliothek/.gegenpruefung-pending
