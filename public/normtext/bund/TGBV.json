@@ -248,7 +248,7 @@
         },
         {
           "absatz": "4",
-          "text": "Sie realisieren die im Anhang 5 aufgeführten UPI-Schnittstellen, soweit die Grundbuchämter die Angaben für die Zuordnung der AHV-Nummer nicht aus einer Datenquelle nach Artikel 23 b Buchstabe b GBV beziehen."
+          "text": "Sie realisieren die im Anhang 5 aufgeführten UPI-Schnittstellen, soweit die Grundbuchämter die Angaben für die Zuordnung der AHV-Nummer nicht aus einer Datenquelle nach Artikel 23b Buchstabe b GBV beziehen."
         },
         {
           "absatz": "5",
@@ -259,7 +259,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "65d30d0be87f825673866be898e39d32699c71065c3204be13796cc65ebb5074"
+      "sha": "628cb4e38ab1b6e33e7fccbdd2461fdceb5a579b5cb609aaf3dbe5d3674d9b7d"
     },
     {
       "id": "bund/TGBV/art_7",
@@ -302,7 +302,7 @@
             },
             {
               "marke": "b",
-              "text": "den Gebieten mit dauernden Bodenverschiebungen (Art. 660 a ZGB);"
+              "text": "den Gebieten mit dauernden Bodenverschiebungen (Art. 660a ZGB);"
             },
             {
               "marke": "c",
@@ -322,7 +322,7 @@
             },
             {
               "marke": "g",
-              "text": "den Gebäudeadressen nach den Artikeln 26 b und 26 c der Verordnung vom 21. Mai 2008 über die geografischen Namen (GeoNV);"
+              "text": "den Gebäudeadressen nach den Artikeln 26b und 26c der Verordnung vom 21. Mai 2008 über die geografischen Namen (GeoNV);"
             },
             {
               "marke": "h",
@@ -339,7 +339,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "b1324bb56bcebf9b439f7618bbc531146398d1ce0c8fc92a7a81286f17f456d6"
+      "sha": "e6c4bbe5f512467f35cef9dc3927530a31d448e21a04df0b9514c96abcd16b85"
     },
     {
       "id": "bund/TGBV/art_7_b",
@@ -404,7 +404,7 @@
             },
             {
               "marke": "d",
-              "text": "die Gebäudeadressen nach den Artikeln 26 b und 26 c GeoNV;"
+              "text": "die Gebäudeadressen nach den Artikeln 26b und 26c GeoNV;"
             },
             {
               "marke": "e",
@@ -425,7 +425,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "a8ea122e091c316f55ea43b80feb59d91a2643648335cfd236d29f6cc5823654"
+      "sha": "7deea8a3b9b5cb01385935d282520fad6fd727a7b0a3d9d8af3d300ac31f2e34"
     },
     {
       "id": "bund/TGBV/art_7_d",
@@ -574,7 +574,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das kantonale System kann die von der ZAS gemeldeten Aktualisierungen unmittelbar über die UPI-Schnittstelle «Mutationsmeldungen UPI an Dritte» (Anhang 5) oder mittelbar aus einer Datenquelle nach Artikel 23 b Buchstabe b GBV beziehen."
+          "text": "Das kantonale System kann die von der ZAS gemeldeten Aktualisierungen unmittelbar über die UPI-Schnittstelle «Mutationsmeldungen UPI an Dritte» (Anhang 5) oder mittelbar aus einer Datenquelle nach Artikel 23b Buchstabe b GBV beziehen."
         },
         {
           "absatz": "2",
@@ -582,14 +582,14 @@
         },
         {
           "absatz": "3",
-          "text": "Das Vorgehen des Grundbuchamtes im Fall einer Annullierung der AHV-Nummer richtet sich in jedem Fall nach Artikel 23 d Absatz 3 GBV."
+          "text": "Das Vorgehen des Grundbuchamtes im Fall einer Annullierung der AHV-Nummer richtet sich in jedem Fall nach Artikel 23d Absatz 3 GBV."
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_8_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "42da4b5e0143d7f626900ed2047d9e19ca4443b2000423b144e2940bea14354e"
+      "sha": "3a960c77a8b270bdd728885bbd65c8cb40f8bc85c0ad792c0e38ee7f7e8b8299"
     },
     {
       "id": "bund/TGBV/art_8_b",
@@ -757,14 +757,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das kantonale System übermittelt dem Suchindex des Grundstücksuchdienstes über die Schnittstelle die Daten nach Artikel 34 b Absätze 5 und 6 GBV."
+          "text": "Das kantonale System übermittelt dem Suchindex des Grundstücksuchdienstes über die Schnittstelle die Daten nach Artikel 34b Absätze 5 und 6 GBV."
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_10_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "c1b0edd9889c315a23ca31125d52932d5a62a1f4de4023c4d916c7b55e50b058"
+      "sha": "35d1989a7a32280c53e04e29778131dbfb82ffc8683e862e7ef55010526ca367"
     },
     {
       "id": "bund/TGBV/art_11",
@@ -955,7 +955,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Grundbuchanmeldungen, die nicht bereits im Rechtsgrundausweis enthalten sind: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis des Obligationenrechts (OR); die in der Anmeldung enthaltenen Angaben können zusätzlich im Format XML beigefügt werden;"
+              "text": "für Grundbuchanmeldungen, die nicht bereits im Rechtsgrundausweis enthalten sind: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2bis des Obligationenrechts (OR); die in der Anmeldung enthaltenen Angaben können zusätzlich im Format XML beigefügt werden;"
             },
             {
               "marke": "b",
@@ -963,11 +963,11 @@
             },
             {
               "marke": "c",
-              "text": "für Rechtsgrundausweise in schriftlicher Form einschliesslich Beilagen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR;"
+              "text": "für Rechtsgrundausweise in schriftlicher Form einschliesslich Beilagen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2bis OR;"
             },
             {
               "marke": "d",
-              "text": "für Gesuche um Ausstellung eines Grundbuchauszugs oder einer Eintragungsbescheinigung: PDF mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR; vorbehalten bleiben Gesuche von authentifizierten Teilnehmerinnen oder Teilnehmern im Rahmen von alternativen Übermittlungsverfahren und kantonalen Grundbuch-Informationssystemen."
+              "text": "für Gesuche um Ausstellung eines Grundbuchauszugs oder einer Eintragungsbescheinigung: PDF mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2bis OR; vorbehalten bleiben Gesuche von authentifizierten Teilnehmerinnen oder Teilnehmern im Rahmen von alternativen Übermittlungsverfahren und kantonalen Grundbuch-Informationssystemen."
             }
           ]
         }
@@ -976,7 +976,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_18",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "66e23434a8e5d97fcc2fa09df4db8d9b4b19d37d20b195634645a9877f6d81d7"
+      "sha": "ffb3460d2ace0dae061f80c6d7b3cc00f10282f4ac8ed0293388598866a6cbed"
     },
     {
       "id": "bund/TGBV/art_19",
@@ -992,11 +992,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Eintragungsbescheinigungen und Anzeigen von grundbuchlichen Verfügungen: PDF/A oder XML; auf Verlangen der Empfängerin oder des Empfängers kann das Dokument in PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR versehen werden; zusätzlich können ihm Angaben im Format XML beigefügt werden;"
+              "text": "für Eintragungsbescheinigungen und Anzeigen von grundbuchlichen Verfügungen: PDF/A oder XML; auf Verlangen der Empfängerin oder des Empfängers kann das Dokument in PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2bis OR versehen werden; zusätzlich können ihm Angaben im Format XML beigefügt werden;"
             },
             {
               "marke": "b",
-              "text": "für Fristansetzungen und Abweisungsverfügungen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR;"
+              "text": "für Fristansetzungen und Abweisungsverfügungen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2bis OR;"
             },
             {
               "marke": "c",
@@ -1013,7 +1013,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_19",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "587afd16fb728f0c843752bdb350e1178a6812df8cc4fc83b3ed8edaf4356c48"
+      "sha": "ad72420002f74792bbe0bbd4521aabc723cfc21e1b748e9b89f14a2455bafd33"
     },
     {
       "id": "bund/TGBV/art_20",
@@ -1171,14 +1171,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gesuch um Bewilligung zur Verwendung der Schnittstelle für Abfragen über den Grundstücksuchdienst muss den Nachweis enthalten, dass die technischen Anforderungen nach Artikel 22 a erfüllt sind."
+          "text": "Das Gesuch um Bewilligung zur Verwendung der Schnittstelle für Abfragen über den Grundstücksuchdienst muss den Nachweis enthalten, dass die technischen Anforderungen nach Artikel 22a erfüllt sind."
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_22_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "dd95baa211034d5d8b0dd90bbdb92957a14fca4694af4ec61bcfe5c101dbd298"
+      "sha": "dd7544f5eeca47f36106d5f343819c24b69f8a2194967e5ce637d541a28271bf"
     },
     {
       "id": "bund/TGBV/art_23",
@@ -1473,7 +1473,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 1 Bst. i, 2 Abs. 1 Bst. e, 6 Abs. 4, 8 a Abs. 1)"
+          "text": "(Art. 1 Bst. i, 2 Abs. 1 Bst. e, 6 Abs. 4, 8a Abs. 1)"
         },
         {
           "absatz": null,
@@ -1515,7 +1515,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "a6377d82c9f8ea8eacd753a70ba823e28985c1c4431ac4f988f0b55dd47d1996"
+      "sha": "b1fa5e449c13272e032ae423d8ffb75ad97a31a43c9883c53fb34da44e7735aa"
     },
     {
       "id": "bund/TGBV/annex_6",
@@ -1527,7 +1527,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 1 Bst. m, 2 Abs. 1 Bst. i, 10 a, 10 b )"
+          "text": "(Art. 1 Bst. m, 2 Abs. 1 Bst. i, 10a, 10b)"
         },
         {
           "absatz": null,
@@ -1543,7 +1543,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#annex_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "43c02c98a6dfeb2ecac493fead737c6e55dd50bdec89f440b893d14a80cb3aa2"
+      "sha": "ed22e13693eaff10ff15d565583561ba502f356c569f1734fbcf3ef7a94f4626"
     },
     {
       "id": "bund/TGBV/annex_7",
@@ -1555,7 +1555,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 1 Bst. n, 2 Abs. 1 Bst. j, 22 a, 22 b )"
+          "text": "(Art. 1 Bst. n, 2 Abs. 1 Bst. j, 22a, 22b)"
         },
         {
           "absatz": null,
@@ -1571,7 +1571,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#annex_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240101",
-      "sha": "f6d3cdab882044fff18fa75fda797e7d17d6510cfe42c8c0c4c5b5d16a148919"
+      "sha": "9621c3f8bcf62f6ae59c419e7ec5ebe2f2434e5973d7507c6553fb16e64ec358"
     }
   ]
 }

@@ -76,11 +76,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Herstellerin: jede natürliche oder juristische Person , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt; als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung unter eigenem Handelsnamen oder für einen anderen Verwendungszweck beruflich oder gewerblich abgibt; lässt eine Person einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen, so gilt sie als alleinige Herstellerin, sofern sie in der Schweiz Wohnsitz oder Geschäftssitz hat;"
+              "text": "Herstellerin: jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt; als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung unter eigenem Handelsnamen oder für einen anderen Verwendungszweck beruflich oder gewerblich abgibt; lässt eine Person einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen, so gilt sie als alleinige Herstellerin, sofern sie in der Schweiz Wohnsitz oder Geschäftssitz hat;"
             },
             {
               "marke": "b",
-              "text": "H ändlerin: jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt."
+              "text": "Händlerin: jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt."
             }
           ]
         }
@@ -89,7 +89,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "7725c1224b1383df6ce203880bbce21f6a239c697a5a3895b2e81983ef94b05c"
+      "sha": "eecd943aa12dfdb49781806d6db36c3b8bc7b23b8624af8a58116a7082d69dd6"
     },
     {
       "id": "bund/CHEMRRV/art_3",
@@ -1212,7 +1212,7 @@
             },
             {
               "marke": "–",
-              "text": "Polychlorierte Naphthaline der Formel C 10 H n Cl 8–n mit 0 ≤ n ≤ 7.",
+              "text": "Polychlorierte Naphthaline der Formel C 10 HnCl8–n mit 0 ≤ n ≤ 7.",
               "tiefe": 1
             },
             {
@@ -1296,7 +1296,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "5e13e7227d5f2a01a15789a28c78f9b405ce2f85d5da1bec0e4d3b094719f5ba"
+      "sha": "34b1b68995ead8945b8c112f57b4488cdd61e09fc598e33098aebde4f39c7338"
     },
     {
       "id": "bund/CHEMRRV/annex_1_2",
@@ -1492,17 +1492,17 @@
             },
             {
               "marke": "–",
-              "text": "halogenierte Biphenyle der Formel C 12 H n X 10-n ;",
+              "text": "halogenierte Biphenyle der Formel C 12 HnX10-n;",
               "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "halogenierte Terphenyle der Formel C 18 H n X 14–n ;",
+              "text": "halogenierte Terphenyle der Formel C 18 HnX14–n;",
               "tiefe": 1
             },
             {
               "marke": "–",
-              "text": "halogenierte Naphthaline der Formel C 10 H n X 8–n ;",
+              "text": "halogenierte Naphthaline der Formel C 10 HnX8–n;",
               "tiefe": 1
             },
             {
@@ -1553,7 +1553,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "3e96ab2adc7bb7ef9ef644f5ae4f1e8f832c3c4b7c2be2131392db7a53e296ed"
+      "sha": "f4250caec61fef541b76a581de34ab635c1519ecbcae0bcfebaef70660b95ed1"
     },
     {
       "id": "bund/CHEMRRV/annex_1_3",
@@ -2950,7 +2950,7 @@
             },
             {
               "marke": "b",
-              "text": "Importeurinnen und Exporteurinnen, die einer Branchenvereinbarung im Sinne von Artikel 41 a USG angehören, wenn die Information des BAFU durch die Branchenvereinbarung sichergestellt ist."
+              "text": "Importeurinnen und Exporteurinnen, die einer Branchenvereinbarung im Sinne von Artikel 41a USG angehören, wenn die Information des BAFU durch die Branchenvereinbarung sichergestellt ist."
             }
           ]
         },
@@ -2997,7 +2997,7 @@
         },
         {
           "absatz": "1",
-          "text": "Die Meldepflicht nach Ziffer 7.2.1 Absatz 1 gilt nicht für Mitglieder einer Branchenvereinbarung im Sinne von Artikel 41 a USG über Schwefelhexafluorid, wenn durch die Branchenvereinbarung die Information des BAFU sichergestellt ist."
+          "text": "Die Meldepflicht nach Ziffer 7.2.1 Absatz 1 gilt nicht für Mitglieder einer Branchenvereinbarung im Sinne von Artikel 41a USG über Schwefelhexafluorid, wenn durch die Branchenvereinbarung die Information des BAFU sichergestellt ist."
         },
         {
           "absatz": "2",
@@ -3074,7 +3074,7 @@
         },
         {
           "absatz": "2",
-          "text": "Wer Stoffe nach Ziffer 1 Absatz 1 bis herstellt, muss als Nebenprodukt entstehendes Distickstoffoxid nach dem Stand der Technik umwandeln, wenn dies technisch und betrieblich möglich und wirtschaftlich tragbar ist."
+          "text": "Wer Stoffe nach Ziffer 1 Absatz 1bis herstellt, muss als Nebenprodukt entstehendes Distickstoffoxid nach dem Stand der Technik umwandeln, wenn dies technisch und betrieblich möglich und wirtschaftlich tragbar ist."
         },
         {
           "absatz": null,
@@ -3105,14 +3105,14 @@
         },
         {
           "absatz": null,
-          "text": "Stoffe nach Ziffer 1 Absatz 1 bis Buchstabe f dürfen noch bis zum 30. Juni 2023 ohne Umwandlung des entstehenden Distickstoffoxids hergestellt werden."
+          "text": "Stoffe nach Ziffer 1 Absatz 1bis Buchstabe f dürfen noch bis zum 30. Juni 2023 ohne Umwandlung des entstehenden Distickstoffoxids hergestellt werden."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "6926bf556a5cce799dfcb9c88f83f6a4f3d7eb6c67c23d926e299de6673b977c"
+      "sha": "7c732181ea2624e18946b45d9bea991fbdee0473654d83197f3e0dc213842f47"
     },
     {
       "id": "bund/CHEMRRV/annex_1_6",
@@ -3493,7 +3493,7 @@
             },
             {
               "marke": "2",
-              "text": "Biozidprodukte gemäss Artikel 1 a der Biozidprodukteverordnung vom 18. Mai 2005 (VBP),",
+              "text": "Biozidprodukte gemäss Artikel 1a der Biozidprodukteverordnung vom 18. Mai 2005 (VBP),",
               "tiefe": 1
             },
             {
@@ -4220,7 +4220,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "e90716da6f393fe02a8ce18ca4db08d7159af4ef858aee014ffa6d7ad2db5735"
+      "sha": "1ec0c16d56d36964230a3975fb131637765ae2a9b10dcf1bde8c6a0ff561c0c5"
     },
     {
       "id": "bund/CHEMRRV/annex_1_8",
@@ -5401,7 +5401,7 @@
         },
         {
           "absatz": null,
-          "text": "Als Perfluoroctansulfonsäure und ihre Derivate (PFOS) gelten Stoffe mit der Summenformel C 8 F 17 SO 2 X, wobei X bedeutet: OH, Metallsalze [O – M + ], Halogenide, Amide und andere Derivate einschliesslich Polymere."
+          "text": "Als Perfluoroctansulfonsäure und ihre Derivate (PFOS) gelten Stoffe mit der Summenformel C 8 F 17 SO 2 X, wobei X bedeutet: OH, Metallsalze [O–M+], Halogenide, Amide und andere Derivate einschliesslich Polymere."
         },
         {
           "absatz": null,
@@ -5525,7 +5525,7 @@
             },
             {
               "marke": "b",
-              "text": "Fluorpolymere mit dem Strukturelement CF 3 [CF 2 ] n -R mit n > 16, wobei R bedeutet: jegliche Gruppe;"
+              "text": "Fluorpolymere mit dem Strukturelement CF 3 [CF 2 ]n-R mit n > 16, wobei R bedeutet: jegliche Gruppe;"
             },
             {
               "marke": "c",
@@ -5543,7 +5543,7 @@
         },
         {
           "absatz": "3",
-          "text": "Als Vorläuferverbindungen von Perfluornonan-, Perfluordecan-, Perfluorundecan-, Perfluordodecan-, Perfluortridecan- und Perfluortetradecansäure in Form ihrer linearen und verzweigten Isomere und Salzen (C 9 –C 14 -PFCA) gelten Stoffe einschliesslich Polymere mit einer linearen oder verzweigten Perfluoralkyl-Gruppe mit der Formel C n F 2n+1 mit n = 8 – 13 in direkter Verbindung mit einem weiteren Kohlenstoffatom als Strukturelement, die zu C 9 –C 14 -PFCA abgebaut werden."
+          "text": "Als Vorläuferverbindungen von Perfluornonan-, Perfluordecan-, Perfluorundecan-, Perfluordodecan-, Perfluortridecan- und Perfluortetradecansäure in Form ihrer linearen und verzweigten Isomere und Salzen (C 9 –C 14 -PFCA) gelten Stoffe einschliesslich Polymere mit einer linearen oder verzweigten Perfluoralkyl-Gruppe mit der Formel CnF2n+1 mit n = 8 – 13 in direkter Verbindung mit einem weiteren Kohlenstoffatom als Strukturelement, die zu C 9 –C 14 -PFCA abgebaut werden."
         },
         {
           "absatz": "4",
@@ -5551,7 +5551,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Stoffe mit der Summenformel C n F 2n+1 X mit n = 9 – 14, wobei X bedeutet: F, Cl oder Br;"
+              "text": "Stoffe mit der Summenformel CnF2n+1X mit n = 9 – 14, wobei X bedeutet: F, Cl oder Br;"
             },
             {
               "marke": "b",
@@ -5687,7 +5687,7 @@
         },
         {
           "absatz": "1",
-          "text": "Als Fluoralkylsilanole und ihre Derivate gelten Stoffe mit dem Strukturelement C 6 F 13 (C 2 H 4 )Si(OH) n (OX) 3-n mit 0 ≤ n ≤ 3, wobei X bedeutet: jede Alkylgruppe."
+          "text": "Als Fluoralkylsilanole und ihre Derivate gelten Stoffe mit dem Strukturelement C 6 F 13 (C 2 H 4 )Si(OH)n(OX)3-n mit 0 ≤ n ≤ 3, wobei X bedeutet: jede Alkylgruppe."
         },
         {
           "absatz": "2",
@@ -5889,7 +5889,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_16",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "ab8763d0bb61dca14970329c555873af05e3eeee07cbdaf74b1f8721de1c873d"
+      "sha": "4ef4f25720ec984ea8fc8e5a46337ff16876e9007be3bc8c35dd7b0d73aa2809"
     },
     {
       "id": "bund/CHEMRRV/annex_1_17",
@@ -6162,7 +6162,7 @@
         },
         {
           "absatz": "2",
-          "text": "Die Anmeldestelle führt ein Verzeichnis über die Meldungen nach den Absätzen 1 und 1 bis."
+          "text": "Die Anmeldestelle führt ein Verzeichnis über die Meldungen nach den Absätzen 1 und 1bis."
         },
         {
           "absatz": null,
@@ -6171,7 +6171,7 @@
         },
         {
           "absatz": "1",
-          "text": "Die Anmeldestelle überprüft im Einvernehmen mit dem BAFU, dem BAG und dem SECO innerhalb von sechs Monaten nach Eingang der Meldung nach Ziffer 3 Absatz 1 ter und stellt fest, ob die Verwendung des Stoffs in einem Herstellungsprozess in einem geschlossenen System den Anforderungen von Ziffer 2 Absatz 1 Buchstabe n entspricht."
+          "text": "Die Anmeldestelle überprüft im Einvernehmen mit dem BAFU, dem BAG und dem SECO innerhalb von sechs Monaten nach Eingang der Meldung nach Ziffer 3 Absatz 1ter und stellt fest, ob die Verwendung des Stoffs in einem Herstellungsprozess in einem geschlossenen System den Anforderungen von Ziffer 2 Absatz 1 Buchstabe n entspricht."
         },
         {
           "absatz": "2",
@@ -6755,7 +6755,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_1_17",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "8e9fce433ac2e6d3a8a5659c1b9e032f1dbfab614e8cd4e73cbc63791ce77f7e"
+      "sha": "8143a12b45ba1ef5ec99db6dc04c816458e073e1163951d9464bdcb98e995e33"
     },
     {
       "id": "bund/CHEMRRV/annex_1_18",
@@ -8075,7 +8075,7 @@
         },
         {
           "absatz": "5",
-          "text": "Das Verbot nach Ziffer 2 Absatz 1 bis und die Pflichten nach Ziffer 4 Absatz 1 gelten nicht für Geschirrspülmittel für Maschinen, die im Haushalt verwendet werden, die vor dem 1. Januar 2017 erstmals in Verkehr gebracht worden sind."
+          "text": "Das Verbot nach Ziffer 2 Absatz 1bis und die Pflichten nach Ziffer 4 Absatz 1 gelten nicht für Geschirrspülmittel für Maschinen, die im Haushalt verwendet werden, die vor dem 1. Januar 2017 erstmals in Verkehr gebracht worden sind."
         },
         {
           "absatz": "6",
@@ -8086,7 +8086,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "fe700a985cfdccd1382a9606493bcd404915cc4b4be2f7e6252e72ca1e77654e"
+      "sha": "5a7a307c0e22873f6410edac9f4fafba605754f878d85d75132a05a093cb0d75"
     },
     {
       "id": "bund/CHEMRRV/annex_2_3",
@@ -8620,7 +8620,7 @@
         },
         {
           "absatz": "1",
-          "text": "In den Zonen S1, S2 und S h von Grundwasserschutzzonen ist verboten:",
+          "text": "In den Zonen S1, S2 und Sh von Grundwasserschutzzonen ist verboten:",
           "items": [
             {
               "marke": "a",
@@ -8634,7 +8634,7 @@
         },
         {
           "absatz": "2",
-          "text": "Wer in den Zonen S3 und S m von Grundwasserschutzzonen und in der Nähe von Gewässern Holzschutzmittel verwenden oder damit behandeltes Holz lagern will, muss bauliche Massnahmen gegen das Versickern und das Abschwemmen der Mittel treffen."
+          "text": "Wer in den Zonen S3 und Sm von Grundwasserschutzzonen und in der Nähe von Gewässern Holzschutzmittel verwenden oder damit behandeltes Holz lagern will, muss bauliche Massnahmen gegen das Versickern und das Abschwemmen der Mittel treffen."
         },
         {
           "absatz": null,
@@ -8803,7 +8803,7 @@
         },
         {
           "absatz": "1",
-          "text": "Die Inhaberinnen von Zulassungen nach Artikel 7 Absatz 1 VPB müssen die Abnehmerinnen von Biozidprodukten gegen Algen und Moose in einer Aufschrift oder in anderer gleichwertiger schriftlicher Form über die Verbote nach Ziffer 4 bis.2 informieren."
+          "text": "Die Inhaberinnen von Zulassungen nach Artikel 7 Absatz 1 VPB müssen die Abnehmerinnen von Biozidprodukten gegen Algen und Moose in einer Aufschrift oder in anderer gleichwertiger schriftlicher Form über die Verbote nach Ziffer 4bis.2 informieren."
         },
         {
           "absatz": "2",
@@ -8901,7 +8901,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "9dbeed8d92e6708717858e82bf73fefc77fe26c6e08a2e88322f88bb1391ae07"
+      "sha": "2825b06189c4c9ceabcb2b35ffe4b4ab18f5feaa48694ca253fc2fa0162bd66f"
     },
     {
       "id": "bund/CHEMRRV/annex_2_5",
@@ -8952,7 +8952,7 @@
             },
             {
               "marke": "e",
-              "text": "in oberirdischen Gewässern und in einem Streifen von drei Metern Breite entlang von oberirdischen Gewässern, wobei der Streifen bei Fliessgewässern, für die ein Gewässerraum nach Artikel 41 a GSchV festgelegt wurde oder bei denen nach Artikel 41 a Absatz 5 GSchV ausdrücklich auf die Festlegung eines Gewässerraums verzichtet wurde, ab der Uferlinie und bei den übrigen Fliessgewässern sowie bei stehenden Gewässern ab der Böschungsoberkante gemäss Pufferstreifenmerkblatt «Pufferstreifen richtig messen und bewirtschaften», KIP/PIOCH 2009, gemessen wird;"
+              "text": "in oberirdischen Gewässern und in einem Streifen von drei Metern Breite entlang von oberirdischen Gewässern, wobei der Streifen bei Fliessgewässern, für die ein Gewässerraum nach Artikel 41a GSchV festgelegt wurde oder bei denen nach Artikel 41a Absatz 5 GSchV ausdrücklich auf die Festlegung eines Gewässerraums verzichtet wurde, ab der Uferlinie und bei den übrigen Fliessgewässern sowie bei stehenden Gewässern ab der Böschungsoberkante gemäss Pufferstreifenmerkblatt «Pufferstreifen richtig messen und bewirtschaften», KIP/PIOCH 2009, gemessen wird;"
             },
             {
               "marke": "f",
@@ -8960,7 +8960,7 @@
             },
             {
               "marke": "g",
-              "text": "auf und an Gleisanlagen in den Zonen S2 und S h von Grundwasserschutzzonen."
+              "text": "auf und an Gleisanlagen in den Zonen S2 und Sh von Grundwasserschutzzonen."
             }
           ]
         },
@@ -8988,15 +8988,15 @@
         },
         {
           "absatz": "3",
-          "text": "Für die Verwendung von Pflanzenschutzmitteln in den Zonen S2 und S h von Grundwasserschutzzonen gilt die Pflanzenschutzmittelverordnung vom 12. Mai 2010."
+          "text": "Für die Verwendung von Pflanzenschutzmitteln in den Zonen S2 und Sh von Grundwasserschutzzonen gilt die Pflanzenschutzmittelverordnung vom 12. Mai 2010."
         },
         {
           "absatz": "4",
-          "text": "Für die Verwendung von Pflanzenschutzmitteln in den Zuströmbereichen Z u und Z o legen die Kantone, unter Berücksichtigung der Ausnahmen nach Ziffer 1.2 Absätze 2, 4 und 5, über die Absätze 1 und 2 hinausgehende Einschränkungen fest, soweit dies zum Schutz der Gewässer erforderlich ist. Insbesondere schränken sie die Verwendung eines Pflanzenschutzmittels im Zuströmbereich Z u ein, wenn dieses in einer Trinkwasserfassung festgestellt wird und die Anforderungen an genutztes oder zur Nutzung vorgesehenes Grundwasser wiederholt nicht erfüllt werden."
+          "text": "Für die Verwendung von Pflanzenschutzmitteln in den Zuströmbereichen Zu und Zo legen die Kantone, unter Berücksichtigung der Ausnahmen nach Ziffer 1.2 Absätze 2, 4 und 5, über die Absätze 1 und 2 hinausgehende Einschränkungen fest, soweit dies zum Schutz der Gewässer erforderlich ist. Insbesondere schränken sie die Verwendung eines Pflanzenschutzmittels im Zuströmbereich Zu ein, wenn dieses in einer Trinkwasserfassung festgestellt wird und die Anforderungen an genutztes oder zur Nutzung vorgesehenes Grundwasser wiederholt nicht erfüllt werden."
         },
         {
           "absatz": "5",
-          "text": "Für die Verwendung von Pflanzenschutzmitteln auf und an Gleisanlagen ausserhalb der Zonen S1, S2 und S h von Grundwasserschutzzonen legt das Bundesamt für Verkehr die zum Schutz der Umwelt erforderlichen Einschränkungen und Verbote fest. Es berücksichtigt dabei die örtlichen Verhältnisse und hört vor dem Entscheid die betroffenen Kantone an."
+          "text": "Für die Verwendung von Pflanzenschutzmitteln auf und an Gleisanlagen ausserhalb der Zonen S1, S2 und Sh von Grundwasserschutzzonen legt das Bundesamt für Verkehr die zum Schutz der Umwelt erforderlichen Einschränkungen und Verbote fest. Es berücksichtigt dabei die örtlichen Verhältnisse und hört vor dem Entscheid die betroffenen Kantone an."
         },
         {
           "absatz": null,
@@ -9021,11 +9021,11 @@
             },
             {
               "marke": "b",
-              "text": "zur Behandlung von geschlagenem Holz mit Insektiziden, die gestützt auf die Pflanzenschutzmittelverordnung für die Kultur «Liegendes Rundholz im Wald und auf Lagerplätzen» zugelassen sind, auf dazu geeigneten Plätzen, sofern das Holz nicht rechtzeitig abgeführt werden kann, diese Plätze nicht in den Zonen S1, S2 und S h von Grundwasserschutzzonen liegen und wirksame Massnahmen gegen das Versickern und das Abschwemmen der Mittel getroffen werden;"
+              "text": "zur Behandlung von geschlagenem Holz mit Insektiziden, die gestützt auf die Pflanzenschutzmittelverordnung für die Kultur «Liegendes Rundholz im Wald und auf Lagerplätzen» zugelassen sind, auf dazu geeigneten Plätzen, sofern das Holz nicht rechtzeitig abgeführt werden kann, diese Plätze nicht in den Zonen S1, S2 und Sh von Grundwasserschutzzonen liegen und wirksame Massnahmen gegen das Versickern und das Abschwemmen der Mittel getroffen werden;"
             },
             {
               "marke": "c",
-              "text": "in forstlichen Pflanzgärten ausserhalb der Zonen S1, S2, S3 und S h von Grundwasserschutzzonen;"
+              "text": "in forstlichen Pflanzgärten ausserhalb der Zonen S1, S2, S3 und Sh von Grundwasserschutzzonen;"
             },
             {
               "marke": "d",
@@ -9035,7 +9035,7 @@
         },
         {
           "absatz": "3bis",
-          "text": "Das Bundesamt für Verkehr erteilt im Einzelfall im Einvernehmen mit dem BAFU in Abweichung vom Verbot nach Ziffer 1.1 Absatz 1 Buchstabe g eine Bewilligung für die Anwendung von Pflanzenschutzmitteln in den Zonen S2 und S h von Grundwasserschutzzonen, wenn:",
+          "text": "Das Bundesamt für Verkehr erteilt im Einzelfall im Einvernehmen mit dem BAFU in Abweichung vom Verbot nach Ziffer 1.1 Absatz 1 Buchstabe g eine Bewilligung für die Anwendung von Pflanzenschutzmitteln in den Zonen S2 und Sh von Grundwasserschutzzonen, wenn:",
           "items": [
             {
               "marke": "a",
@@ -9043,7 +9043,7 @@
             },
             {
               "marke": "b",
-              "text": "das anfallende Abwasser ausserhalb der Zonen S2 oder S h von Grundwasserschutzzonen beseitigt wird; und"
+              "text": "das anfallende Abwasser ausserhalb der Zonen S2 oder Sh von Grundwasserschutzzonen beseitigt wird; und"
             },
             {
               "marke": "c",
@@ -9698,7 +9698,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "5e23fa3a4f8814a730abab557a6e1fbe3f978b3d45ed42f277343d53a31f27f8"
+      "sha": "8b5e60d26e59b1a7e6d6ce4db5f54968c21a1c2ae5f36e38d7a2ecce8512fb88"
     },
     {
       "id": "bund/CHEMRRV/annex_2_6",
@@ -10720,7 +10720,7 @@
         },
         {
           "absatz": "2",
-          "text": "Auf einer Hektare dürfen innert zehn Jahren nicht mehr als 100 t Bodenverbesserungsmittel mit einem Gehalt an C org über 7,5 %, Kompost oder festes Gärgut als Bodenverbesserer, als Substrat, als Erosionsschutz, für Rekultivierungen oder für künstliche Kulturerden verwendet werden."
+          "text": "Auf einer Hektare dürfen innert zehn Jahren nicht mehr als 100 t Bodenverbesserungsmittel mit einem Gehalt an Corg über 7,5 %, Kompost oder festes Gärgut als Bodenverbesserer, als Substrat, als Erosionsschutz, für Rekultivierungen oder für künstliche Kulturerden verwendet werden."
         },
         {
           "absatz": null,
@@ -10772,7 +10772,7 @@
             },
             {
               "marke": "d",
-              "text": "in oberirdischen Gewässern und in einem Streifen von drei Metern Breite entlang von oberirdischen Gewässern, wobei der Streifen bei Fliessgewässern, für die ein Gewässerraum nach Artikel 41 a GSchV festgelegt wurde oder bei denen nach Artikel 41 a Absatz 5 GSchV ausdrücklich auf die Festlegung eines Gewässerraums verzichtet wurde, ab der Uferlinie und bei den übrigen Fliessgewässern sowie bei stehenden Gewässern ab der Böschungsoberkante gemäss Pufferstreifenmerkblatt «Pufferstreifen richtig messen und bewirtschaften», KIP/PIOCH 2009, gemessen wird;"
+              "text": "in oberirdischen Gewässern und in einem Streifen von drei Metern Breite entlang von oberirdischen Gewässern, wobei der Streifen bei Fliessgewässern, für die ein Gewässerraum nach Artikel 41a GSchV festgelegt wurde oder bei denen nach Artikel 41a Absatz 5 GSchV ausdrücklich auf die Festlegung eines Gewässerraums verzichtet wurde, ab der Uferlinie und bei den übrigen Fliessgewässern sowie bei stehenden Gewässern ab der Böschungsoberkante gemäss Pufferstreifenmerkblatt «Pufferstreifen richtig messen und bewirtschaften», KIP/PIOCH 2009, gemessen wird;"
             },
             {
               "marke": "e",
@@ -10782,11 +10782,11 @@
         },
         {
           "absatz": "2",
-          "text": "Flüssige Hof- und Recyclingdünger dürfen in den Zonen S2 und S h von Grundwasserschutzzonen nicht verwendet werden."
+          "text": "Flüssige Hof- und Recyclingdünger dürfen in den Zonen S2 und Sh von Grundwasserschutzzonen nicht verwendet werden."
         },
         {
           "absatz": "3",
-          "text": "Für die Verwendung von Düngern in den Zuströmbereichen Z u und Z o legt die kantonale Behörde über die Absätze 1 und 2 hinausgehende Einschränkungen fest, soweit dies zum Schutz der Gewässer erforderlich ist."
+          "text": "Für die Verwendung von Düngern in den Zuströmbereichen Zu und Zo legt die kantonale Behörde über die Absätze 1 und 2 hinausgehende Einschränkungen fest, soweit dies zum Schutz der Gewässer erforderlich ist."
         },
         {
           "absatz": "4",
@@ -10857,7 +10857,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "c2546c5853b408aba8966bc1333edb3122498bd426d60d097fe4df18196dd138"
+      "sha": "f84fc28cf28d938a9f9d7905328feb230902f07e3c47b97f2e0752712d20284b"
     },
     {
       "id": "bund/CHEMRRV/annex_2_7",
@@ -11493,7 +11493,7 @@
         },
         {
           "absatz": null,
-          "text": "Das BAFU erlässt nach Anhörung der betroffenen Branche Empfehlungen zum Stand der Technik nach Ziffer 3 Absatz 3 bis."
+          "text": "Das BAFU erlässt nach Anhörung der betroffenen Branche Empfehlungen zum Stand der Technik nach Ziffer 3 Absatz 3bis."
         },
         {
           "absatz": null,
@@ -11532,11 +11532,11 @@
         },
         {
           "absatz": "5",
-          "text": "Das Verbot nach Ziffer 2 Absatz 1 Buchstabe e bis gilt nicht für das Inverkehrbringen von Gegenständen, die vor dem 1. September 2016 erstmals in Verkehr gebracht worden sind."
+          "text": "Das Verbot nach Ziffer 2 Absatz 1 Buchstabe ebis gilt nicht für das Inverkehrbringen von Gegenständen, die vor dem 1. September 2016 erstmals in Verkehr gebracht worden sind."
         },
         {
           "absatz": "6",
-          "text": "Die Verbote nach Ziffer 2 Absatz 1 Buchstabe e ter gelten nicht für das Inverkehrbringen und das Verwenden von Kunststoffgranulaten oder -streu, die bis zum 1. April 2023 einer Verwendung in Kunstrasen-, Spiel- oder Sportplätzen zugeführt worden sind."
+          "text": "Die Verbote nach Ziffer 2 Absatz 1 Buchstabe eter gelten nicht für das Inverkehrbringen und das Verwenden von Kunststoffgranulaten oder -streu, die bis zum 1. April 2023 einer Verwendung in Kunstrasen-, Spiel- oder Sportplätzen zugeführt worden sind."
         },
         {
           "absatz": "7",
@@ -11544,14 +11544,14 @@
         },
         {
           "absatz": "8",
-          "text": "Schaumstoffe und Gegenstände mit Schaumstoffen, für die Ziffer 3 Absatz 3 bis nicht mehr anzuwenden ist, weil aufgrund einer Änderung des Standes der Technik ein Ersatz besteht, dürfen noch während 6 Monaten hergestellt, zu beruflichen oder gewerblichen Zwecken eingeführt sowie während weiterer 6 Monate an Dritte abgegeben werden."
+          "text": "Schaumstoffe und Gegenstände mit Schaumstoffen, für die Ziffer 3 Absatz 3bis nicht mehr anzuwenden ist, weil aufgrund einer Änderung des Standes der Technik ein Ersatz besteht, dürfen noch während 6 Monaten hergestellt, zu beruflichen oder gewerblichen Zwecken eingeführt sowie während weiterer 6 Monate an Dritte abgegeben werden."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_9",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "96fcb1fc8d1916556b39a0e9c7713e528c46fc10551b20e00156fa4aad83a6c6"
+      "sha": "96befc2ef4535a0e480ae7e4f6522fbf10f9fcb503b29bcd49fca0d03f89419d"
     },
     {
       "id": "bund/CHEMRRV/annex_2_10",
@@ -12021,7 +12021,7 @@
         },
         {
           "absatz": "9",
-          "text": "Das BAFU kann im Einvernehmen mit dem SECO die Absätze 4 ter Buchstabe a und 8 Buchstabe a bei Änderungen der dort bezeichneten Normen entsprechend anpassen."
+          "text": "Das BAFU kann im Einvernehmen mit dem SECO die Absätze 4ter Buchstabe a und 8 Buchstabe a bei Änderungen der dort bezeichneten Normen entsprechend anpassen."
         },
         {
           "absatz": null,
@@ -12373,7 +12373,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "zum Stand der Technik nach Ziffer 2.2 Absätze 2–4 ter , 6 und 8;"
+              "text": "zum Stand der Technik nach Ziffer 2.2 Absätze 2–4ter, 6 und 8;"
             },
             {
               "marke": "b",
@@ -12400,7 +12400,7 @@
         },
         {
           "absatz": "3",
-          "text": "Für Geräte und Anlagen, die in der Luft stabile Kältemittel enthalten oder enthalten werden, die in Anhang A des Protokolls von Kyoto vom 11. Dezember 1997 zum Rahmenübereinkommen der Vereinten Nationen über Klimaänderungen (Kyoto-Protokoll) aufgeführt sind, ist bis zum 31. Mai 2020 auch eine Kennzeichnung nach Ziffer 2.3 bis zur ChemRRV in der Fassung vom 10. Dezember 2010 zulässig."
+          "text": "Für Geräte und Anlagen, die in der Luft stabile Kältemittel enthalten oder enthalten werden, die in Anhang A des Protokolls von Kyoto vom 11. Dezember 1997 zum Rahmenübereinkommen der Vereinten Nationen über Klimaänderungen (Kyoto-Protokoll) aufgeführt sind, ist bis zum 31. Mai 2020 auch eine Kennzeichnung nach Ziffer 2.3bis zur ChemRRV in der Fassung vom 10. Dezember 2010 zulässig."
         },
         {
           "absatz": "4",
@@ -12415,7 +12415,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_10",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "a34542e82d8fc01722b464626b7ecba70ea23fb6817bfc53b04a2c93cdae6f89"
+      "sha": "20b317132c73b39c0fba2dead92ea29a3bf6ee62c237de31ac5f18236f12731b"
     },
     {
       "id": "bund/CHEMRRV/annex_2_11",
@@ -13774,7 +13774,7 @@
         },
         {
           "absatz": null,
-          "text": "1 .1 Begriff",
+          "text": "1.1 Begriff",
           "titel": 4
         },
         {
@@ -13783,7 +13783,7 @@
         },
         {
           "absatz": null,
-          "text": "1 .2 Verbot",
+          "text": "1.2 Verbot",
           "titel": 4
         },
         {
@@ -13914,7 +13914,7 @@
         },
         {
           "absatz": null,
-          "text": "3 .1 Begriffe",
+          "text": "3.1 Begriffe",
           "titel": 4
         },
         {
@@ -13923,7 +13923,7 @@
         },
         {
           "absatz": null,
-          "text": "3 .2 Verbote",
+          "text": "3.2 Verbote",
           "titel": 4
         },
         {
@@ -13932,12 +13932,12 @@
         },
         {
           "absatz": null,
-          "text": "3 .3 Ausnahmen",
+          "text": "3.3 Ausnahmen",
           "titel": 4
         },
         {
           "absatz": null,
-          "text": "Die Verbote nach Ziffer 3 bis.2 gelten nicht für Hartlote, die in Verteidigungs-, Luft- und Raumfahrtanwendungen eingesetzt oder aus Sicherheitsgründen verwendet werden."
+          "text": "Die Verbote nach Ziffer 3bis.2 gelten nicht für Hartlote, die in Verteidigungs-, Luft- und Raumfahrtanwendungen eingesetzt oder aus Sicherheitsgründen verwendet werden."
         },
         {
           "absatz": null,
@@ -13946,7 +13946,7 @@
         },
         {
           "absatz": null,
-          "text": "3 .1 Begriffe",
+          "text": "3.1 Begriffe",
           "titel": 4
         },
         {
@@ -13959,7 +13959,7 @@
         },
         {
           "absatz": null,
-          "text": "3 .2 Verbote",
+          "text": "3.2 Verbote",
           "titel": 4
         },
         {
@@ -13972,7 +13972,7 @@
         },
         {
           "absatz": null,
-          "text": "3 .3 Verhältnis zur Lebensmittel- und Gebrauchsgegenständeverordnung vom 16. Dezember 2016 (LGV)",
+          "text": "3.3 Verhältnis zur Lebensmittel- und Gebrauchsgegenständeverordnung vom 16. Dezember 2016 (LGV)",
           "titel": 4
         },
         {
@@ -13981,12 +13981,12 @@
         },
         {
           "absatz": null,
-          "text": "3 .4 Ausnahmen",
+          "text": "3.4 Ausnahmen",
           "titel": 4
         },
         {
           "absatz": "1",
-          "text": "Vom Verbot nach Ziffer 3 ter.2 ausgenommen sind:",
+          "text": "Vom Verbot nach Ziffer 3ter.2 ausgenommen sind:",
           "items": [
             {
               "marke": "a",
@@ -14028,7 +14028,7 @@
         },
         {
           "absatz": "2",
-          "text": "Zusätzlich ausgenommen vom Verbot nach Ziffer 3 ter.2 Absatz 1 sind:",
+          "text": "Zusätzlich ausgenommen vom Verbot nach Ziffer 3ter.2 Absatz 1 sind:",
           "items": [
             {
               "marke": "a",
@@ -14217,11 +14217,11 @@
         },
         {
           "absatz": "1",
-          "text": "Das Verbot nach Ziffer 1 bis.2 gilt nicht für das Inverkehrbringen von chromathaltigen Lederwaren, die vor dem 1. September 2016 erstmals an Endverbraucher abgegeben worden sind."
+          "text": "Das Verbot nach Ziffer 1bis.2 gilt nicht für das Inverkehrbringen von chromathaltigen Lederwaren, die vor dem 1. September 2016 erstmals an Endverbraucher abgegeben worden sind."
         },
         {
           "absatz": "1bis",
-          "text": "Das Verbot nach Ziffer 3 ter.2 Absatz 1 gilt nicht für Gegenstände, die vor dem 1. Januar 2019 erstmals in Verkehr gebracht worden sind."
+          "text": "Das Verbot nach Ziffer 3ter.2 Absatz 1 gilt nicht für Gegenstände, die vor dem 1. Januar 2019 erstmals in Verkehr gebracht worden sind."
         },
         {
           "absatz": "2",
@@ -14236,7 +14236,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#annex_2_16",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "15e386ca1c8d4461c243a5cc7fe82aac2e6d719158b88c87df7bd605a6168865"
+      "sha": "9d454ac4b4ac9609e6016877b8ca8741a05ced9b46ebcd14d49f862cceaf7202"
     },
     {
       "id": "bund/CHEMRRV/annex_2_17",

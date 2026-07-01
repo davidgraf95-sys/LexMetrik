@@ -159,6 +159,58 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  // N1 (Bündel N, 1.7.2026): Quelle setzt den Artikelnummer-Buchstaben inline
+  // OHNE Leerzeichen («329<i>g</i>», «335<i>f</i>»). entferneTags fügte das
+  // Leerzeichen beim Strippen der Inline-Tags selbst ein → «329 g». Fix: Inline-
+  // Formatierungs-Tags werden ohne Leerzeichen entfernt (HTML rendert sie inline).
+  // Die Fixtures OR_ART_335_C (Abs. 3: «Artikel 329<i>g</i>») und OR_ART_336
+  // (Abs. 2 lit. c: «(Art. 335<i>f</i>)») tragen das Muster real.
+  describe('N1 — Artikelnummer-Buchstabe nicht durch Leerzeichen getrennt', () => {
+    it('Abs. 3 nennt «Artikel 329g» (nicht «329 g»)', () => {
+      const result = extrahiereArtikel(HTML_OR, '335_c');
+      const text = result!.bloecke[2].text;
+      expect(text).toMatch(/Artikel 329g\b/);
+      expect(text).not.toMatch(/329 g\b/);
+    });
+
+    it('lit. c nennt «Art. 335f» (nicht «335 f»)', () => {
+      const result = extrahiereArtikel(HTML_OR, '336');
+      const text = result!.bloecke[1].items![2].text;
+      expect(text).toMatch(/335f\b/);
+      expect(text).not.toMatch(/335 f\b/);
+    });
+
+    it('«1 bis» als Latein-Suffix am Absatzverweis bleibt geklebt («1bis»)', () => {
+      const html = '<article id="art_x"><div class="collapseable">'
+        + '<p class="absatz "><sup>1</sup>&nbsp;Verweis auf Absatz 1<sup>bis</sup> des Gesetzes.</p>'
+        + '</div></article>';
+      const r = extrahiereArtikel(html, 'x');
+      expect(r!.bloecke[0].text).toMatch(/Absatz 1bis\b/);
+      expect(r!.bloecke[0].text).not.toMatch(/1 bis\b/);
+    });
+
+    it('§1-Schutz: typografischer Bruch «133¹⁄₃» wird NICHT zu «1331/3» verklebt', () => {
+      // Reine Ziffern-<sup>/<sub> sind Exponent/Bruch/Absatz-Hochzahl — an die
+      // Nachbarziffer geklebt entstünde eine irreführende Zahl. Sie behalten den
+      // trennenden Abstand (nur Buchstaben-Suffixe werden verklebt).
+      const html = '<article id="art_x"><div class="collapseable">'
+        + '<p class="absatz ">mindestens 133<sup>1</sup>/<sub>3</sub>&nbsp;Prozent der Ansätze.</p>'
+        + '</div></article>';
+      const r = extrahiereArtikel(html, 'x');
+      expect(r!.bloecke[0].text).not.toMatch(/1331/);
+    });
+
+    it('§1/§2-Schutz: echte «1 a)»-Aufzählung (Leerzeichen in der QUELLE) bleibt getrennt', () => {
+      // Quelle hat ein ECHTES Leerzeichen zwischen Ziffer und Buchstabe — das
+      // darf der Fix NICHT verschlucken (keine blinde Zahl-Leer-Buchstabe-Regex).
+      const html = '<article id="art_x"><div class="collapseable">'
+        + '<p class="absatz ">Die Frist von 1 a) beträgt zehn Tage.</p>'
+        + '</div></article>';
+      const r = extrahiereArtikel(html, 'x');
+      expect(r!.bloecke[0].text).toMatch(/1 a\)/);
+    });
+  });
+
   describe('Verschachtelte <dl> — lit. → nummerierte Unterpunkte (Bug 25.6.2026)', () => {
     // Reale Fedlex-Struktur MStG art_42 (verkürzt): ein lit-<dd> enthält eine
     // verschachtelte <dl> mit nummerierten Unterpunkten; danach folgen weitere

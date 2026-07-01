@@ -102,7 +102,7 @@
             },
             {
               "marke": "b",
-              "text": "Hauptindex : ein Index, der sämtliche an einer regulierten Börse gehandelten Effekten (Gesamtmarktindex) oder eine Auswahl der wichtigsten Effekten dieser Börse umfasst, oder ein Index, der die wichtigsten Effekten verschiedener regulierter Börsen umfasst;"
+              "text": "Hauptindex: ein Index, der sämtliche an einer regulierten Börse gehandelten Effekten (Gesamtmarktindex) oder eine Auswahl der wichtigsten Effekten dieser Börse umfasst, oder ein Index, der die wichtigsten Effekten verschiedener regulierter Börsen umfasst;"
             },
             {
               "marke": "c",
@@ -122,7 +122,7 @@
             },
             {
               "marke": "f",
-              "text": "entsprechendes Abzugsverfahren: das in den Ziffern 30.21, 30.26 und 30.30 des Basler Mindeststandards zur Kapitaldefinition (CAP) als « corresponding deduction approach » bezeichnete Verfahren;"
+              "text": "entsprechendes Abzugsverfahren: das in den Ziffern 30.21, 30.26 und 30.30 des Basler Mindeststandards zur Kapitaldefinition (CAP) als «corresponding deduction approach» bezeichnete Verfahren;"
             },
             {
               "marke": "fbis",
@@ -183,7 +183,7 @@
             },
             {
               "marke": "i",
-              "text": "Leverage Ratio : nach den Vorgaben des Basler Mindeststandards zur Höchstverschuldungsquote (LEV) berechnete Höchstverschuldungsquote."
+              "text": "Leverage Ratio: nach den Vorgaben des Basler Mindeststandards zur Höchstverschuldungsquote (LEV) berechnete Höchstverschuldungsquote."
             }
           ]
         },
@@ -244,7 +244,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "bcfafcc2d51527e1d447dbaa357d24d4ceb55a222c944d36993989d5129566e0"
+      "sha": "21abf79f7d40053796ddc7037f6c43bf523e79cc466c04c38c5fe4d0c4a9bbc3"
     },
     {
       "id": "bund/ERV/art_4_a",
@@ -340,7 +340,7 @@
         },
         {
           "absatz": "2",
-          "text": "Positionen, die bei Bilanzaufnahme zu einem der folgenden Zwecke gehalten werden, müssen dem Handelsbuch zugeordnet werden, ausser wenn es sich um Positionen nach Artikel 4 b Buchstaben a–h handelt:",
+          "text": "Positionen, die bei Bilanzaufnahme zu einem der folgenden Zwecke gehalten werden, müssen dem Handelsbuch zugeordnet werden, ausser wenn es sich um Positionen nach Artikel 4b Buchstaben a–h handelt:",
           "items": [
             {
               "marke": "a",
@@ -362,7 +362,7 @@
         },
         {
           "absatz": "3",
-          "text": "Die folgenden Positionen müssen dem Handelsbuch zugeordnet werden, ausser wenn es sich um Positionen nach Artikel 4 b Buchstaben a–h handelt:",
+          "text": "Die folgenden Positionen müssen dem Handelsbuch zugeordnet werden, ausser wenn es sich um Positionen nach Artikel 4b Buchstaben a–h handelt:",
           "items": [
             {
               "marke": "a",
@@ -425,7 +425,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "8a3a3884143d457a5f4bc2ddd000d12fdf313396ae2049f45cab5fec90a56866"
+      "sha": "c28b007d94b4f9b3d71145247bbf78d9ca4c8501e4718163f725ddc178ac204d"
     },
     {
       "id": "bund/ERV/art_5_a",
@@ -491,7 +491,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die FINMA kann eine Ratingagentur anerkennen, wenn die Voraussetzungen nach den Ziffern 21.2–21.4 des Basler Mindeststandards zur Berechnung der nach Risiko gewichteten Positionen für Kreditrisiken (CRE) sowie der Code of Conduct Fundamentals for Credit Rating Agencies vom 24. März 2015 der Internationalen Organisation der Wertpapieraufsichtsbehörden ( International Organization of Securities Commissions ) erfüllt sind, insbesondere wenn:",
+          "text": "Die FINMA kann eine Ratingagentur anerkennen, wenn die Voraussetzungen nach den Ziffern 21.2–21.4 des Basler Mindeststandards zur Berechnung der nach Risiko gewichteten Positionen für Kreditrisiken (CRE) sowie der Code of Conduct Fundamentals for Credit Rating Agencies vom 24. März 2015 der Internationalen Organisation der Wertpapieraufsichtsbehörden (International Organization of Securities Commissions) erfüllt sind, insbesondere wenn:",
           "items": [
             {
               "marke": "a",
@@ -540,7 +540,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "3f54bba092705f630da1fcd5a73223d7a8e4eb5138d43434d178ff4c40a5ad51"
+      "sha": "d058326a1bb9e9d4ea463649c073461d0f2147a7548c13fb396cd198ee887d06"
     },
     {
       "id": "bund/ERV/art_7",
@@ -1635,11 +1635,11 @@
             },
             {
               "marke": "c",
-              "text": "der Goodwill, einschliesslich des Goodwills, der bei der Bewertung wesentlicher Beteiligungen an Unternehmen des Finanzbereichs ausserhalb des Konsolidierungskreises einbezogen wurde, und immaterielle Werte mit Ausnahme von Rechten zur Bedienung von Hypotheken ( Mortgage Servicing Rights, MSR);"
+              "text": "der Goodwill, einschliesslich des Goodwills, der bei der Bewertung wesentlicher Beteiligungen an Unternehmen des Finanzbereichs ausserhalb des Konsolidierungskreises einbezogen wurde, und immaterielle Werte mit Ausnahme von Rechten zur Bedienung von Hypotheken (Mortgage Servicing Rights, MSR);"
             },
             {
               "marke": "d",
-              "text": "latente Steueransprüche ( Deferred Tax Assets, DTA), deren Realisierung von der zukünftigen Rentabilität abhängt, vorbehältlich einer Verrechnung mit latenten Steuerverpflichtungen nach Absatz 2; vom Abzug ausgenommen sind latente Steueransprüche aufgrund zeitlicher Diskrepanzen, die den Abzügen nach Schwellenwerten nach den Artikeln 39 und 40 unterliegen;"
+              "text": "latente Steueransprüche (Deferred Tax Assets, DTA), deren Realisierung von der zukünftigen Rentabilität abhängt, vorbehältlich einer Verrechnung mit latenten Steuerverpflichtungen nach Absatz 2; vom Abzug ausgenommen sind latente Steueransprüche aufgrund zeitlicher Diskrepanzen, die den Abzügen nach Schwellenwerten nach den Artikeln 39 und 40 unterliegen;"
             },
             {
               "marke": "e",
@@ -1655,7 +1655,7 @@
             },
             {
               "marke": "h",
-              "text": "qualifizierte Beteiligungen am Kapital eines anderen Unternehmens des Finanzbereichs, soweit dieses seinerseits am Kapital der Bank beteiligt ist ( Reciprocal Holdings );"
+              "text": "qualifizierte Beteiligungen am Kapital eines anderen Unternehmens des Finanzbereichs, soweit dieses seinerseits am Kapital der Bank beteiligt ist (Reciprocal Holdings);"
             },
             {
               "marke": "i",
@@ -1669,7 +1669,7 @@
         },
         {
           "absatz": "3",
-          "text": "Banken, die den auf internen Ratings basierenden Ansatz ( Internal Ratings-based Approach , IRB) anwenden (Art. 77), müssen zusätzlich zu den Abzügen nach Absatz 1 den Betrag abziehen, um den die nach dem IRB berechneten erwarteten Verluste die Wertberichtigungen gemäss dem CAP übersteigen."
+          "text": "Banken, die den auf internen Ratings basierenden Ansatz (Internal Ratings-based Approach, IRB) anwenden (Art. 77), müssen zusätzlich zu den Abzügen nach Absatz 1 den Betrag abziehen, um den die nach dem IRB berechneten erwarteten Verluste die Wertberichtigungen gemäss dem CAP übersteigen."
         },
         {
           "absatz": "4",
@@ -1680,7 +1680,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_32",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "729eb4540c6f5d5e6a4cdec6a3f48b5e6b4c9ce1922c56ef04dcab1205b38a73"
+      "sha": "0c01f3e6ce6e13e1728a3d6329a0fcb1da10e4a67bacf920131345f3f00e5699"
     },
     {
       "id": "bund/ERV/art_33",
@@ -1696,7 +1696,7 @@
         },
         {
           "absatz": "1bis",
-          "text": "Von international tätigen systemrelevanten Banken ausgegebene Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 126 a Absatz 1 oder nach entsprechenden Regelungen ausländischer Rechtsordnungen werden für die Anforderungen dieses Abschnitts wie Instrumente des Ergänzungskapitals behandelt."
+          "text": "Von international tätigen systemrelevanten Banken ausgegebene Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 126a Absatz 1 oder nach entsprechenden Regelungen ausländischer Rechtsordnungen werden für die Anforderungen dieses Abschnitts wie Instrumente des Ergänzungskapitals behandelt."
         },
         {
           "absatz": "2",
@@ -1707,7 +1707,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_33",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "17ec7b9b46e143488798595ebb0389820589afb9c76256fadcfe85a946ab4410"
+      "sha": "96cf1bbedda39edf95a384c97a6aa8214af13060560c358fcfd8985806e5ce06"
     },
     {
       "id": "bund/ERV/art_34",
@@ -1742,7 +1742,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei einem Abzug nach Schwellenwert ( Threshold Deduction ) wird der Anteil, der über dem jeweiligen Schwellenwert 1, 2 oder 3 liegt, vom Kapital abgezogen."
+          "text": "Bei einem Abzug nach Schwellenwert (Threshold Deduction) wird der Anteil, der über dem jeweiligen Schwellenwert 1, 2 oder 3 liegt, vom Kapital abgezogen."
         },
         {
           "absatz": "2",
@@ -1761,7 +1761,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_35",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "e4906a8d7fa560c2d4fb37826a74776c372b79da8842218bfe4e6cd187f001ca"
+      "sha": "185337de2d93ba7e2eb32dc4671c40668a7c8d5a22cfd29941ede33b12c59674"
     },
     {
       "id": "bund/ERV/art_36",
@@ -1804,7 +1804,7 @@
         },
         {
           "absatz": "2bis",
-          "text": "Zusätzlich zu der Begrenzung nach Absatz 1 am Schwellenwert 1 kann eine Bank Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 33 Absatz 1 bis bis zu 5 Prozent des harten Kernkapitals halten, ohne diese von eigenen Eigenkapitalbestandteilen abzuziehen. Die FINMA kann entsprechende Ausführungsbestimmungen erlassen."
+          "text": "Zusätzlich zu der Begrenzung nach Absatz 1 am Schwellenwert 1 kann eine Bank Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 33 Absatz 1bis bis zu 5 Prozent des harten Kernkapitals halten, ohne diese von eigenen Eigenkapitalbestandteilen abzuziehen. Die FINMA kann entsprechende Ausführungsbestimmungen erlassen."
         },
         {
           "absatz": "3",
@@ -1815,7 +1815,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_37",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "3fdeb400a101adb51ec99699c8ee2eeca0e2524aca90ff827f5c7a4dcce3b3fb"
+      "sha": "2c658583046348bbc7a2bd17be2850cb3febbfd48dc739c10e51a6c95e6d22ef"
     },
     {
       "id": "bund/ERV/art_38",
@@ -1827,7 +1827,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Bank, die an einem Unternehmen des Finanzbereichs über 10 Prozent Beteiligungstitel in der Form harten Kernkapitals hält, hat sämtliche Eigenkapitalinstrumente des zusätzlichen Kernkapitals und des Ergänzungskapitals solcher Unternehmen mittels des entsprechenden Abzugsverfahrens ohne Schwellenwert zu behandeln. Das entsprechende Abzugsverfahren ohne Schwellenwerte gilt auch für gehaltene Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen von international tätigen systemrelevanten Banken nach Artikel 33 Absatz 1 bis ."
+          "text": "Eine Bank, die an einem Unternehmen des Finanzbereichs über 10 Prozent Beteiligungstitel in der Form harten Kernkapitals hält, hat sämtliche Eigenkapitalinstrumente des zusätzlichen Kernkapitals und des Ergänzungskapitals solcher Unternehmen mittels des entsprechenden Abzugsverfahrens ohne Schwellenwert zu behandeln. Das entsprechende Abzugsverfahren ohne Schwellenwerte gilt auch für gehaltene Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen von international tätigen systemrelevanten Banken nach Artikel 33 Absatz 1bis."
         },
         {
           "absatz": "2",
@@ -1842,7 +1842,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_38",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "8eace7baa830852017d8d9fe8f05d44a12b6256866844dea3ff66d9395af41bd"
+      "sha": "335683e53478fa18187b65f587ce650428caf49e89200a2febe56c0251ca213c"
     },
     {
       "id": "bund/ERV/art_39",
@@ -1910,11 +1910,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Kantonalbanken können Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 30 b Absatz 6 BankG ausgeben."
+          "text": "Kantonalbanken können Schuldinstrumente zur Verlusttragung bei Insolvenzmassnahmen nach Artikel 30b Absatz 6 BankG ausgeben."
         },
         {
           "absatz": "2",
-          "text": "Diese Schuldinstrumente müssen die Anforderungen von Artikel 126 a erfüllen sowie zusätzlich folgende Ausgabebedingungen vorsehen:",
+          "text": "Diese Schuldinstrumente müssen die Anforderungen von Artikel 126a erfüllen sowie zusätzlich folgende Ausgabebedingungen vorsehen:",
           "items": [
             {
               "marke": "a",
@@ -1960,7 +1960,7 @@
             },
             {
               "marke": "b",
-              "text": "inwiefern eine Abschreibung der Schuldinstrumente im Rahmen der Sanierung durchführbar ist und die gesetzlichen Anforderungen, namentlich jene von Artikel 30 c Absatz 1 Buchstabe b BankG, erfüllt;"
+              "text": "inwiefern eine Abschreibung der Schuldinstrumente im Rahmen der Sanierung durchführbar ist und die gesetzlichen Anforderungen, namentlich jene von Artikel 30c Absatz 1 Buchstabe b BankG, erfüllt;"
             },
             {
               "marke": "c",
@@ -1977,7 +1977,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_40_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "9c771273721fadc6740d7ee44934cfea7c01f723df05f2434626653799011861"
+      "sha": "f518bb980fabf35c5122570bae2961748284926825f6bbfdfa3d5c12da7ecb9c"
     },
     {
       "id": "bund/ERV/art_41",
@@ -2034,32 +2034,32 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Banken müssen nach den Abzügen gemäss den Artikeln 31–40 gesamthaft die folgenden Mindesteigenmittel halten :",
+          "text": "Banken müssen nach den Abzügen gemäss den Artikeln 31–40 gesamthaft die folgenden Mindesteigenmittel halten:",
           "items": [
             {
               "marke": "a",
-              "text": "Kernkapital in Höhe von 3 Prozent des Gesamtengagements (Art. 42 a );"
+              "text": "Kernkapital in Höhe von 3 Prozent des Gesamtengagements (Art. 42a);"
             },
             {
               "marke": "b",
-              "text": "Eigenmittel in Höhe von 8 Prozent der G esamtheit der nach Risiko gewichteten Positionen (Art. 42 b ) ."
+              "text": "Eigenmittel in Höhe von 8 Prozent der Gesamtheit der nach Risiko gewichteten Positionen (Art. 42b)."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Eine Bank muss die FINMA und die Prüfgesellschaft informieren, sobald sie nicht mehr über die Mindesteigenmittel nach Absatz 1 verfügt ."
+          "text": "Eine Bank muss die FINMA und die Prüfgesellschaft informieren, sobald sie nicht mehr über die Mindesteigenmittel nach Absatz 1 verfügt."
         },
         {
           "absatz": "3",
-          "text": "H ält eine Bank weniger als die Mindesteigenmittel nach Absatz 1, so gilt dies als Nichterfüllung der Eigenmittelvorschriften im Sinne von Artikel 25 Absatz 1 BankG."
+          "text": "Hält eine Bank weniger als die Mindesteigenmittel nach Absatz 1, so gilt dies als Nichterfüllung der Eigenmittelvorschriften im Sinne von Artikel 25 Absatz 1 BankG."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "7bcde108e9f2df71feb1149afb43fd7a5472a06f7dbc12af489010b645aafd8a"
+      "sha": "f94d6de6d0747b80e203e78b35dabe308a5e18610eef22d4c6a7003a9225edc1"
     },
     {
       "id": "bund/ERV/art_42_a",
@@ -2075,14 +2075,14 @@
         },
         {
           "absatz": "2",
-          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zur Leverage Ratio und zum Gesamtengagement. Sie richtet sich dabei nach dem LEV. Sie lässt für die Berechnung des Sicherheitszuschlags bei Derivaten neben dem Standardansatz zur Berechnung der Kreditäquivalente von Derivaten ( Standardised Approach for Measuring Counterparty Credit Risk , SA-CCR) (Art. 57) den vereinfachten Standardansatz (VSA-CCR) und den Marktwertansatz (Art. 58) zu."
+          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zur Leverage Ratio und zum Gesamtengagement. Sie richtet sich dabei nach dem LEV. Sie lässt für die Berechnung des Sicherheitszuschlags bei Derivaten neben dem Standardansatz zur Berechnung der Kreditäquivalente von Derivaten (Standardised Approach for Measuring Counterparty Credit Risk, SA-CCR) (Art. 57) den vereinfachten Standardansatz (VSA-CCR) und den Marktwertansatz (Art. 58) zu."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_42_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "6e38b121fb37d4c649e58416c9a8768c1db106097aef0cc4642456524a6ae026"
+      "sha": "461c0c62d95bb73a2d96cd18aab21a76f150d7b76f2ca259fad22a4d88cf804e"
     },
     {
       "id": "bund/ERV/art_42_b",
@@ -2298,19 +2298,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "den Expected-Positive-Exposure -Modellansatz (EPE-Modellansatz) zur Berechnung von Kreditäquivalenten von Derivaten und Wertpapierfinanzierungsgeschäften (Art. 59 und 62 Abs. 1 Bst. c);"
+              "text": "den Expected-Positive-Exposure-Modellansatz (EPE-Modellansatz) zur Berechnung von Kreditäquivalenten von Derivaten und Wertpapierfinanzierungsgeschäften (Art. 59 und 62 Abs. 1 Bst. c);"
             },
             {
               "marke": "b",
-              "text": "den auf internen Ratings basierenden Ansatz für Verbriefungen ( Internal Ratings-based Approach for Securitisations, SEC-IRBA) (Art. 59 b Abs. 2 Bst. b);"
+              "text": "den auf internen Ratings basierenden Ansatz für Verbriefungen (Internal Ratings-based Approach for Securitisations, SEC-IRBA) (Art. 59b Abs. 2 Bst. b);"
             },
             {
               "marke": "c",
-              "text": "den auf interner Beurteilung basierenden Ansatz für Verbriefungen ( Internal Assessment Approach for Securitisations, SEC-IAA) (Art. 59 b Abs. 2 Bst. d);"
+              "text": "den auf interner Beurteilung basierenden Ansatz für Verbriefungen (Internal Assessment Approach for Securitisations, SEC-IAA) (Art. 59b Abs. 2 Bst. d);"
             },
             {
               "marke": "d",
-              "text": "den Value-at-Risk -Modellansatz zur Anrechnung von Sicherheiten bei Wertpapierfinanzierungsgeschäften und anderen besicherten Transaktionen (Art. 62 Abs. 3 Bst. b);"
+              "text": "den Value-at-Risk-Modellansatz zur Anrechnung von Sicherheiten bei Wertpapierfinanzierungsgeschäften und anderen besicherten Transaktionen (Art. 62 Abs. 3 Bst. b);"
             },
             {
               "marke": "e",
@@ -2332,7 +2332,7 @@
             },
             {
               "marke": "b",
-              "text": "der Standardansatz für Verbriefungen ( Standardised Approach for Securitisations , SEC-SA) (Art. 59 b Abs. 2 Bst. a) und der auf externen Ratings basierende Ansatz für Verbriefungen ( External Ratings-based Approach for Securitisations, SEC-ERBA) (Art. 59 b Abs. 2 Bst. c) sowie die Gewichtung nach Artikel 59 b Absatz 3;"
+              "text": "der Standardansatz für Verbriefungen (Standardised Approach for Securitisations, SEC-SA) (Art. 59b Abs. 2 Bst. a) und der auf externen Ratings basierende Ansatz für Verbriefungen (External Ratings-based Approach for Securitisations, SEC-ERBA) (Art. 59b Abs. 2 Bst. c) sowie die Gewichtung nach Artikel 59b Absatz 3;"
             },
             {
               "marke": "c",
@@ -2344,11 +2344,11 @@
             },
             {
               "marke": "e",
-              "text": "die für Risiken von Kreditbewertungsanpassungen bei Derivaten und Wertpapierfinanzierungsgeschäften verwendeten Ansätze (Art. 77 g –77 j );"
+              "text": "die für Risiken von Kreditbewertungsanpassungen bei Derivaten und Wertpapierfinanzierungsgeschäften verwendeten Ansätze (Art. 77g–77j);"
             },
             {
               "marke": "f",
-              "text": "der einfache Marktrisiko-Standardansatz (Art. 83–86 a ) und der Marktrisiko-Standardansatz (Art. 87), wobei Banken, die den Marktrisiko-Modellansatz (Art. 88) verwenden, für die zusätzliche Berechnung den Marktrisiko-Standardansatz (Art. 87) verwenden müssen;"
+              "text": "der einfache Marktrisiko-Standardansatz (Art. 83–86a) und der Marktrisiko-Standardansatz (Art. 87), wobei Banken, die den Marktrisiko-Modellansatz (Art. 88) verwenden, für die zusätzliche Berechnung den Marktrisiko-Standardansatz (Art. 87) verwenden müssen;"
             },
             {
               "marke": "g",
@@ -2358,7 +2358,7 @@
         },
         {
           "absatz": "3",
-          "text": "Banken nach Absatz 1 müssen zur Berechnung der Gesamtheit der nach Risiko gewichteten Positionen den grösseren der beiden folgenden Werte verwenden ( Output Floor ):",
+          "text": "Banken nach Absatz 1 müssen zur Berechnung der Gesamtheit der nach Risiko gewichteten Positionen den grösseren der beiden folgenden Werte verwenden (Output Floor):",
           "items": [
             {
               "marke": "a",
@@ -2379,7 +2379,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_45_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "5eae6cfd7e082f3862ec3a3fae501121cd8addefe3532a12de3d10bbd0bf1a67"
+      "sha": "021bd2bb89bccf75dcd74c5231ee2732dd9fceae3045f49cc3882c28c373496b"
     },
     {
       "id": "bund/ERV/art_46_47",
@@ -2410,14 +2410,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Banken der Kategorien 4 und 5 nach Anhang 3 BankV können bei der FINMA beantragen, von der Einhaltung der Bestimmungen über die erforderlichen Eigenmittel nach den Artikeln 41–45 a dispensiert zu werden."
+          "text": "Banken der Kategorien 4 und 5 nach Anhang 3 BankV können bei der FINMA beantragen, von der Einhaltung der Bestimmungen über die erforderlichen Eigenmittel nach den Artikeln 41–45a dispensiert zu werden."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "37f8375d3769973b6d58fc7a8594b06ae9c710c6b328888d7e7586f0de08f04e"
+      "sha": "4588754721565ffd5d10c937deaf6dfc0efc159ea81596621ee3e3165b8aaa03"
     },
     {
       "id": "bund/ERV/art_47_b",
@@ -2465,11 +2465,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Durchschnitt der letzten zwölf Monatsendbestände an qualitativ hochwertigen, liquiden Aktiva ( High Quality Liquid Assets , HQLA) nach Artikel 15 der Liquiditätsverordnung vom 30. November 2012 (LiqV); und"
+              "text": "Durchschnitt der letzten zwölf Monatsendbestände an qualitativ hochwertigen, liquiden Aktiva (High Quality Liquid Assets, HQLA) nach Artikel 15 der Liquiditätsverordnung vom 30. November 2012 (LiqV); und"
             },
             {
               "marke": "b",
-              "text": "durchschnittlichem Wert des Nettomittelabflusses zum Monatsende nach Artikel 16 LiqV, der gemäss Stressszenario für die Quote für kurzfristige Liquidität ( Liquidity Coverage Ratio , LCR) im 30-Tage-Horizont zu erwarten ist, der letzten zwölf Monate."
+              "text": "durchschnittlichem Wert des Nettomittelabflusses zum Monatsende nach Artikel 16 LiqV, der gemäss Stressszenario für die Quote für kurzfristige Liquidität (Liquidity Coverage Ratio, LCR) im 30-Tage-Horizont zu erwarten ist, der letzten zwölf Monate."
             }
           ]
         },
@@ -2496,7 +2496,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "5bbb6861e296deb991e55b4143f75f816b2d86805d1cfd37cc1e67048918c255"
+      "sha": "65623c25a1d239ad9e580304d763625af28974b4df7d53b99b710a7b32bac396"
     },
     {
       "id": "bund/ERV/art_47_c",
@@ -2512,7 +2512,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Voraussetzungen nach den Artikeln 47 a und 47 b nicht erfüllt sind;"
+              "text": "die Voraussetzungen nach den Artikeln 47a und 47b nicht erfüllt sind;"
             },
             {
               "marke": "b",
@@ -2549,7 +2549,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "f2110c17c477383aa627ad974ce8961a86d9bc1e4ea7c536ed32dd4a171da4e7"
+      "sha": "b3a2b9906c7e179d2fc8bd886632628c4649818a1094b15647406f27338390d1"
     },
     {
       "id": "bund/ERV/art_47_d",
@@ -2561,22 +2561,22 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Banken, welche die Voraussetzungen nach Artikel 47 b nicht mehr erfüllen, haben dies der FINMA umgehend mitzuteilen."
+          "text": "Banken, welche die Voraussetzungen nach Artikel 47b nicht mehr erfüllen, haben dies der FINMA umgehend mitzuteilen."
         },
         {
           "absatz": "2",
-          "text": "Stellt die FINMA fest, dass eine Bank nicht mehr der Kategorie 4 oder 5 angehört oder dass ein Ablehnungsgrund nach Artikel 47 c vorliegt, so teilt sie dies der Bank mit."
+          "text": "Stellt die FINMA fest, dass eine Bank nicht mehr der Kategorie 4 oder 5 angehört oder dass ein Ablehnungsgrund nach Artikel 47c vorliegt, so teilt sie dies der Bank mit."
         },
         {
           "absatz": "3",
-          "text": "Bei Mitteilungen nach den Absätzen 1 und 2 räumt die FINMA der Bank eine Frist zur Wiedererfüllung der Voraussetzungen ein. Diese beträgt in der Regel ein Jahr, kann jedoch in begründeten Einzelfällen verkürzt oder verlängert werden. Sind die Voraussetzungen nach Ablauf dieser Frist nicht erfüllt, so können die Vereinfachungen nach Artikel 47 a nicht mehr beansprucht werden."
+          "text": "Bei Mitteilungen nach den Absätzen 1 und 2 räumt die FINMA der Bank eine Frist zur Wiedererfüllung der Voraussetzungen ein. Diese beträgt in der Regel ein Jahr, kann jedoch in begründeten Einzelfällen verkürzt oder verlängert werden. Sind die Voraussetzungen nach Ablauf dieser Frist nicht erfüllt, so können die Vereinfachungen nach Artikel 47a nicht mehr beansprucht werden."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_d",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "19a9dfa7a8c841d464108bb52d92a68315e29aa305f63e44e89a5928dc58014f"
+      "sha": "22afbda41dff199ee5f2fe332d1891e8e0e2acb9937e17a9c4f9546df3df2038"
     },
     {
       "id": "bund/ERV/art_47_e",
@@ -2588,14 +2588,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Banken, die von den Vereinfachungen nach Artikel 47 a nicht mehr Gebrauch machen wollen, melden dies der FINMA und der Prüfgesellschaft."
+          "text": "Banken, die von den Vereinfachungen nach Artikel 47a nicht mehr Gebrauch machen wollen, melden dies der FINMA und der Prüfgesellschaft."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_47_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "fc6af60fa0b2868cd0da847898e587c2876f12efd801b697dae9e4e0ba3c28e2"
+      "sha": "0b210cb3f62b3259b40e1c50ffa05373ff4e4bdeca85a2d144e1901f226d8865"
     },
     {
       "id": "bund/ERV/art_48",
@@ -2639,14 +2639,14 @@
         },
         {
           "absatz": "3",
-          "text": "Als CVA-Risiko gilt die Gefahr von Marktwertverlusten für die Bank durch Kreditbewertungsanpassungen ( Credit valuation adjustment, CVA) bei Derivaten und Wertpapierfinanzierungsgeschäften aufgrund des Risikos eines Ausfalls der Gegenpartei."
+          "text": "Als CVA-Risiko gilt die Gefahr von Marktwertverlusten für die Bank durch Kreditbewertungsanpassungen (Credit valuation adjustment, CVA) bei Derivaten und Wertpapierfinanzierungsgeschäften aufgrund des Risikos eines Ausfalls der Gegenpartei."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_48",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "198f2e47aa86ba404ff2ff076abd7fd6c248ea06d4e67843c730482a6703a1b9"
+      "sha": "2656e0a8f0a745092595cbb3ba9396f6e46c45186ba86f79bb269f11e4f0d4e5"
     },
     {
       "id": "bund/ERV/art_49",
@@ -2763,7 +2763,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Berechn ung der nach den Kreditrisiken gewichteten Positionen erfolgt nach den gemeinsamen Bestimmungen (Art. 77 a –77 j) sowie nach:",
+          "text": "Die Berechnung der nach den Kreditrisiken gewichteten Positionen erfolgt nach den gemeinsamen Bestimmungen (Art. 77a–77j) sowie nach:",
           "items": [
             {
               "marke": "a",
@@ -2792,7 +2792,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_50",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "10c2253052d6c1069f17ce962387baf7328aa5511362e678087961b70cd385f7"
+      "sha": "b999a6bd61e1fc5f8168bf9505a85de0e08b6addf5a1691f80951781f0982b38"
     },
     {
       "id": "bund/ERV/art_50_a",
@@ -2816,7 +2816,7 @@
             },
             {
               "marke": "c",
-              "text": "Abzüge von den Eigenmitteln nach den Artikeln 5 b Absatz 3 und 31–40."
+              "text": "Abzüge von den Eigenmitteln nach den Artikeln 5b Absatz 3 und 31–40."
             }
           ]
         },
@@ -2829,7 +2829,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_50_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a6692ff2ca335a2c1fe39b74aaf5a20774279e9150c6a94caa8a51d092220a97"
+      "sha": "27d6266293d8d74b59cc93872f5301ba77a58c83da5b14d1f3f450ffab28c00e"
     },
     {
       "id": "bund/ERV/art_51",
@@ -2845,11 +2845,11 @@
           "items": [
             {
               "marke": "+",
-              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps )"
+              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)"
             },
             {
               "marke": "./",
-              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps )"
+              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)"
             },
             {
               "marke": "+",
@@ -2857,19 +2857,19 @@
             },
             {
               "marke": "+",
-              "text": "Lieferansprüche aus Call -Käufen, deltagewichtet"
+              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet"
             },
             {
               "marke": "./",
-              "text": "Lieferverpflichtungen aus geschriebenen Calls , deltagewichtet"
+              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet"
             },
             {
               "marke": "+",
-              "text": "Übernahmeverpflichtungen aus geschriebenen Puts , deltagewichtet"
+              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet"
             },
             {
               "marke": "./",
-              "text": "Abgabeansprüche aus Put -Käufen, deltagewichtet."
+              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet."
             }
           ]
         },
@@ -2879,14 +2879,14 @@
         },
         {
           "absatz": "3",
-          "text": "Positive Nettopositionen werden als Netto- Long positionen, die absoluten Beträge von negativen Nettopositionen als Netto- Short positionen bezeichnet."
+          "text": "Positive Nettopositionen werden als Netto-Longpositionen, die absoluten Beträge von negativen Nettopositionen als Netto-Shortpositionen bezeichnet."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_51",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "d60d40796178b0145fa2f28077acf25225e8cb061e840812c7e6cd7bd8941baf"
+      "sha": "8c6aa2c28708391aaced7b18258fa6b54e9b0737187e8e29a5915fbb0bd4b91b"
     },
     {
       "id": "bund/ERV/art_52",
@@ -2902,11 +2902,11 @@
           "items": [
             {
               "marke": "+",
-              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps )"
+              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)"
             },
             {
               "marke": "./",
-              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps )"
+              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)"
             },
             {
               "marke": "./",
@@ -2914,33 +2914,33 @@
             },
             {
               "marke": "+",
-              "text": "Lieferansprüche aus Call -Käufen, deltagewichtet"
+              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet"
             },
             {
               "marke": "./",
-              "text": "Lieferverpflichtungen aus geschriebenen Calls , deltagewichtet"
+              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet"
             },
             {
               "marke": "+",
-              "text": "Übernahmeverpflichtungen aus geschriebenen Puts , deltagewichtet"
+              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet"
             },
             {
               "marke": "./",
-              "text": "Abgabeansprüche aus Put -Käufen, deltagewichtet."
+              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Bei direkt gehaltenen Instrumenten, die Eigenkapitalinstrumente sind oder durch welche Eigenkapitalinstrumente indirekt oder synthetisch gehalten werden, ausgenommen eigene Eigenkapitalinstrumente, ist eine Verrechnung von Long - und Short -Positionen in den Eigenkapitalinstrumenten nur zulässig, wenn:",
+          "text": "Bei direkt gehaltenen Instrumenten, die Eigenkapitalinstrumente sind oder durch welche Eigenkapitalinstrumente indirekt oder synthetisch gehalten werden, ausgenommen eigene Eigenkapitalinstrumente, ist eine Verrechnung von Long- und Short-Positionen in den Eigenkapitalinstrumenten nur zulässig, wenn:",
           "items": [
             {
               "marke": "a",
-              "text": "sich die Long - und die Short -Position auf dasselbe Eigenkapitalinstrument beziehen; und"
+              "text": "sich die Long- und die Short-Position auf dasselbe Eigenkapitalinstrument beziehen; und"
             },
             {
               "marke": "b",
-              "text": "die Short -Position des Instruments die gleiche Laufzeit aufweist wie die Long -Position oder zumindest eine Restlaufzeit von einem Jahr hat."
+              "text": "die Short-Position des Instruments die gleiche Laufzeit aufweist wie die Long-Position oder zumindest eine Restlaufzeit von einem Jahr hat."
             }
           ]
         },
@@ -2963,7 +2963,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_52",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "9ea4e2c43f1126f77e7e0350d0348094357f181993226f0b11ab0173e19bd437"
+      "sha": "7f2340fde8ae9211349c1b2d954c9097e007aee9826208be681ccf6686e15014"
     },
     {
       "id": "bund/ERV/art_53",
@@ -2979,7 +2979,7 @@
         },
         {
           "absatz": "2",
-          "text": "Banken, die den SA-BIZ anwenden, müssen das Kreditäquivalent berechnen, indem der Nominalwert oder der Barwert des jeweiligen Geschäfts mit dessen Kreditumrechnungsfaktor nach Anhang 1 a multipliziert wird."
+          "text": "Banken, die den SA-BIZ anwenden, müssen das Kreditäquivalent berechnen, indem der Nominalwert oder der Barwert des jeweiligen Geschäfts mit dessen Kreditumrechnungsfaktor nach Anhang 1a multipliziert wird."
         },
         {
           "absatz": "3",
@@ -3001,7 +3001,7 @@
         },
         {
           "absatz": "5",
-          "text": "M it einem Kreditumrechnungsfaktor von 0,0 umgerechnet werden können nach dem SA-BIZ Beträge im Rahmen von Zusagen gegenüber Unternehmen, einschliesslich KMU nach Artikel 70, bei denen:",
+          "text": "Mit einem Kreditumrechnungsfaktor von 0,0 umgerechnet werden können nach dem SA-BIZ Beträge im Rahmen von Zusagen gegenüber Unternehmen, einschliesslich KMU nach Artikel 70, bei denen:",
           "items": [
             {
               "marke": "a",
@@ -3038,7 +3038,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_53",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "24cb7126c234f6c60f2ee3aaf63051375299322180a7932a7383482886da0f7a"
+      "sha": "25fbd2d450fd1e1dd3ab3137cf78878599101f1bb0741a45a9ca82c8c532efda"
     },
     {
       "id": "bund/ERV/art_54",
@@ -3234,7 +3234,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Look-Through -Ansatz (LTA);"
+              "text": "Look-Through-Ansatz (LTA);"
             },
             {
               "marke": "b",
@@ -3242,7 +3242,7 @@
             },
             {
               "marke": "c",
-              "text": "Fallback -Ansatz (FBA); oder"
+              "text": "Fallback-Ansatz (FBA); oder"
             },
             {
               "marke": "d",
@@ -3273,7 +3273,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_59_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "71f5c22cefff3056b699927355fc34b9e306a611498260c5dd1c12769853cc4f"
+      "sha": "de394ddbfd445e35a9adbb1a7349265a562536e95c0c3ad6e5950861b9b4c91b"
     },
     {
       "id": "bund/ERV/art_59_b",
@@ -3476,13 +3476,13 @@
             },
             {
               "marke": "b",
-              "text": "der Value-at-Risk -Modellansatz."
+              "text": "der Value-at-Risk-Modellansatz."
             }
           ]
         },
         {
           "absatz": "4",
-          "text": "Die Anwendung des EPE- und des Value-at-Risk -Modellansatzes erfordert eine Bewilligung der FINMA."
+          "text": "Die Anwendung des EPE- und des Value-at-Risk-Modellansatzes erfordert eine Bewilligung der FINMA."
         },
         {
           "absatz": "5",
@@ -3490,18 +3490,18 @@
         },
         {
           "absatz": "6",
-          "text": "Bei der Berechnung der Kreditäquivalente nach den Artikeln 56 – 59 sind alle zur Besicherung von Derivaten durch die Bank gestellten sowie von der Bank erhaltenen anrechenbaren Sicherheiten zu berücksichtigen."
+          "text": "Bei der Berechnung der Kreditäquivalente nach den Artikeln 56–59 sind alle zur Besicherung von Derivaten durch die Bank gestellten sowie von der Bank erhaltenen anrechenbaren Sicherheiten zu berücksichtigen."
         },
         {
           "absatz": "7",
-          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zu den Ansätzen nach den Absätzen 1 – 5 und zur Berücksichtigung der Sicherheiten nach Absatz 6. Sie richtet sich dabei nach dem CRE unter Ausschluss von dessen Ziffer 56."
+          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zu den Ansätzen nach den Absätzen 1–5 und zur Berücksichtigung der Sicherheiten nach Absatz 6. Sie richtet sich dabei nach dem CRE unter Ausschluss von dessen Ziffer 56."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_62",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "52d7de69bfb038b1ea94bbaad72f19eeaa74869f6fe4a88e8dcd9ca95dfbbcd0"
+      "sha": "a51a8e09e382614ae07913fc6c4ffe53eb571f9db5cd54d4eb97f0e4f2a0c4c7"
     },
     {
       "id": "bund/ERV/art_63",
@@ -3842,7 +3842,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die Risikogewichtung von Positionen gegenüber Zentralregierungen können Banken die Länderrisikoklassifikation verwenden, die nach dem Arrangement on Guidelines for Officially Supported Export Credits vom 1. Januar 2022 der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung ( Organisation for Economic Co-operation and Development , OECD) erstellt und von der OECD veröffentlicht wird."
+          "text": "Für die Risikogewichtung von Positionen gegenüber Zentralregierungen können Banken die Länderrisikoklassifikation verwenden, die nach dem Arrangement on Guidelines for Officially Supported Export Credits vom 1. Januar 2022 der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (Organisation for Economic Co-operation and Development, OECD) erstellt und von der OECD veröffentlicht wird."
         },
         {
           "absatz": "2",
@@ -3875,7 +3875,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_65_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "45c440e25591746fbcb0346af0d6b6bb22ca409a506f84dff4dff6664df35d92"
+      "sha": "0e46ce13498bb9491863f6952d79e78b68fff7984535c3a3efd26c6d5363ddf9"
     },
     {
       "id": "bund/ERV/art_66",
@@ -4017,14 +4017,14 @@
         },
         {
           "absatz": "5",
-          "text": "Positionen gegenüber einer Bank ohne externes Rating, deren Antrag auf Inanspruchnahme der Vereinfachungen nach Artikel 47 a von der FINMA bewilligt wurde, werden lediglich aufgrund der Kreditfähigkeit der Bank den Unterpositionsklassen A–C zugeordnet. Die Voraussetzungen nach den Absätzen 2–4 gelten nicht."
+          "text": "Positionen gegenüber einer Bank ohne externes Rating, deren Antrag auf Inanspruchnahme der Vereinfachungen nach Artikel 47a von der FINMA bewilligt wurde, werden lediglich aufgrund der Kreditfähigkeit der Bank den Unterpositionsklassen A–C zugeordnet. Die Voraussetzungen nach den Absätzen 2–4 gelten nicht."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_68_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "59b53ae3477f21f587c7cde03efdb19ddd491e01c43abc709c1d079c1fa627d4"
+      "sha": "68a32423645dab2a79899dd1724b690f333cb4e3a5bd23a06b4aebdfe64c3349"
     },
     {
       "id": "bund/ERV/art_69",
@@ -4036,7 +4036,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Hält eine Bank der Unterpositionsklasse A Mindesteigenmittel in Form von hartem Kernkapital von mindestens 14 Prozent der Gesamtheit der nach Risiko gewichteten Positionen (Art. 42 b ) und von mindestens 5 Prozent des Gesamtengagements (Art. 42 a ), so ist auf Positionen nach Anhang 2 Ziffer 4.2 gegenüber dieser Bank ein Risikogewicht von 30 Prozent anwendbar."
+          "text": "Hält eine Bank der Unterpositionsklasse A Mindesteigenmittel in Form von hartem Kernkapital von mindestens 14 Prozent der Gesamtheit der nach Risiko gewichteten Positionen (Art. 42b) und von mindestens 5 Prozent des Gesamtengagements (Art. 42a), so ist auf Positionen nach Anhang 2 Ziffer 4.2 gegenüber dieser Bank ein Risikogewicht von 30 Prozent anwendbar."
         },
         {
           "absatz": "2",
@@ -4065,7 +4065,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_69",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "0bbece491c4cca56f257b6652606b3a6c874306bb331c5fd0c1d238937d7d524"
+      "sha": "cc4889e94f624793e161fedd44bc06de689fd2cec69cfef5b883111fa891c4ec"
     },
     {
       "id": "bund/ERV/art_70",
@@ -4282,12 +4282,12 @@
             },
             {
               "marke": "2",
-              "text": "direkt und indirekt grundpfandgesicherte Positionen für Wohnliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 80 Prozent;",
+              "text": "direkt und indirekt grundpfandgesicherte Positionen für Wohnliegenschaften, die die Anforderungen nach Artikel 72c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 80 Prozent;",
               "tiefe": 1
             },
             {
               "marke": "3",
-              "text": "direkt und indirekt grundpfandgesicherte Positionen für Gewerbeliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 60 Prozent;",
+              "text": "direkt und indirekt grundpfandgesicherte Positionen für Gewerbeliegenschaften, die die Anforderungen nach Artikel 72c Absatz 1 erfüllen, mit einem Belehnungsgrad von maximal 60 Prozent;",
               "tiefe": 1
             },
             {
@@ -4320,7 +4320,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_71_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "9eb9af8d79b3314aca9cfde772d948dd5cbb001c0675f3b3b100abb996bd0169"
+      "sha": "6f0b45cba6d2c0bae1da58cb459bcd809299de6b7840a58155616f24d999a613"
     },
     {
       "id": "bund/ERV/art_72",
@@ -4463,7 +4463,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die Liegenschaften sind fertiggestellt, ausser im Fall von Baukrediten und Krediten für Bauland (Art. 72 e )."
+              "text": "Die Liegenschaften sind fertiggestellt, ausser im Fall von Baukrediten und Krediten für Bauland (Art. 72e)."
             },
             {
               "marke": "b",
@@ -4475,11 +4475,11 @@
             },
             {
               "marke": "d",
-              "text": "Die Tragbarkeit (Art. 72 d ) des Kredits sowie die Rückzahlungsfähigkeit der Kreditnehmerin oder des Kreditnehmers werden im Rahmen der Kreditvergabe geprüft."
+              "text": "Die Tragbarkeit (Art. 72d) des Kredits sowie die Rückzahlungsfähigkeit der Kreditnehmerin oder des Kreditnehmers werden im Rahmen der Kreditvergabe geprüft."
             },
             {
               "marke": "e",
-              "text": "Der Belehnungswert ist nach Artikel 72 b vorsichtig festgelegt."
+              "text": "Der Belehnungswert ist nach Artikel 72b vorsichtig festgelegt."
             },
             {
               "marke": "f",
@@ -4497,7 +4497,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die Kreditnehmerin oder der Kreditnehmer erbringt für die Finanzierung einen angemessenen Mindestanteil an Eigenmitteln, der weder aus einer Verpfändung noch aus einem Vorbezug nach Artikel 30 b beziehungsweise 30 c des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) stammt."
+              "text": "Die Kreditnehmerin oder der Kreditnehmer erbringt für die Finanzierung einen angemessenen Mindestanteil an Eigenmitteln, der weder aus einer Verpfändung noch aus einem Vorbezug nach Artikel 30b beziehungsweise 30c des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) stammt."
             },
             {
               "marke": "b",
@@ -4547,7 +4547,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "0d9738fa1966eb271975e2649d1fefb3ca7fa4b30018c03ee99f3d26188da342"
+      "sha": "dca3190199066d84bdedfb9582bb1fa6dd6b4a795e84234d8119f741bb47e408"
     },
     {
       "id": "bund/ERV/art_72_d",
@@ -4586,15 +4586,15 @@
         },
         {
           "absatz": "2",
-          "text": "Baukredite und Kredite für Bauland für selbstgenutzte Wohnliegenschaften, die die Anforderungen nach Artikel 72 c Absatz 1 Buchstaben b–f erfüllen, sind nach Anhang 3 Ziffer 3.1 zu gewichten. Sind diese Anforderungen nicht erfüllt, so ist Artikel 72 c Absatz 5 Buchstabe a anwendbar."
+          "text": "Baukredite und Kredite für Bauland für selbstgenutzte Wohnliegenschaften, die die Anforderungen nach Artikel 72c Absatz 1 Buchstaben b–f erfüllen, sind nach Anhang 3 Ziffer 3.1 zu gewichten. Sind diese Anforderungen nicht erfüllt, so ist Artikel 72c Absatz 5 Buchstabe a anwendbar."
         },
         {
           "absatz": "3",
-          "text": "Baukredite und Kredite für Bauland für Wohnliegenschaften, die nicht selbstgenutzt sind, sind mit 100 Prozent zu gewichten, sofern die Anforderungen nach Artikel 72 c Absatz 1 Buchstaben b−f erfüllt sind und der Belehnungsgrad maximal 70 Prozent beträgt. In allen anderen Fällen sind sie mit 150 Prozent zu gewichten. Der dem Belehnungsgrad zugrunde liegende Wert entspricht dem geschätzten Belehnungswert des Grundpfandes zum Zeitpunkt der Fertigstellung."
+          "text": "Baukredite und Kredite für Bauland für Wohnliegenschaften, die nicht selbstgenutzt sind, sind mit 100 Prozent zu gewichten, sofern die Anforderungen nach Artikel 72c Absatz 1 Buchstaben b−f erfüllt sind und der Belehnungsgrad maximal 70 Prozent beträgt. In allen anderen Fällen sind sie mit 150 Prozent zu gewichten. Der dem Belehnungsgrad zugrunde liegende Wert entspricht dem geschätzten Belehnungswert des Grundpfandes zum Zeitpunkt der Fertigstellung."
         },
         {
           "absatz": "4",
-          "text": "Baukredite und Kredite für Bauland für selbstgenutzte Gewerbeliegenschaften sind nach Artikel 72 c Absatz 5 Buchstabe a zu gewichten."
+          "text": "Baukredite und Kredite für Bauland für selbstgenutzte Gewerbeliegenschaften sind nach Artikel 72c Absatz 5 Buchstabe a zu gewichten."
         },
         {
           "absatz": "5",
@@ -4605,7 +4605,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "2cb2fc9917b15086461ecc602509ac39ea44b9bbe7b8569cf527ea3609b63bd7"
+      "sha": "b2f558081b6cc48c5b975755926c2cc71f8f18035c28c86b4b0ca4214c2718dc"
     },
     {
       "id": "bund/ERV/art_72_f",
@@ -4617,11 +4617,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Risikomindernde Massnahmen (Art. 61) können bei der Berechnung der nach Risiko zu gewichtenden direkt und indirekt grundpfandgesicherten Positionen berücksichtigt werden, soweit sie nicht bereits bei der Berechnung des Belehnungsgrades nach Artikel 72 a Absatz 3 berücksichtigt wurden."
+          "text": "Risikomindernde Massnahmen (Art. 61) können bei der Berechnung der nach Risiko zu gewichtenden direkt und indirekt grundpfandgesicherten Positionen berücksichtigt werden, soweit sie nicht bereits bei der Berechnung des Belehnungsgrades nach Artikel 72a Absatz 3 berücksichtigt wurden."
         },
         {
           "absatz": "2",
-          "text": "Verpfändete Vorsorgevermögen nach Artikel 30 b BVG und Artikel 4 der Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen können im Rahmen der Anrechenbarkeit nach Artikel 61 berücksichtigt werden, wenn:",
+          "text": "Verpfändete Vorsorgevermögen nach Artikel 30b BVG und Artikel 4 der Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen können im Rahmen der Anrechenbarkeit nach Artikel 61 berücksichtigt werden, wenn:",
           "items": [
             {
               "marke": "a",
@@ -4633,7 +4633,7 @@
             },
             {
               "marke": "c",
-              "text": "die Minimalanforderungen nach Artikel 72 c Absatz 3 erfüllt sind."
+              "text": "die Minimalanforderungen nach Artikel 72c Absatz 3 erfüllt sind."
             }
           ]
         }
@@ -4642,7 +4642,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_f",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "164d730ccba094171005efdf3d09c8fb1babe8ea469264ba90e187e9eaad75cb"
+      "sha": "124448a9ff8631332844d4ae367c78d4fbc869761da25962e88d892dd97d1796"
     },
     {
       "id": "bund/ERV/art_72_g",
@@ -4654,14 +4654,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zu den direkt und indirekt grundpfandgesicherten Positionen. Sie richtet sich dabei nach dem CRE. In Abweichung vom CRE regelt sie im Rahmen von Artikel 72 f Absatz 2 die Anrechenbarkeit verpfändeter Vorsorgevermögen."
+          "text": "Die FINMA erlässt technische Ausführungsbestimmungen zu den direkt und indirekt grundpfandgesicherten Positionen. Sie richtet sich dabei nach dem CRE. In Abweichung vom CRE regelt sie im Rahmen von Artikel 72f Absatz 2 die Anrechenbarkeit verpfändeter Vorsorgevermögen."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_72_g",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "c61ce20e6152ae4470d3cdb409a15632b09b5e1431bff8dd62b47240b6cf41ae"
+      "sha": "ddeb3f71c0467e2e77de79c2cc674bc6d804504873ceff2df97f1720e24b4759"
     },
     {
       "id": "bund/ERV/art_73",
@@ -4725,11 +4725,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "dem einfachen IRB ( Foundation IRB, F-IRB); oder"
+              "text": "dem einfachen IRB (Foundation IRB, F-IRB); oder"
             },
             {
               "marke": "b",
-              "text": "dem fortgeschrittenen IRB ( Advanced IRB, A-IRB)."
+              "text": "dem fortgeschrittenen IRB (Advanced IRB, A-IRB)."
             }
           ]
         },
@@ -4739,7 +4739,7 @@
         },
         {
           "absatz": "3",
-          "text": "Für direkt und indirekt durch Wohnliegenschaften grundpfandgesicherte Positionen, bei denen das Kreditgeschäft der Bank die Minimalanforderungen nach Artikel 72 c Absatz 3 nicht erfüllt, ist das Risikogewicht nach Artikel 72 c Absatz 5 anzuwenden, sofern dieses höher ist als das nach dem IRB bestimmte Risikogewicht."
+          "text": "Für direkt und indirekt durch Wohnliegenschaften grundpfandgesicherte Positionen, bei denen das Kreditgeschäft der Bank die Minimalanforderungen nach Artikel 72c Absatz 3 nicht erfüllt, ist das Risikogewicht nach Artikel 72c Absatz 5 anzuwenden, sofern dieses höher ist als das nach dem IRB bestimmte Risikogewicht."
         },
         {
           "absatz": "4",
@@ -4758,7 +4758,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a3016f02ac101f7755e59fb6eea52af9ce381baafcf1e1768d1ef8885b456472"
+      "sha": "0a179df970bc35499254c1b0fd1d890a17f4fc0a2dc45acc6ee50e97408733e7"
     },
     {
       "id": "bund/ERV/art_77_a",
@@ -4770,7 +4770,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Artikel 77 a –77 e gelten für Transaktionen mit zentralen Gegenparteien nach Artikel 48 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015."
+          "text": "Die Artikel 77a–77e gelten für Transaktionen mit zentralen Gegenparteien nach Artikel 48 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015."
         },
         {
           "absatz": "2",
@@ -4786,7 +4786,7 @@
             },
             {
               "marke": "c",
-              "text": "Die Banken verfügen über die nötigen Informationen der zentralen Gegenpartei, um für Risiken gegenüber dem Ausfallfonds ihre Mindesteigenmittel nach Artikel 77 d Absatz 2 zu berechnen, und die zuständigen Aufsichtsbehörden überprüfen diese Informationen und die Berechnung."
+              "text": "Die Banken verfügen über die nötigen Informationen der zentralen Gegenpartei, um für Risiken gegenüber dem Ausfallfonds ihre Mindesteigenmittel nach Artikel 77d Absatz 2 zu berechnen, und die zuständigen Aufsichtsbehörden überprüfen diese Informationen und die Berechnung."
             }
           ]
         },
@@ -4813,7 +4813,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "675ebba7feecac46a022961d09d6801ed676d58016d7717e4b096e1508ef5c1a"
+      "sha": "c0c11f71cc6c2e0ad15be127f11834eafc4b08d60d7150cdb81eb7081be9dab7"
     },
     {
       "id": "bund/ERV/art_77_b",
@@ -4865,7 +4865,7 @@
         },
         {
           "absatz": "3",
-          "text": "Für Positionen im Zusammenhang mit Kassageschäften gilt Artikel 77 f . Für Beiträge an Ausfallfonds, die nur das Abwicklungsrisiko von Kassageschäften abdecken, gilt ein Risikogewicht von 0 Prozent."
+          "text": "Für Positionen im Zusammenhang mit Kassageschäften gilt Artikel 77f. Für Beiträge an Ausfallfonds, die nur das Abwicklungsrisiko von Kassageschäften abdecken, gilt ein Risikogewicht von 0 Prozent."
         },
         {
           "absatz": "4",
@@ -4876,7 +4876,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "ac80aaa22c11e08c28f169583f7f30b1cdde775c86715e1d49286f2985d5b01c"
+      "sha": "e612f16edeafdec81ab37ec3d5de63f02b546c3615337bb5d185c1e625af514b"
     },
     {
       "id": "bund/ERV/art_77_c",
@@ -4888,7 +4888,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Mindesteigenmittel für Positionen aus Handelsgeschäften nach Artikel 77 b Absatz 1 Buchstaben a und b gegenüber nicht qualifizierten zentralen Gegenparteien sind unter Verwendung des SA-BIZ zu berechnen."
+          "text": "Die Mindesteigenmittel für Positionen aus Handelsgeschäften nach Artikel 77b Absatz 1 Buchstaben a und b gegenüber nicht qualifizierten zentralen Gegenparteien sind unter Verwendung des SA-BIZ zu berechnen."
         },
         {
           "absatz": "2",
@@ -4913,7 +4913,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "b4e6e4f55c11ee3f27ec38a506c839a1b6785a88ce1eef9258f375eb092ac7ab"
+      "sha": "be9767c280e085ddd264a4d963a7c2c8f0e8b495b4c0707423ab22828b9cfb51"
     },
     {
       "id": "bund/ERV/art_77_d",
@@ -4925,11 +4925,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Handelt eine Bank als Clearing-Mitglied einer qualifizierten zentralen Gegenpartei, so gilt für Positionen aus Handelsgeschäften nach Artikel 77 b Absatz 1 Buchstaben a und b gegenüber der qualifizierten zentralen Gegenpartei ein Risikogewicht von 2 Prozent."
+          "text": "Handelt eine Bank als Clearing-Mitglied einer qualifizierten zentralen Gegenpartei, so gilt für Positionen aus Handelsgeschäften nach Artikel 77b Absatz 1 Buchstaben a und b gegenüber der qualifizierten zentralen Gegenpartei ein Risikogewicht von 2 Prozent."
         },
         {
           "absatz": "2",
-          "text": "Die Mindesteigenmittel für Beiträge an den Ausfallfonds berechnen sich nach Anhang 4 a ."
+          "text": "Die Mindesteigenmittel für Beiträge an den Ausfallfonds berechnen sich nach Anhang 4a."
         },
         {
           "absatz": "3",
@@ -4954,7 +4954,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_d",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "b49c10fdbe97dc1ca8602f0032cb6ed685732fddacdb45c94812c32b1139bcfa"
+      "sha": "2ac19679b0abc10cea46406baff0770be888fc4877368c1f410917953119c903"
     },
     {
       "id": "bund/ERV/art_77_e",
@@ -4966,14 +4966,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Bank muss prüfen, ob die Mindesteigenmittel nach den Artikeln 77 b –77 d die Risiken ihrer Positionen gegenüber der zentralen Gegenpartei angemessen abdecken. Andernfalls muss sie in Ergänzung zu den erforderlichen Eigenmitteln nach den Artikeln 41–45 a und, sofern sie systemrelevant ist, nach den Artikeln 130–131 b angemessene zusätzliche Eigenmittel halten."
+          "text": "Die Bank muss prüfen, ob die Mindesteigenmittel nach den Artikeln 77b–77d die Risiken ihrer Positionen gegenüber der zentralen Gegenpartei angemessen abdecken. Andernfalls muss sie in Ergänzung zu den erforderlichen Eigenmitteln nach den Artikeln 41–45a und, sofern sie systemrelevant ist, nach den Artikeln 130–131b angemessene zusätzliche Eigenmittel halten."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "4197339e4919a44294b3e6467ae14e79b5865717cc9aadfe9968a26331baefc0"
+      "sha": "288fc185def406223f4ae82def5d0ddf7a200390e971dabe5c80e27cb92cd9f8"
     },
     {
       "id": "bund/ERV/art_77_f",
@@ -5122,7 +5122,7 @@
         },
         {
           "absatz": "2",
-          "text": "Der vereinfachte Ansatz ist auf das gesamte Portfolio anzuwenden. Er darf nicht mit dem fortgeschrittenen Ansatz oder mit dem Basisansatz kombiniert werden, ausser auf konsolidierter Basis nach Artikel 77 j Absatz 2 zweiter Satz."
+          "text": "Der vereinfachte Ansatz ist auf das gesamte Portfolio anzuwenden. Er darf nicht mit dem fortgeschrittenen Ansatz oder mit dem Basisansatz kombiniert werden, ausser auf konsolidierter Basis nach Artikel 77j Absatz 2 zweiter Satz."
         },
         {
           "absatz": "3",
@@ -5133,7 +5133,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_77_i",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "6b97e805cee5602104d1b494e48d5a293e382293fa94655a5e26521c9dc78e90"
+      "sha": "cb50c07097cd33d728a63f9097c22813306101d85ab7a97c44f534e898997109"
     },
     {
       "id": "bund/ERV/art_77_j",
@@ -5360,7 +5360,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Mindesteigenmittel , die zur Unterlegung der Marktrisiken vorliegen müssen, können berechnet werden nach:",
+          "text": "Die Mindesteigenmittel, die zur Unterlegung der Marktrisiken vorliegen müssen, können berechnet werden nach:",
           "items": [
             {
               "marke": "a",
@@ -5399,7 +5399,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_82",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "cbce04eb165026f458accd20a8dd0b81440a62b0ceaf7ea67a6096778071b2b0"
+      "sha": "3dc222399fc6aa49b733e5d32caea69835085743a4c85561d6e5a6a601dd12ae"
     },
     {
       "id": "bund/ERV/art_83",
@@ -5415,7 +5415,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Sie ist keine international tätige systemrelevante Bank nach Artikel 124 a Absatz 1."
+              "text": "Sie ist keine international tätige systemrelevante Bank nach Artikel 124a Absatz 1."
             },
             {
               "marke": "b",
@@ -5437,7 +5437,7 @@
         },
         {
           "absatz": "3",
-          "text": "Banken nach Absatz 1, die keine Kreditderivate im Handelsbuch halten und deren Handelsbuch bestimmte Grenzwerte nicht überschreitet, dürfen die Mindesteigenmittel zur Unterlegung von Zins- und Aktienpreisrisiken von Instrumenten, die im Handelsbuch gehalten werden, nach den Artikeln 59 a , 59 b , 60 und 66 – 73 berechnen (De-Minimis-Ansatz). Sie müssen dabei die Bestimmungen desselben Ansatzes anwenden wie für die Unterlegung der Kreditrisiken, unter Anwendung eines Multiplikators von 2,5 auf die nach Risiko gewichteten Positionen."
+          "text": "Banken nach Absatz 1, die keine Kreditderivate im Handelsbuch halten und deren Handelsbuch bestimmte Grenzwerte nicht überschreitet, dürfen die Mindesteigenmittel zur Unterlegung von Zins- und Aktienpreisrisiken von Instrumenten, die im Handelsbuch gehalten werden, nach den Artikeln 59a, 59b, 60 und 66–73 berechnen (De-Minimis-Ansatz). Sie müssen dabei die Bestimmungen desselben Ansatzes anwenden wie für die Unterlegung der Kreditrisiken, unter Anwendung eines Multiplikators von 2,5 auf die nach Risiko gewichteten Positionen."
         },
         {
           "absatz": "4",
@@ -5452,7 +5452,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_83",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "db2663cfa75d8225cb88f49b257e21fad862ae5f50bb03595afc85921689a9ae"
+      "sha": "269db48dda6a1b8c8ecafff2e7f5324e68879d391076704743c7092f2594e3fd"
     },
     {
       "id": "bund/ERV/art_83_a",
@@ -5468,7 +5468,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Die Mindesteigenmittel vor Skalierung zur Unterlegung des Zins-, des Aktienpreis-, des Währungs-, des Goldpreis- und des Rohstoffrisikos werden nach den Artikeln 84–86 a berechnet."
+              "text": "Die Mindesteigenmittel vor Skalierung zur Unterlegung des Zins-, des Aktienpreis-, des Währungs-, des Goldpreis- und des Rohstoffrisikos werden nach den Artikeln 84–86a berechnet."
             },
             {
               "marke": "b",
@@ -5515,7 +5515,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_83_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "5a1ac900c64a2d9dfe394ed5a12c96f3ff0bb7db9529dc420333a8c221b67178"
+      "sha": "2f6cbffa6cf955042eae0519e30fd66ebcb4f0ad07145110046bb2468e70ee14"
     },
     {
       "id": "bund/ERV/art_84",
@@ -5706,19 +5706,19 @@
           "items": [
             {
               "marke": "a",
-              "text": "Geschäftsindikator ( Business Indicator , BI);"
+              "text": "Geschäftsindikator (Business Indicator, BI);"
             },
             {
               "marke": "b",
-              "text": "Geschäftsindikatorkomponente ( Business Indicator Component , BIC);"
+              "text": "Geschäftsindikatorkomponente (Business Indicator Component, BIC);"
             },
             {
               "marke": "c",
-              "text": "interner Verlustmultiplikator ( Internal Loss Multiplier , ILM);"
+              "text": "interner Verlustmultiplikator (Internal Loss Multiplier, ILM);"
             },
             {
               "marke": "d",
-              "text": "Verlustkomponente ( Loss Component, LC)."
+              "text": "Verlustkomponente (Loss Component, LC)."
             }
           ]
         },
@@ -5731,7 +5731,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_90",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "ef5ae4686d61c3c32cb745a91b6c1602288de31990c21a25ace12083edf4514f"
+      "sha": "33c5da100cce57be8b20922f21567dd7b988bda1c7bf5b586b0fbd850a2877fd"
     },
     {
       "id": "bund/ERV/art_91",
@@ -5766,21 +5766,21 @@
           "items": [
             {
               "marke": "a",
-              "text": "Zins- und Dividendenkomponente ( Interest, Leases and Dividend Component , ILDC);"
+              "text": "Zins- und Dividendenkomponente (Interest, Leases and Dividend Component, ILDC);"
             },
             {
               "marke": "b",
-              "text": "Dienstleistungskomponente ( Services Component , SC); und"
+              "text": "Dienstleistungskomponente (Services Component, SC); und"
             },
             {
               "marke": "c",
-              "text": "Finanzkomponente ( Financial Component , FC)."
+              "text": "Finanzkomponente (Financial Component, FC)."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Die Zins- und Dividendenkomponente berechnet sich nach der Formel in Anhang 5 a und setzt sich zusammen aus:",
+          "text": "Die Zins- und Dividendenkomponente berechnet sich nach der Formel in Anhang 5a und setzt sich zusammen aus:",
           "items": [
             {
               "marke": "a",
@@ -5802,7 +5802,7 @@
         },
         {
           "absatz": "3",
-          "text": "Die Dienstleistungskomponente berechnet sich nach der Formel in Anhang 5 a und setzt sich zusammen aus:",
+          "text": "Die Dienstleistungskomponente berechnet sich nach der Formel in Anhang 5a und setzt sich zusammen aus:",
           "items": [
             {
               "marke": "a",
@@ -5824,7 +5824,7 @@
         },
         {
           "absatz": "4",
-          "text": "Die Finanzkomponente berechnet sich nach der Formel in Anhang 5 a und setzt sich zusammen aus:",
+          "text": "Die Finanzkomponente berechnet sich nach der Formel in Anhang 5a und setzt sich zusammen aus:",
           "items": [
             {
               "marke": "a",
@@ -5841,7 +5841,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "d06ece6412283a79d31e0c7a9e61b6cda23b5d35ff9f897a38665b95b3c38578"
+      "sha": "406993359296e795925cac3706590e8575a36764db810cd3543372d6b92fd319"
     },
     {
       "id": "bund/ERV/art_92_a",
@@ -5880,14 +5880,14 @@
         },
         {
           "absatz": "2",
-          "text": "Der Geschäftsindikator muss jährlich auf der Basis der Jahresendinformationen berechnet werden. In den Fällen nach Artikel 92 a ist eine unterjährige Neuberechnung erforderlich."
+          "text": "Der Geschäftsindikator muss jährlich auf der Basis der Jahresendinformationen berechnet werden. In den Fällen nach Artikel 92a ist eine unterjährige Neuberechnung erforderlich."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "11cd4bc718cb77a0348041cddb3c98c7cf863d0de9839511d2a521a9fd7c7cc0"
+      "sha": "5d52c5f36dd7cd25a759f4be8803abf92db0bdd2c8a477e71de5c422bb9b7d20"
     },
     {
       "id": "bund/ERV/art_92_c",
@@ -5932,11 +5932,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Banken mit einem Geschäftsindikator von über 1,25 Milliarden Franken müssen den internen Verlustmultiplikator auf der Basis von internen Verlustdaten berechnen. Der interne Verlustmultiplikator berechnet sich nach der Formel in Anhang 5 a aus der Geschäftsindikatorkomponente und der Verlustkomponente."
+          "text": "Banken mit einem Geschäftsindikator von über 1,25 Milliarden Franken müssen den internen Verlustmultiplikator auf der Basis von internen Verlustdaten berechnen. Der interne Verlustmultiplikator berechnet sich nach der Formel in Anhang 5a aus der Geschäftsindikatorkomponente und der Verlustkomponente."
         },
         {
           "absatz": "2",
-          "text": "Der interne Verlustmultiplikator muss jährlich auf der Basis der Jahresendinformationen berechnet werden. In den Fällen nach Artikel 93 a Absätze 2–4 ist eine unterjährige Neuberechnung erforderlich."
+          "text": "Der interne Verlustmultiplikator muss jährlich auf der Basis der Jahresendinformationen berechnet werden. In den Fällen nach Artikel 93a Absätze 2–4 ist eine unterjährige Neuberechnung erforderlich."
         },
         {
           "absatz": "3",
@@ -5948,14 +5948,14 @@
         },
         {
           "absatz": "5",
-          "text": "Für Banken, die den internen Verlustmultiplikator auf der Basis von internen Verlustdaten berechnen und die Anforderungen an die internen Verlustdaten nach Artikel 93, an die Berechnung der Verlustkomponente nach Artikel 93 a oder an die Berechnung des Brutto- und des Nettoverlusts nach Artikel 94 nicht erfüllen, ist der interne Verlustmultiplikator gleich eins. Die FINMA kann im Einzelfall einen internen Verlustmultiplikator höher als eins verlangen."
+          "text": "Für Banken, die den internen Verlustmultiplikator auf der Basis von internen Verlustdaten berechnen und die Anforderungen an die internen Verlustdaten nach Artikel 93, an die Berechnung der Verlustkomponente nach Artikel 93a oder an die Berechnung des Brutto- und des Nettoverlusts nach Artikel 94 nicht erfüllen, ist der interne Verlustmultiplikator gleich eins. Die FINMA kann im Einzelfall einen internen Verlustmultiplikator höher als eins verlangen."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_92_d",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "87169f7138e17a338c200a35f117ed9e49c04559b2a44b4f976a5f6d261c17e3"
+      "sha": "0d1095a921adef53285346aa08380ed2f78b3e002ca429640c99052974d9df61"
     },
     {
       "id": "bund/ERV/art_93",
@@ -6347,11 +6347,11 @@
         },
         {
           "absatz": "7",
-          "text": "Betrifft ein Klumpenrisiko ein Mitglied der Organe oder einen im Sinne von Artikel 3 Absatz 2 Buchstabe c bis BankG qualifiziert Beteiligten der Bank oder eine ihnen nahestehende Person oder Gesellschaft, so ist das Klumpenrisiko in den Meldungen mit dem Sammelbegriff «Organgeschäft» zu kennzeichnen."
+          "text": "Betrifft ein Klumpenrisiko ein Mitglied der Organe oder einen im Sinne von Artikel 3 Absatz 2 Buchstabe cbis BankG qualifiziert Beteiligten der Bank oder eine ihnen nahestehende Person oder Gesellschaft, so ist das Klumpenrisiko in den Meldungen mit dem Sammelbegriff «Organgeschäft» zu kennzeichnen."
         },
         {
           "absatz": "8",
-          "text": "Betrifft ein Klumpenrisiko eine Gruppengesellschaft, so ist das Klumpenrisiko in den Meldungen mit dem Sammelbegriff «Gruppengeschäft» zu kennzeichnen. Zu melden sind auch diejenigen Teile der Position Gruppengeschäft, die nach den Artikeln 111 a Absatz 1 und 112 Absatz 2 Buchstabe d von der Obergrenze ausgenommen sind."
+          "text": "Betrifft ein Klumpenrisiko eine Gruppengesellschaft, so ist das Klumpenrisiko in den Meldungen mit dem Sammelbegriff «Gruppengeschäft» zu kennzeichnen. Zu melden sind auch diejenigen Teile der Position Gruppengeschäft, die nach den Artikeln 111a Absatz 1 und 112 Absatz 2 Buchstabe d von der Obergrenze ausgenommen sind."
         },
         {
           "absatz": "9",
@@ -6362,7 +6362,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_100",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "0ec5c846a03d074301763dff1fedfdf98dc88e5af50f9f0c55dac5262b619b9d"
+      "sha": "058e4a53bca9d21f46bbc48f359729292613d7191f8d0c7416f7c38c480c7ddb"
     },
     {
       "id": "bund/ERV/art_101",
@@ -6393,14 +6393,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Bank hat vierteljährlich eine Meldung über die gruppeninternen Positionen nach Artikel 111 a zu erstellen und der Prüfgesellschaft, der FINMA sowie dem Organ für Oberleitung, Aufsicht und Kontrolle zusammen mit der Meldung über die bestehenden Klumpenrisiken nach Artikel 100 zuzustellen. Dabei ist zwischen den Gruppengesellschaften nach Artikel 111 a Absätze 1 und 3 zu unterscheiden."
+          "text": "Die Bank hat vierteljährlich eine Meldung über die gruppeninternen Positionen nach Artikel 111a zu erstellen und der Prüfgesellschaft, der FINMA sowie dem Organ für Oberleitung, Aufsicht und Kontrolle zusammen mit der Meldung über die bestehenden Klumpenrisiken nach Artikel 100 zuzustellen. Dabei ist zwischen den Gruppengesellschaften nach Artikel 111a Absätze 1 und 3 zu unterscheiden."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_102",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "481b43e25cbd1917c036f0ea40275ea7790d2f5f59bf271f916c744df9ed48c6"
+      "sha": "c56d58429fd2ca3bb2ffa5eedd492bde5e1fe07e42bd17097f018dab912e05b3"
     },
     {
       "id": "bund/ERV/art_103",
@@ -6490,14 +6490,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Nach dem fünften Bankwerktag nicht abgewickelte Transaktionen (Art. 77 f ) sind zum Forderungswert in die Gesamtposition einzubeziehen."
+          "text": "Nach dem fünften Bankwerktag nicht abgewickelte Transaktionen (Art. 77f) sind zum Forderungswert in die Gesamtposition einzubeziehen."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_106",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "0eb3fc882fd88b796fded1a2df4783c8375022c0f3270cf6a2a4c507856bd40a"
+      "sha": "6d6f352ffb131390a38cfa1c00e0c8360f302e076bb33898ff57c16c9784478d"
     },
     {
       "id": "bund/ERV/art_107_108",
@@ -6686,15 +6686,15 @@
             },
             {
               "marke": "d",
-              "text": "die Ausnahme von der Obergrenze nach Artikel 111 a Absatz 1 für einzelne oder die Gesamtheit der Gruppengesellschaften nicht anwendbar erklären oder sie auf einzelne Gruppengesellschaften ausdehnen, welche die Voraussetzungen nach Artikel 111 a Absatz 1 nicht erfüllen;"
+              "text": "die Ausnahme von der Obergrenze nach Artikel 111a Absatz 1 für einzelne oder die Gesamtheit der Gruppengesellschaften nicht anwendbar erklären oder sie auf einzelne Gruppengesellschaften ausdehnen, welche die Voraussetzungen nach Artikel 111a Absatz 1 nicht erfüllen;"
             },
             {
               "marke": "e",
-              "text": "einzelne nicht im Finanzbereich tätige Gruppengesellschaften vom Einbezug in die aggregierte Position nach Artikel 111 a Absätze 1 und 3 befreien;"
+              "text": "einzelne nicht im Finanzbereich tätige Gruppengesellschaften vom Einbezug in die aggregierte Position nach Artikel 111a Absätze 1 und 3 befreien;"
             },
             {
               "marke": "f",
-              "text": "nach Artikel 9 Absatz 1 Buchstabe a nicht in die Konsolidierung einzubeziehende Beteiligungen von einem Einbezug in die aggregierte Position nach Artikel 111 a Absätze 1 und 3 befreien;"
+              "text": "nach Artikel 9 Absatz 1 Buchstabe a nicht in die Konsolidierung einzubeziehende Beteiligungen von einem Einbezug in die aggregierte Position nach Artikel 111a Absätze 1 und 3 befreien;"
             },
             {
               "marke": "g",
@@ -6719,7 +6719,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_112",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "b7cc36b9ddabfe45199134e9c4e23fa86ea97681ead26a2de1cdb084330ce5c5"
+      "sha": "386e528e60e71b45213543da9fc1c9438e3d53b101c5e7d88e8a93c914666d62"
     },
     {
       "id": "bund/ERV/art_113",
@@ -6768,14 +6768,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zur Bestimmung der Gesamtposition gegenüber einer Gegenpartei sind die zugehörigen Positionen im Handelsbuch und die Positionen im Bankenbuch zusammenzuzählen. Eine Verrechnung zwischen Short -Positionen im Handelsbuch und Long -Positionen im Bankenbuch ist nicht zulässig."
+          "text": "Zur Bestimmung der Gesamtposition gegenüber einer Gegenpartei sind die zugehörigen Positionen im Handelsbuch und die Positionen im Bankenbuch zusammenzuzählen. Eine Verrechnung zwischen Short-Positionen im Handelsbuch und Long-Positionen im Bankenbuch ist nicht zulässig."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_114",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "34a4ffc43bf10187d74dbba6af7755252fd2084fdcefacd87f572b8099f02819"
+      "sha": "d5b30d1dc138511350a3c083d689620e69ecb46ee94148ce54b5593b3cf2a075"
     },
     {
       "id": "bund/ERV/art_115",
@@ -6791,7 +6791,7 @@
         },
         {
           "absatz": "2",
-          "text": "Für nichtlineare Derivate im Handelsbuch sind im Positionswert zusätzlich die Kreditrisiken der zugrunde liegenden Vermögenswerte ( Underlyings ) unter Annahme eines vollständigen Wertverlusts zu berechnen."
+          "text": "Für nichtlineare Derivate im Handelsbuch sind im Positionswert zusätzlich die Kreditrisiken der zugrunde liegenden Vermögenswerte (Underlyings) unter Annahme eines vollständigen Wertverlusts zu berechnen."
         },
         {
           "absatz": "3",
@@ -6802,7 +6802,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_115",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "0b3c1d5d5f0d12f772f030f4c2a68b491091d78767c4103e1d3a150063d8871d"
+      "sha": "3bdeccda80c83ab1c95e6681b56702bb89f396e50c8236ff009a10d30e776de6"
     },
     {
       "id": "bund/ERV/art_116",
@@ -6833,7 +6833,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ausserbilanzpositionen, die im Bankenbuch gehalten werden, sind mit den Kreditumrechnungsfaktoren nach Anhang 1 a, mindestens aber mit einem Faktor von 0,1, in ihr Kreditäquivalent umzurechnen. Einzelrückstellungen können abgezogen werden."
+          "text": "Ausserbilanzpositionen, die im Bankenbuch gehalten werden, sind mit den Kreditumrechnungsfaktoren nach Anhang 1a, mindestens aber mit einem Faktor von 0,1, in ihr Kreditäquivalent umzurechnen. Einzelrückstellungen können abgezogen werden."
         },
         {
           "absatz": "2",
@@ -6849,7 +6849,7 @@
             },
             {
               "marke": "c",
-              "text": "0,5 für den nicht syndizierten Anteil während der Syndizierungsphase sowie 1 für den geplanten Eigenanteil ;"
+              "text": "0,5 für den nicht syndizierten Anteil während der Syndizierungsphase sowie 1 für den geplanten Eigenanteil;"
             },
             {
               "marke": "d",
@@ -6862,7 +6862,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_117",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a24f2fececac11b80b495f19408af4a0af4125fb9584ab914a4986b4a626432d"
+      "sha": "41b5de024a848a29d248e2992ba4e36254aaab0d9483b1be6b62d5c6ed203cd3"
     },
     {
       "id": "bund/ERV/art_118",
@@ -7235,7 +7235,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Voraussetzungen nach Artikel 126 a Absatz 1 Buchstaben a–c und f–i erfüllen;"
+              "text": "die Voraussetzungen nach Artikel 126a Absatz 1 Buchstaben a–c und f–i erfüllen;"
             },
             {
               "marke": "b",
@@ -7260,7 +7260,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_126_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "fd91f02650c095cbbfff8a2b1f8502d7f3319127011c293e4e5e22cc16639ca8"
+      "sha": "77dd208a6879888d7a85980a1b181f71d7fc268af4a9a8450de8399472e4db9f"
     },
     {
       "id": "bund/ERV/art_127",
@@ -7309,11 +7309,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bail-in-Bonds, welche die Voraussetzungen von Artikel 126 a erfüllen, können an die zusätzlichen verlustabsorbierenden Mittel nach dem 4. Kapitel in der Höhe des Forderungsbetrags angerechnet werden, solange sie noch eine Restlaufzeit von mindestens einem Jahr aufweisen."
+          "text": "Bail-in-Bonds, welche die Voraussetzungen von Artikel 126a erfüllen, können an die zusätzlichen verlustabsorbierenden Mittel nach dem 4. Kapitel in der Höhe des Forderungsbetrags angerechnet werden, solange sie noch eine Restlaufzeit von mindestens einem Jahr aufweisen."
         },
         {
           "absatz": "1bis",
-          "text": "Ebenfalls nach Absatz 1 angerechnet werden können von Kantonalbanken ausgegebene Bail-in-Bonds, welche die Voraussetzungen nach Artikel 40 a erfüllen."
+          "text": "Ebenfalls nach Absatz 1 angerechnet werden können von Kantonalbanken ausgegebene Bail-in-Bonds, welche die Voraussetzungen nach Artikel 40a erfüllen."
         },
         {
           "absatz": "2",
@@ -7342,7 +7342,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_127_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "ea0bc5c0d21513f3059d489defb14f22cab71d033acfc3f0bb30d0ef8fefef9e"
+      "sha": "ba4d8ce49a387686779634ac142070c7c2305e48c8a1d3459c037226020fef7d"
     },
     {
       "id": "bund/ERV/art_128",
@@ -7366,7 +7366,7 @@
             },
             {
               "marke": "b",
-              "text": "dem Anteil an der Gesamtheit der nach Risiko gewichteten Positionen nach Artikel 42 b (RWA-Quote)."
+              "text": "dem Anteil an der Gesamtheit der nach Risiko gewichteten Positionen nach Artikel 42b (RWA-Quote)."
             }
           ]
         }
@@ -7375,7 +7375,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_128",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "abbbb49f249db774ecc611ba4329046a241f11bcc9c84a416891e6a288a63e48"
+      "sha": "41fb2d2b996a74060cc1c5aa53aa633327c4fc300ff9e2a81e703d1b548644a3"
     },
     {
       "id": "bund/ERV/art_129",
@@ -7522,14 +7522,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die antizyklischen Puffer nach den Artikeln 44 und 44 a sind zusätzlich zu den Eigenmittelanforderungen gemessen an den nach Risiko gewichteten Positionen dieses Titels zu erfüllen."
+          "text": "Die antizyklischen Puffer nach den Artikeln 44 und 44a sind zusätzlich zu den Eigenmittelanforderungen gemessen an den nach Risiko gewichteten Positionen dieses Titels zu erfüllen."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_131_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "f75c3ae4f4dd3c1bb70361bfefd51ae614d33ecc7617e8bcf04878e7a483079c"
+      "sha": "8e04766a9f6a031fabc35580b469d4728735326695b694e22257eeb0ddbc3816"
     },
     {
       "id": "bund/ERV/art_131_b",
@@ -7608,7 +7608,7 @@
         },
         {
           "absatz": "3",
-          "text": "Die zusätzlichen Mittel sind in Form von Bail-in-Bonds zu halten, welche die Anforderungen nach Artikel 126 a erfüllen. Vorbehalten bleiben die Absätze 4–7 und Artikel 132 b ."
+          "text": "Die zusätzlichen Mittel sind in Form von Bail-in-Bonds zu halten, welche die Anforderungen nach Artikel 126a erfüllen. Vorbehalten bleiben die Absätze 4–7 und Artikel 132b."
         },
         {
           "absatz": "4",
@@ -7620,18 +7620,18 @@
         },
         {
           "absatz": "6",
-          "text": "Eigenmittel, die eine Bank zur Erfüllung der Anforderungen nach diesem Kapitel hält, darf sie nicht gleichzeitig zur Erfüllung der Anforderungen nach den Artikeln 128–131 b heranziehen."
+          "text": "Eigenmittel, die eine Bank zur Erfüllung der Anforderungen nach diesem Kapitel hält, darf sie nicht gleichzeitig zur Erfüllung der Anforderungen nach den Artikeln 128–131b heranziehen."
         },
         {
           "absatz": "7",
-          "text": "Hat die Bank zu einem früheren Zeitpunkt Eigenmittel zur Erfüllung der Anforderungen nach diesem Kapitel gehalten, so darf sie diese neu zur Erfüllung der Anforderungen nach den Artikeln 128–131 b nur insoweit heranziehen, als die Anforderungen dieses Artikels mit den verbleibenden Mitteln weiterhin erfüllt sind."
+          "text": "Hat die Bank zu einem früheren Zeitpunkt Eigenmittel zur Erfüllung der Anforderungen nach diesem Kapitel gehalten, so darf sie diese neu zur Erfüllung der Anforderungen nach den Artikeln 128–131b nur insoweit heranziehen, als die Anforderungen dieses Artikels mit den verbleibenden Mitteln weiterhin erfüllt sind."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "8992782b7bad7336a805e70bf20d44ebde5931ae3aae8bcbfd635dd03e8f5b2f"
+      "sha": "713d16a03743b09a944fc124cfd9cd2e0bc59be15bb13c77a010a533783d65b2"
     },
     {
       "id": "bund/ERV/art_132_a",
@@ -7695,14 +7695,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die FINMA kann nach Artikel 65 b Absatz 1 BankV bei Hindernissen für die Sanier- und Liquidierbarkeit für Einheiten nach Artikel 124 Absatz 3 Buchstaben b–d von international tätigen systemrelevanten Banken ergänzende zusätzliche verlustabsorbierende Mittel verlangen. Deren Höhe ist auf 25 Prozent der Gesamtanforderung begrenzt. Artikel 132 Absatz 4 gilt sinngemäss."
+          "text": "Die FINMA kann nach Artikel 65b Absatz 1 BankV bei Hindernissen für die Sanier- und Liquidierbarkeit für Einheiten nach Artikel 124 Absatz 3 Buchstaben b–d von international tätigen systemrelevanten Banken ergänzende zusätzliche verlustabsorbierende Mittel verlangen. Deren Höhe ist auf 25 Prozent der Gesamtanforderung begrenzt. Artikel 132 Absatz 4 gilt sinngemäss."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_133",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "dc62d260631bf8d014fa4d66277ac69909cf0d3cdf5ea933d06cde4c51b504f3"
+      "sha": "ceb40522e46d72e51f94a8551c4ee3e85350eab94c0d1e1adbcb9d921d35f92c"
     },
     {
       "id": "bund/ERV/art_134_135",
@@ -7737,7 +7737,7 @@
         },
         {
           "absatz": "1bis",
-          "text": "Ein Klumpenrisiko darf höchstens 25 Prozent des Kernkapitals nach Absatz 1 betragen ."
+          "text": "Ein Klumpenrisiko darf höchstens 25 Prozent des Kernkapitals nach Absatz 1 betragen."
         },
         {
           "absatz": "2",
@@ -7776,7 +7776,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_136",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "4480b1f2f848a1b78f6d4f621fd8a57bb91298453b9bb7d9f07fbf4be5f05472"
+      "sha": "674e2c74d9ebbc3e8fc8d8e05db28e0dd62ca8685dc975671e09c964f31ae80f"
     },
     {
       "id": "bund/ERV/art_137_138",
@@ -7976,7 +7976,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Untergrenzen nach den Artikeln 45 a Absatz 3 Buchstabe b und 77 Absatz 2 sowie Anhang 7 Ziffer 2 zweiter Satz betragen:",
+          "text": "Die Untergrenzen nach den Artikeln 45a Absatz 3 Buchstabe b und 77 Absatz 2 sowie Anhang 7 Ziffer 2 zweiter Satz betragen:",
           "items": [
             {
               "marke": "a",
@@ -7997,7 +7997,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "f75367f427f9493235e56d0ccdc7344c9dc66c9dcc0936abe0ed6a23fdd095c8"
+      "sha": "5ab0f7cdd5a6ca8a82af9204a3100bd7048f82fc36de565585b6a43f0a979c21"
     },
     {
       "id": "bund/ERV/art_148_f",
@@ -8102,14 +8102,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Artikel 72 b Absätze 1, 2 und 5 findet auf direkt und indirekt grundpfandgesicherte Positionen, die vor dem Inkrafttreten der Änderung vom 29. November 2023 Bestand hatten, erst bei Kreditvergabe bei Neugeschäften und Krediterhöhungen Anwendung."
+          "text": "Artikel 72b Absätze 1, 2 und 5 findet auf direkt und indirekt grundpfandgesicherte Positionen, die vor dem Inkrafttreten der Änderung vom 29. November 2023 Bestand hatten, erst bei Kreditvergabe bei Neugeschäften und Krediterhöhungen Anwendung."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_148_i",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "8d0e00924d0eea4f6c1f553f2617cf5a34281161d1478250312e0fe08a0d3fd2"
+      "sha": "c3d38d06858a208f6553be685e2f9016dd8a85cc32e3a06255ba19e3b7520174"
     },
     {
       "id": "bund/ERV/art_148_j",
@@ -8224,7 +8224,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 4 a Abs. 2)"
+          "text": "(Art. 4a Abs. 2)"
         },
         {
           "absatz": null,
@@ -8837,7 +8837,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "9c63b5cde69bb66d08277bdfb6dda61ed57322f723af2664ad5af9a3fb8188f4"
+      "sha": "1aa7e527b867d3c13ff12e2ebceae0e2adad416711d69d1ffb040294310392b7"
     },
     {
       "id": "bund/ERV/annex_1_a",
@@ -8965,7 +8965,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 64 a Abs. 3 und 4, 66 Abs. 1, 70 Abs. 1 und 3, 71 b sowie 113 Abs. 2 Bst. a)"
+          "text": "(Art. 64a Abs. 3 und 4, 66 Abs. 1, 70 Abs. 1 und 3, 71b sowie 113 Abs. 2 Bst. a)"
         },
         {
           "absatz": null,
@@ -9475,7 +9475,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a9af840bfdee49f0d8630f3355b06950969bba6ea61b9d7033ac03ad2290627d"
+      "sha": "3a5b7a4ed9014626c8502b0e15029e3a295a49ca088da1fa41463f5f25d97395"
     },
     {
       "id": "bund/ERV/annex_3",
@@ -9487,7 +9487,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 49 Abs. 2 Bst. h, 66 Abs. 2, 66 a Abs. 1, 70 Abs. 5, 71 Abs. 2, 71 a, 72 c Abs. 1 und 6 sowie 72 e Abs. 2)"
+          "text": "(Art. 49 Abs. 2 Bst. h, 66 Abs. 2, 66a Abs. 1, 70 Abs. 5, 71 Abs. 2, 71a, 72c Abs. 1 und 6 sowie 72e Abs. 2)"
         },
         {
           "absatz": null,
@@ -9716,7 +9716,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "a255c1259450a59aa329f919d4f89acc175578e9a3b6f2ce720cfe553fd50fed"
+      "sha": "b2163c321467f9ffb5b2d917edb5421cc2c8a6dde57c76a505a9453c43f7819d"
     },
     {
       "id": "bund/ERV/annex_4",
@@ -9728,7 +9728,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 32 Abs. 4, 66 Abs. 3, 73, 148 c und 148 g )"
+          "text": "(Art. 32 Abs. 4, 66 Abs. 3, 73, 148c und 148g)"
         },
         {
           "absatz": null,
@@ -9797,7 +9797,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "d9ba53566ddb4bd63db8c75c75babf28c8f3f75fe15f6845b9710854e236343a"
+      "sha": "3022b9edaf855bd7b11eb20acf5705a1e8057ea1ad9149bcb6eb9782a9da75b8"
     },
     {
       "id": "bund/ERV/annex_4_a",
@@ -9809,7 +9809,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 77 d Abs. 2)"
+          "text": "(Art. 77d Abs. 2)"
         },
         {
           "absatz": null,
@@ -9826,15 +9826,15 @@
         },
         {
           "absatz": null,
-          "text": "K CCP: die hypothetischen Mindesteigenmittel der qualifizierten zentralen Gegenpartei entsprechend dem Gegenpartei-Kreditrisiko gegenüber allen Clearing-Mitgliedern und von deren Clearing-Kunden;"
+          "text": "KCCP: die hypothetischen Mindesteigenmittel der qualifizierten zentralen Gegenpartei entsprechend dem Gegenpartei-Kreditrisiko gegenüber allen Clearing-Mitgliedern und von deren Clearing-Kunden;"
         },
         {
           "absatz": null,
-          "text": "DF CCP: diejenigen vorfinanzierten eigenen Mittel der qualifizierten zentralen Gegenpartei, wie zum Ausfallfonds beitragende Eigenmittel oder Gewinnrücklagen, die von der qualifizierten zentralen Gegenpartei verwendet werden müssen, um Verluste durch den Ausfall von Clearing-Mitgliedern zu tragen, und die den vorfinanzierten Beiträgen der Clearing-Mitglieder an den Ausfallfonds gegenüber gleichrangig oder nachrangig sind;"
+          "text": "DFCCP: diejenigen vorfinanzierten eigenen Mittel der qualifizierten zentralen Gegenpartei, wie zum Ausfallfonds beitragende Eigenmittel oder Gewinnrücklagen, die von der qualifizierten zentralen Gegenpartei verwendet werden müssen, um Verluste durch den Ausfall von Clearing-Mitgliedern zu tragen, und die den vorfinanzierten Beiträgen der Clearing-Mitglieder an den Ausfallfonds gegenüber gleichrangig oder nachrangig sind;"
         },
         {
           "absatz": null,
-          "text": "DF CM: die gesamten vorfinanzierten Beiträge aller Clearing-Mitglieder an den Ausfallfonds;"
+          "text": "DFCM: die gesamten vorfinanzierten Beiträge aller Clearing-Mitglieder an den Ausfallfonds;"
         },
         {
           "absatz": null,
@@ -9842,14 +9842,14 @@
         },
         {
           "absatz": null,
-          "text": "K CCP, DF CCP und DF CM: nach den Ziffern 54.24–54.39 CRE durch die qualifizierte zentrale Gegenpartei oder eine zuständige Behörde berechnete Beträge."
+          "text": "KCCP, DFCCP und DFCM: nach den Ziffern 54.24–54.39 CRE durch die qualifizierte zentrale Gegenpartei oder eine zuständige Behörde berechnete Beträge."
         }
       ],
       "stand": "2025-01-24",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_4_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "74ec5441f9e70116ed5cb4cb0dd376972ba466703bd6374dd78911e79352a2c0"
+      "sha": "a6b4b5bf21207089d291972f66ce1a6c4a915d38d843817a6366e59faeb86122"
     },
     {
       "id": "bund/ERV/annex_5",
@@ -9989,7 +9989,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 92 Abs. 2–4 und 92 d Abs. 1)"
+          "text": "(Art. 92 Abs. 2–4 und 92d Abs. 1)"
         },
         {
           "absatz": null,
@@ -10049,7 +10049,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_5_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "c59865da6b86776548aaee6d0b3e440ba6d289ca0a64602d42cf6b1ffce26891"
+      "sha": "c3753e315c9d564e86a25e72f9f9d4c9e4d1f7ff7f6a3a71148dc6134fa33e99"
     },
     {
       "id": "bund/ERV/annex_6",
@@ -10089,7 +10089,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 44 Abs. 2 und 148 e )"
+          "text": "(Art. 44 Abs. 2 und 148e)"
         },
         {
           "absatz": null,
@@ -10115,7 +10115,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "35d6d3445f2fe3e479e1421079f3ef0cd4395af7c010c06310dfc69c6e4aaf39"
+      "sha": "b44249f8e30d45cec1dfd4e80c32b2029c563add3675f214ff1aff9a776d1328"
     },
     {
       "id": "bund/ERV/annex_8",
@@ -10136,7 +10136,7 @@
         },
         {
           "absatz": null,
-          "text": "in % der Gesamtheit der nach Risiko gewichteten Positionen nach Artikel 42 b"
+          "text": "in % der Gesamtheit der nach Risiko gewichteten Positionen nach Artikel 42b"
         },
         {
           "absatz": null,
@@ -10209,7 +10209,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#annex_8",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250124",
-      "sha": "69ec413ed185ef05a2a38084499c0d6bd5cb8c69547f79d959bcc31336bd27ec"
+      "sha": "76e572818eb5e7663ddebae9498a797cd0a47f45dc1043214680be337a8893ba"
     },
     {
       "id": "bund/ERV/annex_9",
