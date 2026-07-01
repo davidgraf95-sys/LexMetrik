@@ -40,6 +40,14 @@ bewegt den Haupt-Router. Neuer SSR-Unit-Test `paneKopfBreadcrumb.test.tsx` (TDD 
 (tsc/vitest/**golden byte-identisch**/lint/check — reine Darstellung §3/§6.4, kein Logik-/Prerender-Drift; kein Risiko-Pfad →
 `check:gegenpruefung` n/a). **Push/Deploy §9: PR + Auto-Merge bei grüner CI; Prod-Deploy wartet auf Davids Ja.**
 
+## Session 1.7.2026 — Bilder & Formeln + SSV-Signal-Tabellen (Worktree `normtext-bilder-formeln`, gegated, Push/Deploy §9 offen)
+
+**Auftrag David: amtliche Bilder/Formeln erfassen + die «schrecklich formatierten» SSV-Tabellen fixen (dieselbe Ursache), nachhaltig/einfach.** 3 Commits (§14.2 Daten/Render/Doku getrennt).
+- **Daten** (`68b75d18`): Fedlex-`<img>` (Piktogramme SSV/VTS/chem., Formeln-als-Bild KKG/DBG/FZV/LSV) wurden von `entferneTags` gedroppt → jetzt **`bild`** (Standalone) / **`bildKacheln`** (flaches Karten-Raster NUR bei reinen Piktogramm-Katalogen; gemischte Datentabellen bleiben `mehrspaltig`, §1). Generator `ladeBilder`: rel. src → amtl. Filestore-URL, **selbst gehostet** unter `public/normtext/bilder/<erlass>/` (445 Dateien), **sha**/idempotent/Escape-Hatch. Fedlex-`[tab]`-Spacer gestrippt. Catch-all `ergaenzeFehlendeBilder` → **Containment 455/455 distinct**. Neues Tor **`check:bilder`**. Alle Bund neu generiert, **Engine-Golden byte-gleich**, Daten-Index re-gesegnet.
+- **Render** (`5556abc5`): `BildElemente.tsx` (`BildFigur` + `BildKacheln`, §13-Tokens, CLS-fest, ehrlicher alt §8), 2 Block-Zweige in `ArtikelBody.tsx`. **SSV-Signal-Anhänge → bebilderter Kachel-Katalog** (Bild+Nr+Name) statt Text-Wirrwarr. Browser-verifiziert (SSV-Signale + KKG-Formel).
+- **Bug-Check** (Opus-Gegenprüfung + korpusweite Wort-Multiset/Dubletten-Checks): **WIDERLEGTE** zunächst — Text-Dublette (VTS/VZV/VVV: `[tab]`-Marke uneins zwischen `markeloseNotizen` und `parseDefinitionsListe`) + SSV-Mehrfach-`<dt>/<dd>`-Zelle (Textverlust). **Beide gefixt** (konsistente Marke-Bestimmung; alle Zell-Paare/Bilder erfasst), korpusweit re-verifiziert: **0 Dublette, 0 verlorene Wörter**. Gate voll grün.
+- **Offen (cosmetic):** `formel`-Flag nie gesetzt → Formeln als «Amtliche Abbildung» statt «Formel». Detail `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §M13-Rest`, Spec `docs/superpowers/specs/2026-07-01-bilder-formeln-design.md`.
+
 ## Session 1.7.2026 — Bündel N: Normtext-Fidelity + Verweise (Worktree `buendel-n-normtext-fidelity`, gegated, Push/Deploy §9 offen)
 
 **Phase 0 der AKN-XML-Quell-Architektur (Council 30.6.), 4 Teile, je eigener Commit (Risiko-Klassen getrennt §14.2):**
