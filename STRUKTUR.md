@@ -23,6 +23,20 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — Fix: Kompakt-Kalender Einzelmonat füllt die Karte (Branch `fix/kalender-einzelmonat-fuellt-karte`)
+
+**UI-Bugfix (im Zuge QS-PERF entdeckt).** Die e2e `schnellrechner-kalender.e2e.ts:38` («füllt seine
+Karte», Füllgrad >0,55) war **seit ihrem Einführungs-Commit `8719d336` deterministisch rot** (0,516 =
+16/31, macOS + CI identisch, nie grün — main ist nicht branch-protected, daher unbemerkt durchgelaufen).
+**Root Cause** (systematisches Debugging, gemessen): der Default-Startseiten-Kalender rendert **1 Monat**,
+gekappt auf `max-w-[17rem]` (272px) in einer 527px-Karte → max. 51,6 % Füllung, unter der 0,55-Schwelle.
+**Fix** (Entscheid David 1.7.: «Einzelmonat darf breiter»): die 17rem-Kappe gilt in `FristenKalender.tsx`
+(kompakt) nur noch bei **mehreren** Monaten; ein einzelner Monat wächst per `flex-1` und füllt die Karte
+(gemessen 1,0, zentriert; Mehrmonats-Layout unverändert). **Der Test wurde NICHT aufgeweicht** (§6.3) —
+das Layout wurde gefixt, sodass die bestehende Assertion ehrlich grün wird. **Verifikation:** `npm run gate`
+grün (golden byte-gleich — Kalender nicht in golden), beide Kalender-e2e grün, Screenshot geprüft (sauber,
+nicht luftig). Reine Darstellung (§3). `Gegenpruefung: n/a`.
+
 ## Session 1.7.2026 — QS-PERF Rank 2-Rest: Reader-Chunk idle-Vorladen (Branch `feat/perf-batch3-reader-preload`)
 
 **Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Die schweren Leser-Route-Chunks

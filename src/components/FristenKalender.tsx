@@ -145,7 +145,11 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   <span className="lc-overline text-ink-500 tracking-[0.3em]">···</span>
                 </div>
               )}
-              <div className={kompakt ? 'flex-1 basis-[12.5rem] max-w-[17rem]' : 'w-[min(15.5rem,100%)]'}>
+              {/* kompakt: die 17rem-Kappe hält MEHRERE Monate gleich breit; ein
+                  EINZELNER (letzter) Monat darf per flex-1 die Karte füllen statt
+                  gekappt-schmal zentriert zu bleiben (Auftrag David 1.7.2026 «füllt
+                  die Karte» — behebt den bauartbedingten <55%-Füllgrad bei 1 Monat). */}
+              <div className={kompakt ? `flex-1 basis-[12.5rem] ${monate.length > 1 ? 'max-w-[17rem]' : ''}` : 'w-[min(15.5rem,100%)]'}>
                 {/* Almanach-Monatskopf: Display-Name, Messing-Jahr, Haarlinie */}
                 <p className="flex items-baseline justify-between gap-2 border-b border-line pb-1.5 mb-2">
                   <span className="font-display text-body-s font-semibold tracking-[-0.01em] text-ink-900">{MONATE[m]}</span>
