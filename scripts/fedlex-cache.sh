@@ -15,9 +15,17 @@ BASIS="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli"
 # gesetz|eli|konsolidierung|html-N|pflicht-anker (kommagetrennt)
 EINTRAEGE=(
   "or|cc/27/317_321_377|20260101|4|art_11,art_32,art_77,art_104,art_216,art_324_a,art_335_c,art_336_c,art_396,art_493|220"
-  "zgb|cc/24/233_245_233|20260101|4|art_19_c,art_360,art_361,art_370,art_467,art_505|210"
+  # Re-Pin 20260101→20260701 (§7-Nachverifikation 1.7.2026, AS 2026 94 gewaltfreie
+  # Erziehung art_302 + AS 2026 16 Besitzesschutz art_926 ff.). FALLE: unter 20260701
+  # liefern n=0 UND n=1 echtes HTML — n=0 ist STALE (ohne AS 2026 94), nur html-1 trägt
+  # die Änderung; SPARQL bestätigt html-1 kanonisch. Alle 6 zitierten Anker byte-identisch,
+  # Inventar 1099→1099 (art_302 Intra-Artikel, kein neuer Anker).
+  "zgb|cc/24/233_245_233|20260701|1|art_19_c,art_360,art_361,art_370,art_467,art_505|210"
   # ZPO-Anker um die Rechtsmittel-Artikel erweitert (Umbau 6.6.2026).
-  "zpo|cc/2010/262|20250101|1|art_4,art_6,art_68,art_145,art_197,art_198,art_199,art_210,art_212,art_243,art_308,art_314,art_319,art_321|272"
+  # Re-Pin 20250101→20260701 (§7-Nachverifikation 1.7.2026, AS 2026 16 Besitzesschutz:
+  # neu art_260_a/art_260_b, nicht zitiert). No-Suffix (n=0; n≥1 = Casemates-SPA). Alle 14
+  # zitierten Anker operativ byte-identisch (art_314 nur Fussnoten-Reklassifikation, Fristen 10/30 T. unverändert).
+  "zpo|cc/2010/262|20260701|0|art_4,art_6,art_68,art_145,art_197,art_198,art_199,art_210,art_212,art_243,art_308,art_314,art_319,art_321|272"
   # SchKG-Anker um die Zuständigkeits-Karten-Pillen erweitert (Katalog-Split 6.6.2026).
   # Re-Pin 20250101→20260101 (§7-Nachverifikation 7.6.2026): alle engine-
   # tragenden Artikel (46–53, 56, 63, 83–88, 166, 174, 250, 271–280) body-
