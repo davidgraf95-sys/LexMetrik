@@ -17,6 +17,9 @@ export const importEntscheidLeser = () =>
 
 /** Wärmt die schweren Leser-Chunks vor (nur aus einem Client-useEffect rufen). */
 export function prefetchLeser() {
-  void importGesetzLeser();
-  void importEntscheidLeser();
+  // Best-effort: Fehler (offline / veralteter Chunk-Hash nach Deploy) bewusst
+  // schlucken — der echte Route-Load fängt sie ohnehin über lazyRetry. Ohne .catch
+  // bliebe eine unbehandelte Promise-Rejection (Konsolen-Rauschen / Error-Reporter).
+  void importGesetzLeser().catch(() => {});
+  void importEntscheidLeser().catch(() => {});
 }
