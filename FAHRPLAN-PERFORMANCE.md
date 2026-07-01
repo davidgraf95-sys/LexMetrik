@@ -35,9 +35,29 @@ und den Doppel-React-Schutz (react-dom darf nur im vendor-Chunk liegen). Negativ
 Offen am Tor: die **Lighthouse-Metrik-Schranken** (CLS/LCP/TBT unter 4× CPU) — bleiben vorerst
 manueller Mess-Schritt im Deploy-Ritual (CI-Chrome noch nicht verdrahtet).
 
+**1.7.2026 — Quick-Win-Batch 2 gebaut** (Branch `feat/perf-batch2-render-cls-fonts`,
+Gate grün: 2870 Tests + golden 201 byte-gleich + `check:struktur-konsistenz` + `check:perf-budget`,
+plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):
+
+- ✅ **Rank 4** — Render-Hotpath. `SektionBaumTOC` (`parts.tsx`) `React.memo`; `tocToggle`/
+  `springeZuSektion` als `useCallback` (Letzteres über den early-return gehoben — der in Batch 1
+  zurückgestellte Hook-Reorder); Sektions-Bereichslabel + Einzelartikel-Flag in **einem** Bottom-up-
+  `useMemo` `sektionMeta` `[sektionen,artIndex]` statt 2× O(Subtree) je Sektion je Scroll-Render.
+  Labels byte-identisch (golden + struktur-konsistenz grün). Reine Laufzeit, kein Output.
+- ✅ **Rank 3** — Startseiten-CLS. `NewsHeader` reserviert während des async-Ladens (`news===null`)
+  **und** am geladenen Streifen dieselbe Mindesthöhe (`min-h-[12.5rem]`). **Gemessen** (Playwright,
+  Preview): Streifen 11,61 rem Desktop / 11,17 rem mobil < 12,5 rem → `min-h` dominiert in beiden
+  Zuständen → **CLS von NewsHeader = 0** (statt Voll-Höhe-Einwachsen). Echter Leerfall (leeres
+  Register) kollabiert bewusst auf `null` (§8, in Prod nie — 272 BGE).
+- ⏸️ **Rank 11 (Fonts) bewusst verschoben** — braucht **gemessene** `size-adjust`/`ascent`/
+  `descent`/`line-gap-override` (fontkit/Fontaine), sonst verschlechtert ein geratener Wert den
+  Swap-Reflow. Eigener Schritt mit echter Metrik-Extraktion; Sekundärfix (dominanter OR-CLS ist
+  Rank 2/6, nicht Fonts).
+
 **Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · Rank 2-Reader-Chunk-Vorladen +
-News-Prerender (3) · **M-Daten-Pfad → LCP** (6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding,
-10 Snapshot-Format) · Render-/Split-View-Feinschliff (4, 9, 12, 14) · Fonts (11).
+News-Prerender (3-optional) · **Fonts (11)** mit gemessenen Metriken · **M-Daten-Pfad → LCP**
+(6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding, 10 Snapshot-Format) · Split-View-Feinschliff
+(9, 12, 14).
 
 ---
 

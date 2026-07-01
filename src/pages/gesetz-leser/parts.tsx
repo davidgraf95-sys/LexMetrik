@@ -339,7 +339,12 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel,
 
 // TOC-Gliederungsbaum: jede Stufe einklappbar (geteilter Zustand mit dem
 // Fliesstext); Dreieck klappt, Label springt.
-export function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
+// Rank 4 (QS-PERF, §15/4): React.memo (Default-Komparator) — der Baum re-rendert
+// sonst bei JEDER Scroll-Spy-Aktualisierung des Parents (setAktArtikel etc.) mit,
+// obwohl nur aktivPfad/offen ihn betreffen. Props sind referenzstabil: sektionen
+// (useMemo), offen=tocBaum (State), onToggle/onSprung (useCallback) → memo bricht
+// nur bei echtem aktivPfad-/offen-Wechsel ab. Reine Laufzeit, kein Output (§6.4).
+export const SektionBaumTOC = memo(function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
   sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>; // aktivPfad = Sektions-IDs
   onToggle: (id: string) => void; onSprung: (id: string) => void;
 }) {
@@ -375,4 +380,4 @@ export function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung
     );
   };
   return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0))}</ul>;
-}
+});

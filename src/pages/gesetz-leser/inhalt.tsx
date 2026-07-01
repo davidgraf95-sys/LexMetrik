@@ -262,6 +262,35 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return map;
   }, [eintraege]);
 
+  // Rank 4 (QS-PERF, §6.4): Sektions-Bereichslabel («Art. 1–10») + Artikelzahl
+  // EINMAL bottom-up vorberechnen — statt 2× O(Subtree) je Sektion je Scroll-Render
+  // (bisher rief renderSektion sekBereich(s) UND sammleArtikel(s).length je Knoten,
+  // jeweils den Teilbaum sammelnd). Deps [sektionen, artIndex] → nur bei echtem
+  // Gliederungs-/Index-Wechsel neu. Die Label-Logik ist byte-identisch zur früheren
+  // sekBereich/sammleArtikel (golden/struktur-konsistenz grün). Reine Darstellung (§3).
+  const sektionMeta = useMemo(() => {
+    const meta = new Map<string, { bereich: string | undefined; einzel: boolean }>();
+    const sammle = (s: Sektion): NormSnapshot[] => {
+      const arts = [...s.artikel, ...s.kinder.flatMap(sammle)];
+      let bereich: string | undefined;
+      if (arts.length > 0) {
+        let erst = arts[0], letzt = arts[0];
+        for (const a of arts) {
+          const idx = artIndex.get(a.artikel) ?? 0;
+          if (idx < (artIndex.get(erst.artikel) ?? 0)) erst = a;
+          if (idx > (artIndex.get(letzt.artikel) ?? 0)) letzt = a;
+        }
+        bereich = erst === letzt
+          ? erst.artikelLabel
+          : `${erst.artikelLabel}–${letzt.artikelLabel.replace(/^(Art\.|§)\s*/, '')}`;
+      }
+      meta.set(s.id, { bereich, einzel: arts.length === 1 });
+      return arts;
+    };
+    sektionen.forEach(sammle);
+    return meta;
+  }, [sektionen, artIndex]);
+
   // M13: Token → korrektes Anzeige-Label («Art. 3», «Art. 31–32») für den
   // Scroll-Spy-/Reiter-Kopf. Schlusstitel-Token («disp_u1_art_3») lassen sich
   // NICHT heuristisch aus dem Token ableiten — hier den echten artikelLabel des
@@ -340,6 +369,29 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 400);
     }, 110));
   }, [sektionen, basisPfad, istSekundaer, imPane, wurzel]);
+
+  // Sprung aus dem Gliederungs-Baum (TOC): Pfad öffnen, markieren, scrollen. Beim
+  // Sprung den mobilen Drawer schliessen (analog Seitenleiste). Rank 4 (QS-PERF,
+  // §15/4): useCallback [sektionen] — nur pfadZu liest sektionen, alle Setter/Refs
+  // stabil → SektionBaumTOC (React.memo) re-rendert nur bei aktivPfad-/offen-Wechsel.
+  // Muss ÜBER dem early-return (`!erlass || !eintraege`) stehen, sonst wäre der Hook
+  // bedingt (Rules of Hooks) — das war der in Batch 1 zurückgestellte Reorder.
+  const springeZuSektion = useCallback((id: string) => {
+    const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
+    jumpLock.current = true;
+    setAktivIds(ids);
+    // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
+    // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
+    // gleich wieder zuklappt.
+    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
+    setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+    setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+    setTocAuf(false); // mobilen Drawer schliessen
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
+      requestAnimationFrame(() => { jumpLock.current = false; });
+    }));
+  }, [sektionen]);
 
   // Wechsel zwischen zwei Instanzen DESSELBEN Gesetzes (?r) bzw. ein Tab-Klick mit
   // #art-Anker remountet den Reader nicht (gleicher pathname) — darum bei jeder
@@ -678,21 +730,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     return /^Bereich /.test(name) ? null : name;
   })();
 
-  // Artikel-Bereich «Art. 1–10» einer Sektion (inkl. Unterabschnitte) — erster und
-  // letzter Artikel in Dokument-Reihenfolge. Reine Darstellung (Sektionsüberschrift).
-  const sammleArtikel = (s: Sektion): NormSnapshot[] => [...s.artikel, ...s.kinder.flatMap(sammleArtikel)];
-  const sekBereich = (s: Sektion): string | undefined => {
-    const arts = sammleArtikel(s);
-    if (arts.length === 0) return undefined;
-    let erst = arts[0], letzt = arts[0];
-    for (const a of arts) {
-      const idx = artIndex.get(a.artikel) ?? 0;
-      if (idx < (artIndex.get(erst.artikel) ?? 0)) erst = a;
-      if (idx > (artIndex.get(letzt.artikel) ?? 0)) letzt = a;
-    }
-    if (erst === letzt) return erst.artikelLabel;
-    return `${erst.artikelLabel}–${letzt.artikelLabel.replace(/^(Art\.|§)\s*/, '')}`;
-  };
+  // Artikel-Bereich «Art. 1–10» + Einzelartikel-Flag je Sektion kommen aus dem
+  // `sektionMeta`-useMemo (Rank 4) — einmal bottom-up berechnet statt je Render.
 
   // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
   const baueText = (): string => {
@@ -764,7 +803,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const linie = gruppierungslinienAn && tiefe > 0;
     return (
       <section key={s.id} className={`space-y-3 ${linie ? 'border-l border-line/60 pl-3' : ''}`}>
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} bereichEinzel={sammleArtikel(s).length === 1} fussnotenAuf={fussnotenAuf} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sektionMeta.get(s.id)?.bereich} bereichEinzel={sektionMeta.get(s.id)?.einzel ?? false} fussnotenAuf={fussnotenAuf} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
@@ -789,25 +828,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // einspaltig → Suche + Gliederungs-Zugang leben in der STICKY Vollbreiten-Leiste.
   const zweiSpalten = sektionen.length > 0 && tocOffen && istXl;
 
-  // Gliederungs-Baum EINMAL beschreiben (genutzt in der xl-Spalte UND im
-  // mobilen Drawer, §5 — kein doppelter onSprung). Beim Sprung den mobilen
-  // Drawer schliessen (analog Seitenleiste: Auswahl schliesst das Overlay).
-  const springeZuSektion = (id: string) => {
-    const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
-    jumpLock.current = true;
-    setAktivIds(ids);
-    // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
-    // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
-    // gleich wieder zuklappt.
-    for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
-    setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-    setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-    setTocAuf(false); // mobilen Drawer schliessen
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
-      requestAnimationFrame(() => { jumpLock.current = false; });
-    }));
-  };
+  // Gliederungs-Baum EINMAL beschreiben (genutzt in der xl-Spalte UND im mobilen
+  // Drawer, §5 — kein doppelter onSprung). `springeZuSektion`/`tocToggle` sind
+  // oben als useCallback definiert (über dem early-return, Rank 4).
   const tocBaumEl = (
     <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivIds} offen={tocBaum}
       onToggle={tocToggle} onSprung={springeZuSektion} />

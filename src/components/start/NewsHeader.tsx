@@ -54,11 +54,18 @@ export function NewsHeader() {
     return () => { lebt = false; };
   }, []);
 
-  // SSR/Prerender + leeres Register: nichts rendern (News ist dynamisch).
-  if (!news || news.length === 0) return null;
+  // Rank 3 (QS-PERF, §15/2): CLS-Reservierung. Der Streifen lädt async aus dem
+  // Register nach; ohne reservierten Platz wächst er ein und schiebt die ganze
+  // Startseite nach unten (gemessener Startseiten-CLS-Anteil 0,57). Während des
+  // Ladens (news===null) dieselbe Mindesthöhe halten, die der geladene Streifen
+  // belegt → nahezu 0 Shift. Reserviert nur Platz, kürzt keinen Inhalt (§15/2).
+  if (news === null) return <div className="min-h-[12.5rem]" aria-hidden />;
+  // Echter Leerfall (leeres Register, SSR/Prerender — in Prod nie, 272 BGE): nichts
+  // anzeigen, kein leerer Kopf (§8). Kollabiert bewusst (kommt in Prod nicht vor).
+  if (news.length === 0) return null;
 
   return (
-    <section aria-label="Neue Bundesgerichtsentscheide" className="space-y-2">
+    <section aria-label="Neue Bundesgerichtsentscheide" className="space-y-2 min-h-[12.5rem]">
       <div className="flex items-center justify-between gap-3">
         <span className="lc-overline text-ink-500">Neu aus dem Bundesgericht</span>
         <div className="flex items-center gap-2">
