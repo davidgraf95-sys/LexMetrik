@@ -4,6 +4,13 @@ import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
 import { trenneAenderungshistorie, absatzMarke, gruppiereTausender, gruppiereBetraege, istAufgehoben } from '../../lib/normtext/darstellung';
 import { NormText, type InternRefs } from '../NormText';
+import { BildFigur, BildKacheln, type BildDaten, type BildKachel } from './BildElemente';
+
+// Bild-/Kachel-Felder eines Blocks (bild/bildKacheln) sind neu im Snapshot-Daten-
+// format; die Render-Schicht liest sie über diese lokale Erweiterung des
+// Snapshot-Block-Typs (wie TabSpalte — kein Import aus scripts/, §3). Additiv:
+// bestehende Blöcke ohne die Felder rendern unverändert.
+type BildBlock = NormSnapshot['bloecke'][number] & { bild?: BildDaten; bildKacheln?: BildKachel[] };
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
  *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert. */
@@ -416,6 +423,26 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             >
               {b.text}
             </p>
+          );
+        }
+        // Bild-/Kachel-Blöcke (neu im Datenformat): eigenständige Abbildung, Formel
+        // oder Signaltafel-Katalog — kein Absatz/Item, keine Zitat-/Tabellen-Logik.
+        // Wie der titel-Block per Early-Return; in der Lesesicht (zk) an die
+        // Prosa-Kante eingerückt (pl-9), das Popover bleibt bündig. Additiv/golden-
+        // neutral, da bestehende Blöcke die Felder nie tragen (§3 reine Darstellung).
+        const bb = b as BildBlock;
+        if (bb.bildKacheln && bb.bildKacheln.length > 0) {
+          return (
+            <div key={i} className={zk ? 'pl-9 [text-indent:0]' : undefined}>
+              <BildKacheln kacheln={bb.bildKacheln} />
+            </div>
+          );
+        }
+        if (bb.bild) {
+          return (
+            <div key={i} className={zk ? 'pl-9 [text-indent:0]' : undefined}>
+              <BildFigur bild={bb.bild} />
+            </div>
           );
         }
         const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
