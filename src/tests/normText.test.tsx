@@ -142,4 +142,43 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
     const out = ssr(<NormText text="nach Artikel 5 Absatz 2 hier" intern={intern} />);
     expect(out).toContain('#art-5"');
   });
+
+  // N2 (Bündel N): die AUSGESCHRIEBENE Passus-Form «Artikel N Absatz X … GESETZ»
+  // (727 Fälle im Bund-Korpus) entging der alten Sofort-Kürzel-Regel und erzeugte
+  // einen falschen Self-Link (Bsp. AHVV «Artikel 1a Absatz 1 … AHVG» → AHVV art 1a
+  // statt AHVG). Jetzt unterdrückt.
+  it('«Artikel 5 Absatz 2 Buchstabe c AHVG» wird NICHT self-verlinkt (ausgeschrieben)', () => {
+    const out = ssr(<NormText text="richtet sich nach Artikel 5 Absatz 2 Buchstabe c AHVG weiter" intern={intern} />);
+    expect(out).not.toContain('#art-5"');
+    expect(out).toContain('Artikel 5 Absatz 2 Buchstabe c AHVG');
+  });
+
+  it('«Artikel 5 Absatz 2 des IVG» wird NICHT self-verlinkt (Präpositions-Form)', () => {
+    const out = ssr(<NormText text="gemäss Artikel 5 Absatz 2 des IVG gilt" intern={intern} />);
+    expect(out).not.toContain('#art-5"');
+  });
+
+  it('§1-Präzision: «Artikel 5 Absatz 2 und die Bestimmungen des OR» BLEIBT self-verlinkt', () => {
+    // Der Fremdgesetz-Name gehört zu einem SEPARATEN Verweis, nicht zum «Artikel 5»-
+    // Zitat → «Artikel 5 Absatz 2» ist ein echter Self-Verweis und bleibt verlinkt.
+    const out = ssr(<NormText text="nach Artikel 5 Absatz 2 und die Bestimmungen des OR" intern={intern} />);
+    expect(out).toContain('#art-5"');
+  });
+
+  it('eigenes Kürzel ist KEIN Fremdgesetz: «Artikel 5 Absatz 2 AHVG» in AHVG bleibt self', () => {
+    // Nennt der Verweis exakt das Kürzel DIESES Erlasses, ist es ein Self-Verweis
+    // und bleibt verlinkt (Fremdgesetz-Erkennung greift nur bei anderem Kürzel).
+    const internEigen: InternRefs = { tokenMap, basisPfad: '/gesetze/bund/AHVG', springeZu: () => {} };
+    const out = ssr(<NormText text="nach Artikel 5 Absatz 2 AHVG hier" intern={internEigen} />);
+    expect(out).toContain('#art-5"');
+  });
+
+  // QS-GP-Regression (1.7.): Register-Schlüssel «FINFRAV_FINMA» (Unterstrich) vs.
+  // FEDLEX-Key «FinfraV-FINMA» (Bindestrich) — vor der Normalisierung unterdrückte
+  // ein Gesetz mit getrenntem Kürzel seinen EIGENEN Self-Verweis fälschlich.
+  it('getrennt-benanntes Kürzel: «Artikel 5 Absatz 2 FinfraV-FINMA» in FINFRAV_FINMA bleibt self', () => {
+    const internSep: InternRefs = { tokenMap, basisPfad: '/gesetze/bund/FINFRAV_FINMA', springeZu: () => {} };
+    const out = ssr(<NormText text="Meldepflicht nach Artikel 5 Absatz 2 FinfraV-FINMA in der Fassung" intern={internSep} />);
+    expect(out).toContain('#art-5"');
+  });
 });
